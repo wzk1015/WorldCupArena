@@ -1,0 +1,169 @@
+# WorldCupBench — task definitions & scoring weights
+#
+# Five layers (T1..T5) × many sub-tasks. Each sub-task names:
+#   metric          : which grader.py function computes the score
+#   output_field    : key in the prediction JSON
+#   weight_in_layer : relative weight within its layer
+#   layer_weight    : weight of the parent layer in the composite score
+
+layer_weights:
+  T1_core_result:      0.35
+  T2_player_level:     0.25
+  T3_event_level:      0.15
+  T4_tactics_stats:    0.15
+  T5_tournament_macro: 0.10
+
+tasks:
+  # ------- T1: core result -------
+  - id: match_winner_prob
+    layer: T1_core_result
+    weight_in_layer: 0.45
+    metric: brier_3way
+    output_field: win_probs
+    notes: Requires {home, draw, away} probabilities summing to 1.
+  - id: most_likely_score
+    layer: T1_core_result
+    weight_in_layer: 0.25
+    metric: rps_score
+    output_field: score_dist
+  - id: goal_diff_mae
+    layer: T1_core_result
+    weight_in_layer: 0.15
+    metric: mae
+    output_field: expected_goal_diff
+  - id: qualification
+    layer: T1_core_result
+    weight_in_layer: 0.15
+    metric: brier_binary
+    output_field: advance_prob
+    applies_to: [knockout_leg_aggregate, tournament_stage]
+
+  # ------- T2: player level -------
+  - id: starting_xi
+    layer: T2_player_level
+    weight_in_layer: 0.30
+    metric: jaccard_with_position
+    output_field: lineups
+  - id: formation
+    layer: T2_player_level
+    weight_in_layer: 0.10
+    metric: exact_match
+    output_field: formations
+  - id: goalscorers
+    layer: T2_player_level
+    weight_in_layer: 0.35
+    metric: f1_with_ndcg
+    output_field: scorers
+  - id: assist_providers
+    layer: T2_player_level
+    weight_in_layer: 0.15
+    metric: f1_set
+    output_field: assisters
+  - id: man_of_the_match
+    layer: T2_player_level
+    weight_in_layer: 0.10
+    metric: top1_accuracy
+    output_field: motm_probs
+
+  # ------- T3: event level -------
+  - id: goal_minute
+    layer: T3_event_level
+    weight_in_layer: 0.35
+    metric: hungarian_minute_mae
+    output_field: scorers
+    notes: Bipartite-match predicted scorers to actual; MAE on minute.
+  - id: substitution_times
+    layer: T3_event_level
+    weight_in_layer: 0.15
+    metric: hungarian_minute_mae
+    output_field: substitutions
+  - id: cards
+    layer: T3_event_level
+    weight_in_layer: 0.20
+    metric: event_f1
+    output_field: cards
+  - id: penalty_events
+    layer: T3_event_level
+    weight_in_layer: 0.15
+    metric: event_f1
+    output_field: penalties
+  - id: own_goals
+    layer: T3_event_level
+    weight_in_layer: 0.15
+    metric: event_f1
+    output_field: own_goals
+
+  # ------- T4: tactics & stats -------
+  - id: tactical_formation_match
+    layer: T4_tactics_stats
+    weight_in_layer: 0.15
+    metric: exact_match
+    output_field: formations
+  - id: possession_pct
+    layer: T4_tactics_stats
+    weight_in_layer: 0.10
+    metric: smape
+    output_field: stats.possession
+  - id: shots
+    layer: T4_tactics_stats
+    weight_in_layer: 0.10
+    metric: smape
+    output_field: stats.shots
+  - id: shots_on_target
+    layer: T4_tactics_stats
+    weight_in_layer: 0.10
+    metric: smape
+    output_field: stats.shots_on_target
+  - id: corners
+    layer: T4_tactics_stats
+    weight_in_layer: 0.10
+    metric: smape
+    output_field: stats.corners
+  - id: pass_accuracy
+    layer: T4_tactics_stats
+    weight_in_layer: 0.10
+    metric: smape
+    output_field: stats.pass_accuracy
+  - id: fouls
+    layer: T4_tactics_stats
+    weight_in_layer: 0.10
+    metric: smape
+    output_field: stats.fouls
+  - id: saves
+    layer: T4_tactics_stats
+    weight_in_layer: 0.10
+    metric: smape
+    output_field: stats.saves
+  - id: tackles_and_interceptions
+    layer: T4_tactics_stats
+    weight_in_layer: 0.15
+    metric: smape
+    output_field: stats.defensive_actions
+
+  # ------- T5: tournament macro (only for full-tournament predictions) -------
+  - id: group_standings
+    layer: T5_tournament_macro
+    weight_in_layer: 0.25
+    metric: kendall_tau
+    output_field: group_standings
+  - id: bracket_advancement
+    layer: T5_tournament_macro
+    weight_in_layer: 0.35
+    metric: bracket_score
+    output_field: bracket
+    notes: Round-weighted 1-2-4-8-16.
+  - id: champion
+    layer: T5_tournament_macro
+    weight_in_layer: 0.20
+    metric: brier_multiclass
+    output_field: champion_probs
+  - id: top_scorer
+    layer: T5_tournament_macro
+    weight_in_layer: 0.10
+    metric: ndcg_at_3
+    output_field: top_scorer_probs
+  - id: golden_glove_and_awards
+    layer: T5_tournament_macro
+    weight_in_layer: 0.10
+    metric: top1_accuracy
+    output_field: awards

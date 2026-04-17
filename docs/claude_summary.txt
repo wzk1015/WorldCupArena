@@ -1,0 +1,67 @@
+骨架搭完了。已修正 MiroThinker 归类为 Deep Research Agent（配 MiroThinker 1.7 / H1，价格 ~$0.15–0.30/run）。
+
+产出物
+文档
+
+README.md — 项目总览、快速上手
+docs/cost_estimate.md — 逐模型、逐 Phase 花销测算：Phase 1 ≈ $155，Phase 2 ≈ $1,928，加基础设施和缓冲共 ≈ $2,750
+docs/tech_report.md — 方法论技术报告（含指标定义、泄漏审计、复现性）
+docs/announcement.md — 宣传文
+配置与协议
+
+configs/models.yaml — 四类模型 + 基线，含 MiroThinker 1.7/H1
+configs/settings.yaml — S0/S1/S2a/S2b/S3a/S3b 矩阵
+configs/tasks.yaml — T1–T5 任务 + 权重 + 指标映射
+schemas/prediction.schema.json + schemas/fixture.schema.json
+prompts/system.md + task 模板
+代码
+
+src/runners/base.py、openai_compat.py、anthropic_runner.py（Gemini / MiroThinker / Perplexity DR 待补）
+src/graders/metrics.py — Brier/RPS/Hungarian/Kendall/Bracket 等全量指标
+src/graders/grade_match.py — 按 tasks.yaml 自动聚合
+src/pipeline/orchestrator.py — lock / predict / grade / leaderboard 四个子命令
+src/pipeline/prompt_build.py、src/ingest/api_football.py、src/leaderboard/build.py
+.github/workflows/predict.yml + grade.yml
+Demo fixture：data/snapshots/demo_ucl_sf1_l1/fixture.json 用于 Phase 0 dry-run。
+
+下一步建议顺序
+补 Gemini / Perplexity / MiroThinker 三个 runner（每个 ~60 行）
+在一场真实英超比赛上跑 Phase 0，把 cost_estimate 的估算换成实测 token 数
+写 src/ingest/ingest.py 自动从 API-Football 构造 fixture.json 的 context_pack
+需要我先做哪一步？
+
+Sources:
+
+MiroThinker GitHub
+MiroThinker 1.7 / H1 blog
+
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+已补充到 docs/cost_estimate.md 的 §6–§8。要点：
+
+九种降本杠杆（可独立叠加）
+杠杆	每场省	科学代价
+L1 砍 OpenAI DR / Claude Research / Gemini DR（保 MiroThinker + Perplexity DR）	−$15.00	Research Uplift 榜失去贵派 agent
+L2 用 Batch API（OpenAI + Anthropic 五折）	−$1.05	无（T-24h 锁正好在 24h 窗口内）
+L3 Prompt caching（system + squads 块重用）	−$0.48	无
+L4 裁剪 Setting 矩阵（6 格 → 闭源 2 格、搜索 1 格、agent 1 格）	−$4.71	"Research Uplift"变成 S3b−S3a
+L5 分级覆盖：仅淘汰赛用全阵容，小组赛 cheap-only	WC 省 ~$1,590	小组赛榜单打"简阵容"标
+L6 自托管 MiroThinker-8B	~−$0.15	仅运维代价
+L7 少一轮锦标赛再预测	省 $80	粗粒度推进
+L8 卡 max_tokens + 压 reasoning 长度	已内含在基线	别放宽即可
+L9 每家厂商只留一个旗舰	−$1.10	丢失 correlated-error 检查
+五档预包方案
+方案	杠杆组合	总成本
+A 完整发表版（原方案）	—	$2,750
+B 经济版	L1+L2+L3	$1,190
+C 聚焦版（推荐）	L1–L4 + L7	$550（含消融~$630）
+D 分级覆盖版	L1–L5 + L7	$460
+E 精简可发版	L1–L5 + L7 + L9	$380
+绝对地板	1 LLM + 1 搜索 LLM + 1 agent，只淘汰赛	~$280
+推荐路径
+Phase 0 dry-run 用 Tier C 经济跑通（$5），Phase 1 UCL 固定 Tier C（$45），根据 Phase 1 实测再决定 Phase 2 用 C 还是 D。Tier A 的 $2,750 留作最终报告"5 场 UCL + 世界杯决赛"复跑的 stretch goal，不是必花预算。
+
+结论：发表可行预算落在 $380–$630 之间（Tier E 或 C），相比原方案降低 77%–86%。

@@ -1,0 +1,52 @@
+name: predict-fixture
+
+on:
+  workflow_dispatch:
+    inputs:
+      fixture_path:
+        description: "Path to fixture.json"
+        required: true
+      parallel:
+        description: "Concurrent workers"
+        required: false
+        default: "8"
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Lock fixture
+        run: python -m src.pipeline.orchestrator lock --fixture "${{ inputs.fixture_path }}"
+      - name: Predict
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          TOGETHER_API_KEY: ${{ secrets.TOGETHER_API_KEY }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+          MIROMIND_API_KEY: ${{ secrets.MIROMIND_API_KEY }}
+        run: |
+          python -m src.pipeline.orchestrator predict \
+            --fixture "${{ inputs.fixture_path }}" \
+            --parallel "${{ inputs.parallel }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: predictions
+          path: data/predictions/
+
+  schedule:
+    # Cron trigger: every 6h scan for fixtures where now >= T-24h and not yet predicted.
+    # Separate workflow in ops/; omitted from MVP.
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo placeholder

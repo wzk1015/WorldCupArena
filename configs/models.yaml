@@ -1,0 +1,142 @@
+# WorldCupBench — model registry
+#
+# Categories:
+#   closed_llm           : proprietary LLMs, API-only
+#   open_llm             : open-weight LLMs (via hosted provider)
+#   search_llm           : LLMs with built-in web_search tool enabled
+#   deep_research_agent  : multi-step research agents that plan + browse + synthesize
+#
+# settings_supported: which Settings (S0..S3b) each model runs.
+# price_per_mtok: USD per 1M tokens; for agents we use price_per_run (rough).
+# Prices are approximations as of 2026-04; verify before large runs.
+
+closed_llm:
+  - id: gpt-5
+    provider: openai
+    model: gpt-5
+    price_per_mtok: { input: 2.50, output: 10.00 }
+    settings_supported: [S0, S2a, S3a]
+  - id: gpt-5-mini
+    provider: openai
+    model: gpt-5-mini
+    price_per_mtok: { input: 0.25, output: 2.00 }
+    settings_supported: [S0, S2a, S3a]
+  - id: claude-opus-4-7
+    provider: anthropic
+    model: claude-opus-4-7
+    price_per_mtok: { input: 15.00, output: 75.00 }
+    settings_supported: [S0, S2a, S3a]
+  - id: claude-sonnet-4-6
+    provider: anthropic
+    model: claude-sonnet-4-6
+    price_per_mtok: { input: 3.00, output: 15.00 }
+    settings_supported: [S0, S2a, S3a]
+  - id: gemini-2.5-pro
+    provider: google
+    model: gemini-2.5-pro
+    price_per_mtok: { input: 1.25, output: 5.00 }
+    settings_supported: [S0, S2a, S3a]
+  - id: gemini-2.5-flash
+    provider: google
+    model: gemini-2.5-flash
+    price_per_mtok: { input: 0.30, output: 2.50 }
+    settings_supported: [S0, S2a, S3a]
+  - id: grok-4
+    provider: xai
+    model: grok-4
+    price_per_mtok: { input: 3.00, output: 15.00 }
+    settings_supported: [S0, S2a, S3a]
+
+open_llm:
+  - id: deepseek-v3.2
+    provider: deepseek
+    model: deepseek-chat
+    price_per_mtok: { input: 0.27, output: 1.10 }
+    settings_supported: [S0, S2a, S3a]
+  - id: deepseek-r1
+    provider: deepseek
+    model: deepseek-reasoner
+    price_per_mtok: { input: 0.55, output: 2.19 }
+    settings_supported: [S0, S2a, S3a]
+  - id: qwen3-max
+    provider: dashscope
+    model: qwen3-max
+    price_per_mtok: { input: 1.60, output: 6.40 }
+    settings_supported: [S0, S2a, S3a]
+  - id: llama-4-maverick
+    provider: together
+    model: meta-llama/Llama-4-Maverick
+    price_per_mtok: { input: 0.27, output: 0.85 }
+    settings_supported: [S0, S2a, S3a]
+
+search_llm:
+  # same underlying model as closed_llm entry, but with search tool enabled
+  - id: claude-opus-4-7-search
+    provider: anthropic
+    model: claude-opus-4-7
+    tools: [web_search]
+    price_per_mtok: { input: 15.00, output: 75.00 }
+    search_surcharge_per_1k: 10.00  # Anthropic web_search cost
+    settings_supported: [S1, S2b, S3b]
+  - id: gemini-2.5-pro-search
+    provider: google
+    model: gemini-2.5-pro
+    tools: [google_search]
+    price_per_mtok: { input: 1.25, output: 5.00 }
+    settings_supported: [S1, S2b, S3b]
+  - id: gpt-5-search
+    provider: openai
+    model: gpt-5
+    tools: [web_search]
+    price_per_mtok: { input: 2.50, output: 10.00 }
+    settings_supported: [S1, S2b, S3b]
+  - id: perplexity-sonar
+    provider: perplexity
+    model: sonar-pro
+    price_per_mtok: { input: 3.00, output: 15.00 }
+    settings_supported: [S1, S2b, S3b]
+
+deep_research_agent:
+  - id: openai-deep-research
+    provider: openai
+    model: deep-research
+    price_per_run_usd: 3.00   # rough; depends on tool calls
+    settings_supported: [S1, S3b]
+  - id: gemini-deep-research
+    provider: google
+    model: gemini-deep-research
+    price_per_run_usd: 2.00
+    settings_supported: [S1, S3b]
+  - id: perplexity-deep-research
+    provider: perplexity
+    model: sonar-deep-research
+    price_per_run_usd: 0.20
+    settings_supported: [S1, S3b]
+  - id: claude-research
+    provider: anthropic
+    model: claude-opus-4-7
+    tools: [web_search, extended_thinking]
+    price_per_run_usd: 2.50
+    settings_supported: [S1, S3b]
+  - id: mirothinker-1.7
+    provider: miromind
+    model: mirothinker-1.7
+    price_per_run_usd: 0.15
+    settings_supported: [S1, S3b]
+  - id: mirothinker-h1
+    provider: miromind
+    model: mirothinker-h1
+    price_per_run_usd: 0.30
+    settings_supported: [S1, S3b]
+
+# Non-model baselines for the leaderboard
+baselines:
+  - id: bookmaker-closing
+    kind: bookmaker
+    source: pinnacle
+  - id: elo-538
+    kind: statistical
+    source: fivethirtyeight-spi
+  - id: chalk
+    kind: naive
+    description: always pick higher-ranked team, 1-0

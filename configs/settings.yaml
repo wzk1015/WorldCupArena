@@ -1,0 +1,74 @@
+# WorldCupBench — Setting matrix
+#
+# Each Setting is a distinct (context, tool-access) combination that a model runs under.
+# Dimension A: how much prior info is injected into the prompt.
+# Dimension B: whether the model may call external tools (web search / deep research).
+
+settings:
+  S0:
+    description: No information. Prompt contains only match identifier and task schema.
+    tools_allowed: false
+    inject:
+      fixture_header: true
+      squads: false
+      recent_form: false
+      news_headlines: false
+      stats: false
+
+  S1:
+    description: Same as S0, but web/research tools are allowed.
+    tools_allowed: true
+    inject:
+      fixture_header: true
+      squads: false
+      recent_form: false
+      news_headlines: false
+      stats: false
+
+  S2a:
+    description: Provide official 23-man squads + basic player info. No tools.
+    tools_allowed: false
+    inject:
+      fixture_header: true
+      squads: true
+      recent_form: false
+      news_headlines: false
+      stats: false
+
+  S2b:
+    description: S2a + tools allowed (model may augment squad info via search).
+    tools_allowed: true
+    inject:
+      fixture_header: true
+      squads: true
+      recent_form: false
+      news_headlines: false
+      stats: false
+
+  S3a:
+    description: Full context pack (squads + recent form + news headlines + stats). No tools.
+    tools_allowed: false
+    inject:
+      fixture_header: true
+      squads: true
+      recent_form: true
+      news_headlines: true
+      stats: true
+
+  S3b:
+    description: S3a + tools allowed.
+    tools_allowed: true
+    inject:
+      fixture_header: true
+      squads: true
+      recent_form: true
+      news_headlines: true
+      stats: true
+
+# Runtime policy applied to all settings
+policy:
+  prediction_lock_hours_before_kickoff: 1
+  result_fetch_grace_hours: 24
+  leakage_audit: true        # check sources[].accessed_at against lock time
+  require_probabilities: true
+  require_reasoning: true

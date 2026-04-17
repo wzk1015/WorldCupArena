@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://worldcupbench/schemas/fixture.schema.json",
+  "title": "WorldCupBench fixture snapshot (frozen at T-1h)",
+  "type": "object",
+  "required": ["fixture_id","competition","stage","kickoff_utc","home","away","lock_at_utc"],
+  "properties": {
+    "fixture_id":  { "type":"string" },
+    "competition": { "type":"string", "examples":["UCL-2025-26","WC-2026"] },
+    "stage":       { "type":"string", "examples":["SF1-L1","SF2-L2","FINAL","GROUP-A-MD1","R16"] },
+    "kickoff_utc": { "type":"string", "format":"date-time" },
+    "lock_at_utc": { "type":"string", "format":"date-time" },
+    "home":        { "$ref":"#/$defs/team" },
+    "away":        { "$ref":"#/$defs/team" },
+    "venue":       { "type":"string" },
+    "referee":     { "type":"string" },
+    "bookmaker_closing": {
+      "type":"object",
+      "properties":{
+        "home":{"type":"number"}, "draw":{"type":"number"}, "away":{"type":"number"},
+        "source":{"type":"string"}, "timestamp":{"type":"string","format":"date-time"}
+      }
+    },
+    "context_pack": {
+      "type":"object",
+      "description":"Info materialized by the ingest step, used to build S2/S3 prompts.",
+      "properties":{
+        "squads":          { "type":"object" },
+        "recent_form":     { "type":"object" },
+        "news_headlines":  { "type":"array" },
+        "stats_last_n":    { "type":"object" }
+      }
+    },
+    "snapshot_hash": { "type":"string", "description":"SHA256 of the canonical JSON, used as leakage audit anchor." }
+  },
+  "$defs": {
+    "team": {
+      "type":"object",
+      "required":["id","name"],
+      "properties":{
+        "id":    { "type":"string" },
+        "name":  { "type":"string" },
+        "short": { "type":"string" }
+      }
+    }
+  }
+}
