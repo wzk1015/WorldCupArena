@@ -4,6 +4,8 @@ Benchmarking LLMs and deep-research agents on real-world football prediction —
 
 **Status:** Phase 0 (pipeline dry-run) · 2026-04-17
 
+**Docs**: [Usage](docs/usage.md) · [Integration](docs/integration.md) · [Cost](docs/cost_estimate.md) · [Tech Report](docs/tech_report.md) · [Announcement](docs/announcement.md) · [中文宣传](docs/promo_zh.md) · [Logo Prompt](docs/logo_prompt.md)
+
 ---
 
 ## Why
@@ -26,27 +28,32 @@ Composite score ∈ [0, 100]. Three leaderboards:
 
 1. **Main** — overall composite.
 2. **Above-Market** — composite gain vs. Pinnacle closing odds.
-3. **Research Uplift** — score increase from S1 (search on) over S0 (search off).
+3. **Research Uplift** — score increase from S3 (agent with tools) over S2 (LLM with equivalent injected context).
 
 ## Who we test
 
-- **Closed LLMs**: GPT-5 family, Claude Opus/Sonnet 4.x, Gemini 2.5 Pro/Flash, Grok 4.
-- **Open LLMs**: DeepSeek V3.2 / R1, Qwen3-Max, Llama-4 Maverick.
-- **Search-enabled LLMs**: Claude + web_search, GPT-5 + web_search, Gemini + Google Search, Perplexity Sonar.
-- **Deep Research Agents**: OpenAI Deep Research, Gemini Deep Research, Perplexity Deep Research, Claude Research, MiroMind **MiroThinker** 1.7 / H1.
+Default policy: **one flagship LLM per provider**, full deep-research agent roster. Entries that were dropped are kept as commented-out references in [configs/models.yaml](configs/models.yaml) and can be re-added in 5 seconds.
+
+- **Closed LLMs**: GPT-5.4, Claude Sonnet 4.6, Gemini 3 Pro, Grok 4.
+- **Open LLMs**: DeepSeek R1, Qwen3-Max, Llama-4 Maverick. *(Currently via hosted endpoints; swap to self-hosted vLLM by setting `base_url`.)*
+- **Search-enabled LLMs**: Claude + web_search, GPT-5.4 + web_search, Gemini 3 Pro + Google Search, Perplexity Sonar Pro.
+- **Deep Research Agents**: OpenAI Deep Research, Gemini Deep Research, Perplexity Deep Research, Claude Research, MiroMind **MiroThinker H1**.
 - **Baselines**: Pinnacle closing odds, FiveThirtyEight SPI/Elo, "chalk pick."
 
-See [configs/models.yaml](configs/models.yaml).
+Every model entry in [configs/models.yaml](configs/models.yaml) supports a `base_url` field for routing through proxy / 中转 endpoints.
 
 ## Setting matrix
 
-| | No tools | Search/agent tools |
-|---|---|---|
-| No info | **S0** | **S1** |
-| + official squads | **S2a** | **S2b** |
-| + squads + form + news + stats | **S3a** | **S3b** |
+Four settings, split cleanly by "what the model gets" and "can it use tools":
 
-See [configs/settings.yaml](configs/settings.yaml).
+| Setting | Injected context | Tools | Run by |
+|---|---|---|---|
+| **S0** | fixture header only | off | closed / open LLMs |
+| **S1** | + official squads | off | closed / open LLMs |
+| **S2** | + squads + form + news + stats | off | closed / open LLMs |
+| **S3** | fixture header only | **on** | search-LLMs + deep-research agents |
+
+See [configs/settings.yaml](configs/settings.yaml). (S0–S2 isolate context uplift; S3 isolates research uplift.)
 
 ## Repo layout
 
@@ -93,27 +100,32 @@ python3 -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env         # fill in API keys
 
-# Create or fetch a fixture snapshot
-python -m src.ingest.api_football --fixture-id 123456 > data/snapshots/demo/fixture.json
-
-# Lock it
-python -m src.pipeline.orchestrator lock --fixture data/snapshots/demo/fixture.json
-
-# Predict with all configured models/settings
-python -m src.pipeline.orchestrator predict --fixture data/snapshots/demo/fixture.json
-
-# (after kickoff + 24h)
-python -m src.pipeline.orchestrator grade --fixture-dir data/snapshots/demo
-python -m src.leaderboard.build
+# Fastest path — bundled dry-run on a finished UCL QF fixture (~$0.05)
+bash scripts/dryrun_bayern_madrid.sh
 ```
+
+Full step-by-step usage (ingest → lock → predict → grade → leaderboard, with worked examples for this weekend's Premier League fixtures) lives in [docs/usage.md](docs/usage.md).
+
+Want your model on the leaderboard? See [docs/integration.md](docs/integration.md) — most integrations take 10 minutes.
 
 ## Cost
 
-Roughly **$27 per fixture** for the full model roster × all settings. Phase 1 (UCL semis + final) ≈ $155; Phase 2 (World Cup 2026) ≈ $1,900; full project through July 2026 ≈ **$2,750** including infra and buffer. Breakdown in [docs/cost_estimate.md](docs/cost_estimate.md).
+With the flagship-only roster: **~$10 per fixture** with format-retry buffer. Phase 1 (UCL semis + final) ≈ $60; Phase 2 (World Cup 2026) ≈ $701; full project through July 2026 ≈ **$1,109** at full roster, or **~$450 at recommended Tier C** (economy levers + caching + tiered T5). Full breakdown — including per-layer T1–T5 costs and T5 frequency options — in [docs/cost_estimate.md](docs/cost_estimate.md).
 
 ## Leakage policy
 
 Every agent/search response must include `sources[].accessed_at`. Any source with `published_at > lock_at_utc` invalidates the tasks that depend on it (0 score). Leakage events are highlighted on the leaderboard.
+
+## Format integrity
+
+Every prediction is **schema-validated + semantically checked** at submission time:
+- JSON Schema conformance (required fields, enums, patterns).
+- `win_probs` and `score_dist` probability sums normalized to 1 (within 1e-2).
+- `lineups.*.starting` has exactly 11 players.
+- `stats` contains all 8 required keys with `{home, away}` pairs.
+- `reasoning.overall` non-empty and ≥80 characters (reasoning comes *first* in the JSON, before numeric fields).
+
+If validation fails, the orchestrator sends a targeted repair prompt to the same model (up to 2 retries) so we never discover malformed output only after kickoff.
 
 ## Status & roadmap
 
@@ -125,7 +137,9 @@ Every agent/search response must include `sources[].accessed_at`. Any source wit
 - [ ] Phase 1: UCL SF1 leg 1 (week of 2026-04-27)
 - [ ] Phase 2: Pre-tournament WC prediction (by 2026-06-10)
 
-Contributions welcome — especially new model runners and ingest adapters.
+Contributions welcome — especially new model runners and ingest adapters. See [docs/integration.md](docs/integration.md) for model-maintainer onboarding.
+
+Sponsorship welcome for API cost and deployment of open-source models.
 
 ## License
 

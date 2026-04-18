@@ -1,135 +1,149 @@
 # WorldCupBench — model registry
 #
-# Categories:
-#   closed_llm           : proprietary LLMs, API-only
-#   open_llm             : open-weight LLMs (via hosted provider)
-#   search_llm           : LLMs with built-in web_search tool enabled
-#   deep_research_agent  : multi-step research agents that plan + browse + synthesize
+# Default policy: ONE flagship LLM per provider (deep-research agents excluded from this rule).
+# Models we removed but left reference pricing for (in comments) can be re-added by anyone
+# sponsoring their cost.
 #
-# settings_supported: which Settings (S0..S3b) each model runs.
-# price_per_mtok: USD per 1M tokens; for agents we use price_per_run (rough).
-# Prices are approximations as of 2026-04; verify before large runs.
+# Categories:
+#   closed_llm           : proprietary LLMs, no tool-use
+#   open_llm             : open-weight LLMs (hosted provider for now; base_url swappable)
+#   search_llm           : LLMs with built-in web_search tool enabled
+#   deep_research_agent  : multi-step research agents
+#
+# Setting coverage:
+#   closed_llm / open_llm -> [S0, S1, S2]   (no-tool; vary injected context)
+#   search_llm            -> [S3]            (tools on)
+#   deep_research_agent   -> [S3]            (tools on)
 
 closed_llm:
-  - id: gpt-5
+  - id: gpt-5.4
     provider: openai
-    model: gpt-5
-    price_per_mtok: { input: 2.50, output: 10.00 }
-    settings_supported: [S0, S2a, S3a]
-  - id: gpt-5-mini
-    provider: openai
-    model: gpt-5-mini
-    price_per_mtok: { input: 0.25, output: 2.00 }
-    settings_supported: [S0, S2a, S3a]
-  - id: claude-opus-4-7
-    provider: anthropic
-    model: claude-opus-4-7
-    price_per_mtok: { input: 15.00, output: 75.00 }
-    settings_supported: [S0, S2a, S3a]
+    model: gpt-5.4
+    api_key_env: OPENAI_API_KEY
+    base_url: null                      # e.g. "https://api.openai-proxy.com/v1" for 中转
+    price_per_mtok: { input: 3.00, output: 12.00 }
+    settings_supported: [S0, S1, S2]
   - id: claude-sonnet-4-6
     provider: anthropic
     model: claude-sonnet-4-6
+    api_key_env: ANTHROPIC_API_KEY
+    base_url: null
     price_per_mtok: { input: 3.00, output: 15.00 }
-    settings_supported: [S0, S2a, S3a]
-  - id: gemini-2.5-pro
+    settings_supported: [S0, S1, S2]
+  - id: gemini-3-pro
     provider: google
-    model: gemini-2.5-pro
-    price_per_mtok: { input: 1.25, output: 5.00 }
-    settings_supported: [S0, S2a, S3a]
-  - id: gemini-2.5-flash
-    provider: google
-    model: gemini-2.5-flash
-    price_per_mtok: { input: 0.30, output: 2.50 }
-    settings_supported: [S0, S2a, S3a]
+    model: gemini-3-pro
+    api_key_env: GOOGLE_API_KEY
+    base_url: null
+    price_per_mtok: { input: 2.00, output: 8.00 }
+    settings_supported: [S0, S1, S2]
   - id: grok-4
     provider: xai
     model: grok-4
+    api_key_env: XAI_API_KEY
+    base_url: null
     price_per_mtok: { input: 3.00, output: 15.00 }
-    settings_supported: [S0, S2a, S3a]
+    settings_supported: [S0, S1, S2]
+  # Dropped from default roster (2026-04-18): gpt-5.4-mini, claude-opus-4-7, gemini-3-flash.
+  # Re-add by uncommenting and keeping the same schema.
 
 open_llm:
-  - id: deepseek-v3.2
-    provider: deepseek
-    model: deepseek-chat
-    price_per_mtok: { input: 0.27, output: 1.10 }
-    settings_supported: [S0, S2a, S3a]
   - id: deepseek-r1
     provider: deepseek
     model: deepseek-reasoner
+    api_key_env: DEEPSEEK_API_KEY
+    base_url: https://api.deepseek.com/v1
     price_per_mtok: { input: 0.55, output: 2.19 }
-    settings_supported: [S0, S2a, S3a]
+    settings_supported: [S0, S1, S2]
   - id: qwen3-max
     provider: dashscope
     model: qwen3-max
+    api_key_env: DASHSCOPE_API_KEY
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
     price_per_mtok: { input: 1.60, output: 6.40 }
-    settings_supported: [S0, S2a, S3a]
+    settings_supported: [S0, S1, S2]
   - id: llama-4-maverick
     provider: together
     model: meta-llama/Llama-4-Maverick
+    api_key_env: TOGETHER_API_KEY
+    base_url: https://api.together.xyz/v1
     price_per_mtok: { input: 0.27, output: 0.85 }
-    settings_supported: [S0, S2a, S3a]
+    settings_supported: [S0, S1, S2]
+  # Dropped: deepseek-v3.2 (kept R1 as the stronger reasoner).
 
 search_llm:
-  # same underlying model as closed_llm entry, but with search tool enabled
-  - id: claude-opus-4-7-search
+  - id: claude-sonnet-4-6-search
     provider: anthropic
-    model: claude-opus-4-7
+    model: claude-sonnet-4-6
+    api_key_env: ANTHROPIC_API_KEY
+    base_url: null
     tools: [web_search]
-    price_per_mtok: { input: 15.00, output: 75.00 }
-    search_surcharge_per_1k: 10.00  # Anthropic web_search cost
-    settings_supported: [S1, S2b, S3b]
-  - id: gemini-2.5-pro-search
-    provider: google
-    model: gemini-2.5-pro
-    tools: [google_search]
-    price_per_mtok: { input: 1.25, output: 5.00 }
-    settings_supported: [S1, S2b, S3b]
-  - id: gpt-5-search
+    price_per_mtok: { input: 3.00, output: 15.00 }
+    search_surcharge_per_1k: 10.00
+    settings_supported: [S3]
+  - id: gpt-5.4-search
     provider: openai
-    model: gpt-5
+    model: gpt-5.4
+    api_key_env: OPENAI_API_KEY
+    base_url: null
     tools: [web_search]
-    price_per_mtok: { input: 2.50, output: 10.00 }
-    settings_supported: [S1, S2b, S3b]
+    price_per_mtok: { input: 3.00, output: 12.00 }
+    settings_supported: [S3]
+  - id: gemini-3-pro-search
+    provider: google
+    model: gemini-3-pro
+    api_key_env: GOOGLE_API_KEY
+    base_url: null
+    tools: [google_search]
+    price_per_mtok: { input: 2.00, output: 8.00 }
+    settings_supported: [S3]
   - id: perplexity-sonar
     provider: perplexity
     model: sonar-pro
+    api_key_env: PERPLEXITY_API_KEY
+    base_url: https://api.perplexity.ai
     price_per_mtok: { input: 3.00, output: 15.00 }
-    settings_supported: [S1, S2b, S3b]
+    settings_supported: [S3]
 
 deep_research_agent:
   - id: openai-deep-research
     provider: openai
     model: deep-research
-    price_per_run_usd: 3.00   # rough; depends on tool calls
-    settings_supported: [S1, S3b]
+    api_key_env: OPENAI_API_KEY
+    base_url: null
+    price_per_run_usd: 3.00
+    settings_supported: [S3]
   - id: gemini-deep-research
     provider: google
     model: gemini-deep-research
+    api_key_env: GOOGLE_API_KEY
+    base_url: null
     price_per_run_usd: 2.00
-    settings_supported: [S1, S3b]
+    settings_supported: [S3]
   - id: perplexity-deep-research
     provider: perplexity
     model: sonar-deep-research
+    api_key_env: PERPLEXITY_API_KEY
+    base_url: https://api.perplexity.ai
     price_per_run_usd: 0.20
-    settings_supported: [S1, S3b]
+    settings_supported: [S3]
   - id: claude-research
     provider: anthropic
-    model: claude-opus-4-7
+    model: claude-sonnet-4-6
+    api_key_env: ANTHROPIC_API_KEY
+    base_url: null
     tools: [web_search, extended_thinking]
-    price_per_run_usd: 2.50
-    settings_supported: [S1, S3b]
-  - id: mirothinker-1.7
-    provider: miromind
-    model: mirothinker-1.7
-    price_per_run_usd: 0.15
-    settings_supported: [S1, S3b]
+    price_per_run_usd: 2.00
+    settings_supported: [S3]
   - id: mirothinker-h1
     provider: miromind
     model: mirothinker-h1
+    api_key_env: MIROMIND_API_KEY
+    base_url: https://api.miromind.ai/v1
     price_per_run_usd: 0.30
-    settings_supported: [S1, S3b]
+    settings_supported: [S3]
+  # Dropped: mirothinker-1.7 (kept H1 as the stronger variant, BrowseComp 88.2).
 
-# Non-model baselines for the leaderboard
 baselines:
   - id: bookmaker-closing
     kind: bookmaker

@@ -22,25 +22,36 @@
 
 ## Task
 
-Predict the outcome of this match. Produce a single JSON object conforming exactly to this JSON Schema:
+Predict the outcome of this match. Produce a single JSON object conforming **exactly** to the JSON Schema below.
 
 ```json
 {{schema}}
 ```
 
-Required fields for this task:
-- `win_probs` (home/draw/away, normalized)
-- `score_dist` (top-5 scorelines with probabilities; include an "other" bucket if needed)
-- `most_likely_score`
-- `expected_goal_diff` (home minus away)
-- `lineups` (best-effort starting XI for each side)
-- `formations`
-- `scorers` (predicted scorers with probability and minute_range)
-- `stats` (possession, shots, shots_on_target, corners, pass_accuracy, fouls, saves, defensive_actions for each side)
-- `cards`, `substitutions`: best-effort; empty array allowed if highly uncertain
-- `reasoning`: concise rationale
-- `sources`: if you used any external retrieval
+### Field guide (all listed fields are required unless marked optional)
+
+1. `reasoning`  — **emit this first**
+   - `reasoning.overall`   main rationale, ≥ 80 chars
+   - `reasoning.t1_result` / `t2_player` / `t3_events` / `t4_stats`  per-layer rationale
+2. `win_probs` { home, draw, away }, sum ≈ 1
+3. `score_dist` top-5 to top-20 scorelines with probabilities (sum ≈ 1)
+4. `most_likely_score`  "H-A"
+5. `expected_goal_diff`  home minus away (can be negative)
+6. `advance_prob`  (optional; knockout legs only) probability the `home` team advances on aggregate
+7. `lineups` { home, away } each with `starting` (exactly 11) and `bench`
+8. `formations` { home, away }
+9. `scorers`  every predicted scorer with `player`, `team`, `minute_range`, `p`
+10. `assisters` (optional) similar shape, no minutes
+11. `substitutions` (optional) `{team, off, on, minute}`
+12. `cards` (optional) `{player, team, color, minute}`
+13. `penalties` (optional) `{team, taker, outcome, minute}`
+14. `own_goals` (optional) `{player, team, minute}`
+15. `motm_probs` (optional) MOTM candidates with probability
+16. `stats`  all 8 required keys, each `{home, away}`
+17. `sources` (optional)  if you used retrieval, list every URL with `accessed_at`
+
+### Setting
 
 Setting for this run: **{{setting_id}}** — {{setting_description}}
 
-Return JSON only.
+Return JSON only. Begin with `{`.

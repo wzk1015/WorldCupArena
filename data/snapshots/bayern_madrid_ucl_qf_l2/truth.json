@@ -1,0 +1,90 @@
+{
+  "fixture_id": "bayern_madrid_ucl_qf_l2",
+  "competition": "UCL-2025-26",
+  "stage": "QF-L2",
+  "kickoff_utc": "2026-04-15T19:00:00Z",
+  "final_time_result": {
+    "home_goals": 1,
+    "away_goals": 2,
+    "outcome": "away_win",
+    "score_string": "1-2",
+    "aggregate": "Real Madrid 2 - 4 Bayern Munich",
+    "advancing_team": "away",
+    "went_to_extra_time": false,
+    "went_to_penalties": false
+  },
+  "lineups": {
+    "home": {
+      "formation": "4-3-3",
+      "starting": [
+        { "name": "Thibaut Courtois",    "position": "GK" },
+        { "name": "Dani Carvajal",       "position": "DF" },
+        { "name": "Eder Militao",        "position": "DF" },
+        { "name": "Antonio Rudiger",     "position": "DF" },
+        { "name": "Ferland Mendy",       "position": "DF" },
+        { "name": "Aurelien Tchouameni", "position": "MF" },
+        { "name": "Federico Valverde",   "position": "MF" },
+        { "name": "Jude Bellingham",     "position": "MF" },
+        { "name": "Vinicius Jr",         "position": "FW" },
+        { "name": "Kylian Mbappe",       "position": "FW" },
+        { "name": "Arda Guler",          "position": "FW" }
+      ]
+    },
+    "away": {
+      "formation": "4-2-3-1",
+      "starting": [
+        { "name": "Manuel Neuer",        "position": "GK" },
+        { "name": "Joshua Kimmich",      "position": "DF" },
+        { "name": "Dayot Upamecano",     "position": "DF" },
+        { "name": "Kim Min-jae",         "position": "DF" },
+        { "name": "Raphael Guerreiro",   "position": "DF" },
+        { "name": "Aleksandar Pavlovic", "position": "MF" },
+        { "name": "Leon Goretzka",       "position": "MF" },
+        { "name": "Michael Olise",       "position": "MF" },
+        { "name": "Jamal Musiala",       "position": "MF" },
+        { "name": "Leroy Sane",          "position": "MF" },
+        { "name": "Harry Kane",          "position": "FW" }
+      ]
+    }
+  },
+  "events": {
+    "goals": [
+      { "player": "Harry Kane",    "team": "away", "minute": 17, "type": "goal" },
+      { "player": "Jude Bellingham","team": "home", "minute": 52, "type": "goal" },
+      { "player": "Jamal Musiala", "team": "away", "minute": 74, "type": "goal" }
+    ],
+    "assists": [
+      { "player": "Michael Olise",   "team": "away", "minute": 17 },
+      { "player": "Vinicius Jr",     "team": "home", "minute": 52 },
+      { "player": "Harry Kane",      "team": "away", "minute": 74 }
+    ],
+    "substitutions": [
+      { "team": "home", "off": "Arda Guler",         "on": "Rodrygo",          "minute": 60 },
+      { "team": "home", "off": "Dani Carvajal",      "on": "Fran Garcia",      "minute": 68 },
+      { "team": "away", "off": "Leroy Sane",         "on": "Serge Gnabry",     "minute": 72 },
+      { "team": "home", "off": "Aurelien Tchouameni","on": "Eduardo Camavinga","minute": 75 },
+      { "team": "away", "off": "Jamal Musiala",      "on": "Mathys Tel",       "minute": 85 },
+      { "team": "away", "off": "Harry Kane",         "on": "Leon Goretzka",    "minute": 90 }
+    ],
+    "cards": [
+      { "player": "Antonio Rudiger",   "team": "home", "color": "yellow", "minute": 31 },
+      { "player": "Konrad Laimer",     "team": "away", "color": "yellow", "minute": 45 },
+      { "player": "Dayot Upamecano",   "team": "away", "color": "yellow", "minute": 67 },
+      { "player": "Federico Valverde", "team": "home", "color": "yellow", "minute": 80 }
+    ],
+    "penalties": [],
+    "own_goals": []
+  },
+  "stats": {
+    "possession":        { "home": 58, "away": 42 },
+    "shots":             { "home": 17, "away": 12 },
+    "shots_on_target":   { "home": 5,  "away": 6 },
+    "corners":           { "home": 9,  "away": 4 },
+    "pass_accuracy":     { "home": 86, "away": 84 },
+    "fouls":             { "home": 11, "away": 14 },
+    "saves":             { "home": 4,  "away": 4 },
+    "defensive_actions": { "home": 21, "away": 29 }
+  },
+  "motm": { "name": "Harry Kane", "team": "away" },
+  "source": "synthetic-for-dryrun"
+}

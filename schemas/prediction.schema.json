@@ -2,23 +2,44 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://worldcupbench/schemas/prediction.schema.json",
   "title": "WorldCupBench single-match prediction",
+  "description": "Reasoning-first prediction JSON. The `reasoning` field must be populated BEFORE the quantitative predictions and is required regardless of whether the model has internal thinking.",
   "type": "object",
   "required": [
     "fixture_id",
     "model_id",
     "setting",
     "submitted_at",
+    "reasoning",
     "win_probs",
     "score_dist",
     "most_likely_score",
-    "reasoning"
+    "expected_goal_diff",
+    "lineups",
+    "formations",
+    "scorers",
+    "stats"
   ],
   "additionalProperties": false,
   "properties": {
     "fixture_id":    { "type": "string" },
     "model_id":      { "type": "string" },
-    "setting":       { "enum": ["S0","S1","S2a","S2b","S3a","S3b"] },
+    "setting":       { "enum": ["S0","S1","S2","S3"] },
     "submitted_at":  { "type": "string", "format": "date-time" },
+
+    "reasoning": {
+      "type": "object",
+      "description": "Output this BEFORE the numeric predictions. Explains the basis of the entire prediction.",
+      "required": ["overall"],
+      "properties": {
+        "overall":   { "type": "string", "minLength": 80,
+                        "description": "Main rationale: form, injuries, tactical matchup, H2H, key players." },
+        "t1_result": { "type": "string", "description": "Why this win/draw/loss distribution and scoreline." },
+        "t2_player": { "type": "string", "description": "Why these starters, goalscorers, formations." },
+        "t3_events": { "type": "string", "description": "Expected event pattern: goal timing, card triggers, subs." },
+        "t4_stats":  { "type": "string", "description": "Why these possession/shot/pass numbers." }
+      },
+      "additionalProperties": false
+    },
 
     "win_probs": {
       "type": "object",
@@ -34,6 +55,7 @@
     "score_dist": {
       "type": "array",
       "minItems": 1,
+      "maxItems": 20,
       "items": {
         "type": "object",
         "required": ["score","p"],
@@ -44,12 +66,14 @@
         }
       }
     },
-    "most_likely_score": { "type":"string", "pattern":"^[0-9]+-[0-9]+$" },
+    "most_likely_score":  { "type":"string", "pattern":"^[0-9]+-[0-9]+$" },
     "expected_goal_diff": { "type":"number" },
-    "advance_prob": { "type":"number", "minimum":0, "maximum":1 },
+    "advance_prob":       { "type":"number", "minimum":0, "maximum":1 },
 
     "lineups": {
       "type":"object",
+      "required": ["home", "away"],
+      "additionalProperties": false,
       "properties": {
         "home": { "$ref":"#/$defs/lineup" },
         "away": { "$ref":"#/$defs/lineup" }
@@ -57,6 +81,8 @@
     },
     "formations": {
       "type":"object",
+      "required": ["home","away"],
+      "additionalProperties": false,
       "properties": {
         "home": { "type":"string", "pattern":"^[0-9]+(-[0-9]+)+$" },
         "away": { "type":"string", "pattern":"^[0-9]+(-[0-9]+)+$" }
@@ -68,23 +94,35 @@
       "items": {
         "type":"object",
         "required":["player","team","p"],
+        "additionalProperties": false,
         "properties": {
-          "player":        { "type":"string" },
-          "team":          { "enum":["home","away"] },
-          "minute_range":  { "type":"array", "items":{"type":"number"}, "minItems":2, "maxItems":2 },
-          "p":             { "type":"number", "minimum":0, "maximum":1 }
+          "player":       { "type":"string" },
+          "team":         { "enum":["home","away"] },
+          "minute_range": { "type":"array", "items":{"type":"number","minimum":0,"maximum":130},
+                            "minItems":2, "maxItems":2 },
+          "p":            { "type":"number", "minimum":0, "maximum":1 }
         }
       }
     },
     "assisters": {
       "type":"array",
-      "items": { "type":"object", "required":["player","team","p"] }
+      "items": {
+        "type":"object",
+        "required":["player","team","p"],
+        "additionalProperties": false,
+        "properties": {
+          "player": { "type":"string" },
+          "team":   { "enum":["home","away"] },
+          "p":      { "type":"number", "minimum":0, "maximum":1 }
+        }
+      }
     },
     "substitutions": {
       "type":"array",
       "items": {
         "type":"object",
         "required":["team","off","on","minute"],
+        "additionalProperties": false,
         "properties": {
           "team":   { "enum":["home","away"] },
           "off":    { "type":"string" },
@@ -98,37 +136,80 @@
       "items": {
         "type":"object",
         "required":["player","team","color","minute"],
+        "additionalProperties": false,
         "properties": {
-          "player":{ "type":"string" },
-          "team":  { "enum":["home","away"] },
-          "color": { "enum":["yellow","red","second_yellow"] },
-          "minute":{ "type":"number" }
+          "player": { "type":"string" },
+          "team":   { "enum":["home","away"] },
+          "color":  { "enum":["yellow","red","second_yellow"] },
+          "minute": { "type":"number", "minimum":0, "maximum":130 }
         }
       }
     },
-    "penalties":   { "type":"array" },
-    "own_goals":   { "type":"array" },
-    "motm_probs":  { "type":"array" },
+    "penalties": {
+      "type":"array",
+      "items": {
+        "type":"object",
+        "required": ["team","taker","outcome","minute"],
+        "additionalProperties": false,
+        "properties": {
+          "team":    { "enum":["home","away"] },
+          "taker":   { "type":"string" },
+          "outcome": { "enum":["scored","saved","missed"] },
+          "minute":  { "type":"number", "minimum":0, "maximum":130 }
+        }
+      }
+    },
+    "own_goals": {
+      "type":"array",
+      "items": {
+        "type":"object",
+        "required":["player","team","minute"],
+        "additionalProperties": false,
+        "properties": {
+          "player": { "type":"string" },
+          "team":   { "enum":["home","away"] },
+          "minute": { "type":"number", "minimum":0, "maximum":130 }
+        }
+      }
+    },
+    "motm_probs": {
+      "type":"array",
+      "items": {
+        "type":"object",
+        "required":["player","team","p"],
+        "additionalProperties": false,
+        "properties":{
+          "player":{"type":"string"},
+          "team":  {"enum":["home","away"]},
+          "p":     {"type":"number","minimum":0,"maximum":1}
+        }
+      }
+    },
 
     "stats": {
       "type":"object",
-      "description":"Per-side match stats. Keys are stat names; values have {home, away} numbers.",
-      "additionalProperties": {
-        "type":"object",
-        "properties": {
-          "home":{"type":"number"},
-          "away":{"type":"number"}
-        }
+      "description":"Per-side match stats. Required keys listed below; each value has {home, away} numbers.",
+      "required": ["possession","shots","shots_on_target","corners","pass_accuracy","fouls","saves","defensive_actions"],
+      "additionalProperties": false,
+      "properties": {
+        "possession":         { "$ref": "#/$defs/stat_pair" },
+        "shots":              { "$ref": "#/$defs/stat_pair" },
+        "shots_on_target":    { "$ref": "#/$defs/stat_pair" },
+        "corners":            { "$ref": "#/$defs/stat_pair" },
+        "pass_accuracy":      { "$ref": "#/$defs/stat_pair" },
+        "fouls":              { "$ref": "#/$defs/stat_pair" },
+        "saves":              { "$ref": "#/$defs/stat_pair" },
+        "defensive_actions":  { "$ref": "#/$defs/stat_pair" }
       }
     },
 
-    "reasoning": { "type":"string", "minLength": 20 },
-    "thinking":  { "type":"string" },
+    "thinking": { "type":"string" },
     "sources": {
       "type":"array",
       "items": {
         "type":"object",
         "required":["url","accessed_at"],
+        "additionalProperties": false,
         "properties":{
           "url":          { "type":"string", "format":"uri" },
           "accessed_at":  { "type":"string", "format":"date-time" },
@@ -143,19 +224,31 @@
     "lineup": {
       "type":"object",
       "required":["starting","bench"],
+      "additionalProperties": false,
       "properties": {
         "starting": { "type":"array", "minItems":11, "maxItems":11,
                       "items":{"$ref":"#/$defs/player"} },
-        "bench":    { "type":"array", "items":{"$ref":"#/$defs/player"} }
+        "bench":    { "type":"array", "maxItems":12,
+                      "items":{"$ref":"#/$defs/player"} }
       }
     },
     "player": {
       "type":"object",
       "required":["name","position"],
+      "additionalProperties": false,
       "properties":{
         "name":     { "type":"string" },
         "position": { "enum":["GK","DF","MF","FW"] },
-        "shirt":    { "type":"integer" }
+        "shirt":    { "type":"integer", "minimum":1, "maximum":99 }
+      }
+    },
+    "stat_pair": {
+      "type":"object",
+      "required":["home","away"],
+      "additionalProperties": false,
+      "properties":{
+        "home":{"type":"number","minimum":0},
+        "away":{"type":"number","minimum":0}
       }
     }
   }

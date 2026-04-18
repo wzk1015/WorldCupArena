@@ -27,6 +27,7 @@ import yaml
 from ..runners import build_runner
 from ..graders import grade_match
 from .prompt_build import build_prompt
+from .validate import validate_or_repair
 
 ROOT = Path(__file__).resolve().parents[2]
 CONFIGS = ROOT / "configs"
@@ -70,6 +71,10 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
     jobs = list(_iter_model_setting_pairs(models_cfg, settings_cfg))
     print(f"[predict] {fid}: {len(jobs)} model×setting runs")
 
+    policy = settings_cfg.get("policy", {})
+    tol = float(policy.get("probability_sum_tolerance", 0.01))
+    max_retries = int(policy.get("max_format_retries", 2))
+
     def _one(job):
         model_cfg, setting = job
         sys_p, usr_p = build_prompt(fixture, setting)
@@ -77,7 +82,18 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
             runner = build_runner(model_cfg)
         except NotImplementedError as e:
             return {"model": model_cfg["id"], "setting": setting["id"], "skipped": str(e)}
-        res = runner.run(fixture, setting, sys_p, usr_p, schema={})
+
+        def _validate(pred, retry_fn):
+            return validate_or_repair(
+                pred,
+                fixture_id=fid,
+                setting_id=setting["id"],
+                retry_fn=retry_fn,
+                max_retries=max_retries,
+                tol=tol,
+            )
+
+        res = runner.run(fixture, setting, sys_p, usr_p, validate_fn=_validate)
         audit = _leak_audit(res.sources, fixture["lock_at_utc"])
         record = {
             "fixture_id": fid,
@@ -91,11 +107,17 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
             "tokens": {"input": res.input_tokens, "output": res.output_tokens},
             "tool_calls": res.tool_calls,
             "wall_seconds": res.wall_seconds,
+            "repair_retries": res.repair_retries,
+            "validation_errors": res.validation_errors,
             "error": res.error,
         }
         path = out_dir / f"{res.model_id}__{res.setting}.json"
         path.write_text(json.dumps(record, ensure_ascii=False, indent=2))
-        return {"model": res.model_id, "setting": res.setting, "cost": res.cost_usd, "err": res.error}
+        return {
+            "model": res.model_id, "setting": res.setting,
+            "cost": res.cost_usd, "retries": res.repair_retries,
+            "err": res.error,
+        }
 
     with cf.ThreadPoolExecutor(max_workers=parallel) as ex:
         for r in ex.map(_one, jobs):

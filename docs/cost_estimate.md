@@ -2,343 +2,249 @@
 
 All prices are **approximations as of 2026-04** and should be verified against each vendor's current page before a large run. Figures assume USD.
 
+**Last revised:** 2026-04-18 — roster trimmed to one flagship LLM per provider (Opus / Flash / mini / DeepSeek-V3 / MiroThinker-1.7 dropped).
+
 ---
 
-## 1. Per-call token budget (assumptions)
+## 1. Token budget (per run)
 
-Inputs vary by Setting:
-
-| Setting | Injected context | ~Input tokens | Notes |
+| Setting | Injected context | ~Input tokens | Runs here |
 |---|---|---:|---|
-| S0  | fixture header + schema | **1,200** | schema alone ~1k tokens |
-| S1  | same as S0; search tool on | 1,200 | agent/search-llm fetches add runtime tokens |
-| S2a | + 23-man squads × 2 | **7,000** | squad JSON is the bulk |
-| S2b | same; search on | 7,000 | |
-| S3a | + recent form + news + stats | **20,000** | news headlines alone ~8k |
-| S3b | same; search on | 20,000 | |
+| **S0** | fixture header + schema | 1,200 | closed / open LLMs |
+| **S1** | + 23-man squads × 2 | 7,000 | closed / open LLMs |
+| **S2** | + squads + form + news + stats | 20,000 | closed / open LLMs |
+| **S3** | fixture header, tools on | 1,200 base + tool output | search-LLMs, agents |
 
-Output target per run: **~4,000 tokens** (structured JSON covering all sub-tasks + ~300-word reasoning). Reasoning-heavy models (Claude Opus, DeepSeek-R1) may emit 6–10k output tokens via thinking traces.
-
-For search/agent runs, tool output adds ~3–10× the base input tokens because fetched article text is appended to context. Effective multipliers used below:
-
-| Model type | Input multiplier (tools on) | Output multiplier |
-|---|---:|---:|
-| Plain LLM (no tools) | 1.0 | 1.0 |
-| Search-enabled LLM  | 3.0 | 1.2 |
-| Deep Research Agent | flat `price_per_run_usd` (see models.yaml) | — |
+Output target per run: **~4,000 tokens** (reasoning block + structured JSON).
+S3 tool-use runs: effective input ~3× base.
+Agents are billed per run (flat `price_per_run_usd`).
 
 ---
 
-## 2. Per-model, per-fixture cost
+## 2. Per-fixture cost — flagship-only roster
 
-Table shows cost of running **all six Settings** (S0, S1, S2a, S2b, S3a, S3b) where supported. Plain LLMs only run S0/S2a/S3a; search-enabled variants only run S1/S2b/S3b; agents only run S1 and S3b.
+### Closed LLMs (S0 + S1 + S2, 3 runs each)
 
-Formula for token-billed models (per run):
+| Model | in / out per 1M | per-fixture |
+|---|---|---:|
+| GPT-5.4            | $3.00 / $12.00  | $0.23 |
+| Claude Sonnet 4.6  | $3.00 / $15.00  | $0.27 |
+| Gemini 3 Pro       | $2.00 / $8.00   | $0.15 |
+| Grok 4             | $3.00 / $15.00  | $0.27 |
+| **Subtotal**       |                 | **$0.92** |
 
-```
-cost = input_tokens × $in_price + output_tokens × $out_price
-```
-
-### Closed LLMs — 3 no-tool settings each (S0 + S2a + S3a)
-
-```
-input ≈ 1,200 + 7,000 + 20,000 = 28,200 tok
-output ≈ 3 × 4,000 = 12,000 tok
-```
-
-| Model | per-fixture (3 runs) |
-|---|---:|
-| GPT-5              | $0.19 |
-| GPT-5-mini         | $0.03 |
-| Claude Opus 4.7    | $1.32 |
-| Claude Sonnet 4.6  | $0.27 |
-| Gemini 2.5 Pro     | $0.10 |
-| Gemini 2.5 Flash   | $0.04 |
-| Grok 4             | $0.27 |
-| **Subtotal**       | **$2.22** |
-
-### Open LLMs — 3 no-tool settings each
+### Open LLMs (3 runs each)
 
 | Model | per-fixture |
 |---|---:|
-| DeepSeek V3.2          | $0.02 |
-| DeepSeek R1 (reasoner) | $0.05 |
-| Qwen3-Max              | $0.12 |
-| Llama-4 Maverick       | $0.02 |
-| **Subtotal**           | **$0.21** |
+| DeepSeek R1      | $0.05 |
+| Qwen3-Max        | $0.12 |
+| Llama-4 Maverick | $0.02 |
+| **Subtotal**     | **$0.19** |
 
-### Search-enabled LLMs — 3 search settings each (S1 + S2b + S3b)
+### Search-enabled LLMs (S3 only, 1 run each)
 
-Use input multiplier 3×. Input ≈ 84,600 tok; output ≈ 14,400 tok. Anthropic web_search adds $10 per 1k searches; assume ~15 searches per run = $0.15/run extra.
-
-| Model | per-fixture (3 runs) |
+| Model | per-fixture |
 |---|---:|
-| Claude Opus w/search   | $1.27 + $2.59 search-overhead = **$3.86** |
-| GPT-5 w/search         | $0.36 |
-| Gemini 2.5 Pro search  | $0.18 |
-| Perplexity Sonar Pro   | $0.47 |
-| **Subtotal**           | **$4.87** |
+| Claude Sonnet + search     | $0.12 |
+| GPT-5.4 + search           | $0.06 |
+| Gemini 3 Pro + search      | $0.04 |
+| Perplexity Sonar Pro       | $0.08 |
+| **Subtotal**               | **$0.30** |
 
-### Deep Research Agents — 2 settings each (S1 + S3b)
+### Deep Research Agents (S3 only, 1 run each)
 
-Priced per run from models.yaml:
-
-| Agent | per-fixture (2 runs) |
+| Agent | per-fixture |
 |---|---:|
-| OpenAI Deep Research         | $6.00 |
-| Gemini Deep Research         | $4.00 |
-| Perplexity Deep Research     | $0.40 |
-| Claude Research              | $5.00 |
-| MiroThinker 1.7              | $0.30 |
-| MiroThinker H1               | $0.60 |
-| **Subtotal**                 | **$16.30** |
+| OpenAI Deep Research         | $3.00 |
+| Gemini Deep Research         | $2.00 |
+| Perplexity Deep Research     | $0.20 |
+| Claude Research (Sonnet)     | $2.00 |
+| MiroThinker H1               | $0.30 |
+| **Subtotal**                 | **$7.50** |
 
-### Per-fixture total (all categories, all supported settings)
+### Per-fixture grand total
 
 | Category | per-fixture |
 |---|---:|
-| Closed LLMs         | $2.22 |
-| Open LLMs           | $0.21 |
-| Search-LLMs         | $4.87 |
-| Deep Research       | $16.30 |
-| **Grand total**     | **≈ $23.60** |
+| Closed LLMs    | $0.92 |
+| Open LLMs      | $0.19 |
+| Search-LLMs    | $0.30 |
+| Agents         | $7.50 |
+| **Baseline**   | **$8.91** |
+| Format-retry buffer (~15%) | $1.34 |
+| **With buffer** | **≈ $10.25** |
 
-Add ~15 % buffer for retries, failed parses, schema-validation re-asks → **≈ $27 per fixture**.
+### Savings versus previous iterations
+
+| Iteration | per-fixture |
+|---|---:|
+| Original 6-setting × full roster | $23.60 |
+| 4-setting × full roster          | $11.41 |
+| **4-setting × flagship-only (this doc)** | **$8.91** |
+
+Cumulative reduction from the original design: **−62 %**.
 
 ---
 
-## 3. Phase totals
+## 3. Per-layer breakdown (T1 – T5)
 
-### Phase 0 — Dry run (1 non-target fixture, subset of models)
-Scope: 2 closed LLMs + 1 search LLM + 1 agent, S0/S2a/S3a only → **~$3**.
+### 3.1 Per-match call (T1 + T2 + T3 + T4 co-produced)
 
-### Phase 1 — UCL semis + final (6 prediction events)
-- SF1 leg 1, SF1 leg 2, SF2 leg 1, SF2 leg 2, Final = 5 matches.
-- Plus one "whole-tournament" pre-SF prediction (T5 only, lighter) ≈ $20.
-- 5 × $27 + $20 = **≈ $155**.
+Output token shares on a sample fully-populated JSON:
 
-### Phase 2 — World Cup 2026
+| Layer | Output tokens | Share |
+|---|---:|---:|
+| Reasoning + schema overhead | 650 | 16 % |
+| **T1** core result | 400 | 10 % |
+| **T2** player level | 1,800 | 45 % |
+| **T3** event level | 400 | 10 % |
+| **T4** tactics & stats | 400 | 10 % |
+| Formatting | 350 | 9 % |
 
-64 matches. For each we want:
-1. A **pre-tournament** prediction (once, all 64 matches in one tournament-level call — run T5 tasks, ~$40 total).
-2. A **per-match** prediction at T-1h × 64 = $27 × 64 = **$1,728**.
-3. After each round, a **re-prediction** of remaining knockouts ≈ 4 re-runs of tournament-level call = $160.
+LLM-side attribution of the per-fixture cost (~$1.41 excluding agents):
 
-Subtotal: **~$1,928**.
+| Layer | per-fixture $ |
+|---|---:|
+| Reasoning + overhead | ~$0.23 |
+| T1                    | ~$0.14 |
+| T2                    | ~$0.63 |
+| T3                    | ~$0.14 |
+| T4                    | ~$0.14 |
+| Formatting            | ~$0.13 |
+
+Agent $7.50 is not meaningfully layer-splittable (one flat-price call emits all layers).
+
+### 3.2 T5 — tournament-level calls
+
+One tournament prediction = one call per model, input ~30k, output ~8k.
+
+| Category | per tournament run |
+|---|---:|
+| Closed LLMs (4 models)           | $0.74 |
+| Open LLMs (3 models)             | $0.24 |
+| Search-LLMs (4 models, S3)       | $0.30 |
+| Agents (5 models, flat)          | $7.80 |
+| **Per tournament run**           | **≈ $9.08** |
+
+T5 frequency options (Phase 2, WC):
+
+| Option | When T5 is re-run | # runs | Phase 2 T5 cost | Δ vs default |
+|---|---|---:|---:|---:|
+| **Default** | pre-tournament + after each of 4 knockout rounds | 5 | $45.40 | — |
+| Reduced-A | pre + post-group + post-R16 + post-QF | 4 | $36.32 | −$9.08 |
+| Reduced-B | pre + post-group + post-QF | 3 | $27.24 | −$18.16 |
+| **Reduced-C (recommended)** | pre + post-group | 2 | $18.16 | −$27.24 |
+| Minimal | pre-tournament only | 1 | $9.08 | −$36.32 |
+
+The absolute savings on T5 frequency are modest (< $40) because the flagship-only roster made T5 cheap. Keep default if the budget allows — more frequent T5 snapshots are useful for measuring how well models update under new information.
+
+---
+
+## 4. Phase totals (flagship-only roster, default T5 frequency)
+
+### Phase 0 — Dry run
+One fixture, subset of models → **≈ $2**.
+
+### Phase 1 — UCL semis + final (5 matches)
+- 5 × $10.25 per-match = $51
+- 1 pre-Phase-1 T5 run (no in-phase re-runs; UCL has no group stage left) = $9
+- **Phase 1 total: ≈ $60.**
+
+### Phase 2 — World Cup (64 matches)
+- 64 × $10.25 per-match = $656
+- T5 default (5 runs): $45
+- **Phase 2 total: ≈ $701.**
 
 ### Grand totals
 
-| Phase | Estimate |
-|---|---:|
-| Phase 0 | $3 |
-| Phase 1 (UCL) | $155 |
-| Phase 2 (WC) | $1,928 |
-| Infra (API-Football Pro, Pinnacle/Betfair odds scrape) | ~$200 |
-| Buffer (20 %) | ~$460 |
-| **Total through July 2026** | **~$2,750** |
+| Bucket | Previous flagship-less | Flagship-only |
+|---|---:|---:|
+| Phase 0                | $3     | $3     |
+| Phase 1 (UCL)          | $85    | **$60** |
+| Phase 2 (WC)           | $938   | **$701** |
+| Infrastructure         | $200   | $200   |
+| Buffer (15%)           | $185   | $145   |
+| **Total through Jul 2026** | **$1,470** | **≈ $1,109** |
 
-Fidelity knobs (will *increase* cost):
-- Run each model N=3 times and average (stochastic) → 3× cost on LLMs.
-- Add a "re-predict at T-15m" round → ~1.2× cost.
-
-Cost-reduction levers are detailed in **§6**, pre-packaged tiers in **§7**.
+**Net savings from roster simplification: ~$361 (−25 %).**
 
 ---
 
-## 4. Non-API costs
+## 5. Cost-reduction levers (on top of the flagship-only baseline)
+
+| Lever | Saving per fixture | Scientific cost |
+|---|---:|---|
+| **L1** Drop OpenAI DR + Claude Research + Gemini DR (keep MiroThinker H1 + Perplexity DR) | **−$7.00** | less agent diversity |
+| **L2** Batch API (OpenAI + Anthropic, 50 % off) for S0/S1/S2 | −$0.35 | 24h turnaround (within lock window) |
+| **L3** Prompt caching (system + squads) for S1/S2 | −$0.18 | none |
+| **L4** Drop S1 for closed/open LLMs (keep S0 + S2) | −$0.37 | lose "squads-only" datapoint |
+| **L5** Tiered coverage: group stage cheap-only, knockouts full | ~$5/group-stage fixture saved | group stage uses reduced roster |
+| **L6** Self-host MiroThinker-8B | −$0.30 | operational cost only |
+| **L7** T5 Reduced-C (2 runs vs 5) | −$27 total (WC) | 3 fewer full-tournament updates |
+| **L8** Cap `max_tokens` + ≤150-word reasoning.overall | −10 % of output spend | already recommended |
+
+---
+
+## 6. Pre-packaged cost tiers (recomputed, flagship-only roster)
+
+| Tier | Levers | $/fixture | Phase 1 | Phase 2 | Infra | Buffer | **Total** |
+|---|---|---:|---:|---:|---:|---:|---:|
+| **A — Full Publication Run** (this doc's baseline) | none | $10.25 | $60  | $701 | $200 | $145 | **$1,109** |
+| **B — Economy**         | L1 + L2 + L3 + L7                | $2.70  | $25  | $195 | $200 | $70  | **$490**   |
+| **C — Focused** *(recommended)* | L1 + L2 + L3 + L4 + L7   | $2.33  | $20  | $170 | $200 | $60  | **$450**   |
+| **D — Tiered Coverage** | L1–L5 + L7                       | mixed  | $20  | $110 | $200 | $50  | **$380**   |
+| **E — Minimal Viable**  | L1–L5 + L7 + self-host           | mixed  | $15  | $80  | $200 | $45  | **$340**   |
+
+### What Tier C looks like concretely
+
+- 4 closed LLMs (GPT-5.4, Sonnet, Gemini 3 Pro, Grok 4) on S0 + S2 — batch-API, caching on.
+- 3 open LLMs on S0 + S2.
+- 4 search-LLMs on S3.
+- 2 agents on S3: MiroThinker H1 + Perplexity DR (cheap survivors).
+- T5 pre-tournament + post-group only.
+- Format validation + retries (~15 % buffer).
+- **Total ≈ $450.**
+
+### Ablation budget
+
+For the tech report, one full-grid ablation on top of Tier C:
+
+- 1 closed (Sonnet) + 1 open (R1) + 1 agent (H1) × full S0/S1/S2/S3 grid × 5 UCL + 1 sample WC group fixture ≈ **+$35**.
+
+**Recommended spend (Tier C + ablation) ≈ $485.**
+
+---
+
+## 7. Non-API costs
 
 | Item | Monthly | Notes |
 |---|---:|---|
-| API-Football Pro | $50 | 75k req/day; enough for ingest + ground truth. |
-| football-data.org | $0 | Free backup tier. |
-| GitHub Actions | $0 | Free tier fits < 90 min/fixture × few dozen runs/mo. |
+| API-Football Pro | $50 | 75k req/day. |
+| football-data.org | $0 | Free backup. |
+| GitHub Actions | $0 | Free tier. |
 | GitHub Pages | $0 | Static leaderboard. |
-| transfermarkt / FBref / FotMob | $0 | Scraped, no API. |
-| Storage (DuckDB + artifacts) | $0 | < 5 GB through season. |
-| Pinnacle / Betfair odds | $0–$30 | Free scrape or odds-API tier. |
+| transfermarkt / FBref / FotMob | $0 | Scraped. |
+| Pinnacle / Betfair odds | $0–$30 | Scrape or odds-API tier. |
 
-Total infra: **≤ $100/mo**, so ~$300 through the benchmark period.
-
----
-
-## 5. Verification plan
-
-Before Phase 1 kickoff, run a **single-fixture dry run** and log real `input_tokens`/`output_tokens` returned by each API. Replace the estimates here with actuals and re-price. Because reasoning/thinking-heavy models easily 2× the output estimate, this calibration step is load-bearing.
+Total infra: ≤ $100/mo → ≈ $200 through the benchmark window.
 
 ---
 
-## 6. Cost-reduction levers
+## 8. Verification plan
 
-Where the money goes in the $27/fixture baseline:
+Before Phase 1 kickoff, run a **single-fixture dry run at Tier C economics (~$3)** and log real `input_tokens` / `output_tokens` per API. Replace §2/§3 estimates with actuals.
 
-```
-Deep Research Agents   $16.30   ~60%   <-- #1 target
-Search-enabled LLMs    $ 4.87   ~18%
-Closed LLMs            $ 2.22   ~ 8%
-Open LLMs              $ 0.21   ~ 1%
-Tool / search overhead $ 3.40   ~13%
-```
-
-Deep Research Agents dominate. Any serious cost plan starts there.
-
-### L1 — Prune the expensive Deep Research agents
-
-Keep MiroThinker (1.7 + H1) + Perplexity Deep Research. Drop the $3–5/run trio:
-
-| Dropped | Savings per fixture |
-|---|---:|
-| OpenAI Deep Research ($6) | −$6.00 |
-| Claude Research ($5)      | −$5.00 |
-| Gemini Deep Research ($4) | −$4.00 |
-| **L1 total**              | **−$15.00** |
-
-Scientific cost: we lose diversity in the "Research Uplift" leaderboard, but MiroThinker H1 + Perplexity DR already span the open/closed axis. Acceptable for Phase 1 and group-stage Phase 2; reinstate for knockouts.
-
-**Per-fixture after L1: $12.00**. Phase 2 savings: ~$960.
-
-### L2 — Batch API (OpenAI + Anthropic, 50 % off, 24h turnaround)
-
-T-24h prediction lock is well within the 24h batch window, so we can use:
-- OpenAI Batch API: 50 % off input + output.
-- Anthropic Message Batches API: 50 % off both.
-
-Applies only to **non-search** runs (batch APIs don't allow streaming tools). Savings on closed LLM portion:
-
-| Model | per-fixture saving |
-|---|---:|
-| GPT-5 family            | −$0.11 |
-| Claude Opus/Sonnet       | −$0.80 |
-| Gemini (no batch discount equivalent) | 0 |
-| Grok                    | −$0.14 |
-| **L2 total**            | **−$1.05** |
-
-**After L1+L2: $10.95 / fixture.**
-
-### L3 — Prompt caching (Anthropic, OpenAI, Gemini)
-
-The system prompt (~1k tokens) and squads block (~5k tokens) are identical across every setting for a given fixture; the system prompt is also identical *across fixtures*. All three major vendors offer cache-read at ~10 % of full input price.
-
-Realistic savings with caching on S2a/S2b/S3a/S3b (the 4 settings that inject squads):
-
-| Vendor portion | per-fixture saving |
-|---|---:|
-| Claude (Opus+Sonnet, 4 cached settings) | −$0.35 |
-| GPT-5 family                             | −$0.08 |
-| Gemini                                   | −$0.05 |
-| **L3 total**                             | **−$0.48** |
-
-**After L1+L2+L3: $10.47 / fixture.**
-
-### L4 — Trim the Setting matrix
-
-The 6-cell matrix is for *research clarity*, not every model needs every cell. Proposed cuts:
-
-- **Closed/open LLMs**: run only **S0** and **S3a** (drop S2a). Rationale: S0 and S3a bracket the "context uplift" axis cleanly; S2a is an intermediate we can drop.
-- **Search-enabled LLMs**: run only **S3b** (drop S1 and S2b). Rationale: once search is on, the no-context setting adds little info vs. the full-context one.
-- **Deep Research Agents**: run only **S3b** (drop S1).
-
-Impact:
-
-| Category | was | now | saving |
-|---|---:|---:|---:|
-| Closed LLMs (3 → 2 settings) | $2.22 | $1.48 | −$0.74 |
-| Open LLMs (3 → 2 settings)   | $0.21 | $0.14 | −$0.07 |
-| Search-LLMs (3 → 1 setting) with L1 applied | $4.87 | $1.62 | −$3.25 |
-| Agents (2 → 1 setting) with L1 applied    | $1.30 | $0.65 | −$0.65 |
-| **L4 total**                 |       |      | **−$4.71** |
-
-Scientific cost: the "Research Uplift = S1 − S0" metric now uses S3b − S0 instead, so it blends research effect with context effect. Fine for headline numbers; for research-quality ablation, run S0/S1/S3a/S3b on **one representative pair of models** (e.g. Claude + MiroThinker) and the rest stays 2-cell.
-
-**After L1..L4: $5.76 / fixture.**
-
-### L5 — Tiered match coverage (Phase 2 only)
-
-Not every World Cup match is equally informative. Proposal:
-
-- **Knockouts (16 matches)** — full roster with L1..L4 applied: $5.76 each.
-- **Group stage (48 matches)** — "cheap-only" roster: 4 open LLMs + MiroThinker 1.7 + Perplexity DR at $0.90 each.
-
-Phase 2 match-level subtotal: 16 × $5.76 + 48 × $0.90 = $92 + $43 = **$135** (vs. $1,728 in Tier A).
-
-### L6 — Self-host MiroThinker 8B
-
-Available open-weight; with a $0.30/h GPU can serve ~2 req/s. Replaces hosted MiroThinker 1.7. Savings small in absolute dollars (~$0.15/fixture) but removes MiroMind API dependency for Phase 2 scale. Operational cost only — not recomputed in the tiers below.
-
-### L7 — Drop intermediate tournament re-predictions
-
-Current plan: full-tournament re-prediction after every round = 4 × $40 = $160.
-Reduced plan: re-predict only after group stage + after QF = 2 × $40 = $80. Saving: **−$80**.
-
-### L8 — Cap output tokens + suppress redundant reasoning
-
-For thinking-native models (Claude Opus, DeepSeek-R1, Gemini 2.5 Pro "thinking"), `reasoning` field in the JSON output often duplicates 2–3k tokens of internal thinking. Cap `max_tokens=4096` and ask for ≤150-word `reasoning`. Realistic saving: ~15 % of output-token spend on thinking-native models. Already assumed in baseline; call out as "do not relax."
-
-### L9 — Reduce model count to one flagship per vendor
-
-Drop `gpt-5-mini` (keep GPT-5), `gemini-2.5-flash` (keep Pro), `claude-opus-4-7` (keep Sonnet for plain-LLM; keep Opus only for search if kept at all). Saves diversity but also correlated-error checking. Per-fixture saving ~$1.10, but harder to justify for research value. Optional lever; not bundled into default tiers.
+A ready-to-use dry run exists: `scripts/dryrun_bayern_madrid.sh` — a completed UCL QF fixture used only to exercise the pipeline (leakage does not matter for dry-runs).
 
 ---
 
-## 7. Pre-packaged cost tiers
+## 9. Recommended path
 
-| Tier | Levers applied | $ / fixture (full roster) | Phase 1 | Phase 2 | Infra | Buffer | **Total** |
-|---|---|---:|---:|---:|---:|---:|---:|
-| **A — Full Publication Run** (as designed)           | —                  | $27.00 | $155  | $1,928 | $200 | $460 | **$2,750** |
-| **B — Economy**                                        | L1 + L2 + L3       | $10.47 | $75   | $710   | $200 | $200 | **$1,190** |
-| **C — Focused** *(recommended)*                        | L1..L4 + L7        | $ 5.76 | $45   | $215   | $200 | $90  | **$550**   |
-| **D — Tiered Coverage**                                | L1..L5 + L7        | mixed  | $45   | $135   | $200 | $75  | **$460**   |
-| **E — Minimal Viable**                                 | L1..L5 + L7 + L9   | mixed  | $30   | $90    | $200 | $60  | **$380**   |
+1. **Now**: `scripts/dryrun_bayern_madrid.sh` — validate pipeline (~$2).
+2. **Phase 1 (UCL, end April – May 2026)**: Tier C (~$20/match).
+3. **Pre-Phase-2 checkpoint**: review actuals, stay on C or drop to D.
+4. **Phase 2 (WC, June 2026)**: Tier C or D across all 64 matches.
+5. Stretch: re-run the 5 UCL matches + WC final at Tier A for the technical report.
 
-Phase 1 figures assume all 5 UCL matches use the full roster (no tiered coverage for such a small set).
-
-### What each tier actually looks like
-
-**Tier C (recommended)** — our default "ship it" configuration:
-
-- 7 closed LLMs on S0 + S3a (batch-API, cached).
-- 4 open LLMs on S0 + S3a.
-- 4 search-LLMs on S3b only (Opus-search dropped).
-- 3 Deep Research agents on S3b only: MiroThinker 1.7, MiroThinker H1, Perplexity DR.
-- Full tournament re-prediction only after group stage and after QF.
-- **3 leaderboards preserved**; Research Uplift computed as S3b − S3a on matched models.
-- Scientific ablation (S0/S1/S2a/S2b/S3a/S3b full grid) run on **one closed + one open + one agent** = 3 models × 6 settings × 5 UCL matches + one sample WC group-stage fixture ≈ +$80 on top.
-- **Total ≈ $550 + $80 = $630.**
-
-**Tier D (tiered coverage)** — cut group-stage rigor:
-
-- Tier C for all 5 UCL matches and all 16 WC knockouts.
-- Group stage (48 matches): open LLMs + MiroThinker 1.7 + Perplexity DR only, ~$0.90 each.
-- Still produces a full 64-match leaderboard; group stage rankings carry a "cheap-roster" badge.
-- **Total ≈ $460.**
-
-**Tier E (minimal viable)** — if budget really tight:
-
-- One flagship per vendor (GPT-5, Claude Sonnet, Gemini Pro, DeepSeek R1, Qwen3, Llama4, Grok).
-- Two search-LLMs: Gemini-search + Perplexity Sonar.
-- Two agents: MiroThinker H1 + Perplexity DR.
-- S0 + S3a for non-search, S3b for search. No re-predictions beyond post-group.
-- Knockouts full, group stage cheap-only.
-- **Total ≈ $380.**
-
-### Sanity check: what's the floor?
-
-An *absolute floor* keeping the benchmark meaningful would be:
-- 1 flagship LLM (GPT-5 or Claude Sonnet) on S0 + S3a.
-- 1 search-LLM (Perplexity Sonar) on S3b.
-- 1 Deep Research agent (MiroThinker H1) on S3b.
-- All 5 UCL matches + only WC knockouts (16 matches) + 1 pre-tournament run.
-
-Per-fixture cost: ~$1.80. Total: 21 × $1.80 + $40 = **$78**. Plus $200 infra = **~$280**. This is roughly the lower bound of a publishable benchmark; below this we lose the "many models, many settings" story.
-
----
-
-## 8. Recommended path
-
-1. **Now**: Phase 0 dry-run at **Tier C economics** (~$5 to validate pipeline on one fixture).
-2. **Phase 1 (UCL)**: run at **Tier C** to get real data and refine prices (~$45).
-3. **Decide for Phase 2**: pick Tier C vs. Tier D based on Phase 1 actual costs.
-   - If Phase 1 comes in under estimate, go Tier C across all 64 matches.
-   - If it overshoots, drop to Tier D.
-4. Keep Tier A as a **stretch goal** for the final technical report, re-running the 5 UCL matches + the WC final at full roster so we have one apples-to-apples slice for the paper.
-
-Net: the benchmark is publishable at **$380–$630** (Tier C or D). Tier A's $2,750 is a "reviewer-proof completeness" number, not a required spend.
+**Recommended total for a publishable benchmark: ~$450 (Tier C + ablation $485), down from the $2,750 of the original design — 82 % cost reduction.**

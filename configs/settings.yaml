@@ -1,12 +1,22 @@
-# WorldCupBench — Setting matrix
+# WorldCupBench — Setting matrix (simplified, 2026-04-17)
 #
-# Each Setting is a distinct (context, tool-access) combination that a model runs under.
-# Dimension A: how much prior info is injected into the prompt.
-# Dimension B: whether the model may call external tools (web search / deep research).
+# Four settings:
+#   S0   no info,       no tools   -> closed/open LLMs (pure prior)
+#   S1   + squads,      no tools   -> closed/open LLMs (context uplift, minimal)
+#   S2   + full context, no tools  -> closed/open LLMs (context uplift, max)
+#   S3   no info,       tools on   -> search-LLMs + deep-research agents
+#
+# Rationale:
+#   - S0/S1/S2 isolate the effect of injected context on LLM reasoning.
+#   - S3 isolates the effect of self-directed retrieval by agents.
+#   - Dropping S2b/S3b (tools × context) cuts cost without losing any of the two
+#     research questions we actually want to answer (context uplift, research uplift).
+#   - "Research Uplift" is redefined as S3 (agent) minus S2 (LLM with same context
+#     a human researcher would have assembled).
 
 settings:
   S0:
-    description: No information. Prompt contains only match identifier and task schema.
+    description: No information. Prompt contains only fixture header + schema. No tools.
     tools_allowed: false
     inject:
       fixture_header: true
@@ -16,16 +26,6 @@ settings:
       stats: false
 
   S1:
-    description: Same as S0, but web/research tools are allowed.
-    tools_allowed: true
-    inject:
-      fixture_header: true
-      squads: false
-      recent_form: false
-      news_headlines: false
-      stats: false
-
-  S2a:
     description: Provide official 23-man squads + basic player info. No tools.
     tools_allowed: false
     inject:
@@ -35,17 +35,7 @@ settings:
       news_headlines: false
       stats: false
 
-  S2b:
-    description: S2a + tools allowed (model may augment squad info via search).
-    tools_allowed: true
-    inject:
-      fixture_header: true
-      squads: true
-      recent_form: false
-      news_headlines: false
-      stats: false
-
-  S3a:
+  S2:
     description: Full context pack (squads + recent form + news headlines + stats). No tools.
     tools_allowed: false
     inject:
@@ -55,20 +45,22 @@ settings:
       news_headlines: true
       stats: true
 
-  S3b:
-    description: S3a + tools allowed.
+  S3:
+    description: No injected info, tools allowed (web search, deep research).
     tools_allowed: true
     inject:
       fixture_header: true
-      squads: true
-      recent_form: true
-      news_headlines: true
-      stats: true
+      squads: false
+      recent_form: false
+      news_headlines: false
+      stats: false
 
-# Runtime policy applied to all settings
 policy:
   prediction_lock_hours_before_kickoff: 1
   result_fetch_grace_hours: 24
-  leakage_audit: true        # check sources[].accessed_at against lock time
+  leakage_audit: true
   require_probabilities: true
   require_reasoning: true
+  # Format validation: orchestrator will schema-check and retry up to N times.
+  max_format_retries: 2
+  probability_sum_tolerance: 0.01
