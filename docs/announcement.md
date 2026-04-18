@@ -1,8 +1,8 @@
-# Introducing WorldCupBench
+# Introducing WorldCupArena
 
 **Can GPT-5, Claude Opus 4.7, or MiroThinker H1 pick this week's Champions League semi-final?**
 
-WorldCupBench is a new public benchmark that puts frontier LLMs and deep-research agents against real, future football matches — starting with the UEFA Champions League 2025-26 semi-finals in late April, and scaling up to the full 2026 FIFA World Cup this June.
+WorldCupArena is a new public benchmark that puts frontier LLMs and deep-research agents against real, future football matches — starting with the UEFA Champions League 2025-26 semi-finals in late April, and scaling up to the full 2026 FIFA World Cup this June.
 
 ## The task
 
@@ -49,4 +49,4 @@ Contributions welcome — wiring up a new model is one file in `src/runners/`.
 - **2026-06-11 → 07-19**: 64 matches, round-by-round re-prediction.
 - **2026-08**: Final write-up + technical report.
 
-Follow progress at `docs/leaderboard/`. PRs at [github.com/…/WorldCupBench].
+Follow progress at `docs/leaderboard/`. PRs at [github.com/…/WorldCupArena].

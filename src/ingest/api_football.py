@@ -55,7 +55,7 @@ class APIFootballClient:
 
 def normalize_to_truth(event_resp: dict, lineup_resp: dict, stats_resp: dict,
                        fixture_meta: dict) -> dict[str, Any]:
-    """Collapse API-Football responses into a WorldCupBench `truth.json` shape."""
+    """Collapse API-Football responses into a WorldCupArena `truth.json` shape."""
     goals, subs, cards, own_goals, penalties = [], [], [], [], []
     for ev in event_resp.get("response", []):
         t = ev.get("type")

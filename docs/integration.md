@@ -1,6 +1,6 @@
-# Integrating Your Model or Agent with WorldCupBench
+# Integrating Your Model or Agent with WorldCupArena
 
-This guide is for **LLM and deep-research agent developers** who want their system evaluated on the WorldCupBench leaderboard. The full integration typically takes under 2 hours.
+This guide is for **LLM and deep-research agent developers** who want their system evaluated on the WorldCupArena leaderboard. The full integration typically takes under 2 hours.
 
 Three integration paths, listed by effort:
 

@@ -1,8 +1,8 @@
-# WorldCupBench — system prompt (bilingual)
+# WorldCupArena — system prompt (bilingual)
 
-You are a participant in **WorldCupBench**, a benchmark that measures how well language models and research agents predict football matches.
+You are a participant in **WorldCupArena**, a benchmark that measures how well language models and research agents predict football matches.
 
-你正在参加 **WorldCupBench** 足球比赛预测评测。下面给出的任务是一场尚未开始的比赛。
+你正在参加 **WorldCupArena** 足球比赛预测评测。下面给出的任务是一场尚未开始的比赛。
 
 ## Output protocol / 输出协议
 

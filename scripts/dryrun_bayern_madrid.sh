@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ---------------------------------------------------------------------------
-# WorldCupBench dry-run — Bayern vs Real Madrid (UCL 25/26 QF leg 2)
+# WorldCupArena dry-run — Bayern vs Real Madrid (UCL 25/26 QF leg 2)
 #
 # Purpose: exercise the full lock -> predict -> grade -> leaderboard pipeline
 # on a fixture whose result is already known. Result leakage does NOT matter
@@ -37,7 +37,7 @@ DRYRUN_MODELS="${DRYRUN_MODELS:-deepseek-r1}"
 PARALLEL="${PARALLEL:-4}"
 
 echo "============================================================"
-echo " WorldCupBench dry-run: Real Madrid vs Bayern (UCL QF L2)"
+echo " WorldCupArena dry-run: Real Madrid vs Bayern (UCL QF L2)"
 echo "   fixture:      $FIXTURE"
 echo "   models:       $DRYRUN_MODELS"
 echo "   parallel:     $PARALLEL"
@@ -64,7 +64,7 @@ MODELS_CFG="configs/models.yaml"
 ORIG_MODELS="$MODELS_CFG"
 FILTERED_MODELS=""
 if [[ "$DRYRUN_MODELS" != "all" ]]; then
-  FILTERED_MODELS="$(mktemp -t worldcupbench_models.XXXX.yaml)"
+  FILTERED_MODELS="$(mktemp -t worldcuparena_models.XXXX.yaml)"
   python3 - "$ORIG_MODELS" "$FILTERED_MODELS" "$DRYRUN_MODELS" <<'PY'
 import sys, yaml
 src, dst, keep_csv = sys.argv[1], sys.argv[2], sys.argv[3]

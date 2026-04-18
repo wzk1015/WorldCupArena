@@ -1,4 +1,4 @@
-# WorldCupBench — Technical Report
+# WorldCupArena — Technical Report
 
 *Draft, 2026-04-17. Replaced with empirical results at end of Phase 1 and Phase 2.*
 
@@ -12,12 +12,12 @@ Three gaps in current LLM benchmarks:
 2. **Single-source reasoning.** Tool-use benchmarks usually provide one clean source. Real deep-research spans heterogeneous sources that disagree (official lineups, rumour-mill news, odds, stats).
 3. **Subjective evaluation.** Long-form evaluation relies on LLM-as-judge or human rating. Football produces **objective, high-dimensional ground truth** on a predictable calendar.
 
-WorldCupBench operationalises "deep research for prediction" with quantitative metrics at five granularities (match outcome → event-level → stats).
+WorldCupArena operationalises "deep research for prediction" with quantitative metrics at five granularities (match outcome → event-level → stats).
 
 ## 2. Related work
 
 - **Sports-forecasting literature**: Constantinou & Fenton (Bayesian nets for football), 538's SPI/Club SPI, Dixon–Coles Poisson models. We borrow Brier/RPS as our primary probability scoring rule.
-- **LLM agent benchmarks**: GAIA, BrowseComp, AssistantBench. BrowseComp, in particular, measures retrieval-heavy tasks; WorldCupBench extends that to **temporal**, **multi-event** forecasting where the answer is only revealed in the future.
+- **LLM agent benchmarks**: GAIA, BrowseComp, AssistantBench. BrowseComp, in particular, measures retrieval-heavy tasks; WorldCupArena extends that to **temporal**, **multi-event** forecasting where the answer is only revealed in the future.
 - **MiroThinker** (MiroMind, 2026) reports 74.0 / 88.2 on BrowseComp and BrowseComp-ZH at ~$0.07/call; we include it as a strong low-cost deep-research baseline.
 
 ## 3. Task taxonomy

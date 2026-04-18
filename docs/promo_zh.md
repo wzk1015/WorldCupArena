@@ -1,4 +1,4 @@
-# WorldCupBench — 中文宣传文案合集
+# WorldCupArena — 中文宣传文案合集
 
 三版口径，按渠道调性撰写。所有数字口径与 [docs/cost_estimate.md](cost_estimate.md) 保持一致。发布前请替换 `<占位>` 项（项目链接、二维码、首页地址、作者 handle 等）。
 
@@ -9,7 +9,7 @@
 **标题建议**（选一）：
 - 用世界杯测 AI：我们给 20 个大模型和深度研究 Agent 办了一场预测大赛
 - 2026 世界杯来了，GPT-5.4、Claude、Gemini 和 MiroThinker 谁更懂球？
-- 第一个用真实足球赛事衡量 LLM 与 Agent 的基准：WorldCupBench
+- 第一个用真实足球赛事衡量 LLM 与 Agent 的基准：WorldCupArena
 
 **正文**：
 
@@ -25,7 +25,7 @@
 - 评分是**客观的**：90 分钟后所有答案揭晓，想赖都赖不掉；
 - 结构是**分层丰富的**：一场比赛同时产出 1X2、比分分布、首发、进球时间、拦截数、最终冠军 …… 从一场球里能拿到上百个独立评价信号。
 
-于是我们做了 **WorldCupBench**：一个用真实足球赛事评测 LLM 与深度研究 Agent 的开源基准。
+于是我们做了 **WorldCupArena**：一个用真实足球赛事评测 LLM 与深度研究 Agent 的开源基准。
 
 ### 怎么测
 
@@ -75,7 +75,7 @@
 
 ```bash
 git clone <占位-项目地址>
-cd WorldCupBench && pip install -r requirements.txt
+cd WorldCupArena && pip install -r requirements.txt
 cp .env.example .env && <填一个 API key>
 
 bash scripts/dryrun_bayern_madrid.sh   # 拜仁皇马 dry-run，几分钱跑完
@@ -99,16 +99,16 @@ bash scripts/dryrun_bayern_madrid.sh   # 拜仁皇马 dry-run，几分钱跑完
 ## B. 朋友圈版（短文案 · 约 80 字 × 4 选一）
 
 **候选 1（正式款）**
-> 做了一个叫 WorldCupBench 的事：用 2026 世界杯 + 欧冠，真刀真枪评测 GPT-5.4 / Claude / Gemini / MiroThinker 这些 LLM 和 Deep Research Agent 谁更会预测足球。三张榜、五层任务、泄漏审计全开源。接入欢迎、赞助感激、围观热烈欢迎。<占位-项目链接>
+> 做了一个叫 WorldCupArena 的事：用 2026 世界杯 + 欧冠，真刀真枪评测 GPT-5.4 / Claude / Gemini / MiroThinker 这些 LLM 和 Deep Research Agent 谁更会预测足球。三张榜、五层任务、泄漏审计全开源。接入欢迎、赞助感激、围观热烈欢迎。<占位-项目链接>
 
 **候选 2（感性款）**
-> 拿真实的足球比赛来测 AI——因为足球不会说谎，而模型会。WorldCupBench：LLM vs. Agent，看看"自己上网查"到底比"我们喂资料"强多少。欢迎来围观，也欢迎把你的模型挂上来。<占位-项目链接>
+> 拿真实的足球比赛来测 AI——因为足球不会说谎，而模型会。WorldCupArena：LLM vs. Agent，看看"自己上网查"到底比"我们喂资料"强多少。欢迎来围观，也欢迎把你的模型挂上来。<占位-项目链接>
 
 **候选 3（戏谑款）**
-> 我给 GPT、Claude、Gemini、DeepSeek、MiroThinker 办了个世界杯预测比赛，发现它们比我还懂球。预测值公开锁哈希，怕不怕？WorldCupBench 开源中：<占位-项目链接>
+> 我给 GPT、Claude、Gemini、DeepSeek、MiroThinker 办了个世界杯预测比赛，发现它们比我还懂球。预测值公开锁哈希，怕不怕？WorldCupArena 开源中：<占位-项目链接>
 
 **候选 4（招募款）**
-> 做了一个 AI 预测足球的公开基准 WorldCupBench，欢迎 LLM / Agent 厂商把自家模型挂上榜（10 分钟 YAML 配置就够），也欢迎赞助一点 API 额度助攻世界杯期间的全量评测。链接：<占位>
+> 做了一个 AI 预测足球的公开基准 WorldCupArena，欢迎 LLM / Agent 厂商把自家模型挂上榜（10 分钟 YAML 配置就够），也欢迎赞助一点 API 额度助攻世界杯期间的全量评测。链接：<占位>
 
 ---
 
@@ -130,7 +130,7 @@ bash scripts/dryrun_bayern_madrid.sh   # 拜仁皇马 dry-run，几分钱跑完
 ✅ 赔率最近一小时往哪边移
 …… 而且**比赛一结束马上就知道你说对没说对** 🤡
 
-于是就做了一个叫 **WorldCupBench** 的开源基准🏟️：
+于是就做了一个叫 **WorldCupArena** 的开源基准🏟️：
 
 🎯 **测谁**
 - 闭源：GPT-5.4、Claude Sonnet 4.6、Gemini 3 Pro、Grok 4
@@ -168,7 +168,7 @@ GitHub 在主页置顶🔗｜接入文档见 `docs/integration.md`
 ## 发布清单（checklist）
 
 - [ ] 替换所有 `<占位>` 为真实链接
-- [ ] 公众号版配首图（logo + "WorldCupBench × 2026 WC" 字样，生成 prompt 见 [docs/logo_prompt.md](logo_prompt.md)）
+- [ ] 公众号版配首图（logo + "WorldCupArena × 2026 WC" 字样，生成 prompt 见 [docs/logo_prompt.md](logo_prompt.md)）
 - [ ] 朋友圈版选 1 条，配 1 张 logo 图或榜单截图
 - [ ] 小红书版封面生成：navy 背景 + 白色描边足球 + 绿色胜率柱，使用与 logo 一致的品牌色
 - [ ] 首发同步：公众号 → 朋友圈 → 小红书 → X/Twitter（英文版另起）

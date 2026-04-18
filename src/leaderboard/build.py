@@ -57,7 +57,7 @@ def aggregate(rows: list[dict]) -> dict:
 
 def write_markdown(agg: dict) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    lines = ["# WorldCupBench Leaderboard", "",
+    lines = ["# WorldCupArena Leaderboard", "",
              "## Main (higher = better, 0–100 composite)", "",
              "| Rank | Model | Composite | N |", "|---|---|---|---|"]
     for i, r in enumerate(agg["main"], 1):

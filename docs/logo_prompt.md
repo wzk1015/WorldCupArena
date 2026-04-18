@@ -1,4 +1,4 @@
-# WorldCupBench — Logo Prompt (Nano Banana Pro)
+# WorldCupArena — Logo Prompt (Nano Banana Pro)
 
 Paste the prompt below directly into **Gemini 3 Pro Image / Nano Banana Pro**. Aspect ratio 1:1. Request four variants, pick the strongest, then ask for a "clean vector-style cleanup, no photographic artifacts" as a follow-up turn.
 
@@ -7,7 +7,7 @@ Paste the prompt below directly into **Gemini 3 Pro Image / Nano Banana Pro**. A
 ## Primary prompt (EN)
 
 ```
-Flat vector logo for an AI research benchmark named "WorldCupBench".
+Flat vector logo for an AI research benchmark named "WorldCupArena".
 
 Central composition:
 - A clean geometric soccer ball (hexagon + pentagon pattern) fused with a
@@ -25,7 +25,7 @@ Color palette:
   electric green (#00E676) — evokes the pitch + "correct prediction."
 
 Typography (optional wordmark version):
-- "WorldCupBench" in a geometric sans-serif (Inter / Space Grotesk feel),
+- "WorldCupArena" in a geometric sans-serif (Inter / Space Grotesk feel),
   tight letter-spacing, positioned to the right of the mark, baseline
   aligned with the ball center.
 - Subtitle micro-text: "LLM · Agent · Football" in 30% opacity white,
@@ -42,7 +42,7 @@ Style constraints:
 Deliverables in one image set:
 1. Icon only, square, transparent background.
 2. Icon only, square, navy background.
-3. Horizontal wordmark (icon + "WorldCupBench"), navy background.
+3. Horizontal wordmark (icon + "WorldCupArena"), navy background.
 4. Monochrome white version (for dark surfaces).
 
 Avoid: trophies, confetti, stadium silhouettes, overly bright rainbows,
@@ -87,7 +87,7 @@ harder to read at favicon size — use only for hero images.
 ## Prompt (中文，直接喂给 nano banana pro)
 
 ```
-为一个名叫 "WorldCupBench" 的 AI 研究基准项目设计扁平矢量 logo。
+为一个名叫 "WorldCupArena" 的 AI 研究基准项目设计扁平矢量 logo。
 
 核心图形：
 - 一个几何风足球（六边形+五边形拼接），在球体的右下方长出三根
@@ -103,7 +103,7 @@ harder to read at favicon size — use only for hero images.
   ——既代表草坪，又代表"预测正确"。
 
 字体（如需文字版）：
-- "WorldCupBench" 使用几何无衬线体（接近 Inter / Space Grotesk），
+- "WorldCupArena" 使用几何无衬线体（接近 Inter / Space Grotesk），
   字距紧凑，置于图形右侧，基线与球心对齐。
 - 下方小字副标题 "LLM · Agent · Football"，白色 30% 透明度，全大写，
   字距拉宽。

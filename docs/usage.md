@@ -1,4 +1,4 @@
-# WorldCupBench — Usage Guide
+# WorldCupArena — Usage Guide
 
 This is the "how do I actually run it" document. Everything else (why, what we measure, cost) is in the [README](../README.md) and [docs/cost_estimate.md](cost_estimate.md).
 
@@ -12,7 +12,7 @@ This is the "how do I actually run it" document. Everything else (why, what we m
 - ~5 minutes
 
 ```bash
-git clone <repo-url> WorldCupBench && cd WorldCupBench
+git clone <repo-url> WorldCupArena && cd WorldCupArena
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
@@ -120,7 +120,7 @@ python -m src.pipeline.orchestrator leaderboard
 Easiest: comment out the entries you don't want in [configs/models.yaml](../configs/models.yaml), or maintain a private copy and pass it in via:
 
 ```bash
-WORLDCUPBENCH_MODELS_YAML=configs/models.mine.yaml \
+WORLDCUPARENA_MODELS_YAML=configs/models.mine.yaml \
   python -m src.pipeline.orchestrator predict --fixture ...
 ```
 

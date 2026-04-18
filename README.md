@@ -1,4 +1,4 @@
-# WorldCupBench
+# WorldCupArena
 
 Benchmarking LLMs and deep-research agents on real-world football prediction — from the tactical "who scores in minute 67" to the strategic "who wins the World Cup."
 

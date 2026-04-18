@@ -1,4 +1,4 @@
-# WorldCupBench — Cost Estimate
+# WorldCupArena — Cost Estimate
 
 All prices are **approximations as of 2026-04** and should be verified against each vendor's current page before a large run. Figures assume USD.
 
