@@ -1,12 +1,13 @@
 # Per-match prediction task template
 #
 # Variables rendered by src/pipeline/prompt_build.py:
-#   {{fixture_header}}   always present
-#   {{squads_block}}     only if setting.inject.squads
-#   {{recent_form_block}}  only if setting.inject.recent_form
-#   {{news_block}}       only if setting.inject.news_headlines
-#   {{stats_block}}      only if setting.inject.stats
-#   {{schema}}           JSON schema (compacted)
+#   {{fixture_header}}      always present
+#   {{squads_block}}        only if setting.inject.squads          (S1)
+#   {{recent_form_block}}   only if setting.inject.recent_form     (S1)
+#   {{news_block}}          only if setting.inject.news_headlines  (S1)
+#   {{stats_block}}         only if setting.inject.stats           (S1)
+#   {{search_guidance_block}}  only if setting.inject.search_guidance  (S2)
+#   {{schema}}              JSON schema (compacted)
 
 ## Fixture
 
@@ -19,6 +20,8 @@
 {{news_block}}
 
 {{stats_block}}
+
+{{search_guidance_block}}
 
 ## Task
 

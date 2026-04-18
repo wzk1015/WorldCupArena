@@ -1,42 +1,26 @@
-# WorldCupArena — Setting matrix (simplified, 2026-04-17)
+# WorldCupArena — Setting matrix (simplified, 2026-04-18)
 #
-# Four settings:
-#   S0   no info,       no tools   -> closed/open LLMs (pure prior)
-#   S1   + squads,      no tools   -> closed/open LLMs (context uplift, minimal)
-#   S2   + full context, no tools  -> closed/open LLMs (context uplift, max)
-#   S3   no info,       tools on   -> search-LLMs + deep-research agents
+# Two settings:
+#   S1   full context injected, no tools  -> closed / open LLMs
+#   S2   tools on, self-directed search   -> search-LLMs + deep-research agents
 #
 # Rationale:
-#   - S0/S1/S2 isolate the effect of injected context on LLM reasoning.
-#   - S3 isolates the effect of self-directed retrieval by agents.
-#   - Dropping S2b/S3b (tools × context) cuts cost without losing any of the two
-#     research questions we actually want to answer (context uplift, research uplift).
-#   - "Research Uplift" is redefined as S3 (agent) minus S2 (LLM with same context
-#     a human researcher would have assembled).
+#   - S1 measures what an LLM can do when given the same evidence a human analyst
+#     would assemble (squads + recent form + news headlines + stats). No tool use.
+#   - S2 measures what a tool-using model/agent can do on its own: it's told what
+#     kinds of evidence to gather (with short concrete examples) and is free to
+#     search for more. No context is pre-injected.
+#   - Earlier drafts also had "no info, no tools" and "no info, no prompt guidance"
+#     settings; both were dropped because they answered questions we don't care
+#     about (pure prior / unprompted retrieval).
+#   - "Research uplift" is now defined as S2 (tool-using agent) minus S1 (best-case
+#     context-fed LLM of the same provider, where comparable).
 
 settings:
-  S0:
-    description: No information. Prompt contains only fixture header + schema. No tools.
-    tools_allowed: false
-    inject:
-      fixture_header: true
-      squads: false
-      recent_form: false
-      news_headlines: false
-      stats: false
-
   S1:
-    description: Provide official 23-man squads + basic player info. No tools.
-    tools_allowed: false
-    inject:
-      fixture_header: true
-      squads: true
-      recent_form: false
-      news_headlines: false
-      stats: false
-
-  S2:
-    description: Full context pack (squads + recent form + news headlines + stats). No tools.
+    description: >-
+      Full context pack injected (official squads + recent form + ~20 news
+      headlines + recent stats). No tools.
     tools_allowed: false
     inject:
       fixture_header: true
@@ -44,9 +28,13 @@ settings:
       recent_form: true
       news_headlines: true
       stats: true
+      search_guidance: false
 
-  S3:
-    description: No injected info, tools allowed (web search, deep research).
+  S2:
+    description: >-
+      Tools enabled. Prompt instructs the model/agent to self-search for squads,
+      recent form, news, and stats (with short examples of each) and to pull any
+      additional evidence it thinks useful. No context is pre-injected.
     tools_allowed: true
     inject:
       fixture_header: true
@@ -54,6 +42,7 @@ settings:
       recent_form: false
       news_headlines: false
       stats: false
+      search_guidance: true
 
 policy:
   prediction_lock_hours_before_kickoff: 1

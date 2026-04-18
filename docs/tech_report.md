@@ -65,11 +65,14 @@ Unmatched predicted events incur a flat 30-minute penalty. Final score = `max(0,
 - **Bracket score** with round weights `1, 2, 4, 8, 16` for R16, QF, SF, F, Champion.
 - **nDCG@3** for top-scorer predictions.
 
-## 5. Settings (S0 – S3b)
+## 5. Settings (S1, S2)
 
-Two orthogonal dimensions: *prior info injected* (none / squads / full context pack) × *tool access* (off / on). Six cells.
+Two settings, one per family of model:
 
-Running the same model across S0 / S1 gives us the **Research Uplift** (how much the model benefits from being allowed to search). Running across S2a / S3a gives us the **Context Uplift** (how much structured context replaces self-directed retrieval). These are the two main scientific questions of the benchmark.
+- **S1** — plain LLM with the full context pack injected into the prompt: official 23-man squads, recent form (last ~10 matches per side), up to 20 pre-match news headlines from trusted sources, and recent stats aggregates. Tools off. Measures what an LLM can do when given the same evidence a human analyst would assemble.
+- **S2** — search-enabled LLM or deep-research agent with tools on. The prompt tells the model what kinds of evidence to gather (squads / form / news / stats), shows one short worked example of each (drawn from the fixture's `context_pack` when available), and explicitly invites it to pull any additional evidence it thinks would sharpen the forecast. No context is pre-injected. Measures what a tool-using model/agent can do on its own.
+
+The **Research Uplift** is defined as S2 − S1 for comparable model pairs (same base model in both its LLM and tool-using variants, e.g. Claude Sonnet vs Claude Sonnet + web_search). Earlier drafts of this report also had "no info, no tools" and "tools, no prompt guidance" cells; both were dropped because they answered questions we are not trying to measure (pure prior / unprompted retrieval).
 
 ## 6. Probability elicitation
 
@@ -113,7 +116,7 @@ We considered also running a "date-constrained" search tool, but most provider A
 
 ## 11. Threats to validity
 
-- **Popular fixtures bias**: LLMs will know more about Real Madrid than Auckland City. We partially control by also reporting **relative** gains (S1 vs S0).
+- **Popular fixtures bias**: LLMs will know more about Real Madrid than Auckland City. We partially control by also reporting **relative** gains (S2 vs S1 on a same-base-model pair).
 - **Bookmaker as baseline**: Pinnacle closing odds incorporate market-aggregate information — beating them consistently is very hard. We report "Above-Market" as a separate, harder-to-beat leaderboard.
 - **Prompt sensitivity**: small prompt changes can swing scores by several points. We fix the prompt templates in `prompts/` and report the exact SHA of the prompt file alongside each run.
 - **Model-version drift**: vendors silently update models. We record model version strings and API response metadata to be able to flag this.

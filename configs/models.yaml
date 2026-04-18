@@ -10,139 +10,168 @@
 #   search_llm           : LLMs with built-in web_search tool enabled
 #   deep_research_agent  : multi-step research agents
 #
-# Setting coverage:
-#   closed_llm / open_llm -> [S0, S1, S2]   (no-tool; vary injected context)
-#   search_llm            -> [S3]            (tools on)
-#   deep_research_agent   -> [S3]            (tools on)
+# Setting coverage (simplified 2026-04-18 to 2 settings):
+#   closed_llm / open_llm -> [S1]   (no tools; full context pack injected)
+#   search_llm            -> [S2]   (tools on; model self-searches with guidance)
+#   deep_research_agent   -> [S2]   (tools on; agent self-searches with guidance)
+#
+# base_url / base_url_env:
+#   `base_url` is the provider's official endpoint (used by default).
+#   `base_url_env` names an env var that, if set and non-empty, OVERRIDES `base_url`
+#   at runtime — use this to route through a 中转/proxy without touching this file.
 
 closed_llm:
-  - id: gpt-5.4
+  # - id: gpt-5.4
+  #   provider: openai
+  #   model: gpt-5.4
+  #   api_key_env: OPENAI_API_KEY
+  #   base_url_env: OPENAI_BASE_URL
+  #   base_url: https://api.openai.com/v1
+  #   price_per_mtok: { input: 3.00, output: 12.00 }
+  #   settings_supported: [S1]
+  - id: gpt-5.4-mini
     provider: openai
-    model: gpt-5.4
+    model: gpt-5.4-mini
     api_key_env: OPENAI_API_KEY
-    base_url: null                      # e.g. "https://api.openai-proxy.com/v1" for 中转
+    base_url_env: OPENAI_BASE_URL
+    base_url: https://api.openai.com/v1
     price_per_mtok: { input: 3.00, output: 12.00 }
-    settings_supported: [S0, S1, S2]
-  - id: claude-sonnet-4-6
-    provider: anthropic
-    model: claude-sonnet-4-6
-    api_key_env: ANTHROPIC_API_KEY
-    base_url: null
-    price_per_mtok: { input: 3.00, output: 15.00 }
-    settings_supported: [S0, S1, S2]
-  - id: gemini-3-pro
-    provider: google
-    model: gemini-3-pro
-    api_key_env: GOOGLE_API_KEY
-    base_url: null
-    price_per_mtok: { input: 2.00, output: 8.00 }
-    settings_supported: [S0, S1, S2]
-  - id: grok-4
-    provider: xai
-    model: grok-4
-    api_key_env: XAI_API_KEY
-    base_url: null
-    price_per_mtok: { input: 3.00, output: 15.00 }
-    settings_supported: [S0, S1, S2]
-  # Dropped from default roster (2026-04-18): gpt-5.4-mini, claude-opus-4-7, gemini-3-flash.
-  # Re-add by uncommenting and keeping the same schema.
+    settings_supported: [S1]
+#   - id: claude-sonnet-4-6
+#     provider: anthropic
+#     model: claude-sonnet-4-6
+#     api_key_env: ANTHROPIC_API_KEY
+#     base_url_env: ANTHROPIC_BASE_URL
+#     base_url: https://api.anthropic.com
+#     price_per_mtok: { input: 3.00, output: 15.00 }
+#     settings_supported: [S1]
+#   - id: gemini-3-pro
+#     provider: google
+#     model: gemini-3-pro
+#     api_key_env: GOOGLE_API_KEY
+#     base_url_env: GOOGLE_BASE_URL
+#     base_url: https://generativelanguage.googleapis.com/v1beta
+#     price_per_mtok: { input: 2.00, output: 8.00 }
+#     settings_supported: [S1]
+#   - id: grok-4
+#     provider: xai
+#     model: grok-4
+#     api_key_env: XAI_API_KEY
+#     base_url_env: XAI_BASE_URL
+#     base_url: https://api.x.ai/v1
+#     price_per_mtok: { input: 3.00, output: 15.00 }
+#     settings_supported: [S1]
+#   # Dropped from default roster (2026-04-18): gpt-5.4-mini, claude-opus-4-7, gemini-3-flash.
+#   # Re-add by uncommenting and keeping the same schema.
 
-open_llm:
-  - id: deepseek-r1
-    provider: deepseek
-    model: deepseek-reasoner
-    api_key_env: DEEPSEEK_API_KEY
-    base_url: https://api.deepseek.com/v1
-    price_per_mtok: { input: 0.55, output: 2.19 }
-    settings_supported: [S0, S1, S2]
-  - id: qwen3-max
-    provider: dashscope
-    model: qwen3-max
-    api_key_env: DASHSCOPE_API_KEY
-    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
-    price_per_mtok: { input: 1.60, output: 6.40 }
-    settings_supported: [S0, S1, S2]
-  - id: llama-4-maverick
-    provider: together
-    model: meta-llama/Llama-4-Maverick
-    api_key_env: TOGETHER_API_KEY
-    base_url: https://api.together.xyz/v1
-    price_per_mtok: { input: 0.27, output: 0.85 }
-    settings_supported: [S0, S1, S2]
-  # Dropped: deepseek-v3.2 (kept R1 as the stronger reasoner).
+# open_llm:
+#   - id: deepseek-r1
+#     provider: deepseek
+#     model: deepseek-reasoner
+#     api_key_env: DEEPSEEK_API_KEY
+#     base_url_env: DEEPSEEK_BASE_URL
+#     base_url: https://api.deepseek.com/v1
+#     price_per_mtok: { input: 0.55, output: 2.19 }
+#     settings_supported: [S1]
+#   - id: qwen3-max
+#     provider: dashscope
+#     model: qwen3-max
+#     api_key_env: DASHSCOPE_API_KEY
+#     base_url_env: DASHSCOPE_BASE_URL
+#     base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+#     price_per_mtok: { input: 1.60, output: 6.40 }
+#     settings_supported: [S1]
+#   - id: llama-4-maverick
+#     provider: together
+#     model: meta-llama/Llama-4-Maverick
+#     api_key_env: TOGETHER_API_KEY
+#     base_url_env: TOGETHER_BASE_URL
+#     base_url: https://api.together.xyz/v1
+#     price_per_mtok: { input: 0.27, output: 0.85 }
+#     settings_supported: [S1]
+#   # Dropped: deepseek-v3.2 (kept R1 as the stronger reasoner).
 
 search_llm:
-  - id: claude-sonnet-4-6-search
-    provider: anthropic
-    model: claude-sonnet-4-6
-    api_key_env: ANTHROPIC_API_KEY
-    base_url: null
-    tools: [web_search]
-    price_per_mtok: { input: 3.00, output: 15.00 }
-    search_surcharge_per_1k: 10.00
-    settings_supported: [S3]
-  - id: gpt-5.4-search
-    provider: openai
-    model: gpt-5.4
-    api_key_env: OPENAI_API_KEY
-    base_url: null
-    tools: [web_search]
-    price_per_mtok: { input: 3.00, output: 12.00 }
-    settings_supported: [S3]
-  - id: gemini-3-pro-search
-    provider: google
-    model: gemini-3-pro
-    api_key_env: GOOGLE_API_KEY
-    base_url: null
-    tools: [google_search]
-    price_per_mtok: { input: 2.00, output: 8.00 }
-    settings_supported: [S3]
-  - id: perplexity-sonar
-    provider: perplexity
-    model: sonar-pro
-    api_key_env: PERPLEXITY_API_KEY
-    base_url: https://api.perplexity.ai
-    price_per_mtok: { input: 3.00, output: 15.00 }
-    settings_supported: [S3]
+#   - id: claude-sonnet-4-6-search
+#     provider: anthropic
+#     model: claude-sonnet-4-6
+#     api_key_env: ANTHROPIC_API_KEY
+#     base_url_env: ANTHROPIC_BASE_URL
+#     base_url: https://api.anthropic.com
+#     tools: [web_search]
+#     price_per_mtok: { input: 3.00, output: 15.00 }
+#     search_surcharge_per_1k: 10.00
+#     settings_supported: [S2]
+#   - id: gpt-5.4-search
+#     provider: openai
+#     model: gpt-5.4
+#     api_key_env: OPENAI_API_KEY
+#     base_url_env: OPENAI_BASE_URL
+#     base_url: https://api.openai.com/v1
+#     tools: [web_search]
+#     price_per_mtok: { input: 3.00, output: 12.00 }
+#     settings_supported: [S2]
+#   - id: gemini-3-pro-search
+#     provider: google
+#     model: gemini-3-pro
+#     api_key_env: GOOGLE_API_KEY
+#     base_url_env: GOOGLE_BASE_URL
+#     base_url: https://generativelanguage.googleapis.com/v1beta
+#     tools: [google_search]
+#     price_per_mtok: { input: 2.00, output: 8.00 }
+#     settings_supported: [S2]
+#   - id: perplexity-sonar
+#     provider: perplexity
+#     model: sonar-pro
+#     api_key_env: PERPLEXITY_API_KEY
+#     base_url_env: PERPLEXITY_BASE_URL
+#     base_url: https://api.perplexity.ai
+#     price_per_mtok: { input: 3.00, output: 15.00 }
+#     settings_supported: [S2]
 
-deep_research_agent:
-  - id: openai-deep-research
-    provider: openai
-    model: deep-research
-    api_key_env: OPENAI_API_KEY
-    base_url: null
-    price_per_run_usd: 3.00
-    settings_supported: [S3]
-  - id: gemini-deep-research
-    provider: google
-    model: gemini-deep-research
-    api_key_env: GOOGLE_API_KEY
-    base_url: null
-    price_per_run_usd: 2.00
-    settings_supported: [S3]
-  - id: perplexity-deep-research
-    provider: perplexity
-    model: sonar-deep-research
-    api_key_env: PERPLEXITY_API_KEY
-    base_url: https://api.perplexity.ai
-    price_per_run_usd: 0.20
-    settings_supported: [S3]
-  - id: claude-research
-    provider: anthropic
-    model: claude-sonnet-4-6
-    api_key_env: ANTHROPIC_API_KEY
-    base_url: null
-    tools: [web_search, extended_thinking]
-    price_per_run_usd: 2.00
-    settings_supported: [S3]
-  - id: mirothinker-h1
-    provider: miromind
-    model: mirothinker-h1
-    api_key_env: MIROMIND_API_KEY
-    base_url: https://api.miromind.ai/v1
-    price_per_run_usd: 0.30
-    settings_supported: [S3]
-  # Dropped: mirothinker-1.7 (kept H1 as the stronger variant, BrowseComp 88.2).
+# deep_research_agent:
+#   - id: openai-deep-research
+#     provider: openai
+#     model: deep-research
+#     api_key_env: OPENAI_API_KEY
+#     base_url_env: OPENAI_BASE_URL
+#     base_url: https://api.openai.com/v1
+#     price_per_run_usd: 3.00
+#     settings_supported: [S2]
+#   - id: gemini-deep-research
+#     provider: google
+#     model: gemini-deep-research
+#     api_key_env: GOOGLE_API_KEY
+#     base_url_env: GOOGLE_BASE_URL
+#     base_url: https://generativelanguage.googleapis.com/v1beta
+#     price_per_run_usd: 2.00
+#     settings_supported: [S2]
+#   - id: perplexity-deep-research
+#     provider: perplexity
+#     model: sonar-deep-research
+#     api_key_env: PERPLEXITY_API_KEY
+#     base_url_env: PERPLEXITY_BASE_URL
+#     base_url: https://api.perplexity.ai
+#     price_per_run_usd: 0.20
+#     settings_supported: [S2]
+#   - id: claude-research
+#     provider: anthropic
+#     model: claude-sonnet-4-6
+#     api_key_env: ANTHROPIC_API_KEY
+#     base_url_env: ANTHROPIC_BASE_URL
+#     base_url: https://api.anthropic.com
+#     tools: [web_search, extended_thinking]
+#     price_per_run_usd: 2.00
+#     settings_supported: [S2]
+#   - id: mirothinker-h1
+#     provider: miromind
+#     model: mirothinker-h1
+#     api_key_env: MIROMIND_API_KEY
+#     base_url_env: MIROMIND_BASE_URL
+#     base_url: https://api.miromind.ai/v1
+#     price_per_run_usd: 0.30
+#     settings_supported: [S2]
+#   # Dropped: mirothinker-1.7 (kept H1 as the stronger variant, BrowseComp 88.2).
 
 baselines:
   - id: bookmaker-closing

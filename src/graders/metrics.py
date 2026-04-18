@@ -132,6 +132,45 @@ def kendall_tau(pred_order: Sequence[str], truth_order: Sequence[str]) -> float:
 
 
 # ----------------------------------------------------------------------
+# Truth-side sanitization
+# ----------------------------------------------------------------------
+#
+# API-Football and other ingest sources occasionally emit events with nonsense
+# time fields (negative minute, null, non-numeric) or missing actors. We only
+# sanitize *truth* — per spec we never second-guess model predictions.
+#
+# Rules:
+#   - If the actor field is missing/empty, drop the event (can't match it).
+#   - If the time field is invalid (None, non-numeric, negative), strip the
+#     time fields so downstream metrics treat the time as "unknown" rather
+#     than penalizing the prediction for getting it wrong.
+
+def sanitize_truth_events(
+    events: Iterable[dict[str, Any]] | None,
+    actor_key: str = "player",
+    time_key: str = "minute",
+    require_time: bool = False,
+) -> list[dict[str, Any]]:
+    cleaned: list[dict[str, Any]] = []
+    for e in events or []:
+        actor = e.get(actor_key)
+        if not (isinstance(actor, str) and actor.strip()):
+            continue  # unsalvageable — drop
+        t = _mid_minute(e.get(time_key))
+        if t is None:
+            t = _mid_minute(e.get("minute_range"))
+        valid_time = t is not None and t >= 0
+        if not valid_time and require_time:
+            continue  # caller can't handle unknown time — drop the event
+        out = dict(e)
+        if not valid_time:
+            out.pop(time_key, None)
+            out.pop("minute_range", None)
+        cleaned.append(out)
+    return cleaned
+
+
+# ----------------------------------------------------------------------
 # Event matching (goals, subs, cards) with Hungarian bipartite match on time
 # ----------------------------------------------------------------------
 
@@ -144,6 +183,8 @@ def hungarian_minute_mae(
 ) -> float:
     from scipy.optimize import linear_sum_assignment  # lazy import
 
+    truth_events = sanitize_truth_events(truth_events, actor_key=key, time_key=time_key)
+
     if not pred_events and not truth_events:
         return 100.0
     if not pred_events or not truth_events:
@@ -152,10 +193,15 @@ def hungarian_minute_mae(
     cost = np.zeros((len(pred_events), len(truth_events)))
     for i, pe in enumerate(pred_events):
         for j, te in enumerate(truth_events):
-            same_actor = pe.get(key, "").strip().lower() == te.get(key, "").strip().lower()
+            same_actor = str(pe.get(key, "")).strip().lower() == str(te.get(key, "")).strip().lower()
             t_pred = _mid_minute(pe.get(time_key) or pe.get("minute_range"))
             t_true = _mid_minute(te.get(time_key) or te.get("minute_range"))
-            gap = abs(t_pred - t_true) if t_pred is not None and t_true is not None else no_match_penalty
+            if t_true is None:
+                gap = 0.0                       # truth time is unknown → don't penalize minute
+            elif t_pred is None:
+                gap = no_match_penalty          # prediction omitted a time we do know
+            else:
+                gap = abs(t_pred - t_true)
             cost[i, j] = gap + (0 if same_actor else no_match_penalty)
     row_ind, col_ind = linear_sum_assignment(cost)
     matched = cost[row_ind, col_ind]
@@ -200,8 +246,15 @@ def _result_of(s: str) -> str:
 def _mid_minute(v: Any) -> float | None:
     if v is None:
         return None
-    if isinstance(v, (int, float)):
-        return float(v)
-    if isinstance(v, (list, tuple)) and len(v) == 2:
-        return (float(v[0]) + float(v[1])) / 2
+    try:
+        if isinstance(v, bool):
+            return None  # bool is int subclass — reject explicitly
+        if isinstance(v, (int, float)):
+            return float(v)
+        if isinstance(v, str) and v.strip():
+            return float(v)
+        if isinstance(v, (list, tuple)) and len(v) == 2:
+            return (float(v[0]) + float(v[1])) / 2
+    except (TypeError, ValueError):
+        return None
     return None

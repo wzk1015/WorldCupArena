@@ -29,7 +29,7 @@ Football is the tightest possible test for a deep-research agent:
 - **Brier / RPS** for probability fields (not accuracy — that rewards lucky guesses).
 - **Hungarian assignment** on time-stamped events (goals, subs, cards).
 - **Jaccard + position** for lineups. **Bracket score** for knockouts.
-- Composite 0–100 per (model, setting). Three leaderboards: main, above-market (vs. Pinnacle closing), and **Research Uplift** (S1 − S0, i.e. the value of being allowed to search the web).
+- Composite 0–100 per (model, setting). Three leaderboards: main, above-market (vs. Pinnacle closing), and **Research Uplift** (S2 − S1, i.e. tool-using self-search vs the same model family fed a curated context pack).
 
 ## Who's competing
 

@@ -19,7 +19,7 @@ cp .env.example .env
 $EDITOR .env          # fill in at least OPENAI_API_KEY or DEEPSEEK_API_KEY
 ```
 
-If you route through a 中转/proxy endpoint, set `base_url` on the relevant entry in [configs/models.yaml](../configs/models.yaml) — every runner honours it.
+If you route through a 中转/proxy endpoint, set `OPENA_BASE_URL` or other base url envs in `.env` — every runner honours it.
 
 ---
 
@@ -103,7 +103,7 @@ Runs every (model × setting) pair configured in [configs/models.yaml](../config
 
 ```bash
 # Pull the real result
-python -m src.ingest.api_football --fixture-id $FIXTURE_ID --truth \
+python -m src.ingest.api_football --fixture-id $FIXTURE_ID \
     --out data/snapshots/pl_ars_avl_2026_04_18/truth.json
 
 # Score
@@ -124,7 +124,7 @@ WORLDCUPARENA_MODELS_YAML=configs/models.mine.yaml \
   python -m src.pipeline.orchestrator predict --fixture ...
 ```
 
-Per-model setting coverage is declared via `settings_supported: [S0, S1, S2]` on each entry — remove settings you don't want that model to run.
+Per-model setting coverage is declared via `settings_supported:` on each entry. In the current 2-setting regime, non-tool LLMs declare `[S1]` and tool-using models / agents declare `[S2]` — see [configs/settings.yaml](../configs/settings.yaml) for what each setting injects.
 
 ---
 
@@ -135,8 +135,7 @@ In order of biggest → smallest impact:
 1. **Drop deep-research agents** — 80 % of per-fixture cost lives in those 5 agents. Keep only MiroThinker H1 + Perplexity DR for a ~$7 saving.
 2. **Enable batch APIs** (OpenAI + Anthropic) — set `batch: true` in the model entry. 50 % discount, 24 h turnaround (fine for pre-kickoff locks).
 3. **Prompt caching** — set `cache_system: true` on any provider that supports it. The system prompt is ~1.2k tokens and identical across fixtures.
-4. **Fewer settings** — you can drop S1 (keep S0 + S2) to halve the LLM spend with minimal signal loss.
-5. **T5 frequency** — see [docs/cost_estimate.md §3.2](cost_estimate.md).
+4. **T5 frequency** — see [docs/cost_estimate.md §3.2](cost_estimate.md). The biggest remaining non-agent lever.
 
 All of these are already wired up; they are just config flags.
 

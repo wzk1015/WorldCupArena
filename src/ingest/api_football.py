@@ -15,9 +15,14 @@ Key endpoints:
 
 from __future__ import annotations
 
+from dotenv import load_dotenv
 import os
-from typing import Any
 
+load_dotenv()  # 自动加载 .env 里的所有变量
+from typing import Any
+import argparse
+from pathlib import Path
+import json
 import httpx
 
 BASE = "https://v3.football.api-sports.io"
@@ -59,7 +64,17 @@ def normalize_to_truth(event_resp: dict, lineup_resp: dict, stats_resp: dict,
     goals, subs, cards, own_goals, penalties = [], [], [], [], []
     for ev in event_resp.get("response", []):
         t = ev.get("type")
-        minute = (ev.get("time") or {}).get("elapsed", 0) + ((ev.get("time") or {}).get("extra") or 0)
+        time_obj = ev.get("time") or {}
+        elapsed = time_obj.get("elapsed")
+        extra = time_obj.get("extra") or 0
+        # Leave minute as None when API-Football didn't give us a usable elapsed
+        # value — the grader's truth-sanitizer will drop bad times (or ignore
+        # them, depending on the metric) instead of our ingest layer silently
+        # coercing unknowns to "0'".
+        try:
+            minute: int | None = int(elapsed) + int(extra) if elapsed is not None else None
+        except (TypeError, ValueError):
+            minute = None
         player = (ev.get("player") or {}).get("name")
         team_id = (ev.get("team") or {}).get("id")
         side = "home" if team_id == fixture_meta.get("home_id") else "away"
@@ -96,3 +111,21 @@ def normalize_to_truth(event_resp: dict, lineup_resp: dict, stats_resp: dict,
         "lineups": lineup_resp,     # full lineup payload; grader consumes
         "stats": stats_resp,
     }
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--fixture-id", type=str, required=True)
+    ap.add_argument("--out", type=str, required=True)
+    args = ap.parse_args()
+    
+    client = APIFootballClient()
+    data = client.fixture(args.fixture_id)
+    os.makedirs(os.path.dirname(args.out), exist_ok=True)
+    with open(args.out, "w") as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
+    print("saved to", args.out)
+
+
+if __name__ == "__main__":
+    main()

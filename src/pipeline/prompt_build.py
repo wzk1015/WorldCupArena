@@ -35,11 +35,14 @@ def _render_form(form: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+NEWS_HEADLINE_CAP = 20  # how many pre-match headlines to inject / show as examples
+
+
 def _render_news(news: list[dict[str, Any]]) -> str:
     if not news:
         return ""
-    lines = ["### Recent news headlines (pre-match, from trusted sources)"]
-    for n in news[:30]:
+    lines = [f"### Recent news headlines (pre-match, from trusted sources; up to {NEWS_HEADLINE_CAP})"]
+    for n in news[:NEWS_HEADLINE_CAP]:
         lines.append(f"- [{n.get('published_at','?')}] {n.get('source','?')}: "
                      f"{n.get('title')} — {n.get('url','')}")
     return "\n".join(lines)
@@ -49,6 +52,72 @@ def _render_stats(stats: dict[str, Any]) -> str:
     if not stats:
         return ""
     return "### Recent stats\n```json\n" + json.dumps(stats, ensure_ascii=False, indent=2) + "\n```"
+
+
+def _render_search_guidance(fixture: dict[str, Any], ctx: dict[str, Any]) -> str:
+    """Block used by S2 (tools-on) to tell the model what kinds of evidence to
+    gather and show one short concrete example of each, drawn from the fixture's
+    context_pack when available. The model is free to search for more.
+    """
+    home = fixture["home"]["name"]
+    away = fixture["away"]["name"]
+
+    def _example_squad() -> str:
+        squads = ctx.get("squads") or {}
+        for side in ("home", "away"):
+            players = (squads.get(side) or {}).get("players") or []
+            if players:
+                p = players[0]
+                team = (squads.get(side) or {}).get("team_name", side)
+                return (f"e.g. `{p.get('name','?')} · {p.get('position','?')} · "
+                        f"age {p.get('age','?')} · {p.get('club','?')}` (from {team})")
+        return f"e.g. `Harry Kane · ST · age 32 · Bayern Munich`"
+
+    def _example_form() -> str:
+        form = ctx.get("recent_form") or {}
+        for side in ("home", "away"):
+            matches = (form.get(side) or {}).get("matches") or []
+            if matches:
+                m = matches[0]
+                return (f"e.g. `{m.get('date','YYYY-MM-DD')} {m.get('competition','?')} "
+                        f"{m.get('opponent','?')} {m.get('result','?')} ({m.get('score','?')})`")
+        return "e.g. `2026-04-09 UCL Real Madrid W (2-1)`"
+
+    def _example_news() -> str:
+        news = ctx.get("news_headlines") or []
+        if news:
+            n = news[0]
+            return (f"e.g. `[{n.get('published_at','?')}] {n.get('source','?')}: "
+                    f"{n.get('title','?')}`")
+        return "e.g. `[2026-04-15] BBC Sport: Bayern confirm Neuer fit for semi`"
+
+    def _example_stats() -> str:
+        stats = ctx.get("stats_last_n") or {}
+        if stats:
+            first_key = next(iter(stats.keys()))
+            return f"e.g. `{first_key}: {stats[first_key]!r}`"
+        return "e.g. `xG last 5: {home: 1.8, away: 1.4}`"
+
+    return (
+        f"### Self-directed research (tools enabled)\n"
+        f"You have web-search / browsing tools available. Before predicting, "
+        f"search for up-to-date evidence about **{home} vs {away}**. "
+        f"At minimum, collect the four kinds of signals below; "
+        f"pull additional evidence (injury reports, tactical previews, H2H, "
+        f"weather, bookmaker moves, etc.) whenever it would sharpen the forecast.\n"
+        f"\n"
+        f"1. **Official 23-man squads** for both sides, with position / age / club. {_example_squad()}.\n"
+        f"2. **Recent form** — last ~10 matches per side (date, competition, opponent, result, score). {_example_form()}.\n"
+        f"3. **Pre-match news headlines** — aim for ~{NEWS_HEADLINE_CAP} trusted-source items "
+        f"(injuries, suspensions, press-conference notes, tactical previews). {_example_news()}.\n"
+        f"4. **Recent stats** — rolling per-team aggregates (xG, shots, possession, pass accuracy, "
+        f"defensive actions, etc.) over a comparable window. {_example_stats()}.\n"
+        f"\n"
+        f"Record every URL you actually used under the prediction's `sources[]` "
+        f"with an ISO-8601 `accessed_at`. Any source published *after* "
+        f"`{fixture.get('lock_at_utc','<lock_at_utc>')}` will zero out the "
+        f"tasks it influenced, so filter by date as you go.\n"
+    )
 
 
 def _render_fixture_header(fixture: dict[str, Any]) -> str:
@@ -84,6 +153,8 @@ def build_prompt(
            .replace("{{recent_form_block}}", _render_form(ctx.get("recent_form", {})) if inject.get("recent_form") else "")
            .replace("{{news_block}}", _render_news(ctx.get("news_headlines", [])) if inject.get("news_headlines") else "")
            .replace("{{stats_block}}", _render_stats(ctx.get("stats_last_n", {})) if inject.get("stats") else "")
+           .replace("{{search_guidance_block}}",
+                    _render_search_guidance(fixture, ctx) if inject.get("search_guidance") else "")
            .replace("{{schema}}", json.dumps(schema))
            .replace("{{setting_id}}", setting["id"])
            .replace("{{setting_description}}", setting.get("description", ""))

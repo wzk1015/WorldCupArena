@@ -28,7 +28,7 @@ Composite score ∈ [0, 100]. Three leaderboards:
 
 1. **Main** — overall composite.
 2. **Above-Market** — composite gain vs. Pinnacle closing odds.
-3. **Research Uplift** — score increase from S3 (agent with tools) over S2 (LLM with equivalent injected context).
+3. **Research Uplift** — score increase from S2 (tool-using agent, self-search) over S1 (LLM with the full injected context pack).
 
 ## Who we test
 
@@ -44,16 +44,14 @@ Every model entry in [configs/models.yaml](configs/models.yaml) supports a `base
 
 ## Setting matrix
 
-Four settings, split cleanly by "what the model gets" and "can it use tools":
+Two settings — one for non-tool LLMs, one for tool-using models / agents:
 
 | Setting | Injected context | Tools | Run by |
 |---|---|---|---|
-| **S0** | fixture header only | off | closed / open LLMs |
-| **S1** | + official squads | off | closed / open LLMs |
-| **S2** | + squads + form + news + stats | off | closed / open LLMs |
-| **S3** | fixture header only | **on** | search-LLMs + deep-research agents |
+| **S1** | full context pack (squads + recent form + ~20 news headlines + recent stats) | off | closed / open LLMs |
+| **S2** | fixture header + self-search guidance block (with worked examples of each evidence type) | **on** | search-LLMs + deep-research agents |
 
-See [configs/settings.yaml](configs/settings.yaml). (S0–S2 isolate context uplift; S3 isolates research uplift.)
+See [configs/settings.yaml](configs/settings.yaml). S1 measures "best case with injected evidence"; S2 measures "best case with self-directed retrieval". Research uplift = S2 − S1.
 
 ## Repo layout
 

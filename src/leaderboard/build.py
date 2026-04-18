@@ -41,18 +41,17 @@ def aggregate(rows: list[dict]) -> dict:
         key=lambda x: -x["mean"],
     )
 
-    # Research uplift: S1 minus S0
-    uplift = {}
+    # Research uplift: S2 (tool-using agent) minus S1 (best context-fed LLM).
+    # Only defined for models where the same provider ships both an LLM-only
+    # variant (S1) and a tool-using / agent variant (S2). Pairing is by shared
+    # prefix — e.g. `claude-sonnet-4-6` (S1) vs `claude-sonnet-4-6-search` (S2)
+    # or `claude-research` (S2). Downstream dashboards do the pairing; here we
+    # just emit the per-(model, setting) means.
+    by_setting: dict[str, dict[str, float]] = {}
     for (m, s), v in by_model_setting.items():
-        uplift.setdefault(m, {})[s] = sum(v) / len(v)
-    uplift_list = []
-    for m, per_s in uplift.items():
-        if "S0" in per_s and "S1" in per_s:
-            uplift_list.append({"model_id": m, "s0": per_s["S0"], "s1": per_s["S1"],
-                                "uplift": per_s["S1"] - per_s["S0"]})
-    uplift_list.sort(key=lambda x: -x["uplift"])
+        by_setting.setdefault(m, {})[s] = sum(v) / len(v)
 
-    return {"main": main, "research_uplift": uplift_list, "rows": rows}
+    return {"main": main, "by_model_setting": by_setting, "rows": rows}
 
 
 def write_markdown(agg: dict) -> None:
@@ -62,10 +61,12 @@ def write_markdown(agg: dict) -> None:
              "| Rank | Model | Composite | N |", "|---|---|---|---|"]
     for i, r in enumerate(agg["main"], 1):
         lines.append(f"| {i} | {r['model_id']} | {r['mean']:.2f} | {r['n']} |")
-    lines += ["", "## Research Uplift (S1 − S0)", "",
-              "| Rank | Model | S0 | S1 | Uplift |", "|---|---|---|---|---|"]
-    for i, r in enumerate(agg["research_uplift"], 1):
-        lines.append(f"| {i} | {r['model_id']} | {r['s0']:.2f} | {r['s1']:.2f} | {r['uplift']:+.2f} |")
+    lines += ["", "## Per-model × setting mean (S1 = context-fed LLM, S2 = tool-using)", "",
+              "| Model | S1 | S2 |", "|---|---|---|"]
+    for m, per_s in sorted(agg["by_model_setting"].items()):
+        s1 = f"{per_s['S1']:.2f}" if "S1" in per_s else "—"
+        s2 = f"{per_s['S2']:.2f}" if "S2" in per_s else "—"
+        lines.append(f"| {m} | {s1} | {s2} |")
     (OUT / "README.md").write_text("\n".join(lines))
 
 

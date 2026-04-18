@@ -43,7 +43,32 @@ METRIC_FNS = {
 
 
 def _event_keys(events: list[dict[str, Any]]) -> list[str]:
-    return [f"{e.get('player','?')}@{int(e.get('minute', e.get('minute_range',[0,0])[0]))//5}" for e in events]
+    """Bucket events by (player, 5-minute window) for set-based f1 scoring.
+
+    Events with an unusable minute (None, non-numeric, negative) are skipped
+    rather than bucketed — upstream truth sanitization will already have
+    dropped ones we're unwilling to score at all; any remaining here came
+    from predictions and we simply can't place them on the timeline.
+    """
+    keys: list[str] = []
+    for e in events or []:
+        player = e.get("player") or "?"
+        raw = e.get("minute")
+        if raw is None:
+            mr = e.get("minute_range")
+            if isinstance(mr, (list, tuple)) and len(mr) == 2:
+                try:
+                    raw = (float(mr[0]) + float(mr[1])) / 2
+                except (TypeError, ValueError):
+                    raw = None
+        try:
+            minute = float(raw)
+        except (TypeError, ValueError):
+            continue
+        if minute < 0:
+            continue
+        keys.append(f"{player}@{int(minute) // 5}")
+    return keys
 
 
 def _stats_smape(pred: dict[str, Any], truth: dict[str, Any], key: str) -> float:
@@ -127,12 +152,14 @@ def grade_match(prediction: dict[str, Any], truth: dict[str, Any]) -> dict[str, 
                     key="on",
                 )
             elif metric == "event_f1":
-                pred_ev = prediction.get({"cards": "cards",
-                                          "penalty_events": "penalties",
-                                          "own_goals": "own_goals"}.get(tid, tid), []) or []
-                truth_ev = truth.get({"cards": "cards",
-                                      "penalty_events": "penalties",
-                                      "own_goals": "own_goals"}.get(tid, tid), []) or []
+                field_map = {"cards": "cards",
+                             "penalty_events": "penalties",
+                             "own_goals": "own_goals"}
+                pred_ev = prediction.get(field_map.get(tid, tid), []) or []
+                truth_ev = truth.get(field_map.get(tid, tid), []) or []
+                # event_f1 buckets by 5-minute window, so an unknown truth time
+                # can't participate — drop such events rather than mis-bucket.
+                truth_ev = metrics.sanitize_truth_events(truth_ev, require_time=True)
                 score = metrics.f1_set(_event_keys(pred_ev), _event_keys(truth_ev))
             elif metric == "smape":
                 key = tid.replace("tactical_formation_match", "").strip() or tid

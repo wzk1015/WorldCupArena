@@ -38,8 +38,11 @@ class BaseRunner(abc.ABC):
     """One subclass per (provider, interaction mode).
 
     Concrete runners MUST honour:
-      - `self.cfg.get("api_key_env")` -> read API key from that env var.
-      - `self.cfg.get("base_url")`    -> use that base URL (for proxy / 中转) when truthy.
+      - `self.cfg.get("api_key_env")`  -> read API key from that env var.
+      - `self.cfg.get("base_url_env")` -> read base URL override from that env var;
+        if unset or empty, fall back to `self.cfg.get("base_url")` (the official
+        default). This lets users point at a 中转/proxy via `.env` without editing
+        models.yaml.
     """
 
     category: str  # closed_llm | open_llm | search_llm | deep_research_agent
@@ -154,8 +157,12 @@ class BaseRunner(abc.ABC):
             raise RuntimeError(f"{self.model_id}: env var {env} not set") from e
 
     def base_url(self) -> str | None:
-        url = self.cfg.get("base_url")
-        return url or None
+        env = self.cfg.get("base_url_env")
+        if env:
+            override = os.environ.get(env)
+            if override:
+                return override
+        return self.cfg.get("base_url") or None
 
     def price_tokens(self, input_tokens: int, output_tokens: int) -> float:
         p = self.cfg.get("price_per_mtok") or {}

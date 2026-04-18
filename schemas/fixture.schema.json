@@ -23,7 +23,7 @@
     },
     "context_pack": {
       "type":"object",
-      "description":"Info materialized by the ingest step, used to build S2/S3 prompts.",
+      "description":"Info materialized by the ingest step. S1 injects it directly into the prompt; S2 uses it as short worked examples inside the self-search guidance.",
       "properties":{
         "squads":          { "type":"object" },
         "recent_form":     { "type":"object" },

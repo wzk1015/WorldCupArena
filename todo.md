@@ -13,3 +13,18 @@
 4. 写一个用于输入给nano banana pro生成项目logo的prompt。不需要写调用脚本，我自己以后会写好
 5. 写一个文档告诉LLM或者deepresearch agent的开发者，如何迅速将自己的模型接入benchmark进行评测
 6. 写一个中文的宣传文案，分为比较长的公众号风格的版本、短的朋友圈风格的版本、中等的小红书风格的版本
+
+
+
+
+
+Setting只保留两个：
+1. 不联网LLM，直接提供squads + form + news + stats
+2. 联网LLM/agent，通过提示模型自主搜索squads + form + news + stats，并提供这些信息的例子，并说明还可以自主搜索更多信息
+并更新cost计算
+另外两个暂时不想留：
+3. 不联网LLM，不给任何信息
+4. 联网LLM/agent，不进行任何提示，自主搜索
+
+另外，news不要只是五条新闻的headline，最好是20条新闻的headline
+还要增加鲁棒性处理，例如比赛结果fixture格式里如果某个event的时间（比如第几分钟换人）是无效的（<0），则评测时忽略时间；类似的有其他情况要handle；如果实在无法handle则忽略此条数据。注意只处理truth fixture缺失的情况，不考虑模型预测缺失

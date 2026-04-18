@@ -24,7 +24,7 @@ closed_llm:                           # or open_llm, depending on how you classi
     api_key_env: MY_MODEL_API_KEY     # env var name to read the key from
     base_url: https://api.myservice.ai/v1
     price_per_mtok: { input: 1.50, output: 6.00 }
-    settings_supported: [S0, S1, S2]  # which context settings this model runs under
+    settings_supported: [S1]          # see settings cheat-sheet below
 ```
 
 Set `MY_MODEL_API_KEY` in `.env`. That is the entire integration.
@@ -33,14 +33,14 @@ The registered providers that route to `OpenAICompatRunner` are: `openai`, `deep
 
 ### Settings cheat-sheet
 
+Only two settings exist in the current benchmark:
+
 | Setting | What your model receives | When to support it |
 |---|---|---|
-| **S0** | fixture header only (teams, kickoff, venue) | plain LLMs, tests pure prior knowledge |
-| **S1** | + official squads | plain LLMs, tests squad-aware reasoning |
-| **S2** | + squads + form + news + stats | plain LLMs, tests full-context synthesis |
-| **S3** | fixture header; tools enabled | **only** search-enabled LLMs and research agents |
+| **S1** | fixture header + full injected context pack (official squads, recent form, ~20 news headlines, recent stats). Tools **off**. | plain LLMs without tool use |
+| **S2** | fixture header + self-search guidance block (told what evidence to gather, with short examples of each type; free to pull more). Tools **on**. | search-enabled LLMs, deep-research agents |
 
-Do **not** declare `S3` unless your model actually has live browsing / tool use.
+Declare `S1` for a non-tool LLM, `S2` for a tool-using model / agent. Do **not** declare `S2` unless your model actually has live browsing / tool use.
 
 ---
 
@@ -57,7 +57,7 @@ search_llm:
     base_url: https://api.myservice.ai
     tools: [web_search]              # or [web_search, extended_thinking]
     price_per_mtok: { input: 3.00, output: 15.00 }
-    settings_supported: [S3]
+    settings_supported: [S2]
 ```
 
 The runner wires up the `web_search_20250305` tool block and extracts sources from `web_search_tool_result` blocks.
@@ -188,13 +188,13 @@ We'll run a single-fixture validation pass, add you to the next Phase 1 batch, a
 ## FAQ
 
 **Can my model skip settings it doesn't support well?**
-Yes — only list the `settings_supported` you want evaluated. An open model without strong long-context handling may drop S2.
+Each model normally participates in exactly one setting anyway (S1 for non-tool LLMs, S2 for tool-using models / agents). If you want to skip that one, your model doesn't belong on the benchmark.
 
 **Can I sponsor a closed-weight model I don't own?**
 Yes — provide an API key with sufficient quota + a budget ceiling. We'll cap spending at the budget.
 
 **Does the leaderboard separate LLMs from agents?**
-Yes — three leaderboards: Main (all), Above-Market (vs. Pinnacle), and Research Uplift (S3 − S2). Agents and search-LLMs compete on all three; plain LLMs compete on Main and Above-Market only.
+Yes — three leaderboards: Main (all), Above-Market (vs. Pinnacle), and Research Uplift (S2 − S1). Agents and search-LLMs compete on all three; plain LLMs compete on Main and Above-Market only.
 
 **Does the benchmark allow self-hosted open models?**
 Yes — point `base_url` at your vLLM / TGI / SGLang endpoint. `openai_compat` works out of the box.
