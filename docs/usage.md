@@ -76,6 +76,9 @@ FIXTURE_ID=1234567
 python -m src.ingest.api_football \
     --fixture-id $FIXTURE_ID \
     --out data/snapshots/pl_ars_avl_2026_04_18/fixture.json
+
+python -m src.pipeline.orchestrator populate \
+    --fixture data/snapshots/pl_ars_avl_2026_04_18/fixture_test.json --recent-n 10
 ```
 
 The ingestor pulls squads, recent form, injury news, and bookmaker closing odds into `context_pack`. If an adapter isn't ready yet (e.g. for a minor league), hand-author the snapshot using [data/snapshots/bayern_madrid_ucl_qf_l2/fixture.json](../data/snapshots/bayern_madrid_ucl_qf_l2/fixture.json) as a template — only the `fixture_id`, `kickoff_utc`, `lock_at_utc`, `home`, `away`, and `context_pack` fields are required.

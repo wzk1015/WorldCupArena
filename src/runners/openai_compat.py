@@ -27,7 +27,7 @@ class OpenAICompatRunner(BaseRunner):
             messages=[{"role": "system", "content": system_prompt}, *messages],
             response_format={"type": "json_object"},
             temperature=self.cfg.get("temperature", 0.3),
-            max_tokens=self.cfg.get("max_tokens", 8192),
+            max_completion_tokens=self.cfg.get("max_completion_tokens", 8192),
         )
         text = resp.choices[0].message.content or ""
         usage = resp.usage

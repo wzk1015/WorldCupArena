@@ -26,6 +26,7 @@ import yaml
 
 from ..runners import build_runner
 from ..graders import grade_match
+from ..ingest.api_football import normalize_fixture, normalize_to_truth, populate_context_pack, APIFootballClient
 from .prompt_build import build_prompt
 from .validate import validate_or_repair
 
@@ -38,6 +39,33 @@ RESULTS_DIR = DATA / "results"
 
 def _load_yaml(p: Path) -> Any:
     return yaml.safe_load(p.read_text())
+
+
+def _load_fixture(path: Path) -> dict:
+    """Load a fixture snapshot and normalise it to the internal WCA format.
+
+    On-disk files are raw API-Football responses with WCA extras at the root
+    (fixture_id, lock_at_utc, context_pack). If the file already looks like
+    the internal flat format (has 'home' as a dict with an 'id' string field
+    rather than an integer inside 'response'), use it as-is for backwards
+    compatibility with hand-crafted fixtures.
+    """
+    raw = json.loads(path.read_text())
+    if "response" in raw:
+        return normalize_fixture(raw)
+    return raw  # already in flat internal format
+
+
+def _load_truth(path: Path) -> dict:
+    """Load a truth snapshot and normalise it to the WCA grader format.
+
+    Same raw-vs-internal detection: if 'response' key is present it's the
+    raw API-Football format; otherwise it's already normalised.
+    """
+    raw = json.loads(path.read_text())
+    if "response" in raw:
+        return normalize_to_truth(raw)
+    return raw
 
 
 def _iter_model_setting_pairs(models_cfg: dict, settings_cfg: dict):
@@ -60,7 +88,7 @@ def _leak_audit(sources: list[dict[str, Any]], lock_at: str) -> dict[str, Any]:
 
 
 def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
-    fixture = json.loads(fixture_path.read_text())
+    fixture = _load_fixture(fixture_path)
     models_cfg = _load_yaml(CONFIGS / "models.yaml")
     settings_cfg = _load_yaml(CONFIGS / "settings.yaml")
 
@@ -125,13 +153,15 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
 
 
 def cmd_grade(fixture_dir: Path) -> None:
-    fixture = json.loads((fixture_dir / "fixture.json").read_text())
-    truth = json.loads((fixture_dir / "truth.json").read_text())
+    fixture = _load_fixture(fixture_dir / "fixture.json")
+    truth = _load_truth(fixture_dir / "truth.json")
     fid = fixture["fixture_id"]
     pred_dir = PREDICTIONS_DIR / fid
     out_dir = RESULTS_DIR / fid
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    # print(list(pred_dir.glob("*.json")))
+    # print(pred_dir)
     for pred_file in sorted(pred_dir.glob("*.json")):
         record = json.loads(pred_file.read_text())
         if record.get("error"):
@@ -163,6 +193,21 @@ def cmd_leaderboard() -> None:
     print(f"[leaderboard] wrote {len(rows)} rows -> {out}")
 
 
+def cmd_populate(fixture_path: Path, recent_n: int = 10) -> None:
+    """Fetch squads + recent form + stats from API-Football and write into fixture.json.
+
+    Reads APIFOOTBALL_API_KEY from the environment (same convention as other keys).
+    Run this before `lock` so the snapshot hash covers the populated context_pack.
+    """
+    import os
+    api_key = os.environ.get("APIFOOTBALL_API_KEY") or os.environ.get("API_FOOTBALL_KEY")
+    if not api_key:
+        raise RuntimeError("Set APIFOOTBALL_API_KEY (or API_FOOTBALL_KEY) in your .env")
+    client = APIFootballClient(api_key)
+    populate_context_pack(fixture_path, client, recent_n=recent_n)
+    print(f"[populate] {fixture_path}: context_pack updated (recent_n={recent_n})")
+
+
 def canonicalize_fixture(fixture: dict[str, Any]) -> str:
     """Stable JSON for snapshot_hash."""
     return json.dumps(fixture, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
@@ -184,7 +229,8 @@ def main() -> None:
     p = sub.add_parser("predict"); p.add_argument("--fixture", type=Path, required=True); p.add_argument("--parallel", type=int, default=8)
     p = sub.add_parser("grade");   p.add_argument("--fixture-dir", type=Path, required=True)
     sub.add_parser("leaderboard")
-    p = sub.add_parser("lock");    p.add_argument("--fixture", type=Path, required=True)
+    p = sub.add_parser("lock");     p.add_argument("--fixture", type=Path, required=True)
+    p = sub.add_parser("populate"); p.add_argument("--fixture", type=Path, required=True); p.add_argument("--recent-n", type=int, default=10)
 
     args = ap.parse_args()
     if args.cmd == "predict":
@@ -195,6 +241,8 @@ def main() -> None:
         cmd_leaderboard()
     elif args.cmd == "lock":
         lock_fixture(args.fixture)
+    elif args.cmd == "populate":
+        cmd_populate(args.fixture, args.recent_n)
 
 
 if __name__ == "__main__":

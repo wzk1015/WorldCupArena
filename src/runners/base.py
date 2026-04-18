@@ -83,7 +83,7 @@ class BaseRunner(abc.ABC):
         import time
         t0 = time.time()
 
-        messages = [{"role": "user", "content": user_prompt}]
+        # messages = [{"role": "user", "content": user_prompt}]
         totals = {"input_tokens": 0, "output_tokens": 0, "tool_calls": 0, "cost": 0.0}
         sources: list[dict[str, Any]] = []
         thinking = None

@@ -28,3 +28,8 @@ Setting只保留两个：
 
 另外，news不要只是五条新闻的headline，最好是20条新闻的headline
 还要增加鲁棒性处理，例如比赛结果fixture格式里如果某个event的时间（比如第几分钟换人）是无效的（<0），则评测时忽略时间；类似的有其他情况要handle；如果实在无法handle则忽略此条数据。注意只处理truth fixture缺失的情况，不考虑模型预测缺失
+
+
+1.补充news
+2.github workflow如何自动化
+3.做一个项目网页展示leaderboard以及对于下一场比赛的预测。并且设计一下如何加入到自动化workflow中

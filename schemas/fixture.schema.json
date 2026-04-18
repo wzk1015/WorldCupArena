@@ -1,46 +1,119 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://worldcuparena/schemas/fixture.schema.json",
-  "title": "WorldCupArena fixture snapshot (frozen at T-1h)",
+  "title": "WorldCupArena fixture snapshot — on-disk format",
+  "description": "Stored as the raw API-Football /fixtures response, with three WorldCupArena fields added at the root level by the ingest pipeline: fixture_id, lock_at_utc, and context_pack. The snapshot_hash is added by the lock step.",
   "type": "object",
-  "required": ["fixture_id","competition","stage","kickoff_utc","home","away","lock_at_utc"],
+  "required": ["response", "fixture_id", "lock_at_utc"],
   "properties": {
-    "fixture_id":  { "type":"string" },
-    "competition": { "type":"string", "examples":["UCL-2025-26","WC-2026"] },
-    "stage":       { "type":"string", "examples":["SF1-L1","SF2-L2","FINAL","GROUP-A-MD1","R16"] },
-    "kickoff_utc": { "type":"string", "format":"date-time" },
-    "lock_at_utc": { "type":"string", "format":"date-time" },
-    "home":        { "$ref":"#/$defs/team" },
-    "away":        { "$ref":"#/$defs/team" },
-    "venue":       { "type":"string" },
-    "referee":     { "type":"string" },
-    "bookmaker_closing": {
-      "type":"object",
-      "properties":{
-        "home":{"type":"number"}, "draw":{"type":"number"}, "away":{"type":"number"},
-        "source":{"type":"string"}, "timestamp":{"type":"string","format":"date-time"}
-      }
+    "get":        { "type": "string" },
+    "parameters": { "type": "object" },
+    "errors":     { "type": "array" },
+    "results":    { "type": "integer" },
+    "paging":     { "type": "object" },
+
+    "fixture_id": {
+      "type": "string",
+      "description": "WorldCupArena identifier — set by the operator, not derived from the API. Matches the snapshot directory name."
+    },
+    "lock_at_utc": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Prediction lock timestamp (kickoff − 1 h). Added by the ingest pipeline."
     },
     "context_pack": {
-      "type":"object",
-      "description":"Info materialized by the ingest step. S1 injects it directly into the prompt; S2 uses it as short worked examples inside the self-search guidance.",
-      "properties":{
-        "squads":          { "type":"object" },
-        "recent_form":     { "type":"object" },
-        "news_headlines":  { "type":"array" },
-        "stats_last_n":    { "type":"object" }
+      "type": "object",
+      "description": "Injected into S1 prompts; shown as worked examples in S2 self-search guidance. Populated by separate ingest steps.",
+      "properties": {
+        "squads":         { "type": "object" },
+        "recent_form":    { "type": "object" },
+        "news_headlines": { "type": "array"  },
+        "stats_last_n":   { "type": "object" }
       }
     },
-    "snapshot_hash": { "type":"string", "description":"SHA256 of the canonical JSON, used as leakage audit anchor." }
+    "snapshot_hash": {
+      "type": "string",
+      "description": "SHA-256 of the canonical JSON (all WCA extra fields included, snapshot_hash itself excluded). Written by the lock step."
+    },
+
+    "response": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "fixture": {
+            "type": "object",
+            "properties": {
+              "id":       { "type": "integer" },
+              "referee":  { "type": ["string", "null"] },
+              "timezone": { "type": "string" },
+              "date":     { "type": "string", "format": "date-time" },
+              "timestamp":{ "type": "integer" },
+              "periods":  { "type": "object" },
+              "venue": {
+                "type": "object",
+                "properties": {
+                  "id":   { "type": ["integer", "null"] },
+                  "name": { "type": ["string",  "null"] },
+                  "city": { "type": ["string",  "null"] }
+                }
+              },
+              "status": {
+                "type": "object",
+                "properties": {
+                  "long":    { "type": "string" },
+                  "short":   { "type": "string" },
+                  "elapsed": { "type": ["integer", "null"] },
+                  "extra":   { "type": ["integer", "null"] }
+                }
+              }
+            }
+          },
+          "league": {
+            "type": "object",
+            "properties": {
+              "id":      { "type": "integer" },
+              "name":    { "type": "string" },
+              "country": { "type": "string" },
+              "logo":    { "type": "string"  },
+              "flag":    { "type": ["string", "null"] },
+              "season":  { "type": "integer" },
+              "round":   { "type": "string"  }
+            }
+          },
+          "teams": {
+            "type": "object",
+            "properties": {
+              "home": { "$ref": "#/$defs/api_team" },
+              "away": { "$ref": "#/$defs/api_team" }
+            }
+          },
+          "goals": {
+            "type": "object",
+            "properties": {
+              "home": { "type": ["integer", "null"] },
+              "away": { "type": ["integer", "null"] }
+            }
+          },
+          "score": { "type": "object" },
+          "events":     { "type": "array" },
+          "lineups":    { "type": "array" },
+          "statistics": { "type": "array" },
+          "players":    { "type": "array" }
+        }
+      }
+    }
   },
+
   "$defs": {
-    "team": {
-      "type":"object",
-      "required":["id","name"],
-      "properties":{
-        "id":    { "type":"string" },
-        "name":  { "type":"string" },
-        "short": { "type":"string" }
+    "api_team": {
+      "type": "object",
+      "properties": {
+        "id":     { "type": "integer" },
+        "name":   { "type": "string"  },
+        "logo":   { "type": "string"  },
+        "winner": { "type": ["boolean", "null"] }
       }
     }
   }

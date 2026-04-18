@@ -11,7 +11,7 @@ headers = {
     'x-apisports-key': os.getenv("API_FOOTBALL_KEY")
     }
 
-conn.request("GET", "/fixtures?date=2026-04-15&league=2&season=2025", headers=headers)
+conn.request("GET", "/fixtures?date=2026-04-28&league=2&season=2025", headers=headers)
 
 res = conn.getresponse()
 data = res.read()

@@ -29,14 +29,14 @@ closed_llm:
   #   base_url: https://api.openai.com/v1
   #   price_per_mtok: { input: 3.00, output: 12.00 }
   #   settings_supported: [S1]
-  - id: gpt-5.4-mini
-    provider: openai
-    model: gpt-5.4-mini
-    api_key_env: OPENAI_API_KEY
-    base_url_env: OPENAI_BASE_URL
-    base_url: https://api.openai.com/v1
-    price_per_mtok: { input: 3.00, output: 12.00 }
-    settings_supported: [S1]
+  # - id: gpt-5.4-mini
+  #   provider: openai
+  #   model: gpt-5.4-mini
+  #   api_key_env: OPENAI_API_KEY
+  #   base_url_env: OPENAI_BASE_URL
+  #   base_url: https://api.openai.com/v1
+  #   price_per_mtok: { input: 3.00, output: 12.00 }
+  #   settings_supported: [S1]
 #   - id: claude-sonnet-4-6
 #     provider: anthropic
 #     model: claude-sonnet-4-6
@@ -102,15 +102,15 @@ search_llm:
 #     price_per_mtok: { input: 3.00, output: 15.00 }
 #     search_surcharge_per_1k: 10.00
 #     settings_supported: [S2]
-#   - id: gpt-5.4-search
-#     provider: openai
-#     model: gpt-5.4
-#     api_key_env: OPENAI_API_KEY
-#     base_url_env: OPENAI_BASE_URL
-#     base_url: https://api.openai.com/v1
-#     tools: [web_search]
-#     price_per_mtok: { input: 3.00, output: 12.00 }
-#     settings_supported: [S2]
+  - id: gpt-5.4-search
+    provider: openai
+    model: gpt-5.4
+    api_key_env: OPENAI_API_KEY
+    base_url_env: OPENAI_BASE_URL
+    base_url: https://api.openai.com/v1
+    tools: [web_search]
+    price_per_mtok: { input: 3.00, output: 12.00 }
+    settings_supported: [S2]
 #   - id: gemini-3-pro-search
 #     provider: google
 #     model: gemini-3-pro
