@@ -55,6 +55,7 @@ jobs:
 
       - name: Scheduler tick
         env:
+          PYTHONUNBUFFERED: "1"
           API_FOOTBALL_KEY:   ${{ secrets.API_FOOTBALL_KEY }}
           NEWSAPI_KEY:        ${{ secrets.NEWSAPI_KEY }}
           GNEWS_API_KEY:      ${{ secrets.GNEWS_API_KEY }}
@@ -81,7 +82,11 @@ jobs:
         run: |
           git config user.name  "worldcuparena-bot"
           git config user.email "bot@worldcuparena.local"
-          git add data/snapshots data/predictions data/results docs/leaderboard docs/site/data.json 2>/dev/null || true
+          echo "--- files written by pipeline ---"
+          ls data/snapshots/ 2>/dev/null || echo "(data/snapshots missing)"
+          git add data/snapshots data/predictions data/results docs/leaderboard docs/site/data.json
+          echo "--- git status after add ---"
+          git status --short
           if ! git diff --cached --quiet; then
             git commit -m "automate: tick $(date -u +%FT%TZ)"
             git push

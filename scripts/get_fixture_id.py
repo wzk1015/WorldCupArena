@@ -51,5 +51,6 @@ def get_fixture(id):
 
 
 if __name__ == "__main__":
-    get_id(team="germain", league=61)
+    # get_id(team="germain", league=61)
+    get_id(team="los angeles fc", league=253, date="2026-04-19", season=2026)
     # get_fixture(1396506)
