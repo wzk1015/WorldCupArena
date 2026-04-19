@@ -47,7 +47,7 @@ open http://localhost:8000
    to GitHub Pages.
 
 So each fixture's lifecycle visibly updates the public site twice:
-once after lock+predict (T-1h, predictions appear), and once after grade
+once after lock+predict (T-24h, predictions appear), and once after grade
 (T+3h–T+48h, leaderboard + history update).
 
 Enable Pages in repo Settings → Pages → Source = "GitHub Actions".

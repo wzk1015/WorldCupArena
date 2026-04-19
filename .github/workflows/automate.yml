@@ -5,9 +5,9 @@ name: automate
 #   configs/fixtures.yaml and fires every pipeline phase whose window is
 #   currently open for each fixture:
 #
-#     ingest       T-72h → T-1h   pull fixture.json from API-Football
-#     populate     T-48h → T-1h   fill context_pack (squads, form, news, stats)
-#     lock_predict T-1h  → T+0h   lock snapshot + run every model prediction
+#     ingest       T-72h → T-24h  pull fixture.json from API-Football
+#     populate     T-48h → T-24h  fill context_pack (squads, form, news, stats)
+#     lock_predict T-24h → T+0h   lock snapshot + run every model prediction
 #     truth_grade  T+3h  → T+48h  fetch truth + grade + rebuild leaderboard
 #
 # Every phase is idempotent: `ingest` skips if fixture.json exists, `populate`

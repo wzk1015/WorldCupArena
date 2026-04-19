@@ -8,7 +8,7 @@
 #   wca_id        : WorldCupArena ID. Becomes the snapshot/predictions/results
 #                   directory name. kebab_case, unique.
 #   provider_id   : API-Football numeric fixture id.
-#   kickoff_utc   : ISO-8601 kickoff time. lock_at_utc is derived as kickoff-1h.
+#   kickoff_utc   : ISO-8601 kickoff time. lock_at_utc is derived as kickoff-24h.
 #   enabled       : false to freeze a fixture out of the automation (default true).
 #
 # Add a fixture and the next cron tick picks it up automatically; no manual

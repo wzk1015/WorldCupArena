@@ -83,7 +83,7 @@ python -m src.pipeline.orchestrator populate \
 
 The ingestor pulls squads, recent form, injury news, and bookmaker closing odds into `context_pack`. If an adapter isn't ready yet (e.g. for a minor league), hand-author the snapshot using [data/snapshots/bayern_madrid_ucl_qf_l2/fixture.json](../data/snapshots/bayern_madrid_ucl_qf_l2/fixture.json) as a template — only the `fixture_id`, `kickoff_utc`, `lock_at_utc`, `home`, `away`, and `context_pack` fields are required.
 
-### 3.2 Lock at T-1h
+### 3.2 Lock at T-24h
 
 ```bash
 python -m src.pipeline.orchestrator lock \

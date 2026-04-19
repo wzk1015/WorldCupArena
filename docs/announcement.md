@@ -22,7 +22,7 @@ Football is the tightest possible test for a deep-research agent:
 1. **The answer changes daily.** Injury news at 10 a.m. can flip the score line at 8 p.m.
 2. **Sources disagree.** Official club statements, reputable journalism, odds markets, and Twitter rumours can each point different directions.
 3. **Ground truth is abundant.** One 90-minute match yields dozens of gradable signals — an F1 on goalscorers, a Hungarian-matched MAE on minutes, a sMAPE on corners.
-4. **Leakage is trivially punishable.** Every source link is audited against kickoff-minus-1h; any article published after lock disqualifies the task.
+4. **Leakage is trivially punishable.** Every source link is audited against kickoff-minus-24h; any article published after lock disqualifies the task.
 
 ## How we score
 

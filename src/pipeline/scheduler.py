@@ -7,9 +7,9 @@ ticks catch up on the next run and running two back-to-back is a no-op.
 
 Phases (windows relative to kickoff):
 
-    ingest       : T-72h → T-1h    pull fixture.json from API-Football
-    populate     : T-48h → T-1h    fill context_pack (squads/form/news/stats)
-    lock_predict : T-1h  → T+0h    lock snapshot + run all model predictions
+    ingest       : T-72h → T-24h   pull fixture.json from API-Football
+    populate     : T-48h → T-24h   fill context_pack (squads/form/news/stats)
+    lock_predict : T-24h → T+0h    lock snapshot + run all model predictions
     truth_grade  : T+3h  → T+48h   pull truth, grade, rebuild leaderboard
 
 At each tick, for each fixture, every phase whose window is open runs in
@@ -17,7 +17,6 @@ order. Every phase checks "is my work already done?" before acting:
 
     ingest       — skip if fixture.json exists
     populate     — skip if context_pack already has squads
-                   (news is refreshed once more inside the T-6h lock window)
     lock_predict — skip lock if snapshot_hash is set;
                    skip predict if predictions/<wca_id>/ has any json
     truth_grade  — skip truth download if truth.json exists;
@@ -47,9 +46,9 @@ FIXTURES_YAML = ROOT / "configs" / "fixtures.yaml"
 
 # (phase_name, start_offset_from_kickoff, end_offset_from_kickoff)
 PHASES: list[tuple[str, timedelta, timedelta]] = [
-    ("ingest",       timedelta(hours=-72),  timedelta(hours=-1)),
-    ("populate",     timedelta(hours=-48),  timedelta(hours=-1)),
-    ("lock_predict", timedelta(hours=-1),   timedelta(hours=0)),
+    ("ingest",       timedelta(hours=-72),  timedelta(hours=-24)),
+    ("populate",     timedelta(hours=-48),  timedelta(hours=-24)),
+    ("lock_predict", timedelta(hours=-24),  timedelta(hours=0)),
     ("truth_grade",  timedelta(hours=3),    timedelta(hours=48)),
 ]
 PHASE_NAMES = [p[0] for p in PHASES]
@@ -91,7 +90,7 @@ def _phase_ingest(fx: dict, fx_dir: Path) -> None:
         print(f"  [ingest] skip — {fixture_path} exists")
         return
     fx_dir.mkdir(parents=True, exist_ok=True)
-    lock_at = (_parse_iso(fx["kickoff_utc"]) - timedelta(hours=1)).isoformat()
+    lock_at = (_parse_iso(fx["kickoff_utc"]) - timedelta(hours=24)).isoformat()
     _run([sys.executable, "-m", "src.ingest.api_football",
           "--fixture-id", str(fx["provider_id"]),
           "--wca-id", fx["wca_id"],

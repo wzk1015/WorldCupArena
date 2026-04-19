@@ -7,7 +7,7 @@ On-disk format (snapshots/<id>/fixture.json, truth.json):
   Both files are raw API-Football /fixtures responses (the "get"/"response"/...
   wrapper) with three WorldCupArena fields added at the root level:
     fixture_id  — WorldCupArena ID set by the operator
-    lock_at_utc — prediction lock time (kickoff − 1 h), added by ingest
+    lock_at_utc — prediction lock time (kickoff − 24 h), added by ingest
     context_pack — squads/form/news/stats injected into S1 prompts
 
 The orchestrator calls normalize_fixture() / normalize_to_truth() to flatten
@@ -438,7 +438,7 @@ def main():
     ap = argparse.ArgumentParser(description="Fetch a fixture from API-Football and save the raw response.")
     ap.add_argument("--fixture-id", type=int, required=True, help="API-Football fixture ID")
     ap.add_argument("--wca-id", type=str, required=True, help="WorldCupArena fixture_id (e.g. ucl_sf1_l1)")
-    ap.add_argument("--lock-at", type=str, default="", help="lock_at_utc (ISO-8601, kickoff − 1 h). Leave empty for truth-only pulls.")
+    ap.add_argument("--lock-at", type=str, default="", help="lock_at_utc (ISO-8601, kickoff − 24 h). Leave empty for truth-only pulls.")
     ap.add_argument("--out", type=str, required=True, help="Output path (e.g. data/snapshots/ucl_sf1_l1/fixture.json)")
     args = ap.parse_args()
 

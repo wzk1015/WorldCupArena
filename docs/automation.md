@@ -16,10 +16,10 @@ windows. All times are relative to **kickoff** (UTC).
 
 | Phase | Window | Command | What it writes |
 |-------|--------|---------|----------------|
-| **ingest**   | T-48h → T-1h | `src.ingest.api_football --fixture-id … --out fixture.json` | raw API-Football response → `data/snapshots/<id>/fixture.json` |
-| **populate** | T-48h → T-1h | `src.pipeline.orchestrator populate --fixture …` | adds `context_pack` — squads + recent form + stats + **news headlines** |
-| **lock**     | T-1h         | `src.pipeline.orchestrator lock --fixture …` | `snapshot_hash` written into `fixture.json` |
-| **predict**  | T-1h → T+0h  | `src.pipeline.orchestrator predict --fixture …` | `data/predictions/<id>/<model>__<setting>.json` |
+| **ingest**   | T-48h → T-24h | `src.ingest.api_football --fixture-id … --out fixture.json` | raw API-Football response → `data/snapshots/<id>/fixture.json` |
+| **populate** | T-48h → T-24h | `src.pipeline.orchestrator populate --fixture …` | adds `context_pack` — squads + recent form + stats + **news headlines** |
+| **lock**     | T-24h         | `src.pipeline.orchestrator lock --fixture …` | `snapshot_hash` written into `fixture.json` |
+| **predict**  | T-24h → T+0h  | `src.pipeline.orchestrator predict --fixture …` | `data/predictions/<id>/<model>__<setting>.json` |
 | **truth**    | T+3h → T+48h | `src.ingest.api_football --fixture-id … --out truth.json` | raw post-match response → `data/snapshots/<id>/truth.json` |
 | **grade**    | T+3h → T+48h | `src.pipeline.orchestrator grade --fixture-dir …` + `src.leaderboard.build` + `src.leaderboard.build_site` | `data/results/<id>/*.json` + `docs/leaderboard/raw.json` + `docs/site/data.json` |
 
@@ -28,7 +28,7 @@ Phases scheduled by `src.pipeline.scheduler`:
 ```
 T-72h ─── ingest          ─── fixture.json  (from API-Football)
 T-48h ─── populate        ─── context_pack  (squads, form, news, stats)
-T-1h  ─── lock_predict    ─── snapshot_hash + predictions/
+T-24h ─── lock_predict    ─── snapshot_hash + predictions/
 T+3h  ─── truth_grade     ─── truth.json + results/ + leaderboard + site/data.json
 ```
 
@@ -52,7 +52,7 @@ fixtures:
     enabled: true
 ```
 
-`lock_at_utc` is always derived as `kickoff_utc − 1 hour`.
+`lock_at_utc` is always derived as `kickoff_utc − 24 hours`.
 
 Status check (dry-run; prints each fixture and the phase that would run now):
 
@@ -179,7 +179,7 @@ T-72h ──────── ingest      (fetch fixture.json from API-Football
    │                                       │
 T-48h ──────── populate    (squads + form + news + stats)
    │                                       │
-T-1h  ──────── lock + predict   (freeze snapshot, run all models)
+T-24h ──────── lock + predict   (freeze snapshot, run all models)
    │                                       │
 kickoff ──────── (real match)
    │                                       │
@@ -217,7 +217,7 @@ That's all. The hourly cron at .github/workflows/automate.yml now picks it up:
 
 T-48h → ingests + populates context_pack (news included)
 
-T-1h → locks + runs every model prediction
+T-24h → locks + runs every model prediction
 
 T+3h → fetches truth, grades, rebuilds leaderboard + site
 

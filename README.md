@@ -82,8 +82,7 @@ docs/
 
 ```
  T-48h   ingest.py          pull squads, form, news, odds  →  snapshots/<id>/fixture.json
- T-24h   orchestrator predict  run every (model, setting)  →  predictions/<id>/*.json
- T-1h    lock.py            snapshot_hash frozen, audit sources[] against this moment
+ T-24h   lock.py + predict  snapshot_hash frozen; run every (model, setting)  →  predictions/<id>/*.json
  T+3h    ingest/result      pull goals, lineups, stats     →  snapshots/<id>/truth.json
  T+24h   orchestrator grade → results/<id>/*.json
          leaderboard.build  → docs/leaderboard/

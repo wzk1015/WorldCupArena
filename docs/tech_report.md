@@ -89,7 +89,7 @@ We normalise distributions post-hoc if the model returns unnormalised probabilit
 Agents with web search can trivially read post-kickoff reports and "predict" what already happened. We mitigate as follows:
 
 - Every response must include `sources[]` with `url` and `accessed_at`.
-- Before kickoff we record `lock_at_utc = kickoff − 1h`.
+- Before kickoff we record `lock_at_utc = kickoff − 24h`.
 - Post-grading, an audit job fetches each source URL's publication metadata. Any source with `published_at > lock_at_utc` invalidates the dependent task (0 score). The leaderboard flags models with any leakage events.
 
 We considered also running a "date-constrained" search tool, but most provider APIs don't expose deterministic pre-lock filtering, so post-hoc audit is the pragmatic fallback.
