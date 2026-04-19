@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-04-19T14:12:27+00:00",
+  "generated_at": "2026-04-19T18:58:07+00:00",
   "leaderboard": {
     "main": [
       {
-        "model_id": "gpt-5.4-search",
-        "mean": 45.549434581881535,
+        "model_id": "gpt-5.4-mini",
+        "mean": 46.71341167865636,
         "n": 1,
         "layers_mean": {
-          "T1_core_result": 73.8255,
+          "T1_core_result": 75.9205,
           "T2_player_level": 10.0,
-          "T3_event_level": 56.224999999999994,
-          "T4_tactics_stats": 51.84506387921023,
+          "T3_event_level": 60.4375,
+          "T4_tactics_stats": 50.50407785770903,
           "T5_tournament_macro": 10.0
         }
       },
       {
-        "model_id": "gpt-5.4-mini",
-        "mean": 44.43072649725218,
+        "model_id": "gpt-5.4-search",
+        "mean": 44.4591099544479,
         "n": 1,
         "layers_mean": {
-          "T1_core_result": 75.9205,
+          "T1_core_result": 73.8255,
           "T2_player_level": 5.0,
-          "T3_event_level": 52.535,
-          "T4_tactics_stats": 51.522009981681194,
+          "T3_event_level": 60.32083333333333,
+          "T4_tactics_stats": 48.81373302965265,
           "T5_tournament_macro": 10.0
         }
       },
@@ -40,81 +40,31 @@
       }
     ],
     "by_model_setting": {
-      "test": {
-        "test": 21.5125
+      "gpt-5.4-search": {
+        "S2": 44.4591099544479
       },
       "gpt-5.4-mini": {
-        "S1": 44.43072649725218
+        "S1": 46.71341167865636
       },
-      "gpt-5.4-search": {
-        "S2": 45.549434581881535
+      "test": {
+        "test": 21.5125
       }
     }
   },
   "next_match": {
     "fixture": {
-      "wca_id": "bayern_madrid_ucl_qf_l2",
-      "home": "Bayern München",
-      "home_logo": "https://media.api-sports.io/football/teams/157.png",
-      "away": "Real Madrid",
-      "away_logo": "https://media.api-sports.io/football/teams/541.png",
-      "kickoff_utc": "2026-04-15T19:00:00+00:00",
-      "lock_at_utc": "2026-04-15T18:00:00+00:00",
-      "venue": "Allianz Arena",
-      "stage": "Quarter-finals",
-      "competition": "UEFA Champions League"
+      "wca_id": "mls_lafc_test",
+      "home": "Los Angeles FC",
+      "home_logo": "https://media.api-sports.io/football/teams/1616.png",
+      "away": "San Jose Earthquakes",
+      "away_logo": "https://media.api-sports.io/football/teams/1596.png",
+      "kickoff_utc": "2026-04-19T23:00:00+00:00",
+      "lock_at_utc": "2026-04-19T22:00:00+00:00",
+      "venue": "BMO Stadium",
+      "stage": "Regular Season - 8",
+      "competition": "Major League Soccer"
     },
-    "predictions": [
-      {
-        "model_id": "gpt-5.4-mini",
-        "setting": "S1",
-        "win_probs": {
-          "home": 0.42,
-          "draw": 0.29,
-          "away": 0.29
-        },
-        "most_likely_score": "1-1",
-        "expected_goal_diff": 0.12,
-        "advance_prob": 0.53,
-        "reasoning_overall": "Bayern at the Allianz Arena usually start fast and can control territory, but Real Madrid’s knockout pedigree and transition threat make this close to even. In a first-leg quarter-final, both teams should be cautious enough to keep the score tight, while elite finishers like Kane and Vinícius can decide it with one or two moments. Bayern’s home edge slightly offsets Madrid’s experience and late-game management, so a narrow Bayern win or draw is the most plausible band.",
-        "top_scorers": [
-          "Harry Kane",
-          "Jamal Musiala",
-          "Leroy Sané"
-        ],
-        "cost_usd": 0.038235
-      },
-      {
-        "model_id": "gpt-5.4-search",
-        "setting": "S2",
-        "win_probs": {
-          "home": 0.4,
-          "draw": 0.28,
-          "away": 0.32
-        },
-        "most_likely_score": "1-1",
-        "expected_goal_diff": 0.12,
-        "advance_prob": 0.46,
-        "reasoning_overall": "This projects as a very tight elite-level knockout match: Bayern should have more territorial control at Allianz Arena, but Real Madrid’s transition quality, Champions League game management, and individual match-winners keep the tie balanced. Bayern’s home pressure and volume creation slightly lift their win chance, yet Madrid’s counterattacking threat through Vinícius, Bellingham and Mbappé-type central/left combinations makes an away result highly live. Recent H2H history between these clubs is usually open but decided by fine margins, so a one-goal game or draw is more plausible than a blowout.",
-        "top_scorers": [
-          "Harry Kane",
-          "Jamal Musiala",
-          "Leroy Sané"
-        ],
-        "cost_usd": 0.093447
-      },
-      {
-        "model_id": "test",
-        "setting": "test",
-        "win_probs": null,
-        "most_likely_score": null,
-        "expected_goal_diff": null,
-        "advance_prob": null,
-        "reasoning_overall": null,
-        "top_scorers": [],
-        "cost_usd": null
-      }
-    ]
+    "predictions": []
   },
   "history": [
     {
@@ -131,14 +81,14 @@
       "result": "4-3",
       "models": [
         {
-          "model_id": "gpt-5.4-search",
-          "setting": "S2",
-          "composite": 45.549434581881535
-        },
-        {
           "model_id": "gpt-5.4-mini",
           "setting": "S1",
-          "composite": 44.43072649725218
+          "composite": 46.71341167865636
+        },
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "composite": 44.4591099544479
         },
         {
           "model_id": "test",
