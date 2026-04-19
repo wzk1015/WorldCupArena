@@ -110,7 +110,7 @@ We considered also running a "date-constrained" search tool, but most provider A
 
 - 64 matches, group + knockout.
 - Pre-tournament prediction on 2026-06-10.
-- Per-match T-1h predictions.
+- Per-match T-24h predictions.
 - Post-round re-prediction of remaining knockouts.
 - Expected ~$1,928 API spend.
 

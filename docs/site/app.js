@@ -67,7 +67,7 @@ function renderNextMatch(nm) {
     </div>
 
     ${ preds.length === 0
-        ? `<div class="text-gray-400 text-sm">No model predictions locked for this fixture yet (runs at T-1h).</div>`
+        ? `<div class="text-gray-400 text-sm">No model predictions locked for this fixture yet (runs at 24 hours before the game).</div>`
         : `<div class="overflow-x-auto">
             <table class="w-full text-sm">
               <thead class="text-gray-400 text-xs uppercase tracking-wider">
