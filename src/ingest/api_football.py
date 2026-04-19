@@ -457,3 +457,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # python -m src.ingest.api_football --fixture-id 1379295 --wca-id premier_league_mancity_arsenal --lock-at 2026-04-19T13:30:00+00:00 --out data/snapshots/premier_league_mancity_arsenal/fixture.json

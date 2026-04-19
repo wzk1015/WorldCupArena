@@ -261,3 +261,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    # python -m src.ingest.news --fixture data/snapshots/premier_league_mancity_arsenal/fixture.json 
