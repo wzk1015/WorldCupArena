@@ -12,7 +12,7 @@ def get_id():
         'x-apisports-key': os.getenv("API_FOOTBALL_KEY")
         }
 
-    conn.request("GET", "/fixtures?date=2026-04-19&league=39&season=2025", headers=headers)
+    conn.request("GET", "/fixtures?date=2026-04-19&league=94&season=2025", headers=headers)
 
     res = conn.getresponse()
     data = res.read()
@@ -39,4 +39,4 @@ def get_fixture(id):
 
 if __name__ == "__main__":
     # get_id()
-    get_fixture(1379295)
+    get_fixture(1396506)
