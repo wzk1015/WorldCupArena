@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T22:16:25+00:00",
+  "generated_at": "2026-04-19T23:50:49+00:00",
   "leaderboard": {
     "main": [
       {
@@ -25,34 +25,35 @@
           "T4_tactics_stats": 48.81373302965265,
           "T5_tournament_macro": 10.0
         }
-      },
-      {
-        "model_id": "test",
-        "mean": 21.5125,
-        "n": 1,
-        "layers_mean": {
-          "T1_core_result": 45.75,
-          "T2_player_level": 0.0,
-          "T3_event_level": 30.0,
-          "T4_tactics_stats": 0.0,
-          "T5_tournament_macro": 10.0
-        }
       }
     ],
     "by_model_setting": {
-      "test": {
-        "test": 21.5125
+      "gpt-5.4-search": {
+        "S2": 44.4591099544479
       },
       "gpt-5.4-mini": {
         "S1": 46.71341167865636
-      },
-      "gpt-5.4-search": {
-        "S2": 44.4591099544479
       }
     }
   },
   "next_match": {
     "fixture": {
+      "wca_id": "Premier-League_Brighton_Chelsea_2026-04-21",
+      "home": "Brighton",
+      "home_logo": "https://media.api-sports.io/football/teams/51.png",
+      "away": "Chelsea",
+      "away_logo": "https://media.api-sports.io/football/teams/49.png",
+      "kickoff_utc": "2026-04-21T19:00:00+00:00",
+      "lock_at_utc": "2026-04-20T19:00:00+00:00",
+      "venue": "Amex Stadium",
+      "stage": "Regular Season - 34",
+      "competition": "Premier League"
+    },
+    "predictions": [],
+    "live": null
+  },
+  "history": [
+    {
       "wca_id": "mls_lafc_test",
       "home": "Los Angeles FC",
       "home_logo": "https://media.api-sports.io/football/teams/1616.png",
@@ -62,486 +63,525 @@
       "lock_at_utc": "2026-04-19T22:00:00+00:00",
       "venue": "BMO Stadium",
       "stage": "Regular Season - 8",
-      "competition": "Major League Soccer"
+      "competition": "Major League Soccer",
+      "result": null,
+      "truth": null,
+      "live": {
+        "status": "First Half",
+        "elapsed": 38,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "events": [
+          {
+            "time": {
+              "elapsed": 23,
+              "extra": null
+            },
+            "team": {
+              "id": 1616,
+              "name": "Los Angeles FC",
+              "logo": "https://media.api-sports.io/football/teams/1616.png"
+            },
+            "player": {
+              "id": 25617,
+              "name": "T. Tillman"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": null
+          }
+        ]
+      },
+      "models": [
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "composite": 0.0
+        }
+      ],
+      "predictions": [
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.57,
+            "draw": 0.24,
+            "away": 0.19
+          },
+          "score_dist": [
+            {
+              "score": "2-1",
+              "p": 0.19
+            },
+            {
+              "score": "1-0",
+              "p": 0.15
+            },
+            {
+              "score": "2-0",
+              "p": 0.12
+            },
+            {
+              "score": "1-1",
+              "p": 0.12
+            },
+            {
+              "score": "3-1",
+              "p": 0.09
+            },
+            {
+              "score": "0-0",
+              "p": 0.06
+            },
+            {
+              "score": "2-2",
+              "p": 0.05
+            },
+            {
+              "score": "0-1",
+              "p": 0.05
+            },
+            {
+              "score": "1-2",
+              "p": 0.05
+            },
+            {
+              "score": "3-0",
+              "p": 0.04
+            },
+            {
+              "score": "3-2",
+              "p": 0.03
+            },
+            {
+              "score": "4-1",
+              "p": 0.02
+            },
+            {
+              "score": "1-3",
+              "p": 0.01
+            },
+            {
+              "score": "4-0",
+              "p": 0.01
+            },
+            {
+              "score": "0-2",
+              "p": 0.01
+            }
+          ],
+          "most_likely_score": "2-1",
+          "expected_goal_diff": 0.72,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "LAFC deserve clear favoritism at BMO Stadium because their squad ceiling, home-field edge, and attacking talent are stronger than San Jose's, and this fixture has often tilted toward LAFC in Los Angeles. Even allowing for MLS volatility and possible rotation, LAFC's likely front line and chance creation profile should generate more box entries and shots, while San Jose remain dangerous in transition and on direct attacks, keeping draw and away-upset probabilities meaningful. The matchup likely hinges on whether LAFC's wide attackers and advanced fullbacks can pin San Jose deep, and whether San Jose can exploit space behind them through quick counters and set pieces. Key players such as Denis Bouanga and Mateusz Bogusz give LAFC more reliable finishing and ball progression, while San Jose's best route is through moments from Cristian Espinoza and a central striker attacking crosses.",
+            "t1_result": "The home win is the single most likely outcome because LAFC project for the better expected-goal share, more territorial control, and stronger individual quality, but MLS parity keeps the draw live. A 2-1 home result fits a game where LAFC create more volume yet concede at least one dangerous transition or set-piece chance.",
+            "t2_player": "LAFC are projected in a familiar 4-3-3/4-2-3-1 hybrid with Bouanga as the main scoring threat and Bogusz involved between the lines. San Jose should also use a back four and rely on Espinoza's delivery plus vertical runs from the front line, so their scorers are more likely to come from wide-service patterns than sustained possession.",
+            "t3_events": "Expect LAFC to start on the front foot, with one of their best chances arriving before halftime and San Jose's most dangerous spell coming after turnovers or after the break. Typical MLS game-state dynamics suggest several second-half substitutions, a few tactical yellows, and a decent chance of both teams scoring.",
+            "t4_stats": "LAFC should have a modest possession edge and more shots because they are likelier to sustain attacks at home, but San Jose can still post respectable shot numbers through counters and crosses. That points to LAFC leading in possession, corners, and pass accuracy, while both keepers should be forced into multiple saves."
+          },
+          "scorers": [
+            {
+              "player": "Denis Bouanga",
+              "team": "home",
+              "minute_range": [
+                15,
+                75
+              ],
+              "p": 0.43
+            },
+            {
+              "player": "Olivier Giroud",
+              "team": "home",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.28
+            },
+            {
+              "player": "Mateusz Bogusz",
+              "team": "home",
+              "minute_range": [
+                25,
+                85
+              ],
+              "p": 0.24
+            },
+            {
+              "player": "Cristian Olivera",
+              "team": "home",
+              "minute_range": [
+                30,
+                90
+              ],
+              "p": 0.16
+            },
+            {
+              "player": "Jeremy Ebobisse",
+              "team": "away",
+              "minute_range": [
+                35,
+                90
+              ],
+              "p": 0.24
+            },
+            {
+              "player": "Cristian Espinoza",
+              "team": "away",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.18
+            },
+            {
+              "player": "Amahl Pellegrino",
+              "team": "away",
+              "minute_range": [
+                40,
+                90
+              ],
+              "p": 0.14
+            }
+          ],
+          "assisters": [
+            {
+              "player": "Mateusz Bogusz",
+              "team": "home",
+              "p": 0.27
+            },
+            {
+              "player": "Denis Bouanga",
+              "team": "home",
+              "p": 0.22
+            },
+            {
+              "player": "Ryan Hollingshead",
+              "team": "home",
+              "p": 0.12
+            },
+            {
+              "player": "Cristian Espinoza",
+              "team": "away",
+              "p": 0.21
+            },
+            {
+              "player": "Hernán López",
+              "team": "away",
+              "p": 0.13
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "Denis Bouanga",
+              "team": "home",
+              "p": 0.31
+            },
+            {
+              "player": "Mateusz Bogusz",
+              "team": "home",
+              "p": 0.18
+            },
+            {
+              "player": "Olivier Giroud",
+              "team": "home",
+              "p": 0.13
+            },
+            {
+              "player": "Cristian Espinoza",
+              "team": "away",
+              "p": 0.11
+            },
+            {
+              "player": "Hugo Lloris",
+              "team": "home",
+              "p": 0.07
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Hugo Lloris",
+                  "position": "GK"
+                },
+                {
+                  "name": "Sergi Palencia",
+                  "position": "DF"
+                },
+                {
+                  "name": "Aaron Long",
+                  "position": "DF"
+                },
+                {
+                  "name": "Jesús Murillo",
+                  "position": "DF"
+                },
+                {
+                  "name": "Ryan Hollingshead",
+                  "position": "DF"
+                },
+                {
+                  "name": "Ilie Sánchez",
+                  "position": "MF"
+                },
+                {
+                  "name": "Timothy Tillman",
+                  "position": "MF"
+                },
+                {
+                  "name": "Mateusz Bogusz",
+                  "position": "MF"
+                },
+                {
+                  "name": "Denis Bouanga",
+                  "position": "FW"
+                },
+                {
+                  "name": "Cristian Olivera",
+                  "position": "FW"
+                },
+                {
+                  "name": "Olivier Giroud",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Thomas Hasal",
+                  "position": "GK"
+                },
+                {
+                  "name": "Marlon",
+                  "position": "DF"
+                },
+                {
+                  "name": "Maxime Chanot",
+                  "position": "DF"
+                },
+                {
+                  "name": "Odin Holm",
+                  "position": "MF"
+                },
+                {
+                  "name": "Lewis O'Brien",
+                  "position": "MF"
+                },
+                {
+                  "name": "David Martínez",
+                  "position": "FW"
+                },
+                {
+                  "name": "Nathan Ordaz",
+                  "position": "FW"
+                },
+                {
+                  "name": "Jeremy Ebobisse",
+                  "position": "FW"
+                },
+                {
+                  "name": "Javairô Dilrosun",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "Daniel",
+                  "position": "GK"
+                },
+                {
+                  "name": "Paul Marie",
+                  "position": "DF"
+                },
+                {
+                  "name": "Rodrigues",
+                  "position": "DF"
+                },
+                {
+                  "name": "Bruno Wilson",
+                  "position": "DF"
+                },
+                {
+                  "name": "Carlos Akapo",
+                  "position": "DF"
+                },
+                {
+                  "name": "Jackson Yueill",
+                  "position": "MF"
+                },
+                {
+                  "name": "Hernán López",
+                  "position": "MF"
+                },
+                {
+                  "name": "Carlos Gruezo",
+                  "position": "MF"
+                },
+                {
+                  "name": "Cristian Espinoza",
+                  "position": "FW"
+                },
+                {
+                  "name": "Amahl Pellegrino",
+                  "position": "FW"
+                },
+                {
+                  "name": "Jeremy Ebobisse",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "William Yarbrough",
+                  "position": "GK"
+                },
+                {
+                  "name": "Tanner Beason",
+                  "position": "DF"
+                },
+                {
+                  "name": "Vítor Costa",
+                  "position": "DF"
+                },
+                {
+                  "name": "Niko Tsakiris",
+                  "position": "MF"
+                },
+                {
+                  "name": "Judson",
+                  "position": "MF"
+                },
+                {
+                  "name": "Jack Skahan",
+                  "position": "MF"
+                },
+                {
+                  "name": "Preston Judd",
+                  "position": "FW"
+                },
+                {
+                  "name": "Ousseni Bouda",
+                  "position": "FW"
+                },
+                {
+                  "name": "Benji Kikanović",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-3-3",
+            "away": "4-3-3"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "Olivier Giroud",
+              "on": "Nathan Ordaz",
+              "minute": 68
+            },
+            {
+              "team": "home",
+              "off": "Cristian Olivera",
+              "on": "David Martínez",
+              "minute": 72
+            },
+            {
+              "team": "home",
+              "off": "Ilie Sánchez",
+              "on": "Lewis O'Brien",
+              "minute": 77
+            },
+            {
+              "team": "away",
+              "off": "Amahl Pellegrino",
+              "on": "Ousseni Bouda",
+              "minute": 64
+            },
+            {
+              "team": "away",
+              "off": "Jeremy Ebobisse",
+              "on": "Preston Judd",
+              "minute": 74
+            },
+            {
+              "team": "away",
+              "off": "Jackson Yueill",
+              "on": "Niko Tsakiris",
+              "minute": 79
+            }
+          ],
+          "cards": [
+            {
+              "player": "Carlos Gruezo",
+              "team": "away",
+              "color": "yellow",
+              "minute": 33
+            },
+            {
+              "player": "Aaron Long",
+              "team": "home",
+              "color": "yellow",
+              "minute": 58
+            },
+            {
+              "player": "Paul Marie",
+              "team": "away",
+              "color": "yellow",
+              "minute": 71
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 56,
+              "away": 44
+            },
+            "shots": {
+              "home": 15,
+              "away": 10
+            },
+            "shots_on_target": {
+              "home": 6,
+              "away": 4
+            },
+            "corners": {
+              "home": 6,
+              "away": 4
+            },
+            "pass_accuracy": {
+              "home": 85,
+              "away": 80
+            },
+            "fouls": {
+              "home": 11,
+              "away": 13
+            },
+            "saves": {
+              "home": 3,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 58,
+              "away": 64
+            }
+          },
+          "cost_usd": 0.045033,
+          "composite": null
+        }
+      ]
     },
-    "predictions": [
-      {
-        "model_id": "gpt-5.4-search",
-        "setting": "S2",
-        "win_probs": {
-          "home": 0.57,
-          "draw": 0.24,
-          "away": 0.19
-        },
-        "score_dist": [
-          {
-            "score": "2-1",
-            "p": 0.19
-          },
-          {
-            "score": "1-0",
-            "p": 0.15
-          },
-          {
-            "score": "2-0",
-            "p": 0.12
-          },
-          {
-            "score": "1-1",
-            "p": 0.12
-          },
-          {
-            "score": "3-1",
-            "p": 0.09
-          },
-          {
-            "score": "0-0",
-            "p": 0.06
-          },
-          {
-            "score": "2-2",
-            "p": 0.05
-          },
-          {
-            "score": "0-1",
-            "p": 0.05
-          },
-          {
-            "score": "1-2",
-            "p": 0.05
-          },
-          {
-            "score": "3-0",
-            "p": 0.04
-          },
-          {
-            "score": "3-2",
-            "p": 0.03
-          },
-          {
-            "score": "4-1",
-            "p": 0.02
-          },
-          {
-            "score": "1-3",
-            "p": 0.01
-          },
-          {
-            "score": "4-0",
-            "p": 0.01
-          },
-          {
-            "score": "0-2",
-            "p": 0.01
-          }
-        ],
-        "most_likely_score": "2-1",
-        "expected_goal_diff": 0.72,
-        "advance_prob": null,
-        "reasoning": {
-          "overall": "LAFC deserve clear favoritism at BMO Stadium because their squad ceiling, home-field edge, and attacking talent are stronger than San Jose's, and this fixture has often tilted toward LAFC in Los Angeles. Even allowing for MLS volatility and possible rotation, LAFC's likely front line and chance creation profile should generate more box entries and shots, while San Jose remain dangerous in transition and on direct attacks, keeping draw and away-upset probabilities meaningful. The matchup likely hinges on whether LAFC's wide attackers and advanced fullbacks can pin San Jose deep, and whether San Jose can exploit space behind them through quick counters and set pieces. Key players such as Denis Bouanga and Mateusz Bogusz give LAFC more reliable finishing and ball progression, while San Jose's best route is through moments from Cristian Espinoza and a central striker attacking crosses.",
-          "t1_result": "The home win is the single most likely outcome because LAFC project for the better expected-goal share, more territorial control, and stronger individual quality, but MLS parity keeps the draw live. A 2-1 home result fits a game where LAFC create more volume yet concede at least one dangerous transition or set-piece chance.",
-          "t2_player": "LAFC are projected in a familiar 4-3-3/4-2-3-1 hybrid with Bouanga as the main scoring threat and Bogusz involved between the lines. San Jose should also use a back four and rely on Espinoza's delivery plus vertical runs from the front line, so their scorers are more likely to come from wide-service patterns than sustained possession.",
-          "t3_events": "Expect LAFC to start on the front foot, with one of their best chances arriving before halftime and San Jose's most dangerous spell coming after turnovers or after the break. Typical MLS game-state dynamics suggest several second-half substitutions, a few tactical yellows, and a decent chance of both teams scoring.",
-          "t4_stats": "LAFC should have a modest possession edge and more shots because they are likelier to sustain attacks at home, but San Jose can still post respectable shot numbers through counters and crosses. That points to LAFC leading in possession, corners, and pass accuracy, while both keepers should be forced into multiple saves."
-        },
-        "scorers": [
-          {
-            "player": "Denis Bouanga",
-            "team": "home",
-            "minute_range": [
-              15,
-              75
-            ],
-            "p": 0.43
-          },
-          {
-            "player": "Olivier Giroud",
-            "team": "home",
-            "minute_range": [
-              20,
-              90
-            ],
-            "p": 0.28
-          },
-          {
-            "player": "Mateusz Bogusz",
-            "team": "home",
-            "minute_range": [
-              25,
-              85
-            ],
-            "p": 0.24
-          },
-          {
-            "player": "Cristian Olivera",
-            "team": "home",
-            "minute_range": [
-              30,
-              90
-            ],
-            "p": 0.16
-          },
-          {
-            "player": "Jeremy Ebobisse",
-            "team": "away",
-            "minute_range": [
-              35,
-              90
-            ],
-            "p": 0.24
-          },
-          {
-            "player": "Cristian Espinoza",
-            "team": "away",
-            "minute_range": [
-              20,
-              90
-            ],
-            "p": 0.18
-          },
-          {
-            "player": "Amahl Pellegrino",
-            "team": "away",
-            "minute_range": [
-              40,
-              90
-            ],
-            "p": 0.14
-          }
-        ],
-        "assisters": [
-          {
-            "player": "Mateusz Bogusz",
-            "team": "home",
-            "p": 0.27
-          },
-          {
-            "player": "Denis Bouanga",
-            "team": "home",
-            "p": 0.22
-          },
-          {
-            "player": "Ryan Hollingshead",
-            "team": "home",
-            "p": 0.12
-          },
-          {
-            "player": "Cristian Espinoza",
-            "team": "away",
-            "p": 0.21
-          },
-          {
-            "player": "Hernán López",
-            "team": "away",
-            "p": 0.13
-          }
-        ],
-        "motm_probs": [
-          {
-            "player": "Denis Bouanga",
-            "team": "home",
-            "p": 0.31
-          },
-          {
-            "player": "Mateusz Bogusz",
-            "team": "home",
-            "p": 0.18
-          },
-          {
-            "player": "Olivier Giroud",
-            "team": "home",
-            "p": 0.13
-          },
-          {
-            "player": "Cristian Espinoza",
-            "team": "away",
-            "p": 0.11
-          },
-          {
-            "player": "Hugo Lloris",
-            "team": "home",
-            "p": 0.07
-          }
-        ],
-        "lineups": {
-          "home": {
-            "starting": [
-              {
-                "name": "Hugo Lloris",
-                "position": "GK"
-              },
-              {
-                "name": "Sergi Palencia",
-                "position": "DF"
-              },
-              {
-                "name": "Aaron Long",
-                "position": "DF"
-              },
-              {
-                "name": "Jesús Murillo",
-                "position": "DF"
-              },
-              {
-                "name": "Ryan Hollingshead",
-                "position": "DF"
-              },
-              {
-                "name": "Ilie Sánchez",
-                "position": "MF"
-              },
-              {
-                "name": "Timothy Tillman",
-                "position": "MF"
-              },
-              {
-                "name": "Mateusz Bogusz",
-                "position": "MF"
-              },
-              {
-                "name": "Denis Bouanga",
-                "position": "FW"
-              },
-              {
-                "name": "Cristian Olivera",
-                "position": "FW"
-              },
-              {
-                "name": "Olivier Giroud",
-                "position": "FW"
-              }
-            ],
-            "bench": [
-              {
-                "name": "Thomas Hasal",
-                "position": "GK"
-              },
-              {
-                "name": "Marlon",
-                "position": "DF"
-              },
-              {
-                "name": "Maxime Chanot",
-                "position": "DF"
-              },
-              {
-                "name": "Odin Holm",
-                "position": "MF"
-              },
-              {
-                "name": "Lewis O'Brien",
-                "position": "MF"
-              },
-              {
-                "name": "David Martínez",
-                "position": "FW"
-              },
-              {
-                "name": "Nathan Ordaz",
-                "position": "FW"
-              },
-              {
-                "name": "Jeremy Ebobisse",
-                "position": "FW"
-              },
-              {
-                "name": "Javairô Dilrosun",
-                "position": "FW"
-              }
-            ]
-          },
-          "away": {
-            "starting": [
-              {
-                "name": "Daniel",
-                "position": "GK"
-              },
-              {
-                "name": "Paul Marie",
-                "position": "DF"
-              },
-              {
-                "name": "Rodrigues",
-                "position": "DF"
-              },
-              {
-                "name": "Bruno Wilson",
-                "position": "DF"
-              },
-              {
-                "name": "Carlos Akapo",
-                "position": "DF"
-              },
-              {
-                "name": "Jackson Yueill",
-                "position": "MF"
-              },
-              {
-                "name": "Hernán López",
-                "position": "MF"
-              },
-              {
-                "name": "Carlos Gruezo",
-                "position": "MF"
-              },
-              {
-                "name": "Cristian Espinoza",
-                "position": "FW"
-              },
-              {
-                "name": "Amahl Pellegrino",
-                "position": "FW"
-              },
-              {
-                "name": "Jeremy Ebobisse",
-                "position": "FW"
-              }
-            ],
-            "bench": [
-              {
-                "name": "William Yarbrough",
-                "position": "GK"
-              },
-              {
-                "name": "Tanner Beason",
-                "position": "DF"
-              },
-              {
-                "name": "Vítor Costa",
-                "position": "DF"
-              },
-              {
-                "name": "Niko Tsakiris",
-                "position": "MF"
-              },
-              {
-                "name": "Judson",
-                "position": "MF"
-              },
-              {
-                "name": "Jack Skahan",
-                "position": "MF"
-              },
-              {
-                "name": "Preston Judd",
-                "position": "FW"
-              },
-              {
-                "name": "Ousseni Bouda",
-                "position": "FW"
-              },
-              {
-                "name": "Benji Kikanović",
-                "position": "FW"
-              }
-            ]
-          }
-        },
-        "formations": {
-          "home": "4-3-3",
-          "away": "4-3-3"
-        },
-        "substitutions": [
-          {
-            "team": "home",
-            "off": "Olivier Giroud",
-            "on": "Nathan Ordaz",
-            "minute": 68
-          },
-          {
-            "team": "home",
-            "off": "Cristian Olivera",
-            "on": "David Martínez",
-            "minute": 72
-          },
-          {
-            "team": "home",
-            "off": "Ilie Sánchez",
-            "on": "Lewis O'Brien",
-            "minute": 77
-          },
-          {
-            "team": "away",
-            "off": "Amahl Pellegrino",
-            "on": "Ousseni Bouda",
-            "minute": 64
-          },
-          {
-            "team": "away",
-            "off": "Jeremy Ebobisse",
-            "on": "Preston Judd",
-            "minute": 74
-          },
-          {
-            "team": "away",
-            "off": "Jackson Yueill",
-            "on": "Niko Tsakiris",
-            "minute": 79
-          }
-        ],
-        "cards": [
-          {
-            "player": "Carlos Gruezo",
-            "team": "away",
-            "color": "yellow",
-            "minute": 33
-          },
-          {
-            "player": "Aaron Long",
-            "team": "home",
-            "color": "yellow",
-            "minute": 58
-          },
-          {
-            "player": "Paul Marie",
-            "team": "away",
-            "color": "yellow",
-            "minute": 71
-          }
-        ],
-        "penalties": [],
-        "own_goals": [],
-        "stats": {
-          "possession": {
-            "home": 56,
-            "away": 44
-          },
-          "shots": {
-            "home": 15,
-            "away": 10
-          },
-          "shots_on_target": {
-            "home": 6,
-            "away": 4
-          },
-          "corners": {
-            "home": 6,
-            "away": 4
-          },
-          "pass_accuracy": {
-            "home": 85,
-            "away": 80
-          },
-          "fouls": {
-            "home": 11,
-            "away": 13
-          },
-          "saves": {
-            "home": 3,
-            "away": 4
-          },
-          "defensive_actions": {
-            "home": 58,
-            "away": 64
-          }
-        },
-        "cost_usd": 0.045033
-      }
-    ],
-    "live": null
-  },
-  "history": [
     {
       "wca_id": "bayern_madrid_ucl_qf_l2",
       "home": "Bayern München",
@@ -1036,7 +1076,7 @@
         {
           "model_id": "test",
           "setting": "test",
-          "composite": 21.5125
+          "composite": 0.0
         }
       ],
       "predictions": [
@@ -2006,7 +2046,7 @@
           "own_goals": [],
           "stats": {},
           "cost_usd": null,
-          "composite": 21.5125
+          "composite": null
         }
       ]
     }
