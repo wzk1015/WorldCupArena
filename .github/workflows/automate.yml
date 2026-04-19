@@ -92,7 +92,7 @@ jobs:
             git commit -m "automate: tick $(date -u +%FT%TZ)"
             git pull --rebase origin main
             git push
-            gh workflow run pages.yml --ref main
+            GH_TOKEN="${{ github.token }}" gh workflow run pages.yml --ref main
           else
             echo "no changes to commit"
           fi
