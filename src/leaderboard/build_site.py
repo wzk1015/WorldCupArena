@@ -139,17 +139,26 @@ def _collect_predictions(wca_id: str) -> list[dict]:
         if rec.get("error"):
             continue
         p = rec.get("prediction") or {}
-        scorers = [s.get("player") for s in (p.get("scorers") or [])[:3] if s.get("player")]
         out.append({
-            "model_id":          rec["model_id"],
-            "setting":           rec["setting"],
-            "win_probs":         p.get("win_probs"),
-            "most_likely_score": p.get("most_likely_score"),
+            "model_id":           rec["model_id"],
+            "setting":            rec["setting"],
+            "win_probs":          p.get("win_probs"),
+            "score_dist":         p.get("score_dist") or [],
+            "most_likely_score":  p.get("most_likely_score"),
             "expected_goal_diff": p.get("expected_goal_diff"),
-            "advance_prob":      p.get("advance_prob"),
-            "reasoning_overall": (p.get("reasoning") or {}).get("overall"),
-            "top_scorers":       scorers,
-            "cost_usd":          rec.get("cost_usd"),
+            "advance_prob":       p.get("advance_prob"),
+            "reasoning":          p.get("reasoning") or {},
+            "scorers":            p.get("scorers") or [],
+            "assisters":          p.get("assisters") or [],
+            "motm_probs":         p.get("motm_probs") or [],
+            "lineups":            p.get("lineups") or {},
+            "formations":         p.get("formations") or {},
+            "substitutions":      p.get("substitutions") or [],
+            "cards":              p.get("cards") or [],
+            "penalties":          p.get("penalties") or [],
+            "own_goals":          p.get("own_goals") or [],
+            "stats":              p.get("stats") or {},
+            "cost_usd":           rec.get("cost_usd"),
         })
     return out
 
@@ -168,46 +177,114 @@ def build_next_match() -> dict | None:
         if not hdr:
             continue
         preds = _collect_predictions(wca_id)
-        return {"fixture": hdr, "predictions": preds}
+        live  = _load_live_state(wca_id)
+        return {"fixture": hdr, "predictions": preds, "live": live}
     # Fallback: most recent snapshot with predictions (useful for demos)
     if PREDICTIONS.exists():
         candidates = sorted(PREDICTIONS.glob("*"), key=lambda p: p.stat().st_mtime, reverse=True)
         for d in candidates:
             hdr = _load_fixture_header(d.name)
             if hdr:
-                return {"fixture": hdr, "predictions": _collect_predictions(d.name)}
+                return {"fixture": hdr, "predictions": _collect_predictions(d.name),
+                        "live": _load_live_state(d.name)}
     return None
 
 
 # ---------------------------------------------------------------------------
-# History (graded fixtures)
+# Live state (T+0h → T+3h window)
+# ---------------------------------------------------------------------------
+
+def _load_live_state(wca_id: str) -> dict | None:
+    path = SNAPSHOTS / wca_id / "live.json"
+    if not path.exists():
+        return None
+    raw = json.loads(path.read_text())
+    if "response" not in raw:
+        return None
+    r0 = raw["response"][0]
+    return {
+        "status":  (r0["fixture"]["status"] or {}).get("long"),
+        "elapsed": (r0["fixture"]["status"] or {}).get("elapsed"),
+        "score":   r0.get("goals"),   # {"home": N, "away": N}
+        "events":  r0.get("events") or [],
+    }
+
+
+def _load_truth_data(wca_id: str) -> dict | None:
+    path = SNAPSHOTS / wca_id / "truth.json"
+    if not path.exists():
+        return None
+    t = json.loads(path.read_text())
+    if "response" in t:
+        r0 = t["response"][0]
+        g = r0.get("goals") or {}
+        score = None
+        if g.get("home") is not None and g.get("away") is not None:
+            score = f"{g['home']}-{g['away']}"
+        return {"score": score, "events": r0.get("events") or []}
+    return {"score": t.get("score"), "events": []}
+
+
+# ---------------------------------------------------------------------------
+# History (past fixtures — combines graded results with full predictions)
 # ---------------------------------------------------------------------------
 
 def build_history() -> list[dict]:
+    now = datetime.now(timezone.utc)
+
+    # Collect all known wca_ids from results + predictions dirs + yaml
+    wca_ids: set[str] = set()
+    if RESULTS.exists():
+        wca_ids.update(d.name for d in RESULTS.glob("*") if d.is_dir())
+    if PREDICTIONS.exists():
+        wca_ids.update(d.name for d in PREDICTIONS.glob("*") if d.is_dir())
+    for fx in _load_fixtures():
+        if _parse_iso(fx["kickoff_utc"]) <= now:
+            wca_ids.add(fx["wca_id"])
+
     rows = []
-    for fid_dir in sorted(RESULTS.glob("*"), reverse=True):
-        hdr = _load_fixture_header(fid_dir.name) or {"wca_id": fid_dir.name}
-        truth_path = SNAPSHOTS / fid_dir.name / "truth.json"
+    for wca_id in wca_ids:
+        hdr = _load_fixture_header(wca_id) or {"wca_id": wca_id}
+
+        # Only include past fixtures
+        kick = hdr.get("kickoff_utc")
+        if kick and _parse_iso(kick) > now:
+            continue
+
+        truth = _load_truth_data(wca_id)
+        live  = _load_live_state(wca_id)
+
         result = None
-        if truth_path.exists():
-            t = json.loads(truth_path.read_text())
-            if "response" in t:
-                r0 = t["response"][0]
-                g = r0.get("goals") or {}
-                if g.get("home") is not None and g.get("away") is not None:
-                    result = f"{g['home']}-{g['away']}"
-            else:
-                result = t.get("score")
-        models = []
-        for f in fid_dir.glob("*.json"):
-            r = json.loads(f.read_text())
-            models.append({
-                "model_id":  r["model_id"],
-                "setting":   r["setting"],
-                "composite": r.get("composite", 0.0),
-            })
-        models.sort(key=lambda m: -m["composite"])
-        rows.append({**hdr, "result": result, "models": models})
+        if truth:
+            result = truth.get("score")
+
+        # Composite scores from results dir (for leaderboard ordering within card)
+        composites: dict[str, float] = {}
+        result_dir = RESULTS / wca_id
+        if result_dir.exists():
+            for f in result_dir.glob("*.json"):
+                r = json.loads(f.read_text())
+                key = f"{r['model_id']}_{r['setting']}"
+                composites[key] = r.get("composite", 0.0)
+
+        # Full predictions
+        preds = _collect_predictions(wca_id)
+        for p in preds:
+            key = f"{p['model_id']}_{p['setting']}"
+            p["composite"] = composites.get(key)
+
+        models = sorted(
+            [{"model_id": p["model_id"], "setting": p["setting"],
+              "composite": composites.get(f"{p['model_id']}_{p['setting']}", 0.0)}
+             for p in preds],
+            key=lambda m: -(m["composite"] or 0.0),
+        )
+
+        rows.append({**hdr, "result": result, "truth": truth, "live": live,
+                     "models": models, "predictions": preds})
+
+    # Sort by kickoff descending
+    rows.sort(key=lambda r: _parse_iso(r["kickoff_utc"]) if r.get("kickoff_utc") else datetime.min.replace(tzinfo=timezone.utc), reverse=True)
     return rows
 
 

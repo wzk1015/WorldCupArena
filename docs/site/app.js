@@ -4,44 +4,481 @@
 const fmtPct = (x) => (x == null ? "—" : Math.round(x * 100) + "%");
 const fmt2   = (x) => (x == null ? "—" : (+x).toFixed(2));
 const esc    = (s) => String(s ?? "").replace(/[<>&"']/g, c =>
-  ({"<":"&lt;", ">":"&gt;", "&":"&amp;", '"':"&quot;", "'":"&#39;"}[c]));
+  ({ "<":"&lt;", ">":"&gt;", "&":"&amp;", '"':"&quot;", "'":"&#39;" }[c]));
+
+let _allPreds = [];  // flat registry of all rendered pred cards (for modal)
 
 function modelBadge(id) {
   const key = (id || "").toLowerCase();
-  if (key.includes("gpt"))        return { emoji: "🟢", tint: "from-emerald-500/20 to-emerald-500/5" };
-  if (key.includes("claude"))     return { emoji: "🟠", tint: "from-orange-500/20 to-orange-500/5"  };
-  if (key.includes("gemini"))     return { emoji: "🔵", tint: "from-sky-500/20 to-sky-500/5"        };
-  if (key.includes("grok"))       return { emoji: "⚫", tint: "from-gray-500/20 to-gray-500/5"      };
-  if (key.includes("deepseek"))   return { emoji: "🟣", tint: "from-violet-500/20 to-violet-500/5"  };
-  if (key.includes("qwen"))       return { emoji: "🔴", tint: "from-red-500/20 to-red-500/5"        };
-  if (key.includes("llama"))      return { emoji: "🟤", tint: "from-amber-700/20 to-amber-700/5"    };
-  if (key.includes("perplexity")) return { emoji: "🔷", tint: "from-blue-500/20 to-blue-500/5"      };
-  if (key.includes("mirothinker"))return { emoji: "✨", tint: "from-fuchsia-500/20 to-fuchsia-500/5"};
+  if (key.includes("gpt"))         return { emoji: "🟢", tint: "from-emerald-500/20 to-emerald-500/5" };
+  if (key.includes("claude"))      return { emoji: "🟠", tint: "from-orange-500/20 to-orange-500/5"   };
+  if (key.includes("gemini"))      return { emoji: "🔵", tint: "from-sky-500/20 to-sky-500/5"         };
+  if (key.includes("grok"))        return { emoji: "⚫", tint: "from-gray-500/20 to-gray-500/5"       };
+  if (key.includes("deepseek"))    return { emoji: "🟣", tint: "from-violet-500/20 to-violet-500/5"   };
+  if (key.includes("qwen"))        return { emoji: "🔴", tint: "from-red-500/20 to-red-500/5"         };
+  if (key.includes("llama"))       return { emoji: "🟤", tint: "from-amber-700/20 to-amber-700/5"     };
+  if (key.includes("perplexity"))  return { emoji: "🔷", tint: "from-blue-500/20 to-blue-500/5"       };
+  if (key.includes("mirothinker")) return { emoji: "✨", tint: "from-fuchsia-500/20 to-fuchsia-500/5" };
   return { emoji: "🤖", tint: "from-gray-500/20 to-gray-500/5" };
 }
 
-// ---------- Next match ---------------------------------------------------
+// ---------- Reasoning modal --------------------------------------------------
+
+const REASONING_LABELS = {
+  overall:   "Overall Analysis",
+  t1_result: "T1 · Result & Score",
+  t2_player: "T2 · Players & Lineups",
+  t3_events: "T3 · Events & Timeline",
+  t4_stats:  "T4 · Match Statistics",
+};
+
+function buildReasoningModal() {
+  const div = document.createElement("div");
+  div.id = "reasoning-modal";
+  div.style.cssText = "display:none;position:fixed;inset:0;z-index:50;align-items:center;justify-content:center;padding:1rem;";
+  div.innerHTML = `
+    <div style="position:absolute;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);"
+         onclick="closeReasoningModal()"></div>
+    <div class="card rounded-2xl p-6 relative" style="max-width:42rem;width:100%;max-height:80vh;overflow-y:auto;background:rgba(10,15,28,.97);z-index:1;">
+      <button onclick="closeReasoningModal()"
+              class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl leading-none">✕</button>
+      <h3 class="font-bold text-base mb-4" id="reasoning-modal-title">Reasoning</h3>
+      <div id="reasoning-modal-body"></div>
+    </div>`;
+  document.body.appendChild(div);
+}
+
+function openReasoningModal(idx) {
+  const p = _allPreds[idx];
+  if (!p) return;
+  const r = p.reasoning || {};
+  document.getElementById("reasoning-modal-title").textContent =
+    `${p.model_id} (${p.setting}) — Full Reasoning`;
+  const rows = Object.entries(REASONING_LABELS)
+    .filter(([k]) => r[k])
+    .map(([k, label]) => `
+      <tr style="border-top:1px solid rgba(255,255,255,.08)">
+        <td style="padding:.75rem .75rem .75rem 0;vertical-align:top;width:8rem;white-space:nowrap;"
+            class="text-xs font-semibold text-gray-400">${esc(label)}</td>
+        <td style="padding:.75rem 0;" class="text-sm text-gray-200 leading-relaxed">${esc(r[k])}</td>
+      </tr>`).join("");
+  document.getElementById("reasoning-modal-body").innerHTML =
+    `<table style="width:100%;border-collapse:collapse;"><tbody>${rows ||
+      '<tr><td class="text-gray-400 text-sm py-2">No reasoning available.</td></tr>'
+    }</tbody></table>`;
+  document.getElementById("reasoning-modal").style.display = "flex";
+}
+
+function closeReasoningModal() {
+  document.getElementById("reasoning-modal").style.display = "none";
+}
+
+// ---------- Prediction card --------------------------------------------------
+
+function toggleDetails(idx) {
+  const el  = document.getElementById(`pred-details-${idx}`);
+  const btn = document.getElementById(`pred-details-btn-${idx}`);
+  if (!el) return;
+  const showing = el.style.display !== "none";
+  el.style.display = showing ? "none" : "block";
+  if (btn) btn.textContent = showing ? "📊 More details" : "📊 Hide details";
+}
+
+function _lineupSide(lineup, formation, teamName, colorCls) {
+  const POS = ["GK", "DF", "MF", "FW"];
+  const starting = (lineup || {}).starting || [];
+  const bench    = (lineup || {}).bench    || [];
+  const byPos = {};
+  for (const pl of starting) (byPos[pl.position] = byPos[pl.position] || []).push(pl.name);
+  return `
+    <div>
+      <div class="text-xs font-semibold mb-2 ${colorCls}">
+        ${esc(teamName)}${formation ? ` <span class="text-gray-400 font-normal">(${esc(formation)})</span>` : ""}
+      </div>
+      ${POS.filter(pos => byPos[pos]).map(pos => `
+        <div class="text-xs mb-1 leading-snug">
+          <span class="text-gray-500 inline-block w-7">${pos}</span>
+          <span class="text-gray-200">${byPos[pos].map(esc).join(", ")}</span>
+        </div>`).join("")}
+      ${bench.length ? `
+        <div class="text-xs mt-2 leading-snug text-gray-500">
+          <span class="inline-block w-7">Sub</span>${bench.map(pl => esc(pl.name)).join(", ")}
+        </div>` : ""}
+    </div>`;
+}
+
+function _renderDetails(p, f) {
+  const hName  = f.home || "Home";
+  const aName  = f.away || "Away";
+  const tName  = (t) => t === "home" ? hName : aName;
+  const tColor = (t) => t === "home" ? "text-emerald-400" : "text-blue-400";
+  let html = "";
+
+  // Lineups
+  const lin = p.lineups || {};
+  if (lin.home || lin.away) {
+    html += `
+      <div>
+        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">⬡ Lineups</div>
+        <div class="grid grid-cols-2 gap-4">
+          ${_lineupSide(lin.home, (p.formations || {}).home, hName, "text-emerald-400")}
+          ${_lineupSide(lin.away, (p.formations || {}).away, aName, "text-blue-400")}
+        </div>
+      </div>`;
+  }
+
+  // Scorers
+  if ((p.scorers || []).length) {
+    html += `
+      <div>
+        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">⚽ Scorers</div>
+        <table class="w-full text-xs" style="border-collapse:collapse;">
+          <thead><tr class="text-gray-500 text-left">
+            <th class="font-normal pb-1">Player</th>
+            <th class="font-normal pb-1">Team</th>
+            <th class="font-normal pb-1 text-center">Prob</th>
+            <th class="font-normal pb-1 text-center">Minutes</th>
+          </tr></thead>
+          <tbody>
+            ${p.scorers.map(s => `
+              <tr style="border-top:1px solid rgba(255,255,255,.06)">
+                <td class="py-1 ${tColor(s.team)}">${esc(s.player)}</td>
+                <td class="py-1 text-gray-400">${esc(tName(s.team))}</td>
+                <td class="py-1 text-center font-mono">${fmtPct(s.p)}</td>
+                <td class="py-1 text-center text-gray-400">
+                  ${s.minute_range ? `${s.minute_range[0]}′–${s.minute_range[1]}′` : "—"}
+                </td>
+              </tr>`).join("")}
+          </tbody>
+        </table>
+      </div>`;
+  }
+
+  // Assisters
+  if ((p.assisters || []).length) {
+    html += `
+      <div>
+        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🎯 Assisters</div>
+        <table class="w-full text-xs" style="border-collapse:collapse;">
+          <thead><tr class="text-gray-500 text-left">
+            <th class="font-normal pb-1">Player</th>
+            <th class="font-normal pb-1">Team</th>
+            <th class="font-normal pb-1 text-center">Prob</th>
+          </tr></thead>
+          <tbody>
+            ${p.assisters.map(a => `
+              <tr style="border-top:1px solid rgba(255,255,255,.06)">
+                <td class="py-1 ${tColor(a.team)}">${esc(a.player)}</td>
+                <td class="py-1 text-gray-400">${esc(tName(a.team))}</td>
+                <td class="py-1 text-center font-mono">${fmtPct(a.p)}</td>
+              </tr>`).join("")}
+          </tbody>
+        </table>
+      </div>`;
+  }
+
+  // Substitutions
+  if ((p.substitutions || []).length) {
+    html += `
+      <div>
+        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🔄 Substitutions</div>
+        <table class="w-full text-xs" style="border-collapse:collapse;">
+          <thead><tr class="text-gray-500 text-left">
+            <th class="font-normal pb-1 w-10 text-center">Min</th>
+            <th class="font-normal pb-1">Team</th>
+            <th class="font-normal pb-1">Off → On</th>
+          </tr></thead>
+          <tbody>
+            ${p.substitutions.map(s => `
+              <tr style="border-top:1px solid rgba(255,255,255,.06)">
+                <td class="py-1 text-center text-gray-400">${s.minute}′</td>
+                <td class="py-1 ${tColor(s.team)}">${esc(tName(s.team))}</td>
+                <td class="py-1">${esc(s.off)} → <span class="text-emerald-400">${esc(s.on)}</span></td>
+              </tr>`).join("")}
+          </tbody>
+        </table>
+      </div>`;
+  }
+
+  // Cards
+  if ((p.cards || []).length) {
+    html += `
+      <div>
+        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🟨 Cards</div>
+        <table class="w-full text-xs" style="border-collapse:collapse;">
+          <thead><tr class="text-gray-500 text-left">
+            <th class="font-normal pb-1 w-10 text-center">Min</th>
+            <th class="font-normal pb-1">Player</th>
+            <th class="font-normal pb-1">Team</th>
+            <th class="font-normal pb-1 text-center">Card</th>
+          </tr></thead>
+          <tbody>
+            ${p.cards.map(c => `
+              <tr style="border-top:1px solid rgba(255,255,255,.06)">
+                <td class="py-1 text-center text-gray-400">${c.minute}′</td>
+                <td class="py-1">${esc(c.player)}</td>
+                <td class="py-1 ${tColor(c.team)}">${esc(tName(c.team))}</td>
+                <td class="py-1 text-center">
+                  ${c.color === "red" ? "🟥" : c.color === "second_yellow" ? "🟨🟥" : "🟨"}
+                </td>
+              </tr>`).join("")}
+          </tbody>
+        </table>
+      </div>`;
+  }
+
+  // Penalties
+  if ((p.penalties || []).length) {
+    html += `
+      <div>
+        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🥅 Penalties</div>
+        <table class="w-full text-xs" style="border-collapse:collapse;">
+          <thead><tr class="text-gray-500 text-left">
+            <th class="font-normal pb-1 w-10 text-center">Min</th>
+            <th class="font-normal pb-1">Taker</th>
+            <th class="font-normal pb-1">Team</th>
+            <th class="font-normal pb-1">Outcome</th>
+          </tr></thead>
+          <tbody>
+            ${p.penalties.map(pen => `
+              <tr style="border-top:1px solid rgba(255,255,255,.06)">
+                <td class="py-1 text-center text-gray-400">${pen.minute}′</td>
+                <td class="py-1">${esc(pen.taker)}</td>
+                <td class="py-1 ${tColor(pen.team)}">${esc(tName(pen.team))}</td>
+                <td class="py-1">
+                  ${pen.outcome === "scored" ? "✅" : pen.outcome === "saved" ? "🧤" : "❌"}
+                  ${esc(pen.outcome)}
+                </td>
+              </tr>`).join("")}
+          </tbody>
+        </table>
+      </div>`;
+  }
+
+  // Own goals
+  if ((p.own_goals || []).length) {
+    html += `
+      <div>
+        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">⚽ Own Goals</div>
+        <div class="space-y-1 text-xs">
+          ${p.own_goals.map(og => `
+            <div>${og.minute}′ —
+              <span class="${tColor(og.team)}">${esc(og.player)}</span>
+              <span class="text-gray-400">(${esc(tName(og.team))})</span>
+            </div>`).join("")}
+        </div>
+      </div>`;
+  }
+
+  // Stats
+  const STAT_LABELS = {
+    possession:        "Possession %",
+    shots:             "Shots",
+    shots_on_target:   "Shots on Target",
+    corners:           "Corners",
+    pass_accuracy:     "Pass Accuracy %",
+    fouls:             "Fouls",
+    saves:             "Saves",
+    defensive_actions: "Defensive Actions",
+  };
+  const LOWER_BETTER = new Set(["fouls"]);
+  const stats = p.stats || {};
+  const statRows = Object.entries(STAT_LABELS)
+    .filter(([k]) => stats[k] && (stats[k].home != null || stats[k].away != null))
+    .map(([k, label]) => {
+      const h = stats[k].home ?? "—";
+      const a = stats[k].away ?? "—";
+      const total = (typeof h === "number" && typeof a === "number") ? h + a : null;
+      const hPct  = total ? (h / total * 100) : 50;
+      const lower = LOWER_BETTER.has(k);
+      const hWin  = typeof h === "number" && typeof a === "number" && (lower ? h < a : h > a);
+      const aWin  = typeof h === "number" && typeof a === "number" && (lower ? a < h : a > h);
+      return `
+        <tr style="border-top:1px solid rgba(255,255,255,.06)">
+          <td class="py-1.5 text-xs text-gray-400 pr-2">${esc(label)}</td>
+          <td class="py-1.5 text-xs font-mono text-center w-10 ${hWin ? "text-emerald-400 font-bold" : ""}">${h}</td>
+          <td class="py-1.5 px-2" style="width:6rem;">
+            ${total !== null ? `
+              <div style="display:flex;height:.375rem;border-radius:9999px;overflow:hidden;">
+                <div style="width:${hPct}%;background:#22c55e70;"></div>
+                <div style="width:${100 - hPct}%;background:#3b82f670;"></div>
+              </div>` : ""}
+          </td>
+          <td class="py-1.5 text-xs font-mono text-center w-10 ${aWin ? "text-blue-400 font-bold" : ""}">${a}</td>
+        </tr>`;
+    }).join("");
+
+  if (statRows) {
+    html += `
+      <div>
+        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">📊 Stats</div>
+        <table class="w-full" style="border-collapse:collapse;">
+          <thead><tr class="text-xs">
+            <th class="font-normal text-gray-500 text-left pb-1">Stat</th>
+            <th class="font-normal text-emerald-400/70 text-center pb-1 w-10">${esc(hName)}</th>
+            <th style="width:6rem;"></th>
+            <th class="font-normal text-blue-400/70 text-center pb-1 w-10">${esc(aName)}</th>
+          </tr></thead>
+          <tbody>${statRows}</tbody>
+        </table>
+      </div>`;
+  }
+
+  return html || `<div class="text-gray-500 text-xs">No detailed prediction data available.</div>`;
+}
+
+function renderPredCard(p, f, idx) {
+  const b          = modelBadge(p.model_id);
+  const wp         = p.win_probs || {};
+  const reasoning  = p.reasoning || {};
+  const top3       = (p.score_dist || []).slice(0, 3);
+  const hName      = f.home || "Home";
+  const aName      = f.away || "Away";
+  const topMotm    = (p.motm_probs || [])[0];
+  const hScorers   = (p.scorers || []).filter(s => s.team === "home").slice(0, 3);
+  const aScorers   = (p.scorers || []).filter(s => s.team === "away").slice(0, 3);
+  const hasReason  = Object.keys(reasoning).length > 0;
+
+  return `
+    <div class="card rounded-xl p-4">
+
+      <!-- Header -->
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-2">
+          <span class="text-lg">${b.emoji}</span>
+          <span class="font-semibold text-sm">${esc(p.model_id)}</span>
+          <span class="chip chip-${(p.setting || "").toLowerCase()}">${esc(p.setting)}</span>
+        </div>
+        ${p.cost_usd != null ? `<span class="text-xs text-gray-500">$${(+p.cost_usd).toFixed(3)}</span>` : ""}
+      </div>
+
+      <!-- 4-column summary grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-3">
+
+        <!-- Win probs -->
+        <div>
+          <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-2">Result</div>
+          ${[
+            [hName, wp.home, "text-emerald-400", "#22c55e"],
+            ["Draw", wp.draw, "text-gray-400",   "#64748b"],
+            [aName,  wp.away, "text-blue-400",   "#3b82f6"],
+          ].map(([label, prob, cls, color]) => `
+            <div class="flex items-center gap-1.5 mb-1">
+              <div class="w-14 flex-shrink-0 truncate text-[10px] ${cls}">${esc(label)}</div>
+              <div class="flex-1 bar h-1.5">
+                <div class="h-full rounded-full" style="width:${(prob || 0) * 100}%;background:${color}90;"></div>
+              </div>
+              <div class="text-[10px] font-mono w-8 text-right text-gray-300">${fmtPct(prob)}</div>
+            </div>`).join("")}
+          <div class="text-[10px] text-gray-500 mt-1.5">
+            xGD <span class="font-mono text-gray-300">${fmt2(p.expected_goal_diff)}</span>
+          </div>
+        </div>
+
+        <!-- Top 3 scores -->
+        <div>
+          <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-2">Top scores</div>
+          ${top3.length ? top3.map((s, i) => `
+            <div class="flex items-center justify-between mb-1 ${i > 0 ? "opacity-65" : ""}">
+              <span class="font-mono text-sm ${i === 0 ? "text-emerald-400 font-bold" : "text-gray-200"}">${esc(s.score)}</span>
+              <span class="text-[10px] font-mono text-gray-400">${fmtPct(s.p)}</span>
+            </div>`).join("")
+            : `<div class="text-gray-500 text-xs">—</div>`}
+        </div>
+
+        <!-- Scorers -->
+        <div>
+          <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-2">Scorers</div>
+          ${hScorers.length ? `
+            <div class="text-[10px] text-gray-500 mb-1">${esc(hName)}</div>
+            ${hScorers.map(s => `
+              <div class="flex items-center justify-between mb-0.5">
+                <span class="text-xs text-emerald-400 truncate" style="max-width:7rem;">${esc(s.player)}</span>
+                <span class="text-[10px] font-mono text-gray-400 ml-1">${fmtPct(s.p)}</span>
+              </div>`).join("")}` : ""}
+          ${aScorers.length ? `
+            <div class="text-[10px] text-gray-500 mt-2 mb-1">${esc(aName)}</div>
+            ${aScorers.map(s => `
+              <div class="flex items-center justify-between mb-0.5">
+                <span class="text-xs text-blue-400 truncate" style="max-width:7rem;">${esc(s.player)}</span>
+                <span class="text-[10px] font-mono text-gray-400 ml-1">${fmtPct(s.p)}</span>
+              </div>`).join("")}` : ""}
+          ${!hScorers.length && !aScorers.length ? `<div class="text-gray-500 text-xs">—</div>` : ""}
+        </div>
+
+        <!-- MOTM -->
+        <div>
+          <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-2">MOTM</div>
+          ${topMotm ? `
+            <div class="text-sm font-semibold text-yellow-400 leading-tight">${esc(topMotm.player)}</div>
+            <div class="text-[10px] font-mono text-gray-400 mt-0.5">${fmtPct(topMotm.p)}</div>
+            <div class="text-[10px] text-gray-500 mt-0.5">
+              ${topMotm.team === "home" ? esc(hName) : esc(aName)}
+            </div>` : `<div class="text-gray-500 text-xs">—</div>`}
+        </div>
+      </div>
+
+      <!-- Reasoning preview (4 lines) -->
+      ${reasoning.overall ? `
+        <div class="text-xs text-gray-300 leading-relaxed mb-2"
+             style="display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;">
+          ${esc(reasoning.overall)}
+        </div>` : ""}
+
+      <!-- Buttons -->
+      <div class="flex flex-wrap gap-2 mt-1">
+        ${hasReason ? `
+          <button onclick="openReasoningModal(${idx})"
+                  class="chip hover:bg-white/15 transition text-xs">📖 Full reasoning</button>` : ""}
+        <button id="pred-details-btn-${idx}" onclick="toggleDetails(${idx})"
+                class="chip hover:bg-white/15 transition text-xs">📊 More details</button>
+      </div>
+
+      <!-- Expandable details -->
+      <div id="pred-details-${idx}" style="display:none;"
+           class="mt-4 pt-4 space-y-5" style="border-top:1px solid rgba(255,255,255,.06);">
+        ${_renderDetails(p, f)}
+      </div>
+    </div>`;
+}
+
+// ---------- Next match -------------------------------------------------------
 
 function renderNextMatch(nm) {
   const el = document.getElementById("next-container");
-  if (!nm || !nm.fixture) { el.innerHTML = `<div class="text-gray-400">No upcoming fixture in the registry yet.</div>`; return; }
-  const f = nm.fixture;
+  if (!nm || !nm.fixture) {
+    el.innerHTML = `<div class="text-gray-400">No upcoming fixture in the registry yet.</div>`;
+    return;
+  }
+  const f    = nm.fixture;
   const kick = f.kickoff_utc ? new Date(f.kickoff_utc) : null;
-  const countdownId = "nm-countdown";
+  const cid  = "nm-countdown";
   const preds = nm.predictions || [];
+  const nmStart = _allPreds.length;
+  _allPreds.push(...preds);
 
-  // Consensus: average win_probs across models
+  // Live badge for next_match (during match window)
+  const lv = nm.live;
+  const liveHtml = (lv && lv.status !== "Match Finished") ? `
+    <div class="flex items-center justify-center gap-2 mb-4">
+      <span class="chip" style="background:rgba(239,68,68,.2);border-color:rgba(239,68,68,.5);color:#fca5a5;">
+        🔴 LIVE ${lv.elapsed != null ? `· ${lv.elapsed}′` : ""}
+      </span>
+      <span class="font-mono font-bold text-lg">
+        ${lv.score ? `${lv.score.home ?? "?"}–${lv.score.away ?? "?"}` : ""}
+      </span>
+    </div>` : "";
+
+  // Consensus win probs
   const agg = { home: 0, draw: 0, away: 0 };
-  let nProbs = 0;
+  let nP = 0;
   for (const p of preds) {
     if (p.win_probs && typeof p.win_probs.home === "number") {
-      agg.home += p.win_probs.home;
-      agg.draw += p.win_probs.draw;
-      agg.away += p.win_probs.away;
-      nProbs++;
+      agg.home += p.win_probs.home; agg.draw += p.win_probs.draw; agg.away += p.win_probs.away;
+      nP++;
     }
   }
-  if (nProbs > 0) { agg.home/=nProbs; agg.draw/=nProbs; agg.away/=nProbs; }
+  if (nP > 0) { agg.home /= nP; agg.draw /= nP; agg.away /= nP; }
 
   el.innerHTML = `
     <div class="pitch rounded-xl p-5 mb-6">
@@ -55,7 +492,7 @@ function renderNextMatch(nm) {
           <div class="text-gray-300 text-sm">${esc(f.competition || "")} · ${esc(f.stage || "")}</div>
           <div class="mt-1 text-2xl font-black">VS</div>
           <div class="text-xs text-gray-400 mt-1">draw ${fmtPct(agg.draw)}</div>
-          <div class="text-xs text-gray-400 mt-3" id="${countdownId}">${kick ? kick.toUTCString() : "—"}</div>
+          <div class="text-xs text-gray-400 mt-3" id="${cid}">${kick ? kick.toUTCString() : "—"}</div>
           <div class="text-[10px] text-gray-500">${esc(f.venue || "")}</div>
         </div>
         <div class="flex-1 text-center">
@@ -66,72 +503,35 @@ function renderNextMatch(nm) {
       </div>
     </div>
 
-    ${ preds.length === 0
-        ? `<div class="text-gray-400 text-sm">No model predictions locked for this fixture yet (runs at 24 hours before the game).</div>`
-        : `<div class="overflow-x-auto">
-            <table class="w-full text-sm">
-              <thead class="text-gray-400 text-xs uppercase tracking-wider">
-                <tr>
-                  <th class="text-left py-2 px-3">Model</th>
-                  <th class="text-center py-2 px-3">Setting</th>
-                  <th class="text-center py-2 px-3">Win / Draw / Loss</th>
-                  <th class="text-center py-2 px-3">Most likely</th>
-                  <th class="text-center py-2 px-3">xGD</th>
-                  <th class="text-left py-2 px-3">Reasoning (hover)</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${preds.map(p => {
-                  const b = modelBadge(p.model_id);
-                  const wp = p.win_probs || {};
-                  const reason = (p.reasoning_overall || "").slice(0, 400);
-                  return `
-                    <tr class="border-t border-white/5 hover:bg-white/5 transition">
-                      <td class="py-2 px-3"><span class="mr-1">${b.emoji}</span>${esc(p.model_id)}</td>
-                      <td class="text-center"><span class="chip chip-${p.setting.toLowerCase()}">${esc(p.setting)}</span></td>
-                      <td class="py-2 px-3">
-                        <div class="flex gap-1 items-center justify-center">
-                          <div class="bar w-12"><div class="bar-fill" style="width:${(wp.home||0)*100}%"></div></div>
-                          <span class="text-xs opacity-70 w-10 text-right">${fmtPct(wp.home)}</span>
-                          <span class="mx-1 opacity-50">/</span>
-                          <span class="text-xs opacity-70 w-10">${fmtPct(wp.draw)}</span>
-                          <span class="mx-1 opacity-50">/</span>
-                          <div class="bar w-12"><div class="bar-fill" style="width:${(wp.away||0)*100}%"></div></div>
-                          <span class="text-xs opacity-70 w-10 text-right">${fmtPct(wp.away)}</span>
-                        </div>
-                      </td>
-                      <td class="text-center font-bold">${esc(p.most_likely_score || "—")}</td>
-                      <td class="text-center">${fmt2(p.expected_goal_diff)}</td>
-                      <td class="py-2 px-3 text-xs text-gray-400 max-w-[22rem] truncate" title="${esc(reason)}">${esc(reason)}</td>
-                    </tr>`;
-                }).join("")}
-              </tbody>
-            </table>
-          </div>`
-    }`;
+    ${liveHtml}
+    ${preds.length === 0
+      ? `<div class="text-gray-400 text-sm">No model predictions locked yet (runs 24 h before kickoff).</div>`
+      : `<div class="space-y-3">${preds.map((p, i) => renderPredCard(p, f, nmStart + i)).join("")}</div>`}`;
 
-  // Countdown
   if (kick) {
     const tick = () => {
       const diff = kick - new Date();
-      if (diff <= 0) { document.getElementById(countdownId).textContent = "🔴 kicked off"; return; }
+      if (diff <= 0) { document.getElementById(cid).textContent = "🔴 kicked off"; return; }
       const h = Math.floor(diff / 3600000);
       const m = Math.floor((diff % 3600000) / 60000);
       const s = Math.floor((diff % 60000) / 1000);
-      document.getElementById(countdownId).textContent = `kickoff in ${h}h ${m}m ${s}s`;
+      document.getElementById(cid).textContent = `kickoff in ${h}h ${m}m ${s}s`;
     };
     tick(); setInterval(tick, 1000);
   }
 }
 
-// ---------- Leaderboard --------------------------------------------------
+// ---------- Leaderboard ------------------------------------------------------
 
 let chartInstance = null;
 
 function renderLeaderboard(lb, view) {
-  const el = document.getElementById("leaderboard-container");
+  const el   = document.getElementById("leaderboard-container");
   const rows = lb.main || [];
-  if (rows.length === 0) { el.innerHTML = `<div class="text-gray-400 text-sm">No graded fixtures yet.</div>`; return; }
+  if (rows.length === 0) {
+    el.innerHTML = `<div class="text-gray-400 text-sm">No graded fixtures yet.</div>`;
+    return;
+  }
 
   if (view === "main") {
     el.innerHTML = `
@@ -142,7 +542,7 @@ function renderLeaderboard(lb, view) {
               <th class="text-left py-2 px-3 w-12">#</th>
               <th class="text-left py-2 px-3">Model</th>
               <th class="text-right py-2 px-3">Composite</th>
-              <th class="text-right py-2 px-3">N fixtures</th>
+              <th class="text-right py-2 px-3">#Games</th>
             </tr>
           </thead>
           <tbody>
@@ -151,7 +551,7 @@ function renderLeaderboard(lb, view) {
               const medal = i === 0 ? "rank-1" : i === 1 ? "rank-2" : i === 2 ? "rank-3" : "";
               return `
                 <tr class="border-t border-white/5 hover:bg-white/5 transition">
-                  <td class="py-2 px-3"><span class="rank-medal ${medal}">${i+1}</span></td>
+                  <td class="py-2 px-3"><span class="rank-medal ${medal}">${i + 1}</span></td>
                   <td class="py-2 px-3"><span class="mr-2">${b.emoji}</span><span class="font-semibold">${esc(r.model_id)}</span></td>
                   <td class="py-2 px-3 text-right font-mono">
                     <div class="inline-flex items-center gap-2">
@@ -167,12 +567,12 @@ function renderLeaderboard(lb, view) {
       </div>`;
   } else if (view === "layers") {
     el.innerHTML = `<canvas id="layersChart" height="220"></canvas>`;
-    const layers = ["T1_core_result","T2_player_level","T3_event_level","T4_tactics_stats","T5_tournament_macro"];
-    const labels = ["T1 Result","T2 Players","T3 Events","T4 Stats","T5 Tournament"];
-    const palette = ["#22c55e","#3b82f6","#a855f7","#ec4899","#f59e0b","#14b8a6","#ef4444","#eab308","#64748b"];
+    const layers  = ["T1_core_result", "T2_player_level", "T3_event_level", "T4_tactics_stats", "T5_tournament_macro"];
+    const labels  = ["T1 Result", "T2 Players", "T3 Events", "T4 Stats", "T5 Tournament"];
+    const palette = ["#22c55e", "#3b82f6", "#a855f7", "#ec4899", "#f59e0b", "#14b8a6", "#ef4444", "#eab308", "#64748b"];
     const datasets = rows.slice(0, 9).map((r, i) => ({
       label: r.model_id,
-      data: layers.map(l => (r.layers_mean||{})[l] || 0),
+      data: layers.map(l => (r.layers_mean || {})[l] || 0),
       backgroundColor: palette[i] + "cc",
       borderColor: palette[i], borderWidth: 2,
       pointBackgroundColor: palette[i],
@@ -186,84 +586,102 @@ function renderLeaderboard(lb, view) {
         scales: { r: {
           suggestedMin: 0, suggestedMax: 100,
           angleLines: { color: "rgba(255,255,255,.12)" },
-          grid: { color: "rgba(255,255,255,.08)" },
+          grid:        { color: "rgba(255,255,255,.08)" },
           pointLabels: { color: "#cbd5e1", font: { size: 11 } },
-          ticks: { backdropColor: "transparent", color: "#64748b" }
+          ticks:       { backdropColor: "transparent", color: "#64748b" },
         }},
         plugins: { legend: { labels: { color: "#cbd5e1", boxWidth: 12 } } },
       },
     });
-  } else if (view === "uplift") {
-    const by = lb.by_model_setting || {};
-    const pairs = Object.entries(by)
-      .map(([m, s]) => ({ model: m, s1: s.S1, s2: s.S2, uplift: (s.S2 != null && s.S1 != null) ? s.S2 - s.S1 : null }))
-      .filter(p => p.uplift != null)
-      .sort((a, b) => b.uplift - a.uplift);
-    if (pairs.length === 0) {
-      el.innerHTML = `<div class="text-gray-400 text-sm">Need both an S1 and an S2 entry for the same model to show uplift.</div>`;
-      return;
-    }
-    el.innerHTML = `
-      <div class="space-y-2">
-        ${pairs.map(p => `
-          <div class="flex items-center gap-3">
-            <div class="w-48 truncate">${esc(p.model)}</div>
-            <div class="flex-1 bar"><div class="bar-fill" style="width:${Math.max(0, Math.min(100, p.uplift*2 + 50))}%"></div></div>
-            <div class="w-32 text-right text-sm font-mono">
-              S1 ${fmt2(p.s1)} → S2 ${fmt2(p.s2)}
-              <span class="${p.uplift >= 0 ? 'text-emerald-400' : 'text-rose-400'} ml-2">
-                (${p.uplift >= 0 ? "+" : ""}${fmt2(p.uplift)})
-              </span>
-            </div>
-          </div>`).join("")}
-      </div>`;
   }
 }
 
 function wireTabs(lb) {
-  const buttons = document.querySelectorAll(".tab-btn");
-  buttons.forEach(btn => btn.addEventListener("click", () => {
-    buttons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    renderLeaderboard(lb, btn.dataset.view);
-  }));
+  document.querySelectorAll(".tab-btn").forEach(btn =>
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      renderLeaderboard(lb, btn.dataset.view);
+    })
+  );
 }
 
-// ---------- History ------------------------------------------------------
+// ---------- History ----------------------------------------------------------
 
 function renderHistory(rows) {
   const el = document.getElementById("history-container");
-  if (!rows || rows.length === 0) { el.innerHTML = `<div class="text-gray-400 text-sm col-span-2">No graded fixtures yet.</div>`; return; }
+  if (!rows || rows.length === 0) {
+    el.innerHTML = `<div class="text-gray-400 text-sm">No graded fixtures yet.</div>`;
+    return;
+  }
   el.innerHTML = rows.map(r => {
-    const best = r.models && r.models[0];
-    const date = r.kickoff_utc ? new Date(r.kickoff_utc).toISOString().slice(0, 10) : "";
+    const date  = r.kickoff_utc ? new Date(r.kickoff_utc).toISOString().slice(0, 10) : "";
+    const preds = r.predictions || [];
+    const lv    = r.live;
+    const isLive = lv && lv.status && lv.status !== "Match Finished" && lv.status !== "Not Started";
+
+    // Result badge: prefer live score during match, then truth, then "—"
+    let resultBadge;
+    if (isLive) {
+      resultBadge = `
+        <div class="flex items-center gap-2 justify-end">
+          <span class="chip text-[10px]" style="background:rgba(239,68,68,.2);border-color:rgba(239,68,68,.5);color:#fca5a5;">
+            🔴 LIVE${lv.elapsed != null ? ` · ${lv.elapsed}′` : ""}
+          </span>
+          <span class="font-mono font-bold text-xl">
+            ${lv.score ? `${lv.score.home ?? "?"}–${lv.score.away ?? "?"}` : ""}
+          </span>
+        </div>`;
+    } else {
+      resultBadge = `<div class="text-xl font-black">${esc(r.result || "—")}</div>`;
+    }
+
+    const truthScore = r.truth ? r.truth.score : null;
+    const hStart = _allPreds.length;
+    _allPreds.push(...preds);
+
+    const predCards = preds.length
+      ? preds.map((p, i) => `
+          <div>
+            ${renderPredCard(p, r, hStart + i)}
+            ${r.result || truthScore ? `
+              <div class="px-4 pb-2 text-[10px] text-gray-400">
+                Actual result: <span class="font-mono font-bold text-white">${esc(r.result || truthScore || "—")}</span>
+              </div>` : ""}
+          </div>`).join("")
+      : `<div class="text-gray-500 text-sm py-2">No predictions for this fixture.</div>`;
+
     return `
-      <details class="card rounded-xl p-4">
-        <summary class="flex items-center justify-between">
+      <details open class="card rounded-xl p-4 col-span-2">
+        <summary class="flex items-center justify-between cursor-pointer select-none">
           <div>
             <div class="text-xs text-gray-400">${esc(date)} · ${esc(r.competition || "")} ${esc(r.stage || "")}</div>
-            <div class="font-semibold">${esc(r.home || "?")} <span class="text-gray-500 mx-2">vs</span> ${esc(r.away || "?")}</div>
+            <div class="font-semibold text-lg">${esc(r.home || "?")} <span class="text-gray-500 mx-2">vs</span> ${esc(r.away || "?")}</div>
           </div>
           <div class="text-right">
-            <div class="text-xl font-black">${esc(r.result || "—")}</div>
-            ${best ? `<div class="text-xs text-gray-400">best: ${esc(best.model_id)} · ${fmt2(best.composite)}</div>` : ""}
+            ${resultBadge}
+            ${r.models && r.models[0] ? `<div class="text-xs text-gray-400 mt-1">best composite: ${fmt2(r.models[0].composite)}</div>` : ""}
           </div>
         </summary>
-        <div class="mt-3 space-y-1 text-sm">
-          ${(r.models || []).map(m => `
-            <div class="flex items-center justify-between border-t border-white/5 pt-1">
-              <span class="text-gray-300">${modelBadge(m.model_id).emoji} ${esc(m.model_id)}
-                <span class="chip chip-${(m.setting || "").toLowerCase()} ml-1">${esc(m.setting)}</span></span>
-              <span class="font-mono">${fmt2(m.composite)}</span>
-            </div>`).join("")}
+        <div class="mt-4 space-y-3">
+          ${predCards}
         </div>
       </details>`;
   }).join("");
 }
 
-// ---------- Boot ---------------------------------------------------------
+// ---------- Boot -------------------------------------------------------------
+
+function fmtTimestamp(iso) {
+  if (!iso) return "—";
+  const d   = new Date(iso);
+  const pad = n => String(n).padStart(2, "0");
+  return `${d.getUTCFullYear()}-${pad(d.getUTCMonth()+1)}-${pad(d.getUTCDate())} `
+       + `${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())} (UTC+0)`;
+}
 
 async function main() {
+  buildReasoningModal();
   let data;
   try {
     const resp = await fetch("data.json?ts=" + Date.now());
@@ -274,8 +692,8 @@ async function main() {
     console.error(e);
     return;
   }
-  document.getElementById("generated-at").textContent =
-    "Last updated " + (data.generated_at || "—");
+  document.getElementById("generated-at").textContent = "Last updated " + fmtTimestamp(data.generated_at);
+  _allPreds = [];
   renderNextMatch(data.next_match);
   renderLeaderboard(data.leaderboard || { main: [] }, "main");
   wireTabs(data.leaderboard || { main: [] });

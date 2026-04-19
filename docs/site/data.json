@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T21:57:32+00:00",
+  "generated_at": "2026-04-19T22:16:25+00:00",
   "leaderboard": {
     "main": [
       {
@@ -40,14 +40,14 @@
       }
     ],
     "by_model_setting": {
-      "gpt-5.4-search": {
-        "S2": 44.4591099544479
+      "test": {
+        "test": 21.5125
       },
       "gpt-5.4-mini": {
         "S1": 46.71341167865636
       },
-      "test": {
-        "test": 21.5125
+      "gpt-5.4-search": {
+        "S2": 44.4591099544479
       }
     }
   },
@@ -73,18 +73,473 @@
           "draw": 0.24,
           "away": 0.19
         },
+        "score_dist": [
+          {
+            "score": "2-1",
+            "p": 0.19
+          },
+          {
+            "score": "1-0",
+            "p": 0.15
+          },
+          {
+            "score": "2-0",
+            "p": 0.12
+          },
+          {
+            "score": "1-1",
+            "p": 0.12
+          },
+          {
+            "score": "3-1",
+            "p": 0.09
+          },
+          {
+            "score": "0-0",
+            "p": 0.06
+          },
+          {
+            "score": "2-2",
+            "p": 0.05
+          },
+          {
+            "score": "0-1",
+            "p": 0.05
+          },
+          {
+            "score": "1-2",
+            "p": 0.05
+          },
+          {
+            "score": "3-0",
+            "p": 0.04
+          },
+          {
+            "score": "3-2",
+            "p": 0.03
+          },
+          {
+            "score": "4-1",
+            "p": 0.02
+          },
+          {
+            "score": "1-3",
+            "p": 0.01
+          },
+          {
+            "score": "4-0",
+            "p": 0.01
+          },
+          {
+            "score": "0-2",
+            "p": 0.01
+          }
+        ],
         "most_likely_score": "2-1",
         "expected_goal_diff": 0.72,
         "advance_prob": null,
-        "reasoning_overall": "LAFC deserve clear favoritism at BMO Stadium because their squad ceiling, home-field edge, and attacking talent are stronger than San Jose's, and this fixture has often tilted toward LAFC in Los Angeles. Even allowing for MLS volatility and possible rotation, LAFC's likely front line and chance creation profile should generate more box entries and shots, while San Jose remain dangerous in transition and on direct attacks, keeping draw and away-upset probabilities meaningful. The matchup likely hinges on whether LAFC's wide attackers and advanced fullbacks can pin San Jose deep, and whether San Jose can exploit space behind them through quick counters and set pieces. Key players such as Denis Bouanga and Mateusz Bogusz give LAFC more reliable finishing and ball progression, while San Jose's best route is through moments from Cristian Espinoza and a central striker attacking crosses.",
-        "top_scorers": [
-          "Denis Bouanga",
-          "Olivier Giroud",
-          "Mateusz Bogusz"
+        "reasoning": {
+          "overall": "LAFC deserve clear favoritism at BMO Stadium because their squad ceiling, home-field edge, and attacking talent are stronger than San Jose's, and this fixture has often tilted toward LAFC in Los Angeles. Even allowing for MLS volatility and possible rotation, LAFC's likely front line and chance creation profile should generate more box entries and shots, while San Jose remain dangerous in transition and on direct attacks, keeping draw and away-upset probabilities meaningful. The matchup likely hinges on whether LAFC's wide attackers and advanced fullbacks can pin San Jose deep, and whether San Jose can exploit space behind them through quick counters and set pieces. Key players such as Denis Bouanga and Mateusz Bogusz give LAFC more reliable finishing and ball progression, while San Jose's best route is through moments from Cristian Espinoza and a central striker attacking crosses.",
+          "t1_result": "The home win is the single most likely outcome because LAFC project for the better expected-goal share, more territorial control, and stronger individual quality, but MLS parity keeps the draw live. A 2-1 home result fits a game where LAFC create more volume yet concede at least one dangerous transition or set-piece chance.",
+          "t2_player": "LAFC are projected in a familiar 4-3-3/4-2-3-1 hybrid with Bouanga as the main scoring threat and Bogusz involved between the lines. San Jose should also use a back four and rely on Espinoza's delivery plus vertical runs from the front line, so their scorers are more likely to come from wide-service patterns than sustained possession.",
+          "t3_events": "Expect LAFC to start on the front foot, with one of their best chances arriving before halftime and San Jose's most dangerous spell coming after turnovers or after the break. Typical MLS game-state dynamics suggest several second-half substitutions, a few tactical yellows, and a decent chance of both teams scoring.",
+          "t4_stats": "LAFC should have a modest possession edge and more shots because they are likelier to sustain attacks at home, but San Jose can still post respectable shot numbers through counters and crosses. That points to LAFC leading in possession, corners, and pass accuracy, while both keepers should be forced into multiple saves."
+        },
+        "scorers": [
+          {
+            "player": "Denis Bouanga",
+            "team": "home",
+            "minute_range": [
+              15,
+              75
+            ],
+            "p": 0.43
+          },
+          {
+            "player": "Olivier Giroud",
+            "team": "home",
+            "minute_range": [
+              20,
+              90
+            ],
+            "p": 0.28
+          },
+          {
+            "player": "Mateusz Bogusz",
+            "team": "home",
+            "minute_range": [
+              25,
+              85
+            ],
+            "p": 0.24
+          },
+          {
+            "player": "Cristian Olivera",
+            "team": "home",
+            "minute_range": [
+              30,
+              90
+            ],
+            "p": 0.16
+          },
+          {
+            "player": "Jeremy Ebobisse",
+            "team": "away",
+            "minute_range": [
+              35,
+              90
+            ],
+            "p": 0.24
+          },
+          {
+            "player": "Cristian Espinoza",
+            "team": "away",
+            "minute_range": [
+              20,
+              90
+            ],
+            "p": 0.18
+          },
+          {
+            "player": "Amahl Pellegrino",
+            "team": "away",
+            "minute_range": [
+              40,
+              90
+            ],
+            "p": 0.14
+          }
         ],
+        "assisters": [
+          {
+            "player": "Mateusz Bogusz",
+            "team": "home",
+            "p": 0.27
+          },
+          {
+            "player": "Denis Bouanga",
+            "team": "home",
+            "p": 0.22
+          },
+          {
+            "player": "Ryan Hollingshead",
+            "team": "home",
+            "p": 0.12
+          },
+          {
+            "player": "Cristian Espinoza",
+            "team": "away",
+            "p": 0.21
+          },
+          {
+            "player": "Hernán López",
+            "team": "away",
+            "p": 0.13
+          }
+        ],
+        "motm_probs": [
+          {
+            "player": "Denis Bouanga",
+            "team": "home",
+            "p": 0.31
+          },
+          {
+            "player": "Mateusz Bogusz",
+            "team": "home",
+            "p": 0.18
+          },
+          {
+            "player": "Olivier Giroud",
+            "team": "home",
+            "p": 0.13
+          },
+          {
+            "player": "Cristian Espinoza",
+            "team": "away",
+            "p": 0.11
+          },
+          {
+            "player": "Hugo Lloris",
+            "team": "home",
+            "p": 0.07
+          }
+        ],
+        "lineups": {
+          "home": {
+            "starting": [
+              {
+                "name": "Hugo Lloris",
+                "position": "GK"
+              },
+              {
+                "name": "Sergi Palencia",
+                "position": "DF"
+              },
+              {
+                "name": "Aaron Long",
+                "position": "DF"
+              },
+              {
+                "name": "Jesús Murillo",
+                "position": "DF"
+              },
+              {
+                "name": "Ryan Hollingshead",
+                "position": "DF"
+              },
+              {
+                "name": "Ilie Sánchez",
+                "position": "MF"
+              },
+              {
+                "name": "Timothy Tillman",
+                "position": "MF"
+              },
+              {
+                "name": "Mateusz Bogusz",
+                "position": "MF"
+              },
+              {
+                "name": "Denis Bouanga",
+                "position": "FW"
+              },
+              {
+                "name": "Cristian Olivera",
+                "position": "FW"
+              },
+              {
+                "name": "Olivier Giroud",
+                "position": "FW"
+              }
+            ],
+            "bench": [
+              {
+                "name": "Thomas Hasal",
+                "position": "GK"
+              },
+              {
+                "name": "Marlon",
+                "position": "DF"
+              },
+              {
+                "name": "Maxime Chanot",
+                "position": "DF"
+              },
+              {
+                "name": "Odin Holm",
+                "position": "MF"
+              },
+              {
+                "name": "Lewis O'Brien",
+                "position": "MF"
+              },
+              {
+                "name": "David Martínez",
+                "position": "FW"
+              },
+              {
+                "name": "Nathan Ordaz",
+                "position": "FW"
+              },
+              {
+                "name": "Jeremy Ebobisse",
+                "position": "FW"
+              },
+              {
+                "name": "Javairô Dilrosun",
+                "position": "FW"
+              }
+            ]
+          },
+          "away": {
+            "starting": [
+              {
+                "name": "Daniel",
+                "position": "GK"
+              },
+              {
+                "name": "Paul Marie",
+                "position": "DF"
+              },
+              {
+                "name": "Rodrigues",
+                "position": "DF"
+              },
+              {
+                "name": "Bruno Wilson",
+                "position": "DF"
+              },
+              {
+                "name": "Carlos Akapo",
+                "position": "DF"
+              },
+              {
+                "name": "Jackson Yueill",
+                "position": "MF"
+              },
+              {
+                "name": "Hernán López",
+                "position": "MF"
+              },
+              {
+                "name": "Carlos Gruezo",
+                "position": "MF"
+              },
+              {
+                "name": "Cristian Espinoza",
+                "position": "FW"
+              },
+              {
+                "name": "Amahl Pellegrino",
+                "position": "FW"
+              },
+              {
+                "name": "Jeremy Ebobisse",
+                "position": "FW"
+              }
+            ],
+            "bench": [
+              {
+                "name": "William Yarbrough",
+                "position": "GK"
+              },
+              {
+                "name": "Tanner Beason",
+                "position": "DF"
+              },
+              {
+                "name": "Vítor Costa",
+                "position": "DF"
+              },
+              {
+                "name": "Niko Tsakiris",
+                "position": "MF"
+              },
+              {
+                "name": "Judson",
+                "position": "MF"
+              },
+              {
+                "name": "Jack Skahan",
+                "position": "MF"
+              },
+              {
+                "name": "Preston Judd",
+                "position": "FW"
+              },
+              {
+                "name": "Ousseni Bouda",
+                "position": "FW"
+              },
+              {
+                "name": "Benji Kikanović",
+                "position": "FW"
+              }
+            ]
+          }
+        },
+        "formations": {
+          "home": "4-3-3",
+          "away": "4-3-3"
+        },
+        "substitutions": [
+          {
+            "team": "home",
+            "off": "Olivier Giroud",
+            "on": "Nathan Ordaz",
+            "minute": 68
+          },
+          {
+            "team": "home",
+            "off": "Cristian Olivera",
+            "on": "David Martínez",
+            "minute": 72
+          },
+          {
+            "team": "home",
+            "off": "Ilie Sánchez",
+            "on": "Lewis O'Brien",
+            "minute": 77
+          },
+          {
+            "team": "away",
+            "off": "Amahl Pellegrino",
+            "on": "Ousseni Bouda",
+            "minute": 64
+          },
+          {
+            "team": "away",
+            "off": "Jeremy Ebobisse",
+            "on": "Preston Judd",
+            "minute": 74
+          },
+          {
+            "team": "away",
+            "off": "Jackson Yueill",
+            "on": "Niko Tsakiris",
+            "minute": 79
+          }
+        ],
+        "cards": [
+          {
+            "player": "Carlos Gruezo",
+            "team": "away",
+            "color": "yellow",
+            "minute": 33
+          },
+          {
+            "player": "Aaron Long",
+            "team": "home",
+            "color": "yellow",
+            "minute": 58
+          },
+          {
+            "player": "Paul Marie",
+            "team": "away",
+            "color": "yellow",
+            "minute": 71
+          }
+        ],
+        "penalties": [],
+        "own_goals": [],
+        "stats": {
+          "possession": {
+            "home": 56,
+            "away": 44
+          },
+          "shots": {
+            "home": 15,
+            "away": 10
+          },
+          "shots_on_target": {
+            "home": 6,
+            "away": 4
+          },
+          "corners": {
+            "home": 6,
+            "away": 4
+          },
+          "pass_accuracy": {
+            "home": 85,
+            "away": 80
+          },
+          "fouls": {
+            "home": 11,
+            "away": 13
+          },
+          "saves": {
+            "home": 3,
+            "away": 4
+          },
+          "defensive_actions": {
+            "home": 58,
+            "away": 64
+          }
+        },
         "cost_usd": 0.045033
       }
-    ]
+    ],
+    "live": null
   },
   "history": [
     {
@@ -99,6 +554,474 @@
       "stage": "Quarter-finals",
       "competition": "UEFA Champions League",
       "result": "4-3",
+      "truth": {
+        "score": "4-3",
+        "events": [
+          {
+            "time": {
+              "elapsed": -5,
+              "extra": null
+            },
+            "team": {
+              "id": 541,
+              "name": "Real Madrid",
+              "logo": "https://media.api-sports.io/football/teams/541.png"
+            },
+            "player": {
+              "id": 291964,
+              "name": "Arda Güler"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Argument"
+          },
+          {
+            "time": {
+              "elapsed": -5,
+              "extra": null
+            },
+            "team": {
+              "id": 541,
+              "name": "Real Madrid",
+              "logo": "https://media.api-sports.io/football/teams/541.png"
+            },
+            "player": {
+              "id": 291964,
+              "name": "Arda Güler"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Argument"
+          },
+          {
+            "time": {
+              "elapsed": -5,
+              "extra": null
+            },
+            "team": {
+              "id": 541,
+              "name": "Real Madrid",
+              "logo": "https://media.api-sports.io/football/teams/541.png"
+            },
+            "player": {
+              "id": 291964,
+              "name": "Arda Güler"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Red Card",
+            "comments": "Argument"
+          },
+          {
+            "time": {
+              "elapsed": 1,
+              "extra": null
+            },
+            "team": {
+              "id": 541,
+              "name": "Real Madrid",
+              "logo": "https://media.api-sports.io/football/teams/541.png"
+            },
+            "player": {
+              "id": 291964,
+              "name": "A. Guler"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 6,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 328033,
+              "name": "A. Pavlovic"
+            },
+            "assist": {
+              "id": 502,
+              "name": "J. Kimmich"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 29,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 125171,
+              "name": "Josip Stanišić"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Argument"
+          },
+          {
+            "time": {
+              "elapsed": 29,
+              "extra": null
+            },
+            "team": {
+              "id": 541,
+              "name": "Real Madrid",
+              "logo": "https://media.api-sports.io/football/teams/541.png"
+            },
+            "player": {
+              "id": 291964,
+              "name": "A. Guler"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 38,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 184,
+              "name": "H. Kane"
+            },
+            "assist": {
+              "id": 1149,
+              "name": "D. Upamecano"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 40,
+              "extra": null
+            },
+            "team": {
+              "id": 541,
+              "name": "Real Madrid",
+              "logo": "https://media.api-sports.io/football/teams/541.png"
+            },
+            "player": {
+              "id": 372,
+              "name": "Éder Militão"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          },
+          {
+            "time": {
+              "elapsed": 42,
+              "extra": null
+            },
+            "team": {
+              "id": 541,
+              "name": "Real Madrid",
+              "logo": "https://media.api-sports.io/football/teams/541.png"
+            },
+            "player": {
+              "id": 278,
+              "name": "K. Mbappe"
+            },
+            "assist": {
+              "id": 762,
+              "name": "Vinicius Junior"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 46,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 125171,
+              "name": "J. Stanisic"
+            },
+            "assist": {
+              "id": 509,
+              "name": "A. Davies"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 61,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 510,
+              "name": "S. Gnabry"
+            },
+            "assist": {
+              "id": 181812,
+              "name": "J. Musiala"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 62,
+              "extra": null
+            },
+            "team": {
+              "id": 541,
+              "name": "Real Madrid",
+              "logo": "https://media.api-sports.io/football/teams/541.png"
+            },
+            "player": {
+              "id": 744,
+              "name": "B. Diaz"
+            },
+            "assist": {
+              "id": 2207,
+              "name": "E. Camavinga"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 70,
+              "extra": null
+            },
+            "team": {
+              "id": 541,
+              "name": "Real Madrid",
+              "logo": "https://media.api-sports.io/football/teams/541.png"
+            },
+            "player": {
+              "id": 2285,
+              "name": "Antonio Rudiger"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Argument"
+          },
+          {
+            "time": {
+              "elapsed": 78,
+              "extra": null
+            },
+            "team": {
+              "id": 541,
+              "name": "Real Madrid",
+              "logo": "https://media.api-sports.io/football/teams/541.png"
+            },
+            "player": {
+              "id": 2207,
+              "name": "Eduardo Camavinga"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          },
+          {
+            "time": {
+              "elapsed": 86,
+              "extra": null
+            },
+            "team": {
+              "id": 541,
+              "name": "Real Madrid",
+              "logo": "https://media.api-sports.io/football/teams/541.png"
+            },
+            "player": {
+              "id": 2207,
+              "name": "Eduardo Camavinga"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Time wasting"
+          },
+          {
+            "time": {
+              "elapsed": 86,
+              "extra": null
+            },
+            "team": {
+              "id": 541,
+              "name": "Real Madrid",
+              "logo": "https://media.api-sports.io/football/teams/541.png"
+            },
+            "player": {
+              "id": 2207,
+              "name": "Eduardo Camavinga"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Red Card",
+            "comments": "Time wasting"
+          },
+          {
+            "time": {
+              "elapsed": 89,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 2489,
+              "name": "L. Diaz"
+            },
+            "assist": {
+              "id": 181812,
+              "name": "J. Musiala"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": null
+            },
+            "team": {
+              "id": 541,
+              "name": "Real Madrid",
+              "logo": "https://media.api-sports.io/football/teams/541.png"
+            },
+            "player": {
+              "id": 291964,
+              "name": "A. Guler"
+            },
+            "assist": {
+              "id": 449249,
+              "name": "F. Mastantuono"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": null
+            },
+            "team": {
+              "id": 541,
+              "name": "Real Madrid",
+              "logo": "https://media.api-sports.io/football/teams/541.png"
+            },
+            "player": {
+              "id": 283,
+              "name": "T. Alexander-Arnold"
+            },
+            "assist": {
+              "id": 509470,
+              "name": "T. Pitarch"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 19617,
+              "name": "M. Olise"
+            },
+            "assist": {
+              "id": 184,
+              "name": "H. Kane"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          }
+        ]
+      },
+      "live": null,
       "models": [
         {
           "model_id": "gpt-5.4-mini",
@@ -113,6 +1036,976 @@
         {
           "model_id": "test",
           "setting": "test",
+          "composite": 21.5125
+        }
+      ],
+      "predictions": [
+        {
+          "model_id": "gpt-5.4-mini",
+          "setting": "S1",
+          "win_probs": {
+            "home": 0.42,
+            "draw": 0.29,
+            "away": 0.29
+          },
+          "score_dist": [
+            {
+              "score": "1-1",
+              "p": 0.16
+            },
+            {
+              "score": "2-1",
+              "p": 0.14
+            },
+            {
+              "score": "1-0",
+              "p": 0.12
+            },
+            {
+              "score": "0-1",
+              "p": 0.11
+            },
+            {
+              "score": "2-2",
+              "p": 0.09
+            },
+            {
+              "score": "0-0",
+              "p": 0.08
+            },
+            {
+              "score": "1-2",
+              "p": 0.08
+            },
+            {
+              "score": "2-0",
+              "p": 0.07
+            },
+            {
+              "score": "0-2",
+              "p": 0.06
+            },
+            {
+              "score": "3-1",
+              "p": 0.04
+            },
+            {
+              "score": "3-2",
+              "p": 0.03
+            },
+            {
+              "score": "1-3",
+              "p": 0.02
+            }
+          ],
+          "most_likely_score": "1-1",
+          "expected_goal_diff": 0.12,
+          "advance_prob": 0.53,
+          "reasoning": {
+            "overall": "Bayern at the Allianz Arena usually start fast and can control territory, but Real Madrid’s knockout pedigree and transition threat make this close to even. In a first-leg quarter-final, both teams should be cautious enough to keep the score tight, while elite finishers like Kane and Vinícius can decide it with one or two moments. Bayern’s home edge slightly offsets Madrid’s experience and late-game management, so a narrow Bayern win or draw is the most plausible band.",
+            "t1_result": "I lean toward a home win narrowly, but the draw and away win remain live because both sides can score against top opposition. A 1-1 or 2-1 type game fits a match where Bayern have more of the ball and Madrid are more efficient in transition.",
+            "t2_player": "The lineups should feature Bayern’s strongest attacking pieces around Kane, Musiala, and a high-usage winger/fullback structure, while Madrid should center around Vinícius, Bellingham, and a compact midfield. Those players are the most likely scorer and assister candidates because they drive shot volume and final-third creation in big matches.",
+            "t3_events": "Expect a measured first half with the first goal more likely before or around the hour mark rather than very early. Cards are likelier for tactical fouls against counters, and both managers should use 60-75 minute substitutions to refresh wide and midfield legs.",
+            "t4_stats": "Bayern should edge possession and passing, but Madrid’s shot quality may be comparable or better in fewer attacks. That suggests Bayern around the mid-50s in possession, a modest shot advantage, and a small edge in corners, with saves split depending on which side finishes more cleanly."
+          },
+          "scorers": [
+            {
+              "player": "Harry Kane",
+              "team": "home",
+              "minute_range": [
+                30,
+                90
+              ],
+              "p": 0.42
+            },
+            {
+              "player": "Jamal Musiala",
+              "team": "home",
+              "minute_range": [
+                25,
+                90
+              ],
+              "p": 0.23
+            },
+            {
+              "player": "Leroy Sané",
+              "team": "home",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.2
+            },
+            {
+              "player": "Vinícius Júnior",
+              "team": "away",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.31
+            },
+            {
+              "player": "Kylian Mbappé",
+              "team": "away",
+              "minute_range": [
+                15,
+                90
+              ],
+              "p": 0.29
+            },
+            {
+              "player": "Jude Bellingham",
+              "team": "away",
+              "minute_range": [
+                25,
+                90
+              ],
+              "p": 0.21
+            },
+            {
+              "player": "Rodrygo",
+              "team": "away",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.17
+            }
+          ],
+          "assisters": [
+            {
+              "player": "Jamal Musiala",
+              "team": "home",
+              "p": 0.24
+            },
+            {
+              "player": "Joshua Kimmich",
+              "team": "home",
+              "p": 0.2
+            },
+            {
+              "player": "Leroy Sané",
+              "team": "home",
+              "p": 0.16
+            },
+            {
+              "player": "Vinícius Júnior",
+              "team": "away",
+              "p": 0.24
+            },
+            {
+              "player": "Federico Valverde",
+              "team": "away",
+              "p": 0.19
+            },
+            {
+              "player": "Jude Bellingham",
+              "team": "away",
+              "p": 0.18
+            },
+            {
+              "player": "Rodrygo",
+              "team": "away",
+              "p": 0.15
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "Harry Kane",
+              "team": "home",
+              "p": 0.24
+            },
+            {
+              "player": "Jamal Musiala",
+              "team": "home",
+              "p": 0.16
+            },
+            {
+              "player": "Vinícius Júnior",
+              "team": "away",
+              "p": 0.17
+            },
+            {
+              "player": "Kylian Mbappé",
+              "team": "away",
+              "p": 0.15
+            },
+            {
+              "player": "Jude Bellingham",
+              "team": "away",
+              "p": 0.1
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Manuel Neuer",
+                  "position": "GK"
+                },
+                {
+                  "name": "Joshua Kimmich",
+                  "position": "DF"
+                },
+                {
+                  "name": "Dayot Upamecano",
+                  "position": "DF"
+                },
+                {
+                  "name": "Matthijs de Ligt",
+                  "position": "DF"
+                },
+                {
+                  "name": "Alphonso Davies",
+                  "position": "DF"
+                },
+                {
+                  "name": "Leon Goretzka",
+                  "position": "MF"
+                },
+                {
+                  "name": "Aleksandar Pavlović",
+                  "position": "MF"
+                },
+                {
+                  "name": "Jamal Musiala",
+                  "position": "MF"
+                },
+                {
+                  "name": "Leroy Sané",
+                  "position": "FW"
+                },
+                {
+                  "name": "Harry Kane",
+                  "position": "FW"
+                },
+                {
+                  "name": "Kingsley Coman",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Daniel Peretz",
+                  "position": "GK"
+                },
+                {
+                  "name": "Kim Min-jae",
+                  "position": "DF"
+                },
+                {
+                  "name": "Noussair Mazraoui",
+                  "position": "DF"
+                },
+                {
+                  "name": "Konrad Laimer",
+                  "position": "MF"
+                },
+                {
+                  "name": "Raphaël Guerreiro",
+                  "position": "MF"
+                },
+                {
+                  "name": "Thomas Müller",
+                  "position": "MF"
+                },
+                {
+                  "name": "Serge Gnabry",
+                  "position": "FW"
+                },
+                {
+                  "name": "Mathys Tel",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "Thibaut Courtois",
+                  "position": "GK"
+                },
+                {
+                  "name": "Daniel Carvajal",
+                  "position": "DF"
+                },
+                {
+                  "name": "Antonio Rüdiger",
+                  "position": "DF"
+                },
+                {
+                  "name": "Éder Militão",
+                  "position": "DF"
+                },
+                {
+                  "name": "Ferland Mendy",
+                  "position": "DF"
+                },
+                {
+                  "name": "Aurélien Tchouaméni",
+                  "position": "MF"
+                },
+                {
+                  "name": "Federico Valverde",
+                  "position": "MF"
+                },
+                {
+                  "name": "Jude Bellingham",
+                  "position": "MF"
+                },
+                {
+                  "name": "Rodrygo",
+                  "position": "FW"
+                },
+                {
+                  "name": "Vinícius Júnior",
+                  "position": "FW"
+                },
+                {
+                  "name": "Kylian Mbappé",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Andriy Lunin",
+                  "position": "GK"
+                },
+                {
+                  "name": "David Alaba",
+                  "position": "DF"
+                },
+                {
+                  "name": "Fran García",
+                  "position": "DF"
+                },
+                {
+                  "name": "Luka Modrić",
+                  "position": "MF"
+                },
+                {
+                  "name": "Eduardo Camavinga",
+                  "position": "MF"
+                },
+                {
+                  "name": "Arda Güler",
+                  "position": "MF"
+                },
+                {
+                  "name": "Brahim Díaz",
+                  "position": "FW"
+                },
+                {
+                  "name": "Joselu",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "4-3-3"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "Leroy Sané",
+              "on": "Serge Gnabry",
+              "minute": 67
+            },
+            {
+              "team": "home",
+              "off": "Aleksandar Pavlović",
+              "on": "Thomas Müller",
+              "minute": 72
+            },
+            {
+              "team": "away",
+              "off": "Rodrygo",
+              "on": "Brahim Díaz",
+              "minute": 70
+            },
+            {
+              "team": "away",
+              "off": "Ferland Mendy",
+              "on": "Fran García",
+              "minute": 74
+            }
+          ],
+          "cards": [
+            {
+              "player": "Aurélien Tchouaméni",
+              "team": "away",
+              "color": "yellow",
+              "minute": 38
+            },
+            {
+              "player": "Joshua Kimmich",
+              "team": "home",
+              "color": "yellow",
+              "minute": 61
+            },
+            {
+              "player": "Antonio Rüdiger",
+              "team": "away",
+              "color": "yellow",
+              "minute": 77
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 55,
+              "away": 45
+            },
+            "shots": {
+              "home": 15,
+              "away": 13
+            },
+            "shots_on_target": {
+              "home": 5,
+              "away": 5
+            },
+            "corners": {
+              "home": 6,
+              "away": 5
+            },
+            "pass_accuracy": {
+              "home": 88,
+              "away": 86
+            },
+            "fouls": {
+              "home": 11,
+              "away": 12
+            },
+            "saves": {
+              "home": 4,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 31,
+              "away": 33
+            }
+          },
+          "cost_usd": 0.038235,
+          "composite": 46.71341167865636
+        },
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.4,
+            "draw": 0.28,
+            "away": 0.32
+          },
+          "score_dist": [
+            {
+              "score": "1-1",
+              "p": 0.18
+            },
+            {
+              "score": "2-1",
+              "p": 0.16
+            },
+            {
+              "score": "1-2",
+              "p": 0.13
+            },
+            {
+              "score": "2-2",
+              "p": 0.1
+            },
+            {
+              "score": "1-0",
+              "p": 0.09
+            },
+            {
+              "score": "0-1",
+              "p": 0.08
+            },
+            {
+              "score": "2-0",
+              "p": 0.06
+            },
+            {
+              "score": "0-0",
+              "p": 0.05
+            },
+            {
+              "score": "3-1",
+              "p": 0.05
+            },
+            {
+              "score": "1-3",
+              "p": 0.04
+            },
+            {
+              "score": "3-2",
+              "p": 0.03
+            },
+            {
+              "score": "2-3",
+              "p": 0.03
+            }
+          ],
+          "most_likely_score": "1-1",
+          "expected_goal_diff": 0.12,
+          "advance_prob": 0.46,
+          "reasoning": {
+            "overall": "This projects as a very tight elite-level knockout match: Bayern should have more territorial control at Allianz Arena, but Real Madrid’s transition quality, Champions League game management, and individual match-winners keep the tie balanced. Bayern’s home pressure and volume creation slightly lift their win chance, yet Madrid’s counterattacking threat through Vinícius, Bellingham and Mbappé-type central/left combinations makes an away result highly live. Recent H2H history between these clubs is usually open but decided by fine margins, so a one-goal game or draw is more plausible than a blowout.",
+            "t1_result": "Bayern get a modest home edge from venue, likely shot volume, and sustained possession, but Madrid’s efficiency in big European ties narrows the gap. The score distribution centers on 1-1, 2-1, and 1-2 because both teams have enough attacking quality to score while neither is likely to fully suppress the other.",
+            "t2_player": "Both sides are expected to use star-heavy lineups with aggressive wide threats and attacking full-backs. Kane is Bayern’s most reliable finishing outlet, while Vinícius Júnior and Jude Bellingham are Madrid’s likeliest decisive attackers in open play and late-box arrivals.",
+            "t3_events": "Expect Bayern to start faster, with Madrid more dangerous after regains and in the latter part of each half. Tactical fouls and a few bookings are likely in midfield and wide defensive zones, with attacking substitutions around 60–75 minutes if the match is level.",
+            "t4_stats": "Bayern should shade possession and passes at home, but Madrid can match or exceed them in chance quality despite fewer attacks. That points to moderate shot totals for both, several saves, and a corner count slightly favoring Bayern due to territorial pressure."
+          },
+          "scorers": [
+            {
+              "player": "Harry Kane",
+              "team": "home",
+              "minute_range": [
+                30,
+                85
+              ],
+              "p": 0.42
+            },
+            {
+              "player": "Jamal Musiala",
+              "team": "home",
+              "minute_range": [
+                20,
+                80
+              ],
+              "p": 0.24
+            },
+            {
+              "player": "Leroy Sané",
+              "team": "home",
+              "minute_range": [
+                15,
+                75
+              ],
+              "p": 0.18
+            },
+            {
+              "player": "Vinícius Júnior",
+              "team": "away",
+              "minute_range": [
+                25,
+                90
+              ],
+              "p": 0.34
+            },
+            {
+              "player": "Jude Bellingham",
+              "team": "away",
+              "minute_range": [
+                35,
+                90
+              ],
+              "p": 0.23
+            },
+            {
+              "player": "Rodrygo",
+              "team": "away",
+              "minute_range": [
+                20,
+                80
+              ],
+              "p": 0.19
+            }
+          ],
+          "assisters": [
+            {
+              "player": "Jamal Musiala",
+              "team": "home",
+              "p": 0.22
+            },
+            {
+              "player": "Joshua Kimmich",
+              "team": "home",
+              "p": 0.18
+            },
+            {
+              "player": "Vinícius Júnior",
+              "team": "away",
+              "p": 0.2
+            },
+            {
+              "player": "Federico Valverde",
+              "team": "away",
+              "p": 0.16
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "Harry Kane",
+              "team": "home",
+              "p": 0.2
+            },
+            {
+              "player": "Jamal Musiala",
+              "team": "home",
+              "p": 0.16
+            },
+            {
+              "player": "Vinícius Júnior",
+              "team": "away",
+              "p": 0.19
+            },
+            {
+              "player": "Jude Bellingham",
+              "team": "away",
+              "p": 0.14
+            },
+            {
+              "player": "Thibaut Courtois",
+              "team": "away",
+              "p": 0.08
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Manuel Neuer",
+                  "position": "GK",
+                  "shirt": 1
+                },
+                {
+                  "name": "Joshua Kimmich",
+                  "position": "DF",
+                  "shirt": 6
+                },
+                {
+                  "name": "Dayot Upamecano",
+                  "position": "DF",
+                  "shirt": 2
+                },
+                {
+                  "name": "Kim Min-jae",
+                  "position": "DF",
+                  "shirt": 3
+                },
+                {
+                  "name": "Alphonso Davies",
+                  "position": "DF",
+                  "shirt": 19
+                },
+                {
+                  "name": "Aleksandar Pavlović",
+                  "position": "MF",
+                  "shirt": 45
+                },
+                {
+                  "name": "Leon Goretzka",
+                  "position": "MF",
+                  "shirt": 8
+                },
+                {
+                  "name": "Leroy Sané",
+                  "position": "FW",
+                  "shirt": 10
+                },
+                {
+                  "name": "Jamal Musiala",
+                  "position": "MF",
+                  "shirt": 42
+                },
+                {
+                  "name": "Kingsley Coman",
+                  "position": "FW",
+                  "shirt": 11
+                },
+                {
+                  "name": "Harry Kane",
+                  "position": "FW",
+                  "shirt": 9
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Daniel Peretz",
+                  "position": "GK",
+                  "shirt": 18
+                },
+                {
+                  "name": "Raphaël Guerreiro",
+                  "position": "DF",
+                  "shirt": 22
+                },
+                {
+                  "name": "Konrad Laimer",
+                  "position": "MF",
+                  "shirt": 27
+                },
+                {
+                  "name": "Serge Gnabry",
+                  "position": "FW",
+                  "shirt": 7
+                },
+                {
+                  "name": "Thomas Müller",
+                  "position": "FW",
+                  "shirt": 25
+                },
+                {
+                  "name": "Mathys Tel",
+                  "position": "FW",
+                  "shirt": 39
+                },
+                {
+                  "name": "Eric Dier",
+                  "position": "DF",
+                  "shirt": 15
+                },
+                {
+                  "name": "Josip Stanišić",
+                  "position": "DF",
+                  "shirt": 44
+                },
+                {
+                  "name": "João Palhinha",
+                  "position": "MF",
+                  "shirt": 16
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "Thibaut Courtois",
+                  "position": "GK",
+                  "shirt": 1
+                },
+                {
+                  "name": "Dani Carvajal",
+                  "position": "DF",
+                  "shirt": 2
+                },
+                {
+                  "name": "Antonio Rüdiger",
+                  "position": "DF",
+                  "shirt": 22
+                },
+                {
+                  "name": "Éder Militão",
+                  "position": "DF",
+                  "shirt": 3
+                },
+                {
+                  "name": "Ferland Mendy",
+                  "position": "DF",
+                  "shirt": 23
+                },
+                {
+                  "name": "Federico Valverde",
+                  "position": "MF",
+                  "shirt": 8
+                },
+                {
+                  "name": "Aurélien Tchouaméni",
+                  "position": "MF",
+                  "shirt": 14
+                },
+                {
+                  "name": "Eduardo Camavinga",
+                  "position": "MF",
+                  "shirt": 6
+                },
+                {
+                  "name": "Jude Bellingham",
+                  "position": "MF",
+                  "shirt": 5
+                },
+                {
+                  "name": "Rodrygo",
+                  "position": "FW",
+                  "shirt": 11
+                },
+                {
+                  "name": "Vinícius Júnior",
+                  "position": "FW",
+                  "shirt": 7
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Andriy Lunin",
+                  "position": "GK",
+                  "shirt": 13
+                },
+                {
+                  "name": "Lucas Vázquez",
+                  "position": "DF",
+                  "shirt": 17
+                },
+                {
+                  "name": "David Alaba",
+                  "position": "DF",
+                  "shirt": 4
+                },
+                {
+                  "name": "Fran García",
+                  "position": "DF",
+                  "shirt": 20
+                },
+                {
+                  "name": "Luka Modrić",
+                  "position": "MF",
+                  "shirt": 10
+                },
+                {
+                  "name": "Dani Ceballos",
+                  "position": "MF",
+                  "shirt": 19
+                },
+                {
+                  "name": "Arda Güler",
+                  "position": "MF",
+                  "shirt": 15
+                },
+                {
+                  "name": "Brahim Díaz",
+                  "position": "FW",
+                  "shirt": 21
+                },
+                {
+                  "name": "Endrick",
+                  "position": "FW",
+                  "shirt": 16
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "4-4-2"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "Kingsley Coman",
+              "on": "Serge Gnabry",
+              "minute": 67
+            },
+            {
+              "team": "home",
+              "off": "Leon Goretzka",
+              "on": "Konrad Laimer",
+              "minute": 74
+            },
+            {
+              "team": "home",
+              "off": "Leroy Sané",
+              "on": "Thomas Müller",
+              "minute": 78
+            },
+            {
+              "team": "away",
+              "off": "Rodrygo",
+              "on": "Brahim Díaz",
+              "minute": 68
+            },
+            {
+              "team": "away",
+              "off": "Eduardo Camavinga",
+              "on": "Luka Modrić",
+              "minute": 72
+            },
+            {
+              "team": "away",
+              "off": "Ferland Mendy",
+              "on": "Fran García",
+              "minute": 82
+            }
+          ],
+          "cards": [
+            {
+              "player": "Dayot Upamecano",
+              "team": "home",
+              "color": "yellow",
+              "minute": 41
+            },
+            {
+              "player": "Leon Goretzka",
+              "team": "home",
+              "color": "yellow",
+              "minute": 58
+            },
+            {
+              "player": "Aurélien Tchouaméni",
+              "team": "away",
+              "color": "yellow",
+              "minute": 36
+            },
+            {
+              "player": "Dani Carvajal",
+              "team": "away",
+              "color": "yellow",
+              "minute": 63
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 54,
+              "away": 46
+            },
+            "shots": {
+              "home": 15,
+              "away": 12
+            },
+            "shots_on_target": {
+              "home": 5,
+              "away": 5
+            },
+            "corners": {
+              "home": 6,
+              "away": 4
+            },
+            "pass_accuracy": {
+              "home": 88,
+              "away": 86
+            },
+            "fouls": {
+              "home": 12,
+              "away": 13
+            },
+            "saves": {
+              "home": 4,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 61,
+              "away": 64
+            }
+          },
+          "cost_usd": 0.093447,
+          "composite": 44.4591099544479
+        },
+        {
+          "model_id": "test",
+          "setting": "test",
+          "win_probs": null,
+          "score_dist": [],
+          "most_likely_score": null,
+          "expected_goal_diff": null,
+          "advance_prob": null,
+          "reasoning": {},
+          "scorers": [],
+          "assisters": [],
+          "motm_probs": [],
+          "lineups": {},
+          "formations": {},
+          "substitutions": [],
+          "cards": [],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {},
+          "cost_usd": null,
           "composite": 21.5125
         }
       ]

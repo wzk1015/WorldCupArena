@@ -49,6 +49,7 @@ PHASES: list[tuple[str, timedelta, timedelta]] = [
     ("ingest",       timedelta(hours=-72),  timedelta(hours=-24)),
     ("populate",     timedelta(hours=-48),  timedelta(hours=-24)),
     ("lock_predict", timedelta(hours=-24),  timedelta(hours=0)),
+    ("live_update",  timedelta(hours=0),    timedelta(hours=3)),
     ("truth_grade",  timedelta(hours=3),    timedelta(hours=48)),
 ]
 PHASE_NAMES = [p[0] for p in PHASES]
@@ -133,6 +134,16 @@ def _phase_lock_predict(fx: dict, fx_dir: Path) -> None:
           "--fixture", str(fixture_path), "--parallel", "8"])
 
 
+def _phase_live_update(fx: dict, fx_dir: Path) -> None:
+    """Fetch live match state and overwrite live.json (T+0h → T+3h)."""
+    live_path = fx_dir / "live.json"
+    _run([sys.executable, "-m", "src.ingest.api_football",
+          "--fixture-id", str(fx["provider_id"]),
+          "--wca-id", fx["wca_id"],
+          "--lock-at", "",
+          "--out", str(live_path)])
+
+
 def _phase_truth_grade(fx: dict, fx_dir: Path) -> None:
     """Fetch truth, grade every prediction, rebuild leaderboard."""
     truth_path = fx_dir / "truth.json"
@@ -153,6 +164,7 @@ _DISPATCH = {
     "ingest":       _phase_ingest,
     "populate":     _phase_populate,
     "lock_predict": _phase_lock_predict,
+    "live_update":  _phase_live_update,
     "truth_grade":  _phase_truth_grade,
 }
 

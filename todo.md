@@ -37,3 +37,21 @@ Setting只保留两个：
 1.这个automation workflow如何输入secrets，比如yaml里要读取的api key
 2.优化模型评测时S1和S2的prompt，提示模型要考虑的因素，比如球队和球员的综合水平、近期战绩和状态，两队交手历史，战术，队友之间配合和化学反应，球员和对手球员的交互，（再补充一些）
 3.用最简单的话告诉我怎么运行workflow，怎么部署和访问网页
+
+
+
+修改一下网站的显示，对于每个模型的预测（例如对于data/predictions/mls_lafc_test/gpt-5.4-search__S2.json，并参考schemas/prediction.schema.json）：
+1. 比分显示最高概率的三个
+2. 显示进球球员和概率
+3. 最高概率的motm
+4. reasoning默认多显示几行，并可以点击reasoning在同一页面内弹出一个框显示完整的reasoning（注意到这是一个字典，请通过比较好看的表格来呈现）
+5. 可以点击按钮显示更多预测：lineups、进球球员的进球时间、助攻球员及时间、换人、红牌黄牌、点球、乌龙、stats等
+另外：
+1. 在页面最开始的某处增加作者信息和邮箱（Zhaokai Wang，zhaokaiwang99@gmail.com，主页https://www.wzk.plus），并把github链接（https://github.com/wzk1015/WorldCupArena/）加在更显眼的地方，而不仅仅是页面右上角现在这个
+2. 把last updated从2026-04-19T20:51:54+00:00改成2026-04-19 20:51:54 (UTC+0)的格式
+3. History这个部分的每个block默认是打开的
+4. workflow由于是每10分钟更新一次的，请在每次workflow时获取已预测比赛的实时情况（类似于truth.json，但不要保存在这个位置以免影响其它代码），从而用于（且仅用于）在网页上显示正在进行的比赛的实时比分
+5. 去掉s2-s1 uplift这个模块
+6. 对于实时比赛和已结束比赛，要和未进行比赛的模型预测一样，显示出模型的所有预测，以及每一项对应的实际比赛结果
+
+对于history，显示每一个预测的项对应的实际结果（从truth读取）
