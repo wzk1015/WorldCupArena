@@ -1,25 +1,28 @@
 name: automate
 
 # Cron-driven pipeline:
-#   every hour, run `src.pipeline.scheduler tick` which scans
-#   configs/fixtures.yaml and fires the appropriate phase for every fixture
-#   whose kickoff has crossed a phase boundary:
-#     T-48h → T-1h : ingest + populate context_pack (squads, form, news, stats)
-#     T-1h  → T+0h : lock snapshot + run all (model × setting) predictions
-#     T+3h  → T+48h: fetch truth + grade + rebuild leaderboard
+#   every 10 minutes, run `src.pipeline.scheduler tick` which scans
+#   configs/fixtures.yaml and fires every pipeline phase whose window is
+#   currently open for each fixture:
 #
-# Each phase is idempotent: if fixture.json already has a snapshot_hash we
-# skip re-locking, if predictions/<fid>/*.json already exist we skip predict,
-# etc. Missed ticks catch up on the next run, so a single failed run doesn't
-# break the fixture.
+#     ingest       T-72h → T-1h   pull fixture.json from API-Football
+#     populate     T-48h → T-1h   fill context_pack (squads, form, news, stats)
+#     lock_predict T-1h  → T+0h   lock snapshot + run every model prediction
+#     truth_grade  T+3h  → T+48h  fetch truth + grade + rebuild leaderboard
 #
-# Scheduler commits any new/updated artifacts (fixture.json, truth.json,
-# predictions, results, leaderboard data) back to main so the website
+# Every phase is idempotent: `ingest` skips if fixture.json exists, `populate`
+# skips if context_pack.squads is already set, `lock_predict` skips predict if
+# the predictions directory is non-empty, `truth_grade` skips truth-download
+# if truth.json exists. So the 10-minute cadence is safe — repeated ticks are
+# cheap no-ops, and missed ticks catch up automatically.
+#
+# The scheduler commits any new/updated artifacts (fixture.json, truth.json,
+# predictions, results, leaderboard payload) back to main so the pages
 # deploy workflow picks them up.
 
 on:
   schedule:
-    - cron: "0 * * * *"   # hourly, top-of-hour UTC
+    - cron: "*/10 * * * *"   # every 10 minutes, UTC
   workflow_dispatch:
     inputs:
       phase:
@@ -27,7 +30,7 @@ on:
         required: false
         type: choice
         default: ""
-        options: ["", "ingest_populate", "lock_predict", "truth_grade"]
+        options: ["", "ingest", "populate", "lock_predict", "truth_grade"]
 
 permissions:
   contents: write   # for auto-commit of new artifacts

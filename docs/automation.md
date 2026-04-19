@@ -23,15 +23,19 @@ windows. All times are relative to **kickoff** (UTC).
 | **truth**    | T+3h → T+48h | `src.ingest.api_football --fixture-id … --out truth.json` | raw post-match response → `data/snapshots/<id>/truth.json` |
 | **grade**    | T+3h → T+48h | `src.pipeline.orchestrator grade --fixture-dir …` + `src.leaderboard.build` + `src.leaderboard.build_site` | `data/results/<id>/*.json` + `docs/leaderboard/raw.json` + `docs/site/data.json` |
 
-Phases are grouped by the scheduler into three cron-triggered work units:
+Phases scheduled by `src.pipeline.scheduler`:
 
 ```
-T-48h ─┬─ ingest_populate ───── fixture.json + context_pack
-       │
-T-1h  ─┴─ lock_predict    ───── snapshot_hash + predictions/
-       │
-T+3h  ─── truth_grade     ───── truth.json + results/ + leaderboard + site/data.json
+T-72h ─── ingest          ─── fixture.json  (from API-Football)
+T-48h ─── populate        ─── context_pack  (squads, form, news, stats)
+T-1h  ─── lock_predict    ─── snapshot_hash + predictions/
+T+3h  ─── truth_grade     ─── truth.json + results/ + leaderboard + site/data.json
 ```
+
+Each phase has its own window (see `PHASES` in `src/pipeline/scheduler.py`).
+At every tick, for every fixture, every phase whose window is **currently
+open** runs — and each handler is idempotent, so a 10-minute cadence is
+safe (repeated ticks are no-ops, missed ticks catch up).
 
 ---
 
@@ -71,22 +75,29 @@ Key design properties:
 
 1. **Idempotent.** Running it twice is safe. Every phase checks "has this
    artifact already been produced?" before acting:
-   - `ingest_populate`: skips the download if `fixture.json` exists.
-   - `lock_predict`: skips `lock` if `snapshot_hash` is present, skips
-     `predict` if `data/predictions/<wca_id>/*.json` is non-empty.
-   - `truth_grade`: skips the truth download if `truth.json` exists.
+   - `ingest`: skips the API-Football download if `fixture.json` exists.
+   - `populate`: skips if `context_pack.squads` is already populated.
+   - `lock_predict`: skips `lock` if `snapshot_hash` is set; skips `predict`
+     if `data/predictions/<wca_id>/*.json` is non-empty.
+   - `truth_grade`: skips the truth download if `truth.json` exists. Grade
+     itself is always safe to rerun.
 2. **Catch-up friendly.** Phase windows are ranges, not exact times, so a
-   missed hourly tick (workflow outage, rate-limit) just catches up on the
-   next tick.
+   missed tick (workflow outage, rate-limit) just catches up on the next
+   tick.
 3. **Fail-isolated.** One fixture's failure doesn't stop the others — errors
    are logged and the loop continues.
+4. **Multi-phase per tick.** A single tick runs every phase whose window is
+   open for each fixture, so adding a new fixture whose kickoff is imminent
+   can complete `ingest`, `populate`, and `lock_predict` back-to-back in one
+   invocation.
 
 ---
 
 ## 4. The workflow: `.github/workflows/automate.yml`
 
-Trigger: **`cron: "0 * * * *"`** — every hour on the hour, UTC.
-Also accepts manual `workflow_dispatch` with an optional phase filter.
+Trigger: **`cron: "*/10 * * * *"`** — every 10 minutes, UTC.
+Also accepts manual `workflow_dispatch` with an optional phase filter
+(`ingest` / `populate` / `lock_predict` / `truth_grade`).
 
 Job outline:
 
@@ -104,7 +115,8 @@ The commit step is what makes the site update visibly — once main moves, the
 
 Concurrency: one `automate` job at a time (`concurrency: group: automate,
 cancel-in-progress: false`) — long-running predict phases never get cancelled
-by the next hourly tick.
+by the next 10-minute tick; the queued tick just runs when the current one
+finishes.
 
 ---
 
@@ -161,15 +173,17 @@ python -m src.pipeline.scheduler tick
      fixture added to fixtures.yaml
              │
              ▼
-   ┌──────── cron every hour ────────┐
-   │                                 │
-T-48h ──────────── ingest + populate  (pulls squads, form, stats + news)
-   │                                 │
-T-1h  ──────────── lock + predict     (freezes snapshot, runs all models)
-   │                                 │
-kickoff ──────────── (real match)
-   │                                 │
-T+3h  ──────────── truth + grade      (pulls result, scores, rebuilds site)
+   ┌──────── cron every 10 minutes ────────┐
+   │                                       │
+T-72h ──────── ingest      (fetch fixture.json from API-Football)
+   │                                       │
+T-48h ──────── populate    (squads + form + news + stats)
+   │                                       │
+T-1h  ──────── lock + predict   (freeze snapshot, run all models)
+   │                                       │
+kickoff ──────── (real match)
+   │                                       │
+T+3h  ──────── truth + grade    (pull result, score, rebuild site)
              │
              ▼
       docs/site deploys to GH Pages

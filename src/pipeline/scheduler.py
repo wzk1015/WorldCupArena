@@ -1,26 +1,38 @@
 """Cron-friendly fixture scheduler.
 
-Reads configs/fixtures.yaml and fires the appropriate pipeline phase for any
-fixture whose kickoff time crosses a phase boundary. Intended to be driven by
-a single GitHub Actions cron that runs every hour — each invocation is
-idempotent, so missed ticks just catch up on the next run.
+Reads configs/fixtures.yaml and fires every pipeline phase whose window is
+open for each fixture. Intended to be driven by a short-interval GitHub
+Actions cron (every 10 minutes) — each invocation is idempotent, so missed
+ticks catch up on the next run and running two back-to-back is a no-op.
 
-Phase boundaries (relative to kickoff):
-    ingest_populate : T-48h → T-1h    (snapshot + context_pack if missing)
-    lock_predict    : T-1h  → T+0h    (lock + predict if unlocked)
-    truth_grade     : T+3h  → T+48h   (truth ingest + grade + leaderboard)
+Phases (windows relative to kickoff):
+
+    ingest       : T-72h → T-1h    pull fixture.json from API-Football
+    populate     : T-48h → T-1h    fill context_pack (squads/form/news/stats)
+    lock_predict : T-1h  → T+0h    lock snapshot + run all model predictions
+    truth_grade  : T+3h  → T+48h   pull truth, grade, rebuild leaderboard
+
+At each tick, for each fixture, every phase whose window is open runs in
+order. Every phase checks "is my work already done?" before acting:
+
+    ingest       — skip if fixture.json exists
+    populate     — skip if context_pack already has squads
+                   (news is refreshed once more inside the T-6h lock window)
+    lock_predict — skip lock if snapshot_hash is set;
+                   skip predict if predictions/<wca_id>/ has any json
+    truth_grade  — skip truth download if truth.json exists;
+                   grade is always safe to rerun
 
 Usage:
-    python -m src.pipeline.scheduler tick            # run all due phases
+    python -m src.pipeline.scheduler tick             # run every due phase
     python -m src.pipeline.scheduler tick --phase predict
-    python -m src.pipeline.scheduler show            # dry-run status table
+    python -m src.pipeline.scheduler show             # dry-run status table
 """
 
 from __future__ import annotations
 
 import argparse
 import json
-import os
 import subprocess
 import sys
 from datetime import datetime, timedelta, timezone
@@ -31,6 +43,16 @@ import yaml
 ROOT = Path(__file__).resolve().parents[2]
 SNAPSHOTS = ROOT / "data" / "snapshots"
 FIXTURES_YAML = ROOT / "configs" / "fixtures.yaml"
+
+
+# (phase_name, start_offset_from_kickoff, end_offset_from_kickoff)
+PHASES: list[tuple[str, timedelta, timedelta]] = [
+    ("ingest",       timedelta(hours=-72),  timedelta(hours=-1)),
+    ("populate",     timedelta(hours=-48),  timedelta(hours=-1)),
+    ("lock_predict", timedelta(hours=-1),   timedelta(hours=0)),
+    ("truth_grade",  timedelta(hours=3),    timedelta(hours=48)),
+]
+PHASE_NAMES = [p[0] for p in PHASES]
 
 
 def _now() -> datetime:
@@ -48,15 +70,9 @@ def _load_fixtures() -> list[dict]:
     return [f for f in (cfg.get("fixtures") or []) if f.get("enabled", True)]
 
 
-def _phase_for(kickoff: datetime, now: datetime) -> str | None:
-    """Which phase should run for a fixture with this kickoff time, at `now`?"""
-    if kickoff - timedelta(hours=48) <= now < kickoff - timedelta(hours=1):
-        return "ingest_populate"
-    if kickoff - timedelta(hours=1) <= now < kickoff:
-        return "lock_predict"
-    if kickoff + timedelta(hours=3) <= now < kickoff + timedelta(hours=48):
-        return "truth_grade"
-    return None
+def _active_phases(kickoff: datetime, now: datetime) -> list[str]:
+    """All phases whose window is currently open for this fixture."""
+    return [name for (name, a, b) in PHASES if kickoff + a <= now < kickoff + b]
 
 
 def _run(cmd: list[str]) -> None:
@@ -64,38 +80,62 @@ def _run(cmd: list[str]) -> None:
     subprocess.run(cmd, check=True)
 
 
-def _ingest_populate(fx: dict, fx_dir: Path) -> None:
+# ---------------------------------------------------------------------------
+# Phase handlers (each idempotent)
+# ---------------------------------------------------------------------------
+
+def _phase_ingest(fx: dict, fx_dir: Path) -> None:
+    """Pull fixture.json from API-Football. No-op if already downloaded."""
     fixture_path = fx_dir / "fixture.json"
+    if fixture_path.exists():
+        print(f"  [ingest] skip — {fixture_path} exists")
+        return
+    fx_dir.mkdir(parents=True, exist_ok=True)
     lock_at = (_parse_iso(fx["kickoff_utc"]) - timedelta(hours=1)).isoformat()
+    _run([sys.executable, "-m", "src.ingest.api_football",
+          "--fixture-id", str(fx["provider_id"]),
+          "--wca-id", fx["wca_id"],
+          "--lock-at", lock_at,
+          "--out", str(fixture_path)])
+
+
+def _phase_populate(fx: dict, fx_dir: Path) -> None:
+    """Fill context_pack (squads + form + stats + news). No-op if squads set."""
+    fixture_path = fx_dir / "fixture.json"
     if not fixture_path.exists():
-        fx_dir.mkdir(parents=True, exist_ok=True)
-        _run([sys.executable, "-m", "src.ingest.api_football",
-              "--fixture-id", str(fx["provider_id"]),
-              "--wca-id", fx["wca_id"],
-              "--lock-at", lock_at,
-              "--out", str(fixture_path)])
+        print(f"  [populate] skip — no fixture.json yet")
+        return
+    raw = json.loads(fixture_path.read_text())
+    cp = raw.get("context_pack") or {}
+    if cp.get("squads"):
+        print(f"  [populate] skip — context_pack.squads already populated")
+        return
     _run([sys.executable, "-m", "src.pipeline.orchestrator", "populate",
           "--fixture", str(fixture_path)])
 
 
-def _lock_predict(fx: dict, fx_dir: Path) -> None:
+def _phase_lock_predict(fx: dict, fx_dir: Path) -> None:
+    """Lock the snapshot then run every (model × setting) prediction."""
     fixture_path = fx_dir / "fixture.json"
     if not fixture_path.exists():
-        print(f"  [skip] no fixture.json at {fixture_path}")
+        print(f"  [lock_predict] skip — no fixture.json at {fixture_path}")
         return
     raw = json.loads(fixture_path.read_text())
     if not raw.get("snapshot_hash"):
         _run([sys.executable, "-m", "src.pipeline.orchestrator", "lock",
               "--fixture", str(fixture_path)])
+    else:
+        print(f"  [lock_predict] skip lock — snapshot_hash already set")
     pred_dir = ROOT / "data" / "predictions" / fx["wca_id"]
     if pred_dir.exists() and any(pred_dir.glob("*.json")):
-        print(f"  [skip] predictions already exist at {pred_dir}")
+        print(f"  [lock_predict] skip predict — predictions already exist")
         return
     _run([sys.executable, "-m", "src.pipeline.orchestrator", "predict",
           "--fixture", str(fixture_path), "--parallel", "8"])
 
 
-def _truth_grade(fx: dict, fx_dir: Path) -> None:
+def _phase_truth_grade(fx: dict, fx_dir: Path) -> None:
+    """Fetch truth, grade every prediction, rebuild leaderboard."""
     truth_path = fx_dir / "truth.json"
     if not truth_path.exists():
         _run([sys.executable, "-m", "src.ingest.api_football",
@@ -103,51 +143,60 @@ def _truth_grade(fx: dict, fx_dir: Path) -> None:
               "--wca-id", fx["wca_id"],
               "--lock-at", "",
               "--out", str(truth_path)])
+    else:
+        print(f"  [truth_grade] skip truth download — {truth_path} exists")
     _run([sys.executable, "-m", "src.pipeline.orchestrator", "grade",
           "--fixture-dir", str(fx_dir)])
     _run([sys.executable, "-m", "src.leaderboard.build"])
 
 
 _DISPATCH = {
-    "ingest_populate": _ingest_populate,
-    "lock_predict":    _lock_predict,
-    "truth_grade":     _truth_grade,
+    "ingest":       _phase_ingest,
+    "populate":     _phase_populate,
+    "lock_predict": _phase_lock_predict,
+    "truth_grade":  _phase_truth_grade,
 }
 
+
+# ---------------------------------------------------------------------------
+# CLI commands
+# ---------------------------------------------------------------------------
 
 def cmd_tick(phase_filter: str | None) -> None:
     now = _now()
     for fx in _load_fixtures():
         kickoff = _parse_iso(fx["kickoff_utc"])
-        phase = _phase_for(kickoff, now)
-        if phase is None:
+        active = _active_phases(kickoff, now)
+        if not active:
             continue
-        if phase_filter and phase != phase_filter:
-            continue
+        if phase_filter:
+            active = [p for p in active if p == phase_filter]
+            if not active:
+                continue
         fx_dir = SNAPSHOTS / fx["wca_id"]
-        print(f"[{fx['wca_id']}] phase={phase} kickoff={kickoff.isoformat()}")
-        try:
-            _DISPATCH[phase](fx, fx_dir)
-        except subprocess.CalledProcessError as e:
-            print(f"  [error] {phase} failed: {e}")
+        print(f"[{fx['wca_id']}] kickoff={kickoff.isoformat()} phases={active}")
+        for phase in active:
+            try:
+                _DISPATCH[phase](fx, fx_dir)
+            except subprocess.CalledProcessError as e:
+                print(f"  [error] {phase} failed: {e}")
 
 
 def cmd_show() -> None:
     now = _now()
-    print(f"{'wca_id':<30} {'kickoff_utc':<28} {'phase':<18} {'delta':<10}")
+    print(f"{'wca_id':<40} {'kickoff_utc':<28} {'delta':<22} active_phases")
     for fx in _load_fixtures():
         kickoff = _parse_iso(fx["kickoff_utc"])
-        phase = _phase_for(kickoff, now) or "-"
+        active = _active_phases(kickoff, now)
         delta = kickoff - now
-        kstr = kickoff.isoformat()
-        print(f"{fx['wca_id']:<30} {kstr:<28} {phase:<18} {delta}")
+        print(f"{fx['wca_id']:<40} {kickoff.isoformat():<28} {str(delta):<22} {','.join(active) or '-'}")
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
     p = sub.add_parser("tick")
-    p.add_argument("--phase", choices=list(_DISPATCH.keys()), default=None)
+    p.add_argument("--phase", choices=PHASE_NAMES, default=None)
     sub.add_parser("show")
     args = ap.parse_args()
     if args.cmd == "tick":
