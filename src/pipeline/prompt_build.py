@@ -108,7 +108,7 @@ def _render_search_guidance(fixture: dict[str, Any], ctx: dict[str, Any]) -> str
         f"weather, referee, bookmaker signals — and gather evidence for the ones "
         f"that materially move the forecast.\n"
         f"\n"
-        f"At minimum, collect the four core signals below:\n"
+        f"At minimum, consider collecting the four core signals below:\n"
         f"\n"
         f"1. **Official 23-man squads** for both sides, with position / age / club. {_example_squad()}.\n"
         f"2. **Recent form** — last ~10 matches per side (date, competition, opponent, result, score). {_example_form()}.\n"

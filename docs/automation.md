@@ -176,9 +176,39 @@ T+3h  ──────────── truth + grade      (pulls result, sco
 ```
 
 
-## Note
+## Simplest run + deploy + view instructions
 
 ```
 gh auth login
 gh secret set -f .env
 ```
+
+Run the automation (one-time setup):
+
+In GitHub: Settings → Pages → Source = GitHub Actions (enables Pages).
+
+In GitHub: Settings → Secrets and variables → Actions — add API_FOOTBALL_KEY + at least one model key (e.g. OPENAI_API_KEY).
+Push. Done.
+
+Add a fixture: append one entry to configs/fixtures.yaml and push:
+
+```
+- wca_id: pl_ars_avl_2026_04_26
+  provider_id: 1234567
+  kickoff_utc: 2026-04-26T19:30:00+00:00
+  enabled: true
+```
+
+That's all. The hourly cron at .github/workflows/automate.yml now picks it up:
+
+T-48h → ingests + populates context_pack (news included)
+
+T-1h → locks + runs every model prediction
+
+T+3h → fetches truth, grades, rebuilds leaderboard + site
+
+View the website: https://<your-gh-username>.github.io/<repo-name>/. It auto-deploys every time the automation commits new data to main (triggered via .github/workflows/pages.yml).
+
+Force-run without waiting for cron: Actions → automate → Run workflow.
+
+Local preview: python -m src.leaderboard.build_site && python -m http.server -d docs/site 8000 → open http://localhost:8000.
