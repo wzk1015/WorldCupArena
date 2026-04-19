@@ -90,6 +90,7 @@ jobs:
           git status --short
           if ! git diff --cached --quiet; then
             git commit -m "automate: tick $(date -u +%FT%TZ)"
+            git pull --rebase origin main
             git push
             gh workflow run pages.yml --ref main
           else
