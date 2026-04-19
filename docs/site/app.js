@@ -373,6 +373,11 @@ function renderPredCard(p, f, idx) {
           <div class="text-[10px] text-gray-500 mt-1.5">
             xGD <span class="font-mono text-gray-300">${fmt2(p.expected_goal_diff)}</span>
           </div>
+          ${f.truth ? `<div class="text-[10px] text-gray-500 mt-2 pt-1.5" style="border-top:1px solid rgba(255,255,255,.07);">
+            Actual: <span class="font-mono font-bold text-white">${esc(
+              f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : f.truth.result || "—"
+            )}</span>
+          </div>` : ""}
         </div>
 
         <!-- Top 3 scores -->
@@ -384,6 +389,9 @@ function renderPredCard(p, f, idx) {
               <span class="text-[10px] font-mono text-gray-400">${fmtPct(s.p)}</span>
             </div>`).join("")
             : `<div class="text-gray-500 text-xs">—</div>`}
+          ${f.truth ? `<div class="text-[10px] text-gray-500 mt-2 pt-1.5" style="border-top:1px solid rgba(255,255,255,.07);">
+            Actual: <span class="font-mono font-bold text-white">${esc(f.truth.score || "—")}</span>
+          </div>` : ""}
         </div>
 
         <!-- Scorers -->
@@ -404,6 +412,9 @@ function renderPredCard(p, f, idx) {
                 <span class="text-[10px] font-mono text-gray-400 ml-1">${fmtPct(s.p)}</span>
               </div>`).join("")}` : ""}
           ${!hScorers.length && !aScorers.length ? `<div class="text-gray-500 text-xs">—</div>` : ""}
+          ${f.truth && f.truth.scorer_names && f.truth.scorer_names.length ? `
+            <div class="text-[10px] text-gray-500 mt-2 pt-1.5 mb-1" style="border-top:1px solid rgba(255,255,255,.07);">Actual scorers</div>
+            ${f.truth.scorer_names.map(n => `<div class="text-xs text-yellow-400 truncate">${esc(n)}</div>`).join("")}` : ""}
         </div>
 
         <!-- MOTM -->
@@ -415,6 +426,10 @@ function renderPredCard(p, f, idx) {
             <div class="text-[10px] text-gray-500 mt-0.5">
               ${topMotm.team === "home" ? esc(hName) : esc(aName)}
             </div>` : `<div class="text-gray-500 text-xs">—</div>`}
+          ${f.truth && f.truth.motm ? `
+            <div class="text-[10px] text-gray-500 mt-2 pt-1.5" style="border-top:1px solid rgba(255,255,255,.07);">
+              Actual: <span class="text-yellow-400 font-semibold">${esc(f.truth.motm)}</span>
+            </div>` : ""}
         </div>
       </div>
 
@@ -636,19 +651,11 @@ function renderHistory(rows) {
       resultBadge = `<div class="text-xl font-black">${esc(r.result || "—")}</div>`;
     }
 
-    const truthScore = r.truth ? r.truth.score : null;
     const hStart = _allPreds.length;
     _allPreds.push(...preds);
 
     const predCards = preds.length
-      ? preds.map((p, i) => `
-          <div>
-            ${renderPredCard(p, r, hStart + i)}
-            ${r.result || truthScore ? `
-              <div class="px-4 pb-2 text-[10px] text-gray-400">
-                Actual result: <span class="font-mono font-bold text-white">${esc(r.result || truthScore || "—")}</span>
-              </div>` : ""}
-          </div>`).join("")
+      ? preds.map((p, i) => renderPredCard(p, r, hStart + i)).join("")
       : `<div class="text-gray-500 text-sm py-2">No predictions for this fixture.</div>`;
 
     return `

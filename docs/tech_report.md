@@ -26,8 +26,17 @@ Five layers × sub-tasks (see `configs/tasks.yaml`). Each sub-task names an `out
 
 ```
 Layer weights: 0.35 / 0.25 / 0.15 / 0.15 / 0.10
-within-layer weights: see configs/tasks.yaml
+
+T1 within-layer weights (core result):
+  match_winner_prob   0.55   ← amplified (win/loss/draw outcome)
+  most_likely_score   0.35   ← amplified (exact scoreline)
+  goal_diff_mae       0.05
+  qualification       0.05
+
+Other layers: see configs/tasks.yaml
 ```
+
+The two headline tasks — **match winner** (win/loss/draw) and **scoreline** — together account for 90% of T1, which itself carries 35% of the composite. This reflects their primacy as the most visible and actionable predictions in match forecasting.
 
 ## 4. Metric definitions
 

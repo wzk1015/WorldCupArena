@@ -141,3 +141,16 @@ Sponsorship welcome for API cost and deployment of open-source models.
 ## License
 
 MIT. Predictions, prompts, and grading code are all open; model outputs are attributed to each vendor.
+
+## Citation
+
+```
+@misc{worldcuparena,
+  author = {Zhaokai Wang},
+  title = {WorldCupArena},
+  year = {2026},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/wzk1015/WorldCupArena}}
+}
+```

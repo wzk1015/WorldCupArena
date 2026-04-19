@@ -17,23 +17,23 @@ tasks:
   # ------- T1: core result -------
   - id: match_winner_prob
     layer: T1_core_result
-    weight_in_layer: 0.45
+    weight_in_layer: 0.55
     metric: brier_3way
     output_field: win_probs
     notes: Requires {home, draw, away} probabilities summing to 1.
   - id: most_likely_score
     layer: T1_core_result
-    weight_in_layer: 0.25
+    weight_in_layer: 0.35
     metric: rps_score
     output_field: score_dist
   - id: goal_diff_mae
     layer: T1_core_result
-    weight_in_layer: 0.15
+    weight_in_layer: 0.05
     metric: mae
     output_field: expected_goal_diff
   - id: qualification
     layer: T1_core_result
-    weight_in_layer: 0.15
+    weight_in_layer: 0.05
     metric: brier_binary
     output_field: advance_prob
     applies_to: [knockout_leg_aggregate, tournament_stage]
