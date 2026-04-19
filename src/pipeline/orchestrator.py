@@ -27,6 +27,7 @@ import yaml
 from ..runners import build_runner
 from ..graders import grade_match
 from ..ingest.api_football import normalize_fixture, normalize_to_truth, populate_context_pack, APIFootballClient
+from ..ingest.news import populate_news
 from .prompt_build import build_prompt
 from .validate import validate_or_repair
 
@@ -193,11 +194,20 @@ def cmd_leaderboard() -> None:
     print(f"[leaderboard] wrote {len(rows)} rows -> {out}")
 
 
-def cmd_populate(fixture_path: Path, recent_n: int = 10) -> None:
+def cmd_populate(
+    fixture_path: Path,
+    recent_n: int = 10,
+    with_news: bool = True,
+    news_cap: int = 20,
+    news_window_days: int = 7,
+) -> None:
     """Fetch squads + recent form + stats from API-Football and write into fixture.json.
 
     Reads APIFOOTBALL_API_KEY from the environment (same convention as other keys).
     Run this before `lock` so the snapshot hash covers the populated context_pack.
+
+    When with_news is True, also populates context_pack.news_headlines via
+    ingest.news (NewsAPI / GNews / Google News RSS fallback).
     """
     import os
     api_key = os.environ.get("APIFOOTBALL_API_KEY") or os.environ.get("API_FOOTBALL_KEY")
@@ -205,7 +215,9 @@ def cmd_populate(fixture_path: Path, recent_n: int = 10) -> None:
         raise RuntimeError("Set APIFOOTBALL_API_KEY (or API_FOOTBALL_KEY) in your .env")
     client = APIFootballClient(api_key)
     populate_context_pack(fixture_path, client, recent_n=recent_n)
-    print(f"[populate] {fixture_path}: context_pack updated (recent_n={recent_n})")
+    if with_news:
+        populate_news(fixture_path, cap=news_cap, window_days=news_window_days)
+    print(f"[populate] {fixture_path}: context_pack updated (recent_n={recent_n}, news={with_news})")
 
 
 def canonicalize_fixture(fixture: dict[str, Any]) -> str:
@@ -230,7 +242,12 @@ def main() -> None:
     p = sub.add_parser("grade");   p.add_argument("--fixture-dir", type=Path, required=True)
     sub.add_parser("leaderboard")
     p = sub.add_parser("lock");     p.add_argument("--fixture", type=Path, required=True)
-    p = sub.add_parser("populate"); p.add_argument("--fixture", type=Path, required=True); p.add_argument("--recent-n", type=int, default=10)
+    p = sub.add_parser("populate")
+    p.add_argument("--fixture", type=Path, required=True)
+    p.add_argument("--recent-n", type=int, default=10)
+    p.add_argument("--no-news", action="store_true", help="skip news_headlines ingest")
+    p.add_argument("--news-cap", type=int, default=20)
+    p.add_argument("--news-window-days", type=int, default=7)
 
     args = ap.parse_args()
     if args.cmd == "predict":
@@ -242,7 +259,13 @@ def main() -> None:
     elif args.cmd == "lock":
         lock_fixture(args.fixture)
     elif args.cmd == "populate":
-        cmd_populate(args.fixture, args.recent_n)
+        cmd_populate(
+            args.fixture,
+            args.recent_n,
+            with_news=not args.no_news,
+            news_cap=args.news_cap,
+            news_window_days=args.news_window_days,
+        )
 
 
 if __name__ == "__main__":

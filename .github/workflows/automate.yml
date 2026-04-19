@@ -1,0 +1,87 @@
+name: automate
+
+# Cron-driven pipeline:
+#   every hour, run `src.pipeline.scheduler tick` which scans
+#   configs/fixtures.yaml and fires the appropriate phase for every fixture
+#   whose kickoff has crossed a phase boundary:
+#     T-48h → T-1h : ingest + populate context_pack (squads, form, news, stats)
+#     T-1h  → T+0h : lock snapshot + run all (model × setting) predictions
+#     T+3h  → T+48h: fetch truth + grade + rebuild leaderboard
+#
+# Each phase is idempotent: if fixture.json already has a snapshot_hash we
+# skip re-locking, if predictions/<fid>/*.json already exist we skip predict,
+# etc. Missed ticks catch up on the next run, so a single failed run doesn't
+# break the fixture.
+#
+# Scheduler commits any new/updated artifacts (fixture.json, truth.json,
+# predictions, results, leaderboard data) back to main so the website
+# deploy workflow picks them up.
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # hourly, top-of-hour UTC
+  workflow_dispatch:
+    inputs:
+      phase:
+        description: "Phase to run (blank = all due phases)"
+        required: false
+        type: choice
+        default: ""
+        options: ["", "ingest_populate", "lock_predict", "truth_grade"]
+
+permissions:
+  contents: write   # for auto-commit of new artifacts
+
+concurrency:
+  group: automate
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt python-dotenv pyyaml
+
+      - name: Scheduler status
+        run: python -m src.pipeline.scheduler show
+
+      - name: Scheduler tick
+        env:
+          API_FOOTBALL_KEY:   ${{ secrets.API_FOOTBALL_KEY }}
+          NEWSAPI_KEY:        ${{ secrets.NEWSAPI_KEY }}
+          GNEWS_API_KEY:      ${{ secrets.GNEWS_API_KEY }}
+          OPENAI_API_KEY:     ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_API_KEY:     ${{ secrets.GOOGLE_API_KEY }}
+          XAI_API_KEY:        ${{ secrets.XAI_API_KEY }}
+          DEEPSEEK_API_KEY:   ${{ secrets.DEEPSEEK_API_KEY }}
+          TOGETHER_API_KEY:   ${{ secrets.TOGETHER_API_KEY }}
+          DASHSCOPE_API_KEY:  ${{ secrets.DASHSCOPE_API_KEY }}
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+          MIROMIND_API_KEY:   ${{ secrets.MIROMIND_API_KEY }}
+        run: |
+          if [ -n "${{ inputs.phase }}" ]; then
+            python -m src.pipeline.scheduler tick --phase "${{ inputs.phase }}"
+          else
+            python -m src.pipeline.scheduler tick
+          fi
+
+      - name: Build site payload
+        run: python -m src.leaderboard.build_site || true
+
+      - name: Commit updated artifacts
+        run: |
+          git config user.name  "worldcuparena-bot"
+          git config user.email "bot@worldcuparena.local"
+          git add data/snapshots data/predictions data/results docs/leaderboard docs/site/data.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "automate: tick $(date -u +%FT%TZ)"
+            git push
+          else
+            echo "no changes to commit"
+          fi

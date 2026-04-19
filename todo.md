@@ -30,6 +30,6 @@ Setting只保留两个：
 还要增加鲁棒性处理，例如比赛结果fixture格式里如果某个event的时间（比如第几分钟换人）是无效的（<0），则评测时忽略时间；类似的有其他情况要handle；如果实在无法handle则忽略此条数据。注意只处理truth fixture缺失的情况，不考虑模型预测缺失
 
 
-1.补充news
-2.github workflow如何自动化
-3.做一个项目网页展示leaderboard以及对于下一场比赛的预测。并且设计一下如何加入到自动化workflow中
+1.目前context_pack里news还是空的，想办法从某个API或者网站获取数据填进去，以辅助S1的模型推理
+2.目前的github workflow如何自动化？是不是包括赛前获取fixture、预测、lock、获取truth、grade、leaderboard几个功能？写个文档详细说明
+3.做一个项目网页展示leaderboard以及各个模型对于下一场比赛的预测，要做的有趣、fancy、有噱头一些。并且设计一下如何加入到自动化workflow中使得每场比赛前后自动更新

@@ -417,6 +417,19 @@ def populate_context_pack(
     print(f"  context_pack written to {path}")
 
 
+def populate_context_pack_with_news(
+    fixture_path: "Path",
+    client: APIFootballClient,
+    recent_n: int = 10,
+    news_cap: int = 20,
+    news_window_days: int = 7,
+) -> None:
+    """populate_context_pack() + news_headlines in one call."""
+    from . import news as _news
+    populate_context_pack(fixture_path, client, recent_n=recent_n)
+    _news.populate_news(fixture_path, cap=news_cap, window_days=news_window_days)
+
+
 # ---------------------------------------------------------------------------
 # CLI — fetch and save raw fixture response
 # ---------------------------------------------------------------------------
@@ -425,7 +438,7 @@ def main():
     ap = argparse.ArgumentParser(description="Fetch a fixture from API-Football and save the raw response.")
     ap.add_argument("--fixture-id", type=int, required=True, help="API-Football fixture ID")
     ap.add_argument("--wca-id", type=str, required=True, help="WorldCupArena fixture_id (e.g. ucl_sf1_l1)")
-    ap.add_argument("--lock-at", type=str, required=True, help="lock_at_utc (ISO-8601, kickoff − 1 h)")
+    ap.add_argument("--lock-at", type=str, default="", help="lock_at_utc (ISO-8601, kickoff − 1 h). Leave empty for truth-only pulls.")
     ap.add_argument("--out", type=str, required=True, help="Output path (e.g. data/snapshots/ucl_sf1_l1/fixture.json)")
     args = ap.parse_args()
 

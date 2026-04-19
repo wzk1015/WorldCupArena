@@ -1,0 +1,26 @@
+# Registry of fixtures the automation pipeline should process.
+#
+# Each entry becomes a directory under data/snapshots/<wca_id>/ and drives six
+# cron phases (ingest → populate → lock → predict → truth → grade). See
+# docs/automation.md for the full lifecycle.
+#
+# Fields:
+#   wca_id        : WorldCupArena ID. Becomes the snapshot/predictions/results
+#                   directory name. kebab_case, unique.
+#   provider_id   : API-Football numeric fixture id.
+#   kickoff_utc   : ISO-8601 kickoff time. lock_at_utc is derived as kickoff-1h.
+#   enabled       : false to freeze a fixture out of the automation (default true).
+#
+# Add a fixture and the next cron tick picks it up automatically; no manual
+# predict/grade invocations needed.
+
+fixtures:
+  - wca_id: ucl_sf1_l1_2026
+    provider_id: 1540901
+    kickoff_utc: 2026-04-28T19:00:00+00:00
+    enabled: true
+
+  - wca_id: ucl_sf1_l2_2026
+    provider_id: 1540902
+    kickoff_utc: 2026-05-05T19:00:00+00:00
+    enabled: true

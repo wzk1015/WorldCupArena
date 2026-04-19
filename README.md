@@ -4,7 +4,7 @@ Benchmarking LLMs and deep-research agents on real-world football prediction —
 
 **Status:** Phase 0 (pipeline dry-run) · 2026-04-17
 
-**Docs**: [Usage](docs/usage.md) · [Integration](docs/integration.md) · [Cost](docs/cost_estimate.md) · [Tech Report](docs/tech_report.md) · [Announcement](docs/announcement.md) · [中文宣传](docs/promo_zh.md) · [Logo Prompt](docs/logo_prompt.md)
+**Docs**: [Usage](docs/usage.md) · [Automation](docs/automation.md) · [Integration](docs/integration.md) · [Cost](docs/cost_estimate.md) · [Tech Report](docs/tech_report.md) · [Announcement](docs/announcement.md) · [中文宣传](docs/promo_zh.md) · [Logo Prompt](docs/logo_prompt.md)
 
 ---
 

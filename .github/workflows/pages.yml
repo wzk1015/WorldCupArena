@@ -1,0 +1,49 @@
+name: pages
+
+# Publishes docs/site/ to GitHub Pages whenever main changes the site
+# sources or the underlying data payload. Triggered by:
+#   - the automate workflow committing updated data.json
+#   - any manual push touching docs/site/ or src/leaderboard/build_site.py
+#
+# GH Pages setup: repo Settings → Pages → Source = "GitHub Actions".
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/site/**"
+      - "docs/leaderboard/**"
+      - "src/leaderboard/build_site.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Assemble site dir
+        run: |
+          mkdir -p _site
+          cp -r docs/site/* _site/
+          # Back-compat: also ship the old raw.json for anyone reading it.
+          if [ -f docs/leaderboard/raw.json ]; then
+            cp docs/leaderboard/raw.json _site/raw.json
+          fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
