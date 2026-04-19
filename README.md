@@ -1,10 +1,10 @@
-# WorldCupArena
+# ⚽️🤖 WorldCupArena
 
 Benchmarking LLMs and deep-research agents on real-world football prediction — from the tactical "who scores in minute 67" to the strategic "who wins the World Cup."
 
-**Status:** Phase 0 (pipeline dry-run) · 2026-04-17
+**Check the [website](https://wzk1015.github.io/WorldCupArena/) for leaderboard and predictions!**
 
-**Docs**: [Usage](docs/usage.md) · [Automation](docs/automation.md) · [Integration](docs/integration.md) · [Cost](docs/cost_estimate.md) · [Tech Report](docs/tech_report.md) · [Announcement](docs/announcement.md) · [中文宣传](docs/promo_zh.md) · [Logo Prompt](docs/logo_prompt.md)
+**Docs**: [Usage](docs/usage.md) · [Automation](docs/automation.md) · [Integration](docs/integration.md) ·[Announcement](docs/announcement.md) · [中文宣传](docs/promo_zh.md)
 
 ---
 
@@ -130,7 +130,7 @@ If validation fails, the orchestrator sends a targeted repair prompt to the same
 - [x] OpenAI-compat + Anthropic runners
 - [ ] Gemini runner, MiroThinker runner, Perplexity/OpenAI DR runners
 - [ ] Ingest: squads + news + odds
-- [ ] Phase 0 dry run on a Premier League fixture
+- [x] Phase 0 dry run on a Premier League fixture
 - [ ] Phase 1: UCL SF1 leg 1 (week of 2026-04-27)
 - [ ] Phase 2: Pre-tournament WC prediction (by 2026-06-10)
 
