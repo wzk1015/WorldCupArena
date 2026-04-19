@@ -51,5 +51,5 @@ def get_fixture(id):
 
 
 if __name__ == "__main__":
-    get_id(team="ben")
+    get_id(team="germain", league=61)
     # get_fixture(1396506)
