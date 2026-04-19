@@ -33,3 +33,7 @@ Setting只保留两个：
 1.目前context_pack里news还是空的，想办法从某个API或者网站获取数据填进去，以辅助S1的模型推理
 2.目前的github workflow如何自动化？是不是包括赛前获取fixture、预测、lock、获取truth、grade、leaderboard几个功能？写个文档详细说明
 3.做一个项目网页展示leaderboard以及各个模型对于下一场比赛的预测，要做的有趣、fancy、有噱头一些。并且设计一下如何加入到自动化workflow中使得每场比赛前后自动更新
+
+1.这个automation workflow如何输入secrets，比如yaml里要读取的api key
+2.优化模型评测时S1和S2的prompt，提示模型要考虑的因素，比如球队和球员的综合水平、近期战绩和状态，两队交手历史，战术，队友之间配合和化学反应，球员和对手球员的交互，（再补充一些）
+3.用最简单的话告诉我怎么运行workflow，怎么部署和访问网页

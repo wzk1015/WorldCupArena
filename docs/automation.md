@@ -174,3 +174,11 @@ T+3h  ──────────── truth + grade      (pulls result, sco
              ▼
       docs/site deploys to GH Pages
 ```
+
+
+## Note
+
+```
+gh auth login
+gh secret set -f .env
+```
