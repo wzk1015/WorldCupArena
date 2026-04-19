@@ -34,6 +34,7 @@ on:
 
 permissions:
   contents: write   # for auto-commit of new artifacts
+  actions: write    # for gh workflow run pages.yml
 
 concurrency:
   group: automate
@@ -90,6 +91,7 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "automate: tick $(date -u +%FT%TZ)"
             git push
+            gh workflow run pages.yml --ref main
           else
             echo "no changes to commit"
           fi
