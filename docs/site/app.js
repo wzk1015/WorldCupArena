@@ -107,9 +107,17 @@ function _lineupSide(lineup, formation, teamName, colorCls) {
     </div>`;
 }
 
+// Renders a highlighted "Actual" truth block used in detail sections
+function _truthBlock(content) {
+  return `<div class="mt-2 rounded-lg px-3 py-2 text-xs" style="background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.25);">
+    <span class="text-amber-400 font-semibold uppercase tracking-wider text-[10px] mr-2">Actual</span>${content}
+  </div>`;
+}
+
 function _renderDetails(p, f) {
   const hName  = f.home || "Home";
   const aName  = f.away || "Away";
+  const tr     = f.truth || null;
   const tName  = (t) => t === "home" ? hName : aName;
   const tColor = (t) => t === "home" ? "text-emerald-400" : "text-blue-400";
   let html = "";
@@ -117,6 +125,10 @@ function _renderDetails(p, f) {
   // Lineups
   const lin = p.lineups || {};
   if (lin.home || lin.away) {
+    const trLinHome = tr && tr.lineups && tr.lineups.home ? tr.lineups.home.starting || [] : null;
+    const trLinAway = tr && tr.lineups && tr.lineups.away ? tr.lineups.away.starting || [] : null;
+    const trFmHome  = tr && tr.formations ? tr.formations.home : null;
+    const trFmAway  = tr && tr.formations ? tr.formations.away : null;
     html += `
       <div>
         <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">⬡ Lineups</div>
@@ -124,11 +136,23 @@ function _renderDetails(p, f) {
           ${_lineupSide(lin.home, (p.formations || {}).home, hName, "text-emerald-400")}
           ${_lineupSide(lin.away, (p.formations || {}).away, aName, "text-blue-400")}
         </div>
+        ${(trLinHome || trLinAway) ? _truthBlock(`
+          <div class="grid grid-cols-2 gap-4 mt-1">
+            <div>
+              <div class="text-amber-300/70 text-[10px] mb-1">${esc(hName)}${trFmHome ? ` · ${esc(trFmHome)}` : ""}</div>
+              ${(trLinHome || []).map(pl => `<div class="text-gray-200 leading-tight">${esc(pl.player)}${pl.pos ? ` <span class="text-gray-500">(${esc(pl.pos)})</span>` : ""}</div>`).join("")}
+            </div>
+            <div>
+              <div class="text-amber-300/70 text-[10px] mb-1">${esc(aName)}${trFmAway ? ` · ${esc(trFmAway)}` : ""}</div>
+              ${(trLinAway || []).map(pl => `<div class="text-gray-200 leading-tight">${esc(pl.player)}${pl.pos ? ` <span class="text-gray-500">(${esc(pl.pos)})</span>` : ""}</div>`).join("")}
+            </div>
+          </div>`) : ""}
       </div>`;
   }
 
   // Scorers
   if ((p.scorers || []).length) {
+    const trScorers = tr && tr.scorers ? tr.scorers : null;
     html += `
       <div>
         <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">⚽ Scorers</div>
@@ -151,11 +175,15 @@ function _renderDetails(p, f) {
               </tr>`).join("")}
           </tbody>
         </table>
+        ${trScorers && trScorers.length ? _truthBlock(
+          trScorers.map(s => `<span class="${tColor(s.team)} font-semibold">${esc(s.player)}</span> <span class="text-gray-400">(${esc(tName(s.team))} ${s.minute}′)</span>`).join(" &nbsp;·&nbsp; ")
+        ) : tr ? _truthBlock(`<span class="text-gray-400">No goals</span>`) : ""}
       </div>`;
   }
 
   // Assisters
   if ((p.assisters || []).length) {
+    const trAssisters = tr && tr.assisters ? tr.assisters : null;
     html += `
       <div>
         <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🎯 Assisters</div>
@@ -174,11 +202,15 @@ function _renderDetails(p, f) {
               </tr>`).join("")}
           </tbody>
         </table>
+        ${trAssisters && trAssisters.length ? _truthBlock(
+          trAssisters.map(a => `<span class="${tColor(a.team)} font-semibold">${esc(a.player)}</span> <span class="text-gray-400">(${esc(tName(a.team))})</span>`).join(" &nbsp;·&nbsp; ")
+        ) : tr ? _truthBlock(`<span class="text-gray-400">No assists recorded</span>`) : ""}
       </div>`;
   }
 
   // Substitutions
   if ((p.substitutions || []).length) {
+    const trSubs = tr && tr.substitutions ? tr.substitutions : null;
     html += `
       <div>
         <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🔄 Substitutions</div>
@@ -197,11 +229,21 @@ function _renderDetails(p, f) {
               </tr>`).join("")}
           </tbody>
         </table>
+        ${trSubs && trSubs.length ? _truthBlock(`
+          <table class="w-full mt-1" style="border-collapse:collapse;">
+            ${trSubs.map(s => `
+              <tr>
+                <td class="pr-3 text-gray-400 font-mono">${s.minute}′</td>
+                <td class="pr-3 ${tColor(s.team)}">${esc(s.team_name || tName(s.team))}</td>
+                <td>${esc(s.off)} → <span class="text-amber-300">${esc(s.on)}</span></td>
+              </tr>`).join("")}
+          </table>`) : ""}
       </div>`;
   }
 
   // Cards
   if ((p.cards || []).length) {
+    const trCards = tr && tr.cards ? tr.cards : null;
     html += `
       <div>
         <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🟨 Cards</div>
@@ -224,11 +266,22 @@ function _renderDetails(p, f) {
               </tr>`).join("")}
           </tbody>
         </table>
+        ${trCards && trCards.length ? _truthBlock(`
+          <table class="w-full mt-1" style="border-collapse:collapse;">
+            ${trCards.map(c => `
+              <tr>
+                <td class="pr-3 text-gray-400 font-mono">${c.minute}′</td>
+                <td class="pr-3 ${tColor(c.team)} font-semibold">${esc(c.player)}</td>
+                <td class="pr-3 text-gray-400">${esc(tName(c.team))}</td>
+                <td>${c.color === "red" ? "🟥" : c.color === "second_yellow" ? "🟨🟥" : "🟨"}</td>
+              </tr>`).join("")}
+          </table>`) : tr ? _truthBlock(`<span class="text-gray-400">No cards</span>`) : ""}
       </div>`;
   }
 
   // Penalties
   if ((p.penalties || []).length) {
+    const trPens = tr && tr.penalties ? tr.penalties : null;
     html += `
       <div>
         <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🥅 Penalties</div>
@@ -252,11 +305,15 @@ function _renderDetails(p, f) {
               </tr>`).join("")}
           </tbody>
         </table>
+        ${trPens && trPens.length ? _truthBlock(
+          trPens.map(pen => `<span class="${tColor(pen.team)} font-semibold">${esc(pen.taker)}</span> <span class="text-gray-400">${pen.minute}′ · ✅ scored</span>`).join(" &nbsp;·&nbsp; ")
+        ) : tr ? _truthBlock(`<span class="text-gray-400">No penalties</span>`) : ""}
       </div>`;
   }
 
   // Own goals
   if ((p.own_goals || []).length) {
+    const trOg = tr && tr.own_goals ? tr.own_goals : null;
     html += `
       <div>
         <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">⚽ Own Goals</div>
@@ -267,6 +324,9 @@ function _renderDetails(p, f) {
               <span class="text-gray-400">(${esc(tName(og.team))})</span>
             </div>`).join("")}
         </div>
+        ${trOg && trOg.length ? _truthBlock(
+          trOg.map(og => `<span class="${tColor(og.team)} font-semibold">${esc(og.player)}</span> <span class="text-gray-400">${og.minute}′</span>`).join(" &nbsp;·&nbsp; ")
+        ) : tr ? _truthBlock(`<span class="text-gray-400">No own goals</span>`) : ""}
       </div>`;
   }
 
@@ -283,6 +343,7 @@ function _renderDetails(p, f) {
   };
   const LOWER_BETTER = new Set(["fouls"]);
   const stats = p.stats || {};
+  const trStats = tr && tr.stats ? tr.stats : null;
   const statRows = Object.entries(STAT_LABELS)
     .filter(([k]) => stats[k] && (stats[k].home != null || stats[k].away != null))
     .map(([k, label]) => {
@@ -293,6 +354,12 @@ function _renderDetails(p, f) {
       const lower = LOWER_BETTER.has(k);
       const hWin  = typeof h === "number" && typeof a === "number" && (lower ? h < a : h > a);
       const aWin  = typeof h === "number" && typeof a === "number" && (lower ? a < h : a > h);
+      const trH   = trStats && trStats[k] ? trStats[k].home : null;
+      const trA   = trStats && trStats[k] ? trStats[k].away : null;
+      const trTotal = (typeof trH === "number" && typeof trA === "number") ? trH + trA : null;
+      const trHPct  = trTotal ? (trH / trTotal * 100) : 50;
+      const trHWin  = typeof trH === "number" && typeof trA === "number" && (lower ? trH < trA : trH > trA);
+      const trAWin  = typeof trH === "number" && typeof trA === "number" && (lower ? trA < trH : trA > trH);
       return `
         <tr style="border-top:1px solid rgba(255,255,255,.06)">
           <td class="py-1.5 text-xs text-gray-400 pr-2">${esc(label)}</td>
@@ -305,6 +372,16 @@ function _renderDetails(p, f) {
               </div>` : ""}
           </td>
           <td class="py-1.5 text-xs font-mono text-center w-10 ${aWin ? "text-blue-400 font-bold" : ""}">${a}</td>
+          ${trH != null || trA != null ? `
+          <td class="py-1.5 pl-4 text-[10px] text-amber-400/80 font-mono text-center w-10 ${trHWin ? "text-amber-400 font-bold" : ""}">${trH ?? "—"}</td>
+          <td class="py-1.5 px-1" style="width:4rem;">
+            ${trTotal !== null ? `
+              <div style="display:flex;height:.375rem;border-radius:9999px;overflow:hidden;">
+                <div style="width:${trHPct}%;background:#fbbf2470;"></div>
+                <div style="width:${100 - trHPct}%;background:#fbbf2430;"></div>
+              </div>` : ""}
+          </td>
+          <td class="py-1.5 text-[10px] text-amber-400/80 font-mono text-center w-10 ${trAWin ? "text-amber-400 font-bold" : ""}">${trA ?? "—"}</td>` : ""}
         </tr>`;
     }).join("");
 
@@ -318,6 +395,7 @@ function _renderDetails(p, f) {
             <th class="font-normal text-emerald-400/70 text-center pb-1 w-10">${esc(hName)}</th>
             <th style="width:6rem;"></th>
             <th class="font-normal text-blue-400/70 text-center pb-1 w-10">${esc(aName)}</th>
+            ${trStats ? `<th class="font-normal text-amber-400/70 text-center pb-1 pl-4 w-10">Act·H</th><th style="width:4rem;"></th><th class="font-normal text-amber-400/70 text-center pb-1 w-10">Act·A</th>` : ""}
           </tr></thead>
           <tbody>${statRows}</tbody>
         </table>
@@ -557,6 +635,7 @@ function renderLeaderboard(lb, view) {
               <th class="text-left py-2 px-3 w-12">#</th>
               <th class="text-left py-2 px-3">Model</th>
               <th class="text-right py-2 px-3">Composite</th>
+              <th class="text-right py-2 px-3">Win %</th>
               <th class="text-right py-2 px-3">#Games</th>
             </tr>
           </thead>
@@ -564,6 +643,9 @@ function renderLeaderboard(lb, view) {
             ${rows.map((r, i) => {
               const b = modelBadge(r.model_id);
               const medal = i === 0 ? "rank-1" : i === 1 ? "rank-2" : i === 2 ? "rank-3" : "";
+              const winAcc = r.winner_acc != null
+                ? `${(r.winner_acc * 100).toFixed(1)}% (${r.winner_correct}/${r.winner_total})`
+                : "—";
               return `
                 <tr class="border-t border-white/5 hover:bg-white/5 transition">
                   <td class="py-2 px-3"><span class="rank-medal ${medal}">${i + 1}</span></td>
@@ -574,6 +656,7 @@ function renderLeaderboard(lb, view) {
                       <span>${fmt2(r.mean)}</span>
                     </div>
                   </td>
+                  <td class="py-2 px-3 text-right font-mono text-gray-300">${winAcc}</td>
                   <td class="py-2 px-3 text-right text-gray-400">${r.n}</td>
                 </tr>`;
             }).join("")}

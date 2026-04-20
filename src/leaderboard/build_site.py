@@ -64,8 +64,17 @@ def build_leaderboard() -> dict:
     by_model_composites: dict[str, list[float]] = defaultdict(list)
     by_model_layers: dict[str, dict[str, list[float]]] = defaultdict(lambda: defaultdict(list))
     by_model_setting: dict[tuple[str, str], list[float]] = defaultdict(list)
+    by_model_winner_correct: dict[str, int] = defaultdict(int)
+    by_model_winner_total: dict[str, int] = defaultdict(int)
+
+    _truth_cache: dict[str, dict | None] = {}
 
     for fid_dir in sorted(RESULTS.glob("*")):
+        wca_id = fid_dir.name
+        if wca_id not in _truth_cache:
+            _truth_cache[wca_id] = _load_truth_data(wca_id)
+        truth_result = (_truth_cache[wca_id] or {}).get("result")
+
         for f in fid_dir.glob("*.json"):
             r = json.loads(f.read_text())
             if (r.get("leakage_audit") or {}).get("leaked"):
@@ -78,14 +87,29 @@ def build_leaderboard() -> dict:
             for k, v in (r.get("layers") or {}).items():
                 by_model_layers[model][k].append(float(v))
 
+            # Win prediction accuracy
+            if truth_result:
+                pred_file = PREDICTIONS / wca_id / f.name
+                if pred_file.exists():
+                    pred_rec = json.loads(pred_file.read_text())
+                    wp = (pred_rec.get("prediction") or {}).get("win_probs") or {}
+                    if wp:
+                        predicted = max(wp, key=lambda k: wp[k])
+                        by_model_winner_correct[model] += int(predicted == truth_result)
+                        by_model_winner_total[model] += 1
+
     main = []
     for m, v in by_model_composites.items():
         layers_mean = {k: sum(xs) / len(xs) for k, xs in by_model_layers[m].items() if xs}
+        total = by_model_winner_total[m]
         main.append({
-            "model_id":    m,
-            "mean":        sum(v) / len(v),
-            "n":           len(v),
-            "layers_mean": layers_mean,
+            "model_id":      m,
+            "mean":          sum(v) / len(v),
+            "n":             len(v),
+            "layers_mean":   layers_mean,
+            "winner_correct": by_model_winner_correct[m],
+            "winner_total":   total,
+            "winner_acc":    by_model_winner_correct[m] / total if total else None,
         })
     main.sort(key=lambda x: -x["mean"])
 
@@ -210,19 +234,117 @@ def _load_live_state(wca_id: str) -> dict | None:
     }
 
 
+_STAT_TYPE_MAP = {
+    "Ball Possession":    "possession",
+    "Total Shots":        "shots",
+    "Shots on Goal":      "shots_on_target",
+    "Corner Kicks":       "corners",
+    "Passes %":           "pass_accuracy",
+    "Fouls":              "fouls",
+    "Goalkeeper Saves":   "saves",
+}
+
+
 def _load_truth_data(wca_id: str) -> dict | None:
     path = SNAPSHOTS / wca_id / "truth.json"
     if not path.exists():
         return None
     t = json.loads(path.read_text())
-    if "response" in t:
-        r0 = t["response"][0]
-        g = r0.get("goals") or {}
-        score = None
-        if g.get("home") is not None and g.get("away") is not None:
-            score = f"{g['home']}-{g['away']}"
-        return {"score": score, "events": r0.get("events") or []}
-    return {"score": t.get("score"), "events": []}
+    if "response" not in t:
+        return {"score": t.get("score"), "result": t.get("result"), "events": []}
+
+    r0 = t["response"][0]
+    g = r0.get("goals") or {}
+    hg = g.get("home")
+    ag = g.get("away")
+    score = f"{hg}-{ag}" if hg is not None and ag is not None else None
+    result = "home" if (hg or 0) > (ag or 0) else "away" if (ag or 0) > (hg or 0) else "draw" if score else None
+
+    teams_raw = r0.get("teams") or {}
+    home_id   = (teams_raw.get("home") or {}).get("id")
+    home_name = (teams_raw.get("home") or {}).get("name", "Home")
+    away_name = (teams_raw.get("away") or {}).get("name", "Away")
+
+    events = r0.get("events") or []
+    scorers, assisters, cards, substitutions, own_goals, penalties = [], [], [], [], [], []
+    scorer_names, assister_names = [], []
+    for ev in events:
+        team_id   = (ev.get("team") or {}).get("id")
+        team_name = (ev.get("team") or {}).get("name", "")
+        side      = "home" if team_id == home_id else "away"
+        player    = (ev.get("player") or {}).get("name", "")
+        assist    = (ev.get("assist") or {}).get("name")
+        minute    = (ev.get("time") or {}).get("elapsed", 0)
+        ev_type   = ev.get("type", "")
+        detail    = ev.get("detail", "")
+        if ev_type == "Goal":
+            if detail == "Own Goal":
+                own_goals.append({"minute": minute, "player": player, "team": side})
+            elif detail == "Penalty":
+                penalties.append({"minute": minute, "taker": player, "team": side, "outcome": "scored"})
+                scorers.append({"minute": minute, "player": player, "team": side})
+                scorer_names.append(player)
+            else:
+                scorers.append({"minute": minute, "player": player, "team": side})
+                scorer_names.append(player)
+            if assist:
+                assisters.append({"player": assist, "team": side})
+                assister_names.append(assist)
+        elif ev_type == "Card":
+            color = "yellow" if detail == "Yellow Card" else "red" if detail == "Red Card" else "second_yellow"
+            cards.append({"minute": minute, "player": player, "team": side, "color": color})
+        elif ev_type == "subst":
+            off = player
+            on  = (ev.get("assist") or {}).get("name", "")
+            substitutions.append({"minute": minute, "team": side, "team_name": team_name, "off": off, "on": on})
+
+    lineups_raw = r0.get("lineups") or []
+    lineups: dict[str, dict] = {}
+    formations: dict[str, str] = {}
+    for side_data in lineups_raw:
+        side_team_id = (side_data.get("team") or {}).get("id")
+        side_key = "home" if side_team_id == home_id else "away"
+        formations[side_key] = side_data.get("formation", "")
+        starting = [
+            {"player": (p.get("player") or {}).get("name", ""), "pos": (p.get("player") or {}).get("pos", "")}
+            for p in (side_data.get("startXI") or [])
+        ]
+        lineups[side_key] = {"starting": starting}
+
+    stats_raw = r0.get("statistics") or []
+    stats: dict[str, dict] = {}
+    for side_idx, side_key in enumerate(["home", "away"]):
+        if side_idx >= len(stats_raw):
+            break
+        for entry in stats_raw[side_idx].get("statistics") or []:
+            wca_key = _STAT_TYPE_MAP.get(entry.get("type", ""))
+            if not wca_key:
+                continue
+            val = entry.get("value")
+            if isinstance(val, str) and val.endswith("%"):
+                val = float(val.rstrip("%"))
+            if val is None:
+                continue
+            stats.setdefault(wca_key, {})[side_key] = val
+
+    return {
+        "score":          score,
+        "result":         result,
+        "home_name":      home_name,
+        "away_name":      away_name,
+        "scorer_names":   scorer_names,
+        "assister_names": assister_names,
+        "scorers":        scorers,
+        "assisters":      assisters,
+        "cards":          cards,
+        "substitutions":  substitutions,
+        "own_goals":      own_goals,
+        "penalties":      penalties,
+        "formations":     formations,
+        "lineups":        lineups,
+        "stats":          stats,
+        "events":         events,
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -244,6 +366,8 @@ def build_history() -> list[dict]:
 
     rows = []
     for wca_id in wca_ids:
+        if "_test" in wca_id.lower() or wca_id.lower().startswith("test_"):
+            continue
         hdr = _load_fixture_header(wca_id) or {"wca_id": wca_id}
 
         # Only include past fixtures
