@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T01:13:58+00:00",
+  "generated_at": "2026-04-20T10:59:43+00:00",
   "leaderboard": {
     "main": [
       {
@@ -19,23 +19,23 @@
       },
       {
         "model_id": "gpt-5.4-search",
-        "mean": 44.4591099544479,
-        "n": 1,
+        "mean": 38.70846361036462,
+        "n": 2,
         "layers_mean": {
-          "T1_core_result": 73.8255,
-          "T2_player_level": 5.0,
-          "T3_event_level": 60.32083333333333,
-          "T4_tactics_stats": 48.81373302965265,
+          "T1_core_result": 59.21125,
+          "T2_player_level": 3.916666666666666,
+          "T3_event_level": 54.568749999999994,
+          "T4_tactics_stats": 52.133646291319714,
           "T5_tournament_macro": 10.0
         },
         "winner_correct": 1,
-        "winner_total": 1,
-        "winner_acc": 1.0
+        "winner_total": 2,
+        "winner_acc": 0.5
       }
     ],
     "by_model_setting": {
       "gpt-5.4-search": {
-        "S2": 44.4591099544479
+        "S2": 38.70846361036462
       },
       "gpt-5.4-mini": {
         "S1": 46.71341167865636
@@ -46,15 +46,517 @@
     {
       "fixture": {
         "wca_id": "Premier-League_Crystal-Palace_West-Ham_2026-04-20",
-        "home": null,
-        "away": null,
+        "home": "Crystal Palace",
+        "home_logo": "https://media.api-sports.io/football/teams/52.png",
+        "away": "West Ham",
+        "away_logo": "https://media.api-sports.io/football/teams/48.png",
         "kickoff_utc": "2026-04-20T19:00:00+00:00",
-        "lock_at_utc": null,
-        "venue": null,
-        "stage": null,
-        "competition": null
+        "lock_at_utc": "2026-04-19T19:00:00+00:00",
+        "venue": "Selhurst Park",
+        "stage": "Regular Season - 33",
+        "competition": "Premier League"
       },
-      "predictions": [],
+      "predictions": [
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.42,
+            "draw": 0.29,
+            "away": 0.29
+          },
+          "score_dist": [
+            {
+              "score": "1-1",
+              "p": 0.19
+            },
+            {
+              "score": "1-0",
+              "p": 0.17
+            },
+            {
+              "score": "2-1",
+              "p": 0.15
+            },
+            {
+              "score": "0-0",
+              "p": 0.09
+            },
+            {
+              "score": "0-1",
+              "p": 0.09
+            },
+            {
+              "score": "2-0",
+              "p": 0.08
+            },
+            {
+              "score": "1-2",
+              "p": 0.08
+            },
+            {
+              "score": "2-2",
+              "p": 0.06
+            },
+            {
+              "score": "3-1",
+              "p": 0.04
+            },
+            {
+              "score": "3-2",
+              "p": 0.02
+            },
+            {
+              "score": "0-2",
+              "p": 0.03
+            }
+          ],
+          "most_likely_score": "1-1",
+          "expected_goal_diff": 0.22,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "This projects as a fairly even London derby, but Crystal Palace get a small edge from Selhurst Park, slightly better defensive balance, and a matchup that can trouble West Ham in transition and on second balls. Palace are likelier to defend in a compact mid-block and attack through Eberechi Eze, Adam Wharton progression, and Jean-Philippe Mateta’s box presence, while West Ham still carry threat through Jarrod Bowen, Mohammed Kudus, and James Ward-Prowse set pieces. Head-to-head meetings between these sides are often tight and low-margin, so the forecast leans toward a narrow home result or draw rather than a high-confidence Palace win.",
+            "t1_result": "The win distribution is centered on a one-goal Palace edge because home advantage and defensive structure slightly outweigh West Ham’s attacking talent. Draw remains substantial given derby dynamics, similar squad tiers, and both teams’ capacity to cancel each other out for long stretches.",
+            "t2_player": "Palace are projected in a 3-4-2-1/3-4-3 shape built around Guehi-Lacroix-Andersen behind Wharton and Lerma, with Eze and Sarr supporting Mateta. West Ham are projected in a 4-2-3-1 with Bowen, Paquetá, and Kudus around Füllkrug, maximizing wide isolation and set-piece delivery.",
+            "t3_events": "Expect a cautious first phase, with the game opening after 25 minutes once Palace’s wing-backs push higher and West Ham begin targeting direct switches to Bowen and Kudus. Most likely event pattern is one goal before halftime or early second half, then tactical substitutions around 60-75 minutes and a late push from the trailing side.",
+            "t4_stats": "Possession should be close, with Palace marginally ahead at home but not dominant because West Ham can sustain spells through Paquetá and Ward-Prowse. Shot volume looks moderate rather than extreme, reflecting two sides more likely to create from transitions, crosses, and set plays than relentless central chance creation."
+          },
+          "scorers": [
+            {
+              "player": "Jean-Philippe Mateta",
+              "team": "home",
+              "minute_range": [
+                30,
+                75
+              ],
+              "p": 0.34
+            },
+            {
+              "player": "Eberechi Eze",
+              "team": "home",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.24
+            },
+            {
+              "player": "Ismaïla Sarr",
+              "team": "home",
+              "minute_range": [
+                35,
+                90
+              ],
+              "p": 0.17
+            },
+            {
+              "player": "Jarrod Bowen",
+              "team": "away",
+              "minute_range": [
+                25,
+                85
+              ],
+              "p": 0.31
+            },
+            {
+              "player": "Mohammed Kudus",
+              "team": "away",
+              "minute_range": [
+                30,
+                90
+              ],
+              "p": 0.22
+            },
+            {
+              "player": "Niclas Füllkrug",
+              "team": "away",
+              "minute_range": [
+                15,
+                80
+              ],
+              "p": 0.18
+            }
+          ],
+          "assisters": [
+            {
+              "player": "Eberechi Eze",
+              "team": "home",
+              "p": 0.22
+            },
+            {
+              "player": "Adam Wharton",
+              "team": "home",
+              "p": 0.14
+            },
+            {
+              "player": "Daniel Muñoz",
+              "team": "home",
+              "p": 0.13
+            },
+            {
+              "player": "James Ward-Prowse",
+              "team": "away",
+              "p": 0.21
+            },
+            {
+              "player": "Lucas Paquetá",
+              "team": "away",
+              "p": 0.18
+            },
+            {
+              "player": "Mohammed Kudus",
+              "team": "away",
+              "p": 0.12
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "Eberechi Eze",
+              "team": "home",
+              "p": 0.21
+            },
+            {
+              "player": "Jean-Philippe Mateta",
+              "team": "home",
+              "p": 0.18
+            },
+            {
+              "player": "Jarrod Bowen",
+              "team": "away",
+              "p": 0.17
+            },
+            {
+              "player": "Mohammed Kudus",
+              "team": "away",
+              "p": 0.11
+            },
+            {
+              "player": "Adam Wharton",
+              "team": "home",
+              "p": 0.1
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Dean Henderson",
+                  "position": "GK",
+                  "shirt": 1
+                },
+                {
+                  "name": "Joël Ward",
+                  "position": "DF",
+                  "shirt": 2
+                },
+                {
+                  "name": "Marc Guéhi",
+                  "position": "DF",
+                  "shirt": 6
+                },
+                {
+                  "name": "Maxence Lacroix",
+                  "position": "DF",
+                  "shirt": 5
+                },
+                {
+                  "name": "Daniel Muñoz",
+                  "position": "DF",
+                  "shirt": 12
+                },
+                {
+                  "name": "Tyrick Mitchell",
+                  "position": "DF",
+                  "shirt": 3
+                },
+                {
+                  "name": "Adam Wharton",
+                  "position": "MF",
+                  "shirt": 20
+                },
+                {
+                  "name": "Jefferson Lerma",
+                  "position": "MF",
+                  "shirt": 8
+                },
+                {
+                  "name": "Ismaïla Sarr",
+                  "position": "FW",
+                  "shirt": 7
+                },
+                {
+                  "name": "Eberechi Eze",
+                  "position": "MF",
+                  "shirt": 10
+                },
+                {
+                  "name": "Jean-Philippe Mateta",
+                  "position": "FW",
+                  "shirt": 14
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Sam Johnstone",
+                  "position": "GK",
+                  "shirt": 31
+                },
+                {
+                  "name": "Chris Richards",
+                  "position": "DF",
+                  "shirt": 26
+                },
+                {
+                  "name": "Nathaniel Clyne",
+                  "position": "DF",
+                  "shirt": 17
+                },
+                {
+                  "name": "Cheick Doucouré",
+                  "position": "MF",
+                  "shirt": 28
+                },
+                {
+                  "name": "Daichi Kamada",
+                  "position": "MF",
+                  "shirt": 18
+                },
+                {
+                  "name": "Will Hughes",
+                  "position": "MF",
+                  "shirt": 19
+                },
+                {
+                  "name": "Justin Devenny",
+                  "position": "MF",
+                  "shirt": 55
+                },
+                {
+                  "name": "Odsonne Édouard",
+                  "position": "FW",
+                  "shirt": 22
+                },
+                {
+                  "name": "Eddie Nketiah",
+                  "position": "FW",
+                  "shirt": 9
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "Alphonse Areola",
+                  "position": "GK",
+                  "shirt": 23
+                },
+                {
+                  "name": "Vladimír Coufal",
+                  "position": "DF",
+                  "shirt": 5
+                },
+                {
+                  "name": "Konstantinos Mavropanos",
+                  "position": "DF",
+                  "shirt": 15
+                },
+                {
+                  "name": "Max Kilman",
+                  "position": "DF",
+                  "shirt": 26
+                },
+                {
+                  "name": "Emerson",
+                  "position": "DF",
+                  "shirt": 33
+                },
+                {
+                  "name": "Tomáš Souček",
+                  "position": "MF",
+                  "shirt": 28
+                },
+                {
+                  "name": "James Ward-Prowse",
+                  "position": "MF",
+                  "shirt": 7
+                },
+                {
+                  "name": "Jarrod Bowen",
+                  "position": "FW",
+                  "shirt": 20
+                },
+                {
+                  "name": "Lucas Paquetá",
+                  "position": "MF",
+                  "shirt": 10
+                },
+                {
+                  "name": "Mohammed Kudus",
+                  "position": "FW",
+                  "shirt": 14
+                },
+                {
+                  "name": "Niclas Füllkrug",
+                  "position": "FW",
+                  "shirt": 11
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Łukasz Fabiański",
+                  "position": "GK",
+                  "shirt": 1
+                },
+                {
+                  "name": "Aaron Cresswell",
+                  "position": "DF",
+                  "shirt": 3
+                },
+                {
+                  "name": "Jean-Clair Todibo",
+                  "position": "DF",
+                  "shirt": 25
+                },
+                {
+                  "name": "Edson Álvarez",
+                  "position": "MF",
+                  "shirt": 19
+                },
+                {
+                  "name": "Guido Rodríguez",
+                  "position": "MF",
+                  "shirt": 24
+                },
+                {
+                  "name": "Carlos Soler",
+                  "position": "MF",
+                  "shirt": 4
+                },
+                {
+                  "name": "Crysencio Summerville",
+                  "position": "FW",
+                  "shirt": 17
+                },
+                {
+                  "name": "Luis Guilherme",
+                  "position": "FW",
+                  "shirt": 21
+                },
+                {
+                  "name": "Danny Ings",
+                  "position": "FW",
+                  "shirt": 18
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "3-4-2-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "Jefferson Lerma",
+              "on": "Cheick Doucouré",
+              "minute": 67
+            },
+            {
+              "team": "home",
+              "off": "Ismaïla Sarr",
+              "on": "Daichi Kamada",
+              "minute": 72
+            },
+            {
+              "team": "home",
+              "off": "Jean-Philippe Mateta",
+              "on": "Eddie Nketiah",
+              "minute": 79
+            },
+            {
+              "team": "away",
+              "off": "Niclas Füllkrug",
+              "on": "Danny Ings",
+              "minute": 70
+            },
+            {
+              "team": "away",
+              "off": "James Ward-Prowse",
+              "on": "Edson Álvarez",
+              "minute": 74
+            },
+            {
+              "team": "away",
+              "off": "Mohammed Kudus",
+              "on": "Crysencio Summerville",
+              "minute": 78
+            }
+          ],
+          "cards": [
+            {
+              "player": "Jefferson Lerma",
+              "team": "home",
+              "color": "yellow",
+              "minute": 41
+            },
+            {
+              "player": "Daniel Muñoz",
+              "team": "home",
+              "color": "yellow",
+              "minute": 63
+            },
+            {
+              "player": "Tomáš Souček",
+              "team": "away",
+              "color": "yellow",
+              "minute": 52
+            },
+            {
+              "player": "Konstantinos Mavropanos",
+              "team": "away",
+              "color": "yellow",
+              "minute": 69
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 52,
+              "away": 48
+            },
+            "shots": {
+              "home": 13,
+              "away": 11
+            },
+            "shots_on_target": {
+              "home": 5,
+              "away": 4
+            },
+            "corners": {
+              "home": 6,
+              "away": 5
+            },
+            "pass_accuracy": {
+              "home": 83,
+              "away": 81
+            },
+            "fouls": {
+              "home": 12,
+              "away": 11
+            },
+            "saves": {
+              "home": 3,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 61,
+              "away": 58
+            }
+          },
+          "cost_usd": 0.046635
+        }
+      ],
       "live": null
     },
     {
