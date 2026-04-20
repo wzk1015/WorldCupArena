@@ -22,13 +22,25 @@ class OpenAICompatRunner(BaseRunner):
 
     def generate(self, system_prompt: str, messages: list[dict[str, Any]]) -> dict[str, Any]:
         client = self._client()
-        resp = client.chat.completions.create(
-            model=self.cfg["model"],
-            messages=[{"role": "system", "content": system_prompt}, *messages],
-            response_format={"type": "json_object"},
-            temperature=self.cfg.get("temperature", 0.3),
-            max_completion_tokens=self.cfg.get("max_completion_tokens", 8192),
-        )
+
+        if "gpt" in self.cfg["model"]: 
+            resp = client.chat.completions.create(
+                model=self.cfg["model"],
+                messages=[{"role": "system", "content": system_prompt}, *messages],
+                response_format={"type": "json_object"},
+                temperature=self.cfg.get("temperature", 0.3),
+                max_completion_tokens=self.cfg.get("max_tokens", 8192),
+            )
+        else:
+            resp = client.chat.completions.create(
+                model=self.cfg["model"],
+                messages=[{"role": "system", "content": system_prompt}, *messages],
+                response_format={"type": "json_object"},
+                temperature=self.cfg.get("temperature", 0.3),
+                # max_tokens is universally supported across all OpenAI-compat providers
+                # (Zhipu, Moonshot, DashScope, xAI, etc.); max_completion_tokens is OpenAI-only
+                max_tokens=self.cfg.get("max_tokens", 8192),
+            )
         text = resp.choices[0].message.content or ""
         usage = resp.usage
         return {

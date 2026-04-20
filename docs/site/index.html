@@ -13,17 +13,14 @@
   body {
     font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
     background:
-      radial-gradient(1200px 600px at 20% -10%, rgba(34,197,94,.15), transparent 60%),
-      radial-gradient(900px 500px at 90% 10%, rgba(236,72,153,.12), transparent 55%),
-      radial-gradient(1200px 600px at 50% 110%, rgba(59,130,246,.10), transparent 60%),
+      radial-gradient(1000px 500px at 15% -5%, rgba(34,197,94,.07), transparent 60%),
       #0a0f1a;
-    color: #e5e7eb;
+    color: #d1d5db;
   }
-  .glow { text-shadow: 0 0 24px rgba(34,197,94,.35), 0 0 60px rgba(59,130,246,.18); }
+  .glow { text-shadow: 0 0 32px rgba(34,197,94,.25); }
   .card {
-    background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-    border: 1px solid rgba(255,255,255,.08);
-    backdrop-filter: blur(8px);
+    background: rgba(255,255,255,.035);
+    border: 1px solid rgba(255,255,255,.09);
   }
   .pitch {
     background:
@@ -50,11 +47,9 @@
   details > summary { list-style:none; cursor:pointer; }
   details > summary::-webkit-details-marker { display:none; }
   .gradient-text {
-    background: linear-gradient(90deg,#22c55e,#3b82f6,#a855f7,#ec4899);
+    background: linear-gradient(90deg,#4ade80,#60a5fa);
     -webkit-background-clip: text; background-clip: text; color: transparent;
-    background-size: 200% 200%; animation: flow 9s ease infinite;
   }
-  @keyframes flow { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
   .tab-btn.active { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.28); }
 </style>
 </head>
