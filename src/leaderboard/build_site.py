@@ -187,31 +187,38 @@ def _collect_predictions(wca_id: str) -> list[dict]:
     return out
 
 
-def build_next_match() -> dict | None:
+def build_incoming_matches() -> list[dict]:
+    """Return all enabled fixtures within the next 3 days, sorted by kickoff."""
+    from datetime import timedelta
     now = datetime.now(timezone.utc)
+    cutoff = now + timedelta(days=3)
     registry = _load_fixtures()
-    # soonest kickoff in the future
-    upcoming = sorted(
-        (f for f in registry if _parse_iso(f["kickoff_utc"]) > now),
-        key=lambda f: _parse_iso(f["kickoff_utc"]),
-    )
-    for fx in upcoming:
+    results = []
+    for fx in sorted(registry, key=lambda f: _parse_iso(f["kickoff_utc"])):
+        kick = _parse_iso(fx["kickoff_utc"])
+        if kick <= now or kick > cutoff:
+            continue
+        if "_test" in fx["wca_id"].lower():
+            continue
         wca_id = fx["wca_id"]
         hdr = _load_fixture_header(wca_id)
         if not hdr:
-            continue
+            # Fall back to yaml metadata when snapshot not yet ingested
+            kick_str = kick.isoformat() if hasattr(kick, "isoformat") else str(fx["kickoff_utc"])
+            hdr = {
+                "wca_id":      wca_id,
+                "home":        fx.get("home"),
+                "away":        fx.get("away"),
+                "kickoff_utc": kick_str,
+                "lock_at_utc": None,
+                "venue":       None,
+                "stage":       None,
+                "competition": None,
+            }
         preds = _collect_predictions(wca_id)
         live  = _load_live_state(wca_id)
-        return {"fixture": hdr, "predictions": preds, "live": live}
-    # Fallback: most recent snapshot with predictions (useful for demos)
-    if PREDICTIONS.exists():
-        candidates = sorted(PREDICTIONS.glob("*"), key=lambda p: p.stat().st_mtime, reverse=True)
-        for d in candidates:
-            hdr = _load_fixture_header(d.name)
-            if hdr:
-                return {"fixture": hdr, "predictions": _collect_predictions(d.name),
-                        "live": _load_live_state(d.name)}
-    return None
+        results.append({"fixture": hdr, "predictions": preds, "live": live})
+    return results
 
 
 # ---------------------------------------------------------------------------
@@ -413,17 +420,18 @@ def build_history() -> list[dict]:
 
 
 def main() -> None:
+    incoming = build_incoming_matches()
     payload = {
-        "generated_at": _now_iso(),
-        "leaderboard": build_leaderboard(),
-        "next_match":  build_next_match(),
-        "history":     build_history(),
+        "generated_at":     _now_iso(),
+        "leaderboard":      build_leaderboard(),
+        "incoming_matches": incoming,
+        "history":          build_history(),
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
     print(f"wrote {OUT} "
           f"(leaderboard_models={len(payload['leaderboard']['main'])}, "
-          f"next_match_preds={len(payload['next_match']['predictions']) if payload['next_match'] else 0}, "
+          f"incoming={len(incoming)}, "
           f"history={len(payload['history'])})")
 
 

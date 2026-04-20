@@ -17,7 +17,9 @@ order. Every phase checks "is my work already done?" before acting:
 
     ingest       — skip if fixture.json exists
     populate     — skip if context_pack already has squads
-    lock_predict — skip lock if snapshot_hash is set;
+    lock_predict — if fixture.json is missing (fixture added late, inside the
+                   24h window), runs ingest + populate inline before locking;
+                   skip lock if snapshot_hash is set;
                    skip predict if predictions/<wca_id>/ has any json
     truth_grade  — skip truth download if truth.json exists;
                    grade is always safe to rerun
@@ -118,8 +120,14 @@ def _phase_lock_predict(fx: dict, fx_dir: Path) -> None:
     """Lock the snapshot then run every (model × setting) prediction."""
     fixture_path = fx_dir / "fixture.json"
     if not fixture_path.exists():
-        print(f"  [lock_predict] skip — no fixture.json at {fixture_path}")
-        return
+        # Fixture added late (inside the 24h window) — run ingest + populate now
+        # before locking and predicting.
+        print(f"  [lock_predict] fixture.json missing — running late ingest + populate")
+        _phase_ingest(fx, fx_dir)
+        if not fixture_path.exists():
+            print(f"  [lock_predict] ingest failed, aborting")
+            return
+        _phase_populate(fx, fx_dir)
     raw = json.loads(fixture_path.read_text())
     if not raw.get("snapshot_hash"):
         _run([sys.executable, "-m", "src.pipeline.orchestrator", "lock",

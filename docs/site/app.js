@@ -541,22 +541,16 @@ function renderPredCard(p, f, idx) {
     </div>`;
 }
 
-// ---------- Next match -------------------------------------------------------
+// ---------- Incoming matches -------------------------------------------------
 
-function renderNextMatch(nm) {
-  const el = document.getElementById("next-container");
-  if (!nm || !nm.fixture) {
-    el.innerHTML = `<div class="text-gray-400">No upcoming fixture in the registry yet.</div>`;
-    return;
-  }
-  const f    = nm.fixture;
-  const kick = f.kickoff_utc ? new Date(f.kickoff_utc) : null;
-  const cid  = "nm-countdown";
+function _renderOneFixture(nm, cardIdx) {
+  const f     = nm.fixture;
+  const kick  = f.kickoff_utc ? new Date(f.kickoff_utc) : null;
+  const cid   = `nm-countdown-${cardIdx}`;
   const preds = nm.predictions || [];
   const nmStart = _allPreds.length;
   _allPreds.push(...preds);
 
-  // Live badge for next_match (during match window)
   const lv = nm.live;
   const liveHtml = (lv && lv.status !== "Match Finished") ? `
     <div class="flex items-center justify-center gap-2 mb-4">
@@ -568,7 +562,6 @@ function renderNextMatch(nm) {
       </span>
     </div>` : "";
 
-  // Consensus win probs
   const agg = { home: 0, draw: 0, away: 0 };
   let nP = 0;
   for (const p of preds) {
@@ -579,42 +572,64 @@ function renderNextMatch(nm) {
   }
   if (nP > 0) { agg.home /= nP; agg.draw /= nP; agg.away /= nP; }
 
-  el.innerHTML = `
-    <div class="pitch rounded-xl p-5 mb-6">
-      <div class="flex items-center justify-between flex-wrap gap-4">
-        <div class="flex-1 text-center">
-          ${f.home_logo ? `<img src="${esc(f.home_logo)}" alt="${esc(f.home)}" class="h-14 mx-auto mb-2"/>` : `<div class="text-4xl">🏠</div>`}
-          <div class="font-bold text-lg">${esc(f.home)}</div>
-          <div class="text-xs text-gray-400">consensus ${fmtPct(agg.home)}</div>
-        </div>
-        <div class="text-center px-4">
-          <div class="text-gray-300 text-sm">${esc(f.competition || "")} · ${esc(f.stage || "")}</div>
-          <div class="mt-1 text-2xl font-black">VS</div>
-          <div class="text-xs text-gray-400 mt-1">draw ${fmtPct(agg.draw)}</div>
-          <div class="text-xs text-gray-400 mt-3" id="${cid}">${kick ? kick.toUTCString() : "—"}</div>
-          <div class="text-[10px] text-gray-500">${esc(f.venue || "")}</div>
-        </div>
-        <div class="flex-1 text-center">
-          ${f.away_logo ? `<img src="${esc(f.away_logo)}" alt="${esc(f.away)}" class="h-14 mx-auto mb-2"/>` : `<div class="text-4xl">🛫</div>`}
-          <div class="font-bold text-lg">${esc(f.away)}</div>
-          <div class="text-xs text-gray-400">consensus ${fmtPct(agg.away)}</div>
+  const html = `
+    <div class="card rounded-2xl p-6">
+      <div class="pitch rounded-xl p-5 mb-6">
+        <div class="flex items-center justify-between flex-wrap gap-4">
+          <div class="flex-1 text-center">
+            ${f.home_logo ? `<img src="${esc(f.home_logo)}" alt="${esc(f.home)}" class="h-14 mx-auto mb-2"/>` : `<div class="text-4xl">🏠</div>`}
+            <div class="font-bold text-lg">${esc(f.home || "?")}</div>
+            ${nP > 0 ? `<div class="text-xs text-gray-400">consensus ${fmtPct(agg.home)}</div>` : ""}
+          </div>
+          <div class="text-center px-4">
+            <div class="text-gray-300 text-sm">${esc(f.competition || "")}${f.stage ? ` · ${esc(f.stage)}` : ""}</div>
+            <div class="mt-1 text-2xl font-black">VS</div>
+            ${nP > 0 ? `<div class="text-xs text-gray-400 mt-1">draw ${fmtPct(agg.draw)}</div>` : ""}
+            <div class="text-xs text-gray-400 mt-3" id="${cid}">${kick ? kick.toUTCString() : "—"}</div>
+            ${f.venue ? `<div class="text-[10px] text-gray-500">${esc(f.venue)}</div>` : ""}
+          </div>
+          <div class="flex-1 text-center">
+            ${f.away_logo ? `<img src="${esc(f.away_logo)}" alt="${esc(f.away)}" class="h-14 mx-auto mb-2"/>` : `<div class="text-4xl">🛫</div>`}
+            <div class="font-bold text-lg">${esc(f.away || "?")}</div>
+            ${nP > 0 ? `<div class="text-xs text-gray-400">consensus ${fmtPct(agg.away)}</div>` : ""}
+          </div>
         </div>
       </div>
-    </div>
+      ${liveHtml}
+      ${preds.length === 0
+        ? `<div class="text-gray-400 text-sm">No model predictions locked yet (runs 24 h before kickoff).</div>`
+        : `<div class="space-y-3">${preds.map((p, i) => renderPredCard(p, f, nmStart + i)).join("")}</div>`}
+    </div>`;
 
-    ${liveHtml}
-    ${preds.length === 0
-      ? `<div class="text-gray-400 text-sm">No model predictions locked yet (runs 24 h before kickoff).</div>`
-      : `<div class="space-y-3">${preds.map((p, i) => renderPredCard(p, f, nmStart + i)).join("")}</div>`}`;
+  // Start countdown timer after DOM insertion (called by caller)
+  return { html, kick, cid };
+}
 
-  if (kick) {
+function renderIncomingMatches(matches) {
+  const el = document.getElementById("next-container");
+  if (!matches || matches.length === 0) {
+    el.innerHTML = `<div class="text-gray-400">No fixtures scheduled in the next 3 days.</div>`;
+    return;
+  }
+
+  const timers = [];
+  const parts  = matches.map((nm, i) => {
+    const { html, kick, cid } = _renderOneFixture(nm, i);
+    if (kick) timers.push({ kick, cid });
+    return html;
+  });
+  el.innerHTML = parts.join("");
+
+  for (const { kick, cid } of timers) {
     const tick = () => {
+      const el2 = document.getElementById(cid);
+      if (!el2) return;
       const diff = kick - new Date();
-      if (diff <= 0) { document.getElementById(cid).textContent = "🔴 kicked off"; return; }
+      if (diff <= 0) { el2.textContent = "🔴 kicked off"; return; }
       const h = Math.floor(diff / 3600000);
       const m = Math.floor((diff % 3600000) / 60000);
       const s = Math.floor((diff % 60000) / 1000);
-      document.getElementById(cid).textContent = `kickoff in ${h}h ${m}m ${s}s`;
+      el2.textContent = `kickoff in ${h}h ${m}m ${s}s`;
     };
     tick(); setInterval(tick, 1000);
   }
@@ -790,7 +805,7 @@ async function main() {
   }
   document.getElementById("generated-at").textContent = "Last updated " + fmtTimestamp(data.generated_at);
   _allPreds = [];
-  renderNextMatch(data.next_match);
+  renderIncomingMatches(data.incoming_matches || []);
   renderLeaderboard(data.leaderboard || { main: [] }, "main");
   wireTabs(data.leaderboard || { main: [] });
   renderHistory(data.history || []);
