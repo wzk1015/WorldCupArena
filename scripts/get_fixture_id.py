@@ -97,6 +97,6 @@ def add_fixture(fixture_id, wca_id=None) -> None:
 
 
 if __name__ == "__main__":
-    # print(get_id(team="chelsea", league=39, date="2026-04-21", season=2025))
+    # print(get_id(team="crystal", league=39, date="2026-04-20", season=2025))
     # print(get_id(team="bayern", league=81, date="2026-04-22", season=2025))
-    add_fixture(1526336)
+    add_fixture(1379292)
