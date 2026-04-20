@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T10:59:43+00:00",
+  "generated_at": "2026-04-21T12:00:46+00:00",
   "leaderboard": {
     "main": [
       {
@@ -19,46 +19,1158 @@
       },
       {
         "model_id": "gpt-5.4-search",
-        "mean": 38.70846361036462,
-        "n": 2,
+        "mean": 39.236296221872465,
+        "n": 3,
         "layers_mean": {
-          "T1_core_result": 59.21125,
-          "T2_player_level": 3.916666666666666,
-          "T3_event_level": 54.568749999999994,
-          "T4_tactics_stats": 52.133646291319714,
+          "T1_core_result": 61.300000000000004,
+          "T2_player_level": 5.859821121431028,
+          "T3_event_level": 49.5625,
+          "T4_tactics_stats": 52.54643961009805,
           "T5_tournament_macro": 10.0
         },
         "winner_correct": 1,
-        "winner_total": 2,
-        "winner_acc": 0.5
+        "winner_total": 3,
+        "winner_acc": 0.3333333333333333
       }
     ],
     "by_model_setting": {
       "gpt-5.4-search": {
-        "S2": 38.70846361036462
+        "S2": 39.236296221872465
       },
       "gpt-5.4-mini": {
         "S1": 46.71341167865636
-      },
-      "gpt-5.4-search": {
-        "S2": 44.4591099544479
       }
     }
   },
   "incoming_matches": [
     {
       "fixture": {
-        "wca_id": "Premier-League_Crystal-Palace_West-Ham_2026-04-20",
-        "home": "Crystal Palace",
-        "home_logo": "https://media.api-sports.io/football/teams/52.png",
-        "away": "West Ham",
-        "away_logo": "https://media.api-sports.io/football/teams/48.png",
-        "kickoff_utc": "2026-04-20T19:00:00+00:00",
-        "lock_at_utc": "2026-04-19T19:00:00+00:00",
-        "venue": "Selhurst Park",
-        "stage": "Regular Season - 33",
+        "wca_id": "Premier-League_Brighton_Chelsea_2026-04-21",
+        "home": "Brighton",
+        "home_logo": "https://media.api-sports.io/football/teams/51.png",
+        "away": "Chelsea",
+        "away_logo": "https://media.api-sports.io/football/teams/49.png",
+        "kickoff_utc": "2026-04-21T19:00:00+00:00",
+        "lock_at_utc": "2026-04-20T19:00:00+00:00",
+        "venue": "Amex Stadium",
+        "stage": "Regular Season - 34",
         "competition": "Premier League"
       },
+      "predictions": [
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.25,
+            "draw": 0.27,
+            "away": 0.48
+          },
+          "score_dist": [
+            {
+              "score": "1-2",
+              "p": 0.18
+            },
+            {
+              "score": "1-1",
+              "p": 0.17
+            },
+            {
+              "score": "0-1",
+              "p": 0.14
+            },
+            {
+              "score": "0-2",
+              "p": 0.11
+            },
+            {
+              "score": "1-3",
+              "p": 0.08
+            },
+            {
+              "score": "2-2",
+              "p": 0.08
+            },
+            {
+              "score": "2-1",
+              "p": 0.07
+            },
+            {
+              "score": "0-0",
+              "p": 0.05
+            },
+            {
+              "score": "2-3",
+              "p": 0.04
+            },
+            {
+              "score": "1-0",
+              "p": 0.04
+            },
+            {
+              "score": "3-2",
+              "p": 0.02
+            },
+            {
+              "score": "0-3",
+              "p": 0.02
+            }
+          ],
+          "most_likely_score": "1-2",
+          "expected_goal_diff": -0.48,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Chelsea project as the stronger side on squad quality, depth and likely control of territory, but Brighton at the Amex remain dangerous because of their aggressive build-up, wide rotations and ability to create transition moments against teams that press high. The matchup points to Chelsea having more possession and higher shot volume, yet Brighton's home edge and attacking talent make a clean away win less certain than raw talent suggests. Head-to-head trends in recent seasons have often produced open games, and key attackers on both sides are capable of deciding it, so the forecast leans Chelsea narrowly rather than heavily.",
+            "t1_result": "Chelsea get the largest win share because their baseline level and depth are higher, but Brighton's home advantage and chance creation keep draw and home-win probabilities meaningful. A one-goal away win and a scoring draw are the most plausible outcomes, with 1-2 narrowly ahead of 1-1.",
+            "t2_player": "Both teams are likely to use familiar structures: Brighton with a fluid back four and mobile front line, Chelsea with a possession-oriented 4-2-3-1/4-3-3 shape. The most likely scorers come from central forwards and advanced wide attackers who dominate box touches and set-piece involvement.",
+            "t3_events": "The game should start with Chelsea controlling the ball and Brighton looking to jump passing lanes before breaking quickly. Most substitutions are likely after 60 minutes as intensity drops, and the card risk is concentrated in full-backs and holding midfielders dealing with transition fouls.",
+            "t4_stats": "Chelsea are projected to edge possession, pass accuracy and total shots, while Brighton should still generate enough attacks at home to keep the shot count competitive. Saves and defensive actions are slightly higher for Brighton because they are more likely to spend longer without the ball."
+          },
+          "scorers": [
+            {
+              "player": "Nicolas Jackson",
+              "team": "away",
+              "minute_range": [
+                30,
+                75
+              ],
+              "p": 0.34
+            },
+            {
+              "player": "Cole Palmer",
+              "team": "away",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.31
+            },
+            {
+              "player": "Christopher Nkunku",
+              "team": "away",
+              "minute_range": [
+                35,
+                85
+              ],
+              "p": 0.22
+            },
+            {
+              "player": "João Pedro",
+              "team": "home",
+              "minute_range": [
+                25,
+                85
+              ],
+              "p": 0.27
+            },
+            {
+              "player": "Kaoru Mitoma",
+              "team": "home",
+              "minute_range": [
+                40,
+                90
+              ],
+              "p": 0.19
+            },
+            {
+              "player": "Georginio Rutter",
+              "team": "home",
+              "minute_range": [
+                15,
+                70
+              ],
+              "p": 0.14
+            }
+          ],
+          "assisters": [
+            {
+              "player": "Cole Palmer",
+              "team": "away",
+              "p": 0.24
+            },
+            {
+              "player": "Enzo Fernández",
+              "team": "away",
+              "p": 0.18
+            },
+            {
+              "player": "Pedro Neto",
+              "team": "away",
+              "p": 0.17
+            },
+            {
+              "player": "João Pedro",
+              "team": "home",
+              "p": 0.16
+            },
+            {
+              "player": "Kaoru Mitoma",
+              "team": "home",
+              "p": 0.15
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "Cole Palmer",
+              "team": "away",
+              "p": 0.24
+            },
+            {
+              "player": "Nicolas Jackson",
+              "team": "away",
+              "p": 0.18
+            },
+            {
+              "player": "João Pedro",
+              "team": "home",
+              "p": 0.14
+            },
+            {
+              "player": "Enzo Fernández",
+              "team": "away",
+              "p": 0.11
+            },
+            {
+              "player": "Kaoru Mitoma",
+              "team": "home",
+              "p": 0.09
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Bart Verbruggen",
+                  "position": "GK"
+                },
+                {
+                  "name": "Joël Veltman",
+                  "position": "DF"
+                },
+                {
+                  "name": "Jan Paul van Hecke",
+                  "position": "DF"
+                },
+                {
+                  "name": "Lewis Dunk",
+                  "position": "DF"
+                },
+                {
+                  "name": "Pervis Estupiñán",
+                  "position": "DF"
+                },
+                {
+                  "name": "Carlos Baleba",
+                  "position": "MF"
+                },
+                {
+                  "name": "Jack Hinshelwood",
+                  "position": "MF"
+                },
+                {
+                  "name": "Kaoru Mitoma",
+                  "position": "FW"
+                },
+                {
+                  "name": "João Pedro",
+                  "position": "FW"
+                },
+                {
+                  "name": "Simon Adingra",
+                  "position": "FW"
+                },
+                {
+                  "name": "Georginio Rutter",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Jason Steele",
+                  "position": "GK"
+                },
+                {
+                  "name": "Igor Julio",
+                  "position": "DF"
+                },
+                {
+                  "name": "Tariq Lamptey",
+                  "position": "DF"
+                },
+                {
+                  "name": "Adam Webster",
+                  "position": "DF"
+                },
+                {
+                  "name": "Mats Wieffer",
+                  "position": "MF"
+                },
+                {
+                  "name": "Yasin Ayari",
+                  "position": "MF"
+                },
+                {
+                  "name": "Brajan Gruda",
+                  "position": "FW"
+                },
+                {
+                  "name": "Danny Welbeck",
+                  "position": "FW"
+                },
+                {
+                  "name": "Evan Ferguson",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "Robert Sánchez",
+                  "position": "GK"
+                },
+                {
+                  "name": "Malo Gusto",
+                  "position": "DF"
+                },
+                {
+                  "name": "Wesley Fofana",
+                  "position": "DF"
+                },
+                {
+                  "name": "Levi Colwill",
+                  "position": "DF"
+                },
+                {
+                  "name": "Marc Cucurella",
+                  "position": "DF"
+                },
+                {
+                  "name": "Moisés Caicedo",
+                  "position": "MF"
+                },
+                {
+                  "name": "Enzo Fernández",
+                  "position": "MF"
+                },
+                {
+                  "name": "Cole Palmer",
+                  "position": "FW"
+                },
+                {
+                  "name": "Christopher Nkunku",
+                  "position": "FW"
+                },
+                {
+                  "name": "Pedro Neto",
+                  "position": "FW"
+                },
+                {
+                  "name": "Nicolas Jackson",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Filip Jörgensen",
+                  "position": "GK"
+                },
+                {
+                  "name": "Benoît Badiashile",
+                  "position": "DF"
+                },
+                {
+                  "name": "Trevoh Chalobah",
+                  "position": "DF"
+                },
+                {
+                  "name": "Reece James",
+                  "position": "DF"
+                },
+                {
+                  "name": "Roméo Lavia",
+                  "position": "MF"
+                },
+                {
+                  "name": "Conor Gallagher",
+                  "position": "MF"
+                },
+                {
+                  "name": "Mykhailo Mudryk",
+                  "position": "FW"
+                },
+                {
+                  "name": "Noni Madueke",
+                  "position": "FW"
+                },
+                {
+                  "name": "Armando Broja",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "Simon Adingra",
+              "on": "Brajan Gruda",
+              "minute": 64
+            },
+            {
+              "team": "home",
+              "off": "Georginio Rutter",
+              "on": "Danny Welbeck",
+              "minute": 71
+            },
+            {
+              "team": "home",
+              "off": "Jack Hinshelwood",
+              "on": "Mats Wieffer",
+              "minute": 76
+            },
+            {
+              "team": "away",
+              "off": "Christopher Nkunku",
+              "on": "Noni Madueke",
+              "minute": 67
+            },
+            {
+              "team": "away",
+              "off": "Pedro Neto",
+              "on": "Mykhailo Mudryk",
+              "minute": 74
+            },
+            {
+              "team": "away",
+              "off": "Nicolas Jackson",
+              "on": "Armando Broja",
+              "minute": 82
+            }
+          ],
+          "cards": [
+            {
+              "player": "Carlos Baleba",
+              "team": "home",
+              "color": "yellow",
+              "minute": 38
+            },
+            {
+              "player": "Joël Veltman",
+              "team": "home",
+              "color": "yellow",
+              "minute": 61
+            },
+            {
+              "player": "Moisés Caicedo",
+              "team": "away",
+              "color": "yellow",
+              "minute": 54
+            },
+            {
+              "player": "Marc Cucurella",
+              "team": "away",
+              "color": "yellow",
+              "minute": 72
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 45,
+              "away": 55
+            },
+            "shots": {
+              "home": 11,
+              "away": 15
+            },
+            "shots_on_target": {
+              "home": 4,
+              "away": 6
+            },
+            "corners": {
+              "home": 4,
+              "away": 6
+            },
+            "pass_accuracy": {
+              "home": 84,
+              "away": 88
+            },
+            "fouls": {
+              "home": 12,
+              "away": 11
+            },
+            "saves": {
+              "home": 4,
+              "away": 3
+            },
+            "defensive_actions": {
+              "home": 21,
+              "away": 18
+            }
+          },
+          "cost_usd": 0.043377
+        }
+      ],
+      "live": null
+    },
+    {
+      "fixture": {
+        "wca_id": "DFB-Pokal_Bayer-Leverkusen_Bayern-München_2026-04-22",
+        "home": "Bayer Leverkusen",
+        "home_logo": "https://media.api-sports.io/football/teams/168.png",
+        "away": "Bayern München",
+        "away_logo": "https://media.api-sports.io/football/teams/157.png",
+        "kickoff_utc": "2026-04-22T18:45:00+00:00",
+        "lock_at_utc": "2026-04-21T18:45:00+00:00",
+        "venue": "BayArena",
+        "stage": "Semi-finals",
+        "competition": "DFB Pokal"
+      },
+      "predictions": [],
+      "live": null
+    }
+  ],
+  "history": [
+    {
+      "wca_id": "Premier-League_Crystal-Palace_West-Ham_2026-04-20",
+      "home": "Crystal Palace",
+      "home_logo": "https://media.api-sports.io/football/teams/52.png",
+      "away": "West Ham",
+      "away_logo": "https://media.api-sports.io/football/teams/48.png",
+      "kickoff_utc": "2026-04-20T19:00:00+00:00",
+      "lock_at_utc": "2026-04-19T19:00:00+00:00",
+      "venue": "Selhurst Park",
+      "stage": "Regular Season - 33",
+      "competition": "Premier League",
+      "result": "0-0",
+      "truth": {
+        "score": "0-0",
+        "result": "draw",
+        "home_name": "Crystal Palace",
+        "away_name": "West Ham",
+        "scorer_names": [],
+        "assister_names": [],
+        "scorers": [],
+        "assisters": [],
+        "cards": [
+          {
+            "minute": 21,
+            "player": "B. Johnson",
+            "team": "home",
+            "color": "yellow"
+          },
+          {
+            "minute": 90,
+            "player": "M. Diouf",
+            "team": "away",
+            "color": "yellow"
+          },
+          {
+            "minute": 90,
+            "player": "D. Munoz",
+            "team": "home",
+            "color": "yellow"
+          }
+        ],
+        "substitutions": [
+          {
+            "minute": 59,
+            "team": "home",
+            "team_name": "Crystal Palace",
+            "off": "Y. Pino",
+            "on": "I. Sarr"
+          },
+          {
+            "minute": 59,
+            "team": "home",
+            "team_name": "Crystal Palace",
+            "off": "J. S. Larsen",
+            "on": "J. Mateta"
+          },
+          {
+            "minute": 59,
+            "team": "home",
+            "team_name": "Crystal Palace",
+            "off": "W. Hughes",
+            "on": "D. Kamada"
+          },
+          {
+            "minute": 75,
+            "team": "away",
+            "team_name": "West Ham",
+            "off": "Pablo",
+            "on": "C. Wilson"
+          },
+          {
+            "minute": 78,
+            "team": "home",
+            "team_name": "Crystal Palace",
+            "off": "B. Johnson",
+            "on": "J. Devenny"
+          },
+          {
+            "minute": 84,
+            "team": "away",
+            "team_name": "West Ham",
+            "off": "T. Castellanos",
+            "on": "M. Kante"
+          }
+        ],
+        "own_goals": [],
+        "penalties": [],
+        "formations": {
+          "home": "3-4-2-1",
+          "away": "4-4-1-1"
+        },
+        "lineups": {
+          "home": {
+            "starting": [
+              {
+                "player": "Dean Henderson",
+                "pos": "G"
+              },
+              {
+                "player": "Chris Richards",
+                "pos": "D"
+              },
+              {
+                "player": "Maxence Lacroix",
+                "pos": "D"
+              },
+              {
+                "player": "Jaydee Canvot",
+                "pos": "D"
+              },
+              {
+                "player": "Daniel Muñoz",
+                "pos": "M"
+              },
+              {
+                "player": "Will Hughes",
+                "pos": "M"
+              },
+              {
+                "player": "Jefferson Lerma",
+                "pos": "M"
+              },
+              {
+                "player": "Tyrick Mitchell",
+                "pos": "M"
+              },
+              {
+                "player": "Brennan Johnson",
+                "pos": "F"
+              },
+              {
+                "player": "Yéremy Pino",
+                "pos": "F"
+              },
+              {
+                "player": "Jørgen Strand Larsen",
+                "pos": "F"
+              }
+            ]
+          },
+          "away": {
+            "starting": [
+              {
+                "player": "Mads Hermansen",
+                "pos": "G"
+              },
+              {
+                "player": "Kyle Walker-Peters",
+                "pos": "D"
+              },
+              {
+                "player": "Konstantinos Mavropanos",
+                "pos": "D"
+              },
+              {
+                "player": "Axel Disasi",
+                "pos": "D"
+              },
+              {
+                "player": "El Hadji Malick Diouf",
+                "pos": "D"
+              },
+              {
+                "player": "Jarrod Bowen",
+                "pos": "M"
+              },
+              {
+                "player": "Tomáš Souček",
+                "pos": "M"
+              },
+              {
+                "player": "Mateus Fernandes",
+                "pos": "M"
+              },
+              {
+                "player": "Crysencio Summerville",
+                "pos": "M"
+              },
+              {
+                "player": "Pablo Felipe",
+                "pos": "F"
+              },
+              {
+                "player": "Valentín Castellanos",
+                "pos": "F"
+              }
+            ]
+          }
+        },
+        "stats": {
+          "shots_on_target": {
+            "home": 1,
+            "away": 4
+          },
+          "shots": {
+            "home": 9,
+            "away": 9
+          },
+          "fouls": {
+            "home": 13,
+            "away": 12
+          },
+          "corners": {
+            "home": 4,
+            "away": 5
+          },
+          "possession": {
+            "home": 54.0,
+            "away": 46.0
+          },
+          "saves": {
+            "home": 3,
+            "away": 1
+          },
+          "pass_accuracy": {
+            "home": 81.0,
+            "away": 74.0
+          }
+        },
+        "events": [
+          {
+            "time": {
+              "elapsed": 21,
+              "extra": null
+            },
+            "team": {
+              "id": 52,
+              "name": "Crystal Palace",
+              "logo": "https://media.api-sports.io/football/teams/52.png"
+            },
+            "player": {
+              "id": 129711,
+              "name": "B. Johnson"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Tripping"
+          },
+          {
+            "time": {
+              "elapsed": 59,
+              "extra": null
+            },
+            "team": {
+              "id": 52,
+              "name": "Crystal Palace",
+              "logo": "https://media.api-sports.io/football/teams/52.png"
+            },
+            "player": {
+              "id": 184226,
+              "name": "Y. Pino"
+            },
+            "assist": {
+              "id": 2218,
+              "name": "I. Sarr"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 59,
+              "extra": null
+            },
+            "team": {
+              "id": 52,
+              "name": "Crystal Palace",
+              "logo": "https://media.api-sports.io/football/teams/52.png"
+            },
+            "player": {
+              "id": 2032,
+              "name": "J. S. Larsen"
+            },
+            "assist": {
+              "id": 25927,
+              "name": "J. Mateta"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 59,
+              "extra": null
+            },
+            "team": {
+              "id": 52,
+              "name": "Crystal Palace",
+              "logo": "https://media.api-sports.io/football/teams/52.png"
+            },
+            "player": {
+              "id": 18806,
+              "name": "W. Hughes"
+            },
+            "assist": {
+              "id": 2601,
+              "name": "D. Kamada"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 75,
+              "extra": null
+            },
+            "team": {
+              "id": 48,
+              "name": "West Ham",
+              "logo": "https://media.api-sports.io/football/teams/48.png"
+            },
+            "player": {
+              "id": 301187,
+              "name": "Pablo"
+            },
+            "assist": {
+              "id": 2939,
+              "name": "C. Wilson"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 78,
+              "extra": null
+            },
+            "team": {
+              "id": 52,
+              "name": "Crystal Palace",
+              "logo": "https://media.api-sports.io/football/teams/52.png"
+            },
+            "player": {
+              "id": 129711,
+              "name": "B. Johnson"
+            },
+            "assist": {
+              "id": 286458,
+              "name": "J. Devenny"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 84,
+              "extra": null
+            },
+            "team": {
+              "id": 48,
+              "name": "West Ham",
+              "logo": "https://media.api-sports.io/football/teams/48.png"
+            },
+            "player": {
+              "id": 50856,
+              "name": "T. Castellanos"
+            },
+            "assist": {
+              "id": 401278,
+              "name": "M. Kante"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 2
+            },
+            "team": {
+              "id": 48,
+              "name": "West Ham",
+              "logo": "https://media.api-sports.io/football/teams/48.png"
+            },
+            "player": {
+              "id": 409303,
+              "name": "M. Diouf"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Roughing"
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 2
+            },
+            "team": {
+              "id": 52,
+              "name": "Crystal Palace",
+              "logo": "https://media.api-sports.io/football/teams/52.png"
+            },
+            "player": {
+              "id": 13736,
+              "name": "D. Munoz"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          }
+        ]
+      },
+      "live": {
+        "status": "Match Finished",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "events": [
+          {
+            "time": {
+              "elapsed": 21,
+              "extra": null
+            },
+            "team": {
+              "id": 52,
+              "name": "Crystal Palace",
+              "logo": "https://media.api-sports.io/football/teams/52.png"
+            },
+            "player": {
+              "id": 129711,
+              "name": "B. Johnson"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Tripping"
+          },
+          {
+            "time": {
+              "elapsed": 59,
+              "extra": null
+            },
+            "team": {
+              "id": 52,
+              "name": "Crystal Palace",
+              "logo": "https://media.api-sports.io/football/teams/52.png"
+            },
+            "player": {
+              "id": 184226,
+              "name": "Y. Pino"
+            },
+            "assist": {
+              "id": 2218,
+              "name": "I. Sarr"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 59,
+              "extra": null
+            },
+            "team": {
+              "id": 52,
+              "name": "Crystal Palace",
+              "logo": "https://media.api-sports.io/football/teams/52.png"
+            },
+            "player": {
+              "id": 2032,
+              "name": "J. S. Larsen"
+            },
+            "assist": {
+              "id": 25927,
+              "name": "J. Mateta"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 59,
+              "extra": null
+            },
+            "team": {
+              "id": 52,
+              "name": "Crystal Palace",
+              "logo": "https://media.api-sports.io/football/teams/52.png"
+            },
+            "player": {
+              "id": 18806,
+              "name": "W. Hughes"
+            },
+            "assist": {
+              "id": 2601,
+              "name": "D. Kamada"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 75,
+              "extra": null
+            },
+            "team": {
+              "id": 48,
+              "name": "West Ham",
+              "logo": "https://media.api-sports.io/football/teams/48.png"
+            },
+            "player": {
+              "id": 301187,
+              "name": "Pablo"
+            },
+            "assist": {
+              "id": 2939,
+              "name": "C. Wilson"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 78,
+              "extra": null
+            },
+            "team": {
+              "id": 52,
+              "name": "Crystal Palace",
+              "logo": "https://media.api-sports.io/football/teams/52.png"
+            },
+            "player": {
+              "id": 129711,
+              "name": "B. Johnson"
+            },
+            "assist": {
+              "id": 286458,
+              "name": "J. Devenny"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 84,
+              "extra": null
+            },
+            "team": {
+              "id": 48,
+              "name": "West Ham",
+              "logo": "https://media.api-sports.io/football/teams/48.png"
+            },
+            "player": {
+              "id": 50856,
+              "name": "T. Castellanos"
+            },
+            "assist": {
+              "id": 401278,
+              "name": "M. Kante"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 2
+            },
+            "team": {
+              "id": 48,
+              "name": "West Ham",
+              "logo": "https://media.api-sports.io/football/teams/48.png"
+            },
+            "player": {
+              "id": 409303,
+              "name": "M. Diouf"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Roughing"
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 2
+            },
+            "team": {
+              "id": 52,
+              "name": "Crystal Palace",
+              "logo": "https://media.api-sports.io/football/teams/52.png"
+            },
+            "player": {
+              "id": 13736,
+              "name": "D. Munoz"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          }
+        ]
+      },
+      "models": [
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "composite": 40.291961444888145
+        }
+      ],
       "predictions": [
         {
           "model_id": "gpt-5.4-search",
@@ -557,45 +1669,11 @@
               "away": 58
             }
           },
-          "cost_usd": 0.046635
+          "cost_usd": 0.046635,
+          "composite": 40.291961444888145
         }
-      ],
-      "live": null
+      ]
     },
-    {
-      "fixture": {
-        "wca_id": "Premier-League_Brighton_Chelsea_2026-04-21",
-        "home": "Brighton",
-        "home_logo": "https://media.api-sports.io/football/teams/51.png",
-        "away": "Chelsea",
-        "away_logo": "https://media.api-sports.io/football/teams/49.png",
-        "kickoff_utc": "2026-04-21T19:00:00+00:00",
-        "lock_at_utc": "2026-04-20T19:00:00+00:00",
-        "venue": "Amex Stadium",
-        "stage": "Regular Season - 34",
-        "competition": "Premier League"
-      },
-      "predictions": [],
-      "live": null
-    },
-    {
-      "fixture": {
-        "wca_id": "DFB-Pokal_Bayer-Leverkusen_Bayern-München_2026-04-22",
-        "home": "Bayer Leverkusen",
-        "home_logo": "https://media.api-sports.io/football/teams/168.png",
-        "away": "Bayern München",
-        "away_logo": "https://media.api-sports.io/football/teams/157.png",
-        "kickoff_utc": "2026-04-22T18:45:00+00:00",
-        "lock_at_utc": "2026-04-21T18:45:00+00:00",
-        "venue": "BayArena",
-        "stage": "Semi-finals",
-        "competition": "DFB Pokal"
-      },
-      "predictions": [],
-      "live": null
-    }
-  ],
-  "history": [
     {
       "wca_id": "bayern_madrid_ucl_qf_l2",
       "home": "Bayern München",
