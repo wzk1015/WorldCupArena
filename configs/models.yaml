@@ -21,54 +21,62 @@
 #   at runtime — use this to route through a 中转/proxy without touching this file.
 
 closed_llm:
-  - id: gemini-2.5-pro
+  - id: gemini-3.1-pro-preview-thinking
     provider: google
-    model: gemini-2.5-pro-preview-05-06
+    model: gemini-3.1-pro-preview-thinking
     api_key_env: GOOGLE_API_KEY
     base_url_env: GOOGLE_BASE_URL
     base_url: https://generativelanguage.googleapis.com/v1beta
-    price_per_mtok: { input: 1.25, output: 10.00 }
+    price_per_mtok: { input: 1.05, output: 6.30 }
     settings_supported: [S1]
-  - id: claude-opus-4-6
+  - id: claude-opus-4-7-thinking
     provider: anthropic
-    model: claude-opus-4-6
+    model: claude-opus-4-7-thinking
     api_key_env: ANTHROPIC_API_KEY
     base_url_env: ANTHROPIC_BASE_URL
     base_url: https://api.anthropic.com
-    price_per_mtok: { input: 15.00, output: 75.00 }
+    price_per_mtok: { input: 3.70, output: 18.50 }
     settings_supported: [S1]
-  - id: grok-3
-    provider: xai
-    model: grok-3
-    api_key_env: XAI_API_KEY
-    base_url_env: XAI_BASE_URL
-    base_url: https://api.x.ai/v1
-    price_per_mtok: { input: 3.00, output: 15.00 }
+  - id: gpt-5.4
+    provider: openai
+    model: gpt-5.4
+    api_key_env: OPENAI_API_KEY
+    base_url_env: OPENAI_BASE_URL
+    base_url: https://api.openai.com/v1
+    price_per_mtok: { input: 3.00, output: 12.00 }
     settings_supported: [S1]
-  - id: qwen-max
-    provider: dashscope
-    model: qwen-max
-    api_key_env: DASHSCOPE_API_KEY
-    base_url_env: DASHSCOPE_BASE_URL
-    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
-    price_per_mtok: { input: 1.60, output: 6.40 }
-    settings_supported: [S1]
-  - id: kimi-k2
-    provider: moonshot
-    model: kimi-k2-0711-preview
-    api_key_env: MOONSHOT_API_KEY
-    base_url_env: MOONSHOT_BASE_URL
-    base_url: https://api.moonshot.cn/v1
-    price_per_mtok: { input: 0.60, output: 2.50 }
-    settings_supported: [S1]
-  - id: glm-4-plus
-    provider: zhipu
-    model: glm-4-plus
-    api_key_env: ZHIPU_API_KEY
-    base_url_env: ZHIPU_BASE_URL
-    base_url: https://open.bigmodel.cn/api/paas/v4
-    price_per_mtok: { input: 0.70, output: 2.80 }
-    settings_supported: [S1]
+  # - id: grok-3
+  #   provider: xai
+  #   model: grok-3
+  #   api_key_env: XAI_API_KEY
+  #   base_url_env: XAI_BASE_URL
+  #   base_url: https://api.x.ai/v1
+  #   price_per_mtok: { input: 3.00, output: 15.00 }
+  #   settings_supported: [S1]
+  # - id: qwen-max
+  #   provider: dashscope
+  #   model: qwen-max
+  #   api_key_env: DASHSCOPE_API_KEY
+  #   base_url_env: DASHSCOPE_BASE_URL
+  #   base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+  #   price_per_mtok: { input: 1.60, output: 6.40 }
+  #   settings_supported: [S1]
+  # - id: kimi-k2
+  #   provider: moonshot
+  #   model: kimi-k2-0711-preview
+  #   api_key_env: MOONSHOT_API_KEY
+  #   base_url_env: MOONSHOT_BASE_URL
+  #   base_url: https://api.moonshot.cn/v1
+  #   price_per_mtok: { input: 0.60, output: 2.50 }
+  #   settings_supported: [S1]
+  # - id: glm-4-plus
+  #   provider: zhipu
+  #   model: glm-4-plus
+  #   api_key_env: ZHIPU_API_KEY
+  #   base_url_env: ZHIPU_BASE_URL
+  #   base_url: https://open.bigmodel.cn/api/paas/v4
+  #   price_per_mtok: { input: 0.70, output: 2.80 }
+  #   settings_supported: [S1]
   # - id: gpt-5.4
   #   provider: openai
   #   model: gpt-5.4
@@ -140,34 +148,34 @@ closed_llm:
 #   # Dropped: deepseek-v3.2 (kept R1 as the stronger reasoner).
 
 search_llm:
-#   - id: claude-sonnet-4-6-search
-#     provider: anthropic
-#     model: claude-sonnet-4-6
-#     api_key_env: ANTHROPIC_API_KEY
-#     base_url_env: ANTHROPIC_BASE_URL
-#     base_url: https://api.anthropic.com
-#     tools: [web_search]
-#     price_per_mtok: { input: 3.00, output: 15.00 }
-#     search_surcharge_per_1k: 10.00
-#     settings_supported: [S2]
+  - id: gemini-3.1-pro-preview-thinking-search
+    provider: google
+    model: gemini-3.1-pro-preview-thinking
+    api_key_env: GOOGLE_API_KEY
+    base_url_env: GOOGLE_BASE_URL
+    base_url: https://generativelanguage.googleapis.com/v1beta
+    price_per_mtok: { input: 1.05, output: 6.30 }
+    tools: [google_search]
+    settings_supported: [S2]
+  - id: claude-opus-4-7-thinking-search
+    provider: anthropic
+    model: claude-opus-4-7-thinking
+    api_key_env: ANTHROPIC_API_KEY
+    base_url_env: ANTHROPIC_BASE_URL
+    base_url: https://api.anthropic.com
+    price_per_mtok: { input: 3.70, output: 18.50 }
+    tools: [web_search]
+    settings_supported: [S2]
   - id: gpt-5.4-search
     provider: openai
     model: gpt-5.4
     api_key_env: OPENAI_API_KEY
     base_url_env: OPENAI_BASE_URL
     base_url: https://api.openai.com/v1
-    tools: [web_search]
     price_per_mtok: { input: 3.00, output: 12.00 }
+    tools: [web_search]
     settings_supported: [S2]
-#   - id: gemini-3-pro-search
-#     provider: google
-#     model: gemini-3-pro
-#     api_key_env: GOOGLE_API_KEY
-#     base_url_env: GOOGLE_BASE_URL
-#     base_url: https://generativelanguage.googleapis.com/v1beta
-#     tools: [google_search]
-#     price_per_mtok: { input: 2.00, output: 8.00 }
-#     settings_supported: [S2]
+
 #   - id: perplexity-sonar
 #     provider: perplexity
 #     model: sonar-pro

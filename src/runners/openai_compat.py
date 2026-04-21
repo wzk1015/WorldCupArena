@@ -18,6 +18,7 @@ class OpenAICompatRunner(BaseRunner):
     category = "closed_llm"  # overridden at runtime for open_llm / search_llm / agents
 
     def _client(self) -> OpenAI:
+        # import ipdb; ipdb.set_trace()
         return OpenAI(api_key=self.api_key(), base_url=self.base_url())
 
     def generate(self, system_prompt: str, messages: list[dict[str, Any]]) -> dict[str, Any]:

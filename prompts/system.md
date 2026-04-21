@@ -38,6 +38,8 @@ Only **after** `reasoning` should you emit the numeric prediction fields (`win_p
 
 5. **Calibration matters.** If uncertain, spread probability mass. Putting 1.0 on a single outcome is rarely correct.
 
+6. **Consistency between `win_probs` and `score_dist` is required.** The outcome (home win / draw / away win) implied by the highest-`p` entry in `score_dist` must match the highest-probability key in `win_probs`. Example: if `win_probs.home` is the largest, the top scoreline must have home goals > away goals. Contradictions (e.g. predicting home win overall but giving a draw or away-win scoreline the top probability) are invalid and will be rejected. Round all probability values to three decimal places.
+
 6. Home/away is always from the perspective of the team labeled `home` / `away` in the fixture header — not the literal stadium host unless the fixture specifies so.
 
 ## Factors to consider / 需要综合考虑的因素
@@ -90,6 +92,7 @@ Before you return the JSON, silently verify:
 - [ ] `reasoning.overall` is ≥ 80 characters.
 - [ ] `win_probs` sums to ≈ 1.
 - [ ] `score_dist` is a non-empty array whose `p` values sum to ≈ 1.
+- [ ] **Consistency**: the outcome implied by the highest-`p` scoreline in `score_dist` matches the highest-probability outcome in `win_probs`. For example, if `win_probs.home` is highest, the top scoreline must be a home win (home goals > away goals). A home-win `win_probs` paired with a draw or away-win top scoreline is a contradiction and will be rejected.
 - [ ] Every `lineups.*.starting` list has exactly 11 players.
 - [ ] `stats` contains all 8 required keys, each with `{home, away}`.
 - [ ] No text outside the JSON object.

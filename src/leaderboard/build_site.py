@@ -35,6 +35,8 @@ ROOT = Path(__file__).resolve().parents[2]
 RESULTS = ROOT / "data" / "results"
 PREDICTIONS = ROOT / "data" / "predictions"
 SNAPSHOTS = ROOT / "data" / "snapshots"
+LIVE_DIR = ROOT / "data" / "live"
+SEARCH_LOGS = ROOT / "data" / "search_logs"
 FIXTURES_YAML = ROOT / "configs" / "fixtures.yaml"
 OUT = ROOT / "docs" / "site" / "data.json"
 
@@ -163,6 +165,19 @@ def _collect_predictions(wca_id: str) -> list[dict]:
         if rec.get("error"):
             continue
         p = rec.get("prediction") or {}
+
+        # Load search sources from search_logs if available
+        sources: list[dict] = []
+        log_path = SEARCH_LOGS / wca_id / f.name
+        if log_path.exists():
+            try:
+                log = json.loads(log_path.read_text())
+                sources = log.get("sources") or []
+            except Exception:
+                pass
+        if not sources:
+            sources = rec.get("sources") or []
+
         out.append({
             "model_id":           rec["model_id"],
             "setting":            rec["setting"],
@@ -183,6 +198,7 @@ def _collect_predictions(wca_id: str) -> list[dict]:
             "own_goals":          p.get("own_goals") or [],
             "stats":              p.get("stats") or {},
             "cost_usd":           rec.get("cost_usd"),
+            "sources":            sources,
         })
     return out
 
@@ -226,7 +242,7 @@ def build_incoming_matches() -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def _load_live_state(wca_id: str) -> dict | None:
-    path = SNAPSHOTS / wca_id / "live.json"
+    path = LIVE_DIR / f"{wca_id}.json"
     if not path.exists():
         return None
     raw = json.loads(path.read_text())

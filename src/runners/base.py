@@ -97,6 +97,7 @@ class BaseRunner(abc.ABC):
             """Used by validate_fn as the retry hook."""
             msgs = [{"role": "user", "content": usr_prompt}]
             out = self.generate(system_prompt, msgs)
+            # import ipdb; ipdb.set_trace()
             totals["input_tokens"] += out.get("input_tokens", 0)
             totals["output_tokens"] += out.get("output_tokens", 0)
             totals["tool_calls"] += out.get("tool_calls", 0)

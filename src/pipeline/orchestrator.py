@@ -36,6 +36,7 @@ CONFIGS = ROOT / "configs"
 DATA = ROOT / "data"
 PREDICTIONS_DIR = DATA / "predictions"
 RESULTS_DIR = DATA / "results"
+SEARCH_LOGS_DIR = DATA / "search_logs"
 
 
 def _load_yaml(p: Path) -> Any:
@@ -106,6 +107,10 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
 
     def _one(job):
         model_cfg, setting = job
+        path = out_dir / f"{model_cfg['id']}__{setting['id']}.json"
+        if path.exists():
+            return {"model": model_cfg["id"], "setting": setting["id"], "skipped": "Done"}
+
         sys_p, usr_p = build_prompt(fixture, setting)
         try:
             runner = build_runner(model_cfg)
@@ -121,7 +126,7 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
                 max_retries=max_retries,
                 tol=tol,
             )
-
+        print(f"[predict] {fid}: running {model_cfg['id']} on setting {setting['id']}")
         res = runner.run(fixture, setting, sys_p, usr_p, validate_fn=_validate)
         audit = _leak_audit(res.sources, fixture["lock_at_utc"])
         record = {
@@ -140,8 +145,22 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
             "validation_errors": res.validation_errors,
             "error": res.error,
         }
-        path = out_dir / f"{res.model_id}__{res.setting}.json"
+        
         path.write_text(json.dumps(record, ensure_ascii=False, indent=2))
+
+        # Persist search sources for S2 runs so they can be reviewed later
+        if res.sources and setting.get("id", "").startswith("S2"):
+            log_dir = SEARCH_LOGS_DIR / fid
+            log_dir.mkdir(parents=True, exist_ok=True)
+            log_path = log_dir / f"{model_cfg['id']}__{setting['id']}.json"
+            log_path.write_text(json.dumps({
+                "fixture_id": fid,
+                "model_id": res.model_id,
+                "setting": res.setting,
+                "submitted_at": res.submitted_at,
+                "sources": res.sources,
+            }, ensure_ascii=False, indent=2))
+
         return {
             "model": res.model_id, "setting": res.setting,
             "cost": res.cost_usd, "retries": res.repair_retries,

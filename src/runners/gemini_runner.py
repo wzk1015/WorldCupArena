@@ -17,7 +17,7 @@ from typing import Any
 
 from .openai_compat import OpenAICompatRunner
 
-_COMPAT_SUFFIX = "/openai"
+# _COMPAT_SUFFIX = "/openai"
 
 
 class GeminiRunner(OpenAICompatRunner):
@@ -26,6 +26,6 @@ class GeminiRunner(OpenAICompatRunner):
     def base_url(self) -> str:
         url = super().base_url() or "https://generativelanguage.googleapis.com/v1beta"
         url = url.rstrip("/")
-        if not url.endswith(_COMPAT_SUFFIX):
-            url += _COMPAT_SUFFIX
+        # if not url.endswith(_COMPAT_SUFFIX):
+        #     url += _COMPAT_SUFFIX
         return url

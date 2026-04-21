@@ -6,6 +6,12 @@ const fmt2   = (x) => (x == null ? "—" : (+x).toFixed(2));
 const esc    = (s) => String(s ?? "").replace(/[<>&"']/g, c =>
   ({ "<":"&lt;", ">":"&gt;", "&":"&amp;", '"':"&quot;", "'":"&#39;" }[c]));
 
+function fmtModelId(id) {
+  if (!id) return id;
+  if (id.endsWith("-search")) return id.slice(0, -7) + " (Search)";
+  return id;
+}
+
 let _allPreds = [];  // flat registry of all rendered pred cards (for modal)
 
 function modelBadge(id) {
@@ -56,7 +62,7 @@ function openReasoningModal(idx) {
   if (!p) return;
   const r = p.reasoning || {};
   document.getElementById("reasoning-modal-title").textContent =
-    `${p.model_id} (${p.setting}) — Full Reasoning`;
+    `${fmtModelId(p.model_id)} (${p.setting}) — Full Reasoning`;
   const rows = Object.entries(REASONING_LABELS)
     .filter(([k]) => r[k])
     .map(([k, label]) => `
@@ -84,7 +90,19 @@ function toggleDetails(idx) {
   if (!el) return;
   const showing = el.style.display !== "none";
   el.style.display = showing ? "none" : "block";
-  if (btn) btn.textContent = showing ? "📊 More details" : "📊 Hide details";
+  if (btn) btn.textContent = showing ? "👇 Show Full AI Analysis" : "👇 Hide details";
+}
+
+function toggleSources(idx) {
+  const el  = document.getElementById(`pred-sources-${idx}`);
+  const btn = document.getElementById(`pred-sources-btn-${idx}`);
+  if (!el) return;
+  const showing = el.style.display !== "none";
+  el.style.display = showing ? "none" : "block";
+  if (btn) {
+    const count = el.querySelectorAll("a").length;
+    btn.textContent = showing ? `🔗 Sources (${count})` : `🔗 Hide sources`;
+  }
 }
 
 function _lineupSide(lineup, formation, teamName, colorCls) {
@@ -431,7 +449,7 @@ function renderPredCard(p, f, idx) {
       <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
         <div class="flex items-center gap-2">
           <span class="text-lg">${b.emoji}</span>
-          <span class="font-bold text-sm text-white">${esc(p.model_id)}</span>
+          <span class="font-bold text-sm text-white">${esc(fmtModelId(p.model_id))}</span>
           <span class="chip chip-${(p.setting || "").toLowerCase()}">${esc(p.setting)}</span>
         </div>
         ${p.cost_usd != null ? `<span class="text-xs text-gray-600">$${(+p.cost_usd).toFixed(3)}</span>` : ""}
@@ -480,7 +498,23 @@ function renderPredCard(p, f, idx) {
       <div class="flex flex-wrap gap-2 mt-1">
         <button id="pred-details-btn-${idx}" onclick="toggleDetails(${idx})"
                 class="chip hover:bg-white/15 transition text-xs">👇 Show Full AI Analysis</button>
+        ${p.sources && p.sources.length ? `
+        <button id="pred-sources-btn-${idx}" onclick="toggleSources(${idx})"
+                class="chip hover:bg-white/15 transition text-xs">🔗 Sources (${p.sources.length})</button>` : ""}
       </div>
+
+      <!-- Expandable sources -->
+      ${p.sources && p.sources.length ? `
+      <div id="pred-sources-${idx}" style="display:none;"
+           class="mt-3 pt-3 space-y-1" style="border-top:1px solid rgba(255,255,255,.06);">
+        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🔗 Search Sources</div>
+        ${p.sources.map(s => `
+          <div class="text-xs leading-snug">
+            <a href="${esc(s.url)}" target="_blank" rel="noopener"
+               class="text-blue-400 hover:text-blue-300 underline break-all">${esc(s.title || s.url)}</a>
+            ${s.accessed_at ? `<span class="text-gray-600 ml-1">${esc(s.accessed_at.slice(0,10))}</span>` : ""}
+          </div>`).join("")}
+      </div>` : ""}
 
       <!-- Expandable details -->
       <div id="pred-details-${idx}" style="display:none;"
@@ -625,7 +659,7 @@ function renderLeaderboard(lb, view) {
               return `
                 <tr class="border-t border-white/5 hover:bg-white/5 transition">
                   <td class="py-2 px-3"><span class="rank-medal ${medal}">${i + 1}</span></td>
-                  <td class="py-2 px-3"><span class="mr-2">${b.emoji}</span><span class="font-bold text-white">${esc(r.model_id)}</span></td>
+                  <td class="py-2 px-3"><span class="mr-2">${b.emoji}</span><span class="font-bold text-white">${esc(fmtModelId(r.model_id))}</span></td>
                   <td class="py-2 px-3 text-right font-mono">
                     <div class="inline-flex items-center gap-2">
                       <div class="bar w-28"><div class="bar-fill" style="width:${Math.min(100, r.mean)}%"></div></div>

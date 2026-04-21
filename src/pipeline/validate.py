@@ -92,6 +92,26 @@ def _validate_semantics(
         if len(starting) != 11:
             errs.append(f"lineups.{side}.starting has {len(starting)} players, need 11")
 
+    # Consistency: top score_dist outcome must match top win_probs outcome
+    sd = pred.get("score_dist") or []
+    if sd and wp:
+        top_score = max(sd, key=lambda x: float(x.get("p", 0)), default=None)
+        if top_score:
+            score_str = top_score.get("score", "")
+            parts = score_str.split("-") if score_str else []
+            if len(parts) == 2:
+                try:
+                    h_goals, a_goals = int(parts[0]), int(parts[1])
+                    sd_outcome = "home" if h_goals > a_goals else "away" if a_goals > h_goals else "draw"
+                    wp_outcome = max(("home", "draw", "away"), key=lambda k: float(wp.get(k, 0)))
+                    if sd_outcome != wp_outcome:
+                        errs.append(
+                            f"consistency: top score_dist entry '{score_str}' implies '{sd_outcome}' "
+                            f"but win_probs favours '{wp_outcome}' — these must agree"
+                        )
+                except (ValueError, TypeError):
+                    pass
+
     stats = pred.get("stats") or {}
     required_keys = {"possession","shots","shots_on_target","corners","pass_accuracy","fouls","saves","defensive_actions"}
     missing = required_keys - set(stats.keys())
@@ -107,21 +127,43 @@ def _validate_semantics(
 
 def normalize_probabilities(pred: dict[str, Any], tol: float = 0.01) -> dict[str, Any]:
     """Post-hoc normalize distributions that are only slightly off, so minor
-    rounding doesn't waste a retry. Returns a new dict; does not mutate input."""
+    rounding doesn't waste a retry. Returns a new dict; does not mutate input.
+    Also rounds all probability values to 3 decimal places."""
     out = json.loads(json.dumps(pred))  # deep copy via JSON
     wp = out.get("win_probs") or {}
     s = sum(float(wp.get(k, 0)) for k in ("home","draw","away"))
     if 0 < s and abs(s - 1.0) <= tol:
         for k in ("home","draw","away"):
-            wp[k] = float(wp.get(k, 0)) / s
+            wp[k] = round(float(wp.get(k, 0)) / s, 3)
+        out["win_probs"] = wp
+    else:
+        for k in ("home","draw","away"):
+            if k in wp:
+                wp[k] = round(float(wp[k]), 3)
         out["win_probs"] = wp
 
     sd = out.get("score_dist") or []
     p_sum = sum(float(x.get("p", 0)) for x in sd)
     if 0 < p_sum and abs(p_sum - 1.0) <= tol:
         for x in sd:
-            x["p"] = float(x.get("p", 0)) / p_sum
+            x["p"] = round(float(x.get("p", 0)) / p_sum, 3)
         out["score_dist"] = sd
+    else:
+        for x in sd:
+            if "p" in x:
+                x["p"] = round(float(x["p"]), 3)
+        out["score_dist"] = sd
+
+    for scorer in out.get("scorers") or []:
+        if "p" in scorer:
+            scorer["p"] = round(float(scorer["p"]), 3)
+    for assister in out.get("assisters") or []:
+        if "p" in assister:
+            assister["p"] = round(float(assister["p"]), 3)
+    for motm in out.get("motm_probs") or []:
+        if "p" in motm:
+            motm["p"] = round(float(motm["p"]), 3)
+
     return out
 
 

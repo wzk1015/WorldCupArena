@@ -43,6 +43,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 SNAPSHOTS = ROOT / "data" / "snapshots"
+LIVE_DIR  = ROOT / "data" / "live"
 FIXTURES_YAML = ROOT / "configs" / "fixtures.yaml"
 
 
@@ -143,8 +144,13 @@ def _phase_lock_predict(fx: dict, fx_dir: Path) -> None:
 
 
 def _phase_live_update(fx: dict, fx_dir: Path) -> None:
-    """Fetch live match state and overwrite live.json (T+0h → T+3h)."""
-    live_path = fx_dir / "live.json"
+    """Fetch live match state and overwrite data/live/<wca_id>.json (T+0h → T+3h).
+
+    Kept outside the snapshot dir so it never interferes with fixture.json /
+    truth.json and can be safely deleted without affecting grading.
+    """
+    LIVE_DIR.mkdir(parents=True, exist_ok=True)
+    live_path = LIVE_DIR / f"{fx['wca_id']}.json"
     _run([sys.executable, "-m", "src.ingest.api_football",
           "--fixture-id", str(fx["provider_id"]),
           "--wca-id", fx["wca_id"],
