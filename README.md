@@ -67,14 +67,17 @@ src/
   ingest/      API-Football, transfermarkt, odds
   runners/     one file per provider (openai_compat, anthropic, ...)
   graders/     metrics + per-match grader
-  pipeline/    orchestrator, prompt_build, lock/audit
+  pipeline/    orchestrator, prompt_build, lock/audit, scheduler
   leaderboard/ aggregate → static site
 data/
   snapshots/<fixture_id>/fixture.json    frozen pre-match state
   snapshots/<fixture_id>/truth.json      filled in post-match
   predictions/<fixture_id>/*.json        raw per-model outputs
   results/<fixture_id>/*.json            scored outputs
-.github/workflows/   predict / grade / leaderboard-build
+  live/<fixture_id>.json                 real-time score during match (T+0h → T+3h)
+  search_logs/<fixture_id>/*.json        S2 search sources for review
+  archive/                               fixtures removed from leaderboard
+.github/workflows/   automate (cron every 10 min) + pages deploy
 docs/
   cost_estimate.md   per-fixture and per-phase $$ estimates
   tech_report.md     methodology + results
@@ -85,14 +88,15 @@ docs/
 ## Lifecycle of a fixture
 
 ```
- T-48h   ingest.py          pull squads, form, news, odds  →  snapshots/<id>/fixture.json
- T-24h   lock.py + predict  snapshot_hash frozen; run every (model, setting)  →  predictions/<id>/*.json
- T+3h    ingest/result      pull goals, lineups, stats     →  snapshots/<id>/truth.json
- T+24h   orchestrator grade → results/<id>/*.json
-         leaderboard.build  → docs/leaderboard/
+ T-72h → T-24h   ingest       pull fixture.json from API-Football
+ T-48h → T-24h   populate     fill context_pack (squads, form, news, stats)
+ T-24h → T+0h    lock_predict lock snapshot_hash; run every (model × setting)  →  predictions/<id>/*.json
+ T+0h  → T+3h    live_update  fetch live score every 10 min  →  data/live/<id>.json
+                              if status = "Match Finished": trigger truth_grade immediately
+ T+3h  → T+48h   truth_grade  fetch truth + grade + rebuild leaderboard  →  results/<id>/*.json
 ```
 
-All API keys live in `.env` locally, or GitHub Actions secrets in CI.
+The entire lifecycle is driven by a single GitHub Actions cron (`automate.yml`, every 10 minutes). Each phase is idempotent — repeated ticks are no-ops, missed ticks catch up automatically.
 
 ## Quickstart
 
@@ -121,7 +125,8 @@ Every agent/search response must include `sources[].accessed_at`. Any source wit
 
 Every prediction is **schema-validated + semantically checked** at submission time:
 - JSON Schema conformance (required fields, enums, patterns).
-- `win_probs` and `score_dist` probability sums normalized to 1 (within 1e-2).
+- `win_probs` and `score_dist` probability sums normalized to 1 (within 1e-2), all floats rounded to 3 decimal places.
+- The outcome implied by the highest-`p` entry in `score_dist` must match the highest-probability key in `win_probs` (e.g. a home-win `win_probs` paired with a draw top scoreline is rejected).
 - `lineups.*.starting` has exactly 11 players.
 - `stats` contains all 8 required keys with `{home, away}` pairs.
 - `reasoning.overall` non-empty and ≥80 characters (reasoning comes *first* in the JSON, before numeric fields).
@@ -135,7 +140,10 @@ If validation fails, the orchestrator sends a targeted repair prompt to the same
 - [x] Gemini runner, MiroThinker runner, Perplexity/OpenAI DR runners
 - [x] Ingest: squads + news + odds
 - [x] Phase 0 dry run on a Premier League fixture
-- [ ] Phase 1: UCL SF1 leg 1 (week of 2026-04-27)
+- [x] Automated cron pipeline (GitHub Actions, every 10 min)
+- [x] Live score display during matches
+- [x] S2 search log archival
+- [ ] Phase 1: UCL SF1 (Bayern vs PSG, 2026-04-29 / 2026-05-06)
 - [ ] Phase 2: Pre-tournament WC prediction (by 2026-06-10)
 
 Contributions welcome — especially new model runners and ingest adapters. See [docs/integration.md](docs/integration.md) for model-maintainer onboarding.

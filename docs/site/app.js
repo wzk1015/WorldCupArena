@@ -421,7 +421,7 @@ function _renderDetails(p, f) {
             <th class="font-normal text-emerald-400/70 text-center pb-1 w-10">${esc(hName)}</th>
             <th style="width:6rem;"></th>
             <th class="font-normal text-blue-400/70 text-center pb-1 w-10">${esc(aName)}</th>
-            ${trStats ? `<th class="font-normal text-amber-400/70 text-center pb-1 pl-4 w-10">Act·H</th><th style="width:4rem;"></th><th class="font-normal text-amber-400/70 text-center pb-1 w-10">Act·A</th>` : ""}
+            ${trStats ? `<th colspan="3" class="font-normal text-amber-400/70 text-center pb-1 pl-4">Actual</th>` : ""}
           </tr></thead>
           <tbody>${statRows}</tbody>
         </table>

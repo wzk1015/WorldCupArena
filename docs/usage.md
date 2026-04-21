@@ -43,22 +43,33 @@ Step-by-step:
 
 ---
 
-## 2. Fastest path: run the bundled dry-run
+## 2. Fastest path: run the scheduler locally
 
-Validates the entire pipeline end-to-end on a real fixture whose truth is already known (so leakage doesn't matter):
+The easiest way to validate the full pipeline is to run the same scheduler the cron job uses:
 
 ```bash
-# cheap: only hits DeepSeek-R1 (~$0.05)
-bash scripts/dryrun_bayern_madrid.sh
+# Show which phases are currently due for each fixture
+python -m src.pipeline.scheduler show
 
-# full flagship roster (~$10 — uses the 4 closed + 3 open + 4 search + 5 agents)
-DRYRUN_MODELS=all bash scripts/dryrun_bayern_madrid.sh
+# Run all due phases (idempotent — safe to run repeatedly)
+python -m src.pipeline.scheduler tick
 
-# pick a subset
-DRYRUN_MODELS=gpt-5.4,claude-sonnet-4-6,mirothinker-h1 bash scripts/dryrun_bayern_madrid.sh
+# Run a specific phase only
+python -m src.pipeline.scheduler tick --phase lock_predict
 ```
 
-The script: locks → predicts → grades. Look at `data/predictions/bayern_madrid_ucl_qf_l2/*.json` to see what the models produced, and `data/results/bayern_madrid_ucl_qf_l2/*.json` for scored outputs.
+After a tick, inspect outputs:
+- `data/predictions/<fixture_id>/<model>__<setting>.json` — raw model output
+- `data/results/<fixture_id>/<model>__<setting>.json` — scored output (after grading)
+- `data/search_logs/<fixture_id>/<model>__<setting>.json` — S2 search sources
+
+View the results in a browser:
+
+```bash
+python3 -m src.leaderboard.build_site
+python3 -m http.server --directory docs/site 8000
+# open http://localhost:8000
+```
 
 ---
 
@@ -80,7 +91,7 @@ python -m src.pipeline.orchestrator populate \
     --fixture data/snapshots/pl_ars_avl_2026_04_18/fixture_test.json --recent-n 10
 ```
 
-The ingestor pulls squads, recent form, injury news, and bookmaker closing odds into `context_pack`. If an adapter isn't ready yet (e.g. for a minor league), hand-author the snapshot using [data/snapshots/bayern_madrid_ucl_qf_l2/fixture.json](../data/snapshots/bayern_madrid_ucl_qf_l2/fixture.json) as a template — only the `fixture_id`, `kickoff_utc`, `lock_at_utc`, `home`, `away`, and `context_pack` fields are required.
+The ingestor pulls squads, recent form, injury news, and bookmaker closing odds into `context_pack`. If an adapter isn't ready yet (e.g. for a minor league), hand-author the snapshot — only the `fixture_id`, `kickoff_utc`, `lock_at_utc`, `home`, `away`, and `context_pack` fields are required.
 
 ### 3.2 Lock at T-24h
 
@@ -99,7 +110,9 @@ python -m src.pipeline.orchestrator predict \
     --parallel 8
 ```
 
-Runs every (model × setting) pair configured in [configs/models.yaml](../configs/models.yaml) × [configs/settings.yaml](../configs/settings.yaml). Each prediction is schema- and semantics-validated; malformed outputs trigger up to 2 repair retries. Per-call cost, token usage, and validation report are stored with the prediction.
+Runs every (model × setting) pair configured in [configs/models.yaml](../configs/models.yaml) × [configs/settings.yaml](../configs/settings.yaml). Each prediction is schema- and semantics-validated (including win_probs ↔ score_dist consistency); malformed outputs trigger up to 2 repair retries. If a prediction file already exists but contains an error, it is automatically re-run. Per-call cost, token usage, and validation report are stored with the prediction.
+
+S2 model search sources are also saved to `data/search_logs/<fixture_id>/` for post-run review.
 
 ### 3.4 Grade (T+3h to T+24h after kickoff)
 
@@ -112,13 +125,13 @@ python -m src.ingest.api_football --fixture-id $FIXTURE_ID \
 python -m src.pipeline.orchestrator grade \
     --fixture-dir data/snapshots/pl_ars_avl_2026_04_18
 
-# Update the website
-
+# Rebuild and view the website locally
 python3 -m src.leaderboard.build_site
-
 python3 -m http.server --directory docs/site 8000
-# Then open http://localhost:8000 in your browser
+# open http://localhost:8000
 ```
+
+> In automated runs, grading is triggered immediately when the live score status becomes "Match Finished" (during the T+0h → T+3h `live_update` phase), without waiting for the T+3h window.
 
 ---
 
@@ -157,6 +170,9 @@ All of these are already wired up; they are just config flags.
 | `data/predictions/<fixture>/<model>__<setting>.json` → `leakage_audit` | any source with `published_at > lock_at_utc` flagged    |
 | `data/results/<fixture>/<model>__<setting>.json` → `composite` | final 0-100 score                                       |
 | `data/results/<fixture>/<model>__<setting>.json` → `layers`   | T1-T5 sub-scores                                        |
+| `data/search_logs/<fixture>/<model>__<setting>.json`          | S2 search sources (URLs + titles + accessed_at)         |
+| `data/live/<fixture>.json`                                    | real-time score snapshot during match (T+0h → T+3h)     |
+| `data/archive/`                                               | fixtures excluded from leaderboard (moved here manually) |
 
 ---
 
