@@ -1,5 +1,7 @@
 # WorldCupArena — Cost Estimate
 
+## This document is deprecated
+
 All prices are **approximations as of 2026-04** and should be verified against each vendor's current page before a large run. Figures assume USD.
 
 **Last revised:** 2026-04-18 — setting matrix collapsed from 4 (S0/S1/S2/S3) to 2 (S1 = full context injected, S2 = tools on with self-search guidance). Flagship-only roster retained.

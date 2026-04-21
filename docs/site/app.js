@@ -14,6 +14,11 @@ function fmtModelId(id) {
 
 let _allPreds = [];  // flat registry of all rendered pred cards (for modal)
 
+const SETTING_TIPS = {
+  S1: "S1 · LLM with full injected context pack (official squads, recent form, ~20 news headlines, stats). No tools.",
+  S2: "S2 · Tool-using agent, self-directed search. No context pre-injected — the model searches for everything itself.",
+};
+
 function modelBadge(id) {
   const key = (id || "").toLowerCase();
   if (key.includes("gpt") || key.includes("o1") || key.includes("o3") || key.includes("o4"))
@@ -90,7 +95,7 @@ function toggleDetails(idx) {
   if (!el) return;
   const showing = el.style.display !== "none";
   el.style.display = showing ? "none" : "block";
-  if (btn) btn.textContent = showing ? "👇 Show Full AI Analysis" : "👇 Hide details";
+  if (btn) btn.textContent = showing ? "👇 Show Full AI Analysis" : "👇 Hide Details";
 }
 
 function toggleSources(idx) {
@@ -450,7 +455,8 @@ function renderPredCard(p, f, idx) {
         <div class="flex items-center gap-2">
           <span class="text-lg">${b.emoji}</span>
           <span class="font-bold text-sm text-white">${esc(fmtModelId(p.model_id))}</span>
-          <span class="chip chip-${(p.setting || "").toLowerCase()}">${esc(p.setting)}</span>
+          <span class="chip chip-${(p.setting || "").toLowerCase()}"
+                data-tip="${esc(SETTING_TIPS[p.setting] || p.setting)}">${esc(p.setting)}</span>
         </div>
         ${p.cost_usd != null ? `<span class="text-xs text-gray-600">$${(+p.cost_usd).toFixed(3)}</span>` : ""}
       </div>
@@ -461,13 +467,30 @@ function renderPredCard(p, f, idx) {
         <div class="flex items-center gap-6">
           <div>
             <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Predicted winner</div>
-            <div class="text-lg font-black text-white leading-tight">${esc(predWinner)}</div>
+            ${(() => {
+              const truthOutcome = f.truth
+                ? (f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : "Draw")
+                : null;
+              const winnerCorrect = truthOutcome && predWinner && truthOutcome === predWinner;
+              const winnerColor = truthOutcome
+                ? (winnerCorrect ? "color:#4ade80;" : "color:#f87171;")
+                : "color:#fff;";
+              return `<div class="text-lg font-black leading-tight" style="${winnerColor}">${esc(predWinner)}</div>`;
+            })()}
             <div class="text-xs font-mono text-gray-400">${fmtPct(predWinnerProb)}</div>
           </div>
           <div style="width:1px;height:2.5rem;background:rgba(255,255,255,.1);"></div>
           <div>
             <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Top score</div>
-            <div class="text-2xl font-black text-white leading-tight font-mono">${esc(top3[0] ? top3[0].score : "—")}</div>
+            ${(() => {
+              const topScore = top3[0] ? top3[0].score : null;
+              const actualScore = f.truth ? f.truth.score : null;
+              const scoreCorrect = topScore && actualScore && topScore === actualScore;
+              const scoreColor = actualScore
+                ? (scoreCorrect ? "color:#4ade80;" : "color:#f87171;")
+                : "color:#fff;";
+              return `<div class="text-2xl font-black leading-tight font-mono" style="${scoreColor}">${esc(topScore || "—")}</div>`;
+            })()}
             <div class="text-xs font-mono text-gray-400">${fmtPct(top3[0] ? top3[0].p : null)}</div>
           </div>
           ${f.truth ? `<div class="ml-auto">
@@ -478,21 +501,8 @@ function renderPredCard(p, f, idx) {
             )}</div>
           </div>` : ""}
         </div>
-        <div class="text-xs text-gray-400 mt-3">
-          Win Probs:
-          <span class="font-semibold text-gray-200">${hName}</span> ${fmtPct(wp.home)} |
-          <span class="font-semibold text-gray-200">Draw</span> ${fmtPct(wp.draw)} |
-          <span class="font-semibold text-gray-200">${aName}</span> ${fmtPct(wp.away)}
-        </div>
       </div>
       ` : ""}
-
-      <!-- Reasoning preview (2 lines) -->
-      ${reasoning.overall ? `
-        <div class="text-xs text-gray-300 leading-relaxed mb-3 italic"
-             style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;border-left: 2px solid rgba(255,255,255,.15); padding-left: .75rem;">
-          ${esc(reasoning.overall)}
-        </div>` : ""}
 
       <!-- Buttons -->
       <div class="flex flex-wrap gap-2 mt-1">
@@ -505,23 +515,72 @@ function renderPredCard(p, f, idx) {
 
       <!-- Expandable sources -->
       ${p.sources && p.sources.length ? `
-      <div id="pred-sources-${idx}" style="display:none;"
-           class="mt-3 pt-3 space-y-1" style="border-top:1px solid rgba(255,255,255,.06);">
+      <div id="pred-sources-${idx}"
+           style="display:none;border-top:1px solid rgba(255,255,255,.06);"
+           class="mt-3 pt-3 space-y-1">
         <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🔗 Search Sources</div>
-        ${p.sources.map(s => `
-          <div class="text-xs leading-snug">
-            <a href="${esc(s.url)}" target="_blank" rel="noopener"
-               class="text-blue-400 hover:text-blue-300 underline break-all">${esc(s.title || s.url)}</a>
-            ${s.accessed_at ? `<span class="text-gray-600 ml-1">${esc(s.accessed_at.slice(0,10))}</span>` : ""}
-          </div>`).join("")}
+        ${p.sources.map(s => {
+          const title = esc(s.title || s.url || "");
+          const url   = esc(s.url || "");
+          const date  = s.accessed_at ? esc(s.accessed_at.slice(0, 10)) : "";
+          return `<div class="text-xs leading-snug">
+            <a href="${url}" target="_blank" rel="noopener"
+               class="text-blue-400 hover:text-blue-300 underline break-all">${title}</a>
+            ${date ? `<span class="text-gray-600 ml-1">${date}</span>` : ""}
+          </div>`;
+        }).join("")}
       </div>` : ""}
 
       <!-- Expandable details -->
-      <div id="pred-details-${idx}" style="display:none;"
-           class="mt-4 pt-4 space-y-5" style="border-top:1px solid rgba(255,255,255,.06);">
+      <div id="pred-details-${idx}"
+           style="display:none;border-top:1px solid rgba(255,255,255,.06);"
+           class="mt-4 pt-4 space-y-5">
+
+        <!-- Win probabilities (full) -->
+        ${wp.home != null ? `
+        <div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">📊 Win Probabilities</div>
+          <div class="flex gap-3">
+            ${[["home", hName, "text-emerald-400", "rgba(34,197,94,.25)"],
+               ["draw", "Draw",  "text-gray-300",   "rgba(255,255,255,.15)"],
+               ["away", aName,  "text-blue-400",   "rgba(59,130,246,.25)"]
+              ].map(([k, label, cls, bg]) => `
+              <div class="flex-1 rounded-lg px-3 py-2 text-center" style="background:${bg};">
+                <div class="text-[10px] text-gray-400 uppercase tracking-wider">${esc(label)}</div>
+                <div class="text-lg font-black font-mono ${cls}">${fmtPct(wp[k])}</div>
+              </div>`).join("")}
+          </div>
+        </div>` : ""}
+
+        <!-- Score distribution (full) -->
+        ${top3.length ? (() => {
+          const allScores = (p.score_dist || []).slice(0, 15);
+          const maxP = Math.max(...allScores.map(s => s.p || 0));
+          return `
+        <div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🎯 Score Distribution</div>
+          <div class="space-y-1">
+            ${allScores.map(s => {
+              const barW = maxP > 0 ? Math.round((s.p / maxP) * 100) : 0;
+              const sc   = (s.score || "").split("-");
+              const hg   = parseInt(sc[0] ?? "-1");
+              const ag   = parseInt(sc[1] ?? "-1");
+              const outcomeCls = hg > ag ? "text-emerald-400" : ag > hg ? "text-blue-400" : "text-gray-300";
+              return `<div class="flex items-center gap-2">
+                <span class="font-mono font-bold text-sm w-10 text-right ${outcomeCls}">${esc(s.score)}</span>
+                <div class="flex-1 h-2 rounded-full overflow-hidden" style="background:rgba(255,255,255,.07);">
+                  <div class="h-full rounded-full" style="width:${barW}%;background:rgba(255,255,255,.3);"></div>
+                </div>
+                <span class="font-mono text-xs text-gray-400 w-10">${fmtPct(s.p)}</span>
+              </div>`;
+            }).join("")}
+          </div>
+        </div>`;
+        })() : ""}
+
         ${hasReason ? `
           <div>
-            <h4 class="text-xs text-gray-400 uppercase tracking-wider mb-2">📖 Full Reasoning</h4>
+            <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">📖 Full Reasoning</div>
             <div class="text-sm text-gray-200 leading-relaxed whitespace-pre-wrap">${esc(reasoning.overall)}</div>
           </div>
         ` : ""}
@@ -645,7 +704,7 @@ function renderLeaderboard(lb, view) {
               <th class="text-left py-2 px-3 w-12">#</th>
               <th class="text-left py-2 px-3">Model</th>
               <th class="text-right py-2 px-3">Composite</th>
-              <th class="text-right py-2 px-3">Win %</th>
+              <th class="text-right py-2 px-3">Result Acc.</th>
               <th class="text-right py-2 px-3">#Games</th>
             </tr>
           </thead>
@@ -656,10 +715,21 @@ function renderLeaderboard(lb, view) {
               const winAcc = r.winner_acc != null
                 ? `${(r.winner_acc * 100).toFixed(1)}% (${r.winner_correct}/${r.winner_total})`
                 : "—";
+              const settings = Object.keys((lb.by_model_setting || {})[r.model_id] || {}).sort();
+              const settingBadges = settings.map(s =>
+                `<span class="chip chip-${s.toLowerCase()}"
+                       data-tip="${esc(SETTING_TIPS[s] || s)}">${esc(s)}</span>`
+              ).join(" ");
               return `
                 <tr class="border-t border-white/5 hover:bg-white/5 transition">
                   <td class="py-2 px-3"><span class="rank-medal ${medal}">${i + 1}</span></td>
-                  <td class="py-2 px-3"><span class="mr-2">${b.emoji}</span><span class="font-bold text-white">${esc(fmtModelId(r.model_id))}</span></td>
+                  <td class="py-2 px-3">
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <span class="mr-1">${b.emoji}</span>
+                      <span class="font-bold text-white">${esc(fmtModelId(r.model_id))}</span>
+                      ${settingBadges}
+                    </div>
+                  </td>
                   <td class="py-2 px-3 text-right font-mono">
                     <div class="inline-flex items-center gap-2">
                       <div class="bar w-28"><div class="bar-fill" style="width:${Math.min(100, r.mean)}%"></div></div>

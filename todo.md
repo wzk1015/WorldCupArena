@@ -74,3 +74,33 @@ Setting只保留两个：
 
 我希望能把search到的结果链接显示到网页里，具体来说是在show full results旁白显示一个类似的按钮，展示search logs里的链接和标题
 另外现在网页中我不想显示bayern madrid这场比赛了，能不能把相关文件放到一个不会触发网页显示的文件夹里
+
+1. 网页上模型名旁白显示的S1和S2，鼠标放上去时显示悬浮的说明，大概意思是S1的话是LLM with the full injected context pack of xxx，S2是tool-using agent, self-search
+2. 有的模型预测结果的展开按钮是“more details”，有的是"show full analysis"，这是为什么，请统一改为后者
+3. 所有的显示搜索来源按钮目前都没显示出来
+4. 简要告诉我如何在本地部署网页查看效果
+
+1. 现在鼠标放在S1和S2时并没有显示出说明，而是鼠标变成了问号形状。我希望鼠标不要变，但是显示说明
+2. 现在brighton chelsea这场比赛被放到了history里，但却还没有获取比赛结果，这是为什么？如果正在进行的比赛会显示在哪里？
+3. 检查一下为什么claude-opus-4-7-thinking-search对dfb pokal bayern这场比赛的预测没有显示在网页里？
+
+
+1. 我希望鼠标悬浮说明能在悬浮时经过极端的间隔就立刻显示，现在的延迟太长了
+2. 我希望正在进行的比赛能显示在incoming matches里，通过data/live里获取到的正在进行的比赛的fixture可以读取到实时比分，并显示在界面中，而如果fixture中"status"是"Match Finished"（请参考data/snapshots/benfica_test/truth.json），就放到history里，并且比赛比分显示到网页里、启动评分程序
+3. 
+
+本地运行网页
+
+两步，在项目根目录下运行：
+
+
+# 第一步：生成 data.json（每次想看最新数据时运行）
+python3 -m src.leaderboard.build_site
+
+# 第二步：启动本地 HTTP 服务器
+python3 -m http.server --directory docs/site 8000
+然后浏览器打开 http://localhost:8000 即可。
+
+每次修改了 app.js 或 index.html 后直接刷新浏览器即可，不需要重启服务器。每次想看最新预测数据时重新跑一次 build_site。
+
+

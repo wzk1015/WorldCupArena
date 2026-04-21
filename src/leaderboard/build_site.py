@@ -73,6 +73,8 @@ def build_leaderboard() -> dict:
 
     for fid_dir in sorted(RESULTS.glob("*")):
         wca_id = fid_dir.name
+        if "_test" in wca_id.lower() or wca_id.lower().startswith("test_"):
+            continue
         if wca_id not in _truth_cache:
             _truth_cache[wca_id] = _load_truth_data(wca_id)
         truth_result = (_truth_cache[wca_id] or {}).get("result")
@@ -204,7 +206,16 @@ def _collect_predictions(wca_id: str) -> list[dict]:
 
 
 def build_incoming_matches() -> list[dict]:
-    """Return all enabled fixtures within the next 3 days, sorted by kickoff."""
+    """Return fixtures to display in the Incoming Matches section.
+
+    Includes:
+    - Future fixtures within the next 3 days (not yet kicked off)
+    - Fixtures that have kicked off but are STILL LIVE according to data/live/
+      (status != "Match Finished")
+
+    Fixtures whose live status is "Match Finished" are excluded here and handled
+    by build_history() instead.
+    """
     from datetime import timedelta
     now = datetime.now(timezone.utc)
     cutoff = now + timedelta(days=3)
@@ -212,14 +223,24 @@ def build_incoming_matches() -> list[dict]:
     results = []
     for fx in sorted(registry, key=lambda f: _parse_iso(f["kickoff_utc"])):
         kick = _parse_iso(fx["kickoff_utc"])
-        if kick <= now or kick > cutoff:
-            continue
         if "_test" in fx["wca_id"].lower():
             continue
         wca_id = fx["wca_id"]
+
+        is_future = kick > now and kick <= cutoff
+        live = _load_live_state(wca_id)
+        is_live = live is not None and live.get("status") != "Match Finished"
+        is_finished_live = live is not None and live.get("status") == "Match Finished"
+
+        # Skip far-future, and anything that's already finished (goes to history)
+        if not is_future and not is_live:
+            continue
+        # If the live file says finished, skip here (history picks it up)
+        if is_finished_live:
+            continue
+
         hdr = _load_fixture_header(wca_id)
         if not hdr:
-            # Fall back to yaml metadata when snapshot not yet ingested
             kick_str = kick.isoformat() if hasattr(kick, "isoformat") else str(fx["kickoff_utc"])
             hdr = {
                 "wca_id":      wca_id,
@@ -232,7 +253,6 @@ def build_incoming_matches() -> list[dict]:
                 "competition": None,
             }
         preds = _collect_predictions(wca_id)
-        live  = _load_live_state(wca_id)
         results.append({"fixture": hdr, "predictions": preds, "live": live})
     return results
 
@@ -386,6 +406,18 @@ def build_history() -> list[dict]:
     for fx in _load_fixtures():
         if _parse_iso(fx["kickoff_utc"]) <= now:
             wca_ids.add(fx["wca_id"])
+    # Also include fixtures whose live.json says "Match Finished" even if
+    # truth.json hasn't arrived yet (grading will run on the next tick).
+    if LIVE_DIR.exists():
+        for lf in LIVE_DIR.glob("*.json"):
+            try:
+                raw = json.loads(lf.read_text())
+                r0 = raw["response"][0]
+                status = (r0["fixture"]["status"] or {}).get("long")
+                if status == "Match Finished":
+                    wca_ids.add(lf.stem)
+            except Exception:
+                pass
 
     rows = []
     for wca_id in wca_ids:
@@ -393,17 +425,27 @@ def build_history() -> list[dict]:
             continue
         hdr = _load_fixture_header(wca_id) or {"wca_id": wca_id}
 
-        # Only include past fixtures
+        # Exclude fixtures still live (they show in incoming_matches instead)
+        live = _load_live_state(wca_id)
+        if live and live.get("status") and live.get("status") != "Match Finished":
+            continue
+
+        # Only include past fixtures (or live-finished ones detected above)
         kick = hdr.get("kickoff_utc")
         if kick and _parse_iso(kick) > now:
             continue
 
         truth = _load_truth_data(wca_id)
-        live  = _load_live_state(wca_id)
 
+        # If truth.json not yet available, try to build score from live.json
         result = None
         if truth:
             result = truth.get("score")
+        elif live and live.get("score"):
+            sc = live["score"]
+            h, a = sc.get("home"), sc.get("away")
+            if h is not None and a is not None:
+                result = f"{h}-{a}"
 
         # Composite scores from results dir (for leaderboard ordering within card)
         composites: dict[str, float] = {}

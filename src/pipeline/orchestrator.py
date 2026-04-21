@@ -3,7 +3,6 @@
 Usage:
     python -m src.pipeline.orchestrator predict  --fixture data/snapshots/ucl_sf1_l1/fixture.json
     python -m src.pipeline.orchestrator grade    --fixture-dir data/snapshots/ucl_sf1_l1
-    python -m src.pipeline.orchestrator leaderboard
 
 Design:
     1. Load fixture snapshot (must already be locked; snapshot_hash required).
@@ -109,7 +108,12 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
         model_cfg, setting = job
         path = out_dir / f"{model_cfg['id']}__{setting['id']}.json"
         if path.exists():
-            return {"model": model_cfg["id"], "setting": setting["id"], "skipped": "Done"}
+            with open(path) as f:
+                prev_ret = json.load(f)
+                if prev_ret["error"] or prev_ret["validation_errors"] or (not prev_ret["prediction"]):
+                    print(f"[predict] {fid}: result exists but has errors, rerunning: {path}")
+                else:
+                    return {"model": model_cfg["id"], "setting": setting["id"], "skipped": "Done"}
 
         sys_p, usr_p = build_prompt(fixture, setting)
         try:
@@ -194,23 +198,23 @@ def cmd_grade(fixture_dir: Path) -> None:
     print(f"[grade] {fid}: done")
 
 
-def cmd_leaderboard() -> None:
-    # Aggregate all results/*/ files into a single table.
-    rows: list[dict[str, Any]] = []
-    for fid_dir in RESULTS_DIR.glob("*"):
-        for f in fid_dir.glob("*.json"):
-            r = json.loads(f.read_text())
-            rows.append({
-                "fixture_id": fid_dir.name,
-                "model_id": r["model_id"],
-                "setting": r["setting"],
-                "composite": r.get("composite", 0.0),
-                **{f"layer_{k}": v for k, v in r.get("layers", {}).items()},
-            })
-    out = ROOT / "docs" / "leaderboard" / "raw.json"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(rows, ensure_ascii=False, indent=2))
-    print(f"[leaderboard] wrote {len(rows)} rows -> {out}")
+# def cmd_leaderboard() -> None:
+#     # Aggregate all results/*/ files into a single table.
+#     rows: list[dict[str, Any]] = []
+#     for fid_dir in RESULTS_DIR.glob("*"):
+#         for f in fid_dir.glob("*.json"):
+#             r = json.loads(f.read_text())
+#             rows.append({
+#                 "fixture_id": fid_dir.name,
+#                 "model_id": r["model_id"],
+#                 "setting": r["setting"],
+#                 "composite": r.get("composite", 0.0),
+#                 **{f"layer_{k}": v for k, v in r.get("layers", {}).items()},
+#             })
+#     out = ROOT / "docs" / "leaderboard" / "raw.json"
+#     out.parent.mkdir(parents=True, exist_ok=True)
+#     out.write_text(json.dumps(rows, ensure_ascii=False, indent=2))
+#     print(f"[leaderboard] wrote {len(rows)} rows -> {out}")
 
 
 def cmd_populate(
@@ -259,7 +263,7 @@ def main() -> None:
 
     p = sub.add_parser("predict"); p.add_argument("--fixture", type=Path, required=True); p.add_argument("--parallel", type=int, default=8)
     p = sub.add_parser("grade");   p.add_argument("--fixture-dir", type=Path, required=True)
-    sub.add_parser("leaderboard")
+    # sub.add_parser("leaderboard")
     p = sub.add_parser("lock");     p.add_argument("--fixture", type=Path, required=True)
     p = sub.add_parser("populate")
     p.add_argument("--fixture", type=Path, required=True)
@@ -273,8 +277,8 @@ def main() -> None:
         cmd_predict(args.fixture, args.parallel)
     elif args.cmd == "grade":
         cmd_grade(args.fixture_dir)
-    elif args.cmd == "leaderboard":
-        cmd_leaderboard()
+    # elif args.cmd == "leaderboard":
+    #     cmd_leaderboard()
     elif args.cmd == "lock":
         lock_fixture(args.fixture)
     elif args.cmd == "populate":

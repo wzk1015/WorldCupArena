@@ -28,7 +28,7 @@ If you route through a 中转/proxy endpoint, set `OPENA_BASE_URL` or other base
 Every fixture goes through exactly these four steps:
 
 ```
-lock  →  predict  →  (kickoff + real match happens)  →  grade  →  leaderboard
+lock  →  predict  →  (kickoff + real match happens)  →  grade
 ```
 
 Step-by-step:
@@ -38,7 +38,6 @@ Step-by-step:
 | **lock**      | `python -m src.pipeline.orchestrator lock --fixture <fixture.json>`           | `snapshot_hash` written into `fixture.json`         |
 | **predict**   | `python -m src.pipeline.orchestrator predict --fixture <fixture.json>`        | one JSON per (model, setting) in `data/predictions/<id>/` |
 | **grade**     | `python -m src.pipeline.orchestrator grade --fixture-dir <snapshot_dir>`      | scored JSON in `data/results/<id>/`                 |
-| **leaderboard** | `python -m src.pipeline.orchestrator leaderboard`                            | `docs/leaderboard/raw.json` (source for the static site) |
 
 > `grade` needs `truth.json` next to `fixture.json` in the snapshot directory. Fetch it automatically via `src.ingest.api_football --fixture-id <ID> --truth` or hand-edit for dry-runs.
 
@@ -59,7 +58,7 @@ DRYRUN_MODELS=all bash scripts/dryrun_bayern_madrid.sh
 DRYRUN_MODELS=gpt-5.4,claude-sonnet-4-6,mirothinker-h1 bash scripts/dryrun_bayern_madrid.sh
 ```
 
-The script: locks → predicts → grades → rebuilds leaderboard. Look at `data/predictions/bayern_madrid_ucl_qf_l2/*.json` to see what the models produced, and `data/results/bayern_madrid_ucl_qf_l2/*.json` for scored outputs.
+The script: locks → predicts → grades. Look at `data/predictions/bayern_madrid_ucl_qf_l2/*.json` to see what the models produced, and `data/results/bayern_madrid_ucl_qf_l2/*.json` for scored outputs.
 
 ---
 
@@ -113,7 +112,12 @@ python -m src.ingest.api_football --fixture-id $FIXTURE_ID \
 python -m src.pipeline.orchestrator grade \
     --fixture-dir data/snapshots/pl_ars_avl_2026_04_18
 
-python -m src.pipeline.orchestrator leaderboard
+# Update the website
+
+python3 -m src.leaderboard.build_site
+
+python3 -m http.server --directory docs/site 8000
+# Then open http://localhost:8000 in your browser
 ```
 
 ---
@@ -153,7 +157,6 @@ All of these are already wired up; they are just config flags.
 | `data/predictions/<fixture>/<model>__<setting>.json` → `leakage_audit` | any source with `published_at > lock_at_utc` flagged    |
 | `data/results/<fixture>/<model>__<setting>.json` → `composite` | final 0-100 score                                       |
 | `data/results/<fixture>/<model>__<setting>.json` → `layers`   | T1-T5 sub-scores                                        |
-| `docs/leaderboard/raw.json`                                   | one row per (fixture, model, setting) — input to the static site |
 
 ---
 
@@ -169,5 +172,3 @@ All of these are already wired up; they are just config flags.
 ## 8. Where next
 
 - [docs/integration.md](integration.md) — "I want my model/agent on this leaderboard" (for third-party developers).
-- [docs/cost_estimate.md](cost_estimate.md) — full cost breakdown, per-tier budgets, savings levers.
-- [docs/tech_report.md](tech_report.md) — methodology, grading metrics, ablations.

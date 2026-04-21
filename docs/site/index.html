@@ -36,6 +36,20 @@
   }
   .chip-s1 { background: rgba(59,130,246,.18); border-color: rgba(59,130,246,.4); color:#93c5fd; }
   .chip-s2 { background: rgba(236,72,153,.18); border-color: rgba(236,72,153,.4); color:#f9a8d4; }
+  /* Instant CSS tooltip — no JS, no delay */
+  [data-tip] { position: relative; }
+  [data-tip]::after {
+    content: attr(data-tip);
+    position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%);
+    background: #1e2a3a; color: #e2e8f0; font-size: .7rem; font-weight: 400;
+    line-height: 1.4; white-space: normal; width: 220px; max-width: 90vw;
+    padding: .4rem .6rem; border-radius: .4rem;
+    border: 1px solid rgba(255,255,255,.15);
+    box-shadow: 0 4px 16px rgba(0,0,0,.5);
+    pointer-events: none; opacity: 0; transition: opacity .08s;
+    z-index: 100;
+  }
+  [data-tip]:hover::after { opacity: 1; }
   .rank-medal { width:1.75rem; height:1.75rem; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; font-weight:800; }
   .rank-1 { background:linear-gradient(135deg,#facc15,#f59e0b); color:#1a1a1a; }
   .rank-2 { background:linear-gradient(135deg,#cbd5e1,#94a3b8); color:#1a1a1a; }

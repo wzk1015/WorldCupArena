@@ -32,13 +32,17 @@ Composite score ∈ [0, 100]. Three leaderboards:
 
 ## Who we test
 
-Default policy: **one flagship LLM per provider**, full deep-research agent roster. Entries that were dropped are kept as commented-out references in [configs/models.yaml](configs/models.yaml) and can be re-added in 5 seconds.
+Currently we support the following models (defined in [configs/models.yaml](configs/models.yaml)):
 
-- **Closed LLMs**: GPT-5.4, Claude Sonnet 4.6, Gemini 3 Pro, Grok 4.
+- **Closed LLMs**: GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro.
+- **Search-enabled LLMs**: GPT-5.4 + web_search, Claude Opus 4.7 + web_search, Gemini 3.1 Pro + google_search.
+
+TODO:
+
 - **Open LLMs**: DeepSeek R1, Qwen3-Max, Llama-4 Maverick. *(Currently via hosted endpoints; swap to self-hosted vLLM by setting `base_url`.)*
-- **Search-enabled LLMs**: Claude + web_search, GPT-5.4 + web_search, Gemini 3 Pro + Google Search, Perplexity Sonar Pro.
-- **Deep Research Agents**: OpenAI Deep Research, Gemini Deep Research, Perplexity Deep Research, Claude Research, MiroMind **MiroThinker H1**.
+- **Deep Research Agents**: OpenAI Deep Research, Gemini Deep Research, Perplexity Deep Research, Claude Research, MiroMind MiroThinker H1.
 - **Baselines**: Pinnacle closing odds, FiveThirtyEight SPI/Elo, "chalk pick."
+
 
 Every model entry in [configs/models.yaml](configs/models.yaml) supports a `base_url` field for routing through proxy / 中转 endpoints.
 
@@ -75,7 +79,7 @@ docs/
   cost_estimate.md   per-fixture and per-phase $$ estimates
   tech_report.md     methodology + results
   announcement.md    promotional write-up
-  leaderboard/       static site (GH Pages)
+  site/              static site (GH Pages)
 ```
 
 ## Lifecycle of a fixture
@@ -97,13 +101,13 @@ python3 -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env         # fill in API keys
 
-# Fastest path — bundled dry-run on a finished UCL QF fixture (~$0.05)
-bash scripts/dryrun_bayern_madrid.sh
+python -m src.pipeline.scheduler show
+python -m src.pipeline.scheduler tick
 ```
 
-Full step-by-step usage (ingest → lock → predict → grade → leaderboard, with worked examples for this weekend's Premier League fixtures) lives in [docs/usage.md](docs/usage.md).
+Full step-by-step usage (ingest → lock → predict → grade → leaderboard) lives in [docs/usage.md](docs/usage.md).
 
-Want your model on the leaderboard? See [docs/integration.md](docs/integration.md) — most integrations take 10 minutes.
+Want your model on the leaderboard? See [docs/integration.md](docs/integration.md) — most integrations take less than 10 minutes.
 
 ## Cost
 
@@ -128,8 +132,8 @@ If validation fails, the orchestrator sends a targeted repair prompt to the same
 
 - [x] Config schema, metrics, orchestrator skeleton
 - [x] OpenAI-compat + Anthropic runners
-- [ ] Gemini runner, MiroThinker runner, Perplexity/OpenAI DR runners
-- [ ] Ingest: squads + news + odds
+- [x] Gemini runner, MiroThinker runner, Perplexity/OpenAI DR runners
+- [x] Ingest: squads + news + odds
 - [x] Phase 0 dry run on a Premier League fixture
 - [ ] Phase 1: UCL SF1 leg 1 (week of 2026-04-27)
 - [ ] Phase 2: Pre-tournament WC prediction (by 2026-06-10)

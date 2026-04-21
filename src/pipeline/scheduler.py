@@ -143,9 +143,24 @@ def _phase_lock_predict(fx: dict, fx_dir: Path) -> None:
           "--fixture", str(fixture_path), "--parallel", "8"])
 
 
+def _live_status(wca_id: str) -> str | None:
+    """Return the status.long string from data/live/<wca_id>.json, or None."""
+    path = LIVE_DIR / f"{wca_id}.json"
+    if not path.exists():
+        return None
+    try:
+        raw = json.loads(path.read_text())
+        r0 = raw["response"][0]
+        return (r0["fixture"]["status"] or {}).get("long")
+    except Exception:
+        return None
+
+
 def _phase_live_update(fx: dict, fx_dir: Path) -> None:
     """Fetch live match state and overwrite data/live/<wca_id>.json (T+0h → T+3h).
 
+    If the fetched status is "Match Finished", immediately triggers truth_grade
+    so the result is persisted and scored without waiting for the T+3h window.
     Kept outside the snapshot dir so it never interferes with fixture.json /
     truth.json and can be safely deleted without affecting grading.
     """
@@ -156,6 +171,11 @@ def _phase_live_update(fx: dict, fx_dir: Path) -> None:
           "--wca-id", fx["wca_id"],
           "--lock-at", "",
           "--out", str(live_path)])
+
+    status = _live_status(fx["wca_id"])
+    if status == "Match Finished":
+        print(f"  [live_update] match finished — triggering truth_grade early")
+        _phase_truth_grade(fx, fx_dir)
 
 
 def _phase_truth_grade(fx: dict, fx_dir: Path) -> None:

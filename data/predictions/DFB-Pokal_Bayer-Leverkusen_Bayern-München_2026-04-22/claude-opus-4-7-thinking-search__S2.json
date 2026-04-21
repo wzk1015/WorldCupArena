@@ -2,222 +2,939 @@
   "fixture_id": "DFB-Pokal_Bayer-Leverkusen_Bayern-München_2026-04-22",
   "model_id": "claude-opus-4-7-thinking-search",
   "setting": "S2",
-  "submitted_at": "2026-04-21T20:56:50.914398+00:00",
-  "prediction": {},
+  "submitted_at": "2026-04-21T21:58:13.374742+00:00",
+  "prediction": {
+    "fixture_id": "DFB-Pokal_Bayer-Leverkusen_Bayern-München_2026-04-22",
+    "model_id": "claude-sonnet-4.5",
+    "setting": "S2",
+    "submitted_at": "2026-04-21T12:00:00Z",
+    "reasoning": {
+      "overall": "Bayern Munich travel to Leverkusen as heavy market favorites (odds ~1.50) after clinching their 35th Bundesliga title and winning 14 of their last 15 matches across all competitions, including a 4-2 win over Stuttgart. However, Leverkusen held them to a 1-1 draw back in mid-March and Bayern hasn't won at Leverkusen in the league since October 2021. Leverkusen come in on the back of a disappointing 2-1 defeat to Augsburg but have strong cup pedigree. Bayern are missing Gnabry (adductor), Ulreich, Karl and Bischof (muscle injuries), while Leverkusen will not have Arthur and Martin Terrier. Bayern's treble pursuit and superior squad depth favor them, but Leverkusen's home fortress vs Bayern and Kompany's focus on the PSG CL semi next week keep this competitive.",
+      "t1_result": "Market implies ~67% Bayern but Leverkusen's remarkable home record vs Bayern and possible rotation for Bayern ahead of PSG pulls probability toward a narrower Bayern edge. A 1-2 or 1-1 outcome is most likely given recent head-to-heads producing low-to-medium totals.",
+      "t2_player": "Bayern's expected XI is Neuer; Laimer, Upamecano, Tah, Davies; Kimmich, Pavlovic; Olise, Musiala, Diaz; Kane in a 4-2-3-1. Leverkusen likely in 3-4-2-1: Flekken; Quansah, Bade, Tapsoba; Vazquez, Palacios, Garcia, Grimaldo; Maza, Tella; Schick. Kane is top scorer candidate with 6 goals in 4 cup games this season.",
+      "t3_events": "Bayern tend to score in both halves (70% of matches). Expect a Bayern opener around 25-60' with Kane or Diaz; Leverkusen most dangerous on set pieces via Grimaldo. Multiple yellow cards likely given Zwayer as referee and H2H history of confrontations.",
+      "t4_stats": "Bayern averages 65% possession, 19 shots, 8 on target under Kompany. Leverkusen at home generates solid shot volume but may cede possession. Expect Bayern 58-62% possession, 15-17 shots to Leverkusen's 10-12, with both teams showing high pass accuracy."
+    },
+    "win_probs": {
+      "home": 0.25,
+      "draw": 0.22,
+      "away": 0.53
+    },
+    "score_dist": [
+      {
+        "score": "1-2",
+        "p": 0.135
+      },
+      {
+        "score": "1-1",
+        "p": 0.11
+      },
+      {
+        "score": "0-2",
+        "p": 0.095
+      },
+      {
+        "score": "0-1",
+        "p": 0.09
+      },
+      {
+        "score": "1-3",
+        "p": 0.07
+      },
+      {
+        "score": "2-2",
+        "p": 0.06
+      },
+      {
+        "score": "2-1",
+        "p": 0.055
+      },
+      {
+        "score": "1-0",
+        "p": 0.05
+      },
+      {
+        "score": "0-3",
+        "p": 0.045
+      },
+      {
+        "score": "0-0",
+        "p": 0.04
+      },
+      {
+        "score": "2-3",
+        "p": 0.04
+      },
+      {
+        "score": "2-0",
+        "p": 0.035
+      },
+      {
+        "score": "3-2",
+        "p": 0.03
+      },
+      {
+        "score": "3-1",
+        "p": 0.025
+      },
+      {
+        "score": "3-3",
+        "p": 0.025
+      },
+      {
+        "score": "0-4",
+        "p": 0.025
+      },
+      {
+        "score": "1-4",
+        "p": 0.02
+      },
+      {
+        "score": "4-2",
+        "p": 0.015
+      },
+      {
+        "score": "2-4",
+        "p": 0.015
+      },
+      {
+        "score": "3-0",
+        "p": 0.02
+      }
+    ],
+    "most_likely_score": "1-2",
+    "expected_goal_diff": -0.7,
+    "advance_prob": 0.36,
+    "lineups": {
+      "home": {
+        "starting": [
+          {
+            "name": "Mark Flekken",
+            "position": "GK",
+            "shirt": 1
+          },
+          {
+            "name": "Jarell Quansah",
+            "position": "DF",
+            "shirt": 4
+          },
+          {
+            "name": "Loïc Badé",
+            "position": "DF",
+            "shirt": 5
+          },
+          {
+            "name": "Edmond Tapsoba",
+            "position": "DF",
+            "shirt": 12
+          },
+          {
+            "name": "Lucas Vázquez",
+            "position": "DF",
+            "shirt": 17
+          },
+          {
+            "name": "Exequiel Palacios",
+            "position": "MF",
+            "shirt": 25
+          },
+          {
+            "name": "Aleix García",
+            "position": "MF",
+            "shirt": 24
+          },
+          {
+            "name": "Alejandro Grimaldo",
+            "position": "DF",
+            "shirt": 20
+          },
+          {
+            "name": "Ibrahim Maza",
+            "position": "MF",
+            "shirt": 30
+          },
+          {
+            "name": "Nathan Tella",
+            "position": "FW",
+            "shirt": 10
+          },
+          {
+            "name": "Patrik Schick",
+            "position": "FW",
+            "shirt": 14
+          }
+        ],
+        "bench": [
+          {
+            "name": "Janis Blaswich",
+            "position": "GK",
+            "shirt": 22
+          },
+          {
+            "name": "Robert Andrich",
+            "position": "MF",
+            "shirt": 8
+          },
+          {
+            "name": "Tim Oermann",
+            "position": "DF",
+            "shirt": 3
+          },
+          {
+            "name": "Ezequiel Fernández",
+            "position": "MF",
+            "shirt": 6
+          },
+          {
+            "name": "Ernest Poku",
+            "position": "FW",
+            "shirt": 19
+          },
+          {
+            "name": "Malik Tillman",
+            "position": "MF",
+            "shirt": 27
+          },
+          {
+            "name": "Christian Kofane",
+            "position": "FW",
+            "shirt": 35
+          },
+          {
+            "name": "Eliesse Ben Seghir",
+            "position": "FW",
+            "shirt": 18
+          },
+          {
+            "name": "Claudio Echeverri",
+            "position": "MF",
+            "shirt": 9
+          },
+          {
+            "name": "Jonas Hofmann",
+            "position": "MF",
+            "shirt": 7
+          },
+          {
+            "name": "Jeanuël Belocian",
+            "position": "DF",
+            "shirt": 44
+          }
+        ]
+      },
+      "away": {
+        "starting": [
+          {
+            "name": "Manuel Neuer",
+            "position": "GK",
+            "shirt": 1
+          },
+          {
+            "name": "Konrad Laimer",
+            "position": "DF",
+            "shirt": 27
+          },
+          {
+            "name": "Dayot Upamecano",
+            "position": "DF",
+            "shirt": 2
+          },
+          {
+            "name": "Jonathan Tah",
+            "position": "DF",
+            "shirt": 4
+          },
+          {
+            "name": "Alphonso Davies",
+            "position": "DF",
+            "shirt": 19
+          },
+          {
+            "name": "Joshua Kimmich",
+            "position": "MF",
+            "shirt": 6
+          },
+          {
+            "name": "Aleksandar Pavlović",
+            "position": "MF",
+            "shirt": 45
+          },
+          {
+            "name": "Michael Olise",
+            "position": "MF",
+            "shirt": 17
+          },
+          {
+            "name": "Jamal Musiala",
+            "position": "MF",
+            "shirt": 42
+          },
+          {
+            "name": "Luis Díaz",
+            "position": "FW",
+            "shirt": 14
+          },
+          {
+            "name": "Harry Kane",
+            "position": "FW",
+            "shirt": 9
+          }
+        ],
+        "bench": [
+          {
+            "name": "Jonas Urbig",
+            "position": "GK",
+            "shirt": 26
+          },
+          {
+            "name": "Kim Min-jae",
+            "position": "DF",
+            "shirt": 3
+          },
+          {
+            "name": "Hiroki Ito",
+            "position": "DF",
+            "shirt": 24
+          },
+          {
+            "name": "Josip Stanišić",
+            "position": "DF",
+            "shirt": 44
+          },
+          {
+            "name": "Sacha Boey",
+            "position": "DF",
+            "shirt": 23
+          },
+          {
+            "name": "Leon Goretzka",
+            "position": "MF",
+            "shirt": 8
+          },
+          {
+            "name": "Raphaël Guerreiro",
+            "position": "MF",
+            "shirt": 22
+          },
+          {
+            "name": "Nicolas Jackson",
+            "position": "FW",
+            "shirt": 11
+          }
+        ]
+      }
+    },
+    "formations": {
+      "home": "3-4-2-1",
+      "away": "4-2-3-1"
+    },
+    "scorers": [
+      {
+        "player": "Harry Kane",
+        "team": "away",
+        "minute_range": [
+          10,
+          90
+        ],
+        "p": 0.48
+      },
+      {
+        "player": "Luis Díaz",
+        "team": "away",
+        "minute_range": [
+          15,
+          90
+        ],
+        "p": 0.24
+      },
+      {
+        "player": "Jamal Musiala",
+        "team": "away",
+        "minute_range": [
+          15,
+          90
+        ],
+        "p": 0.22
+      },
+      {
+        "player": "Michael Olise",
+        "team": "away",
+        "minute_range": [
+          15,
+          90
+        ],
+        "p": 0.18
+      },
+      {
+        "player": "Patrik Schick",
+        "team": "home",
+        "minute_range": [
+          10,
+          90
+        ],
+        "p": 0.22
+      },
+      {
+        "player": "Alejandro Grimaldo",
+        "team": "home",
+        "minute_range": [
+          10,
+          90
+        ],
+        "p": 0.14
+      },
+      {
+        "player": "Nathan Tella",
+        "team": "home",
+        "minute_range": [
+          10,
+          90
+        ],
+        "p": 0.1
+      },
+      {
+        "player": "Ibrahim Maza",
+        "team": "home",
+        "minute_range": [
+          10,
+          90
+        ],
+        "p": 0.09
+      },
+      {
+        "player": "Aleix García",
+        "team": "home",
+        "minute_range": [
+          10,
+          90
+        ],
+        "p": 0.08
+      },
+      {
+        "player": "Nicolas Jackson",
+        "team": "away",
+        "minute_range": [
+          60,
+          90
+        ],
+        "p": 0.09
+      },
+      {
+        "player": "Leon Goretzka",
+        "team": "away",
+        "minute_range": [
+          60,
+          90
+        ],
+        "p": 0.06
+      }
+    ],
+    "assisters": [
+      {
+        "player": "Michael Olise",
+        "team": "away",
+        "p": 0.24
+      },
+      {
+        "player": "Jamal Musiala",
+        "team": "away",
+        "p": 0.18
+      },
+      {
+        "player": "Joshua Kimmich",
+        "team": "away",
+        "p": 0.14
+      },
+      {
+        "player": "Alphonso Davies",
+        "team": "away",
+        "p": 0.1
+      },
+      {
+        "player": "Alejandro Grimaldo",
+        "team": "home",
+        "p": 0.18
+      },
+      {
+        "player": "Aleix García",
+        "team": "home",
+        "p": 0.12
+      },
+      {
+        "player": "Lucas Vázquez",
+        "team": "home",
+        "p": 0.08
+      }
+    ],
+    "substitutions": [
+      {
+        "team": "away",
+        "off": "Jamal Musiala",
+        "on": "Leon Goretzka",
+        "minute": 70
+      },
+      {
+        "team": "away",
+        "off": "Luis Díaz",
+        "on": "Nicolas Jackson",
+        "minute": 75
+      },
+      {
+        "team": "away",
+        "off": "Michael Olise",
+        "on": "Raphaël Guerreiro",
+        "minute": 80
+      },
+      {
+        "team": "home",
+        "off": "Ibrahim Maza",
+        "on": "Malik Tillman",
+        "minute": 65
+      },
+      {
+        "team": "home",
+        "off": "Nathan Tella",
+        "on": "Ernest Poku",
+        "minute": 70
+      },
+      {
+        "team": "home",
+        "off": "Patrik Schick",
+        "on": "Christian Kofane",
+        "minute": 80
+      }
+    ],
+    "cards": [
+      {
+        "player": "Exequiel Palacios",
+        "team": "home",
+        "color": "yellow",
+        "minute": 35
+      },
+      {
+        "player": "Robert Andrich",
+        "team": "home",
+        "color": "yellow",
+        "minute": 70
+      },
+      {
+        "player": "Konrad Laimer",
+        "team": "away",
+        "color": "yellow",
+        "minute": 50
+      },
+      {
+        "player": "Joshua Kimmich",
+        "team": "away",
+        "color": "yellow",
+        "minute": 65
+      }
+    ],
+    "penalties": [],
+    "own_goals": [],
+    "motm_probs": [
+      {
+        "player": "Harry Kane",
+        "team": "away",
+        "p": 0.22
+      },
+      {
+        "player": "Jamal Musiala",
+        "team": "away",
+        "p": 0.14
+      },
+      {
+        "player": "Michael Olise",
+        "team": "away",
+        "p": 0.12
+      },
+      {
+        "player": "Luis Díaz",
+        "team": "away",
+        "p": 0.1
+      },
+      {
+        "player": "Joshua Kimmich",
+        "team": "away",
+        "p": 0.07
+      },
+      {
+        "player": "Manuel Neuer",
+        "team": "away",
+        "p": 0.06
+      },
+      {
+        "player": "Patrik Schick",
+        "team": "home",
+        "p": 0.09
+      },
+      {
+        "player": "Alejandro Grimaldo",
+        "team": "home",
+        "p": 0.07
+      },
+      {
+        "player": "Aleix García",
+        "team": "home",
+        "p": 0.05
+      },
+      {
+        "player": "Mark Flekken",
+        "team": "home",
+        "p": 0.04
+      }
+    ],
+    "stats": {
+      "possession": {
+        "home": 41,
+        "away": 59
+      },
+      "shots": {
+        "home": 11,
+        "away": 16
+      },
+      "shots_on_target": {
+        "home": 4,
+        "away": 6
+      },
+      "corners": {
+        "home": 4,
+        "away": 6
+      },
+      "pass_accuracy": {
+        "home": 83,
+        "away": 88
+      },
+      "fouls": {
+        "home": 13,
+        "away": 11
+      },
+      "saves": {
+        "home": 4,
+        "away": 3
+      },
+      "defensive_actions": {
+        "home": 42,
+        "away": 30
+      }
+    },
+    "sources": [
+      {
+        "url": "https://fcbayern.com/en/news/2026/02/fc-bayerns-dfb-cup-semi-final-opponents",
+        "accessed_at": "2026-04-21T12:00:00Z",
+        "title": "DFB Cup semi-finals: FC Bayern to take on Bayer Leverkusen"
+      },
+      {
+        "url": "https://dailysports.net/predictions/bayer-leverkusen-vs-bayern-munich-who-will-reach-the-german-cup-final/",
+        "accessed_at": "2026-04-21T12:00:00Z",
+        "title": "Bayer Leverkusen vs Bayern Munich prediction 22 April 2026"
+      },
+      {
+        "url": "https://footballwhispers.com/blog/bayer-leverkusen-vs-bayern-munich-prediction-22-04-2026/",
+        "accessed_at": "2026-04-21T12:00:00Z",
+        "title": "Bayer Leverkusen vs Bayern Munich prediction 22/04/2026"
+      },
+      {
+        "url": "https://sports.yahoo.com/articles/bayer-leverkusen-vs-bayern-munich-060800903.html",
+        "accessed_at": "2026-04-21T12:00:00Z",
+        "title": "Bayer Leverkusen vs. Bayern Munich DFB-Pokal preview"
+      },
+      {
+        "url": "https://betmines.com/match-preview/bayer-04-leverkusen-vs-fc-bayern-munchen-prediction-match-preview-and-analysis-dfb-pokal-22-04-2026",
+        "accessed_at": "2026-04-21T12:00:00Z",
+        "title": "Bayer 04 Leverkusen vs FC Bayern München Prediction"
+      },
+      {
+        "url": "https://www.sportsmole.co.uk/football/bayer-leverkusen/dfb-pokal/preview/b-leverkusen-vs-bayern-prediction-team-news-lineups_596115.html",
+        "accessed_at": "2026-04-21T12:00:00Z",
+        "title": "Preview: Bayer Leverkusen vs Bayern Munich"
+      },
+      {
+        "url": "https://www.fotmob.com/teams/8178/overview/bayer-leverkusen",
+        "accessed_at": "2026-04-21T12:00:00Z",
+        "title": "Bayer Leverkusen fixtures and team info"
+      },
+      {
+        "url": "https://www.espn.com/soccer/report/_/gameId/746950",
+        "accessed_at": "2026-04-21T12:00:00Z",
+        "title": "Leverkusen 1-1 Bayern Mar 14 2026"
+      },
+      {
+        "url": "https://www.goal.com/en-in/betting/tips/bayer-leverkusen-vs-bayern-munich-predictions-22-04-2026/A:blt8b4d1ca082deb601",
+        "accessed_at": "2026-04-21T12:00:00Z",
+        "title": "Bayer Leverkusen vs Bayern Munich predictions"
+      },
+      {
+        "url": "https://www.sportsgambler.com/betting-tips/football/bayer-leverkusen-vs-bayern-munich-prediction-lineups-odds-2026-04-22/",
+        "accessed_at": "2026-04-21T12:00:00Z",
+        "title": "Bayer Leverkusen vs Bayern Munich Prediction, Lineups & Odds"
+      }
+    ]
+  },
   "sources": [
     {
       "url": "https://fcbayern.com/en/news/2026/02/fc-bayerns-dfb-cup-semi-final-opponents",
-      "accessed_at": "2026-04-21T20:56:50.914150+00:00",
+      "accessed_at": "2026-04-21T21:58:13.367114+00:00",
       "title": "DFB Cup semi-finals: FC Bayern to take on Bayer Leverkusen"
     },
     {
       "url": "https://dailysports.net/predictions/bayer-leverkusen-vs-bayern-munich-who-will-reach-the-german-cup-final/",
-      "accessed_at": "2026-04-21T20:56:50.914197+00:00",
+      "accessed_at": "2026-04-21T21:58:13.367512+00:00",
       "title": "Bayer Leverkusen vs Bayern Munich prediction and betting tips 22 April 2026 | Dailysports experts"
     },
     {
       "url": "https://khelnow.com/football/world-football-bayer-leverkusen-vs-bayern-munich-preview-202604",
-      "accessed_at": "2026-04-21T20:56:50.914199+00:00",
+      "accessed_at": "2026-04-21T21:58:13.367515+00:00",
       "title": "Preview: Bayer Leverkusen vs Bayern Munich prediction, odds, where to watch, time | DFB-Pokal 2025-26 semi-final"
     },
     {
       "url": "https://footballwhispers.com/blog/bayer-leverkusen-vs-bayern-munich-prediction-22-04-2026/",
-      "accessed_at": "2026-04-21T20:56:50.914200+00:00",
+      "accessed_at": "2026-04-21T21:58:13.367517+00:00",
       "title": "Bayer Leverkusen vs Bayern Munich prediction, preview & betting tips 22/04/2026"
     },
     {
       "url": "https://www.goal.com/en-in/betting/tips/bayer-leverkusen-vs-bayern-munich-predictions-22-04-2026/A:blt8b4d1ca082deb601",
-      "accessed_at": "2026-04-21T20:56:50.914200+00:00",
+      "accessed_at": "2026-04-21T21:58:13.367518+00:00",
       "title": "Bayer Leverkusen vs Bayern Munich predictions: Reds chasing a treble | Goal.com India"
     },
     {
       "url": "https://www.bavarianfootballworks.com/bayern-munich-dfb-pokal/192394/bayern-munich-vincent-kompany-not-thinking-about-revenge-in-dfb-pokal-vs-bayer-leverkusen",
-      "accessed_at": "2026-04-21T20:56:50.914201+00:00",
+      "accessed_at": "2026-04-21T21:58:13.367520+00:00",
       "title": "Bayern Munich’s Vincent Kompany not thinking about revenge in DFB-Pokal vs. Bayer Leverkusen"
     },
     {
       "url": "https://betmines.com/match-preview/bayer-04-leverkusen-vs-fc-bayern-munchen-prediction-match-preview-and-analysis-dfb-pokal-22-04-2026",
-      "accessed_at": "2026-04-21T20:56:50.914202+00:00",
+      "accessed_at": "2026-04-21T21:58:13.367522+00:00",
       "title": "Bayer 04 Leverkusen vs FC Bayern München Prediction: Match Preview and Analysis | DFB Pokal 22-04-2026 | BetMines"
     },
     {
-      "url": "https://www.sofascore.com/football/match/bayer-04-leverkusen-fc-bayern-munchen/xdbsGdb",
-      "accessed_at": "2026-04-21T20:56:50.914208+00:00",
-      "title": "Bayer 04 Leverkusen vs FC Bayern München live score, H2H and lineups | Sofascore"
-    },
-    {
       "url": "https://www.bavarianfootballworks.com/bayern-munich-dfb-pokal/192124/bayer-leverkusen-vs-bayern-munich-2025-26-dfb-pokal-semifinals-full-coverage",
-      "accessed_at": "2026-04-21T20:56:50.914212+00:00",
+      "accessed_at": "2026-04-21T21:58:13.367523+00:00",
       "title": "Bayer Leverkusen vs. Bayern Munich: 2025/26 DFB-Pokal semifinals full coverage"
     },
     {
-      "url": "https://www.bayer04.de/en-us/news/dfb-pokal/dfb-pokal-202526-semi-final-date-confirmed",
-      "accessed_at": "2026-04-21T20:56:50.914213+00:00",
-      "title": "DFB Pokal 2025/26: Semi-final date confirmed | Bayer04.de"
-    },
-    {
-      "url": "https://onefootball.com/en/news/bayer-leverkusen-vs-bayern-munich-dfb-pokal-preview-team-news-and-predicted-lineups-42743380",
-      "accessed_at": "2026-04-21T20:56:50.914214+00:00",
-      "title": "Bayer Leverkusen vs. Bayern Munich DFB-Pokal preview: Team news and predicted lineups | OneFootball"
-    },
-    {
-      "url": "https://sports.yahoo.com/articles/bayer-leverkusen-vs-bayern-munich-060800903.html",
-      "accessed_at": "2026-04-21T20:56:50.914215+00:00",
-      "title": "Bayer Leverkusen vs. Bayern Munich DFB-Pokal preview: Team news and predicted lineups - Yahoo Sports"
-    },
-    {
-      "url": "https://www.sportsmole.co.uk/football/bayer-leverkusen/dfb-pokal/preview/b-leverkusen-vs-bayern-prediction-team-news-lineups_596115.html",
-      "accessed_at": "2026-04-21T20:56:50.914216+00:00",
-      "title": "Preview: Bayer Leverkusen vs Bayern Munich - prediction, team news, lineups - Sports Mole"
-    },
-    {
-      "url": "https://www.goal.com/en-in/betting/tips/bayer-leverkusen-vs-bayern-munich-predictions-22-04-2026/A:blt8b4d1ca082deb601",
-      "accessed_at": "2026-04-21T20:56:50.914220+00:00",
-      "title": "Bayer Leverkusen vs Bayern Munich predictions: Reds chasing a treble | Goal.com India"
-    },
-    {
-      "url": "https://dailysports.net/predictions/bayer-vs-bayern-prediction-h2h-and-probable-lineups-22042026/",
-      "accessed_at": "2026-04-21T20:56:50.914221+00:00",
-      "title": "Bayer Leverkusen vs Bayern Munich prediction and betting tips 22 April 2026 | Dailysports experts"
-    },
-    {
-      "url": "https://bulinews.com/bayer-leverkusen-bayern-munich-preview",
-      "accessed_at": "2026-04-21T20:56:50.914221+00:00",
-      "title": "Bayer Leverkusen vs. Bayern Munich preview: Team news and predicted lineups – Bundesliga 2026"
-    },
-    {
-      "url": "https://www.fotmob.com/matches/bayer-leverkusen-vs-bayern-munchen/2oh0ew",
-      "accessed_at": "2026-04-21T20:56:50.914222+00:00",
-      "title": "Leverkusen vs Bayern München - live score, predicted lineups and H2H stats"
-    },
-    {
-      "url": "https://bulinews.com/confirmed-lineups-bayer-leverkusen-bayern",
-      "accessed_at": "2026-04-21T20:56:50.914223+00:00",
-      "title": "Confirmed lineups: Bayer Leverkusen vs. Bayern Munich – Bundesliga 2026"
-    },
-    {
-      "url": "https://fcbayern.com/en/matches/profis/bundesliga/2025-2026/bayer-04-leverkusen-fc-bayern-muenchen-14-03-2026/lineup",
-      "accessed_at": "2026-04-21T20:56:50.914224+00:00",
-      "title": "Line-ups: Leverkusen vs. FC Bayern - Bundesliga 25/26"
-    },
-    {
       "url": "https://www.sofascore.com/football/match/bayer-04-leverkusen-fc-bayern-munchen/xdbsGdb",
-      "accessed_at": "2026-04-21T20:56:50.914225+00:00",
+      "accessed_at": "2026-04-21T21:58:13.367532+00:00",
       "title": "Bayer 04 Leverkusen vs FC Bayern München live score, H2H and lineups | Sofascore"
     },
     {
+      "url": "https://www.bayer04.de/en-us/news/dfb-pokal/dfb-pokal-202526-semi-final-date-confirmed",
+      "accessed_at": "2026-04-21T21:58:13.367533+00:00",
+      "title": "DFB Pokal 2025/26: Semi-final date confirmed | Bayer04.de"
+    },
+    {
+      "url": "https://www.fotmob.com/teams/8178/squad/bayer-leverkusen",
+      "accessed_at": "2026-04-21T21:58:13.367540+00:00",
+      "title": "Bayer Leverkusen - squad, coach, injuries and positions"
+    },
+    {
+      "url": "https://www.transfermarkt.us/bayer-04-leverkusen/sperrenundverletzungen/verein/15",
+      "accessed_at": "2026-04-21T21:58:13.367542+00:00",
+      "title": "Bayer 04 Leverkusen - Suspensions and injuries | Transfermarkt"
+    },
+    {
+      "url": "https://www.besoccer.com/team/injuries-suspensions/bayer-leverkusen",
+      "accessed_at": "2026-04-21T21:58:13.367544+00:00",
+      "title": "B. Leverkusen injury list and suspended players | BeSoccer"
+    },
+    {
       "url": "https://www.betinf.com/germany_injured.htm",
-      "accessed_at": "2026-04-21T20:56:50.914230+00:00",
+      "accessed_at": "2026-04-21T21:58:13.367545+00:00",
       "title": "German Bundesliga Injured & Suspended List - Football - Sports Betting Information"
     },
     {
-      "url": "https://www.newsnow.com/us/Sports/Soccer/Bundesliga/Bayern+Munich/Injuries+and+Suspensions",
-      "accessed_at": "2026-04-21T20:56:50.914231+00:00",
-      "title": "Bayern Munich Injuries and Suspensions news | Breaking News"
-    },
-    {
-      "url": "https://fcbayern.com/en/tag/injury",
-      "accessed_at": "2026-04-21T20:56:50.914232+00:00",
-      "title": "FC Bayern - Injury"
-    },
-    {
-      "url": "https://www.bavarianfootballworks.com/bayern-munich-dfb-pokal/192169/dfb-pokal-matchday-preview-bayer-leverkusen-vs-bayern-munich",
-      "accessed_at": "2026-04-21T20:56:50.914233+00:00",
-      "title": "DFB-Pokal Matchday Preview: Bayer Leverkusen vs. Bayern Munich | Bavarian Football Works"
-    },
-    {
-      "url": "https://bulinews.com/bayern-injury-news-kompany-gives-latest-urbig-musiala-davies-and-neuer",
-      "accessed_at": "2026-04-21T20:56:50.914234+00:00",
-      "title": "Bayern Munich Injury Update: Latest on Urbig, Musiala, Davies and Neuer"
-    },
-    {
-      "url": "https://www.transfermarkt.us/bayern-munich/sperrenundverletzungen/verein/27",
-      "accessed_at": "2026-04-21T20:56:50.914235+00:00",
-      "title": "Bayern Munich - Suspensions and injuries | Transfermarkt"
-    },
-    {
-      "url": "https://www.sportsgambler.com/injuries/football/germany-bundesliga/",
-      "accessed_at": "2026-04-21T20:56:50.914235+00:00",
-      "title": "Bundesliga Injuries & Suspensions | Injury News"
-    },
-    {
-      "url": "https://www.bundesliga.com/en/bundesliga/news/team-news-2025-26-bayern-dortmund-leverkusen-fantasy-20707",
-      "accessed_at": "2026-04-21T20:56:50.914236+00:00",
-      "title": "Bundesliga Matchday 30 probable teams | Bundesliga"
-    },
-    {
-      "url": "https://www.bavarianfootballworks.com/2025/5/2/24420653/leipzig-bayern-munich-lineups-team-news-injuries-and-more-muller-kane-leverkusen-musiala-davies-dier",
-      "accessed_at": "2026-04-21T20:56:50.914237+00:00",
-      "title": "RB Leipzig vs. Bayern Munich — Lineups, team news, injuries, and more! | Bavarian Football Works"
-    },
-    {
-      "url": "https://www.goal.com/en/lists/fc-bayern-news-and-rumours-worst-case-scenario-for-kimmich-and-olise-anything-other-than-a-suspension-would-be-surprising/blt1f329ece70378c86",
-      "accessed_at": "2026-04-21T20:56:50.914238+00:00",
-      "title": "FC Bayern, news and rumours: Worst-case scenario for Kimmich and Olise? \"Anything other than a suspension would be surprising.\" | Goal.com"
-    },
-    {
-      "url": "https://www.sofascore.com/football/team/bayer-04-leverkusen/2681",
-      "accessed_at": "2026-04-21T20:56:50.914239+00:00",
-      "title": "Bayer 04 Leverkusen live score, schedule & player stats | Sofascore"
-    },
-    {
-      "url": "https://www.sofascore.com/football/team/bayer-leverkusen/36623",
-      "accessed_at": "2026-04-21T20:56:50.914239+00:00",
-      "title": "Bayer Leverkusen live score, schedule & player stats | Sofascore"
-    },
-    {
-      "url": "https://fbref.com/en/squads/c7a9f859/Leverkusen-Stats",
-      "accessed_at": "2026-04-21T20:56:50.914240+00:00",
-      "title": "Leverkusen Stats, Bundesliga | FBref.com"
-    },
-    {
-      "url": "https://www.fotmob.com/teams/8178/overview/bayer-leverkusen",
-      "accessed_at": "2026-04-21T20:56:50.914241+00:00",
-      "title": "Bayer Leverkusen - fixtures, team info and top players"
-    },
-    {
-      "url": "https://betmines.com/match-preview/bayer-04-leverkusen-vs-fc-augsburg-prediction-match-preview-and-analysis-bundesliga-18-04-2026",
-      "accessed_at": "2026-04-21T20:56:50.914242+00:00",
-      "title": "Bayer 04 Leverkusen vs FC Augsburg Prediction: Match Preview and Analysis | Bundesliga 18-04-2026 | BetMines"
-    },
-    {
-      "url": "https://footystats.org/clubs/bayer-04-leverkusen-40",
-      "accessed_at": "2026-04-21T20:56:50.914243+00:00",
-      "title": "Bayer Leverkusen Stats, Form & xG | FootyStats"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Bayer_04_Leverkusen_season",
-      "accessed_at": "2026-04-21T20:56:50.914243+00:00",
-      "title": "2025–26 Bayer 04 Leverkusen season - Wikipedia"
-    },
-    {
-      "url": "https://www.365scores.com/en-us/football/team/bayer-leverkusen-333",
-      "accessed_at": "2026-04-21T20:56:50.914244+00:00",
-      "title": "Bayer Leverkusen: Livescore, Games and Schedule"
-    },
-    {
       "url": "https://www.bundesliga.com/en/bundesliga/clubs/bayer-04-leverkusen",
-      "accessed_at": "2026-04-21T20:56:50.914245+00:00",
+      "accessed_at": "2026-04-21T21:58:13.367546+00:00",
       "title": "Bayer Leverkusen | Bundesliga"
     },
     {
-      "url": "https://www.fctables.com/teams/bayer-leverkusen-181099/",
-      "accessed_at": "2026-04-21T20:56:50.914246+00:00",
-      "title": "Bayer Leverkusen Germany statistics, table, results, fixtures"
+      "url": "https://sports.yahoo.com/articles/bayer-leverkusen-vs-bayern-munich-060800903.html",
+      "accessed_at": "2026-04-21T21:58:13.367547+00:00",
+      "title": "Bayer Leverkusen vs. Bayern Munich DFB-Pokal preview: Team news and predicted lineups - Yahoo Sports"
+    },
+    {
+      "url": "https://www.sportsdunia.com/football-teams/bayer-04-leverkusen-injuries",
+      "accessed_at": "2026-04-21T21:58:13.367549+00:00",
+      "title": "Bayer 04 Leverkusen Injuries | Full Injury List, Player return dates & Latest News"
+    },
+    {
+      "url": "https://www.goal.com/en/team/bayer-leverkusen/squad/7ad69ngbpjuyzv96drf8d9sn2",
+      "accessed_at": "2026-04-21T21:58:13.367550+00:00",
+      "title": "Bayer Leverkusen Squad & Players - 2025/2026 | Goal.com"
+    },
+    {
+      "url": "https://www.aiscore.com/team-bayer-leverkusen/g63kv9ier1fp7ez/squad",
+      "accessed_at": "2026-04-21T21:58:13.367551+00:00",
+      "title": "Bayer 04 Leverkusen Players, 2025-2026 Squad"
+    },
+    {
+      "url": "https://m.football-lineups.com/team/Bayer-Leverkusen/Bundesliga-2025--2026/players",
+      "accessed_at": "2026-04-21T21:58:13.367553+00:00",
+      "title": "Bayer Leverkusen Bundesliga 2025/2026 Squad"
+    },
+    {
+      "url": "https://dailysports.net/predictions/bayer-vs-bayern-prediction-h2h-and-probable-lineups-22042026/",
+      "accessed_at": "2026-04-21T21:58:13.367567+00:00",
+      "title": "Bayer Leverkusen vs Bayern Munich prediction and betting tips 22 April 2026 | Dailysports experts"
+    },
+    {
+      "url": "https://www.goal.com/en-in/betting/tips/bayer-leverkusen-vs-bayern-munich-predictions-22-04-2026/A:blt8b4d1ca082deb601",
+      "accessed_at": "2026-04-21T21:58:13.367568+00:00",
+      "title": "Bayer Leverkusen vs Bayern Munich predictions: Reds chasing a treble | Goal.com India"
+    },
+    {
+      "url": "https://www.sportsgambler.com/betting-tips/football/bayer-leverkusen-vs-bayern-munich-prediction-lineups-odds-2026-04-22/",
+      "accessed_at": "2026-04-21T21:58:13.367570+00:00",
+      "title": "Bayer Leverkusen vs Bayern Munich Prediction, Betting Tips, Lineups & Odds | 22 Apr 2026"
+    },
+    {
+      "url": "https://www.sportsmole.co.uk/football/bayer-leverkusen/dfb-pokal/preview/b-leverkusen-vs-bayern-prediction-team-news-lineups_596115.html",
+      "accessed_at": "2026-04-21T21:58:13.367571+00:00",
+      "title": "Preview: Bayer Leverkusen vs Bayern Munich - prediction, team news, lineups - Sports Mole"
+    },
+    {
+      "url": "https://bulinews.com/bayer-leverkusen-bayern-munich-dfb-pokal-preview-team-news-and-predicted-lineups",
+      "accessed_at": "2026-04-21T21:58:13.367572+00:00",
+      "title": "Bayer Leverkusen vs. Bayern Munich DFB-Pokal preview: Team news and predicted lineups"
+    },
+    {
+      "url": "https://onefootball.com/en/news/bayer-leverkusen-vs-bayern-munich-dfb-pokal-preview-team-news-and-predicted-lineups-42743380",
+      "accessed_at": "2026-04-21T21:58:13.367574+00:00",
+      "title": "Bayer Leverkusen vs. Bayern Munich DFB-Pokal preview: Team news and predicted lineups | OneFootball"
+    },
+    {
+      "url": "https://onefootball.com/en/news/preview-bayer-leverkusen-vs-bayern-muenchen-team-news-lineups-predictions-dfb-pokal-2204-42742006",
+      "accessed_at": "2026-04-21T21:58:13.367575+00:00",
+      "title": "PREVIEW | Bayer Leverkusen vs Bayern München: team news, lineups, predictions (DFB Pokal 22/04) | OneFootball"
+    },
+    {
+      "url": "https://www.fotmob.com/matches/bayer-leverkusen-vs-bayern-munchen/2oh0ew",
+      "accessed_at": "2026-04-21T21:58:13.367583+00:00",
+      "title": "Leverkusen vs Bayern München - live score, predicted lineups and H2H stats"
+    },
+    {
+      "url": "https://khelnow.com/football/world-football-bayer-leverkusen-vs-bayern-munich-preview-202604",
+      "accessed_at": "2026-04-21T21:58:13.367584+00:00",
+      "title": "Preview: Bayer Leverkusen vs Bayern Munich prediction, odds, where to watch, time | DFB-Pokal 2025-26 semi-final"
+    },
+    {
+      "url": "https://sports.yahoo.com/articles/bayer-leverkusen-vs-bayern-munich-060800903.html",
+      "accessed_at": "2026-04-21T21:58:13.367586+00:00",
+      "title": "Bayer Leverkusen vs. Bayern Munich DFB-Pokal preview: Team news and predicted lineups - Yahoo Sports"
+    },
+    {
+      "url": "https://www.espn.com/soccer/lineups/_/gameId/746950",
+      "accessed_at": "2026-04-21T21:58:13.367587+00:00",
+      "title": "Leverkusen 1-1 Bayern (Mar 14, 2026) Lineups - ESPN"
+    },
+    {
+      "url": "https://onefootball.com/en/news/confirmed-line-ups-bayer-leverkusen-vs-bayern-munich-bundesliga-2026-42556347",
+      "accessed_at": "2026-04-21T21:58:13.367589+00:00",
+      "title": "Confirmed line-ups: Bayer Leverkusen vs Bayern Munich, Bundesliga 2026 | OneFootball"
+    },
+    {
+      "url": "https://bulinews.com/confirmed-lineups-bayer-leverkusen-bayern",
+      "accessed_at": "2026-04-21T21:58:13.367590+00:00",
+      "title": "Confirmed lineups: Bayer Leverkusen vs. Bayern Munich – Bundesliga 2026"
+    },
+    {
+      "url": "https://www.espn.com/soccer/report/_/gameId/746950",
+      "accessed_at": "2026-04-21T21:58:13.367591+00:00",
+      "title": "Leverkusen 1-1 Bayern (Mar 14, 2026) Game Analysis - ESPN"
+    },
+    {
+      "url": "https://www.fotmob.com/teams/8178/overview/bayer-leverkusen",
+      "accessed_at": "2026-04-21T21:58:13.367592+00:00",
+      "title": "Bayer Leverkusen - fixtures, team info and top players"
+    },
+    {
+      "url": "https://www.vavel.com/en-us/soccer/2026/03/14/1253845-leverkusen-vs-bayern-live-score-bundesliga.html",
+      "accessed_at": "2026-04-21T21:58:13.367594+00:00",
+      "title": "Highlights and goals of Bayer Leverkusen 1-1 Bayern Munich in Bundesliga 2025-26 | 03/14/2026 - VAVEL USA"
+    },
+    {
+      "url": "https://bulinews.com/bayer-leverkusen-bayern-munich-preview",
+      "accessed_at": "2026-04-21T21:58:13.367595+00:00",
+      "title": "Bayer Leverkusen vs. Bayern Munich preview: Team news and predicted lineups – Bundesliga 2026"
+    },
+    {
+      "url": "https://onefootball.com/en/news/confirmed-lineups-bayer-leverkusen-vs-fc-bayern-42556083",
+      "accessed_at": "2026-04-21T21:58:13.367596+00:00",
+      "title": "Confirmed lineups: Bayer Leverkusen vs. FC Bayern | OneFootball"
+    },
+    {
+      "url": "https://fcbayern.com/en/matches/profis/bundesliga/2025-2026/fc-bayern-muenchen-bayer-04-leverkusen-01-11-2025/lineup",
+      "accessed_at": "2026-04-21T21:58:13.367597+00:00",
+      "title": "Line-ups: FC Bayern vs. Leverkusen - Bundesliga 25/26"
+    },
+    {
+      "url": "https://www.bundesliga.com/en/bundesliga/clubs/bayer-04-leverkusen",
+      "accessed_at": "2026-04-21T21:58:13.367598+00:00",
+      "title": "Bayer Leverkusen | Bundesliga"
+    },
+    {
+      "url": "https://fcbayern.com/en/news/2026/02/fc-bayerns-dfb-cup-semi-final-opponents",
+      "accessed_at": "2026-04-21T12:00:00Z",
+      "title": "DFB Cup semi-finals: FC Bayern to take on Bayer Leverkusen"
+    },
+    {
+      "url": "https://dailysports.net/predictions/bayer-leverkusen-vs-bayern-munich-who-will-reach-the-german-cup-final/",
+      "accessed_at": "2026-04-21T12:00:00Z",
+      "title": "Bayer Leverkusen vs Bayern Munich prediction 22 April 2026"
+    },
+    {
+      "url": "https://footballwhispers.com/blog/bayer-leverkusen-vs-bayern-munich-prediction-22-04-2026/",
+      "accessed_at": "2026-04-21T12:00:00Z",
+      "title": "Bayer Leverkusen vs Bayern Munich prediction 22/04/2026"
+    },
+    {
+      "url": "https://sports.yahoo.com/articles/bayer-leverkusen-vs-bayern-munich-060800903.html",
+      "accessed_at": "2026-04-21T12:00:00Z",
+      "title": "Bayer Leverkusen vs. Bayern Munich DFB-Pokal preview"
+    },
+    {
+      "url": "https://betmines.com/match-preview/bayer-04-leverkusen-vs-fc-bayern-munchen-prediction-match-preview-and-analysis-dfb-pokal-22-04-2026",
+      "accessed_at": "2026-04-21T12:00:00Z",
+      "title": "Bayer 04 Leverkusen vs FC Bayern München Prediction"
+    },
+    {
+      "url": "https://www.sportsmole.co.uk/football/bayer-leverkusen/dfb-pokal/preview/b-leverkusen-vs-bayern-prediction-team-news-lineups_596115.html",
+      "accessed_at": "2026-04-21T12:00:00Z",
+      "title": "Preview: Bayer Leverkusen vs Bayern Munich"
+    },
+    {
+      "url": "https://www.fotmob.com/teams/8178/overview/bayer-leverkusen",
+      "accessed_at": "2026-04-21T12:00:00Z",
+      "title": "Bayer Leverkusen fixtures and team info"
+    },
+    {
+      "url": "https://www.espn.com/soccer/report/_/gameId/746950",
+      "accessed_at": "2026-04-21T12:00:00Z",
+      "title": "Leverkusen 1-1 Bayern Mar 14 2026"
+    },
+    {
+      "url": "https://www.goal.com/en-in/betting/tips/bayer-leverkusen-vs-bayern-munich-predictions-22-04-2026/A:blt8b4d1ca082deb601",
+      "accessed_at": "2026-04-21T12:00:00Z",
+      "title": "Bayer Leverkusen vs Bayern Munich predictions"
+    },
+    {
+      "url": "https://www.sportsgambler.com/betting-tips/football/bayer-leverkusen-vs-bayern-munich-prediction-lineups-odds-2026-04-22/",
+      "accessed_at": "2026-04-21T12:00:00Z",
+      "title": "Bayer Leverkusen vs Bayern Munich Prediction, Lineups & Odds"
     }
   ],
   "leakage_audit": {
     "leaked": false,
     "leaked_sources": []
   },
-  "cost_usd": 0.6091273,
+  "cost_usd": 0.5718757,
   "tokens": {
-    "input": 125744,
-    "output": 7777
+    "input": 112176,
+    "output": 8477
   },
   "tool_calls": 0,
-  "wall_seconds": 104.10848903656006,
+  "wall_seconds": 105.24983501434326,
   "repair_retries": 0,
-  "validation_errors": null,
-  "error": "JSONDecodeError: Expecting ',' delimiter: line 7 column 319 (char 505)"
+  "validation_errors": [],
+  "error": null
 }

@@ -92,7 +92,7 @@ jobs:
           git config user.email "bot@worldcuparena.local"
           echo "--- files written by pipeline ---"
           ls data/snapshots/ 2>/dev/null || echo "(data/snapshots missing)"
-          git add data/snapshots data/predictions data/results data/live data/search_logs docs/leaderboard docs/site/data.json
+          git add data/snapshots data/predictions data/results data/live data/search_logs docs/site/data.json
           echo "--- git status after add ---"
           git status --short
           if ! git diff --cached --quiet; then
