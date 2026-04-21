@@ -415,9 +415,6 @@ function renderPredCard(p, f, idx) {
   const top3       = (p.score_dist || []).slice(0, 3);
   const hName      = f.home || "Home";
   const aName      = f.away || "Away";
-  const topMotm    = (p.motm_probs || [])[0];
-  const hScorers   = (p.scorers || []).filter(s => s.team === "home").slice(0, 3);
-  const aScorers   = (p.scorers || []).filter(s => s.team === "away").slice(0, 3);
   const hasReason  = Object.keys(reasoning).length > 0;
 
   // Compute predicted winner (argmax of win_probs)
@@ -440,121 +437,60 @@ function renderPredCard(p, f, idx) {
         ${p.cost_usd != null ? `<span class="text-xs text-gray-600">$${(+p.cost_usd).toFixed(3)}</span>` : ""}
       </div>
 
-      <!-- Prediction headline: winner + score -->
+      <!-- Minimalist Prediction -->
       ${predWinner || top3.length ? `
-      <div class="flex items-center gap-4 mb-4 px-1">
-        ${predWinner ? `
-        <div>
-          <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Predicted winner</div>
-          <div class="text-lg font-black text-white leading-tight">${esc(predWinner)}</div>
-          <div class="text-xs font-mono text-gray-400">${fmtPct(predWinnerProb)}</div>
+      <div class="mb-4">
+        <div class="flex items-center gap-6">
+          <div>
+            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Predicted winner</div>
+            <div class="text-lg font-black text-white leading-tight">${esc(predWinner)}</div>
+            <div class="text-xs font-mono text-gray-400">${fmtPct(predWinnerProb)}</div>
+          </div>
+          <div style="width:1px;height:2.5rem;background:rgba(255,255,255,.1);"></div>
+          <div>
+            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Top score</div>
+            <div class="text-2xl font-black text-white leading-tight font-mono">${esc(top3[0] ? top3[0].score : "—")}</div>
+            <div class="text-xs font-mono text-gray-400">${fmtPct(top3[0] ? top3[0].p : null)}</div>
+          </div>
+          ${f.truth ? `<div class="ml-auto">
+            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Actual</div>
+            <div class="text-2xl font-black font-mono leading-tight" style="color:#fbbf24;">${esc(f.truth.score || "—")}</div>
+            <div class="text-xs font-mono" style="color:#fbbf2480;">${esc(
+              f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : f.truth.result || "—"
+            )}</div>
+          </div>` : ""}
+        </div>
+        <div class="text-xs text-gray-400 mt-3">
+          Win Probs:
+          <span class="font-semibold text-gray-200">${hName}</span> ${fmtPct(wp.home)} |
+          <span class="font-semibold text-gray-200">Draw</span> ${fmtPct(wp.draw)} |
+          <span class="font-semibold text-gray-200">${aName}</span> ${fmtPct(wp.away)}
+        </div>
+      </div>
+      ` : ""}
+
+      <!-- Reasoning preview (2 lines) -->
+      ${reasoning.overall ? `
+        <div class="text-xs text-gray-300 leading-relaxed mb-3 italic"
+             style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;border-left: 2px solid rgba(255,255,255,.15); padding-left: .75rem;">
+          ${esc(reasoning.overall)}
         </div>` : ""}
-        ${predWinner && top3.length ? `<div style="width:1px;height:2.5rem;background:rgba(255,255,255,.1);"></div>` : ""}
-        ${top3[0] ? `
-        <div>
-          <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Top score</div>
-          <div class="text-2xl font-black text-white leading-tight font-mono">${esc(top3[0].score)}</div>
-          <div class="text-xs font-mono text-gray-400">${fmtPct(top3[0].p)}</div>
-        </div>` : ""}
-        ${f.truth ? `<div class="ml-auto">
-          <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Actual</div>
-          <div class="text-2xl font-black font-mono leading-tight" style="color:#fbbf24;">${esc(f.truth.score || "—")}</div>
-          <div class="text-xs font-mono" style="color:#fbbf2480;">${esc(
-            f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : f.truth.result || "—"
-          )}</div>
-        </div>` : ""}
-      </div>` : ""}
 
       <!-- Buttons -->
       <div class="flex flex-wrap gap-2 mt-1">
-        ${hasReason ? `
-          <button onclick="openReasoningModal(${idx})"
-                  class="chip hover:bg-white/15 transition text-xs">📖 Full reasoning</button>` : ""}
         <button id="pred-details-btn-${idx}" onclick="toggleDetails(${idx})"
-                class="chip hover:bg-white/15 transition text-xs">📊 More details</button>
+                class="chip hover:bg-white/15 transition text-xs">👇 Show Full AI Analysis</button>
       </div>
 
       <!-- Expandable details -->
       <div id="pred-details-${idx}" style="display:none;"
            class="mt-4 pt-4 space-y-5" style="border-top:1px solid rgba(255,255,255,.06);">
-        <!-- 4-column detail grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-3">
-
-          <!-- Win probs -->
+        ${hasReason ? `
           <div>
-            <div class="text-[10px] text-gray-600 uppercase tracking-wider mb-2">Win probs</div>
-            ${[
-              [hName, wp.home, "#e5e7eb", "#6b7280"],
-              ["Draw", wp.draw, "#9ca3af", "#4b5563"],
-              [aName,  wp.away, "#e5e7eb", "#6b7280"],
-            ].map(([label, prob, textcol, barcol]) => `
-              <div class="flex items-center gap-1.5 mb-1">
-                <div class="w-14 flex-shrink-0 truncate text-[10px]" style="color:${textcol};">${esc(label)}</div>
-                <div class="flex-1 bar h-1.5">
-                  <div class="h-full rounded-full" style="width:${(prob || 0) * 100}%;background:${barcol};"></div>
-                </div>
-                <div class="text-[10px] font-mono w-8 text-right font-bold" style="color:${textcol};">${fmtPct(prob)}</div>
-              </div>`).join("")}
-            <div class="text-[10px] text-gray-600 mt-1.5">
-              xGD <span class="font-mono text-gray-300 font-bold">${fmt2(p.expected_goal_diff)}</span>
-            </div>
+            <h4 class="text-xs text-gray-400 uppercase tracking-wider mb-2">📖 Full Reasoning</h4>
+            <div class="text-sm text-gray-200 leading-relaxed whitespace-pre-wrap">${esc(reasoning.overall)}</div>
           </div>
-
-          <!-- Top 3 scores -->
-          <div>
-            <div class="text-[10px] text-gray-600 uppercase tracking-wider mb-2">Score dist.</div>
-            ${top3.length ? top3.map((s, i) => `
-              <div class="flex items-center justify-between mb-1 ${i > 0 ? "opacity-50" : ""}">
-                <span class="font-mono font-bold ${i === 0 ? "text-white text-sm" : "text-gray-300 text-xs"}">${esc(s.score)}</span>
-                <span class="text-[10px] font-mono text-gray-500">${fmtPct(s.p)}</span>
-              </div>`).join("")
-              : `<div class="text-gray-600 text-xs">—</div>`}
-          </div>
-
-          <!-- Scorers -->
-          <div>
-            <div class="text-[10px] text-gray-600 uppercase tracking-wider mb-2">Scorers</div>
-            ${hScorers.length ? `
-              <div class="text-[10px] text-gray-600 mb-1">${esc(hName)}</div>
-              ${hScorers.map(s => `
-                <div class="flex items-center justify-between mb-0.5">
-                  <span class="text-xs text-gray-200 font-semibold truncate" style="max-width:7rem;">${esc(s.player)}</span>
-                  <span class="text-[10px] font-mono text-gray-500 ml-1">${fmtPct(s.p)}</span>
-                </div>`).join("")}` : ""}
-            ${aScorers.length ? `
-              <div class="text-[10px] text-gray-600 mt-2 mb-1">${esc(aName)}</div>
-              ${aScorers.map(s => `
-                <div class="flex items-center justify-between mb-0.5">
-                  <span class="text-xs text-gray-200 font-semibold truncate" style="max-width:7rem;">${esc(s.player)}</span>
-                  <span class="text-[10px] font-mono text-gray-500 ml-1">${fmtPct(s.p)}</span>
-                </div>`).join("")}` : ""}
-            ${!hScorers.length && !aScorers.length ? `<div class="text-gray-600 text-xs">—</div>` : ""}
-            ${f.truth && f.truth.scorer_names && f.truth.scorer_names.length ? `
-              <div class="text-[10px] text-gray-600 mt-2 pt-1.5 mb-0.5" style="border-top:1px solid rgba(255,255,255,.06);">Actual</div>
-              ${f.truth.scorer_names.map(n => `<div class="text-xs font-bold truncate" style="color:#fbbf24;">${esc(n)}</div>`).join("")}` : ""}
-          </div>
-
-          <!-- MOTM -->
-          <div>
-            <div class="text-[10px] text-gray-600 uppercase tracking-wider mb-2">MOTM</div>
-            ${topMotm ? `
-              <div class="text-sm font-bold text-white leading-tight">${esc(topMotm.player)}</div>
-              <div class="text-[10px] font-mono text-gray-500 mt-0.5">${fmtPct(topMotm.p)}</div>
-              <div class="text-[10px] text-gray-600 mt-0.5">
-                ${topMotm.team === "home" ? esc(hName) : esc(aName)}
-              </div>` : `<div class="text-gray-600 text-xs">—</div>`}
-            ${f.truth && f.truth.motm ? `
-              <div class="text-[10px] text-gray-600 mt-2 pt-1.5 mb-0.5" style="border-top:1px solid rgba(255,255,255,.06);">Actual</div>
-              <div class="text-xs font-bold" style="color:#fbbf24;">${esc(f.truth.motm)}</div>` : ""}
-          </div>
-        </div>
-
-        <!-- Reasoning preview (4 lines) -->
-        ${reasoning.overall ? `
-          <div class="text-xs text-gray-300 leading-relaxed mb-2"
-               style="display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;">
-            ${esc(reasoning.overall)}
-          </div>` : ""}
+        ` : ""}
         ${_renderDetails(p, f)}
       </div>
     </div>`;
