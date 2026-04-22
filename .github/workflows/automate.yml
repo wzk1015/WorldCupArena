@@ -92,12 +92,12 @@ jobs:
           git config user.email "bot@worldcuparena.local"
           echo "--- files written by pipeline ---"
           ls data/snapshots/ 2>/dev/null || echo "(data/snapshots missing)"
-          git add data/snapshots data/predictions data/results data/live data/search_logs docs/site/data.json
+          git add data/snapshots data/predictions data/results data/live data/search_logs docs/site/data.json docs/leaderboard
           echo "--- git status after add ---"
           git status --short
           if ! git diff --cached --quiet; then
             git commit -m "automate: tick $(date -u +%FT%TZ)"
-            git pull --rebase origin main
+            git pull --rebase --autostash origin main
             git push
             GH_TOKEN="${{ github.token }}" gh workflow run pages.yml --ref main
           else
