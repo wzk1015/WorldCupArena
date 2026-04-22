@@ -193,7 +193,7 @@ def hungarian_minute_mae(
     cost = np.zeros((len(pred_events), len(truth_events)))
     for i, pe in enumerate(pred_events):
         for j, te in enumerate(truth_events):
-            same_actor = str(pe.get(key, "")).strip().lower() == str(te.get(key, "")).strip().lower()
+            same_actor = _name_match(str(pe.get(key, "")), str(te.get(key, "")))
             t_pred = _mid_minute(pe.get(time_key) or pe.get("minute_range"))
             t_true = _mid_minute(te.get(time_key) or te.get("minute_range"))
             if t_true is None:
@@ -232,6 +232,50 @@ def bracket_score(pred_bracket: dict[str, Any], truth_bracket: dict[str, Any]) -
 # ----------------------------------------------------------------------
 # helpers
 # ----------------------------------------------------------------------
+
+def _norm_name(s: str) -> str:
+    """Canonical form for player names: strips accents, normalises to 'firstInitial.lastName'.
+
+    'Harry Kane', 'H. Kane' → 'h.kane'
+    'L. Díaz', 'L. Diaz'   → 'l.diaz'
+    """
+    import unicodedata
+    s = unicodedata.normalize("NFD", s)
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    parts = s.strip().split()
+    if not parts:
+        return s.lower()
+    last = parts[-1].lower()
+    first_init = parts[0].lstrip(".")[0].lower() if parts[0] else ""
+    return f"{first_init}.{last}"
+
+
+def _name_match(a: str, b: str) -> bool:
+    """Case-insensitive name match that handles abbreviated first names.
+
+    Matches "Harry Kane" == "H. Kane" by comparing last names and checking
+    whether one first-name token is an initial of the other.
+    """
+    a, b = a.strip(), b.strip()
+    if a.lower() == b.lower():
+        return True
+    pa, pb = a.split(), b.split()
+    if not pa or not pb:
+        return False
+    # Last names must match
+    if pa[-1].lower() != pb[-1].lower():
+        return False
+    if len(pa) < 2 or len(pb) < 2:
+        # One name only — last-name match is enough
+        return True
+    fa, fb = pa[0].rstrip("."), pb[0].rstrip(".")
+    # One is an initial of the other
+    if len(fa) == 1 and fb:
+        return fa.lower() == fb[0].lower()
+    if len(fb) == 1 and fa:
+        return fb.lower() == fa[0].lower()
+    return False
+
 
 def _parse_score(s: str) -> tuple[int, int]:
     h, a = s.split("-")

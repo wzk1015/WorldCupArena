@@ -42,8 +42,13 @@ METRIC_FNS = {
 }
 
 
+def _norm(name: str | None) -> str:
+    """Normalize a player name for comparison (delegates to metrics._norm_name)."""
+    return metrics._norm_name(name or "")
+
+
 def _event_keys(events: list[dict[str, Any]]) -> list[str]:
-    """Bucket events by (player, 5-minute window) for set-based f1 scoring.
+    """Bucket events by (player_norm, 5-minute window) for set-based f1 scoring.
 
     Events with an unusable minute (None, non-numeric, negative) are skipped
     rather than bucketed — upstream truth sanitization will already have
@@ -52,7 +57,7 @@ def _event_keys(events: list[dict[str, Any]]) -> list[str]:
     """
     keys: list[str] = []
     for e in events or []:
-        player = e.get("player") or "?"
+        player = _norm(e.get("player") or "?")
         raw = e.get("minute")
         if raw is None:
             mr = e.get("minute_range")
@@ -80,10 +85,11 @@ def _stats_smape(pred: dict[str, Any], truth: dict[str, Any], key: str) -> float
 
 
 def _f1_with_ndcg(pred_scorers: list[dict[str, Any]], truth_scorers: list[str]) -> float:
-    pred_names = [s.get("player") for s in pred_scorers]
-    f1 = metrics.f1_set(pred_names, truth_scorers)
+    pred_names = [_norm(s.get("player")) for s in pred_scorers]
+    truth_norm = [_norm(n) for n in truth_scorers]
+    f1 = metrics.f1_set(pred_names, truth_norm)
     ranked = sorted(pred_scorers, key=lambda s: -float(s.get("p", 0)))
-    ndcg = metrics.ndcg_at_k([s["player"] for s in ranked], truth_scorers, k=3)
+    ndcg = metrics.ndcg_at_k([_norm(s["player"]) for s in ranked], truth_norm, k=3)
     return 0.6 * f1 + 0.4 * ndcg
 
 
@@ -92,10 +98,10 @@ def _jaccard_with_position(pred_lineups: dict[str, Any], truth_lineups: dict[str
     for side in ("home", "away"):
         p = pred_lineups.get(side, {}).get("starting", [])
         t = truth_lineups.get(side, {}).get("starting", [])
-        set_score = metrics.jaccard([x["name"] for x in p], [x["name"] for x in t])
+        set_score = metrics.jaccard([_norm(x.get("name")) for x in p], [_norm(x.get("name")) for x in t])
         pos_match = sum(
             1 for a in p for b in t
-            if a.get("name") == b.get("name") and a.get("position") == b.get("position")
+            if _norm(a.get("name")) == _norm(b.get("name")) and a.get("position") == b.get("position")
         )
         pos_score = 100.0 * pos_match / 11
         per_side.append(0.7 * set_score + 0.3 * pos_score)
@@ -133,13 +139,13 @@ def grade_match(prediction: dict[str, Any], truth: dict[str, Any]) -> dict[str, 
                     truth.get("scorer_names", []) or [],
                 )
             elif metric == "f1_set" and tid == "assist_providers":
-                pred_a = [a.get("player") for a in prediction.get("assisters", []) or []]
-                score = metrics.f1_set(pred_a, truth.get("assister_names", []) or [])
+                pred_a = [_norm(a.get("player")) for a in prediction.get("assisters", []) or []]
+                score = metrics.f1_set(pred_a, [_norm(n) for n in truth.get("assister_names", []) or []])
             elif metric == "top1_accuracy" and tid == "man_of_the_match":
                 ranked = sorted(prediction.get("motm_probs", []) or [],
                                 key=lambda x: -float(x.get("p", 0)))
-                top1 = ranked[0].get("player") if ranked else None
-                score = metrics.top1_accuracy([top1] if top1 else [], truth.get("motm", ""))
+                top1 = _norm(ranked[0].get("player")) if ranked else None
+                score = metrics.top1_accuracy([top1] if top1 else [], _norm(truth.get("motm", "")))
             elif metric == "hungarian_minute_mae" and tid == "goal_minute":
                 score = metrics.hungarian_minute_mae(
                     prediction.get("scorers", []) or [],
@@ -193,8 +199,8 @@ def grade_match(prediction: dict[str, Any], truth: dict[str, Any]) -> dict[str, 
                 )
             elif metric == "ndcg_at_3":
                 score = metrics.ndcg_at_k(
-                    [p.get("player") for p in prediction.get("top_scorer_probs", []) or []],
-                    truth.get("top_scorers", []) or [],
+                    [_norm(p.get("player")) for p in prediction.get("top_scorer_probs", []) or []],
+                    [_norm(n) for n in truth.get("top_scorers", []) or []],
                     k=3,
                 )
         except Exception as e:  # noqa: BLE001

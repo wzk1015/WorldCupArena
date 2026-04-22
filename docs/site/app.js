@@ -110,21 +110,34 @@ function toggleSources(idx) {
   }
 }
 
-function _lineupSide(lineup, formation, teamName, colorCls) {
+// Normalize player name: strip accents, reduce to "firstInitial.lastName"
+// "Harry Kane" == "H. Kane", "L. Díaz" == "L. Diaz"
+function _normName(s) {
+  const stripped = (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "");
+  const parts = stripped.trim().split(/\s+/);
+  if (!parts.length) return stripped.toLowerCase();
+  const last = parts[parts.length - 1].toLowerCase();
+  const init = parts[0].replace(/\./g, "")[0]?.toLowerCase() || "";
+  return `${init}.${last}`;
+}
+
+function _lineupSide(lineup, formation, teamName, trStarting, hasTruth) {
   const POS = ["GK", "DF", "MF", "FW"];
   const starting = (lineup || {}).starting || [];
   const bench    = (lineup || {}).bench    || [];
   const byPos = {};
   for (const pl of starting) (byPos[pl.position] = byPos[pl.position] || []).push(pl.name);
+  const trNames = new Set((trStarting || []).map(p => _normName(p.player)));
+  const plColor = (name) => !hasTruth ? "text-gray-200" : trNames.has(_normName(name)) ? "text-green-400" : "text-red-400";
   return `
     <div>
-      <div class="text-xs font-semibold mb-2 ${colorCls}">
+      <div class="text-xs font-semibold mb-2 text-gray-200">
         ${esc(teamName)}${formation ? ` <span class="text-gray-400 font-normal">(${esc(formation)})</span>` : ""}
       </div>
       ${POS.filter(pos => byPos[pos]).map(pos => `
         <div class="text-xs mb-1 leading-snug">
           <span class="text-gray-500 inline-block w-7">${pos}</span>
-          <span class="text-gray-200">${byPos[pos].map(esc).join(", ")}</span>
+          ${byPos[pos].map(n => `<span class="${plColor(n)}">${esc(n)}</span>`).join(", ")}
         </div>`).join("")}
       ${bench.length ? `
         <div class="text-xs mt-2 leading-snug text-gray-500">
@@ -144,11 +157,13 @@ function _renderDetails(p, f) {
   const hName  = f.home || "Home";
   const aName  = f.away || "Away";
   const tr     = f.truth || null;
-  const tName  = (t) => t === "home" ? hName : aName;
-  const tColor = (t) => t === "home" ? "text-emerald-400" : "text-blue-400";
   let html = "";
 
   // Lineups
+  const tTeam = (t) => esc(t === "home" ? hName : aName);
+  // helper: correct/wrong color when truth available
+  const hitColor = (hit) => hit ? "text-green-400" : "text-red-400";
+
   const lin = p.lineups || {};
   if (lin.home || lin.away) {
     const trLinHome = tr && tr.lineups && tr.lineups.home ? tr.lineups.home.starting || [] : null;
@@ -159,8 +174,8 @@ function _renderDetails(p, f) {
       <div>
         <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">⬡ Lineups</div>
         <div class="grid grid-cols-2 gap-4">
-          ${_lineupSide(lin.home, (p.formations || {}).home, hName, "text-emerald-400")}
-          ${_lineupSide(lin.away, (p.formations || {}).away, aName, "text-blue-400")}
+          ${_lineupSide(lin.home, (p.formations || {}).home, hName, trLinHome, !!tr)}
+          ${_lineupSide(lin.away, (p.formations || {}).away, aName, trLinAway, !!tr)}
         </div>
         ${(trLinHome || trLinAway) ? _truthBlock(`
           <div class="grid grid-cols-2 gap-4 mt-1">
@@ -179,30 +194,32 @@ function _renderDetails(p, f) {
   // Scorers
   if ((p.scorers || []).length) {
     const trScorers = tr && tr.scorers ? tr.scorers : null;
+    const trScorerNames = new Set((trScorers || []).map(s => _normName(s.player)));
     html += `
       <div>
         <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">⚽ Scorers</div>
         <table class="w-full text-xs" style="border-collapse:collapse;">
           <thead><tr class="text-gray-500 text-left">
             <th class="font-normal pb-1">Player</th>
-            <th class="font-normal pb-1">Team</th>
+            <th class="font-normal pb-1 text-center">Team</th>
             <th class="font-normal pb-1 text-center">Prob</th>
             <th class="font-normal pb-1 text-center">Minutes</th>
           </tr></thead>
           <tbody>
-            ${p.scorers.map(s => `
-              <tr style="border-top:1px solid rgba(255,255,255,.06)">
-                <td class="py-1 ${tColor(s.team)}">${esc(s.player)}</td>
-                <td class="py-1 text-gray-400">${esc(tName(s.team))}</td>
-                <td class="py-1 text-center font-mono">${fmtPct(s.p)}</td>
+            ${p.scorers.map(s => {
+              const cls = tr ? hitColor(trScorerNames.has(_normName(s.player))) : "text-gray-200";
+              return `<tr style="border-top:1px solid rgba(255,255,255,.06)">
+                <td class="py-1 ${cls}">${esc(s.player)}</td>
+                <td class="py-1 text-center">${tTeam(s.team)}</td>
+                <td class="py-1 text-center font-mono text-gray-300">${fmtPct(s.p)}</td>
                 <td class="py-1 text-center text-gray-400">
                   ${s.minute_range ? `${s.minute_range[0]}′–${s.minute_range[1]}′` : "—"}
                 </td>
-              </tr>`).join("")}
+              </tr>`;}).join("")}
           </tbody>
         </table>
         ${trScorers && trScorers.length ? _truthBlock(
-          trScorers.map(s => `<span class="${tColor(s.team)} font-semibold">${esc(s.player)}</span> <span class="text-gray-400">(${esc(tName(s.team))} ${s.minute}′)</span>`).join(" &nbsp;·&nbsp; ")
+          trScorers.map(s => `<span class="text-gray-200 font-semibold">${esc(s.player)}</span> <span class="text-gray-400">(${tTeam(s.team)} ${s.minute}′)</span>`).join(" &nbsp;·&nbsp; ")
         ) : tr ? _truthBlock(`<span class="text-gray-400">No goals</span>`) : ""}
       </div>`;
   }
@@ -210,26 +227,28 @@ function _renderDetails(p, f) {
   // Assisters
   if ((p.assisters || []).length) {
     const trAssisters = tr && tr.assisters ? tr.assisters : null;
+    const trAssisterNames = new Set((trAssisters || []).map(a => _normName(a.player)));
     html += `
       <div>
         <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🎯 Assisters</div>
         <table class="w-full text-xs" style="border-collapse:collapse;">
           <thead><tr class="text-gray-500 text-left">
             <th class="font-normal pb-1">Player</th>
-            <th class="font-normal pb-1">Team</th>
+            <th class="font-normal pb-1 text-center">Team</th>
             <th class="font-normal pb-1 text-center">Prob</th>
           </tr></thead>
           <tbody>
-            ${p.assisters.map(a => `
-              <tr style="border-top:1px solid rgba(255,255,255,.06)">
-                <td class="py-1 ${tColor(a.team)}">${esc(a.player)}</td>
-                <td class="py-1 text-gray-400">${esc(tName(a.team))}</td>
-                <td class="py-1 text-center font-mono">${fmtPct(a.p)}</td>
-              </tr>`).join("")}
+            ${p.assisters.map(a => {
+              const cls = tr ? hitColor(trAssisterNames.has(_normName(a.player))) : "text-gray-200";
+              return `<tr style="border-top:1px solid rgba(255,255,255,.06)">
+                <td class="py-1 ${cls}">${esc(a.player)}</td>
+                <td class="py-1 text-center">${tTeam(a.team)}</td>
+                <td class="py-1 text-center font-mono text-gray-300">${fmtPct(a.p)}</td>
+              </tr>`;}).join("")}
           </tbody>
         </table>
         ${trAssisters && trAssisters.length ? _truthBlock(
-          trAssisters.map(a => `<span class="${tColor(a.team)} font-semibold">${esc(a.player)}</span> <span class="text-gray-400">(${esc(tName(a.team))})</span>`).join(" &nbsp;·&nbsp; ")
+          trAssisters.map(a => `<span class="text-gray-200 font-semibold">${esc(a.player)}</span> <span class="text-gray-400">(${tTeam(a.team)})</span>`).join(" &nbsp;·&nbsp; ")
         ) : tr ? _truthBlock(`<span class="text-gray-400">No assists recorded</span>`) : ""}
       </div>`;
   }
@@ -237,22 +256,26 @@ function _renderDetails(p, f) {
   // Substitutions
   if ((p.substitutions || []).length) {
     const trSubs = tr && tr.substitutions ? tr.substitutions : null;
+    const trSubOff = new Set((trSubs || []).map(s => _normName(s.off)));
+    const trSubOn  = new Set((trSubs || []).map(s => _normName(s.on)));
     html += `
       <div>
         <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🔄 Substitutions</div>
         <table class="w-full text-xs" style="border-collapse:collapse;">
           <thead><tr class="text-gray-500 text-left">
             <th class="font-normal pb-1 w-10 text-center">Min</th>
-            <th class="font-normal pb-1">Team</th>
+            <th class="font-normal pb-1 text-center">Team</th>
             <th class="font-normal pb-1">Off → On</th>
           </tr></thead>
           <tbody>
-            ${p.substitutions.map(s => `
-              <tr style="border-top:1px solid rgba(255,255,255,.06)">
+            ${p.substitutions.map(s => {
+              const offCls = tr ? hitColor(trSubOff.has(_normName(s.off))) : "text-gray-300";
+              const onCls  = tr ? hitColor(trSubOn.has(_normName(s.on)))  : "text-gray-300";
+              return `<tr style="border-top:1px solid rgba(255,255,255,.06)">
                 <td class="py-1 text-center text-gray-400">${s.minute}′</td>
-                <td class="py-1 ${tColor(s.team)}">${esc(tName(s.team))}</td>
-                <td class="py-1">${esc(s.off)} → <span class="text-emerald-400">${esc(s.on)}</span></td>
-              </tr>`).join("")}
+                <td class="py-1 text-center">${tTeam(s.team)}</td>
+                <td class="py-1"><span class="${offCls}">${esc(s.off)}</span> → <span class="${onCls}">${esc(s.on)}</span></td>
+              </tr>`;}).join("")}
           </tbody>
         </table>
         ${trSubs && trSubs.length ? _truthBlock(`
@@ -260,7 +283,7 @@ function _renderDetails(p, f) {
             ${trSubs.map(s => `
               <tr>
                 <td class="pr-3 text-gray-400 font-mono">${s.minute}′</td>
-                <td class="pr-3 ${tColor(s.team)}">${esc(s.team_name || tName(s.team))}</td>
+                <td class="pr-2">${tTeam(s.team)}</td>
                 <td>${esc(s.off)} → <span class="text-amber-300">${esc(s.on)}</span></td>
               </tr>`).join("")}
           </table>`) : ""}
@@ -270,6 +293,7 @@ function _renderDetails(p, f) {
   // Cards
   if ((p.cards || []).length) {
     const trCards = tr && tr.cards ? tr.cards : null;
+    const trCardPlayers = new Set((trCards || []).map(c => _normName(c.player)));
     html += `
       <div>
         <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🟨 Cards</div>
@@ -277,19 +301,20 @@ function _renderDetails(p, f) {
           <thead><tr class="text-gray-500 text-left">
             <th class="font-normal pb-1 w-10 text-center">Min</th>
             <th class="font-normal pb-1">Player</th>
-            <th class="font-normal pb-1">Team</th>
+            <th class="font-normal pb-1 text-center">Team</th>
             <th class="font-normal pb-1 text-center">Card</th>
           </tr></thead>
           <tbody>
-            ${p.cards.map(c => `
-              <tr style="border-top:1px solid rgba(255,255,255,.06)">
+            ${p.cards.map(c => {
+              const cls = tr ? hitColor(trCardPlayers.has(_normName(c.player))) : "text-gray-200";
+              return `<tr style="border-top:1px solid rgba(255,255,255,.06)">
                 <td class="py-1 text-center text-gray-400">${c.minute}′</td>
-                <td class="py-1">${esc(c.player)}</td>
-                <td class="py-1 ${tColor(c.team)}">${esc(tName(c.team))}</td>
+                <td class="py-1 ${cls}">${esc(c.player)}</td>
+                <td class="py-1 text-center">${tTeam(c.team)}</td>
                 <td class="py-1 text-center">
                   ${c.color === "red" ? "🟥" : c.color === "second_yellow" ? "🟨🟥" : "🟨"}
                 </td>
-              </tr>`).join("")}
+              </tr>`;}).join("")}
           </tbody>
         </table>
         ${trCards && trCards.length ? _truthBlock(`
@@ -297,8 +322,8 @@ function _renderDetails(p, f) {
             ${trCards.map(c => `
               <tr>
                 <td class="pr-3 text-gray-400 font-mono">${c.minute}′</td>
-                <td class="pr-3 ${tColor(c.team)} font-semibold">${esc(c.player)}</td>
-                <td class="pr-3 text-gray-400">${esc(tName(c.team))}</td>
+                <td class="pr-2">${tTeam(c.team)}</td>
+                <td class="pr-3 text-gray-200 font-semibold">${esc(c.player)}</td>
                 <td>${c.color === "red" ? "🟥" : c.color === "second_yellow" ? "🟨🟥" : "🟨"}</td>
               </tr>`).join("")}
           </table>`) : tr ? _truthBlock(`<span class="text-gray-400">No cards</span>`) : ""}
@@ -308,6 +333,7 @@ function _renderDetails(p, f) {
   // Penalties
   if ((p.penalties || []).length) {
     const trPens = tr && tr.penalties ? tr.penalties : null;
+    const trPenTakers = new Set((trPens || []).map(p => _normName(p.taker)));
     html += `
       <div>
         <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🥅 Penalties</div>
@@ -315,24 +341,25 @@ function _renderDetails(p, f) {
           <thead><tr class="text-gray-500 text-left">
             <th class="font-normal pb-1 w-10 text-center">Min</th>
             <th class="font-normal pb-1">Taker</th>
-            <th class="font-normal pb-1">Team</th>
+            <th class="font-normal pb-1 text-center">Team</th>
             <th class="font-normal pb-1">Outcome</th>
           </tr></thead>
           <tbody>
-            ${p.penalties.map(pen => `
-              <tr style="border-top:1px solid rgba(255,255,255,.06)">
+            ${p.penalties.map(pen => {
+              const cls = tr ? hitColor(trPenTakers.has(_normName(pen.taker))) : "text-gray-200";
+              return `<tr style="border-top:1px solid rgba(255,255,255,.06)">
                 <td class="py-1 text-center text-gray-400">${pen.minute}′</td>
-                <td class="py-1">${esc(pen.taker)}</td>
-                <td class="py-1 ${tColor(pen.team)}">${esc(tName(pen.team))}</td>
-                <td class="py-1">
+                <td class="py-1 ${cls}">${esc(pen.taker)}</td>
+                <td class="py-1 text-center">${tTeam(pen.team)}</td>
+                <td class="py-1 text-gray-300">
                   ${pen.outcome === "scored" ? "✅" : pen.outcome === "saved" ? "🧤" : "❌"}
                   ${esc(pen.outcome)}
                 </td>
-              </tr>`).join("")}
+              </tr>`;}).join("")}
           </tbody>
         </table>
         ${trPens && trPens.length ? _truthBlock(
-          trPens.map(pen => `<span class="${tColor(pen.team)} font-semibold">${esc(pen.taker)}</span> <span class="text-gray-400">${pen.minute}′ · ✅ scored</span>`).join(" &nbsp;·&nbsp; ")
+          trPens.map(pen => `<span class="text-gray-200 font-semibold">${esc(pen.taker)}</span> <span class="text-gray-400">${pen.minute}′ · ✅ scored</span>`).join(" &nbsp;·&nbsp; ")
         ) : tr ? _truthBlock(`<span class="text-gray-400">No penalties</span>`) : ""}
       </div>`;
   }
@@ -340,18 +367,18 @@ function _renderDetails(p, f) {
   // Own goals
   if ((p.own_goals || []).length) {
     const trOg = tr && tr.own_goals ? tr.own_goals : null;
+    const trOgPlayers = new Set((trOg || []).map(o => _normName(o.player)));
     html += `
       <div>
         <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">⚽ Own Goals</div>
         <div class="space-y-1 text-xs">
-          ${p.own_goals.map(og => `
-            <div>${og.minute}′ —
-              <span class="${tColor(og.team)}">${esc(og.player)}</span>
-              <span class="text-gray-400">(${esc(tName(og.team))})</span>
-            </div>`).join("")}
+          ${p.own_goals.map(og => {
+            const cls = tr ? hitColor(trOgPlayers.has(_normName(og.player))) : "text-gray-200";
+            return `<div>${og.minute}′ — <span class="${cls}">${esc(og.player)}</span> ${tTeam(og.team)}</div>`;
+          }).join("")}
         </div>
         ${trOg && trOg.length ? _truthBlock(
-          trOg.map(og => `<span class="${tColor(og.team)} font-semibold">${esc(og.player)}</span> <span class="text-gray-400">${og.minute}′</span>`).join(" &nbsp;·&nbsp; ")
+          trOg.map(og => `<span class="text-gray-200 font-semibold">${esc(og.player)}</span> <span class="text-gray-400">${og.minute}′</span>`).join(" &nbsp;·&nbsp; ")
         ) : tr ? _truthBlock(`<span class="text-gray-400">No own goals</span>`) : ""}
       </div>`;
   }
@@ -388,15 +415,15 @@ function _renderDetails(p, f) {
       return `
         <tr style="border-top:1px solid rgba(255,255,255,.06)">
           <td class="py-1.5 text-xs text-gray-400 pr-2">${esc(label)}</td>
-          <td class="py-1.5 text-xs font-mono text-center w-10 ${hWin ? "text-emerald-400 font-bold" : ""}">${h}</td>
+          <td class="py-1.5 text-xs font-mono text-center w-10 ${hWin ? "text-gray-100 font-bold" : "text-gray-300"}">${h}</td>
           <td class="py-1.5 px-2" style="width:6rem;">
             ${total !== null ? `
               <div style="display:flex;height:.375rem;border-radius:9999px;overflow:hidden;">
-                <div style="width:${hPct}%;background:#22c55e70;"></div>
-                <div style="width:${100 - hPct}%;background:#3b82f670;"></div>
+                <div style="width:${hPct}%;background:rgba(255,255,255,.3);"></div>
+                <div style="width:${100 - hPct}%;background:rgba(255,255,255,.1);"></div>
               </div>` : ""}
           </td>
-          <td class="py-1.5 text-xs font-mono text-center w-10 ${aWin ? "text-blue-400 font-bold" : ""}">${a}</td>
+          <td class="py-1.5 text-xs font-mono text-center w-10 ${aWin ? "text-gray-100 font-bold" : "text-gray-300"}">${a}</td>
           ${trH != null || trA != null ? `
           <td class="py-1.5 text-[10px] text-amber-400/80 font-mono text-center w-10 ${trHWin ? "text-amber-400 font-bold" : ""}">${trH ?? "—"}</td>
           <td class="py-1.5 px-1" style="width:4rem;">
@@ -417,9 +444,9 @@ function _renderDetails(p, f) {
         <table class="w-full" style="border-collapse:collapse;">
           <thead><tr class="text-xs">
             <th class="font-normal text-gray-500 text-left pb-1">Stat</th>
-            <th class="font-normal text-emerald-400/70 text-center pb-1 w-10">${esc(hName)}</th>
+            <th class="font-normal text-gray-400 text-center pb-1 w-10">H</th>
             <th style="width:6rem;"></th>
-            <th class="font-normal text-blue-400/70 text-center pb-1 w-10">${esc(aName)}</th>
+            <th class="font-normal text-gray-400 text-center pb-1 w-10">A</th>
             ${trStats ? `<th colspan="3" class="font-normal text-amber-400/70 text-center pb-1">Actual</th>` : ""}
           </tr></thead>
           <tbody>${statRows}</tbody>
@@ -538,13 +565,11 @@ function renderPredCard(p, f, idx) {
         <div>
           <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">📊 Win Probabilities</div>
           <div class="flex gap-3">
-            ${[["home", hName, "text-emerald-400", "rgba(34,197,94,.25)"],
-               ["draw", "Draw",  "text-gray-300",   "rgba(255,255,255,.15)"],
-               ["away", aName,  "text-blue-400",   "rgba(59,130,246,.25)"]
-              ].map(([k, label, cls, bg]) => `
-              <div class="flex-1 rounded-lg px-3 py-2 text-center" style="background:${bg};">
+            ${[["home", hName], ["draw", "Draw"], ["away", aName]
+              ].map(([k, label]) => `
+              <div class="flex-1 rounded-lg px-3 py-2 text-center" style="background:rgba(255,255,255,.06);">
                 <div class="text-[10px] text-gray-400 uppercase tracking-wider">${esc(label)}</div>
-                <div class="text-lg font-black font-mono ${cls}">${fmtPct(wp[k])}</div>
+                <div class="text-lg font-black font-mono text-gray-100">${fmtPct(wp[k])}</div>
               </div>`).join("")}
           </div>
         </div>` : ""}
@@ -562,7 +587,7 @@ function renderPredCard(p, f, idx) {
               const sc   = (s.score || "").split("-");
               const hg   = parseInt(sc[0] ?? "-1");
               const ag   = parseInt(sc[1] ?? "-1");
-              const outcomeCls = hg > ag ? "text-emerald-400" : ag > hg ? "text-blue-400" : "text-gray-300";
+              const outcomeCls = hg > ag || ag > hg ? "text-gray-100" : "text-gray-300";
               return `<div class="flex items-center gap-2">
                 <span class="font-mono font-bold text-sm w-10 text-right ${outcomeCls}">${esc(s.score)}</span>
                 <div class="flex-1 h-2 rounded-full overflow-hidden" style="background:rgba(255,255,255,.07);">
