@@ -487,12 +487,12 @@ function renderPredCard(p, f, idx) {
               const scoreColor = actualScore
                 ? (scoreCorrect ? "color:#4ade80;" : "color:#f87171;")
                 : "color:#fff;";
-              return `<div class="text-2xl font-black leading-tight font-mono" style="${scoreColor}">${esc(topScore.replace("-", " - ") || "—")}</div>`;
+              return `<div class="text-2xl font-black leading-tight font-mono whitespace-nowrap" style="${scoreColor}">${esc(topScore.replace("-", " - ") || "—")}</div>`;
             })()}
           </div>
           ${f.truth ? `<div class="ml-auto">
             <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Actual</div>
-            <div class="text-2xl font-black font-mono leading-tight" style="color:#fbbf24;">${esc(f.truth.score.replace("-", " - ") || "—")}</div>
+            <div class="text-2xl font-black font-mono leading-tight whitespace-nowrap" style="color:#fbbf24;">${esc(f.truth.score.replace("-", " - ") || "—")}</div>
             <div class="text-xs font-mono" style="color:#fbbf2480;">${esc(
               f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : f.truth.result || "—"
             )}</div>
