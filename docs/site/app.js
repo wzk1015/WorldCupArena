@@ -365,7 +365,6 @@ function _renderDetails(p, f) {
     pass_accuracy:     "Pass Accuracy %",
     fouls:             "Fouls",
     saves:             "Saves",
-    defensive_actions: "Defensive Actions",
   };
   const LOWER_BETTER = new Set(["fouls"]);
   const stats = p.stats || {};
@@ -399,7 +398,7 @@ function _renderDetails(p, f) {
           </td>
           <td class="py-1.5 text-xs font-mono text-center w-10 ${aWin ? "text-blue-400 font-bold" : ""}">${a}</td>
           ${trH != null || trA != null ? `
-          <td class="py-1.5 pl-4 text-[10px] text-amber-400/80 font-mono text-center w-10 ${trHWin ? "text-amber-400 font-bold" : ""}">${trH ?? "—"}</td>
+          <td class="py-1.5 text-[10px] text-amber-400/80 font-mono text-center w-10 ${trHWin ? "text-amber-400 font-bold" : ""}">${trH ?? "—"}</td>
           <td class="py-1.5 px-1" style="width:4rem;">
             ${trTotal !== null ? `
               <div style="display:flex;height:.375rem;border-radius:9999px;overflow:hidden;">
@@ -421,7 +420,7 @@ function _renderDetails(p, f) {
             <th class="font-normal text-emerald-400/70 text-center pb-1 w-10">${esc(hName)}</th>
             <th style="width:6rem;"></th>
             <th class="font-normal text-blue-400/70 text-center pb-1 w-10">${esc(aName)}</th>
-            ${trStats ? `<th colspan="3" class="font-normal text-amber-400/70 text-center pb-1 pl-4">Actual</th>` : ""}
+            ${trStats ? `<th colspan="3" class="font-normal text-amber-400/70 text-center pb-1">Actual</th>` : ""}
           </tr></thead>
           <tbody>${statRows}</tbody>
         </table>
@@ -480,7 +479,7 @@ function renderPredCard(p, f, idx) {
           </div>
           <div style="width:1px;height:2.5rem;background:rgba(255,255,255,.1);"></div>
           <div>
-            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Top score</div>
+            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Score</div>
             ${(() => {
               const topScore = top3[0] ? top3[0].score : null;
               const actualScore = f.truth ? f.truth.score : null;
@@ -621,23 +620,23 @@ function _renderOneFixture(nm, cardIdx) {
   const html = `
     <div class="card rounded-2xl p-6">
       <div class="pitch rounded-xl p-5 mb-6">
-        <div class="flex items-center justify-between flex-wrap gap-4">
-          <div class="flex-1 text-center">
-            ${f.home_logo ? `<img src="${esc(f.home_logo)}" alt="${esc(f.home)}" class="h-14 mx-auto mb-2"/>` : `<div class="text-4xl">🏠</div>`}
-            <div class="font-bold text-lg">${esc(f.home || "?")}</div>
-            ${nP > 0 ? `<div class="text-xs text-gray-400">win prob ${fmtPct(agg.home)}</div>` : ""}
+        <div class="grid grid-cols-3 items-center gap-2">
+          <div class="text-center">
+            ${f.home_logo ? `<img src="${esc(f.home_logo)}" alt="${esc(f.home)}" class="h-10 sm:h-14 mx-auto mb-2"/>` : `<div class="text-4xl">🏠</div>`}
+            <div class="font-bold text-sm sm:text-lg leading-tight">${esc(f.home || "?")}</div>
+            ${nP > 0 ? `<div class="text-xs text-gray-400">win ${fmtPct(agg.home)}</div>` : ""}
           </div>
-          <div class="text-center px-4">
-            <div class="text-gray-300 text-sm">${esc(f.competition || "")}${f.stage ? ` · ${esc(f.stage)}` : ""}</div>
+          <div class="text-center">
+            <div class="text-gray-300 text-xs">${esc(f.competition || "")}${f.stage ? ` · ${esc(f.stage)}` : ""}</div>
             <div class="mt-1 text-2xl font-black">VS</div>
-            ${nP > 0 ? `<div class="text-xs text-gray-400 mt-1">draw prob ${fmtPct(agg.draw)}</div>` : ""}
-            <div class="text-xs text-gray-400 mt-3" id="${cid}">${kick ? kick.toUTCString() : "—"}</div>
+            ${nP > 0 ? `<div class="text-xs text-gray-400">draw ${fmtPct(agg.draw)}</div>` : ""}
+            <div class="text-xs text-gray-400 mt-2" id="${cid}">${kick ? kick.toUTCString() : "—"}</div>
             ${f.venue ? `<div class="text-[10px] text-gray-500">${esc(f.venue)}</div>` : ""}
           </div>
-          <div class="flex-1 text-center">
-            ${f.away_logo ? `<img src="${esc(f.away_logo)}" alt="${esc(f.away)}" class="h-14 mx-auto mb-2"/>` : `<div class="text-4xl">🛫</div>`}
-            <div class="font-bold text-lg">${esc(f.away || "?")}</div>
-            ${nP > 0 ? `<div class="text-xs text-gray-400">win prob ${fmtPct(agg.away)}</div>` : ""}
+          <div class="text-center">
+            ${f.away_logo ? `<img src="${esc(f.away_logo)}" alt="${esc(f.away)}" class="h-10 sm:h-14 mx-auto mb-2"/>` : `<div class="text-4xl">🛫</div>`}
+            <div class="font-bold text-sm sm:text-lg leading-tight">${esc(f.away || "?")}</div>
+            ${nP > 0 ? `<div class="text-xs text-gray-400">win ${fmtPct(agg.away)}</div>` : ""}
           </div>
         </div>
       </div>
@@ -828,12 +827,24 @@ function renderHistory(rows) {
             <div class="text-xs text-gray-400">${esc(date)} · ${esc(r.competition || "")} ${esc(r.stage || "")}</div>
             <div class="font-semibold text-lg">${esc(r.home || "?")} <span class="text-gray-500 mx-2">vs</span> ${esc(r.away || "?")}</div>
           </div>
-          <div class="text-right">
-            ${resultBadge}
-            ${r.models && r.models[0] ? `<div class="text-xs text-gray-400 mt-1">best composite: ${fmt2(r.models[0].composite)}</div>` : ""}
-          </div>
         </summary>
         <div class="mt-4 space-y-3">
+          <div class="pitch rounded-xl p-4 mb-4">
+            <div class="grid grid-cols-3 items-center gap-2">
+              <div class="text-center">
+                ${r.home_logo ? `<img src="${esc(r.home_logo)}" alt="${esc(r.home)}" class="h-10 sm:h-14 mx-auto mb-2"/>` : `<div class="text-3xl">🏠</div>`}
+                <div class="font-bold text-sm sm:text-lg leading-tight">${esc(r.home || "?")}</div>
+              </div>
+              <div class="text-center">
+                <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1">Final Score</div>
+                <div class="text-3xl font-black font-mono" style="color:#fbbf24;">${esc(r.result || "—")}</div>
+              </div>
+              <div class="text-center">
+                ${r.away_logo ? `<img src="${esc(r.away_logo)}" alt="${esc(r.away)}" class="h-10 sm:h-14 mx-auto mb-2"/>` : `<div class="text-3xl">🛫</div>`}
+                <div class="font-bold text-sm sm:text-lg leading-tight">${esc(r.away || "?")}</div>
+              </div>
+            </div>
+          </div>
           ${predCards}
         </div>
       </details>`;
