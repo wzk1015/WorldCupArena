@@ -28,6 +28,8 @@ on:
     - cron: "0,10,20,30,40,50 0-5   * * *"   # 00:00–05:50
     # 06:00–15:59 UTC (off-peak): once per hour
     - cron: "0 6-15 * * *"
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       phase:
