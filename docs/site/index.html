@@ -7,9 +7,11 @@
 <meta name="description" content="Benchmarking LLMs and deep-research agents on real-world football prediction. Live leaderboard + next-match model predictions." />
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { theme: { extend: { fontFamily: { mono: ['Inter', 'system-ui', 'sans-serif'] } } } }</script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
   :root { color-scheme: dark; }
+  .font-mono { font-variant-numeric: tabular-nums; }
   body {
     font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
     background:
@@ -125,8 +127,8 @@
   <div class="flex items-center justify-between mb-4">
     <h2 class="text-2xl font-bold flex items-center gap-2">🏆 Leaderboard</h2>
     <div class="flex gap-2 text-xs">
-      <button class="tab-btn chip active" data-view="main">Composite</button>
-      <button class="tab-btn chip" data-view="layers">Per-layer</button>
+      <button class="tab-btn chip active" data-view="main">Composite Score</button>
+      <button class="tab-btn chip" data-view="layers">Per-layer Score</button>
     </div>
   </div>
   <div id="leaderboard-container" class="card rounded-2xl p-4 animate-fade">

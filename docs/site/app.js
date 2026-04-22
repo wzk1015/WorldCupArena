@@ -463,9 +463,9 @@ function renderPredCard(p, f, idx) {
       <!-- Minimalist Prediction -->
       ${predWinner || top3.length ? `
       <div class="mb-4">
-        <div class="flex items-center gap-6">
+        <div class="flex items-start gap-6">
           <div>
-            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Predicted winner</div>
+            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Pred Winner</div>
             ${(() => {
               const truthOutcome = f.truth
                 ? (f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : "Draw")
@@ -474,12 +474,12 @@ function renderPredCard(p, f, idx) {
               const winnerColor = truthOutcome
                 ? (winnerCorrect ? "color:#4ade80;" : "color:#f87171;")
                 : "color:#fff;";
-              return `<div class="text-lg font-black leading-tight" style="${winnerColor}">${esc(predWinner)}</div>`;
+              return `<div class="text-2xl font-black leading-tight" style="${winnerColor}">${esc(predWinner)}</div>`;
             })()}
           </div>
           <div style="width:1px;height:2.5rem;background:rgba(255,255,255,.1);"></div>
           <div>
-            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Score</div>
+            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Pred Score</div>
             ${(() => {
               const topScore = top3[0] ? top3[0].score : null;
               const actualScore = f.truth ? f.truth.score : null;
@@ -487,7 +487,7 @@ function renderPredCard(p, f, idx) {
               const scoreColor = actualScore
                 ? (scoreCorrect ? "color:#4ade80;" : "color:#f87171;")
                 : "color:#fff;";
-              return `<div class="text-2xl font-black leading-tight font-mono" style="${scoreColor}">${esc(topScore || "—")}</div>`;
+              return `<div class="text-2xl font-black leading-tight font-mono" style="${scoreColor}">${esc(topScore.replace("-", " - ") || "—")}</div>`;
             })()}
           </div>
           ${f.truth ? `<div class="ml-auto">
@@ -626,13 +626,13 @@ function _renderOneFixture(nm, cardIdx) {
       <div class="pitch rounded-xl p-5 mb-6">
         <div class="grid grid-cols-3 items-center gap-2">
           <div class="text-center">
-            ${f.home_logo ? `<img src="${esc(f.home_logo)}" alt="${esc(f.home)}" class="h-12 sm:h-16 mx-auto mb-2"/>` : `<div class="text-4xl">🏠</div>`}
+            ${f.home_logo ? `<img src="${esc(f.home_logo)}" alt="${esc(f.home)}" class="h-16 sm:h-24 mx-auto mb-2"/>` : `<div class="text-4xl">🏠</div>`}
             <div class="font-bold text-sm sm:text-lg leading-tight">${esc(f.home || "?")}</div>
             ${nP > 0 ? `<div class="text-xs text-gray-400">win ${fmtPct(agg.home)}</div>` : ""}
           </div>
           <div class="text-center">${centerMiddle}</div>
           <div class="text-center">
-            ${f.away_logo ? `<img src="${esc(f.away_logo)}" alt="${esc(f.away)}" class="h-12 sm:h-16 mx-auto mb-2"/>` : `<div class="text-4xl">🛫</div>`}
+            ${f.away_logo ? `<img src="${esc(f.away_logo)}" alt="${esc(f.away)}" class="h-16 sm:h-24 mx-auto mb-2"/>` : `<div class="text-4xl">🛫</div>`}
             <div class="font-bold text-sm sm:text-lg leading-tight">${esc(f.away || "?")}</div>
             ${nP > 0 ? `<div class="text-xs text-gray-400">win ${fmtPct(agg.away)}</div>` : ""}
           </div>
@@ -697,8 +697,8 @@ function renderLeaderboard(lb, view) {
             <tr>
               <th class="text-left py-2 px-3 w-12">#</th>
               <th class="text-left py-2 px-3">Model</th>
-              <th class="text-right py-2 px-3">Composite</th>
-              <th class="text-right py-2 px-3">Result Acc.</th>
+              <th class="text-right py-2 px-3">Composite Score</th>
+              <th class="text-right py-2 px-3">Result Accuracy</th>
               <th class="text-right py-2 px-3">#Games</th>
             </tr>
           </thead>
@@ -820,7 +820,7 @@ function renderHistory(rows) {
           <div class="pitch rounded-xl p-4 mb-4">
             <div class="grid grid-cols-3 items-center gap-2">
               <div class="text-center">
-                ${r.home_logo ? `<img src="${esc(r.home_logo)}" alt="${esc(r.home)}" class="h-12 sm:h-16 mx-auto mb-2"/>` : `<div class="text-3xl">🏠</div>`}
+                ${r.home_logo ? `<img src="${esc(r.home_logo)}" alt="${esc(r.home)}" class="h-16 sm:h-24 mx-auto mb-2"/>` : `<div class="text-3xl">🏠</div>`}
                 <div class="font-bold text-sm sm:text-lg leading-tight">${esc(r.home || "?")}</div>
               </div>
               <div class="text-center">
@@ -830,7 +830,7 @@ function renderHistory(rows) {
                 ${r.venue ? `<div class="text-[10px] text-gray-500 mt-1">${esc(r.venue)}</div>${r.venue_city ? `<div class="text-[10px] text-gray-500">${esc(r.venue_city)}${r.venue_country ? `, ${esc(r.venue_country)}` : ""}</div>` : ""}` : ""}
               </div>
               <div class="text-center">
-                ${r.away_logo ? `<img src="${esc(r.away_logo)}" alt="${esc(r.away)}" class="h-12 sm:h-16 mx-auto mb-2"/>` : `<div class="text-3xl">🛫</div>`}
+                ${r.away_logo ? `<img src="${esc(r.away_logo)}" alt="${esc(r.away)}" class="h-16 sm:h-24 mx-auto mb-2"/>` : `<div class="text-3xl">🛫</div>`}
                 <div class="font-bold text-sm sm:text-lg leading-tight">${esc(r.away || "?")}</div>
               </div>
             </div>
