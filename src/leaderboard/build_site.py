@@ -528,7 +528,16 @@ def main() -> None:
     #     except Exception:
     #         pass  # malformed existing file — overwrite
 
-    OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
+    def _round3(obj):
+        if isinstance(obj, float):
+            return round(obj, 3)
+        if isinstance(obj, dict):
+            return {k: _round3(v) for k, v in obj.items()}
+        if isinstance(obj, list):
+            return [_round3(v) for v in obj]
+        return obj
+
+    OUT.write_text(json.dumps(_round3(payload), ensure_ascii=False, indent=2))
     print(f"wrote {OUT} "
           f"(leaderboard_models={len(payload['leaderboard']['main'])}, "
           f"incoming={len(incoming)}, "
