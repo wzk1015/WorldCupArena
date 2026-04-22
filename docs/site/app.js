@@ -582,6 +582,9 @@ function renderPredCard(p, f, idx) {
           </div>
         ` : ""}
         ${_renderDetails(p, f)}
+        <div class="pt-2 border-t border-white/5">
+          <button onclick="toggleDetails(${idx})" class="chip hover:bg-white/15 transition text-xs">🔼 Hide Detail</button>
+        </div>
       </div>
     </div>`;
 }
