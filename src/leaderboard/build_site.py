@@ -167,7 +167,11 @@ def _collect_predictions(wca_id: str) -> list[dict]:
     pred_dir = PREDICTIONS / wca_id
     out = []
     for f in sorted(pred_dir.glob("*.json")):
-        rec = json.loads(f.read_text())
+        try:
+            rec = json.loads(f.read_text())
+        except json.JSONDecodeError:
+            print(f"  [warn] skipping malformed JSON: {f}")
+            continue
         if rec.get("error"):
             continue
         p = rec.get("prediction") or {}
@@ -232,18 +236,19 @@ def build_incoming_matches() -> list[dict]:
 
         is_future = kick > now and kick <= cutoff
         live = _load_live_state(wca_id)
-        is_live = live is not None and live.get("status") != "Match Finished"
-        is_finished_live = live is not None and live.get("status") == "Match Finished"
-        # Match kicked off recently but has no live file and no result yet — treat as live
         truth = _load_truth_data(wca_id)
-        is_in_progress = (not is_future and live is None and truth is None
+        # truth.json is authoritative — if it exists the match is done
+        is_finished = (truth is not None) or (live is not None and live.get("status") == "Match Finished")
+        is_live = (not is_finished) and live is not None and live.get("status") not in (None, "Not Started", "Match Finished")
+        # Match kicked off recently but has no live file and no result yet — treat as live
+        is_in_progress = (not is_future and not is_finished and live is None
                           and kick <= now and now - kick < timedelta(hours=3))
 
         # Skip far-future, and anything that's already finished (goes to history)
         if not is_future and not is_live and not is_in_progress:
             continue
-        # If the live file says finished, skip here (history picks it up)
-        if is_finished_live:
+        # If the match is finished, skip here (history picks it up)
+        if is_finished:
             continue
 
         hdr = _load_fixture_header(wca_id)
@@ -436,14 +441,17 @@ def build_history() -> list[dict]:
 
         # Exclude fixtures still live (they show in incoming_matches instead)
         live = _load_live_state(wca_id)
-        if live and live.get("status") and live.get("status") != "Match Finished":
-            continue
-        # Exclude matches that kicked off recently but have no result/live yet
-        kick_dt = _parse_iso(hdr.get("kickoff_utc") or "")
         truth_check = _load_truth_data(wca_id)
-        if (kick_dt and live is None and truth_check is None
-                and kick_dt <= now and now - kick_dt < timedelta(hours=3)):
-            continue
+        # truth.json is authoritative — if it exists the match is done (even if live file is stale)
+        is_done = truth_check is not None or (live and live.get("status") == "Match Finished")
+        if not is_done:
+            if live and live.get("status") and live.get("status") != "Match Finished":
+                continue  # still live, shows in incoming
+            # Exclude matches that kicked off recently but have no result/live yet
+            kick_dt = _parse_iso(hdr.get("kickoff_utc") or "")
+            if (kick_dt and live is None
+                    and kick_dt <= now and now - kick_dt < timedelta(hours=3)):
+                continue
 
         # Only include past fixtures (or live-finished ones detected above)
         kick = hdr.get("kickoff_utc")

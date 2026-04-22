@@ -75,7 +75,7 @@ View the results in a browser:
 ```bash
 python3 -m src.leaderboard.build_site
 python3 -m http.server --directory docs/site 8000
-# open http://localhost:8000
+# open http://localhost:8000 in your browser
 ```
 
 ---
