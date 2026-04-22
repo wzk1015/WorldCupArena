@@ -4,20 +4,20 @@
 
 | Rank | Model | Composite | N |
 |---|---|---|---|
-| 1 | claude-opus-4-7-thinking | 52.87 | 1 |
-| 2 | claude-opus-4-7-thinking-search | 52.50 | 1 |
-| 3 | gemini-3.1-pro-preview-thinking | 52.31 | 1 |
-| 4 | gpt-5.4 | 52.12 | 1 |
-| 5 | gemini-3.1-pro-preview-thinking-search | 46.32 | 1 |
-| 6 | gpt-5.4-search | 39.28 | 3 |
+| 1 | claude-opus-4-7-thinking-search | 59.23 | 1 |
+| 2 | claude-opus-4-7-thinking | 57.24 | 1 |
+| 3 | gpt-5.4 | 56.68 | 1 |
+| 4 | gemini-3.1-pro-preview-thinking | 55.19 | 1 |
+| 5 | gemini-3.1-pro-preview-thinking-search | 51.12 | 1 |
+| 6 | gpt-5.4-search | 41.15 | 3 |
 
 ## Per-model × setting mean (S1 = context-fed LLM, S2 = tool-using)
 
 | Model | S1 | S2 |
 |---|---|---|
-| claude-opus-4-7-thinking | 52.87 | — |
-| claude-opus-4-7-thinking-search | — | 52.50 |
-| gemini-3.1-pro-preview-thinking | 52.31 | — |
-| gemini-3.1-pro-preview-thinking-search | — | 46.32 |
-| gpt-5.4 | 52.12 | — |
-| gpt-5.4-search | — | 39.28 |
+| claude-opus-4-7-thinking | 57.24 | — |
+| claude-opus-4-7-thinking-search | — | 59.23 |
+| gemini-3.1-pro-preview-thinking | 55.19 | — |
+| gemini-3.1-pro-preview-thinking-search | — | 51.12 |
+| gpt-5.4 | 56.68 | — |
+| gpt-5.4-search | — | 41.15 |

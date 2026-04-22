@@ -2,12 +2,27 @@
   "leaderboard": {
     "main": [
       {
+        "model_id": "claude-opus-4-7-thinking-search",
+        "mean": 59.231,
+        "n": 1,
+        "layers_mean": {
+          "T1_core_result": 83.251,
+          "T2_player_level": 51.295,
+          "T3_event_level": 65.216,
+          "T4_tactics_stats": 43.249,
+          "T5_tournament_macro": 10.0
+        },
+        "winner_correct": 1,
+        "winner_total": 1,
+        "winner_acc": 1.0
+      },
+      {
         "model_id": "claude-opus-4-7-thinking",
-        "mean": 52.866,
+        "mean": 57.236,
         "n": 1,
         "layers_mean": {
           "T1_core_result": 83.096,
-          "T2_player_level": 27.373,
+          "T2_player_level": 44.854,
           "T3_event_level": 64.009,
           "T4_tactics_stats": 42.253,
           "T5_tournament_macro": 10.0
@@ -17,42 +32,12 @@
         "winner_acc": 1.0
       },
       {
-        "model_id": "claude-opus-4-7-thinking-search",
-        "mean": 52.499,
-        "n": 1,
-        "layers_mean": {
-          "T1_core_result": 83.251,
-          "T2_player_level": 26.019,
-          "T3_event_level": 62.461,
-          "T4_tactics_stats": 43.249,
-          "T5_tournament_macro": 10.0
-        },
-        "winner_correct": 1,
-        "winner_total": 1,
-        "winner_acc": 1.0
-      },
-      {
-        "model_id": "gemini-3.1-pro-preview-thinking",
-        "mean": 52.314,
-        "n": 1,
-        "layers_mean": {
-          "T1_core_result": 85.479,
-          "T2_player_level": 27.143,
-          "T3_event_level": 52.33,
-          "T4_tactics_stats": 45.076,
-          "T5_tournament_macro": 10.0
-        },
-        "winner_correct": 1,
-        "winner_total": 1,
-        "winner_acc": 1.0
-      },
-      {
         "model_id": "gpt-5.4",
-        "mean": 52.119,
+        "mean": 56.679,
         "n": 1,
         "layers_mean": {
           "T1_core_result": 82.9,
-          "T2_player_level": 24.093,
+          "T2_player_level": 42.331,
           "T3_event_level": 63.0,
           "T4_tactics_stats": 44.205,
           "T5_tournament_macro": 10.0
@@ -62,13 +47,28 @@
         "winner_acc": 1.0
       },
       {
+        "model_id": "gemini-3.1-pro-preview-thinking",
+        "mean": 55.189,
+        "n": 1,
+        "layers_mean": {
+          "T1_core_result": 85.479,
+          "T2_player_level": 38.643,
+          "T3_event_level": 52.33,
+          "T4_tactics_stats": 45.076,
+          "T5_tournament_macro": 10.0
+        },
+        "winner_correct": 1,
+        "winner_total": 1,
+        "winner_acc": 1.0
+      },
+      {
         "model_id": "gemini-3.1-pro-preview-thinking-search",
-        "mean": 46.32,
+        "mean": 51.116,
         "n": 1,
         "layers_mean": {
           "T1_core_result": 74.052,
-          "T2_player_level": 13.991,
-          "T3_event_level": 62.425,
+          "T2_player_level": 32.389,
+          "T3_event_level": 63.737,
           "T4_tactics_stats": 43.602,
           "T5_tournament_macro": 10.0
         },
@@ -78,12 +78,12 @@
       },
       {
         "model_id": "gpt-5.4-search",
-        "mean": 42.44,
+        "mean": 45.239,
         "n": 2,
         "layers_mean": {
           "T1_core_result": 64.271,
-          "T2_player_level": 15.444,
-          "T3_event_level": 60.862,
+          "T2_player_level": 25.837,
+          "T3_event_level": 62.2,
           "T4_tactics_stats": 39.701,
           "T5_tournament_macro": 10.0
         },
@@ -94,22 +94,22 @@
     ],
     "by_model_setting": {
       "gpt-5.4-search": {
-        "S2": 42.44
-      },
-      "gemini-3.1-pro-preview-thinking": {
-        "S1": 52.314
+        "S2": 45.239
       },
       "gpt-5.4": {
-        "S1": 52.119
-      },
-      "claude-opus-4-7-thinking": {
-        "S1": 52.866
+        "S1": 56.679
       },
       "claude-opus-4-7-thinking-search": {
-        "S2": 52.499
+        "S2": 59.231
+      },
+      "claude-opus-4-7-thinking": {
+        "S1": 57.236
       },
       "gemini-3.1-pro-preview-thinking-search": {
-        "S2": 46.32
+        "S2": 51.116
+      },
+      "gemini-3.1-pro-preview-thinking": {
+        "S1": 55.189
       }
     }
   },
@@ -2834,34 +2834,34 @@
       },
       "models": [
         {
-          "model_id": "claude-opus-4-7-thinking",
-          "setting": "S1",
-          "composite": 52.866
-        },
-        {
           "model_id": "claude-opus-4-7-thinking-search",
           "setting": "S2",
-          "composite": 52.499
+          "composite": 59.231
         },
         {
-          "model_id": "gemini-3.1-pro-preview-thinking",
+          "model_id": "claude-opus-4-7-thinking",
           "setting": "S1",
-          "composite": 52.314
+          "composite": 57.236
         },
         {
           "model_id": "gpt-5.4",
           "setting": "S1",
-          "composite": 52.119
+          "composite": 56.679
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking",
+          "setting": "S1",
+          "composite": 55.189
         },
         {
           "model_id": "gpt-5.4-search",
           "setting": "S2",
-          "composite": 47.66
+          "composite": 53.187
         },
         {
           "model_id": "gemini-3.1-pro-preview-thinking-search",
           "setting": "S2",
-          "composite": 46.32
+          "composite": 51.116
         }
       ],
       "predictions": [
@@ -3731,7 +3731,7 @@
               "title": "Bayer Leverkusen vs Bayern Munich Prediction, Lineups & Odds"
             }
           ],
-          "composite": 52.499
+          "composite": 59.231
         },
         {
           "model_id": "claude-opus-4-7-thinking",
@@ -4303,7 +4303,7 @@
           },
           "cost_usd": 0.182,
           "sources": [],
-          "composite": 52.866
+          "composite": 57.236
         },
         {
           "model_id": "gemini-3.1-pro-preview-thinking-search",
@@ -4723,7 +4723,7 @@
               "title": "Match Preview: Bayer Leverkusen vs Bayern Munich"
             }
           ],
-          "composite": 46.32
+          "composite": 51.116
         },
         {
           "model_id": "gemini-3.1-pro-preview-thinking",
@@ -5076,7 +5076,7 @@
           },
           "cost_usd": 0.065,
           "sources": [],
-          "composite": 52.314
+          "composite": 55.189
         },
         {
           "model_id": "gpt-5.4-search",
@@ -5645,7 +5645,7 @@
               "title": "Transfermarkt match preview"
             }
           ],
-          "composite": 47.66
+          "composite": 53.187
         },
         {
           "model_id": "gpt-5.4",
@@ -6164,7 +6164,7 @@
           },
           "cost_usd": 0.078,
           "sources": [],
-          "composite": 52.119
+          "composite": 56.679
         }
       ]
     },
@@ -6752,7 +6752,7 @@
         {
           "model_id": "gpt-5.4-search",
           "setting": "S2",
-          "composite": 37.221
+          "composite": 37.291
         }
       ],
       "predictions": [
@@ -7214,7 +7214,7 @@
           },
           "cost_usd": 0.043,
           "sources": [],
-          "composite": 37.221
+          "composite": 37.291
         }
       ]
     }
