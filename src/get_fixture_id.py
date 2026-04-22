@@ -23,8 +23,10 @@ def get_id(league=94, date="2026-04-19", season=2025, team=None):
     data = json.loads(data.decode("utf-8"))["response"]
 
     if team is None:
-        print(data)
-        return
+        # print(data)
+        if len(data) == 1:
+            return data[0]["fixture"]["id"]
+        return data
 
     # import ipdb; ipdb.set_trace()
     ids = []
@@ -98,5 +100,5 @@ def add_fixture(fixture_id, wca_id=None) -> None:
 
 if __name__ == "__main__":
     # print(get_id(team="crystal", league=39, date="2026-04-20", season=2025))
-    # print(get_id(team="bayern", league=81, date="2026-04-22", season=2025))
-    add_fixture(1379292)
+    # print(get_id(league=81, date="2026-04-23", season=2025))
+    add_fixture(1526337)

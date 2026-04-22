@@ -22,14 +22,12 @@ name: automate
 
 on:
   schedule:
-    # GitHub Actions does not reliably honour */10 — it clusters runs hourly for
-    # low-activity repos. Six explicit entries guarantee 10-minute intervals.
-    - cron: "0  * * * *"   # :00
-    - cron: "10 * * * *"   # :10
-    - cron: "20 * * * *"   # :20
-    - cron: "30 * * * *"   # :30
-    - cron: "40 * * * *"   # :40
-    - cron: "50 * * * *"   # :50
+    # 16:00–05:59 UTC (match hours): every 10 min via explicit minute list + hour ranges.
+    # Explicit entries avoid GitHub's unreliable */10 clustering for low-activity repos.
+    - cron: "0,10,20,30,40,50 16-23 * * *"   # 16:00–23:50
+    - cron: "0,10,20,30,40,50 0-5   * * *"   # 00:00–05:50
+    # 06:00–15:59 UTC (off-peak): once per hour
+    - cron: "0 6-15 * * *"
   workflow_dispatch:
     inputs:
       phase:
