@@ -10,6 +10,8 @@ Phases (windows relative to kickoff):
     ingest       : T-72h → T-24h   pull fixture.json from API-Football
     populate     : T-48h → T-24h   fill context_pack (squads/form/news/stats)
     lock_predict : T-24h → T+0h    lock snapshot + run all model predictions
+    live_update  : T+0h  → T+3h    fetch live score every tick → data/live/<id>.json;
+                                   immediately triggers truth_grade if "Match Finished"
     truth_grade  : T+3h  → T+48h   pull truth, grade, rebuild leaderboard
 
 At each tick, for each fixture, every phase whose window is open runs in
@@ -21,13 +23,15 @@ order. Every phase checks "is my work already done?" before acting:
                    24h window), runs ingest + populate inline before locking;
                    skip lock if snapshot_hash is set;
                    skip predict if predictions/<wca_id>/ has any json
+    live_update  — always overwrites data/live/<id>.json with latest API response;
+                   if status == "Match Finished", calls _phase_truth_grade immediately
     truth_grade  — skip truth download if truth.json exists;
                    grade is always safe to rerun
 
 Usage:
-    python -m src.pipeline.scheduler tick             # run every due phase
-    python -m src.pipeline.scheduler tick --phase predict
-    python -m src.pipeline.scheduler show             # dry-run status table
+    python -m src.pipeline.scheduler tick                      # run every due phase
+    python -m src.pipeline.scheduler tick --phase live_update  # only live score fetch
+    python -m src.pipeline.scheduler show                      # dry-run status table
 """
 
 from __future__ import annotations

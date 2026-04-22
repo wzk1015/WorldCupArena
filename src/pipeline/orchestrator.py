@@ -1,8 +1,9 @@
 """Top-level orchestrator for a single fixture prediction round.
 
 Usage:
-    python -m src.pipeline.orchestrator predict  --fixture data/snapshots/ucl_sf1_l1/fixture.json
-    python -m src.pipeline.orchestrator grade    --fixture-dir data/snapshots/ucl_sf1_l1
+    python -m src.pipeline.orchestrator predict     --fixture data/snapshots/ucl_sf1_l1/fixture.json
+    python -m src.pipeline.orchestrator grade       --fixture-dir data/snapshots/ucl_sf1_l1
+    python -m src.pipeline.orchestrator live_update --fixture-id 12345 --wca-id ucl_sf1_l1
 
 Design:
     1. Load fixture snapshot (must already be locked; snapshot_hash required).
@@ -36,6 +37,7 @@ DATA = ROOT / "data"
 PREDICTIONS_DIR = DATA / "predictions"
 RESULTS_DIR = DATA / "results"
 SEARCH_LOGS_DIR = DATA / "search_logs"
+LIVE_DIR = DATA / "live"
 
 
 def _load_yaml(p: Path) -> Any:
@@ -217,6 +219,42 @@ def cmd_grade(fixture_dir: Path) -> None:
 #     print(f"[leaderboard] wrote {len(rows)} rows -> {out}")
 
 
+def cmd_live_update(fixture_id: str, wca_id: str) -> None:
+    """Fetch the current live score from API-Football and write to data/live/<wca_id>.json.
+
+    If the match status is "Match Finished", also writes truth.json and grades
+    all predictions (same as truth_grade phase), so results appear immediately
+    without waiting for the T+3h window.
+    """
+    import os
+    api_key = os.environ.get("APIFOOTBALL_API_KEY") or os.environ.get("API_FOOTBALL_KEY")
+    if not api_key:
+        raise RuntimeError("Set APIFOOTBALL_API_KEY (or API_FOOTBALL_KEY) in your .env")
+
+    LIVE_DIR.mkdir(parents=True, exist_ok=True)
+    live_path = LIVE_DIR / f"{wca_id}.json"
+
+    client = APIFootballClient(api_key)
+    raw = client.fixture(int(fixture_id))
+    live_path.write_text(json.dumps(raw, ensure_ascii=False, indent=2))
+
+    try:
+        status = raw["response"][0]["fixture"]["status"].get("long")
+    except (KeyError, IndexError):
+        status = None
+
+    print(f"[live_update] {wca_id}: status={status!r} → {live_path}")
+
+    if status == "Match Finished":
+        print(f"[live_update] match finished — running truth_grade")
+        fx_dir = DATA / "snapshots" / wca_id
+        truth_path = fx_dir / "truth.json"
+        if not truth_path.exists():
+            truth_path.write_text(json.dumps(raw, ensure_ascii=False, indent=2))
+            print(f"[live_update] wrote truth.json from live response")
+        cmd_grade(fx_dir)
+
+
 def cmd_populate(
     fixture_path: Path,
     recent_n: int = 10,
@@ -263,22 +301,22 @@ def main() -> None:
 
     p = sub.add_parser("predict"); p.add_argument("--fixture", type=Path, required=True); p.add_argument("--parallel", type=int, default=8)
     p = sub.add_parser("grade");   p.add_argument("--fixture-dir", type=Path, required=True)
-    # sub.add_parser("leaderboard")
-    p = sub.add_parser("lock");     p.add_argument("--fixture", type=Path, required=True)
+    p = sub.add_parser("lock");    p.add_argument("--fixture", type=Path, required=True)
     p = sub.add_parser("populate")
     p.add_argument("--fixture", type=Path, required=True)
     p.add_argument("--recent-n", type=int, default=10)
     p.add_argument("--no-news", action="store_true", help="skip news_headlines ingest")
     p.add_argument("--news-cap", type=int, default=20)
     p.add_argument("--news-window-days", type=int, default=7)
+    p = sub.add_parser("live_update", help="fetch live score; grade immediately if finished")
+    p.add_argument("--fixture-id", required=True, help="API-Football numeric fixture id")
+    p.add_argument("--wca-id", required=True, help="internal wca_id (snapshot dir name)")
 
     args = ap.parse_args()
     if args.cmd == "predict":
         cmd_predict(args.fixture, args.parallel)
     elif args.cmd == "grade":
         cmd_grade(args.fixture_dir)
-    # elif args.cmd == "leaderboard":
-    #     cmd_leaderboard()
     elif args.cmd == "lock":
         lock_fixture(args.fixture)
     elif args.cmd == "populate":
@@ -289,6 +327,8 @@ def main() -> None:
             news_cap=args.news_cap,
             news_window_days=args.news_window_days,
         )
+    elif args.cmd == "live_update":
+        cmd_live_update(args.fixture_id, args.wca_id)
 
 
 if __name__ == "__main__":

@@ -26,7 +26,7 @@ from __future__ import annotations
 
 import json
 from collections import defaultdict
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 import yaml
@@ -144,8 +144,10 @@ def _load_fixture_header(wca_id: str) -> dict | None:
             "kickoff_utc": r0["fixture"]["date"],
             "lock_at_utc": raw.get("lock_at_utc"),
             "venue":       (r0["fixture"].get("venue") or {}).get("name"),
-            "stage":       (r0.get("league") or {}).get("round"),
-            "competition": (r0.get("league") or {}).get("name"),
+            "venue_city":    (r0["fixture"].get("venue") or {}).get("city"),
+            "venue_country": (r0.get("league") or {}).get("country"),
+            "stage":         (r0.get("league") or {}).get("round"),
+            "competition":   (r0.get("league") or {}).get("name"),
         }
     return {
         "wca_id":      wca_id,
@@ -154,7 +156,9 @@ def _load_fixture_header(wca_id: str) -> dict | None:
         "kickoff_utc": raw.get("kickoff_utc"),
         "lock_at_utc": raw.get("lock_at_utc"),
         "venue":       raw.get("venue"),
-        "stage":       raw.get("stage"),
+        "venue_city":    raw.get("venue_city"),
+        "venue_country": raw.get("venue_country"),
+        "stage":         raw.get("stage"),
         "competition": raw.get("competition"),
     }
 
@@ -216,7 +220,6 @@ def build_incoming_matches() -> list[dict]:
     Fixtures whose live status is "Match Finished" are excluded here and handled
     by build_history() instead.
     """
-    from datetime import timedelta
     now = datetime.now(timezone.utc)
     cutoff = now + timedelta(days=3)
     registry = _load_fixtures()
@@ -231,9 +234,13 @@ def build_incoming_matches() -> list[dict]:
         live = _load_live_state(wca_id)
         is_live = live is not None and live.get("status") != "Match Finished"
         is_finished_live = live is not None and live.get("status") == "Match Finished"
+        # Match kicked off recently but has no live file and no result yet — treat as live
+        truth = _load_truth_data(wca_id)
+        is_in_progress = (not is_future and live is None and truth is None
+                          and kick <= now and now - kick < timedelta(hours=3))
 
         # Skip far-future, and anything that's already finished (goes to history)
-        if not is_future and not is_live:
+        if not is_future and not is_live and not is_in_progress:
             continue
         # If the live file says finished, skip here (history picks it up)
         if is_finished_live:
@@ -249,7 +256,9 @@ def build_incoming_matches() -> list[dict]:
                 "kickoff_utc": kick_str,
                 "lock_at_utc": None,
                 "venue":       None,
-                "stage":       None,
+                "venue_city":    None,
+                "venue_country": None,
+                "stage":         None,
                 "competition": None,
             }
         preds = _collect_predictions(wca_id)
@@ -429,6 +438,12 @@ def build_history() -> list[dict]:
         live = _load_live_state(wca_id)
         if live and live.get("status") and live.get("status") != "Match Finished":
             continue
+        # Exclude matches that kicked off recently but have no result/live yet
+        kick_dt = _parse_iso(hdr.get("kickoff_utc") or "")
+        truth_check = _load_truth_data(wca_id)
+        if (kick_dt and live is None and truth_check is None
+                and kick_dt <= now and now - kick_dt < timedelta(hours=3)):
+            continue
 
         # Only include past fixtures (or live-finished ones detected above)
         kick = hdr.get("kickoff_utc")
@@ -480,30 +495,30 @@ def build_history() -> list[dict]:
 def main() -> None:
     incoming = build_incoming_matches()
     payload = {
-        "generated_at":     _now_iso(),
+        # "generated_at":     _now_iso(),
         "leaderboard":      build_leaderboard(),
         "incoming_matches": incoming,
         "history":          build_history(),
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
 
-    # Only write if content changed (ignoring generated_at), so the cron commit
-    # isn't triggered purely by a timestamp update.
-    def _content(p: dict) -> str:
-        return json.dumps({k: v for k, v in p.items() if k != "generated_at"},
-                          ensure_ascii=False, sort_keys=True)
+    # # Only write if content changed (ignoring generated_at), so the cron commit
+    # # isn't triggered purely by a timestamp update.
+    # def _content(p: dict) -> str:
+    #     return json.dumps({k: v for k, v in p.items() if k != "generated_at"},
+    #                       ensure_ascii=False, sort_keys=True)
 
-    if OUT.exists():
-        try:
-            old = json.loads(OUT.read_text())
-            if _content(old) == _content(payload):
-                print(f"skip write — content unchanged "
-                      f"(leaderboard_models={len(payload['leaderboard']['main'])}, "
-                      f"incoming={len(incoming)}, "
-                      f"history={len(payload['history'])})")
-                return
-        except Exception:
-            pass  # malformed existing file — overwrite
+    # if OUT.exists():
+    #     try:
+    #         old = json.loads(OUT.read_text())
+    #         if _content(old) == _content(payload):
+    #             print(f"skip write — content unchanged "
+    #                   f"(leaderboard_models={len(payload['leaderboard']['main'])}, "
+    #                   f"incoming={len(incoming)}, "
+    #                   f"history={len(payload['history'])})")
+    #             return
+    #     except Exception:
+    #         pass  # malformed existing file — overwrite
 
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
     print(f"wrote {OUT} "

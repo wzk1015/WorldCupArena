@@ -114,6 +114,8 @@ def normalize_fixture(raw: dict) -> dict:
             "short": teams["away"].get("short") or teams["away"]["name"][:3],
         },
         "venue":        (fix.get("venue") or {}).get("name"),
+        "venue_city":    (fix.get("venue") or {}).get("city"),
+        "venue_country": fix.get("league", {}).get("country"),
         "referee":      fix.get("referee"),
         "context_pack": raw.get("context_pack") or {},
         "snapshot_hash": raw.get("snapshot_hash"),

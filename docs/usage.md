@@ -23,23 +23,24 @@ If you route through a 中转/proxy endpoint, set `OPENA_BASE_URL` or other base
 
 ---
 
-## 1. The 4-step lifecycle of a fixture
+## 1. The lifecycle of a fixture
 
-Every fixture goes through exactly these four steps:
+Every fixture flows through these phases (automated by the scheduler):
 
 ```
-lock  →  predict  →  (kickoff + real match happens)  →  grade
+ingest → populate → lock+predict → (kickoff) → live_update → truth+grade
 ```
 
-Step-by-step:
+| Phase | Scheduler name | Command | What it produces |
+|-------|---------------|---------|-----------------|
+| **ingest**   | `ingest`       | `src.ingest.api_football --fixture-id … --out fixture.json` | `data/snapshots/<id>/fixture.json` |
+| **populate** | `populate`     | `src.pipeline.orchestrator populate --fixture …` | `context_pack` (squads, form, news, stats) |
+| **lock**     | `lock_predict` | `src.pipeline.orchestrator lock --fixture …` | `snapshot_hash` in `fixture.json` |
+| **predict**  | `lock_predict` | `src.pipeline.orchestrator predict --fixture …` | `data/predictions/<id>/<model>__<setting>.json` |
+| **live update** | `live_update` | `src.pipeline.orchestrator live_update --fixture-id … --wca-id …` | real-time score/status in `data/live/<id>.json`; auto-triggers grade when finished |
+| **grade**    | `truth_grade`  | `src.pipeline.orchestrator grade --fixture-dir …` | `data/results/<id>/*.json` + rebuilt leaderboard |
 
-| Step          | Command                                                                       | What it produces                                    |
-|---------------|-------------------------------------------------------------------------------|-----------------------------------------------------|
-| **lock**      | `python -m src.pipeline.orchestrator lock --fixture <fixture.json>`           | `snapshot_hash` written into `fixture.json`         |
-| **predict**   | `python -m src.pipeline.orchestrator predict --fixture <fixture.json>`        | one JSON per (model, setting) in `data/predictions/<id>/` |
-| **grade**     | `python -m src.pipeline.orchestrator grade --fixture-dir <snapshot_dir>`      | scored JSON in `data/results/<id>/`                 |
-
-> `grade` needs `truth.json` next to `fixture.json` in the snapshot directory. Fetch it automatically via `src.ingest.api_football --fixture-id <ID> --truth` or hand-edit for dry-runs.
+> `grade` needs `truth.json` next to `fixture.json`. In automated runs this is fetched automatically. For manual dry-runs, hand-edit or fetch via `src.ingest.api_football --fixture-id <ID> --out truth.json`.
 
 ---
 
@@ -56,6 +57,12 @@ python -m src.pipeline.scheduler tick
 
 # Run a specific phase only
 python -m src.pipeline.scheduler tick --phase lock_predict
+python -m src.pipeline.scheduler tick --phase live_update   # fetch live score (all due fixtures)
+
+# Or target a single fixture directly:
+python -m src.pipeline.orchestrator live_update \
+    --fixture-id 12345 \
+    --wca-id Premier-League_Arsenal_Chelsea_2026-05-01
 ```
 
 After a tick, inspect outputs:

@@ -9,19 +9,18 @@ This document is the authoritative reference for the workflow system. See
 
 ---
 
-## 1. The six-phase fixture lifecycle
+## 1. The five-phase fixture lifecycle
 
-Every fixture flows through six pipeline phases, grouped into three cron
-windows. All times are relative to **kickoff** (UTC).
+Every fixture flows through five pipeline phases. All times are relative to
+**kickoff** (UTC).
 
-| Phase | Window | Command | What it writes |
-|-------|--------|---------|----------------|
-| **ingest**   | T-48h → T-24h | `src.ingest.api_football --fixture-id … --out fixture.json` | raw API-Football response → `data/snapshots/<id>/fixture.json` |
-| **populate** | T-48h → T-24h | `src.pipeline.orchestrator populate --fixture …` | adds `context_pack` — squads + recent form + stats + **news headlines** |
-| **lock**     | T-24h         | `src.pipeline.orchestrator lock --fixture …` | `snapshot_hash` written into `fixture.json` |
-| **predict**  | T-24h → T+0h  | `src.pipeline.orchestrator predict --fixture …` | `data/predictions/<id>/<model>__<setting>.json` |
-| **truth**    | T+3h → T+48h | `src.ingest.api_football --fixture-id … --out truth.json` | raw post-match response → `data/snapshots/<id>/truth.json` |
-| **grade**    | T+3h → T+48h | `src.pipeline.orchestrator grade --fixture-dir …` + `src.leaderboard.build` + `src.leaderboard.build_site` | `data/results/<id>/*.json` + `docs/leaderboard/raw.json` + `docs/site/data.json` |
+| Phase | Scheduler name | Window | Command | What it writes |
+|-------|---------------|--------|---------|----------------|
+| **ingest**   | `ingest`       | T-72h → T-24h | `src.ingest.api_football --fixture-id … --out fixture.json` | raw API-Football response → `data/snapshots/<id>/fixture.json` |
+| **populate** | `populate`     | T-48h → T-24h | `src.pipeline.orchestrator populate --fixture …` | adds `context_pack` — squads + recent form + stats + **news headlines** |
+| **lock+predict** | `lock_predict` | T-24h → T+0h | `orchestrator lock` then `orchestrator predict` | `snapshot_hash` in `fixture.json` + `data/predictions/<id>/<model>__<setting>.json` |
+| **live update** | `live_update` | T+0h → T+3h | `src.pipeline.orchestrator live_update --fixture-id … --wca-id …` | `data/live/<id>.json` (real-time score/status); triggers `truth_grade` early if status = "Match Finished" |
+| **truth+grade** | `truth_grade` | T+3h → T+48h | `src.ingest.api_football --out truth.json` + `orchestrator grade` + `leaderboard.build` + `leaderboard.build_site` | `truth.json` + `data/results/<id>/*.json` + `docs/site/data.json` |
 
 Phases scheduled by `src.pipeline.scheduler`:
 
@@ -29,6 +28,7 @@ Phases scheduled by `src.pipeline.scheduler`:
 T-72h ─── ingest          ─── fixture.json  (from API-Football)
 T-48h ─── populate        ─── context_pack  (squads, form, news, stats)
 T-24h ─── lock_predict    ─── snapshot_hash + predictions/
+T+0h  ─── live_update     ─── data/live/<id>.json  (real-time score every 10 min)
 T+3h  ─── truth_grade     ─── truth.json + results/ + leaderboard + site/data.json
 ```
 
@@ -79,6 +79,9 @@ Key design properties:
    - `populate`: skips if `context_pack.squads` is already populated.
    - `lock_predict`: skips `lock` if `snapshot_hash` is set; skips `predict`
      if `data/predictions/<wca_id>/*.json` is non-empty.
+   - `live_update`: always overwrites `data/live/<wca_id>.json` with the
+     latest score; if status becomes "Match Finished", immediately triggers
+     `truth_grade` without waiting for the T+3h window.
    - `truth_grade`: skips the truth download if `truth.json` exists. Grade
      itself is always safe to rerun.
 2. **Catch-up friendly.** Phase windows are ranges, not exact times, so a
@@ -97,7 +100,7 @@ Key design properties:
 
 Trigger: **`cron: "*/10 * * * *"`** — every 10 minutes, UTC.
 Also accepts manual `workflow_dispatch` with an optional phase filter
-(`ingest` / `populate` / `lock_predict` / `truth_grade`).
+(`ingest` / `populate` / `lock_predict` / `live_update` / `truth_grade`).
 
 Job outline:
 
@@ -175,14 +178,14 @@ python -m src.pipeline.scheduler tick
              ▼
    ┌──────── cron every 10 minutes ────────┐
    │                                       │
-T-72h ──────── ingest      (fetch fixture.json from API-Football)
+T-72h ──────── ingest           (fetch fixture.json from API-Football)
    │                                       │
-T-48h ──────── populate    (squads + form + news + stats)
+T-48h ──────── populate         (squads + form + news + stats)
    │                                       │
 T-24h ──────── lock + predict   (freeze snapshot, run all models)
    │                                       │
-kickoff ──────── (real match)
-   │                                       │
+kickoff ──────── live_update    (real-time score every 10 min → data/live/)
+   │                            (triggers truth_grade immediately on "Match Finished")
 T+3h  ──────── truth + grade    (pull result, score, rebuild site)
              │
              ▼

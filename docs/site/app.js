@@ -492,7 +492,7 @@ function renderPredCard(p, f, idx) {
           </div>
           ${f.truth ? `<div class="ml-auto">
             <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Actual</div>
-            <div class="text-2xl font-black font-mono leading-tight" style="color:#fbbf24;">${esc(f.truth.score || "—")}</div>
+            <div class="text-2xl font-black font-mono leading-tight" style="color:#fbbf24;">${esc(f.truth.score.replace("-", " - ") || "—")}</div>
             <div class="text-xs font-mono" style="color:#fbbf2480;">${esc(
               f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : f.truth.result || "—"
             )}</div>
@@ -597,15 +597,7 @@ function _renderOneFixture(nm, cardIdx) {
   _allPreds.push(...preds);
 
   const lv = nm.live;
-  const liveHtml = (lv && lv.status !== "Match Finished") ? `
-    <div class="flex items-center justify-center gap-2 mb-4">
-      <span class="chip" style="background:rgba(239,68,68,.2);border-color:rgba(239,68,68,.5);color:#fca5a5;">
-        🔴 LIVE ${lv.elapsed != null ? `· ${lv.elapsed}′` : ""}
-      </span>
-      <span class="font-mono font-bold text-lg">
-        ${lv.score ? `${lv.score.home ?? "?"}–${lv.score.away ?? "?"}` : ""}
-      </span>
-    </div>` : "";
+  const isMatchLive = lv && lv.status && lv.status !== "Match Finished" && lv.status !== "Not Started";
 
   const agg = { home: 0, draw: 0, away: 0 };
   let nP = 0;
@@ -617,30 +609,35 @@ function _renderOneFixture(nm, cardIdx) {
   }
   if (nP > 0) { agg.home /= nP; agg.draw /= nP; agg.away /= nP; }
 
+  const centerMiddle = isMatchLive
+    ? `<div class="text-gray-400 text-xs">${esc(f.competition || "")}${f.stage ? ` · ${esc(f.stage)}` : ""}</div>
+       <div class="mt-1 text-3xl font-black font-mono" style="color:#f87171;">${lv.score ? `${lv.score.home ?? "?"} – ${lv.score.away ?? "?"}` : "?–?"}</div>
+       <div class="text-xs font-semibold" style="color:#fca5a5;">🔴 LIVE${lv.elapsed != null ? ` · ${lv.elapsed}′` : ""}</div>
+       ${f.venue ? `<div class="text-[10px] text-gray-500 mt-1">${esc(f.venue)}</div>${f.venue_city ? `<div class="text-[10px] text-gray-500">${esc(f.venue_city)}${f.venue_country ? `, ${esc(f.venue_country)}` : ""}</div>` : ""}` : ""}`
+    : `${kick ? `<div class="text-xs text-gray-300 font-medium mb-1">${fmtLocalKickoff(kick)}</div>` : ""}
+       <div class="text-gray-400 text-xs">${esc(f.competition || "")}${f.stage ? ` · ${esc(f.stage)}` : ""}</div>
+       <div class="mt-1 text-2xl font-black">VS</div>
+       ${nP > 0 ? `<div class="text-xs text-gray-400">draw ${fmtPct(agg.draw)}</div>` : ""}
+       <div class="text-xs text-gray-400 mt-1" id="${cid}">${kick ? "" : "—"}</div>
+       ${f.venue ? `<div class="text-[10px] text-gray-500 mt-1">${esc(f.venue)}</div>${f.venue_city ? `<div class="text-[10px] text-gray-500">${esc(f.venue_city)}${f.venue_country ? `, ${esc(f.venue_country)}` : ""}</div>` : ""}` : ""}`;
+
   const html = `
     <div class="card rounded-2xl p-6">
       <div class="pitch rounded-xl p-5 mb-6">
         <div class="grid grid-cols-3 items-center gap-2">
           <div class="text-center">
-            ${f.home_logo ? `<img src="${esc(f.home_logo)}" alt="${esc(f.home)}" class="h-10 sm:h-14 mx-auto mb-2"/>` : `<div class="text-4xl">🏠</div>`}
+            ${f.home_logo ? `<img src="${esc(f.home_logo)}" alt="${esc(f.home)}" class="h-12 sm:h-16 mx-auto mb-2"/>` : `<div class="text-4xl">🏠</div>`}
             <div class="font-bold text-sm sm:text-lg leading-tight">${esc(f.home || "?")}</div>
             ${nP > 0 ? `<div class="text-xs text-gray-400">win ${fmtPct(agg.home)}</div>` : ""}
           </div>
+          <div class="text-center">${centerMiddle}</div>
           <div class="text-center">
-            <div class="text-gray-300 text-xs">${esc(f.competition || "")}${f.stage ? ` · ${esc(f.stage)}` : ""}</div>
-            <div class="mt-1 text-2xl font-black">VS</div>
-            ${nP > 0 ? `<div class="text-xs text-gray-400">draw ${fmtPct(agg.draw)}</div>` : ""}
-            <div class="text-xs text-gray-400 mt-2" id="${cid}">${kick ? kick.toUTCString() : "—"}</div>
-            ${f.venue ? `<div class="text-[10px] text-gray-500">${esc(f.venue)}</div>` : ""}
-          </div>
-          <div class="text-center">
-            ${f.away_logo ? `<img src="${esc(f.away_logo)}" alt="${esc(f.away)}" class="h-10 sm:h-14 mx-auto mb-2"/>` : `<div class="text-4xl">🛫</div>`}
+            ${f.away_logo ? `<img src="${esc(f.away_logo)}" alt="${esc(f.away)}" class="h-12 sm:h-16 mx-auto mb-2"/>` : `<div class="text-4xl">🛫</div>`}
             <div class="font-bold text-sm sm:text-lg leading-tight">${esc(f.away || "?")}</div>
             ${nP > 0 ? `<div class="text-xs text-gray-400">win ${fmtPct(agg.away)}</div>` : ""}
           </div>
         </div>
       </div>
-      ${liveHtml}
       ${preds.length === 0
         ? `<div class="text-gray-400 text-sm">No model predictions yet (runs 24 h before kickoff).</div>`
         : `<div class="space-y-3">${preds.map((p, i) => renderPredCard(p, f, nmStart + i)).join("")}</div>`}
@@ -670,7 +667,7 @@ function renderIncomingMatches(matches) {
       const el2 = document.getElementById(cid);
       if (!el2) return;
       const diff = kick - new Date();
-      if (diff <= 0) { el2.textContent = "🔴 kicked off"; return; }
+      if (diff <= 0) { el2.textContent = "🟢 Live"; return; }
       const h = Math.floor(diff / 3600000);
       const m = Math.floor((diff % 3600000) / 60000);
       const s = Math.floor((diff % 60000) / 1000);
@@ -795,23 +792,14 @@ function renderHistory(rows) {
     const lv    = r.live;
     const isLive = lv && lv.status && lv.status !== "Match Finished" && lv.status !== "Not Started";
 
-    // Result badge: prefer live score during match, then truth, then "—"
-    let resultBadge;
-    if (isLive) {
-      resultBadge = `
-        <div class="flex items-center gap-2 justify-end">
-          <span class="chip text-[10px]" style="background:rgba(239,68,68,.2);border-color:rgba(239,68,68,.5);color:#fca5a5;">
-            🔴 LIVE${lv.elapsed != null ? ` · ${lv.elapsed}′` : ""}
-          </span>
-          <span class="font-mono font-bold text-xl">
-            ${lv.score ? `${lv.score.home ?? "?"}–${lv.score.away ?? "?"}` : ""}
-          </span>
-        </div>`;
-    } else {
-      resultBadge = r.result
-        ? `<div class="text-2xl font-black font-mono" style="color:#fbbf24;letter-spacing:-.02em;">${esc(r.result)}</div>`
-        : `<div class="text-xl font-black text-gray-600">—</div>`;
-    }
+    // Skip live matches — they belong in Incoming Matches
+    if (isLive) return "";
+
+    const liveScore = isLive && lv.score ? `${lv.score.home ?? "?"} – ${lv.score.away ?? "?"}` : null;
+    const scoreHtml = isLive
+      ? `<div class="text-3xl font-black font-mono" style="color:#f87171;">${esc(liveScore || "?–?")}</div>
+         <div class="text-xs font-semibold mt-0.5" style="color:#fca5a5;">🔴 LIVE${lv.elapsed != null ? ` · ${lv.elapsed}′` : ""}</div>`
+      : `<div class="text-3xl font-black font-mono" style="color:#fbbf24;">${esc((r.result || "—").replace("-", " – "))}</div>`;
 
     const hStart = _allPreds.length;
     _allPreds.push(...preds);
@@ -832,15 +820,17 @@ function renderHistory(rows) {
           <div class="pitch rounded-xl p-4 mb-4">
             <div class="grid grid-cols-3 items-center gap-2">
               <div class="text-center">
-                ${r.home_logo ? `<img src="${esc(r.home_logo)}" alt="${esc(r.home)}" class="h-10 sm:h-14 mx-auto mb-2"/>` : `<div class="text-3xl">🏠</div>`}
+                ${r.home_logo ? `<img src="${esc(r.home_logo)}" alt="${esc(r.home)}" class="h-12 sm:h-16 mx-auto mb-2"/>` : `<div class="text-3xl">🏠</div>`}
                 <div class="font-bold text-sm sm:text-lg leading-tight">${esc(r.home || "?")}</div>
               </div>
               <div class="text-center">
-                <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1">Final Score</div>
-                <div class="text-3xl font-black font-mono" style="color:#fbbf24;">${esc(r.result || "—")}</div>
+                ${r.kickoff_utc ? `<div class="text-xs text-gray-300 font-medium mb-1">${fmtLocalKickoff(new Date(r.kickoff_utc))}</div>` : ""}
+                ${r.competition ? `<div class="text-[10px] text-gray-400 mb-1">${esc(r.competition)}${r.stage ? ` · ${esc(r.stage)}` : ""}</div>` : ""}
+                ${scoreHtml}
+                ${r.venue ? `<div class="text-[10px] text-gray-500 mt-1">${esc(r.venue)}</div>${r.venue_city ? `<div class="text-[10px] text-gray-500">${esc(r.venue_city)}${r.venue_country ? `, ${esc(r.venue_country)}` : ""}</div>` : ""}` : ""}
               </div>
               <div class="text-center">
-                ${r.away_logo ? `<img src="${esc(r.away_logo)}" alt="${esc(r.away)}" class="h-10 sm:h-14 mx-auto mb-2"/>` : `<div class="text-3xl">🛫</div>`}
+                ${r.away_logo ? `<img src="${esc(r.away_logo)}" alt="${esc(r.away)}" class="h-12 sm:h-16 mx-auto mb-2"/>` : `<div class="text-3xl">🛫</div>`}
                 <div class="font-bold text-sm sm:text-lg leading-tight">${esc(r.away || "?")}</div>
               </div>
             </div>
@@ -861,6 +851,19 @@ function fmtTimestamp(iso) {
        + `${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())} (UTC+0)`;
 }
 
+function fmtLocalKickoff(date) {
+  if (!date) return null;
+  const pad = n => String(n).padStart(2, "0");
+  const yr  = date.getFullYear();
+  const mo  = pad(date.getMonth() + 1);
+  const dy  = pad(date.getDate());
+  const hr  = pad(date.getHours());
+  const mn  = pad(date.getMinutes());
+  const off = -date.getTimezoneOffset();
+  const tz  = `UTC${off >= 0 ? "+" : ""}${Math.floor(off / 60)}${off % 60 ? `:${pad(Math.abs(off % 60))}` : ""}`;
+  return `${yr}-${mo}-${dy} ${hr}:${mn} ${tz}`;
+}
+
 async function main() {
   buildReasoningModal();
   let data;
@@ -873,7 +876,7 @@ async function main() {
     console.error(e);
     return;
   }
-  document.getElementById("generated-at").textContent = "Last updated " + fmtTimestamp(data.generated_at);
+  // document.getElementById("generated-at").textContent = "Last updated " + fmtTimestamp(data.generated_at);
   _allPreds = [];
   renderIncomingMatches(data.incoming_matches || []);
   renderLeaderboard(data.leaderboard || { main: [] }, "main");
