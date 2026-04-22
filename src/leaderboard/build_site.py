@@ -486,6 +486,25 @@ def main() -> None:
         "history":          build_history(),
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
+
+    # Only write if content changed (ignoring generated_at), so the cron commit
+    # isn't triggered purely by a timestamp update.
+    def _content(p: dict) -> str:
+        return json.dumps({k: v for k, v in p.items() if k != "generated_at"},
+                          ensure_ascii=False, sort_keys=True)
+
+    if OUT.exists():
+        try:
+            old = json.loads(OUT.read_text())
+            if _content(old) == _content(payload):
+                print(f"skip write — content unchanged "
+                      f"(leaderboard_models={len(payload['leaderboard']['main'])}, "
+                      f"incoming={len(incoming)}, "
+                      f"history={len(payload['history'])})")
+                return
+        except Exception:
+            pass  # malformed existing file — overwrite
+
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
     print(f"wrote {OUT} "
           f"(leaderboard_models={len(payload['leaderboard']['main'])}, "
