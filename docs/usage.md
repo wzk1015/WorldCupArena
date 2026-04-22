@@ -127,8 +127,8 @@ python -m src.pipeline.orchestrator grade \
 
 # Rebuild and view the website locally
 python3 -m src.leaderboard.build_site
-python3 -m http.server --directory docs/site 8000
-# open http://localhost:8000
+python3 -m http.server --directory docs/site 8001
+# now open http://localhost:8000 in your browser
 ```
 
 > In automated runs, grading is triggered immediately when the live score status becomes "Match Finished" (during the T+0h → T+3h `live_update` phase), without waiting for the T+3h window.

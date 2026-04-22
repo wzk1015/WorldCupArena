@@ -445,7 +445,7 @@ function renderPredCard(p, f, idx) {
     ? (wp.home >= wp.draw && wp.home >= wp.away ? hName
        : wp.away >= wp.home && wp.away >= wp.draw ? aName : "Draw")
     : null;
-  const predWinnerProb = predWinner === hName ? wp.home : predWinner === aName ? wp.away : wp.draw;
+
 
   return `
     <div class="card rounded-xl p-4">
@@ -458,7 +458,7 @@ function renderPredCard(p, f, idx) {
           <span class="chip chip-${(p.setting || "").toLowerCase()}"
                 data-tip="${esc(SETTING_TIPS[p.setting] || p.setting)}">${esc(p.setting)}</span>
         </div>
-        ${p.cost_usd != null ? `<span class="text-xs text-gray-600">$${(+p.cost_usd).toFixed(3)}</span>` : ""}
+        ${p.cost_usd != null ? `<span class="text-xs text-gray-600">Cost: $${(+p.cost_usd).toFixed(3)}</span>` : ""}
       </div>
 
       <!-- Minimalist Prediction -->
@@ -477,7 +477,6 @@ function renderPredCard(p, f, idx) {
                 : "color:#fff;";
               return `<div class="text-lg font-black leading-tight" style="${winnerColor}">${esc(predWinner)}</div>`;
             })()}
-            <div class="text-xs font-mono text-gray-400">${fmtPct(predWinnerProb)}</div>
           </div>
           <div style="width:1px;height:2.5rem;background:rgba(255,255,255,.1);"></div>
           <div>
@@ -491,7 +490,6 @@ function renderPredCard(p, f, idx) {
                 : "color:#fff;";
               return `<div class="text-2xl font-black leading-tight font-mono" style="${scoreColor}">${esc(topScore || "—")}</div>`;
             })()}
-            <div class="text-xs font-mono text-gray-400">${fmtPct(top3[0] ? top3[0].p : null)}</div>
           </div>
           ${f.truth ? `<div class="ml-auto">
             <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Actual</div>
@@ -627,25 +625,25 @@ function _renderOneFixture(nm, cardIdx) {
           <div class="flex-1 text-center">
             ${f.home_logo ? `<img src="${esc(f.home_logo)}" alt="${esc(f.home)}" class="h-14 mx-auto mb-2"/>` : `<div class="text-4xl">🏠</div>`}
             <div class="font-bold text-lg">${esc(f.home || "?")}</div>
-            ${nP > 0 ? `<div class="text-xs text-gray-400">consensus ${fmtPct(agg.home)}</div>` : ""}
+            ${nP > 0 ? `<div class="text-xs text-gray-400">win prob ${fmtPct(agg.home)}</div>` : ""}
           </div>
           <div class="text-center px-4">
             <div class="text-gray-300 text-sm">${esc(f.competition || "")}${f.stage ? ` · ${esc(f.stage)}` : ""}</div>
             <div class="mt-1 text-2xl font-black">VS</div>
-            ${nP > 0 ? `<div class="text-xs text-gray-400 mt-1">draw ${fmtPct(agg.draw)}</div>` : ""}
+            ${nP > 0 ? `<div class="text-xs text-gray-400 mt-1">draw prob ${fmtPct(agg.draw)}</div>` : ""}
             <div class="text-xs text-gray-400 mt-3" id="${cid}">${kick ? kick.toUTCString() : "—"}</div>
             ${f.venue ? `<div class="text-[10px] text-gray-500">${esc(f.venue)}</div>` : ""}
           </div>
           <div class="flex-1 text-center">
             ${f.away_logo ? `<img src="${esc(f.away_logo)}" alt="${esc(f.away)}" class="h-14 mx-auto mb-2"/>` : `<div class="text-4xl">🛫</div>`}
             <div class="font-bold text-lg">${esc(f.away || "?")}</div>
-            ${nP > 0 ? `<div class="text-xs text-gray-400">consensus ${fmtPct(agg.away)}</div>` : ""}
+            ${nP > 0 ? `<div class="text-xs text-gray-400">win prob ${fmtPct(agg.away)}</div>` : ""}
           </div>
         </div>
       </div>
       ${liveHtml}
       ${preds.length === 0
-        ? `<div class="text-gray-400 text-sm">No model predictions locked yet (runs 24 h before kickoff).</div>`
+        ? `<div class="text-gray-400 text-sm">No model predictions yet (runs 24 h before kickoff).</div>`
         : `<div class="space-y-3">${preds.map((p, i) => renderPredCard(p, f, nmStart + i)).join("")}</div>`}
     </div>`;
 
