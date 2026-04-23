@@ -38,7 +38,15 @@ SNAPSHOTS = ROOT / "data" / "snapshots"
 LIVE_DIR = ROOT / "data" / "live"
 SEARCH_LOGS = ROOT / "data" / "search_logs"
 FIXTURES_YAML = ROOT / "configs" / "fixtures.yaml"
+COMMENTS_JSON = ROOT / "data" / "comments.json"
 OUT = ROOT / "docs" / "site" / "data.json"
+
+
+def _load_comments() -> dict[str, str]:
+    if not COMMENTS_JSON.exists():
+        return {}
+    data = json.loads(COMMENTS_JSON.read_text())
+    return {k: v for k, v in data.items() if not k.startswith("_") and v}
 
 
 def _now_iso() -> str:
@@ -501,13 +509,24 @@ def build_history() -> list[dict]:
     return rows
 
 
+def _attach_comments(items: list[dict], key: str = "fixture") -> None:
+    comments = _load_comments()
+    for item in items:
+        wca_id = (item.get(key) or item).get("wca_id") if key else item.get("wca_id")
+        if wca_id and wca_id in comments:
+            item["comment"] = comments[wca_id]
+
+
 def main() -> None:
     incoming = build_incoming_matches()
+    _attach_comments(incoming, key="fixture")
+    history = build_history()
+    _attach_comments(history, key=None)
     payload = {
         # "generated_at":     _now_iso(),
         "leaderboard":      build_leaderboard(),
         "incoming_matches": incoming,
-        "history":          build_history(),
+        "history":          history,
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
 

@@ -669,6 +669,9 @@ function _renderOneFixture(nm, cardIdx) {
       ${preds.length === 0
         ? `<div class="text-gray-400 text-sm">No model predictions yet (runs 24 h before kickoff).</div>`
         : `<div class="space-y-3">${preds.map((p, i) => renderPredCard(p, f, nmStart + i)).join("")}</div>`}
+      ${nm.comment ? `<div class="mt-4 pt-3 border-t border-white/5 text-sm text-gray-400">
+        <span class="text-gray-500 text-xs uppercase tracking-wider mr-2">Comment</span>${esc(nm.comment)}<span class="ml-2 text-gray-500">——@wzk1015</span>
+      </div>` : ""}
     </div>`;
 
   // Start countdown timer after DOM insertion (called by caller)
@@ -865,6 +868,9 @@ function renderHistory(rows) {
             </div>
           </div>
           ${predCards}
+          ${r.comment ? `<div class="mt-4 pt-3 border-t border-white/5 text-sm text-gray-400">
+            <span class="text-gray-500 text-xs uppercase tracking-wider mr-2">Comment</span>${esc(r.comment)}<span class="ml-2 text-gray-500">——@wzk1015</span>
+          </div>` : ""}
         </div>
       </details>`;
   }).join("");
