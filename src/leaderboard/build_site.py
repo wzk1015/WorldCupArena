@@ -120,6 +120,7 @@ def build_leaderboard() -> dict:
     by_setting = {}
     for (m, s), xs in by_model_setting.items():
         by_setting.setdefault(m, {})[s] = sum(xs) / len(xs)
+    by_setting = {m: dict(sorted(v.items())) for m, v in sorted(by_setting.items())}
 
     return {"main": main, "by_model_setting": by_setting}
 
