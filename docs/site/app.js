@@ -818,7 +818,8 @@ function renderHistory(rows) {
     const date  = r.kickoff_utc ? new Date(r.kickoff_utc).toISOString().slice(0, 10) : "";
     const preds = r.predictions || [];
     const lv    = r.live;
-    const isLive = lv && lv.status && lv.status !== "Match Finished" && lv.status !== "Not Started";
+    // truth data (r.result) is authoritative — if it exists the match is done
+    const isLive = !r.result && lv && lv.status && lv.status !== "Match Finished" && lv.status !== "Not Started";
 
     // Skip live matches — they belong in Incoming Matches
     if (isLive) return "";
