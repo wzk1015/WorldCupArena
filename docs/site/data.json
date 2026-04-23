@@ -17,36 +17,6 @@
         "winner_acc": 1.0
       },
       {
-        "model_id": "claude-opus-4-7-thinking",
-        "mean": 57.236,
-        "n": 1,
-        "layers_mean": {
-          "T1_core_result": 83.096,
-          "T2_player_level": 44.854,
-          "T3_event_level": 64.009,
-          "T4_tactics_stats": 42.253,
-          "T5_tournament_macro": 10.0
-        },
-        "winner_correct": 1,
-        "winner_total": 1,
-        "winner_acc": 1.0
-      },
-      {
-        "model_id": "gpt-5.4",
-        "mean": 56.679,
-        "n": 1,
-        "layers_mean": {
-          "T1_core_result": 82.9,
-          "T2_player_level": 42.331,
-          "T3_event_level": 63.0,
-          "T4_tactics_stats": 44.205,
-          "T5_tournament_macro": 10.0
-        },
-        "winner_correct": 1,
-        "winner_total": 1,
-        "winner_acc": 1.0
-      },
-      {
         "model_id": "gemini-3.1-pro-preview-thinking",
         "mean": 55.189,
         "n": 1,
@@ -62,73 +32,1282 @@
         "winner_acc": 1.0
       },
       {
-        "model_id": "gemini-3.1-pro-preview-thinking-search",
-        "mean": 51.116,
-        "n": 1,
+        "model_id": "claude-opus-4-7-thinking",
+        "mean": 54.67,
+        "n": 2,
         "layers_mean": {
-          "T1_core_result": 74.052,
-          "T2_player_level": 32.389,
-          "T3_event_level": 63.737,
-          "T4_tactics_stats": 43.602,
+          "T1_core_result": 82.282,
+          "T2_player_level": 34.221,
+          "T3_event_level": 63.517,
+          "T4_tactics_stats": 45.259,
           "T5_tournament_macro": 10.0
         },
-        "winner_correct": 1,
-        "winner_total": 1,
+        "winner_correct": 2,
+        "winner_total": 2,
+        "winner_acc": 1.0
+      },
+      {
+        "model_id": "gpt-5.4",
+        "mean": 53.938,
+        "n": 2,
+        "layers_mean": {
+          "T1_core_result": 81.209,
+          "T2_player_level": 33.25,
+          "T3_event_level": 62.47,
+          "T4_tactics_stats": 45.547,
+          "T5_tournament_macro": 10.0
+        },
+        "winner_correct": 2,
+        "winner_total": 2,
+        "winner_acc": 1.0
+      },
+      {
+        "model_id": "gemini-3.1-pro-preview-thinking-search",
+        "mean": 51.746,
+        "n": 2,
+        "layers_mean": {
+          "T1_core_result": 79.605,
+          "T2_player_level": 28.801,
+          "T3_event_level": 57.653,
+          "T4_tactics_stats": 46.909,
+          "T5_tournament_macro": 10.0
+        },
+        "winner_correct": 2,
+        "winner_total": 2,
         "winner_acc": 1.0
       },
       {
         "model_id": "gpt-5.4-search",
-        "mean": 45.239,
-        "n": 2,
+        "mean": 46.712,
+        "n": 3,
         "layers_mean": {
-          "T1_core_result": 64.271,
-          "T2_player_level": 25.837,
-          "T3_event_level": 62.2,
-          "T4_tactics_stats": 39.701,
+          "T1_core_result": 69.646,
+          "T2_player_level": 22.83,
+          "T3_event_level": 61.987,
+          "T4_tactics_stats": 42.204,
           "T5_tournament_macro": 10.0
         },
-        "winner_correct": 1,
-        "winner_total": 2,
-        "winner_acc": 0.5
+        "winner_correct": 2,
+        "winner_total": 3,
+        "winner_acc": 0.667
       }
     ],
     "by_model_setting": {
       "gpt-5.4-search": {
-        "S2": 45.239
+        "S2": 46.712
       },
       "gpt-5.4": {
-        "S1": 56.679
+        "S1": 53.938
       },
       "claude-opus-4-7-thinking-search": {
         "S2": 59.231
       },
       "claude-opus-4-7-thinking": {
-        "S1": 57.236
+        "S1": 54.67
       },
       "gemini-3.1-pro-preview-thinking-search": {
-        "S2": 51.116
+        "S2": 51.746
       },
       "gemini-3.1-pro-preview-thinking": {
         "S1": 55.189
       }
     }
   },
-  "incoming_matches": [
+  "incoming_matches": [],
+  "history": [
     {
-      "fixture": {
-        "wca_id": "DFB-Pokal_VfB-Stuttgart_SC-Freiburg_2026-04-23",
-        "home": "VfB Stuttgart",
-        "home_logo": "https://media.api-sports.io/football/teams/172.png",
-        "away": "SC Freiburg",
-        "away_logo": "https://media.api-sports.io/football/teams/160.png",
-        "kickoff_utc": "2026-04-23T18:45:00+00:00",
-        "lock_at_utc": "2026-04-22T18:45:00+00:00",
-        "venue": "MHPArena",
-        "venue_city": "Stuttgart",
-        "venue_country": "Germany",
-        "stage": "Semi-finals",
-        "competition": "DFB Pokal"
+      "wca_id": "DFB-Pokal_VfB-Stuttgart_SC-Freiburg_2026-04-23",
+      "home": "VfB Stuttgart",
+      "home_logo": "https://media.api-sports.io/football/teams/172.png",
+      "away": "SC Freiburg",
+      "away_logo": "https://media.api-sports.io/football/teams/160.png",
+      "kickoff_utc": "2026-04-23T18:45:00+00:00",
+      "lock_at_utc": "2026-04-22T18:45:00+00:00",
+      "venue": "MHPArena",
+      "venue_city": "Stuttgart",
+      "venue_country": "Germany",
+      "stage": "Semi-finals",
+      "competition": "DFB Pokal",
+      "result": "2-1",
+      "truth": {
+        "score": "2-1",
+        "result": "home",
+        "home_name": "VfB Stuttgart",
+        "away_name": "SC Freiburg",
+        "scorer_names": [
+          "M. Eggestein",
+          "D. Undav",
+          "T. Tomas"
+        ],
+        "assister_names": [
+          "M. Ginter",
+          "B. El Khannouss",
+          "B. Bouanani"
+        ],
+        "scorers": [
+          {
+            "minute": 28,
+            "player": "M. Eggestein",
+            "team": "away"
+          },
+          {
+            "minute": 70,
+            "player": "D. Undav",
+            "team": "home"
+          },
+          {
+            "minute": 119,
+            "player": "T. Tomas",
+            "team": "home"
+          }
+        ],
+        "assisters": [
+          {
+            "player": "M. Ginter",
+            "team": "away"
+          },
+          {
+            "player": "B. El Khannouss",
+            "team": "home"
+          },
+          {
+            "player": "B. Bouanani",
+            "team": "home"
+          }
+        ],
+        "cards": [
+          {
+            "minute": 13,
+            "player": "J. Makengo",
+            "team": "away",
+            "color": "yellow"
+          },
+          {
+            "minute": 15,
+            "player": "N. Nartey",
+            "team": "home",
+            "color": "yellow"
+          },
+          {
+            "minute": 17,
+            "player": "J. Manzambi",
+            "team": "away",
+            "color": "yellow"
+          },
+          {
+            "minute": 17,
+            "player": "J. Leweling",
+            "team": "home",
+            "color": "yellow"
+          },
+          {
+            "minute": 56,
+            "player": "V. Grifo",
+            "team": "away",
+            "color": "yellow"
+          },
+          {
+            "minute": 74,
+            "player": "I. Matanovic",
+            "team": "away",
+            "color": "yellow"
+          },
+          {
+            "minute": 94,
+            "player": "L. Holer",
+            "team": "away",
+            "color": "yellow"
+          },
+          {
+            "minute": 95,
+            "player": "R. Hendriks",
+            "team": "home",
+            "color": "yellow"
+          },
+          {
+            "minute": 120,
+            "player": "T. Tomas",
+            "team": "home",
+            "color": "yellow"
+          }
+        ],
+        "substitutions": [
+          {
+            "minute": 63,
+            "team": "home",
+            "team_name": "VfB Stuttgart",
+            "off": "N. Nartey",
+            "on": "B. El Khannouss"
+          },
+          {
+            "minute": 71,
+            "team": "away",
+            "team_name": "SC Freiburg",
+            "off": "V. Grifo",
+            "on": "D. Scherhant"
+          },
+          {
+            "minute": 84,
+            "team": "away",
+            "team_name": "SC Freiburg",
+            "off": "I. Matanovic",
+            "on": "L. Holer"
+          },
+          {
+            "minute": 91,
+            "team": "home",
+            "team_name": "VfB Stuttgart",
+            "off": "E. Demirovic",
+            "on": "T. Tomas"
+          },
+          {
+            "minute": 98,
+            "team": "home",
+            "team_name": "VfB Stuttgart",
+            "off": "R. Hendriks",
+            "on": "L. Jaquez"
+          },
+          {
+            "minute": 101,
+            "team": "away",
+            "team_name": "SC Freiburg",
+            "off": "J. Makengo",
+            "on": "C. Gunter"
+          },
+          {
+            "minute": 102,
+            "team": "away",
+            "team_name": "SC Freiburg",
+            "off": "J. Beste",
+            "on": "L. Kubler"
+          },
+          {
+            "minute": 113,
+            "team": "away",
+            "team_name": "SC Freiburg",
+            "off": "P. Treu",
+            "on": "B. Ogbus"
+          },
+          {
+            "minute": 118,
+            "team": "home",
+            "team_name": "VfB Stuttgart",
+            "off": "C. Fuhrich",
+            "on": "B. Bouanani"
+          },
+          {
+            "minute": 118,
+            "team": "home",
+            "team_name": "VfB Stuttgart",
+            "off": "D. Undav",
+            "on": "J. Vagnoman"
+          }
+        ],
+        "own_goals": [],
+        "penalties": [],
+        "formations": {
+          "home": "3-4-1-2",
+          "away": "4-2-3-1"
+        },
+        "lineups": {
+          "home": {
+            "starting": [
+              {
+                "player": "Alexander Nübel",
+                "pos": "G"
+              },
+              {
+                "player": "Ramon Hendriks",
+                "pos": "D"
+              },
+              {
+                "player": "Jeff Chabot",
+                "pos": "D"
+              },
+              {
+                "player": "Maximilian Mittelstädt",
+                "pos": "D"
+              },
+              {
+                "player": "Jamie Leweling",
+                "pos": "M"
+              },
+              {
+                "player": "Atakan Karazor",
+                "pos": "M"
+              },
+              {
+                "player": "Angelo Stiller",
+                "pos": "M"
+              },
+              {
+                "player": "Chris Führich",
+                "pos": "M"
+              },
+              {
+                "player": "Nikolas Nartey",
+                "pos": "F"
+              },
+              {
+                "player": "Ermedin Demirović",
+                "pos": "F"
+              },
+              {
+                "player": "Deniz Undav",
+                "pos": "F"
+              }
+            ]
+          },
+          "away": {
+            "starting": [
+              {
+                "player": "Florian Müller",
+                "pos": "G"
+              },
+              {
+                "player": "Philipp Treu",
+                "pos": "D"
+              },
+              {
+                "player": "Matthias Ginter",
+                "pos": "D"
+              },
+              {
+                "player": "Philipp Lienhart",
+                "pos": "D"
+              },
+              {
+                "player": "Jordy Makengo",
+                "pos": "D"
+              },
+              {
+                "player": "Maximilian Eggestein",
+                "pos": "M"
+              },
+              {
+                "player": "Johan Manzambi",
+                "pos": "M"
+              },
+              {
+                "player": "Jan-Niklas Beste",
+                "pos": "M"
+              },
+              {
+                "player": "Yuito Suzuki",
+                "pos": "M"
+              },
+              {
+                "player": "Vincenzo Grifo",
+                "pos": "M"
+              },
+              {
+                "player": "Igor Matanović",
+                "pos": "F"
+              }
+            ]
+          }
+        },
+        "stats": {
+          "shots_on_target": {
+            "home": 9,
+            "away": 5
+          },
+          "shots": {
+            "home": 29,
+            "away": 17
+          },
+          "fouls": {
+            "home": 20,
+            "away": 17
+          },
+          "corners": {
+            "home": 9,
+            "away": 4
+          },
+          "possession": {
+            "home": 66.0,
+            "away": 34.0
+          },
+          "saves": {
+            "home": 3,
+            "away": 7
+          },
+          "pass_accuracy": {
+            "home": 82.0,
+            "away": 69.0
+          }
+        },
+        "events": [
+          {
+            "time": {
+              "elapsed": 13,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 191160,
+              "name": "J. Makengo"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          },
+          {
+            "time": {
+              "elapsed": 15,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 24806,
+              "name": "N. Nartey"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          },
+          {
+            "time": {
+              "elapsed": 17,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 406244,
+              "name": "J. Manzambi"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 17,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 128533,
+              "name": "J. Leweling"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 28,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 2917,
+              "name": "M. Eggestein"
+            },
+            "assist": {
+              "id": 2915,
+              "name": "M. Ginter"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 56,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 26248,
+              "name": "V. Grifo"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Delay of game"
+          },
+          {
+            "time": {
+              "elapsed": 61,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 137210,
+              "name": "A. Stiller"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Var",
+            "detail": "Goal Disallowed - offside",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 63,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 24806,
+              "name": "N. Nartey"
+            },
+            "assist": {
+              "id": 340573,
+              "name": "B. El Khannouss"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 70,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 26475,
+              "name": "D. Undav"
+            },
+            "assist": {
+              "id": 340573,
+              "name": "B. El Khannouss"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 71,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 26248,
+              "name": "V. Grifo"
+            },
+            "assist": {
+              "id": 286710,
+              "name": "D. Scherhant"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 74,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 202696,
+              "name": "I. Matanovic"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          },
+          {
+            "time": {
+              "elapsed": 84,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 202696,
+              "name": "I. Matanovic"
+            },
+            "assist": {
+              "id": 26255,
+              "name": "L. Holer"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 91,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 46930,
+              "name": "E. Demirovic"
+            },
+            "assist": {
+              "id": 265363,
+              "name": "T. Tomas"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 94,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 26255,
+              "name": "L. Holer"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 95,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 135883,
+              "name": "R. Hendriks"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Tripping"
+          },
+          {
+            "time": {
+              "elapsed": 98,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 135883,
+              "name": "R. Hendriks"
+            },
+            "assist": {
+              "id": 349344,
+              "name": "L. Jaquez"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 101,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 191160,
+              "name": "J. Makengo"
+            },
+            "assist": {
+              "id": 26236,
+              "name": "C. Gunter"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 102,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 25313,
+              "name": "J. Beste"
+            },
+            "assist": {
+              "id": 26239,
+              "name": "L. Kubler"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 113,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 178769,
+              "name": "P. Treu"
+            },
+            "assist": {
+              "id": 361393,
+              "name": "B. Ogbus"
+            },
+            "type": "subst",
+            "detail": "Substitution 5",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 118,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 24798,
+              "name": "C. Fuhrich"
+            },
+            "assist": {
+              "id": 334879,
+              "name": "B. Bouanani"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 118,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 26475,
+              "name": "D. Undav"
+            },
+            "assist": {
+              "id": 24868,
+              "name": "J. Vagnoman"
+            },
+            "type": "subst",
+            "detail": "Substitution 5",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 119,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 265363,
+              "name": "T. Tomas"
+            },
+            "assist": {
+              "id": 334879,
+              "name": "B. Bouanani"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 120,
+              "extra": 1
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 265363,
+              "name": "T. Tomas"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          }
+        ]
       },
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 97,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "events": [
+          {
+            "time": {
+              "elapsed": 13,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 191160,
+              "name": "J. Makengo"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          },
+          {
+            "time": {
+              "elapsed": 15,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 24806,
+              "name": "N. Nartey"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          },
+          {
+            "time": {
+              "elapsed": 17,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 406244,
+              "name": "J. Manzambi"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 17,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 128533,
+              "name": "J. Leweling"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 28,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 2917,
+              "name": "M. Eggestein"
+            },
+            "assist": {
+              "id": 2915,
+              "name": "M. Ginter"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 56,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 26248,
+              "name": "V. Grifo"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Delay of game"
+          },
+          {
+            "time": {
+              "elapsed": 61,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 137210,
+              "name": "A. Stiller"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Var",
+            "detail": "Goal Disallowed - offside",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 63,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 24806,
+              "name": "N. Nartey"
+            },
+            "assist": {
+              "id": 340573,
+              "name": "B. El Khannouss"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 70,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 26475,
+              "name": "D. Undav"
+            },
+            "assist": {
+              "id": 340573,
+              "name": "B. El Khannouss"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 71,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 26248,
+              "name": "V. Grifo"
+            },
+            "assist": {
+              "id": 286710,
+              "name": "D. Scherhant"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 74,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 202696,
+              "name": "I. Matanovic"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          },
+          {
+            "time": {
+              "elapsed": 84,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 202696,
+              "name": "I. Matanovic"
+            },
+            "assist": {
+              "id": 26255,
+              "name": "L. Holer"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 91,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 46930,
+              "name": "E. Demirovic"
+            },
+            "assist": {
+              "id": 265363,
+              "name": "T. Tomas"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 94,
+              "extra": null
+            },
+            "team": {
+              "id": 160,
+              "name": "SC Freiburg",
+              "logo": "https://media.api-sports.io/football/teams/160.png"
+            },
+            "player": {
+              "id": 26255,
+              "name": "L. Holer"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 95,
+              "extra": null
+            },
+            "team": {
+              "id": 172,
+              "name": "VfB Stuttgart",
+              "logo": "https://media.api-sports.io/football/teams/172.png"
+            },
+            "player": {
+              "id": 135883,
+              "name": "R. Hendriks"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": null
+          }
+        ]
+      },
+      "models": [
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking-search",
+          "setting": "S2",
+          "composite": 52.376
+        },
+        {
+          "model_id": "claude-opus-4-7-thinking",
+          "setting": "S1",
+          "composite": 52.104
+        },
+        {
+          "model_id": "gpt-5.4",
+          "setting": "S1",
+          "composite": 51.198
+        },
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "composite": 49.658
+        }
+      ],
       "predictions": [
         {
           "model_id": "claude-opus-4-7-thinking",
@@ -731,7 +1910,8 @@
             }
           },
           "cost_usd": 0.325,
-          "sources": []
+          "sources": [],
+          "composite": 52.104
         },
         {
           "model_id": "gemini-3.1-pro-preview-thinking-search",
@@ -1129,7 +2309,8 @@
               "accessed_at": "2026-04-22T10:35:00Z",
               "title": "DFB Pokal Semi-finals Preview"
             }
-          ]
+          ],
+          "composite": 52.376
         },
         {
           "model_id": "gpt-5.4-search",
@@ -1631,7 +2812,8 @@
               "accessed_at": "2026-04-22T18:22:00Z",
               "title": "DFB-Pokal official"
             }
-          ]
+          ],
+          "composite": 49.658
         },
         {
           "model_id": "gpt-5.4",
@@ -2081,352 +3263,11 @@
             }
           },
           "cost_usd": 0.124,
-          "sources": []
+          "sources": [],
+          "composite": 51.198
         }
-      ],
-      "live": {
-        "status": "Extra Time",
-        "elapsed": 97,
-        "score": {
-          "home": 1,
-          "away": 1
-        },
-        "events": [
-          {
-            "time": {
-              "elapsed": 13,
-              "extra": null
-            },
-            "team": {
-              "id": 160,
-              "name": "SC Freiburg",
-              "logo": "https://media.api-sports.io/football/teams/160.png"
-            },
-            "player": {
-              "id": 191160,
-              "name": "J. Makengo"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Foul"
-          },
-          {
-            "time": {
-              "elapsed": 15,
-              "extra": null
-            },
-            "team": {
-              "id": 172,
-              "name": "VfB Stuttgart",
-              "logo": "https://media.api-sports.io/football/teams/172.png"
-            },
-            "player": {
-              "id": 24806,
-              "name": "N. Nartey"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Foul"
-          },
-          {
-            "time": {
-              "elapsed": 17,
-              "extra": null
-            },
-            "team": {
-              "id": 160,
-              "name": "SC Freiburg",
-              "logo": "https://media.api-sports.io/football/teams/160.png"
-            },
-            "player": {
-              "id": 406244,
-              "name": "J. Manzambi"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Unsportsmanlike conduct"
-          },
-          {
-            "time": {
-              "elapsed": 17,
-              "extra": null
-            },
-            "team": {
-              "id": 172,
-              "name": "VfB Stuttgart",
-              "logo": "https://media.api-sports.io/football/teams/172.png"
-            },
-            "player": {
-              "id": 128533,
-              "name": "J. Leweling"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Unsportsmanlike conduct"
-          },
-          {
-            "time": {
-              "elapsed": 28,
-              "extra": null
-            },
-            "team": {
-              "id": 160,
-              "name": "SC Freiburg",
-              "logo": "https://media.api-sports.io/football/teams/160.png"
-            },
-            "player": {
-              "id": 2917,
-              "name": "M. Eggestein"
-            },
-            "assist": {
-              "id": 2915,
-              "name": "M. Ginter"
-            },
-            "type": "Goal",
-            "detail": "Normal Goal",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 56,
-              "extra": null
-            },
-            "team": {
-              "id": 160,
-              "name": "SC Freiburg",
-              "logo": "https://media.api-sports.io/football/teams/160.png"
-            },
-            "player": {
-              "id": 26248,
-              "name": "V. Grifo"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Delay of game"
-          },
-          {
-            "time": {
-              "elapsed": 61,
-              "extra": null
-            },
-            "team": {
-              "id": 172,
-              "name": "VfB Stuttgart",
-              "logo": "https://media.api-sports.io/football/teams/172.png"
-            },
-            "player": {
-              "id": 137210,
-              "name": "A. Stiller"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Var",
-            "detail": "Goal Disallowed - offside",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 63,
-              "extra": null
-            },
-            "team": {
-              "id": 172,
-              "name": "VfB Stuttgart",
-              "logo": "https://media.api-sports.io/football/teams/172.png"
-            },
-            "player": {
-              "id": 24806,
-              "name": "N. Nartey"
-            },
-            "assist": {
-              "id": 340573,
-              "name": "B. El Khannouss"
-            },
-            "type": "subst",
-            "detail": "Substitution 1",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 70,
-              "extra": null
-            },
-            "team": {
-              "id": 172,
-              "name": "VfB Stuttgart",
-              "logo": "https://media.api-sports.io/football/teams/172.png"
-            },
-            "player": {
-              "id": 26475,
-              "name": "D. Undav"
-            },
-            "assist": {
-              "id": 340573,
-              "name": "B. El Khannouss"
-            },
-            "type": "Goal",
-            "detail": "Normal Goal",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 71,
-              "extra": null
-            },
-            "team": {
-              "id": 160,
-              "name": "SC Freiburg",
-              "logo": "https://media.api-sports.io/football/teams/160.png"
-            },
-            "player": {
-              "id": 26248,
-              "name": "V. Grifo"
-            },
-            "assist": {
-              "id": 286710,
-              "name": "D. Scherhant"
-            },
-            "type": "subst",
-            "detail": "Substitution 1",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 74,
-              "extra": null
-            },
-            "team": {
-              "id": 160,
-              "name": "SC Freiburg",
-              "logo": "https://media.api-sports.io/football/teams/160.png"
-            },
-            "player": {
-              "id": 202696,
-              "name": "I. Matanovic"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Foul"
-          },
-          {
-            "time": {
-              "elapsed": 84,
-              "extra": null
-            },
-            "team": {
-              "id": 160,
-              "name": "SC Freiburg",
-              "logo": "https://media.api-sports.io/football/teams/160.png"
-            },
-            "player": {
-              "id": 202696,
-              "name": "I. Matanovic"
-            },
-            "assist": {
-              "id": 26255,
-              "name": "L. Holer"
-            },
-            "type": "subst",
-            "detail": "Substitution 2",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 91,
-              "extra": null
-            },
-            "team": {
-              "id": 172,
-              "name": "VfB Stuttgart",
-              "logo": "https://media.api-sports.io/football/teams/172.png"
-            },
-            "player": {
-              "id": 46930,
-              "name": "E. Demirovic"
-            },
-            "assist": {
-              "id": 265363,
-              "name": "T. Tomas"
-            },
-            "type": "subst",
-            "detail": "Substitution 2",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 94,
-              "extra": null
-            },
-            "team": {
-              "id": 160,
-              "name": "SC Freiburg",
-              "logo": "https://media.api-sports.io/football/teams/160.png"
-            },
-            "player": {
-              "id": 26255,
-              "name": "L. Holer"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Unsportsmanlike conduct"
-          },
-          {
-            "time": {
-              "elapsed": 95,
-              "extra": null
-            },
-            "team": {
-              "id": 172,
-              "name": "VfB Stuttgart",
-              "logo": "https://media.api-sports.io/football/teams/172.png"
-            },
-            "player": {
-              "id": 135883,
-              "name": "R. Hendriks"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": null
-          }
-        ]
-      }
-    }
-  ],
-  "history": [
+      ]
+    },
     {
       "wca_id": "DFB-Pokal_Bayer-Leverkusen_Bayern-München_2026-04-22",
       "home": "Bayer Leverkusen",
