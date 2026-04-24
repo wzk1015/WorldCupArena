@@ -140,9 +140,9 @@ def _phase_lock_predict(fx: dict, fx_dir: Path) -> None:
     else:
         print(f"  [lock_predict] skip lock — snapshot_hash already set")
     pred_dir = ROOT / "data" / "predictions" / fx["wca_id"]
-    if pred_dir.exists() and any(pred_dir.glob("*.json")):
-        print(f"  [lock_predict] skip predict — predictions already exist")
-        return
+    # if pred_dir.exists() and any(pred_dir.glob("*.json")):
+    #     print(f"  [lock_predict] skip predict — predictions already exist")
+    #     return
     _run([sys.executable, "-m", "src.pipeline.orchestrator", "predict",
           "--fixture", str(fixture_path), "--parallel", "8"])
 

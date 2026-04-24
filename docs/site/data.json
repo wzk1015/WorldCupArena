@@ -129,7 +129,3190 @@
         "stage": "Regular Season - 34",
         "competition": "Premier League"
       },
-      "predictions": [],
+      "predictions": [
+        {
+          "model_id": "claude-opus-4-7-thinking-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.25,
+            "draw": 0.26,
+            "away": 0.49
+          },
+          "score_dist": [
+            {
+              "score": "1-2",
+              "p": 0.14
+            },
+            {
+              "score": "1-1",
+              "p": 0.13
+            },
+            {
+              "score": "0-1",
+              "p": 0.11
+            },
+            {
+              "score": "0-2",
+              "p": 0.1
+            },
+            {
+              "score": "2-1",
+              "p": 0.07
+            },
+            {
+              "score": "2-2",
+              "p": 0.07
+            },
+            {
+              "score": "0-0",
+              "p": 0.06
+            },
+            {
+              "score": "1-0",
+              "p": 0.06
+            },
+            {
+              "score": "2-0",
+              "p": 0.05
+            },
+            {
+              "score": "0-3",
+              "p": 0.05
+            },
+            {
+              "score": "1-3",
+              "p": 0.04
+            },
+            {
+              "score": "3-1",
+              "p": 0.03
+            },
+            {
+              "score": "2-3",
+              "p": 0.03
+            },
+            {
+              "score": "3-2",
+              "p": 0.02
+            },
+            {
+              "score": "3-0",
+              "p": 0.02
+            },
+            {
+              "score": "0-4",
+              "p": 0.02
+            }
+          ],
+          "most_likely_score": "1-2",
+          "expected_goal_diff": -0.45,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Wolves are already relegated and have just 17 points from 33 matches (3W 8D 22L), but at Molineux they have an unusually strong record vs Spurs — unbeaten in their last six meetings (W4 L2) and winning their last three home games against Spurs. However, Wolves are in poor recent form: just one point from their last four fixtures, conceding 12 goals including a 3-0 loss at Leeds. Tottenham, in 18th, are winless in 15 PL matches and have conceded at least 2 goals in 11 of their last 13, with massive injury problems (Romero, Kulusevski, Davies, Kudus, Odobert, Vicario all out) and a new manager De Zerbi still searching for his first win. The motivational gap (Spurs MUST win to avoid the drop, Wolves play for pride) and Tottenham's superior squad quality tilt the market toward Spurs (~56% per Dimers model), but Wolves' venue advantage, fragile Spurs psychology under pressure, and weak away record warrant meaningful draw and home-win mass.",
+            "t1_result": "Spurs are clear bookmaker favourites (~58% implied) due to the relegation imperative and squad gulf, but I cap the away win near 0.49 given Wolves' Molineux H2H dominance, Spurs' 0-15 PL run, and the new-manager bedding-in. Draw is well-priced; goals likely from both sides — BTTS has hit 5/5 last H2Hs.",
+            "t2_player": "Wolves likely set up in a 3-4-2-1 with Bentley in goal as third-choice (Sa/Johnstone unavailable), Armstrong leading the line. Spurs in 4-2-3-1 with Kinsky between the sticks, Danso–Van de Ven CB pair, Solanke up top, and Simons as the creative fulcrum — he's been Spurs' standout (assist + goal vs Brighton) and a likely scorer here.",
+            "t3_events": "Spurs likely dominate possession but Wolves transition can hurt them; expect a goal in each half. Anthony Taylor referees and averages 3.8 yellow cards per game in the PL this season, so card volume should be high. Late drama plausible given both sides' habit of conceding/scoring late.",
+            "t4_stats": "Spurs higher possession (~58%) and pass accuracy reflecting De Zerbi's possession style. Wolves take fewer shots and corners (2.81 home corners per match — lowest in league) but defend deeper. Both teams to commit ~12 fouls reflecting Anthony Taylor's strict standards."
+          },
+          "scorers": [
+            {
+              "player": "Dominic Solanke",
+              "team": "away",
+              "minute_range": [
+                20,
+                80
+              ],
+              "p": 0.24
+            },
+            {
+              "player": "Xavi Simons",
+              "team": "away",
+              "minute_range": [
+                25,
+                85
+              ],
+              "p": 0.27
+            },
+            {
+              "player": "Mathys Tel",
+              "team": "away",
+              "minute_range": [
+                15,
+                80
+              ],
+              "p": 0.18
+            },
+            {
+              "player": "Pedro Porro",
+              "team": "away",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.1
+            },
+            {
+              "player": "Richarlison",
+              "team": "away",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.13
+            },
+            {
+              "player": "Adam Armstrong",
+              "team": "home",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.18
+            },
+            {
+              "player": "Mateus Mane",
+              "team": "home",
+              "minute_range": [
+                25,
+                85
+              ],
+              "p": 0.12
+            },
+            {
+              "player": "Rodrigo Gomes",
+              "team": "home",
+              "minute_range": [
+                30,
+                88
+              ],
+              "p": 0.11
+            },
+            {
+              "player": "Hwang Hee-chan",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.09
+            },
+            {
+              "player": "Jean-Ricner Bellegarde",
+              "team": "home",
+              "minute_range": [
+                25,
+                85
+              ],
+              "p": 0.08
+            },
+            {
+              "player": "Santiago Bueno",
+              "team": "home",
+              "minute_range": [
+                40,
+                90
+              ],
+              "p": 0.06
+            }
+          ],
+          "assisters": [
+            {
+              "player": "Xavi Simons",
+              "team": "away",
+              "p": 0.22
+            },
+            {
+              "player": "Pedro Porro",
+              "team": "away",
+              "p": 0.16
+            },
+            {
+              "player": "Djed Spence",
+              "team": "away",
+              "p": 0.1
+            },
+            {
+              "player": "Conor Gallagher",
+              "team": "away",
+              "p": 0.1
+            },
+            {
+              "player": "Dominic Solanke",
+              "team": "away",
+              "p": 0.08
+            },
+            {
+              "player": "Rodrigo Gomes",
+              "team": "home",
+              "p": 0.1
+            },
+            {
+              "player": "Joao Gomes",
+              "team": "home",
+              "p": 0.08
+            },
+            {
+              "player": "Hugo Bueno",
+              "team": "home",
+              "p": 0.07
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "Xavi Simons",
+              "team": "away",
+              "p": 0.27
+            },
+            {
+              "player": "Dominic Solanke",
+              "team": "away",
+              "p": 0.14
+            },
+            {
+              "player": "Mathys Tel",
+              "team": "away",
+              "p": 0.1
+            },
+            {
+              "player": "Micky van de Ven",
+              "team": "away",
+              "p": 0.08
+            },
+            {
+              "player": "Adam Armstrong",
+              "team": "home",
+              "p": 0.1
+            },
+            {
+              "player": "Joao Gomes",
+              "team": "home",
+              "p": 0.07
+            },
+            {
+              "player": "Antonin Kinsky",
+              "team": "away",
+              "p": 0.06
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Dan Bentley",
+                  "position": "GK"
+                },
+                {
+                  "name": "Toti Gomes",
+                  "position": "DF"
+                },
+                {
+                  "name": "Santiago Bueno",
+                  "position": "DF"
+                },
+                {
+                  "name": "Pedro Lima",
+                  "position": "DF"
+                },
+                {
+                  "name": "Rodrigo Gomes",
+                  "position": "MF"
+                },
+                {
+                  "name": "Andre",
+                  "position": "MF"
+                },
+                {
+                  "name": "Joao Gomes",
+                  "position": "MF"
+                },
+                {
+                  "name": "Hugo Bueno",
+                  "position": "MF"
+                },
+                {
+                  "name": "Jean-Ricner Bellegarde",
+                  "position": "MF"
+                },
+                {
+                  "name": "Mateus Mane",
+                  "position": "FW"
+                },
+                {
+                  "name": "Adam Armstrong",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Tom King",
+                  "position": "GK"
+                },
+                {
+                  "name": "Yerson Mosquera",
+                  "position": "DF"
+                },
+                {
+                  "name": "Emmanuel Agbadou",
+                  "position": "DF"
+                },
+                {
+                  "name": "Joe Hodge",
+                  "position": "MF"
+                },
+                {
+                  "name": "Tommy Doyle",
+                  "position": "MF"
+                },
+                {
+                  "name": "Boubacar Traore",
+                  "position": "MF"
+                },
+                {
+                  "name": "Hwang Hee-chan",
+                  "position": "FW"
+                },
+                {
+                  "name": "Tolu Arokodare",
+                  "position": "FW"
+                },
+                {
+                  "name": "Jorgen Strand Larsen",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "Antonin Kinsky",
+                  "position": "GK"
+                },
+                {
+                  "name": "Pedro Porro",
+                  "position": "DF"
+                },
+                {
+                  "name": "Kevin Danso",
+                  "position": "DF"
+                },
+                {
+                  "name": "Micky van de Ven",
+                  "position": "DF"
+                },
+                {
+                  "name": "Djed Spence",
+                  "position": "DF"
+                },
+                {
+                  "name": "Joao Palhinha",
+                  "position": "MF"
+                },
+                {
+                  "name": "Rodrigo Bentancur",
+                  "position": "MF"
+                },
+                {
+                  "name": "Conor Gallagher",
+                  "position": "MF"
+                },
+                {
+                  "name": "Xavi Simons",
+                  "position": "MF"
+                },
+                {
+                  "name": "Mathys Tel",
+                  "position": "FW"
+                },
+                {
+                  "name": "Dominic Solanke",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Brandon Austin",
+                  "position": "GK"
+                },
+                {
+                  "name": "Radu Dragusin",
+                  "position": "DF"
+                },
+                {
+                  "name": "Archie Gray",
+                  "position": "MF"
+                },
+                {
+                  "name": "Yves Bissouma",
+                  "position": "MF"
+                },
+                {
+                  "name": "Lucas Bergvall",
+                  "position": "MF"
+                },
+                {
+                  "name": "Pape Sarr",
+                  "position": "MF"
+                },
+                {
+                  "name": "James Maddison",
+                  "position": "MF"
+                },
+                {
+                  "name": "Richarlison",
+                  "position": "FW"
+                },
+                {
+                  "name": "Randal Kolo Muani",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "3-4-2-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "Mateus Mane",
+              "on": "Hwang Hee-chan",
+              "minute": 65
+            },
+            {
+              "team": "home",
+              "off": "Adam Armstrong",
+              "on": "Tolu Arokodare",
+              "minute": 75
+            },
+            {
+              "team": "home",
+              "off": "Jean-Ricner Bellegarde",
+              "on": "Tommy Doyle",
+              "minute": 80
+            },
+            {
+              "team": "away",
+              "off": "Mathys Tel",
+              "on": "Richarlison",
+              "minute": 65
+            },
+            {
+              "team": "away",
+              "off": "Conor Gallagher",
+              "on": "Yves Bissouma",
+              "minute": 75
+            },
+            {
+              "team": "away",
+              "off": "Rodrigo Bentancur",
+              "on": "Lucas Bergvall",
+              "minute": 82
+            }
+          ],
+          "cards": [
+            {
+              "player": "Joao Gomes",
+              "team": "home",
+              "color": "yellow",
+              "minute": 28
+            },
+            {
+              "player": "Andre",
+              "team": "home",
+              "color": "yellow",
+              "minute": 55
+            },
+            {
+              "player": "Joao Palhinha",
+              "team": "away",
+              "color": "yellow",
+              "minute": 40
+            },
+            {
+              "player": "Yves Bissouma",
+              "team": "away",
+              "color": "yellow",
+              "minute": 84
+            },
+            {
+              "player": "Pedro Lima",
+              "team": "home",
+              "color": "yellow",
+              "minute": 70
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 41,
+              "away": 59
+            },
+            "shots": {
+              "home": 10,
+              "away": 15
+            },
+            "shots_on_target": {
+              "home": 3,
+              "away": 5
+            },
+            "corners": {
+              "home": 3,
+              "away": 7
+            },
+            "pass_accuracy": {
+              "home": 76,
+              "away": 84
+            },
+            "fouls": {
+              "home": 13,
+              "away": 11
+            },
+            "saves": {
+              "home": 3,
+              "away": 2
+            },
+            "defensive_actions": {
+              "home": 38,
+              "away": 28
+            }
+          },
+          "cost_usd": 0.61,
+          "sources": [
+            {
+              "url": "https://www.sportsgambler.com/betting-tips/football/wolves-vs-tottenham-prediction-lineups-odds-2026-04-25/",
+              "accessed_at": "2026-04-24T22:52:33.681712+00:00",
+              "title": "Wolves vs Tottenham Prediction, Betting Tips, Lineups & Odds | 25 Apr 2026"
+            },
+            {
+              "url": "https://footballwhispers.com/blog/wolverhampton-wanderers-vs-tottenham-prediction-25-04-2026/",
+              "accessed_at": "2026-04-24T22:52:33.681729+00:00",
+              "title": "Wolverhampton Wanderers vs Tottenham – prediction, preview & betting tips – 25/04/2026"
+            },
+            {
+              "url": "https://www.whoscored.com/matches/1903401/preview/england-premier-league-2025-2026-wolves-tottenham",
+              "accessed_at": "2026-04-24T22:52:33.681733+00:00",
+              "title": "Wolves-Tottenham - Premier League 2025/2026 Statistical Preview"
+            },
+            {
+              "url": "https://scores24.live/en/soccer/m-25-04-2026-wolverhampton-wanderers-tottenham-hotspur-prediction",
+              "accessed_at": "2026-04-24T22:52:33.681743+00:00",
+              "title": "Wolves vs Tottenham Prediction 25/04/2026 – Odds, Tips & Analysis - Football"
+            },
+            {
+              "url": "https://www.spurs-web.com/tottenham-match-previews/tottenham-vs-wolves-premier-league-preview-team-news-predicted-line-ups-score-prediction/",
+              "accessed_at": "2026-04-24T22:52:33.681745+00:00",
+              "title": "Tottenham vs Wolves Premier League preview: Team news, predicted line-ups, score prediction - Spurs Web"
+            },
+            {
+              "url": "https://www.sportskeeda.com/football/wolves-vs-tottenham-hotspur-prediction-betting-tips-april-25th-2026",
+              "accessed_at": "2026-04-24T22:52:33.681753+00:00",
+              "title": "Wolves vs Tottenham Hotspur Prediction and Betting Tips | April 25th 2026"
+            },
+            {
+              "url": "https://www.squawka.com/en/news/match-preview-wolves-vs-tottenham-25-04-26-premier-league/",
+              "accessed_at": "2026-04-24T22:52:33.681756+00:00",
+              "title": "Wolves vs Tottenham: predictions, stats, tips & odds"
+            },
+            {
+              "url": "https://www.dimers.com/news/wolves-vs-tottenham-prediction-epl-saturday-04-25-2026-ac",
+              "accessed_at": "2026-04-24T22:52:33.681758+00:00",
+              "title": "Wolves vs. Tottenham prediction, odds, Premier League picks [4/25/2026]"
+            },
+            {
+              "url": "https://thehardtackle.com/round-up/2026/04/24/wolves-vs-tottenham-hotspur-preview-and-prediction/",
+              "accessed_at": "2026-04-24T22:52:33.681771+00:00",
+              "title": "Wolves vs Tottenham Hotspur: Preview and Prediction"
+            },
+            {
+              "url": "https://eplindex.com/145689/wolves-vs-tottenham-hotspur-match-preview-latest-team-news-and-score-prediction.html",
+              "accessed_at": "2026-04-24T22:52:33.681774+00:00",
+              "title": "Wolves vs Tottenham Hotspur: Match Preview, Latest Team News and Score Prediction"
+            },
+            {
+              "url": "https://www.wolves.co.uk/",
+              "accessed_at": "2026-04-24T22:52:33.681783+00:00",
+              "title": "Official Website of Wolves | Wolverhampton Wanderers FC"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League",
+              "accessed_at": "2026-04-24T22:52:33.681792+00:00",
+              "title": "2025–26 Premier League - Wikipedia"
+            },
+            {
+              "url": "https://www.thecanary.co/uk/news/2026/04/21/wolves-relegated/",
+              "accessed_at": "2026-04-24T22:52:33.681795+00:00",
+              "title": "Wolves bid farewell to the top flight, ending eight years in the Premier League"
+            },
+            {
+              "url": "https://www.premierleague.com/en/clubs/39/wolverhampton-wanderers/overview",
+              "accessed_at": "2026-04-24T22:52:33.681797+00:00",
+              "title": "Wolverhampton Wanderers Team News, Fixtures & Results 2025/26 | Premier League"
+            },
+            {
+              "url": "https://www.skysports.com/football/news/11661/13535651/premier-league-and-fa-cup-predictions-and-best-bets-tottenhams-woes-to-grow-at-wolves",
+              "accessed_at": "2026-04-24T22:52:33.681799+00:00",
+              "title": "Premier League & FA Cup predictions and best bets: Tottenham's woes to grow at Wolves | Football News | Sky Sports"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Wolverhampton_Wanderers_F.C.",
+              "accessed_at": "2026-04-24T22:52:33.681801+00:00",
+              "title": "Wolverhampton Wanderers F.C. - Wikipedia"
+            },
+            {
+              "url": "https://www.goal.com/en-in/betting/tips/wolves-vs-tottenham-predictions-25-04-2026/A:blt9f6fd4a2ad7ce0e5",
+              "accessed_at": "2026-04-24T22:52:33.681804+00:00",
+              "title": "Wolves vs Tottenham predictions: De Zerbi seeks first win | Goal.com India"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League",
+              "accessed_at": "2026-04-24T22:52:33.681806+00:00",
+              "title": "2026–27 Premier League - Wikipedia"
+            },
+            {
+              "url": "https://www.fplgameweek.com/premier-league-standings/wolves",
+              "accessed_at": "2026-04-24T22:52:33.681808+00:00",
+              "title": "Wolves Standings | Premier League 2025/2026"
+            },
+            {
+              "url": "https://www.whoscored.com/matches/1903401/preview/england-premier-league-2025-2026-wolves-tottenham",
+              "accessed_at": "2026-04-24T22:52:33.681810+00:00",
+              "title": "Wolves-Tottenham - Premier League 2025/2026 Statistical Preview"
+            },
+            {
+              "url": "https://www.spurs-web.com/tottenham-match-previews/tottenham-vs-wolves-premier-league-preview-team-news-predicted-line-ups-score-prediction/",
+              "accessed_at": "2026-04-24T22:52:33.681816+00:00",
+              "title": "Tottenham vs Wolves Premier League preview: Team news, predicted line-ups, score prediction - Spurs Web"
+            },
+            {
+              "url": "https://predictions.xpertstats.com/wolves-vs-tottenham-prediction-250426/",
+              "accessed_at": "2026-04-24T22:52:33.681818+00:00",
+              "title": "Wolves vs Tottenham Prediction, Team News, Lineups, Stats"
+            },
+            {
+              "url": "https://www.flashscore.com/match/football/tottenham-UDg08Ohm/wolves-j3Azpf5d/",
+              "accessed_at": "2026-04-24T22:52:33.681820+00:00",
+              "title": "Wolves v Tottenham LIVE 25/04/2026 | Football - Flashscore"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/news/2026/april/academy-spurs-u21s-v-wolves-match-report-april-2026/",
+              "accessed_at": "2026-04-24T22:52:33.681822+00:00",
+              "title": "Wilson spot-kick seals win over Wolves Under-21s | Tottenham Hotspur"
+            },
+            {
+              "url": "https://www.sportsgambler.com/betting-tips/football/wolves-vs-tottenham-prediction-lineups-odds-2026-04-25/",
+              "accessed_at": "2026-04-24T22:52:33.681824+00:00",
+              "title": "Wolves vs Tottenham Prediction, Betting Tips, Lineups & Odds | 25 Apr 2026"
+            },
+            {
+              "url": "https://scores24.live/en/soccer/m-25-04-2026-wolverhampton-wanderers-tottenham-hotspur-prediction",
+              "accessed_at": "2026-04-24T22:52:33.681826+00:00",
+              "title": "Wolves vs Tottenham Prediction 25/04/2026 – Odds, Tips & Analysis - Football"
+            },
+            {
+              "url": "https://www.premierleague.com/en/news/4501732/match-officials-for-matchweek-19",
+              "accessed_at": "2026-04-24T22:52:33.681828+00:00",
+              "title": "Match officials for Matchweek 19"
+            },
+            {
+              "url": "https://dailysports.net/predictions/wolves-vs-tottenham-prediction-h2h-and-probable-lineups-april-25-2026/",
+              "accessed_at": "2026-04-24T22:52:33.681830+00:00",
+              "title": "Wolverhampton vs Tottenham prediction and betting tips 25 April 2026 | Dailysports experts"
+            },
+            {
+              "url": "https://heavy.com/sports/soccer/premier-league/tottenham-hotspur-spurs/wolves-vs-tottenham-premier-league-table-relegation-battle-molineux-2026/",
+              "accessed_at": "2026-04-24T22:52:33.681832+00:00",
+              "title": "Wolves vs Tottenham: Premier League Relegation Fight Reaches Breaking Point at Molineux"
+            },
+            {
+              "url": "https://www.whoscored.com/matches/1903401/preview/england-premier-league-2025-2026-wolves-tottenham",
+              "accessed_at": "2026-04-24T22:52:33.681834+00:00",
+              "title": "Wolves-Tottenham - Premier League 2025/2026 Statistical Preview"
+            },
+            {
+              "url": "https://www.sofascore.com/football/team/tottenham-hotspur/33",
+              "accessed_at": "2026-04-24T22:52:33.681838+00:00",
+              "title": "Tottenham Hotspur live score, schedule & player stats | Sofascore"
+            },
+            {
+              "url": "https://thefootball.data.blog/2026/04/24/premier-league-form-guide-last-10-games-to-22nd-april-2026/",
+              "accessed_at": "2026-04-24T22:52:33.681840+00:00",
+              "title": "Premier League Form Guide – Last 10 Games to 22nd April 2026"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Tottenham_Hotspur_F.C._season",
+              "accessed_at": "2026-04-24T22:52:33.681842+00:00",
+              "title": "2025–26 Tottenham Hotspur F.C. season - Wikipedia"
+            },
+            {
+              "url": "https://thefootball.data.blog/2026/04/21/premier-league-form-guide-last-10-games-to-20th-april-2026/",
+              "accessed_at": "2026-04-24T22:52:33.681845+00:00",
+              "title": "Premier League Form Guide – Last 10 Games to 20th April 2026"
+            },
+            {
+              "url": "https://www.premierleague.com/en/clubs/6/tottenham-hotspur/matches",
+              "accessed_at": "2026-04-24T22:52:33.681847+00:00",
+              "title": "Tottenham Hotspur Fixtures & Results 2025/2026 | Premier League"
+            },
+            {
+              "url": "https://thefootball.data.blog/2026/04/17/premier-league-form-guide-last-10-games-to-13th-april-2026/",
+              "accessed_at": "2026-04-24T22:52:33.681849+00:00",
+              "title": "Premier League Form Guide – Last 10 Games to 13th April 2026"
+            },
+            {
+              "url": "https://sportstats365.com/football/premiership/2025-2026/teams/tottenham",
+              "accessed_at": "2026-04-24T22:52:33.681851+00:00",
+              "title": "Tottenham statistics, fixtures and results - Premier League 2025/2026 - Sportstats365.com"
+            },
+            {
+              "url": "https://fbref.com/en/squads/361ca564/2025-2026/matchlogs/c9/schedule/Tottenham-Hotspur-Scores-and-Fixtures-Premier-League",
+              "accessed_at": "2026-04-24T22:52:33.681854+00:00",
+              "title": "Tottenham Hotspur Scores and Fixtures, Premier League | FBref.com"
+            },
+            {
+              "url": "https://www.fotmob.com/teams/8586/overview/tottenham-hotspur",
+              "accessed_at": "2026-04-24T22:52:33.681856+00:00",
+              "title": "Tottenham Hotspur - fixtures, team info and top players"
+            },
+            {
+              "url": "https://www.livescore.com/en/football/team/tottenham-hotspur/3339/overview/",
+              "accessed_at": "2026-04-24T22:52:33.681858+00:00",
+              "title": "Tottenham Hotspur Scores & Latest Results Today | LiveScore"
+            },
+            {
+              "url": "https://www.sportsgambler.com/betting-tips/football/wolves-vs-tottenham-prediction-lineups-odds-2026-04-25/",
+              "accessed_at": "2026-04-24T12:25:00Z",
+              "title": "Wolves vs Tottenham Prediction, Betting Tips, Lineups & Odds | 25 Apr 2026"
+            },
+            {
+              "url": "https://footballwhispers.com/blog/wolverhampton-wanderers-vs-tottenham-prediction-25-04-2026/",
+              "accessed_at": "2026-04-24T12:25:00Z",
+              "title": "Wolverhampton Wanderers vs Tottenham – prediction, preview & betting tips"
+            },
+            {
+              "url": "https://www.whoscored.com/matches/1903401/preview/england-premier-league-2025-2026-wolves-tottenham",
+              "accessed_at": "2026-04-24T12:25:00Z",
+              "title": "Wolves-Tottenham Statistical Preview"
+            },
+            {
+              "url": "https://scores24.live/en/soccer/m-25-04-2026-wolverhampton-wanderers-tottenham-hotspur-prediction",
+              "accessed_at": "2026-04-24T12:25:00Z",
+              "title": "Wolves vs Tottenham Prediction 25/04/2026"
+            },
+            {
+              "url": "https://www.spurs-web.com/tottenham-match-previews/tottenham-vs-wolves-premier-league-preview-team-news-predicted-line-ups-score-prediction/",
+              "accessed_at": "2026-04-24T12:25:00Z",
+              "title": "Tottenham vs Wolves Premier League preview"
+            },
+            {
+              "url": "https://www.sportskeeda.com/football/wolves-vs-tottenham-hotspur-prediction-betting-tips-april-25th-2026",
+              "accessed_at": "2026-04-24T12:25:00Z",
+              "title": "Wolves vs Tottenham Hotspur Prediction April 25th 2026"
+            },
+            {
+              "url": "https://www.squawka.com/en/news/match-preview-wolves-vs-tottenham-25-04-26-premier-league/",
+              "accessed_at": "2026-04-24T12:25:00Z",
+              "title": "Wolves vs Tottenham: predictions, stats, tips & odds"
+            },
+            {
+              "url": "https://www.dimers.com/news/wolves-vs-tottenham-prediction-epl-saturday-04-25-2026-ac",
+              "accessed_at": "2026-04-24T12:25:00Z",
+              "title": "Wolves vs. Tottenham prediction, odds, Premier League picks"
+            },
+            {
+              "url": "https://thehardtackle.com/round-up/2026/04/24/wolves-vs-tottenham-hotspur-preview-and-prediction/",
+              "accessed_at": "2026-04-24T12:25:00Z",
+              "title": "Wolves vs Tottenham Hotspur: Preview and Prediction"
+            },
+            {
+              "url": "https://eplindex.com/145689/wolves-vs-tottenham-hotspur-match-preview-latest-team-news-and-score-prediction.html",
+              "accessed_at": "2026-04-24T12:25:00Z",
+              "title": "Wolves vs Tottenham Hotspur: Match Preview"
+            },
+            {
+              "url": "https://www.skysports.com/football/news/11661/13535651/premier-league-and-fa-cup-predictions-and-best-bets-tottenhams-woes-to-grow-at-wolves",
+              "accessed_at": "2026-04-24T12:25:00Z",
+              "title": "Premier League predictions: Tottenham's woes to grow at Wolves"
+            },
+            {
+              "url": "https://www.goal.com/en-in/betting/tips/wolves-vs-tottenham-predictions-25-04-2026/A:blt9f6fd4a2ad7ce0e5",
+              "accessed_at": "2026-04-24T12:25:00Z",
+              "title": "Wolves vs Tottenham predictions: De Zerbi seeks first win"
+            },
+            {
+              "url": "https://www.fotmob.com/teams/8586/overview/tottenham-hotspur",
+              "accessed_at": "2026-04-24T12:25:00Z",
+              "title": "Tottenham Hotspur - fixtures, team info"
+            },
+            {
+              "url": "https://predictions.xpertstats.com/wolves-vs-tottenham-prediction-250426/",
+              "accessed_at": "2026-04-24T12:25:00Z",
+              "title": "Wolves vs Tottenham Prediction Stats"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League",
+              "accessed_at": "2026-04-24T12:25:00Z",
+              "title": "2025-26 Premier League - Wikipedia"
+            }
+          ]
+        },
+        {
+          "model_id": "claude-opus-4-7-thinking",
+          "setting": "S1",
+          "win_probs": {
+            "home": 0.27,
+            "draw": 0.27,
+            "away": 0.46
+          },
+          "score_dist": [
+            {
+              "score": "0-1",
+              "p": 0.135
+            },
+            {
+              "score": "1-1",
+              "p": 0.135
+            },
+            {
+              "score": "1-2",
+              "p": 0.115
+            },
+            {
+              "score": "0-2",
+              "p": 0.11
+            },
+            {
+              "score": "0-0",
+              "p": 0.07
+            },
+            {
+              "score": "2-2",
+              "p": 0.06
+            },
+            {
+              "score": "1-0",
+              "p": 0.075
+            },
+            {
+              "score": "2-1",
+              "p": 0.075
+            },
+            {
+              "score": "0-3",
+              "p": 0.06
+            },
+            {
+              "score": "1-3",
+              "p": 0.045
+            },
+            {
+              "score": "2-0",
+              "p": 0.04
+            },
+            {
+              "score": "3-1",
+              "p": 0.02
+            },
+            {
+              "score": "2-3",
+              "p": 0.03
+            },
+            {
+              "score": "3-2",
+              "p": 0.015
+            },
+            {
+              "score": "0-4",
+              "p": 0.015
+            }
+          ],
+          "most_likely_score": "0-1",
+          "expected_goal_diff": -0.45,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Wolves enter this match already mathematically relegated (per The Guardian 20 Apr report after West Ham's draw at Palace), which historically can swing motivation either way - sometimes liberation, often resignation; their last two PL outings (0-3 Leeds, 0-4 West Ham) suggest mental capitulation. Tottenham are in dreadful form (1W-2D-7L in last 10) and dragged into a relegation scrap themselves under De Zerbi, with fresh injury concerns including Udogie a doubt and another key player flagged by Goal.com. However, Spurs still have meaningfully more individual quality (Kudus, Maddison, Solanke/Tel, Romero, Van de Ven) and a must-win incentive that Wolves lack. Multiple previews (Sky, ESPN/Carragher, Squawka) lean toward Spurs but acknowledge volatility. I expect a nervy, mistake-prone game where Spurs' superior attacking talent and motivation edge through, but with real chance of an open draw or a Wolves shock given home factor and Spurs' defensive frailties.",
+            "t1_result": "Spurs are slight favorites due to quality and stakes, but heavy injury list and dismal form plus Molineux unpredictability (Wolves drew Arsenal, beat Liverpool in this stretch) keep the home and draw probabilities meaningful. Expected goals lean ~1.0 vs ~1.5 favoring Spurs.",
+            "t2_player": "Wolves likely line up in their 3-4-2-1 with Arokodare/Hwang up top behind Bellegarde and A. Gomes, João Gomes-André in midfield. Spurs in 4-2-3-1 with Kudus-Maddison-Odobert behind Tel (Solanke rotation possible) per tottenhamhotspurnews.com predicted XI; Udogie replaced by Spence if doubtful.",
+            "t3_events": "Both sides concede sloppily, expect goals across the match with Spurs scoring early-to-midway after settling, Wolves capable of a set-piece or transition response. Multiple yellows likely (Romero, Bissouma, João Gomes are bookable types). Subs from minute 60-75 with Solanke/Richarlison and Kolo Muani for Spurs.",
+            "t4_stats": "Spurs to dominate possession (~58%) and shots given Wolves' relegated passivity, but with low pass accuracy in a chaotic relegation-fight tempo. Wolves still generate corners and crosses at home; both keepers busy."
+          },
+          "scorers": [
+            {
+              "player": "M. Tel",
+              "team": "away",
+              "minute_range": [
+                20,
+                80
+              ],
+              "p": 0.22
+            },
+            {
+              "player": "M. Kudus",
+              "team": "away",
+              "minute_range": [
+                15,
+                85
+              ],
+              "p": 0.2
+            },
+            {
+              "player": "W. Odobert",
+              "team": "away",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.16
+            },
+            {
+              "player": "J. Maddison",
+              "team": "away",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.15
+            },
+            {
+              "player": "D. Solanke",
+              "team": "away",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.12
+            },
+            {
+              "player": "R. Kolo Muani",
+              "team": "away",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.1
+            },
+            {
+              "player": "Pedro Porro",
+              "team": "away",
+              "minute_range": [
+                10,
+                90
+              ],
+              "p": 0.08
+            },
+            {
+              "player": "T. Arokodare",
+              "team": "home",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.2
+            },
+            {
+              "player": "J. Bellegarde",
+              "team": "home",
+              "minute_range": [
+                15,
+                85
+              ],
+              "p": 0.13
+            },
+            {
+              "player": "A. Gomes",
+              "team": "home",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.11
+            },
+            {
+              "player": "Hwang Hee-Chan",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.1
+            },
+            {
+              "player": "João Gomes",
+              "team": "home",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.07
+            },
+            {
+              "player": "Rodrigo Gomes",
+              "team": "home",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.06
+            }
+          ],
+          "assisters": [
+            {
+              "player": "J. Maddison",
+              "team": "away",
+              "p": 0.18
+            },
+            {
+              "player": "M. Kudus",
+              "team": "away",
+              "p": 0.15
+            },
+            {
+              "player": "Pedro Porro",
+              "team": "away",
+              "p": 0.13
+            },
+            {
+              "player": "W. Odobert",
+              "team": "away",
+              "p": 0.1
+            },
+            {
+              "player": "A. Gomes",
+              "team": "home",
+              "p": 0.12
+            },
+            {
+              "player": "J. Bellegarde",
+              "team": "home",
+              "p": 0.1
+            },
+            {
+              "player": "Rodrigo Gomes",
+              "team": "home",
+              "p": 0.08
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "M. Kudus",
+              "team": "away",
+              "p": 0.2
+            },
+            {
+              "player": "M. Tel",
+              "team": "away",
+              "p": 0.15
+            },
+            {
+              "player": "J. Maddison",
+              "team": "away",
+              "p": 0.13
+            },
+            {
+              "player": "W. Odobert",
+              "team": "away",
+              "p": 0.09
+            },
+            {
+              "player": "G. Vicario",
+              "team": "away",
+              "p": 0.07
+            },
+            {
+              "player": "T. Arokodare",
+              "team": "home",
+              "p": 0.12
+            },
+            {
+              "player": "S. Johnstone",
+              "team": "home",
+              "p": 0.08
+            },
+            {
+              "player": "J. Bellegarde",
+              "team": "home",
+              "p": 0.07
+            },
+            {
+              "player": "André",
+              "team": "home",
+              "p": 0.05
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "S. Johnstone",
+                  "position": "GK"
+                },
+                {
+                  "name": "L. Krejčí",
+                  "position": "DF"
+                },
+                {
+                  "name": "Toti Gomes",
+                  "position": "DF"
+                },
+                {
+                  "name": "Y. Mosquera",
+                  "position": "DF"
+                },
+                {
+                  "name": "Rodrigo Gomes",
+                  "position": "MF"
+                },
+                {
+                  "name": "André",
+                  "position": "MF"
+                },
+                {
+                  "name": "João Gomes",
+                  "position": "MF"
+                },
+                {
+                  "name": "Hugo Bueno",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Bellegarde",
+                  "position": "FW"
+                },
+                {
+                  "name": "A. Gomes",
+                  "position": "FW"
+                },
+                {
+                  "name": "T. Arokodare",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "José Sá",
+                  "position": "GK"
+                },
+                {
+                  "name": "S. Bueno",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. Doherty",
+                  "position": "DF"
+                },
+                {
+                  "name": "Pedro Lima",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Møller Wolfe",
+                  "position": "DF"
+                },
+                {
+                  "name": "T. Edozie",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Tchatchoua",
+                  "position": "MF"
+                },
+                {
+                  "name": "Hwang Hee-Chan",
+                  "position": "FW"
+                },
+                {
+                  "name": "A. Armstrong",
+                  "position": "FW"
+                },
+                {
+                  "name": "E. González",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "G. Vicario",
+                  "position": "GK"
+                },
+                {
+                  "name": "Pedro Porro",
+                  "position": "DF"
+                },
+                {
+                  "name": "C. Romero",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. van de Ven",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Spence",
+                  "position": "DF"
+                },
+                {
+                  "name": "R. Bentancur",
+                  "position": "MF"
+                },
+                {
+                  "name": "L. Bergvall",
+                  "position": "MF"
+                },
+                {
+                  "name": "M. Kudus",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Maddison",
+                  "position": "MF"
+                },
+                {
+                  "name": "W. Odobert",
+                  "position": "FW"
+                },
+                {
+                  "name": "M. Tel",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "A. Kinský",
+                  "position": "GK"
+                },
+                {
+                  "name": "K. Danso",
+                  "position": "DF"
+                },
+                {
+                  "name": "B. Davies",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Udogie",
+                  "position": "DF"
+                },
+                {
+                  "name": "Y. Bissouma",
+                  "position": "MF"
+                },
+                {
+                  "name": "P. Sarr",
+                  "position": "MF"
+                },
+                {
+                  "name": "João Palhinha",
+                  "position": "MF"
+                },
+                {
+                  "name": "X. Simons",
+                  "position": "FW"
+                },
+                {
+                  "name": "R. Kolo Muani",
+                  "position": "FW"
+                },
+                {
+                  "name": "Richarlison",
+                  "position": "FW"
+                },
+                {
+                  "name": "D. Solanke",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "3-4-2-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [
+            {
+              "team": "away",
+              "off": "M. Tel",
+              "on": "D. Solanke",
+              "minute": 65
+            },
+            {
+              "team": "away",
+              "off": "W. Odobert",
+              "on": "R. Kolo Muani",
+              "minute": 70
+            },
+            {
+              "team": "away",
+              "off": "L. Bergvall",
+              "on": "Y. Bissouma",
+              "minute": 75
+            },
+            {
+              "team": "home",
+              "off": "A. Gomes",
+              "on": "Hwang Hee-Chan",
+              "minute": 60
+            },
+            {
+              "team": "home",
+              "off": "J. Bellegarde",
+              "on": "A. Armstrong",
+              "minute": 72
+            },
+            {
+              "team": "home",
+              "off": "Hugo Bueno",
+              "on": "S. Bueno",
+              "minute": 80
+            }
+          ],
+          "cards": [
+            {
+              "player": "C. Romero",
+              "team": "away",
+              "color": "yellow",
+              "minute": 35
+            },
+            {
+              "player": "João Gomes",
+              "team": "home",
+              "color": "yellow",
+              "minute": 40
+            },
+            {
+              "player": "L. Bergvall",
+              "team": "away",
+              "color": "yellow",
+              "minute": 55
+            },
+            {
+              "player": "Toti Gomes",
+              "team": "home",
+              "color": "yellow",
+              "minute": 70
+            },
+            {
+              "player": "Y. Mosquera",
+              "team": "home",
+              "color": "yellow",
+              "minute": 82
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 42,
+              "away": 58
+            },
+            "shots": {
+              "home": 10,
+              "away": 14
+            },
+            "shots_on_target": {
+              "home": 3,
+              "away": 5
+            },
+            "corners": {
+              "home": 5,
+              "away": 6
+            },
+            "pass_accuracy": {
+              "home": 76,
+              "away": 83
+            },
+            "fouls": {
+              "home": 13,
+              "away": 12
+            },
+            "saves": {
+              "home": 3,
+              "away": 2
+            },
+            "defensive_actions": {
+              "home": 38,
+              "away": 30
+            }
+          },
+          "cost_usd": 0.181,
+          "sources": []
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.3,
+            "draw": 0.25,
+            "away": 0.45
+          },
+          "score_dist": [
+            {
+              "score": "1-2",
+              "p": 0.12
+            },
+            {
+              "score": "1-1",
+              "p": 0.11
+            },
+            {
+              "score": "0-1",
+              "p": 0.1
+            },
+            {
+              "score": "2-1",
+              "p": 0.09
+            },
+            {
+              "score": "0-2",
+              "p": 0.08
+            },
+            {
+              "score": "2-2",
+              "p": 0.08
+            },
+            {
+              "score": "1-0",
+              "p": 0.08
+            },
+            {
+              "score": "0-0",
+              "p": 0.06
+            },
+            {
+              "score": "2-0",
+              "p": 0.05
+            },
+            {
+              "score": "1-3",
+              "p": 0.05
+            },
+            {
+              "score": "3-1",
+              "p": 0.03
+            },
+            {
+              "score": "2-3",
+              "p": 0.03
+            },
+            {
+              "score": "0-3",
+              "p": 0.03
+            },
+            {
+              "score": "3-2",
+              "p": 0.02
+            },
+            {
+              "score": "3-0",
+              "p": 0.02
+            },
+            {
+              "score": "3-3",
+              "p": 0.01
+            },
+            {
+              "score": "4-1",
+              "p": 0.01
+            },
+            {
+              "score": "1-4",
+              "p": 0.01
+            },
+            {
+              "score": "4-2",
+              "p": 0.01
+            },
+            {
+              "score": "2-4",
+              "p": 0.01
+            }
+          ],
+          "most_likely_score": "1-2",
+          "expected_goal_diff": -0.3,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Tottenham enters this late-season fixture highly motivated by the race for Champions League qualification, while Wolves are comfortably mid-table but formidable at Molineux. Spurs' high-line possession system will likely dominate the ball, but Wolves' transition threat through Cunha and Hwang poses a significant danger. Injuries to key Spurs rotation players limit their bench impact, but their starting XI quality gives them a slight edge.",
+            "t1_result": "Tottenham are favored due to their superior attacking metrics and higher stakes, but a draw or narrow Wolves win are very plausible given Spurs' defensive vulnerabilities on the counter.",
+            "t2_player": "Son Heung-min and James Maddison are crucial for Spurs' chance creation. For Wolves, Matheus Cunha will be the focal point of counter-attacks. Both teams field their strongest available XIs.",
+            "t3_events": "Spurs are expected to score first, but Wolves will likely find the net in the second half as the game opens up. High card potential for Wolves' midfield trying to stop Maddison.",
+            "t4_stats": "Spurs will dominate possession (around 58-60%) and outshoot Wolves, but Wolves will have high-quality chances from fewer shots. Pass accuracy will favor Tottenham."
+          },
+          "scorers": [
+            {
+              "player": "Son Heung-min",
+              "team": "away",
+              "minute_range": [
+                15,
+                45
+              ],
+              "p": 0.35
+            },
+            {
+              "player": "Matheus Cunha",
+              "team": "home",
+              "minute_range": [
+                45,
+                75
+              ],
+              "p": 0.28
+            },
+            {
+              "player": "Richarlison",
+              "team": "away",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.25
+            },
+            {
+              "player": "Hwang Hee-chan",
+              "team": "home",
+              "minute_range": [
+                30,
+                60
+              ],
+              "p": 0.22
+            }
+          ],
+          "assisters": [],
+          "motm_probs": [],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Jose Sa",
+                  "position": "GK",
+                  "shirt": 1
+                },
+                {
+                  "name": "Nelson Semedo",
+                  "position": "DF",
+                  "shirt": 22
+                },
+                {
+                  "name": "Santiago Bueno",
+                  "position": "DF",
+                  "shirt": 4
+                },
+                {
+                  "name": "Toti Gomes",
+                  "position": "DF",
+                  "shirt": 24
+                },
+                {
+                  "name": "Rayan Ait-Nouri",
+                  "position": "DF",
+                  "shirt": 3
+                },
+                {
+                  "name": "Mario Lemina",
+                  "position": "MF",
+                  "shirt": 5
+                },
+                {
+                  "name": "Joao Gomes",
+                  "position": "MF",
+                  "shirt": 8
+                },
+                {
+                  "name": "Tommy Doyle",
+                  "position": "MF",
+                  "shirt": 20
+                },
+                {
+                  "name": "Pablo Sarabia",
+                  "position": "FW",
+                  "shirt": 21
+                },
+                {
+                  "name": "Hwang Hee-chan",
+                  "position": "FW",
+                  "shirt": 11
+                },
+                {
+                  "name": "Matheus Cunha",
+                  "position": "FW",
+                  "shirt": 12
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Daniel Bentley",
+                  "position": "GK",
+                  "shirt": 25
+                },
+                {
+                  "name": "Matt Doherty",
+                  "position": "DF",
+                  "shirt": 2
+                },
+                {
+                  "name": "Hugo Bueno",
+                  "position": "DF",
+                  "shirt": 17
+                },
+                {
+                  "name": "Boubacar Traore",
+                  "position": "MF",
+                  "shirt": 6
+                },
+                {
+                  "name": "Jean-Ricner Bellegarde",
+                  "position": "MF",
+                  "shirt": 27
+                },
+                {
+                  "name": "Sasa Kalajdzic",
+                  "position": "FW",
+                  "shirt": 18
+                },
+                {
+                  "name": "Enso Gonzalez",
+                  "position": "FW",
+                  "shirt": 30
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "Guglielmo Vicario",
+                  "position": "GK",
+                  "shirt": 13
+                },
+                {
+                  "name": "Pedro Porro",
+                  "position": "DF",
+                  "shirt": 23
+                },
+                {
+                  "name": "Cristian Romero",
+                  "position": "DF",
+                  "shirt": 17
+                },
+                {
+                  "name": "Micky van de Ven",
+                  "position": "DF",
+                  "shirt": 37
+                },
+                {
+                  "name": "Destiny Udogie",
+                  "position": "DF",
+                  "shirt": 38
+                },
+                {
+                  "name": "Yves Bissouma",
+                  "position": "MF",
+                  "shirt": 8
+                },
+                {
+                  "name": "Pape Matar Sarr",
+                  "position": "MF",
+                  "shirt": 29
+                },
+                {
+                  "name": "James Maddison",
+                  "position": "MF",
+                  "shirt": 10
+                },
+                {
+                  "name": "Dejan Kulusevski",
+                  "position": "FW",
+                  "shirt": 21
+                },
+                {
+                  "name": "Son Heung-min",
+                  "position": "FW",
+                  "shirt": 7
+                },
+                {
+                  "name": "Richarlison",
+                  "position": "FW",
+                  "shirt": 9
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Fraser Forster",
+                  "position": "GK",
+                  "shirt": 20
+                },
+                {
+                  "name": "Radu Dragusin",
+                  "position": "DF",
+                  "shirt": 6
+                },
+                {
+                  "name": "Ben Davies",
+                  "position": "DF",
+                  "shirt": 33
+                },
+                {
+                  "name": "Rodrigo Bentancur",
+                  "position": "MF",
+                  "shirt": 30
+                },
+                {
+                  "name": "Oliver Skipp",
+                  "position": "MF",
+                  "shirt": 4
+                },
+                {
+                  "name": "Brennan Johnson",
+                  "position": "FW",
+                  "shirt": 22
+                },
+                {
+                  "name": "Timo Werner",
+                  "position": "FW",
+                  "shirt": 16
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "3-4-2-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [],
+          "cards": [],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 42.0,
+              "away": 58.0
+            },
+            "shots": {
+              "home": 11.0,
+              "away": 15.0
+            },
+            "shots_on_target": {
+              "home": 4.0,
+              "away": 6.0
+            },
+            "corners": {
+              "home": 4.0,
+              "away": 6.0
+            },
+            "pass_accuracy": {
+              "home": 80.0,
+              "away": 88.0
+            },
+            "fouls": {
+              "home": 12.0,
+              "away": 10.0
+            },
+            "saves": {
+              "home": 4.0,
+              "away": 3.0
+            },
+            "defensive_actions": {
+              "home": 45.0,
+              "away": 35.0
+            }
+          },
+          "cost_usd": 0.031,
+          "sources": [
+            {
+              "url": "https://www.wolves.co.uk/teams/mens-first-team/",
+              "accessed_at": "2026-04-24T13:10:00+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/teams/men/players/",
+              "accessed_at": "2026-04-24T13:12:00+00:00"
+            },
+            {
+              "url": "https://www.skysports.com/football/wolverhampton-wanderers-vs-tottenham-hotspur/preview/482910",
+              "accessed_at": "2026-04-24T13:15:00+00:00"
+            },
+            {
+              "url": "https://fbref.com/en/matches/preview/Wolves-Tottenham",
+              "accessed_at": "2026-04-24T13:20:00+00:00"
+            }
+          ]
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking",
+          "setting": "S1",
+          "win_probs": {
+            "home": 0.46,
+            "draw": 0.27,
+            "away": 0.27
+          },
+          "score_dist": [
+            {
+              "score": "1-0",
+              "p": 0.13
+            },
+            {
+              "score": "1-1",
+              "p": 0.12
+            },
+            {
+              "score": "2-1",
+              "p": 0.11
+            },
+            {
+              "score": "0-1",
+              "p": 0.09
+            },
+            {
+              "score": "2-0",
+              "p": 0.09
+            },
+            {
+              "score": "0-0",
+              "p": 0.08
+            },
+            {
+              "score": "1-2",
+              "p": 0.08
+            },
+            {
+              "score": "2-2",
+              "p": 0.07
+            },
+            {
+              "score": "3-1",
+              "p": 0.06
+            },
+            {
+              "score": "0-2",
+              "p": 0.05
+            },
+            {
+              "score": "3-2",
+              "p": 0.03
+            },
+            {
+              "score": "1-3",
+              "p": 0.03
+            },
+            {
+              "score": "3-0",
+              "p": 0.03
+            },
+            {
+              "score": "0-3",
+              "p": 0.02
+            },
+            {
+              "score": "4-1",
+              "p": 0.01
+            }
+          ],
+          "most_likely_score": "1-0",
+          "expected_goal_diff": 0.4,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Tottenham are in a dire run of form under Roberto De Zerbi, fighting an unexpected relegation battle with just 1 win in their last 10 matches. Wolves have been inconsistent but solid at home, recently beating Aston Villa and Liverpool at Molineux. With Destiny Udogie a major doubt and Spurs' confidence at rock bottom, Wolves are well-placed to capitalize on their defensive frailties. The pressure is entirely on the visitors, which could lead to a tense, error-prone performance.",
+            "t1_result": "Wolves are slight favorites given their home advantage and Spurs' terrible form. A draw is also very possible given the high stakes for Spurs, but a narrow home win is the most likely outcome.",
+            "t2_player": "Hwang Hee-Chan and Joao Gomes will be key for Wolves in transitions. For Spurs, Mathys Tel is expected to step up in attack alongside Solanke, while Ben Davies likely covers for the doubtful Udogie.",
+            "t3_events": "Spurs will likely dominate possession early on but leave gaps for Wolves to exploit on the counter. Expect a cagey affair with cards likely as Spurs fight desperately for survival.",
+            "t4_stats": "Spurs to control possession (around 58%) under De Zerbi's system, but Wolves to be more clinical with their shots on target. High defensive actions expected from Wolves."
+          },
+          "scorers": [
+            {
+              "player": "Hwang Hee-Chan",
+              "team": "home",
+              "minute_range": [
+                30,
+                75
+              ],
+              "p": 0.28
+            },
+            {
+              "player": "A. Gomes",
+              "team": "home",
+              "minute_range": [
+                45,
+                90
+              ],
+              "p": 0.22
+            },
+            {
+              "player": "D. Solanke",
+              "team": "away",
+              "minute_range": [
+                15,
+                80
+              ],
+              "p": 0.25
+            },
+            {
+              "player": "M. Tel",
+              "team": "away",
+              "minute_range": [
+                45,
+                90
+              ],
+              "p": 0.2
+            }
+          ],
+          "assisters": [],
+          "motm_probs": [],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "José Sá",
+                  "position": "GK"
+                },
+                {
+                  "name": "M. Doherty",
+                  "position": "DF"
+                },
+                {
+                  "name": "S. Bueno",
+                  "position": "DF"
+                },
+                {
+                  "name": "Toti Gomes",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Møller Wolfe",
+                  "position": "DF"
+                },
+                {
+                  "name": "João Gomes",
+                  "position": "MF"
+                },
+                {
+                  "name": "André",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Bellegarde",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Gomes",
+                  "position": "FW"
+                },
+                {
+                  "name": "Hwang Hee-Chan",
+                  "position": "FW"
+                },
+                {
+                  "name": "A. Armstrong",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "D. Bentley",
+                  "position": "GK"
+                },
+                {
+                  "name": "L. Krejčí",
+                  "position": "DF"
+                },
+                {
+                  "name": "Rodrigo Gomes",
+                  "position": "DF"
+                },
+                {
+                  "name": "Pedro Lima",
+                  "position": "DF"
+                },
+                {
+                  "name": "Hugo Bueno",
+                  "position": "MF"
+                },
+                {
+                  "name": "Y. Mosquera",
+                  "position": "MF"
+                },
+                {
+                  "name": "T. Edozie",
+                  "position": "MF"
+                },
+                {
+                  "name": "T. Arokodare",
+                  "position": "FW"
+                },
+                {
+                  "name": "E. González",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "G. Vicario",
+                  "position": "GK"
+                },
+                {
+                  "name": "Pedro Porro",
+                  "position": "DF"
+                },
+                {
+                  "name": "C. Romero",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. van de Ven",
+                  "position": "DF"
+                },
+                {
+                  "name": "B. Davies",
+                  "position": "DF"
+                },
+                {
+                  "name": "Y. Bissouma",
+                  "position": "MF"
+                },
+                {
+                  "name": "P. Sarr",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Maddison",
+                  "position": "MF"
+                },
+                {
+                  "name": "M. Kudus",
+                  "position": "MF"
+                },
+                {
+                  "name": "M. Tel",
+                  "position": "FW"
+                },
+                {
+                  "name": "D. Solanke",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "B. Austin",
+                  "position": "GK"
+                },
+                {
+                  "name": "R. Drăgușin",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Spence",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Udogie",
+                  "position": "DF"
+                },
+                {
+                  "name": "R. Bentancur",
+                  "position": "MF"
+                },
+                {
+                  "name": "C. Gallagher",
+                  "position": "MF"
+                },
+                {
+                  "name": "L. Bergvall",
+                  "position": "MF"
+                },
+                {
+                  "name": "Richarlison",
+                  "position": "FW"
+                },
+                {
+                  "name": "R. Kolo Muani",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-3-3",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [],
+          "cards": [],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 42,
+              "away": 58
+            },
+            "shots": {
+              "home": 12,
+              "away": 14
+            },
+            "shots_on_target": {
+              "home": 5,
+              "away": 4
+            },
+            "corners": {
+              "home": 4,
+              "away": 6
+            },
+            "pass_accuracy": {
+              "home": 81,
+              "away": 88
+            },
+            "fouls": {
+              "home": 12,
+              "away": 11
+            },
+            "saves": {
+              "home": 3,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 45,
+              "away": 35
+            }
+          },
+          "cost_usd": 0.067,
+          "sources": []
+        },
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.282,
+            "draw": 0.286,
+            "away": 0.432
+          },
+          "score_dist": [
+            {
+              "score": "1-2",
+              "p": 0.136
+            },
+            {
+              "score": "1-1",
+              "p": 0.132
+            },
+            {
+              "score": "0-1",
+              "p": 0.117
+            },
+            {
+              "score": "1-0",
+              "p": 0.095
+            },
+            {
+              "score": "0-0",
+              "p": 0.081
+            },
+            {
+              "score": "0-2",
+              "p": 0.078
+            },
+            {
+              "score": "2-1",
+              "p": 0.077
+            },
+            {
+              "score": "2-2",
+              "p": 0.062
+            },
+            {
+              "score": "2-0",
+              "p": 0.049
+            },
+            {
+              "score": "1-3",
+              "p": 0.046
+            },
+            {
+              "score": "0-3",
+              "p": 0.031
+            },
+            {
+              "score": "3-1",
+              "p": 0.029
+            },
+            {
+              "score": "3-2",
+              "p": 0.021
+            },
+            {
+              "score": "2-3",
+              "p": 0.019
+            },
+            {
+              "score": "3-0",
+              "p": 0.01
+            },
+            {
+              "score": "0-4",
+              "p": 0.006
+            },
+            {
+              "score": "4-1",
+              "p": 0.005
+            },
+            {
+              "score": "4-2",
+              "p": 0.006
+            }
+          ],
+          "most_likely_score": "1-2",
+          "expected_goal_diff": -0.24,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Tottenham project as the slightly stronger side on squad quality and attacking ceiling, but Wolves at Molineux usually make matches slower and more transition-heavy, which narrows the gap. The forecast therefore balances Spurs' superior creators and finishers against Wolves' home edge, defensive compactness, and capacity to target space behind aggressive full-backs. With no extreme mismatch assumed and both teams carrying enough attacking talent to score once, a narrow away lean with meaningful draw probability is more plausible than a dominant result. Key players such as Son Heung-min, James Maddison and Pedro Neto/Matheus Cunha type ball-carriers shape the game more than pure set-piece variance, though Wolves can keep it close through wing-back delivery and counterattacks.",
+            "t1_result": "The win distribution leans away because Tottenham's average chance creation and individual quality are a bit higher, but Wolves' home advantage and lower-event game profile keep draw and home-win chances substantial. A 1-2 away win is the top single scoreline, with 1-1 and 1-0/0-1 also carrying real weight.",
+            "t2_player": "Both teams are projected in familiar structures: Wolves with a back three/five and direct runners, Tottenham in a 4-2-3-1/4-3-3 shape built around possession and wide isolation. The most likely scorers are the central Spurs attackers and Wolves' lead forward, as they dominate shot share and box touches.",
+            "t3_events": "The match should open cautiously, with Wolves protecting central zones and Spurs having more of the ball. If Tottenham score first the game becomes more transitional, increasing substitute winger and second-half booking risk, especially in wide defensive duels.",
+            "t4_stats": "Spurs are expected to control possession and passing volume, but Wolves should stay competitive in shots through counters and set plays. That points to a modest shot edge for the away side, near-even saves, and elevated defensive actions for Wolves due to time spent without the ball."
+          },
+          "scorers": [
+            {
+              "player": "Son Heung-min",
+              "team": "away",
+              "minute_range": [
+                46,
+                90
+              ],
+              "p": 0.364
+            },
+            {
+              "player": "Richarlison",
+              "team": "away",
+              "minute_range": [
+                16,
+                75
+              ],
+              "p": 0.274
+            },
+            {
+              "player": "James Maddison",
+              "team": "away",
+              "minute_range": [
+                20,
+                80
+              ],
+              "p": 0.183
+            },
+            {
+              "player": "Matheus Cunha",
+              "team": "home",
+              "minute_range": [
+                30,
+                90
+              ],
+              "p": 0.256
+            },
+            {
+              "player": "Pedro Neto",
+              "team": "home",
+              "minute_range": [
+                15,
+                85
+              ],
+              "p": 0.191
+            },
+            {
+              "player": "Hwang Hee-chan",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.117
+            }
+          ],
+          "assisters": [
+            {
+              "player": "James Maddison",
+              "team": "away",
+              "p": 0.228
+            },
+            {
+              "player": "Pedro Porro",
+              "team": "away",
+              "p": 0.162
+            },
+            {
+              "player": "Dejan Kulusevski",
+              "team": "away",
+              "p": 0.153
+            },
+            {
+              "player": "Pedro Neto",
+              "team": "home",
+              "p": 0.171
+            },
+            {
+              "player": "Rayan Aït-Nouri",
+              "team": "home",
+              "p": 0.116
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "Son Heung-min",
+              "team": "away",
+              "p": 0.244
+            },
+            {
+              "player": "James Maddison",
+              "team": "away",
+              "p": 0.186
+            },
+            {
+              "player": "Matheus Cunha",
+              "team": "home",
+              "p": 0.152
+            },
+            {
+              "player": "Pedro Neto",
+              "team": "home",
+              "p": 0.129
+            },
+            {
+              "player": "Guglielmo Vicario",
+              "team": "away",
+              "p": 0.081
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "José Sá",
+                  "position": "GK"
+                },
+                {
+                  "name": "Max Kilman",
+                  "position": "DF"
+                },
+                {
+                  "name": "Craig Dawson",
+                  "position": "DF"
+                },
+                {
+                  "name": "Toti Gomes",
+                  "position": "DF"
+                },
+                {
+                  "name": "Nélson Semedo",
+                  "position": "DF"
+                },
+                {
+                  "name": "Rayan Aït-Nouri",
+                  "position": "DF"
+                },
+                {
+                  "name": "João Gomes",
+                  "position": "MF"
+                },
+                {
+                  "name": "Mario Lemina",
+                  "position": "MF"
+                },
+                {
+                  "name": "Pablo Sarabia",
+                  "position": "MF"
+                },
+                {
+                  "name": "Pedro Neto",
+                  "position": "FW"
+                },
+                {
+                  "name": "Matheus Cunha",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Daniel Bentley",
+                  "position": "GK"
+                },
+                {
+                  "name": "Santiago Bueno",
+                  "position": "DF"
+                },
+                {
+                  "name": "Matt Doherty",
+                  "position": "DF"
+                },
+                {
+                  "name": "Boubacar Traoré",
+                  "position": "MF"
+                },
+                {
+                  "name": "Tommy Doyle",
+                  "position": "MF"
+                },
+                {
+                  "name": "Jean-Ricner Bellegarde",
+                  "position": "MF"
+                },
+                {
+                  "name": "Hwang Hee-chan",
+                  "position": "FW"
+                },
+                {
+                  "name": "Fábio Silva",
+                  "position": "FW"
+                },
+                {
+                  "name": "Nathan Fraser",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "Guglielmo Vicario",
+                  "position": "GK"
+                },
+                {
+                  "name": "Pedro Porro",
+                  "position": "DF"
+                },
+                {
+                  "name": "Cristian Romero",
+                  "position": "DF"
+                },
+                {
+                  "name": "Micky van de Ven",
+                  "position": "DF"
+                },
+                {
+                  "name": "Destiny Udogie",
+                  "position": "DF"
+                },
+                {
+                  "name": "Yves Bissouma",
+                  "position": "MF"
+                },
+                {
+                  "name": "Pape Matar Sarr",
+                  "position": "MF"
+                },
+                {
+                  "name": "James Maddison",
+                  "position": "MF"
+                },
+                {
+                  "name": "Dejan Kulusevski",
+                  "position": "FW"
+                },
+                {
+                  "name": "Son Heung-min",
+                  "position": "FW"
+                },
+                {
+                  "name": "Richarlison",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Fraser Forster",
+                  "position": "GK"
+                },
+                {
+                  "name": "Ben Davies",
+                  "position": "DF"
+                },
+                {
+                  "name": "Radu Drăgușin",
+                  "position": "DF"
+                },
+                {
+                  "name": "Emerson Royal",
+                  "position": "DF"
+                },
+                {
+                  "name": "Rodrigo Bentancur",
+                  "position": "MF"
+                },
+                {
+                  "name": "Pierre-Emile Højbjerg",
+                  "position": "MF"
+                },
+                {
+                  "name": "Brennan Johnson",
+                  "position": "FW"
+                },
+                {
+                  "name": "Timo Werner",
+                  "position": "FW"
+                },
+                {
+                  "name": "Alejo Véliz",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "3-4-2-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "Pablo Sarabia",
+              "on": "Hwang Hee-chan",
+              "minute": 62
+            },
+            {
+              "team": "home",
+              "off": "Mario Lemina",
+              "on": "Tommy Doyle",
+              "minute": 71
+            },
+            {
+              "team": "away",
+              "off": "Richarlison",
+              "on": "Brennan Johnson",
+              "minute": 68
+            },
+            {
+              "team": "away",
+              "off": "Pape Matar Sarr",
+              "on": "Rodrigo Bentancur",
+              "minute": 74
+            }
+          ],
+          "cards": [
+            {
+              "player": "João Gomes",
+              "team": "home",
+              "color": "yellow",
+              "minute": 54
+            },
+            {
+              "player": "Craig Dawson",
+              "team": "home",
+              "color": "yellow",
+              "minute": 67
+            },
+            {
+              "player": "Cristian Romero",
+              "team": "away",
+              "color": "yellow",
+              "minute": 59
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 43,
+              "away": 57
+            },
+            "shots": {
+              "home": 11,
+              "away": 14
+            },
+            "shots_on_target": {
+              "home": 4,
+              "away": 5
+            },
+            "corners": {
+              "home": 4,
+              "away": 6
+            },
+            "pass_accuracy": {
+              "home": 81,
+              "away": 86
+            },
+            "fouls": {
+              "home": 13,
+              "away": 11
+            },
+            "saves": {
+              "home": 3,
+              "away": 3
+            },
+            "defensive_actions": {
+              "home": 67,
+              "away": 58
+            }
+          },
+          "cost_usd": 0.124,
+          "sources": [
+            {
+              "url": "https://www.premierleague.com/clubs/38/Wolverhampton-Wanderers/squad",
+              "accessed_at": "2026-04-24T12:05:00Z",
+              "title": "Wolverhampton Wanderers squad"
+            },
+            {
+              "url": "https://www.premierleague.com/clubs/21/Tottenham-Hotspur/squad",
+              "accessed_at": "2026-04-24T12:07:00Z",
+              "title": "Tottenham Hotspur squad"
+            },
+            {
+              "url": "https://www.worldfootball.net/teams/wolverhampton-wanderers/2026/3/",
+              "accessed_at": "2026-04-24T12:12:00Z",
+              "title": "Wolves fixtures & results"
+            },
+            {
+              "url": "https://www.worldfootball.net/teams/tottenham-hotspur/2026/3/",
+              "accessed_at": "2026-04-24T12:14:00Z",
+              "title": "Tottenham fixtures & results"
+            },
+            {
+              "url": "https://www.fotmob.com/teams/8602/fixtures/wolverhampton-wanderers",
+              "accessed_at": "2026-04-24T12:18:00Z",
+              "title": "Wolves fixtures - FotMob"
+            },
+            {
+              "url": "https://www.fotmob.com/teams/8586/fixtures/tottenham-hotspur",
+              "accessed_at": "2026-04-24T12:20:00Z",
+              "title": "Tottenham fixtures - FotMob"
+            },
+            {
+              "url": "https://www.transfermarkt.com/wolverhampton-wanderers/startseite/verein/543",
+              "accessed_at": "2026-04-24T12:23:00Z",
+              "title": "Wolves squad overview"
+            },
+            {
+              "url": "https://www.transfermarkt.com/tottenham-hotspur/startseite/verein/148",
+              "accessed_at": "2026-04-24T12:25:00Z",
+              "title": "Tottenham squad overview"
+            },
+            {
+              "url": "https://understat.com/team/Wolverhampton_Wanderers/2025",
+              "accessed_at": "2026-04-24T12:31:00Z",
+              "title": "Understat Wolves 2025"
+            },
+            {
+              "url": "https://understat.com/team/Tottenham/2025",
+              "accessed_at": "2026-04-24T12:33:00Z",
+              "title": "Understat Tottenham 2025"
+            },
+            {
+              "url": "https://fbref.com/en/squads/8cec06e1/Wolverhampton-Wanderers-Stats",
+              "accessed_at": "2026-04-24T12:38:00Z",
+              "title": "FBref Wolves Stats"
+            },
+            {
+              "url": "https://fbref.com/en/squads/361ca564/Tottenham-Hotspur-Stats",
+              "accessed_at": "2026-04-24T12:40:00Z",
+              "title": "FBref Tottenham Stats"
+            },
+            {
+              "url": "https://www.bbc.com/sport/football/teams/wolverhampton-wanderers",
+              "accessed_at": "2026-04-24T12:45:00Z",
+              "title": "BBC Sport Wolves"
+            },
+            {
+              "url": "https://www.bbc.com/sport/football/teams/tottenham-hotspur",
+              "accessed_at": "2026-04-24T12:47:00Z",
+              "title": "BBC Sport Tottenham"
+            },
+            {
+              "url": "https://www.skysports.com/tottenham-hotspur-fixtures",
+              "accessed_at": "2026-04-24T12:50:00Z",
+              "title": "Sky Sports Tottenham fixtures"
+            },
+            {
+              "url": "https://www.skysports.com/wolverhampton-wanderers-fixtures",
+              "accessed_at": "2026-04-24T12:51:00Z",
+              "title": "Sky Sports Wolves fixtures"
+            },
+            {
+              "url": "https://www.whoscored.com/Teams/161/Show/England-Wolverhampton-Wanderers",
+              "accessed_at": "2026-04-24T12:54:00Z",
+              "title": "WhoScored Wolves"
+            },
+            {
+              "url": "https://www.whoscored.com/Teams/30/Show/England-Tottenham",
+              "accessed_at": "2026-04-24T12:56:00Z",
+              "title": "WhoScored Tottenham"
+            }
+          ]
+        },
+        {
+          "model_id": "gpt-5.4",
+          "setting": "S1",
+          "win_probs": {
+            "home": 0.421,
+            "draw": 0.296,
+            "away": 0.283
+          },
+          "score_dist": [
+            {
+              "score": "1-0",
+              "p": 0.141
+            },
+            {
+              "score": "1-1",
+              "p": 0.134
+            },
+            {
+              "score": "2-1",
+              "p": 0.116
+            },
+            {
+              "score": "0-0",
+              "p": 0.099
+            },
+            {
+              "score": "0-1",
+              "p": 0.095
+            },
+            {
+              "score": "2-0",
+              "p": 0.083
+            },
+            {
+              "score": "1-2",
+              "p": 0.078
+            },
+            {
+              "score": "2-2",
+              "p": 0.067
+            },
+            {
+              "score": "3-1",
+              "p": 0.049
+            },
+            {
+              "score": "3-0",
+              "p": 0.037
+            },
+            {
+              "score": "0-2",
+              "p": 0.036
+            },
+            {
+              "score": "3-2",
+              "p": 0.024
+            },
+            {
+              "score": "1-3",
+              "p": 0.02
+            },
+            {
+              "score": "4-1",
+              "p": 0.009
+            },
+            {
+              "score": "4-2",
+              "p": 0.006
+            },
+            {
+              "score": "2-3",
+              "p": 0.006
+            }
+          ],
+          "most_likely_score": "1-0",
+          "expected_goal_diff": 0.29,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Wolves get a slight edge from home advantage, marginally steadier recent league form, and Tottenham's deeper slump plus fresh injury uncertainty around key defenders/full-backs. Wolves have still defended poorly in recent heavy losses, so this is not a strong home-win call, but Spurs' balance has looked fragile, especially in transition and rest defence. Tactically, Tottenham should see more of the ball through Maddison, Bentancur and Porro, yet Wolves' direct breaks through Hwang, Bellegarde and Arokodare/Armstrong profile well against an aggressive back line. Head-to-head reputation favors Spurs historically, but current momentum and availability lean more toward Wolves nicking a close game.",
+            "t1_result": "The result distribution is fairly flat but leans home because Wolves' last ten are mediocre rather than disastrous, while Spurs have one win in ten and arrive under pressure. A one-goal home win is the most likely single outcome, with 1-0 slightly ahead of 1-1 and 2-1 in a medium-low event match.",
+            "t2_player": "Wolves are projected in a back three/five with João Gomes and André central to screening and transitions, while Hwang is their clearest attacking threat. Tottenham's likely XI keeps technical quality on the pitch with Maddison, Kudus and Solanke, but defensive selection is shaped by reported doubts around Udogie and broader back-line instability.",
+            "t3_events": "Expect Spurs to control early possession but leave spaces for Wolves counters, with the first goal more likely after the opening settling period than in the first 10 minutes. Tactical fouls in midfield and several second-half attacking substitutions are likely if the game is level entering the final half hour.",
+            "t4_stats": "That points to Tottenham having slightly more possession and passes, but Wolves matching them closely enough on shots because of transition attacks and set plays. Save counts should be moderate on both sides, with Wolves forced into a bit more defensive work overall."
+          },
+          "scorers": [
+            {
+              "player": "Hwang Hee-Chan",
+              "team": "home",
+              "minute_range": [
+                36,
+                85
+              ],
+              "p": 0.261
+            },
+            {
+              "player": "T. Arokodare",
+              "team": "home",
+              "minute_range": [
+                20,
+                78
+              ],
+              "p": 0.204
+            },
+            {
+              "player": "J. Bellegarde",
+              "team": "home",
+              "minute_range": [
+                28,
+                90
+              ],
+              "p": 0.139
+            },
+            {
+              "player": "A. Armstrong",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.118
+            },
+            {
+              "player": "D. Solanke",
+              "team": "away",
+              "minute_range": [
+                24,
+                82
+              ],
+              "p": 0.258
+            },
+            {
+              "player": "M. Kudus",
+              "team": "away",
+              "minute_range": [
+                18,
+                90
+              ],
+              "p": 0.201
+            },
+            {
+              "player": "J. Maddison",
+              "team": "away",
+              "minute_range": [
+                30,
+                88
+              ],
+              "p": 0.145
+            },
+            {
+              "player": "X. Simons",
+              "team": "away",
+              "minute_range": [
+                16,
+                86
+              ],
+              "p": 0.136
+            }
+          ],
+          "assisters": [
+            {
+              "player": "J. Bellegarde",
+              "team": "home",
+              "p": 0.188
+            },
+            {
+              "player": "Rodrigo Gomes",
+              "team": "home",
+              "p": 0.121
+            },
+            {
+              "player": "Pedro Porro",
+              "team": "away",
+              "p": 0.191
+            },
+            {
+              "player": "J. Maddison",
+              "team": "away",
+              "p": 0.184
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "Hwang Hee-Chan",
+              "team": "home",
+              "p": 0.196
+            },
+            {
+              "player": "José Sá",
+              "team": "home",
+              "p": 0.131
+            },
+            {
+              "player": "D. Solanke",
+              "team": "away",
+              "p": 0.148
+            },
+            {
+              "player": "J. Maddison",
+              "team": "away",
+              "p": 0.112
+            },
+            {
+              "player": "M. Kudus",
+              "team": "away",
+              "p": 0.108
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "José Sá",
+                  "position": "GK"
+                },
+                {
+                  "name": "S. Bueno",
+                  "position": "DF"
+                },
+                {
+                  "name": "L. Krejčí",
+                  "position": "DF"
+                },
+                {
+                  "name": "Toti Gomes",
+                  "position": "DF"
+                },
+                {
+                  "name": "Rodrigo Gomes",
+                  "position": "MF"
+                },
+                {
+                  "name": "D. Møller Wolfe",
+                  "position": "MF"
+                },
+                {
+                  "name": "André",
+                  "position": "MF"
+                },
+                {
+                  "name": "João Gomes",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Bellegarde",
+                  "position": "FW"
+                },
+                {
+                  "name": "Hwang Hee-Chan",
+                  "position": "FW"
+                },
+                {
+                  "name": "T. Arokodare",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "S. Johnstone",
+                  "position": "GK"
+                },
+                {
+                  "name": "M. Doherty",
+                  "position": "DF"
+                },
+                {
+                  "name": "Pedro Lima",
+                  "position": "DF"
+                },
+                {
+                  "name": "Hugo Bueno",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Tchatchoua",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Gomes",
+                  "position": "FW"
+                },
+                {
+                  "name": "A. Armstrong",
+                  "position": "FW"
+                },
+                {
+                  "name": "E. González",
+                  "position": "FW"
+                },
+                {
+                  "name": "T. Edozie",
+                  "position": "MF"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "G. Vicario",
+                  "position": "GK"
+                },
+                {
+                  "name": "Pedro Porro",
+                  "position": "DF"
+                },
+                {
+                  "name": "C. Romero",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. van de Ven",
+                  "position": "DF"
+                },
+                {
+                  "name": "B. Davies",
+                  "position": "DF"
+                },
+                {
+                  "name": "R. Bentancur",
+                  "position": "MF"
+                },
+                {
+                  "name": "João Palhinha",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Maddison",
+                  "position": "MF"
+                },
+                {
+                  "name": "M. Kudus",
+                  "position": "MF"
+                },
+                {
+                  "name": "X. Simons",
+                  "position": "FW"
+                },
+                {
+                  "name": "D. Solanke",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "A. Kinský",
+                  "position": "GK"
+                },
+                {
+                  "name": "K. Danso",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Spence",
+                  "position": "DF"
+                },
+                {
+                  "name": "R. Drăgușin",
+                  "position": "DF"
+                },
+                {
+                  "name": "P. Sarr",
+                  "position": "MF"
+                },
+                {
+                  "name": "L. Bergvall",
+                  "position": "MF"
+                },
+                {
+                  "name": "C. Gallagher",
+                  "position": "MF"
+                },
+                {
+                  "name": "M. Tel",
+                  "position": "FW"
+                },
+                {
+                  "name": "Richarlison",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "3-4-3",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "T. Arokodare",
+              "on": "A. Armstrong",
+              "minute": 67
+            },
+            {
+              "team": "home",
+              "off": "J. Bellegarde",
+              "on": "A. Gomes",
+              "minute": 74
+            },
+            {
+              "team": "away",
+              "off": "B. Davies",
+              "on": "D. Spence",
+              "minute": 62
+            },
+            {
+              "team": "away",
+              "off": "X. Simons",
+              "on": "M. Tel",
+              "minute": 71
+            },
+            {
+              "team": "away",
+              "off": "João Palhinha",
+              "on": "P. Sarr",
+              "minute": 76
+            }
+          ],
+          "cards": [
+            {
+              "player": "João Gomes",
+              "team": "home",
+              "color": "yellow",
+              "minute": 31
+            },
+            {
+              "player": "André",
+              "team": "home",
+              "color": "yellow",
+              "minute": 57
+            },
+            {
+              "player": "C. Romero",
+              "team": "away",
+              "color": "yellow",
+              "minute": 43
+            },
+            {
+              "player": "João Palhinha",
+              "team": "away",
+              "color": "yellow",
+              "minute": 64
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 45,
+              "away": 55
+            },
+            "shots": {
+              "home": 12,
+              "away": 13
+            },
+            "shots_on_target": {
+              "home": 4,
+              "away": 5
+            },
+            "corners": {
+              "home": 5,
+              "away": 6
+            },
+            "pass_accuracy": {
+              "home": 81,
+              "away": 85
+            },
+            "fouls": {
+              "home": 13,
+              "away": 12
+            },
+            "saves": {
+              "home": 4,
+              "away": 3
+            },
+            "defensive_actions": {
+              "home": 22,
+              "away": 18
+            }
+          },
+          "cost_usd": 0.078,
+          "sources": []
+        }
+      ],
       "live": null,
       "comment": "Can Tottenham survive?"
     }

@@ -10,6 +10,7 @@ Validation layers:
     3. Semantic checks the schema can't express:
          - win_probs sum ≈ 1
          - score_dist p values sum ≈ 1
+         - score_dist contains at least 8 distinct scorelines
          - stats contains all 8 required keys
          - lineups.*.starting has exactly 11 entries
          - reasoning.overall non-empty & ≥80 chars
@@ -81,6 +82,9 @@ def _validate_semantics(
         p_sum = sum(float(x.get("p", 0)) for x in sd)
         if abs(p_sum - 1.0) > tol:
             errs.append(f"score_dist p sum={p_sum:.4f} not within {tol} of 1 (add an 'other' bucket if needed)")
+        distinct_scores = {str(x.get("score", "")) for x in sd if x.get("score")}
+        if len(distinct_scores) < 8:
+            errs.append(f"score_dist has {len(distinct_scores)} distinct scorelines, need at least 8")
 
     reasoning = (pred.get("reasoning") or {}).get("overall") or ""
     if len(reasoning) < 80:

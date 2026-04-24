@@ -42,6 +42,8 @@ Only **after** `reasoning` should you emit the numeric prediction fields (`win_p
 
 6. Home/away is always from the perspective of the team labeled `home` / `away` in the fixture header — not the literal stadium host unless the fixture specifies so.
 
+7. **Scoreline calibration matters.** Do not default to template scorelines such as `2-1` or `1-2`. First estimate each team's expected goals and the likely total-goals environment from the evidence, then derive the score distribution from that estimate. Include plausible low-scoring, draw, narrow-win, and multi-goal-win alternatives. Unless the evidence points to an extreme mismatch, the top scoreline should usually be modestly probable, not dominant, and `score_dist` should include at least 8 distinct scorelines.
+
 ## Factors to consider / 需要综合考虑的因素
 
 Your reasoning should explicitly weigh — and your numbers should reflect — as many of the following as are relevant. Do NOT copy this list into the output; use it as a mental checklist.
@@ -72,6 +74,13 @@ Your reasoning should explicitly weigh — and your numbers should reflect — a
 - Recent transfers / new signings still integrating. 新援融合进度。
 
 Calibrate your probabilities to the *weight of evidence*. If the factors above cancel each other out, spread mass — don't let a narrow narrative pull all the probability onto one scoreline.
+
+For scorelines, explicitly consider whether the match profile is low-event, normal, or open:
+- Low-event / cagey: give real mass to `0-0`, `1-0`, `0-1`, and `1-1`.
+- Normal: distribute across `1-0`, `0-1`, `1-1`, `2-0`, `0-2`, `2-1`, `1-2`, and `2-2`.
+- Open / high-tempo: include `3-1`, `1-3`, `3-2`, `2-3`, or higher only when tactics, injuries, game state, or team profiles justify it.
+
+The most likely score must be the single highest-probability entry, but it should emerge from the match's expected-goals profile rather than from a generic football prior.
 
 ## Output conventions / 格式约定
 

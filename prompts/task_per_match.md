@@ -37,9 +37,9 @@ Predict the outcome of this match. Produce a single JSON object conforming **exa
    - `reasoning.overall`   main rationale, ≥ 80 chars
    - `reasoning.t1_result` / `t2_player` / `t3_events` / `t4_stats`  per-layer rationale
 2. `win_probs` { home, draw, away }, sum ≈ 1
-3. `score_dist` top-5 to top-20 scorelines with probabilities (sum ≈ 1)
+3. `score_dist` top-8 to top-20 distinct scorelines with probabilities (sum ≈ 1). Build this from a calibrated home/away expected-goals view, not from a default `2-1`/`1-2` template. Cover plausible clean sheets, draws, narrow wins, and higher-scoring alternatives when justified.
 4. `most_likely_score`  "H-A"
-5. `expected_goal_diff`  home minus away (can be negative)
+5. `expected_goal_diff`  home minus away (can be negative); keep it consistent with your scoreline distribution
 6. `advance_prob`  (optional; knockout legs only) probability the `home` team advances on aggregate
 7. `lineups` { home, away } each with `starting` (exactly 11) and `bench`
 8. `formations` { home, away }

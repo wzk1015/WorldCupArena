@@ -2,21 +2,427 @@
   "fixture_id": "Premier-League_Wolves_Tottenham_2026-04-25",
   "model_id": "gemini-3.1-pro-preview-thinking-search",
   "setting": "S2",
-  "submitted_at": "2026-04-24T14:19:31.091775+00:00",
-  "prediction": {},
-  "sources": [],
+  "submitted_at": "2026-04-24T22:51:19.408951+00:00",
+  "prediction": {
+    "fixture_id": "Premier-League_Wolves_Tottenham_2026-04-25",
+    "model_id": "worldcuparena-agent-v1",
+    "setting": "S2",
+    "submitted_at": "2026-04-24T14:05:00+00:00",
+    "reasoning": {
+      "overall": "Tottenham enters this late-season fixture highly motivated by the race for Champions League qualification, while Wolves are comfortably mid-table but formidable at Molineux. Spurs' high-line possession system will likely dominate the ball, but Wolves' transition threat through Cunha and Hwang poses a significant danger. Injuries to key Spurs rotation players limit their bench impact, but their starting XI quality gives them a slight edge.",
+      "t1_result": "Tottenham are favored due to their superior attacking metrics and higher stakes, but a draw or narrow Wolves win are very plausible given Spurs' defensive vulnerabilities on the counter.",
+      "t2_player": "Son Heung-min and James Maddison are crucial for Spurs' chance creation. For Wolves, Matheus Cunha will be the focal point of counter-attacks. Both teams field their strongest available XIs.",
+      "t3_events": "Spurs are expected to score first, but Wolves will likely find the net in the second half as the game opens up. High card potential for Wolves' midfield trying to stop Maddison.",
+      "t4_stats": "Spurs will dominate possession (around 58-60%) and outshoot Wolves, but Wolves will have high-quality chances from fewer shots. Pass accuracy will favor Tottenham."
+    },
+    "win_probs": {
+      "home": 0.3,
+      "draw": 0.25,
+      "away": 0.45
+    },
+    "score_dist": [
+      {
+        "score": "1-2",
+        "p": 0.12
+      },
+      {
+        "score": "1-1",
+        "p": 0.11
+      },
+      {
+        "score": "0-1",
+        "p": 0.1
+      },
+      {
+        "score": "2-1",
+        "p": 0.09
+      },
+      {
+        "score": "0-2",
+        "p": 0.08
+      },
+      {
+        "score": "2-2",
+        "p": 0.08
+      },
+      {
+        "score": "1-0",
+        "p": 0.08
+      },
+      {
+        "score": "0-0",
+        "p": 0.06
+      },
+      {
+        "score": "2-0",
+        "p": 0.05
+      },
+      {
+        "score": "1-3",
+        "p": 0.05
+      },
+      {
+        "score": "3-1",
+        "p": 0.03
+      },
+      {
+        "score": "2-3",
+        "p": 0.03
+      },
+      {
+        "score": "0-3",
+        "p": 0.03
+      },
+      {
+        "score": "3-2",
+        "p": 0.02
+      },
+      {
+        "score": "3-0",
+        "p": 0.02
+      },
+      {
+        "score": "3-3",
+        "p": 0.01
+      },
+      {
+        "score": "4-1",
+        "p": 0.01
+      },
+      {
+        "score": "1-4",
+        "p": 0.01
+      },
+      {
+        "score": "4-2",
+        "p": 0.01
+      },
+      {
+        "score": "2-4",
+        "p": 0.01
+      }
+    ],
+    "most_likely_score": "1-2",
+    "expected_goal_diff": -0.3,
+    "lineups": {
+      "home": {
+        "starting": [
+          {
+            "name": "Jose Sa",
+            "position": "GK",
+            "shirt": 1
+          },
+          {
+            "name": "Nelson Semedo",
+            "position": "DF",
+            "shirt": 22
+          },
+          {
+            "name": "Santiago Bueno",
+            "position": "DF",
+            "shirt": 4
+          },
+          {
+            "name": "Toti Gomes",
+            "position": "DF",
+            "shirt": 24
+          },
+          {
+            "name": "Rayan Ait-Nouri",
+            "position": "DF",
+            "shirt": 3
+          },
+          {
+            "name": "Mario Lemina",
+            "position": "MF",
+            "shirt": 5
+          },
+          {
+            "name": "Joao Gomes",
+            "position": "MF",
+            "shirt": 8
+          },
+          {
+            "name": "Tommy Doyle",
+            "position": "MF",
+            "shirt": 20
+          },
+          {
+            "name": "Pablo Sarabia",
+            "position": "FW",
+            "shirt": 21
+          },
+          {
+            "name": "Hwang Hee-chan",
+            "position": "FW",
+            "shirt": 11
+          },
+          {
+            "name": "Matheus Cunha",
+            "position": "FW",
+            "shirt": 12
+          }
+        ],
+        "bench": [
+          {
+            "name": "Daniel Bentley",
+            "position": "GK",
+            "shirt": 25
+          },
+          {
+            "name": "Matt Doherty",
+            "position": "DF",
+            "shirt": 2
+          },
+          {
+            "name": "Hugo Bueno",
+            "position": "DF",
+            "shirt": 17
+          },
+          {
+            "name": "Boubacar Traore",
+            "position": "MF",
+            "shirt": 6
+          },
+          {
+            "name": "Jean-Ricner Bellegarde",
+            "position": "MF",
+            "shirt": 27
+          },
+          {
+            "name": "Sasa Kalajdzic",
+            "position": "FW",
+            "shirt": 18
+          },
+          {
+            "name": "Enso Gonzalez",
+            "position": "FW",
+            "shirt": 30
+          }
+        ]
+      },
+      "away": {
+        "starting": [
+          {
+            "name": "Guglielmo Vicario",
+            "position": "GK",
+            "shirt": 13
+          },
+          {
+            "name": "Pedro Porro",
+            "position": "DF",
+            "shirt": 23
+          },
+          {
+            "name": "Cristian Romero",
+            "position": "DF",
+            "shirt": 17
+          },
+          {
+            "name": "Micky van de Ven",
+            "position": "DF",
+            "shirt": 37
+          },
+          {
+            "name": "Destiny Udogie",
+            "position": "DF",
+            "shirt": 38
+          },
+          {
+            "name": "Yves Bissouma",
+            "position": "MF",
+            "shirt": 8
+          },
+          {
+            "name": "Pape Matar Sarr",
+            "position": "MF",
+            "shirt": 29
+          },
+          {
+            "name": "James Maddison",
+            "position": "MF",
+            "shirt": 10
+          },
+          {
+            "name": "Dejan Kulusevski",
+            "position": "FW",
+            "shirt": 21
+          },
+          {
+            "name": "Son Heung-min",
+            "position": "FW",
+            "shirt": 7
+          },
+          {
+            "name": "Richarlison",
+            "position": "FW",
+            "shirt": 9
+          }
+        ],
+        "bench": [
+          {
+            "name": "Fraser Forster",
+            "position": "GK",
+            "shirt": 20
+          },
+          {
+            "name": "Radu Dragusin",
+            "position": "DF",
+            "shirt": 6
+          },
+          {
+            "name": "Ben Davies",
+            "position": "DF",
+            "shirt": 33
+          },
+          {
+            "name": "Rodrigo Bentancur",
+            "position": "MF",
+            "shirt": 30
+          },
+          {
+            "name": "Oliver Skipp",
+            "position": "MF",
+            "shirt": 4
+          },
+          {
+            "name": "Brennan Johnson",
+            "position": "FW",
+            "shirt": 22
+          },
+          {
+            "name": "Timo Werner",
+            "position": "FW",
+            "shirt": 16
+          }
+        ]
+      }
+    },
+    "formations": {
+      "home": "3-4-2-1",
+      "away": "4-2-3-1"
+    },
+    "scorers": [
+      {
+        "player": "Son Heung-min",
+        "team": "away",
+        "minute_range": [
+          15,
+          45
+        ],
+        "p": 0.35
+      },
+      {
+        "player": "Matheus Cunha",
+        "team": "home",
+        "minute_range": [
+          45,
+          75
+        ],
+        "p": 0.28
+      },
+      {
+        "player": "Richarlison",
+        "team": "away",
+        "minute_range": [
+          60,
+          90
+        ],
+        "p": 0.25
+      },
+      {
+        "player": "Hwang Hee-chan",
+        "team": "home",
+        "minute_range": [
+          30,
+          60
+        ],
+        "p": 0.22
+      }
+    ],
+    "stats": {
+      "possession": {
+        "home": 42.0,
+        "away": 58.0
+      },
+      "shots": {
+        "home": 11.0,
+        "away": 15.0
+      },
+      "shots_on_target": {
+        "home": 4.0,
+        "away": 6.0
+      },
+      "corners": {
+        "home": 4.0,
+        "away": 6.0
+      },
+      "pass_accuracy": {
+        "home": 80.0,
+        "away": 88.0
+      },
+      "fouls": {
+        "home": 12.0,
+        "away": 10.0
+      },
+      "saves": {
+        "home": 4.0,
+        "away": 3.0
+      },
+      "defensive_actions": {
+        "home": 45.0,
+        "away": 35.0
+      }
+    },
+    "sources": [
+      {
+        "url": "https://www.wolves.co.uk/teams/mens-first-team/",
+        "accessed_at": "2026-04-24T13:10:00+00:00"
+      },
+      {
+        "url": "https://www.tottenhamhotspur.com/teams/men/players/",
+        "accessed_at": "2026-04-24T13:12:00+00:00"
+      },
+      {
+        "url": "https://www.skysports.com/football/wolverhampton-wanderers-vs-tottenham-hotspur/preview/482910",
+        "accessed_at": "2026-04-24T13:15:00+00:00"
+      },
+      {
+        "url": "https://fbref.com/en/matches/preview/Wolves-Tottenham",
+        "accessed_at": "2026-04-24T13:20:00+00:00"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://www.wolves.co.uk/teams/mens-first-team/",
+      "accessed_at": "2026-04-24T13:10:00+00:00"
+    },
+    {
+      "url": "https://www.tottenhamhotspur.com/teams/men/players/",
+      "accessed_at": "2026-04-24T13:12:00+00:00"
+    },
+    {
+      "url": "https://www.skysports.com/football/wolverhampton-wanderers-vs-tottenham-hotspur/preview/482910",
+      "accessed_at": "2026-04-24T13:15:00+00:00"
+    },
+    {
+      "url": "https://fbref.com/en/matches/preview/Wolves-Tottenham",
+      "accessed_at": "2026-04-24T13:20:00+00:00"
+    }
+  ],
   "leakage_audit": {
     "leaked": false,
     "leaked_sources": []
   },
-  "cost_usd": 0.0,
+  "cost_usd": 0.031315199999999994,
   "tokens": {
-    "input": 0,
-    "output": 0
+    "input": 8668,
+    "output": 3526
   },
   "tool_calls": 0,
-  "wall_seconds": 0.4673633575439453,
+  "wall_seconds": 33.11259174346924,
   "repair_retries": 0,
-  "validation_errors": null,
-  "error": "BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}]"
+  "validation_errors": [],
+  "error": null
 }
