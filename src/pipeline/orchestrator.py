@@ -189,6 +189,9 @@ def cmd_grade(fixture_dir: Path) -> None:
     # print(list(pred_dir.glob("*.json")))
     # print(pred_dir)
     for pred_file in sorted(pred_dir.glob("*.json")):
+        if (out_dir / pred_file.name).exists():
+            print(f"[grade] skip graded result {out_dir / pred_file.name}")
+            continue 
         record = json.loads(pred_file.read_text())
         if record.get("error"):
             continue
