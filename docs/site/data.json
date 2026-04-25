@@ -3,132 +3,1192 @@
     "main": [
       {
         "model_id": "claude-opus-4-7-thinking-search",
-        "mean": 59.231,
-        "n": 1,
+        "mean": 55.502,
+        "n": 2,
         "layers_mean": {
-          "T1_core_result": 83.251,
-          "T2_player_level": 51.295,
-          "T3_event_level": 65.216,
-          "T4_tactics_stats": 43.249,
+          "T1_core_result": 81.946,
+          "T2_player_level": 37.917,
+          "T3_event_level": 65.263,
+          "T4_tactics_stats": 43.678,
           "T5_tournament_macro": 10.0
         },
-        "winner_correct": 1,
-        "winner_total": 1,
-        "winner_acc": 1.0
-      },
-      {
-        "model_id": "gemini-3.1-pro-preview-thinking",
-        "mean": 55.189,
-        "n": 1,
-        "layers_mean": {
-          "T1_core_result": 85.479,
-          "T2_player_level": 38.643,
-          "T3_event_level": 52.33,
-          "T4_tactics_stats": 45.076,
-          "T5_tournament_macro": 10.0
-        },
-        "winner_correct": 1,
-        "winner_total": 1,
+        "winner_correct": 2,
+        "winner_total": 2,
         "winner_acc": 1.0
       },
       {
         "model_id": "claude-opus-4-7-thinking",
-        "mean": 54.67,
-        "n": 2,
+        "mean": 52.882,
+        "n": 3,
         "layers_mean": {
-          "T1_core_result": 82.282,
-          "T2_player_level": 34.221,
-          "T3_event_level": 63.517,
-          "T4_tactics_stats": 45.259,
+          "T1_core_result": 81.473,
+          "T2_player_level": 27.955,
+          "T3_event_level": 63.787,
+          "T4_tactics_stats": 45.401,
           "T5_tournament_macro": 10.0
         },
-        "winner_correct": 2,
-        "winner_total": 2,
-        "winner_acc": 1.0
-      },
-      {
-        "model_id": "gpt-5.4",
-        "mean": 53.938,
-        "n": 2,
-        "layers_mean": {
-          "T1_core_result": 81.209,
-          "T2_player_level": 33.25,
-          "T3_event_level": 62.47,
-          "T4_tactics_stats": 45.547,
-          "T5_tournament_macro": 10.0
-        },
-        "winner_correct": 2,
-        "winner_total": 2,
+        "winner_correct": 3,
+        "winner_total": 3,
         "winner_acc": 1.0
       },
       {
         "model_id": "gemini-3.1-pro-preview-thinking-search",
-        "mean": 51.746,
-        "n": 2,
+        "mean": 49.812,
+        "n": 3,
         "layers_mean": {
-          "T1_core_result": 79.605,
-          "T2_player_level": 28.801,
-          "T3_event_level": 57.653,
-          "T4_tactics_stats": 46.909,
+          "T1_core_result": 78.732,
+          "T2_player_level": 23.864,
+          "T3_event_level": 56.398,
+          "T4_tactics_stats": 45.531,
           "T5_tournament_macro": 10.0
         },
-        "winner_correct": 2,
-        "winner_total": 2,
+        "winner_correct": 3,
+        "winner_total": 3,
         "winner_acc": 1.0
       },
       {
-        "model_id": "gpt-5.4-search",
-        "mean": 46.712,
+        "model_id": "gpt-5.4",
+        "mean": 49.704,
         "n": 3,
         "layers_mean": {
-          "T1_core_result": 69.646,
-          "T2_player_level": 22.83,
-          "T3_event_level": 61.987,
-          "T4_tactics_stats": 42.204,
+          "T1_core_result": 74.286,
+          "T2_player_level": 26.175,
+          "T3_event_level": 63.145,
+          "T4_tactics_stats": 44.587,
           "T5_tournament_macro": 10.0
         },
         "winner_correct": 2,
         "winner_total": 3,
         "winner_acc": 0.667
+      },
+      {
+        "model_id": "gemini-3.1-pro-preview-thinking",
+        "mean": 47.572,
+        "n": 2,
+        "layers_mean": {
+          "T1_core_result": 73.023,
+          "T2_player_level": 25.438,
+          "T3_event_level": 52.781,
+          "T4_tactics_stats": 44.913,
+          "T5_tournament_macro": 10.0
+        },
+        "winner_correct": 1,
+        "winner_total": 2,
+        "winner_acc": 0.5
+      },
+      {
+        "model_id": "gpt-5.4-search",
+        "mean": 46.844,
+        "n": 4,
+        "layers_mean": {
+          "T1_core_result": 71.294,
+          "T2_player_level": 20.452,
+          "T3_event_level": 62.592,
+          "T4_tactics_stats": 42.593,
+          "T5_tournament_macro": 10.0
+        },
+        "winner_correct": 3,
+        "winner_total": 4,
+        "winner_acc": 0.75
       }
     ],
     "by_model_setting": {
       "claude-opus-4-7-thinking": {
-        "S1": 54.67
+        "S1": 52.882
       },
       "claude-opus-4-7-thinking-search": {
-        "S2": 59.231
+        "S2": 55.502
       },
       "gemini-3.1-pro-preview-thinking": {
-        "S1": 55.189
+        "S1": 47.572
       },
       "gemini-3.1-pro-preview-thinking-search": {
-        "S2": 51.746
+        "S2": 49.812
       },
       "gpt-5.4": {
-        "S1": 53.938
+        "S1": 49.704
       },
       "gpt-5.4-search": {
-        "S2": 46.712
+        "S2": 46.844
       }
     }
   },
-  "incoming_matches": [
+  "incoming_matches": [],
+  "history": [
     {
-      "fixture": {
-        "wca_id": "Premier-League_Wolves_Tottenham_2026-04-25",
-        "home": "Wolves",
-        "home_logo": "https://media.api-sports.io/football/teams/39.png",
-        "away": "Tottenham",
-        "away_logo": "https://media.api-sports.io/football/teams/47.png",
-        "kickoff_utc": "2026-04-25T14:00:00+00:00",
-        "lock_at_utc": "2026-04-24T14:00:00+00:00",
-        "venue": "Molineux Stadium",
-        "venue_city": "Wolverhampton",
-        "venue_country": "England",
-        "stage": "Regular Season - 34",
-        "competition": "Premier League"
+      "wca_id": "Premier-League_Wolves_Tottenham_2026-04-25",
+      "home": "Wolves",
+      "home_logo": "https://media.api-sports.io/football/teams/39.png",
+      "away": "Tottenham",
+      "away_logo": "https://media.api-sports.io/football/teams/47.png",
+      "kickoff_utc": "2026-04-25T14:00:00+00:00",
+      "lock_at_utc": "2026-04-24T14:00:00+00:00",
+      "venue": "Molineux Stadium",
+      "venue_city": "Wolverhampton",
+      "venue_country": "England",
+      "stage": "Regular Season - 34",
+      "competition": "Premier League",
+      "result": "0-1",
+      "truth": {
+        "score": "0-1",
+        "result": "away",
+        "home_name": "Wolves",
+        "away_name": "Tottenham",
+        "scorer_names": [
+          "J. Palhinha"
+        ],
+        "assister_names": [
+          "Richarlison"
+        ],
+        "scorers": [
+          {
+            "minute": 82,
+            "player": "J. Palhinha",
+            "team": "away"
+          }
+        ],
+        "assisters": [
+          {
+            "player": "Richarlison",
+            "team": "away"
+          }
+        ],
+        "cards": [
+          {
+            "minute": 45,
+            "player": "Andre",
+            "team": "home",
+            "color": "yellow"
+          },
+          {
+            "minute": 56,
+            "player": "S. Bueno",
+            "team": "home",
+            "color": "yellow"
+          },
+          {
+            "minute": 56,
+            "player": "P. Porro",
+            "team": "away",
+            "color": "yellow"
+          },
+          {
+            "minute": 65,
+            "player": "R. Bentancur",
+            "team": "away",
+            "color": "yellow"
+          },
+          {
+            "minute": 74,
+            "player": "C. Gallagher",
+            "team": "away",
+            "color": "yellow"
+          },
+          {
+            "minute": 90,
+            "player": "Joao Gomes",
+            "team": "home",
+            "color": "yellow"
+          },
+          {
+            "minute": 90,
+            "player": "K. Danso",
+            "team": "away",
+            "color": "yellow"
+          }
+        ],
+        "substitutions": [
+          {
+            "minute": 40,
+            "team": "away",
+            "team_name": "Tottenham",
+            "off": "D. Solanke",
+            "on": "Richarlison"
+          },
+          {
+            "minute": 46,
+            "team": "away",
+            "team_name": "Tottenham",
+            "off": "R. Kolo Muani",
+            "on": "M. Tel"
+          },
+          {
+            "minute": 62,
+            "team": "away",
+            "team_name": "Tottenham",
+            "off": "Y. Bissouma",
+            "on": "J. Palhinha"
+          },
+          {
+            "minute": 62,
+            "team": "away",
+            "team_name": "Tottenham",
+            "off": "X. Simons",
+            "on": "L. Bergvall"
+          },
+          {
+            "minute": 71,
+            "team": "home",
+            "team_name": "Wolves",
+            "off": "R. Gomes",
+            "on": "T. Arokodare"
+          },
+          {
+            "minute": 85,
+            "team": "home",
+            "team_name": "Wolves",
+            "off": "M. Doherty",
+            "on": "Hwang Hee-Chan"
+          },
+          {
+            "minute": 86,
+            "team": "home",
+            "team_name": "Wolves",
+            "off": "Pedro Lima",
+            "on": "J. Tchatchoua"
+          },
+          {
+            "minute": 90,
+            "team": "away",
+            "team_name": "Tottenham",
+            "off": "C. Gallagher",
+            "on": "R. Dragusin"
+          },
+          {
+            "minute": 90,
+            "team": "home",
+            "team_name": "Wolves",
+            "off": "S. Bueno",
+            "on": "D. M. Wolfe"
+          }
+        ],
+        "own_goals": [],
+        "penalties": [],
+        "formations": {
+          "home": "3-4-2-1",
+          "away": "4-2-3-1"
+        },
+        "lineups": {
+          "home": {
+            "starting": [
+              {
+                "player": "Jose Sa",
+                "pos": "G"
+              },
+              {
+                "player": "Matt Doherty",
+                "pos": "D"
+              },
+              {
+                "player": "Santiago Bueno",
+                "pos": "D"
+              },
+              {
+                "player": "Toti Gomes",
+                "pos": "D"
+              },
+              {
+                "player": "Pedro Lima",
+                "pos": "M"
+              },
+              {
+                "player": "André",
+                "pos": "M"
+              },
+              {
+                "player": "João Gomes",
+                "pos": "M"
+              },
+              {
+                "player": "Hugo Bueno",
+                "pos": "M"
+              },
+              {
+                "player": "Rodrigo Gomes",
+                "pos": "F"
+              },
+              {
+                "player": "Mateus Mané",
+                "pos": "F"
+              },
+              {
+                "player": "Adam Armstrong",
+                "pos": "F"
+              }
+            ]
+          },
+          "away": {
+            "starting": [
+              {
+                "player": "Antonín Kinský",
+                "pos": "G"
+              },
+              {
+                "player": "Pedro Porro",
+                "pos": "D"
+              },
+              {
+                "player": "Kevin Danso",
+                "pos": "D"
+              },
+              {
+                "player": "Micky van de Ven",
+                "pos": "D"
+              },
+              {
+                "player": "Djed Spence",
+                "pos": "D"
+              },
+              {
+                "player": "Conor Gallagher",
+                "pos": "M"
+              },
+              {
+                "player": "Rodrigo Bentancur",
+                "pos": "M"
+              },
+              {
+                "player": "Randal Kolo Muani",
+                "pos": "M"
+              },
+              {
+                "player": "Yves Bissouma",
+                "pos": "M"
+              },
+              {
+                "player": "Xavi Simons",
+                "pos": "M"
+              },
+              {
+                "player": "Dominic Solanke",
+                "pos": "F"
+              }
+            ]
+          }
+        },
+        "stats": {
+          "shots_on_target": {
+            "home": 1,
+            "away": 2
+          },
+          "shots": {
+            "home": 10,
+            "away": 11
+          },
+          "fouls": {
+            "home": 8,
+            "away": 14
+          },
+          "corners": {
+            "home": 4,
+            "away": 5
+          },
+          "possession": {
+            "home": 41.0,
+            "away": 59.0
+          },
+          "saves": {
+            "home": 1,
+            "away": 1
+          },
+          "pass_accuracy": {
+            "home": 76.0,
+            "away": 85.0
+          }
+        },
+        "events": [
+          {
+            "time": {
+              "elapsed": 40,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 18883,
+              "name": "D. Solanke"
+            },
+            "assist": {
+              "id": 2413,
+              "name": "Richarlison"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 45,
+              "extra": 3
+            },
+            "team": {
+              "id": 39,
+              "name": "Wolves",
+              "logo": "https://media.api-sports.io/football/teams/39.png"
+            },
+            "player": {
+              "id": 265784,
+              "name": "Andre"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          },
+          {
+            "time": {
+              "elapsed": 46,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 21104,
+              "name": "R. Kolo Muani"
+            },
+            "assist": {
+              "id": 270510,
+              "name": "M. Tel"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 56,
+              "extra": null
+            },
+            "team": {
+              "id": 39,
+              "name": "Wolves",
+              "logo": "https://media.api-sports.io/football/teams/39.png"
+            },
+            "player": {
+              "id": 135334,
+              "name": "S. Bueno"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 56,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 47519,
+              "name": "P. Porro"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Holding"
+          },
+          {
+            "time": {
+              "elapsed": 62,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 18968,
+              "name": "Y. Bissouma"
+            },
+            "assist": {
+              "id": 41104,
+              "name": "J. Palhinha"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 62,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 162016,
+              "name": "X. Simons"
+            },
+            "assist": {
+              "id": 347316,
+              "name": "L. Bergvall"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 65,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 863,
+              "name": "R. Bentancur"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Tripping"
+          },
+          {
+            "time": {
+              "elapsed": 71,
+              "extra": null
+            },
+            "team": {
+              "id": 39,
+              "name": "Wolves",
+              "logo": "https://media.api-sports.io/football/teams/39.png"
+            },
+            "player": {
+              "id": 282770,
+              "name": "R. Gomes"
+            },
+            "assist": {
+              "id": 110153,
+              "name": "T. Arokodare"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 74,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 67972,
+              "name": "C. Gallagher"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Roughing"
+          },
+          {
+            "time": {
+              "elapsed": 82,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 41104,
+              "name": "J. Palhinha"
+            },
+            "assist": {
+              "id": 2413,
+              "name": "Richarlison"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 85,
+              "extra": null
+            },
+            "team": {
+              "id": 39,
+              "name": "Wolves",
+              "logo": "https://media.api-sports.io/football/teams/39.png"
+            },
+            "player": {
+              "id": 18742,
+              "name": "M. Doherty"
+            },
+            "assist": {
+              "id": 24888,
+              "name": "Hwang Hee-Chan"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 86,
+              "extra": null
+            },
+            "team": {
+              "id": 39,
+              "name": "Wolves",
+              "logo": "https://media.api-sports.io/football/teams/39.png"
+            },
+            "player": {
+              "id": 449245,
+              "name": "Pedro Lima"
+            },
+            "assist": {
+              "id": 296560,
+              "name": "J. Tchatchoua"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 1
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 67972,
+              "name": "C. Gallagher"
+            },
+            "assist": {
+              "id": 162498,
+              "name": "R. Dragusin"
+            },
+            "type": "subst",
+            "detail": "Substitution 5",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 4
+            },
+            "team": {
+              "id": 39,
+              "name": "Wolves",
+              "logo": "https://media.api-sports.io/football/teams/39.png"
+            },
+            "player": {
+              "id": 135334,
+              "name": "S. Bueno"
+            },
+            "assist": {
+              "id": 265782,
+              "name": "D. M. Wolfe"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 6
+            },
+            "team": {
+              "id": 39,
+              "name": "Wolves",
+              "logo": "https://media.api-sports.io/football/teams/39.png"
+            },
+            "player": {
+              "id": 195103,
+              "name": "Joao Gomes"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 8
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 25287,
+              "name": "K. Danso"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          }
+        ]
       },
+      "live": {
+        "status": "Match Finished",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "events": [
+          {
+            "time": {
+              "elapsed": 40,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 18883,
+              "name": "D. Solanke"
+            },
+            "assist": {
+              "id": 2413,
+              "name": "Richarlison"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 45,
+              "extra": 3
+            },
+            "team": {
+              "id": 39,
+              "name": "Wolves",
+              "logo": "https://media.api-sports.io/football/teams/39.png"
+            },
+            "player": {
+              "id": 265784,
+              "name": "Andre"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          },
+          {
+            "time": {
+              "elapsed": 46,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 21104,
+              "name": "R. Kolo Muani"
+            },
+            "assist": {
+              "id": 270510,
+              "name": "M. Tel"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 56,
+              "extra": null
+            },
+            "team": {
+              "id": 39,
+              "name": "Wolves",
+              "logo": "https://media.api-sports.io/football/teams/39.png"
+            },
+            "player": {
+              "id": 135334,
+              "name": "S. Bueno"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 56,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 47519,
+              "name": "P. Porro"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Holding"
+          },
+          {
+            "time": {
+              "elapsed": 62,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 18968,
+              "name": "Y. Bissouma"
+            },
+            "assist": {
+              "id": 41104,
+              "name": "J. Palhinha"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 62,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 162016,
+              "name": "X. Simons"
+            },
+            "assist": {
+              "id": 347316,
+              "name": "L. Bergvall"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 65,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 863,
+              "name": "R. Bentancur"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Tripping"
+          },
+          {
+            "time": {
+              "elapsed": 71,
+              "extra": null
+            },
+            "team": {
+              "id": 39,
+              "name": "Wolves",
+              "logo": "https://media.api-sports.io/football/teams/39.png"
+            },
+            "player": {
+              "id": 282770,
+              "name": "R. Gomes"
+            },
+            "assist": {
+              "id": 110153,
+              "name": "T. Arokodare"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 74,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 67972,
+              "name": "C. Gallagher"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Roughing"
+          },
+          {
+            "time": {
+              "elapsed": 82,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 41104,
+              "name": "J. Palhinha"
+            },
+            "assist": {
+              "id": 2413,
+              "name": "Richarlison"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 85,
+              "extra": null
+            },
+            "team": {
+              "id": 39,
+              "name": "Wolves",
+              "logo": "https://media.api-sports.io/football/teams/39.png"
+            },
+            "player": {
+              "id": 18742,
+              "name": "M. Doherty"
+            },
+            "assist": {
+              "id": 24888,
+              "name": "Hwang Hee-Chan"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 86,
+              "extra": null
+            },
+            "team": {
+              "id": 39,
+              "name": "Wolves",
+              "logo": "https://media.api-sports.io/football/teams/39.png"
+            },
+            "player": {
+              "id": 449245,
+              "name": "Pedro Lima"
+            },
+            "assist": {
+              "id": 296560,
+              "name": "J. Tchatchoua"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 1
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 67972,
+              "name": "C. Gallagher"
+            },
+            "assist": {
+              "id": 162498,
+              "name": "R. Dragusin"
+            },
+            "type": "subst",
+            "detail": "Substitution 5",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 4
+            },
+            "team": {
+              "id": 39,
+              "name": "Wolves",
+              "logo": "https://media.api-sports.io/football/teams/39.png"
+            },
+            "player": {
+              "id": 135334,
+              "name": "S. Bueno"
+            },
+            "assist": {
+              "id": 265782,
+              "name": "D. M. Wolfe"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 6
+            },
+            "team": {
+              "id": 39,
+              "name": "Wolves",
+              "logo": "https://media.api-sports.io/football/teams/39.png"
+            },
+            "player": {
+              "id": 195103,
+              "name": "Joao Gomes"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 8
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 25287,
+              "name": "K. Danso"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          }
+        ]
+      },
+      "models": [
+        {
+          "model_id": "claude-opus-4-7-thinking-search",
+          "setting": "S2",
+          "composite": 51.772
+        },
+        {
+          "model_id": "claude-opus-4-7-thinking",
+          "setting": "S1",
+          "composite": 49.307
+        },
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "composite": 47.238
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking-search",
+          "setting": "S2",
+          "composite": 45.942
+        },
+        {
+          "model_id": "gpt-5.4",
+          "setting": "S1",
+          "composite": 41.234
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking",
+          "setting": "S1",
+          "composite": 39.954
+        }
+      ],
       "predictions": [
         {
           "model_id": "claude-opus-4-7-thinking-search",
@@ -955,7 +2015,8 @@
               "accessed_at": "2026-04-24T12:25:00Z",
               "title": "2025-26 Premier League - Wikipedia"
             }
-          ]
+          ],
+          "composite": 51.772
         },
         {
           "model_id": "claude-opus-4-7-thinking",
@@ -1537,7 +2598,8 @@
             }
           },
           "cost_usd": 0.181,
-          "sources": []
+          "sources": [],
+          "composite": 49.307
         },
         {
           "model_id": "gemini-3.1-pro-preview-thinking-search",
@@ -1933,7 +2995,8 @@
               "url": "https://fbref.com/en/matches/preview/Wolves-Tottenham",
               "accessed_at": "2026-04-24T13:20:00+00:00"
             }
-          ]
+          ],
+          "composite": 45.942
         },
         {
           "model_id": "gemini-3.1-pro-preview-thinking",
@@ -2272,7 +3335,8 @@
             }
           },
           "cost_usd": 0.067,
-          "sources": []
+          "sources": [],
+          "composite": 39.954
         },
         {
           "model_id": "gpt-5.4-search",
@@ -2828,7 +3892,8 @@
               "accessed_at": "2026-04-24T12:56:00Z",
               "title": "WhoScored Tottenham"
             }
-          ]
+          ],
+          "composite": 47.238
         },
         {
           "model_id": "gpt-5.4",
@@ -3310,199 +4375,12 @@
             }
           },
           "cost_usd": 0.078,
-          "sources": []
+          "sources": [],
+          "composite": 41.234
         }
       ],
-      "live": {
-        "status": "Second Half",
-        "elapsed": 69,
-        "score": {
-          "home": 0,
-          "away": 0
-        },
-        "events": [
-          {
-            "time": {
-              "elapsed": 40,
-              "extra": null
-            },
-            "team": {
-              "id": 47,
-              "name": "Tottenham",
-              "logo": "https://media.api-sports.io/football/teams/47.png"
-            },
-            "player": {
-              "id": 18883,
-              "name": "D. Solanke"
-            },
-            "assist": {
-              "id": 2413,
-              "name": "Richarlison"
-            },
-            "type": "subst",
-            "detail": "Substitution 1",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 45,
-              "extra": 3
-            },
-            "team": {
-              "id": 39,
-              "name": "Wolves",
-              "logo": "https://media.api-sports.io/football/teams/39.png"
-            },
-            "player": {
-              "id": 265784,
-              "name": "Andre"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Foul"
-          },
-          {
-            "time": {
-              "elapsed": 46,
-              "extra": null
-            },
-            "team": {
-              "id": 47,
-              "name": "Tottenham",
-              "logo": "https://media.api-sports.io/football/teams/47.png"
-            },
-            "player": {
-              "id": 21104,
-              "name": "R. Kolo Muani"
-            },
-            "assist": {
-              "id": 270510,
-              "name": "M. Tel"
-            },
-            "type": "subst",
-            "detail": "Substitution 2",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 56,
-              "extra": null
-            },
-            "team": {
-              "id": 39,
-              "name": "Wolves",
-              "logo": "https://media.api-sports.io/football/teams/39.png"
-            },
-            "player": {
-              "id": 135334,
-              "name": "S. Bueno"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Unsportsmanlike conduct"
-          },
-          {
-            "time": {
-              "elapsed": 56,
-              "extra": null
-            },
-            "team": {
-              "id": 47,
-              "name": "Tottenham",
-              "logo": "https://media.api-sports.io/football/teams/47.png"
-            },
-            "player": {
-              "id": 47519,
-              "name": "P. Porro"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Holding"
-          },
-          {
-            "time": {
-              "elapsed": 62,
-              "extra": null
-            },
-            "team": {
-              "id": 47,
-              "name": "Tottenham",
-              "logo": "https://media.api-sports.io/football/teams/47.png"
-            },
-            "player": {
-              "id": 18968,
-              "name": "Y. Bissouma"
-            },
-            "assist": {
-              "id": 41104,
-              "name": "J. Palhinha"
-            },
-            "type": "subst",
-            "detail": "Substitution 3",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 62,
-              "extra": null
-            },
-            "team": {
-              "id": 47,
-              "name": "Tottenham",
-              "logo": "https://media.api-sports.io/football/teams/47.png"
-            },
-            "player": {
-              "id": 162016,
-              "name": "X. Simons"
-            },
-            "assist": {
-              "id": 347316,
-              "name": "L. Bergvall"
-            },
-            "type": "subst",
-            "detail": "Substitution 4",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 65,
-              "extra": null
-            },
-            "team": {
-              "id": 47,
-              "name": "Tottenham",
-              "logo": "https://media.api-sports.io/football/teams/47.png"
-            },
-            "player": {
-              "id": 863,
-              "name": "R. Bentancur"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Tripping"
-          }
-        ]
-      },
       "comment": "If Tottenham wants to stay up in Premier League they have to win this (BTW I update the prompt to encourage more diverse score predictions)"
-    }
-  ],
-  "history": [
+    },
     {
       "wca_id": "DFB-Pokal_VfB-Stuttgart_SC-Freiburg_2026-04-23",
       "home": "VfB Stuttgart",
