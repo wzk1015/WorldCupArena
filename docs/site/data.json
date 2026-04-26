@@ -129,7 +129,2324 @@
         "stage": "Semi-finals",
         "competition": "FA Cup"
       },
-      "predictions": [],
+      "predictions": [
+        {
+          "model_id": "claude-opus-4-7-thinking",
+          "setting": "S1",
+          "win_probs": {
+            "home": 0.63,
+            "draw": 0.22,
+            "away": 0.15
+          },
+          "score_dist": [
+            {
+              "score": "2-1",
+              "p": 0.145
+            },
+            {
+              "score": "1-0",
+              "p": 0.135
+            },
+            {
+              "score": "2-0",
+              "p": 0.13
+            },
+            {
+              "score": "1-1",
+              "p": 0.115
+            },
+            {
+              "score": "3-1",
+              "p": 0.085
+            },
+            {
+              "score": "3-0",
+              "p": 0.07
+            },
+            {
+              "score": "0-0",
+              "p": 0.06
+            },
+            {
+              "score": "0-1",
+              "p": 0.055
+            },
+            {
+              "score": "2-2",
+              "p": 0.05
+            },
+            {
+              "score": "1-2",
+              "p": 0.045
+            },
+            {
+              "score": "3-2",
+              "p": 0.035
+            },
+            {
+              "score": "4-1",
+              "p": 0.03
+            },
+            {
+              "score": "4-0",
+              "p": 0.025
+            },
+            {
+              "score": "0-2",
+              "p": 0.015
+            },
+            {
+              "score": "2-3",
+              "p": 0.005
+            }
+          ],
+          "most_likely_score": "2-1",
+          "expected_goal_diff": 0.95,
+          "advance_prob": 0.74,
+          "reasoning": {
+            "overall": "Chelsea enter Wembley as clear favorites on squad quality despite a brutal 3W-7L stretch that includes heavy Premier League defeats; their losses have come against elite opposition (Man City, Brighton, Man United, PSG) while their FA Cup performances have been emphatic (7-0 vs Port Vale, 4-2 vs Wrexham). Leeds, recently promoted, are sturdy and well-drilled but limited in attacking quality, with Piroe/Calvert-Lewin/Okafor as attacking options and a recent run heavy on draws (5 in 10). The talent gulf — Palmer, Estêvão, Garnacho, Neto, Caicedo, Fernández, Delap vs Leeds' mid-table profile — should manifest at a neutral Wembley with a full week's rest and a clear target (the cup is now Chelsea's only realistic trophy). Tactically, Leeds' mid-block can frustrate but their full-backs (Bogle/Justin) will be exposed by Chelsea's wide creators, while Chelsea's set-piece threat through Adarabioyo/Fofana is significant. Expect Chelsea to dominate possession and territory but with a manageable goal output given Leeds' defensive discipline.",
+            "t1_result": "Chelsea win probability ~63% reflecting clear quality edge and cup motivation, balanced by their patchy form. Draw at ~22% (matches Leeds' frequent stalemate pattern). Leeds win ~15% — non-trivial because Chelsea's defense has been leaky in big games. Most likely scoreline 2-1 with healthy mass on 1-0, 2-0, 1-1.",
+            "t2_player": "Maresca's typical 4-2-3-1 with Sánchez behind a back four of Gusto-Adarabioyo-Chalobah-Cucurella, double pivot Caicedo-Fernández, attacking trio Estêvão-Palmer-Neto behind Delap. Leeds likely 4-2-3-1 with Meslier; Bogle-Rodon-Struijk-Justin; Ampadu-Stach; James-Aaronson-Gnonto behind Calvert-Lewin (Piroe alternative). Palmer and Delap are top scorer candidates; Piroe/Calvert-Lewin lead Leeds' chances.",
+            "t3_events": "Expect Chelsea to apply early pressure but Leeds to keep it tight in opening 30 minutes; first goal often after 25-40' as Leeds tire from chasing. Cards likely from Leeds tactical fouls in midfield (Ampadu, Stach). Subs around 60-70' bringing on Garnacho/João Pedro for fresh legs. If Chelsea lead, Leeds will commit late and concede space.",
+            "t4_stats": "Chelsea ~62% possession, 16-18 shots vs Leeds 8-10. Pass accuracy 86% vs 78%. Corners 7-4 favoring Chelsea. Fouls higher for Leeds due to defensive nature. Saves higher for Meslier given Chelsea's shot volume."
+          },
+          "scorers": [
+            {
+              "player": "C. Palmer",
+              "team": "home",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.34
+            },
+            {
+              "player": "L. Delap",
+              "team": "home",
+              "minute_range": [
+                25,
+                80
+              ],
+              "p": 0.26
+            },
+            {
+              "player": "Estêvão",
+              "team": "home",
+              "minute_range": [
+                30,
+                90
+              ],
+              "p": 0.22
+            },
+            {
+              "player": "Pedro Neto",
+              "team": "home",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.18
+            },
+            {
+              "player": "João Pedro",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.16
+            },
+            {
+              "player": "A. Garnacho",
+              "team": "home",
+              "minute_range": [
+                60,
+                95
+              ],
+              "p": 0.13
+            },
+            {
+              "player": "T. Adarabioyo",
+              "team": "home",
+              "minute_range": [
+                30,
+                90
+              ],
+              "p": 0.08
+            },
+            {
+              "player": "E. Fernández",
+              "team": "home",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.08
+            },
+            {
+              "player": "D. Calvert-Lewin",
+              "team": "away",
+              "minute_range": [
+                25,
+                90
+              ],
+              "p": 0.18
+            },
+            {
+              "player": "J. Piroe",
+              "team": "away",
+              "minute_range": [
+                55,
+                95
+              ],
+              "p": 0.14
+            },
+            {
+              "player": "W. Gnonto",
+              "team": "away",
+              "minute_range": [
+                25,
+                90
+              ],
+              "p": 0.12
+            },
+            {
+              "player": "B. Aaronson",
+              "team": "away",
+              "minute_range": [
+                30,
+                90
+              ],
+              "p": 0.09
+            },
+            {
+              "player": "D. James",
+              "team": "away",
+              "minute_range": [
+                30,
+                90
+              ],
+              "p": 0.07
+            }
+          ],
+          "assisters": [
+            {
+              "player": "C. Palmer",
+              "team": "home",
+              "p": 0.28
+            },
+            {
+              "player": "Pedro Neto",
+              "team": "home",
+              "p": 0.22
+            },
+            {
+              "player": "Estêvão",
+              "team": "home",
+              "p": 0.2
+            },
+            {
+              "player": "E. Fernández",
+              "team": "home",
+              "p": 0.16
+            },
+            {
+              "player": "Marc Cucurella",
+              "team": "home",
+              "p": 0.12
+            },
+            {
+              "player": "B. Aaronson",
+              "team": "away",
+              "p": 0.14
+            },
+            {
+              "player": "W. Gnonto",
+              "team": "away",
+              "p": 0.12
+            },
+            {
+              "player": "D. James",
+              "team": "away",
+              "p": 0.1
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "C. Palmer",
+              "team": "home",
+              "p": 0.27
+            },
+            {
+              "player": "L. Delap",
+              "team": "home",
+              "p": 0.14
+            },
+            {
+              "player": "Estêvão",
+              "team": "home",
+              "p": 0.13
+            },
+            {
+              "player": "E. Fernández",
+              "team": "home",
+              "p": 0.1
+            },
+            {
+              "player": "Pedro Neto",
+              "team": "home",
+              "p": 0.09
+            },
+            {
+              "player": "M. Caicedo",
+              "team": "home",
+              "p": 0.07
+            },
+            {
+              "player": "I. Meslier",
+              "team": "away",
+              "p": 0.07
+            },
+            {
+              "player": "D. Calvert-Lewin",
+              "team": "away",
+              "p": 0.05
+            },
+            {
+              "player": "E. Ampadu",
+              "team": "away",
+              "p": 0.05
+            },
+            {
+              "player": "J. Rodon",
+              "team": "away",
+              "p": 0.03
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Robert Sánchez",
+                  "position": "GK"
+                },
+                {
+                  "name": "M. Gusto",
+                  "position": "DF"
+                },
+                {
+                  "name": "T. Adarabioyo",
+                  "position": "DF"
+                },
+                {
+                  "name": "T. Chalobah",
+                  "position": "DF"
+                },
+                {
+                  "name": "Marc Cucurella",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. Caicedo",
+                  "position": "MF"
+                },
+                {
+                  "name": "E. Fernández",
+                  "position": "MF"
+                },
+                {
+                  "name": "Estêvão",
+                  "position": "MF"
+                },
+                {
+                  "name": "C. Palmer",
+                  "position": "MF"
+                },
+                {
+                  "name": "Pedro Neto",
+                  "position": "MF"
+                },
+                {
+                  "name": "L. Delap",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "F. Jörgensen",
+                  "position": "GK"
+                },
+                {
+                  "name": "R. James",
+                  "position": "DF"
+                },
+                {
+                  "name": "B. Badiashile",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Hato",
+                  "position": "DF"
+                },
+                {
+                  "name": "Andrey Santos",
+                  "position": "MF"
+                },
+                {
+                  "name": "R. Lavia",
+                  "position": "MF"
+                },
+                {
+                  "name": "Dário Essugo",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Garnacho",
+                  "position": "FW"
+                },
+                {
+                  "name": "J. Bynoe-Gittens",
+                  "position": "FW"
+                },
+                {
+                  "name": "João Pedro",
+                  "position": "FW"
+                },
+                {
+                  "name": "Marc Guiu",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "I. Meslier",
+                  "position": "GK"
+                },
+                {
+                  "name": "J. Bogle",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Rodon",
+                  "position": "DF"
+                },
+                {
+                  "name": "P. Struijk",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Justin",
+                  "position": "DF"
+                },
+                {
+                  "name": "E. Ampadu",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Stach",
+                  "position": "MF"
+                },
+                {
+                  "name": "D. James",
+                  "position": "MF"
+                },
+                {
+                  "name": "B. Aaronson",
+                  "position": "MF"
+                },
+                {
+                  "name": "W. Gnonto",
+                  "position": "FW"
+                },
+                {
+                  "name": "D. Calvert-Lewin",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Lucas Perri",
+                  "position": "GK"
+                },
+                {
+                  "name": "S. Bornauw",
+                  "position": "DF"
+                },
+                {
+                  "name": "S. Byram",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Bijol",
+                  "position": "DF"
+                },
+                {
+                  "name": "I. Gruev",
+                  "position": "MF"
+                },
+                {
+                  "name": "S. Longstaff",
+                  "position": "MF"
+                },
+                {
+                  "name": "F. Buonanotte",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Tanaka",
+                  "position": "MF"
+                },
+                {
+                  "name": "G. Gudmundsson",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Piroe",
+                  "position": "FW"
+                },
+                {
+                  "name": "N. Okafor",
+                  "position": "FW"
+                },
+                {
+                  "name": "L. Nmecha",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "L. Delap",
+              "on": "João Pedro",
+              "minute": 68
+            },
+            {
+              "team": "home",
+              "off": "Pedro Neto",
+              "on": "A. Garnacho",
+              "minute": 70
+            },
+            {
+              "team": "home",
+              "off": "Estêvão",
+              "on": "J. Bynoe-Gittens",
+              "minute": 80
+            },
+            {
+              "team": "away",
+              "off": "D. Calvert-Lewin",
+              "on": "J. Piroe",
+              "minute": 65
+            },
+            {
+              "team": "away",
+              "off": "B. Aaronson",
+              "on": "F. Buonanotte",
+              "minute": 70
+            },
+            {
+              "team": "away",
+              "off": "A. Stach",
+              "on": "I. Gruev",
+              "minute": 75
+            }
+          ],
+          "cards": [
+            {
+              "player": "A. Stach",
+              "team": "away",
+              "color": "yellow",
+              "minute": 35
+            },
+            {
+              "player": "E. Ampadu",
+              "team": "away",
+              "color": "yellow",
+              "minute": 55
+            },
+            {
+              "player": "M. Caicedo",
+              "team": "home",
+              "color": "yellow",
+              "minute": 60
+            },
+            {
+              "player": "J. Bogle",
+              "team": "away",
+              "color": "yellow",
+              "minute": 75
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 62,
+              "away": 38
+            },
+            "shots": {
+              "home": 16,
+              "away": 9
+            },
+            "shots_on_target": {
+              "home": 6,
+              "away": 3
+            },
+            "corners": {
+              "home": 7,
+              "away": 4
+            },
+            "pass_accuracy": {
+              "home": 86,
+              "away": 78
+            },
+            "fouls": {
+              "home": 10,
+              "away": 14
+            },
+            "saves": {
+              "home": 2,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 28,
+              "away": 38
+            }
+          },
+          "cost_usd": 0.15,
+          "sources": []
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.65,
+            "draw": 0.2,
+            "away": 0.15
+          },
+          "score_dist": [
+            {
+              "score": "2-0",
+              "p": 0.15
+            },
+            {
+              "score": "2-1",
+              "p": 0.12
+            },
+            {
+              "score": "1-0",
+              "p": 0.11
+            },
+            {
+              "score": "1-1",
+              "p": 0.1
+            },
+            {
+              "score": "3-0",
+              "p": 0.09
+            },
+            {
+              "score": "3-1",
+              "p": 0.08
+            },
+            {
+              "score": "0-0",
+              "p": 0.06
+            },
+            {
+              "score": "0-1",
+              "p": 0.05
+            },
+            {
+              "score": "1-2",
+              "p": 0.04
+            },
+            {
+              "score": "2-2",
+              "p": 0.04
+            },
+            {
+              "score": "4-1",
+              "p": 0.03
+            },
+            {
+              "score": "3-2",
+              "p": 0.03
+            },
+            {
+              "score": "0-2",
+              "p": 0.02
+            },
+            {
+              "score": "1-3",
+              "p": 0.01
+            },
+            {
+              "score": "4-0",
+              "p": 0.07
+            }
+          ],
+          "most_likely_score": "2-0",
+          "expected_goal_diff": 1.4,
+          "advance_prob": 0.78,
+          "reasoning": {
+            "overall": "Chelsea enter this FA Cup semi-final at Wembley as strong favorites against Leeds United. Chelsea's superior squad depth, recent form in domestic competitions, and tactical control under their current manager give them a distinct edge. Leeds will rely on their high-intensity pressing and quick transitions, but Chelsea's midfield pivot of Caicedo and Fernandez should dictate the tempo and bypass the press. Injuries to key Leeds defenders further tilt the balance in Chelsea's favor.",
+            "t1_result": "Chelsea are heavily favored to win in regular time (65%), with a 2-0 or 2-1 scoreline being the most probable outcomes. Leeds have a puncher's chance but are likely to fall short over 90 minutes.",
+            "t2_player": "Cole Palmer and Nicolas Jackson are expected to lead Chelsea's attack, with Palmer being the primary creative force. Leeds will look to Crysencio Summerville on the counter.",
+            "t3_events": "Expect Chelsea to dominate early possession, potentially scoring in the first half. Leeds may pick up several yellow cards trying to disrupt Chelsea's rhythm.",
+            "t4_stats": "Chelsea should control around 62% possession, generating 15+ shots. Leeds will likely have fewer chances but will contribute to a high foul count due to their aggressive style."
+          },
+          "scorers": [
+            {
+              "player": "C. Palmer",
+              "team": "home",
+              "minute_range": [
+                15,
+                85
+              ],
+              "p": 0.45
+            },
+            {
+              "player": "N. Jackson",
+              "team": "home",
+              "minute_range": [
+                10,
+                80
+              ],
+              "p": 0.35
+            },
+            {
+              "player": "C. Nkunku",
+              "team": "home",
+              "minute_range": [
+                45,
+                90
+              ],
+              "p": 0.25
+            },
+            {
+              "player": "C. Summerville",
+              "team": "away",
+              "minute_range": [
+                30,
+                85
+              ],
+              "p": 0.2
+            }
+          ],
+          "assisters": [],
+          "motm_probs": [],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "F. Jörgensen",
+                  "position": "GK",
+                  "shirt": 12
+                },
+                {
+                  "name": "R. James",
+                  "position": "DF",
+                  "shirt": 24
+                },
+                {
+                  "name": "W. Fofana",
+                  "position": "DF",
+                  "shirt": 29
+                },
+                {
+                  "name": "L. Colwill",
+                  "position": "DF",
+                  "shirt": 26
+                },
+                {
+                  "name": "M. Cucurella",
+                  "position": "DF",
+                  "shirt": 3
+                },
+                {
+                  "name": "M. Caicedo",
+                  "position": "MF",
+                  "shirt": 25
+                },
+                {
+                  "name": "E. Fernández",
+                  "position": "MF",
+                  "shirt": 8
+                },
+                {
+                  "name": "C. Palmer",
+                  "position": "MF",
+                  "shirt": 20
+                },
+                {
+                  "name": "C. Nkunku",
+                  "position": "FW",
+                  "shirt": 18
+                },
+                {
+                  "name": "M. Mudryk",
+                  "position": "FW",
+                  "shirt": 10
+                },
+                {
+                  "name": "N. Jackson",
+                  "position": "FW",
+                  "shirt": 15
+                }
+              ],
+              "bench": [
+                {
+                  "name": "R. Sánchez",
+                  "position": "GK",
+                  "shirt": 1
+                },
+                {
+                  "name": "B. Badiashile",
+                  "position": "DF",
+                  "shirt": 5
+                },
+                {
+                  "name": "M. Gusto",
+                  "position": "DF",
+                  "shirt": 27
+                },
+                {
+                  "name": "R. Lavia",
+                  "position": "MF",
+                  "shirt": 45
+                },
+                {
+                  "name": "K. Dewsbury-Hall",
+                  "position": "MF",
+                  "shirt": 22
+                },
+                {
+                  "name": "N. Madueke",
+                  "position": "FW",
+                  "shirt": 11
+                },
+                {
+                  "name": "J. Félix",
+                  "position": "FW",
+                  "shirt": 14
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "I. Meslier",
+                  "position": "GK",
+                  "shirt": 1
+                },
+                {
+                  "name": "J. Bogle",
+                  "position": "DF",
+                  "shirt": 2
+                },
+                {
+                  "name": "J. Rodon",
+                  "position": "DF",
+                  "shirt": 6
+                },
+                {
+                  "name": "P. Struijk",
+                  "position": "DF",
+                  "shirt": 21
+                },
+                {
+                  "name": "J. Firpo",
+                  "position": "DF",
+                  "shirt": 3
+                },
+                {
+                  "name": "E. Ampadu",
+                  "position": "MF",
+                  "shirt": 4
+                },
+                {
+                  "name": "I. Gruev",
+                  "position": "MF",
+                  "shirt": 44
+                },
+                {
+                  "name": "D. James",
+                  "position": "MF",
+                  "shirt": 20
+                },
+                {
+                  "name": "G. Rutter",
+                  "position": "MF",
+                  "shirt": 24
+                },
+                {
+                  "name": "C. Summerville",
+                  "position": "FW",
+                  "shirt": 10
+                },
+                {
+                  "name": "J. Piroe",
+                  "position": "FW",
+                  "shirt": 7
+                }
+              ],
+              "bench": [
+                {
+                  "name": "K. Darlow",
+                  "position": "GK",
+                  "shirt": 28
+                },
+                {
+                  "name": "S. Byram",
+                  "position": "DF",
+                  "shirt": 25
+                },
+                {
+                  "name": "M. Wöber",
+                  "position": "DF",
+                  "shirt": 39
+                },
+                {
+                  "name": "A. Rothwell",
+                  "position": "MF",
+                  "shirt": 8
+                },
+                {
+                  "name": "B. Aaronson",
+                  "position": "MF",
+                  "shirt": 11
+                },
+                {
+                  "name": "W. Gnonto",
+                  "position": "FW",
+                  "shirt": 29
+                },
+                {
+                  "name": "M. Joseph",
+                  "position": "FW",
+                  "shirt": 19
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [],
+          "cards": [],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 62.5,
+              "away": 37.5
+            },
+            "shots": {
+              "home": 16.0,
+              "away": 8.5
+            },
+            "shots_on_target": {
+              "home": 6.5,
+              "away": 2.5
+            },
+            "corners": {
+              "home": 7.0,
+              "away": 3.5
+            },
+            "pass_accuracy": {
+              "home": 88.0,
+              "away": 76.5
+            },
+            "fouls": {
+              "home": 10.5,
+              "away": 14.0
+            },
+            "saves": {
+              "home": 1.5,
+              "away": 4.5
+            },
+            "defensive_actions": {
+              "home": 42.0,
+              "away": 68.0
+            }
+          },
+          "cost_usd": 0.029,
+          "sources": [
+            {
+              "url": "https://www.chelseafc.com/en/teams/men",
+              "accessed_at": "2026-04-25T12:00:00Z"
+            },
+            {
+              "url": "https://www.leedsunited.com/teams/first-team",
+              "accessed_at": "2026-04-25T12:05:00Z"
+            },
+            {
+              "url": "https://www.bbc.com/sport/football/teams/chelsea",
+              "accessed_at": "2026-04-25T12:10:00Z"
+            },
+            {
+              "url": "https://www.bbc.com/sport/football/teams/leeds-united",
+              "accessed_at": "2026-04-25T12:15:00Z"
+            },
+            {
+              "url": "https://fbref.com/en/squads/cff3d9bb/Chelsea-Stats",
+              "accessed_at": "2026-04-25T12:20:00Z"
+            },
+            {
+              "url": "https://fbref.com/en/squads/5bfb9659/Leeds-United-Stats",
+              "accessed_at": "2026-04-25T12:25:00Z"
+            }
+          ]
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking",
+          "setting": "S1",
+          "win_probs": {
+            "home": 0.45,
+            "draw": 0.28,
+            "away": 0.27
+          },
+          "score_dist": [
+            {
+              "score": "2-1",
+              "p": 0.14
+            },
+            {
+              "score": "1-1",
+              "p": 0.13
+            },
+            {
+              "score": "1-0",
+              "p": 0.12
+            },
+            {
+              "score": "2-0",
+              "p": 0.1
+            },
+            {
+              "score": "0-1",
+              "p": 0.09
+            },
+            {
+              "score": "1-2",
+              "p": 0.08
+            },
+            {
+              "score": "2-2",
+              "p": 0.07
+            },
+            {
+              "score": "0-0",
+              "p": 0.06
+            },
+            {
+              "score": "3-1",
+              "p": 0.06
+            },
+            {
+              "score": "0-2",
+              "p": 0.05
+            },
+            {
+              "score": "3-0",
+              "p": 0.04
+            },
+            {
+              "score": "3-2",
+              "p": 0.03
+            },
+            {
+              "score": "1-3",
+              "p": 0.02
+            },
+            {
+              "score": "0-3",
+              "p": 0.01
+            }
+          ],
+          "most_likely_score": "2-1",
+          "expected_goal_diff": 0.4,
+          "advance_prob": 0.6,
+          "reasoning": {
+            "overall": "Chelsea enters this FA Cup semi-final at Wembley in poor overall form, having lost 7 of their last 10 matches across all competitions. However, their squad quality remains superior to Leeds, who have been solid but face a step up in class. The neutral venue and cup context should favor Chelsea's individual brilliance, particularly from Cole Palmer, though Leeds' organized setup and counter-attacking threat will make it a closely contested match.",
+            "t1_result": "Chelsea are given a 45% chance to win in 90 minutes, reflecting their higher ceiling but inconsistent form. A draw (28%) is a strong possibility given Leeds' resilience, with a 2-1 Chelsea victory being the most likely scoreline.",
+            "t2_player": "Chelsea will likely deploy a 4-2-3-1 with Palmer as the creative hub and João Pedro leading the line. Leeds will counter with a similar shape, relying on Gnonto and Piroe for attacking output.",
+            "t3_events": "Expect a cautious first half, with the game opening up in the second. Chelsea will dominate possession, while Leeds will look for opportunities in transition. Cards are likely as Leeds try to disrupt Chelsea's rhythm.",
+            "t4_stats": "Chelsea should control possession (around 58%) and generate more shots, but Leeds will remain competitive in defensive actions and counter-attacks."
+          },
+          "scorers": [
+            {
+              "player": "C. Palmer",
+              "team": "home",
+              "minute_range": [
+                30,
+                80
+              ],
+              "p": 0.35
+            },
+            {
+              "player": "João Pedro",
+              "team": "home",
+              "minute_range": [
+                15,
+                75
+              ],
+              "p": 0.25
+            },
+            {
+              "player": "W. Gnonto",
+              "team": "away",
+              "minute_range": [
+                45,
+                90
+              ],
+              "p": 0.2
+            },
+            {
+              "player": "J. Piroe",
+              "team": "away",
+              "minute_range": [
+                20,
+                80
+              ],
+              "p": 0.2
+            }
+          ],
+          "assisters": [],
+          "motm_probs": [],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Robert Sánchez",
+                  "position": "GK"
+                },
+                {
+                  "name": "M. Gusto",
+                  "position": "DF"
+                },
+                {
+                  "name": "W. Fofana",
+                  "position": "DF"
+                },
+                {
+                  "name": "B. Badiashile",
+                  "position": "DF"
+                },
+                {
+                  "name": "Marc Cucurella",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. Caicedo",
+                  "position": "MF"
+                },
+                {
+                  "name": "E. Fernández",
+                  "position": "MF"
+                },
+                {
+                  "name": "C. Palmer",
+                  "position": "MF"
+                },
+                {
+                  "name": "Pedro Neto",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Garnacho",
+                  "position": "FW"
+                },
+                {
+                  "name": "João Pedro",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "F. Jörgensen",
+                  "position": "GK"
+                },
+                {
+                  "name": "T. Adarabioyo",
+                  "position": "DF"
+                },
+                {
+                  "name": "R. James",
+                  "position": "DF"
+                },
+                {
+                  "name": "R. Lavia",
+                  "position": "MF"
+                },
+                {
+                  "name": "Andrey Santos",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Bynoe-Gittens",
+                  "position": "FW"
+                },
+                {
+                  "name": "L. Delap",
+                  "position": "FW"
+                },
+                {
+                  "name": "Marc Guiu",
+                  "position": "FW"
+                },
+                {
+                  "name": "Estêvão",
+                  "position": "MF"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "I. Meslier",
+                  "position": "GK"
+                },
+                {
+                  "name": "J. Bogle",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Rodon",
+                  "position": "DF"
+                },
+                {
+                  "name": "P. Struijk",
+                  "position": "DF"
+                },
+                {
+                  "name": "S. Byram",
+                  "position": "DF"
+                },
+                {
+                  "name": "E. Ampadu",
+                  "position": "MF"
+                },
+                {
+                  "name": "I. Gruev",
+                  "position": "MF"
+                },
+                {
+                  "name": "D. James",
+                  "position": "MF"
+                },
+                {
+                  "name": "B. Aaronson",
+                  "position": "MF"
+                },
+                {
+                  "name": "W. Gnonto",
+                  "position": "FW"
+                },
+                {
+                  "name": "J. Piroe",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "K. Darlow",
+                  "position": "GK"
+                },
+                {
+                  "name": "J. Bijol",
+                  "position": "DF"
+                },
+                {
+                  "name": "S. Bornauw",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Justin",
+                  "position": "DF"
+                },
+                {
+                  "name": "F. Buonanotte",
+                  "position": "MF"
+                },
+                {
+                  "name": "S. Longstaff",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Tanaka",
+                  "position": "MF"
+                },
+                {
+                  "name": "D. Calvert-Lewin",
+                  "position": "FW"
+                },
+                {
+                  "name": "N. Okafor",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [],
+          "cards": [],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 58,
+              "away": 42
+            },
+            "shots": {
+              "home": 15,
+              "away": 11
+            },
+            "shots_on_target": {
+              "home": 6,
+              "away": 4
+            },
+            "corners": {
+              "home": 6,
+              "away": 4
+            },
+            "pass_accuracy": {
+              "home": 88,
+              "away": 81
+            },
+            "fouls": {
+              "home": 11,
+              "away": 13
+            },
+            "saves": {
+              "home": 3,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 45,
+              "away": 55
+            }
+          },
+          "cost_usd": 0.056,
+          "sources": []
+        },
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.545,
+            "draw": 0.258,
+            "away": 0.197
+          },
+          "score_dist": [
+            {
+              "score": "1-0",
+              "p": 0.146
+            },
+            {
+              "score": "1-1",
+              "p": 0.132
+            },
+            {
+              "score": "2-0",
+              "p": 0.118
+            },
+            {
+              "score": "2-1",
+              "p": 0.114
+            },
+            {
+              "score": "0-0",
+              "p": 0.089
+            },
+            {
+              "score": "0-1",
+              "p": 0.081
+            },
+            {
+              "score": "1-2",
+              "p": 0.06
+            },
+            {
+              "score": "3-1",
+              "p": 0.059
+            },
+            {
+              "score": "3-0",
+              "p": 0.055
+            },
+            {
+              "score": "2-2",
+              "p": 0.043
+            },
+            {
+              "score": "0-2",
+              "p": 0.032
+            },
+            {
+              "score": "3-2",
+              "p": 0.026
+            },
+            {
+              "score": "4-1",
+              "p": 0.015
+            },
+            {
+              "score": "4-0",
+              "p": 0.012
+            },
+            {
+              "score": "2-3",
+              "p": 0.018
+            }
+          ],
+          "most_likely_score": "1-0",
+          "expected_goal_diff": 0.57,
+          "advance_prob": 0.634,
+          "reasoning": {
+            "overall": "Chelsea project as clear but not overwhelming favourites on squad depth, top-end talent and likely control of territory, even at a neutral Wembley. Leeds can still make this awkward if they press aggressively and attack transitions quickly, but over a 90-minute semi-final Chelsea's stronger midfield ball progression, better bench options and superior individual quality in wide and final-third areas give them the edge. A cup semi often starts cagey, so draw paths remain live, yet Chelsea's chance creation profile and set-piece threat make a narrow home win the likeliest outcome.",
+            "t1_result": "I lean Chelsea because their expected territorial dominance and stronger defenders-versus-forwards matchups should suppress Leeds' volume, while Leeds still have enough pace and directness to keep draw and 0-1/1-1 outcomes meaningful. The score distribution centers on a normal-to-slightly low-event game, making 1-0 the top scoreline rather than a high-scoring template.",
+            "t2_player": "Chelsea are more likely to field a possession-first 4-2-3-1/4-3-3 hybrid with their best creators underneath a central striker, while Leeds are likelier to use a compact 4-2-3-1 and break through the wings. Chelsea's most probable scorers come from their striker and advanced wide attackers because they should spend more time in Leeds' box.",
+            "t3_events": "Semi-final game state should produce a cautious first half, with the opening goal more likely after the first 25 minutes once pressing intensity and nerves settle. Tactical fouls and late substitutions are likely if Leeds chase, and Chelsea's bench could matter from 60 minutes onward.",
+            "t4_stats": "Chelsea should have the larger share of possession and passes, plus a modest edge in shots and corners, but not total dominance because Wembley semis often compress space and encourage risk management. Leeds' out-of-possession workload raises their defensive actions and foul count, while their keeper is slightly more likely to face multiple saves."
+          },
+          "scorers": [
+            {
+              "player": "Nicolas Jackson",
+              "team": "home",
+              "minute_range": [
+                30,
+                85
+              ],
+              "p": 0.356
+            },
+            {
+              "player": "Cole Palmer",
+              "team": "home",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.304
+            },
+            {
+              "player": "Mykhailo Mudryk",
+              "team": "home",
+              "minute_range": [
+                35,
+                90
+              ],
+              "p": 0.181
+            },
+            {
+              "player": "Christopher Nkunku",
+              "team": "home",
+              "minute_range": [
+                60,
+                110
+              ],
+              "p": 0.126
+            },
+            {
+              "player": "Joël Piroe",
+              "team": "away",
+              "minute_range": [
+                25,
+                90
+              ],
+              "p": 0.214
+            },
+            {
+              "player": "Crysencio Summerville",
+              "team": "away",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.205
+            },
+            {
+              "player": "Georginio Rutter",
+              "team": "away",
+              "minute_range": [
+                35,
+                100
+              ],
+              "p": 0.148
+            }
+          ],
+          "assisters": [
+            {
+              "player": "Cole Palmer",
+              "team": "home",
+              "p": 0.281
+            },
+            {
+              "player": "Enzo Fernández",
+              "team": "home",
+              "p": 0.189
+            },
+            {
+              "player": "Malo Gusto",
+              "team": "home",
+              "p": 0.144
+            },
+            {
+              "player": "Crysencio Summerville",
+              "team": "away",
+              "p": 0.162
+            },
+            {
+              "player": "Georginio Rutter",
+              "team": "away",
+              "p": 0.158
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "Cole Palmer",
+              "team": "home",
+              "p": 0.272
+            },
+            {
+              "player": "Nicolas Jackson",
+              "team": "home",
+              "p": 0.211
+            },
+            {
+              "player": "Enzo Fernández",
+              "team": "home",
+              "p": 0.112
+            },
+            {
+              "player": "Crysencio Summerville",
+              "team": "away",
+              "p": 0.107
+            },
+            {
+              "player": "Illan Meslier",
+              "team": "away",
+              "p": 0.094
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Robert Sánchez",
+                  "position": "GK"
+                },
+                {
+                  "name": "Malo Gusto",
+                  "position": "DF"
+                },
+                {
+                  "name": "Axel Disasi",
+                  "position": "DF"
+                },
+                {
+                  "name": "Levi Colwill",
+                  "position": "DF"
+                },
+                {
+                  "name": "Ben Chilwell",
+                  "position": "DF"
+                },
+                {
+                  "name": "Moisés Caicedo",
+                  "position": "MF"
+                },
+                {
+                  "name": "Enzo Fernández",
+                  "position": "MF"
+                },
+                {
+                  "name": "Cole Palmer",
+                  "position": "MF"
+                },
+                {
+                  "name": "Conor Gallagher",
+                  "position": "MF"
+                },
+                {
+                  "name": "Mykhailo Mudryk",
+                  "position": "FW"
+                },
+                {
+                  "name": "Nicolas Jackson",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Djordje Petrović",
+                  "position": "GK"
+                },
+                {
+                  "name": "Reece James",
+                  "position": "DF"
+                },
+                {
+                  "name": "Benoît Badiashile",
+                  "position": "DF"
+                },
+                {
+                  "name": "Marc Cucurella",
+                  "position": "DF"
+                },
+                {
+                  "name": "Carney Chukwuemeka",
+                  "position": "MF"
+                },
+                {
+                  "name": "Lesley Ugochukwu",
+                  "position": "MF"
+                },
+                {
+                  "name": "Noni Madueke",
+                  "position": "FW"
+                },
+                {
+                  "name": "Raheem Sterling",
+                  "position": "FW"
+                },
+                {
+                  "name": "Christopher Nkunku",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "Illan Meslier",
+                  "position": "GK"
+                },
+                {
+                  "name": "Jayden Bogle",
+                  "position": "DF"
+                },
+                {
+                  "name": "Joe Rodon",
+                  "position": "DF"
+                },
+                {
+                  "name": "Pascal Struijk",
+                  "position": "DF"
+                },
+                {
+                  "name": "Junior Firpo",
+                  "position": "DF"
+                },
+                {
+                  "name": "Ethan Ampadu",
+                  "position": "MF"
+                },
+                {
+                  "name": "Ilia Gruev",
+                  "position": "MF"
+                },
+                {
+                  "name": "Daniel James",
+                  "position": "FW"
+                },
+                {
+                  "name": "Georginio Rutter",
+                  "position": "MF"
+                },
+                {
+                  "name": "Crysencio Summerville",
+                  "position": "FW"
+                },
+                {
+                  "name": "Joël Piroe",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Karl Darlow",
+                  "position": "GK"
+                },
+                {
+                  "name": "Sam Byram",
+                  "position": "DF"
+                },
+                {
+                  "name": "Liam Cooper",
+                  "position": "DF"
+                },
+                {
+                  "name": "Connor Roberts",
+                  "position": "DF"
+                },
+                {
+                  "name": "Glen Kamara",
+                  "position": "MF"
+                },
+                {
+                  "name": "Archie Gray",
+                  "position": "MF"
+                },
+                {
+                  "name": "Wilfried Gnonto",
+                  "position": "FW"
+                },
+                {
+                  "name": "Jaidon Anthony",
+                  "position": "FW"
+                },
+                {
+                  "name": "Patrick Bamford",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "Mykhailo Mudryk",
+              "on": "Noni Madueke",
+              "minute": 67
+            },
+            {
+              "team": "home",
+              "off": "Conor Gallagher",
+              "on": "Christopher Nkunku",
+              "minute": 72
+            },
+            {
+              "team": "home",
+              "off": "Ben Chilwell",
+              "on": "Marc Cucurella",
+              "minute": 79
+            },
+            {
+              "team": "away",
+              "off": "Joël Piroe",
+              "on": "Patrick Bamford",
+              "minute": 70
+            },
+            {
+              "team": "away",
+              "off": "Daniel James",
+              "on": "Wilfried Gnonto",
+              "minute": 74
+            },
+            {
+              "team": "away",
+              "off": "Ilia Gruev",
+              "on": "Glen Kamara",
+              "minute": 81
+            }
+          ],
+          "cards": [
+            {
+              "player": "Moisés Caicedo",
+              "team": "home",
+              "color": "yellow",
+              "minute": 38
+            },
+            {
+              "player": "Junior Firpo",
+              "team": "away",
+              "color": "yellow",
+              "minute": 44
+            },
+            {
+              "player": "Ethan Ampadu",
+              "team": "away",
+              "color": "yellow",
+              "minute": 63
+            },
+            {
+              "player": "Joe Rodon",
+              "team": "away",
+              "color": "yellow",
+              "minute": 78
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 58,
+              "away": 42
+            },
+            "shots": {
+              "home": 14,
+              "away": 10
+            },
+            "shots_on_target": {
+              "home": 5,
+              "away": 3
+            },
+            "corners": {
+              "home": 6,
+              "away": 4
+            },
+            "pass_accuracy": {
+              "home": 86,
+              "away": 80
+            },
+            "fouls": {
+              "home": 11,
+              "away": 14
+            },
+            "saves": {
+              "home": 2,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 63,
+              "away": 74
+            }
+          },
+          "cost_usd": 0.1,
+          "sources": []
+        },
+        {
+          "model_id": "gpt-5.4",
+          "setting": "S1",
+          "win_probs": {
+            "home": 0.432,
+            "draw": 0.286,
+            "away": 0.282
+          },
+          "score_dist": [
+            {
+              "score": "1-0",
+              "p": 0.133
+            },
+            {
+              "score": "1-1",
+              "p": 0.131
+            },
+            {
+              "score": "0-1",
+              "p": 0.102
+            },
+            {
+              "score": "2-1",
+              "p": 0.101
+            },
+            {
+              "score": "2-0",
+              "p": 0.093
+            },
+            {
+              "score": "0-0",
+              "p": 0.084
+            },
+            {
+              "score": "1-2",
+              "p": 0.078
+            },
+            {
+              "score": "0-2",
+              "p": 0.059
+            },
+            {
+              "score": "2-2",
+              "p": 0.055
+            },
+            {
+              "score": "3-1",
+              "p": 0.049
+            },
+            {
+              "score": "3-0",
+              "p": 0.042
+            },
+            {
+              "score": "3-2",
+              "p": 0.027
+            },
+            {
+              "score": "0-3",
+              "p": 0.019
+            },
+            {
+              "score": "1-3",
+              "p": 0.016
+            },
+            {
+              "score": "2-3",
+              "p": 0.011
+            }
+          ],
+          "most_likely_score": "1-0",
+          "expected_goal_diff": 0.28,
+          "advance_prob": 0.507,
+          "reasoning": {
+            "overall": "Chelsea still have the stronger squad ceiling and more match-winners, but their recent run is extremely poor: seven losses in ten and repeated scoreless defeats against strong opponents. Leeds arrive in steadier form, with only two losses in ten and enough athleticism in midfield and transition threat through Dan James, Gnonto and Piroe/Calvert-Lewin to punish Chelsea’s shaky confidence. At Wembley the nominal home edge is muted, so squad quality keeps Chelsea only slight favourites rather than clear ones. Tactically, Chelsea should control more possession through Caicedo and Palmer, yet Leeds’ compact block and direct counters can keep this close. With no reliable pre-lock injury detail, I lean toward strong XIs; key players Palmer and João Pedro give Chelsea the best individual edge, while Ampadu and Rodon help Leeds stay competitive.",
+            "t1_result": "Chelsea’s talent advantage is offset by dreadful recent form and a neutral-site semi-final setting, so the result distribution is tight with home win narrowly ahead of draw and away win. The most likely single score is a modest Chelsea win rather than a dominant result, reflecting a medium-low event match with both sides carrying some attacking threat.",
+            "t2_player": "Chelsea are projected in a 4-2-3-1 built around Caicedo screening and Palmer between the lines, with Neto and Garnacho stretching Leeds. Leeds look suited to a 4-2-3-1/4-4-1-1 hybrid using Ampadu and Tanaka centrally, Aaronson underneath, and pace from Dan James and Gnonto to attack space behind advanced full-backs.",
+            "t3_events": "Expect a cautious opening, with Chelsea probing and Leeds accepting phases without the ball before countering. If Chelsea score first it is likely through a central combination or cutback; if Leeds score, it is more likely from transition or a second ball, with several attacking substitutions after 60 minutes.",
+            "t4_stats": "Chelsea should edge possession and passing accuracy, but not by an overwhelming margin because Leeds can press in bursts and force turnovers. Shot counts project fairly even, with Chelsea generating slightly more box entries and corners while Leeds’ keeper may face one extra save."
+          },
+          "scorers": [
+            {
+              "player": "C. Palmer",
+              "team": "home",
+              "minute_range": [
+                30,
+                75
+              ],
+              "p": 0.258
+            },
+            {
+              "player": "João Pedro",
+              "team": "home",
+              "minute_range": [
+                20,
+                80
+              ],
+              "p": 0.241
+            },
+            {
+              "player": "A. Garnacho",
+              "team": "home",
+              "minute_range": [
+                35,
+                90
+              ],
+              "p": 0.164
+            },
+            {
+              "player": "L. Delap",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.116
+            },
+            {
+              "player": "J. Piroe",
+              "team": "away",
+              "minute_range": [
+                25,
+                85
+              ],
+              "p": 0.196
+            },
+            {
+              "player": "W. Gnonto",
+              "team": "away",
+              "minute_range": [
+                35,
+                88
+              ],
+              "p": 0.172
+            },
+            {
+              "player": "D. James",
+              "team": "away",
+              "minute_range": [
+                40,
+                90
+              ],
+              "p": 0.149
+            },
+            {
+              "player": "D. Calvert-Lewin",
+              "team": "away",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.107
+            }
+          ],
+          "assisters": [
+            {
+              "player": "Pedro Neto",
+              "team": "home",
+              "p": 0.195
+            },
+            {
+              "player": "C. Palmer",
+              "team": "home",
+              "p": 0.193
+            },
+            {
+              "player": "Marc Cucurella",
+              "team": "home",
+              "p": 0.104
+            },
+            {
+              "player": "D. James",
+              "team": "away",
+              "p": 0.151
+            },
+            {
+              "player": "B. Aaronson",
+              "team": "away",
+              "p": 0.147
+            },
+            {
+              "player": "W. Gnonto",
+              "team": "away",
+              "p": 0.118
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "C. Palmer",
+              "team": "home",
+              "p": 0.261
+            },
+            {
+              "player": "João Pedro",
+              "team": "home",
+              "p": 0.174
+            },
+            {
+              "player": "M. Caicedo",
+              "team": "home",
+              "p": 0.106
+            },
+            {
+              "player": "J. Piroe",
+              "team": "away",
+              "p": 0.133
+            },
+            {
+              "player": "W. Gnonto",
+              "team": "away",
+              "p": 0.109
+            },
+            {
+              "player": "E. Ampadu",
+              "team": "away",
+              "p": 0.091
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Robert Sánchez",
+                  "position": "GK"
+                },
+                {
+                  "name": "R. James",
+                  "position": "DF"
+                },
+                {
+                  "name": "W. Fofana",
+                  "position": "DF"
+                },
+                {
+                  "name": "T. Adarabioyo",
+                  "position": "DF"
+                },
+                {
+                  "name": "Marc Cucurella",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. Caicedo",
+                  "position": "MF"
+                },
+                {
+                  "name": "R. Lavia",
+                  "position": "MF"
+                },
+                {
+                  "name": "Pedro Neto",
+                  "position": "MF"
+                },
+                {
+                  "name": "C. Palmer",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Garnacho",
+                  "position": "FW"
+                },
+                {
+                  "name": "João Pedro",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "F. Jörgensen",
+                  "position": "GK"
+                },
+                {
+                  "name": "B. Badiashile",
+                  "position": "DF"
+                },
+                {
+                  "name": "T. Chalobah",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. Gusto",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Hato",
+                  "position": "DF"
+                },
+                {
+                  "name": "Andrey Santos",
+                  "position": "MF"
+                },
+                {
+                  "name": "Dário Essugo",
+                  "position": "MF"
+                },
+                {
+                  "name": "Estêvão",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Bynoe-Gittens",
+                  "position": "FW"
+                },
+                {
+                  "name": "L. Delap",
+                  "position": "FW"
+                },
+                {
+                  "name": "Marc Guiu",
+                  "position": "FW"
+                },
+                {
+                  "name": "E. Fernández",
+                  "position": "MF"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "I. Meslier",
+                  "position": "GK"
+                },
+                {
+                  "name": "J. Bogle",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Rodon",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Bijol",
+                  "position": "DF"
+                },
+                {
+                  "name": "P. Struijk",
+                  "position": "DF"
+                },
+                {
+                  "name": "E. Ampadu",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Tanaka",
+                  "position": "MF"
+                },
+                {
+                  "name": "D. James",
+                  "position": "MF"
+                },
+                {
+                  "name": "B. Aaronson",
+                  "position": "MF"
+                },
+                {
+                  "name": "W. Gnonto",
+                  "position": "FW"
+                },
+                {
+                  "name": "J. Piroe",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "K. Darlow",
+                  "position": "GK"
+                },
+                {
+                  "name": "Lucas Perri",
+                  "position": "GK"
+                },
+                {
+                  "name": "S. Bornauw",
+                  "position": "DF"
+                },
+                {
+                  "name": "S. Byram",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Justin",
+                  "position": "DF"
+                },
+                {
+                  "name": "I. Gruev",
+                  "position": "MF"
+                },
+                {
+                  "name": "S. Longstaff",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Stach",
+                  "position": "MF"
+                },
+                {
+                  "name": "F. Buonanotte",
+                  "position": "MF"
+                },
+                {
+                  "name": "D. Calvert-Lewin",
+                  "position": "FW"
+                },
+                {
+                  "name": "N. Okafor",
+                  "position": "FW"
+                },
+                {
+                  "name": "L. Nmecha",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "A. Garnacho",
+              "on": "J. Bynoe-Gittens",
+              "minute": 67
+            },
+            {
+              "team": "home",
+              "off": "João Pedro",
+              "on": "L. Delap",
+              "minute": 72
+            },
+            {
+              "team": "home",
+              "off": "R. Lavia",
+              "on": "Andrey Santos",
+              "minute": 74
+            },
+            {
+              "team": "away",
+              "off": "J. Piroe",
+              "on": "D. Calvert-Lewin",
+              "minute": 68
+            },
+            {
+              "team": "away",
+              "off": "B. Aaronson",
+              "on": "F. Buonanotte",
+              "minute": 71
+            },
+            {
+              "team": "away",
+              "off": "W. Gnonto",
+              "on": "N. Okafor",
+              "minute": 79
+            }
+          ],
+          "cards": [
+            {
+              "player": "M. Caicedo",
+              "team": "home",
+              "color": "yellow",
+              "minute": 53
+            },
+            {
+              "player": "R. James",
+              "team": "home",
+              "color": "yellow",
+              "minute": 77
+            },
+            {
+              "player": "E. Ampadu",
+              "team": "away",
+              "color": "yellow",
+              "minute": 43
+            },
+            {
+              "player": "J. Rodon",
+              "team": "away",
+              "color": "yellow",
+              "minute": 70
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 56,
+              "away": 44
+            },
+            "shots": {
+              "home": 13,
+              "away": 10
+            },
+            "shots_on_target": {
+              "home": 5,
+              "away": 4
+            },
+            "corners": {
+              "home": 6,
+              "away": 4
+            },
+            "pass_accuracy": {
+              "home": 85,
+              "away": 81
+            },
+            "fouls": {
+              "home": 11,
+              "away": 13
+            },
+            "saves": {
+              "home": 3,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 20,
+              "away": 24
+            }
+          },
+          "cost_usd": 0.061,
+          "sources": []
+        }
+      ],
       "live": null
     },
     {

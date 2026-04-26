@@ -2,7 +2,7 @@
   "fixture_id": "FA-Cup_Chelsea_Leeds_2026-04-26",
   "model_id": "claude-opus-4-7-thinking-search",
   "setting": "S2",
-  "submitted_at": "2026-04-26T13:37:37.646351+00:00",
+  "submitted_at": "2026-04-26T13:42:56.104482+00:00",
   "prediction": {},
   "sources": [],
   "leakage_audit": {
@@ -15,8 +15,8 @@
     "output": 0
   },
   "tool_calls": 0,
-  "wall_seconds": 10.06669020652771,
+  "wall_seconds": 0.17418909072875977,
   "repair_retries": 0,
   "validation_errors": null,
-  "error": "RateLimitError: Error code: 429 - {'error': {'type': '<nil>', 'message': \"This request would exceed your organization's rate limit of 2,000,000 input tokens per minute (org: bab2cf1f-284f-4130-91a3-a9c37c9f7096, model: claude-opus-4-7). For details, refer to: https://***.com/***/***/*** You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://***.com/*** to discuss your options for a rate limit increase. (request id: 20260426133736610118018268d9d6IheLE21X) (request id: 202604261337346442957978268d9d6wEVfe6q7)\"}, 'type': 'error'}"
+  "error": "AuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CaSUqAijtdBewJnGu19nR'}"
 }
