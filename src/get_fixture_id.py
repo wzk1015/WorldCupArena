@@ -3,6 +3,7 @@ import os
 import json
 from pathlib import Path
 import pprint
+import re
 
 load_dotenv()  # 自动加载 .env 里的所有变量
 import http.client
@@ -67,10 +68,15 @@ def add_fixture(fixture_id, wca_id=None) -> None:
     assert fixture["fixture"]["id"] == fixture_id
     kickoff_utc = fixture["fixture"]["date"]
 
+    competition = fixture["league"]["name"]
+    if competition == "World Cup":
+        competition += "_" + fixture["league"]["round"]
+
     if wca_id is None:
-        wca_id = fixture["league"]["name"] + "_" + fixture["teams"]["home"]["name"] \
+        wca_id = competition + "_" + fixture["teams"]["home"]["name"] \
             + "_" + fixture["teams"]["away"]["name"] + "_" + kickoff_utc.split("T")[0]
         wca_id = wca_id.replace(" ", "-")
+        wca_id = re.sub(r'-+', '-', wca_id)
 
     text = FIXTURES_YAML.read_text()
 
@@ -103,4 +109,7 @@ if __name__ == "__main__":
     # print(get_id(team="Tottenham", league=39, date="2026-04-25", season=2025))
     # print(get_id(league=45, date="2026-04-26", season=2025))
     # print(get_id(league=81, date="2026-04-23", season=2025))
-    add_fixture(1539715)
+    # print(get_id(team="Germany", league=1, date="2026-06-14", season=2026))
+    # print(get_id(league=1, date="2022-12-18", season=2022))
+    add_fixture(1489374)
+    # print(get_fixture(979139)["response"][0]["result"])

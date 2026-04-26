@@ -21,6 +21,7 @@ import json
 import hashlib
 from pathlib import Path
 from typing import Any
+import time
 
 import yaml
 
@@ -106,6 +107,8 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
     tol = float(policy.get("probability_sum_tolerance", 0.01))
     max_retries = int(policy.get("max_format_retries", 2))
 
+    MAX_RUN_RETRIES = 3
+
     def _one(job):
         model_cfg, setting = job
         path = out_dir / f"{model_cfg['id']}__{setting['id']}.json"
@@ -132,27 +135,42 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
                 max_retries=max_retries,
                 tol=tol,
             )
-        print(f"[predict] {fid}: running {model_cfg['id']} on setting {setting['id']}")
-        res = runner.run(fixture, setting, sys_p, usr_p, validate_fn=_validate)
-        audit = _leak_audit(res.sources, fixture["lock_at_utc"])
-        record = {
-            "fixture_id": fid,
-            "model_id": res.model_id,
-            "setting": res.setting,
-            "submitted_at": res.submitted_at,
-            "prediction": res.prediction,
-            "sources": res.sources,
-            "leakage_audit": audit,
-            "cost_usd": res.cost_usd,
-            "tokens": {"input": res.input_tokens, "output": res.output_tokens},
-            "tool_calls": res.tool_calls,
-            "wall_seconds": res.wall_seconds,
-            "repair_retries": res.repair_retries,
-            "validation_errors": res.validation_errors,
-            "error": res.error,
-        }
-        
-        path.write_text(json.dumps(record, ensure_ascii=False, indent=2))
+
+        record = None
+        total_cost = 0.0
+        for attempt in range(1, MAX_RUN_RETRIES + 1):
+            if attempt == 1:
+                print(f"[predict] {fid}: running {model_cfg['id']} on setting {setting['id']}")
+            else:
+                print(f"[predict] {fid}: retry {attempt}/{MAX_RUN_RETRIES} for {model_cfg['id']} ({setting['id']})")
+            res = runner.run(fixture, setting, sys_p, usr_p, validate_fn=_validate)
+            total_cost += res.cost_usd
+            audit = _leak_audit(res.sources, fixture["lock_at_utc"])
+            record = {
+                "fixture_id": fid,
+                "model_id": res.model_id,
+                "setting": res.setting,
+                "submitted_at": res.submitted_at,
+                "prediction": res.prediction,
+                "sources": res.sources,
+                "leakage_audit": audit,
+                "cost_usd": total_cost,
+                "tokens": {"input": res.input_tokens, "output": res.output_tokens},
+                "tool_calls": res.tool_calls,
+                "wall_seconds": res.wall_seconds,
+                "repair_retries": res.repair_retries,
+                "validation_errors": res.validation_errors,
+                "error": res.error,
+            }
+            path.write_text(json.dumps(record, ensure_ascii=False, indent=2))
+
+            if not res.error and not res.validation_errors and res.prediction:
+                break  # success
+            
+            if attempt < MAX_RUN_RETRIES:
+                print(f"  [predict] attempt {attempt} failed (err={res.error!r}, "
+                      f"validation_errors={res.validation_errors}), retrying after sleeping 60s…")
+                time.sleep(60)
 
         # Persist search sources for S2 runs so they can be reviewed later
         if res.sources and setting.get("id", "").startswith("S2"):
@@ -167,9 +185,18 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
                 "sources": res.sources,
             }, ensure_ascii=False, indent=2))
 
+        still_failed = res.error or res.validation_errors or not res.prediction
+        if still_failed:
+            print(f"\n{'='*60}")
+            print(f"  *** WARNING: {model_cfg['id']} ({setting['id']}) FAILED after {MAX_RUN_RETRIES} attempts ***")
+            print(f"  error            : {res.error}")
+            print(f"  validation_errors: {res.validation_errors}")
+            print(f"  prediction empty : {not res.prediction}")
+            print(f"{'='*60}\n")
+
         return {
             "model": res.model_id, "setting": res.setting,
-            "cost": res.cost_usd, "retries": res.repair_retries,
+            "cost": total_cost, "retries": res.repair_retries,
             "err": res.error,
         }
 

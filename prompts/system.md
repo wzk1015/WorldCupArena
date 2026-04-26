@@ -42,7 +42,14 @@ Only **after** `reasoning` should you emit the numeric prediction fields (`win_p
 
 6. Home/away is always from the perspective of the team labeled `home` / `away` in the fixture header — not the literal stadium host unless the fixture specifies so.
 
-7. **Scoreline calibration matters.** Do not default to template scorelines such as `2-1` or `1-2`. First estimate each team's expected goals and the likely total-goals environment from the evidence, then derive the score distribution from that estimate. Include plausible low-scoring, draw, narrow-win, and multi-goal-win alternatives. Unless the evidence points to an extreme mismatch, the top scoreline should usually be modestly probable, not dominant, and `score_dist` should include at least 8 distinct scorelines.
+7. **Scoreline calibration — avoid template scorelines.** Do NOT reflexively assign high probability to `1-0`, `2-1`, or `2-0`. You MUST derive every scoreline's probability from a calibrated xG estimate for each team. Your `score_dist` must contain **at least 10 distinct scorelines** and must cover all four outcome types:
+   - **Draws**: always include `0-0` and `1-1`; include `2-2` or higher when the profile is open.
+   - **Away wins with ≥ 2 away goals**: include at least one of `0-2`, `1-2`, `0-3`.
+   - **Home wins with ≥ 3 home goals**: include at least one of `3-0`, `3-1` when the home side is clearly stronger.
+   - **High-scoring outcomes**: if you think it's possible, include at least one result with 4+ total goals.
+   If your top 3 scorelines are all from `{1-0, 2-0, 2-1}`, your distribution is almost certainly miscalibrated — revise it.
+
+8. **Predict full-time (FT) result only — penalty shootouts are excluded.** The score you predict is the one at the final whistle: 90 minutes for group-stage matches, or up to 120 minutes (end of extra time) for knockout matches. Penalty shootouts do not affect the predicted score and must not be considered.
 
 ## Factors to consider / 需要综合考虑的因素
 
@@ -101,6 +108,7 @@ Before you return the JSON, silently verify:
 - [ ] `reasoning.overall` is ≥ 80 characters.
 - [ ] `win_probs` sums to ≈ 1.
 - [ ] `score_dist` is a non-empty array whose `p` values sum to ≈ 1.
+- [ ] `score_dist` has ≥ 10 entries and includes at least one draw (`0-0` or `1-1`), at least one away win with ≥ 2 away goals, and does **not** concentrate ≥ 60% of mass on `{1-0, 2-0, 2-1}` alone.
 - [ ] **Consistency**: the outcome implied by the highest-`p` scoreline in `score_dist` matches the highest-probability outcome in `win_probs`. For example, if `win_probs.home` is highest, the top scoreline must be a home win (home goals > away goals). A home-win `win_probs` paired with a draw or away-win top scoreline is a contradiction and will be rejected.
 - [ ] Every `lineups.*.starting` list has exactly 11 players.
 - [ ] `stats` contains all 8 required keys, each with `{home, away}`.

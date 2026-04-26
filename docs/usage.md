@@ -192,6 +192,26 @@ All of these are already wired up; they are just config flags.
 
 ---
 
-## 8. Where next
+## Example
+
+```bash
+# 1. ingest
+python -m src.ingest.api_football \
+  --fixture-id 1489369 \
+  --wca-id World-Cup_Group-Stage-1_Germany_Curaçao_2026-06-14 \
+  --lock-at "" \
+  --out data/snapshots/World-Cup_Group-Stage-1_Germany_Curaçao_2026-06-14/fixture.json
+
+# 2. populate
+python -m src.pipeline.orchestrator populate \
+  --fixture data/snapshots/World-Cup_Group-Stage-1_Germany_Curaçao_2026-06-14/fixture.json
+
+# 3. predict
+python -m src.pipeline.orchestrator predict \
+  --fixture data/snapshots/World-Cup_Group-Stage-1_Germany_Curaçao_2026-06-14/fixture.json \
+  --parallel 8
+```
+
+## 9. Where next
 
 - [docs/integration.md](integration.md) — "I want my model/agent on this leaderboard" (for third-party developers).

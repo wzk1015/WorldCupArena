@@ -18,27 +18,45 @@ class AnthropicRunner(BaseRunner):
         self.use_search = "web_search" in tools
         self.use_thinking = "extended_thinking" in tools
 
+    def _is_official_api(self) -> bool:
+        url = self.base_url() or ""
+        return "api.anthropic.com" in url
+
     def _client(self) -> anthropic.Anthropic:
         return anthropic.Anthropic(api_key=self.api_key(), base_url=self.base_url())
 
     def generate(self, system_prompt: str, messages: list[dict[str, Any]]) -> dict[str, Any]:
         client = self._client()
+        official = self._is_official_api()
+
+        # Official API: use official_model (e.g. claude-opus-4-7) + thinking: adaptive
+        # Proxy: use model as-is (e.g. claude-opus-4-7-thinking), no thinking param
+        if official and self.cfg.get("official_model"):
+            model_id = self.cfg["official_model"]
+            use_adaptive_thinking = True
+        else:
+            model_id = self.cfg["model"]
+            use_adaptive_thinking = False
 
         tools: list[dict[str, Any]] = []
-        if self.use_search:
+        if self.use_search and official:
             tools.append({"type": "web_search_20250305", "name": "web_search"})
 
         kwargs: dict[str, Any] = {
-            "model": self.cfg["model"],
+            "model": model_id,
             "system": system_prompt,
             "messages": messages,
-            "max_tokens": self.cfg.get("max_tokens", 8192),
-            "temperature": self.cfg.get("temperature", 0.3),
+            "max_tokens": self.cfg.get("max_tokens", 16000),
         }
+        # thinking models do not support temperature
+        if not use_adaptive_thinking and not self.use_thinking:
+            kwargs["temperature"] = self.cfg.get("temperature", 0.3)
         if tools:
             kwargs["tools"] = tools
-        if self.use_thinking:
-            kwargs["thinking"] = {"type": "enabled", "budget_tokens": 4096}
+        if use_adaptive_thinking:
+            kwargs["thinking"] = {"type": "adaptive"}
+        elif self.use_thinking:
+            kwargs["thinking"] = {"type": "enabled", "budget_tokens": self.cfg.get("thinking_budget", 4096)}
 
         resp = client.messages.create(**kwargs)
 
