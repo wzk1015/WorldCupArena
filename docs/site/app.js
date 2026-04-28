@@ -514,8 +514,7 @@ function renderPredCard(p, f, idx) {
               const scoreColor = actualScore
                 ? (scoreCorrect ? "color:#4ade80;" : "color:#f87171;")
                 : "color:#fff;";
-              return `<div class="text-2xl font-black leading-tight font-mono whitespace-nowrap" style="${scoreColor}">${esc(predScore ? predScore.replace("-", " - ") : "—")}</div>
-                ${p.over_3_5_prob != null ? `<div class="text-[10px] font-mono text-gray-500 mt-0.5">O3.5 ${fmtPct(p.over_3_5_prob)}</div>` : ""}`;
+              return `<div class="text-2xl font-black leading-tight font-mono whitespace-nowrap" style="${scoreColor}">${esc(predScore ? predScore.replace("-", " - ") : "—")}</div>`;
             })()}
           </div>
           ${f.truth ? `<div class="ml-auto">
