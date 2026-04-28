@@ -1387,6 +1387,1754 @@
           },
           "cost_usd": 0.182,
           "sources": []
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.38,
+            "draw": 0.28,
+            "away": 0.34
+          },
+          "score_dist": [
+            {
+              "score": "2-1",
+              "p": 0.12
+            },
+            {
+              "score": "1-1",
+              "p": 0.11
+            },
+            {
+              "score": "1-2",
+              "p": 0.1
+            },
+            {
+              "score": "2-2",
+              "p": 0.1
+            },
+            {
+              "score": "1-0",
+              "p": 0.08
+            },
+            {
+              "score": "0-1",
+              "p": 0.08
+            },
+            {
+              "score": "0-0",
+              "p": 0.06
+            },
+            {
+              "score": "2-0",
+              "p": 0.06
+            },
+            {
+              "score": "0-2",
+              "p": 0.06
+            },
+            {
+              "score": "3-1",
+              "p": 0.05
+            },
+            {
+              "score": "1-3",
+              "p": 0.05
+            },
+            {
+              "score": "3-2",
+              "p": 0.04
+            },
+            {
+              "score": "2-3",
+              "p": 0.04
+            },
+            {
+              "score": "3-0",
+              "p": 0.03
+            },
+            {
+              "score": "0-3",
+              "p": 0.01
+            },
+            {
+              "score": "3-3",
+              "p": 0.01
+            }
+          ],
+          "most_likely_score": "2-1",
+          "expected_goal_diff": 0.1,
+          "advance_prob": 0.48,
+          "reasoning": {
+            "overall": "Paris Saint Germain host Bayern München in the first leg of the UEFA Champions League semi-final. PSG will look to leverage their home advantage at the Parc des Princes, utilizing the pace of Dembélé and Barcola on the wings to exploit Bayern's high defensive line. Bayern, however, possesses immense experience at this stage and a lethal finisher in Harry Kane. The midfield battle between Vitinha and Musiala will be crucial. Given the attacking quality on both sides and occasional defensive frailties, a high-scoring draw or a narrow victory for either side is the most probable outcome. The match profile is expected to be open, justifying probabilities for 2-2 and 3-2 scorelines.",
+            "t1_result": "A closely contested match with a slight edge to PSG due to home advantage, but Bayern's attacking threat makes a draw highly likely. Win probabilities reflect a very balanced tie.",
+            "t2_player": "PSG will likely start with a 4-3-3 featuring Ramos centrally, supported by Dembélé and Barcola. Bayern will counter with a 4-2-3-1, with Kane leading the line and Musiala operating as the primary creator.",
+            "t3_events": "Expect an open game with goals likely in the second half as fatigue sets in. Substitutions around the 65th minute will inject fresh pace for both teams.",
+            "t4_stats": "Possession should be relatively even, perhaps slightly favoring PSG at home. Both teams are expected to generate numerous shots and corners in an attacking display."
+          },
+          "scorers": [
+            {
+              "player": "H. Kane",
+              "team": "away",
+              "minute_range": [
+                30,
+                90
+              ],
+              "p": 0.45
+            },
+            {
+              "player": "G. Ramos",
+              "team": "home",
+              "minute_range": [
+                20,
+                80
+              ],
+              "p": 0.35
+            },
+            {
+              "player": "O. Dembélé",
+              "team": "home",
+              "minute_range": [
+                45,
+                90
+              ],
+              "p": 0.25
+            },
+            {
+              "player": "J. Musiala",
+              "team": "away",
+              "minute_range": [
+                45,
+                90
+              ],
+              "p": 0.2
+            }
+          ],
+          "assisters": [],
+          "motm_probs": [],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "G. Donnarumma",
+                  "position": "GK",
+                  "shirt": 99
+                },
+                {
+                  "name": "A. Hakimi",
+                  "position": "DF",
+                  "shirt": 2
+                },
+                {
+                  "name": "Marquinhos",
+                  "position": "DF",
+                  "shirt": 5
+                },
+                {
+                  "name": "M. Skriniar",
+                  "position": "DF",
+                  "shirt": 37
+                },
+                {
+                  "name": "N. Mendes",
+                  "position": "DF",
+                  "shirt": 25
+                },
+                {
+                  "name": "W. Zaïre-Emery",
+                  "position": "MF",
+                  "shirt": 33
+                },
+                {
+                  "name": "Vitinha",
+                  "position": "MF",
+                  "shirt": 17
+                },
+                {
+                  "name": "F. Ruiz",
+                  "position": "MF",
+                  "shirt": 8
+                },
+                {
+                  "name": "O. Dembélé",
+                  "position": "FW",
+                  "shirt": 10
+                },
+                {
+                  "name": "G. Ramos",
+                  "position": "FW",
+                  "shirt": 9
+                },
+                {
+                  "name": "B. Barcola",
+                  "position": "FW",
+                  "shirt": 29
+                }
+              ],
+              "bench": [
+                {
+                  "name": "A. Tenas",
+                  "position": "GK",
+                  "shirt": 80
+                },
+                {
+                  "name": "L. Hernández",
+                  "position": "DF",
+                  "shirt": 21
+                },
+                {
+                  "name": "L. Beraldo",
+                  "position": "DF",
+                  "shirt": 35
+                },
+                {
+                  "name": "D. Pereira",
+                  "position": "MF",
+                  "shirt": 15
+                },
+                {
+                  "name": "M. Ugarte",
+                  "position": "MF",
+                  "shirt": 4
+                },
+                {
+                  "name": "Kang-in Lee",
+                  "position": "MF",
+                  "shirt": 19
+                },
+                {
+                  "name": "M. Asensio",
+                  "position": "FW",
+                  "shirt": 11
+                },
+                {
+                  "name": "R. Kolo Muani",
+                  "position": "FW",
+                  "shirt": 23
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "M. Neuer",
+                  "position": "GK",
+                  "shirt": 1
+                },
+                {
+                  "name": "J. Kimmich",
+                  "position": "DF",
+                  "shirt": 6
+                },
+                {
+                  "name": "D. Upamecano",
+                  "position": "DF",
+                  "shirt": 2
+                },
+                {
+                  "name": "Min-jae Kim",
+                  "position": "DF",
+                  "shirt": 3
+                },
+                {
+                  "name": "A. Davies",
+                  "position": "DF",
+                  "shirt": 19
+                },
+                {
+                  "name": "L. Goretzka",
+                  "position": "MF",
+                  "shirt": 8
+                },
+                {
+                  "name": "A. Pavlović",
+                  "position": "MF",
+                  "shirt": 45
+                },
+                {
+                  "name": "L. Sané",
+                  "position": "FW",
+                  "shirt": 10
+                },
+                {
+                  "name": "J. Musiala",
+                  "position": "MF",
+                  "shirt": 42
+                },
+                {
+                  "name": "K. Coman",
+                  "position": "FW",
+                  "shirt": 11
+                },
+                {
+                  "name": "H. Kane",
+                  "position": "FW",
+                  "shirt": 9
+                }
+              ],
+              "bench": [
+                {
+                  "name": "S. Ulreich",
+                  "position": "GK",
+                  "shirt": 26
+                },
+                {
+                  "name": "M. de Ligt",
+                  "position": "DF",
+                  "shirt": 4
+                },
+                {
+                  "name": "E. Dier",
+                  "position": "DF",
+                  "shirt": 15
+                },
+                {
+                  "name": "R. Guerreiro",
+                  "position": "DF",
+                  "shirt": 22
+                },
+                {
+                  "name": "K. Laimer",
+                  "position": "MF",
+                  "shirt": 27
+                },
+                {
+                  "name": "T. Müller",
+                  "position": "MF",
+                  "shirt": 25
+                },
+                {
+                  "name": "S. Gnabry",
+                  "position": "FW",
+                  "shirt": 7
+                },
+                {
+                  "name": "M. Tel",
+                  "position": "FW",
+                  "shirt": 39
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-3-3",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [],
+          "cards": [],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 52,
+              "away": 48
+            },
+            "shots": {
+              "home": 14,
+              "away": 13
+            },
+            "shots_on_target": {
+              "home": 5,
+              "away": 5
+            },
+            "corners": {
+              "home": 6,
+              "away": 5
+            },
+            "pass_accuracy": {
+              "home": 88,
+              "away": 86
+            },
+            "fouls": {
+              "home": 11,
+              "away": 12
+            },
+            "saves": {
+              "home": 4,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 45,
+              "away": 48
+            }
+          },
+          "cost_usd": 0.059,
+          "sources": []
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking",
+          "setting": "S1",
+          "win_probs": {
+            "home": 0.43,
+            "draw": 0.25,
+            "away": 0.32
+          },
+          "score_dist": [
+            {
+              "score": "2-1",
+              "p": 0.12
+            },
+            {
+              "score": "1-1",
+              "p": 0.11
+            },
+            {
+              "score": "1-2",
+              "p": 0.09
+            },
+            {
+              "score": "2-0",
+              "p": 0.08
+            },
+            {
+              "score": "2-2",
+              "p": 0.08
+            },
+            {
+              "score": "1-0",
+              "p": 0.07
+            },
+            {
+              "score": "0-1",
+              "p": 0.06
+            },
+            {
+              "score": "3-1",
+              "p": 0.06
+            },
+            {
+              "score": "0-0",
+              "p": 0.05
+            },
+            {
+              "score": "0-2",
+              "p": 0.05
+            },
+            {
+              "score": "3-2",
+              "p": 0.04
+            },
+            {
+              "score": "2-3",
+              "p": 0.04
+            },
+            {
+              "score": "1-3",
+              "p": 0.04
+            },
+            {
+              "score": "3-0",
+              "p": 0.03
+            },
+            {
+              "score": "0-3",
+              "p": 0.02
+            },
+            {
+              "score": "4-1",
+              "p": 0.02
+            },
+            {
+              "score": "1-4",
+              "p": 0.01
+            },
+            {
+              "score": "3-3",
+              "p": 0.01
+            },
+            {
+              "score": "4-2",
+              "p": 0.01
+            },
+            {
+              "score": "2-4",
+              "p": 0.01
+            }
+          ],
+          "most_likely_score": "2-1",
+          "expected_goal_diff": 0.2,
+          "advance_prob": 0.55,
+          "reasoning": {
+            "overall": "PSG hosts Bayern in the first leg of the UCL semi-final. Bayern is in incredible form, coming off a comeback win against Mainz and eliminating Real Madrid. However, PSG's home advantage at Parc des Princes and their fully fit squad (compared to Bayern missing Guerreiro) gives them a slight edge. Expect a high-quality, closely contested match with goals from both sides, as both teams possess elite attacking talent like Kane, Musiala, Dembele, and Barcola.",
+            "t1_result": "A narrow 2-1 home win for PSG is the most likely outcome, reflecting their home strength, though Bayern's attacking prowess ensures they will likely score and keep the tie very competitive.",
+            "t2_player": "PSG will likely field a 4-3-3 with Dembele, Ramos, and Barcola up front. Bayern will counter with a 4-2-3-1 featuring Kane supported by Musiala, Olise, and Gnabry. Davies steps in for the injured Guerreiro.",
+            "t3_events": "An open game with early chances. Bayern might score first through Kane, but PSG's relentless pressure at home could lead to a second-half comeback with goals from Barcola and Ramos.",
+            "t4_stats": "Possession should be slightly in PSG's favor (52-48) as they play at home. Both teams will generate around 13-15 shots, with high pass accuracy reflecting their technical quality."
+          },
+          "scorers": [
+            {
+              "player": "H. Kane",
+              "team": "away",
+              "minute_range": [
+                15,
+                45
+              ],
+              "p": 0.45
+            },
+            {
+              "player": "B. Barcola",
+              "team": "home",
+              "minute_range": [
+                45,
+                75
+              ],
+              "p": 0.35
+            },
+            {
+              "player": "Gonçalo Ramos",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.3
+            },
+            {
+              "player": "J. Musiala",
+              "team": "away",
+              "minute_range": [
+                45,
+                90
+              ],
+              "p": 0.25
+            },
+            {
+              "player": "O. Dembélé",
+              "team": "home",
+              "minute_range": [
+                15,
+                75
+              ],
+              "p": 0.25
+            }
+          ],
+          "assisters": [],
+          "motm_probs": [],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "L. Chevalier",
+                  "position": "GK",
+                  "shirt": 1
+                },
+                {
+                  "name": "A. Hakimi",
+                  "position": "DF",
+                  "shirt": 2
+                },
+                {
+                  "name": "Marquinhos",
+                  "position": "DF",
+                  "shirt": 5
+                },
+                {
+                  "name": "W. Pacho",
+                  "position": "DF",
+                  "shirt": 51
+                },
+                {
+                  "name": "Nuno Mendes",
+                  "position": "DF",
+                  "shirt": 25
+                },
+                {
+                  "name": "W. Zaïre-Emery",
+                  "position": "MF",
+                  "shirt": 33
+                },
+                {
+                  "name": "Vitinha",
+                  "position": "MF",
+                  "shirt": 17
+                },
+                {
+                  "name": "João Neves",
+                  "position": "MF",
+                  "shirt": 87
+                },
+                {
+                  "name": "O. Dembélé",
+                  "position": "FW",
+                  "shirt": 10
+                },
+                {
+                  "name": "Gonçalo Ramos",
+                  "position": "FW",
+                  "shirt": 9
+                },
+                {
+                  "name": "B. Barcola",
+                  "position": "FW",
+                  "shirt": 29
+                }
+              ],
+              "bench": [
+                {
+                  "name": "M. Safonov",
+                  "position": "GK",
+                  "shirt": 39
+                },
+                {
+                  "name": "L. Hernández",
+                  "position": "DF",
+                  "shirt": 21
+                },
+                {
+                  "name": "I. Zabarnyi",
+                  "position": "DF",
+                  "shirt": 13
+                },
+                {
+                  "name": "Beraldo",
+                  "position": "DF",
+                  "shirt": 35
+                },
+                {
+                  "name": "Fabián Ruiz",
+                  "position": "MF",
+                  "shirt": 8
+                },
+                {
+                  "name": "Lee Kang-In",
+                  "position": "MF",
+                  "shirt": 19
+                },
+                {
+                  "name": "D. Doué",
+                  "position": "FW",
+                  "shirt": 14
+                },
+                {
+                  "name": "K. Kvaratskhelia",
+                  "position": "FW",
+                  "shirt": 77
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "M. Neuer",
+                  "position": "GK",
+                  "shirt": 1
+                },
+                {
+                  "name": "J. Stanišić",
+                  "position": "DF",
+                  "shirt": 44
+                },
+                {
+                  "name": "D. Upamecano",
+                  "position": "DF",
+                  "shirt": 2
+                },
+                {
+                  "name": "Kim Min-Jae",
+                  "position": "DF",
+                  "shirt": 3
+                },
+                {
+                  "name": "A. Davies",
+                  "position": "DF",
+                  "shirt": 19
+                },
+                {
+                  "name": "J. Kimmich",
+                  "position": "MF",
+                  "shirt": 6
+                },
+                {
+                  "name": "A. Pavlović",
+                  "position": "MF",
+                  "shirt": 45
+                },
+                {
+                  "name": "M. Olise",
+                  "position": "MF",
+                  "shirt": 17
+                },
+                {
+                  "name": "J. Musiala",
+                  "position": "MF",
+                  "shirt": 42
+                },
+                {
+                  "name": "S. Gnabry",
+                  "position": "MF",
+                  "shirt": 7
+                },
+                {
+                  "name": "H. Kane",
+                  "position": "FW",
+                  "shirt": 9
+                }
+              ],
+              "bench": [
+                {
+                  "name": "S. Ulreich",
+                  "position": "GK",
+                  "shirt": 26
+                },
+                {
+                  "name": "J. Tah",
+                  "position": "DF",
+                  "shirt": 4
+                },
+                {
+                  "name": "H. Ito",
+                  "position": "DF",
+                  "shirt": 21
+                },
+                {
+                  "name": "K. Laimer",
+                  "position": "MF",
+                  "shirt": 27
+                },
+                {
+                  "name": "L. Goretzka",
+                  "position": "MF",
+                  "shirt": 8
+                },
+                {
+                  "name": "L. Díaz",
+                  "position": "MF",
+                  "shirt": 11
+                },
+                {
+                  "name": "N. Jackson",
+                  "position": "FW",
+                  "shirt": 15
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-3-3",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [],
+          "cards": [],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 52,
+              "away": 48
+            },
+            "shots": {
+              "home": 14,
+              "away": 13
+            },
+            "shots_on_target": {
+              "home": 5,
+              "away": 5
+            },
+            "corners": {
+              "home": 6,
+              "away": 5
+            },
+            "pass_accuracy": {
+              "home": 89,
+              "away": 87
+            },
+            "fouls": {
+              "home": 11,
+              "away": 10
+            },
+            "saves": {
+              "home": 4,
+              "away": 3
+            },
+            "defensive_actions": {
+              "home": 45,
+              "away": 48
+            }
+          },
+          "cost_usd": 0.08,
+          "sources": []
+        },
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.435,
+            "draw": 0.271,
+            "away": 0.294
+          },
+          "score_dist": [
+            {
+              "score": "1-0",
+              "p": 0.112
+            },
+            {
+              "score": "1-1",
+              "p": 0.111
+            },
+            {
+              "score": "2-1",
+              "p": 0.097
+            },
+            {
+              "score": "2-0",
+              "p": 0.086
+            },
+            {
+              "score": "0-1",
+              "p": 0.082
+            },
+            {
+              "score": "0-0",
+              "p": 0.079
+            },
+            {
+              "score": "1-2",
+              "p": 0.074
+            },
+            {
+              "score": "2-2",
+              "p": 0.06
+            },
+            {
+              "score": "3-1",
+              "p": 0.052
+            },
+            {
+              "score": "3-0",
+              "p": 0.041
+            },
+            {
+              "score": "0-2",
+              "p": 0.039
+            },
+            {
+              "score": "3-2",
+              "p": 0.034
+            },
+            {
+              "score": "1-3",
+              "p": 0.028
+            },
+            {
+              "score": "4-1",
+              "p": 0.016
+            },
+            {
+              "score": "2-3",
+              "p": 0.014
+            },
+            {
+              "score": "4-2",
+              "p": 0.075
+            }
+          ],
+          "most_likely_score": "1-0",
+          "expected_goal_diff": 0.29,
+          "advance_prob": 0.472,
+          "reasoning": {
+            "overall": "PSG get a modest edge from home advantage and a likely larger share of controlled possession, but Bayern’s ceiling in transition and set-piece threat keep this close. In a first-leg semi-final the game state should be cautious early, with both sides protecting central zones and pressing in waves rather than all-out. PSG’s front line looks slightly more likely to create repeat entries against Bayern’s full-back spaces, while Bayern still carry elite finishing and counterpunch quality through their wide attackers and Kane-like reference play. Head-to-head history at this level usually produces narrow margins, and with both squads deep, the likeliest profile is a balanced, high-quality match decided by one moment rather than a blowout.",
+            "t1_result": "I make PSG slight favourites rather than clear favourites: home edge, ball retention and chance volume tilt to them, but Bayern’s away-goal output potential keeps the away win live. The score distribution is centered on 1-0, 1-1, 2-1 and 2-0 type outcomes, with enough mass on 0-1 and 1-2 because Bayern can punish turnovers.",
+            "t2_player": "Both teams are likely to use their strongest available semi-final XI with established cores and high-minute stars starting unless there is a late fitness issue. The main scorer probabilities sit with the central striker/inside forwards and penalty takers, while creative wide players and advanced midfielders dominate the assister set.",
+            "t3_events": "Expect a measured first 20 minutes, then more transitions once the first pressing trap is beaten. If level after the hour, substitutions should add pace and verticality; cards are most likely from tactical fouls against counters and winger-versus-full-back duels.",
+            "t4_stats": "PSG project for a small possession edge and slightly more total shots through territorial control, while Bayern should still record efficient shot quality on fewer attacks. Saves and defensive actions are balanced because both sides can force work from the opposition goalkeeper and back line."
+          },
+          "scorers": [
+            {
+              "player": "Gonçalo Ramos",
+              "team": "home",
+              "minute_range": [
+                30,
+                75
+              ],
+              "p": 0.284
+            },
+            {
+              "player": "Ousmane Dembélé",
+              "team": "home",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.261
+            },
+            {
+              "player": "Bradley Barcola",
+              "team": "home",
+              "minute_range": [
+                35,
+                90
+              ],
+              "p": 0.189
+            },
+            {
+              "player": "Harry Kane",
+              "team": "away",
+              "minute_range": [
+                25,
+                90
+              ],
+              "p": 0.352
+            },
+            {
+              "player": "Jamal Musiala",
+              "team": "away",
+              "minute_range": [
+                30,
+                85
+              ],
+              "p": 0.206
+            },
+            {
+              "player": "Leroy Sané",
+              "team": "away",
+              "minute_range": [
+                40,
+                90
+              ],
+              "p": 0.171
+            }
+          ],
+          "assisters": [
+            {
+              "player": "Achraf Hakimi",
+              "team": "home",
+              "p": 0.184
+            },
+            {
+              "player": "Vitinha",
+              "team": "home",
+              "p": 0.168
+            },
+            {
+              "player": "Ousmane Dembélé",
+              "team": "home",
+              "p": 0.219
+            },
+            {
+              "player": "Jamal Musiala",
+              "team": "away",
+              "p": 0.211
+            },
+            {
+              "player": "Joshua Kimmich",
+              "team": "away",
+              "p": 0.173
+            },
+            {
+              "player": "Leroy Sané",
+              "team": "away",
+              "p": 0.152
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "Ousmane Dembélé",
+              "team": "home",
+              "p": 0.214
+            },
+            {
+              "player": "Gonçalo Ramos",
+              "team": "home",
+              "p": 0.156
+            },
+            {
+              "player": "Vitinha",
+              "team": "home",
+              "p": 0.121
+            },
+            {
+              "player": "Harry Kane",
+              "team": "away",
+              "p": 0.226
+            },
+            {
+              "player": "Jamal Musiala",
+              "team": "away",
+              "p": 0.143
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Gianluigi Donnarumma",
+                  "position": "GK"
+                },
+                {
+                  "name": "Achraf Hakimi",
+                  "position": "DF"
+                },
+                {
+                  "name": "Marquinhos",
+                  "position": "DF"
+                },
+                {
+                  "name": "Milan Škriniar",
+                  "position": "DF"
+                },
+                {
+                  "name": "Nuno Mendes",
+                  "position": "DF"
+                },
+                {
+                  "name": "Vitinha",
+                  "position": "MF"
+                },
+                {
+                  "name": "João Neves",
+                  "position": "MF"
+                },
+                {
+                  "name": "Fabián Ruiz",
+                  "position": "MF"
+                },
+                {
+                  "name": "Ousmane Dembélé",
+                  "position": "FW"
+                },
+                {
+                  "name": "Gonçalo Ramos",
+                  "position": "FW"
+                },
+                {
+                  "name": "Bradley Barcola",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Arnau Tenas",
+                  "position": "GK"
+                },
+                {
+                  "name": "Lucas Beraldo",
+                  "position": "DF"
+                },
+                {
+                  "name": "Lucas Hernández",
+                  "position": "DF"
+                },
+                {
+                  "name": "Warren Zaïre-Emery",
+                  "position": "MF"
+                },
+                {
+                  "name": "Lee Kang-In",
+                  "position": "MF"
+                },
+                {
+                  "name": "Marco Asensio",
+                  "position": "FW"
+                },
+                {
+                  "name": "Randal Kolo Muani",
+                  "position": "FW"
+                },
+                {
+                  "name": "Carlos Soler",
+                  "position": "MF"
+                },
+                {
+                  "name": "Danilo Pereira",
+                  "position": "MF"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "Manuel Neuer",
+                  "position": "GK"
+                },
+                {
+                  "name": "Joshua Kimmich",
+                  "position": "DF"
+                },
+                {
+                  "name": "Dayot Upamecano",
+                  "position": "DF"
+                },
+                {
+                  "name": "Kim Min-jae",
+                  "position": "DF"
+                },
+                {
+                  "name": "Alphonso Davies",
+                  "position": "DF"
+                },
+                {
+                  "name": "Aleksandar Pavlović",
+                  "position": "MF"
+                },
+                {
+                  "name": "Leon Goretzka",
+                  "position": "MF"
+                },
+                {
+                  "name": "Jamal Musiala",
+                  "position": "MF"
+                },
+                {
+                  "name": "Leroy Sané",
+                  "position": "FW"
+                },
+                {
+                  "name": "Harry Kane",
+                  "position": "FW"
+                },
+                {
+                  "name": "Kingsley Coman",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Daniel Peretz",
+                  "position": "GK"
+                },
+                {
+                  "name": "Eric Dier",
+                  "position": "DF"
+                },
+                {
+                  "name": "Noussair Mazraoui",
+                  "position": "DF"
+                },
+                {
+                  "name": "Konrad Laimer",
+                  "position": "MF"
+                },
+                {
+                  "name": "Raphaël Guerreiro",
+                  "position": "DF"
+                },
+                {
+                  "name": "Thomas Müller",
+                  "position": "FW"
+                },
+                {
+                  "name": "Mathys Tel",
+                  "position": "FW"
+                },
+                {
+                  "name": "Serge Gnabry",
+                  "position": "FW"
+                },
+                {
+                  "name": "João Palhinha",
+                  "position": "MF"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-3-3",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "Bradley Barcola",
+              "on": "Lee Kang-In",
+              "minute": 68
+            },
+            {
+              "team": "home",
+              "off": "Gonçalo Ramos",
+              "on": "Randal Kolo Muani",
+              "minute": 76
+            },
+            {
+              "team": "home",
+              "off": "Fabián Ruiz",
+              "on": "Warren Zaïre-Emery",
+              "minute": 79
+            },
+            {
+              "team": "away",
+              "off": "Kingsley Coman",
+              "on": "Serge Gnabry",
+              "minute": 67
+            },
+            {
+              "team": "away",
+              "off": "Aleksandar Pavlović",
+              "on": "Konrad Laimer",
+              "minute": 72
+            },
+            {
+              "team": "away",
+              "off": "Leroy Sané",
+              "on": "Thomas Müller",
+              "minute": 81
+            }
+          ],
+          "cards": [
+            {
+              "player": "João Neves",
+              "team": "home",
+              "color": "yellow",
+              "minute": 43
+            },
+            {
+              "player": "Achraf Hakimi",
+              "team": "home",
+              "color": "yellow",
+              "minute": 71
+            },
+            {
+              "player": "Leon Goretzka",
+              "team": "away",
+              "color": "yellow",
+              "minute": 39
+            },
+            {
+              "player": "Dayot Upamecano",
+              "team": "away",
+              "color": "yellow",
+              "minute": 63
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 54,
+              "away": 46
+            },
+            "shots": {
+              "home": 14,
+              "away": 12
+            },
+            "shots_on_target": {
+              "home": 5,
+              "away": 4
+            },
+            "corners": {
+              "home": 6,
+              "away": 5
+            },
+            "pass_accuracy": {
+              "home": 89,
+              "away": 87
+            },
+            "fouls": {
+              "home": 12,
+              "away": 13
+            },
+            "saves": {
+              "home": 3,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 63,
+              "away": 67
+            }
+          },
+          "cost_usd": 0.26,
+          "sources": []
+        },
+        {
+          "model_id": "gpt-5.4",
+          "setting": "S1",
+          "win_probs": {
+            "home": 0.415,
+            "draw": 0.255,
+            "away": 0.33
+          },
+          "score_dist": [
+            {
+              "score": "2-1",
+              "p": 0.115
+            },
+            {
+              "score": "1-1",
+              "p": 0.112
+            },
+            {
+              "score": "1-2",
+              "p": 0.091
+            },
+            {
+              "score": "2-2",
+              "p": 0.09
+            },
+            {
+              "score": "1-0",
+              "p": 0.08
+            },
+            {
+              "score": "2-0",
+              "p": 0.074
+            },
+            {
+              "score": "0-1",
+              "p": 0.065
+            },
+            {
+              "score": "3-1",
+              "p": 0.063
+            },
+            {
+              "score": "0-0",
+              "p": 0.06
+            },
+            {
+              "score": "1-3",
+              "p": 0.05
+            },
+            {
+              "score": "3-2",
+              "p": 0.049
+            },
+            {
+              "score": "0-2",
+              "p": 0.043
+            },
+            {
+              "score": "2-3",
+              "p": 0.033
+            },
+            {
+              "score": "3-0",
+              "p": 0.027
+            },
+            {
+              "score": "4-1",
+              "p": 0.018
+            },
+            {
+              "score": "4-2",
+              "p": 0.015
+            },
+            {
+              "score": "0-3",
+              "p": 0.015
+            }
+          ],
+          "most_likely_score": "2-1",
+          "expected_goal_diff": 0.21,
+          "advance_prob": 0.538,
+          "reasoning": {
+            "overall": "Both sides arrive in elite form, but the tie setup and matchup point to a very narrow edge for PSG at home rather than a clear favorite. PSG have been more defensively controlled in recent Champions League rounds, beating Chelsea and Liverpool with fewer concessions, while Bayern’s last 10 show overwhelming attacking output but also repeated high-event games and some defensive exposure. The reported Bayern injury issue around Raphaël Guerreiro slightly trims their flexibility on the left and in midfield rotations, while PSG’s frontline depth with Dembélé, Barcola, Kvaratskhelia and Ramos gives Luis Enrique multiple ways to attack Bayern’s center-backs and wide channels. Tactically this looks like a high-quality pressing game with spells of shared possession: PSG’s ball security through Vitinha and João Neves can resist Bayern’s first wave, but Kane, Musiala and Olise are good enough to create away goals. H2H prestige and knockout experience on both sides reduce the chance of a blowout; key players most likely to define the first leg are Dembélé/Kvaratskhelia for PSG and Kane/Musiala for Bayern.",
+            "t1_result": "I make PSG slight favorites because of home advantage, marginally cleaner recent UCL defensive profile, and Bayern’s small availability hit, but Bayern’s attack is too strong for a lopsided home-win distribution. The score shape centers on 2-1 and 1-1 with meaningful mass on 1-2 and 2-2 because both teams project above 1.4 xG.",
+            "t2_player": "PSG’s strongest balance is a 4-3-3 with Hakimi and Nuno Mendes pushing high around a Vitinha-João Neves-Fabián Ruiz midfield, while Bayern’s likely 4-2-3-1 is built around Kane ahead of Musiala and Olise. Wide 1v1s and half-space runners matter more than pure target play, so the main scorer picks come from the front four on each side.",
+            "t3_events": "A tense first leg should begin controlled, then open after the first goal as both sides are dangerous in transition. Expect most subs from 60-75 minutes to refresh wide players and midfield legs, plus a few tactical yellows if counters have to be stopped.",
+            "t4_stats": "Possession should be close rather than dominant for either team because both can press and build. PSG at home may have a slight share edge, but Bayern’s directness and shot volume keep the attempts relatively even, with both keepers likely forced into multiple saves."
+          },
+          "scorers": [
+            {
+              "player": "O. Dembélé",
+              "team": "home",
+              "minute_range": [
+                30,
+                85
+              ],
+              "p": 0.333
+            },
+            {
+              "player": "K. Kvaratskhelia",
+              "team": "home",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.279
+            },
+            {
+              "player": "B. Barcola",
+              "team": "home",
+              "minute_range": [
+                35,
+                90
+              ],
+              "p": 0.225
+            },
+            {
+              "player": "Gonçalo Ramos",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.163
+            },
+            {
+              "player": "H. Kane",
+              "team": "away",
+              "minute_range": [
+                25,
+                90
+              ],
+              "p": 0.39
+            },
+            {
+              "player": "J. Musiala",
+              "team": "away",
+              "minute_range": [
+                30,
+                85
+              ],
+              "p": 0.242
+            },
+            {
+              "player": "M. Olise",
+              "team": "away",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.217
+            },
+            {
+              "player": "L. Díaz",
+              "team": "away",
+              "minute_range": [
+                35,
+                90
+              ],
+              "p": 0.168
+            }
+          ],
+          "assisters": [
+            {
+              "player": "A. Hakimi",
+              "team": "home",
+              "p": 0.191
+            },
+            {
+              "player": "Vitinha",
+              "team": "home",
+              "p": 0.223
+            },
+            {
+              "player": "K. Kvaratskhelia",
+              "team": "home",
+              "p": 0.176
+            },
+            {
+              "player": "M. Olise",
+              "team": "away",
+              "p": 0.244
+            },
+            {
+              "player": "J. Musiala",
+              "team": "away",
+              "p": 0.198
+            },
+            {
+              "player": "J. Kimmich",
+              "team": "away",
+              "p": 0.184
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "O. Dembélé",
+              "team": "home",
+              "p": 0.21
+            },
+            {
+              "player": "H. Kane",
+              "team": "away",
+              "p": 0.195
+            },
+            {
+              "player": "K. Kvaratskhelia",
+              "team": "home",
+              "p": 0.145
+            },
+            {
+              "player": "J. Musiala",
+              "team": "away",
+              "p": 0.13
+            },
+            {
+              "player": "Vitinha",
+              "team": "home",
+              "p": 0.105
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "L. Chevalier",
+                  "position": "GK"
+                },
+                {
+                  "name": "A. Hakimi",
+                  "position": "DF"
+                },
+                {
+                  "name": "Marquinhos",
+                  "position": "DF"
+                },
+                {
+                  "name": "W. Pacho",
+                  "position": "DF"
+                },
+                {
+                  "name": "Nuno Mendes",
+                  "position": "DF"
+                },
+                {
+                  "name": "João Neves",
+                  "position": "MF"
+                },
+                {
+                  "name": "Vitinha",
+                  "position": "MF"
+                },
+                {
+                  "name": "Fabián Ruiz",
+                  "position": "MF"
+                },
+                {
+                  "name": "O. Dembélé",
+                  "position": "FW"
+                },
+                {
+                  "name": "K. Kvaratskhelia",
+                  "position": "FW"
+                },
+                {
+                  "name": "B. Barcola",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "M. Safonov",
+                  "position": "GK"
+                },
+                {
+                  "name": "L. Hernández",
+                  "position": "DF"
+                },
+                {
+                  "name": "I. Zabarnyi",
+                  "position": "DF"
+                },
+                {
+                  "name": "W. Zaïre-Emery",
+                  "position": "DF"
+                },
+                {
+                  "name": "Lee Kang-In",
+                  "position": "MF"
+                },
+                {
+                  "name": "Senny Mayulu",
+                  "position": "MF"
+                },
+                {
+                  "name": "Beraldo",
+                  "position": "MF"
+                },
+                {
+                  "name": "D. Doué",
+                  "position": "FW"
+                },
+                {
+                  "name": "Gonçalo Ramos",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "M. Neuer",
+                  "position": "GK"
+                },
+                {
+                  "name": "J. Stanišić",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Upamecano",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Tah",
+                  "position": "DF"
+                },
+                {
+                  "name": "A. Davies",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Kimmich",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Pavlović",
+                  "position": "MF"
+                },
+                {
+                  "name": "M. Olise",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Musiala",
+                  "position": "MF"
+                },
+                {
+                  "name": "L. Díaz",
+                  "position": "MF"
+                },
+                {
+                  "name": "H. Kane",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "J. Urbig",
+                  "position": "GK"
+                },
+                {
+                  "name": "S. Ulreich",
+                  "position": "GK"
+                },
+                {
+                  "name": "Kim Min-Jae",
+                  "position": "DF"
+                },
+                {
+                  "name": "K. Laimer",
+                  "position": "DF"
+                },
+                {
+                  "name": "H. Ito",
+                  "position": "DF"
+                },
+                {
+                  "name": "L. Goretzka",
+                  "position": "MF"
+                },
+                {
+                  "name": "T. Bischof",
+                  "position": "MF"
+                },
+                {
+                  "name": "S. Gnabry",
+                  "position": "MF"
+                },
+                {
+                  "name": "N. Jackson",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-3-3",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "B. Barcola",
+              "on": "D. Doué",
+              "minute": 67
+            },
+            {
+              "team": "home",
+              "off": "Fabián Ruiz",
+              "on": "Lee Kang-In",
+              "minute": 72
+            },
+            {
+              "team": "home",
+              "off": "K. Kvaratskhelia",
+              "on": "Gonçalo Ramos",
+              "minute": 78
+            },
+            {
+              "team": "away",
+              "off": "L. Díaz",
+              "on": "S. Gnabry",
+              "minute": 66
+            },
+            {
+              "team": "away",
+              "off": "A. Pavlović",
+              "on": "L. Goretzka",
+              "minute": 71
+            },
+            {
+              "team": "away",
+              "off": "J. Stanišić",
+              "on": "K. Laimer",
+              "minute": 79
+            }
+          ],
+          "cards": [
+            {
+              "player": "João Neves",
+              "team": "home",
+              "color": "yellow",
+              "minute": 41
+            },
+            {
+              "player": "Marquinhos",
+              "team": "home",
+              "color": "yellow",
+              "minute": 74
+            },
+            {
+              "player": "J. Kimmich",
+              "team": "away",
+              "color": "yellow",
+              "minute": 38
+            },
+            {
+              "player": "D. Upamecano",
+              "team": "away",
+              "color": "yellow",
+              "minute": 63
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 52,
+              "away": 48
+            },
+            "shots": {
+              "home": 15,
+              "away": 14
+            },
+            "shots_on_target": {
+              "home": 6,
+              "away": 5
+            },
+            "corners": {
+              "home": 6,
+              "away": 5
+            },
+            "pass_accuracy": {
+              "home": 89,
+              "away": 87
+            },
+            "fouls": {
+              "home": 11,
+              "away": 12
+            },
+            "saves": {
+              "home": 4,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 61,
+              "away": 59
+            }
+          },
+          "cost_usd": 0.083,
+          "sources": []
         }
       ],
       "live": null
