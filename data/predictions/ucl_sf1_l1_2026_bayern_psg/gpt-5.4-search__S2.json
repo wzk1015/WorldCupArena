@@ -2,21 +2,501 @@
   "fixture_id": "ucl_sf1_l1_2026_bayern_psg",
   "model_id": "gpt-5.4-search",
   "setting": "S2",
-  "submitted_at": "2026-04-28T00:11:38.889632+00:00",
-  "prediction": {},
+  "submitted_at": "2026-04-28T00:30:44.408677+00:00",
+  "prediction": {
+    "fixture_id": "ucl_sf1_l1_2026_bayern_psg",
+    "model_id": "gpt-5",
+    "setting": "S2",
+    "submitted_at": "2026-04-28T00:00:00Z",
+    "reasoning": {
+      "overall": "PSG get a modest edge from home advantage and a likely larger share of controlled possession, but Bayern’s ceiling in transition and set-piece threat keep this close. In a first-leg semi-final the game state should be cautious early, with both sides protecting central zones and pressing in waves rather than all-out. PSG’s front line looks slightly more likely to create repeat entries against Bayern’s full-back spaces, while Bayern still carry elite finishing and counterpunch quality through their wide attackers and Kane-like reference play. Head-to-head history at this level usually produces narrow margins, and with both squads deep, the likeliest profile is a balanced, high-quality match decided by one moment rather than a blowout.",
+      "t1_result": "I make PSG slight favourites rather than clear favourites: home edge, ball retention and chance volume tilt to them, but Bayern’s away-goal output potential keeps the away win live. The score distribution is centered on 1-0, 1-1, 2-1 and 2-0 type outcomes, with enough mass on 0-1 and 1-2 because Bayern can punish turnovers.",
+      "t2_player": "Both teams are likely to use their strongest available semi-final XI with established cores and high-minute stars starting unless there is a late fitness issue. The main scorer probabilities sit with the central striker/inside forwards and penalty takers, while creative wide players and advanced midfielders dominate the assister set.",
+      "t3_events": "Expect a measured first 20 minutes, then more transitions once the first pressing trap is beaten. If level after the hour, substitutions should add pace and verticality; cards are most likely from tactical fouls against counters and winger-versus-full-back duels.",
+      "t4_stats": "PSG project for a small possession edge and slightly more total shots through territorial control, while Bayern should still record efficient shot quality on fewer attacks. Saves and defensive actions are balanced because both sides can force work from the opposition goalkeeper and back line."
+    },
+    "win_probs": {
+      "home": 0.435,
+      "draw": 0.271,
+      "away": 0.294
+    },
+    "score_dist": [
+      {
+        "score": "1-0",
+        "p": 0.112
+      },
+      {
+        "score": "1-1",
+        "p": 0.111
+      },
+      {
+        "score": "2-1",
+        "p": 0.097
+      },
+      {
+        "score": "2-0",
+        "p": 0.086
+      },
+      {
+        "score": "0-1",
+        "p": 0.082
+      },
+      {
+        "score": "0-0",
+        "p": 0.079
+      },
+      {
+        "score": "1-2",
+        "p": 0.074
+      },
+      {
+        "score": "2-2",
+        "p": 0.06
+      },
+      {
+        "score": "3-1",
+        "p": 0.052
+      },
+      {
+        "score": "3-0",
+        "p": 0.041
+      },
+      {
+        "score": "0-2",
+        "p": 0.039
+      },
+      {
+        "score": "3-2",
+        "p": 0.034
+      },
+      {
+        "score": "1-3",
+        "p": 0.028
+      },
+      {
+        "score": "4-1",
+        "p": 0.016
+      },
+      {
+        "score": "2-3",
+        "p": 0.014
+      },
+      {
+        "score": "4-2",
+        "p": 0.075
+      }
+    ],
+    "most_likely_score": "1-0",
+    "expected_goal_diff": 0.29,
+    "advance_prob": 0.472,
+    "lineups": {
+      "home": {
+        "starting": [
+          {
+            "name": "Gianluigi Donnarumma",
+            "position": "GK"
+          },
+          {
+            "name": "Achraf Hakimi",
+            "position": "DF"
+          },
+          {
+            "name": "Marquinhos",
+            "position": "DF"
+          },
+          {
+            "name": "Milan Škriniar",
+            "position": "DF"
+          },
+          {
+            "name": "Nuno Mendes",
+            "position": "DF"
+          },
+          {
+            "name": "Vitinha",
+            "position": "MF"
+          },
+          {
+            "name": "João Neves",
+            "position": "MF"
+          },
+          {
+            "name": "Fabián Ruiz",
+            "position": "MF"
+          },
+          {
+            "name": "Ousmane Dembélé",
+            "position": "FW"
+          },
+          {
+            "name": "Gonçalo Ramos",
+            "position": "FW"
+          },
+          {
+            "name": "Bradley Barcola",
+            "position": "FW"
+          }
+        ],
+        "bench": [
+          {
+            "name": "Arnau Tenas",
+            "position": "GK"
+          },
+          {
+            "name": "Lucas Beraldo",
+            "position": "DF"
+          },
+          {
+            "name": "Lucas Hernández",
+            "position": "DF"
+          },
+          {
+            "name": "Warren Zaïre-Emery",
+            "position": "MF"
+          },
+          {
+            "name": "Lee Kang-In",
+            "position": "MF"
+          },
+          {
+            "name": "Marco Asensio",
+            "position": "FW"
+          },
+          {
+            "name": "Randal Kolo Muani",
+            "position": "FW"
+          },
+          {
+            "name": "Carlos Soler",
+            "position": "MF"
+          },
+          {
+            "name": "Danilo Pereira",
+            "position": "MF"
+          }
+        ]
+      },
+      "away": {
+        "starting": [
+          {
+            "name": "Manuel Neuer",
+            "position": "GK"
+          },
+          {
+            "name": "Joshua Kimmich",
+            "position": "DF"
+          },
+          {
+            "name": "Dayot Upamecano",
+            "position": "DF"
+          },
+          {
+            "name": "Kim Min-jae",
+            "position": "DF"
+          },
+          {
+            "name": "Alphonso Davies",
+            "position": "DF"
+          },
+          {
+            "name": "Aleksandar Pavlović",
+            "position": "MF"
+          },
+          {
+            "name": "Leon Goretzka",
+            "position": "MF"
+          },
+          {
+            "name": "Jamal Musiala",
+            "position": "MF"
+          },
+          {
+            "name": "Leroy Sané",
+            "position": "FW"
+          },
+          {
+            "name": "Harry Kane",
+            "position": "FW"
+          },
+          {
+            "name": "Kingsley Coman",
+            "position": "FW"
+          }
+        ],
+        "bench": [
+          {
+            "name": "Daniel Peretz",
+            "position": "GK"
+          },
+          {
+            "name": "Eric Dier",
+            "position": "DF"
+          },
+          {
+            "name": "Noussair Mazraoui",
+            "position": "DF"
+          },
+          {
+            "name": "Konrad Laimer",
+            "position": "MF"
+          },
+          {
+            "name": "Raphaël Guerreiro",
+            "position": "DF"
+          },
+          {
+            "name": "Thomas Müller",
+            "position": "FW"
+          },
+          {
+            "name": "Mathys Tel",
+            "position": "FW"
+          },
+          {
+            "name": "Serge Gnabry",
+            "position": "FW"
+          },
+          {
+            "name": "João Palhinha",
+            "position": "MF"
+          }
+        ]
+      }
+    },
+    "formations": {
+      "home": "4-3-3",
+      "away": "4-2-3-1"
+    },
+    "scorers": [
+      {
+        "player": "Gonçalo Ramos",
+        "team": "home",
+        "minute_range": [
+          30,
+          75
+        ],
+        "p": 0.284
+      },
+      {
+        "player": "Ousmane Dembélé",
+        "team": "home",
+        "minute_range": [
+          20,
+          90
+        ],
+        "p": 0.261
+      },
+      {
+        "player": "Bradley Barcola",
+        "team": "home",
+        "minute_range": [
+          35,
+          90
+        ],
+        "p": 0.189
+      },
+      {
+        "player": "Harry Kane",
+        "team": "away",
+        "minute_range": [
+          25,
+          90
+        ],
+        "p": 0.352
+      },
+      {
+        "player": "Jamal Musiala",
+        "team": "away",
+        "minute_range": [
+          30,
+          85
+        ],
+        "p": 0.206
+      },
+      {
+        "player": "Leroy Sané",
+        "team": "away",
+        "minute_range": [
+          40,
+          90
+        ],
+        "p": 0.171
+      }
+    ],
+    "assisters": [
+      {
+        "player": "Achraf Hakimi",
+        "team": "home",
+        "p": 0.184
+      },
+      {
+        "player": "Vitinha",
+        "team": "home",
+        "p": 0.168
+      },
+      {
+        "player": "Ousmane Dembélé",
+        "team": "home",
+        "p": 0.219
+      },
+      {
+        "player": "Jamal Musiala",
+        "team": "away",
+        "p": 0.211
+      },
+      {
+        "player": "Joshua Kimmich",
+        "team": "away",
+        "p": 0.173
+      },
+      {
+        "player": "Leroy Sané",
+        "team": "away",
+        "p": 0.152
+      }
+    ],
+    "substitutions": [
+      {
+        "team": "home",
+        "off": "Bradley Barcola",
+        "on": "Lee Kang-In",
+        "minute": 68
+      },
+      {
+        "team": "home",
+        "off": "Gonçalo Ramos",
+        "on": "Randal Kolo Muani",
+        "minute": 76
+      },
+      {
+        "team": "home",
+        "off": "Fabián Ruiz",
+        "on": "Warren Zaïre-Emery",
+        "minute": 79
+      },
+      {
+        "team": "away",
+        "off": "Kingsley Coman",
+        "on": "Serge Gnabry",
+        "minute": 67
+      },
+      {
+        "team": "away",
+        "off": "Aleksandar Pavlović",
+        "on": "Konrad Laimer",
+        "minute": 72
+      },
+      {
+        "team": "away",
+        "off": "Leroy Sané",
+        "on": "Thomas Müller",
+        "minute": 81
+      }
+    ],
+    "cards": [
+      {
+        "player": "João Neves",
+        "team": "home",
+        "color": "yellow",
+        "minute": 43
+      },
+      {
+        "player": "Achraf Hakimi",
+        "team": "home",
+        "color": "yellow",
+        "minute": 71
+      },
+      {
+        "player": "Leon Goretzka",
+        "team": "away",
+        "color": "yellow",
+        "minute": 39
+      },
+      {
+        "player": "Dayot Upamecano",
+        "team": "away",
+        "color": "yellow",
+        "minute": 63
+      }
+    ],
+    "penalties": [],
+    "own_goals": [],
+    "motm_probs": [
+      {
+        "player": "Ousmane Dembélé",
+        "team": "home",
+        "p": 0.214
+      },
+      {
+        "player": "Gonçalo Ramos",
+        "team": "home",
+        "p": 0.156
+      },
+      {
+        "player": "Vitinha",
+        "team": "home",
+        "p": 0.121
+      },
+      {
+        "player": "Harry Kane",
+        "team": "away",
+        "p": 0.226
+      },
+      {
+        "player": "Jamal Musiala",
+        "team": "away",
+        "p": 0.143
+      }
+    ],
+    "stats": {
+      "possession": {
+        "home": 54,
+        "away": 46
+      },
+      "shots": {
+        "home": 14,
+        "away": 12
+      },
+      "shots_on_target": {
+        "home": 5,
+        "away": 4
+      },
+      "corners": {
+        "home": 6,
+        "away": 5
+      },
+      "pass_accuracy": {
+        "home": 89,
+        "away": 87
+      },
+      "fouls": {
+        "home": 12,
+        "away": 13
+      },
+      "saves": {
+        "home": 3,
+        "away": 4
+      },
+      "defensive_actions": {
+        "home": 63,
+        "away": 67
+      }
+    },
+    "sources": []
+  },
   "sources": [],
   "leakage_audit": {
     "leaked": false,
     "leaked_sources": []
   },
-  "cost_usd": 0.0,
+  "cost_usd": 0.26029199999999997,
   "tokens": {
-    "input": 0,
-    "output": 0
+    "input": 14291,
+    "output": 4950
   },
   "tool_calls": 0,
-  "wall_seconds": 0.261014461517334,
-  "repair_retries": 0,
-  "validation_errors": null,
-  "error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-iJURN***************************************rrOQ. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}"
+  "wall_seconds": 87.58198809623718,
+  "repair_retries": 1,
+  "validation_errors": [],
+  "error": null
 }
