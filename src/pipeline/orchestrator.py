@@ -30,7 +30,8 @@ from ..graders import grade_match
 from ..ingest.api_football import normalize_fixture, normalize_to_truth, populate_context_pack, APIFootballClient
 from ..ingest.news import populate_news
 from .prompt_build import build_prompt
-from .validate import validate_or_repair
+from .score_calibration import SCORE_CALIBRATION_METHOD, calibrate_score_prediction
+from .validate import validate, validate_or_repair
 
 ROOT = Path(__file__).resolve().parents[2]
 CONFIGS = ROOT / "configs"
@@ -106,8 +107,53 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
     policy = settings_cfg.get("policy", {})
     tol = float(policy.get("probability_sum_tolerance", 0.01))
     max_retries = int(policy.get("max_format_retries", 2))
+    scoreline_policy = policy.get("scoreline_calibration") or {}
+    calibrate_scorelines = bool(scoreline_policy.get("enabled", False))
+    calibration_max_goals = int(scoreline_policy.get("max_goals", 7))
+    calibration_max_scorelines = int(scoreline_policy.get("max_scorelines", 20))
+    calibration_model_weight = float(scoreline_policy.get("model_weight", 0.62))
+    calibration_favorite_margin = float(scoreline_policy.get("favorite_margin", 0.15))
 
     MAX_RUN_RETRIES = 3
+
+    def _maybe_calibrate_record(record: dict[str, Any], setting_id: str) -> tuple[dict[str, Any], bool]:
+        if not calibrate_scorelines or record.get("error") or not record.get("prediction"):
+            return record, False
+        if (record.get("score_calibration") or {}).get("method") == SCORE_CALIBRATION_METHOD:
+            return record, False
+
+        calibration_source = record["prediction"]
+        previous_before = (record.get("score_calibration") or {}).get("before") or {}
+        previous_head = previous_before.get("score_dist_head") or []
+        if previous_head:
+            calibration_source = json.loads(json.dumps(record["prediction"]))
+            seen_scores = {str(item.get("score")) for item in previous_head}
+            current_tail = [
+                item for item in calibration_source.get("score_dist", [])
+                if str(item.get("score")) not in seen_scores
+            ]
+            calibration_source["score_dist"] = [*previous_head, *current_tail]
+            if previous_before.get("most_likely_score"):
+                calibration_source["most_likely_score"] = previous_before["most_likely_score"]
+
+        prediction, score_calibration = calibrate_score_prediction(
+            calibration_source,
+            max_goals=calibration_max_goals,
+            max_scorelines=calibration_max_scorelines,
+            model_weight=calibration_model_weight,
+            favorite_margin=calibration_favorite_margin,
+        )
+        calibration_report = validate(
+            prediction,
+            fixture_id=fid,
+            setting_id=setting_id,
+            tol=tol,
+        )
+        out = dict(record)
+        out["prediction"] = prediction
+        out["validation_errors"] = calibration_report.errors
+        out["score_calibration"] = score_calibration
+        return out, True
 
     def _one(job):
         model_cfg, setting = job
@@ -115,6 +161,13 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
         if path.exists():
             with open(path) as f:
                 prev_ret = json.load(f)
+                prev_ret, calibrated_existing = _maybe_calibrate_record(prev_ret, setting["id"])
+                if calibrated_existing:
+                    path.write_text(json.dumps(prev_ret, ensure_ascii=False, indent=2))
+                    if prev_ret.get("validation_errors"):
+                        print(f"[predict] {fid}: calibrated existing result but validation failed, rerunning: {path}")
+                    else:
+                        return {"model": model_cfg["id"], "setting": setting["id"], "skipped": "Calibrated"}
                 if prev_ret["error"] or prev_ret["validation_errors"] or (not prev_ret["prediction"]):
                     print(f"[predict] {fid}: result exists but has errors, rerunning: {path}")
                 else:
@@ -146,12 +199,30 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
             res = runner.run(fixture, setting, sys_p, usr_p, validate_fn=_validate)
             total_cost += res.cost_usd
             audit = _leak_audit(res.sources, fixture["lock_at_utc"])
+            prediction = res.prediction
+            validation_errors = res.validation_errors
+            score_calibration = None
+            if calibrate_scorelines and not res.error and prediction:
+                prediction, score_calibration = calibrate_score_prediction(
+                    prediction,
+                    max_goals=calibration_max_goals,
+                    max_scorelines=calibration_max_scorelines,
+                    model_weight=calibration_model_weight,
+                    favorite_margin=calibration_favorite_margin,
+                )
+                calibration_report = validate(
+                    prediction,
+                    fixture_id=fid,
+                    setting_id=setting["id"],
+                    tol=tol,
+                )
+                validation_errors = calibration_report.errors
             record = {
                 "fixture_id": fid,
                 "model_id": res.model_id,
                 "setting": res.setting,
                 "submitted_at": res.submitted_at,
-                "prediction": res.prediction,
+                "prediction": prediction,
                 "sources": res.sources,
                 "leakage_audit": audit,
                 "cost_usd": total_cost,
@@ -159,17 +230,19 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
                 "tool_calls": res.tool_calls,
                 "wall_seconds": res.wall_seconds,
                 "repair_retries": res.repair_retries,
-                "validation_errors": res.validation_errors,
+                "validation_errors": validation_errors,
                 "error": res.error,
             }
+            if score_calibration:
+                record["score_calibration"] = score_calibration
             path.write_text(json.dumps(record, ensure_ascii=False, indent=2))
 
-            if not res.error and not res.validation_errors and res.prediction:
+            if not res.error and not validation_errors and prediction:
                 break  # success
             
             if attempt < MAX_RUN_RETRIES:
                 print(f"  [predict] attempt {attempt} failed (err={res.error!r}, "
-                      f"validation_errors={res.validation_errors}), retrying after sleeping 60s…")
+                      f"validation_errors={validation_errors}), retrying after sleeping 60s…")
                 time.sleep(60)
 
         # Persist search sources for S2 runs so they can be reviewed later
@@ -185,13 +258,13 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
                 "sources": res.sources,
             }, ensure_ascii=False, indent=2))
 
-        still_failed = res.error or res.validation_errors or not res.prediction
+        still_failed = res.error or validation_errors or not prediction
         if still_failed:
             print(f"\n{'='*60}")
             print(f"  *** WARNING: {model_cfg['id']} ({setting['id']}) FAILED after {MAX_RUN_RETRIES} attempts ***")
             print(f"  error            : {res.error}")
-            print(f"  validation_errors: {res.validation_errors}")
-            print(f"  prediction empty : {not res.prediction}")
+            print(f"  validation_errors: {validation_errors}")
+            print(f"  prediction empty : {not prediction}")
             print(f"{'='*60}\n")
 
         return {

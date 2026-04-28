@@ -53,3 +53,11 @@ policy:
   # Format validation: orchestrator will schema-check and retry up to N times.
   max_format_retries: 2
   probability_sum_tolerance: 0.01
+  # Convert LLM exact-score guesses into a calibrated independent-Poisson score
+  # grid that preserves win_probs at the aggregate home/draw/away level.
+  scoreline_calibration:
+    enabled: true
+    max_goals: 7
+    max_scorelines: 20
+    model_weight: 0.62
+    favorite_margin: 0.15

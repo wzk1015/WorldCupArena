@@ -461,14 +461,27 @@ function renderPredCard(p, f, idx) {
   const b          = modelBadge(p.model_id);
   const wp         = p.win_probs || {};
   const reasoning  = p.reasoning || {};
-  const top3       = (p.score_dist || []).slice(0, 3);
+  const scoreDist  = (p.score_dist || []).slice().sort((a, b) => (b.p || 0) - (a.p || 0));
+  const top3       = scoreDist.slice(0, 3);
+  const predScore  = p.display_score || p.most_likely_score || (top3[0] ? top3[0].score : null);
   const hName      = f.home || "Home";
   const aName      = f.away || "Away";
   const hasReason  = Object.keys(reasoning).length > 0;
 
-  // Compute predicted winner (argmax of win_probs)
+  const scoreOutcome = (() => {
+    if (!predScore) return null;
+    const parts = predScore.split("-").map(x => parseInt(x, 10));
+    if (parts.length !== 2 || parts.some(Number.isNaN)) return null;
+    return parts[0] > parts[1] ? "home" : parts[1] > parts[0] ? "away" : "draw";
+  })();
+
+  // Headline pick follows the representative displayed score. Probability
+  // bars below still show the model's full win_probs.
   const predWinner = (wp.home != null && wp.draw != null && wp.away != null)
-    ? (wp.home >= wp.draw && wp.home >= wp.away ? hName
+    ? (scoreOutcome === "home" ? hName
+       : scoreOutcome === "away" ? aName
+       : scoreOutcome === "draw" ? "Draw"
+       : wp.home >= wp.draw && wp.home >= wp.away ? hName
        : wp.away >= wp.home && wp.away >= wp.draw ? aName : "Draw")
     : null;
 
@@ -508,13 +521,13 @@ function renderPredCard(p, f, idx) {
           <div>
             <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Pred Score</div>
             ${(() => {
-              const topScore = top3[0] ? top3[0].score : null;
               const actualScore = f.truth ? f.truth.score : null;
-              const scoreCorrect = topScore && actualScore && topScore === actualScore;
+              const scoreCorrect = predScore && actualScore && predScore === actualScore;
               const scoreColor = actualScore
                 ? (scoreCorrect ? "color:#4ade80;" : "color:#f87171;")
                 : "color:#fff;";
-              return `<div class="text-2xl font-black leading-tight font-mono whitespace-nowrap" style="${scoreColor}">${esc(topScore.replace("-", " - ") || "—")}</div>`;
+              return `<div class="text-2xl font-black leading-tight font-mono whitespace-nowrap" style="${scoreColor}">${esc(predScore ? predScore.replace("-", " - ") : "—")}</div>
+                ${p.over_3_5_prob != null ? `<div class="text-[10px] font-mono text-gray-500 mt-0.5">O3.5 ${fmtPct(p.over_3_5_prob)}</div>` : ""}`;
             })()}
           </div>
           ${f.truth ? `<div class="ml-auto">
@@ -576,7 +589,7 @@ function renderPredCard(p, f, idx) {
 
         <!-- Score distribution (full) -->
         ${top3.length ? (() => {
-          const allScores = (p.score_dist || []).slice(0, 15);
+          const allScores = scoreDist.slice(0, 15);
           const maxP = Math.max(...allScores.map(s => s.p || 0));
           return `
         <div>

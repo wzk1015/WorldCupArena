@@ -10,7 +10,9 @@ Validation layers:
     3. Semantic checks the schema can't express:
          - win_probs sum ≈ 1
          - score_dist p values sum ≈ 1
-         - score_dist contains at least 8 distinct scorelines
+         - score_dist contains at least 10 distinct scorelines
+         - most_likely_score matches the highest-probability score_dist entry
+         - score_dist outcome totals are close to win_probs
          - stats contains all 8 required keys
          - lineups.*.starting has exactly 11 entries
          - reasoning.overall non-empty & ≥80 chars
@@ -83,8 +85,8 @@ def _validate_semantics(
         if abs(p_sum - 1.0) > tol:
             errs.append(f"score_dist p sum={p_sum:.4f} not within {tol} of 1 (add an 'other' bucket if needed)")
         distinct_scores = {str(x.get("score", "")) for x in sd if x.get("score")}
-        if len(distinct_scores) < 8:
-            errs.append(f"score_dist has {len(distinct_scores)} distinct scorelines, need at least 8")
+        if len(distinct_scores) < 10:
+            errs.append(f"score_dist has {len(distinct_scores)} distinct scorelines, need at least 10")
 
     reasoning = (pred.get("reasoning") or {}).get("overall") or ""
     if len(reasoning) < 80:
@@ -96,25 +98,46 @@ def _validate_semantics(
         if len(starting) != 11:
             errs.append(f"lineups.{side}.starting has {len(starting)} players, need 11")
 
-    # Consistency: top score_dist outcome must match top win_probs outcome
+    def _score_outcome(score_str: str) -> str | None:
+        parts = score_str.split("-") if score_str else []
+        if len(parts) != 2:
+            return None
+        try:
+            h_goals, a_goals = int(parts[0]), int(parts[1])
+        except (ValueError, TypeError):
+            return None
+        return "home" if h_goals > a_goals else "away" if a_goals > h_goals else "draw"
+
+    # Consistency: score_dist aggregate outcomes should broadly match win_probs.
+    # The single most likely exact score can reasonably be a draw even when
+    # home/away is the most likely 3-way outcome, because win probability is
+    # spread over many exact scores.
     sd = pred.get("score_dist") or []
     if sd and wp:
-        top_score = max(sd, key=lambda x: float(x.get("p", 0)), default=None)
-        if top_score:
-            score_str = top_score.get("score", "")
-            parts = score_str.split("-") if score_str else []
-            if len(parts) == 2:
-                try:
-                    h_goals, a_goals = int(parts[0]), int(parts[1])
-                    sd_outcome = "home" if h_goals > a_goals else "away" if a_goals > h_goals else "draw"
-                    wp_outcome = max(("home", "draw", "away"), key=lambda k: float(wp.get(k, 0)))
-                    if sd_outcome != wp_outcome:
-                        errs.append(
-                            f"consistency: top score_dist entry '{score_str}' implies '{sd_outcome}' "
-                            f"but win_probs favours '{wp_outcome}' — these must agree"
-                        )
-                except (ValueError, TypeError):
-                    pass
+        sd_outcomes = {"home": 0.0, "draw": 0.0, "away": 0.0}
+        for item in sd:
+            outcome = _score_outcome(str(item.get("score", "")))
+            if outcome:
+                sd_outcomes[outcome] += float(item.get("p", 0))
+        outcome_tol = max(0.10, tol * 10)
+        for outcome in ("home", "draw", "away"):
+            if abs(sd_outcomes[outcome] - float(wp.get(outcome, 0))) > outcome_tol:
+                errs.append(
+                    f"consistency: score_dist aggregates to {outcome}={sd_outcomes[outcome]:.3f} "
+                    f"but win_probs.{outcome}={float(wp.get(outcome, 0)):.3f} "
+                    f"(allowed ±{outcome_tol:.2f})"
+                )
+
+    # Consistency: most_likely_score must be the highest-probability scoreline.
+    most_likely = pred.get("most_likely_score")
+    if sd and most_likely:
+        max_p = max(float(x.get("p", 0)) for x in sd)
+        top_scores = {str(x.get("score")) for x in sd if abs(float(x.get("p", 0)) - max_p) < 1e-9}
+        if most_likely not in top_scores:
+            errs.append(
+                f"consistency: most_likely_score '{most_likely}' is not a highest-probability "
+                f"score_dist entry {sorted(top_scores)}"
+            )
 
     stats = pred.get("stats") or {}
     required_keys = {"possession","shots","shots_on_target","corners","pass_accuracy","fouls","saves","defensive_actions"}

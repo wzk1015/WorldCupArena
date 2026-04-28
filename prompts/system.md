@@ -38,7 +38,7 @@ Only **after** `reasoning` should you emit the numeric prediction fields (`win_p
 
 5. **Calibration matters.** If uncertain, spread probability mass. Putting 1.0 on a single outcome is rarely correct.
 
-6. **Consistency between `win_probs` and `score_dist` is required.** The outcome (home win / draw / away win) implied by the highest-`p` entry in `score_dist` must match the highest-probability key in `win_probs`. Example: if `win_probs.home` is the largest, the top scoreline must have home goals > away goals. Contradictions (e.g. predicting home win overall but giving a draw or away-win scoreline the top probability) are invalid and will be rejected. Round all probability values to three decimal places.
+6. **Consistency between `win_probs` and `score_dist` is required at the aggregate level.** The total probability mass of home-win scorelines, draw scorelines, and away-win scorelines in `score_dist` should broadly match `win_probs`. The single most likely exact score may be a draw even when home or away has the highest total win probability, because one outcome class is spread over many scorelines. Round all probability values to three decimal places.
 
 6. Home/away is always from the perspective of the team labeled `home` / `away` in the fixture header — not the literal stadium host unless the fixture specifies so.
 
@@ -109,7 +109,7 @@ Before you return the JSON, silently verify:
 - [ ] `win_probs` sums to ≈ 1.
 - [ ] `score_dist` is a non-empty array whose `p` values sum to ≈ 1.
 - [ ] `score_dist` has ≥ 10 entries and includes at least one draw (`0-0` or `1-1`), at least one away win with ≥ 2 away goals, and does **not** concentrate ≥ 60% of mass on `{1-0, 2-0, 2-1}` alone.
-- [ ] **Consistency**: the outcome implied by the highest-`p` scoreline in `score_dist` matches the highest-probability outcome in `win_probs`. For example, if `win_probs.home` is highest, the top scoreline must be a home win (home goals > away goals). A home-win `win_probs` paired with a draw or away-win top scoreline is a contradiction and will be rejected.
+- [ ] **Consistency**: when `score_dist` entries are aggregated into home/draw/away buckets, those totals broadly match `win_probs`. It is OK for the single most likely exact score to be `0-0`, `1-1`, or `2-2` even when home/away is the highest-probability 3-way outcome.
 - [ ] Every `lineups.*.starting` list has exactly 11 players.
 - [ ] `stats` contains all 8 required keys, each with `{home, away}`.
 - [ ] No text outside the JSON object.

@@ -23,71 +23,87 @@
     "score_dist": [
       {
         "score": "1-0",
-        "p": 0.112
+        "p": 0.126
       },
       {
         "score": "1-1",
-        "p": 0.111
-      },
-      {
-        "score": "2-1",
-        "p": 0.097
-      },
-      {
-        "score": "2-0",
-        "p": 0.086
+        "p": 0.123
       },
       {
         "score": "0-1",
-        "p": 0.082
+        "p": 0.088
+      },
+      {
+        "score": "2-0",
+        "p": 0.084
       },
       {
         "score": "0-0",
-        "p": 0.079
+        "p": 0.084
+      },
+      {
+        "score": "2-1",
+        "p": 0.078
       },
       {
         "score": "1-2",
-        "p": 0.074
+        "p": 0.076
       },
       {
         "score": "2-2",
-        "p": 0.06
-      },
-      {
-        "score": "3-1",
-        "p": 0.052
-      },
-      {
-        "score": "3-0",
-        "p": 0.041
+        "p": 0.055
       },
       {
         "score": "0-2",
-        "p": 0.039
+        "p": 0.053
       },
       {
-        "score": "3-2",
-        "p": 0.034
+        "score": "3-1",
+        "p": 0.044
+      },
+      {
+        "score": "3-0",
+        "p": 0.038
       },
       {
         "score": "1-3",
-        "p": 0.028
+        "p": 0.029
       },
       {
-        "score": "4-1",
-        "p": 0.016
+        "score": "3-2",
+        "p": 0.025
       },
       {
         "score": "2-3",
+        "p": 0.021
+      },
+      {
+        "score": "0-3",
+        "p": 0.02
+      },
+      {
+        "score": "4-1",
+        "p": 0.015
+      },
+      {
+        "score": "4-0",
         "p": 0.014
       },
       {
+        "score": "3-3",
+        "p": 0.01
+      },
+      {
         "score": "4-2",
-        "p": 0.075
+        "p": 0.009
+      },
+      {
+        "score": "1-4",
+        "p": 0.008
       }
     ],
     "most_likely_score": "1-0",
-    "expected_goal_diff": 0.29,
+    "expected_goal_diff": 0.3,
     "advance_prob": 0.472,
     "lineups": {
       "home": {
@@ -498,5 +514,70 @@
   "wall_seconds": 87.58198809623718,
   "repair_retries": 1,
   "validation_errors": [],
-  "error": null
+  "error": null,
+  "score_calibration": {
+    "applied": true,
+    "method": "hybrid_poisson_model_v2",
+    "model_weight": 0.62,
+    "favorite_margin": 0.15,
+    "lambda_home": 1.4,
+    "lambda_away": 1.1,
+    "target_total_goals": 2.538,
+    "target_goal_diff": 0.3,
+    "fitted_outcomes": {
+      "home": 0.438,
+      "draw": 0.266,
+      "away": 0.296
+    },
+    "before": {
+      "most_likely_score": "1-0",
+      "score_dist_head": [
+        {
+          "score": "1-0",
+          "p": 0.112
+        },
+        {
+          "score": "1-1",
+          "p": 0.111
+        },
+        {
+          "score": "2-1",
+          "p": 0.097
+        },
+        {
+          "score": "2-0",
+          "p": 0.086
+        },
+        {
+          "score": "0-1",
+          "p": 0.082
+        }
+      ]
+    },
+    "after": {
+      "most_likely_score": "1-0",
+      "score_dist_head": [
+        {
+          "score": "1-0",
+          "p": 0.126
+        },
+        {
+          "score": "1-1",
+          "p": 0.123
+        },
+        {
+          "score": "0-1",
+          "p": 0.088
+        },
+        {
+          "score": "2-0",
+          "p": 0.084
+        },
+        {
+          "score": "0-0",
+          "p": 0.084
+        }
+      ]
+    }
+  }
 }
