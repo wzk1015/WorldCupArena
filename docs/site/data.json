@@ -113,7 +113,1535 @@
       }
     }
   },
-  "incoming_matches": [],
+  "incoming_matches": [
+    {
+      "fixture": {
+        "wca_id": "UEFA-Champions-League_Atletico-Madrid_Arsenal_2026-04-29",
+        "home": "Atletico Madrid",
+        "home_logo": "https://media.api-sports.io/football/teams/530.png",
+        "away": "Arsenal",
+        "away_logo": "https://media.api-sports.io/football/teams/42.png",
+        "kickoff_utc": "2026-04-29T19:00:00+00:00",
+        "lock_at_utc": "2026-04-28T19:00:00+00:00",
+        "venue": "Metropolitano Stadium",
+        "venue_city": "Madrid",
+        "venue_country": "World",
+        "stage": "Semi-finals",
+        "competition": "UEFA Champions League"
+      },
+      "predictions": [
+        {
+          "model_id": "claude-opus-4-7-thinking-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.288,
+            "draw": 0.362,
+            "away": 0.35
+          },
+          "score_dist": [
+            {
+              "score": "1-1",
+              "p": 0.188
+            },
+            {
+              "score": "0-1",
+              "p": 0.121
+            },
+            {
+              "score": "0-0",
+              "p": 0.115
+            },
+            {
+              "score": "1-0",
+              "p": 0.107
+            },
+            {
+              "score": "1-2",
+              "p": 0.087
+            },
+            {
+              "score": "2-1",
+              "p": 0.074
+            },
+            {
+              "score": "0-2",
+              "p": 0.069
+            },
+            {
+              "score": "2-2",
+              "p": 0.057
+            },
+            {
+              "score": "2-0",
+              "p": 0.053
+            },
+            {
+              "score": "1-3",
+              "p": 0.028
+            },
+            {
+              "score": "0-3",
+              "p": 0.025
+            },
+            {
+              "score": "3-1",
+              "p": 0.02
+            },
+            {
+              "score": "3-0",
+              "p": 0.016
+            },
+            {
+              "score": "2-3",
+              "p": 0.014
+            },
+            {
+              "score": "3-2",
+              "p": 0.014
+            },
+            {
+              "score": "1-4",
+              "p": 0.003
+            },
+            {
+              "score": "0-4",
+              "p": 0.003
+            },
+            {
+              "score": "3-3",
+              "p": 0.002
+            },
+            {
+              "score": "4-1",
+              "p": 0.002
+            },
+            {
+              "score": "4-0",
+              "p": 0.002
+            }
+          ],
+          "most_likely_score": "1-1",
+          "expected_goal_diff": -0.1,
+          "advance_prob": 0.34,
+          "reasoning": {
+            "overall": "Tight, low-to-medium-event semi-final first leg at the Metropolitano. Arsenal are the only unbeaten team in the Champions League this season (W10 D2) but their domestic form has been patchy with a recent four-game losing streak ended by a slender 1-0 win over Newcastle. Arteta has confirmed Kai Havertz is out for the first leg, while Eze, Saka and Calafiori are available; Timber and Merino remain unavailable. Atleti are without Barrios and Gimenez, with Lookman and Hancko doubtful, but Alvarez should start. Arsenal hammered Atleti 4-0 in October at the Emirates with Gabriel, Martinelli and a Gyokeres brace, but at the Calderon/Metropolitano Atletico have never lost to an English side in a CL knockout match (P6 W3 D3). This Atleti are far less defensively robust, conceding 26 in 14 CL games and BTTS has hit in 8 of last 10 Atleti games, suggesting goals are likely. Bookmakers price this near a coin-flip with a marginal Arsenal lean and a strong draw chance.",
+            "t1_result": "Implied bookmaker probabilities cluster around home 33%, draw 32%, away 35%, reflecting Arsenal's slight edge in quality/recent H2H against Atleti's home advantage and motivation. Havertz's absence dulls Arsenal's edge; Atleti's home aura but shaky back line points toward an open game and a real draw probability with 1-1 the modal exact score.",
+            "t2_player": "Arsenal in 4-3-3 with Saka returning on the right and Gyokeres replacing Havertz; Eze cleared to start. Atleti in their 4-4-2 used through the knockouts with Alvarez-Griezmann up top, Simeone-Gonzalez wide, Cardoso-Koke central. Alvarez (9 UCL goals) and Griezmann are the chief scoring threats; Gyokeres, Saka and Martinelli the most likely Arsenal scorers.",
+            "t3_events": "Expect a slow tactical opening, Atleti pressing hard early to feed off the crowd, with Arsenal absorbing then growing into the game. Atleti score first-half goals at 1.29 per CL match this season, while 63% of Arsenal's CL goals come after the interval. Cards moderate (Atleti aggressive, Makkelie ~2.8/game). Likely double subs around 60-70 from both benches.",
+            "t4_stats": "Arsenal carry slightly more possession (~52-54%) given Atleti's willingness to cede the ball and counter; pass accuracy higher for Arsenal. Shots roughly balanced (Atleti more home volume vs Arsenal more efficiency). Fouls tilt to Atleti (more aggressive pressing). Corners modestly favour Arsenal given their set-piece threat."
+          },
+          "scorers": [
+            {
+              "player": "Julian Alvarez",
+              "team": "home",
+              "minute_range": [
+                10,
+                90
+              ],
+              "p": 0.3
+            },
+            {
+              "player": "Antoine Griezmann",
+              "team": "home",
+              "minute_range": [
+                15,
+                85
+              ],
+              "p": 0.2
+            },
+            {
+              "player": "Alexander Sorloth",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.12
+            },
+            {
+              "player": "Giuliano Simeone",
+              "team": "home",
+              "minute_range": [
+                20,
+                80
+              ],
+              "p": 0.07
+            },
+            {
+              "player": "Nico Gonzalez",
+              "team": "home",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.06
+            },
+            {
+              "player": "Koke",
+              "team": "home",
+              "minute_range": [
+                25,
+                80
+              ],
+              "p": 0.05
+            },
+            {
+              "player": "Viktor Gyokeres",
+              "team": "away",
+              "minute_range": [
+                25,
+                90
+              ],
+              "p": 0.25
+            },
+            {
+              "player": "Bukayo Saka",
+              "team": "away",
+              "minute_range": [
+                30,
+                90
+              ],
+              "p": 0.18
+            },
+            {
+              "player": "Gabriel Martinelli",
+              "team": "away",
+              "minute_range": [
+                30,
+                90
+              ],
+              "p": 0.18
+            },
+            {
+              "player": "Martin Odegaard",
+              "team": "away",
+              "minute_range": [
+                30,
+                85
+              ],
+              "p": 0.1
+            },
+            {
+              "player": "Declan Rice",
+              "team": "away",
+              "minute_range": [
+                30,
+                90
+              ],
+              "p": 0.08
+            },
+            {
+              "player": "Gabriel",
+              "team": "away",
+              "minute_range": [
+                30,
+                90
+              ],
+              "p": 0.07
+            },
+            {
+              "player": "Eberechi Eze",
+              "team": "away",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.07
+            }
+          ],
+          "assisters": [
+            {
+              "player": "Antoine Griezmann",
+              "team": "home",
+              "p": 0.18
+            },
+            {
+              "player": "Julian Alvarez",
+              "team": "home",
+              "p": 0.14
+            },
+            {
+              "player": "Nico Gonzalez",
+              "team": "home",
+              "p": 0.1
+            },
+            {
+              "player": "Giuliano Simeone",
+              "team": "home",
+              "p": 0.08
+            },
+            {
+              "player": "Martin Odegaard",
+              "team": "away",
+              "p": 0.18
+            },
+            {
+              "player": "Declan Rice",
+              "team": "away",
+              "p": 0.12
+            },
+            {
+              "player": "Bukayo Saka",
+              "team": "away",
+              "p": 0.14
+            },
+            {
+              "player": "Gabriel Martinelli",
+              "team": "away",
+              "p": 0.1
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "Julian Alvarez",
+              "team": "home",
+              "p": 0.22
+            },
+            {
+              "player": "Antoine Griezmann",
+              "team": "home",
+              "p": 0.1
+            },
+            {
+              "player": "Jan Oblak",
+              "team": "home",
+              "p": 0.08
+            },
+            {
+              "player": "Koke",
+              "team": "home",
+              "p": 0.05
+            },
+            {
+              "player": "Viktor Gyokeres",
+              "team": "away",
+              "p": 0.14
+            },
+            {
+              "player": "Bukayo Saka",
+              "team": "away",
+              "p": 0.1
+            },
+            {
+              "player": "Declan Rice",
+              "team": "away",
+              "p": 0.09
+            },
+            {
+              "player": "William Saliba",
+              "team": "away",
+              "p": 0.07
+            },
+            {
+              "player": "Gabriel Martinelli",
+              "team": "away",
+              "p": 0.08
+            },
+            {
+              "player": "David Raya",
+              "team": "away",
+              "p": 0.07
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Jan Oblak",
+                  "position": "GK",
+                  "shirt": 13
+                },
+                {
+                  "name": "Nahuel Molina",
+                  "position": "DF",
+                  "shirt": 16
+                },
+                {
+                  "name": "Robin Le Normand",
+                  "position": "DF",
+                  "shirt": 24
+                },
+                {
+                  "name": "Clement Lenglet",
+                  "position": "DF",
+                  "shirt": 4
+                },
+                {
+                  "name": "Matteo Ruggeri",
+                  "position": "DF",
+                  "shirt": 23
+                },
+                {
+                  "name": "Giuliano Simeone",
+                  "position": "MF",
+                  "shirt": 19
+                },
+                {
+                  "name": "Koke",
+                  "position": "MF",
+                  "shirt": 6
+                },
+                {
+                  "name": "Johnny Cardoso",
+                  "position": "MF",
+                  "shirt": 14
+                },
+                {
+                  "name": "Nico Gonzalez",
+                  "position": "MF",
+                  "shirt": 20
+                },
+                {
+                  "name": "Antoine Griezmann",
+                  "position": "FW",
+                  "shirt": 7
+                },
+                {
+                  "name": "Julian Alvarez",
+                  "position": "FW",
+                  "shirt": 9
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Juan Musso",
+                  "position": "GK",
+                  "shirt": 1
+                },
+                {
+                  "name": "Marc Pubill",
+                  "position": "DF",
+                  "shirt": 2
+                },
+                {
+                  "name": "Marcos Llorente",
+                  "position": "DF",
+                  "shirt": 14
+                },
+                {
+                  "name": "Javi Galan",
+                  "position": "DF",
+                  "shirt": 21
+                },
+                {
+                  "name": "Conor Gallagher",
+                  "position": "MF",
+                  "shirt": 4
+                },
+                {
+                  "name": "Rodrigo De Paul",
+                  "position": "MF",
+                  "shirt": 5
+                },
+                {
+                  "name": "Alex Baena",
+                  "position": "MF",
+                  "shirt": 10
+                },
+                {
+                  "name": "Thomas Lemar",
+                  "position": "MF",
+                  "shirt": 11
+                },
+                {
+                  "name": "Alexander Sorloth",
+                  "position": "FW",
+                  "shirt": 22
+                },
+                {
+                  "name": "Angel Correa",
+                  "position": "FW",
+                  "shirt": 8
+                },
+                {
+                  "name": "Ademola Lookman",
+                  "position": "FW",
+                  "shirt": 17
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "David Raya",
+                  "position": "GK",
+                  "shirt": 1
+                },
+                {
+                  "name": "Ben White",
+                  "position": "DF",
+                  "shirt": 4
+                },
+                {
+                  "name": "William Saliba",
+                  "position": "DF",
+                  "shirt": 2
+                },
+                {
+                  "name": "Gabriel",
+                  "position": "DF",
+                  "shirt": 6
+                },
+                {
+                  "name": "Piero Hincapie",
+                  "position": "DF",
+                  "shirt": 5
+                },
+                {
+                  "name": "Declan Rice",
+                  "position": "MF",
+                  "shirt": 41
+                },
+                {
+                  "name": "Martin Zubimendi",
+                  "position": "MF",
+                  "shirt": 36
+                },
+                {
+                  "name": "Martin Odegaard",
+                  "position": "MF",
+                  "shirt": 8
+                },
+                {
+                  "name": "Bukayo Saka",
+                  "position": "FW",
+                  "shirt": 7
+                },
+                {
+                  "name": "Viktor Gyokeres",
+                  "position": "FW",
+                  "shirt": 14
+                },
+                {
+                  "name": "Gabriel Martinelli",
+                  "position": "FW",
+                  "shirt": 11
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Kepa Arrizabalaga",
+                  "position": "GK",
+                  "shirt": 13
+                },
+                {
+                  "name": "Cristhian Mosquera",
+                  "position": "DF",
+                  "shirt": 3
+                },
+                {
+                  "name": "Riccardo Calafiori",
+                  "position": "DF",
+                  "shirt": 33
+                },
+                {
+                  "name": "Myles Lewis-Skelly",
+                  "position": "DF",
+                  "shirt": 49
+                },
+                {
+                  "name": "Christian Norgaard",
+                  "position": "MF",
+                  "shirt": 16
+                },
+                {
+                  "name": "Mikel Merino",
+                  "position": "MF",
+                  "shirt": 23
+                },
+                {
+                  "name": "Eberechi Eze",
+                  "position": "MF",
+                  "shirt": 10
+                },
+                {
+                  "name": "Leandro Trossard",
+                  "position": "FW",
+                  "shirt": 19
+                },
+                {
+                  "name": "Noni Madueke",
+                  "position": "FW",
+                  "shirt": 20
+                },
+                {
+                  "name": "Gabriel Jesus",
+                  "position": "FW",
+                  "shirt": 9
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-4-2",
+            "away": "4-3-3"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "Giuliano Simeone",
+              "on": "Marcos Llorente",
+              "minute": 65
+            },
+            {
+              "team": "home",
+              "off": "Antoine Griezmann",
+              "on": "Alexander Sorloth",
+              "minute": 70
+            },
+            {
+              "team": "home",
+              "off": "Nico Gonzalez",
+              "on": "Conor Gallagher",
+              "minute": 78
+            },
+            {
+              "team": "away",
+              "off": "Bukayo Saka",
+              "on": "Noni Madueke",
+              "minute": 70
+            },
+            {
+              "team": "away",
+              "off": "Gabriel Martinelli",
+              "on": "Eberechi Eze",
+              "minute": 72
+            },
+            {
+              "team": "away",
+              "off": "Martin Odegaard",
+              "on": "Christian Norgaard",
+              "minute": 85
+            }
+          ],
+          "cards": [
+            {
+              "player": "Koke",
+              "team": "home",
+              "color": "yellow",
+              "minute": 35
+            },
+            {
+              "player": "Johnny Cardoso",
+              "team": "home",
+              "color": "yellow",
+              "minute": 55
+            },
+            {
+              "player": "Clement Lenglet",
+              "team": "home",
+              "color": "yellow",
+              "minute": 70
+            },
+            {
+              "player": "Declan Rice",
+              "team": "away",
+              "color": "yellow",
+              "minute": 40
+            },
+            {
+              "player": "Piero Hincapie",
+              "team": "away",
+              "color": "yellow",
+              "minute": 60
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 47,
+              "away": 53
+            },
+            "shots": {
+              "home": 12,
+              "away": 13
+            },
+            "shots_on_target": {
+              "home": 4,
+              "away": 4
+            },
+            "corners": {
+              "home": 5,
+              "away": 6
+            },
+            "pass_accuracy": {
+              "home": 82,
+              "away": 86
+            },
+            "fouls": {
+              "home": 14,
+              "away": 11
+            },
+            "saves": {
+              "home": 3,
+              "away": 3
+            },
+            "defensive_actions": {
+              "home": 38,
+              "away": 33
+            }
+          },
+          "cost_usd": 0.674,
+          "sources": [
+            {
+              "url": "https://www.aljazeera.com/sports/2026/4/28/atletico-madrid-vs-arsenal-champions-league-team-news-start",
+              "accessed_at": "2026-04-28T23:36:22.250062+00:00",
+              "title": "Atletico Madrid vs Arsenal: Champions League – team news, start, lineups | Football News | Al Jazeera"
+            },
+            {
+              "url": "https://sport-news.ca/news/atletico-madrid-arsenal-champions-league-semi-final",
+              "accessed_at": "2026-04-28T23:36:22.250076+00:00",
+              "title": "Atletico Madrid vs Arsenal: UEFA Champions League Semi-Final Preview"
+            },
+            {
+              "url": "https://www.sportsgambler.com/betting-tips/football/atletico-madrid-vs-arsenal-prediction-lineups-odds-2026-04-29/",
+              "accessed_at": "2026-04-28T23:36:22.250081+00:00",
+              "title": "Atlético Madrid vs Arsenal Prediction, Betting Tips, Lineups & Odds | 29 Apr 2026"
+            },
+            {
+              "url": "https://www.sportsmole.co.uk/football/atletico-madrid/champions-league/preview/atletico-vs-arsenal-prediction-team-news-lineups_596508.html",
+              "accessed_at": "2026-04-28T23:36:22.250084+00:00",
+              "title": "Preview: Atletico Madrid vs Arsenal - prediction, team news, lineups - Sports Mole"
+            },
+            {
+              "url": "https://www.football365.com/match-preview/atletico-madrid-v-arsenal-prediction-preview",
+              "accessed_at": "2026-04-28T23:36:22.250086+00:00",
+              "title": "Atletico Madrid v Arsenal: Prediction, team news, lineups and odds"
+            },
+            {
+              "url": "https://theanalyst.com/articles/atletico-madrid-vs-arsenal-prediction-champions-league-semi-final-first-leg-04-2026",
+              "accessed_at": "2026-04-28T23:36:22.250088+00:00",
+              "title": "Atlético Madrid vs Arsenal Prediction: UCL Nearly Men Battle for First-Leg Advantage | Opta Analyst"
+            },
+            {
+              "url": "https://www.youtube.com/watch?v=HrRiMyIwIXk",
+              "accessed_at": "2026-04-28T23:36:22.250091+00:00",
+              "title": "Atletico Madrid v Arsenal | Semi-Final LEG 1 | UEFA Champions League 2026 Gameplay - YouTube"
+            },
+            {
+              "url": "https://www.enforcethesport.com/blog/battle-in-madrid-atltico-and-arsenal-collide-in-2026-champions-league-semifinal",
+              "accessed_at": "2026-04-28T23:36:22.250093+00:00",
+              "title": "Battle in Madrid: Atlético and Arsenal Collide in 2026 Champions League Semifinal — EnforcetheSport.com"
+            },
+            {
+              "url": "https://www.football-espana.net/2026/04/28/atletico-madrid-to-get-three-key-players-back-for-arsenal-champions-league-semi-final",
+              "accessed_at": "2026-04-28T23:36:22.250095+00:00",
+              "title": "Atletico Madrid to get three key players back for Arsenal Champions League semi-final"
+            },
+            {
+              "url": "https://editorial.uefa.com/resources/02a3-202da17acaeb-9a328b195eec-1000/uefa_-_champions_league_-_2025-26_-_quarter-finals_schedule.pdf",
+              "accessed_at": "2026-04-28T23:36:22.250098+00:00",
+              "title": "2025/26 UEFA CHAMPIONS LEAGUE KNOCKOUT PHASE Quarter-Finals Semi-Finals - -"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Arsenal_F.C._season",
+              "accessed_at": "2026-04-28T23:36:22.250101+00:00",
+              "title": "2025–26 Arsenal F.C. season - Wikipedia"
+            },
+            {
+              "url": "https://www.arsenal.com/results-and-fixtures-list",
+              "accessed_at": "2026-04-28T23:36:22.250103+00:00",
+              "title": "Results And Fixtures List | Arsenal.com"
+            },
+            {
+              "url": "https://www.fotmob.com/teams/9825/overview/arsenal",
+              "accessed_at": "2026-04-28T23:36:22.250105+00:00",
+              "title": "Arsenal - fixtures, team info and top players"
+            },
+            {
+              "url": "https://www.premierleague.com/en/clubs/3/arsenal/matches",
+              "accessed_at": "2026-04-28T23:36:22.250108+00:00",
+              "title": "Arsenal Fixtures & Results 2025/2026 | Premier League"
+            },
+            {
+              "url": "https://www.arsenal.com/fixture/arsenal/2026-Apr-25/newcastle-united",
+              "accessed_at": "2026-04-28T23:36:22.250110+00:00",
+              "title": "Arsenal vs Newcastle United | Premier League | April 25 2026"
+            },
+            {
+              "url": "https://sportstats365.com/football/premiership/2025-2026/teams/arsenal",
+              "accessed_at": "2026-04-28T23:36:22.250112+00:00",
+              "title": "Arsenal statistics, fixtures and results - Premier League 2025/2026 - Sportstats365.com"
+            },
+            {
+              "url": "https://fbref.com/en/squads/18bb7c10/2025-2026/matchlogs/c9/schedule/Arsenal-Scores-and-Fixtures-Premier-League",
+              "accessed_at": "2026-04-28T23:36:22.250114+00:00",
+              "title": "2025-2026 Arsenal Scores and Fixtures (Premier League)"
+            },
+            {
+              "url": "https://tribuna.com/en/clubs/arsenal/squad/2025-2026/",
+              "accessed_at": "2026-04-28T23:36:22.250116+00:00",
+              "title": "Arsenal Squad & Players 2025/2026 season, numbers"
+            },
+            {
+              "url": "https://www.espn.com/soccer/team/results/_/id/359/league/ENG.1",
+              "accessed_at": "2026-04-28T23:36:22.250119+00:00",
+              "title": "Arsenal 2025 English Premier League Results - ESPN"
+            },
+            {
+              "url": "https://www.sofascore.com/football/team/arsenal/42",
+              "accessed_at": "2026-04-28T23:36:22.250121+00:00",
+              "title": "Arsenal live score, schedule & player stats | Sofascore"
+            },
+            {
+              "url": "https://www.sportsgambler.com/betting-tips/football/atletico-madrid-vs-arsenal-prediction-lineups-odds-2026-04-29/",
+              "accessed_at": "2026-04-28T23:36:22.250125+00:00",
+              "title": "Atlético Madrid vs Arsenal Prediction, Betting Tips, Lineups & Odds | 29 Apr 2026"
+            },
+            {
+              "url": "https://www.sportsmole.co.uk/football/atletico-madrid/champions-league/preview/atletico-vs-arsenal-prediction-team-news-lineups_596508.html",
+              "accessed_at": "2026-04-28T23:36:22.250127+00:00",
+              "title": "Preview: Atletico Madrid vs Arsenal - prediction, team news, lineups - Sports Mole"
+            },
+            {
+              "url": "https://www.football365.com/match-preview/atletico-madrid-v-arsenal-prediction-preview",
+              "accessed_at": "2026-04-28T23:36:22.250129+00:00",
+              "title": "Atletico Madrid v Arsenal: Prediction, team news, lineups and odds"
+            },
+            {
+              "url": "https://paininthearsenal.com/atletico-madrid-vs-arsenal-preview-prediction-lineups-29-4-26",
+              "accessed_at": "2026-04-28T23:36:22.250132+00:00",
+              "title": "Atletico Madrid vs Arsenal: Preview, Prediction & Lineups"
+            },
+            {
+              "url": "https://www.sportsmole.co.uk/football/atletico-madrid/champions-league/predicted-lineups/barrios-blow-alvarez-lookman-decisions-predicted-atletico-lineup-vs-arsenal_596509.html",
+              "accessed_at": "2026-04-28T23:36:22.250134+00:00",
+              "title": "Atletico Madrid lineup vs. Arsenal: Predicted XI for Champions League semi-final first leg - Sports Mole"
+            },
+            {
+              "url": "https://dailysports.net/predictions/atletico-vs-arsenal-prediction-h2h-and-probable-lineups-april-29-2026/",
+              "accessed_at": "2026-04-28T23:36:22.250136+00:00",
+              "title": "Atletico Madrid vs Arsenal prediction and betting tips 29 April 2026 | Dailysports experts"
+            },
+            {
+              "url": "https://www.aljazeera.com/sports/2026/4/28/atletico-madrid-vs-arsenal-champions-league-team-news-start",
+              "accessed_at": "2026-04-28T23:36:22.250139+00:00",
+              "title": "Atletico Madrid vs Arsenal: Champions League – team news, start, lineups | Football News | Al Jazeera"
+            },
+            {
+              "url": "https://scores24.live/en/soccer/m-29-04-2026-atletico-madrid-arsenal-prediction",
+              "accessed_at": "2026-04-28T23:36:22.250141+00:00",
+              "title": "Atletico Madrid vs Arsenal Prediction 29/04/2026 – Odds, Tips & Analysis - Football"
+            },
+            {
+              "url": "https://onefootball.com/en/news/preview-atletico-de-madrid-vs-arsenal-team-news-lineups-predictions-champions-league-2904-42778597",
+              "accessed_at": "2026-04-28T23:36:22.250143+00:00",
+              "title": "PREVIEW | Atlético de Madrid vs Arsenal: team news, lineups, predictions (Champions League 29/04) | OneFootball"
+            },
+            {
+              "url": "https://www.goal.com/en-za/betting/tips/atletico-madrid-vs-arsenal-predictions-29-04-26/A:blt9777d60fa7b0db66",
+              "accessed_at": "2026-04-28T23:36:22.250145+00:00",
+              "title": "Atletico Madrid vs Arsenal predictions: First leg draw expected | Goal.com South Africa"
+            },
+            {
+              "url": "https://www.si.com/soccer/arsenal-xi-vs-atletico-madrid-attacking-changes-necessary-injury-news-predicted-lineup-4-29-26",
+              "accessed_at": "2026-04-28T23:36:22.250148+00:00",
+              "title": "Arsenal XI vs. Atletico Madrid—Attacking Changes Necessary: Injury News, Predicted Lineup"
+            },
+            {
+              "url": "https://roundtable.io/sports/soccer/premier-league/arsenal/news/arsenal-injury-update-arteta-confirms-havertz-out-for-atletico",
+              "accessed_at": "2026-04-28T23:36:22.250150+00:00",
+              "title": "Arsenal Injury Update: Arteta Confirms Havertz out for Atletico"
+            },
+            {
+              "url": "https://www.sportsmole.co.uk/football/atletico-madrid/champions-league/preview/atletico-vs-arsenal-prediction-team-news-lineups_596508.html",
+              "accessed_at": "2026-04-28T23:36:22.250152+00:00",
+              "title": "Preview: Atletico Madrid vs Arsenal - prediction, team news, lineups - Sports Mole"
+            },
+            {
+              "url": "https://www.sportsmole.co.uk/football/atletico-madrid/champions-league/team-news/atletico-vs-arsenal-injury-suspension-list-predicted-xis_596511.html",
+              "accessed_at": "2026-04-28T23:36:22.250154+00:00",
+              "title": "Team News: Atletico Madrid vs. Arsenal injury, suspension list, predicted XIs - Sports Mole"
+            },
+            {
+              "url": "https://www.goal.com/en/lists/kai-havertz-set-to-miss-arsenal-champions-league-clash-with-atletico-madrid-injury-blow-in-newcastle-win/blt65694c3741e0a1bc",
+              "accessed_at": "2026-04-28T23:36:22.250156+00:00",
+              "title": "Kai Havertz set to miss Arsenal's Champions League clash with Atletico Madrid after injury blow in Newcastle win | Goal.com"
+            },
+            {
+              "url": "https://www.aljazeera.com/sports/2026/4/28/atletico-madrid-vs-arsenal-champions-league-team-news-start",
+              "accessed_at": "2026-04-28T23:36:22.250158+00:00",
+              "title": "Atletico Madrid vs Arsenal: Champions League – team news, start, lineups | Football News | Al Jazeera"
+            },
+            {
+              "url": "https://www.sportsmole.co.uk/football/arsenal/injury-news/news/advantage-atletico-arteta-delivers-havertz-eze-injury-updates-after-newcastle-win_596444.html",
+              "accessed_at": "2026-04-28T23:36:22.250160+00:00",
+              "title": "Mikel Arteta provides Eberechi Eze, Kai Havertz injury updates after Arsenal's nervy Newcastle win - Sports Mole"
+            },
+            {
+              "url": "https://aftv.co.uk/match-centre/atletico-madrid-vs-arsenal-latest-injury-updates-and-predicted-line-up-uefa-champions-league-semi-final/",
+              "accessed_at": "2026-04-28T23:36:22.250163+00:00",
+              "title": "Atlético Madrid vs Arsenal: latest injury updates and predicted line-up (UEFA Champions League semi-final) AFTV"
+            },
+            {
+              "url": "https://www.nbcsports.com/soccer/news/arsenal-predicted-xi-how-will-gunners-line-up-vs-atletico-madrid",
+              "accessed_at": "2026-04-28T23:36:22.250165+00:00",
+              "title": "Arsenal predicted XI: How will Gunners line up vs Atletico Madrid? - NBC Sports"
+            },
+            {
+              "url": "https://arseblog.com/2026/04/injury-hit/",
+              "accessed_at": "2026-04-28T23:36:22.250167+00:00",
+              "title": "Injury hit | Arseblog ... an Arsenal blog"
+            },
+            {
+              "url": "https://www.aljazeera.com/sports/2026/4/28/atletico-madrid-vs-arsenal-champions-league-team-news-start",
+              "accessed_at": "2026-04-28T18:25:00Z",
+              "title": "Atletico Madrid vs Arsenal: Champions League team news"
+            },
+            {
+              "url": "https://www.sportsmole.co.uk/football/atletico-madrid/champions-league/preview/atletico-vs-arsenal-prediction-team-news-lineups_596508.html",
+              "accessed_at": "2026-04-28T18:25:00Z",
+              "title": "Preview: Atletico vs Arsenal"
+            },
+            {
+              "url": "https://www.sportsmole.co.uk/football/atletico-madrid/champions-league/team-news/atletico-vs-arsenal-injury-suspension-list-predicted-xis_596511.html",
+              "accessed_at": "2026-04-28T18:26:00Z",
+              "title": "Atletico Madrid vs Arsenal injury, suspension list, predicted XIs"
+            },
+            {
+              "url": "https://roundtable.io/sports/soccer/premier-league/arsenal/news/arsenal-injury-update-arteta-confirms-havertz-out-for-atletico",
+              "accessed_at": "2026-04-28T18:26:00Z",
+              "title": "Arteta confirms Havertz out for Atletico"
+            },
+            {
+              "url": "https://www.football-espana.net/2026/04/28/atletico-madrid-to-get-three-key-players-back-for-arsenal-champions-league-semi-final",
+              "accessed_at": "2026-04-28T18:27:00Z",
+              "title": "Atletico Madrid to get three key players back for Arsenal"
+            },
+            {
+              "url": "https://theanalyst.com/articles/atletico-madrid-vs-arsenal-prediction-champions-league-semi-final-first-leg-04-2026",
+              "accessed_at": "2026-04-28T18:27:00Z",
+              "title": "Opta Analyst: Atletico Madrid vs Arsenal Prediction"
+            },
+            {
+              "url": "https://sport-news.ca/news/atletico-madrid-arsenal-champions-league-semi-final",
+              "accessed_at": "2026-04-28T18:27:00Z",
+              "title": "Atletico Madrid vs Arsenal preview"
+            },
+            {
+              "url": "https://www.sportsgambler.com/betting-tips/football/atletico-madrid-vs-arsenal-prediction-lineups-odds-2026-04-29/",
+              "accessed_at": "2026-04-28T18:27:00Z",
+              "title": "Atletico Madrid vs Arsenal predictions, betting tips, lineups, odds"
+            },
+            {
+              "url": "https://scores24.live/en/soccer/m-29-04-2026-atletico-madrid-arsenal-prediction",
+              "accessed_at": "2026-04-28T18:28:00Z",
+              "title": "Atletico Madrid vs Arsenal Prediction 29/04/2026"
+            },
+            {
+              "url": "https://www.goal.com/en-za/betting/tips/atletico-madrid-vs-arsenal-predictions-29-04-26/A:blt9777d60fa7b0db66",
+              "accessed_at": "2026-04-28T18:28:00Z",
+              "title": "Atletico Madrid vs Arsenal predictions: First leg draw expected"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Arsenal_F.C._season",
+              "accessed_at": "2026-04-28T18:28:00Z",
+              "title": "2025-26 Arsenal F.C. season"
+            },
+            {
+              "url": "https://www.fotmob.com/teams/9825/overview/arsenal",
+              "accessed_at": "2026-04-28T18:29:00Z",
+              "title": "Arsenal recent form"
+            }
+          ],
+          "over_3_5_prob": 0.145
+        },
+        {
+          "model_id": "claude-opus-4-7-thinking",
+          "setting": "S1",
+          "win_probs": {
+            "home": 0.31,
+            "draw": 0.321,
+            "away": 0.369
+          },
+          "score_dist": [
+            {
+              "score": "0-1",
+              "p": 0.159
+            },
+            {
+              "score": "1-1",
+              "p": 0.153
+            },
+            {
+              "score": "0-0",
+              "p": 0.118
+            },
+            {
+              "score": "1-0",
+              "p": 0.112
+            },
+            {
+              "score": "2-1",
+              "p": 0.077
+            },
+            {
+              "score": "0-2",
+              "p": 0.076
+            },
+            {
+              "score": "1-2",
+              "p": 0.059
+            },
+            {
+              "score": "2-0",
+              "p": 0.059
+            },
+            {
+              "score": "2-2",
+              "p": 0.048
+            },
+            {
+              "score": "1-3",
+              "p": 0.027
+            },
+            {
+              "score": "0-3",
+              "p": 0.027
+            },
+            {
+              "score": "3-1",
+              "p": 0.024
+            },
+            {
+              "score": "3-0",
+              "p": 0.02
+            },
+            {
+              "score": "2-3",
+              "p": 0.015
+            },
+            {
+              "score": "3-2",
+              "p": 0.014
+            },
+            {
+              "score": "1-4",
+              "p": 0.003
+            },
+            {
+              "score": "0-4",
+              "p": 0.003
+            },
+            {
+              "score": "4-1",
+              "p": 0.002
+            },
+            {
+              "score": "3-3",
+              "p": 0.002
+            },
+            {
+              "score": "4-0",
+              "p": 0.002
+            }
+          ],
+          "most_likely_score": "0-1",
+          "expected_goal_diff": -0.1,
+          "advance_prob": 0.42,
+          "reasoning": {
+            "overall": "UCL semi-final first leg at the Metropolitano between two evenly-matched but inconsistent sides. Atletico's last-10 record is poor (3W-1D-6L) but they remain a different animal at home in Europe under Simeone, with Álvarez, Griezmann and Sørloth giving them set-piece and transition threat. Arsenal arrive in slightly better form (4W-2D-4L) but with attritional fixtures, defensive injury concerns flagged by Arteta, and a lower-scoring profile (1-0 wins, 0-0 draws). The matchup is a classic low-block vs structured possession battle — Arsenal usually dominate the ball, Atletico will sit deeper, hunt set pieces and counters. First-leg dynamics push both managers toward caution, especially Arteta who will not want to concede a damaging away tally. Slight Arsenal edge on overall quality and recent form is largely cancelled by home advantage and Simeone's knockout DNA, producing a tight, low-event tie with significant draw probability.",
+            "t1_result": "Talent and recent form give Arsenal a small edge, but the home crowd, Atletico's defensive identity in big European nights, and Arsenal's known tendency to draw/lose tight away knockout legs flatten the matchup. I have draw and away marginally above home, with a low-scoring profile dominating the score distribution.",
+            "t2_player": "Atletico likely set up 4-4-2 with Oblak; Llorente-Le Normand-Lenglet-Hancko; Koke-Barrios anchoring, Baena and Simeone wide, Álvarez-Griezmann up top. Arsenal go 4-3-3: Raya; Timber-Saliba-Gabriel/Hincapié-Calafiori; Zubimendi-Rice-Ødegaard; Saka-Gyökeres-Martinelli. Top scorer candidates: Álvarez and Sørloth (set pieces) for home, Saka, Gyökeres and Ødegaard for away.",
+            "t3_events": "Expect a cagey opening 25 minutes, set-piece derived chances, fouls and yellow cards in midfield (Barrios/Rice/Zubimendi area). Goals likeliest 30-50' window from a set play and 65-85' as legs tire and subs (Trossard, Eze, Almada, Lookman) come on chasing the leg. Penalty risk modest given referee tendency to stage-manage in semis.",
+            "t4_stats": "Arsenal will see more of the ball (~56-58%) and post higher pass accuracy. Atletico will outfoul, win more aerial/defensive actions and rely on counter shots. Total shots fairly even with Arsenal slightly higher on quality; corners modest because Atletico funnel play wide and Arsenal patient build-up doesn't produce mass corners away."
+          },
+          "scorers": [
+            {
+              "player": "J. Álvarez",
+              "team": "home",
+              "minute_range": [
+                25,
+                90
+              ],
+              "p": 0.24
+            },
+            {
+              "player": "A. Griezmann",
+              "team": "home",
+              "minute_range": [
+                30,
+                85
+              ],
+              "p": 0.14
+            },
+            {
+              "player": "A. Sørloth",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.1
+            },
+            {
+              "player": "Álex Baena",
+              "team": "home",
+              "minute_range": [
+                20,
+                80
+              ],
+              "p": 0.08
+            },
+            {
+              "player": "G. Simeone",
+              "team": "home",
+              "minute_range": [
+                40,
+                90
+              ],
+              "p": 0.07
+            },
+            {
+              "player": "T. Almada",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.06
+            },
+            {
+              "player": "B. Saka",
+              "team": "away",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.2
+            },
+            {
+              "player": "V. Gyökeres",
+              "team": "away",
+              "minute_range": [
+                25,
+                90
+              ],
+              "p": 0.2
+            },
+            {
+              "player": "Gabriel Martinelli",
+              "team": "away",
+              "minute_range": [
+                30,
+                85
+              ],
+              "p": 0.12
+            },
+            {
+              "player": "M. Ødegaard",
+              "team": "away",
+              "minute_range": [
+                25,
+                85
+              ],
+              "p": 0.09
+            },
+            {
+              "player": "L. Trossard",
+              "team": "away",
+              "minute_range": [
+                65,
+                90
+              ],
+              "p": 0.07
+            },
+            {
+              "player": "E. Eze",
+              "team": "away",
+              "minute_range": [
+                65,
+                90
+              ],
+              "p": 0.06
+            }
+          ],
+          "assisters": [
+            {
+              "player": "M. Ødegaard",
+              "team": "away",
+              "p": 0.18
+            },
+            {
+              "player": "B. Saka",
+              "team": "away",
+              "p": 0.14
+            },
+            {
+              "player": "D. Rice",
+              "team": "away",
+              "p": 0.09
+            },
+            {
+              "player": "Gabriel Martinelli",
+              "team": "away",
+              "p": 0.08
+            },
+            {
+              "player": "A. Griezmann",
+              "team": "home",
+              "p": 0.16
+            },
+            {
+              "player": "Álex Baena",
+              "team": "home",
+              "p": 0.12
+            },
+            {
+              "player": "Koke",
+              "team": "home",
+              "p": 0.08
+            },
+            {
+              "player": "Marcos Llorente",
+              "team": "home",
+              "p": 0.07
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "J. Álvarez",
+              "team": "home",
+              "p": 0.16
+            },
+            {
+              "player": "B. Saka",
+              "team": "away",
+              "p": 0.14
+            },
+            {
+              "player": "V. Gyökeres",
+              "team": "away",
+              "p": 0.12
+            },
+            {
+              "player": "M. Ødegaard",
+              "team": "away",
+              "p": 0.1
+            },
+            {
+              "player": "D. Rice",
+              "team": "away",
+              "p": 0.08
+            },
+            {
+              "player": "W. Saliba",
+              "team": "away",
+              "p": 0.07
+            },
+            {
+              "player": "J. Oblak",
+              "team": "home",
+              "p": 0.09
+            },
+            {
+              "player": "A. Griezmann",
+              "team": "home",
+              "p": 0.07
+            },
+            {
+              "player": "Álex Baena",
+              "team": "home",
+              "p": 0.05
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "J. Oblak",
+                  "position": "GK"
+                },
+                {
+                  "name": "Marcos Llorente",
+                  "position": "DF"
+                },
+                {
+                  "name": "Robin Le Normand",
+                  "position": "DF"
+                },
+                {
+                  "name": "C. Lenglet",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Hancko",
+                  "position": "DF"
+                },
+                {
+                  "name": "G. Simeone",
+                  "position": "MF"
+                },
+                {
+                  "name": "Pablo Barrios",
+                  "position": "MF"
+                },
+                {
+                  "name": "Koke",
+                  "position": "MF"
+                },
+                {
+                  "name": "Álex Baena",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Álvarez",
+                  "position": "FW"
+                },
+                {
+                  "name": "A. Griezmann",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "J. Musso",
+                  "position": "GK"
+                },
+                {
+                  "name": "J. Giménez",
+                  "position": "DF"
+                },
+                {
+                  "name": "N. Molina",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. Ruggeri",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Cardoso",
+                  "position": "MF"
+                },
+                {
+                  "name": "T. Almada",
+                  "position": "FW"
+                },
+                {
+                  "name": "A. Lookman",
+                  "position": "FW"
+                },
+                {
+                  "name": "A. Sørloth",
+                  "position": "FW"
+                },
+                {
+                  "name": "N. González",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "David Raya",
+                  "position": "GK"
+                },
+                {
+                  "name": "J. Timber",
+                  "position": "DF"
+                },
+                {
+                  "name": "W. Saliba",
+                  "position": "DF"
+                },
+                {
+                  "name": "Gabriel Magalhães",
+                  "position": "DF"
+                },
+                {
+                  "name": "R. Calafiori",
+                  "position": "DF"
+                },
+                {
+                  "name": "Martín Zubimendi",
+                  "position": "MF"
+                },
+                {
+                  "name": "D. Rice",
+                  "position": "MF"
+                },
+                {
+                  "name": "M. Ødegaard",
+                  "position": "MF"
+                },
+                {
+                  "name": "B. Saka",
+                  "position": "FW"
+                },
+                {
+                  "name": "V. Gyökeres",
+                  "position": "FW"
+                },
+                {
+                  "name": "Gabriel Martinelli",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Kepa",
+                  "position": "GK"
+                },
+                {
+                  "name": "P. Hincapié",
+                  "position": "DF"
+                },
+                {
+                  "name": "B. White",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. Lewis-Skelly",
+                  "position": "DF"
+                },
+                {
+                  "name": "Mikel Merino",
+                  "position": "MF"
+                },
+                {
+                  "name": "C. Nørgaard",
+                  "position": "MF"
+                },
+                {
+                  "name": "E. Eze",
+                  "position": "FW"
+                },
+                {
+                  "name": "L. Trossard",
+                  "position": "FW"
+                },
+                {
+                  "name": "K. Havertz",
+                  "position": "FW"
+                },
+                {
+                  "name": "N. Madueke",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-4-2",
+            "away": "4-3-3"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "G. Simeone",
+              "on": "T. Almada",
+              "minute": 62
+            },
+            {
+              "team": "home",
+              "off": "Álex Baena",
+              "on": "A. Lookman",
+              "minute": 70
+            },
+            {
+              "team": "home",
+              "off": "A. Griezmann",
+              "on": "A. Sørloth",
+              "minute": 75
+            },
+            {
+              "team": "away",
+              "off": "Gabriel Martinelli",
+              "on": "L. Trossard",
+              "minute": 68
+            },
+            {
+              "team": "away",
+              "off": "M. Ødegaard",
+              "on": "E. Eze",
+              "minute": 78
+            },
+            {
+              "team": "away",
+              "off": "V. Gyökeres",
+              "on": "K. Havertz",
+              "minute": 84
+            }
+          ],
+          "cards": [
+            {
+              "player": "Pablo Barrios",
+              "team": "home",
+              "color": "yellow",
+              "minute": 28
+            },
+            {
+              "player": "C. Lenglet",
+              "team": "home",
+              "color": "yellow",
+              "minute": 55
+            },
+            {
+              "player": "Marcos Llorente",
+              "team": "home",
+              "color": "yellow",
+              "minute": 72
+            },
+            {
+              "player": "D. Rice",
+              "team": "away",
+              "color": "yellow",
+              "minute": 40
+            },
+            {
+              "player": "R. Calafiori",
+              "team": "away",
+              "color": "yellow",
+              "minute": 66
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 43,
+              "away": 57
+            },
+            "shots": {
+              "home": 11,
+              "away": 13
+            },
+            "shots_on_target": {
+              "home": 4,
+              "away": 5
+            },
+            "corners": {
+              "home": 4,
+              "away": 6
+            },
+            "pass_accuracy": {
+              "home": 82,
+              "away": 87
+            },
+            "fouls": {
+              "home": 14,
+              "away": 11
+            },
+            "saves": {
+              "home": 3,
+              "away": 3
+            },
+            "defensive_actions": {
+              "home": 42,
+              "away": 32
+            }
+          },
+          "cost_usd": 0.188,
+          "sources": [],
+          "over_3_5_prob": 0.14
+        }
+      ],
+      "live": null
+    }
+  ],
   "history": [
     {
       "wca_id": "ucl_sf1_l1_2026_bayern_psg",
