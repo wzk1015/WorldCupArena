@@ -291,86 +291,17 @@ def _display_candidates(pred: dict) -> list[dict]:
 
 
 def _attach_display_picks(preds: list[dict]) -> None:
-    """Choose representative headline scores for the website.
-
-    This is intentionally a display layer. The raw probability distribution is
-    still shown and used for scoring. The headline pick is selected from each
-    model's own high-probability scorelines so the cards are readable without
-    collapsing every model onto the same conservative exact score.
-    """
+    """Attach derived site metrics without changing prediction semantics."""
     if not preds:
         return
 
     for pred in preds:
-        scores = _sorted_scores(pred)
         over_3_5 = 0.0
         for item in pred.get("score_dist") or []:
             total = _score_total(item.get("score"))
             if total is not None and total >= 4:
                 over_3_5 += float(item.get("p", 0))
         pred["over_3_5_prob"] = round(over_3_5, 3)
-
-        top_score = pred.get("most_likely_score") or (scores[0].get("score") if scores else None)
-        top_p = float(scores[0].get("p", 0)) if scores else 0.0
-        pred["display_score"] = top_score
-        pred["display_score_p"] = round(top_p, 3) if top_p else None
-        pred["display_score_note"] = "top_probability"
-
-    # Ensure at least one draw is represented when models give draw a real
-    # chance and a draw score is near their top exact-score candidate.
-    draw_cases = []
-    for idx, pred in enumerate(preds):
-        wp = pred.get("win_probs") or {}
-        draw_p = float(wp.get("draw", 0))
-        fav_p = max(float(wp.get("home", 0)), float(wp.get("away", 0)))
-        draw_score = _best_score(pred, lambda score: _score_outcome(score) == "draw", min_ratio=0.72)
-        if draw_score and draw_p >= 0.22 and fav_p - draw_p <= 0.18:
-            draw_cases.append((draw_p - max(0.0, fav_p - draw_p), draw_score["p"], idx, draw_score))
-
-    draw_quota = 1
-    if len(preds) >= 6:
-        avg_draw = sum(float((p.get("win_probs") or {}).get("draw", 0)) for p in preds) / len(preds)
-        if avg_draw >= 0.27:
-            draw_quota = 2
-    draw_cases.sort(reverse=True)
-    applied_draws = 0
-    for _, _, idx, draw_score in draw_cases:
-        if applied_draws >= draw_quota:
-            break
-        pred = preds[idx]
-        if _score_outcome(pred.get("display_score")) == "draw":
-            continue
-        pred["display_score"] = draw_score["score"]
-        pred["display_score_p"] = round(draw_score["p"], 3)
-        pred["display_score_note"] = "near_top_draw"
-        applied_draws += 1
-
-    # Break up repeated headline scores, but only using scores that are still
-    # near the model's own top candidate. High-total alternatives are preferred
-    # when the model assigns meaningful over-3.5 mass.
-    used: set[str] = set()
-    for pred in preds:
-        current = str(pred.get("display_score") or "")
-        if current and current not in used:
-            used.add(current)
-            continue
-        candidates = _display_candidates(pred)
-        if not candidates:
-            continue
-        over_3_5 = float(pred.get("over_3_5_prob") or 0)
-        candidates.sort(
-            key=lambda c: (
-                c["score"] in used,
-                not (over_3_5 >= 0.22 and c["total"] >= 4),
-                c["rank"],
-                -c["p"],
-            )
-        )
-        choice = candidates[0]
-        pred["display_score"] = choice["score"]
-        pred["display_score_p"] = round(choice["p"], 3)
-        pred["display_score_note"] = "near_top_diversified"
-        used.add(choice["score"])
 
 
 def build_incoming_matches() -> list[dict]:

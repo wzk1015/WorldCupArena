@@ -30,7 +30,7 @@ from ..graders import grade_match
 from ..ingest.api_football import normalize_fixture, normalize_to_truth, populate_context_pack, APIFootballClient
 from ..ingest.news import populate_news
 from .prompt_build import build_prompt
-from .score_calibration import SCORE_CALIBRATION_METHOD, calibrate_score_prediction
+from .score_calibration import SCORE_CALIBRATION_METHOD, calibrate_score_prediction, diversify_prediction_records
 from .validate import validate, validate_or_repair
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -113,6 +113,8 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
     calibration_max_scorelines = int(scoreline_policy.get("max_scorelines", 20))
     calibration_model_weight = float(scoreline_policy.get("model_weight", 0.62))
     calibration_favorite_margin = float(scoreline_policy.get("favorite_margin", 0.15))
+    diversification_policy = policy.get("fixture_diversification") or {}
+    diversify_fixture = bool(diversification_policy.get("enabled", True))
 
     MAX_RUN_RETRIES = 3
 
@@ -200,6 +202,7 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
             total_cost += res.cost_usd
             audit = _leak_audit(res.sources, fixture["lock_at_utc"])
             prediction = res.prediction
+            raw_prediction = json.loads(json.dumps(res.prediction)) if res.prediction else {}
             validation_errors = res.validation_errors
             score_calibration = None
             if calibrate_scorelines and not res.error and prediction:
@@ -223,6 +226,7 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
                 "setting": res.setting,
                 "submitted_at": res.submitted_at,
                 "prediction": prediction,
+                "raw_prediction": raw_prediction,
                 "sources": res.sources,
                 "leakage_audit": audit,
                 "cost_usd": total_cost,
@@ -276,6 +280,39 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
     with cf.ThreadPoolExecutor(max_workers=parallel) as ex:
         for r in ex.map(_one, jobs):
             print(" ", r)
+
+    if calibrate_scorelines and diversify_fixture:
+        _diversify_fixture_prediction_files(out_dir, fid, tol)
+
+
+def _diversify_fixture_prediction_files(out_dir: Path, fixture_id: str, tol: float) -> None:
+    records: list[tuple[Path, dict[str, Any]]] = []
+    for path in sorted(out_dir.glob("*.json")):
+        try:
+            record = json.loads(path.read_text())
+        except json.JSONDecodeError:
+            continue
+        if record.get("error") or record.get("validation_errors") or not record.get("prediction"):
+            continue
+        records.append((path, record))
+    if len(records) < 2:
+        return
+
+    diversified = diversify_prediction_records([record for _, record in records])
+    changed = 0
+    for (path, old_record), new_record in zip(records, diversified):
+        report = validate(
+            new_record.get("prediction") or {},
+            fixture_id=fixture_id,
+            setting_id=new_record["setting"],
+            tol=tol,
+        )
+        new_record["validation_errors"] = report.errors
+        if new_record != old_record:
+            path.write_text(json.dumps(new_record, ensure_ascii=False, indent=2))
+            changed += 1
+    if changed:
+        print(f"[predict] {fixture_id}: diversified {changed} prediction files")
 
 
 def cmd_grade(fixture_dir: Path) -> None:

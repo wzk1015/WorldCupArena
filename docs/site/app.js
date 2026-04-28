@@ -463,25 +463,13 @@ function renderPredCard(p, f, idx) {
   const reasoning  = p.reasoning || {};
   const scoreDist  = (p.score_dist || []).slice().sort((a, b) => (b.p || 0) - (a.p || 0));
   const top3       = scoreDist.slice(0, 3);
-  const predScore  = p.display_score || p.most_likely_score || (top3[0] ? top3[0].score : null);
+  const predScore  = p.most_likely_score || (top3[0] ? top3[0].score : null);
   const hName      = f.home || "Home";
   const aName      = f.away || "Away";
   const hasReason  = Object.keys(reasoning).length > 0;
 
-  const scoreOutcome = (() => {
-    if (!predScore) return null;
-    const parts = predScore.split("-").map(x => parseInt(x, 10));
-    if (parts.length !== 2 || parts.some(Number.isNaN)) return null;
-    return parts[0] > parts[1] ? "home" : parts[1] > parts[0] ? "away" : "draw";
-  })();
-
-  // Headline pick follows the representative displayed score. Probability
-  // bars below still show the model's full win_probs.
   const predWinner = (wp.home != null && wp.draw != null && wp.away != null)
-    ? (scoreOutcome === "home" ? hName
-       : scoreOutcome === "away" ? aName
-       : scoreOutcome === "draw" ? "Draw"
-       : wp.home >= wp.draw && wp.home >= wp.away ? hName
+    ? (wp.home >= wp.draw && wp.home >= wp.away ? hName
        : wp.away >= wp.home && wp.away >= wp.draw ? aName : "Draw")
     : null;
 

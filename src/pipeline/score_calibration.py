@@ -356,3 +356,179 @@ def calibrate_score_prediction(
         },
     }
     return out, metadata
+
+
+def _candidate_scores(
+    pred: dict[str, Any],
+    *,
+    min_ratio: float = 0.65,
+    max_rank: int = 10,
+) -> list[dict[str, Any]]:
+    rows = sorted(pred.get("score_dist") or [], key=lambda row: float(row.get("p", 0)), reverse=True)
+    if not rows:
+        return []
+    top_p = float(rows[0].get("p", 0))
+    candidates: list[dict[str, Any]] = []
+    for rank, row in enumerate(rows[:max_rank], 1):
+        score = str(row.get("score", ""))
+        outcome = _outcome(score)
+        if not outcome:
+            continue
+        p = float(row.get("p", 0))
+        if top_p > 0 and p < top_p * min_ratio:
+            continue
+        total = sum(int(part) for part in score.split("-"))
+        candidates.append({"score": score, "p": p, "rank": rank, "outcome": outcome, "total": total})
+    return candidates
+
+
+def _round_rows(rows: list[dict[str, Any]], top_score: str) -> list[dict[str, Any]]:
+    rows = sorted(rows, key=lambda row: float(row.get("p", 0)), reverse=True)
+    out = [{"score": str(row["score"]), "p": round(float(row["p"]), 3)} for row in rows]
+    diff = round(1.0 - sum(row["p"] for row in out), 3)
+    target = next((row for row in out if row["score"] == top_score), None)
+    if target is not None and diff:
+        target["p"] = round(max(0.0, target["p"] + diff), 3)
+    return sorted(out, key=lambda row: float(row["p"]), reverse=True)
+
+
+def _align_prediction_to_score(pred: dict[str, Any], score: str) -> dict[str, Any]:
+    """Make prediction fields coherent around a chosen exact score.
+
+    The chosen score must already be a plausible candidate from the model's own
+    score_dist. We preserve within-outcome ordering as much as possible, then
+    rake outcome totals so win_probs, score_dist, and most_likely_score agree.
+    """
+    out = json.loads(json.dumps(pred))
+    rows = [
+        {"score": str(row.get("score")), "p": max(0.0, float(row.get("p", 0))), "outcome": _outcome(str(row.get("score", "")))}
+        for row in out.get("score_dist") or []
+    ]
+    rows = [row for row in rows if row["outcome"]]
+    target = next((row for row in rows if row["score"] == score), None)
+    target_outcome = _outcome(score)
+    if target is None or target_outcome is None:
+        return out
+
+    total = sum(row["p"] for row in rows) or 1.0
+    for row in rows:
+        row["p"] /= total
+
+    desired = _outcome_totals(rows)
+    max_other = max(desired[outcome] for outcome in OUTCOMES if outcome != target_outcome)
+    if desired[target_outcome] <= max_other:
+        needed = (max_other + 0.001) - desired[target_outcome]
+        donors = [outcome for outcome in OUTCOMES if outcome != target_outcome and desired[outcome] > 0]
+        donor_total = sum(desired[outcome] for outcome in donors) or 1.0
+        for outcome in donors:
+            take = min(desired[outcome] - 0.001, needed * desired[outcome] / donor_total)
+            if take > 0:
+                desired[outcome] -= take
+                desired[target_outcome] += take
+
+    current = _outcome_totals(rows)
+    for row in rows:
+        outcome = row["outcome"]
+        if current[outcome] > 0:
+            row["p"] *= desired[outcome] / current[outcome]
+
+    target = next(row for row in rows if row["score"] == score)
+    top_p = max(float(row["p"]) for row in rows)
+    needed = top_p + 0.006 - float(target["p"])
+    if needed > 0:
+        donors = [
+            row for row in sorted(rows, key=lambda item: float(item["p"]), reverse=True)
+            if row["outcome"] == target_outcome and row["score"] != score
+        ]
+        for donor in donors:
+            if needed <= 0:
+                break
+            available = max(0.0, float(donor["p"]) - 0.001)
+            take = min(available, needed)
+            donor["p"] -= take
+            target["p"] += take
+            needed -= take
+
+    rounded = _round_rows(rows, score)
+    out["score_dist"] = rounded
+    out["most_likely_score"] = score
+    totals = {outcome: 0.0 for outcome in OUTCOMES}
+    for row in rounded:
+        outcome = _outcome(row["score"])
+        if outcome:
+            totals[outcome] += float(row["p"])
+    total = sum(totals.values()) or 1.0
+    out["win_probs"] = {outcome: round(totals[outcome] / total, 3) for outcome in OUTCOMES}
+    diff = round(1.0 - sum(out["win_probs"].values()), 3)
+    if diff:
+        out["win_probs"][target_outcome] = round(max(0.0, out["win_probs"][target_outcome] + diff), 3)
+    return out
+
+
+def diversify_prediction_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Diversify final predictions coherently across models for one fixture.
+
+    This does not invent arbitrary scores. Each final score is chosen from that
+    model's own near-top score_dist candidates, then the prediction object is
+    made internally consistent. The previous prediction is kept in
+    pre_diversity_prediction for auditability.
+    """
+    if len(records) < 2:
+        return records
+
+    used_scores: set[str] = set()
+    used_outcomes = {outcome: 0 for outcome in OUTCOMES}
+    any_draw = False
+    any_high = False
+    out_records: list[dict[str, Any]] = []
+
+    for record in records:
+        pred = record.get("pre_diversity_prediction") or record.get("prediction") or {}
+        candidates = _candidate_scores(pred)
+        if not candidates:
+            out_records.append(record)
+            continue
+
+        wp = pred.get("win_probs") or {}
+        draw_p = float(wp.get("draw", 0))
+        over_3_5 = sum(
+            float(row.get("p", 0))
+            for row in pred.get("score_dist") or []
+            if sum(int(part) for part in str(row.get("score", "0-0")).split("-")) >= 4
+        )
+        top_p = candidates[0]["p"] or 1.0
+
+        def utility(candidate: dict[str, Any]) -> tuple[float, float]:
+            value = candidate["p"] / top_p
+            if candidate["score"] in used_scores:
+                value -= 1.00
+            value -= 0.08 * used_outcomes[candidate["outcome"]]
+            if not any_draw and candidate["outcome"] == "draw" and draw_p >= 0.22:
+                value += 0.22
+            if not any_high and candidate["total"] >= 4 and over_3_5 >= 0.18:
+                value += 0.14
+            return (value, candidate["p"])
+
+        choice = max(candidates, key=utility)
+        new_record = json.loads(json.dumps(record))
+        if "pre_diversity_prediction" not in new_record:
+            new_record["pre_diversity_prediction"] = json.loads(json.dumps(pred))
+        new_record["prediction"] = _align_prediction_to_score(pred, choice["score"])
+        new_record["fixture_diversification"] = {
+            "applied": True,
+            "method": "near_top_coherent_diversity_v1",
+            "chosen_score": choice["score"],
+            "chosen_rank": choice["rank"],
+            "chosen_probability_before": round(choice["p"], 3),
+            "candidate_scores": [
+                {"score": c["score"], "p": round(c["p"], 3), "rank": c["rank"], "outcome": c["outcome"]}
+                for c in candidates
+            ],
+        }
+        used_scores.add(choice["score"])
+        used_outcomes[choice["outcome"]] += 1
+        any_draw = any_draw or choice["outcome"] == "draw"
+        any_high = any_high or choice["total"] >= 4
+        out_records.append(new_record)
+
+    return out_records
