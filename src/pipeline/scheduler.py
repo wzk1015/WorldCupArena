@@ -7,7 +7,7 @@ ticks catch up on the next run and running two back-to-back is a no-op.
 
 Phases (windows relative to kickoff):
 
-    ingest       : T-72h → T-24h   pull fixture.json from API-Football
+    ingest       : T-7d  → T-24h   pull fixture.json from API-Football
     populate     : T-48h → T-24h   fill context_pack (squads/form/news/stats)
     lock_predict : T-24h → T+0h    lock snapshot + run all model predictions
     live_update  : T+0h  → T+3h    fetch live score every tick → data/live/<id>.json;
@@ -53,7 +53,7 @@ FIXTURES_YAML = ROOT / "configs" / "fixtures.yaml"
 
 # (phase_name, start_offset_from_kickoff, end_offset_from_kickoff)
 PHASES: list[tuple[str, timedelta, timedelta]] = [
-    ("ingest",       timedelta(hours=-72),  timedelta(hours=-24)),
+    ("ingest",       timedelta(days=-7),    timedelta(hours=-24)),
     ("populate",     timedelta(hours=-48),  timedelta(hours=-24)),
     ("lock_predict", timedelta(hours=-24),  timedelta(hours=0)),
     ("live_update",  timedelta(hours=0),    timedelta(hours=3)),

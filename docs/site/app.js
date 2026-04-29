@@ -681,7 +681,7 @@ function _renderOneFixture(nm, cardIdx) {
 function renderIncomingMatches(matches) {
   const el = document.getElementById("next-container");
   if (!matches || matches.length === 0) {
-    el.innerHTML = `<div class="text-gray-400">No fixtures scheduled in the next 3 days.</div>`;
+    el.innerHTML = `<div class="text-gray-400">No fixtures scheduled in the next 7 days.</div>`;
     return;
   }
 

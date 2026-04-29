@@ -88,7 +88,7 @@ docs/
 ## Lifecycle of a fixture
 
 ```
- T-72h → T-24h   ingest       pull fixture.json from API-Football
+ T-7d  → T-24h   ingest       pull fixture.json from API-Football
  T-48h → T-24h   populate     fill context_pack (squads, form, news, stats)
  T-24h → T+0h    lock_predict lock snapshot_hash; run every (model × setting)  →  predictions/<id>/*.json
  T+0h  → T+3h    live_update  fetch live score every 10 min  →  data/live/<id>.json

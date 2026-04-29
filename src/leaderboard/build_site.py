@@ -308,7 +308,7 @@ def build_incoming_matches() -> list[dict]:
     """Return fixtures to display in the Incoming Matches section.
 
     Includes:
-    - Future fixtures within the next 3 days (not yet kicked off)
+    - Future fixtures within the next 7 days (not yet kicked off)
     - Fixtures that have kicked off but are STILL LIVE according to data/live/
       (status != "Match Finished")
 
@@ -316,7 +316,7 @@ def build_incoming_matches() -> list[dict]:
     by build_history() instead.
     """
     now = datetime.now(timezone.utc)
-    cutoff = now + timedelta(days=3)
+    cutoff = now + timedelta(days=7)
     registry = _load_fixtures()
     results = []
     for fx in sorted(registry, key=lambda f: _parse_iso(f["kickoff_utc"])):

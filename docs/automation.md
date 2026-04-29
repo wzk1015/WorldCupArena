@@ -16,7 +16,7 @@ Every fixture flows through five pipeline phases. All times are relative to
 
 | Phase | Scheduler name | Window | Command | What it writes |
 |-------|---------------|--------|---------|----------------|
-| **ingest**   | `ingest`       | T-72h → T-24h | `src.ingest.api_football --fixture-id … --out fixture.json` | raw API-Football response → `data/snapshots/<id>/fixture.json` |
+| **ingest**   | `ingest`       | T-7d → T-24h | `src.ingest.api_football --fixture-id … --out fixture.json` | raw API-Football response → `data/snapshots/<id>/fixture.json` |
 | **populate** | `populate`     | T-48h → T-24h | `src.pipeline.orchestrator populate --fixture …` | adds `context_pack` — squads + recent form + stats + **news headlines** |
 | **lock+predict** | `lock_predict` | T-24h → T+0h | `orchestrator lock` then `orchestrator predict` | `snapshot_hash` in `fixture.json` + `data/predictions/<id>/<model>__<setting>.json` |
 | **live update** | `live_update` | T+0h → T+3h | `src.pipeline.orchestrator live_update --fixture-id … --wca-id …` | `data/live/<id>.json` (real-time score/status); triggers `truth_grade` early if status = "Match Finished" |
@@ -25,7 +25,7 @@ Every fixture flows through five pipeline phases. All times are relative to
 Phases scheduled by `src.pipeline.scheduler`:
 
 ```
-T-72h ─── ingest          ─── fixture.json  (from API-Football)
+T-7d  ─── ingest          ─── fixture.json  (from API-Football)
 T-48h ─── populate        ─── context_pack  (squads, form, news, stats)
 T-24h ─── lock_predict    ─── snapshot_hash + predictions/
 T+0h  ─── live_update     ─── data/live/<id>.json  (real-time score every 10 min)
@@ -41,7 +41,7 @@ safe (repeated ticks are no-ops, missed ticks catch up).
 
 ## 2. The registry: `configs/fixtures.yaml`
 
-Add a new fixture by appending one entry. The next hourly cron tick picks it
+Add a new fixture by appending one entry. The next 10-minute cron tick picks it
 up automatically — no other file has to change.
 
 ```yaml
@@ -178,7 +178,7 @@ python -m src.pipeline.scheduler tick
              ▼
    ┌──────── cron every 10 minutes ────────┐
    │                                       │
-T-72h ──────── ingest           (fetch fixture.json from API-Football)
+T-7d  ──────── ingest           (fetch fixture.json from API-Football)
    │                                       │
 T-48h ──────── populate         (squads + form + news + stats)
    │                                       │
@@ -216,9 +216,11 @@ Add a fixture: append one entry to configs/fixtures.yaml and push:
   enabled: true
 ```
 
-That's all. The hourly cron at .github/workflows/automate.yml now picks it up:
+That's all. The 10-minute cron at .github/workflows/automate.yml now picks it up:
 
-T-48h → ingests + populates context_pack (news included)
+T-7d → ingests fixture.json
+
+T-48h → populates context_pack (news included)
 
 T-24h → locks + runs every model prediction
 

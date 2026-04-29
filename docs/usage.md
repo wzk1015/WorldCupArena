@@ -84,7 +84,7 @@ python3 -m http.server --directory docs/site 8000
 
 Scenario: you want to predict, say, **Arsenal vs Aston Villa** scheduled for Saturday 19:30 UTC.
 
-### 3.1 Ingest the fixture snapshot (T-48h to T-24h)
+### 3.1 Ingest the fixture snapshot (T-7d to T-24h)
 
 ```bash
 # API-Football fixture ID — look it up on api-football.com/documentation
