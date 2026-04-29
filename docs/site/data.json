@@ -3,33 +3,33 @@
     "main": [
       {
         "model_id": "claude-opus-4-7-thinking-search",
-        "mean": 54.551,
-        "n": 3,
+        "mean": 51.372,
+        "n": 4,
         "layers_mean": {
-          "T1_core_result": 76.9,
-          "T2_player_level": 42.826,
-          "T3_event_level": 60.596,
-          "T4_tactics_stats": 45.599,
+          "T1_core_result": 75.059,
+          "T2_player_level": 37.662,
+          "T3_event_level": 51.893,
+          "T4_tactics_stats": 46.015,
           "T5_tournament_macro": 10.0
         },
-        "winner_correct": 2,
-        "winner_total": 3,
-        "winner_acc": 0.667
+        "winner_correct": 3,
+        "winner_total": 4,
+        "winner_acc": 0.75
       },
       {
         "model_id": "claude-opus-4-7-thinking",
-        "mean": 53.644,
-        "n": 5,
+        "mean": 51.357,
+        "n": 6,
         "layers_mean": {
-          "T1_core_result": 82.451,
-          "T2_player_level": 29.974,
-          "T3_event_level": 61.826,
-          "T4_tactics_stats": 46.795,
+          "T1_core_result": 79.884,
+          "T2_player_level": 28.16,
+          "T3_event_level": 55.787,
+          "T4_tactics_stats": 46.598,
           "T5_tournament_macro": 10.0
         },
         "winner_correct": 5,
-        "winner_total": 5,
-        "winner_acc": 1.0
+        "winner_total": 6,
+        "winner_acc": 0.833
       },
       {
         "model_id": "gpt-5.4",
@@ -47,36 +47,6 @@
         "winner_acc": 0.6
       },
       {
-        "model_id": "gemini-3.1-pro-preview-thinking-search",
-        "mean": 48.787,
-        "n": 5,
-        "layers_mean": {
-          "T1_core_result": 79.431,
-          "T2_player_level": 20.905,
-          "T3_event_level": 52.144,
-          "T4_tactics_stats": 46.258,
-          "T5_tournament_macro": 10.0
-        },
-        "winner_correct": 4,
-        "winner_total": 5,
-        "winner_acc": 0.8
-      },
-      {
-        "model_id": "gemini-3.1-pro-preview-thinking",
-        "mean": 47.66,
-        "n": 4,
-        "layers_mean": {
-          "T1_core_result": 75.364,
-          "T2_player_level": 22.824,
-          "T3_event_level": 49.178,
-          "T4_tactics_stats": 48.0,
-          "T5_tournament_macro": 10.0
-        },
-        "winner_correct": 3,
-        "winner_total": 4,
-        "winner_acc": 0.75
-      },
-      {
         "model_id": "gpt-5.4-search",
         "mean": 47.453,
         "n": 6,
@@ -90,20 +60,50 @@
         "winner_correct": 4,
         "winner_total": 6,
         "winner_acc": 0.667
+      },
+      {
+        "model_id": "gemini-3.1-pro-preview-thinking-search",
+        "mean": 46.852,
+        "n": 6,
+        "layers_mean": {
+          "T1_core_result": 76.868,
+          "T2_player_level": 19.3,
+          "T3_event_level": 47.791,
+          "T4_tactics_stats": 46.366,
+          "T5_tournament_macro": 10.0
+        },
+        "winner_correct": 4,
+        "winner_total": 6,
+        "winner_acc": 0.667
+      },
+      {
+        "model_id": "gemini-3.1-pro-preview-thinking",
+        "mean": 46.711,
+        "n": 5,
+        "layers_mean": {
+          "T1_core_result": 74.688,
+          "T2_player_level": 24.501,
+          "T3_event_level": 42.342,
+          "T4_tactics_stats": 47.29,
+          "T5_tournament_macro": 10.0
+        },
+        "winner_correct": 4,
+        "winner_total": 5,
+        "winner_acc": 0.8
       }
     ],
     "by_model_setting": {
       "claude-opus-4-7-thinking": {
-        "S1": 53.644
+        "S1": 51.357
       },
       "claude-opus-4-7-thinking-search": {
-        "S2": 54.551
+        "S2": 51.372
       },
       "gemini-3.1-pro-preview-thinking": {
-        "S1": 47.66
+        "S1": 46.711
       },
       "gemini-3.1-pro-preview-thinking-search": {
-        "S2": 48.787
+        "S2": 46.852
       },
       "gpt-5.4": {
         "S1": 50.268
@@ -116,19 +116,811 @@
   "incoming_matches": [
     {
       "fixture": {
-        "wca_id": "UEFA-Champions-League_Atletico-Madrid_Arsenal_2026-04-29",
-        "home": "Atletico Madrid",
-        "home_logo": "https://media.api-sports.io/football/teams/530.png",
-        "away": "Arsenal",
-        "away_logo": "https://media.api-sports.io/football/teams/42.png",
-        "kickoff_utc": "2026-04-29T19:00:00+00:00",
-        "lock_at_utc": "2026-04-28T19:00:00+00:00",
-        "venue": "Metropolitano Stadium",
-        "venue_city": "Madrid",
+        "wca_id": "UEFA-Champions-League_Arsenal_Atletico-Madrid_2026-05-05",
+        "home": "Arsenal",
+        "home_logo": "https://media.api-sports.io/football/teams/42.png",
+        "away": "Atletico Madrid",
+        "away_logo": "https://media.api-sports.io/football/teams/530.png",
+        "kickoff_utc": "2026-05-05T19:00:00+00:00",
+        "lock_at_utc": "2026-05-04T19:00:00+00:00",
+        "venue": "Emirates Stadium",
+        "venue_city": "London",
         "venue_country": "World",
         "stage": "Semi-finals",
         "competition": "UEFA Champions League"
       },
+      "predictions": [],
+      "live": null
+    },
+    {
+      "fixture": {
+        "wca_id": "UEFA-Champions-League_Bayern-München_Paris-Saint-Germain_2026-05-06",
+        "home": "Bayern München",
+        "home_logo": "https://media.api-sports.io/football/teams/157.png",
+        "away": "Paris Saint Germain",
+        "away_logo": "https://media.api-sports.io/football/teams/85.png",
+        "kickoff_utc": "2026-05-06T19:00:00+00:00",
+        "lock_at_utc": "2026-05-05T19:00:00+00:00",
+        "venue": "Allianz Arena",
+        "venue_city": "Munich",
+        "venue_country": "World",
+        "stage": "Semi-finals",
+        "competition": "UEFA Champions League"
+      },
+      "predictions": [],
+      "live": null
+    }
+  ],
+  "history": [
+    {
+      "wca_id": "UEFA-Champions-League_Atletico-Madrid_Arsenal_2026-04-29",
+      "home": "Atletico Madrid",
+      "home_logo": "https://media.api-sports.io/football/teams/530.png",
+      "away": "Arsenal",
+      "away_logo": "https://media.api-sports.io/football/teams/42.png",
+      "kickoff_utc": "2026-04-29T19:00:00+00:00",
+      "lock_at_utc": "2026-04-28T19:00:00+00:00",
+      "venue": "Metropolitano Stadium",
+      "venue_city": "Madrid",
+      "venue_country": "World",
+      "stage": "Semi-finals",
+      "competition": "UEFA Champions League",
+      "result": "1-1",
+      "truth": {
+        "score": "1-1",
+        "result": "draw",
+        "home_name": "Atletico Madrid",
+        "away_name": "Arsenal",
+        "scorer_names": [
+          "V. Gyokeres",
+          "J. Alvarez"
+        ],
+        "assister_names": [],
+        "scorers": [
+          {
+            "minute": 44,
+            "player": "V. Gyokeres",
+            "team": "away"
+          },
+          {
+            "minute": 56,
+            "player": "J. Alvarez",
+            "team": "home"
+          }
+        ],
+        "assisters": [],
+        "cards": [
+          {
+            "minute": 78,
+            "player": "D. Hancko",
+            "team": "home",
+            "color": "yellow"
+          }
+        ],
+        "substitutions": [
+          {
+            "minute": 46,
+            "team": "home",
+            "team_name": "Atletico Madrid",
+            "off": "G. Simeone",
+            "on": "R. Le Normand"
+          },
+          {
+            "minute": 58,
+            "team": "away",
+            "team_name": "Arsenal",
+            "off": "M. Odegaard",
+            "on": "E. Eze"
+          },
+          {
+            "minute": 68,
+            "team": "away",
+            "team_name": "Arsenal",
+            "off": "G. Martinelli",
+            "on": "L. Trossard"
+          },
+          {
+            "minute": 68,
+            "team": "away",
+            "team_name": "Arsenal",
+            "off": "N. Madueke",
+            "on": "B. Saka"
+          },
+          {
+            "minute": 69,
+            "team": "away",
+            "team_name": "Arsenal",
+            "off": "V. Gyokeres",
+            "on": "Gabriel Jesus"
+          },
+          {
+            "minute": 77,
+            "team": "home",
+            "team_name": "Atletico Madrid",
+            "off": "J. Alvarez",
+            "on": "A. Baena"
+          },
+          {
+            "minute": 86,
+            "team": "away",
+            "team_name": "Arsenal",
+            "off": "B. White",
+            "on": "C. Mosquera"
+          },
+          {
+            "minute": 88,
+            "team": "home",
+            "team_name": "Atletico Madrid",
+            "off": "J. Cardoso",
+            "on": "N. Molina"
+          }
+        ],
+        "own_goals": [],
+        "penalties": [
+          {
+            "minute": 44,
+            "taker": "V. Gyokeres",
+            "team": "away",
+            "outcome": "scored"
+          },
+          {
+            "minute": 56,
+            "taker": "J. Alvarez",
+            "team": "home",
+            "outcome": "scored"
+          }
+        ],
+        "formations": {
+          "home": "4-4-2",
+          "away": "4-3-3"
+        },
+        "lineups": {
+          "home": {
+            "starting": [
+              {
+                "player": "Jan Oblak",
+                "pos": "G"
+              },
+              {
+                "player": "Marcos Llorente",
+                "pos": "D"
+              },
+              {
+                "player": "Marc Pubill",
+                "pos": "D"
+              },
+              {
+                "player": "Dávid Hancko",
+                "pos": "D"
+              },
+              {
+                "player": "Matteo Ruggeri",
+                "pos": "D"
+              },
+              {
+                "player": "Giuliano Simeone",
+                "pos": "M"
+              },
+              {
+                "player": "Koke",
+                "pos": "M"
+              },
+              {
+                "player": "Johnny Cardoso",
+                "pos": "M"
+              },
+              {
+                "player": "Ademola Lookman",
+                "pos": "M"
+              },
+              {
+                "player": "Antoine Griezmann",
+                "pos": "F"
+              },
+              {
+                "player": "Julián Alvarez",
+                "pos": "F"
+              }
+            ]
+          },
+          "away": {
+            "starting": [
+              {
+                "player": "David Raya",
+                "pos": "G"
+              },
+              {
+                "player": "Ben White",
+                "pos": "D"
+              },
+              {
+                "player": "William Saliba",
+                "pos": "D"
+              },
+              {
+                "player": "Gabriel Magalhães",
+                "pos": "D"
+              },
+              {
+                "player": "Piero Hincapié",
+                "pos": "D"
+              },
+              {
+                "player": "Martin Ødegaard",
+                "pos": "M"
+              },
+              {
+                "player": "Declan Rice",
+                "pos": "M"
+              },
+              {
+                "player": "Martín Zubimendi",
+                "pos": "M"
+              },
+              {
+                "player": "Noni Madueke",
+                "pos": "F"
+              },
+              {
+                "player": "Viktor Gyökeres",
+                "pos": "F"
+              },
+              {
+                "player": "Gabriel Martinelli",
+                "pos": "F"
+              }
+            ]
+          }
+        },
+        "stats": {
+          "shots_on_target": {
+            "home": 4,
+            "away": 2
+          },
+          "shots": {
+            "home": 18,
+            "away": 11
+          },
+          "fouls": {
+            "home": 7,
+            "away": 11
+          },
+          "corners": {
+            "home": 6,
+            "away": 1
+          },
+          "possession": {
+            "home": 52.0,
+            "away": 48.0
+          },
+          "saves": {
+            "home": 1,
+            "away": 3
+          },
+          "pass_accuracy": {
+            "home": 83.0,
+            "away": 88.0
+          }
+        },
+        "events": [
+          {
+            "time": {
+              "elapsed": 44,
+              "extra": null
+            },
+            "team": {
+              "id": 42,
+              "name": "Arsenal",
+              "logo": "https://media.api-sports.io/football/teams/42.png"
+            },
+            "player": {
+              "id": 18979,
+              "name": "V. Gyokeres"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Goal",
+            "detail": "Penalty",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 46,
+              "extra": null
+            },
+            "team": {
+              "id": 530,
+              "name": "Atletico Madrid",
+              "logo": "https://media.api-sports.io/football/teams/530.png"
+            },
+            "player": {
+              "id": 323935,
+              "name": "G. Simeone"
+            },
+            "assist": {
+              "id": 47301,
+              "name": "R. Le Normand"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 56,
+              "extra": null
+            },
+            "team": {
+              "id": 530,
+              "name": "Atletico Madrid",
+              "logo": "https://media.api-sports.io/football/teams/530.png"
+            },
+            "player": {
+              "id": 6009,
+              "name": "J. Alvarez"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Goal",
+            "detail": "Penalty",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 58,
+              "extra": null
+            },
+            "team": {
+              "id": 42,
+              "name": "Arsenal",
+              "logo": "https://media.api-sports.io/football/teams/42.png"
+            },
+            "player": {
+              "id": 37127,
+              "name": "M. Odegaard"
+            },
+            "assist": {
+              "id": 19586,
+              "name": "E. Eze"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 68,
+              "extra": null
+            },
+            "team": {
+              "id": 42,
+              "name": "Arsenal",
+              "logo": "https://media.api-sports.io/football/teams/42.png"
+            },
+            "player": {
+              "id": 127769,
+              "name": "G. Martinelli"
+            },
+            "assist": {
+              "id": 1946,
+              "name": "L. Trossard"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 68,
+              "extra": null
+            },
+            "team": {
+              "id": 42,
+              "name": "Arsenal",
+              "logo": "https://media.api-sports.io/football/teams/42.png"
+            },
+            "player": {
+              "id": 136723,
+              "name": "N. Madueke"
+            },
+            "assist": {
+              "id": 1460,
+              "name": "B. Saka"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 69,
+              "extra": null
+            },
+            "team": {
+              "id": 42,
+              "name": "Arsenal",
+              "logo": "https://media.api-sports.io/football/teams/42.png"
+            },
+            "player": {
+              "id": 18979,
+              "name": "V. Gyokeres"
+            },
+            "assist": {
+              "id": 643,
+              "name": "Gabriel Jesus"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 77,
+              "extra": null
+            },
+            "team": {
+              "id": 530,
+              "name": "Atletico Madrid",
+              "logo": "https://media.api-sports.io/football/teams/530.png"
+            },
+            "player": {
+              "id": 6009,
+              "name": "J. Alvarez"
+            },
+            "assist": {
+              "id": 182219,
+              "name": "A. Baena"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 78,
+              "extra": null
+            },
+            "team": {
+              "id": 530,
+              "name": "Atletico Madrid",
+              "logo": "https://media.api-sports.io/football/teams/530.png"
+            },
+            "player": {
+              "id": 30399,
+              "name": "D. Hancko"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 86,
+              "extra": null
+            },
+            "team": {
+              "id": 42,
+              "name": "Arsenal",
+              "logo": "https://media.api-sports.io/football/teams/42.png"
+            },
+            "player": {
+              "id": 19959,
+              "name": "B. White"
+            },
+            "assist": {
+              "id": 333682,
+              "name": "C. Mosquera"
+            },
+            "type": "subst",
+            "detail": "Substitution 5",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 88,
+              "extra": null
+            },
+            "team": {
+              "id": 530,
+              "name": "Atletico Madrid",
+              "logo": "https://media.api-sports.io/football/teams/530.png"
+            },
+            "player": {
+              "id": 133185,
+              "name": "J. Cardoso"
+            },
+            "assist": {
+              "id": 6503,
+              "name": "N. Molina"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          }
+        ]
+      },
+      "live": {
+        "status": "Match Finished",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "events": [
+          {
+            "time": {
+              "elapsed": 44,
+              "extra": null
+            },
+            "team": {
+              "id": 42,
+              "name": "Arsenal",
+              "logo": "https://media.api-sports.io/football/teams/42.png"
+            },
+            "player": {
+              "id": 18979,
+              "name": "V. Gyokeres"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Goal",
+            "detail": "Penalty",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 46,
+              "extra": null
+            },
+            "team": {
+              "id": 530,
+              "name": "Atletico Madrid",
+              "logo": "https://media.api-sports.io/football/teams/530.png"
+            },
+            "player": {
+              "id": 323935,
+              "name": "G. Simeone"
+            },
+            "assist": {
+              "id": 47301,
+              "name": "R. Le Normand"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 56,
+              "extra": null
+            },
+            "team": {
+              "id": 530,
+              "name": "Atletico Madrid",
+              "logo": "https://media.api-sports.io/football/teams/530.png"
+            },
+            "player": {
+              "id": 6009,
+              "name": "J. Alvarez"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Goal",
+            "detail": "Penalty",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 58,
+              "extra": null
+            },
+            "team": {
+              "id": 42,
+              "name": "Arsenal",
+              "logo": "https://media.api-sports.io/football/teams/42.png"
+            },
+            "player": {
+              "id": 37127,
+              "name": "M. Odegaard"
+            },
+            "assist": {
+              "id": 19586,
+              "name": "E. Eze"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 68,
+              "extra": null
+            },
+            "team": {
+              "id": 42,
+              "name": "Arsenal",
+              "logo": "https://media.api-sports.io/football/teams/42.png"
+            },
+            "player": {
+              "id": 127769,
+              "name": "G. Martinelli"
+            },
+            "assist": {
+              "id": 1946,
+              "name": "L. Trossard"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 68,
+              "extra": null
+            },
+            "team": {
+              "id": 42,
+              "name": "Arsenal",
+              "logo": "https://media.api-sports.io/football/teams/42.png"
+            },
+            "player": {
+              "id": 136723,
+              "name": "N. Madueke"
+            },
+            "assist": {
+              "id": 1460,
+              "name": "B. Saka"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 69,
+              "extra": null
+            },
+            "team": {
+              "id": 42,
+              "name": "Arsenal",
+              "logo": "https://media.api-sports.io/football/teams/42.png"
+            },
+            "player": {
+              "id": 18979,
+              "name": "V. Gyokeres"
+            },
+            "assist": {
+              "id": 643,
+              "name": "Gabriel Jesus"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 77,
+              "extra": null
+            },
+            "team": {
+              "id": 530,
+              "name": "Atletico Madrid",
+              "logo": "https://media.api-sports.io/football/teams/530.png"
+            },
+            "player": {
+              "id": 6009,
+              "name": "J. Alvarez"
+            },
+            "assist": {
+              "id": 182219,
+              "name": "A. Baena"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 78,
+              "extra": null
+            },
+            "team": {
+              "id": 530,
+              "name": "Atletico Madrid",
+              "logo": "https://media.api-sports.io/football/teams/530.png"
+            },
+            "player": {
+              "id": 30399,
+              "name": "D. Hancko"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 86,
+              "extra": null
+            },
+            "team": {
+              "id": 42,
+              "name": "Arsenal",
+              "logo": "https://media.api-sports.io/football/teams/42.png"
+            },
+            "player": {
+              "id": 19959,
+              "name": "B. White"
+            },
+            "assist": {
+              "id": 333682,
+              "name": "C. Mosquera"
+            },
+            "type": "subst",
+            "detail": "Substitution 5",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 88,
+              "extra": null
+            },
+            "team": {
+              "id": 530,
+              "name": "Atletico Madrid",
+              "logo": "https://media.api-sports.io/football/teams/530.png"
+            },
+            "player": {
+              "id": 133185,
+              "name": "J. Cardoso"
+            },
+            "assist": {
+              "id": 6503,
+              "name": "N. Molina"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          }
+        ]
+      },
+      "models": [
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking",
+          "setting": "S1",
+          "composite": 42.915
+        },
+        {
+          "model_id": "claude-opus-4-7-thinking-search",
+          "setting": "S2",
+          "composite": 41.836
+        },
+        {
+          "model_id": "claude-opus-4-7-thinking",
+          "setting": "S1",
+          "composite": 39.921
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking-search",
+          "setting": "S2",
+          "composite": 37.177
+        }
+      ],
       "predictions": [
         {
           "model_id": "claude-opus-4-7-thinking-search",
@@ -1032,7 +1824,8 @@
               "title": "Atletico Madrid confirm key injury doubt - Yahoo Sports"
             }
           ],
-          "over_3_5_prob": 0.132
+          "over_3_5_prob": 0.132,
+          "composite": 41.836
         },
         {
           "model_id": "claude-opus-4-7-thinking",
@@ -1702,7 +2495,8 @@
           },
           "cost_usd": 0.223,
           "sources": [],
-          "over_3_5_prob": 0.154
+          "over_3_5_prob": 0.154,
+          "composite": 39.921
         },
         {
           "model_id": "gemini-3.1-pro-preview-thinking-search",
@@ -2156,7 +2950,8 @@
               "title": "Arsenal Men's Players"
             }
           ],
-          "over_3_5_prob": 0.151
+          "over_3_5_prob": 0.151,
+          "composite": 37.177
         },
         {
           "model_id": "gemini-3.1-pro-preview-thinking",
@@ -2556,124 +3351,11 @@
           },
           "cost_usd": 0.066,
           "sources": [],
-          "over_3_5_prob": 0.119
+          "over_3_5_prob": 0.119,
+          "composite": 42.915
         }
-      ],
-      "live": {
-        "status": "Second Half",
-        "elapsed": 58,
-        "score": {
-          "home": 1,
-          "away": 1
-        },
-        "events": [
-          {
-            "time": {
-              "elapsed": 44,
-              "extra": null
-            },
-            "team": {
-              "id": 42,
-              "name": "Arsenal",
-              "logo": "https://media.api-sports.io/football/teams/42.png"
-            },
-            "player": {
-              "id": 18979,
-              "name": "V. Gyokeres"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Goal",
-            "detail": "Penalty",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 46,
-              "extra": null
-            },
-            "team": {
-              "id": 530,
-              "name": "Atletico Madrid",
-              "logo": "https://media.api-sports.io/football/teams/530.png"
-            },
-            "player": {
-              "id": 323935,
-              "name": "G. Simeone"
-            },
-            "assist": {
-              "id": 47301,
-              "name": "R. Le Normand"
-            },
-            "type": "subst",
-            "detail": "Substitution 1",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 56,
-              "extra": null
-            },
-            "team": {
-              "id": 530,
-              "name": "Atletico Madrid",
-              "logo": "https://media.api-sports.io/football/teams/530.png"
-            },
-            "player": {
-              "id": 6009,
-              "name": "J. Alvarez"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Goal",
-            "detail": "Penalty",
-            "comments": null
-          }
-        ]
-      }
+      ]
     },
-    {
-      "fixture": {
-        "wca_id": "UEFA-Champions-League_Arsenal_Atletico-Madrid_2026-05-05",
-        "home": "Arsenal",
-        "home_logo": "https://media.api-sports.io/football/teams/42.png",
-        "away": "Atletico Madrid",
-        "away_logo": "https://media.api-sports.io/football/teams/530.png",
-        "kickoff_utc": "2026-05-05T19:00:00+00:00",
-        "lock_at_utc": "2026-05-04T19:00:00+00:00",
-        "venue": "Emirates Stadium",
-        "venue_city": "London",
-        "venue_country": "World",
-        "stage": "Semi-finals",
-        "competition": "UEFA Champions League"
-      },
-      "predictions": [],
-      "live": null
-    },
-    {
-      "fixture": {
-        "wca_id": "UEFA-Champions-League_Bayern-München_Paris-Saint-Germain_2026-05-06",
-        "home": "Bayern München",
-        "home_logo": "https://media.api-sports.io/football/teams/157.png",
-        "away": "Paris Saint Germain",
-        "away_logo": "https://media.api-sports.io/football/teams/85.png",
-        "kickoff_utc": "2026-05-06T19:00:00+00:00",
-        "lock_at_utc": "2026-05-05T19:00:00+00:00",
-        "venue": "Allianz Arena",
-        "venue_city": "Munich",
-        "venue_country": "World",
-        "stage": "Semi-finals",
-        "competition": "UEFA Champions League"
-      },
-      "predictions": [],
-      "live": null
-    }
-  ],
-  "history": [
     {
       "wca_id": "ucl_sf1_l1_2026_bayern_psg",
       "home": "Paris Saint Germain",
