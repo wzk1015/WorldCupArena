@@ -125,7 +125,7 @@
         "lock_at_utc": "2026-05-04T19:00:00+00:00",
         "venue": "Emirates Stadium",
         "venue_city": "London",
-        "venue_country": "World",
+        "venue_country": null,
         "stage": "Semi-finals",
         "competition": "UEFA Champions League"
       },
@@ -143,7 +143,7 @@
         "lock_at_utc": "2026-05-05T19:00:00+00:00",
         "venue": "Allianz Arena",
         "venue_city": "Munich",
-        "venue_country": "World",
+        "venue_country": null,
         "stage": "Semi-finals",
         "competition": "UEFA Champions League"
       },
@@ -162,7 +162,7 @@
       "lock_at_utc": "2026-04-28T19:00:00+00:00",
       "venue": "Metropolitano Stadium",
       "venue_city": "Madrid",
-      "venue_country": "World",
+      "venue_country": null,
       "stage": "Semi-finals",
       "competition": "UEFA Champions League",
       "result": "1-1",
@@ -919,6 +919,16 @@
           "model_id": "gemini-3.1-pro-preview-thinking-search",
           "setting": "S2",
           "composite": 37.177
+        },
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "composite": 0.0
+        },
+        {
+          "model_id": "gpt-5.4",
+          "setting": "S1",
+          "composite": 0.0
         }
       ],
       "predictions": [
@@ -3352,7 +3362,7 @@
           "cost_usd": 0.066,
           "sources": [],
           "over_3_5_prob": 0.119,
-          "composite": null
+          "composite": 42.915
         },
         {
           "model_id": "gpt-5.4-search",
