@@ -116,19 +116,88 @@
   "incoming_matches": [
     {
       "fixture": {
-        "wca_id": "UEFA-Champions-League_Atletico-Madrid_Arsenal_2026-04-29",
-        "home": "Atletico Madrid",
-        "home_logo": "https://media.api-sports.io/football/teams/530.png",
-        "away": "Arsenal",
-        "away_logo": "https://media.api-sports.io/football/teams/42.png",
-        "kickoff_utc": "2026-04-29T19:00:00+00:00",
-        "lock_at_utc": "2026-04-28T19:00:00+00:00",
-        "venue": "Metropolitano Stadium",
-        "venue_city": "Madrid",
-        "venue_country": "World",
+        "wca_id": "UEFA-Champions-League_Arsenal_Atletico-Madrid_2026-05-05",
+        "home": "Arsenal",
+        "home_logo": "https://media.api-sports.io/football/teams/42.png",
+        "away": "Atletico Madrid",
+        "away_logo": "https://media.api-sports.io/football/teams/530.png",
+        "kickoff_utc": "2026-05-05T19:00:00+00:00",
+        "lock_at_utc": "2026-05-04T19:00:00+00:00",
+        "venue": "Emirates Stadium",
+        "venue_city": "London",
+        "venue_country": null,
         "stage": "Semi-finals",
         "competition": "UEFA Champions League"
       },
+      "predictions": [],
+      "live": null
+    },
+    {
+      "fixture": {
+        "wca_id": "UEFA-Champions-League_Bayern-München_Paris-Saint-Germain_2026-05-06",
+        "home": null,
+        "away": null,
+        "kickoff_utc": "2026-05-06T19:00:00+00:00",
+        "lock_at_utc": null,
+        "venue": null,
+        "venue_city": null,
+        "venue_country": null,
+        "stage": null,
+        "competition": null
+      },
+      "predictions": [],
+      "live": null
+    }
+  ],
+  "history": [
+    {
+      "wca_id": "UEFA-Champions-League_Atletico-Madrid_Arsenal_2026-04-29",
+      "home": "Atletico Madrid",
+      "home_logo": "https://media.api-sports.io/football/teams/530.png",
+      "away": "Arsenal",
+      "away_logo": "https://media.api-sports.io/football/teams/42.png",
+      "kickoff_utc": "2026-04-29T19:00:00+00:00",
+      "lock_at_utc": "2026-04-28T19:00:00+00:00",
+      "venue": "Metropolitano Stadium",
+      "venue_city": "Madrid",
+      "venue_country": null,
+      "stage": "Semi-finals",
+      "competition": "UEFA Champions League",
+      "result": null,
+      "truth": null,
+      "live": null,
+      "models": [
+        {
+          "model_id": "claude-opus-4-7-thinking-search",
+          "setting": "S2",
+          "composite": 0.0
+        },
+        {
+          "model_id": "claude-opus-4-7-thinking",
+          "setting": "S1",
+          "composite": 0.0
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking-search",
+          "setting": "S2",
+          "composite": 0.0
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking",
+          "setting": "S1",
+          "composite": 0.0
+        },
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "composite": 0.0
+        },
+        {
+          "model_id": "gpt-5.4",
+          "setting": "S1",
+          "composite": 0.0
+        }
+      ],
       "predictions": [
         {
           "model_id": "claude-opus-4-7-thinking-search",
@@ -1032,7 +1101,8 @@
               "title": "Atletico Madrid confirm key injury doubt - Yahoo Sports"
             }
           ],
-          "over_3_5_prob": 0.132
+          "over_3_5_prob": 0.132,
+          "composite": null
         },
         {
           "model_id": "claude-opus-4-7-thinking",
@@ -1702,7 +1772,8 @@
           },
           "cost_usd": 0.223,
           "sources": [],
-          "over_3_5_prob": 0.154
+          "over_3_5_prob": 0.154,
+          "composite": null
         },
         {
           "model_id": "gemini-3.1-pro-preview-thinking-search",
@@ -2156,7 +2227,8 @@
               "title": "Arsenal Men's Players"
             }
           ],
-          "over_3_5_prob": 0.151
+          "over_3_5_prob": 0.151,
+          "composite": null
         },
         {
           "model_id": "gemini-3.1-pro-preview-thinking",
@@ -2556,7 +2628,8 @@
           },
           "cost_usd": 0.066,
           "sources": [],
-          "over_3_5_prob": 0.119
+          "over_3_5_prob": 0.119,
+          "composite": null
         },
         {
           "model_id": "gpt-5.4-search",
@@ -3078,7 +3151,8 @@
           },
           "cost_usd": 0.162,
           "sources": [],
-          "over_3_5_prob": 0.224
+          "over_3_5_prob": 0.224,
+          "composite": null
         },
         {
           "model_id": "gpt-5.4",
@@ -3615,31 +3689,11 @@
           },
           "cost_usd": 0.193,
           "sources": [],
-          "over_3_5_prob": 0.202
+          "over_3_5_prob": 0.202,
+          "composite": null
         }
-      ],
-      "live": null
+      ]
     },
-    {
-      "fixture": {
-        "wca_id": "UEFA-Champions-League_Arsenal_Atletico-Madrid_2026-05-05",
-        "home": "Arsenal",
-        "home_logo": "https://media.api-sports.io/football/teams/42.png",
-        "away": "Atletico Madrid",
-        "away_logo": "https://media.api-sports.io/football/teams/530.png",
-        "kickoff_utc": "2026-05-05T19:00:00+00:00",
-        "lock_at_utc": "2026-05-04T19:00:00+00:00",
-        "venue": "Emirates Stadium",
-        "venue_city": "London",
-        "venue_country": "World",
-        "stage": "Semi-finals",
-        "competition": "UEFA Champions League"
-      },
-      "predictions": [],
-      "live": null
-    }
-  ],
-  "history": [
     {
       "wca_id": "ucl_sf1_l1_2026_bayern_psg",
       "home": "Paris Saint Germain",
@@ -3650,7 +3704,7 @@
       "lock_at_utc": "2026-04-27T19:00:00+00:00",
       "venue": "Parc des Princes",
       "venue_city": "Paris",
-      "venue_country": "World",
+      "venue_country": null,
       "stage": "Semi-finals",
       "competition": "UEFA Champions League",
       "result": "5-4",

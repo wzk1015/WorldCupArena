@@ -6,6 +6,17 @@ const fmt2   = (x) => (x == null ? "—" : (+x).toFixed(2));
 const esc    = (s) => String(s ?? "").replace(/[<>&"']/g, c =>
   ({ "<":"&lt;", ">":"&gt;", "&":"&amp;", '"':"&quot;", "'":"&#39;" }[c]));
 
+function renderVenueLocation(match) {
+  if (!match?.venue) return "";
+  const country = String(match.venue_country ?? "").trim();
+  const visibleCountry = country.toLowerCase() === "world" ? "" : country;
+  return `<div class="text-[10px] text-gray-500 mt-1">${esc(match.venue)}</div>${
+    match.venue_city
+      ? `<div class="text-[10px] text-gray-500">${esc(match.venue_city)}${visibleCountry ? `, ${esc(visibleCountry)}` : ""}</div>`
+      : ""
+  }`;
+}
+
 function fmtModelId(id) {
   if (!id) return id;
   if (id.endsWith("-search")) return id.slice(0, -7) + " (Search)";
@@ -641,13 +652,13 @@ function _renderOneFixture(nm, cardIdx) {
     ? `<div class="text-gray-400 text-xs">${esc(f.competition || "")}${f.stage ? ` · ${esc(f.stage)}` : ""}</div>
        <div class="mt-1 text-3xl font-black font-mono" style="color:#f87171;">${lv.score ? `${lv.score.home ?? "?"} – ${lv.score.away ?? "?"}` : "?–?"}</div>
        <div class="text-xs font-semibold" style="color:#fca5a5;">🔴 LIVE${lv.elapsed != null ? ` · ${lv.elapsed}′` : ""}</div>
-       ${f.venue ? `<div class="text-[10px] text-gray-500 mt-1">${esc(f.venue)}</div>${f.venue_city ? `<div class="text-[10px] text-gray-500">${esc(f.venue_city)}${f.venue_country ? `, ${esc(f.venue_country)}` : ""}</div>` : ""}` : ""}`
+       ${renderVenueLocation(f)}`
     : `${kick ? `<div class="text-xs text-gray-300 font-medium mb-1">${fmtLocalKickoff(kick)}</div>` : ""}
        <div class="text-gray-400 text-xs">${esc(f.competition || "")}${f.stage ? ` · ${esc(f.stage)}` : ""}</div>
        <div class="mt-1 text-2xl font-black">VS</div>
        ${nP > 0 ? `<div class="text-xs text-gray-400">draw ${fmtPct(agg.draw)}</div>` : ""}
        <div class="text-xs text-gray-400 mt-1" id="${cid}">${kick ? "" : "—"}</div>
-       ${f.venue ? `<div class="text-[10px] text-gray-500 mt-1">${esc(f.venue)}</div>${f.venue_city ? `<div class="text-[10px] text-gray-500">${esc(f.venue_city)}${f.venue_country ? `, ${esc(f.venue_country)}` : ""}</div>` : ""}` : ""}`;
+       ${renderVenueLocation(f)}`;
 
   const html = `
     <div class="card rounded-2xl p-6">
@@ -859,7 +870,7 @@ function renderHistory(rows) {
                 ${r.kickoff_utc ? `<div class="text-xs text-gray-300 font-medium mb-1">${fmtLocalKickoff(new Date(r.kickoff_utc))}</div>` : ""}
                 ${r.competition ? `<div class="text-[10px] text-gray-400 mb-1">${esc(r.competition)}${r.stage ? ` · ${esc(r.stage)}` : ""}</div>` : ""}
                 ${scoreHtml}
-                ${r.venue ? `<div class="text-[10px] text-gray-500 mt-1">${esc(r.venue)}</div>${r.venue_city ? `<div class="text-[10px] text-gray-500">${esc(r.venue_city)}${r.venue_country ? `, ${esc(r.venue_country)}` : ""}</div>` : ""}` : ""}
+                ${renderVenueLocation(r)}
               </div>
               <div class="text-center">
                 ${r.away_logo ? `<img src="${esc(r.away_logo)}" alt="${esc(r.away)}" class="h-16 sm:h-24 mx-auto mb-2"/>` : `<div class="text-3xl">🛫</div>`}

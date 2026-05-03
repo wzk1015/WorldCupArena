@@ -66,6 +66,13 @@ def _load_fixtures() -> list[dict]:
     return [f for f in (cfg.get("fixtures") or []) if f.get("enabled", True)]
 
 
+def _clean_venue_country(country: str | None) -> str | None:
+    country = (country or "").strip()
+    if not country or country.lower() == "world":
+        return None
+    return country
+
+
 # ---------------------------------------------------------------------------
 # Leaderboard (all graded fixtures, aggregated by model)
 # ---------------------------------------------------------------------------
@@ -154,7 +161,7 @@ def _load_fixture_header(wca_id: str) -> dict | None:
             "lock_at_utc": raw.get("lock_at_utc"),
             "venue":       (r0["fixture"].get("venue") or {}).get("name"),
             "venue_city":    (r0["fixture"].get("venue") or {}).get("city"),
-            "venue_country": (r0.get("league") or {}).get("country"),
+            "venue_country": _clean_venue_country((r0.get("league") or {}).get("country")),
             "stage":         (r0.get("league") or {}).get("round"),
             "competition":   (r0.get("league") or {}).get("name"),
         }
@@ -166,7 +173,7 @@ def _load_fixture_header(wca_id: str) -> dict | None:
         "lock_at_utc": raw.get("lock_at_utc"),
         "venue":       raw.get("venue"),
         "venue_city":    raw.get("venue_city"),
-        "venue_country": raw.get("venue_country"),
+        "venue_country": _clean_venue_country(raw.get("venue_country")),
         "stage":         raw.get("stage"),
         "competition": raw.get("competition"),
     }
