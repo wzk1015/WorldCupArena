@@ -62,4 +62,7 @@ policy:
     model_weight: 0.62
     favorite_margin: 0.15
   fixture_diversification:
-    enabled: true
+    # Keep saved predictions faithful to each model's calibrated top score.
+    # Diversity can be useful for display, but it should not rewrite the model's
+    # headline scoreline in benchmark artifacts.
+    enabled: false

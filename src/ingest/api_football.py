@@ -368,6 +368,108 @@ def _aggregate_stats(raw_fixtures: dict, team_id: int) -> dict[str, Any]:
     return {k: round(sum(v) / len(v), 1) for k, v in totals.items() if v}
 
 
+def _parse_score(score: str) -> tuple[int, int] | None:
+    parts = str(score or "").split("-")
+    if len(parts) != 2:
+        return None
+    try:
+        return int(parts[0]), int(parts[1])
+    except ValueError:
+        return None
+
+
+def _norm_team(name: str) -> str:
+    return " ".join(str(name or "").casefold().replace(".", " ").split())
+
+
+def _infer_tie_context(raw: dict, recent_form: dict[str, Any]) -> dict[str, Any] | None:
+    """Infer two-leg aggregate state from recent form when the previous leg is present."""
+    r0 = raw["response"][0]
+    league = r0.get("league") or {}
+    teams = r0.get("teams") or {}
+    stage = str(league.get("round") or "").casefold()
+    knockout_hint = any(word in stage for word in ("semi", "quarter", "final", "round", "knockout", "play"))
+    competition = str(league.get("name") or "").casefold()
+    two_leg_comp_hint = any(
+        name in competition
+        for name in ("champions league", "europa league", "conference league", "libertadores", "sudamericana")
+    )
+    if not knockout_hint or not two_leg_comp_hint:
+        return None
+
+    home_name = (teams.get("home") or {}).get("name")
+    away_name = (teams.get("away") or {}).get("name")
+    if not home_name or not away_name:
+        return None
+
+    away_norm = _norm_team(away_name)
+    home_matches = (recent_form.get("home") or {}).get("matches") or []
+    away_matches = (recent_form.get("away") or {}).get("matches") or []
+    previous = None
+    for match in home_matches:
+        if _norm_team(match.get("opponent", "")) != away_norm:
+            continue
+        parsed = _parse_score(match.get("score", ""))
+        if not parsed:
+            continue
+        current_home_goals, current_away_goals = parsed
+        if str(match.get("venue", "")).upper() == "H":
+            previous_home = home_name
+            previous_away = away_name
+            previous_score = f"{current_home_goals}-{current_away_goals}"
+        else:
+            previous_home = away_name
+            previous_away = home_name
+            previous_score = f"{current_away_goals}-{current_home_goals}"
+        previous = {
+            "date": match.get("date"),
+            "competition": match.get("competition"),
+            "home": previous_home,
+            "away": previous_away,
+            "score": previous_score,
+            "current_home_goals": current_home_goals,
+            "current_away_goals": current_away_goals,
+            "total_goals": current_home_goals + current_away_goals,
+        }
+        break
+
+    if previous is None:
+        return None
+
+    recent_totals = []
+    for match in [*home_matches[:10], *away_matches[:10]]:
+        parsed = _parse_score(match.get("score", ""))
+        if parsed:
+            recent_totals.append(parsed[0] + parsed[1])
+    recent_avg_total = round(sum(recent_totals) / len(recent_totals), 2) if recent_totals else None
+
+    home_agg = previous["current_home_goals"]
+    away_agg = previous["current_away_goals"]
+    margin = abs(home_agg - away_agg)
+    leader = "level" if home_agg == away_agg else "home" if home_agg > away_agg else "away"
+    if leader == "home":
+        home_state = f"{home_name} lead by {margin}; they can manage phases but should not assume a low-event match."
+        away_state = f"{away_name} trail by {margin}; they must chase if the game state stays unchanged."
+    elif leader == "away":
+        home_state = f"{home_name} trail by {margin}; a one-goal win forces extra time, a two-goal win advances in regulation."
+        away_state = f"{away_name} lead by {margin}; a draw advances, but protecting the lead can invite pressure and transition chances."
+    else:
+        home_state = "The tie is level; one goal can radically change both teams' risk appetite."
+        away_state = home_state
+
+    return {
+        "kind": "two_leg_knockout",
+        "inferred": True,
+        "source": "recent_form",
+        "previous_leg": previous,
+        "aggregate": {"home": home_agg, "away": away_agg, "leader": leader, "margin": margin},
+        "away_goals_rule": "not_used_assumed",
+        "home_game_state": home_state,
+        "away_game_state": away_state,
+        "recent_avg_total_goals": recent_avg_total,
+    }
+
+
 def populate_context_pack(
     fixture_path: "Path",
     client: APIFootballClient,
@@ -411,6 +513,9 @@ def populate_context_pack(
         "away": _aggregate_stats(away_recent_raw, away_id),
         "n":    recent_n,
     }
+    tie_context = _infer_tie_context(raw, cp["recent_form"])
+    if tie_context:
+        cp["tie_context"] = tie_context
     # news_headlines: populated separately (no API-Football endpoint for news)
     cp.setdefault("news_headlines", [])
 

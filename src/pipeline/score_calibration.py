@@ -14,7 +14,8 @@ from typing import Any
 
 
 OUTCOMES = ("home", "draw", "away")
-SCORE_CALIBRATION_METHOD = "hybrid_poisson_model_v2"
+SCORE_CALIBRATION_METHOD = "hybrid_poisson_model_v6"
+OVER_UNDER_KEYS = ("over_1_5", "over_2_5", "over_3_5", "over_4_5")
 MANDATORY_SCORES = {
     "0-0", "1-1", "2-2",
     "1-0", "0-1", "2-0", "0-2", "2-1", "1-2",
@@ -43,6 +44,39 @@ def _normalize_probs(win_probs: dict[str, Any]) -> dict[str, float]:
 
 def _poisson_pmf(lam: float, max_goals: int) -> list[float]:
     return [math.exp(-lam) * (lam ** g) / math.factorial(g) for g in range(max_goals + 1)]
+
+
+def _poisson_over_probs(total_lambda: float, max_goals: int = 16) -> dict[str, float]:
+    pmf = _poisson_pmf(max(0.01, total_lambda), max_goals)
+    total = sum(pmf) or 1.0
+    pmf = [p / total for p in pmf]
+    return {
+        "over_1_5": sum(pmf[2:]),
+        "over_2_5": sum(pmf[3:]),
+        "over_3_5": sum(pmf[4:]),
+        "over_4_5": sum(pmf[5:]),
+    }
+
+
+def _profile_from_total(total_lambda: float) -> str:
+    if total_lambda >= 3.55:
+        return "chaos"
+    if total_lambda >= 3.05:
+        return "open"
+    if total_lambda >= 2.25:
+        return "normal"
+    return "low_event"
+
+
+def _coherent_profile(profile: Any, total_lambda: float) -> str:
+    derived = _profile_from_total(total_lambda)
+    if profile == "low_event" and total_lambda > 2.6:
+        return derived
+    if profile == "chaos" and total_lambda < 3.2:
+        return derived
+    if profile in {"low_event", "normal", "open", "chaos"}:
+        return str(profile)
+    return derived
 
 
 def _grid(lam_home: float, lam_away: float, max_goals: int) -> list[dict[str, Any]]:
@@ -91,17 +125,84 @@ def _score_dist_totals(score_dist: list[dict[str, Any]]) -> tuple[float | None, 
     return total_goals, goal_diff
 
 
+def _score_dist_over_probs(score_dist: list[dict[str, Any]]) -> dict[str, float]:
+    total_p = sum(float(x.get("p", 0.0)) for x in score_dist or [])
+    if total_p <= 0:
+        return {key: 0.0 for key in OVER_UNDER_KEYS}
+    out = {key: 0.0 for key in OVER_UNDER_KEYS}
+    for item in score_dist:
+        score = str(item.get("score", ""))
+        parts = score.split("-")
+        if len(parts) != 2:
+            continue
+        try:
+            total_goals = int(parts[0]) + int(parts[1])
+        except ValueError:
+            continue
+        p = float(item.get("p", 0.0)) / total_p
+        if total_goals >= 2:
+            out["over_1_5"] += p
+        if total_goals >= 3:
+            out["over_2_5"] += p
+        if total_goals >= 4:
+            out["over_3_5"] += p
+        if total_goals >= 5:
+            out["over_4_5"] += p
+    return out
+
+
 def _target_total_goals(pred: dict[str, Any], win_probs: dict[str, float]) -> float:
     model_total, _ = _score_dist_totals(pred.get("score_dist") or [])
     # Higher draw probability generally implies a lower-event match. This is a
-    # deliberately gentle prior; the model's own score_dist total is blended in
-    # when available, but clipped so template-heavy outputs cannot dominate.
+    # deliberately gentle prior, not a cap: open knockout/game-state evidence
+    # should come through the model's explicit total-goals estimate.
     draw_based_total = 2.65 + (0.26 - win_probs["draw"]) * 4.5
-    draw_based_total = min(4.0, max(1.7, draw_based_total))
-    if model_total is None:
+    draw_based_total = min(4.6, max(1.6, draw_based_total))
+
+    expected_total = pred.get("expected_total_goals")
+    if isinstance(expected_total, int | float):
+        expected_total = min(6.0, max(1.0, float(expected_total)))
+    else:
+        expected_total = None
+
+    over_3_5 = None
+    over_4_5 = None
+    ou = pred.get("over_under_probs") or {}
+    if isinstance(ou.get("over_3_5"), int | float):
+        over_3_5 = float(ou["over_3_5"])
+    if isinstance(ou.get("over_4_5"), int | float):
+        over_4_5 = float(ou["over_4_5"])
+    score_overs = _score_dist_over_probs(pred.get("score_dist") or [])
+    over_3_5 = max(over_3_5 or 0.0, score_overs["over_3_5"])
+    over_4_5 = max(over_4_5 or 0.0, score_overs["over_4_5"])
+
+    if model_total is None and expected_total is None:
         return draw_based_total
-    model_total = min(4.2, max(1.6, model_total))
-    return 0.55 * draw_based_total + 0.45 * model_total
+
+    if model_total is not None:
+        model_total = min(5.5, max(1.3, model_total))
+
+    if expected_total is not None and model_total is not None:
+        target = 0.72 * expected_total + 0.18 * model_total + 0.10 * draw_based_total
+    elif expected_total is not None:
+        target = 0.85 * expected_total + 0.15 * draw_based_total
+    else:
+        target = 0.35 * draw_based_total + 0.65 * float(model_total)
+
+    # If the model explicitly prices a high-event match, make sure a high draw
+    # probability does not silently drag the grid back toward 1-1/2-1 templates.
+    if over_3_5 >= 0.40:
+        target = max(target, 3.35)
+    if over_3_5 >= 0.30:
+        target = max(target, 3.05)
+    if over_4_5 >= 0.22:
+        target = max(target, 3.70)
+    profile = pred.get("match_profile")
+    if profile == "open":
+        target = max(target, 3.05)
+    elif profile == "chaos":
+        target = max(target, 3.55)
+    return min(6.0, max(1.0, target))
 
 
 def _target_goal_diff(pred: dict[str, Any]) -> float | None:
@@ -283,6 +384,57 @@ def _apply_top_score_policy(
     return out
 
 
+def _apply_high_event_top_policy(
+    rows: list[dict[str, Any]],
+    *,
+    profile: str,
+) -> list[dict[str, Any]]:
+    """Promote plausible 4+ goal scorelines in open/chaos matches.
+
+    Probability only moves within the selected scoreline's outcome bucket, so
+    aggregate home/draw/away calibration remains intact.
+    """
+    if profile not in {"open", "chaos"} or not rows:
+        return rows
+
+    current_top = max(rows, key=lambda row: float(row["p"]))
+    try:
+        high_candidates = [
+            row for row in rows
+            if sum(int(part) for part in str(row.get("score", "0-0")).split("-")) >= 4
+        ]
+    except ValueError:
+        high_candidates = []
+    if not high_candidates:
+        return rows
+
+    target = max(high_candidates, key=lambda row: float(row["p"]))
+    ratio = float(target["p"]) / (float(current_top["p"]) or 1.0)
+    min_ratio = 0.62 if profile == "chaos" else 0.70
+    if ratio < min_ratio:
+        return rows
+
+    out = [dict(r) for r in rows]
+    target_out = next(r for r in out if r["score"] == target["score"])
+    needed = float(current_top["p"]) + 0.006 - float(target_out["p"])
+    if needed <= 0:
+        return out
+
+    donors = [
+        r for r in sorted(out, key=lambda row: float(row["p"]), reverse=True)
+        if r.get("outcome") == target_out.get("outcome") and r["score"] != target_out["score"]
+    ]
+    for donor in donors:
+        if needed <= 0:
+            break
+        available = max(0.0, float(donor["p"]) - 0.001)
+        take = min(available, needed)
+        donor["p"] = float(donor["p"]) - take
+        target_out["p"] = float(target_out["p"]) + take
+        needed -= take
+    return out
+
+
 def _round_distribution(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     rows = sorted(rows, key=lambda r: float(r["p"]), reverse=True)
     out = [{"score": str(r["score"]), "p": round(float(r["p"]), 3)} for r in rows]
@@ -328,6 +480,10 @@ def calibrate_score_prediction(
         model_top_score=model_top_score,
         favorite_margin=favorite_margin,
     )
+    adjusted = _apply_high_event_top_policy(
+        adjusted,
+        profile=str(out.get("match_profile") or _profile_from_total(target_total)),
+    )
     score_dist = _round_distribution(adjusted)
 
     before = {
@@ -337,7 +493,13 @@ def calibrate_score_prediction(
     out["win_probs"] = {k: round(v, 3) for k, v in win_probs.items()}
     out["score_dist"] = score_dist
     out["most_likely_score"] = score_dist[0]["score"] if score_dist else out.get("most_likely_score")
+    out["match_profile"] = _coherent_profile(out.get("match_profile"), lam_home + lam_away)
+    out["expected_total_goals"] = round(lam_home + lam_away, 3)
     out["expected_goal_diff"] = round(lam_home - lam_away, 3)
+    out["over_under_probs"] = {
+        key: round(value, 3)
+        for key, value in _poisson_over_probs(lam_home + lam_away).items()
+    }
 
     metadata = {
         "applied": True,
@@ -453,15 +615,34 @@ def _align_prediction_to_score(pred: dict[str, Any], score: str) -> dict[str, An
     out["score_dist"] = rounded
     out["most_likely_score"] = score
     totals = {outcome: 0.0 for outcome in OUTCOMES}
+    expected_total = 0.0
+    over_under = {key: 0.0 for key in OVER_UNDER_KEYS}
     for row in rounded:
         outcome = _outcome(row["score"])
         if outcome:
             totals[outcome] += float(row["p"])
+        try:
+            total_goals = sum(int(part) for part in row["score"].split("-"))
+        except ValueError:
+            continue
+        p = float(row["p"])
+        expected_total += total_goals * p
+        if total_goals >= 2:
+            over_under["over_1_5"] += p
+        if total_goals >= 3:
+            over_under["over_2_5"] += p
+        if total_goals >= 4:
+            over_under["over_3_5"] += p
+        if total_goals >= 5:
+            over_under["over_4_5"] += p
     total = sum(totals.values()) or 1.0
     out["win_probs"] = {outcome: round(totals[outcome] / total, 3) for outcome in OUTCOMES}
     diff = round(1.0 - sum(out["win_probs"].values()), 3)
     if diff:
         out["win_probs"][target_outcome] = round(max(0.0, out["win_probs"][target_outcome] + diff), 3)
+    out["match_profile"] = _coherent_profile(out.get("match_profile"), expected_total)
+    out["expected_total_goals"] = round(expected_total, 3)
+    out["over_under_probs"] = {key: round(value, 3) for key, value in over_under.items()}
     return out
 
 

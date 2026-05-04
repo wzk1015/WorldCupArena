@@ -124,19 +124,7 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
         if (record.get("score_calibration") or {}).get("method") == SCORE_CALIBRATION_METHOD:
             return record, False
 
-        calibration_source = record["prediction"]
-        previous_before = (record.get("score_calibration") or {}).get("before") or {}
-        previous_head = previous_before.get("score_dist_head") or []
-        if previous_head:
-            calibration_source = json.loads(json.dumps(record["prediction"]))
-            seen_scores = {str(item.get("score")) for item in previous_head}
-            current_tail = [
-                item for item in calibration_source.get("score_dist", [])
-                if str(item.get("score")) not in seen_scores
-            ]
-            calibration_source["score_dist"] = [*previous_head, *current_tail]
-            if previous_before.get("most_likely_score"):
-                calibration_source["most_likely_score"] = previous_before["most_likely_score"]
+        calibration_source = record.get("raw_prediction") or record["prediction"]
 
         prediction, score_calibration = calibrate_score_prediction(
             calibration_source,
@@ -155,6 +143,8 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
         out["prediction"] = prediction
         out["validation_errors"] = calibration_report.errors
         out["score_calibration"] = score_calibration
+        out.pop("fixture_diversification", None)
+        out.pop("pre_diversity_prediction", None)
         return out, True
 
     def _one(job):

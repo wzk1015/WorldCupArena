@@ -28,7 +28,11 @@
         "squads":         { "type": "object" },
         "recent_form":    { "type": "object" },
         "news_headlines": { "type": "array"  },
-        "stats_last_n":   { "type": "object" }
+        "stats_last_n":   { "type": "object" },
+        "tie_context": {
+          "type": "object",
+          "description": "Two-leg aggregate context when inferred or provided: previous leg, aggregate state, away-goals rule, game-state incentives, and high-event signals."
+        }
       }
     },
     "snapshot_hash": {

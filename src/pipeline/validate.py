@@ -13,6 +13,7 @@ Validation layers:
          - score_dist contains at least 10 distinct scorelines
          - most_likely_score matches the highest-probability score_dist entry
          - score_dist outcome totals are close to win_probs
+         - expected_total_goals and over/under probabilities match score_dist
          - stats contains all 8 required keys
          - lineups.*.starting has exactly 11 entries
          - reasoning.overall non-empty & ≥80 chars
@@ -108,6 +109,15 @@ def _validate_semantics(
             return None
         return "home" if h_goals > a_goals else "away" if a_goals > h_goals else "draw"
 
+    def _score_total(score_str: str) -> int | None:
+        parts = score_str.split("-") if score_str else []
+        if len(parts) != 2:
+            return None
+        try:
+            return int(parts[0]) + int(parts[1])
+        except (ValueError, TypeError):
+            return None
+
     # Consistency: score_dist aggregate outcomes should broadly match win_probs.
     # The single most likely exact score can reasonably be a draw even when
     # home/away is the most likely 3-way outcome, because win probability is
@@ -127,6 +137,51 @@ def _validate_semantics(
                     f"but win_probs.{outcome}={float(wp.get(outcome, 0)):.3f} "
                     f"(allowed ±{outcome_tol:.2f})"
                 )
+
+    # Consistency: explicit total-goals fields should reflect the score grid.
+    if sd:
+        p_sum = sum(float(x.get("p", 0)) for x in sd) or 1.0
+        expected_from_scores = 0.0
+        over_from_scores = {"over_1_5": 0.0, "over_2_5": 0.0, "over_3_5": 0.0, "over_4_5": 0.0}
+        for item in sd:
+            total_goals = _score_total(str(item.get("score", "")))
+            if total_goals is None:
+                continue
+            p = float(item.get("p", 0)) / p_sum
+            expected_from_scores += total_goals * p
+            if total_goals >= 2:
+                over_from_scores["over_1_5"] += p
+            if total_goals >= 3:
+                over_from_scores["over_2_5"] += p
+            if total_goals >= 4:
+                over_from_scores["over_3_5"] += p
+            if total_goals >= 5:
+                over_from_scores["over_4_5"] += p
+
+        expected_total = pred.get("expected_total_goals")
+        if isinstance(expected_total, int | float):
+            if abs(float(expected_total) - expected_from_scores) > 0.75:
+                errs.append(
+                    f"consistency: expected_total_goals={float(expected_total):.3f} "
+                    f"but score_dist implies {expected_from_scores:.3f} (allowed ±0.75)"
+                )
+            profile = pred.get("match_profile")
+            if profile == "low_event" and float(expected_total) > 2.6:
+                errs.append("consistency: match_profile=low_event but expected_total_goals is above 2.6")
+            if profile == "chaos" and float(expected_total) < 3.2:
+                errs.append("consistency: match_profile=chaos but expected_total_goals is below 3.2")
+
+        ou = pred.get("over_under_probs") or {}
+        over_values = [float(ou.get(k, -1)) for k in ("over_1_5", "over_2_5", "over_3_5", "over_4_5")]
+        if all(v >= 0 for v in over_values):
+            if any(over_values[i] + 1e-9 < over_values[i + 1] for i in range(len(over_values) - 1)):
+                errs.append("over_under_probs must be monotonic: over_1_5 >= over_2_5 >= over_3_5 >= over_4_5")
+            for key, implied in over_from_scores.items():
+                if abs(float(ou.get(key, 0)) - implied) > 0.25:
+                    errs.append(
+                        f"consistency: over_under_probs.{key}={float(ou.get(key, 0)):.3f} "
+                        f"but score_dist implies {implied:.3f} (allowed ±0.25)"
+                    )
 
     # Consistency: most_likely_score must be the highest-probability scoreline.
     most_likely = pred.get("most_likely_score")
@@ -190,6 +245,10 @@ def normalize_probabilities(pred: dict[str, Any], tol: float = 0.01) -> dict[str
     for motm in out.get("motm_probs") or []:
         if "p" in motm:
             motm["p"] = round(float(motm["p"]), 3)
+    for key, value in (out.get("over_under_probs") or {}).items():
+        out["over_under_probs"][key] = round(float(value), 3)
+    if isinstance(out.get("expected_total_goals"), int | float):
+        out["expected_total_goals"] = round(float(out["expected_total_goals"]), 3)
 
     return out
 

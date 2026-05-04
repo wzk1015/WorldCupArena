@@ -54,6 +54,142 @@ def _render_stats(stats: dict[str, Any]) -> str:
     return "### Recent stats\n```json\n" + json.dumps(stats, ensure_ascii=False, indent=2) + "\n```"
 
 
+def _parse_score(score: str) -> tuple[int, int] | None:
+    parts = str(score or "").split("-")
+    if len(parts) != 2:
+        return None
+    try:
+        return int(parts[0]), int(parts[1])
+    except ValueError:
+        return None
+
+
+def _norm_team(name: str) -> str:
+    return " ".join(str(name or "").casefold().replace(".", " ").split())
+
+
+def _get_tie_context(fixture: dict[str, Any], ctx: dict[str, Any]) -> dict[str, Any] | None:
+    """Return explicit two-leg context, inferring it from recent form if needed."""
+    existing = ctx.get("tie_context")
+    if isinstance(existing, dict) and existing:
+        return existing
+
+    stage = str(fixture.get("stage", "")).casefold()
+    knockout_hint = any(word in stage for word in ("semi", "quarter", "final", "round", "knockout", "play"))
+    competition = str(fixture.get("competition", "")).casefold()
+    two_leg_comp_hint = any(
+        name in competition
+        for name in ("champions league", "europa league", "conference league", "libertadores", "sudamericana")
+    )
+    if not knockout_hint or not two_leg_comp_hint:
+        return None
+
+    form = ctx.get("recent_form") or {}
+    home_matches = (form.get("home") or {}).get("matches") or []
+    away_matches = (form.get("away") or {}).get("matches") or []
+    home_name = fixture["home"]["name"]
+    away_name = fixture["away"]["name"]
+    away_norm = _norm_team(away_name)
+
+    previous = None
+    for match in home_matches:
+        if _norm_team(match.get("opponent", "")) != away_norm:
+            continue
+        parsed = _parse_score(match.get("score", ""))
+        if not parsed:
+            continue
+        current_home_goals, current_away_goals = parsed
+        if str(match.get("venue", "")).upper() == "H":
+            previous_home = home_name
+            previous_away = away_name
+            previous_score = f"{current_home_goals}-{current_away_goals}"
+        else:
+            previous_home = away_name
+            previous_away = home_name
+            previous_score = f"{current_away_goals}-{current_home_goals}"
+        previous = {
+            "date": match.get("date"),
+            "competition": match.get("competition"),
+            "home": previous_home,
+            "away": previous_away,
+            "score": previous_score,
+            "current_home_goals": current_home_goals,
+            "current_away_goals": current_away_goals,
+            "total_goals": current_home_goals + current_away_goals,
+        }
+        break
+
+    if previous is None:
+        return None
+
+    recent_totals = []
+    for match in [*home_matches[:10], *away_matches[:10]]:
+        parsed = _parse_score(match.get("score", ""))
+        if parsed:
+            recent_totals.append(parsed[0] + parsed[1])
+    recent_avg_total = round(sum(recent_totals) / len(recent_totals), 2) if recent_totals else None
+
+    home_agg = previous["current_home_goals"]
+    away_agg = previous["current_away_goals"]
+    margin = abs(home_agg - away_agg)
+    leader = "level" if home_agg == away_agg else "home" if home_agg > away_agg else "away"
+    if leader == "home":
+        home_state = f"{home_name} lead by {margin}; they can manage phases but should not assume a low-event match."
+        away_state = f"{away_name} trail by {margin}; they must chase if the game state stays unchanged."
+    elif leader == "away":
+        home_state = f"{home_name} trail by {margin}; a one-goal win forces extra time, a two-goal win advances in regulation."
+        away_state = f"{away_name} lead by {margin}; a draw advances, but protecting the lead can invite pressure and transition chances."
+    else:
+        home_state = f"The tie is level; one goal can radically change both teams' risk appetite."
+        away_state = home_state
+
+    return {
+        "kind": "two_leg_knockout",
+        "inferred": True,
+        "previous_leg": previous,
+        "aggregate": {"home": home_agg, "away": away_agg, "leader": leader, "margin": margin},
+        "away_goals_rule": "not_used_assumed",
+        "home_game_state": home_state,
+        "away_game_state": away_state,
+        "recent_avg_total_goals": recent_avg_total,
+    }
+
+
+def _render_tie_context(fixture: dict[str, Any], ctx: dict[str, Any]) -> str:
+    tie = _get_tie_context(fixture, ctx)
+    if not tie:
+        return ""
+
+    previous = tie.get("previous_leg") or {}
+    aggregate = tie.get("aggregate") or {}
+    lines = ["### Two-leg / aggregate context"]
+    if previous:
+        lines.append(
+            f"- Previous leg: {previous.get('date','?')} {previous.get('home','?')} "
+            f"{previous.get('score','?')} {previous.get('away','?')} "
+            f"({previous.get('total_goals','?')} total goals)."
+        )
+    if aggregate:
+        lines.append(
+            f"- Aggregate before kickoff from this fixture's home/away perspective: "
+            f"home {aggregate.get('home','?')} - away {aggregate.get('away','?')} "
+            f"(leader={aggregate.get('leader','?')}, margin={aggregate.get('margin','?')})."
+        )
+    if tie.get("away_goals_rule"):
+        lines.append(f"- Away-goals rule: {tie.get('away_goals_rule')}.")
+    if tie.get("home_game_state"):
+        lines.append(f"- Home game state: {tie.get('home_game_state')}")
+    if tie.get("away_game_state"):
+        lines.append(f"- Away game state: {tie.get('away_game_state')}")
+    if tie.get("recent_avg_total_goals") is not None:
+        lines.append(f"- Recent combined total-goals average across both teams' listed form: {tie.get('recent_avg_total_goals')}.")
+    lines.append(
+        "- Use this context explicitly when estimating expected_total_goals, "
+        "over_3_5 / over_4_5, score_dist, and advance_prob."
+    )
+    return "\n".join(lines)
+
+
 def _render_search_guidance(fixture: dict[str, Any], ctx: dict[str, Any]) -> str:
     """Block used by S2 (tools-on) to tell the model what kinds of evidence to
     gather and show one short concrete example of each, drawn from the fixture's
@@ -61,6 +197,7 @@ def _render_search_guidance(fixture: dict[str, Any], ctx: dict[str, Any]) -> str
     """
     home = fixture["home"]["name"]
     away = fixture["away"]["name"]
+    tie = _get_tie_context(fixture, ctx)
 
     def _example_squad() -> str:
         squads = ctx.get("squads") or {}
@@ -98,6 +235,15 @@ def _render_search_guidance(fixture: dict[str, Any], ctx: dict[str, Any]) -> str
             return f"e.g. `{first_key}: {stats[first_key]!r}`"
         return "e.g. `xG last 5: {home: 1.8, away: 1.4}`"
 
+    tie_guidance = (
+        f"\nFor this two-leg tie, verify the previous-leg score, aggregate state, "
+        f"away-goals rule, and each team's must-chase / can-protect incentives before "
+        f"estimating total goals.\n"
+        if tie else
+        f"\nIf your searches show this is part of a two-leg tie, explicitly collect the "
+        f"previous-leg score, aggregate state, away-goals rule, and game-state incentives.\n"
+    )
+
     return (
         f"### Self-directed research (tools enabled) — MANDATORY\n"
         f"**You MUST actively use your web-search / browsing tools before making any prediction.** "
@@ -129,6 +275,7 @@ def _render_search_guidance(fixture: dict[str, Any], ctx: dict[str, Any]) -> str
         f"(e.g. their winger vs your full-back), **set-piece specialists and takers**, "
         f"**referee profile** (cards/penalties per game), **weather forecast** for kickoff, "
         f"and **closing bookmaker odds** as a market-prior cross-check.\n"
+        f"{tie_guidance}"
         f"\n"
         f"Record every URL you actually visited under the prediction's `sources[]` "
         f"with an ISO-8601 `accessed_at`. Any source published *after* "
@@ -168,6 +315,7 @@ def build_prompt(
 
     user = (
         tpl.replace("{{fixture_header}}", _render_fixture_header(fixture))
+           .replace("{{tie_context_block}}", _render_tie_context(fixture, ctx))
            .replace("{{squads_block}}", _render_squads(ctx.get("squads", {})) if inject.get("squads") else "")
            .replace("{{recent_form_block}}", _render_form(ctx.get("recent_form", {})) if inject.get("recent_form") else "")
            .replace("{{news_block}}", _render_news(ctx.get("news_headlines", [])) if inject.get("news_headlines") else "")

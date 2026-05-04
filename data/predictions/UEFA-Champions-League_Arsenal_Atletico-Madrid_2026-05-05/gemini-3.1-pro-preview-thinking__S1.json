@@ -2,108 +2,116 @@
   "fixture_id": "UEFA-Champions-League_Arsenal_Atletico-Madrid_2026-05-05",
   "model_id": "gemini-3.1-pro-preview-thinking",
   "setting": "S1",
-  "submitted_at": "2026-05-04T22:55:46.467156+00:00",
+  "submitted_at": "2026-05-04T23:51:58.460616+00:00",
   "prediction": {
     "fixture_id": "UEFA-Champions-League_Arsenal_Atletico-Madrid_2026-05-05",
-    "model_id": "assistant",
+    "model_id": "worldcuparena-predictor",
     "setting": "S1",
     "submitted_at": "2026-05-04T19:00:00+00:00",
     "reasoning": {
-      "overall": "Arsenal holds the home advantage after a tense 1-1 draw in the first leg in Madrid. While Diego Simeone rested his entire starting XI at the weekend to prioritize this clash, Arsenal's formidable home record and attacking depth, spearheaded by Viktor Gyokeres and Bukayo Saka, give them the edge to break down Atletico's resilient low block.",
-      "t1_result": "Arsenal is favored to win in regulation (53%) given their strong home form and expected dominance in possession. However, a draw (26%) leading to extra time is highly plausible given Atletico's defensive pedigree.",
-      "t2_player": "Viktor Gyokeres leads the line for Arsenal, supported by Saka and Martinelli, while Zubimendi and Rice control the midfield. Atletico will rely on the creative spark of Griezmann and Alvarez on the counter-attack.",
-      "t3_events": "Arsenal will likely dominate the ball from the kickoff, probing for an opening against a deep Atletico block. Expect a cagey first half, with the game opening up in the second half as fatigue sets in and substitutions are made.",
-      "t4_stats": "Arsenal is projected to control around 60% of possession and register significantly more shots and corners. Atletico will have a high volume of defensive actions and rely on clinical counter-attacks."
+      "overall": "Arsenal host Atletico Madrid in the second leg of the Champions League semi-final with the tie finely balanced at 1-1. Arsenal have the home advantage and received a double injury boost, likely including Bukayo Saka. Atletico rested their entire starting XI at the weekend, showing Simeone's intent to make this a grueling, physical battle. However, Arsenal's superior attacking quality and home crowd should see them edge a tight contest.",
+      "t1_result": "Arsenal are favored to win at home (49%), though a draw in 90 minutes (29%) is highly plausible given Atletico's defensive resilience. The most likely score is 1-1, pushing the game to extra time, but Arsenal winning 1-0 or 2-1 are also strong possibilities.",
+      "t2_player": "Arsenal will rely on Saka, Odegaard, and Gyokeres in attack, supported by Rice and Merino. Atletico will deploy a deep block with Griezmann and Alvarez looking to strike on the counter.",
+      "t3_events": "Expect a cagey first half. If Arsenal score early, the game will open up. Atletico will likely pick up several yellow cards as they try to disrupt Arsenal's rhythm.",
+      "t4_stats": "Arsenal will dominate possession (~60%) and shot count, while Atletico will have higher defensive actions and rely on quick transitions."
     },
     "win_probs": {
-      "home": 0.531,
-      "draw": 0.26,
-      "away": 0.209
+      "home": 0.49,
+      "draw": 0.29,
+      "away": 0.22
     },
     "score_dist": [
       {
-        "score": "2-0",
-        "p": 0.14
+        "score": "1-0",
+        "p": 0.146
       },
       {
         "score": "1-1",
-        "p": 0.121
+        "p": 0.137
       },
       {
-        "score": "1-0",
-        "p": 0.103
-      },
-      {
-        "score": "2-1",
-        "p": 0.099
+        "score": "2-0",
+        "p": 0.107
       },
       {
         "score": "0-0",
-        "p": 0.089
+        "p": 0.104
+      },
+      {
+        "score": "2-1",
+        "p": 0.102
       },
       {
         "score": "0-1",
-        "p": 0.073
-      },
-      {
-        "score": "3-0",
-        "p": 0.058
+        "p": 0.084
       },
       {
         "score": "1-2",
-        "p": 0.052
+        "p": 0.058
+      },
+      {
+        "score": "3-0",
+        "p": 0.056
       },
       {
         "score": "3-1",
-        "p": 0.05
-      },
-      {
-        "score": "2-2",
         "p": 0.047
       },
       {
+        "score": "2-2",
+        "p": 0.046
+      },
+      {
         "score": "0-2",
-        "p": 0.038
+        "p": 0.039
       },
       {
         "score": "3-2",
-        "p": 0.027
-      },
-      {
-        "score": "4-0",
-        "p": 0.021
-      },
-      {
-        "score": "4-1",
-        "p": 0.02
-      },
-      {
-        "score": "1-3",
         "p": 0.019
       },
       {
+        "score": "1-3",
+        "p": 0.018
+      },
+      {
         "score": "0-3",
-        "p": 0.016
-      },
-      {
-        "score": "2-3",
-        "p": 0.011
-      },
-      {
-        "score": "4-2",
         "p": 0.01
       },
       {
+        "score": "2-3",
+        "p": 0.01
+      },
+      {
+        "score": "4-0",
+        "p": 0.006
+      },
+      {
+        "score": "4-1",
+        "p": 0.005
+      },
+      {
+        "score": "4-2",
+        "p": 0.002
+      },
+      {
         "score": "3-3",
-        "p": 0.003
+        "p": 0.002
       },
       {
         "score": "5-0",
-        "p": 0.003
+        "p": 0.002
       }
     ],
-    "most_likely_score": "2-0",
-    "expected_goal_diff": 0.65,
+    "most_likely_score": "1-0",
+    "expected_goal_diff": 0.55,
+    "match_profile": "normal",
+    "expected_total_goals": 2.25,
+    "over_under_probs": {
+      "over_1_5": 0.657,
+      "over_2_5": 0.391,
+      "over_3_5": 0.191,
+      "over_4_5": 0.078
+    },
     "advance_prob": 0.65,
     "lineups": {
       "home": {
@@ -134,14 +142,14 @@
             "shirt": 33
           },
           {
-            "name": "Martín Zubimendi",
-            "position": "MF",
-            "shirt": 20
-          },
-          {
             "name": "D. Rice",
             "position": "MF",
             "shirt": 41
+          },
+          {
+            "name": "Mikel Merino",
+            "position": "MF",
+            "shirt": 23
           },
           {
             "name": "M. Ødegaard",
@@ -178,17 +186,12 @@
           {
             "name": "P. Hincapié",
             "position": "DF",
-            "shirt": 15
+            "shirt": 3
           },
           {
-            "name": "Mikel Merino",
+            "name": "Martín Zubimendi",
             "position": "MF",
-            "shirt": 23
-          },
-          {
-            "name": "K. Havertz",
-            "position": "FW",
-            "shirt": 29
+            "shirt": 15
           },
           {
             "name": "L. Trossard",
@@ -201,14 +204,19 @@
             "shirt": 14
           },
           {
-            "name": "N. Madueke",
+            "name": "K. Havertz",
             "position": "FW",
-            "shirt": 24
+            "shirt": 29
           },
           {
-            "name": "C. Nørgaard",
-            "position": "MF",
-            "shirt": 25
+            "name": "N. Madueke",
+            "position": "FW",
+            "shirt": 10
+          },
+          {
+            "name": "E. Eze",
+            "position": "FW",
+            "shirt": 20
           },
           {
             "name": "M. Lewis-Skelly",
@@ -218,12 +226,12 @@
           {
             "name": "Cristhian Mosquera",
             "position": "DF",
-            "shirt": 21
+            "shirt": 25
           },
           {
-            "name": "Jaden Dixon",
-            "position": "DF",
-            "shirt": 50
+            "name": "C. Nørgaard",
+            "position": "MF",
+            "shirt": 6
           }
         ]
       },
@@ -255,6 +263,11 @@
             "shirt": 15
           },
           {
+            "name": "M. Ruggeri",
+            "position": "DF",
+            "shirt": 3
+          },
+          {
             "name": "Marcos Llorente",
             "position": "MF",
             "shirt": 14
@@ -268,11 +281,6 @@
             "name": "Pablo Barrios",
             "position": "MF",
             "shirt": 8
-          },
-          {
-            "name": "Álex Baena",
-            "position": "MF",
-            "shirt": 21
           },
           {
             "name": "A. Griezmann",
@@ -294,17 +302,12 @@
           {
             "name": "D. Hancko",
             "position": "DF",
-            "shirt": 3
+            "shirt": 4
           },
           {
             "name": "Marc Pubill",
             "position": "DF",
-            "shirt": 4
-          },
-          {
-            "name": "M. Ruggeri",
-            "position": "DF",
-            "shirt": 12
+            "shirt": 22
           },
           {
             "name": "J. Cardoso",
@@ -317,9 +320,14 @@
             "shirt": 10
           },
           {
+            "name": "Álex Baena",
+            "position": "MF",
+            "shirt": 11
+          },
+          {
             "name": "A. Lookman",
             "position": "FW",
-            "shirt": 11
+            "shirt": 17
           },
           {
             "name": "A. Sørloth",
@@ -332,26 +340,26 @@
             "shirt": 20
           },
           {
-            "name": "N. González",
-            "position": "FW",
-            "shirt": 22
-          },
-          {
             "name": "Javi Serrano",
             "position": "MF",
             "shirt": 26
           },
           {
-            "name": "O. Vargas",
-            "position": "MF",
+            "name": "A. Puric",
+            "position": "DF",
             "shirt": 27
+          },
+          {
+            "name": "Rodrigo Mendoza",
+            "position": "MF",
+            "shirt": 30
           }
         ]
       }
     },
     "formations": {
       "home": "4-3-3",
-      "away": "4-4-2"
+      "away": "5-3-2"
     },
     "scorers": [
       {
@@ -361,13 +369,13 @@
           30,
           90
         ],
-        "p": 0.4
+        "p": 0.35
       },
       {
         "player": "B. Saka",
         "team": "home",
         "minute_range": [
-          15,
+          45,
           90
         ],
         "p": 0.3
@@ -376,8 +384,8 @@
         "player": "M. Ødegaard",
         "team": "home",
         "minute_range": [
-          45,
-          90
+          15,
+          75
         ],
         "p": 0.2
       },
@@ -394,20 +402,107 @@
         "player": "J. Álvarez",
         "team": "away",
         "minute_range": [
-          60,
-          90
+          15,
+          80
         ],
         "p": 0.2
       }
     ],
+    "assisters": [
+      {
+        "player": "M. Ødegaard",
+        "team": "home",
+        "p": 0.3
+      },
+      {
+        "player": "B. Saka",
+        "team": "home",
+        "p": 0.25
+      },
+      {
+        "player": "A. Griezmann",
+        "team": "away",
+        "p": 0.2
+      }
+    ],
+    "substitutions": [
+      {
+        "team": "home",
+        "off": "Gabriel Martinelli",
+        "on": "L. Trossard",
+        "minute": 65
+      },
+      {
+        "team": "home",
+        "off": "Mikel Merino",
+        "on": "K. Havertz",
+        "minute": 75
+      },
+      {
+        "team": "away",
+        "off": "J. Álvarez",
+        "on": "A. Sørloth",
+        "minute": 70
+      },
+      {
+        "team": "away",
+        "off": "Pablo Barrios",
+        "on": "Álex Baena",
+        "minute": 75
+      }
+    ],
+    "cards": [
+      {
+        "player": "J. Giménez",
+        "team": "away",
+        "color": "yellow",
+        "minute": 35
+      },
+      {
+        "player": "Koke",
+        "team": "away",
+        "color": "yellow",
+        "minute": 55
+      },
+      {
+        "player": "D. Rice",
+        "team": "home",
+        "color": "yellow",
+        "minute": 60
+      }
+    ],
+    "penalties": [],
+    "own_goals": [],
+    "motm_probs": [
+      {
+        "player": "M. Ødegaard",
+        "team": "home",
+        "p": 0.25
+      },
+      {
+        "player": "B. Saka",
+        "team": "home",
+        "p": 0.2
+      },
+      {
+        "player": "V. Gyökeres",
+        "team": "home",
+        "p": 0.15
+      },
+      {
+        "player": "A. Griezmann",
+        "team": "away",
+        "p": 0.15
+      }
+    ],
     "stats": {
       "possession": {
-        "home": 60,
-        "away": 40
+        "home": 62,
+        "away": 38
       },
       "shots": {
         "home": 16,
-        "away": 9
+        "away": 8
       },
       "shots_on_target": {
         "home": 6,
@@ -419,15 +514,15 @@
       },
       "pass_accuracy": {
         "home": 88,
-        "away": 80
+        "away": 76
       },
       "fouls": {
         "home": 10,
-        "away": 14
+        "away": 15
       },
       "saves": {
         "home": 2,
-        "away": 4
+        "away": 5
       },
       "defensive_actions": {
         "home": 40,
@@ -437,57 +532,45 @@
   },
   "raw_prediction": {
     "fixture_id": "UEFA-Champions-League_Arsenal_Atletico-Madrid_2026-05-05",
-    "model_id": "assistant",
+    "model_id": "worldcuparena-predictor",
     "setting": "S1",
     "submitted_at": "2026-05-04T19:00:00+00:00",
     "reasoning": {
-      "overall": "Arsenal holds the home advantage after a tense 1-1 draw in the first leg in Madrid. While Diego Simeone rested his entire starting XI at the weekend to prioritize this clash, Arsenal's formidable home record and attacking depth, spearheaded by Viktor Gyokeres and Bukayo Saka, give them the edge to break down Atletico's resilient low block.",
-      "t1_result": "Arsenal is favored to win in regulation (53%) given their strong home form and expected dominance in possession. However, a draw (26%) leading to extra time is highly plausible given Atletico's defensive pedigree.",
-      "t2_player": "Viktor Gyokeres leads the line for Arsenal, supported by Saka and Martinelli, while Zubimendi and Rice control the midfield. Atletico will rely on the creative spark of Griezmann and Alvarez on the counter-attack.",
-      "t3_events": "Arsenal will likely dominate the ball from the kickoff, probing for an opening against a deep Atletico block. Expect a cagey first half, with the game opening up in the second half as fatigue sets in and substitutions are made.",
-      "t4_stats": "Arsenal is projected to control around 60% of possession and register significantly more shots and corners. Atletico will have a high volume of defensive actions and rely on clinical counter-attacks."
+      "overall": "Arsenal host Atletico Madrid in the second leg of the Champions League semi-final with the tie finely balanced at 1-1. Arsenal have the home advantage and received a double injury boost, likely including Bukayo Saka. Atletico rested their entire starting XI at the weekend, showing Simeone's intent to make this a grueling, physical battle. However, Arsenal's superior attacking quality and home crowd should see them edge a tight contest.",
+      "t1_result": "Arsenal are favored to win at home (49%), though a draw in 90 minutes (29%) is highly plausible given Atletico's defensive resilience. The most likely score is 1-1, pushing the game to extra time, but Arsenal winning 1-0 or 2-1 are also strong possibilities.",
+      "t2_player": "Arsenal will rely on Saka, Odegaard, and Gyokeres in attack, supported by Rice and Merino. Atletico will deploy a deep block with Griezmann and Alvarez looking to strike on the counter.",
+      "t3_events": "Expect a cagey first half. If Arsenal score early, the game will open up. Atletico will likely pick up several yellow cards as they try to disrupt Arsenal's rhythm.",
+      "t4_stats": "Arsenal will dominate possession (~60%) and shot count, while Atletico will have higher defensive actions and rely on quick transitions."
     },
     "win_probs": {
-      "home": 0.53,
-      "draw": 0.26,
-      "away": 0.21
+      "home": 0.49,
+      "draw": 0.29,
+      "away": 0.22
     },
     "score_dist": [
       {
-        "score": "1-0",
-        "p": 0.13
-      },
-      {
-        "score": "2-0",
-        "p": 0.11
-      },
-      {
-        "score": "2-1",
+        "score": "0-0",
         "p": 0.1
       },
       {
-        "score": "0-0",
-        "p": 0.09
-      },
-      {
         "score": "1-1",
-        "p": 0.12
+        "p": 0.14
       },
       {
         "score": "2-2",
         "p": 0.05
       },
       {
-        "score": "0-1",
-        "p": 0.07
+        "score": "1-0",
+        "p": 0.13
       },
       {
-        "score": "0-2",
-        "p": 0.04
+        "score": "2-0",
+        "p": 0.12
       },
       {
-        "score": "1-2",
-        "p": 0.05
+        "score": "2-1",
+        "p": 0.11
       },
       {
         "score": "3-0",
@@ -499,11 +582,23 @@
       },
       {
         "score": "3-2",
-        "p": 0.03
+        "p": 0.02
+      },
+      {
+        "score": "0-1",
+        "p": 0.08
+      },
+      {
+        "score": "0-2",
+        "p": 0.04
+      },
+      {
+        "score": "1-2",
+        "p": 0.06
       },
       {
         "score": "0-3",
-        "p": 0.02
+        "p": 0.01
       },
       {
         "score": "1-3",
@@ -512,22 +607,18 @@
       {
         "score": "2-3",
         "p": 0.01
-      },
-      {
-        "score": "4-0",
-        "p": 0.02
-      },
-      {
-        "score": "4-1",
-        "p": 0.02
-      },
-      {
-        "score": "4-2",
-        "p": 0.01
       }
     ],
-    "most_likely_score": "1-0",
+    "most_likely_score": "1-1",
     "expected_goal_diff": 0.6,
+    "match_profile": "normal",
+    "expected_total_goals": 2.35,
+    "over_under_probs": {
+      "over_1_5": 0.75,
+      "over_2_5": 0.45,
+      "over_3_5": 0.22,
+      "over_4_5": 0.08
+    },
     "advance_prob": 0.65,
     "lineups": {
       "home": {
@@ -558,14 +649,14 @@
             "shirt": 33
           },
           {
-            "name": "Martín Zubimendi",
-            "position": "MF",
-            "shirt": 20
-          },
-          {
             "name": "D. Rice",
             "position": "MF",
             "shirt": 41
+          },
+          {
+            "name": "Mikel Merino",
+            "position": "MF",
+            "shirt": 23
           },
           {
             "name": "M. Ødegaard",
@@ -602,17 +693,12 @@
           {
             "name": "P. Hincapié",
             "position": "DF",
-            "shirt": 15
+            "shirt": 3
           },
           {
-            "name": "Mikel Merino",
+            "name": "Martín Zubimendi",
             "position": "MF",
-            "shirt": 23
-          },
-          {
-            "name": "K. Havertz",
-            "position": "FW",
-            "shirt": 29
+            "shirt": 15
           },
           {
             "name": "L. Trossard",
@@ -625,14 +711,19 @@
             "shirt": 14
           },
           {
-            "name": "N. Madueke",
+            "name": "K. Havertz",
             "position": "FW",
-            "shirt": 24
+            "shirt": 29
           },
           {
-            "name": "C. Nørgaard",
-            "position": "MF",
-            "shirt": 25
+            "name": "N. Madueke",
+            "position": "FW",
+            "shirt": 10
+          },
+          {
+            "name": "E. Eze",
+            "position": "FW",
+            "shirt": 20
           },
           {
             "name": "M. Lewis-Skelly",
@@ -642,12 +733,12 @@
           {
             "name": "Cristhian Mosquera",
             "position": "DF",
-            "shirt": 21
+            "shirt": 25
           },
           {
-            "name": "Jaden Dixon",
-            "position": "DF",
-            "shirt": 50
+            "name": "C. Nørgaard",
+            "position": "MF",
+            "shirt": 6
           }
         ]
       },
@@ -679,6 +770,11 @@
             "shirt": 15
           },
           {
+            "name": "M. Ruggeri",
+            "position": "DF",
+            "shirt": 3
+          },
+          {
             "name": "Marcos Llorente",
             "position": "MF",
             "shirt": 14
@@ -692,11 +788,6 @@
             "name": "Pablo Barrios",
             "position": "MF",
             "shirt": 8
-          },
-          {
-            "name": "Álex Baena",
-            "position": "MF",
-            "shirt": 21
           },
           {
             "name": "A. Griezmann",
@@ -718,17 +809,12 @@
           {
             "name": "D. Hancko",
             "position": "DF",
-            "shirt": 3
+            "shirt": 4
           },
           {
             "name": "Marc Pubill",
             "position": "DF",
-            "shirt": 4
-          },
-          {
-            "name": "M. Ruggeri",
-            "position": "DF",
-            "shirt": 12
+            "shirt": 22
           },
           {
             "name": "J. Cardoso",
@@ -741,9 +827,14 @@
             "shirt": 10
           },
           {
+            "name": "Álex Baena",
+            "position": "MF",
+            "shirt": 11
+          },
+          {
             "name": "A. Lookman",
             "position": "FW",
-            "shirt": 11
+            "shirt": 17
           },
           {
             "name": "A. Sørloth",
@@ -756,26 +847,26 @@
             "shirt": 20
           },
           {
-            "name": "N. González",
-            "position": "FW",
-            "shirt": 22
-          },
-          {
             "name": "Javi Serrano",
             "position": "MF",
             "shirt": 26
           },
           {
-            "name": "O. Vargas",
-            "position": "MF",
+            "name": "A. Puric",
+            "position": "DF",
             "shirt": 27
+          },
+          {
+            "name": "Rodrigo Mendoza",
+            "position": "MF",
+            "shirt": 30
           }
         ]
       }
     },
     "formations": {
       "home": "4-3-3",
-      "away": "4-4-2"
+      "away": "5-3-2"
     },
     "scorers": [
       {
@@ -785,13 +876,13 @@
           30,
           90
         ],
-        "p": 0.4
+        "p": 0.35
       },
       {
         "player": "B. Saka",
         "team": "home",
         "minute_range": [
-          15,
+          45,
           90
         ],
         "p": 0.3
@@ -800,8 +891,8 @@
         "player": "M. Ødegaard",
         "team": "home",
         "minute_range": [
-          45,
-          90
+          15,
+          75
         ],
         "p": 0.2
       },
@@ -818,20 +909,107 @@
         "player": "J. Álvarez",
         "team": "away",
         "minute_range": [
-          60,
-          90
+          15,
+          80
         ],
         "p": 0.2
       }
     ],
+    "assisters": [
+      {
+        "player": "M. Ødegaard",
+        "team": "home",
+        "p": 0.3
+      },
+      {
+        "player": "B. Saka",
+        "team": "home",
+        "p": 0.25
+      },
+      {
+        "player": "A. Griezmann",
+        "team": "away",
+        "p": 0.2
+      }
+    ],
+    "substitutions": [
+      {
+        "team": "home",
+        "off": "Gabriel Martinelli",
+        "on": "L. Trossard",
+        "minute": 65
+      },
+      {
+        "team": "home",
+        "off": "Mikel Merino",
+        "on": "K. Havertz",
+        "minute": 75
+      },
+      {
+        "team": "away",
+        "off": "J. Álvarez",
+        "on": "A. Sørloth",
+        "minute": 70
+      },
+      {
+        "team": "away",
+        "off": "Pablo Barrios",
+        "on": "Álex Baena",
+        "minute": 75
+      }
+    ],
+    "cards": [
+      {
+        "player": "J. Giménez",
+        "team": "away",
+        "color": "yellow",
+        "minute": 35
+      },
+      {
+        "player": "Koke",
+        "team": "away",
+        "color": "yellow",
+        "minute": 55
+      },
+      {
+        "player": "D. Rice",
+        "team": "home",
+        "color": "yellow",
+        "minute": 60
+      }
+    ],
+    "penalties": [],
+    "own_goals": [],
+    "motm_probs": [
+      {
+        "player": "M. Ødegaard",
+        "team": "home",
+        "p": 0.25
+      },
+      {
+        "player": "B. Saka",
+        "team": "home",
+        "p": 0.2
+      },
+      {
+        "player": "V. Gyökeres",
+        "team": "home",
+        "p": 0.15
+      },
+      {
+        "player": "A. Griezmann",
+        "team": "away",
+        "p": 0.15
+      }
+    ],
     "stats": {
       "possession": {
-        "home": 60,
-        "away": 40
+        "home": 62,
+        "away": 38
       },
       "shots": {
         "home": 16,
-        "away": 9
+        "away": 8
       },
       "shots_on_target": {
         "home": 6,
@@ -843,15 +1021,15 @@
       },
       "pass_accuracy": {
         "home": 88,
-        "away": 80
+        "away": 76
       },
       "fouls": {
         "home": 10,
-        "away": 14
+        "away": 15
       },
       "saves": {
         "home": 2,
-        "away": 4
+        "away": 5
       },
       "defensive_actions": {
         "home": 40,
@@ -864,51 +1042,51 @@
     "leaked": false,
     "leaked_sources": []
   },
-  "cost_usd": 0.0781389,
+  "cost_usd": 0.07303065,
   "tokens": {
-    "input": 26238,
-    "output": 8030
+    "input": 19567,
+    "output": 8331
   },
   "tool_calls": 0,
-  "wall_seconds": 66.62473893165588,
+  "wall_seconds": 325.4818639755249,
   "repair_retries": 1,
   "validation_errors": [],
   "error": null,
   "score_calibration": {
     "applied": true,
-    "method": "hybrid_poisson_model_v2",
+    "method": "hybrid_poisson_model_v6",
     "model_weight": 0.62,
     "favorite_margin": 0.15,
-    "lambda_home": 1.55,
-    "lambda_away": 0.9,
-    "target_total_goals": 2.515,
+    "lambda_home": 1.4,
+    "lambda_away": 0.85,
+    "target_total_goals": 2.332,
     "target_goal_diff": 0.6,
     "fitted_outcomes": {
-      "home": 0.525,
-      "draw": 0.256,
-      "away": 0.219
+      "home": 0.498,
+      "draw": 0.273,
+      "away": 0.228
     },
     "before": {
-      "most_likely_score": "1-0",
+      "most_likely_score": "1-1",
       "score_dist_head": [
+        {
+          "score": "0-0",
+          "p": 0.1
+        },
+        {
+          "score": "1-1",
+          "p": 0.14
+        },
+        {
+          "score": "2-2",
+          "p": 0.05
+        },
         {
           "score": "1-0",
           "p": 0.13
         },
         {
           "score": "2-0",
-          "p": 0.11
-        },
-        {
-          "score": "2-1",
-          "p": 0.1
-        },
-        {
-          "score": "0-0",
-          "p": 0.09
-        },
-        {
-          "score": "1-1",
           "p": 0.12
         }
       ]
@@ -918,496 +1096,25 @@
       "score_dist_head": [
         {
           "score": "1-0",
-          "p": 0.134
+          "p": 0.146
         },
         {
           "score": "1-1",
-          "p": 0.121
+          "p": 0.137
         },
         {
           "score": "2-0",
-          "p": 0.109
-        },
-        {
-          "score": "2-1",
-          "p": 0.099
+          "p": 0.107
         },
         {
           "score": "0-0",
-          "p": 0.089
+          "p": 0.104
+        },
+        {
+          "score": "2-1",
+          "p": 0.102
         }
       ]
     }
-  },
-  "pre_diversity_prediction": {
-    "fixture_id": "UEFA-Champions-League_Arsenal_Atletico-Madrid_2026-05-05",
-    "model_id": "assistant",
-    "setting": "S1",
-    "submitted_at": "2026-05-04T19:00:00+00:00",
-    "reasoning": {
-      "overall": "Arsenal holds the home advantage after a tense 1-1 draw in the first leg in Madrid. While Diego Simeone rested his entire starting XI at the weekend to prioritize this clash, Arsenal's formidable home record and attacking depth, spearheaded by Viktor Gyokeres and Bukayo Saka, give them the edge to break down Atletico's resilient low block.",
-      "t1_result": "Arsenal is favored to win in regulation (53%) given their strong home form and expected dominance in possession. However, a draw (26%) leading to extra time is highly plausible given Atletico's defensive pedigree.",
-      "t2_player": "Viktor Gyokeres leads the line for Arsenal, supported by Saka and Martinelli, while Zubimendi and Rice control the midfield. Atletico will rely on the creative spark of Griezmann and Alvarez on the counter-attack.",
-      "t3_events": "Arsenal will likely dominate the ball from the kickoff, probing for an opening against a deep Atletico block. Expect a cagey first half, with the game opening up in the second half as fatigue sets in and substitutions are made.",
-      "t4_stats": "Arsenal is projected to control around 60% of possession and register significantly more shots and corners. Atletico will have a high volume of defensive actions and rely on clinical counter-attacks."
-    },
-    "win_probs": {
-      "home": 0.53,
-      "draw": 0.26,
-      "away": 0.21
-    },
-    "score_dist": [
-      {
-        "score": "1-0",
-        "p": 0.134
-      },
-      {
-        "score": "1-1",
-        "p": 0.121
-      },
-      {
-        "score": "2-0",
-        "p": 0.109
-      },
-      {
-        "score": "2-1",
-        "p": 0.099
-      },
-      {
-        "score": "0-0",
-        "p": 0.089
-      },
-      {
-        "score": "0-1",
-        "p": 0.073
-      },
-      {
-        "score": "3-0",
-        "p": 0.058
-      },
-      {
-        "score": "1-2",
-        "p": 0.052
-      },
-      {
-        "score": "3-1",
-        "p": 0.05
-      },
-      {
-        "score": "2-2",
-        "p": 0.047
-      },
-      {
-        "score": "0-2",
-        "p": 0.038
-      },
-      {
-        "score": "3-2",
-        "p": 0.027
-      },
-      {
-        "score": "4-0",
-        "p": 0.021
-      },
-      {
-        "score": "4-1",
-        "p": 0.02
-      },
-      {
-        "score": "1-3",
-        "p": 0.019
-      },
-      {
-        "score": "0-3",
-        "p": 0.016
-      },
-      {
-        "score": "2-3",
-        "p": 0.011
-      },
-      {
-        "score": "4-2",
-        "p": 0.01
-      },
-      {
-        "score": "3-3",
-        "p": 0.003
-      },
-      {
-        "score": "5-0",
-        "p": 0.003
-      }
-    ],
-    "most_likely_score": "1-0",
-    "expected_goal_diff": 0.65,
-    "advance_prob": 0.65,
-    "lineups": {
-      "home": {
-        "starting": [
-          {
-            "name": "David Raya",
-            "position": "GK",
-            "shirt": 22
-          },
-          {
-            "name": "B. White",
-            "position": "DF",
-            "shirt": 4
-          },
-          {
-            "name": "W. Saliba",
-            "position": "DF",
-            "shirt": 2
-          },
-          {
-            "name": "Gabriel Magalhães",
-            "position": "DF",
-            "shirt": 6
-          },
-          {
-            "name": "R. Calafiori",
-            "position": "DF",
-            "shirt": 33
-          },
-          {
-            "name": "Martín Zubimendi",
-            "position": "MF",
-            "shirt": 20
-          },
-          {
-            "name": "D. Rice",
-            "position": "MF",
-            "shirt": 41
-          },
-          {
-            "name": "M. Ødegaard",
-            "position": "MF",
-            "shirt": 8
-          },
-          {
-            "name": "B. Saka",
-            "position": "FW",
-            "shirt": 7
-          },
-          {
-            "name": "Gabriel Martinelli",
-            "position": "FW",
-            "shirt": 11
-          },
-          {
-            "name": "V. Gyökeres",
-            "position": "FW",
-            "shirt": 9
-          }
-        ],
-        "bench": [
-          {
-            "name": "Kepa",
-            "position": "GK",
-            "shirt": 1
-          },
-          {
-            "name": "J. Timber",
-            "position": "DF",
-            "shirt": 12
-          },
-          {
-            "name": "P. Hincapié",
-            "position": "DF",
-            "shirt": 15
-          },
-          {
-            "name": "Mikel Merino",
-            "position": "MF",
-            "shirt": 23
-          },
-          {
-            "name": "K. Havertz",
-            "position": "FW",
-            "shirt": 29
-          },
-          {
-            "name": "L. Trossard",
-            "position": "FW",
-            "shirt": 19
-          },
-          {
-            "name": "Gabriel Jesus",
-            "position": "FW",
-            "shirt": 14
-          },
-          {
-            "name": "N. Madueke",
-            "position": "FW",
-            "shirt": 24
-          },
-          {
-            "name": "C. Nørgaard",
-            "position": "MF",
-            "shirt": 25
-          },
-          {
-            "name": "M. Lewis-Skelly",
-            "position": "MF",
-            "shirt": 49
-          },
-          {
-            "name": "Cristhian Mosquera",
-            "position": "DF",
-            "shirt": 21
-          },
-          {
-            "name": "Jaden Dixon",
-            "position": "DF",
-            "shirt": 50
-          }
-        ]
-      },
-      "away": {
-        "starting": [
-          {
-            "name": "J. Oblak",
-            "position": "GK",
-            "shirt": 13
-          },
-          {
-            "name": "N. Molina",
-            "position": "DF",
-            "shirt": 16
-          },
-          {
-            "name": "J. Giménez",
-            "position": "DF",
-            "shirt": 2
-          },
-          {
-            "name": "Robin Le Normand",
-            "position": "DF",
-            "shirt": 24
-          },
-          {
-            "name": "C. Lenglet",
-            "position": "DF",
-            "shirt": 15
-          },
-          {
-            "name": "Marcos Llorente",
-            "position": "MF",
-            "shirt": 14
-          },
-          {
-            "name": "Koke",
-            "position": "MF",
-            "shirt": 6
-          },
-          {
-            "name": "Pablo Barrios",
-            "position": "MF",
-            "shirt": 8
-          },
-          {
-            "name": "Álex Baena",
-            "position": "MF",
-            "shirt": 21
-          },
-          {
-            "name": "A. Griezmann",
-            "position": "FW",
-            "shirt": 7
-          },
-          {
-            "name": "J. Álvarez",
-            "position": "FW",
-            "shirt": 19
-          }
-        ],
-        "bench": [
-          {
-            "name": "J. Musso",
-            "position": "GK",
-            "shirt": 1
-          },
-          {
-            "name": "D. Hancko",
-            "position": "DF",
-            "shirt": 3
-          },
-          {
-            "name": "Marc Pubill",
-            "position": "DF",
-            "shirt": 4
-          },
-          {
-            "name": "M. Ruggeri",
-            "position": "DF",
-            "shirt": 12
-          },
-          {
-            "name": "J. Cardoso",
-            "position": "MF",
-            "shirt": 5
-          },
-          {
-            "name": "T. Almada",
-            "position": "MF",
-            "shirt": 10
-          },
-          {
-            "name": "A. Lookman",
-            "position": "FW",
-            "shirt": 11
-          },
-          {
-            "name": "A. Sørloth",
-            "position": "FW",
-            "shirt": 9
-          },
-          {
-            "name": "G. Simeone",
-            "position": "FW",
-            "shirt": 20
-          },
-          {
-            "name": "N. González",
-            "position": "FW",
-            "shirt": 22
-          },
-          {
-            "name": "Javi Serrano",
-            "position": "MF",
-            "shirt": 26
-          },
-          {
-            "name": "O. Vargas",
-            "position": "MF",
-            "shirt": 27
-          }
-        ]
-      }
-    },
-    "formations": {
-      "home": "4-3-3",
-      "away": "4-4-2"
-    },
-    "scorers": [
-      {
-        "player": "V. Gyökeres",
-        "team": "home",
-        "minute_range": [
-          30,
-          90
-        ],
-        "p": 0.4
-      },
-      {
-        "player": "B. Saka",
-        "team": "home",
-        "minute_range": [
-          15,
-          90
-        ],
-        "p": 0.3
-      },
-      {
-        "player": "M. Ødegaard",
-        "team": "home",
-        "minute_range": [
-          45,
-          90
-        ],
-        "p": 0.2
-      },
-      {
-        "player": "A. Griezmann",
-        "team": "away",
-        "minute_range": [
-          45,
-          90
-        ],
-        "p": 0.25
-      },
-      {
-        "player": "J. Álvarez",
-        "team": "away",
-        "minute_range": [
-          60,
-          90
-        ],
-        "p": 0.2
-      }
-    ],
-    "stats": {
-      "possession": {
-        "home": 60,
-        "away": 40
-      },
-      "shots": {
-        "home": 16,
-        "away": 9
-      },
-      "shots_on_target": {
-        "home": 6,
-        "away": 3
-      },
-      "corners": {
-        "home": 7,
-        "away": 3
-      },
-      "pass_accuracy": {
-        "home": 88,
-        "away": 80
-      },
-      "fouls": {
-        "home": 10,
-        "away": 14
-      },
-      "saves": {
-        "home": 2,
-        "away": 4
-      },
-      "defensive_actions": {
-        "home": 40,
-        "away": 65
-      }
-    }
-  },
-  "fixture_diversification": {
-    "applied": true,
-    "method": "near_top_coherent_diversity_v1",
-    "chosen_score": "2-0",
-    "chosen_rank": 3,
-    "chosen_probability_before": 0.109,
-    "candidate_scores": [
-      {
-        "score": "1-0",
-        "p": 0.134,
-        "rank": 1,
-        "outcome": "home"
-      },
-      {
-        "score": "1-1",
-        "p": 0.121,
-        "rank": 2,
-        "outcome": "draw"
-      },
-      {
-        "score": "2-0",
-        "p": 0.109,
-        "rank": 3,
-        "outcome": "home"
-      },
-      {
-        "score": "2-1",
-        "p": 0.099,
-        "rank": 4,
-        "outcome": "home"
-      },
-      {
-        "score": "0-0",
-        "p": 0.089,
-        "rank": 5,
-        "outcome": "draw"
-      }
-    ]
   }
 }

@@ -14,6 +14,9 @@
     "score_dist",
     "most_likely_score",
     "expected_goal_diff",
+    "match_profile",
+    "expected_total_goals",
+    "over_under_probs",
     "lineups",
     "formations",
     "scorers",
@@ -68,6 +71,27 @@
     },
     "most_likely_score":  { "type":"string", "pattern":"^[0-9]+-[0-9]+$" },
     "expected_goal_diff": { "type":"number" },
+    "match_profile": {
+      "enum":["low_event","normal","open","chaos"],
+      "description":"Overall event environment for the match. Use open/chaos when tactics, injuries, aggregate state, or recent scoring evidence justify high total-goal mass."
+    },
+    "expected_total_goals": {
+      "type":"number",
+      "minimum":0,
+      "maximum":12,
+      "description":"Expected total goals in the predicted match window. Must be consistent with score_dist and the match's low/normal/open/chaos profile."
+    },
+    "over_under_probs": {
+      "type":"object",
+      "required":["over_1_5","over_2_5","over_3_5","over_4_5"],
+      "additionalProperties": false,
+      "properties": {
+        "over_1_5": { "type":"number", "minimum":0, "maximum":1 },
+        "over_2_5": { "type":"number", "minimum":0, "maximum":1 },
+        "over_3_5": { "type":"number", "minimum":0, "maximum":1 },
+        "over_4_5": { "type":"number", "minimum":0, "maximum":1 }
+      }
+    },
     "advance_prob":       { "type":"number", "minimum":0, "maximum":1 },
 
     "lineups": {
