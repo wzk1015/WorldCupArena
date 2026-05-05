@@ -16,9 +16,9 @@
       "t4_stats": "Arsenal expected to dominate possession (~60%) and out-shoot Atleti by a wide margin given home press and Atleti's compact block. Pass accuracy gap reflects Atleti's deeper, longer-ball approach. Fouls/yellows favor away side; Raya/Oblak both busy keepers."
     },
     "win_probs": {
-      "home": 0.54,
+      "home": 0.541,
       "draw": 0.26,
-      "away": 0.2
+      "away": 0.199
     },
     "score_dist": [
       {
@@ -1743,13 +1743,18 @@
   "error": null,
   "score_calibration": {
     "applied": true,
-    "method": "hybrid_poisson_model_v6",
+    "method": "hybrid_poisson_scoredist_v7",
     "model_weight": 0.62,
     "favorite_margin": 0.15,
     "lambda_home": 1.6,
     "lambda_away": 0.9,
     "target_total_goals": 2.558,
     "target_goal_diff": 0.65,
+    "target_outcome_probs": {
+      "home": 0.54,
+      "draw": 0.26,
+      "away": 0.2
+    },
     "fitted_outcomes": {
       "home": 0.538,
       "draw": 0.25,

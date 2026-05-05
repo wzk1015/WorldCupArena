@@ -16,74 +16,74 @@
       "t4_stats": "Arsenal should lead possession, passes, and corners, while Atletico can stay competitive on shots through selective but efficient attacks. Save counts are moderate because neither side is projected for chaos-level shot volume, though defensive actions and fouls should be elevated given the semifinal intensity."
     },
     "win_probs": {
-      "home": 0.431,
-      "draw": 0.291,
-      "away": 0.278
+      "home": 0.443,
+      "draw": 0.298,
+      "away": 0.259
     },
     "score_dist": [
       {
         "score": "1-1",
-        "p": 0.128
+        "p": 0.132
       },
       {
         "score": "1-0",
-        "p": 0.119
+        "p": 0.121
       },
       {
         "score": "0-0",
-        "p": 0.099
-      },
-      {
-        "score": "0-1",
-        "p": 0.098
+        "p": 0.1
       },
       {
         "score": "2-1",
+        "p": 0.094
+      },
+      {
+        "score": "0-1",
         "p": 0.091
       },
       {
         "score": "2-0",
-        "p": 0.079
+        "p": 0.081
       },
       {
         "score": "1-2",
-        "p": 0.075
+        "p": 0.07
       },
       {
         "score": "2-2",
-        "p": 0.055
+        "p": 0.057
       },
       {
         "score": "0-2",
-        "p": 0.047
+        "p": 0.043
       },
       {
         "score": "3-1",
-        "p": 0.041
+        "p": 0.043
       },
       {
         "score": "3-0",
-        "p": 0.032
+        "p": 0.034
       },
       {
         "score": "1-3",
-        "p": 0.026
+        "p": 0.025
       },
       {
         "score": "3-2",
-        "p": 0.022
-      },
-      {
-        "score": "2-3",
-        "p": 0.018
+        "p": 0.023
       },
       {
         "score": "4-3",
         "p": 0.018
       },
       {
+        "score": "2-3",
+        "p": 0.017
+      },
+      {
         "score": "0-3",
-        "p": 0.014
+        "p": 0.013
       },
       {
         "score": "4-1",
@@ -103,14 +103,14 @@
       }
     ],
     "most_likely_score": "1-1",
-    "expected_goal_diff": 0.3,
+    "expected_goal_diff": 0.35,
     "match_profile": "normal",
-    "expected_total_goals": 2.4,
+    "expected_total_goals": 2.45,
     "over_under_probs": {
-      "over_1_5": 0.692,
-      "over_2_5": 0.43,
-      "over_3_5": 0.221,
-      "over_4_5": 0.096
+      "over_1_5": 0.702,
+      "over_2_5": 0.443,
+      "over_3_5": 0.232,
+      "over_4_5": 0.102
     },
     "advance_prob": 0.562,
     "lineups": {
@@ -1146,17 +1146,22 @@
   "error": null,
   "score_calibration": {
     "applied": true,
-    "method": "hybrid_poisson_model_v6",
+    "method": "hybrid_poisson_scoredist_v7",
     "model_weight": 0.62,
     "favorite_margin": 0.15,
-    "lambda_home": 1.35,
+    "lambda_home": 1.4,
     "lambda_away": 1.05,
-    "target_total_goals": 2.483,
+    "target_total_goals": 2.48,
     "target_goal_diff": 0.27,
+    "target_outcome_probs": {
+      "home": 0.444,
+      "draw": 0.296,
+      "away": 0.26
+    },
     "fitted_outcomes": {
-      "home": 0.436,
-      "draw": 0.273,
-      "away": 0.291
+      "home": 0.45,
+      "draw": 0.268,
+      "away": 0.282
     },
     "before": {
       "most_likely_score": "1-1",
@@ -1188,22 +1193,22 @@
       "score_dist_head": [
         {
           "score": "1-1",
-          "p": 0.128
+          "p": 0.132
         },
         {
           "score": "1-0",
-          "p": 0.119
+          "p": 0.121
         },
         {
           "score": "0-0",
-          "p": 0.099
-        },
-        {
-          "score": "0-1",
-          "p": 0.098
+          "p": 0.1
         },
         {
           "score": "2-1",
+          "p": 0.094
+        },
+        {
+          "score": "0-1",
           "p": 0.091
         }
       ]

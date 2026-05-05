@@ -16,9 +16,9 @@
       "t4_stats": "Arsenal to dominate possession (60%) and shot volume, while Atletico will register higher defensive actions and fouls as they sit deep."
     },
     "win_probs": {
-      "home": 0.55,
-      "draw": 0.25,
-      "away": 0.2
+      "home": 0.552,
+      "draw": 0.249,
+      "away": 0.199
     },
     "score_dist": [
       {
@@ -935,13 +935,18 @@
   "error": null,
   "score_calibration": {
     "applied": true,
-    "method": "hybrid_poisson_model_v6",
+    "method": "hybrid_poisson_scoredist_v7",
     "model_weight": 0.62,
     "favorite_margin": 0.15,
     "lambda_home": 1.6,
     "lambda_away": 0.85,
     "target_total_goals": 2.419,
     "target_goal_diff": 0.8,
+    "target_outcome_probs": {
+      "home": 0.55,
+      "draw": 0.25,
+      "away": 0.2
+    },
     "fitted_outcomes": {
       "home": 0.551,
       "draw": 0.25,

@@ -16,9 +16,9 @@
       "t4_stats": "Arsenal will dominate possession (~60%) and shot count, while Atletico will have higher defensive actions and rely on quick transitions."
     },
     "win_probs": {
-      "home": 0.49,
-      "draw": 0.29,
-      "away": 0.22
+      "home": 0.492,
+      "draw": 0.289,
+      "away": 0.219
     },
     "score_dist": [
       {
@@ -1054,13 +1054,18 @@
   "error": null,
   "score_calibration": {
     "applied": true,
-    "method": "hybrid_poisson_model_v6",
+    "method": "hybrid_poisson_scoredist_v7",
     "model_weight": 0.62,
     "favorite_margin": 0.15,
     "lambda_home": 1.4,
     "lambda_away": 0.85,
     "target_total_goals": 2.332,
     "target_goal_diff": 0.6,
+    "target_outcome_probs": {
+      "home": 0.49,
+      "draw": 0.29,
+      "away": 0.22
+    },
     "fitted_outcomes": {
       "home": 0.498,
       "draw": 0.273,

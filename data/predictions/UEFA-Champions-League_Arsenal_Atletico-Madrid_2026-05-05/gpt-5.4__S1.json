@@ -16,101 +16,101 @@
       "t4_stats": "Arsenal should have a bit more possession and territorial pressure at the Emirates, but Atlético’s direct counters should keep shot volume competitive. That points to moderate totals in shots and corners rather than an extreme domination script."
     },
     "win_probs": {
-      "home": 0.443,
-      "draw": 0.285,
-      "away": 0.272
+      "home": 0.501,
+      "draw": 0.27,
+      "away": 0.229
     },
     "score_dist": [
       {
         "score": "1-0",
-        "p": 0.135
+        "p": 0.13
       },
       {
         "score": "1-1",
-        "p": 0.131
+        "p": 0.124
       },
       {
         "score": "0-0",
-        "p": 0.096
-      },
-      {
-        "score": "0-1",
-        "p": 0.095
+        "p": 0.09
       },
       {
         "score": "2-0",
-        "p": 0.075
-      },
-      {
-        "score": "1-2",
-        "p": 0.075
-      },
-      {
-        "score": "4-0",
-        "p": 0.07
-      },
-      {
-        "score": "2-2",
-        "p": 0.056
+        "p": 0.085
       },
       {
         "score": "2-1",
-        "p": 0.055
+        "p": 0.082
       },
       {
-        "score": "0-2",
-        "p": 0.049
+        "score": "0-1",
+        "p": 0.081
+      },
+      {
+        "score": "4-0",
+        "p": 0.079
+      },
+      {
+        "score": "1-2",
+        "p": 0.064
+      },
+      {
+        "score": "2-2",
+        "p": 0.053
       },
       {
         "score": "3-1",
-        "p": 0.04
+        "p": 0.046
+      },
+      {
+        "score": "0-2",
+        "p": 0.041
       },
       {
         "score": "3-0",
-        "p": 0.032
-      },
-      {
-        "score": "1-3",
-        "p": 0.026
+        "p": 0.038
       },
       {
         "score": "3-2",
-        "p": 0.02
+        "p": 0.023
+      },
+      {
+        "score": "1-3",
+        "p": 0.022
       },
       {
         "score": "2-3",
-        "p": 0.018
+        "p": 0.016
       },
       {
         "score": "4-1",
-        "p": 0.011
+        "p": 0.013
       },
       {
         "score": "0-3",
-        "p": 0.007
-      },
-      {
-        "score": "3-3",
-        "p": 0.003
+        "p": 0.005
       },
       {
         "score": "4-2",
         "p": 0.003
       },
       {
-        "score": "1-4",
+        "score": "3-3",
         "p": 0.003
+      },
+      {
+        "score": "5-0",
+        "p": 0.002
       }
     ],
     "most_likely_score": "1-0",
-    "expected_goal_diff": 0.35,
+    "expected_goal_diff": 0.5,
     "match_profile": "normal",
-    "expected_total_goals": 2.45,
+    "expected_total_goals": 2.5,
     "over_under_probs": {
-      "over_1_5": 0.702,
-      "over_2_5": 0.443,
-      "over_3_5": 0.232,
-      "over_4_5": 0.102
+      "over_1_5": 0.713,
+      "over_2_5": 0.456,
+      "over_3_5": 0.242,
+      "over_4_5": 0.109
     },
     "advance_prob": 0.556,
     "lineups": {
@@ -1106,17 +1106,22 @@
   "error": null,
   "score_calibration": {
     "applied": true,
-    "method": "hybrid_poisson_model_v6",
+    "method": "hybrid_poisson_scoredist_v7",
     "model_weight": 0.62,
     "favorite_margin": 0.15,
-    "lambda_home": 1.4,
-    "lambda_away": 1.05,
-    "target_total_goals": 2.469,
+    "lambda_home": 1.5,
+    "lambda_away": 1.0,
+    "target_total_goals": 2.476,
     "target_goal_diff": 0.32,
+    "target_outcome_probs": {
+      "home": 0.501,
+      "draw": 0.27,
+      "away": 0.229
+    },
     "fitted_outcomes": {
-      "home": 0.45,
-      "draw": 0.268,
-      "away": 0.282
+      "home": 0.488,
+      "draw": 0.26,
+      "away": 0.252
     },
     "before": {
       "most_likely_score": "1-1",
@@ -1148,23 +1153,23 @@
       "score_dist_head": [
         {
           "score": "1-0",
-          "p": 0.135
+          "p": 0.13
         },
         {
           "score": "1-1",
-          "p": 0.131
+          "p": 0.124
         },
         {
           "score": "0-0",
-          "p": 0.096
-        },
-        {
-          "score": "0-1",
-          "p": 0.095
+          "p": 0.09
         },
         {
           "score": "2-0",
-          "p": 0.075
+          "p": 0.085
+        },
+        {
+          "score": "2-1",
+          "p": 0.082
         }
       ]
     }
