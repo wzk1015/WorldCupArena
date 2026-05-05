@@ -109,11 +109,14 @@ function outcomeFromScore(score, homeName, awayName) {
   return homeGoals > awayGoals ? homeName : awayName;
 }
 
-function outcomeFromWinProbs(wp, homeName, awayName) {
+function bestOutcomeFromWinProbs(wp, homeName, awayName) {
   if (wp.home == null || wp.draw == null || wp.away == null) return null;
-  if (wp.home >= wp.draw && wp.home >= wp.away) return homeName;
-  if (wp.away >= wp.home && wp.away >= wp.draw) return awayName;
-  return "Draw";
+  const outcomes = [
+    { label: homeName, p: wp.home },
+    { label: "Draw", p: wp.draw },
+    { label: awayName, p: wp.away },
+  ];
+  return outcomes.reduce((best, item) => item.p > best.p ? item : best);
 }
 
 function toggleDetails(idx) {
@@ -495,7 +498,9 @@ function renderPredCard(p, f, idx) {
   const aName      = f.away || "Away";
   const hasReason  = Object.keys(reasoning).length > 0;
 
-  const predWinner = outcomeFromScore(predScore, hName, aName) || outcomeFromWinProbs(wp, hName, aName);
+  const scoreWinner = outcomeFromScore(predScore, hName, aName);
+  const probPick    = bestOutcomeFromWinProbs(wp, hName, aName);
+  const probWinner  = probPick ? probPick.label : null;
 
   return `
     <div class="card rounded-xl p-4">
@@ -512,20 +517,20 @@ function renderPredCard(p, f, idx) {
       </div>
 
       <!-- Minimalist Prediction -->
-      ${predWinner || top3.length ? `
+      ${scoreWinner || probWinner || top3.length ? `
       <div class="mb-4">
-        <div class="flex items-start gap-6">
+        <div class="flex items-start gap-5 flex-wrap">
           <div>
-            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Pred Winner</div>
+            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Score Result</div>
             ${(() => {
               const truthOutcome = f.truth
                 ? (f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : "Draw")
                 : null;
-              const winnerCorrect = truthOutcome && predWinner && truthOutcome === predWinner;
+              const winnerCorrect = truthOutcome && scoreWinner && truthOutcome === scoreWinner;
               const winnerColor = truthOutcome
                 ? (winnerCorrect ? "color:#4ade80;" : "color:#f87171;")
                 : "color:#fff;";
-              return `<div class="text-2xl font-black leading-tight" style="${winnerColor}">${esc(predWinner)}</div>`;
+              return `<div class="text-2xl font-black leading-tight" style="${winnerColor}">${esc(scoreWinner || "—")}</div>`;
             })()}
           </div>
           <div style="width:1px;height:2.5rem;background:rgba(255,255,255,.1);"></div>
@@ -538,6 +543,22 @@ function renderPredCard(p, f, idx) {
                 ? (scoreCorrect ? "color:#4ade80;" : "color:#f87171;")
                 : "color:#fff;";
               return `<div class="text-2xl font-black leading-tight font-mono whitespace-nowrap" style="${scoreColor}">${esc(predScore ? predScore.replace("-", " - ") : "—")}</div>`;
+            })()}
+          </div>
+          <div style="width:1px;height:2.5rem;background:rgba(255,255,255,.1);"></div>
+          <div>
+            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Win Prob Pick</div>
+            ${(() => {
+              const truthOutcome = f.truth
+                ? (f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : "Draw")
+                : null;
+              const winnerCorrect = truthOutcome && probWinner && truthOutcome === probWinner;
+              const winnerColor = truthOutcome
+                ? (winnerCorrect ? "color:#4ade80;" : "color:#f87171;")
+                : "color:#fff;";
+              return `<div class="text-2xl font-black leading-tight" style="${winnerColor}">${esc(probWinner || "—")}</div>${
+                probPick ? `<div class="text-xs font-mono text-gray-500">${fmtPct(probPick.p)}</div>` : ""
+              }`;
             })()}
           </div>
           ${f.truth ? `<div class="ml-auto">
