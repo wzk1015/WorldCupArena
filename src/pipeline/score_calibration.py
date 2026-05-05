@@ -3,7 +3,8 @@
 LLMs tend to collapse exact-score forecasts onto template scorelines such as
 2-1. A pure Poisson replacement has the opposite failure mode: many balanced
 matches collapse onto 1-1. This module blends both signals, then calibrates the
-aggregate home/draw/away mass back to the model's win_probs.
+aggregate home/draw/away mass back to the model's score_dist-derived outcome
+mass.
 """
 
 from __future__ import annotations
@@ -12,9 +13,11 @@ import json
 import math
 from typing import Any
 
+from .prediction_derivatives import attach_score_derived_fields, derive_win_probs_from_score_dist
+
 
 OUTCOMES = ("home", "draw", "away")
-SCORE_CALIBRATION_METHOD = "hybrid_poisson_model_v6"
+SCORE_CALIBRATION_METHOD = "hybrid_poisson_scoredist_v7"
 OVER_UNDER_KEYS = ("over_1_5", "over_2_5", "over_3_5", "over_4_5")
 MANDATORY_SCORES = {
     "0-0", "1-1", "2-2",
@@ -34,12 +37,11 @@ def _outcome(score: str) -> str | None:
     return "home" if h_goals > a_goals else "away" if a_goals > h_goals else "draw"
 
 
-def _normalize_probs(win_probs: dict[str, Any]) -> dict[str, float]:
-    raw = {k: max(0.0, float(win_probs.get(k, 0.0))) for k in OUTCOMES}
-    total = sum(raw.values())
-    if total <= 0:
+def _score_dist_win_probs(score_dist: list[dict[str, Any]]) -> dict[str, float]:
+    derived = derive_win_probs_from_score_dist(score_dist)
+    if not derived:
         return {"home": 0.38, "draw": 0.27, "away": 0.35}
-    return {k: raw[k] / total for k in OUTCOMES}
+    return {outcome: float(derived[outcome]) for outcome in OUTCOMES}
 
 
 def _poisson_pmf(lam: float, max_goals: int) -> list[float]:
@@ -251,7 +253,7 @@ def _select_scorelines(
             selected[score] = dict(found)
 
     # Ensure every non-trivial outcome bucket has at least one representative so
-    # the later outcome-level calibration can preserve win_probs.
+    # the later outcome-level calibration can preserve score-derived outcome mass.
     for outcome in OUTCOMES:
         if win_probs[outcome] < 0.01:
             continue
@@ -457,8 +459,8 @@ def calibrate_score_prediction(
     The returned metadata is intended for the outer prediction record, not the
     schema-constrained prediction object.
     """
-    out = json.loads(json.dumps(pred))
-    win_probs = _normalize_probs(out.get("win_probs") or {})
+    out = attach_score_derived_fields(json.loads(json.dumps(pred)))
+    win_probs = _score_dist_win_probs(out.get("score_dist") or [])
     target_total = _target_total_goals(out, win_probs)
     target_diff = _target_goal_diff(out)
     lam_home, lam_away, fitted_outcomes = _fit_lambdas(
@@ -490,9 +492,7 @@ def calibrate_score_prediction(
         "most_likely_score": out.get("most_likely_score"),
         "score_dist_head": (out.get("score_dist") or [])[:5],
     }
-    out["win_probs"] = {k: round(v, 3) for k, v in win_probs.items()}
     out["score_dist"] = score_dist
-    out["most_likely_score"] = score_dist[0]["score"] if score_dist else out.get("most_likely_score")
     out["match_profile"] = _coherent_profile(out.get("match_profile"), lam_home + lam_away)
     out["expected_total_goals"] = round(lam_home + lam_away, 3)
     out["expected_goal_diff"] = round(lam_home - lam_away, 3)
@@ -500,6 +500,7 @@ def calibrate_score_prediction(
         key: round(value, 3)
         for key, value in _poisson_over_probs(lam_home + lam_away).items()
     }
+    out = attach_score_derived_fields(out)
 
     metadata = {
         "applied": True,
@@ -510,6 +511,7 @@ def calibrate_score_prediction(
         "lambda_away": round(lam_away, 3),
         "target_total_goals": round(target_total, 3),
         "target_goal_diff": round(target_diff, 3) if target_diff is not None else None,
+        "target_outcome_probs": {k: round(v, 3) for k, v in win_probs.items()},
         "fitted_outcomes": {k: round(v, 3) for k, v in fitted_outcomes.items()},
         "before": before,
         "after": {
@@ -559,7 +561,8 @@ def _align_prediction_to_score(pred: dict[str, Any], score: str) -> dict[str, An
 
     The chosen score must already be a plausible candidate from the model's own
     score_dist. We preserve within-outcome ordering as much as possible, then
-    rake outcome totals so win_probs, score_dist, and most_likely_score agree.
+    rake outcome totals so derived win_probs, score_dist, and most_likely_score
+    agree.
     """
     out = json.loads(json.dumps(pred))
     rows = [
@@ -612,15 +615,9 @@ def _align_prediction_to_score(pred: dict[str, Any], score: str) -> dict[str, An
             needed -= take
 
     rounded = _round_rows(rows, score)
-    out["score_dist"] = rounded
-    out["most_likely_score"] = score
-    totals = {outcome: 0.0 for outcome in OUTCOMES}
     expected_total = 0.0
     over_under = {key: 0.0 for key in OVER_UNDER_KEYS}
     for row in rounded:
-        outcome = _outcome(row["score"])
-        if outcome:
-            totals[outcome] += float(row["p"])
         try:
             total_goals = sum(int(part) for part in row["score"].split("-"))
         except ValueError:
@@ -635,15 +632,12 @@ def _align_prediction_to_score(pred: dict[str, Any], score: str) -> dict[str, An
             over_under["over_3_5"] += p
         if total_goals >= 5:
             over_under["over_4_5"] += p
-    total = sum(totals.values()) or 1.0
-    out["win_probs"] = {outcome: round(totals[outcome] / total, 3) for outcome in OUTCOMES}
-    diff = round(1.0 - sum(out["win_probs"].values()), 3)
-    if diff:
-        out["win_probs"][target_outcome] = round(max(0.0, out["win_probs"][target_outcome] + diff), 3)
+    out["score_dist"] = rounded
+    out["most_likely_score"] = score
     out["match_profile"] = _coherent_profile(out.get("match_profile"), expected_total)
     out["expected_total_goals"] = round(expected_total, 3)
     out["over_under_probs"] = {key: round(value, 3) for key, value in over_under.items()}
-    return out
+    return attach_score_derived_fields(out)
 
 
 def diversify_prediction_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -670,7 +664,7 @@ def diversify_prediction_records(records: list[dict[str, Any]]) -> list[dict[str
             out_records.append(record)
             continue
 
-        wp = pred.get("win_probs") or {}
+        wp = pred.get("win_probs") or derive_win_probs_from_score_dist(pred.get("score_dist") or [])
         draw_p = float(wp.get("draw", 0))
         over_3_5 = sum(
             float(row.get("p", 0))

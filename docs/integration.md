@@ -132,14 +132,13 @@ Regardless of integration path, the model's final JSON response must conform to 
 
 1. `fixture_id`, `model_id`, `setting`, `submitted_at`
 2. `reasoning` — **must come first before any numeric field**. Required keys: `overall` (≥80 characters). Optional but recommended: `t1_result`, `t2_player`, `t3_events`, `t4_stats`.
-3. `win_probs` — `{home, draw, away}`, summing to 1 ±1e-2.
-4. `score_dist` — array of `{score: "H-A", p}` objects summing to 1 ±1e-2.
-5. `most_likely_score`, `expected_goal_diff`, `match_profile`, `expected_total_goals`, `over_under_probs`, optional `advance_prob`.
-6. `match_profile` is one of `low_event`, `normal`, `open`, `chaos`; `over_under_probs` must include `{over_1_5, over_2_5, over_3_5, over_4_5}` and be monotonic.
-7. `lineups.home.starting` and `lineups.away.starting` — exactly 11 players each.
-8. `formations.home`, `formations.away` — e.g. `"4-3-3"`.
-9. `scorers` — array, each with `{player, team, p}` (optional `minute_range`).
-10. `stats` — 8 required keys: `possession`, `shots`, `shots_on_target`, `corners`, `pass_accuracy`, `fouls`, `saves`, `defensive_actions`. Each value is `{home, away}`.
+3. `score_dist` — array of `{score: "H-A", p}` objects summing to 1 ±1e-2. Do not output `win_probs` or `most_likely_score`; the pipeline derives both from this distribution before saving.
+4. `expected_goal_diff`, `match_profile`, `expected_total_goals`, `over_under_probs`, optional `advance_prob`.
+5. `match_profile` is one of `low_event`, `normal`, `open`, `chaos`; `over_under_probs` must include `{over_1_5, over_2_5, over_3_5, over_4_5}` and be monotonic.
+6. `lineups.home.starting` and `lineups.away.starting` — exactly 11 players each.
+7. `formations.home`, `formations.away` — e.g. `"4-3-3"`.
+8. `scorers` — array, each with `{player, team, p}` (optional `minute_range`).
+9. `stats` — 8 required keys: `possession`, `shots`, `shots_on_target`, `corners`, `pass_accuracy`, `fouls`, `saves`, `defensive_actions`. Each value is `{home, away}`.
 
 Optional but scored: `assisters`, `substitutions`, `cards`, `penalties`, `own_goals`, `motm_probs`, `sources`.
 

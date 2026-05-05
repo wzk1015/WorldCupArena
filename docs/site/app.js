@@ -109,14 +109,25 @@ function outcomeFromScore(score, homeName, awayName) {
   return homeGoals > awayGoals ? homeName : awayName;
 }
 
-function bestOutcomeFromWinProbs(wp, homeName, awayName) {
-  if (wp.home == null || wp.draw == null || wp.away == null) return null;
-  const outcomes = [
-    { label: homeName, p: wp.home },
-    { label: "Draw", p: wp.draw },
-    { label: awayName, p: wp.away },
-  ];
-  return outcomes.reduce((best, item) => item.p > best.p ? item : best);
+function winProbsFromScoreDist(scoreDist) {
+  const totals = { home: 0, draw: 0, away: 0 };
+  let total = 0;
+  for (const item of scoreDist || []) {
+    const match = String(item.score || "").trim().match(/^(\d+)\s*[-:]\s*(\d+)$/);
+    if (!match) continue;
+    const p = Math.max(0, Number(item.p) || 0);
+    const homeGoals = Number(match[1]);
+    const awayGoals = Number(match[2]);
+    const outcome = homeGoals > awayGoals ? "home" : awayGoals > homeGoals ? "away" : "draw";
+    totals[outcome] += p;
+    total += p;
+  }
+  if (total <= 0) return null;
+  return {
+    home: totals.home / total,
+    draw: totals.draw / total,
+    away: totals.away / total,
+  };
 }
 
 function toggleDetails(idx) {
@@ -489,9 +500,9 @@ function _renderDetails(p, f) {
 
 function renderPredCard(p, f, idx) {
   const b          = modelBadge(p.model_id);
-  const wp         = p.win_probs || {};
   const reasoning  = p.reasoning || {};
   const scoreDist  = (p.score_dist || []).slice().sort((a, b) => (b.p || 0) - (a.p || 0));
+  const wp         = winProbsFromScoreDist(scoreDist) || p.win_probs || {};
   const top3       = scoreDist.slice(0, 3);
   const predScore  = p.most_likely_score || (top3[0] ? top3[0].score : null);
   const hName      = f.home || "Home";
@@ -499,8 +510,6 @@ function renderPredCard(p, f, idx) {
   const hasReason  = Object.keys(reasoning).length > 0;
 
   const scoreWinner = outcomeFromScore(predScore, hName, aName);
-  const probPick    = bestOutcomeFromWinProbs(wp, hName, aName);
-  const probWinner  = probPick ? probPick.label : null;
 
   return `
     <div class="card rounded-xl p-4">
@@ -517,7 +526,7 @@ function renderPredCard(p, f, idx) {
       </div>
 
       <!-- Minimalist Prediction -->
-      ${scoreWinner || probWinner || top3.length ? `
+      ${scoreWinner || top3.length ? `
       <div class="mb-4">
         <div class="flex items-start gap-5 flex-wrap">
           <div>
@@ -543,22 +552,6 @@ function renderPredCard(p, f, idx) {
                 ? (scoreCorrect ? "color:#4ade80;" : "color:#f87171;")
                 : "color:#fff;";
               return `<div class="text-2xl font-black leading-tight font-mono whitespace-nowrap" style="${scoreColor}">${esc(predScore ? predScore.replace("-", " - ") : "—")}</div>`;
-            })()}
-          </div>
-          <div style="width:1px;height:2.5rem;background:rgba(255,255,255,.1);"></div>
-          <div>
-            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Win Prob Pick</div>
-            ${(() => {
-              const truthOutcome = f.truth
-                ? (f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : "Draw")
-                : null;
-              const winnerCorrect = truthOutcome && probWinner && truthOutcome === probWinner;
-              const winnerColor = truthOutcome
-                ? (winnerCorrect ? "color:#4ade80;" : "color:#f87171;")
-                : "color:#fff;";
-              return `<div class="text-2xl font-black leading-tight" style="${winnerColor}">${esc(probWinner || "—")}</div>${
-                probPick ? `<div class="text-xs font-mono text-gray-500">${fmtPct(probPick.p)}</div>` : ""
-              }`;
             })()}
           </div>
           ${f.truth ? `<div class="ml-auto">
@@ -674,8 +667,9 @@ function _renderOneFixture(nm, cardIdx) {
   const agg = { home: 0, draw: 0, away: 0 };
   let nP = 0;
   for (const p of preds) {
-    if (p.win_probs && typeof p.win_probs.home === "number") {
-      agg.home += p.win_probs.home; agg.draw += p.win_probs.draw; agg.away += p.win_probs.away;
+    const wp = winProbsFromScoreDist(p.score_dist || []) || p.win_probs;
+    if (wp && typeof wp.home === "number") {
+      agg.home += wp.home; agg.draw += wp.draw; agg.away += wp.away;
       nP++;
     }
   }

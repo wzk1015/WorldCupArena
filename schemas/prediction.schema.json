@@ -10,9 +10,7 @@
     "setting",
     "submitted_at",
     "reasoning",
-    "win_probs",
     "score_dist",
-    "most_likely_score",
     "expected_goal_diff",
     "match_profile",
     "expected_total_goals",
@@ -44,17 +42,6 @@
       "additionalProperties": false
     },
 
-    "win_probs": {
-      "type": "object",
-      "required": ["home","draw","away"],
-      "additionalProperties": false,
-      "properties": {
-        "home": { "type":"number", "minimum":0, "maximum":1 },
-        "draw": { "type":"number", "minimum":0, "maximum":1 },
-        "away": { "type":"number", "minimum":0, "maximum":1 }
-      }
-    },
-
     "score_dist": {
       "type": "array",
       "minItems": 1,
@@ -69,7 +56,6 @@
         }
       }
     },
-    "most_likely_score":  { "type":"string", "pattern":"^[0-9]+-[0-9]+$" },
     "expected_goal_diff": { "type":"number" },
     "match_profile": {
       "enum":["low_event","normal","open","chaos"],

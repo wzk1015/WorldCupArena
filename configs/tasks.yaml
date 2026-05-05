@@ -20,7 +20,7 @@ tasks:
     weight_in_layer: 0.55
     metric: brier_3way
     output_field: win_probs
-    notes: Requires {home, draw, away} probabilities summing to 1.
+    notes: Derived by the pipeline from score_dist home/draw/away mass.
   - id: most_likely_score
     layer: T1_core_result
     weight_in_layer: 0.35

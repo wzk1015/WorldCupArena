@@ -11,6 +11,7 @@ from typing import Any
 import yaml
 
 from . import metrics
+from ..pipeline.prediction_derivatives import derive_win_probs_from_score_dist
 
 ROOT = Path(__file__).resolve().parents[2]
 TASKS_YAML = ROOT / "configs" / "tasks.yaml"
@@ -20,8 +21,12 @@ def load_tasks() -> dict[str, Any]:
     return yaml.safe_load(TASKS_YAML.read_text())
 
 
+def _win_probs(prediction: dict[str, Any]) -> dict[str, float]:
+    return derive_win_probs_from_score_dist(prediction.get("score_dist") or []) or prediction.get("win_probs") or {}
+
+
 METRIC_FNS = {
-    "brier_3way":          lambda p, t: metrics.brier_3way(p["win_probs"], t["result"]),
+    "brier_3way":          lambda p, t: metrics.brier_3way(_win_probs(p), t["result"]),
     "brier_binary":        lambda p, t: metrics.brier_binary(p.get("advance_prob", 0.5), t.get("advanced", False)),
     "brier_multiclass":    lambda p, t: metrics.brier_multiclass(p.get("champion_probs", {}), t.get("champion", "")),
     "rps_score":           lambda p, t: metrics.rps_score(p["score_dist"], t["score"]),
@@ -119,7 +124,7 @@ def grade_match(prediction: dict[str, Any], truth: dict[str, Any]) -> dict[str, 
         score: float = 0.0
         try:
             if metric in ("brier_3way",):
-                score = metrics.brier_3way(prediction.get("win_probs", {}), truth.get("result", ""))
+                score = metrics.brier_3way(_win_probs(prediction), truth.get("result", ""))
             elif metric == "rps_score" and prediction.get("score_dist"):
                 score = metrics.rps_score(prediction["score_dist"], truth["score"])
             elif metric == "mae" and tid == "goal_diff_mae":

@@ -19,7 +19,9 @@ Emits a single JSON file at docs/site/data.json with three sections:
     }
 
 The site reads this file with fetch('data.json') and renders everything
-client-side — no server, no build step.
+client-side — no server, no build step. `win_probs` and `most_likely_score`
+are saved by the pipeline when available and otherwise derived here from
+`score_dist` for backwards compatibility.
 """
 
 from __future__ import annotations
@@ -30,6 +32,8 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 import yaml
+
+from ..pipeline.prediction_derivatives import derive_most_likely_score, derive_win_probs_from_score_dist
 
 ROOT = Path(__file__).resolve().parents[2]
 RESULTS = ROOT / "data" / "results"
@@ -111,7 +115,8 @@ def build_leaderboard() -> dict:
                 pred_file = PREDICTIONS / wca_id / f.name
                 if pred_file.exists():
                     pred_rec = json.loads(pred_file.read_text())
-                    wp = (pred_rec.get("prediction") or {}).get("win_probs") or {}
+                    pred_obj = pred_rec.get("prediction") or {}
+                    wp = derive_win_probs_from_score_dist(pred_obj.get("score_dist") or []) or pred_obj.get("win_probs") or {}
                     if wp:
                         predicted = max(wp, key=lambda k: wp[k])
                         by_model_winner_correct[model] += int(predicted == truth_result)
@@ -203,13 +208,15 @@ def _collect_predictions(wca_id: str) -> list[dict]:
                 pass
         if not sources:
             sources = rec.get("sources") or []
+        win_probs = derive_win_probs_from_score_dist(p.get("score_dist") or []) or p.get("win_probs")
+        most_likely_score = p.get("most_likely_score") or derive_most_likely_score(p.get("score_dist") or [])
 
         out.append({
             "model_id":           rec["model_id"],
             "setting":            rec["setting"],
-            "win_probs":          p.get("win_probs"),
+            "win_probs":          win_probs,
             "score_dist":         p.get("score_dist") or [],
-            "most_likely_score":  p.get("most_likely_score"),
+            "most_likely_score":  most_likely_score,
             "expected_goal_diff": p.get("expected_goal_diff"),
             "advance_prob":       p.get("advance_prob"),
             "reasoning":          p.get("reasoning") or {},

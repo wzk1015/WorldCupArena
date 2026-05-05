@@ -8,11 +8,9 @@ Validation layers:
     1. JSON parseability (handled by runner, but we re-parse to be safe).
     2. JSON-schema conformance (required fields, types, enums, patterns).
     3. Semantic checks the schema can't express:
-         - win_probs sum ≈ 1
          - score_dist p values sum ≈ 1
          - score_dist contains at least 10 distinct scorelines
-         - most_likely_score matches the highest-probability score_dist entry
-         - score_dist outcome totals are close to win_probs
+         - derived win_probs and most_likely_score match score_dist
          - expected_total_goals and over/under probabilities match score_dist
          - stats contains all 8 required keys
          - lineups.*.starting has exactly 11 entries
@@ -35,6 +33,13 @@ from typing import Any, Callable
 
 from jsonschema import Draft202012Validator
 
+from .prediction_derivatives import (
+    attach_score_derived_fields,
+    derive_win_probs_from_score_dist,
+    score_total,
+    strip_score_derived_fields,
+)
+
 ROOT = Path(__file__).resolve().parents[2]
 SCHEMA_PATH = ROOT / "schemas" / "prediction.schema.json"
 
@@ -56,7 +61,8 @@ class ValidationReport:
 def _validate_schema(pred: dict[str, Any]) -> list[str]:
     schema = json.loads(SCHEMA_PATH.read_text())
     v = Draft202012Validator(schema)
-    return [f"{'/'.join(map(str, e.path))}: {e.message}" for e in v.iter_errors(pred)]
+    schema_pred = strip_score_derived_fields(pred)
+    return [f"{'/'.join(map(str, e.path))}: {e.message}" for e in v.iter_errors(schema_pred)]
 
 
 def _validate_semantics(
@@ -73,11 +79,6 @@ def _validate_semantics(
     if pred.get("setting") != setting_id:
         errs.append(f"setting mismatch: expected {setting_id}, got {pred.get('setting')}")
 
-    wp = pred.get("win_probs") or {}
-    s = float(wp.get("home", 0)) + float(wp.get("draw", 0)) + float(wp.get("away", 0))
-    if abs(s - 1.0) > tol:
-        errs.append(f"win_probs sum={s:.4f} not within {tol} of 1")
-
     sd = pred.get("score_dist") or []
     if not sd:
         errs.append("score_dist is empty")
@@ -89,6 +90,18 @@ def _validate_semantics(
         if len(distinct_scores) < 10:
             errs.append(f"score_dist has {len(distinct_scores)} distinct scorelines, need at least 10")
 
+    derived_wp = derive_win_probs_from_score_dist(sd)
+    wp = pred.get("win_probs") or {}
+    if sd and not derived_wp:
+        errs.append("win_probs could not be derived from score_dist")
+    elif wp and derived_wp:
+        for outcome in ("home", "draw", "away"):
+            if abs(float(wp.get(outcome, 0)) - float(derived_wp.get(outcome, 0))) > 0.002:
+                errs.append(
+                    f"derived field mismatch: win_probs.{outcome}={float(wp.get(outcome, 0)):.3f} "
+                    f"but score_dist implies {float(derived_wp.get(outcome, 0)):.3f}"
+                )
+
     reasoning = (pred.get("reasoning") or {}).get("overall") or ""
     if len(reasoning) < 80:
         errs.append(f"reasoning.overall too short ({len(reasoning)} chars, need ≥80)")
@@ -99,52 +112,13 @@ def _validate_semantics(
         if len(starting) != 11:
             errs.append(f"lineups.{side}.starting has {len(starting)} players, need 11")
 
-    def _score_outcome(score_str: str) -> str | None:
-        parts = score_str.split("-") if score_str else []
-        if len(parts) != 2:
-            return None
-        try:
-            h_goals, a_goals = int(parts[0]), int(parts[1])
-        except (ValueError, TypeError):
-            return None
-        return "home" if h_goals > a_goals else "away" if a_goals > h_goals else "draw"
-
-    def _score_total(score_str: str) -> int | None:
-        parts = score_str.split("-") if score_str else []
-        if len(parts) != 2:
-            return None
-        try:
-            return int(parts[0]) + int(parts[1])
-        except (ValueError, TypeError):
-            return None
-
-    # Consistency: score_dist aggregate outcomes should broadly match win_probs.
-    # The single most likely exact score can reasonably be a draw even when
-    # home/away is the most likely 3-way outcome, because win probability is
-    # spread over many exact scores.
-    sd = pred.get("score_dist") or []
-    if sd and wp:
-        sd_outcomes = {"home": 0.0, "draw": 0.0, "away": 0.0}
-        for item in sd:
-            outcome = _score_outcome(str(item.get("score", "")))
-            if outcome:
-                sd_outcomes[outcome] += float(item.get("p", 0))
-        outcome_tol = max(0.10, tol * 10)
-        for outcome in ("home", "draw", "away"):
-            if abs(sd_outcomes[outcome] - float(wp.get(outcome, 0))) > outcome_tol:
-                errs.append(
-                    f"consistency: score_dist aggregates to {outcome}={sd_outcomes[outcome]:.3f} "
-                    f"but win_probs.{outcome}={float(wp.get(outcome, 0)):.3f} "
-                    f"(allowed ±{outcome_tol:.2f})"
-                )
-
     # Consistency: explicit total-goals fields should reflect the score grid.
     if sd:
         p_sum = sum(float(x.get("p", 0)) for x in sd) or 1.0
         expected_from_scores = 0.0
         over_from_scores = {"over_1_5": 0.0, "over_2_5": 0.0, "over_3_5": 0.0, "over_4_5": 0.0}
         for item in sd:
-            total_goals = _score_total(str(item.get("score", "")))
+            total_goals = score_total(str(item.get("score", "")))
             if total_goals is None:
                 continue
             p = float(item.get("p", 0)) / p_sum
@@ -208,22 +182,12 @@ def _validate_semantics(
 
 
 def normalize_probabilities(pred: dict[str, Any], tol: float = 0.01) -> dict[str, Any]:
-    """Post-hoc normalize distributions that are only slightly off, so minor
-    rounding doesn't waste a retry. Returns a new dict; does not mutate input.
-    Also rounds all probability values to 3 decimal places."""
-    out = json.loads(json.dumps(pred))  # deep copy via JSON
-    wp = out.get("win_probs") or {}
-    s = sum(float(wp.get(k, 0)) for k in ("home","draw","away"))
-    if 0 < s and abs(s - 1.0) <= tol:
-        for k in ("home","draw","away"):
-            wp[k] = round(float(wp.get(k, 0)) / s, 3)
-        out["win_probs"] = wp
-    else:
-        for k in ("home","draw","away"):
-            if k in wp:
-                wp[k] = round(float(wp[k]), 3)
-        out["win_probs"] = wp
+    """Normalize model-supplied probabilities and attach score-derived fields.
 
+    `win_probs` and `most_likely_score` are no longer model-owned. If a model
+    emits either field anyway, it is ignored and overwritten from `score_dist`.
+    """
+    out = strip_score_derived_fields(pred)
     sd = out.get("score_dist") or []
     p_sum = sum(float(x.get("p", 0)) for x in sd)
     if 0 < p_sum and abs(p_sum - 1.0) <= tol:
@@ -250,7 +214,7 @@ def normalize_probabilities(pred: dict[str, Any], tol: float = 0.01) -> dict[str
     if isinstance(out.get("expected_total_goals"), int | float):
         out["expected_total_goals"] = round(float(out["expected_total_goals"]), 3)
 
-    return out
+    return attach_score_derived_fields(out)
 
 
 def validate(
@@ -260,6 +224,7 @@ def validate(
     setting_id: str,
     tol: float = 0.01,
 ) -> ValidationReport:
+    pred = attach_score_derived_fields(pred)
     rep = ValidationReport()
     for e in _validate_schema(pred):
         rep.add(f"schema: {e}")
@@ -273,10 +238,11 @@ def build_repair_prompt(original: dict[str, Any], report: ValidationReport) -> s
     return (
         "Your previous JSON failed format validation. Fix ONLY the listed issues "
         "and return the corrected FULL JSON object (not a patch). Keep all other "
-        "fields and values unchanged.\n\n"
+        "fields and values unchanged. Do not add `win_probs` or `most_likely_score`; "
+        "the system derives them from `score_dist`.\n\n"
         f"Validation errors:\n{report}\n\n"
         "Previous JSON:\n```json\n"
-        f"{json.dumps(original, ensure_ascii=False, indent=2)}\n```\n"
+        f"{json.dumps(strip_score_derived_fields(original), ensure_ascii=False, indent=2)}\n```\n"
         "Return the corrected JSON only. Begin with `{`."
     )
 

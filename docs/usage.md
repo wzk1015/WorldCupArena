@@ -117,7 +117,7 @@ python -m src.pipeline.orchestrator predict \
     --parallel 8
 ```
 
-Runs every (model × setting) pair configured in [configs/models.yaml](../configs/models.yaml) × [configs/settings.yaml](../configs/settings.yaml). Each prediction is schema- and semantics-validated (including win_probs ↔ score_dist consistency); malformed outputs trigger up to 2 repair retries. If a prediction file already exists but contains an error, it is automatically re-run. Per-call cost, token usage, and validation report are stored with the prediction.
+Runs every (model × setting) pair configured in [configs/models.yaml](../configs/models.yaml) × [configs/settings.yaml](../configs/settings.yaml). Each prediction is schema- and semantics-validated; malformed outputs trigger up to 2 repair retries. Models output `score_dist`, and the pipeline derives `win_probs` plus `most_likely_score` from that distribution before saving. If a prediction file already exists but contains an error, it is automatically re-run. Per-call cost, token usage, and validation report are stored with the prediction.
 
 S2 model search sources are also saved to `data/search_logs/<fixture_id>/` for post-run review.
 
