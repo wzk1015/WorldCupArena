@@ -100,6 +100,22 @@ function closeReasoningModal() {
 
 // ---------- Prediction card --------------------------------------------------
 
+function outcomeFromScore(score, homeName, awayName) {
+  const match = String(score || "").trim().match(/^(\d+)\s*[-:]\s*(\d+)$/);
+  if (!match) return null;
+  const homeGoals = Number(match[1]);
+  const awayGoals = Number(match[2]);
+  if (homeGoals === awayGoals) return "Draw";
+  return homeGoals > awayGoals ? homeName : awayName;
+}
+
+function outcomeFromWinProbs(wp, homeName, awayName) {
+  if (wp.home == null || wp.draw == null || wp.away == null) return null;
+  if (wp.home >= wp.draw && wp.home >= wp.away) return homeName;
+  if (wp.away >= wp.home && wp.away >= wp.draw) return awayName;
+  return "Draw";
+}
+
 function toggleDetails(idx) {
   const el  = document.getElementById(`pred-details-${idx}`);
   const btn = document.getElementById(`pred-details-btn-${idx}`);
@@ -479,11 +495,7 @@ function renderPredCard(p, f, idx) {
   const aName      = f.away || "Away";
   const hasReason  = Object.keys(reasoning).length > 0;
 
-  const predWinner = (wp.home != null && wp.draw != null && wp.away != null)
-    ? (wp.home >= wp.draw && wp.home >= wp.away ? hName
-       : wp.away >= wp.home && wp.away >= wp.draw ? aName : "Draw")
-    : null;
-
+  const predWinner = outcomeFromScore(predScore, hName, aName) || outcomeFromWinProbs(wp, hName, aName);
 
   return `
     <div class="card rounded-xl p-4">
