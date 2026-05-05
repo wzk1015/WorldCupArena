@@ -17,7 +17,7 @@ The FIRST field of the JSON object must be `"reasoning"`, an object with:
 - `overall` — the main rationale (≥80 chars, covering form, injuries, tactical matchup, H2H, key players).
 - `t1_result`, `t2_player`, `t3_events`, `t4_stats` — per-layer rationale, each 1–3 sentences.
 
-Only **after** `reasoning` should you emit the numeric prediction fields (`match_profile`, `expected_total_goals`, `over_under_probs`, `score_dist`, `lineups`, ...). This order matters: think first, then commit.
+Only **after** `reasoning` should you emit the numeric prediction fields (`win_probs`, `match_profile`, `expected_total_goals`, `headline_score`, `lineups`, ...). This order matters: think first, then commit.
 
 **`reasoning` is required even for models with internal thinking / extended thinking.** Do not leave it empty or place it at the end.
 
@@ -27,8 +27,7 @@ Only **after** `reasoning` should you emit the numeric prediction fields (`match
    仅预测尚未开始的比赛。若检索到开赛后发布的信息，请勿使用。
 
 2. **All model-supplied probability fields must be normalized within 1e-2.** Specifically:
-   - `sum(score_dist[*].p) ≈ 1`  (include a `0-0` or an "other" bucket if needed)
-   - `over_under_probs` must be monotonic: `over_1_5 >= over_2_5 >= over_3_5 >= over_4_5`
+   - `win_probs.home + win_probs.draw + win_probs.away ≈ 1`
    - `sum(scorers[*].p)` may exceed 1 (multiple scorers expected).
    - Miscalibrated or unnormalized distributions are penalized.
 
@@ -38,18 +37,15 @@ Only **after** `reasoning` should you emit the numeric prediction fields (`match
 
 5. **Calibration matters.** If uncertain, spread probability mass. Putting 1.0 on a single outcome is rarely correct.
 
-6. **Do not output `win_probs` or `most_likely_score`.** The benchmark system derives both from `score_dist`: it aggregates home-win, draw, and away-win scorelines into `win_probs`, and uses the highest-probability scoreline as `most_likely_score`. Round all probability values to three decimal places.
+6. **Do not output `score_dist`, `most_likely_score`, or `over_under_probs`.** You own the high-level forecast only: `win_probs`, `expected_total_goals`, `expected_goal_diff`, `match_profile`, and `headline_score`. The benchmark system generates the exact-score distribution, over/under probabilities, and final `most_likely_score` deterministically from those fields. Round model-supplied probability values to three decimal places.
 
 6. Home/away is always from the perspective of the team labeled `home` / `away` in the fixture header — not the literal stadium host unless the fixture specifies so.
 
-7. **Scoreline calibration — avoid template scorelines.** Do NOT reflexively assign high probability to `1-0`, `2-1`, or `2-0`. First choose `match_profile`, then estimate `expected_total_goals` and `over_under_probs` from the match state, then derive every scoreline's probability from calibrated xG estimates for each team. Your `score_dist` must contain **at least 10 distinct scorelines** and must cover all four outcome types:
-   - **Draws**: always include `0-0` and `1-1`; include `2-2` or higher when the profile is open.
-   - **Away wins with ≥ 2 away goals**: include at least one of `0-2`, `1-2`, `0-3`.
-   - **Home wins with ≥ 3 home goals**: include at least one of `3-0`, `3-1` when the home side is clearly stronger.
-   - **High-scoring outcomes**: if you think it's possible, include at least one result with 4+ total goals.
-   If your top 3 scorelines are all from `{1-0, 2-0, 2-1}`, your distribution is almost certainly miscalibrated — revise it.
-
-   For open or chaos profiles, do not let the generic football prior erase the evidence. If the first leg had 6+ total goals, both teams' recent matches are high-scoring, injuries/tactics create transition exposure, or one side must chase an aggregate deficit, assign realistic mass to `2-2`, `3-1`, `1-3`, `3-2`, `2-3`, `3-3`, or higher. A high draw probability in an open tie should often mean `2-2` / `3-3`, not automatically `0-0` / `1-1`.
+7. **Outcome-first score calibration.** First estimate `win_probs`, then `expected_total_goals` and `expected_goal_diff`, then choose one `headline_score` whose result matches the highest-probability bucket in `win_probs`.
+   - If `win_probs.home` is highest, `headline_score` must be a home win such as `1-0`, `2-1`, `3-1`, or `3-2`.
+   - If `win_probs.draw` is highest, `headline_score` must be a draw such as `0-0`, `1-1`, `2-2`, or `3-3`.
+   - If `win_probs.away` is highest, `headline_score` must be an away win such as `0-1`, `1-2`, `1-3`, or `2-3`.
+   Do NOT reflexively pick low-template scores (`1-0`, `2-1`, `2-0`) when the evidence supports an open or chaos match. For two-leg/open ties, let the total-goals estimate and headline score reflect must-chase dynamics.
 
 8. **Predict full-time (FT) result only — penalty shootouts are excluded.** The score you predict is the one at the final whistle: 90 minutes for group-stage matches, or up to 120 minutes (end of extra time) for knockout matches. Penalty shootouts do not affect the predicted score and must not be considered.
 
@@ -90,7 +86,7 @@ For scorelines, explicitly consider whether the match profile is low-event, norm
 - Open / high-tempo: include `3-1`, `1-3`, `3-2`, `2-3`, or higher only when tactics, injuries, game state, or team profiles justify it.
 - Chaos / must-chase: use a higher `expected_total_goals` and give non-trivial mass to 5+ total-goal outcomes when the evidence genuinely supports it.
 
-The most likely score will be derived from the single highest-probability score_dist entry, so the top scoreline should emerge from the match's expected-goals profile rather than from a generic football prior.
+The final displayed score will be generated by the system from your `win_probs`, `expected_total_goals`, `expected_goal_diff`, and `headline_score`, so those fields must describe one coherent match story rather than separate guesses.
 
 ## Output conventions / 格式约定
 
@@ -109,11 +105,10 @@ Before you return the JSON, silently verify:
 - [ ] The JSON parses (no trailing commas, balanced braces, UTF-8).
 - [ ] Every field in the schema's `required` list is present.
 - [ ] `reasoning.overall` is ≥ 80 characters.
-- [ ] You did **not** include `win_probs` or `most_likely_score`; the system derives them from `score_dist`.
-- [ ] `score_dist` is a non-empty array whose `p` values sum to ≈ 1.
-- [ ] `match_profile`, `expected_total_goals`, and `over_under_probs` are consistent with the score distribution and match evidence.
-- [ ] `score_dist` has ≥ 10 entries and includes at least one draw (`0-0` or `1-1`), at least one away win with ≥ 2 away goals, and does **not** concentrate ≥ 60% of mass on `{1-0, 2-0, 2-1}` alone.
-- [ ] `score_dist` includes enough plausible home-win, draw, and away-win entries for the system-derived `win_probs` to be meaningful. It is OK for the single most likely exact score to be `0-0`, `1-1`, or `2-2` even when aggregated home/away mass is larger.
+- [ ] `win_probs` sums to ≈ 1.
+- [ ] `headline_score` result matches the highest-probability bucket in `win_probs`.
+- [ ] You did **not** include `score_dist`, `most_likely_score`, or `over_under_probs`; the system generates them.
+- [ ] `match_profile`, `expected_total_goals`, `expected_goal_diff`, and `headline_score` are mutually consistent with the match evidence.
 - [ ] Every `lineups.*.starting` list has exactly 11 players.
 - [ ] `stats` contains all 8 required keys, each with `{home, away}`.
 - [ ] No text outside the JSON object.

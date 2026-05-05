@@ -53,14 +53,14 @@ policy:
   # Format validation: orchestrator will schema-check and retry up to N times.
   max_format_retries: 2
   probability_sum_tolerance: 0.01
-  # Convert LLM exact-score distributions into a calibrated independent-Poisson
-  # grid. win_probs are derived from the final score_dist at save time.
+  # Convert model-owned win_probs / total-goals / headline-score parameters
+  # into a calibrated independent-Poisson score grid.
   scoreline_calibration:
     enabled: true
     max_goals: 7
     max_scorelines: 20
     model_weight: 0.62
-    favorite_margin: 0.15
+    favorite_margin: 0.0
   fixture_diversification:
     # Keep saved predictions faithful to each model's calibrated top score.
     # Diversity can be useful for display, but it should not rewrite the model's

@@ -22,7 +22,7 @@ def load_tasks() -> dict[str, Any]:
 
 
 def _win_probs(prediction: dict[str, Any]) -> dict[str, float]:
-    return derive_win_probs_from_score_dist(prediction.get("score_dist") or []) or prediction.get("win_probs") or {}
+    return prediction.get("win_probs") or derive_win_probs_from_score_dist(prediction.get("score_dist") or [])
 
 
 METRIC_FNS = {

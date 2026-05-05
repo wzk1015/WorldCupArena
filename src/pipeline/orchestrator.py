@@ -30,7 +30,7 @@ from ..graders import grade_match
 from ..ingest.api_football import normalize_fixture, normalize_to_truth, populate_context_pack, APIFootballClient
 from ..ingest.news import populate_news
 from .prompt_build import build_prompt
-from .prediction_derivatives import strip_score_derived_fields
+from .prediction_derivatives import strip_generated_score_fields
 from .score_calibration import SCORE_CALIBRATION_METHOD, calibrate_score_prediction, diversify_prediction_records
 from .validate import validate, validate_or_repair
 
@@ -193,7 +193,7 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
             total_cost += res.cost_usd
             audit = _leak_audit(res.sources, fixture["lock_at_utc"])
             prediction = res.prediction
-            raw_prediction = strip_score_derived_fields(res.prediction) if res.prediction else {}
+            raw_prediction = strip_generated_score_fields(res.prediction) if res.prediction else {}
             validation_errors = res.validation_errors
             score_calibration = None
             if calibrate_scorelines and not res.error and prediction:

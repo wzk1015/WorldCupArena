@@ -19,9 +19,9 @@ Emits a single JSON file at docs/site/data.json with three sections:
     }
 
 The site reads this file with fetch('data.json') and renders everything
-client-side — no server, no build step. `win_probs` and `most_likely_score`
-are saved by the pipeline when available and otherwise derived here from
-`score_dist` for backwards compatibility.
+client-side — no server, no build step. New predictions store model-owned
+`win_probs` plus system-generated `score_dist`/`most_likely_score`; older
+artifacts fall back to score_dist-derived win probabilities.
 """
 
 from __future__ import annotations
@@ -116,7 +116,7 @@ def build_leaderboard() -> dict:
                 if pred_file.exists():
                     pred_rec = json.loads(pred_file.read_text())
                     pred_obj = pred_rec.get("prediction") or {}
-                    wp = derive_win_probs_from_score_dist(pred_obj.get("score_dist") or []) or pred_obj.get("win_probs") or {}
+                    wp = pred_obj.get("win_probs") or derive_win_probs_from_score_dist(pred_obj.get("score_dist") or [])
                     if wp:
                         predicted = max(wp, key=lambda k: wp[k])
                         by_model_winner_correct[model] += int(predicted == truth_result)
@@ -208,7 +208,7 @@ def _collect_predictions(wca_id: str) -> list[dict]:
                 pass
         if not sources:
             sources = rec.get("sources") or []
-        win_probs = derive_win_probs_from_score_dist(p.get("score_dist") or []) or p.get("win_probs")
+        win_probs = p.get("win_probs") or derive_win_probs_from_score_dist(p.get("score_dist") or [])
         most_likely_score = p.get("most_likely_score") or derive_most_likely_score(p.get("score_dist") or [])
 
         out.append({

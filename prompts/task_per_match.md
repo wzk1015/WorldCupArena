@@ -39,11 +39,11 @@ Predict the outcome of this match. Produce a single JSON object conforming **exa
 1. `reasoning`  — **emit this first**
    - `reasoning.overall`   main rationale, ≥ 80 chars
    - `reasoning.t1_result` / `t2_player` / `t3_events` / `t4_stats`  per-layer rationale
-2. `score_dist` — **at least 10** distinct scorelines, sum ≈ 1. Must include: `0-0`, `1-1`, at least one away win with ≥ 2 away goals, and at least one result with ≥ 3 total goals. Derive each probability from xG estimates — do NOT default to `1-0 / 2-0 / 2-1`. Predict **full-time score only** (90 min regulation, or 120 min if extra time is played in a knockout); penalty shootouts are excluded. Do **not** output `win_probs` or `most_likely_score`; the system derives both from this distribution.
-3. `expected_goal_diff`  home minus away (can be negative); keep it consistent with your scoreline distribution
-4. `match_profile`  one of `low_event`, `normal`, `open`, `chaos`; choose before exact scorelines
-5. `expected_total_goals`  expected match total goals; estimate this BEFORE exact scorelines and keep it consistent with `score_dist`
-6. `over_under_probs`  `{over_1_5, over_2_5, over_3_5, over_4_5}`; monotonic and consistent with `expected_total_goals`
+2. `win_probs` `{home, draw, away}`, sum ≈ 1. Estimate this first; it is the authoritative winner forecast.
+3. `match_profile`  one of `low_event`, `normal`, `open`, `chaos`; choose before the score hint.
+4. `expected_total_goals`  expected match total goals; keep it consistent with the profile and match context.
+5. `expected_goal_diff`  home minus away (can be negative); keep it consistent with `win_probs`.
+6. `headline_score`  one exact full-time score `"H-A"` whose result matches the highest-probability bucket in `win_probs`. The system uses it as a hint while generating the final score grid. Penalty shootouts are excluded.
 7. `advance_prob`  (optional; knockout legs only) probability the `home` team advances on aggregate
 8. `lineups` { home, away } each with `starting` (exactly 11) and `bench`
 9. `formations` { home, away }
@@ -57,12 +57,12 @@ Predict the outcome of this match. Produce a single JSON object conforming **exa
 17. `stats`  all 8 required keys, each `{home, away}`
 18. `sources` (optional)  if you used retrieval, list every URL with `accessed_at`
 
-Before filling `score_dist`, choose `match_profile`.
+Do **not** output `score_dist`, `most_likely_score`, or `over_under_probs`; the system generates them.
 For two-leg knockout ties, explicitly use the previous-leg score and aggregate game state:
 if the first leg had 6+ total goals, both teams' recent games are high-scoring, or one side
-must chase, do not let a generic low-score football prior dominate. High-event draws such as
-`2-2` / `3-3` and home/away wins such as `3-2` / `2-3` must receive realistic probability mass
-when supported by the evidence.
+must chase, do not let a generic low-score football prior dominate. High-event headline scores
+such as `2-2` / `3-3`, `3-2`, or `2-3` are appropriate when supported by the evidence and
+their result matches your highest win-probability bucket.
 
 ### Setting
 

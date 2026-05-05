@@ -1,10 +1,10 @@
 """Post-process exact-score distributions into calibrated football score grids.
 
-LLMs tend to collapse exact-score forecasts onto template scorelines such as
-2-1. A pure Poisson replacement has the opposite failure mode: many balanced
-matches collapse onto 1-1. This module blends both signals, then calibrates the
-aggregate home/draw/away mass back to the model's score_dist-derived outcome
-mass.
+LLMs tend to produce inconsistent headline result/score forecasts when asked
+for too many probability tables at once. This module turns model-owned
+high-level parameters (win_probs, expected_total_goals, expected_goal_diff, and
+an optional headline score hint) into a deterministic exact-score grid whose
+headline score always matches the model's highest-probability 3-way outcome.
 """
 
 from __future__ import annotations
@@ -13,11 +13,17 @@ import json
 import math
 from typing import Any
 
-from .prediction_derivatives import attach_score_derived_fields, derive_win_probs_from_score_dist
+from .prediction_derivatives import (
+    OUTCOMES,
+    attach_score_derived_fields,
+    best_win_outcome,
+    derive_win_probs_from_score_dist,
+    normalize_win_probs,
+    score_outcome,
+)
 
 
-OUTCOMES = ("home", "draw", "away")
-SCORE_CALIBRATION_METHOD = "hybrid_poisson_scoredist_v7"
+SCORE_CALIBRATION_METHOD = "winprob_poisson_generator_v1"
 OVER_UNDER_KEYS = ("over_1_5", "over_2_5", "over_3_5", "over_4_5")
 MANDATORY_SCORES = {
     "0-0", "1-1", "2-2",
@@ -437,13 +443,64 @@ def _apply_high_event_top_policy(
     return out
 
 
+def _apply_forced_outcome_top_policy(
+    rows: list[dict[str, Any]],
+    win_probs: dict[str, float],
+    *,
+    score_hint: str | None,
+) -> list[dict[str, Any]]:
+    """Force the headline exact score to live in argmax(win_probs)' bucket."""
+    if not rows:
+        return rows
+    target_outcome = best_win_outcome(win_probs)
+    if target_outcome is None:
+        return rows
+
+    current_top = max(rows, key=lambda row: float(row["p"]))
+    if current_top.get("outcome") == target_outcome:
+        return rows
+
+    preferred = None
+    if score_hint and score_outcome(score_hint) == target_outcome:
+        preferred = next((row for row in rows if row["score"] == score_hint), None)
+    if preferred is None:
+        preferred = max((row for row in rows if row.get("outcome") == target_outcome), key=lambda row: float(row["p"]), default=None)
+    if preferred is None:
+        return rows
+
+    out = [dict(row) for row in rows]
+    target = next(row for row in out if row["score"] == preferred["score"])
+    current_top_p = max(float(row["p"]) for row in out if row["score"] != target["score"])
+    needed = current_top_p + 0.006 - float(target["p"])
+    if needed <= 0:
+        return out
+
+    donors = [
+        row for row in sorted(out, key=lambda item: float(item["p"]), reverse=True)
+        if row.get("outcome") == target_outcome and row["score"] != target["score"]
+    ]
+    for donor in donors:
+        if needed <= 0:
+            break
+        available = max(0.0, float(donor["p"]) - 0.001)
+        take = min(available, needed)
+        donor["p"] = float(donor["p"]) - take
+        target["p"] = float(target["p"]) + take
+        needed -= take
+    return out
+
+
 def _round_distribution(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     rows = sorted(rows, key=lambda r: float(r["p"]), reverse=True)
     out = [{"score": str(r["score"]), "p": round(float(r["p"]), 3)} for r in rows]
     diff = round(1.0 - sum(r["p"] for r in out), 3)
     if out and diff:
-        out[0]["p"] = round(max(0.0, out[0]["p"] + diff), 3)
-    return out
+        if diff > 0:
+            out[0]["p"] = round(out[0]["p"] + diff, 3)
+        else:
+            target = next((row for row in reversed(out) if row["p"] + diff >= 0), out[-1])
+            target["p"] = round(max(0.0, target["p"] + diff), 3)
+    return sorted(out, key=lambda row: float(row["p"]), reverse=True)
 
 
 def calibrate_score_prediction(
@@ -452,15 +509,18 @@ def calibrate_score_prediction(
     max_goals: int = 7,
     max_scorelines: int = 20,
     model_weight: float = 0.62,
-    favorite_margin: float = 0.15,
+    favorite_margin: float = 0.0,
 ) -> tuple[dict[str, Any], dict[str, Any]]:
-    """Return a prediction with calibrated score_dist/most_likely_score.
+    """Return a prediction with generated score_dist/most_likely_score.
 
     The returned metadata is intended for the outer prediction record, not the
-    schema-constrained prediction object.
+    model-schema-constrained object.
     """
-    out = attach_score_derived_fields(json.loads(json.dumps(pred)))
-    win_probs = _score_dist_win_probs(out.get("score_dist") or [])
+    out = json.loads(json.dumps(pred))
+    win_probs = normalize_win_probs(out.get("win_probs")) or _score_dist_win_probs(out.get("score_dist") or [])
+    if not win_probs:
+        win_probs = {"home": 0.38, "draw": 0.27, "away": 0.35}
+    out["win_probs"] = win_probs
     target_total = _target_total_goals(out, win_probs)
     target_diff = _target_goal_diff(out)
     lam_home, lam_away, fitted_outcomes = _fit_lambdas(
@@ -471,47 +531,53 @@ def calibrate_score_prediction(
     )
     poisson_rows = _grid(lam_home, lam_away, max_goals)
     model_probs = _model_score_probs(out)
-    rows = _blend_rows(poisson_rows, model_probs, model_weight=model_weight)
-    model_top_score = str(out.get("most_likely_score", "")) or None
-    must_keep = {model_top_score} if model_top_score and _outcome(model_top_score) else set()
+    effective_model_weight = model_weight if model_probs else 0.0
+    rows = _blend_rows(poisson_rows, model_probs, model_weight=effective_model_weight)
+    score_hint = str(out.get("headline_score") or out.get("most_likely_score") or "") or None
+    favored_outcome = best_win_outcome(win_probs)
+    model_top_score = score_hint if score_hint and _outcome(score_hint) == favored_outcome else None
+    must_keep = {model_top_score} if model_top_score else set()
     selected = _select_scorelines(rows, win_probs, max_scorelines, must_keep=must_keep)
     adjusted = _rake_to_outcomes(selected, win_probs)
-    adjusted = _apply_top_score_policy(
-        adjusted,
-        win_probs,
-        model_top_score=model_top_score,
-        favorite_margin=favorite_margin,
-    )
     adjusted = _apply_high_event_top_policy(
         adjusted,
         profile=str(out.get("match_profile") or _profile_from_total(target_total)),
     )
+    adjusted = _apply_forced_outcome_top_policy(
+        adjusted,
+        win_probs,
+        score_hint=model_top_score,
+    )
     score_dist = _round_distribution(adjusted)
 
     before = {
+        "headline_score": out.get("headline_score"),
         "most_likely_score": out.get("most_likely_score"),
+        "win_probs": out.get("win_probs"),
         "score_dist_head": (out.get("score_dist") or [])[:5],
     }
     out["score_dist"] = score_dist
+    out["most_likely_score"] = score_dist[0]["score"] if score_dist else out.get("headline_score")
     out["match_profile"] = _coherent_profile(out.get("match_profile"), lam_home + lam_away)
     out["expected_total_goals"] = round(lam_home + lam_away, 3)
     out["expected_goal_diff"] = round(lam_home - lam_away, 3)
     out["over_under_probs"] = {
         key: round(value, 3)
-        for key, value in _poisson_over_probs(lam_home + lam_away).items()
+        for key, value in _score_dist_over_probs(score_dist).items()
     }
-    out = attach_score_derived_fields(out)
 
     metadata = {
         "applied": True,
         "method": SCORE_CALIBRATION_METHOD,
-        "model_weight": round(model_weight, 3),
+        "model_weight": round(effective_model_weight, 3),
         "favorite_margin": round(favorite_margin, 3),
         "lambda_home": round(lam_home, 3),
         "lambda_away": round(lam_away, 3),
         "target_total_goals": round(target_total, 3),
         "target_goal_diff": round(target_diff, 3) if target_diff is not None else None,
-        "target_outcome_probs": {k: round(v, 3) for k, v in win_probs.items()},
+        "target_outcome_probs": win_probs,
+        "forced_headline_outcome": favored_outcome,
+        "score_hint_used": model_top_score,
         "fitted_outcomes": {k: round(v, 3) for k, v in fitted_outcomes.items()},
         "before": before,
         "after": {

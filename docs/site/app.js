@@ -130,6 +130,13 @@ function winProbsFromScoreDist(scoreDist) {
   };
 }
 
+function winnerFromWinProbs(wp, homeName, awayName) {
+  if (!wp || wp.home == null || wp.draw == null || wp.away == null) return null;
+  if (wp.home >= wp.draw && wp.home >= wp.away) return homeName;
+  if (wp.away >= wp.home && wp.away >= wp.draw) return awayName;
+  return "Draw";
+}
+
 function toggleDetails(idx) {
   const el  = document.getElementById(`pred-details-${idx}`);
   const btn = document.getElementById(`pred-details-btn-${idx}`);
@@ -502,7 +509,7 @@ function renderPredCard(p, f, idx) {
   const b          = modelBadge(p.model_id);
   const reasoning  = p.reasoning || {};
   const scoreDist  = (p.score_dist || []).slice().sort((a, b) => (b.p || 0) - (a.p || 0));
-  const wp         = winProbsFromScoreDist(scoreDist) || p.win_probs || {};
+  const wp         = p.win_probs || winProbsFromScoreDist(scoreDist) || {};
   const top3       = scoreDist.slice(0, 3);
   const predScore  = p.most_likely_score || (top3[0] ? top3[0].score : null);
   const hName      = f.home || "Home";
@@ -510,6 +517,7 @@ function renderPredCard(p, f, idx) {
   const hasReason  = Object.keys(reasoning).length > 0;
 
   const scoreWinner = outcomeFromScore(predScore, hName, aName);
+  const predWinner = winnerFromWinProbs(wp, hName, aName) || scoreWinner;
 
   return `
     <div class="card rounded-xl p-4">
@@ -526,20 +534,20 @@ function renderPredCard(p, f, idx) {
       </div>
 
       <!-- Minimalist Prediction -->
-      ${scoreWinner || top3.length ? `
+      ${predWinner || top3.length ? `
       <div class="mb-4">
         <div class="flex items-start gap-5 flex-wrap">
           <div>
-            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Score Result</div>
+            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Pred Winner</div>
             ${(() => {
               const truthOutcome = f.truth
                 ? (f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : "Draw")
                 : null;
-              const winnerCorrect = truthOutcome && scoreWinner && truthOutcome === scoreWinner;
+              const winnerCorrect = truthOutcome && predWinner && truthOutcome === predWinner;
               const winnerColor = truthOutcome
                 ? (winnerCorrect ? "color:#4ade80;" : "color:#f87171;")
                 : "color:#fff;";
-              return `<div class="text-2xl font-black leading-tight" style="${winnerColor}">${esc(scoreWinner || "—")}</div>`;
+              return `<div class="text-2xl font-black leading-tight" style="${winnerColor}">${esc(predWinner || "—")}</div>`;
             })()}
           </div>
           <div style="width:1px;height:2.5rem;background:rgba(255,255,255,.1);"></div>
@@ -667,7 +675,7 @@ function _renderOneFixture(nm, cardIdx) {
   const agg = { home: 0, draw: 0, away: 0 };
   let nP = 0;
   for (const p of preds) {
-    const wp = winProbsFromScoreDist(p.score_dist || []) || p.win_probs;
+    const wp = p.win_probs || winProbsFromScoreDist(p.score_dist || []);
     if (wp && typeof wp.home === "number") {
       agg.home += wp.home; agg.draw += wp.draw; agg.away += wp.away;
       nP++;

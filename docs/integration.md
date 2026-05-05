@@ -132,9 +132,9 @@ Regardless of integration path, the model's final JSON response must conform to 
 
 1. `fixture_id`, `model_id`, `setting`, `submitted_at`
 2. `reasoning` — **must come first before any numeric field**. Required keys: `overall` (≥80 characters). Optional but recommended: `t1_result`, `t2_player`, `t3_events`, `t4_stats`.
-3. `score_dist` — array of `{score: "H-A", p}` objects summing to 1 ±1e-2. Do not output `win_probs` or `most_likely_score`; the pipeline derives both from this distribution before saving.
-4. `expected_goal_diff`, `match_profile`, `expected_total_goals`, `over_under_probs`, optional `advance_prob`.
-5. `match_profile` is one of `low_event`, `normal`, `open`, `chaos`; `over_under_probs` must include `{over_1_5, over_2_5, over_3_5, over_4_5}` and be monotonic.
+3. `win_probs` — `{home, draw, away}`, summing to 1 ±1e-2.
+4. `headline_score`, `expected_goal_diff`, `match_profile`, `expected_total_goals`, optional `advance_prob`. `headline_score` must land in the highest-probability `win_probs` bucket.
+5. Do not output `score_dist`, `most_likely_score`, or `over_under_probs`; the pipeline generates them before saving.
 6. `lineups.home.starting` and `lineups.away.starting` — exactly 11 players each.
 7. `formations.home`, `formations.away` — e.g. `"4-3-3"`.
 8. `scorers` — array, each with `{player, team, p}` (optional `minute_range`).

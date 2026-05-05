@@ -185,7 +185,7 @@ def _render_tie_context(fixture: dict[str, Any], ctx: dict[str, Any]) -> str:
         lines.append(f"- Recent combined total-goals average across both teams' listed form: {tie.get('recent_avg_total_goals')}.")
     lines.append(
         "- Use this context explicitly when estimating expected_total_goals, "
-        "over_3_5 / over_4_5, score_dist, and advance_prob."
+        "win_probs, headline_score, and advance_prob."
     )
     return "\n".join(lines)
 
