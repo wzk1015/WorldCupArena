@@ -3,43 +3,13 @@
     "main": [
       {
         "model_id": "claude-opus-4-7-thinking-search",
-        "mean": 52.38,
-        "n": 5,
-        "layers_mean": {
-          "T1_core_result": 77.314,
-          "T2_player_level": 37.079,
-          "T3_event_level": 54.451,
-          "T4_tactics_stats": 45.886,
-          "T5_tournament_macro": 10.0
-        },
-        "winner_correct": 4,
-        "winner_total": 5,
-        "winner_acc": 0.8
-      },
-      {
-        "model_id": "claude-opus-4-7-thinking",
-        "mean": 51.872,
-        "n": 7,
-        "layers_mean": {
-          "T1_core_result": 80.663,
-          "T2_player_level": 28.037,
-          "T3_event_level": 57.161,
-          "T4_tactics_stats": 47.046,
-          "T5_tournament_macro": 10.0
-        },
-        "winner_correct": 6,
-        "winner_total": 7,
-        "winner_acc": 0.857
-      },
-      {
-        "model_id": "gpt-5.4",
-        "mean": 50.92,
+        "mean": 51.941,
         "n": 6,
         "layers_mean": {
-          "T1_core_result": 74.608,
-          "T2_player_level": 29.871,
-          "T3_event_level": 61.322,
-          "T4_tactics_stats": 47.608,
+          "T1_core_result": 73.568,
+          "T2_player_level": 38.947,
+          "T3_event_level": 56.097,
+          "T4_tactics_stats": 46.937,
           "T5_tournament_macro": 10.0
         },
         "winner_correct": 4,
@@ -47,88 +17,1132 @@
         "winner_acc": 0.667
       },
       {
-        "model_id": "gemini-3.1-pro-preview-thinking",
-        "mean": 48.536,
-        "n": 6,
+        "model_id": "claude-opus-4-7-thinking",
+        "mean": 51.519,
+        "n": 8,
         "layers_mean": {
-          "T1_core_result": 76.476,
-          "T2_player_level": 27.956,
-          "T3_event_level": 44.349,
-          "T4_tactics_stats": 47.521,
+          "T1_core_result": 77.604,
+          "T2_player_level": 30.039,
+          "T3_event_level": 58.05,
+          "T4_tactics_stats": 47.603,
           "T5_tournament_macro": 10.0
         },
-        "winner_correct": 5,
-        "winner_total": 6,
-        "winner_acc": 0.833
+        "winner_correct": 6,
+        "winner_total": 8,
+        "winner_acc": 0.75
       },
       {
-        "model_id": "gemini-3.1-pro-preview-thinking-search",
-        "mean": 48.468,
+        "model_id": "gpt-5.4",
+        "mean": 50.506,
         "n": 7,
         "layers_mean": {
-          "T1_core_result": 78.085,
-          "T2_player_level": 23.189,
-          "T3_event_level": 48.749,
-          "T4_tactics_stats": 46.859,
+          "T1_core_result": 72.485,
+          "T2_player_level": 31.966,
+          "T3_event_level": 59.211,
+          "T4_tactics_stats": 48.423,
           "T5_tournament_macro": 10.0
         },
-        "winner_correct": 5,
+        "winner_correct": 4,
         "winner_total": 7,
-        "winner_acc": 0.714
+        "winner_acc": 0.571
       },
       {
         "model_id": "gpt-5.4-search",
-        "mean": 48.17,
+        "mean": 48.42,
+        "n": 8,
+        "layers_mean": {
+          "T1_core_result": 71.858,
+          "T2_player_level": 24.454,
+          "T3_event_level": 61.166,
+          "T4_tactics_stats": 46.541,
+          "T5_tournament_macro": 10.0
+        },
+        "winner_correct": 5,
+        "winner_total": 8,
+        "winner_acc": 0.625
+      },
+      {
+        "model_id": "gemini-3.1-pro-preview-thinking",
+        "mean": 48.387,
         "n": 7,
         "layers_mean": {
-          "T1_core_result": 73.566,
-          "T2_player_level": 21.561,
-          "T3_event_level": 61.073,
-          "T4_tactics_stats": 45.807,
+          "T1_core_result": 73.319,
+          "T2_player_level": 30.08,
+          "T3_event_level": 47.103,
+          "T4_tactics_stats": 47.601,
           "T5_tournament_macro": 10.0
         },
         "winner_correct": 5,
         "winner_total": 7,
         "winner_acc": 0.714
+      },
+      {
+        "model_id": "gemini-3.1-pro-preview-thinking-search",
+        "mean": 47.935,
+        "n": 8,
+        "layers_mean": {
+          "T1_core_result": 75.41,
+          "T2_player_level": 24.69,
+          "T3_event_level": 49.065,
+          "T4_tactics_stats": 46.728,
+          "T5_tournament_macro": 10.0
+        },
+        "winner_correct": 5,
+        "winner_total": 8,
+        "winner_acc": 0.625
       }
     ],
     "by_model_setting": {
       "claude-opus-4-7-thinking": {
-        "S1": 51.872
+        "S1": 51.519
       },
       "claude-opus-4-7-thinking-search": {
-        "S2": 52.38
+        "S2": 51.941
       },
       "gemini-3.1-pro-preview-thinking": {
-        "S1": 48.536
+        "S1": 48.387
       },
       "gemini-3.1-pro-preview-thinking-search": {
-        "S2": 48.468
+        "S2": 47.935
       },
       "gpt-5.4": {
-        "S1": 50.92
+        "S1": 50.506
       },
       "gpt-5.4-search": {
-        "S2": 48.17
+        "S2": 48.42
       }
     }
   },
-  "incoming_matches": [
+  "incoming_matches": [],
+  "history": [
     {
-      "fixture": {
-        "wca_id": "UEFA-Champions-League_Bayern-München_Paris-Saint-Germain_2026-05-06",
-        "home": "Bayern München",
-        "home_logo": "https://media.api-sports.io/football/teams/157.png",
-        "away": "Paris Saint Germain",
-        "away_logo": "https://media.api-sports.io/football/teams/85.png",
-        "kickoff_utc": "2026-05-06T19:00:00+00:00",
-        "lock_at_utc": "2026-05-05T19:00:00+00:00",
-        "venue": "Allianz Arena",
-        "venue_city": "Munich",
-        "venue_country": null,
-        "stage": "Semi-finals",
-        "competition": "UEFA Champions League"
+      "wca_id": "UEFA-Champions-League_Bayern-München_Paris-Saint-Germain_2026-05-06",
+      "home": "Bayern München",
+      "home_logo": "https://media.api-sports.io/football/teams/157.png",
+      "away": "Paris Saint Germain",
+      "away_logo": "https://media.api-sports.io/football/teams/85.png",
+      "kickoff_utc": "2026-05-06T19:00:00+00:00",
+      "lock_at_utc": "2026-05-05T19:00:00+00:00",
+      "venue": "Allianz Arena",
+      "venue_city": "Munich",
+      "venue_country": null,
+      "stage": "Semi-finals",
+      "competition": "UEFA Champions League",
+      "result": "1-1",
+      "truth": {
+        "score": "1-1",
+        "result": "draw",
+        "home_name": "Bayern München",
+        "away_name": "Paris Saint Germain",
+        "scorer_names": [
+          "O. Dembele",
+          "H. Kane"
+        ],
+        "assister_names": [
+          "K. Kvaratskhelia",
+          "A. Davies"
+        ],
+        "scorers": [
+          {
+            "minute": 3,
+            "player": "O. Dembele",
+            "team": "away"
+          },
+          {
+            "minute": 90,
+            "player": "H. Kane",
+            "team": "home"
+          }
+        ],
+        "assisters": [
+          {
+            "player": "K. Kvaratskhelia",
+            "team": "away"
+          },
+          {
+            "player": "A. Davies",
+            "team": "home"
+          }
+        ],
+        "cards": [
+          {
+            "minute": 8,
+            "player": "N. Mendes",
+            "team": "away",
+            "color": "yellow"
+          },
+          {
+            "minute": 33,
+            "player": "J. Tah",
+            "team": "home",
+            "color": "yellow"
+          },
+          {
+            "minute": 45,
+            "player": "K. Kvaratskhelia",
+            "team": "away",
+            "color": "yellow"
+          },
+          {
+            "minute": 78,
+            "player": "L. Diaz",
+            "team": "home",
+            "color": "yellow"
+          },
+          {
+            "minute": 86,
+            "player": "Marquinhos",
+            "team": "away",
+            "color": "yellow"
+          },
+          {
+            "minute": 90,
+            "player": "J. Kimmich",
+            "team": "home",
+            "color": "yellow"
+          }
+        ],
+        "substitutions": [
+          {
+            "minute": 65,
+            "team": "away",
+            "team_name": "Paris Saint Germain",
+            "off": "O. Dembele",
+            "on": "B. Barcola"
+          },
+          {
+            "minute": 67,
+            "team": "home",
+            "team_name": "Bayern München",
+            "off": "J. Stanisic",
+            "on": "A. Davies"
+          },
+          {
+            "minute": 68,
+            "team": "home",
+            "team_name": "Bayern München",
+            "off": "J. Tah",
+            "on": "Kim Min-Jae"
+          },
+          {
+            "minute": 76,
+            "team": "away",
+            "team_name": "Paris Saint Germain",
+            "off": "D. Doue",
+            "on": "L. Hernandez"
+          },
+          {
+            "minute": 76,
+            "team": "away",
+            "team_name": "Paris Saint Germain",
+            "off": "F. Ruiz",
+            "on": "L. Beraldo"
+          },
+          {
+            "minute": 79,
+            "team": "home",
+            "team_name": "Bayern München",
+            "off": "J. Musiala",
+            "on": "N. Jackson"
+          },
+          {
+            "minute": 85,
+            "team": "home",
+            "team_name": "Bayern München",
+            "off": "D. Upamecano",
+            "on": "L. Karl"
+          },
+          {
+            "minute": 85,
+            "team": "away",
+            "team_name": "Paris Saint Germain",
+            "off": "N. Mendes",
+            "on": "S. Mayulu"
+          }
+        ],
+        "own_goals": [],
+        "penalties": [],
+        "formations": {
+          "home": "4-2-3-1",
+          "away": "4-3-3"
+        },
+        "lineups": {
+          "home": {
+            "starting": [
+              {
+                "player": "Manuel Neuer",
+                "pos": "G"
+              },
+              {
+                "player": "Konrad Laimer",
+                "pos": "D"
+              },
+              {
+                "player": "Dayot Upamecano",
+                "pos": "D"
+              },
+              {
+                "player": "Jonathan Tah",
+                "pos": "D"
+              },
+              {
+                "player": "Josip Stanišić",
+                "pos": "D"
+              },
+              {
+                "player": "Joshua Kimmich",
+                "pos": "M"
+              },
+              {
+                "player": "Aleksandar Pavlović",
+                "pos": "M"
+              },
+              {
+                "player": "Michael Olise",
+                "pos": "M"
+              },
+              {
+                "player": "Jamal Musiala",
+                "pos": "M"
+              },
+              {
+                "player": "Luis Díaz",
+                "pos": "M"
+              },
+              {
+                "player": "Harry Kane",
+                "pos": "F"
+              }
+            ]
+          },
+          "away": {
+            "starting": [
+              {
+                "player": "Matvey Safonov",
+                "pos": "G"
+              },
+              {
+                "player": "Warren Zaïre-Emery",
+                "pos": "D"
+              },
+              {
+                "player": "Marquinhos",
+                "pos": "D"
+              },
+              {
+                "player": "Willian Pacho",
+                "pos": "D"
+              },
+              {
+                "player": "Nuno Mendes",
+                "pos": "D"
+              },
+              {
+                "player": "Fabián Ruiz",
+                "pos": "M"
+              },
+              {
+                "player": "Vitinha",
+                "pos": "M"
+              },
+              {
+                "player": "João Neves",
+                "pos": "M"
+              },
+              {
+                "player": "Désiré Doué",
+                "pos": "F"
+              },
+              {
+                "player": "Ousmane Dembélé",
+                "pos": "F"
+              },
+              {
+                "player": "Khvicha Kvaratskhelia",
+                "pos": "F"
+              }
+            ]
+          }
+        },
+        "stats": {
+          "shots_on_target": {
+            "home": 6,
+            "away": 7
+          },
+          "shots": {
+            "home": 18,
+            "away": 15
+          },
+          "fouls": {
+            "home": 11,
+            "away": 12
+          },
+          "corners": {
+            "home": 1,
+            "away": 8
+          },
+          "possession": {
+            "home": 66.0,
+            "away": 34.0
+          },
+          "saves": {
+            "home": 6,
+            "away": 5
+          },
+          "pass_accuracy": {
+            "home": 87.0,
+            "away": 71.0
+          }
+        },
+        "events": [
+          {
+            "time": {
+              "elapsed": 3,
+              "extra": null
+            },
+            "team": {
+              "id": 85,
+              "name": "Paris Saint Germain",
+              "logo": "https://media.api-sports.io/football/teams/85.png"
+            },
+            "player": {
+              "id": 153,
+              "name": "O. Dembele"
+            },
+            "assist": {
+              "id": 483,
+              "name": "K. Kvaratskhelia"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 8,
+              "extra": null
+            },
+            "team": {
+              "id": 85,
+              "name": "Paris Saint Germain",
+              "logo": "https://media.api-sports.io/football/teams/85.png"
+            },
+            "player": {
+              "id": 263482,
+              "name": "N. Mendes"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Tripping"
+          },
+          {
+            "time": {
+              "elapsed": 33,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 972,
+              "name": "J. Tah"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 45,
+              "extra": 3
+            },
+            "team": {
+              "id": 85,
+              "name": "Paris Saint Germain",
+              "logo": "https://media.api-sports.io/football/teams/85.png"
+            },
+            "player": {
+              "id": 483,
+              "name": "K. Kvaratskhelia"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 65,
+              "extra": null
+            },
+            "team": {
+              "id": 85,
+              "name": "Paris Saint Germain",
+              "logo": "https://media.api-sports.io/football/teams/85.png"
+            },
+            "player": {
+              "id": 153,
+              "name": "O. Dembele"
+            },
+            "assist": {
+              "id": 161904,
+              "name": "B. Barcola"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 67,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 125171,
+              "name": "J. Stanisic"
+            },
+            "assist": {
+              "id": 509,
+              "name": "A. Davies"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 68,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 972,
+              "name": "J. Tah"
+            },
+            "assist": {
+              "id": 2897,
+              "name": "Kim Min-Jae"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 76,
+              "extra": null
+            },
+            "team": {
+              "id": 85,
+              "name": "Paris Saint Germain",
+              "logo": "https://media.api-sports.io/football/teams/85.png"
+            },
+            "player": {
+              "id": 343027,
+              "name": "D. Doue"
+            },
+            "assist": {
+              "id": 33,
+              "name": "L. Hernandez"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 76,
+              "extra": null
+            },
+            "team": {
+              "id": 85,
+              "name": "Paris Saint Germain",
+              "logo": "https://media.api-sports.io/football/teams/85.png"
+            },
+            "player": {
+              "id": 328,
+              "name": "F. Ruiz"
+            },
+            "assist": {
+              "id": 307835,
+              "name": "L. Beraldo"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 78,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 2489,
+              "name": "L. Diaz"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 79,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 181812,
+              "name": "J. Musiala"
+            },
+            "assist": {
+              "id": 283058,
+              "name": "N. Jackson"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 85,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 1149,
+              "name": "D. Upamecano"
+            },
+            "assist": {
+              "id": 494131,
+              "name": "L. Karl"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 85,
+              "extra": null
+            },
+            "team": {
+              "id": 85,
+              "name": "Paris Saint Germain",
+              "logo": "https://media.api-sports.io/football/teams/85.png"
+            },
+            "player": {
+              "id": 263482,
+              "name": "N. Mendes"
+            },
+            "assist": {
+              "id": 409216,
+              "name": "S. Mayulu"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 86,
+              "extra": null
+            },
+            "team": {
+              "id": 85,
+              "name": "Paris Saint Germain",
+              "logo": "https://media.api-sports.io/football/teams/85.png"
+            },
+            "player": {
+              "id": 257,
+              "name": "Marquinhos"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Holding"
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 4
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 184,
+              "name": "H. Kane"
+            },
+            "assist": {
+              "id": 509,
+              "name": "A. Davies"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 7
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 502,
+              "name": "J. Kimmich"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": null
+          }
+        ]
       },
+      "live": {
+        "status": "Match Finished",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "events": [
+          {
+            "time": {
+              "elapsed": 3,
+              "extra": null
+            },
+            "team": {
+              "id": 85,
+              "name": "Paris Saint Germain",
+              "logo": "https://media.api-sports.io/football/teams/85.png"
+            },
+            "player": {
+              "id": 153,
+              "name": "O. Dembele"
+            },
+            "assist": {
+              "id": 483,
+              "name": "K. Kvaratskhelia"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 8,
+              "extra": null
+            },
+            "team": {
+              "id": 85,
+              "name": "Paris Saint Germain",
+              "logo": "https://media.api-sports.io/football/teams/85.png"
+            },
+            "player": {
+              "id": 263482,
+              "name": "N. Mendes"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Tripping"
+          },
+          {
+            "time": {
+              "elapsed": 33,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 972,
+              "name": "J. Tah"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 45,
+              "extra": 3
+            },
+            "team": {
+              "id": 85,
+              "name": "Paris Saint Germain",
+              "logo": "https://media.api-sports.io/football/teams/85.png"
+            },
+            "player": {
+              "id": 483,
+              "name": "K. Kvaratskhelia"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 65,
+              "extra": null
+            },
+            "team": {
+              "id": 85,
+              "name": "Paris Saint Germain",
+              "logo": "https://media.api-sports.io/football/teams/85.png"
+            },
+            "player": {
+              "id": 153,
+              "name": "O. Dembele"
+            },
+            "assist": {
+              "id": 161904,
+              "name": "B. Barcola"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 67,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 125171,
+              "name": "J. Stanisic"
+            },
+            "assist": {
+              "id": 509,
+              "name": "A. Davies"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 68,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 972,
+              "name": "J. Tah"
+            },
+            "assist": {
+              "id": 2897,
+              "name": "Kim Min-Jae"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 76,
+              "extra": null
+            },
+            "team": {
+              "id": 85,
+              "name": "Paris Saint Germain",
+              "logo": "https://media.api-sports.io/football/teams/85.png"
+            },
+            "player": {
+              "id": 343027,
+              "name": "D. Doue"
+            },
+            "assist": {
+              "id": 33,
+              "name": "L. Hernandez"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 76,
+              "extra": null
+            },
+            "team": {
+              "id": 85,
+              "name": "Paris Saint Germain",
+              "logo": "https://media.api-sports.io/football/teams/85.png"
+            },
+            "player": {
+              "id": 328,
+              "name": "F. Ruiz"
+            },
+            "assist": {
+              "id": 307835,
+              "name": "L. Beraldo"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 78,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 2489,
+              "name": "L. Diaz"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Unsportsmanlike conduct"
+          },
+          {
+            "time": {
+              "elapsed": 79,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 181812,
+              "name": "J. Musiala"
+            },
+            "assist": {
+              "id": 283058,
+              "name": "N. Jackson"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 85,
+              "extra": null
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 1149,
+              "name": "D. Upamecano"
+            },
+            "assist": {
+              "id": 494131,
+              "name": "L. Karl"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 85,
+              "extra": null
+            },
+            "team": {
+              "id": 85,
+              "name": "Paris Saint Germain",
+              "logo": "https://media.api-sports.io/football/teams/85.png"
+            },
+            "player": {
+              "id": 263482,
+              "name": "N. Mendes"
+            },
+            "assist": {
+              "id": 409216,
+              "name": "S. Mayulu"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 86,
+              "extra": null
+            },
+            "team": {
+              "id": 85,
+              "name": "Paris Saint Germain",
+              "logo": "https://media.api-sports.io/football/teams/85.png"
+            },
+            "player": {
+              "id": 257,
+              "name": "Marquinhos"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Holding"
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 4
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 184,
+              "name": "H. Kane"
+            },
+            "assist": {
+              "id": 509,
+              "name": "A. Davies"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 7
+            },
+            "team": {
+              "id": 157,
+              "name": "Bayern München",
+              "logo": "https://media.api-sports.io/football/teams/157.png"
+            },
+            "player": {
+              "id": 502,
+              "name": "J. Kimmich"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": null
+          }
+        ]
+      },
+      "models": [
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "composite": 50.167
+        },
+        {
+          "model_id": "claude-opus-4-7-thinking-search",
+          "setting": "S2",
+          "composite": 49.744
+        },
+        {
+          "model_id": "claude-opus-4-7-thinking",
+          "setting": "S1",
+          "composite": 49.047
+        },
+        {
+          "model_id": "gpt-5.4",
+          "setting": "S1",
+          "composite": 48.025
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking",
+          "setting": "S1",
+          "composite": 47.495
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking-search",
+          "setting": "S2",
+          "composite": 44.2
+        }
+      ],
       "predictions": [
         {
           "model_id": "claude-opus-4-7-thinking-search",
@@ -912,7 +1926,8 @@
               "title": "Bayern vs PSG predicted lineups"
             }
           ],
-          "over_3_5_prob": 0.533
+          "over_3_5_prob": 0.533,
+          "composite": 49.744
         },
         {
           "model_id": "claude-opus-4-7-thinking",
@@ -1488,7 +2503,8 @@
           },
           "cost_usd": 0.143,
           "sources": [],
-          "over_3_5_prob": 0.482
+          "over_3_5_prob": 0.482,
+          "composite": 49.047
         },
         {
           "model_id": "gemini-3.1-pro-preview-thinking-search",
@@ -1882,7 +2898,8 @@
           },
           "cost_usd": 0.025,
           "sources": [],
-          "over_3_5_prob": 0.574
+          "over_3_5_prob": 0.574,
+          "composite": 44.2
         },
         {
           "model_id": "gemini-3.1-pro-preview-thinking",
@@ -2353,7 +3370,8 @@
           },
           "cost_usd": 0.064,
           "sources": [],
-          "over_3_5_prob": 0.538
+          "over_3_5_prob": 0.538,
+          "composite": 47.495
         },
         {
           "model_id": "gpt-5.4-search",
@@ -2858,7 +3876,8 @@
           },
           "cost_usd": 0.04,
           "sources": [],
-          "over_3_5_prob": 0.335
+          "over_3_5_prob": 0.335,
+          "composite": 50.167
         },
         {
           "model_id": "gpt-5.4",
@@ -3362,330 +4381,11 @@
           },
           "cost_usd": 0.057,
           "sources": [],
-          "over_3_5_prob": 0.488
+          "over_3_5_prob": 0.488,
+          "composite": 48.025
         }
-      ],
-      "live": {
-        "status": "Second Half",
-        "elapsed": 87,
-        "score": {
-          "home": 0,
-          "away": 1
-        },
-        "events": [
-          {
-            "time": {
-              "elapsed": 3,
-              "extra": null
-            },
-            "team": {
-              "id": 85,
-              "name": "Paris Saint Germain",
-              "logo": "https://media.api-sports.io/football/teams/85.png"
-            },
-            "player": {
-              "id": 153,
-              "name": "O. Dembele"
-            },
-            "assist": {
-              "id": 483,
-              "name": "K. Kvaratskhelia"
-            },
-            "type": "Goal",
-            "detail": "Normal Goal",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 8,
-              "extra": null
-            },
-            "team": {
-              "id": 85,
-              "name": "Paris Saint Germain",
-              "logo": "https://media.api-sports.io/football/teams/85.png"
-            },
-            "player": {
-              "id": 263482,
-              "name": "N. Mendes"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Tripping"
-          },
-          {
-            "time": {
-              "elapsed": 33,
-              "extra": null
-            },
-            "team": {
-              "id": 157,
-              "name": "Bayern München",
-              "logo": "https://media.api-sports.io/football/teams/157.png"
-            },
-            "player": {
-              "id": 972,
-              "name": "J. Tah"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Unsportsmanlike conduct"
-          },
-          {
-            "time": {
-              "elapsed": 45,
-              "extra": 3
-            },
-            "team": {
-              "id": 85,
-              "name": "Paris Saint Germain",
-              "logo": "https://media.api-sports.io/football/teams/85.png"
-            },
-            "player": {
-              "id": 483,
-              "name": "K. Kvaratskhelia"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Unsportsmanlike conduct"
-          },
-          {
-            "time": {
-              "elapsed": 65,
-              "extra": null
-            },
-            "team": {
-              "id": 85,
-              "name": "Paris Saint Germain",
-              "logo": "https://media.api-sports.io/football/teams/85.png"
-            },
-            "player": {
-              "id": 153,
-              "name": "O. Dembele"
-            },
-            "assist": {
-              "id": 161904,
-              "name": "B. Barcola"
-            },
-            "type": "subst",
-            "detail": "Substitution 1",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 67,
-              "extra": null
-            },
-            "team": {
-              "id": 157,
-              "name": "Bayern München",
-              "logo": "https://media.api-sports.io/football/teams/157.png"
-            },
-            "player": {
-              "id": 125171,
-              "name": "J. Stanisic"
-            },
-            "assist": {
-              "id": 509,
-              "name": "A. Davies"
-            },
-            "type": "subst",
-            "detail": "Substitution 1",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 68,
-              "extra": null
-            },
-            "team": {
-              "id": 157,
-              "name": "Bayern München",
-              "logo": "https://media.api-sports.io/football/teams/157.png"
-            },
-            "player": {
-              "id": 972,
-              "name": "J. Tah"
-            },
-            "assist": {
-              "id": 2897,
-              "name": "Kim Min-Jae"
-            },
-            "type": "subst",
-            "detail": "Substitution 2",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 76,
-              "extra": null
-            },
-            "team": {
-              "id": 85,
-              "name": "Paris Saint Germain",
-              "logo": "https://media.api-sports.io/football/teams/85.png"
-            },
-            "player": {
-              "id": 343027,
-              "name": "D. Doue"
-            },
-            "assist": {
-              "id": 33,
-              "name": "L. Hernandez"
-            },
-            "type": "subst",
-            "detail": "Substitution 2",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 76,
-              "extra": null
-            },
-            "team": {
-              "id": 85,
-              "name": "Paris Saint Germain",
-              "logo": "https://media.api-sports.io/football/teams/85.png"
-            },
-            "player": {
-              "id": 328,
-              "name": "F. Ruiz"
-            },
-            "assist": {
-              "id": 307835,
-              "name": "L. Beraldo"
-            },
-            "type": "subst",
-            "detail": "Substitution 3",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 78,
-              "extra": null
-            },
-            "team": {
-              "id": 157,
-              "name": "Bayern München",
-              "logo": "https://media.api-sports.io/football/teams/157.png"
-            },
-            "player": {
-              "id": 2489,
-              "name": "L. Diaz"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Unsportsmanlike conduct"
-          },
-          {
-            "time": {
-              "elapsed": 79,
-              "extra": null
-            },
-            "team": {
-              "id": 157,
-              "name": "Bayern München",
-              "logo": "https://media.api-sports.io/football/teams/157.png"
-            },
-            "player": {
-              "id": 181812,
-              "name": "J. Musiala"
-            },
-            "assist": {
-              "id": 283058,
-              "name": "N. Jackson"
-            },
-            "type": "subst",
-            "detail": "Substitution 3",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 85,
-              "extra": null
-            },
-            "team": {
-              "id": 157,
-              "name": "Bayern München",
-              "logo": "https://media.api-sports.io/football/teams/157.png"
-            },
-            "player": {
-              "id": 1149,
-              "name": "D. Upamecano"
-            },
-            "assist": {
-              "id": 494131,
-              "name": "L. Karl"
-            },
-            "type": "subst",
-            "detail": "Substitution 4",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 85,
-              "extra": null
-            },
-            "team": {
-              "id": 85,
-              "name": "Paris Saint Germain",
-              "logo": "https://media.api-sports.io/football/teams/85.png"
-            },
-            "player": {
-              "id": 263482,
-              "name": "N. Mendes"
-            },
-            "assist": {
-              "id": 409216,
-              "name": "S. Mayulu"
-            },
-            "type": "subst",
-            "detail": "Substitution 4",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 86,
-              "extra": null
-            },
-            "team": {
-              "id": 85,
-              "name": "Paris Saint Germain",
-              "logo": "https://media.api-sports.io/football/teams/85.png"
-            },
-            "player": {
-              "id": 257,
-              "name": "Marquinhos"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Holding"
-          }
-        ]
-      }
-    }
-  ],
-  "history": [
+      ]
+    },
     {
       "wca_id": "UEFA-Champions-League_Arsenal_Atletico-Madrid_2026-05-05",
       "home": "Arsenal",
