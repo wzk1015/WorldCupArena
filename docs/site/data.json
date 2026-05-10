@@ -1499,6 +1499,1686 @@
           "cost_usd": 0.119,
           "sources": [],
           "over_3_5_prob": 0.234
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.72,
+            "draw": 0.18,
+            "away": 0.1
+          },
+          "score_dist": [
+            {
+              "score": "2-0",
+              "p": 0.126
+            },
+            {
+              "score": "1-0",
+              "p": 0.106
+            },
+            {
+              "score": "3-0",
+              "p": 0.1
+            },
+            {
+              "score": "2-1",
+              "p": 0.095
+            },
+            {
+              "score": "1-1",
+              "p": 0.09
+            },
+            {
+              "score": "3-1",
+              "p": 0.075
+            },
+            {
+              "score": "4-0",
+              "p": 0.059
+            },
+            {
+              "score": "0-0",
+              "p": 0.05
+            },
+            {
+              "score": "4-1",
+              "p": 0.045
+            },
+            {
+              "score": "2-2",
+              "p": 0.04
+            },
+            {
+              "score": "0-1",
+              "p": 0.039
+            },
+            {
+              "score": "1-2",
+              "p": 0.035
+            },
+            {
+              "score": "5-0",
+              "p": 0.028
+            },
+            {
+              "score": "3-2",
+              "p": 0.028
+            },
+            {
+              "score": "5-1",
+              "p": 0.021
+            },
+            {
+              "score": "4-2",
+              "p": 0.017
+            },
+            {
+              "score": "0-2",
+              "p": 0.015
+            },
+            {
+              "score": "6-0",
+              "p": 0.012
+            },
+            {
+              "score": "2-3",
+              "p": 0.011
+            },
+            {
+              "score": "6-1",
+              "p": 0.008
+            }
+          ],
+          "most_likely_score": "2-0",
+          "expected_goal_diff": 1.6,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Tottenham are pushing for a top-four finish and have a strong home record under Ange Postecoglou. Leeds, fighting relegation, will likely adopt a defensive approach but struggle against high-pressing teams. Injuries to key Leeds defenders give Spurs a significant advantage.",
+            "t1_result": "Tottenham are heavy favorites at home. A comfortable win is expected given the disparity in squad quality and form.",
+            "t2_player": "Son Heung-min and James Maddison are key for Spurs. Leeds will rely on Crysencio Summerville on the counter.",
+            "t3_events": "Spurs to dominate early possession, likely scoring in the first half. Leeds might pick up cards trying to disrupt the rhythm.",
+            "t4_stats": "Spurs will dominate possession (65%+) and shots, while Leeds will have more defensive actions and fouls."
+          },
+          "scorers": [
+            {
+              "player": "Son Heung-min",
+              "team": "home",
+              "p": 0.45,
+              "minute_range": [
+                15,
+                45
+              ]
+            },
+            {
+              "player": "Richarlison",
+              "team": "home",
+              "p": 0.35,
+              "minute_range": [
+                46,
+                75
+              ]
+            },
+            {
+              "player": "James Maddison",
+              "team": "home",
+              "p": 0.25,
+              "minute_range": [
+                76,
+                90
+              ]
+            },
+            {
+              "player": "Crysencio Summerville",
+              "team": "away",
+              "p": 0.2,
+              "minute_range": [
+                46,
+                75
+              ]
+            }
+          ],
+          "assisters": [],
+          "motm_probs": [],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Guglielmo Vicario",
+                  "position": "GK"
+                },
+                {
+                  "name": "Pedro Porro",
+                  "position": "DF"
+                },
+                {
+                  "name": "Cristian Romero",
+                  "position": "DF"
+                },
+                {
+                  "name": "Micky van de Ven",
+                  "position": "DF"
+                },
+                {
+                  "name": "Destiny Udogie",
+                  "position": "DF"
+                },
+                {
+                  "name": "Pape Matar Sarr",
+                  "position": "MF"
+                },
+                {
+                  "name": "Yves Bissouma",
+                  "position": "MF"
+                },
+                {
+                  "name": "Dejan Kulusevski",
+                  "position": "MF"
+                },
+                {
+                  "name": "James Maddison",
+                  "position": "MF"
+                },
+                {
+                  "name": "Son Heung-min",
+                  "position": "FW"
+                },
+                {
+                  "name": "Richarlison",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Fraser Forster",
+                  "position": "GK"
+                },
+                {
+                  "name": "Radu Dragusin",
+                  "position": "DF"
+                },
+                {
+                  "name": "Ben Davies",
+                  "position": "DF"
+                },
+                {
+                  "name": "Emerson Royal",
+                  "position": "DF"
+                },
+                {
+                  "name": "Pierre-Emile Hojbjerg",
+                  "position": "MF"
+                },
+                {
+                  "name": "Rodrigo Bentancur",
+                  "position": "MF"
+                },
+                {
+                  "name": "Giovani Lo Celso",
+                  "position": "MF"
+                },
+                {
+                  "name": "Brennan Johnson",
+                  "position": "FW"
+                },
+                {
+                  "name": "Timo Werner",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "Illan Meslier",
+                  "position": "GK"
+                },
+                {
+                  "name": "Archie Gray",
+                  "position": "DF"
+                },
+                {
+                  "name": "Joe Rodon",
+                  "position": "DF"
+                },
+                {
+                  "name": "Ethan Ampadu",
+                  "position": "DF"
+                },
+                {
+                  "name": "Junior Firpo",
+                  "position": "DF"
+                },
+                {
+                  "name": "Ilia Gruev",
+                  "position": "MF"
+                },
+                {
+                  "name": "Glen Kamara",
+                  "position": "MF"
+                },
+                {
+                  "name": "Daniel James",
+                  "position": "MF"
+                },
+                {
+                  "name": "Georginio Rutter",
+                  "position": "MF"
+                },
+                {
+                  "name": "Crysencio Summerville",
+                  "position": "MF"
+                },
+                {
+                  "name": "Patrick Bamford",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Karl Darlow",
+                  "position": "GK"
+                },
+                {
+                  "name": "Sam Byram",
+                  "position": "DF"
+                },
+                {
+                  "name": "Liam Cooper",
+                  "position": "DF"
+                },
+                {
+                  "name": "Charlie Cresswell",
+                  "position": "DF"
+                },
+                {
+                  "name": "Jaidon Anthony",
+                  "position": "MF"
+                },
+                {
+                  "name": "Joel Piroe",
+                  "position": "FW"
+                },
+                {
+                  "name": "Wilfried Gnonto",
+                  "position": "FW"
+                },
+                {
+                  "name": "Joe Gelhardt",
+                  "position": "FW"
+                },
+                {
+                  "name": "Mateo Joseph",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [],
+          "cards": [],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 65,
+              "away": 35
+            },
+            "shots": {
+              "home": 18,
+              "away": 8
+            },
+            "shots_on_target": {
+              "home": 7,
+              "away": 3
+            },
+            "corners": {
+              "home": 8,
+              "away": 3
+            },
+            "pass_accuracy": {
+              "home": 88,
+              "away": 76
+            },
+            "fouls": {
+              "home": 10,
+              "away": 14
+            },
+            "saves": {
+              "home": 2,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 45,
+              "away": 75
+            }
+          },
+          "cost_usd": 0.036,
+          "sources": [],
+          "over_3_5_prob": 0.344
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking",
+          "setting": "S1",
+          "win_probs": {
+            "home": 0.48,
+            "draw": 0.27,
+            "away": 0.25
+          },
+          "score_dist": [
+            {
+              "score": "2-1",
+              "p": 0.137
+            },
+            {
+              "score": "1-1",
+              "p": 0.129
+            },
+            {
+              "score": "2-0",
+              "p": 0.09
+            },
+            {
+              "score": "0-1",
+              "p": 0.078
+            },
+            {
+              "score": "1-0",
+              "p": 0.077
+            },
+            {
+              "score": "0-0",
+              "p": 0.075
+            },
+            {
+              "score": "1-2",
+              "p": 0.066
+            },
+            {
+              "score": "2-2",
+              "p": 0.055
+            },
+            {
+              "score": "3-1",
+              "p": 0.051
+            },
+            {
+              "score": "3-0",
+              "p": 0.048
+            },
+            {
+              "score": "0-2",
+              "p": 0.042
+            },
+            {
+              "score": "3-2",
+              "p": 0.028
+            },
+            {
+              "score": "1-3",
+              "p": 0.024
+            },
+            {
+              "score": "4-1",
+              "p": 0.02
+            },
+            {
+              "score": "2-3",
+              "p": 0.019
+            },
+            {
+              "score": "4-0",
+              "p": 0.019
+            },
+            {
+              "score": "0-3",
+              "p": 0.015
+            },
+            {
+              "score": "4-2",
+              "p": 0.011
+            },
+            {
+              "score": "3-3",
+              "p": 0.01
+            },
+            {
+              "score": "1-4",
+              "p": 0.006
+            }
+          ],
+          "most_likely_score": "2-1",
+          "expected_goal_diff": 0.5,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Tottenham find themselves in a desperate relegation scrap under Roberto De Zerbi, making this a must-win home fixture. They have picked up crucial recent wins against Aston Villa and Wolves, showing resilience. Leeds have been in solid form but face injury issues, notably to Noah Okafor. Spurs' home advantage, attacking quality with Maddison and Solanke, and sheer desperation for survival should edge them past a competitive Leeds side.",
+            "t1_result": "Tottenham are favored due to home advantage and immense motivation in their relegation battle. A 2-1 win reflects their attacking potential but also their defensive vulnerabilities that Leeds can exploit.",
+            "t2_player": "Solanke and Maddison are key for Spurs' attack, while Vicario anchors the defense. For Leeds, Piroe and Gnonto will carry the attacking threat in Okafor's absence, with Ampadu crucial in midfield.",
+            "t3_events": "Expect a tense start, with Spurs pushing hard for an early goal to ease nerves. Leeds will look to counter-attack. A late winner for Spurs is plausible given the stakes.",
+            "t4_stats": "Spurs to dominate possession (around 55%) under De Zerbi's system, generating more shots and corners. Leeds will have lower possession but remain dangerous in transition."
+          },
+          "scorers": [
+            {
+              "player": "D. Solanke",
+              "team": "home",
+              "minute_range": [
+                30,
+                60
+              ],
+              "p": 0.35
+            },
+            {
+              "player": "J. Maddison",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.25
+            },
+            {
+              "player": "J. Piroe",
+              "team": "away",
+              "minute_range": [
+                45,
+                75
+              ],
+              "p": 0.28
+            }
+          ],
+          "assisters": [
+            {
+              "player": "M. Kudus",
+              "team": "home",
+              "p": 0.25
+            },
+            {
+              "player": "Pedro Porro",
+              "team": "home",
+              "p": 0.22
+            },
+            {
+              "player": "W. Gnonto",
+              "team": "away",
+              "p": 0.2
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "J. Maddison",
+              "team": "home",
+              "p": 0.25
+            },
+            {
+              "player": "D. Solanke",
+              "team": "home",
+              "p": 0.2
+            },
+            {
+              "player": "C. Romero",
+              "team": "home",
+              "p": 0.15
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "G. Vicario",
+                  "position": "GK"
+                },
+                {
+                  "name": "Pedro Porro",
+                  "position": "DF"
+                },
+                {
+                  "name": "C. Romero",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. van de Ven",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Udogie",
+                  "position": "DF"
+                },
+                {
+                  "name": "Y. Bissouma",
+                  "position": "MF"
+                },
+                {
+                  "name": "P. Sarr",
+                  "position": "MF"
+                },
+                {
+                  "name": "M. Kudus",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Maddison",
+                  "position": "MF"
+                },
+                {
+                  "name": "W. Odobert",
+                  "position": "FW"
+                },
+                {
+                  "name": "D. Solanke",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "B. Austin",
+                  "position": "GK"
+                },
+                {
+                  "name": "R. Drăgușin",
+                  "position": "DF"
+                },
+                {
+                  "name": "B. Davies",
+                  "position": "DF"
+                },
+                {
+                  "name": "R. Bentancur",
+                  "position": "MF"
+                },
+                {
+                  "name": "C. Gallagher",
+                  "position": "MF"
+                },
+                {
+                  "name": "L. Bergvall",
+                  "position": "MF"
+                },
+                {
+                  "name": "João Palhinha",
+                  "position": "MF"
+                },
+                {
+                  "name": "Richarlison",
+                  "position": "FW"
+                },
+                {
+                  "name": "R. Kolo Muani",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "I. Meslier",
+                  "position": "GK"
+                },
+                {
+                  "name": "J. Bogle",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Rodon",
+                  "position": "DF"
+                },
+                {
+                  "name": "P. Struijk",
+                  "position": "DF"
+                },
+                {
+                  "name": "S. Byram",
+                  "position": "DF"
+                },
+                {
+                  "name": "E. Ampadu",
+                  "position": "MF"
+                },
+                {
+                  "name": "I. Gruev",
+                  "position": "MF"
+                },
+                {
+                  "name": "D. James",
+                  "position": "MF"
+                },
+                {
+                  "name": "B. Aaronson",
+                  "position": "MF"
+                },
+                {
+                  "name": "W. Gnonto",
+                  "position": "FW"
+                },
+                {
+                  "name": "J. Piroe",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "K. Darlow",
+                  "position": "GK"
+                },
+                {
+                  "name": "J. Bijol",
+                  "position": "DF"
+                },
+                {
+                  "name": "S. Bornauw",
+                  "position": "DF"
+                },
+                {
+                  "name": "G. Gudmundsson",
+                  "position": "DF"
+                },
+                {
+                  "name": "A. Tanaka",
+                  "position": "MF"
+                },
+                {
+                  "name": "S. Longstaff",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Stach",
+                  "position": "MF"
+                },
+                {
+                  "name": "F. Buonanotte",
+                  "position": "MF"
+                },
+                {
+                  "name": "D. Calvert-Lewin",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [],
+          "cards": [],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 56.0,
+              "away": 44.0
+            },
+            "shots": {
+              "home": 16.0,
+              "away": 11.0
+            },
+            "shots_on_target": {
+              "home": 6.0,
+              "away": 4.0
+            },
+            "corners": {
+              "home": 7.0,
+              "away": 4.0
+            },
+            "pass_accuracy": {
+              "home": 87.0,
+              "away": 81.0
+            },
+            "fouls": {
+              "home": 11.0,
+              "away": 13.0
+            },
+            "saves": {
+              "home": 3.0,
+              "away": 4.0
+            },
+            "defensive_actions": {
+              "home": 42.0,
+              "away": 58.0
+            }
+          },
+          "cost_usd": 0.052,
+          "sources": [],
+          "over_3_5_prob": 0.243
+        },
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.55,
+            "draw": 0.24,
+            "away": 0.21
+          },
+          "score_dist": [
+            {
+              "score": "2-1",
+              "p": 0.115
+            },
+            {
+              "score": "1-1",
+              "p": 0.114
+            },
+            {
+              "score": "1-0",
+              "p": 0.101
+            },
+            {
+              "score": "2-0",
+              "p": 0.098
+            },
+            {
+              "score": "3-1",
+              "p": 0.063
+            },
+            {
+              "score": "0-1",
+              "p": 0.062
+            },
+            {
+              "score": "1-2",
+              "p": 0.061
+            },
+            {
+              "score": "3-0",
+              "p": 0.059
+            },
+            {
+              "score": "0-0",
+              "p": 0.058
+            },
+            {
+              "score": "2-2",
+              "p": 0.055
+            },
+            {
+              "score": "3-2",
+              "p": 0.034
+            },
+            {
+              "score": "0-2",
+              "p": 0.034
+            },
+            {
+              "score": "4-1",
+              "p": 0.029
+            },
+            {
+              "score": "4-0",
+              "p": 0.026
+            },
+            {
+              "score": "1-3",
+              "p": 0.022
+            },
+            {
+              "score": "2-3",
+              "p": 0.02
+            },
+            {
+              "score": "4-2",
+              "p": 0.016
+            },
+            {
+              "score": "0-3",
+              "p": 0.012
+            },
+            {
+              "score": "3-3",
+              "p": 0.012
+            },
+            {
+              "score": "5-1",
+              "p": 0.009
+            }
+          ],
+          "most_likely_score": "2-1",
+          "expected_goal_diff": 0.75,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Tottenham should be favored at home on squad depth, ball progression and individual attacking quality, but not overwhelmingly because Leeds tend to play high-tempo football that can stretch games and create transition chances. With limited reliable pre-lock lineup certainty, I weight a Spurs edge from home advantage, stronger final-third creators and better set-piece threat, while allowing meaningful draw and away upset probability because Leeds can press aggressively and exploit spaces behind attacking full-backs. The likely tactical picture is Tottenham seeing more of the ball and generating the better xG share, with Leeds dangerous on counters and second balls; that points to a moderate-scoring home-leaning match rather than a shutout certainty.",
+            "t1_result": "The home win is the largest bucket because Tottenham at home usually carry stronger territory, possession and chance volume than promoted or lower-depth sides, but Leeds' intensity keeps draw and away paths live. A 2-1 headline fits a normal-to-open match where Spurs create more but concede some transition threat.",
+            "t2_player": "Tottenham's likely edge comes from their advanced attackers and creative midfield links, while Leeds' best route is direct running and pressure-induced turnovers. Predicted starters reflect typical first-choice shapes, with Spurs in a front-foot 4-3-3 and Leeds in a compact but springy 4-2-3-1.",
+            "t3_events": "Expect Tottenham to control early possession, Leeds to have spells of pressure after turnovers, and the game to open more in the second half as substitutions add pace. Cards are more likely on Leeds defenders and midfielders if they spend long phases containing Spurs wide players.",
+            "t4_stats": "That produces a moderate possession edge for Tottenham, a shots edge for the home side, and a fairly even but not equal shots-on-target split. Leeds should still post useful defensive-action numbers because they are likely to defend more often and contest transitions aggressively."
+          },
+          "scorers": [
+            {
+              "player": "Son Heung-min",
+              "team": "home",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.39
+            },
+            {
+              "player": "James Maddison",
+              "team": "home",
+              "minute_range": [
+                25,
+                90
+              ],
+              "p": 0.18
+            },
+            {
+              "player": "Brennan Johnson",
+              "team": "home",
+              "minute_range": [
+                35,
+                90
+              ],
+              "p": 0.17
+            },
+            {
+              "player": "Joël Piroe",
+              "team": "away",
+              "minute_range": [
+                30,
+                88
+              ],
+              "p": 0.24
+            },
+            {
+              "player": "Crysencio Summerville",
+              "team": "away",
+              "minute_range": [
+                25,
+                90
+              ],
+              "p": 0.22
+            }
+          ],
+          "assisters": [
+            {
+              "player": "James Maddison",
+              "team": "home",
+              "p": 0.28
+            },
+            {
+              "player": "Pedro Porro",
+              "team": "home",
+              "p": 0.18
+            },
+            {
+              "player": "Crysencio Summerville",
+              "team": "away",
+              "p": 0.17
+            },
+            {
+              "player": "Georginio Rutter",
+              "team": "away",
+              "p": 0.16
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "Son Heung-min",
+              "team": "home",
+              "p": 0.28
+            },
+            {
+              "player": "James Maddison",
+              "team": "home",
+              "p": 0.19
+            },
+            {
+              "player": "Crysencio Summerville",
+              "team": "away",
+              "p": 0.12
+            },
+            {
+              "player": "Joël Piroe",
+              "team": "away",
+              "p": 0.1
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Guglielmo Vicario",
+                  "position": "GK"
+                },
+                {
+                  "name": "Pedro Porro",
+                  "position": "DF"
+                },
+                {
+                  "name": "Cristian Romero",
+                  "position": "DF"
+                },
+                {
+                  "name": "Micky van de Ven",
+                  "position": "DF"
+                },
+                {
+                  "name": "Destiny Udogie",
+                  "position": "DF"
+                },
+                {
+                  "name": "Pape Matar Sarr",
+                  "position": "MF"
+                },
+                {
+                  "name": "Yves Bissouma",
+                  "position": "MF"
+                },
+                {
+                  "name": "James Maddison",
+                  "position": "MF"
+                },
+                {
+                  "name": "Dejan Kulusevski",
+                  "position": "FW"
+                },
+                {
+                  "name": "Son Heung-min",
+                  "position": "FW"
+                },
+                {
+                  "name": "Brennan Johnson",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Brandon Austin",
+                  "position": "GK"
+                },
+                {
+                  "name": "Ben Davies",
+                  "position": "DF"
+                },
+                {
+                  "name": "Radu Drăgușin",
+                  "position": "DF"
+                },
+                {
+                  "name": "Emerson Royal",
+                  "position": "DF"
+                },
+                {
+                  "name": "Oliver Skipp",
+                  "position": "MF"
+                },
+                {
+                  "name": "Giovani Lo Celso",
+                  "position": "MF"
+                },
+                {
+                  "name": "Rodrigo Bentancur",
+                  "position": "MF"
+                },
+                {
+                  "name": "Timo Werner",
+                  "position": "FW"
+                },
+                {
+                  "name": "Richarlison",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "Illan Meslier",
+                  "position": "GK"
+                },
+                {
+                  "name": "Jayden Bogle",
+                  "position": "DF"
+                },
+                {
+                  "name": "Joe Rodon",
+                  "position": "DF"
+                },
+                {
+                  "name": "Pascal Struijk",
+                  "position": "DF"
+                },
+                {
+                  "name": "Junior Firpo",
+                  "position": "DF"
+                },
+                {
+                  "name": "Ethan Ampadu",
+                  "position": "MF"
+                },
+                {
+                  "name": "Ilia Gruev",
+                  "position": "MF"
+                },
+                {
+                  "name": "Daniel James",
+                  "position": "MF"
+                },
+                {
+                  "name": "Georginio Rutter",
+                  "position": "MF"
+                },
+                {
+                  "name": "Crysencio Summerville",
+                  "position": "MF"
+                },
+                {
+                  "name": "Joël Piroe",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Karl Darlow",
+                  "position": "GK"
+                },
+                {
+                  "name": "Sam Byram",
+                  "position": "DF"
+                },
+                {
+                  "name": "Liam Cooper",
+                  "position": "DF"
+                },
+                {
+                  "name": "Jamie Shackleton",
+                  "position": "MF"
+                },
+                {
+                  "name": "Glen Kamara",
+                  "position": "MF"
+                },
+                {
+                  "name": "Joe Rothwell",
+                  "position": "MF"
+                },
+                {
+                  "name": "Wilfried Gnonto",
+                  "position": "FW"
+                },
+                {
+                  "name": "Patrick Bamford",
+                  "position": "FW"
+                },
+                {
+                  "name": "Mateo Joseph",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-3-3",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "Brennan Johnson",
+              "on": "Richarlison",
+              "minute": 68
+            },
+            {
+              "team": "home",
+              "off": "Pape Matar Sarr",
+              "on": "Rodrigo Bentancur",
+              "minute": 72
+            },
+            {
+              "team": "away",
+              "off": "Joël Piroe",
+              "on": "Patrick Bamford",
+              "minute": 70
+            },
+            {
+              "team": "away",
+              "off": "Daniel James",
+              "on": "Wilfried Gnonto",
+              "minute": 74
+            }
+          ],
+          "cards": [
+            {
+              "player": "Ethan Ampadu",
+              "team": "away",
+              "color": "yellow",
+              "minute": 41
+            },
+            {
+              "player": "Junior Firpo",
+              "team": "away",
+              "color": "yellow",
+              "minute": 63
+            },
+            {
+              "player": "Yves Bissouma",
+              "team": "home",
+              "color": "yellow",
+              "minute": 57
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 58,
+              "away": 42
+            },
+            "shots": {
+              "home": 15,
+              "away": 11
+            },
+            "shots_on_target": {
+              "home": 6,
+              "away": 4
+            },
+            "corners": {
+              "home": 6,
+              "away": 4
+            },
+            "pass_accuracy": {
+              "home": 86,
+              "away": 80
+            },
+            "fouls": {
+              "home": 11,
+              "away": 13
+            },
+            "saves": {
+              "home": 3,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 63,
+              "away": 72
+            }
+          },
+          "cost_usd": 0.036,
+          "sources": [],
+          "over_3_5_prob": 0.286
+        },
+        {
+          "model_id": "gpt-5.4",
+          "setting": "S1",
+          "win_probs": {
+            "home": 0.457,
+            "draw": 0.268,
+            "away": 0.275
+          },
+          "score_dist": [
+            {
+              "score": "2-1",
+              "p": 0.134
+            },
+            {
+              "score": "1-1",
+              "p": 0.128
+            },
+            {
+              "score": "2-0",
+              "p": 0.084
+            },
+            {
+              "score": "0-1",
+              "p": 0.081
+            },
+            {
+              "score": "1-2",
+              "p": 0.072
+            },
+            {
+              "score": "0-0",
+              "p": 0.072
+            },
+            {
+              "score": "1-0",
+              "p": 0.07
+            },
+            {
+              "score": "2-2",
+              "p": 0.057
+            },
+            {
+              "score": "3-1",
+              "p": 0.05
+            },
+            {
+              "score": "0-2",
+              "p": 0.047
+            },
+            {
+              "score": "3-0",
+              "p": 0.043
+            },
+            {
+              "score": "3-2",
+              "p": 0.029
+            },
+            {
+              "score": "1-3",
+              "p": 0.028
+            },
+            {
+              "score": "2-3",
+              "p": 0.021
+            },
+            {
+              "score": "4-1",
+              "p": 0.019
+            },
+            {
+              "score": "0-3",
+              "p": 0.018
+            },
+            {
+              "score": "4-0",
+              "p": 0.017
+            },
+            {
+              "score": "3-3",
+              "p": 0.011
+            },
+            {
+              "score": "4-2",
+              "p": 0.011
+            },
+            {
+              "score": "1-4",
+              "p": 0.008
+            }
+          ],
+          "most_likely_score": "2-1",
+          "expected_goal_diff": 0.4,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Tottenham have home advantage and slightly higher individual quality, but their last 10 results are shaky and the relegation pressure raises volatility. Leeds arrive in the better form sequence, with four wins and four draws in ten, and their transition threat through James, Gnonto and Buonanotte can trouble Spurs' aggressive full-backs. Spurs still carry more game-breaking talent in Maddison, Solanke, Kudus and Pedro Porro, and recent headlines suggest a couple of timely boosts, so the edge stays narrowly with the home side rather than a clear favorite. With both sides under survival stress, a fairly open but not reckless match looks likelier than a cagey one.",
+            "t1_result": "The home win is only a plurality, not dominant, because Tottenham's recent form is inconsistent while Leeds have been collecting results. A one-goal Spurs win or a draw looks more plausible than a multi-goal margin.",
+            "t2_player": "Tottenham's likely starters lean toward a front-foot 4-3-3 built around Maddison between the lines and Solanke as the reference point. Leeds should favor a compact 4-2-3-1/4-3-3 shape with Ampadu shielding and pace from James and Gnonto to attack space behind Tottenham's advanced full-backs.",
+            "t3_events": "Expect Tottenham to start with more territory, but Leeds should create good transition moments, especially if Spurs commit numbers forward. The most likely scoring pattern is one goal in each half, with substitutions around 60-75 minutes shaping the final phase.",
+            "t4_stats": "Spurs should have the larger possession share and higher pass accuracy at home, while Leeds can still keep shot volume competitive through counters and second balls. That points to moderate shot counts, a few saves at both ends, and defensive-action numbers slightly higher for the away side."
+          },
+          "scorers": [
+            {
+              "player": "D. Solanke",
+              "team": "home",
+              "minute_range": [
+                20,
+                75
+              ],
+              "p": 0.41
+            },
+            {
+              "player": "J. Maddison",
+              "team": "home",
+              "minute_range": [
+                25,
+                90
+              ],
+              "p": 0.19
+            },
+            {
+              "player": "M. Kudus",
+              "team": "home",
+              "minute_range": [
+                15,
+                85
+              ],
+              "p": 0.24
+            },
+            {
+              "player": "J. Piroe",
+              "team": "away",
+              "minute_range": [
+                30,
+                85
+              ],
+              "p": 0.27
+            },
+            {
+              "player": "W. Gnonto",
+              "team": "away",
+              "minute_range": [
+                20,
+                80
+              ],
+              "p": 0.22
+            },
+            {
+              "player": "D. James",
+              "team": "away",
+              "minute_range": [
+                35,
+                90
+              ],
+              "p": 0.16
+            }
+          ],
+          "assisters": [
+            {
+              "player": "J. Maddison",
+              "team": "home",
+              "p": 0.28
+            },
+            {
+              "player": "Pedro Porro",
+              "team": "home",
+              "p": 0.19
+            },
+            {
+              "player": "M. Kudus",
+              "team": "home",
+              "p": 0.17
+            },
+            {
+              "player": "F. Buonanotte",
+              "team": "away",
+              "p": 0.18
+            },
+            {
+              "player": "D. James",
+              "team": "away",
+              "p": 0.15
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "D. Solanke",
+              "team": "home",
+              "p": 0.23
+            },
+            {
+              "player": "J. Maddison",
+              "team": "home",
+              "p": 0.19
+            },
+            {
+              "player": "M. Kudus",
+              "team": "home",
+              "p": 0.14
+            },
+            {
+              "player": "J. Piroe",
+              "team": "away",
+              "p": 0.12
+            },
+            {
+              "player": "W. Gnonto",
+              "team": "away",
+              "p": 0.09
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "G. Vicario",
+                  "position": "GK"
+                },
+                {
+                  "name": "Pedro Porro",
+                  "position": "DF"
+                },
+                {
+                  "name": "C. Romero",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. van de Ven",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Udogie",
+                  "position": "DF"
+                },
+                {
+                  "name": "João Palhinha",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Maddison",
+                  "position": "MF"
+                },
+                {
+                  "name": "C. Gallagher",
+                  "position": "MF"
+                },
+                {
+                  "name": "M. Kudus",
+                  "position": "FW"
+                },
+                {
+                  "name": "D. Solanke",
+                  "position": "FW"
+                },
+                {
+                  "name": "M. Tel",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "A. Kinský",
+                  "position": "GK"
+                },
+                {
+                  "name": "K. Danso",
+                  "position": "DF"
+                },
+                {
+                  "name": "B. Davies",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Spence",
+                  "position": "DF"
+                },
+                {
+                  "name": "R. Bentancur",
+                  "position": "MF"
+                },
+                {
+                  "name": "P. Sarr",
+                  "position": "MF"
+                },
+                {
+                  "name": "L. Bergvall",
+                  "position": "MF"
+                },
+                {
+                  "name": "X. Simons",
+                  "position": "MF"
+                },
+                {
+                  "name": "Richarlison",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "I. Meslier",
+                  "position": "GK"
+                },
+                {
+                  "name": "J. Bogle",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Rodon",
+                  "position": "DF"
+                },
+                {
+                  "name": "P. Struijk",
+                  "position": "DF"
+                },
+                {
+                  "name": "G. Gudmundsson",
+                  "position": "DF"
+                },
+                {
+                  "name": "E. Ampadu",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Tanaka",
+                  "position": "MF"
+                },
+                {
+                  "name": "F. Buonanotte",
+                  "position": "MF"
+                },
+                {
+                  "name": "D. James",
+                  "position": "FW"
+                },
+                {
+                  "name": "J. Piroe",
+                  "position": "FW"
+                },
+                {
+                  "name": "W. Gnonto",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Lucas Perri",
+                  "position": "GK"
+                },
+                {
+                  "name": "J. Bijol",
+                  "position": "DF"
+                },
+                {
+                  "name": "S. Bornauw",
+                  "position": "DF"
+                },
+                {
+                  "name": "S. Byram",
+                  "position": "DF"
+                },
+                {
+                  "name": "I. Gruev",
+                  "position": "MF"
+                },
+                {
+                  "name": "S. Longstaff",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Stach",
+                  "position": "MF"
+                },
+                {
+                  "name": "B. Aaronson",
+                  "position": "MF"
+                },
+                {
+                  "name": "D. Calvert-Lewin",
+                  "position": "FW"
+                },
+                {
+                  "name": "L. Nmecha",
+                  "position": "FW"
+                },
+                {
+                  "name": "N. Okafor",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-3-3",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "M. Tel",
+              "on": "Richarlison",
+              "minute": 67
+            },
+            {
+              "team": "home",
+              "off": "C. Gallagher",
+              "on": "P. Sarr",
+              "minute": 71
+            },
+            {
+              "team": "away",
+              "off": "J. Piroe",
+              "on": "D. Calvert-Lewin",
+              "minute": 68
+            },
+            {
+              "team": "away",
+              "off": "F. Buonanotte",
+              "on": "B. Aaronson",
+              "minute": 74
+            }
+          ],
+          "cards": [
+            {
+              "player": "João Palhinha",
+              "team": "home",
+              "color": "yellow",
+              "minute": 39
+            },
+            {
+              "player": "E. Ampadu",
+              "team": "away",
+              "color": "yellow",
+              "minute": 52
+            },
+            {
+              "player": "J. Rodon",
+              "team": "away",
+              "color": "yellow",
+              "minute": 76
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 56,
+              "away": 44
+            },
+            "shots": {
+              "home": 14,
+              "away": 11
+            },
+            "shots_on_target": {
+              "home": 5,
+              "away": 4
+            },
+            "corners": {
+              "home": 6,
+              "away": 4
+            },
+            "pass_accuracy": {
+              "home": 85,
+              "away": 80
+            },
+            "fouls": {
+              "home": 11,
+              "away": 13
+            },
+            "saves": {
+              "home": 3,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 64,
+              "away": 71
+            }
+          },
+          "cost_usd": 0.065,
+          "sources": [],
+          "over_3_5_prob": 0.251
         }
       ],
       "live": null
