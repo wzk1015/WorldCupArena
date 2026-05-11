@@ -3,43 +3,13 @@
     "main": [
       {
         "model_id": "claude-opus-4-7-thinking-search",
-        "mean": 52.144,
-        "n": 7,
-        "layers_mean": {
-          "T1_core_result": 75.955,
-          "T2_player_level": 35.651,
-          "T3_event_level": 57.424,
-          "T4_tactics_stats": 46.886,
-          "T5_tournament_macro": 10.0
-        },
-        "winner_correct": 5,
-        "winner_total": 7,
-        "winner_acc": 0.714
-      },
-      {
-        "model_id": "claude-opus-4-7-thinking",
-        "mean": 52.048,
-        "n": 9,
-        "layers_mean": {
-          "T1_core_result": 79.532,
-          "T2_player_level": 29.314,
-          "T3_event_level": 58.869,
-          "T4_tactics_stats": 47.018,
-          "T5_tournament_macro": 10.0
-        },
-        "winner_correct": 7,
-        "winner_total": 9,
-        "winner_acc": 0.778
-      },
-      {
-        "model_id": "gpt-5.4",
-        "mean": 51.036,
+        "mean": 51.16,
         "n": 8,
         "layers_mean": {
-          "T1_core_result": 74.901,
-          "T2_player_level": 31.052,
-          "T3_event_level": 58.753,
-          "T4_tactics_stats": 48.301,
+          "T1_core_result": 74.332,
+          "T2_player_level": 34.478,
+          "T3_event_level": 56.584,
+          "T4_tactics_stats": 46.907,
           "T5_tournament_macro": 10.0
         },
         "winner_correct": 5,
@@ -47,88 +17,1081 @@
         "winner_acc": 0.625
       },
       {
-        "model_id": "gemini-3.1-pro-preview-thinking",
-        "mean": 49.252,
-        "n": 8,
+        "model_id": "claude-opus-4-7-thinking",
+        "mean": 50.843,
+        "n": 10,
         "layers_mean": {
-          "T1_core_result": 76.064,
-          "T2_player_level": 29.354,
-          "T3_event_level": 48.221,
-          "T4_tactics_stats": 47.054,
+          "T1_core_result": 77.612,
+          "T2_player_level": 27.585,
+          "T3_event_level": 57.894,
+          "T4_tactics_stats": 47.327,
+          "T5_tournament_macro": 10.0
+        },
+        "winner_correct": 7,
+        "winner_total": 10,
+        "winner_acc": 0.7
+      },
+      {
+        "model_id": "gpt-5.4",
+        "mean": 49.801,
+        "n": 9,
+        "layers_mean": {
+          "T1_core_result": 73.405,
+          "T2_player_level": 28.382,
+          "T3_event_level": 58.265,
+          "T4_tactics_stats": 48.493,
+          "T5_tournament_macro": 10.0
+        },
+        "winner_correct": 5,
+        "winner_total": 9,
+        "winner_acc": 0.556
+      },
+      {
+        "model_id": "gemini-3.1-pro-preview-thinking",
+        "mean": 48.023,
+        "n": 9,
+        "layers_mean": {
+          "T1_core_result": 74.396,
+          "T2_player_level": 27.175,
+          "T3_event_level": 47.187,
+          "T4_tactics_stats": 47.421,
           "T5_tournament_macro": 10.0
         },
         "winner_correct": 6,
-        "winner_total": 8,
-        "winner_acc": 0.75
+        "winner_total": 9,
+        "winner_acc": 0.667
       },
       {
         "model_id": "gpt-5.4-search",
-        "mean": 48.908,
-        "n": 9,
+        "mean": 47.677,
+        "n": 10,
         "layers_mean": {
-          "T1_core_result": 73.762,
-          "T2_player_level": 23.656,
-          "T3_event_level": 61.771,
-          "T4_tactics_stats": 46.075,
+          "T1_core_result": 72.023,
+          "T2_player_level": 21.69,
+          "T3_event_level": 60.557,
+          "T4_tactics_stats": 46.416,
           "T5_tournament_macro": 10.0
         },
         "winner_correct": 6,
-        "winner_total": 9,
-        "winner_acc": 0.667
+        "winner_total": 10,
+        "winner_acc": 0.6
       },
       {
         "model_id": "gemini-3.1-pro-preview-thinking-search",
-        "mean": 48.098,
-        "n": 9,
+        "mean": 46.735,
+        "n": 10,
         "layers_mean": {
-          "T1_core_result": 77.041,
-          "T2_player_level": 22.817,
-          "T3_event_level": 49.638,
-          "T4_tactics_stats": 46.556,
+          "T1_core_result": 73.648,
+          "T2_player_level": 22.934,
+          "T3_event_level": 48.532,
+          "T4_tactics_stats": 46.301,
           "T5_tournament_macro": 10.0
         },
         "winner_correct": 6,
-        "winner_total": 9,
-        "winner_acc": 0.667
+        "winner_total": 10,
+        "winner_acc": 0.6
       }
     ],
     "by_model_setting": {
       "claude-opus-4-7-thinking": {
-        "S1": 52.048
+        "S1": 50.843
       },
       "claude-opus-4-7-thinking-search": {
-        "S2": 52.144
+        "S2": 51.16
       },
       "gemini-3.1-pro-preview-thinking": {
-        "S1": 49.252
+        "S1": 48.023
       },
       "gemini-3.1-pro-preview-thinking-search": {
-        "S2": 48.098
+        "S2": 46.735
       },
       "gpt-5.4": {
-        "S1": 51.036
+        "S1": 49.801
       },
       "gpt-5.4-search": {
-        "S2": 48.908
+        "S2": 47.677
       }
     }
   },
   "incoming_matches": [
     {
       "fixture": {
-        "wca_id": "Premier-League_Tottenham_Leeds_2026-05-11",
-        "home": "Tottenham",
-        "home_logo": "https://media.api-sports.io/football/teams/47.png",
-        "away": "Leeds",
-        "away_logo": "https://media.api-sports.io/football/teams/63.png",
-        "kickoff_utc": "2026-05-11T19:00:00+00:00",
-        "lock_at_utc": "2026-05-10T19:00:00+00:00",
-        "venue": "Tottenham Hotspur Stadium",
-        "venue_city": "London",
+        "wca_id": "Premier-League_Manchester-City_Crystal-Palace_2026-05-13",
+        "home": "Manchester City",
+        "home_logo": "https://media.api-sports.io/football/teams/50.png",
+        "away": "Crystal Palace",
+        "away_logo": "https://media.api-sports.io/football/teams/52.png",
+        "kickoff_utc": "2026-05-13T19:00:00+00:00",
+        "lock_at_utc": "2026-05-12T19:00:00+00:00",
+        "venue": "Etihad Stadium",
+        "venue_city": "Manchester",
         "venue_country": "England",
-        "stage": "Regular Season - 36",
+        "stage": "Regular Season - 31",
         "competition": "Premier League"
       },
+      "predictions": [],
+      "live": null
+    },
+    {
+      "fixture": {
+        "wca_id": "Bundesliga_Bayern-München_1.-FC-Köln_2026-05-16",
+        "home": "Bayern München",
+        "home_logo": "https://media.api-sports.io/football/teams/157.png",
+        "away": "1. FC Köln",
+        "away_logo": "https://media.api-sports.io/football/teams/192.png",
+        "kickoff_utc": "2026-05-16T13:30:00+00:00",
+        "lock_at_utc": "2026-05-15T13:30:00+00:00",
+        "venue": "Allianz Arena",
+        "venue_city": "Munich",
+        "venue_country": "Germany",
+        "stage": "Regular Season - 34",
+        "competition": "Bundesliga"
+      },
+      "predictions": [],
+      "live": null
+    },
+    {
+      "fixture": {
+        "wca_id": "Premier-League_Arsenal_Burnley_2026-05-18",
+        "home": "Arsenal",
+        "home_logo": "https://media.api-sports.io/football/teams/42.png",
+        "away": "Burnley",
+        "away_logo": "https://media.api-sports.io/football/teams/44.png",
+        "kickoff_utc": "2026-05-18T19:00:00+00:00",
+        "lock_at_utc": "2026-05-17T19:00:00+00:00",
+        "venue": "Emirates Stadium",
+        "venue_city": "London",
+        "venue_country": "England",
+        "stage": "Regular Season - 37",
+        "competition": "Premier League"
+      },
+      "predictions": [],
+      "live": null
+    }
+  ],
+  "history": [
+    {
+      "wca_id": "Premier-League_Tottenham_Leeds_2026-05-11",
+      "home": "Tottenham",
+      "home_logo": "https://media.api-sports.io/football/teams/47.png",
+      "away": "Leeds",
+      "away_logo": "https://media.api-sports.io/football/teams/63.png",
+      "kickoff_utc": "2026-05-11T19:00:00+00:00",
+      "lock_at_utc": "2026-05-10T19:00:00+00:00",
+      "venue": "Tottenham Hotspur Stadium",
+      "venue_city": "London",
+      "venue_country": "England",
+      "stage": "Regular Season - 36",
+      "competition": "Premier League",
+      "result": "1-1",
+      "truth": {
+        "score": "1-1",
+        "result": "draw",
+        "home_name": "Tottenham",
+        "away_name": "Leeds",
+        "scorer_names": [
+          "M. Tel",
+          "D. Calvert-Lewin"
+        ],
+        "assister_names": [],
+        "scorers": [
+          {
+            "minute": 50,
+            "player": "M. Tel",
+            "team": "home"
+          },
+          {
+            "minute": 74,
+            "player": "D. Calvert-Lewin",
+            "team": "away"
+          }
+        ],
+        "assisters": [],
+        "cards": [
+          {
+            "minute": 41,
+            "player": "K. Danso",
+            "team": "home",
+            "color": "yellow"
+          },
+          {
+            "minute": 66,
+            "player": "J. Palhinha",
+            "team": "home",
+            "color": "yellow"
+          },
+          {
+            "minute": 79,
+            "player": "J. Rodon",
+            "team": "away",
+            "color": "yellow"
+          },
+          {
+            "minute": 82,
+            "player": "P. Porro",
+            "team": "home",
+            "color": "yellow"
+          },
+          {
+            "minute": 90,
+            "player": "R. De Zerbi",
+            "team": "home",
+            "color": "yellow"
+          }
+        ],
+        "substitutions": [
+          {
+            "minute": 56,
+            "team": "away",
+            "team_name": "Leeds",
+            "off": "P. Struijk",
+            "on": "S. Bornauw"
+          },
+          {
+            "minute": 63,
+            "team": "away",
+            "team_name": "Leeds",
+            "off": "B. Aaronson",
+            "on": "L. Nmecha"
+          },
+          {
+            "minute": 63,
+            "team": "away",
+            "team_name": "Leeds",
+            "off": "D. James",
+            "on": "W. Gnonto"
+          },
+          {
+            "minute": 81,
+            "team": "home",
+            "team_name": "Tottenham",
+            "off": "R. Bentancur",
+            "on": "L. Bergvall"
+          },
+          {
+            "minute": 85,
+            "team": "home",
+            "team_name": "Tottenham",
+            "off": "M. Tel",
+            "on": "J. Maddison"
+          },
+          {
+            "minute": 85,
+            "team": "home",
+            "team_name": "Tottenham",
+            "off": "D. Udogie",
+            "on": "D. Spence"
+          },
+          {
+            "minute": 90,
+            "team": "away",
+            "team_name": "Leeds",
+            "off": "A. Tanaka",
+            "on": "S. Longstaff"
+          }
+        ],
+        "own_goals": [],
+        "penalties": [
+          {
+            "minute": 74,
+            "taker": "D. Calvert-Lewin",
+            "team": "away",
+            "outcome": "scored"
+          }
+        ],
+        "formations": {
+          "home": "4-2-3-1",
+          "away": "3-5-2"
+        },
+        "lineups": {
+          "home": {
+            "starting": [
+              {
+                "player": "Antonín Kinský",
+                "pos": "G"
+              },
+              {
+                "player": "Pedro Porro",
+                "pos": "D"
+              },
+              {
+                "player": "Kevin Danso",
+                "pos": "D"
+              },
+              {
+                "player": "Micky van de Ven",
+                "pos": "D"
+              },
+              {
+                "player": "Destiny Udogie",
+                "pos": "D"
+              },
+              {
+                "player": "João Palhinha",
+                "pos": "M"
+              },
+              {
+                "player": "Rodrigo Bentancur",
+                "pos": "M"
+              },
+              {
+                "player": "Randal Kolo Muani",
+                "pos": "M"
+              },
+              {
+                "player": "Conor Gallagher",
+                "pos": "M"
+              },
+              {
+                "player": "Mathys Tel",
+                "pos": "M"
+              },
+              {
+                "player": "Richarlison",
+                "pos": "F"
+              }
+            ]
+          },
+          "away": {
+            "starting": [
+              {
+                "player": "Karl Darlow",
+                "pos": "G"
+              },
+              {
+                "player": "Joe Rodon",
+                "pos": "D"
+              },
+              {
+                "player": "Jaka Bijol",
+                "pos": "D"
+              },
+              {
+                "player": "Pascal Struijk",
+                "pos": "D"
+              },
+              {
+                "player": "Daniel James",
+                "pos": "M"
+              },
+              {
+                "player": "Anton Stach",
+                "pos": "M"
+              },
+              {
+                "player": "Ethan Ampadu",
+                "pos": "M"
+              },
+              {
+                "player": "Ao Tanaka",
+                "pos": "M"
+              },
+              {
+                "player": "James Justin",
+                "pos": "M"
+              },
+              {
+                "player": "Dominic Calvert-Lewin",
+                "pos": "F"
+              },
+              {
+                "player": "Brenden Aaronson",
+                "pos": "F"
+              }
+            ]
+          }
+        },
+        "stats": {
+          "shots_on_target": {
+            "home": 3,
+            "away": 4
+          },
+          "shots": {
+            "home": 16,
+            "away": 11
+          },
+          "fouls": {
+            "home": 12,
+            "away": 7
+          },
+          "corners": {
+            "home": 14,
+            "away": 2
+          },
+          "possession": {
+            "home": 57.0,
+            "away": 43.0
+          },
+          "saves": {
+            "home": 3,
+            "away": 1
+          },
+          "pass_accuracy": {
+            "home": 80.0,
+            "away": 72.0
+          }
+        },
+        "events": [
+          {
+            "time": {
+              "elapsed": 41,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 25287,
+              "name": "K. Danso"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Tripping"
+          },
+          {
+            "time": {
+              "elapsed": 50,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 270510,
+              "name": "M. Tel"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 56,
+              "extra": null
+            },
+            "team": {
+              "id": 63,
+              "name": "Leeds",
+              "logo": "https://media.api-sports.io/football/teams/63.png"
+            },
+            "player": {
+              "id": 64003,
+              "name": "P. Struijk"
+            },
+            "assist": {
+              "id": 1408,
+              "name": "S. Bornauw"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 63,
+              "extra": null
+            },
+            "team": {
+              "id": 63,
+              "name": "Leeds",
+              "logo": "https://media.api-sports.io/football/teams/63.png"
+            },
+            "player": {
+              "id": 50739,
+              "name": "B. Aaronson"
+            },
+            "assist": {
+              "id": 19461,
+              "name": "L. Nmecha"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 63,
+              "extra": null
+            },
+            "team": {
+              "id": 63,
+              "name": "Leeds",
+              "logo": "https://media.api-sports.io/football/teams/63.png"
+            },
+            "player": {
+              "id": 19329,
+              "name": "D. James"
+            },
+            "assist": {
+              "id": 162128,
+              "name": "W. Gnonto"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 66,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 41104,
+              "name": "J. Palhinha"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Roughing"
+          },
+          {
+            "time": {
+              "elapsed": 74,
+              "extra": null
+            },
+            "team": {
+              "id": 63,
+              "name": "Leeds",
+              "logo": "https://media.api-sports.io/football/teams/63.png"
+            },
+            "player": {
+              "id": 18766,
+              "name": "D. Calvert-Lewin"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Goal",
+            "detail": "Penalty",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 79,
+              "extra": null
+            },
+            "team": {
+              "id": 63,
+              "name": "Leeds",
+              "logo": "https://media.api-sports.io/football/teams/63.png"
+            },
+            "player": {
+              "id": 19321,
+              "name": "J. Rodon"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Holding"
+          },
+          {
+            "time": {
+              "elapsed": 81,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 863,
+              "name": "R. Bentancur"
+            },
+            "assist": {
+              "id": 347316,
+              "name": "L. Bergvall"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 82,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 47519,
+              "name": "P. Porro"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Roughing"
+          },
+          {
+            "time": {
+              "elapsed": 85,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 270510,
+              "name": "M. Tel"
+            },
+            "assist": {
+              "id": 18784,
+              "name": "J. Maddison"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 85,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 204039,
+              "name": "D. Udogie"
+            },
+            "assist": {
+              "id": 19235,
+              "name": "D. Spence"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 3
+            },
+            "team": {
+              "id": 63,
+              "name": "Leeds",
+              "logo": "https://media.api-sports.io/football/teams/63.png"
+            },
+            "player": {
+              "id": 32966,
+              "name": "A. Tanaka"
+            },
+            "assist": {
+              "id": 18901,
+              "name": "S. Longstaff"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 5
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 393873,
+              "name": "R. De Zerbi"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": null
+          }
+        ]
+      },
+      "live": {
+        "status": "Second Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "events": [
+          {
+            "time": {
+              "elapsed": 41,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 25287,
+              "name": "K. Danso"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Tripping"
+          },
+          {
+            "time": {
+              "elapsed": 50,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 270510,
+              "name": "M. Tel"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 56,
+              "extra": null
+            },
+            "team": {
+              "id": 63,
+              "name": "Leeds",
+              "logo": "https://media.api-sports.io/football/teams/63.png"
+            },
+            "player": {
+              "id": 64003,
+              "name": "P. Struijk"
+            },
+            "assist": {
+              "id": 1408,
+              "name": "S. Bornauw"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 63,
+              "extra": null
+            },
+            "team": {
+              "id": 63,
+              "name": "Leeds",
+              "logo": "https://media.api-sports.io/football/teams/63.png"
+            },
+            "player": {
+              "id": 50739,
+              "name": "B. Aaronson"
+            },
+            "assist": {
+              "id": 19461,
+              "name": "L. Nmecha"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 63,
+              "extra": null
+            },
+            "team": {
+              "id": 63,
+              "name": "Leeds",
+              "logo": "https://media.api-sports.io/football/teams/63.png"
+            },
+            "player": {
+              "id": 19329,
+              "name": "D. James"
+            },
+            "assist": {
+              "id": 162128,
+              "name": "W. Gnonto"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 66,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 41104,
+              "name": "J. Palhinha"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Roughing"
+          },
+          {
+            "time": {
+              "elapsed": 74,
+              "extra": null
+            },
+            "team": {
+              "id": 63,
+              "name": "Leeds",
+              "logo": "https://media.api-sports.io/football/teams/63.png"
+            },
+            "player": {
+              "id": 18766,
+              "name": "D. Calvert-Lewin"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Goal",
+            "detail": "Penalty",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 79,
+              "extra": null
+            },
+            "team": {
+              "id": 63,
+              "name": "Leeds",
+              "logo": "https://media.api-sports.io/football/teams/63.png"
+            },
+            "player": {
+              "id": 19321,
+              "name": "J. Rodon"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Holding"
+          },
+          {
+            "time": {
+              "elapsed": 81,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 863,
+              "name": "R. Bentancur"
+            },
+            "assist": {
+              "id": 347316,
+              "name": "L. Bergvall"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 82,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 47519,
+              "name": "P. Porro"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Roughing"
+          },
+          {
+            "time": {
+              "elapsed": 85,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 270510,
+              "name": "M. Tel"
+            },
+            "assist": {
+              "id": 18784,
+              "name": "J. Maddison"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 85,
+              "extra": null
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 204039,
+              "name": "D. Udogie"
+            },
+            "assist": {
+              "id": 19235,
+              "name": "D. Spence"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 3
+            },
+            "team": {
+              "id": 63,
+              "name": "Leeds",
+              "logo": "https://media.api-sports.io/football/teams/63.png"
+            },
+            "player": {
+              "id": 32966,
+              "name": "A. Tanaka"
+            },
+            "assist": {
+              "id": 18901,
+              "name": "S. Longstaff"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 5
+            },
+            "team": {
+              "id": 47,
+              "name": "Tottenham",
+              "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "player": {
+              "id": 393873,
+              "name": "R. De Zerbi"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": null
+          }
+        ]
+      },
+      "models": [
+        {
+          "model_id": "claude-opus-4-7-thinking-search",
+          "setting": "S2",
+          "composite": 44.27
+        },
+        {
+          "model_id": "claude-opus-4-7-thinking",
+          "setting": "S1",
+          "composite": 40.006
+        },
+        {
+          "model_id": "gpt-5.4",
+          "setting": "S1",
+          "composite": 39.918
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking",
+          "setting": "S1",
+          "composite": 38.194
+        },
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "composite": 36.597
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking-search",
+          "setting": "S2",
+          "composite": 34.476
+        }
+      ],
       "predictions": [
         {
           "model_id": "claude-opus-4-7-thinking-search",
@@ -935,7 +1898,8 @@
               "accessed_at": "2026-05-10T18:25:00Z"
             }
           ],
-          "over_3_5_prob": 0.243
+          "over_3_5_prob": 0.243,
+          "composite": 44.27
         },
         {
           "model_id": "claude-opus-4-7-thinking",
@@ -1498,7 +2462,8 @@
           },
           "cost_usd": 0.119,
           "sources": [],
-          "over_3_5_prob": 0.234
+          "over_3_5_prob": 0.234,
+          "composite": 40.006
         },
         {
           "model_id": "gemini-3.1-pro-preview-thinking-search",
@@ -1858,7 +2823,8 @@
           },
           "cost_usd": 0.036,
           "sources": [],
-          "over_3_5_prob": 0.344
+          "over_3_5_prob": 0.344,
+          "composite": 34.476
         },
         {
           "model_id": "gemini-3.1-pro-preview-thinking",
@@ -2241,7 +3207,8 @@
           },
           "cost_usd": 0.052,
           "sources": [],
-          "over_3_5_prob": 0.243
+          "over_3_5_prob": 0.243,
+          "composite": 38.194
         },
         {
           "model_id": "gpt-5.4-search",
@@ -2696,7 +3663,8 @@
           },
           "cost_usd": 0.036,
           "sources": [],
-          "over_3_5_prob": 0.286
+          "over_3_5_prob": 0.286,
+          "composite": 36.597
         },
         {
           "model_id": "gpt-5.4",
@@ -3178,384 +4146,11 @@
           },
           "cost_usd": 0.065,
           "sources": [],
-          "over_3_5_prob": 0.251
+          "over_3_5_prob": 0.251,
+          "composite": 39.918
         }
-      ],
-      "live": {
-        "status": "Second Half",
-        "elapsed": 90,
-        "score": {
-          "home": 1,
-          "away": 1
-        },
-        "events": [
-          {
-            "time": {
-              "elapsed": 41,
-              "extra": null
-            },
-            "team": {
-              "id": 47,
-              "name": "Tottenham",
-              "logo": "https://media.api-sports.io/football/teams/47.png"
-            },
-            "player": {
-              "id": 25287,
-              "name": "K. Danso"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Tripping"
-          },
-          {
-            "time": {
-              "elapsed": 50,
-              "extra": null
-            },
-            "team": {
-              "id": 47,
-              "name": "Tottenham",
-              "logo": "https://media.api-sports.io/football/teams/47.png"
-            },
-            "player": {
-              "id": 270510,
-              "name": "M. Tel"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Goal",
-            "detail": "Normal Goal",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 56,
-              "extra": null
-            },
-            "team": {
-              "id": 63,
-              "name": "Leeds",
-              "logo": "https://media.api-sports.io/football/teams/63.png"
-            },
-            "player": {
-              "id": 64003,
-              "name": "P. Struijk"
-            },
-            "assist": {
-              "id": 1408,
-              "name": "S. Bornauw"
-            },
-            "type": "subst",
-            "detail": "Substitution 1",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 63,
-              "extra": null
-            },
-            "team": {
-              "id": 63,
-              "name": "Leeds",
-              "logo": "https://media.api-sports.io/football/teams/63.png"
-            },
-            "player": {
-              "id": 50739,
-              "name": "B. Aaronson"
-            },
-            "assist": {
-              "id": 19461,
-              "name": "L. Nmecha"
-            },
-            "type": "subst",
-            "detail": "Substitution 2",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 63,
-              "extra": null
-            },
-            "team": {
-              "id": 63,
-              "name": "Leeds",
-              "logo": "https://media.api-sports.io/football/teams/63.png"
-            },
-            "player": {
-              "id": 19329,
-              "name": "D. James"
-            },
-            "assist": {
-              "id": 162128,
-              "name": "W. Gnonto"
-            },
-            "type": "subst",
-            "detail": "Substitution 3",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 66,
-              "extra": null
-            },
-            "team": {
-              "id": 47,
-              "name": "Tottenham",
-              "logo": "https://media.api-sports.io/football/teams/47.png"
-            },
-            "player": {
-              "id": 41104,
-              "name": "J. Palhinha"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Roughing"
-          },
-          {
-            "time": {
-              "elapsed": 74,
-              "extra": null
-            },
-            "team": {
-              "id": 63,
-              "name": "Leeds",
-              "logo": "https://media.api-sports.io/football/teams/63.png"
-            },
-            "player": {
-              "id": 18766,
-              "name": "D. Calvert-Lewin"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Goal",
-            "detail": "Penalty",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 79,
-              "extra": null
-            },
-            "team": {
-              "id": 63,
-              "name": "Leeds",
-              "logo": "https://media.api-sports.io/football/teams/63.png"
-            },
-            "player": {
-              "id": 19321,
-              "name": "J. Rodon"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Holding"
-          },
-          {
-            "time": {
-              "elapsed": 81,
-              "extra": null
-            },
-            "team": {
-              "id": 47,
-              "name": "Tottenham",
-              "logo": "https://media.api-sports.io/football/teams/47.png"
-            },
-            "player": {
-              "id": 863,
-              "name": "R. Bentancur"
-            },
-            "assist": {
-              "id": 347316,
-              "name": "L. Bergvall"
-            },
-            "type": "subst",
-            "detail": "Substitution 1",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 82,
-              "extra": null
-            },
-            "team": {
-              "id": 47,
-              "name": "Tottenham",
-              "logo": "https://media.api-sports.io/football/teams/47.png"
-            },
-            "player": {
-              "id": 47519,
-              "name": "P. Porro"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": "Roughing"
-          },
-          {
-            "time": {
-              "elapsed": 85,
-              "extra": null
-            },
-            "team": {
-              "id": 47,
-              "name": "Tottenham",
-              "logo": "https://media.api-sports.io/football/teams/47.png"
-            },
-            "player": {
-              "id": 270510,
-              "name": "M. Tel"
-            },
-            "assist": {
-              "id": 18784,
-              "name": "J. Maddison"
-            },
-            "type": "subst",
-            "detail": "Substitution 2",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 85,
-              "extra": null
-            },
-            "team": {
-              "id": 47,
-              "name": "Tottenham",
-              "logo": "https://media.api-sports.io/football/teams/47.png"
-            },
-            "player": {
-              "id": 204039,
-              "name": "D. Udogie"
-            },
-            "assist": {
-              "id": 19235,
-              "name": "D. Spence"
-            },
-            "type": "subst",
-            "detail": "Substitution 3",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 90,
-              "extra": 3
-            },
-            "team": {
-              "id": 63,
-              "name": "Leeds",
-              "logo": "https://media.api-sports.io/football/teams/63.png"
-            },
-            "player": {
-              "id": 32966,
-              "name": "A. Tanaka"
-            },
-            "assist": {
-              "id": 18901,
-              "name": "S. Longstaff"
-            },
-            "type": "subst",
-            "detail": "Substitution 4",
-            "comments": null
-          },
-          {
-            "time": {
-              "elapsed": 90,
-              "extra": 5
-            },
-            "team": {
-              "id": 47,
-              "name": "Tottenham",
-              "logo": "https://media.api-sports.io/football/teams/47.png"
-            },
-            "player": {
-              "id": 393873,
-              "name": "R. De Zerbi"
-            },
-            "assist": {
-              "id": null,
-              "name": null
-            },
-            "type": "Card",
-            "detail": "Yellow Card",
-            "comments": null
-          }
-        ]
-      }
+      ]
     },
-    {
-      "fixture": {
-        "wca_id": "Premier-League_Manchester-City_Crystal-Palace_2026-05-13",
-        "home": "Manchester City",
-        "home_logo": "https://media.api-sports.io/football/teams/50.png",
-        "away": "Crystal Palace",
-        "away_logo": "https://media.api-sports.io/football/teams/52.png",
-        "kickoff_utc": "2026-05-13T19:00:00+00:00",
-        "lock_at_utc": "2026-05-12T19:00:00+00:00",
-        "venue": "Etihad Stadium",
-        "venue_city": "Manchester",
-        "venue_country": "England",
-        "stage": "Regular Season - 31",
-        "competition": "Premier League"
-      },
-      "predictions": [],
-      "live": null
-    },
-    {
-      "fixture": {
-        "wca_id": "Bundesliga_Bayern-München_1.-FC-Köln_2026-05-16",
-        "home": "Bayern München",
-        "home_logo": "https://media.api-sports.io/football/teams/157.png",
-        "away": "1. FC Köln",
-        "away_logo": "https://media.api-sports.io/football/teams/192.png",
-        "kickoff_utc": "2026-05-16T13:30:00+00:00",
-        "lock_at_utc": "2026-05-15T13:30:00+00:00",
-        "venue": "Allianz Arena",
-        "venue_city": "Munich",
-        "venue_country": "Germany",
-        "stage": "Regular Season - 34",
-        "competition": "Bundesliga"
-      },
-      "predictions": [],
-      "live": null
-    },
-    {
-      "fixture": {
-        "wca_id": "Premier-League_Arsenal_Burnley_2026-05-18",
-        "home": "Arsenal",
-        "home_logo": "https://media.api-sports.io/football/teams/42.png",
-        "away": "Burnley",
-        "away_logo": "https://media.api-sports.io/football/teams/44.png",
-        "kickoff_utc": "2026-05-18T19:00:00+00:00",
-        "lock_at_utc": "2026-05-17T19:00:00+00:00",
-        "venue": "Emirates Stadium",
-        "venue_city": "London",
-        "venue_country": "England",
-        "stage": "Regular Season - 37",
-        "competition": "Premier League"
-      },
-      "predictions": [],
-      "live": null
-    }
-  ],
-  "history": [
     {
       "wca_id": "Bundesliga_VfL-Wolfsburg_Bayern-München_2026-05-09",
       "home": "VfL Wolfsburg",
