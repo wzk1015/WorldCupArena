@@ -129,7 +129,1345 @@
         "stage": "Regular Season - 31",
         "competition": "Premier League"
       },
-      "predictions": [],
+      "predictions": [
+        {
+          "model_id": "claude-opus-4-7-thinking-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.71,
+            "draw": 0.17,
+            "away": 0.12
+          },
+          "score_dist": [
+            {
+              "score": "2-0",
+              "p": 0.127
+            },
+            {
+              "score": "1-0",
+              "p": 0.109
+            },
+            {
+              "score": "3-0",
+              "p": 0.098
+            },
+            {
+              "score": "2-1",
+              "p": 0.095
+            },
+            {
+              "score": "1-1",
+              "p": 0.085
+            },
+            {
+              "score": "3-1",
+              "p": 0.074
+            },
+            {
+              "score": "4-0",
+              "p": 0.057
+            },
+            {
+              "score": "0-0",
+              "p": 0.048
+            },
+            {
+              "score": "0-1",
+              "p": 0.048
+            },
+            {
+              "score": "4-1",
+              "p": 0.043
+            },
+            {
+              "score": "1-2",
+              "p": 0.042
+            },
+            {
+              "score": "2-2",
+              "p": 0.037
+            },
+            {
+              "score": "3-2",
+              "p": 0.028
+            },
+            {
+              "score": "5-0",
+              "p": 0.027
+            },
+            {
+              "score": "5-1",
+              "p": 0.02
+            },
+            {
+              "score": "0-2",
+              "p": 0.018
+            },
+            {
+              "score": "4-2",
+              "p": 0.016
+            },
+            {
+              "score": "2-3",
+              "p": 0.012
+            },
+            {
+              "score": "6-0",
+              "p": 0.011
+            },
+            {
+              "score": "6-1",
+              "p": 0.005
+            }
+          ],
+          "most_likely_score": "2-0",
+          "expected_goal_diff": 1.55,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Manchester City host Crystal Palace at the Etihad needing a win to keep slim title hopes alive (5 points behind Arsenal with a game in hand). City are in strong form — winning 4 of their last 5 matches, scoring 11 and conceding 5 — and just beat Brentford 3-0. Crystal Palace, meanwhile, are winless in four consecutive matches, mathematically safe, and laser-focused on the Conference League final vs Rayo Vallecano on May 27, so Glasner is expected to rotate. City beat Palace 3-0 at Selhurst in December and are unbeaten in 16 home league games (W13 D3). City have some injury concerns (Rodri, Khusanov, Gvardiol all doubtful) but Doku is in elite form (5 in 6) and Haaland has 8 PL goals in just 5 outings vs Palace. The motivational gap and home advantage strongly favour City.",
+            "t1_result": "City must win, are at home where they're virtually unbeatable this term, and face a rotated Palace side prioritising a European final. A clear home-win lean (~70%) with moderate draw mass given City's injuries; Dimers' model has City at 73%.",
+            "t2_player": "City rotate moderately — Guardiola has flagged needing legs for the FA Cup final, so Marmoush/Foden push for starts; Doku remains undroppable. Palace likely deploy 3-4-2-1 with Henderson; Richards-Lacroix-Lerma; Munoz-Kamada-Hughes-Mitchell; Sarr-Pino; Mateta.",
+            "t3_events": "Expect City to dominate possession and break the deadlock after the half-hour mark, with Doku and Haaland the main threats. Palace will likely score from a Sarr/Mateta moment given their attacking quality, but City's pressure should yield 2-3 goals. Multiple substitutions expected around the hour for both rotation reasons.",
+            "t4_stats": "City should hold ~65% possession with double-digit shots; Palace will counter sparingly. Expect 15+ shots for City, 8-9 for Palace, and high pass accuracy for the hosts."
+          },
+          "scorers": [
+            {
+              "player": "Erling Haaland",
+              "team": "home",
+              "minute_range": [
+                25,
+                80
+              ],
+              "p": 0.58
+            },
+            {
+              "player": "Jérémy Doku",
+              "team": "home",
+              "minute_range": [
+                30,
+                85
+              ],
+              "p": 0.38
+            },
+            {
+              "player": "Rayan Cherki",
+              "team": "home",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.22
+            },
+            {
+              "player": "Antoine Semenyo",
+              "team": "home",
+              "minute_range": [
+                25,
+                85
+              ],
+              "p": 0.18
+            },
+            {
+              "player": "Bernardo Silva",
+              "team": "home",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.15
+            },
+            {
+              "player": "Omar Marmoush",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.18
+            },
+            {
+              "player": "Phil Foden",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.15
+            },
+            {
+              "player": "Ismaïla Sarr",
+              "team": "away",
+              "minute_range": [
+                20,
+                90
+              ],
+              "p": 0.27
+            },
+            {
+              "player": "Jean-Philippe Mateta",
+              "team": "away",
+              "minute_range": [
+                25,
+                90
+              ],
+              "p": 0.22
+            },
+            {
+              "player": "Yeremy Pino",
+              "team": "away",
+              "minute_range": [
+                25,
+                90
+              ],
+              "p": 0.12
+            },
+            {
+              "player": "Daniel Muñoz",
+              "team": "away",
+              "minute_range": [
+                30,
+                90
+              ],
+              "p": 0.08
+            }
+          ],
+          "assisters": [
+            {
+              "player": "Jérémy Doku",
+              "team": "home",
+              "p": 0.32
+            },
+            {
+              "player": "Bernardo Silva",
+              "team": "home",
+              "p": 0.22
+            },
+            {
+              "player": "Rayan Cherki",
+              "team": "home",
+              "p": 0.25
+            },
+            {
+              "player": "Erling Haaland",
+              "team": "home",
+              "p": 0.15
+            },
+            {
+              "player": "Daniel Muñoz",
+              "team": "away",
+              "p": 0.18
+            },
+            {
+              "player": "Ismaïla Sarr",
+              "team": "away",
+              "p": 0.12
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "Jérémy Doku",
+              "team": "home",
+              "p": 0.32
+            },
+            {
+              "player": "Erling Haaland",
+              "team": "home",
+              "p": 0.28
+            },
+            {
+              "player": "Rayan Cherki",
+              "team": "home",
+              "p": 0.12
+            },
+            {
+              "player": "Bernardo Silva",
+              "team": "home",
+              "p": 0.08
+            },
+            {
+              "player": "Ismaïla Sarr",
+              "team": "away",
+              "p": 0.07
+            },
+            {
+              "player": "Dean Henderson",
+              "team": "away",
+              "p": 0.06
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Gianluigi Donnarumma",
+                  "position": "GK"
+                },
+                {
+                  "name": "Matheus Nunes",
+                  "position": "DF"
+                },
+                {
+                  "name": "Marc Guéhi",
+                  "position": "DF"
+                },
+                {
+                  "name": "Nathan Aké",
+                  "position": "DF"
+                },
+                {
+                  "name": "Nico O'Reilly",
+                  "position": "DF"
+                },
+                {
+                  "name": "Bernardo Silva",
+                  "position": "MF"
+                },
+                {
+                  "name": "Tijjani Reijnders",
+                  "position": "MF"
+                },
+                {
+                  "name": "Antoine Semenyo",
+                  "position": "MF"
+                },
+                {
+                  "name": "Rayan Cherki",
+                  "position": "MF"
+                },
+                {
+                  "name": "Jérémy Doku",
+                  "position": "FW"
+                },
+                {
+                  "name": "Erling Haaland",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "James Trafford",
+                  "position": "GK"
+                },
+                {
+                  "name": "Rúben Dias",
+                  "position": "DF"
+                },
+                {
+                  "name": "John Stones",
+                  "position": "DF"
+                },
+                {
+                  "name": "Rayan Aït-Nouri",
+                  "position": "DF"
+                },
+                {
+                  "name": "Rico Lewis",
+                  "position": "DF"
+                },
+                {
+                  "name": "Nico González",
+                  "position": "MF"
+                },
+                {
+                  "name": "Mateo Kovačić",
+                  "position": "MF"
+                },
+                {
+                  "name": "Phil Foden",
+                  "position": "MF"
+                },
+                {
+                  "name": "Savinho",
+                  "position": "FW"
+                },
+                {
+                  "name": "Omar Marmoush",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "Dean Henderson",
+                  "position": "GK"
+                },
+                {
+                  "name": "Chris Richards",
+                  "position": "DF"
+                },
+                {
+                  "name": "Maxence Lacroix",
+                  "position": "DF"
+                },
+                {
+                  "name": "Jefferson Lerma",
+                  "position": "DF"
+                },
+                {
+                  "name": "Daniel Muñoz",
+                  "position": "MF"
+                },
+                {
+                  "name": "Daichi Kamada",
+                  "position": "MF"
+                },
+                {
+                  "name": "Will Hughes",
+                  "position": "MF"
+                },
+                {
+                  "name": "Tyrick Mitchell",
+                  "position": "MF"
+                },
+                {
+                  "name": "Ismaïla Sarr",
+                  "position": "FW"
+                },
+                {
+                  "name": "Yeremy Pino",
+                  "position": "FW"
+                },
+                {
+                  "name": "Jean-Philippe Mateta",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Walter Benítez",
+                  "position": "GK"
+                },
+                {
+                  "name": "Jaydee Canvot",
+                  "position": "DF"
+                },
+                {
+                  "name": "Ismaila Kone",
+                  "position": "DF"
+                },
+                {
+                  "name": "Adam Wharton",
+                  "position": "MF"
+                },
+                {
+                  "name": "Justin Devenny",
+                  "position": "MF"
+                },
+                {
+                  "name": "Brennan Johnson",
+                  "position": "FW"
+                },
+                {
+                  "name": "Jørgen Strand Larsen",
+                  "position": "FW"
+                },
+                {
+                  "name": "Romain Esse",
+                  "position": "MF"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "3-4-2-1"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "Rayan Cherki",
+              "on": "Phil Foden",
+              "minute": 65
+            },
+            {
+              "team": "home",
+              "off": "Erling Haaland",
+              "on": "Omar Marmoush",
+              "minute": 75
+            },
+            {
+              "team": "home",
+              "off": "Antoine Semenyo",
+              "on": "Savinho",
+              "minute": 75
+            },
+            {
+              "team": "away",
+              "off": "Yeremy Pino",
+              "on": "Brennan Johnson",
+              "minute": 65
+            },
+            {
+              "team": "away",
+              "off": "Daichi Kamada",
+              "on": "Adam Wharton",
+              "minute": 70
+            },
+            {
+              "team": "away",
+              "off": "Jean-Philippe Mateta",
+              "on": "Jørgen Strand Larsen",
+              "minute": 78
+            }
+          ],
+          "cards": [
+            {
+              "player": "Jefferson Lerma",
+              "team": "away",
+              "color": "yellow",
+              "minute": 38
+            },
+            {
+              "player": "Will Hughes",
+              "team": "away",
+              "color": "yellow",
+              "minute": 55
+            },
+            {
+              "player": "Matheus Nunes",
+              "team": "home",
+              "color": "yellow",
+              "minute": 62
+            },
+            {
+              "player": "Tyrick Mitchell",
+              "team": "away",
+              "color": "yellow",
+              "minute": 72
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 66,
+              "away": 34
+            },
+            "shots": {
+              "home": 17,
+              "away": 8
+            },
+            "shots_on_target": {
+              "home": 7,
+              "away": 3
+            },
+            "corners": {
+              "home": 8,
+              "away": 3
+            },
+            "pass_accuracy": {
+              "home": 89,
+              "away": 78
+            },
+            "fouls": {
+              "home": 9,
+              "away": 13
+            },
+            "saves": {
+              "home": 2,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 28,
+              "away": 42
+            }
+          },
+          "cost_usd": 0.533,
+          "sources": [
+            {
+              "url": "https://www.fotmob.com/matches/manchester-city-vs-crystal-palace/2ri9zd",
+              "accessed_at": "2026-05-12T20:05:46.952004+00:00",
+              "title": "Man City vs Crystal Palace - live score, predicted lineups and H2H stats"
+            },
+            {
+              "url": "https://www.cpfc.co.uk/matches/men/epl/2025-26/manchester-city-vs-crystal-palace-2026-05-13/2562201/",
+              "accessed_at": "2026-05-12T20:05:46.952023+00:00",
+              "title": "Crystal Palace vs Manchester City - Match Centre - Crystal Palace F.C."
+            },
+            {
+              "url": "https://dailysports.net/predictions/manchester-city-vs-crystal-palace-prediction-facts-line-ups-betting-tips-and-h2h-13-may-2026/",
+              "accessed_at": "2026-05-12T20:05:46.952027+00:00",
+              "title": "Manchester City vs Crystal Palace prediction and betting tips 13 May 2026 | Dailysports experts"
+            },
+            {
+              "url": "https://www.sportsgambler.com/betting-tips/football/manchester-city-vs-crystal-palace-prediction-lineups-odds-2026-05-13/",
+              "accessed_at": "2026-05-12T20:05:46.952030+00:00",
+              "title": "Manchester City vs Crystal Palace Prediction, Betting Tips, Lineups & Odds | 13 May 2026"
+            },
+            {
+              "url": "https://www.dimers.com/news/manchester-city-vs-crystal-palace-prediction-epl-wednesday-05-13-2026-ac",
+              "accessed_at": "2026-05-12T20:05:46.952033+00:00",
+              "title": "Manchester City vs. Crystal Palace prediction, odds, Premier League picks [5/13/2026]"
+            },
+            {
+              "url": "https://www.premierleague.com/en/match/2562201/manchester-city-vs-crystal-palace",
+              "accessed_at": "2026-05-12T20:05:46.952035+00:00",
+              "title": "Manchester City vs Crystal Palace Match Preview & Report | 2025/2026 | Premier League"
+            },
+            {
+              "url": "https://www.offshoresportsbooks.com/picks/soccer/2026/man-city-vs-crystal-palace-picks-odds-preview-may-13/",
+              "accessed_at": "2026-05-12T20:05:46.952038+00:00",
+              "title": "EPL: Man City vs. Crystal Palace Picks, Odds & Preview (May 13)"
+            },
+            {
+              "url": "https://www.freetips.com/football/english-premier-league/man-city-vs-crystal-palace-predictions-tips-20260511-0011/",
+              "accessed_at": "2026-05-12T20:05:46.952040+00:00",
+              "title": "Man City vs Crystal Palace Predictions & Tips - Home Win & Goals in the Premier League on 13 May, 2026"
+            },
+            {
+              "url": "https://www.transfermarkt.co.uk/betting/tips-today/manchester-city-vs-crystal-palace-prediction-13-05-2026/",
+              "accessed_at": "2026-05-12T20:05:46.952042+00:00",
+              "title": "Manchester City - Crystal Palace prediction & tips 13.05.2026"
+            },
+            {
+              "url": "https://www.sportskeeda.com/football/manchester-city-vs-crystal-palace-prediction-betting-tips-may-13th-2026",
+              "accessed_at": "2026-05-12T20:05:46.952045+00:00",
+              "title": "Manchester City vs Crystal Palace Prediction and Betting Tips | May 13th 2026"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Manchester_City_F.C._season",
+              "accessed_at": "2026-05-12T20:05:46.952048+00:00",
+              "title": "2025–26 Manchester City F.C. season - Wikipedia"
+            },
+            {
+              "url": "https://www.sofascore.com/football/team/manchester-city/17",
+              "accessed_at": "2026-05-12T20:05:46.952050+00:00",
+              "title": "Manchester City live score, schedule & player stats | Sofascore"
+            },
+            {
+              "url": "https://www.fotmob.com/teams/8456/overview/manchester-city",
+              "accessed_at": "2026-05-12T20:05:46.952052+00:00",
+              "title": "Manchester City - fixtures, team info and top players"
+            },
+            {
+              "url": "https://www.mancity.com/citytv/mens/manchester-city-brentford-202526-short-highlights-63913950",
+              "accessed_at": "2026-05-12T20:05:46.952054+00:00",
+              "title": "City 3-0 Brentford: 2-minute highlights - Manchester City"
+            },
+            {
+              "url": "https://www.mancity.com/matchday/fixtures/mens/2025/premier-league/man-city-v-brentford-9-may-2026",
+              "accessed_at": "2026-05-12T20:05:46.952057+00:00",
+              "title": "Man City v Brentford - 9 May 2026"
+            },
+            {
+              "url": "https://oddslot.com/football/match/premier-league-2-division-one/manchester-city-u21/manchester-united-u21/8-may-2026/",
+              "accessed_at": "2026-05-12T20:05:46.952059+00:00",
+              "title": "Manchester City U21 vs Manchester United U21 Predictions, Tips & Odds | ODDSLOT"
+            },
+            {
+              "url": "https://dailysports.net/predictions/manchester-city-vs-crystal-palace-prediction-facts-line-ups-betting-tips-and-h2h-13-may-2026/",
+              "accessed_at": "2026-05-12T20:05:46.952061+00:00",
+              "title": "Manchester City vs Crystal Palace prediction and betting tips 13 May 2026 | Dailysports experts"
+            },
+            {
+              "url": "https://www.espn.com/soccer/report/_/gameId/740951",
+              "accessed_at": "2026-05-12T20:05:46.952064+00:00",
+              "title": "Man City 3-0 Brentford (May 9, 2026) Game Analysis - ESPN"
+            },
+            {
+              "url": "https://www.premierleague.com/en/clubs/43/manchester-city/matches",
+              "accessed_at": "2026-05-12T20:05:46.952066+00:00",
+              "title": "Manchester City Fixtures, Live Matches & Results 2025/2026 | Premier League"
+            },
+            {
+              "url": "https://fbref.com/en/squads/b8fd03ef/Manchester-City-Stats",
+              "accessed_at": "2026-05-12T20:05:46.952068+00:00",
+              "title": "Manchester City Stats, Premier League | FBref.com"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Crystal_Palace_F.C._season",
+              "accessed_at": "2026-05-12T20:05:46.952072+00:00",
+              "title": "2025–26 Crystal Palace F.C. season - Wikipedia"
+            },
+            {
+              "url": "https://www.cpfc.co.uk/news/first-team/team-news-bournemouth-crystal-palace-may-2026/",
+              "accessed_at": "2026-05-12T20:05:46.952074+00:00",
+              "title": "Team News: Five changes for Palace at Bournemouth - News - Crystal Palace F.C."
+            },
+            {
+              "url": "https://www.vavel.com/en/football/2026/05/09/crystal-palace/1260179-glasner-gives-thelowdown-on-palace-prep-for-evertonthe-eagles-return-from-european-action-to-battle-with-asolid-mid-table-side.html",
+              "accessed_at": "2026-05-12T20:05:46.952076+00:00",
+              "title": "Glasner gives the lowdown on Palace prep for Everton - VAVEL International"
+            },
+            {
+              "url": "https://www.fotmob.com/teams/9826/overview/crystal-palace",
+              "accessed_at": "2026-05-12T20:05:46.952079+00:00",
+              "title": "Crystal Palace - fixtures, team info and top players"
+            },
+            {
+              "url": "https://ratingbet.com/predictions/crystal-palace-vs-everton-prediction-teams-form-analysis-possible-lineups-on-may-10-2026/",
+              "accessed_at": "2026-05-12T20:05:46.952081+00:00",
+              "title": "Crystal Palace vs Everton prediction: teams form analysis, possible lineups on May 10, 2026 – Ratingbet.com"
+            },
+            {
+              "url": "https://www.cpfc.co.uk/news/first-team/oliver-glasner-press-conference-crystal-palace-shakhtar-donetsk-may-2026/",
+              "accessed_at": "2026-05-12T20:05:46.952083+00:00",
+              "title": "Glasner: We can write history again - News - Crystal Palace F.C."
+            },
+            {
+              "url": "https://www.cpfc.co.uk/news/first-team/oliver-glasner-reaction-crystal-palace-everton-may-2026/",
+              "accessed_at": "2026-05-12T20:05:46.952086+00:00",
+              "title": "Glasner highlights ‘incredible’ elements of Palace performance - News - Crystal Palace F.C."
+            },
+            {
+              "url": "https://www.sportsgambler.com/betting-tips/football/crystal-palace-vs-everton-prediction-lineups-odds-2026-05-10/",
+              "accessed_at": "2026-05-12T20:05:46.952088+00:00",
+              "title": "Crystal Palace vs Everton Prediction, Betting Tips, Lineups & Odds | 10 May 2026"
+            },
+            {
+              "url": "https://thefootballfaithful.com/crystal-palace-vs-everton-predicted-lineup-and-team-news/",
+              "accessed_at": "2026-05-12T20:05:46.952090+00:00",
+              "title": "Crystal Palace vs Everton – Predicted lineup and team news"
+            },
+            {
+              "url": "https://www.offshoresportsbooks.com/picks/soccer/2026/man-city-vs-crystal-palace-picks-odds-preview-may-13/",
+              "accessed_at": "2026-05-12T20:05:46.952092+00:00",
+              "title": "EPL: Man City vs. Crystal Palace Picks, Odds & Preview (May 13)"
+            },
+            {
+              "url": "https://www.sportsmole.co.uk/football/man-city/injury-news/injuries-and-suspensions/khusanov-rodri-gvardiol-latest-man-city-injury-list-for-crystal-palace-clash_597346.html",
+              "accessed_at": "2026-05-12T20:05:46.952095+00:00",
+              "title": "Man City injury, suspension news and return dates for Crystal Palace clash: Abdukodir Khusanov, Rodri, Josko Gvardiol latest - Sports Mole"
+            },
+            {
+              "url": "https://www.espn.com/soccer/story/_/id/48738302/manchester-city-vs-crystal-palace-tv-channel-kickoff-live-stream-referee-injury-team-news-premier-league-2025-26",
+              "accessed_at": "2026-05-12T20:05:46.952097+00:00",
+              "title": "Manchester City vs. Crystal Palace in Premier League: TV channel, kick-off time, live stream, referee, injury and team news - ESPN"
+            },
+            {
+              "url": "https://www.mancity.com/news/mens/man-city-v-crystal-palace-pep-guardiola-injury-update-63914182",
+              "accessed_at": "2026-05-12T20:05:46.952099+00:00",
+              "title": "Pep shares injury update on Rodri and Khusanov"
+            },
+            {
+              "url": "https://www.fourfourtwo.com/team/is-rodri-available-for-manchester-city-against-crystal-palace-premier-league-injury-update",
+              "accessed_at": "2026-05-12T20:05:46.952101+00:00",
+              "title": "Is Rodri available for Manchester City against Crystal Palace? Premier League injury update | FourFourTwo"
+            },
+            {
+              "url": "https://uk.sports.yahoo.com/news/man-city-xi-vs-crystal-134957061.html",
+              "accessed_at": "2026-05-12T20:05:46.952104+00:00",
+              "title": "Man City XI vs Crystal Palace: Confirmed team news, predicted lineup, injury latest for Premier League - Yahoo Sports"
+            },
+            {
+              "url": "https://www.aol.com/news/man-city-xi-vs-crystal-134957245.html",
+              "accessed_at": "2026-05-12T20:05:46.952106+00:00",
+              "title": "Man City XI vs Crystal Palace: Confirmed team news, predicted lineup, injury latest for Premier League"
+            },
+            {
+              "url": "https://www.sportsmole.co.uk/football/man-city/title-race/preview/man-city-vs-crystal-palace-prediction-team-news-lineups_597342.html",
+              "accessed_at": "2026-05-12T20:05:46.952108+00:00",
+              "title": "Preview: Manchester City vs Crystal Palace - prediction, team news, lineups - Sports Mole"
+            },
+            {
+              "url": "https://www.fotmob.com/matches/manchester-city-vs-crystal-palace/2ri9zd",
+              "accessed_at": "2026-05-12T20:05:46.952110+00:00",
+              "title": "Man City vs Crystal Palace - live score, predicted lineups and H2H stats"
+            },
+            {
+              "url": "https://www.sportsmole.co.uk/football/man-city/injury-news/news/man-city-receive-double-injury-boost-from-guardiola-before-crucial-crystal-palace-clash_597410.html",
+              "accessed_at": "2026-05-12T20:05:46.952112+00:00",
+              "title": "Man City injury news: Pep Guardiola issues reassuring update on two stars names before crucial Crystal Palace clash - Sports Mole"
+            },
+            {
+              "url": "https://www.football365.com/match-preview/man-city-vs-crystal-palace-prediction-preview",
+              "accessed_at": "2026-05-12T20:05:46.952115+00:00",
+              "title": "Man City vs Crystal Palace: Prediction, team news, line-ups and odds"
+            },
+            {
+              "url": "https://www.fotmob.com/matches/manchester-city-vs-crystal-palace/2ri9zd",
+              "accessed_at": "2026-05-12T18:25:00Z",
+              "title": "Man City vs Crystal Palace - FotMob"
+            },
+            {
+              "url": "https://www.espn.com/soccer/story/_/id/48738302/manchester-city-vs-crystal-palace-tv-channel-kickoff-live-stream-referee-injury-team-news-premier-league-2025-26",
+              "accessed_at": "2026-05-12T18:25:00Z",
+              "title": "Manchester City vs Crystal Palace preview - ESPN"
+            },
+            {
+              "url": "https://www.sportsmole.co.uk/football/man-city/title-race/preview/man-city-vs-crystal-palace-prediction-team-news-lineups_597342.html",
+              "accessed_at": "2026-05-12T18:25:00Z",
+              "title": "Man City vs Crystal Palace preview - Sports Mole"
+            },
+            {
+              "url": "https://uk.sports.yahoo.com/news/man-city-xi-vs-crystal-134957061.html",
+              "accessed_at": "2026-05-12T18:25:00Z",
+              "title": "Man City XI vs Crystal Palace - Yahoo Sports"
+            },
+            {
+              "url": "https://www.dimers.com/news/manchester-city-vs-crystal-palace-prediction-epl-wednesday-05-13-2026-ac",
+              "accessed_at": "2026-05-12T18:25:00Z",
+              "title": "Man City vs Crystal Palace prediction - Dimers"
+            },
+            {
+              "url": "https://www.offshoresportsbooks.com/picks/soccer/2026/man-city-vs-crystal-palace-picks-odds-preview-may-13/",
+              "accessed_at": "2026-05-12T18:25:00Z",
+              "title": "Man City vs Crystal Palace preview - Offshoresportsbooks"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Manchester_City_F.C._season",
+              "accessed_at": "2026-05-12T18:25:00Z",
+              "title": "2025-26 Manchester City season - Wikipedia"
+            },
+            {
+              "url": "https://www.cpfc.co.uk/news/first-team/oliver-glasner-reaction-crystal-palace-everton-may-2026/",
+              "accessed_at": "2026-05-12T18:25:00Z",
+              "title": "Glasner highlights performance - CPFC"
+            }
+          ],
+          "over_3_5_prob": 0.33
+        },
+        {
+          "model_id": "claude-opus-4-7-thinking",
+          "setting": "S1",
+          "win_probs": {
+            "home": 0.72,
+            "draw": 0.18,
+            "away": 0.1
+          },
+          "score_dist": [
+            {
+              "score": "2-0",
+              "p": 0.12
+            },
+            {
+              "score": "1-0",
+              "p": 0.099
+            },
+            {
+              "score": "3-0",
+              "p": 0.098
+            },
+            {
+              "score": "2-1",
+              "p": 0.096
+            },
+            {
+              "score": "1-1",
+              "p": 0.09
+            },
+            {
+              "score": "3-1",
+              "p": 0.078
+            },
+            {
+              "score": "4-0",
+              "p": 0.059
+            },
+            {
+              "score": "4-1",
+              "p": 0.047
+            },
+            {
+              "score": "0-0",
+              "p": 0.046
+            },
+            {
+              "score": "2-2",
+              "p": 0.044
+            },
+            {
+              "score": "0-1",
+              "p": 0.037
+            },
+            {
+              "score": "1-2",
+              "p": 0.036
+            },
+            {
+              "score": "3-2",
+              "p": 0.031
+            },
+            {
+              "score": "5-0",
+              "p": 0.029
+            },
+            {
+              "score": "5-1",
+              "p": 0.023
+            },
+            {
+              "score": "4-2",
+              "p": 0.019
+            },
+            {
+              "score": "0-2",
+              "p": 0.015
+            },
+            {
+              "score": "2-3",
+              "p": 0.012
+            },
+            {
+              "score": "6-0",
+              "p": 0.012
+            },
+            {
+              "score": "6-1",
+              "p": 0.009
+            }
+          ],
+          "most_likely_score": "2-0",
+          "expected_goal_diff": 1.6,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Manchester City are in excellent form (7W-2D-1L last 10) and at home at the Etihad they remain dominant, with Haaland in scoring touch and a deep squad firing on all cylinders. Crystal Palace, while competitive under Glasner, are juggling Europa Conference League commitments and have shown rotation, with Glasner publicly defending squad rotation vs City/Arsenal. Palace lost 0-3 to Bournemouth and 1-3 to Liverpool recently, suggesting vulnerability in high-stakes away trips. City's quality, home advantage, and Palace's likely rotated XI point to a clear home win, though Palace can punch on the counter via Sarr/Mateta.",
+            "t1_result": "City's home form, attacking output, and Palace's rotation strongly favor a home win; draw mass exists due to Palace's defensive resilience but away win unlikely given Palace's recent away results.",
+            "t2_player": "City lines up in 4-2-3-1 with Haaland leading; Rodri and Kovačić anchor midfield. Palace likely rotate with Mateta and Sarr starting but possibly resting key midfielders given Europa schedule.",
+            "t3_events": "Expect City to dominate early possession, Haaland to threaten constantly; Palace likely sit deep, foul tactically (yellow cards). Subs around 60-70' to manage minutes.",
+            "t4_stats": "City heavily dominate possession (~67%), shots (18+), and corners. Palace fewer shots, more fouls, more defensive actions; Benítez busy in goal."
+          },
+          "scorers": [
+            {
+              "player": "E. Haaland",
+              "team": "home",
+              "minute_range": [
+                10,
+                75
+              ],
+              "p": 0.65
+            },
+            {
+              "player": "P. Foden",
+              "team": "home",
+              "minute_range": [
+                20,
+                80
+              ],
+              "p": 0.32
+            },
+            {
+              "player": "Bernardo Silva",
+              "team": "home",
+              "minute_range": [
+                15,
+                80
+              ],
+              "p": 0.22
+            },
+            {
+              "player": "J. Doku",
+              "team": "home",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.2
+            },
+            {
+              "player": "Omar Marmoush",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.18
+            },
+            {
+              "player": "R. Cherki",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.12
+            },
+            {
+              "player": "T. Reijnders",
+              "team": "home",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.15
+            },
+            {
+              "player": "J. Mateta",
+              "team": "away",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.24
+            },
+            {
+              "player": "I. Sarr",
+              "team": "away",
+              "minute_range": [
+                25,
+                85
+              ],
+              "p": 0.18
+            },
+            {
+              "player": "Yeremy Pino",
+              "team": "away",
+              "minute_range": [
+                30,
+                85
+              ],
+              "p": 0.12
+            },
+            {
+              "player": "E. Nketiah",
+              "team": "away",
+              "minute_range": [
+                65,
+                90
+              ],
+              "p": 0.1
+            }
+          ],
+          "assisters": [
+            {
+              "player": "P. Foden",
+              "team": "home",
+              "p": 0.28
+            },
+            {
+              "player": "Bernardo Silva",
+              "team": "home",
+              "p": 0.25
+            },
+            {
+              "player": "J. Doku",
+              "team": "home",
+              "p": 0.22
+            },
+            {
+              "player": "R. Aït-Nouri",
+              "team": "home",
+              "p": 0.18
+            },
+            {
+              "player": "D. Muñoz",
+              "team": "away",
+              "p": 0.15
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "E. Haaland",
+              "team": "home",
+              "p": 0.4
+            },
+            {
+              "player": "P. Foden",
+              "team": "home",
+              "p": 0.18
+            },
+            {
+              "player": "Bernardo Silva",
+              "team": "home",
+              "p": 0.14
+            },
+            {
+              "player": "J. Doku",
+              "team": "home",
+              "p": 0.1
+            },
+            {
+              "player": "J. Mateta",
+              "team": "away",
+              "p": 0.06
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "G. Donnarumma",
+                  "position": "GK"
+                },
+                {
+                  "name": "R. Lewis",
+                  "position": "DF"
+                },
+                {
+                  "name": "Rúben Dias",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Stones",
+                  "position": "DF"
+                },
+                {
+                  "name": "R. Aït-Nouri",
+                  "position": "DF"
+                },
+                {
+                  "name": "Rodri",
+                  "position": "MF"
+                },
+                {
+                  "name": "T. Reijnders",
+                  "position": "MF"
+                },
+                {
+                  "name": "Bernardo Silva",
+                  "position": "MF"
+                },
+                {
+                  "name": "P. Foden",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Doku",
+                  "position": "MF"
+                },
+                {
+                  "name": "E. Haaland",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "J. Trafford",
+                  "position": "GK"
+                },
+                {
+                  "name": "N. Aké",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Gvardiol",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. Guéhi",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. Kovačić",
+                  "position": "MF"
+                },
+                {
+                  "name": "Nico González",
+                  "position": "MF"
+                },
+                {
+                  "name": "R. Cherki",
+                  "position": "MF"
+                },
+                {
+                  "name": "Omar Marmoush",
+                  "position": "FW"
+                },
+                {
+                  "name": "Sávio",
+                  "position": "FW"
+                },
+                {
+                  "name": "A. Semenyo",
+                  "position": "MF"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "W. Benítez",
+                  "position": "GK"
+                },
+                {
+                  "name": "D. Muñoz",
+                  "position": "DF"
+                },
+                {
+                  "name": "C. Richards",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. Lacroix",
+                  "position": "DF"
+                },
+                {
+                  "name": "B. Sosa",
+                  "position": "DF"
+                },
+                {
+                  "name": "A. Wharton",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Lerma",
+                  "position": "MF"
+                },
+                {
+                  "name": "T. Mitchell",
+                  "position": "MF"
+                },
+                {
+                  "name": "Yeremy Pino",
+                  "position": "MF"
+                },
+                {
+                  "name": "I. Sarr",
+                  "position": "FW"
+                },
+                {
+                  "name": "J. Mateta",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "D. Henderson",
+                  "position": "GK"
+                },
+                {
+                  "name": "N. Clyne",
+                  "position": "DF"
+                },
+                {
+                  "name": "C. Riad",
+                  "position": "DF"
+                },
+                {
+                  "name": "W. Hughes",
+                  "position": "MF"
+                },
+                {
+                  "name": "D. Kamada",
+                  "position": "MF"
+                },
+                {
+                  "name": "Christantus Uche",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Devenny",
+                  "position": "MF"
+                },
+                {
+                  "name": "E. Guessand",
+                  "position": "FW"
+                },
+                {
+                  "name": "E. Nketiah",
+                  "position": "FW"
+                },
+                {
+                  "name": "J. Strand Larsen",
+                  "position": "FW"
+                },
+                {
+                  "name": "B. Johnson",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "4-3-3"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "P. Foden",
+              "on": "R. Cherki",
+              "minute": 68
+            },
+            {
+              "team": "home",
+              "off": "J. Doku",
+              "on": "Sávio",
+              "minute": 72
+            },
+            {
+              "team": "home",
+              "off": "Rodri",
+              "on": "M. Kovačić",
+              "minute": 75
+            },
+            {
+              "team": "home",
+              "off": "E. Haaland",
+              "on": "Omar Marmoush",
+              "minute": 80
+            },
+            {
+              "team": "away",
+              "off": "Yeremy Pino",
+              "on": "E. Guessand",
+              "minute": 65
+            },
+            {
+              "team": "away",
+              "off": "T. Mitchell",
+              "on": "W. Hughes",
+              "minute": 70
+            },
+            {
+              "team": "away",
+              "off": "J. Mateta",
+              "on": "E. Nketiah",
+              "minute": 78
+            }
+          ],
+          "cards": [
+            {
+              "player": "J. Lerma",
+              "team": "away",
+              "color": "yellow",
+              "minute": 35
+            },
+            {
+              "player": "M. Lacroix",
+              "team": "away",
+              "color": "yellow",
+              "minute": 55
+            },
+            {
+              "player": "Rodri",
+              "team": "home",
+              "color": "yellow",
+              "minute": 62
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 67,
+              "away": 33
+            },
+            "shots": {
+              "home": 18,
+              "away": 8
+            },
+            "shots_on_target": {
+              "home": 7,
+              "away": 3
+            },
+            "corners": {
+              "home": 8,
+              "away": 3
+            },
+            "pass_accuracy": {
+              "home": 89,
+              "away": 78
+            },
+            "fouls": {
+              "home": 9,
+              "away": 14
+            },
+            "saves": {
+              "home": 2,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 28,
+              "away": 42
+            }
+          },
+          "cost_usd": 0.113,
+          "sources": [],
+          "over_3_5_prob": 0.363
+        }
+      ],
       "live": null
     },
     {
@@ -160,6 +1498,24 @@
         "kickoff_utc": "2026-05-18T19:00:00+00:00",
         "lock_at_utc": "2026-05-17T19:00:00+00:00",
         "venue": "Emirates Stadium",
+        "venue_city": "London",
+        "venue_country": "England",
+        "stage": "Regular Season - 37",
+        "competition": "Premier League"
+      },
+      "predictions": [],
+      "live": null
+    },
+    {
+      "fixture": {
+        "wca_id": "Premier-League_Chelsea_Tottenham_2026-05-19",
+        "home": "Chelsea",
+        "home_logo": "https://media.api-sports.io/football/teams/49.png",
+        "away": "Tottenham",
+        "away_logo": "https://media.api-sports.io/football/teams/47.png",
+        "kickoff_utc": "2026-05-19T19:15:00+00:00",
+        "lock_at_utc": "2026-05-18T19:15:00+00:00",
+        "venue": "Stamford Bridge",
         "venue_city": "London",
         "venue_country": "England",
         "stage": "Regular Season - 37",
