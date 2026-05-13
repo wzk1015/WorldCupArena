@@ -23,7 +23,10 @@
 closed_llm:
   - id: gemini-3.1-pro-preview-thinking
     provider: google
-    model: gemini-3.1-pro-preview-thinking
+    # model: gemini-3.1-pro-preview-thinking
+    model: gemini-3.1-pro-preview
+    thinking_level: low
+    include_thoughts: true
     api_key_env: GOOGLE_API_KEY
     base_url_env: GOOGLE_BASE_URL
     base_url: https://generativelanguage.googleapis.com/v1beta
@@ -41,6 +44,8 @@ closed_llm:
   - id: gpt-5.4
     provider: openai
     model: gpt-5.4
+    reasoning_effort: low
+    reasoning_summary: auto
     api_key_env: OPENAI_API_KEY
     base_url_env: OPENAI_BASE_URL
     base_url: https://api.openai.com/v1
@@ -151,7 +156,9 @@ closed_llm:
 search_llm:
   - id: gemini-3.1-pro-preview-thinking-search
     provider: google
-    model: gemini-3.1-pro-preview-thinking
+    model: gemini-3.1-pro-preview
+    thinking_level: low
+    include_thoughts: true
     api_key_env: GOOGLE_API_KEY
     base_url_env: GOOGLE_BASE_URL
     base_url: https://generativelanguage.googleapis.com/v1beta
@@ -171,6 +178,8 @@ search_llm:
   - id: gpt-5.4-search
     provider: openai
     model: gpt-5.4
+    reasoning_effort: low
+    reasoning_summary: auto
     api_key_env: OPENAI_API_KEY
     base_url_env: OPENAI_BASE_URL
     base_url: https://api.openai.com/v1

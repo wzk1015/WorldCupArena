@@ -17,31 +17,53 @@ from .base import BaseRunner
 class OpenAICompatRunner(BaseRunner):
     category = "closed_llm"  # overridden at runtime for open_llm / search_llm / agents
 
+    def __init__(self, model_cfg: dict[str, Any]):
+        super().__init__(model_cfg)
+        tools = model_cfg.get("tools") or []
+        self.use_search = "web_search" in tools
+        self.use_reasoning = bool(
+            model_cfg.get("reasoning_effort")
+            or (model_cfg.get("provider") == "openai" and model_cfg.get("model", "").startswith("gpt-5"))
+        )
+
+    def _is_official_openai_api(self) -> bool:
+        url = self.base_url() or ""
+        return self.cfg.get("provider") == "openai" and "api.openai.com" in url
+
     def _client(self) -> OpenAI:
         # import ipdb; ipdb.set_trace()
         return OpenAI(api_key=self.api_key(), base_url=self.base_url())
 
     def generate(self, system_prompt: str, messages: list[dict[str, Any]]) -> dict[str, Any]:
+        if self._is_official_openai_api() and (self.use_reasoning or self.use_search):
+            return self._generate_responses(system_prompt, messages)
+        return self._generate_chat_completions(system_prompt, messages)
+
+    def _generate_chat_completions(
+        self,
+        system_prompt: str,
+        messages: list[dict[str, Any]],
+    ) -> dict[str, Any]:
         client = self._client()
 
-        if "gpt" in self.cfg["model"]: 
-            resp = client.chat.completions.create(
-                model=self.cfg["model"],
-                messages=[{"role": "system", "content": system_prompt}, *messages],
-                response_format={"type": "json_object"},
-                temperature=self.cfg.get("temperature", 0.3),
-                max_completion_tokens=self.cfg.get("max_tokens", 8192),
-            )
+        kwargs: dict[str, Any] = {
+            "model": self.cfg["model"],
+            "messages": [{"role": "system", "content": system_prompt}, *messages],
+            "response_format": {"type": "json_object"},
+            "temperature": self.cfg.get("temperature", 0.3),
+        }
+        if "gpt" in self.cfg["model"]:
+            kwargs["max_completion_tokens"] = self.cfg.get("max_tokens", 8192)
+            if self.use_reasoning:
+                kwargs["reasoning_effort"] = self.cfg.get("reasoning_effort", "low")
+            if self.use_search:
+                kwargs["web_search_options"] = {}
         else:
-            resp = client.chat.completions.create(
-                model=self.cfg["model"],
-                messages=[{"role": "system", "content": system_prompt}, *messages],
-                response_format={"type": "json_object"},
-                temperature=self.cfg.get("temperature", 0.3),
-                # max_tokens is universally supported across all OpenAI-compat providers
-                # (Zhipu, Moonshot, DashScope, xAI, etc.); max_completion_tokens is OpenAI-only
-                max_tokens=self.cfg.get("max_tokens", 8192),
-            )
+            # max_tokens is universally supported across all OpenAI-compat providers
+            # (Zhipu, Moonshot, DashScope, xAI, etc.); max_completion_tokens is OpenAI-only
+            kwargs["max_tokens"] = self.cfg.get("max_tokens", 8192)
+
+        resp = client.chat.completions.create(**kwargs)
         text = resp.choices[0].message.content or ""
         usage = resp.usage
         return {
@@ -52,3 +74,83 @@ class OpenAICompatRunner(BaseRunner):
             "tool_calls": 0,
             "sources": [],
         }
+
+    def _generate_responses(
+        self,
+        system_prompt: str,
+        messages: list[dict[str, Any]],
+    ) -> dict[str, Any]:
+        client = self._client()
+        kwargs: dict[str, Any] = {
+            "model": self.cfg["model"],
+            "instructions": system_prompt,
+            "input": messages,
+            "max_output_tokens": self.cfg.get("max_tokens", 8192),
+        }
+        if not self.use_search:
+            kwargs["text"] = {"format": {"type": "json_object"}}
+        if self.use_reasoning:
+            kwargs["reasoning"] = {
+                "effort": self.cfg.get("reasoning_effort", "low"),
+                "summary": self.cfg.get("reasoning_summary", "auto"),
+            }
+        if self.use_search:
+            kwargs["tools"] = [{"type": "web_search"}]
+            kwargs["tool_choice"] = "auto"
+            kwargs["include"] = ["web_search_call.action.sources"]
+
+        resp = client.responses.create(**kwargs)
+
+        text = getattr(resp, "output_text", None) or ""
+        thinking_parts: list[str] = []
+        sources: list[dict[str, Any]] = []
+        tool_calls = 0
+
+        for item in resp.output or []:
+            item_type = getattr(item, "type", None)
+            if item_type == "reasoning":
+                for summary in getattr(item, "summary", None) or []:
+                    summary_text = getattr(summary, "text", None)
+                    if summary_text:
+                        thinking_parts.append(summary_text)
+            elif item_type == "web_search_call":
+                tool_calls += 1
+                action = getattr(item, "action", None)
+                for source in getattr(action, "sources", None) or []:
+                    url = getattr(source, "url", None)
+                    if url:
+                        self._append_source(sources, {"url": url, "accessed_at": self.now_iso()})
+                url = getattr(action, "url", None)
+                if url:
+                    self._append_source(sources, {"url": url, "accessed_at": self.now_iso()})
+            elif item_type == "message":
+                for content in getattr(item, "content", None) or []:
+                    if not text and getattr(content, "text", None):
+                        text += content.text
+                    for ann in getattr(content, "annotations", None) or []:
+                        if getattr(ann, "type", None) == "url_citation":
+                            self._append_source(
+                                sources,
+                                {
+                                    "url": getattr(ann, "url", None),
+                                    "accessed_at": self.now_iso(),
+                                    "title": getattr(ann, "title", None),
+                                },
+                            )
+
+        usage = resp.usage
+        return {
+            "text": text,
+            "thinking": "\n\n".join(thinking_parts) or None,
+            "input_tokens": usage.input_tokens if usage else 0,
+            "output_tokens": usage.output_tokens if usage else 0,
+            "tool_calls": tool_calls,
+            "sources": sources,
+        }
+
+    @staticmethod
+    def _append_source(sources: list[dict[str, Any]], source: dict[str, Any]) -> None:
+        if not source.get("url"):
+            return
+        if all(existing.get("url") != source["url"] for existing in sources):
+            sources.append(source)
