@@ -3879,7 +3879,60 @@
           "over_3_5_prob": 0.292
         }
       ],
-      "live": null
+      "live": {
+        "status": "Halftime",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "events": [
+          {
+            "time": {
+              "elapsed": 28,
+              "extra": null
+            },
+            "team": {
+              "id": 44,
+              "name": "Burnley",
+              "logo": "https://media.api-sports.io/football/teams/44.png"
+            },
+            "player": {
+              "id": 180560,
+              "name": "H. Mejbri"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Delay of game"
+          },
+          {
+            "time": {
+              "elapsed": 37,
+              "extra": null
+            },
+            "team": {
+              "id": 42,
+              "name": "Arsenal",
+              "logo": "https://media.api-sports.io/football/teams/42.png"
+            },
+            "player": {
+              "id": 978,
+              "name": "K. Havertz"
+            },
+            "assist": {
+              "id": 1460,
+              "name": "B. Saka"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          }
+        ]
+      }
     },
     {
       "fixture": {
@@ -3896,7 +3949,3472 @@
         "stage": "Regular Season - 37",
         "competition": "Premier League"
       },
-      "predictions": [],
+      "predictions": [
+        {
+          "model_id": "claude-opus-4-7-thinking-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.46,
+            "draw": 0.26,
+            "away": 0.28
+          },
+          "score_dist": [
+            {
+              "score": "2-1",
+              "p": 0.13
+            },
+            {
+              "score": "1-1",
+              "p": 0.124
+            },
+            {
+              "score": "2-0",
+              "p": 0.084
+            },
+            {
+              "score": "0-1",
+              "p": 0.083
+            },
+            {
+              "score": "1-0",
+              "p": 0.076
+            },
+            {
+              "score": "1-2",
+              "p": 0.074
+            },
+            {
+              "score": "0-0",
+              "p": 0.07
+            },
+            {
+              "score": "2-2",
+              "p": 0.055
+            },
+            {
+              "score": "3-1",
+              "p": 0.05
+            },
+            {
+              "score": "0-2",
+              "p": 0.047
+            },
+            {
+              "score": "3-0",
+              "p": 0.044
+            },
+            {
+              "score": "3-2",
+              "p": 0.029
+            },
+            {
+              "score": "1-3",
+              "p": 0.028
+            },
+            {
+              "score": "2-3",
+              "p": 0.022
+            },
+            {
+              "score": "4-1",
+              "p": 0.019
+            },
+            {
+              "score": "0-3",
+              "p": 0.018
+            },
+            {
+              "score": "4-0",
+              "p": 0.017
+            },
+            {
+              "score": "4-2",
+              "p": 0.011
+            },
+            {
+              "score": "3-3",
+              "p": 0.011
+            },
+            {
+              "score": "1-4",
+              "p": 0.008
+            }
+          ],
+          "most_likely_score": "2-1",
+          "expected_goal_diff": 0.4,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Chelsea host Spurs at Stamford Bridge in a fixture where form and history pull in opposite directions. Chelsea were beaten 1-0 by Manchester City in the FA Cup final at Wembley and have managed just two victories in their last 12 matches across all competitions, with interim boss Calum McFarlane having taken over from the sacked Liam Rosenior. However, Tottenham have won just one of their last 35 away games in the league at Stamford Bridge, with that win coming back in 2018, and Chelsea continue to dominate recent meetings, having won five consecutive matches against Spurs including a 1-0 away victory earlier this season. Spurs are on a four-match unbeaten run under De Zerbi and only need a point to all-but-confirm safety. The data-modelling consensus (Dimers 54% home, bookies ~51% home) plus the historic ground edge tilt the forecast Chelsea's way, but the goal-environment is moderate-to-open given Chelsea's defensive issues.",
+            "t1_result": "Bookmakers and models cluster around 50-55% Chelsea, 22-25% draw, 22-26% Spurs. The Stamford Bridge fortress factor and 5-0 H2H run for Chelsea outweigh Tottenham's marginal form edge, but Chelsea's terrible 2-in-12 run prevents me from going higher than ~46% home. Headline score 2-1 reflects Chelsea winning while acknowledging Spurs' goal threat.",
+            "t2_player": "Chelsea likely deploy 4-2-3-1 with Sanchez; James, Chalobah, Colwill, Cucurella; Caicedo, Fernandez; Neto, Palmer, Garnacho; Joao Pedro. Spurs go 4-2-3-1 with Vicario back from hernia surgery, Porro-Danso-Van de Ven-Udogie back four, Bentancur-Palhinha screening, Gallagher behind Kolo Muani/Tel supporting Richarlison. Palmer and Joao Pedro are Chelsea's primary goal threats; Tel and Richarlison carry Spurs' chances.",
+            "t3_events": "Expect a competitive London derby with stakes high for both — Chelsea chasing Europe, Spurs sealing safety. BTTS hit 61% in Chelsea matches this season; expect goals at both ends but Chelsea's home advantage and set-piece quality from James/Palmer crosses tilt the late game. Substitutions likely around 60-70 minutes with Maddison potentially introduced for Spurs.",
+            "t4_stats": "Chelsea typically dominate possession at home (~55-58%) with higher shot volume. Spurs under De Zerbi build patiently but Palhinha brings physicality and fouls. Expect Chelsea ~14 shots, Spurs ~11, with Palmer-led set pieces generating corners. Pass accuracy in the high 70s/low 80s for both."
+          },
+          "scorers": [
+            {
+              "player": "Cole Palmer",
+              "team": "home",
+              "minute_range": [
+                20,
+                75
+              ],
+              "p": 0.32
+            },
+            {
+              "player": "Joao Pedro",
+              "team": "home",
+              "minute_range": [
+                25,
+                85
+              ],
+              "p": 0.24
+            },
+            {
+              "player": "Alejandro Garnacho",
+              "team": "home",
+              "minute_range": [
+                30,
+                85
+              ],
+              "p": 0.16
+            },
+            {
+              "player": "Pedro Neto",
+              "team": "home",
+              "minute_range": [
+                25,
+                80
+              ],
+              "p": 0.14
+            },
+            {
+              "player": "Enzo Fernandez",
+              "team": "home",
+              "minute_range": [
+                20,
+                80
+              ],
+              "p": 0.12
+            },
+            {
+              "player": "Richarlison",
+              "team": "away",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.22
+            },
+            {
+              "player": "Mathys Tel",
+              "team": "away",
+              "minute_range": [
+                25,
+                85
+              ],
+              "p": 0.2
+            },
+            {
+              "player": "Randal Kolo Muani",
+              "team": "away",
+              "minute_range": [
+                25,
+                80
+              ],
+              "p": 0.16
+            },
+            {
+              "player": "Pedro Porro",
+              "team": "away",
+              "minute_range": [
+                30,
+                85
+              ],
+              "p": 0.09
+            },
+            {
+              "player": "Conor Gallagher",
+              "team": "away",
+              "minute_range": [
+                30,
+                85
+              ],
+              "p": 0.08
+            }
+          ],
+          "assisters": [
+            {
+              "player": "Cole Palmer",
+              "team": "home",
+              "p": 0.22
+            },
+            {
+              "player": "Reece James",
+              "team": "home",
+              "p": 0.16
+            },
+            {
+              "player": "Pedro Neto",
+              "team": "home",
+              "p": 0.15
+            },
+            {
+              "player": "Pedro Porro",
+              "team": "away",
+              "p": 0.15
+            },
+            {
+              "player": "Mathys Tel",
+              "team": "away",
+              "p": 0.13
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "Cole Palmer",
+              "team": "home",
+              "p": 0.28
+            },
+            {
+              "player": "Joao Pedro",
+              "team": "home",
+              "p": 0.14
+            },
+            {
+              "player": "Enzo Fernandez",
+              "team": "home",
+              "p": 0.1
+            },
+            {
+              "player": "Mathys Tel",
+              "team": "away",
+              "p": 0.12
+            },
+            {
+              "player": "Guglielmo Vicario",
+              "team": "away",
+              "p": 0.09
+            },
+            {
+              "player": "Richarlison",
+              "team": "away",
+              "p": 0.09
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Robert Sanchez",
+                  "position": "GK"
+                },
+                {
+                  "name": "Reece James",
+                  "position": "DF"
+                },
+                {
+                  "name": "Trevoh Chalobah",
+                  "position": "DF"
+                },
+                {
+                  "name": "Levi Colwill",
+                  "position": "DF"
+                },
+                {
+                  "name": "Marc Cucurella",
+                  "position": "DF"
+                },
+                {
+                  "name": "Moises Caicedo",
+                  "position": "MF"
+                },
+                {
+                  "name": "Enzo Fernandez",
+                  "position": "MF"
+                },
+                {
+                  "name": "Pedro Neto",
+                  "position": "MF"
+                },
+                {
+                  "name": "Cole Palmer",
+                  "position": "MF"
+                },
+                {
+                  "name": "Alejandro Garnacho",
+                  "position": "MF"
+                },
+                {
+                  "name": "Joao Pedro",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Filip Jorgensen",
+                  "position": "GK"
+                },
+                {
+                  "name": "Wesley Fofana",
+                  "position": "DF"
+                },
+                {
+                  "name": "Malo Gusto",
+                  "position": "DF"
+                },
+                {
+                  "name": "Benoit Badiashile",
+                  "position": "DF"
+                },
+                {
+                  "name": "Josh Acheampong",
+                  "position": "DF"
+                },
+                {
+                  "name": "Mamadou Sarr",
+                  "position": "DF"
+                },
+                {
+                  "name": "Tyrique George",
+                  "position": "FW"
+                },
+                {
+                  "name": "Christopher Nkunku",
+                  "position": "FW"
+                },
+                {
+                  "name": "Kiernan Dewsbury-Hall",
+                  "position": "MF"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "Guglielmo Vicario",
+                  "position": "GK"
+                },
+                {
+                  "name": "Pedro Porro",
+                  "position": "DF"
+                },
+                {
+                  "name": "Kevin Danso",
+                  "position": "DF"
+                },
+                {
+                  "name": "Micky van de Ven",
+                  "position": "DF"
+                },
+                {
+                  "name": "Destiny Udogie",
+                  "position": "DF"
+                },
+                {
+                  "name": "Rodrigo Bentancur",
+                  "position": "MF"
+                },
+                {
+                  "name": "Joao Palhinha",
+                  "position": "MF"
+                },
+                {
+                  "name": "Conor Gallagher",
+                  "position": "MF"
+                },
+                {
+                  "name": "Randal Kolo Muani",
+                  "position": "FW"
+                },
+                {
+                  "name": "Mathys Tel",
+                  "position": "FW"
+                },
+                {
+                  "name": "Richarlison",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Antonin Kinsky",
+                  "position": "GK"
+                },
+                {
+                  "name": "Djed Spence",
+                  "position": "DF"
+                },
+                {
+                  "name": "Radu Dragusin",
+                  "position": "DF"
+                },
+                {
+                  "name": "Archie Gray",
+                  "position": "MF"
+                },
+                {
+                  "name": "Pape Sarr",
+                  "position": "MF"
+                },
+                {
+                  "name": "Lucas Bergvall",
+                  "position": "MF"
+                },
+                {
+                  "name": "James Maddison",
+                  "position": "MF"
+                },
+                {
+                  "name": "Yves Bissouma",
+                  "position": "MF"
+                },
+                {
+                  "name": "James Wilson",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "Alejandro Garnacho",
+              "on": "Tyrique George",
+              "minute": 70
+            },
+            {
+              "team": "home",
+              "off": "Joao Pedro",
+              "on": "Christopher Nkunku",
+              "minute": 75
+            },
+            {
+              "team": "home",
+              "off": "Pedro Neto",
+              "on": "Malo Gusto",
+              "minute": 82
+            },
+            {
+              "team": "away",
+              "off": "Conor Gallagher",
+              "on": "James Maddison",
+              "minute": 65
+            },
+            {
+              "team": "away",
+              "off": "Richarlison",
+              "on": "Lucas Bergvall",
+              "minute": 75
+            },
+            {
+              "team": "away",
+              "off": "Mathys Tel",
+              "on": "Pape Sarr",
+              "minute": 82
+            }
+          ],
+          "cards": [
+            {
+              "player": "Joao Palhinha",
+              "team": "away",
+              "color": "yellow",
+              "minute": 35
+            },
+            {
+              "player": "Moises Caicedo",
+              "team": "home",
+              "color": "yellow",
+              "minute": 55
+            },
+            {
+              "player": "Destiny Udogie",
+              "team": "away",
+              "color": "yellow",
+              "minute": 68
+            },
+            {
+              "player": "Reece James",
+              "team": "home",
+              "color": "yellow",
+              "minute": 78
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 56,
+              "away": 44
+            },
+            "shots": {
+              "home": 14,
+              "away": 11
+            },
+            "shots_on_target": {
+              "home": 5,
+              "away": 4
+            },
+            "corners": {
+              "home": 6,
+              "away": 4
+            },
+            "pass_accuracy": {
+              "home": 83,
+              "away": 80
+            },
+            "fouls": {
+              "home": 11,
+              "away": 13
+            },
+            "saves": {
+              "home": 3,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 32,
+              "away": 36
+            }
+          },
+          "cost_usd": 0.296,
+          "sources": [
+            {
+              "url": "https://dailysports.net/predictions/chelsea-vs-tottenham-prediction-match-preview-and-probable-lineups-may-19-2026/",
+              "accessed_at": "2026-05-18T19:59:18.513471+00:00",
+              "title": "Chelsea vs Tottenham prediction and betting tips 19 May 2026 | Dailysports experts"
+            },
+            {
+              "url": "https://www.sportsgambler.com/betting-tips/football/chelsea-vs-tottenham-prediction-lineups-odds-2026-05-19/",
+              "accessed_at": "2026-05-18T19:59:18.513487+00:00",
+              "title": "Chelsea vs Tottenham Prediction, Betting Tips, Lineups & Odds | 19 May 2026"
+            },
+            {
+              "url": "https://www.spurs-web.com/tottenham-match-previews/chelsea-vs-tottenham-premier-league-preview-team-news-and-predicted-lineups/",
+              "accessed_at": "2026-05-18T19:59:18.513491+00:00",
+              "title": "Chelsea vs Tottenham Premier League preview: Team news and predicted lineups - Spurs Web"
+            },
+            {
+              "url": "https://www.premierleague.com/en/match/2562259/chelsea-vs-tottenham-hotspur",
+              "accessed_at": "2026-05-18T19:59:18.513493+00:00",
+              "title": "Chelsea vs Tottenham Hotspur Match Preview & Report | 2025/2026 | Premier League"
+            },
+            {
+              "url": "https://www.dimers.com/news/chelsea-vs-tottenham-prediction-epl-tuesday-05-19-2026-ac",
+              "accessed_at": "2026-05-18T19:59:18.513496+00:00",
+              "title": "Chelsea vs. Tottenham prediction, odds, Premier League picks [5/19/2026]"
+            },
+            {
+              "url": "https://easyodds.com/chelsea-vs-tottenham-betting-odds-tips-predictions-preview-19th-may-2026",
+              "accessed_at": "2026-05-18T19:59:18.513498+00:00",
+              "title": "Chelsea vs Tottenham Betting Odds, Tips, Predictions, Preview 19th May 2026"
+            },
+            {
+              "url": "https://www.forebet.com/en/football/matches/chelsea-tottenham-2316106",
+              "accessed_at": "2026-05-18T19:59:18.513501+00:00",
+              "title": "Chelsea vs Tottenham Prediction, Stats, H2H - 19 May 2026"
+            },
+            {
+              "url": "https://news.williamhill.com/football/chelsea-vs-tottenham-hotspur-prediction-premier-league-tips-2026/",
+              "accessed_at": "2026-05-18T19:59:18.513503+00:00",
+              "title": "Safety Within Reach: 4/5 Tottenham or Draw Headlines Massive Tuesday Night Derby at Chelsea"
+            },
+            {
+              "url": "https://uk.sports.yahoo.com/news/tottenham-xi-vs-chelsea-confirmed-143930227.html",
+              "accessed_at": "2026-05-18T19:59:18.513506+00:00",
+              "title": "Tottenham XI vs Chelsea: Confirmed team news, predicted lineup, injury latest for Premier League - Yahoo Sports"
+            },
+            {
+              "url": "https://www.tottenhamhotspurnews.com/tottenham-hotspur/tottenham-hotspur-match/chelsea-vs-tottenham-preview-team-news-likely-lineups-and-score-prediction/",
+              "accessed_at": "2026-05-18T19:59:18.513508+00:00",
+              "title": "Chelsea vs Tottenham preview: Team news, likely lineups and score prediction"
+            },
+            {
+              "url": "https://www.msn.com/en-gb/sport/football/chelsea-xi-vs-tottenham-confirmed-team-news-and-predicted-lineup/ar-AA23tDb9",
+              "accessed_at": "2026-05-18T19:59:18.513511+00:00",
+              "title": "Chelsea XI vs Tottenham: Confirmed team news and predicted lineup"
+            },
+            {
+              "url": "https://uk.sports.yahoo.com/news/chelsea-xi-vs-tottenham-confirmed-113531364.html",
+              "accessed_at": "2026-05-18T19:59:18.513513+00:00",
+              "title": "Chelsea XI vs Tottenham: Confirmed team news, predicted lineup, injury latest for Premier League - Yahoo Sports"
+            },
+            {
+              "url": "https://www.football365.com/match-preview/chelsea-v-tottenham-prediction-preview",
+              "accessed_at": "2026-05-18T19:59:18.513515+00:00",
+              "title": "Chelsea v Tottenham: Prediction, team news, line-ups and odds"
+            },
+            {
+              "url": "https://www.chelseafc.com/en/news/article/confirmed-chelsea-line-up-vs-tottenham-h-24-25",
+              "accessed_at": "2026-05-18T19:59:18.513518+00:00",
+              "title": "Confirmed Chelsea line up vs Tottenham | News | Official Site | Chelsea Football Club"
+            },
+            {
+              "url": "https://www.fantasyfootballscout.co.uk/2026/05/15/chelsea-v-tottenham-predicted-line-ups-fpl-team-news",
+              "accessed_at": "2026-05-18T19:59:18.513520+00:00",
+              "title": "Chelsea v Tottenham predicted line-ups + FPL team news"
+            },
+            {
+              "url": "https://www.thestatszone.com/chelsea-vs-tottenham-preview-team-news-prediction-186972",
+              "accessed_at": "2026-05-18T19:59:18.513522+00:00",
+              "title": "Chelsea vs Tottenham Preview: Team News & Prediction - The Stats Zone"
+            },
+            {
+              "url": "https://uk.sports.yahoo.com/news/tottenham-xi-vs-chelsea-confirmed-143930227.html",
+              "accessed_at": "2026-05-18T18:30:00+00:00",
+              "title": "Tottenham XI vs Chelsea: Confirmed team news, predicted lineup"
+            },
+            {
+              "url": "https://uk.sports.yahoo.com/news/chelsea-xi-vs-tottenham-confirmed-113531364.html",
+              "accessed_at": "2026-05-18T18:30:00+00:00",
+              "title": "Chelsea XI vs Tottenham: Confirmed team news, predicted lineup"
+            },
+            {
+              "url": "https://www.football365.com/match-preview/chelsea-v-tottenham-prediction-preview",
+              "accessed_at": "2026-05-18T18:30:00+00:00",
+              "title": "Chelsea v Tottenham: Prediction, team news, line-ups and odds"
+            },
+            {
+              "url": "https://www.spurs-web.com/tottenham-match-previews/chelsea-vs-tottenham-premier-league-preview-team-news-and-predicted-lineups/",
+              "accessed_at": "2026-05-18T18:30:00+00:00",
+              "title": "Chelsea vs Tottenham Premier League preview"
+            },
+            {
+              "url": "https://www.dimers.com/news/chelsea-vs-tottenham-prediction-epl-tuesday-05-19-2026-ac",
+              "accessed_at": "2026-05-18T18:30:00+00:00",
+              "title": "Chelsea vs. Tottenham prediction, odds, Premier League picks"
+            },
+            {
+              "url": "https://news.williamhill.com/football/chelsea-vs-tottenham-hotspur-prediction-premier-league-tips-2026/",
+              "accessed_at": "2026-05-18T18:30:00+00:00",
+              "title": "Safety Within Reach: Tottenham or Draw at Chelsea"
+            },
+            {
+              "url": "https://www.thestatszone.com/chelsea-vs-tottenham-preview-team-news-prediction-186972",
+              "accessed_at": "2026-05-18T18:30:00+00:00",
+              "title": "Chelsea vs Tottenham Preview: Team News & Prediction"
+            },
+            {
+              "url": "https://www.sportsgambler.com/betting-tips/football/chelsea-vs-tottenham-prediction-lineups-odds-2026-05-19/",
+              "accessed_at": "2026-05-18T18:30:00+00:00",
+              "title": "Chelsea vs Tottenham Prediction, Betting Tips, Lineups & Odds"
+            }
+          ],
+          "over_3_5_prob": 0.25
+        },
+        {
+          "model_id": "claude-opus-4-7-thinking",
+          "setting": "S1",
+          "win_probs": {
+            "home": 0.31,
+            "draw": 0.28,
+            "away": 0.41
+          },
+          "score_dist": [
+            {
+              "score": "1-2",
+              "p": 0.139
+            },
+            {
+              "score": "1-1",
+              "p": 0.133
+            },
+            {
+              "score": "1-0",
+              "p": 0.086
+            },
+            {
+              "score": "2-1",
+              "p": 0.08
+            },
+            {
+              "score": "0-0",
+              "p": 0.072
+            },
+            {
+              "score": "0-1",
+              "p": 0.068
+            },
+            {
+              "score": "2-2",
+              "p": 0.062
+            },
+            {
+              "score": "0-2",
+              "p": 0.055
+            },
+            {
+              "score": "2-0",
+              "p": 0.054
+            },
+            {
+              "score": "1-3",
+              "p": 0.044
+            },
+            {
+              "score": "0-3",
+              "p": 0.036
+            },
+            {
+              "score": "3-1",
+              "p": 0.033
+            },
+            {
+              "score": "2-3",
+              "p": 0.028
+            },
+            {
+              "score": "3-2",
+              "p": 0.025
+            },
+            {
+              "score": "3-0",
+              "p": 0.022
+            },
+            {
+              "score": "1-4",
+              "p": 0.017
+            },
+            {
+              "score": "0-4",
+              "p": 0.013
+            },
+            {
+              "score": "3-3",
+              "p": 0.013
+            },
+            {
+              "score": "2-4",
+              "p": 0.011
+            },
+            {
+              "score": "4-1",
+              "p": 0.009
+            }
+          ],
+          "most_likely_score": "1-2",
+          "expected_goal_diff": -0.2,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Chelsea arrive in dreadful form (2W-1D-7L in last 10, including heavy defeats to Brighton, Man City, Everton and PSG) and have just gone through a managerial transition with Xabi Alonso reportedly taking charge — a chaotic backdrop. Tottenham are inconsistent (3W-3D-4L) but enter with stronger recent results and clear motivation to secure Premier League survival. Stamford Bridge is no fortress this season, news reports flag Spurs being primed to inflict a first Bridge win. Tottenham's pace via Kudus, Tel/Odobert and Solanke can exploit Chelsea's high but unstable line. Both teams have scoring talent and conceding tendencies, pointing to a normal-to-open game with Spurs holding a small edge but with meaningful draw mass given derby unpredictability and Chelsea's home crowd.",
+            "t1_result": "Spurs slight favorites due to relative form and Chelsea's collapse plus mid-season managerial flux, but home advantage and squad talent keep Chelsea live and draw probability elevated. Headline score 1-2 reflects Spurs edge.",
+            "t2_player": "Chelsea likely 4-2-3-1 with Palmer behind Delap, Garnacho/Neto on flanks; Caicedo + Lavia/Fernández pivot. Spurs in 4-3-3 with Kudus-Solanke-Tel front three, Maddison reportedly back per predicted-XI reports, Bentancur/Palhinha/Bergvall midfield.",
+            "t3_events": "Expect early caution then opening up after first goal; Spurs likely to score from transition (Kudus/Tel) while Chelsea threaten via Palmer set-pieces and Delap. Cards likely on Romero, Palhinha, Caicedo; subs around 60-70 with Estêvão/João Pedro for Chelsea and Richarlison for Spurs.",
+            "t4_stats": "Chelsea hold more possession at home (~55%) but Spurs more clinical on the break, leading to roughly even shot counts. Pass accuracy moderate (~82/80), corners slight Chelsea edge, fouls roughly even with Spurs slightly higher due to Romero/Palhinha aggression."
+          },
+          "scorers": [
+            {
+              "player": "M. Kudus",
+              "team": "away",
+              "minute_range": [
+                20,
+                75
+              ],
+              "p": 0.24
+            },
+            {
+              "player": "D. Solanke",
+              "team": "away",
+              "minute_range": [
+                25,
+                85
+              ],
+              "p": 0.22
+            },
+            {
+              "player": "M. Tel",
+              "team": "away",
+              "minute_range": [
+                15,
+                80
+              ],
+              "p": 0.18
+            },
+            {
+              "player": "J. Maddison",
+              "team": "away",
+              "minute_range": [
+                25,
+                80
+              ],
+              "p": 0.13
+            },
+            {
+              "player": "Richarlison",
+              "team": "away",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.11
+            },
+            {
+              "player": "C. Palmer",
+              "team": "home",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.27
+            },
+            {
+              "player": "L. Delap",
+              "team": "home",
+              "minute_range": [
+                25,
+                85
+              ],
+              "p": 0.2
+            },
+            {
+              "player": "A. Garnacho",
+              "team": "home",
+              "minute_range": [
+                20,
+                80
+              ],
+              "p": 0.15
+            },
+            {
+              "player": "Pedro Neto",
+              "team": "home",
+              "minute_range": [
+                20,
+                85
+              ],
+              "p": 0.13
+            },
+            {
+              "player": "Estêvão",
+              "team": "home",
+              "minute_range": [
+                65,
+                90
+              ],
+              "p": 0.1
+            },
+            {
+              "player": "João Pedro",
+              "team": "home",
+              "minute_range": [
+                65,
+                90
+              ],
+              "p": 0.09
+            }
+          ],
+          "assisters": [
+            {
+              "player": "C. Palmer",
+              "team": "home",
+              "p": 0.22
+            },
+            {
+              "player": "A. Garnacho",
+              "team": "home",
+              "p": 0.14
+            },
+            {
+              "player": "Pedro Neto",
+              "team": "home",
+              "p": 0.13
+            },
+            {
+              "player": "J. Maddison",
+              "team": "away",
+              "p": 0.23
+            },
+            {
+              "player": "M. Kudus",
+              "team": "away",
+              "p": 0.18
+            },
+            {
+              "player": "Pedro Porro",
+              "team": "away",
+              "p": 0.14
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "M. Kudus",
+              "team": "away",
+              "p": 0.18
+            },
+            {
+              "player": "J. Maddison",
+              "team": "away",
+              "p": 0.14
+            },
+            {
+              "player": "D. Solanke",
+              "team": "away",
+              "p": 0.12
+            },
+            {
+              "player": "C. Palmer",
+              "team": "home",
+              "p": 0.17
+            },
+            {
+              "player": "L. Delap",
+              "team": "home",
+              "p": 0.1
+            },
+            {
+              "player": "G. Vicario",
+              "team": "away",
+              "p": 0.08
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Robert Sánchez",
+                  "position": "GK"
+                },
+                {
+                  "name": "M. Gusto",
+                  "position": "DF"
+                },
+                {
+                  "name": "T. Adarabioyo",
+                  "position": "DF"
+                },
+                {
+                  "name": "T. Chalobah",
+                  "position": "DF"
+                },
+                {
+                  "name": "Marc Cucurella",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. Caicedo",
+                  "position": "MF"
+                },
+                {
+                  "name": "E. Fernández",
+                  "position": "MF"
+                },
+                {
+                  "name": "Pedro Neto",
+                  "position": "FW"
+                },
+                {
+                  "name": "C. Palmer",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Garnacho",
+                  "position": "FW"
+                },
+                {
+                  "name": "L. Delap",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "F. Jörgensen",
+                  "position": "GK"
+                },
+                {
+                  "name": "L. Colwill",
+                  "position": "DF"
+                },
+                {
+                  "name": "J. Hato",
+                  "position": "DF"
+                },
+                {
+                  "name": "R. James",
+                  "position": "DF"
+                },
+                {
+                  "name": "Andrey Santos",
+                  "position": "MF"
+                },
+                {
+                  "name": "R. Lavia",
+                  "position": "MF"
+                },
+                {
+                  "name": "Estêvão",
+                  "position": "FW"
+                },
+                {
+                  "name": "João Pedro",
+                  "position": "FW"
+                },
+                {
+                  "name": "Marc Guiu",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "G. Vicario",
+                  "position": "GK"
+                },
+                {
+                  "name": "Pedro Porro",
+                  "position": "DF"
+                },
+                {
+                  "name": "C. Romero",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. van de Ven",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Udogie",
+                  "position": "DF"
+                },
+                {
+                  "name": "João Palhinha",
+                  "position": "MF"
+                },
+                {
+                  "name": "R. Bentancur",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Maddison",
+                  "position": "MF"
+                },
+                {
+                  "name": "M. Kudus",
+                  "position": "MF"
+                },
+                {
+                  "name": "D. Solanke",
+                  "position": "FW"
+                },
+                {
+                  "name": "M. Tel",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "A. Kinský",
+                  "position": "GK"
+                },
+                {
+                  "name": "K. Danso",
+                  "position": "DF"
+                },
+                {
+                  "name": "B. Davies",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Spence",
+                  "position": "DF"
+                },
+                {
+                  "name": "L. Bergvall",
+                  "position": "MF"
+                },
+                {
+                  "name": "Y. Bissouma",
+                  "position": "MF"
+                },
+                {
+                  "name": "X. Simons",
+                  "position": "MF"
+                },
+                {
+                  "name": "W. Odobert",
+                  "position": "FW"
+                },
+                {
+                  "name": "Richarlison",
+                  "position": "FW"
+                },
+                {
+                  "name": "R. Kolo Muani",
+                  "position": "MF"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "4-3-3"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "Pedro Neto",
+              "on": "Estêvão",
+              "minute": 65
+            },
+            {
+              "team": "home",
+              "off": "L. Delap",
+              "on": "João Pedro",
+              "minute": 72
+            },
+            {
+              "team": "home",
+              "off": "E. Fernández",
+              "on": "Andrey Santos",
+              "minute": 78
+            },
+            {
+              "team": "away",
+              "off": "M. Tel",
+              "on": "W. Odobert",
+              "minute": 68
+            },
+            {
+              "team": "away",
+              "off": "J. Maddison",
+              "on": "L. Bergvall",
+              "minute": 75
+            },
+            {
+              "team": "away",
+              "off": "D. Solanke",
+              "on": "Richarlison",
+              "minute": 82
+            }
+          ],
+          "cards": [
+            {
+              "player": "M. Caicedo",
+              "team": "home",
+              "color": "yellow",
+              "minute": 38
+            },
+            {
+              "player": "C. Romero",
+              "team": "away",
+              "color": "yellow",
+              "minute": 42
+            },
+            {
+              "player": "João Palhinha",
+              "team": "away",
+              "color": "yellow",
+              "minute": 60
+            },
+            {
+              "player": "T. Chalobah",
+              "team": "home",
+              "color": "yellow",
+              "minute": 70
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 55,
+              "away": 45
+            },
+            "shots": {
+              "home": 14,
+              "away": 13
+            },
+            "shots_on_target": {
+              "home": 5,
+              "away": 5
+            },
+            "corners": {
+              "home": 6,
+              "away": 4
+            },
+            "pass_accuracy": {
+              "home": 82,
+              "away": 80
+            },
+            "fouls": {
+              "home": 11,
+              "away": 13
+            },
+            "saves": {
+              "home": 3,
+              "away": 3
+            },
+            "defensive_actions": {
+              "home": 32,
+              "away": 36
+            }
+          },
+          "cost_usd": 0.133,
+          "sources": [],
+          "over_3_5_prob": 0.255
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.33,
+            "draw": 0.36,
+            "away": 0.31
+          },
+          "score_dist": [
+            {
+              "score": "1-1",
+              "p": 0.159
+            },
+            {
+              "score": "0-0",
+              "p": 0.156
+            },
+            {
+              "score": "1-0",
+              "p": 0.13
+            },
+            {
+              "score": "0-1",
+              "p": 0.125
+            },
+            {
+              "score": "2-0",
+              "p": 0.067
+            },
+            {
+              "score": "2-1",
+              "p": 0.065
+            },
+            {
+              "score": "1-2",
+              "p": 0.063
+            },
+            {
+              "score": "0-2",
+              "p": 0.061
+            },
+            {
+              "score": "2-2",
+              "p": 0.04
+            },
+            {
+              "score": "3-0",
+              "p": 0.023
+            },
+            {
+              "score": "3-1",
+              "p": 0.022
+            },
+            {
+              "score": "1-3",
+              "p": 0.02
+            },
+            {
+              "score": "0-3",
+              "p": 0.02
+            },
+            {
+              "score": "3-2",
+              "p": 0.011
+            },
+            {
+              "score": "2-3",
+              "p": 0.011
+            },
+            {
+              "score": "4-0",
+              "p": 0.006
+            },
+            {
+              "score": "4-1",
+              "p": 0.006
+            },
+            {
+              "score": "0-4",
+              "p": 0.005
+            },
+            {
+              "score": "1-4",
+              "p": 0.005
+            },
+            {
+              "score": "3-3",
+              "p": 0.005
+            }
+          ],
+          "most_likely_score": "1-1",
+          "expected_goal_diff": 0.05,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Chelsea come into this match exhausted after a 1-0 FA Cup final defeat to Manchester City just three days prior, and are winless in their last seven Premier League games. Tottenham, managed by Roberto De Zerbi, are unbeaten in four and need just a single point to guarantee Premier League survival. Given Spurs' motivation and Chelsea's fatigue and poor league form, a tightly contested draw is the most probable outcome.",
+            "t1_result": "A draw is highly likely as Tottenham only need a point to secure safety and will likely prioritize avoiding defeat. Chelsea's recent attacking struggles and cup final hangover further point towards a stalemate.",
+            "t2_player": "Cole Palmer remains Chelsea's main creative outlet, while Richarlison and Mathys Tel will lead the line for Spurs in the absence of Dominic Solanke. Both teams will deploy 4-2-3-1 formations.",
+            "t3_events": "Expect a cautious start from Tottenham, absorbing Chelsea's possession. Goals are likely to come in the second half as legs tire, with a 1-1 draw being the most fitting narrative.",
+            "t4_stats": "Chelsea should edge possession at home (around 54%), but De Zerbi's Spurs will be efficient on the counter. Shot counts will be moderate given the high stakes for the visitors."
+          },
+          "scorers": [
+            {
+              "player": "Cole Palmer",
+              "team": "home",
+              "minute_range": [
+                30,
+                90
+              ],
+              "p": 0.35
+            },
+            {
+              "player": "Richarlison",
+              "team": "away",
+              "minute_range": [
+                45,
+                90
+              ],
+              "p": 0.3
+            },
+            {
+              "player": "Mathys Tel",
+              "team": "away",
+              "minute_range": [
+                15,
+                75
+              ],
+              "p": 0.2
+            },
+            {
+              "player": "Liam Delap",
+              "team": "home",
+              "minute_range": [
+                10,
+                70
+              ],
+              "p": 0.22
+            }
+          ],
+          "assisters": [],
+          "motm_probs": [],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Robert Sánchez",
+                  "position": "GK",
+                  "shirt": 1
+                },
+                {
+                  "name": "Malo Gusto",
+                  "position": "DF",
+                  "shirt": 27
+                },
+                {
+                  "name": "Wesley Fofana",
+                  "position": "DF",
+                  "shirt": 33
+                },
+                {
+                  "name": "Trevoh Chalobah",
+                  "position": "DF",
+                  "shirt": 14
+                },
+                {
+                  "name": "Marc Cucurella",
+                  "position": "DF",
+                  "shirt": 3
+                },
+                {
+                  "name": "Moisés Caicedo",
+                  "position": "MF",
+                  "shirt": 25
+                },
+                {
+                  "name": "Enzo Fernández",
+                  "position": "MF",
+                  "shirt": 8
+                },
+                {
+                  "name": "Cole Palmer",
+                  "position": "MF",
+                  "shirt": 20
+                },
+                {
+                  "name": "Christopher Nkunku",
+                  "position": "MF",
+                  "shirt": 18
+                },
+                {
+                  "name": "Pedro Neto",
+                  "position": "FW",
+                  "shirt": 19
+                },
+                {
+                  "name": "Liam Delap",
+                  "position": "FW",
+                  "shirt": 17
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Filip Jörgensen",
+                  "position": "GK",
+                  "shirt": 12
+                },
+                {
+                  "name": "Reece James",
+                  "position": "DF",
+                  "shirt": 24
+                },
+                {
+                  "name": "Levi Colwill",
+                  "position": "DF",
+                  "shirt": 26
+                },
+                {
+                  "name": "Jorrel Hato",
+                  "position": "DF",
+                  "shirt": 5
+                },
+                {
+                  "name": "Roméo Lavia",
+                  "position": "MF",
+                  "shirt": 45
+                },
+                {
+                  "name": "Andrey Santos",
+                  "position": "MF",
+                  "shirt": 16
+                },
+                {
+                  "name": "Raheem Sterling",
+                  "position": "FW",
+                  "shirt": 7
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "Antonín Kinský",
+                  "position": "GK",
+                  "shirt": 13
+                },
+                {
+                  "name": "Pedro Porro",
+                  "position": "DF",
+                  "shirt": 23
+                },
+                {
+                  "name": "Kevin Danso",
+                  "position": "DF",
+                  "shirt": 4
+                },
+                {
+                  "name": "Micky van de Ven",
+                  "position": "DF",
+                  "shirt": 37
+                },
+                {
+                  "name": "Destiny Udogie",
+                  "position": "DF",
+                  "shirt": 38
+                },
+                {
+                  "name": "Rodrigo Bentancur",
+                  "position": "MF",
+                  "shirt": 30
+                },
+                {
+                  "name": "João Palhinha",
+                  "position": "MF",
+                  "shirt": 26
+                },
+                {
+                  "name": "Conor Gallagher",
+                  "position": "MF",
+                  "shirt": 8
+                },
+                {
+                  "name": "Mathys Tel",
+                  "position": "MF",
+                  "shirt": 19
+                },
+                {
+                  "name": "Randal Kolo Muani",
+                  "position": "FW",
+                  "shirt": 9
+                },
+                {
+                  "name": "Richarlison",
+                  "position": "FW",
+                  "shirt": 9
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Guglielmo Vicario",
+                  "position": "GK",
+                  "shirt": 1
+                },
+                {
+                  "name": "Radu Drăgușin",
+                  "position": "DF",
+                  "shirt": 6
+                },
+                {
+                  "name": "Djed Spence",
+                  "position": "DF",
+                  "shirt": 24
+                },
+                {
+                  "name": "Pape Matar Sarr",
+                  "position": "MF",
+                  "shirt": 29
+                },
+                {
+                  "name": "Yves Bissouma",
+                  "position": "MF",
+                  "shirt": 8
+                },
+                {
+                  "name": "Brennan Johnson",
+                  "position": "FW",
+                  "shirt": 22
+                },
+                {
+                  "name": "Timo Werner",
+                  "position": "FW",
+                  "shirt": 16
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [],
+          "cards": [],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 54.5,
+              "away": 45.5
+            },
+            "shots": {
+              "home": 14,
+              "away": 11
+            },
+            "shots_on_target": {
+              "home": 5,
+              "away": 4
+            },
+            "corners": {
+              "home": 6,
+              "away": 4
+            },
+            "pass_accuracy": {
+              "home": 87.0,
+              "away": 83.5
+            },
+            "fouls": {
+              "home": 10,
+              "away": 12
+            },
+            "saves": {
+              "home": 3,
+              "away": 4
+            },
+            "defensive_actions": {
+              "home": 42,
+              "away": 55
+            }
+          },
+          "cost_usd": 0.054,
+          "sources": [
+            {
+              "url": "https://sportsmole.co.uk/football/chelsea/preview/preview-chelsea-vs-tottenham-hotspur-prediction-team-news-lineups_543881.html",
+              "accessed_at": "2026-05-18T19:58:00Z"
+            },
+            {
+              "url": "https://www.standard.co.uk/sport/football/tottenham-xi-vs-chelsea-confirmed-team-news-predicted-lineup-injury-latest-premier-league-2026-b1158472.html",
+              "accessed_at": "2026-05-18T19:58:00Z"
+            }
+          ],
+          "over_3_5_prob": 0.131
+        },
+        {
+          "model_id": "gemini-3.1-pro-preview-thinking",
+          "setting": "S1",
+          "win_probs": {
+            "home": 0.45,
+            "draw": 0.25,
+            "away": 0.3
+          },
+          "score_dist": [
+            {
+              "score": "2-1",
+              "p": 0.126
+            },
+            {
+              "score": "1-1",
+              "p": 0.119
+            },
+            {
+              "score": "0-1",
+              "p": 0.085
+            },
+            {
+              "score": "2-0",
+              "p": 0.081
+            },
+            {
+              "score": "1-2",
+              "p": 0.079
+            },
+            {
+              "score": "1-0",
+              "p": 0.075
+            },
+            {
+              "score": "0-0",
+              "p": 0.064
+            },
+            {
+              "score": "2-2",
+              "p": 0.055
+            },
+            {
+              "score": "0-2",
+              "p": 0.051
+            },
+            {
+              "score": "3-1",
+              "p": 0.05
+            },
+            {
+              "score": "3-0",
+              "p": 0.042
+            },
+            {
+              "score": "1-3",
+              "p": 0.032
+            },
+            {
+              "score": "3-2",
+              "p": 0.03
+            },
+            {
+              "score": "2-3",
+              "p": 0.024
+            },
+            {
+              "score": "0-3",
+              "p": 0.02
+            },
+            {
+              "score": "4-1",
+              "p": 0.019
+            },
+            {
+              "score": "4-0",
+              "p": 0.016
+            },
+            {
+              "score": "4-2",
+              "p": 0.012
+            },
+            {
+              "score": "3-3",
+              "p": 0.011
+            },
+            {
+              "score": "1-4",
+              "p": 0.009
+            }
+          ],
+          "most_likely_score": "2-1",
+          "expected_goal_diff": 0.35,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Chelsea enters this match with a new manager bounce as Xabi Alonso takes charge for his first game, hoping to reverse a dismal run of form (2W 1D 7L). Tottenham, meanwhile, are fighting for Premier League survival and will be highly motivated to secure safety. The combination of a new tactical setup for Chelsea and Spurs' desperation suggests an intense, closely fought London derby.",
+            "t1_result": "Chelsea are slight favorites due to home advantage and the new manager effect, but Tottenham's relegation battle motivation makes them dangerous. A narrow home win or a draw is most likely.",
+            "t2_player": "Cole Palmer remains Chelsea's main creative outlet, while Solanke and Maddison will be key for Tottenham's attacking transitions.",
+            "t3_events": "Expect a cautious start as Chelsea adapts to Alonso's system, with the game opening up in the second half as Spurs push for a result.",
+            "t4_stats": "Chelsea should edge possession under Alonso, with both teams creating a moderate number of chances in a tense atmosphere."
+          },
+          "scorers": [
+            {
+              "player": "C. Palmer",
+              "team": "home",
+              "minute_range": [
+                30,
+                70
+              ],
+              "p": 0.35
+            },
+            {
+              "player": "D. Solanke",
+              "team": "away",
+              "minute_range": [
+                45,
+                85
+              ],
+              "p": 0.3
+            },
+            {
+              "player": "João Pedro",
+              "team": "home",
+              "minute_range": [
+                60,
+                90
+              ],
+              "p": 0.25
+            }
+          ],
+          "assisters": [],
+          "motm_probs": [],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Robert Sánchez",
+                  "position": "GK"
+                },
+                {
+                  "name": "R. James",
+                  "position": "DF"
+                },
+                {
+                  "name": "W. Fofana",
+                  "position": "DF"
+                },
+                {
+                  "name": "L. Colwill",
+                  "position": "DF"
+                },
+                {
+                  "name": "Marc Cucurella",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. Caicedo",
+                  "position": "MF"
+                },
+                {
+                  "name": "E. Fernández",
+                  "position": "MF"
+                },
+                {
+                  "name": "C. Palmer",
+                  "position": "MF"
+                },
+                {
+                  "name": "Pedro Neto",
+                  "position": "FW"
+                },
+                {
+                  "name": "João Pedro",
+                  "position": "FW"
+                },
+                {
+                  "name": "L. Delap",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "F. Jörgensen",
+                  "position": "GK"
+                },
+                {
+                  "name": "T. Chalobah",
+                  "position": "DF"
+                },
+                {
+                  "name": "B. Badiashile",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. Gusto",
+                  "position": "DF"
+                },
+                {
+                  "name": "R. Lavia",
+                  "position": "MF"
+                },
+                {
+                  "name": "Andrey Santos",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Garnacho",
+                  "position": "FW"
+                },
+                {
+                  "name": "Marc Guiu",
+                  "position": "FW"
+                },
+                {
+                  "name": "Estêvão",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "G. Vicario",
+                  "position": "GK"
+                },
+                {
+                  "name": "Pedro Porro",
+                  "position": "DF"
+                },
+                {
+                  "name": "C. Romero",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. van de Ven",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Udogie",
+                  "position": "DF"
+                },
+                {
+                  "name": "Y. Bissouma",
+                  "position": "MF"
+                },
+                {
+                  "name": "P. Sarr",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Maddison",
+                  "position": "MF"
+                },
+                {
+                  "name": "M. Kudus",
+                  "position": "FW"
+                },
+                {
+                  "name": "Richarlison",
+                  "position": "FW"
+                },
+                {
+                  "name": "D. Solanke",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "B. Austin",
+                  "position": "GK"
+                },
+                {
+                  "name": "R. Drăgușin",
+                  "position": "DF"
+                },
+                {
+                  "name": "B. Davies",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Spence",
+                  "position": "DF"
+                },
+                {
+                  "name": "R. Bentancur",
+                  "position": "MF"
+                },
+                {
+                  "name": "C. Gallagher",
+                  "position": "MF"
+                },
+                {
+                  "name": "L. Bergvall",
+                  "position": "MF"
+                },
+                {
+                  "name": "W. Odobert",
+                  "position": "FW"
+                },
+                {
+                  "name": "R. Kolo Muani",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [],
+          "cards": [],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 55,
+              "away": 45
+            },
+            "shots": {
+              "home": 14,
+              "away": 12
+            },
+            "shots_on_target": {
+              "home": 5,
+              "away": 4
+            },
+            "corners": {
+              "home": 6,
+              "away": 5
+            },
+            "pass_accuracy": {
+              "home": 88,
+              "away": 84
+            },
+            "fouls": {
+              "home": 11,
+              "away": 13
+            },
+            "saves": {
+              "home": 3,
+              "away": 3
+            },
+            "defensive_actions": {
+              "home": 45,
+              "away": 55
+            }
+          },
+          "cost_usd": 0.027,
+          "sources": [],
+          "over_3_5_prob": 0.258
+        },
+        {
+          "model_id": "gpt-5.4-search",
+          "setting": "S2",
+          "win_probs": {
+            "home": 0.444,
+            "draw": 0.285,
+            "away": 0.271
+          },
+          "score_dist": [
+            {
+              "score": "2-1",
+              "p": 0.143
+            },
+            {
+              "score": "1-1",
+              "p": 0.136
+            },
+            {
+              "score": "0-1",
+              "p": 0.083
+            },
+            {
+              "score": "1-0",
+              "p": 0.082
+            },
+            {
+              "score": "0-0",
+              "p": 0.081
+            },
+            {
+              "score": "1-2",
+              "p": 0.07
+            },
+            {
+              "score": "2-0",
+              "p": 0.065
+            },
+            {
+              "score": "2-2",
+              "p": 0.057
+            },
+            {
+              "score": "0-2",
+              "p": 0.047
+            },
+            {
+              "score": "3-1",
+              "p": 0.046
+            },
+            {
+              "score": "3-0",
+              "p": 0.041
+            },
+            {
+              "score": "1-3",
+              "p": 0.026
+            },
+            {
+              "score": "3-2",
+              "p": 0.026
+            },
+            {
+              "score": "2-3",
+              "p": 0.019
+            },
+            {
+              "score": "0-3",
+              "p": 0.018
+            },
+            {
+              "score": "4-1",
+              "p": 0.017
+            },
+            {
+              "score": "4-0",
+              "p": 0.015
+            },
+            {
+              "score": "3-3",
+              "p": 0.01
+            },
+            {
+              "score": "4-2",
+              "p": 0.01
+            },
+            {
+              "score": "1-4",
+              "p": 0.008
+            }
+          ],
+          "most_likely_score": "2-1",
+          "expected_goal_diff": 0.35,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Chelsea’s raw form is poor, but the matchup still leans slightly home because Stamford Bridge has been a historically bad venue for Spurs, Chelsea have won the last five league meetings, and Palmer remains the highest-end attacking difference-maker. Tottenham arrive in better short-term league rhythm and with stronger recent away results, yet their missing attackers and defenders reduce their ceiling; Solanke, Kulusevski, Kudus, Romero and Xavi being absent hurts both counterattacking quality and box presence. Tactically, Chelsea’s wing-backs and Palmer between the lines can trouble Spurs’ full-back zones, while Spurs should still create transition moments through Richarlison, Tel and Kolo Muani against a Chelsea side that has been conceding regularly.",
+            "t1_result": "This looks closer than the badge names suggest: Chelsea have home edge and H2H edge, Spurs have better recent league momentum. A narrow Chelsea win is the single most likely outcome, but draw risk stays high because Chelsea have struggled to turn territorial control into goals.",
+            "t2_player": "Chelsea’s likely 3-4-2-1 protects their center-backs and maximizes Palmer as a free creator around Delap/Neto, while Spurs’ likely 4-2-3-1 leans on Bentancur and Palhinha to protect transitions. Palmer, Enzo and Cucurella are Chelsea’s key chance-builders; Richarlison is Spurs’ best penalty-box scorer with Tel and Kolo Muani supplying running power around him.",
+            "t3_events": "Expect a tense first half with Chelsea having more of the ball, then a more open second half as Spurs chase survival points and both benches add pace. Set pieces and wide overloads should matter, and the card profile points to a few tactical fouls in midfield and on the flanks.",
+            "t4_stats": "Chelsea should finish slightly ahead in possession, passes and total shots, but not by a huge margin because Spurs’ away approach under De Zerbi has become more direct and transition-focused. The projected shot and corner numbers reflect a competitive derby rather than a one-sided control game."
+          },
+          "scorers": [
+            {
+              "player": "Cole Palmer",
+              "team": "home",
+              "minute_range": [
+                50,
+                80
+              ],
+              "p": 0.307
+            },
+            {
+              "player": "Liam Delap",
+              "team": "home",
+              "minute_range": [
+                15,
+                55
+              ],
+              "p": 0.244
+            },
+            {
+              "player": "Richarlison",
+              "team": "away",
+              "minute_range": [
+                40,
+                85
+              ],
+              "p": 0.226
+            },
+            {
+              "player": "Pedro Neto",
+              "team": "home",
+              "minute_range": [
+                55,
+                90
+              ],
+              "p": 0.159
+            },
+            {
+              "player": "Mathys Tel",
+              "team": "away",
+              "minute_range": [
+                20,
+                70
+              ],
+              "p": 0.156
+            }
+          ],
+          "assisters": [
+            {
+              "player": "Cole Palmer",
+              "team": "home",
+              "p": 0.248
+            },
+            {
+              "player": "Enzo Fernandez",
+              "team": "home",
+              "p": 0.201
+            },
+            {
+              "player": "Pedro Porro",
+              "team": "away",
+              "p": 0.174
+            },
+            {
+              "player": "Mathys Tel",
+              "team": "away",
+              "p": 0.149
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "Cole Palmer",
+              "team": "home",
+              "p": 0.286
+            },
+            {
+              "player": "Enzo Fernandez",
+              "team": "home",
+              "p": 0.161
+            },
+            {
+              "player": "Richarlison",
+              "team": "away",
+              "p": 0.138
+            },
+            {
+              "player": "Pedro Neto",
+              "team": "home",
+              "p": 0.119
+            },
+            {
+              "player": "Mathys Tel",
+              "team": "away",
+              "p": 0.093
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Robert Sanchez",
+                  "position": "GK"
+                },
+                {
+                  "name": "Wesley Fofana",
+                  "position": "DF"
+                },
+                {
+                  "name": "Trevoh Chalobah",
+                  "position": "DF"
+                },
+                {
+                  "name": "Jorrel Hato",
+                  "position": "DF"
+                },
+                {
+                  "name": "Malo Gusto",
+                  "position": "DF"
+                },
+                {
+                  "name": "Moises Caicedo",
+                  "position": "MF"
+                },
+                {
+                  "name": "Enzo Fernandez",
+                  "position": "MF"
+                },
+                {
+                  "name": "Marc Cucurella",
+                  "position": "DF"
+                },
+                {
+                  "name": "Cole Palmer",
+                  "position": "MF"
+                },
+                {
+                  "name": "Pedro Neto",
+                  "position": "FW"
+                },
+                {
+                  "name": "Liam Delap",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Filip Jorgensen",
+                  "position": "GK"
+                },
+                {
+                  "name": "Tosin Adarabioyo",
+                  "position": "DF"
+                },
+                {
+                  "name": "Reece James",
+                  "position": "DF"
+                },
+                {
+                  "name": "Levi Colwill",
+                  "position": "DF"
+                },
+                {
+                  "name": "Andrey Santos",
+                  "position": "MF"
+                },
+                {
+                  "name": "Dario Essugo",
+                  "position": "MF"
+                },
+                {
+                  "name": "Alejandro Garnacho",
+                  "position": "FW"
+                },
+                {
+                  "name": "Joao Pedro",
+                  "position": "FW"
+                },
+                {
+                  "name": "Mamadou Sarr",
+                  "position": "DF"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "Antonin Kinsky",
+                  "position": "GK"
+                },
+                {
+                  "name": "Pedro Porro",
+                  "position": "DF"
+                },
+                {
+                  "name": "Kevin Danso",
+                  "position": "DF"
+                },
+                {
+                  "name": "Micky van de Ven",
+                  "position": "DF"
+                },
+                {
+                  "name": "Destiny Udogie",
+                  "position": "DF"
+                },
+                {
+                  "name": "Rodrigo Bentancur",
+                  "position": "MF"
+                },
+                {
+                  "name": "Joao Palhinha",
+                  "position": "MF"
+                },
+                {
+                  "name": "Randal Kolo Muani",
+                  "position": "FW"
+                },
+                {
+                  "name": "Conor Gallagher",
+                  "position": "MF"
+                },
+                {
+                  "name": "Mathys Tel",
+                  "position": "FW"
+                },
+                {
+                  "name": "Richarlison",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "Guglielmo Vicario",
+                  "position": "GK"
+                },
+                {
+                  "name": "Radu Dragusin",
+                  "position": "DF"
+                },
+                {
+                  "name": "Djed Spence",
+                  "position": "DF"
+                },
+                {
+                  "name": "Archie Gray",
+                  "position": "MF"
+                },
+                {
+                  "name": "Lucas Bergvall",
+                  "position": "MF"
+                },
+                {
+                  "name": "Pape Matar Sarr",
+                  "position": "MF"
+                },
+                {
+                  "name": "Yves Bissouma",
+                  "position": "MF"
+                },
+                {
+                  "name": "James Maddison",
+                  "position": "MF"
+                },
+                {
+                  "name": "Souza",
+                  "position": "DF"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "3-4-2-1",
+            "away": "4-2-3-1"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "Malo Gusto",
+              "on": "Reece James",
+              "minute": 63
+            },
+            {
+              "team": "home",
+              "off": "Liam Delap",
+              "on": "Joao Pedro",
+              "minute": 69
+            },
+            {
+              "team": "away",
+              "off": "Conor Gallagher",
+              "on": "James Maddison",
+              "minute": 71
+            },
+            {
+              "team": "away",
+              "off": "Rodrigo Bentancur",
+              "on": "Pape Matar Sarr",
+              "minute": 77
+            }
+          ],
+          "cards": [
+            {
+              "player": "Moises Caicedo",
+              "team": "home",
+              "color": "yellow",
+              "minute": 54
+            },
+            {
+              "player": "Pedro Porro",
+              "team": "away",
+              "color": "yellow",
+              "minute": 62
+            },
+            {
+              "player": "Joao Palhinha",
+              "team": "away",
+              "color": "yellow",
+              "minute": 73
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 53,
+              "away": 47
+            },
+            "shots": {
+              "home": 14,
+              "away": 11
+            },
+            "shots_on_target": {
+              "home": 5,
+              "away": 4
+            },
+            "corners": {
+              "home": 6,
+              "away": 5
+            },
+            "pass_accuracy": {
+              "home": 85,
+              "away": 82
+            },
+            "fouls": {
+              "home": 12,
+              "away": 14
+            },
+            "saves": {
+              "home": 3,
+              "away": 3
+            },
+            "defensive_actions": {
+              "home": 59,
+              "away": 63
+            }
+          },
+          "cost_usd": 0.277,
+          "sources": [
+            {
+              "url": "https://www.tottenhamhotspur.com/teams/men/players/",
+              "accessed_at": "2026-05-18T20:01:26.588293+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/teams/womens/squad",
+              "accessed_at": "2026-05-18T20:01:26.588310+00:00"
+            },
+            {
+              "url": "https://www.chelseafc.com/en/news/article/chelsea-squad-numbers-confirmed-for-2025-26-season",
+              "accessed_at": "2026-05-18T20:01:26.588315+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/news/985049/202526-premier-league-squad-numbers-confirmed",
+              "accessed_at": "2026-05-18T20:01:26.588319+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/teams/men/players/emerson-royal/",
+              "accessed_at": "2026-05-18T20:01:26.588322+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/news/2025/july/confirmed-team-news-spurs-vs-wycombe-wanderers/",
+              "accessed_at": "2026-05-18T20:01:26.588326+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/teams/mens",
+              "accessed_at": "2026-05-18T20:01:26.588329+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/news/2025/september/confirmed-line-ups-west-ham-vs-spurs/",
+              "accessed_at": "2026-05-18T20:01:26.588332+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/teams/",
+              "accessed_at": "2026-05-18T20:01:26.588336+00:00"
+            },
+            {
+              "url": "https://www.chelseafc.com/en/news/article/fpl-prices-for-full-chelsea-squad-revealed-2025-2026",
+              "accessed_at": "2026-05-18T20:01:26.588339+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/news/1009107/new-legacy-number-assigned-after-united-defeat",
+              "accessed_at": "2026-05-18T20:01:26.588342+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/news/1000570/confirmed-line-ups-spurs-vs-borussia-dortmund",
+              "accessed_at": "2026-05-18T20:01:26.588346+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/media/ktchblcm/bodo-h.pdf",
+              "accessed_at": "2026-05-18T20:01:26.588349+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/media/i44ct20g/az-a.pdf",
+              "accessed_at": "2026-05-18T20:01:26.588353+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/media/j2qjiqrf/ef-h.pdf",
+              "accessed_at": "2026-05-18T20:01:26.588356+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/media/kgih1js2/fab-minutes-3rd-march-2025-26-season.pdf",
+              "accessed_at": "2026-05-18T20:01:26.588360+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/media/kymdhzvg/psg-uefa-sc.pdf",
+              "accessed_at": "2026-05-18T20:01:26.588364+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/media/n33kwbrp/2025-2026-season-ticket-pricing-plan.pdf",
+              "accessed_at": "2026-05-18T20:01:26.588368+00:00"
+            },
+            {
+              "url": "https://www.sportsgambler.com/betting-tips/football/chelsea-vs-tottenham-prediction-lineups-odds-2026-05-19/",
+              "accessed_at": "2026-05-18T20:01:26.588384+00:00"
+            },
+            {
+              "url": "https://dailysports.net/predictions/chelsea-vs-tottenham-prediction-h2h-and-probable-lineups-19052026/",
+              "accessed_at": "2026-05-18T20:01:26.588389+00:00"
+            },
+            {
+              "url": "https://www.sportsmole.co.uk/football/chelsea/relegation-battle/team-news/chelsea-vs-spurs-injury-suspension-list-predicted-xis_597733.html",
+              "accessed_at": "2026-05-18T20:01:26.588393+00:00"
+            },
+            {
+              "url": "https://www.soccerway.com/teams/england/tottenham-hotspur/675/matches/",
+              "accessed_at": "2026-05-18T20:01:26.588397+00:00"
+            },
+            {
+              "url": "https://www.calcio.com/pronostici/pronostico-chelsea-tottenham-analisi-e-probabili-formazioni-19052026-premier-league",
+              "accessed_at": "2026-05-18T20:01:26.588401+00:00"
+            },
+            {
+              "url": "https://www.vegasodds.com/predictions/soccer/chelsea-vs-tottenham-picks-odds-preview-may-19/",
+              "accessed_at": "2026-05-18T20:01:26.588405+00:00"
+            },
+            {
+              "url": "https://www.spurs-web.com/tottenham-match-previews/chelsea-vs-tottenham-premier-league-preview-team-news-and-predicted-lineups/",
+              "accessed_at": "2026-05-18T20:01:26.588409+00:00"
+            },
+            {
+              "url": "https://www.football365.com/match-preview/chelsea-v-tottenham-prediction-preview",
+              "accessed_at": "2026-05-18T20:01:26.588414+00:00"
+            },
+            {
+              "url": "https://news.7msport.com/news/newsdata/20260518/253322.shtml",
+              "accessed_at": "2026-05-18T20:01:26.588418+00:00"
+            },
+            {
+              "url": "https://www.myfootballfacts.com/match-preview/premier-league-match-previews/match-preview-chelsea-tottenham-hotspur-premier-league-gameweek-37/",
+              "accessed_at": "2026-05-18T20:01:26.588423+00:00"
+            },
+            {
+              "url": "https://www.rotowire.com/betting/soccer/game/chelsea-vs-tottenham-hotspur-odds-2026-05-19-2562259",
+              "accessed_at": "2026-05-18T20:01:26.588428+00:00"
+            },
+            {
+              "url": "https://www.wincomparator.com/predictions/chelsea-tottenham-8467966/",
+              "accessed_at": "2026-05-18T20:01:26.588432+00:00"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Chelsea_F.C.%E2%80%93Tottenham_Hotspur_F.C._rivalry",
+              "accessed_at": "2026-05-18T20:01:26.588437+00:00"
+            },
+            {
+              "url": "https://www.bcmtv.org/wp-content/uploads/event-manager-uploads/event_banner/2026/03/tottenhamcrystalplaceli3.pdf",
+              "accessed_at": "2026-05-18T20:01:26.588442+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/coys/comments/1t1rn0s/prematch_thread_aston_villa_vs_tottenham_hotspur/",
+              "accessed_at": "2026-05-18T20:01:26.588446+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/coys/comments/1tejvwg/daily_discussion_transfer_thread_may_16_2026/",
+              "accessed_at": "2026-05-18T20:01:26.588451+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/Tottenham/comments/1tefap2/best_case_scenario_for_fa_cup_final/",
+              "accessed_at": "2026-05-18T20:01:26.588456+00:00"
+            },
+            {
+              "url": "https://www.mychelseafc.com/reports/2024-25/team_sheets/Chelsea_v_Tottenham_Hotspur.pdf",
+              "accessed_at": "2026-05-18T20:01:26.588461+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/GPTSportsWriter/comments/1olbsor",
+              "accessed_at": "2026-05-18T20:01:26.588467+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/coys/comments/1tffs1i/daily_discussion_transfer_thread_may_17_2026/",
+              "accessed_at": "2026-05-18T20:01:26.588473+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/coys/comments/1t99vuv/prematch_thread_tottenham_hotspur_vs_leeds_united/",
+              "accessed_at": "2026-05-18T20:01:26.588478+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/championsleague/comments/1rwy1jo/tottenham_vs_atl%C3%A9tico_madrid_why_a_52_lead_is/",
+              "accessed_at": "2026-05-18T20:01:26.588483+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/coys/comments/1tco203/daily_discussion_transfer_thread_may_14_2026/",
+              "accessed_at": "2026-05-18T20:01:26.588489+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/chelsealadiesfc/comments/1sdfang/match_thread_chelsea_fc_women_vs_tottenham/",
+              "accessed_at": "2026-05-18T20:01:26.588495+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/coys/comments/1sihrta/prematch_thread_sunderland_afc_vs_tottenham/",
+              "accessed_at": "2026-05-18T20:01:26.588500+00:00"
+            },
+            {
+              "url": "https://hospitality.chelseafc.com/upcoming-events",
+              "accessed_at": "2026-05-18T20:01:26.588512+00:00"
+            },
+            {
+              "url": "https://hospitality.chelseafc.com/upcoming-events/chelsea-fc-vs-tottenham-hotspur?direct=true",
+              "accessed_at": "2026-05-18T20:01:26.588519+00:00"
+            },
+            {
+              "url": "https://www.chelseafc.com/en/news/article/new-date-set-for-tottenham-visit-and-ticketing-details-confirmed-",
+              "accessed_at": "2026-05-18T20:01:26.588525+00:00"
+            },
+            {
+              "url": "https://www.chelseafc.com/en/news/article/date-time-for-chelsea-womens-trip-tottenham-hotspur-stadium-confirmed",
+              "accessed_at": "2026-05-18T20:01:26.588531+00:00"
+            },
+            {
+              "url": "https://www.chelseafc.com/en/news/article/chelsea-vs-tottenham-key-statistics-and-facts",
+              "accessed_at": "2026-05-18T20:01:26.588537+00:00"
+            },
+            {
+              "url": "https://www.chelseafc.com/en/news/article/chelsea-vs-tottenham-preview--team-news--opposition-analysis-and",
+              "accessed_at": "2026-05-18T20:01:26.588543+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/news/1066190/the-daly-brief-spurs-vs-leeds",
+              "accessed_at": "2026-05-18T20:01:26.588549+00:00"
+            },
+            {
+              "url": "https://www.chelseafc.com/en/news/article/new-date-set-for-spurs-and-west-ham-moved",
+              "accessed_at": "2026-05-18T20:01:26.588555+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/news/2026/april/women-chelsea-2-1-spurs-women-s-fa-cup-martin-ho-s-verdict/",
+              "accessed_at": "2026-05-18T20:01:26.588561+00:00"
+            },
+            {
+              "url": "https://www.chelseafc.com/en/news/article/chelsea-vs-tottenham-all-you-need-to-know",
+              "accessed_at": "2026-05-18T20:01:26.588568+00:00"
+            },
+            {
+              "url": "https://www.chelseafc.com/en/news/article/pre-season-briefing-2025-26-part-one",
+              "accessed_at": "2026-05-18T20:01:26.588574+00:00"
+            },
+            {
+              "url": "https://www.chelseafc.com/en/news/article/chelsea-vs-tottenham-preview--press-conference-info--kick-off-ti",
+              "accessed_at": "2026-05-18T20:01:26.588581+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/media/5xohl450/uefa-champions-league-2025-26-round-of-16-schedule.pdf",
+              "accessed_at": "2026-05-18T20:01:26.588587+00:00"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/media/m44pyoa1/tottenham-women-v-chelsea-women-080226-published.pdf",
+              "accessed_at": "2026-05-18T20:01:26.588594+00:00"
+            },
+            {
+              "url": "https://fbref.com/en/squads/cff3d9bb/2025-2026/roster/Chelsea-Roster-Details",
+              "accessed_at": "2026-05-18T20:01:26.588653+00:00"
+            },
+            {
+              "url": "https://fbref.com/en/squads/cff3d9bb/2025-2026/goallogs/c690/Chelsea-Goal-Logs-EFL-Cup",
+              "accessed_at": "2026-05-18T20:01:26.588660+00:00"
+            },
+            {
+              "url": "https://fbref.com/en/squads/cff3d9bb/Chelsea",
+              "accessed_at": "2026-05-18T20:01:26.588667+00:00"
+            },
+            {
+              "url": "https://fbref.com/en/squads/e8e4577c/2025-2026/matchlogs/all_comps/shooting/Tottenham-Women-Match-Logs-All-Competitions",
+              "accessed_at": "2026-05-18T20:01:26.588674+00:00"
+            },
+            {
+              "url": "https://fbref.com/en/players/15f3ec41/matchlogs/2025-2026/summary",
+              "accessed_at": "2026-05-18T20:01:26.588681+00:00"
+            },
+            {
+              "url": "https://fbref.com/en/squads/cff3d9bb/2025-2026/Chelsea-Stats",
+              "accessed_at": "2026-05-18T20:01:26.588688+00:00"
+            },
+            {
+              "url": "https://fbref.com/en/squads/361ca564/2025-2026/",
+              "accessed_at": "2026-05-18T20:01:26.588695+00:00"
+            },
+            {
+              "url": "https://fbref.com/en/squads/cff3d9bb/2025-2026/",
+              "accessed_at": "2026-05-18T20:01:26.588702+00:00"
+            },
+            {
+              "url": "https://fbref.com/en/squads/cff3d9bb/2025-2026/matchlogs/all_comps/schedule/Chelsea-Scores-and-Fixtures-All-Competitions",
+              "accessed_at": "2026-05-18T20:01:26.588710+00:00"
+            },
+            {
+              "url": "https://fbref.com/en/squads/361ca564/2025-2026/Tottenham-Hotspur-Stats",
+              "accessed_at": "2026-05-18T20:01:26.588717+00:00"
+            },
+            {
+              "url": "https://fbref.com/en/squads/361ca564/Tottenham-Hotspur",
+              "accessed_at": "2026-05-18T20:01:26.588725+00:00"
+            },
+            {
+              "url": "https://fbref.com/en/players/fa031b34/matchlogs/2025-2026/Richarlison-Match-Logs",
+              "accessed_at": "2026-05-18T20:01:26.588732+00:00"
+            },
+            {
+              "url": "https://www.premierleague.com/en/news/4552544/frank-leaves-spurs-why-did-he-go-and-what-next-for-the-club",
+              "accessed_at": "2026-05-18T20:01:26.588745+00:00"
+            },
+            {
+              "url": "https://www.premierleague.com/en/news/4625396/all-you-need-to-know-as-coventry-city-make-premier-league-return",
+              "accessed_at": "2026-05-18T20:01:26.588753+00:00"
+            },
+            {
+              "url": "https://www.premierleague.com/en/news/4583733/palmer-makes-history-with-first-half-hat-trick-for-chelsea-at-wolves",
+              "accessed_at": "2026-05-18T20:01:26.588760+00:00"
+            },
+            {
+              "url": "https://www.premierleague.com/en/news/4644752/all-you-need-to-know-as-ipswich-town-are-promoted-to-the-premier-league",
+              "accessed_at": "2026-05-18T20:01:26.588768+00:00"
+            },
+            {
+              "url": "https://understat.com/match/28889",
+              "accessed_at": "2026-05-18T20:01:26.588776+00:00"
+            },
+            {
+              "url": "https://understat.com/match/28916",
+              "accessed_at": "2026-05-18T20:01:26.588784+00:00"
+            },
+            {
+              "url": "https://www.premierleague.com/en/news/4531073",
+              "accessed_at": "2026-05-18T20:01:26.588792+00:00"
+            },
+            {
+              "url": "https://www.premierleague.com/en/news/4321710",
+              "accessed_at": "2026-05-18T20:01:26.588800+00:00"
+            },
+            {
+              "url": "https://www.premierleague.com/en/news/4585718/salah-moves-joint-seventh-for-premier-league-goal-assists",
+              "accessed_at": "2026-05-18T20:01:26.588810+00:00"
+            },
+            {
+              "url": "https://www.premierleague.com/en/news/4592046/what-is-the-history-behind-every-premier-league-clubs-name",
+              "accessed_at": "2026-05-18T20:01:26.588819+00:00"
+            },
+            {
+              "url": "https://www.premierleague.com/en/news/4617131/uefa-champions-league-review-of-barcelona-v-newcastle-liverpool-v-galatasaray-spurs-v-atletico-madrid",
+              "accessed_at": "2026-05-18T20:01:26.588827+00:00"
+            },
+            {
+              "url": "https://www.premierleague.com/en/news/4251398",
+              "accessed_at": "2026-05-18T20:01:26.588835+00:00"
+            },
+            {
+              "url": "https://checkbestodds.com/football-odds/england/chelsea-tottenham-2026-05-19/1544880731",
+              "accessed_at": "2026-05-18T20:01:26.588850+00:00"
+            },
+            {
+              "url": "https://sportspundit.com/soccer/matches/chelsea-vs-tottenham/",
+              "accessed_at": "2026-05-18T20:01:26.588859+00:00"
+            },
+            {
+              "url": "https://www.sportytrader.com/en/odds/chelsea-tottenham-8467966/",
+              "accessed_at": "2026-05-18T20:01:26.588867+00:00"
+            },
+            {
+              "url": "https://online-bookmakers.com/sports-betting/chelsea-v-tottenham-2026-05-19/",
+              "accessed_at": "2026-05-18T20:01:26.588876+00:00"
+            },
+            {
+              "url": "https://www.futheadpredictions.com/match-chelsea-vs-tottenham-prediction-tips-jQbQQMMZM/",
+              "accessed_at": "2026-05-18T20:01:26.588885+00:00"
+            },
+            {
+              "url": "https://tipsterarea.com/match/chelsea-tottenham-premier-league-england-931266",
+              "accessed_at": "2026-05-18T20:01:26.588894+00:00"
+            },
+            {
+              "url": "https://www.oddschecker.com/us/soccer/premier-league/chelsea-v-tottenham",
+              "accessed_at": "2026-05-18T20:01:26.588907+00:00"
+            },
+            {
+              "url": "https://livescore.football365.com/en-gb/match/tottenham-vs-chelsea",
+              "accessed_at": "2026-05-18T20:01:26.588916+00:00"
+            },
+            {
+              "url": "https://www.transfermarkt.us/spielbericht/index/spielbericht/4626162",
+              "accessed_at": "2026-05-18T20:01:26.588925+00:00"
+            },
+            {
+              "url": "https://www.pokerstars.es/en/sports/soccer/1/english-premier-league/10932509/chelsea-v-tottenham/35600480/",
+              "accessed_at": "2026-05-18T20:01:26.588935+00:00"
+            },
+            {
+              "url": "https://oddscompare.co.za/soccer/english/premier-league/chelsea-fc-v-tottenham-hotspur/2026-05-19",
+              "accessed_at": "2026-05-18T20:01:26.588944+00:00"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/2026_FA_Cup_final",
+              "accessed_at": "2026-05-18T20:01:26.588959+00:00"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Michael_Oliver_%28referee%29",
+              "accessed_at": "2026-05-18T20:01:26.588968+00:00"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/2018_FA_Cup_final",
+              "accessed_at": "2026-05-18T20:01:26.588978+00:00"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Steve_Bennett_%28referee%29",
+              "accessed_at": "2026-05-18T20:01:26.588987+00:00"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Felix_Zwayer",
+              "accessed_at": "2026-05-18T20:01:26.588997+00:00"
+            },
+            {
+              "url": "https://www.uefa.com/newsfiles/UCL/2026/2048055_SPS.pdf",
+              "accessed_at": "2026-05-18T20:01:26.589006+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/chelseafc/comments/1ranm4k/whoscored_chelsea_have_created_the_highest_xg_of/",
+              "accessed_at": "2026-05-18T20:01:26.589016+00:00"
+            },
+            {
+              "url": "https://understat.com/match/28906",
+              "accessed_at": "2026-05-18T20:01:26.589034+00:00"
+            },
+            {
+              "url": "https://www.statbunker.com/competitions/PlayersShotsOnGoal?comp_id=776",
+              "accessed_at": "2026-05-18T20:01:26.589053+00:00"
+            },
+            {
+              "url": "https://www.statbunker.com/competitions/LiveFootballCommentary/Premier-League/Tottenham-Hotspur-VS-West-Ham-United?comp_id=776&date=17-Jan-2026&match_id=128196",
+              "accessed_at": "2026-05-18T20:01:26.589063+00:00"
+            },
+            {
+              "url": "https://www.statbunker.com/competitions/LiveFootballCommentary/Premier-League/Newcastle-United-VS-Tottenham-Hotspur?comp_id=776&date=02-Dec-2025&match_id=127860",
+              "accessed_at": "2026-05-18T20:01:26.589073+00:00"
+            },
+            {
+              "url": "https://understat.com/match/28886",
+              "accessed_at": "2026-05-18T20:01:26.589083+00:00"
+            },
+            {
+              "url": "https://understat.com/match/28814",
+              "accessed_at": "2026-05-18T20:01:26.589093+00:00"
+            },
+            {
+              "url": "https://understat.com/match/28821",
+              "accessed_at": "2026-05-18T20:01:26.589103+00:00"
+            },
+            {
+              "url": "https://understat.com/match/28863",
+              "accessed_at": "2026-05-18T20:01:26.589114+00:00"
+            },
+            {
+              "url": "https://understat.com/match/28782",
+              "accessed_at": "2026-05-18T20:01:26.589124+00:00"
+            },
+            {
+              "url": "https://understat.com/match/28854",
+              "accessed_at": "2026-05-18T20:01:26.589134+00:00"
+            },
+            {
+              "url": "https://understat.com/match/28789",
+              "accessed_at": "2026-05-18T20:01:26.589145+00:00"
+            },
+            {
+              "url": "https://www.fctables.com/h2h/chelsea/tottenham/",
+              "accessed_at": "2026-05-18T20:01:26.589169+00:00"
+            },
+            {
+              "url": "https://www.sofascore.com/news/chelsea-vs-tottenham-odds-form-and-sofascore-rating",
+              "accessed_at": "2026-05-18T20:01:26.589180+00:00"
+            },
+            {
+              "url": "https://theanalyst.com/articles/chelsea-vs-tottenham-prediction-premier-league-05-2026",
+              "accessed_at": "2026-05-18T20:01:26.589190+00:00"
+            },
+            {
+              "url": "https://www.sportsmole.co.uk/football/chelsea/relegation-battle/preview/chelsea-vs-spurs-prediction-team-news-lineups_597718.html",
+              "accessed_at": "2026-05-18T20:01:26.589201+00:00"
+            },
+            {
+              "url": "https://matchstat.com/predictions-tips/football-soccer/tottenham-hotspur/chelsea/33/38/",
+              "accessed_at": "2026-05-18T20:01:26.589211+00:00"
+            },
+            {
+              "url": "https://www.xscores.com/betting/football-predictions/chelsea-fc-tottenham-hotspur-prediction-19-05-2026/",
+              "accessed_at": "2026-05-18T20:01:26.589222+00:00"
+            },
+            {
+              "url": "https://www.livescores.bz/game_info/chelsea-fc-tottenham-hotspur-2026-05-17",
+              "accessed_at": "2026-05-18T20:01:26.589233+00:00"
+            },
+            {
+              "url": "https://blog.ke.sportpesa.com/2026/05/18/chelsea-vs-tottenham-epl-prediction-match-preview-team-news-current-form-h2h/",
+              "accessed_at": "2026-05-18T20:01:26.589249+00:00"
+            },
+            {
+              "url": "https://www.squawka.com/us/news/match-preview-chelsea-vs-tottenham-19-05-26-premier-league/",
+              "accessed_at": "2026-05-18T20:01:26.589265+00:00"
+            },
+            {
+              "url": "https://betmines.com/match-preview/chelsea-vs-tottenham-hotspur-prediction-match-preview-and-analysis-premier-league-19-05-2026",
+              "accessed_at": "2026-05-18T20:01:26.589276+00:00"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Chelsea_F.C._Women_season",
+              "accessed_at": "2026-05-18T20:01:26.589302+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/coys/comments/1tgf6it/pl_form_table_last_6_games/",
+              "accessed_at": "2026-05-18T20:01:26.589314+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/coys/comments/1t536cq/daily_discussion_transfer_thread_may_06_2026/",
+              "accessed_at": "2026-05-18T20:01:26.589325+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/sportsgambling/comments/1t9ktmj/tottenham_leeds_36th_round_of_the_premier_league/",
+              "accessed_at": "2026-05-18T20:01:26.589336+00:00"
+            },
+            {
+              "url": "https://www.uefa.com/newsfiles/UCL/2026/2048060_TS.pdf",
+              "accessed_at": "2026-05-18T20:01:26.589348+00:00"
+            },
+            {
+              "url": "https://thepeninsulaqatar.com/pdf/20260505_1777929797-315.pdf",
+              "accessed_at": "2026-05-18T20:01:26.589359+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/Tottenham/comments/1tg05lv/tactic_against_chelsea/",
+              "accessed_at": "2026-05-18T20:01:26.589371+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/coys/comments/1t45pat/daily_discussion_transfer_thread_may_05_2026/",
+              "accessed_at": "2026-05-18T20:01:26.589382+00:00"
+            },
+            {
+              "url": "https://www.reddit.com/r/coys/comments/1t8xelb/daily_discussion_transfer_thread_may_10_2026/",
+              "accessed_at": "2026-05-18T20:01:26.589394+00:00"
+            },
+            {
+              "url": "https://www.chelseafc.com/en/news/article/chelsea-squad-numbers-confirmed-for-2025-26-season",
+              "accessed_at": "2026-05-18T18:30:00Z",
+              "title": "Chelsea squad numbers confirmed for 2025/26 season"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/teams/men/players/",
+              "accessed_at": "2026-05-18T18:31:00Z",
+              "title": "Men's First Team Squad | Tottenham Hotspur"
+            },
+            {
+              "url": "https://www.chelseafc.com/en/news/article/chelsea-vs-tottenham-key-statistics-and-facts",
+              "accessed_at": "2026-05-18T18:34:00Z",
+              "title": "Chelsea vs Tottenham: Key statistics and facts"
+            },
+            {
+              "url": "https://www.chelseafc.com/en/news/article/chelsea-vs-tottenham-all-you-need-to-know",
+              "accessed_at": "2026-05-18T18:35:00Z",
+              "title": "Chelsea vs Tottenham: All you need to know"
+            },
+            {
+              "url": "https://www.tottenhamhotspur.com/news/1066190/the-daly-brief-spurs-vs-leeds",
+              "accessed_at": "2026-05-18T18:36:00Z",
+              "title": "The Daly Brief | Spurs vs Leeds"
+            },
+            {
+              "url": "https://www.sportsmole.co.uk/football/chelsea/relegation-battle/preview/chelsea-vs-spurs-prediction-team-news-lineups_597718.html",
+              "accessed_at": "2026-05-18T18:40:00Z",
+              "title": "Preview: Chelsea vs Tottenham Hotspur - prediction, team news, lineups"
+            },
+            {
+              "url": "https://www.squawka.com/us/news/match-preview-chelsea-vs-tottenham-19-05-26-premier-league/",
+              "accessed_at": "2026-05-18T18:42:00Z",
+              "title": "Chelsea vs Tottenham: Predictions, odds, picks & stats"
+            },
+            {
+              "url": "https://betmines.com/match-preview/chelsea-vs-tottenham-hotspur-prediction-match-preview-and-analysis-premier-league-19-05-2026",
+              "accessed_at": "2026-05-18T18:45:00Z",
+              "title": "Chelsea vs Tottenham Hotspur Prediction: Match Preview and Analysis"
+            },
+            {
+              "url": "https://www.rotowire.com/betting/soccer/game/chelsea-vs-tottenham-hotspur-odds-2026-05-19-2562259",
+              "accessed_at": "2026-05-18T18:48:00Z",
+              "title": "Chelsea vs Tottenham Hotspur Odds | RotoWire"
+            },
+            {
+              "url": "https://sportspundit.com/soccer/matches/chelsea-vs-tottenham/",
+              "accessed_at": "2026-05-18T18:50:00Z",
+              "title": "Chelsea vs Tottenham (May 19, 2026) – Preview & Odds"
+            },
+            {
+              "url": "https://www.spurs-web.com/tottenham-match-previews/chelsea-vs-tottenham-premier-league-preview-team-news-and-predicted-lineups/",
+              "accessed_at": "2026-05-18T18:52:00Z",
+              "title": "Chelsea vs Tottenham Premier League preview: Team news and predicted lineups"
+            },
+            {
+              "url": "https://www.xscores.com/betting/football-predictions/chelsea-fc-tottenham-hotspur-prediction-19-05-2026/",
+              "accessed_at": "2026-05-18T18:54:00Z",
+              "title": "Prediction and odds for Chelsea - Tottenham"
+            }
+          ],
+          "over_3_5_prob": 0.234
+        },
+        {
+          "model_id": "gpt-5.4",
+          "setting": "S1",
+          "win_probs": {
+            "home": 0.315,
+            "draw": 0.349,
+            "away": 0.336
+          },
+          "score_dist": [
+            {
+              "score": "1-1",
+              "p": 0.163
+            },
+            {
+              "score": "0-0",
+              "p": 0.131
+            },
+            {
+              "score": "0-1",
+              "p": 0.117
+            },
+            {
+              "score": "1-0",
+              "p": 0.113
+            },
+            {
+              "score": "1-2",
+              "p": 0.071
+            },
+            {
+              "score": "2-1",
+              "p": 0.068
+            },
+            {
+              "score": "0-2",
+              "p": 0.066
+            },
+            {
+              "score": "2-0",
+              "p": 0.061
+            },
+            {
+              "score": "2-2",
+              "p": 0.049
+            },
+            {
+              "score": "1-3",
+              "p": 0.027
+            },
+            {
+              "score": "0-3",
+              "p": 0.025
+            },
+            {
+              "score": "3-1",
+              "p": 0.024
+            },
+            {
+              "score": "3-0",
+              "p": 0.022
+            },
+            {
+              "score": "2-3",
+              "p": 0.014
+            },
+            {
+              "score": "3-2",
+              "p": 0.014
+            },
+            {
+              "score": "1-4",
+              "p": 0.008
+            },
+            {
+              "score": "0-4",
+              "p": 0.007
+            },
+            {
+              "score": "4-1",
+              "p": 0.007
+            },
+            {
+              "score": "3-3",
+              "p": 0.007
+            },
+            {
+              "score": "4-0",
+              "p": 0.006
+            }
+          ],
+          "most_likely_score": "1-1",
+          "expected_goal_diff": -0.05,
+          "advance_prob": null,
+          "reasoning": {
+            "overall": "Chelsea enter in poor form, with only two wins in ten and a long run of low scoring league displays, while Tottenham have been inconsistent but slightly steadier and come in with stronger survival motivation. Stamford Bridge and Chelsea's superior individual talent keep the home side competitive, yet Spurs' transition threat through Maddison, Kudus and Solanke matches up well against a Chelsea side that has recently conceded too many big moments. The rivalry usually raises intensity, Chelsea historically tend to be stronger at home in this fixture, and key attackers like Palmer and Solanke make a draw with both teams scoring the most plausible middle ground.",
+            "t1_result": "Chelsea's home edge and squad ceiling stop this from leaning clearly away, but their recent results and lack of attacking fluency make them hard to trust as favorites. Tottenham look a touch more functional, so the forecast clusters around a narrow draw or one-goal away result rather than a confident Chelsea win.",
+            "t2_player": "Chelsea are likely to use a 4-2-3-1 built around Caicedo and Enzo Fernández controlling midfield with Palmer drifting inside, while Tottenham's strongest setup is a 4-3-3 with Maddison linking to Solanke and wide runners. Palmer and João Pedro are Chelsea's likeliest scorers, but Solanke is the clearest single scoring threat because Chelsea have recently struggled to suppress central box touches.",
+            "t3_events": "The game should begin tense because of the table pressure and derby context, with more space opening after halftime if one side scores first. A high foul count, a few tactical yellows, and several attacking substitutions in the final half hour are more likely than an early goal avalanche.",
+            "t4_stats": "Chelsea should see a little more possession at home, but Tottenham's press and direct transitions should keep shots fairly even. That points to moderate totals in possession and passing accuracy, with both goalkeepers likely needing multiple saves rather than one side fully controlling chance volume."
+          },
+          "scorers": [
+            {
+              "player": "D. Solanke",
+              "team": "away",
+              "minute_range": [
+                30,
+                80
+              ],
+              "p": 0.292
+            },
+            {
+              "player": "C. Palmer",
+              "team": "home",
+              "minute_range": [
+                40,
+                90
+              ],
+              "p": 0.241
+            },
+            {
+              "player": "João Pedro",
+              "team": "home",
+              "minute_range": [
+                20,
+                75
+              ],
+              "p": 0.184
+            },
+            {
+              "player": "J. Maddison",
+              "team": "away",
+              "minute_range": [
+                25,
+                85
+              ],
+              "p": 0.158
+            },
+            {
+              "player": "M. Kudus",
+              "team": "away",
+              "minute_range": [
+                15,
+                70
+              ],
+              "p": 0.152
+            },
+            {
+              "player": "Pedro Neto",
+              "team": "home",
+              "minute_range": [
+                20,
+                70
+              ],
+              "p": 0.119
+            }
+          ],
+          "assisters": [
+            {
+              "player": "C. Palmer",
+              "team": "home",
+              "p": 0.247
+            },
+            {
+              "player": "J. Maddison",
+              "team": "away",
+              "p": 0.229
+            },
+            {
+              "player": "Pedro Porro",
+              "team": "away",
+              "p": 0.149
+            },
+            {
+              "player": "Pedro Neto",
+              "team": "home",
+              "p": 0.141
+            }
+          ],
+          "motm_probs": [
+            {
+              "player": "C. Palmer",
+              "team": "home",
+              "p": 0.232
+            },
+            {
+              "player": "D. Solanke",
+              "team": "away",
+              "p": 0.209
+            },
+            {
+              "player": "J. Maddison",
+              "team": "away",
+              "p": 0.133
+            },
+            {
+              "player": "M. Caicedo",
+              "team": "home",
+              "p": 0.108
+            }
+          ],
+          "lineups": {
+            "home": {
+              "starting": [
+                {
+                  "name": "Robert Sánchez",
+                  "position": "GK"
+                },
+                {
+                  "name": "R. James",
+                  "position": "DF"
+                },
+                {
+                  "name": "W. Fofana",
+                  "position": "DF"
+                },
+                {
+                  "name": "L. Colwill",
+                  "position": "DF"
+                },
+                {
+                  "name": "Marc Cucurella",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. Caicedo",
+                  "position": "MF"
+                },
+                {
+                  "name": "E. Fernández",
+                  "position": "MF"
+                },
+                {
+                  "name": "C. Palmer",
+                  "position": "FW"
+                },
+                {
+                  "name": "Andrey Santos",
+                  "position": "MF"
+                },
+                {
+                  "name": "Pedro Neto",
+                  "position": "FW"
+                },
+                {
+                  "name": "João Pedro",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "F. Jörgensen",
+                  "position": "GK"
+                },
+                {
+                  "name": "T. Adarabioyo",
+                  "position": "DF"
+                },
+                {
+                  "name": "T. Chalobah",
+                  "position": "DF"
+                },
+                {
+                  "name": "B. Badiashile",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. Gusto",
+                  "position": "DF"
+                },
+                {
+                  "name": "R. Lavia",
+                  "position": "MF"
+                },
+                {
+                  "name": "Dário Essugo",
+                  "position": "MF"
+                },
+                {
+                  "name": "L. Delap",
+                  "position": "FW"
+                },
+                {
+                  "name": "J. Bynoe-Gittens",
+                  "position": "FW"
+                }
+              ]
+            },
+            "away": {
+              "starting": [
+                {
+                  "name": "G. Vicario",
+                  "position": "GK"
+                },
+                {
+                  "name": "Pedro Porro",
+                  "position": "DF"
+                },
+                {
+                  "name": "C. Romero",
+                  "position": "DF"
+                },
+                {
+                  "name": "M. van de Ven",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Udogie",
+                  "position": "DF"
+                },
+                {
+                  "name": "João Palhinha",
+                  "position": "MF"
+                },
+                {
+                  "name": "R. Bentancur",
+                  "position": "MF"
+                },
+                {
+                  "name": "J. Maddison",
+                  "position": "MF"
+                },
+                {
+                  "name": "M. Kudus",
+                  "position": "FW"
+                },
+                {
+                  "name": "D. Solanke",
+                  "position": "FW"
+                },
+                {
+                  "name": "M. Tel",
+                  "position": "FW"
+                }
+              ],
+              "bench": [
+                {
+                  "name": "A. Kinský",
+                  "position": "GK"
+                },
+                {
+                  "name": "K. Danso",
+                  "position": "DF"
+                },
+                {
+                  "name": "B. Davies",
+                  "position": "DF"
+                },
+                {
+                  "name": "R. Drăgușin",
+                  "position": "DF"
+                },
+                {
+                  "name": "D. Spence",
+                  "position": "DF"
+                },
+                {
+                  "name": "P. Sarr",
+                  "position": "MF"
+                },
+                {
+                  "name": "A. Gray",
+                  "position": "MF"
+                },
+                {
+                  "name": "C. Gallagher",
+                  "position": "MF"
+                },
+                {
+                  "name": "R. Kolo Muani",
+                  "position": "FW"
+                }
+              ]
+            }
+          },
+          "formations": {
+            "home": "4-2-3-1",
+            "away": "4-3-3"
+          },
+          "substitutions": [
+            {
+              "team": "home",
+              "off": "Andrey Santos",
+              "on": "R. Lavia",
+              "minute": 63
+            },
+            {
+              "team": "home",
+              "off": "Pedro Neto",
+              "on": "J. Bynoe-Gittens",
+              "minute": 71
+            },
+            {
+              "team": "home",
+              "off": "João Pedro",
+              "on": "L. Delap",
+              "minute": 78
+            },
+            {
+              "team": "away",
+              "off": "M. Tel",
+              "on": "R. Kolo Muani",
+              "minute": 68
+            },
+            {
+              "team": "away",
+              "off": "J. Maddison",
+              "on": "P. Sarr",
+              "minute": 74
+            },
+            {
+              "team": "away",
+              "off": "R. Bentancur",
+              "on": "C. Gallagher",
+              "minute": 81
+            }
+          ],
+          "cards": [
+            {
+              "player": "M. Caicedo",
+              "team": "home",
+              "color": "yellow",
+              "minute": 36
+            },
+            {
+              "player": "C. Romero",
+              "team": "away",
+              "color": "yellow",
+              "minute": 43
+            },
+            {
+              "player": "João Palhinha",
+              "team": "away",
+              "color": "yellow",
+              "minute": 58
+            },
+            {
+              "player": "Marc Cucurella",
+              "team": "home",
+              "color": "yellow",
+              "minute": 67
+            }
+          ],
+          "penalties": [],
+          "own_goals": [],
+          "stats": {
+            "possession": {
+              "home": 52,
+              "away": 48
+            },
+            "shots": {
+              "home": 12,
+              "away": 11
+            },
+            "shots_on_target": {
+              "home": 4,
+              "away": 4
+            },
+            "corners": {
+              "home": 5,
+              "away": 5
+            },
+            "pass_accuracy": {
+              "home": 85,
+              "away": 83
+            },
+            "fouls": {
+              "home": 12,
+              "away": 14
+            },
+            "saves": {
+              "home": 3,
+              "away": 3
+            },
+            "defensive_actions": {
+              "home": 59,
+              "away": 62
+            }
+          },
+          "cost_usd": 0.074,
+          "sources": [],
+          "over_3_5_prob": 0.163
+        }
+      ],
       "live": null
     },
     {
