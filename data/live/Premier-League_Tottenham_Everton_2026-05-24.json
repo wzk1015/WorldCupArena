@@ -13,13 +13,13 @@
     {
       "fixture": {
         "id": 1379347,
-        "referee": "M. Oliver",
+        "referee": "Michael Oliver, England",
         "timezone": "UTC",
         "date": "2026-05-24T15:00:00+00:00",
         "timestamp": 1779634800,
         "periods": {
           "first": 1779634800,
-          "second": null
+          "second": 1779638400
         },
         "venue": {
           "id": 593,
@@ -27,9 +27,9 @@
           "city": "London"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 32,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 70,
           "extra": null
         }
       },
@@ -48,22 +48,22 @@
           "id": 47,
           "name": "Tottenham",
           "logo": "https://media.api-sports.io/football/teams/47.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 45,
           "name": "Everton",
           "logo": "https://media.api-sports.io/football/teams/45.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -101,6 +101,72 @@
           "type": "Card",
           "detail": "Yellow Card",
           "comments": "Holding"
+        },
+        {
+          "time": {
+            "elapsed": 43,
+            "extra": null
+          },
+          "team": {
+            "id": 47,
+            "name": "Tottenham",
+            "logo": "https://media.api-sports.io/football/teams/47.png"
+          },
+          "player": {
+            "id": 41104,
+            "name": "J. Palhinha"
+          },
+          "assist": {
+            "id": null,
+            "name": null
+          },
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 62,
+            "extra": null
+          },
+          "team": {
+            "id": 45,
+            "name": "Everton",
+            "logo": "https://media.api-sports.io/football/teams/45.png"
+          },
+          "player": {
+            "id": 202854,
+            "name": "M. Rohl"
+          },
+          "assist": {
+            "id": 334037,
+            "name": "T. George"
+          },
+          "type": "subst",
+          "detail": "Substitution 1",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 62,
+            "extra": null
+          },
+          "team": {
+            "id": 45,
+            "name": "Everton",
+            "logo": "https://media.api-sports.io/football/teams/45.png"
+          },
+          "player": {
+            "id": 270139,
+            "name": "J. O'Brien"
+          },
+          "assist": {
+            "id": 405360,
+            "name": "H. Armstrong"
+          },
+          "type": "subst",
+          "detail": "Substitution 2",
+          "comments": null
         }
       ],
       "lineups": [
@@ -533,35 +599,35 @@
           "statistics": [
             {
               "type": "Shots on Goal",
-              "value": 0
+              "value": 2
             },
             {
               "type": "Shots off Goal",
-              "value": 6
+              "value": 8
             },
             {
               "type": "Total Shots",
-              "value": 9
+              "value": 19
             },
             {
               "type": "Blocked Shots",
-              "value": 3
+              "value": 9
             },
             {
               "type": "Shots insidebox",
-              "value": 7
+              "value": 15
             },
             {
               "type": "Shots outsidebox",
-              "value": 2
+              "value": 4
             },
             {
               "type": "Fouls",
-              "value": 3
+              "value": 11
             },
             {
               "type": "Corner Kicks",
-              "value": 2
+              "value": 6
             },
             {
               "type": "Offsides",
@@ -569,7 +635,7 @@
             },
             {
               "type": "Ball Possession",
-              "value": "65%"
+              "value": "57%"
             },
             {
               "type": "Yellow Cards",
@@ -581,27 +647,27 @@
             },
             {
               "type": "Goalkeeper Saves",
-              "value": null
+              "value": 0
             },
             {
               "type": "Total passes",
-              "value": 139
+              "value": 301
             },
             {
               "type": "Passes accurate",
-              "value": 125
+              "value": 262
             },
             {
               "type": "Passes %",
-              "value": "90%"
+              "value": "87%"
             },
             {
               "type": "expected_goals",
-              "value": "0.38"
+              "value": "0.98"
             },
             {
               "type": "goals_prevented",
-              "value": null
+              "value": "-0.32"
             }
           ]
         },
@@ -618,31 +684,31 @@
             },
             {
               "type": "Shots off Goal",
-              "value": 1
+              "value": 2
             },
             {
               "type": "Total Shots",
-              "value": 1
+              "value": 5
             },
             {
               "type": "Blocked Shots",
-              "value": 0
+              "value": 3
             },
             {
               "type": "Shots insidebox",
-              "value": 1
+              "value": 3
             },
             {
               "type": "Shots outsidebox",
-              "value": 0
+              "value": 2
             },
             {
               "type": "Fouls",
-              "value": 7
+              "value": 12
             },
             {
               "type": "Corner Kicks",
-              "value": 1
+              "value": 4
             },
             {
               "type": "Offsides",
@@ -650,7 +716,7 @@
             },
             {
               "type": "Ball Possession",
-              "value": "35%"
+              "value": "43%"
             },
             {
               "type": "Yellow Cards",
@@ -662,27 +728,27 @@
             },
             {
               "type": "Goalkeeper Saves",
-              "value": null
+              "value": 1
             },
             {
               "type": "Total passes",
-              "value": 76
+              "value": 227
             },
             {
               "type": "Passes accurate",
-              "value": 55
+              "value": 181
             },
             {
               "type": "Passes %",
-              "value": "72%"
+              "value": "80%"
             },
             {
               "type": "expected_goals",
-              "value": "0.03"
+              "value": "0.16"
             },
             {
               "type": "goals_prevented",
-              "value": null
+              "value": "-0.32"
             }
           ]
         }
@@ -693,7 +759,7 @@
             "id": 47,
             "name": "Tottenham",
             "logo": "https://media.api-sports.io/football/teams/47.png",
-            "update": "2026-05-24T15:31:29+00:00"
+            "update": "2026-05-24T16:34:19+00:00"
           },
           "players": [
             {
@@ -705,7 +771,7 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 65,
                     "number": 31,
                     "position": "G",
                     "rating": "6.7",
@@ -724,9 +790,9 @@
                     "saves": null
                   },
                   "passes": {
-                    "total": 5,
+                    "total": 9,
                     "key": null,
-                    "accuracy": "4"
+                    "accuracy": "7"
                   },
                   "tackles": {
                     "total": null,
@@ -769,10 +835,10 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 65,
                     "number": 23,
                     "position": "D",
-                    "rating": "6.9",
+                    "rating": "7.2",
                     "captain": false,
                     "substitute": false
                   },
@@ -788,27 +854,27 @@
                     "saves": null
                   },
                   "passes": {
-                    "total": 12,
-                    "key": null,
-                    "accuracy": "10"
+                    "total": 25,
+                    "key": 3,
+                    "accuracy": "20"
                   },
                   "tackles": {
-                    "total": 2,
+                    "total": 3,
                     "blocks": null,
                     "interceptions": null
                   },
                   "duels": {
-                    "total": 3,
-                    "won": 2
+                    "total": 8,
+                    "won": 4
                   },
                   "dribbles": {
-                    "attempts": null,
-                    "success": null,
+                    "attempts": 2,
+                    "success": 1,
                     "past": null
                   },
                   "fouls": {
                     "drawn": null,
-                    "committed": null
+                    "committed": 1
                   },
                   "cards": {
                     "yellow": 0,
@@ -833,10 +899,10 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 65,
                     "number": 4,
                     "position": "D",
-                    "rating": "6.6",
+                    "rating": "7",
                     "captain": false,
                     "substitute": false
                   },
@@ -852,18 +918,18 @@
                     "saves": null
                   },
                   "passes": {
-                    "total": 22,
+                    "total": 40,
                     "key": null,
-                    "accuracy": "22"
+                    "accuracy": "36"
                   },
                   "tackles": {
                     "total": null,
                     "blocks": null,
-                    "interceptions": null
+                    "interceptions": 1
                   },
                   "duels": {
-                    "total": 3,
-                    "won": 2
+                    "total": 7,
+                    "won": 5
                   },
                   "dribbles": {
                     "attempts": null,
@@ -897,10 +963,10 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 65,
                     "number": 37,
                     "position": "D",
-                    "rating": "6.6",
+                    "rating": "6.9",
                     "captain": true,
                     "substitute": false
                   },
@@ -916,9 +982,9 @@
                     "saves": null
                   },
                   "passes": {
-                    "total": 23,
+                    "total": 41,
                     "key": null,
-                    "accuracy": "22"
+                    "accuracy": "39"
                   },
                   "tackles": {
                     "total": null,
@@ -926,17 +992,17 @@
                     "interceptions": null
                   },
                   "duels": {
-                    "total": 3,
-                    "won": 2
+                    "total": 9,
+                    "won": 4
                   },
                   "dribbles": {
                     "attempts": null,
                     "success": null,
-                    "past": null
+                    "past": 1
                   },
                   "fouls": {
                     "drawn": null,
-                    "committed": 1
+                    "committed": 3
                   },
                   "cards": {
                     "yellow": 0,
@@ -961,10 +1027,10 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 65,
                     "number": 13,
                     "position": "D",
-                    "rating": "6.9",
+                    "rating": "7",
                     "captain": false,
                     "substitute": false
                   },
@@ -980,26 +1046,26 @@
                     "saves": null
                   },
                   "passes": {
-                    "total": 14,
+                    "total": 29,
                     "key": null,
-                    "accuracy": "12"
+                    "accuracy": "26"
                   },
                   "tackles": {
-                    "total": 1,
-                    "blocks": null,
+                    "total": 2,
+                    "blocks": 1,
                     "interceptions": null
                   },
                   "duels": {
-                    "total": 3,
-                    "won": 3
+                    "total": 7,
+                    "won": 5
                   },
                   "dribbles": {
                     "attempts": 1,
                     "success": 1,
-                    "past": null
+                    "past": 1
                   },
                   "fouls": {
-                    "drawn": 1,
+                    "drawn": 2,
                     "committed": null
                   },
                   "cards": {
@@ -1025,10 +1091,10 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 65,
                     "number": 30,
                     "position": "M",
-                    "rating": "6.7",
+                    "rating": "6.9",
                     "captain": false,
                     "substitute": false
                   },
@@ -1044,27 +1110,27 @@
                     "saves": null
                   },
                   "passes": {
-                    "total": 6,
+                    "total": 27,
                     "key": null,
-                    "accuracy": "6"
+                    "accuracy": "23"
                   },
                   "tackles": {
-                    "total": null,
+                    "total": 3,
                     "blocks": null,
                     "interceptions": 2
                   },
                   "duels": {
-                    "total": 2,
-                    "won": 1
+                    "total": 10,
+                    "won": 6
                   },
                   "dribbles": {
-                    "attempts": null,
+                    "attempts": 1,
                     "success": null,
                     "past": null
                   },
                   "fouls": {
                     "drawn": 1,
-                    "committed": null
+                    "committed": 1
                   },
                   "cards": {
                     "yellow": 0,
@@ -1089,45 +1155,45 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 65,
                     "number": 6,
                     "position": "M",
-                    "rating": "6.9",
+                    "rating": "7.3",
                     "captain": false,
                     "substitute": false
                   },
                   "offsides": null,
                   "shots": {
-                    "total": 1,
-                    "on": null
+                    "total": 3,
+                    "on": 1
                   },
                   "goals": {
-                    "total": null,
+                    "total": 1,
                     "conceded": 0,
                     "assists": null,
                     "saves": null
                   },
                   "passes": {
-                    "total": 27,
+                    "total": 42,
                     "key": 2,
-                    "accuracy": "23"
+                    "accuracy": "36"
                   },
                   "tackles": {
                     "total": 2,
-                    "blocks": null,
-                    "interceptions": null
+                    "blocks": 1,
+                    "interceptions": 1
                   },
                   "duels": {
-                    "total": 5,
-                    "won": 4
+                    "total": 9,
+                    "won": 6
                   },
                   "dribbles": {
-                    "attempts": null,
-                    "success": null,
+                    "attempts": 2,
+                    "success": 1,
                     "past": null
                   },
                   "fouls": {
-                    "drawn": 2,
+                    "drawn": 3,
                     "committed": null
                   },
                   "cards": {
@@ -1153,17 +1219,17 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 65,
                     "number": 24,
                     "position": "M",
-                    "rating": "6.5",
+                    "rating": "6.2",
                     "captain": false,
                     "substitute": false
                   },
                   "offsides": null,
                   "shots": {
-                    "total": null,
-                    "on": null
+                    "total": 1,
+                    "on": 1
                   },
                   "goals": {
                     "total": null,
@@ -1172,27 +1238,27 @@
                     "saves": null
                   },
                   "passes": {
-                    "total": 7,
+                    "total": 19,
                     "key": null,
-                    "accuracy": "6"
+                    "accuracy": "13"
                   },
                   "tackles": {
-                    "total": null,
+                    "total": 1,
                     "blocks": null,
                     "interceptions": null
                   },
                   "duels": {
-                    "total": 1,
-                    "won": null
+                    "total": 10,
+                    "won": 4
                   },
                   "dribbles": {
-                    "attempts": null,
+                    "attempts": 2,
                     "success": null,
                     "past": null
                   },
                   "fouls": {
-                    "drawn": null,
-                    "committed": 1
+                    "drawn": 1,
+                    "committed": 3
                   },
                   "cards": {
                     "yellow": 0,
@@ -1217,10 +1283,10 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 65,
                     "number": 22,
                     "position": "M",
-                    "rating": "6.3",
+                    "rating": "6.6",
                     "captain": false,
                     "substitute": false
                   },
@@ -1236,26 +1302,26 @@
                     "saves": null
                   },
                   "passes": {
-                    "total": 8,
-                    "key": null,
-                    "accuracy": "7"
+                    "total": 24,
+                    "key": 1,
+                    "accuracy": "22"
                   },
                   "tackles": {
-                    "total": null,
+                    "total": 1,
                     "blocks": null,
                     "interceptions": null
                   },
                   "duels": {
-                    "total": 4,
-                    "won": 1
+                    "total": 9,
+                    "won": 4
                   },
                   "dribbles": {
-                    "attempts": 1,
+                    "attempts": 2,
                     "success": 1,
                     "past": null
                   },
                   "fouls": {
-                    "drawn": null,
+                    "drawn": 2,
                     "committed": 1
                   },
                   "cards": {
@@ -1281,10 +1347,10 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 65,
                     "number": 11,
                     "position": "M",
-                    "rating": "6.3",
+                    "rating": "7.2",
                     "captain": false,
                     "substitute": false
                   },
@@ -1300,22 +1366,22 @@
                     "saves": null
                   },
                   "passes": {
-                    "total": 11,
-                    "key": 3,
-                    "accuracy": "10"
+                    "total": 24,
+                    "key": 4,
+                    "accuracy": "22"
                   },
                   "tackles": {
-                    "total": null,
+                    "total": 1,
                     "blocks": null,
                     "interceptions": 1
                   },
                   "duels": {
-                    "total": 5,
-                    "won": 2
+                    "total": 8,
+                    "won": 4
                   },
                   "dribbles": {
-                    "attempts": 1,
-                    "success": null,
+                    "attempts": 2,
+                    "success": 1,
                     "past": null
                   },
                   "fouls": {
@@ -1345,16 +1411,16 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 65,
                     "number": 9,
                     "position": "F",
-                    "rating": "6.5",
+                    "rating": "6.7",
                     "captain": false,
                     "substitute": false
                   },
                   "offsides": null,
                   "shots": {
-                    "total": 1,
+                    "total": 2,
                     "on": null
                   },
                   "goals": {
@@ -1364,18 +1430,18 @@
                     "saves": null
                   },
                   "passes": {
-                    "total": 4,
-                    "key": null,
-                    "accuracy": "3"
+                    "total": 8,
+                    "key": 1,
+                    "accuracy": "7"
                   },
                   "tackles": {
                     "total": null,
-                    "blocks": null,
+                    "blocks": 1,
                     "interceptions": null
                   },
                   "duels": {
-                    "total": 4,
-                    "won": 1
+                    "total": 11,
+                    "won": 4
                   },
                   "dribbles": {
                     "attempts": null,
@@ -1383,8 +1449,8 @@
                     "past": null
                   },
                   "fouls": {
-                    "drawn": null,
-                    "committed": null
+                    "drawn": 1,
+                    "committed": 1
                   },
                   "cards": {
                     "yellow": 0,
@@ -1983,7 +2049,7 @@
             "id": 45,
             "name": "Everton",
             "logo": "https://media.api-sports.io/football/teams/45.png",
-            "update": "2026-05-24T15:31:29+00:00"
+            "update": "2026-05-24T16:34:19+00:00"
           },
           "players": [
             {
@@ -1995,7 +2061,7 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 65,
                     "number": 1,
                     "position": "G",
                     "rating": "6.3",
@@ -2009,14 +2075,14 @@
                   },
                   "goals": {
                     "total": null,
-                    "conceded": 0,
+                    "conceded": 1,
                     "assists": null,
-                    "saves": null
+                    "saves": 1
                   },
                   "passes": {
-                    "total": 12,
+                    "total": 26,
                     "key": null,
-                    "accuracy": "7"
+                    "accuracy": "17"
                   },
                   "tackles": {
                     "total": null,
@@ -2059,10 +2125,10 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 62,
                     "number": 15,
                     "position": "D",
-                    "rating": "6.5",
+                    "rating": "6.7",
                     "captain": false,
                     "substitute": false
                   },
@@ -2078,9 +2144,9 @@
                     "saves": null
                   },
                   "passes": {
-                    "total": 9,
-                    "key": null,
-                    "accuracy": "6"
+                    "total": 20,
+                    "key": 1,
+                    "accuracy": "15"
                   },
                   "tackles": {
                     "total": 1,
@@ -2088,8 +2154,8 @@
                     "interceptions": null
                   },
                   "duels": {
-                    "total": 6,
-                    "won": 2
+                    "total": 11,
+                    "won": 6
                   },
                   "dribbles": {
                     "attempts": null,
@@ -2097,7 +2163,7 @@
                     "past": 1
                   },
                   "fouls": {
-                    "drawn": null,
+                    "drawn": 2,
                     "committed": 2
                   },
                   "cards": {
@@ -2123,7 +2189,7 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 65,
                     "number": 6,
                     "position": "D",
                     "rating": "6.7",
@@ -2142,18 +2208,18 @@
                     "saves": null
                   },
                   "passes": {
-                    "total": 7,
+                    "total": 20,
                     "key": null,
-                    "accuracy": "6"
+                    "accuracy": "17"
                   },
                   "tackles": {
                     "total": null,
-                    "blocks": 1,
+                    "blocks": 2,
                     "interceptions": 1
                   },
                   "duels": {
-                    "total": 3,
-                    "won": 1
+                    "total": 6,
+                    "won": 3
                   },
                   "dribbles": {
                     "attempts": 1,
@@ -2162,7 +2228,7 @@
                   },
                   "fouls": {
                     "drawn": null,
-                    "committed": null
+                    "committed": 1
                   },
                   "cards": {
                     "yellow": 0,
@@ -2187,7 +2253,7 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 65,
                     "number": 5,
                     "position": "D",
                     "rating": "6.6",
@@ -2206,18 +2272,18 @@
                     "saves": null
                   },
                   "passes": {
-                    "total": 7,
+                    "total": 28,
                     "key": null,
-                    "accuracy": "5"
+                    "accuracy": "23"
                   },
                   "tackles": {
-                    "total": null,
+                    "total": 1,
                     "blocks": null,
                     "interceptions": null
                   },
                   "duels": {
-                    "total": 2,
-                    "won": 1
+                    "total": 5,
+                    "won": 4
                   },
                   "dribbles": {
                     "attempts": null,
@@ -2251,7 +2317,7 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 65,
                     "number": 16,
                     "position": "D",
                     "rating": "6.5",
@@ -2270,282 +2336,26 @@
                     "saves": null
                   },
                   "passes": {
-                    "total": 4,
+                    "total": 21,
                     "key": null,
-                    "accuracy": "4"
+                    "accuracy": "19"
                   },
                   "tackles": {
-                    "total": null,
+                    "total": 2,
                     "blocks": null,
                     "interceptions": null
                   },
                   "duels": {
-                    "total": 2,
-                    "won": null
-                  },
-                  "dribbles": {
-                    "attempts": 1,
-                    "success": null,
-                    "past": null
-                  },
-                  "fouls": {
-                    "drawn": null,
-                    "committed": null
-                  },
-                  "cards": {
-                    "yellow": 0,
-                    "red": 0
-                  },
-                  "penalty": {
-                    "won": null,
-                    "commited": null,
-                    "scored": 0,
-                    "missed": 0,
-                    "saved": null
-                  }
-                }
-              ]
-            },
-            {
-              "player": {
-                "id": 895,
-                "name": "James Garner",
-                "photo": "https://media.api-sports.io/football/players/895.png"
-              },
-              "statistics": [
-                {
-                  "games": {
-                    "minutes": 29,
-                    "number": 37,
-                    "position": "M",
-                    "rating": "6.9",
-                    "captain": false,
-                    "substitute": false
-                  },
-                  "offsides": null,
-                  "shots": {
-                    "total": null,
-                    "on": null
-                  },
-                  "goals": {
-                    "total": null,
-                    "conceded": 0,
-                    "assists": null,
-                    "saves": null
-                  },
-                  "passes": {
-                    "total": 6,
-                    "key": 1,
-                    "accuracy": "6"
-                  },
-                  "tackles": {
-                    "total": 2,
-                    "blocks": 1,
-                    "interceptions": null
-                  },
-                  "duels": {
-                    "total": 3,
+                    "total": 7,
                     "won": 3
                   },
                   "dribbles": {
-                    "attempts": null,
+                    "attempts": 1,
                     "success": null,
                     "past": null
                   },
                   "fouls": {
                     "drawn": 1,
-                    "committed": null
-                  },
-                  "cards": {
-                    "yellow": 0,
-                    "red": 0
-                  },
-                  "penalty": {
-                    "won": null,
-                    "commited": null,
-                    "scored": 0,
-                    "missed": 0,
-                    "saved": null
-                  }
-                }
-              ]
-            },
-            {
-              "player": {
-                "id": 284500,
-                "name": "Tim Iroegbunam",
-                "photo": "https://media.api-sports.io/football/players/284500.png"
-              },
-              "statistics": [
-                {
-                  "games": {
-                    "minutes": 29,
-                    "number": 42,
-                    "position": "M",
-                    "rating": "6.6",
-                    "captain": false,
-                    "substitute": false
-                  },
-                  "offsides": null,
-                  "shots": {
-                    "total": null,
-                    "on": null
-                  },
-                  "goals": {
-                    "total": null,
-                    "conceded": 0,
-                    "assists": null,
-                    "saves": null
-                  },
-                  "passes": {
-                    "total": 9,
-                    "key": null,
-                    "accuracy": "8"
-                  },
-                  "tackles": {
-                    "total": 2,
-                    "blocks": 1,
-                    "interceptions": null
-                  },
-                  "duels": {
-                    "total": 3,
-                    "won": 2
-                  },
-                  "dribbles": {
-                    "attempts": null,
-                    "success": null,
-                    "past": null
-                  },
-                  "fouls": {
-                    "drawn": null,
-                    "committed": 1
-                  },
-                  "cards": {
-                    "yellow": 0,
-                    "red": 0
-                  },
-                  "penalty": {
-                    "won": null,
-                    "commited": null,
-                    "scored": 0,
-                    "missed": 0,
-                    "saved": null
-                  }
-                }
-              ]
-            },
-            {
-              "player": {
-                "id": 18592,
-                "name": "Iliman Ndiaye",
-                "photo": "https://media.api-sports.io/football/players/18592.png"
-              },
-              "statistics": [
-                {
-                  "games": {
-                    "minutes": 29,
-                    "number": 10,
-                    "position": "M",
-                    "rating": "6.3",
-                    "captain": false,
-                    "substitute": false
-                  },
-                  "offsides": null,
-                  "shots": {
-                    "total": null,
-                    "on": null
-                  },
-                  "goals": {
-                    "total": null,
-                    "conceded": 0,
-                    "assists": null,
-                    "saves": null
-                  },
-                  "passes": {
-                    "total": 5,
-                    "key": null,
-                    "accuracy": "4"
-                  },
-                  "tackles": {
-                    "total": 1,
-                    "blocks": null,
-                    "interceptions": null
-                  },
-                  "duels": {
-                    "total": 3,
-                    "won": 1
-                  },
-                  "dribbles": {
-                    "attempts": null,
-                    "success": null,
-                    "past": null
-                  },
-                  "fouls": {
-                    "drawn": null,
-                    "committed": 1
-                  },
-                  "cards": {
-                    "yellow": 0,
-                    "red": 0
-                  },
-                  "penalty": {
-                    "won": null,
-                    "commited": null,
-                    "scored": 0,
-                    "missed": 0,
-                    "saved": null
-                  }
-                }
-              ]
-            },
-            {
-              "player": {
-                "id": 148099,
-                "name": "Kiernan Dewsbury-Hall",
-                "photo": "https://media.api-sports.io/football/players/148099.png"
-              },
-              "statistics": [
-                {
-                  "games": {
-                    "minutes": 29,
-                    "number": 22,
-                    "position": "M",
-                    "rating": "6.2",
-                    "captain": false,
-                    "substitute": false
-                  },
-                  "offsides": null,
-                  "shots": {
-                    "total": null,
-                    "on": null
-                  },
-                  "goals": {
-                    "total": null,
-                    "conceded": 0,
-                    "assists": null,
-                    "saves": null
-                  },
-                  "passes": {
-                    "total": 6,
-                    "key": null,
-                    "accuracy": "4"
-                  },
-                  "tackles": {
-                    "total": null,
-                    "blocks": null,
-                    "interceptions": null
-                  },
-                  "duels": {
-                    "total": 2,
-                    "won": null
-                  },
-                  "dribbles": {
-                    "attempts": 1,
-                    "success": null,
-                    "past": null
-                  },
-                  "fouls": {
-                    "drawn": null,
                     "committed": 1
                   },
                   "cards": {
@@ -2571,8 +2381,72 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 62,
                     "number": 34,
+                    "position": "M",
+                    "rating": "6.5",
+                    "captain": false,
+                    "substitute": false
+                  },
+                  "offsides": null,
+                  "shots": {
+                    "total": null,
+                    "on": null
+                  },
+                  "goals": {
+                    "total": null,
+                    "conceded": 0,
+                    "assists": null,
+                    "saves": null
+                  },
+                  "passes": {
+                    "total": 10,
+                    "key": null,
+                    "accuracy": "7"
+                  },
+                  "tackles": {
+                    "total": 1,
+                    "blocks": null,
+                    "interceptions": null
+                  },
+                  "duels": {
+                    "total": 7,
+                    "won": 3
+                  },
+                  "dribbles": {
+                    "attempts": null,
+                    "success": null,
+                    "past": null
+                  },
+                  "fouls": {
+                    "drawn": 1,
+                    "committed": 2
+                  },
+                  "cards": {
+                    "yellow": 0,
+                    "red": 0
+                  },
+                  "penalty": {
+                    "won": null,
+                    "commited": null,
+                    "scored": 0,
+                    "missed": 0,
+                    "saved": null
+                  }
+                }
+              ]
+            },
+            {
+              "player": {
+                "id": 284500,
+                "name": "Tim Iroegbunam",
+                "photo": "https://media.api-sports.io/football/players/284500.png"
+              },
+              "statistics": [
+                {
+                  "games": {
+                    "minutes": 65,
+                    "number": 42,
                     "position": "M",
                     "rating": "6.6",
                     "captain": false,
@@ -2590,26 +2464,218 @@
                     "saves": null
                   },
                   "passes": {
-                    "total": 6,
+                    "total": 19,
                     "key": null,
-                    "accuracy": "4"
+                    "accuracy": "17"
                   },
                   "tackles": {
-                    "total": 1,
-                    "blocks": null,
+                    "total": 3,
+                    "blocks": 3,
                     "interceptions": null
                   },
                   "duels": {
-                    "total": 5,
-                    "won": 3
+                    "total": 10,
+                    "won": 4
                   },
                   "dribbles": {
-                    "attempts": null,
+                    "attempts": 3,
                     "success": null,
                     "past": null
                   },
                   "fouls": {
+                    "drawn": null,
+                    "committed": 2
+                  },
+                  "cards": {
+                    "yellow": 0,
+                    "red": 0
+                  },
+                  "penalty": {
+                    "won": null,
+                    "commited": null,
+                    "scored": 0,
+                    "missed": 0,
+                    "saved": null
+                  }
+                }
+              ]
+            },
+            {
+              "player": {
+                "id": 895,
+                "name": "James Garner",
+                "photo": "https://media.api-sports.io/football/players/895.png"
+              },
+              "statistics": [
+                {
+                  "games": {
+                    "minutes": 65,
+                    "number": 37,
+                    "position": "M",
+                    "rating": "7",
+                    "captain": false,
+                    "substitute": false
+                  },
+                  "offsides": null,
+                  "shots": {
+                    "total": 1,
+                    "on": null
+                  },
+                  "goals": {
+                    "total": null,
+                    "conceded": 0,
+                    "assists": null,
+                    "saves": null
+                  },
+                  "passes": {
+                    "total": 28,
+                    "key": 2,
+                    "accuracy": "26"
+                  },
+                  "tackles": {
+                    "total": 3,
+                    "blocks": 1,
+                    "interceptions": null
+                  },
+                  "duels": {
+                    "total": 9,
+                    "won": 6
+                  },
+                  "dribbles": {
+                    "attempts": 1,
+                    "success": null,
+                    "past": 1
+                  },
+                  "fouls": {
+                    "drawn": 2,
+                    "committed": null
+                  },
+                  "cards": {
+                    "yellow": 0,
+                    "red": 0
+                  },
+                  "penalty": {
+                    "won": null,
+                    "commited": null,
+                    "scored": 0,
+                    "missed": 0,
+                    "saved": null
+                  }
+                }
+              ]
+            },
+            {
+              "player": {
+                "id": 18592,
+                "name": "Iliman Ndiaye",
+                "photo": "https://media.api-sports.io/football/players/18592.png"
+              },
+              "statistics": [
+                {
+                  "games": {
+                    "minutes": 65,
+                    "number": 10,
+                    "position": "M",
+                    "rating": "6.9",
+                    "captain": false,
+                    "substitute": false
+                  },
+                  "offsides": null,
+                  "shots": {
+                    "total": null,
+                    "on": null
+                  },
+                  "goals": {
+                    "total": null,
+                    "conceded": 0,
+                    "assists": null,
+                    "saves": null
+                  },
+                  "passes": {
+                    "total": 11,
+                    "key": 1,
+                    "accuracy": "8"
+                  },
+                  "tackles": {
+                    "total": 3,
+                    "blocks": null,
+                    "interceptions": null
+                  },
+                  "duels": {
+                    "total": 10,
+                    "won": 6
+                  },
+                  "dribbles": {
+                    "attempts": 2,
+                    "success": 2,
+                    "past": null
+                  },
+                  "fouls": {
                     "drawn": 1,
+                    "committed": 1
+                  },
+                  "cards": {
+                    "yellow": 0,
+                    "red": 0
+                  },
+                  "penalty": {
+                    "won": null,
+                    "commited": null,
+                    "scored": 0,
+                    "missed": 0,
+                    "saved": null
+                  }
+                }
+              ]
+            },
+            {
+              "player": {
+                "id": 148099,
+                "name": "Kiernan Dewsbury-Hall",
+                "photo": "https://media.api-sports.io/football/players/148099.png"
+              },
+              "statistics": [
+                {
+                  "games": {
+                    "minutes": 65,
+                    "number": 22,
+                    "position": "M",
+                    "rating": "6.5",
+                    "captain": false,
+                    "substitute": false
+                  },
+                  "offsides": null,
+                  "shots": {
+                    "total": null,
+                    "on": null
+                  },
+                  "goals": {
+                    "total": null,
+                    "conceded": 0,
+                    "assists": null,
+                    "saves": null
+                  },
+                  "passes": {
+                    "total": 16,
+                    "key": null,
+                    "accuracy": "10"
+                  },
+                  "tackles": {
+                    "total": 2,
+                    "blocks": 1,
+                    "interceptions": null
+                  },
+                  "duels": {
+                    "total": 11,
+                    "won": 5
+                  },
+                  "dribbles": {
+                    "attempts": 1,
+                    "success": null,
+                    "past": 2
+                  },
+                  "fouls": {
+                    "drawn": 2,
                     "committed": 1
                   },
                   "cards": {
@@ -2635,10 +2701,10 @@
               "statistics": [
                 {
                   "games": {
-                    "minutes": 29,
+                    "minutes": 65,
                     "number": 11,
                     "position": "F",
-                    "rating": "6.5",
+                    "rating": "6",
                     "captain": false,
                     "substitute": false
                   },
@@ -2654,9 +2720,73 @@
                     "saves": null
                   },
                   "passes": {
-                    "total": 5,
+                    "total": 9,
                     "key": null,
-                    "accuracy": "1"
+                    "accuracy": "4"
+                  },
+                  "tackles": {
+                    "total": null,
+                    "blocks": 1,
+                    "interceptions": null
+                  },
+                  "duels": {
+                    "total": 12,
+                    "won": 2
+                  },
+                  "dribbles": {
+                    "attempts": 1,
+                    "success": null,
+                    "past": null
+                  },
+                  "fouls": {
+                    "drawn": null,
+                    "committed": 2
+                  },
+                  "cards": {
+                    "yellow": 0,
+                    "red": 0
+                  },
+                  "penalty": {
+                    "won": null,
+                    "commited": null,
+                    "scored": 0,
+                    "missed": 0,
+                    "saved": null
+                  }
+                }
+              ]
+            },
+            {
+              "player": {
+                "id": 405360,
+                "name": "Harrison Armstrong",
+                "photo": "https://media.api-sports.io/football/players/405360.png"
+              },
+              "statistics": [
+                {
+                  "games": {
+                    "minutes": 3,
+                    "number": 45,
+                    "position": "M",
+                    "rating": null,
+                    "captain": false,
+                    "substitute": true
+                  },
+                  "offsides": null,
+                  "shots": {
+                    "total": null,
+                    "on": null
+                  },
+                  "goals": {
+                    "total": null,
+                    "conceded": 0,
+                    "assists": null,
+                    "saves": null
+                  },
+                  "passes": {
+                    "total": null,
+                    "key": null,
+                    "accuracy": null
                   },
                   "tackles": {
                     "total": null,
@@ -2664,8 +2794,8 @@
                     "interceptions": null
                   },
                   "duels": {
-                    "total": 5,
-                    "won": 2
+                    "total": null,
+                    "won": null
                   },
                   "dribbles": {
                     "attempts": null,
@@ -2674,7 +2804,71 @@
                   },
                   "fouls": {
                     "drawn": null,
-                    "committed": 1
+                    "committed": null
+                  },
+                  "cards": {
+                    "yellow": 0,
+                    "red": 0
+                  },
+                  "penalty": {
+                    "won": null,
+                    "commited": null,
+                    "scored": 0,
+                    "missed": 0,
+                    "saved": null
+                  }
+                }
+              ]
+            },
+            {
+              "player": {
+                "id": 334037,
+                "name": "Tyrique George",
+                "photo": "https://media.api-sports.io/football/players/334037.png"
+              },
+              "statistics": [
+                {
+                  "games": {
+                    "minutes": 3,
+                    "number": 19,
+                    "position": "F",
+                    "rating": null,
+                    "captain": false,
+                    "substitute": true
+                  },
+                  "offsides": null,
+                  "shots": {
+                    "total": null,
+                    "on": null
+                  },
+                  "goals": {
+                    "total": null,
+                    "conceded": 0,
+                    "assists": null,
+                    "saves": null
+                  },
+                  "passes": {
+                    "total": null,
+                    "key": null,
+                    "accuracy": null
+                  },
+                  "tackles": {
+                    "total": null,
+                    "blocks": null,
+                    "interceptions": null
+                  },
+                  "duels": {
+                    "total": null,
+                    "won": null
+                  },
+                  "dribbles": {
+                    "attempts": null,
+                    "success": null,
+                    "past": null
+                  },
+                  "fouls": {
+                    "drawn": null,
+                    "committed": null
                   },
                   "cards": {
                     "yellow": 0,
@@ -3012,70 +3206,6 @@
             },
             {
               "player": {
-                "id": 405360,
-                "name": "Harrison Armstrong",
-                "photo": "https://media.api-sports.io/football/players/405360.png"
-              },
-              "statistics": [
-                {
-                  "games": {
-                    "minutes": null,
-                    "number": 45,
-                    "position": "M",
-                    "rating": null,
-                    "captain": false,
-                    "substitute": true
-                  },
-                  "offsides": null,
-                  "shots": {
-                    "total": null,
-                    "on": null
-                  },
-                  "goals": {
-                    "total": null,
-                    "conceded": 0,
-                    "assists": null,
-                    "saves": null
-                  },
-                  "passes": {
-                    "total": null,
-                    "key": null,
-                    "accuracy": null
-                  },
-                  "tackles": {
-                    "total": null,
-                    "blocks": null,
-                    "interceptions": null
-                  },
-                  "duels": {
-                    "total": null,
-                    "won": null
-                  },
-                  "dribbles": {
-                    "attempts": null,
-                    "success": null,
-                    "past": null
-                  },
-                  "fouls": {
-                    "drawn": null,
-                    "committed": null
-                  },
-                  "cards": {
-                    "yellow": 0,
-                    "red": 0
-                  },
-                  "penalty": {
-                    "won": null,
-                    "commited": null,
-                    "scored": 0,
-                    "missed": 0,
-                    "saved": null
-                  }
-                }
-              ]
-            },
-            {
-              "player": {
                 "id": 195993,
                 "name": "Carlos Alcaraz",
                 "photo": "https://media.api-sports.io/football/players/195993.png"
@@ -3149,70 +3279,6 @@
                   "games": {
                     "minutes": null,
                     "number": 9,
-                    "position": "F",
-                    "rating": null,
-                    "captain": false,
-                    "substitute": true
-                  },
-                  "offsides": null,
-                  "shots": {
-                    "total": null,
-                    "on": null
-                  },
-                  "goals": {
-                    "total": null,
-                    "conceded": 0,
-                    "assists": null,
-                    "saves": null
-                  },
-                  "passes": {
-                    "total": null,
-                    "key": null,
-                    "accuracy": null
-                  },
-                  "tackles": {
-                    "total": null,
-                    "blocks": null,
-                    "interceptions": null
-                  },
-                  "duels": {
-                    "total": null,
-                    "won": null
-                  },
-                  "dribbles": {
-                    "attempts": null,
-                    "success": null,
-                    "past": null
-                  },
-                  "fouls": {
-                    "drawn": null,
-                    "committed": null
-                  },
-                  "cards": {
-                    "yellow": 0,
-                    "red": 0
-                  },
-                  "penalty": {
-                    "won": null,
-                    "commited": null,
-                    "scored": 0,
-                    "missed": 0,
-                    "saved": null
-                  }
-                }
-              ]
-            },
-            {
-              "player": {
-                "id": 334037,
-                "name": "Tyrique George",
-                "photo": "https://media.api-sports.io/football/players/334037.png"
-              },
-              "statistics": [
-                {
-                  "games": {
-                    "minutes": null,
-                    "number": 19,
                     "position": "F",
                     "rating": null,
                     "captain": false,
