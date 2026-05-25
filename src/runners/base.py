@@ -11,7 +11,14 @@ import dataclasses
 import datetime as dt
 import json
 import os
+from pathlib import Path
 from typing import Any, Callable
+
+from dotenv import load_dotenv
+
+
+ROOT = Path(__file__).resolve().parents[2]
+load_dotenv(ROOT / ".env")
 
 
 @dataclasses.dataclass
@@ -101,7 +108,10 @@ class BaseRunner(abc.ABC):
             totals["input_tokens"] += out.get("input_tokens", 0)
             totals["output_tokens"] += out.get("output_tokens", 0)
             totals["tool_calls"] += out.get("tool_calls", 0)
-            totals["cost"] += self.price_tokens(out.get("input_tokens", 0), out.get("output_tokens", 0))
+            totals["cost"] += out.get(
+                "cost_usd",
+                self.price_tokens(out.get("input_tokens", 0), out.get("output_tokens", 0)),
+            )
             nonlocal raw, thinking
             raw = out.get("text", "")
             if out.get("thinking"):

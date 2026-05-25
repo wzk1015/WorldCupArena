@@ -8,6 +8,8 @@ from .base import BaseRunner, RunnerResult
 from .openai_compat import OpenAICompatRunner
 from .anthropic_runner import AnthropicRunner
 from .gemini_runner import GeminiRunner
+from .openai_deep_research_runner import OpenAIDeepResearchRunner
+from .gemini_deep_research_runner import GeminiDeepResearchRunner
 
 # provider -> runner class
 PROVIDER_RUNNERS: dict[str, type[BaseRunner]] = {
@@ -20,9 +22,12 @@ PROVIDER_RUNNERS: dict[str, type[BaseRunner]] = {
     "perplexity":  OpenAICompatRunner,
     "moonshot":    OpenAICompatRunner,   # Kimi K2
     "zhipu":       OpenAICompatRunner,   # GLM
+    "yunwu":       OpenAICompatRunner,   # OpenAI-compatible aggregation proxy
     # Dedicated runners
     "anthropic":   AnthropicRunner,
     "google":      GeminiRunner,
+    "openai_deep_research": OpenAIDeepResearchRunner,
+    "google_deep_research": GeminiDeepResearchRunner,
     # "miromind": MiroThinkerRunner,     # not yet implemented
 }
 
@@ -35,4 +40,5 @@ def build_runner(model_cfg: dict[str, Any]) -> BaseRunner:
 
 
 __all__ = ["BaseRunner", "RunnerResult", "build_runner", "PROVIDER_RUNNERS",
-           "OpenAICompatRunner", "AnthropicRunner", "GeminiRunner"]
+           "OpenAICompatRunner", "AnthropicRunner", "GeminiRunner",
+           "OpenAIDeepResearchRunner", "GeminiDeepResearchRunner"]

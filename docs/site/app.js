@@ -41,6 +41,9 @@ function modelBadge(id) {
   if (key.includes("qwen"))    return { emoji: "🔴" };
   if (key.includes("kimi") || key.includes("moonshot")) return { emoji: "🌙" };
   if (key.includes("glm") || key.includes("zhipu"))     return { emoji: "💠" };
+  if (key.includes("doubao"))  return { emoji: "🫘" };
+  if (key.includes("minimax")) return { emoji: "〽️" };
+  if (key.includes("gemma"))   return { emoji: "💎" };
   if (key.includes("llama"))   return { emoji: "🦙" };
   if (key.includes("perplexity")) return { emoji: "🔷" };
   if (key.includes("mirothinker")) return { emoji: "✨" };
@@ -156,6 +159,17 @@ function toggleSources(idx) {
     const count = el.querySelectorAll("a").length;
     btn.textContent = showing ? `🔗 Sources (${count})` : `🔗 Hide sources`;
   }
+}
+
+function togglePredictionGroup(groupId, btn) {
+  const group = document.getElementById(groupId);
+  if (!group) return;
+  const extras = group.querySelectorAll("[data-pred-extra='1']");
+  const showingExtras = Array.from(extras).some(el => !el.classList.contains("hidden"));
+  extras.forEach(el => el.classList.toggle("hidden", showingExtras));
+  if (btn) btn.textContent = showingExtras
+    ? `Show all models (+${extras.length})`
+    : "Show fewer models";
 }
 
 // Normalize player name: strip accents, reduce to "firstInitial.lastName"
@@ -520,13 +534,13 @@ function renderPredCard(p, f, idx) {
   const predWinner = winnerFromWinProbs(wp, hName, aName) || scoreWinner;
 
   return `
-    <div class="card rounded-xl p-4">
+    <div class="card rounded-lg p-3">
 
       <!-- Header -->
-      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+      <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
         <div class="flex items-center gap-2">
-          <span class="text-lg">${b.emoji}</span>
-          <span class="font-bold text-sm text-white">${esc(fmtModelId(p.model_id))}</span>
+          <span class="text-base">${b.emoji}</span>
+          <span class="font-bold text-xs sm:text-sm text-white">${esc(fmtModelId(p.model_id))}</span>
           <span class="chip chip-${(p.setting || "").toLowerCase()}"
                 data-tip="${esc(SETTING_TIPS[p.setting] || p.setting)}">${esc(p.setting)}</span>
         </div>
@@ -535,8 +549,8 @@ function renderPredCard(p, f, idx) {
 
       <!-- Minimalist Prediction -->
       ${predWinner || top3.length ? `
-      <div class="mb-4">
-        <div class="flex items-start gap-5 flex-wrap">
+      <div class="mb-2">
+        <div class="flex items-start gap-3 sm:gap-4 flex-wrap">
           <div>
             <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Pred Winner</div>
             ${(() => {
@@ -547,10 +561,10 @@ function renderPredCard(p, f, idx) {
               const winnerColor = truthOutcome
                 ? (winnerCorrect ? "color:#4ade80;" : "color:#f87171;")
                 : "color:#fff;";
-              return `<div class="text-2xl font-black leading-tight" style="${winnerColor}">${esc(predWinner || "—")}</div>`;
+              return `<div class="text-xl font-black leading-tight" style="${winnerColor}">${esc(predWinner || "—")}</div>`;
             })()}
           </div>
-          <div style="width:1px;height:2.5rem;background:rgba(255,255,255,.1);"></div>
+          <div style="width:1px;height:2.15rem;background:rgba(255,255,255,.1);"></div>
           <div>
             <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Pred Score</div>
             ${(() => {
@@ -559,12 +573,12 @@ function renderPredCard(p, f, idx) {
               const scoreColor = actualScore
                 ? (scoreCorrect ? "color:#4ade80;" : "color:#f87171;")
                 : "color:#fff;";
-              return `<div class="text-2xl font-black leading-tight font-mono whitespace-nowrap" style="${scoreColor}">${esc(predScore ? predScore.replace("-", " - ") : "—")}</div>`;
+              return `<div class="text-xl font-black leading-tight font-mono whitespace-nowrap" style="${scoreColor}">${esc(predScore ? predScore.replace("-", " - ") : "—")}</div>`;
             })()}
           </div>
           ${f.truth ? `<div class="ml-auto">
             <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Actual</div>
-            <div class="text-2xl font-black font-mono leading-tight whitespace-nowrap" style="color:#fbbf24;">${esc(f.truth.score.replace("-", " - ") || "—")}</div>
+            <div class="text-xl font-black font-mono leading-tight whitespace-nowrap" style="color:#fbbf24;">${esc(f.truth.score.replace("-", " - ") || "—")}</div>
             <div class="text-xs font-mono" style="color:#fbbf2480;">${esc(
               f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : f.truth.result || "—"
             )}</div>
@@ -576,10 +590,10 @@ function renderPredCard(p, f, idx) {
       <!-- Buttons -->
       <div class="flex flex-wrap gap-2 mt-1">
         <button id="pred-details-btn-${idx}" onclick="toggleDetails(${idx})"
-                class="chip hover:bg-white/15 transition text-xs">👇 Show Full AI Analysis</button>
+                class="chip hover:bg-white/15 transition text-[11px]">👇 Show Full AI Analysis</button>
         ${p.sources && p.sources.length ? `
         <button id="pred-sources-btn-${idx}" onclick="toggleSources(${idx})"
-                class="chip hover:bg-white/15 transition text-xs">🔗 Sources (${p.sources.length})</button>` : ""}
+                class="chip hover:bg-white/15 transition text-[11px]">🔗 Sources (${p.sources.length})</button>` : ""}
       </div>
 
       <!-- Expandable sources -->
@@ -603,7 +617,7 @@ function renderPredCard(p, f, idx) {
       <!-- Expandable details -->
       <div id="pred-details-${idx}"
            style="display:none;border-top:1px solid rgba(255,255,255,.06);"
-           class="mt-4 pt-4 space-y-5">
+           class="mt-3 pt-3 space-y-4">
 
         <!-- Win probabilities (full) -->
         ${wp.home != null ? `
@@ -657,6 +671,28 @@ function renderPredCard(p, f, idx) {
         </div>
       </div>
     </div>`;
+}
+
+function renderPredList(preds, f, startIdx, groupId) {
+  if (!preds.length) return `<div class="text-gray-500 text-sm py-2">No predictions for this fixture.</div>`;
+  const hiddenCount = preds.filter(p => p.default_visible === false).length;
+  const cards = preds.map((p, i) => {
+    const hidden = p.default_visible === false;
+    return `<div ${hidden ? `class="hidden" data-pred-extra="1"` : ""}>${
+      renderPredCard(p, f, startIdx + i)
+    }</div>`;
+  }).join("");
+  return `
+    <div id="${groupId}" class="space-y-2">${cards}</div>
+    ${hiddenCount ? `
+      <button onclick="togglePredictionGroup('${groupId}', this)"
+              class="chip hover:bg-white/15 transition text-xs mt-2">Show all models (+${hiddenCount})</button>
+    ` : ""}`;
+}
+
+function renderAllPredCards(preds, f, startIdx) {
+  if (!preds.length) return `<div class="text-gray-500 text-sm py-2">No predictions for this fixture.</div>`;
+  return `<div class="space-y-2">${preds.map((p, i) => renderPredCard(p, f, startIdx + i)).join("")}</div>`;
 }
 
 // ---------- Incoming matches -------------------------------------------------
@@ -714,7 +750,8 @@ function _renderOneFixture(nm, cardIdx) {
       </div>
       ${preds.length === 0
         ? `<div class="text-gray-400 text-sm">No model predictions yet (runs 24 h before kickoff).</div>`
-        : `<div class="space-y-3">${preds.map((p, i) => renderPredCard(p, f, nmStart + i)).join("")}</div>`}
+        : renderAllPredCards(preds, f, nmStart)}
+      ${f.data_warning ? `<div class="mt-3 text-xs text-amber-300/80">${esc(f.data_warning)}</div>` : ""}
       ${nm.comment ? `<div class="mt-4 pt-3 border-t border-white/5 text-sm text-gray-400">
         <span class="text-gray-500 text-xs uppercase tracking-wider mr-2">Comment</span>${esc(nm.comment)}<span class="ml-2 text-gray-500">——@wzk1015</span>
       </div>` : ""}
@@ -752,6 +789,49 @@ function renderIncomingMatches(matches) {
     };
     tick(); setInterval(tick, 1000);
   }
+}
+
+// ---------- Featured match ---------------------------------------------------
+
+function renderFeaturedMatch(match) {
+  const section = document.getElementById("featured");
+  const el = document.getElementById("featured-container");
+  if (!section || !el) return;
+  if (!match) {
+    section.classList.add("hidden");
+    return;
+  }
+  section.classList.remove("hidden");
+
+  const preds = match.predictions || [];
+  const start = _allPreds.length;
+  _allPreds.push(...preds);
+  const date = match.kickoff_utc ? new Date(match.kickoff_utc).toISOString().slice(0, 10) : "";
+  const scoreHtml = `<div class="text-3xl font-black font-mono" style="color:#fbbf24;">${esc((match.result || "—").replace("-", " – "))}</div>`;
+  const predCards = renderAllPredCards(preds, match, start);
+
+  el.innerHTML = `
+    <div class="card rounded-2xl p-5">
+      <div class="pitch rounded-xl p-4 mb-4">
+        <div class="grid grid-cols-3 items-center gap-2">
+          <div class="text-center">
+            ${match.home_logo ? `<img src="${esc(match.home_logo)}" alt="${esc(match.home)}" class="h-16 sm:h-24 mx-auto mb-2"/>` : `<div class="text-3xl">🏠</div>`}
+            <div class="font-bold text-sm sm:text-lg leading-tight">${esc(match.home || "?")}</div>
+          </div>
+          <div class="text-center">
+            <div class="text-xs text-gray-300 font-medium mb-1">${esc(date)}</div>
+            ${match.competition ? `<div class="text-[10px] text-gray-400 mb-1">${esc(match.competition)}${match.stage ? ` · ${esc(match.stage)}` : ""}</div>` : ""}
+            ${scoreHtml}
+            ${renderVenueLocation(match)}
+          </div>
+          <div class="text-center">
+            ${match.away_logo ? `<img src="${esc(match.away_logo)}" alt="${esc(match.away)}" class="h-16 sm:h-24 mx-auto mb-2"/>` : `<div class="text-3xl">🛫</div>`}
+            <div class="font-bold text-sm sm:text-lg leading-tight">${esc(match.away || "?")}</div>
+          </div>
+        </div>
+      </div>
+      ${predCards}
+    </div>`;
 }
 
 // ---------- Leaderboard ------------------------------------------------------
@@ -882,9 +962,7 @@ function renderHistory(rows) {
     const hStart = _allPreds.length;
     _allPreds.push(...preds);
 
-    const predCards = preds.length
-      ? preds.map((p, i) => renderPredCard(p, r, hStart + i)).join("")
-      : `<div class="text-gray-500 text-sm py-2">No predictions for this fixture.</div>`;
+    const predCards = renderPredList(preds, r, hStart, `pred-group-history-${hStart}`);
 
     return `
       <details open class="card rounded-xl p-4 col-span-2">
@@ -960,6 +1038,7 @@ async function main() {
   // document.getElementById("generated-at").textContent = "Last updated " + fmtTimestamp(data.generated_at);
   _allPreds = [];
   renderIncomingMatches(data.incoming_matches || []);
+  renderFeaturedMatch(data.featured_match || null);
   renderLeaderboard(data.leaderboard || { main: [] }, "main");
   wireTabs(data.leaderboard || { main: [] });
   renderHistory(data.history || []);

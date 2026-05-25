@@ -93,7 +93,12 @@ def _leak_audit(sources: list[dict[str, Any]], lock_at: str) -> dict[str, Any]:
     return {"leaked": bool(leaks), "leaked_sources": leaks}
 
 
-def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
+def cmd_predict(
+    fixture_path: Path,
+    parallel: int = 8,
+    model_ids: set[str] | None = None,
+    force: bool = False,
+) -> None:
     fixture = _load_fixture(fixture_path)
     models_cfg = _load_yaml(CONFIGS / "models.yaml")
     settings_cfg = _load_yaml(CONFIGS / "settings.yaml")
@@ -103,6 +108,8 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     jobs = list(_iter_model_setting_pairs(models_cfg, settings_cfg))
+    if model_ids:
+        jobs = [job for job in jobs if job[0].get("id") in model_ids]
     print(f"[predict] {fid}: {len(jobs)} model×setting runs")
 
     policy = settings_cfg.get("policy", {})
@@ -151,7 +158,7 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
     def _one(job):
         model_cfg, setting = job
         path = out_dir / f"{model_cfg['id']}__{setting['id']}.json"
-        if path.exists():
+        if path.exists() and not force:
             with open(path) as f:
                 prev_ret = json.load(f)
                 prev_ret, calibrated_existing = _maybe_calibrate_record(prev_ret, setting["id"])
@@ -173,22 +180,24 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
             return {"model": model_cfg["id"], "setting": setting["id"], "skipped": str(e)}
 
         def _validate(pred, retry_fn):
+            model_max_retries = int(model_cfg.get("max_format_retries", max_retries))
             return validate_or_repair(
                 pred,
                 fixture_id=fid,
                 setting_id=setting["id"],
                 retry_fn=retry_fn,
-                max_retries=max_retries,
+                max_retries=model_max_retries,
                 tol=tol,
             )
 
         record = None
         total_cost = 0.0
-        for attempt in range(1, MAX_RUN_RETRIES + 1):
+        max_run_retries = int(model_cfg.get("max_run_retries", MAX_RUN_RETRIES))
+        for attempt in range(1, max_run_retries + 1):
             if attempt == 1:
                 print(f"[predict] {fid}: running {model_cfg['id']} on setting {setting['id']}")
             else:
-                print(f"[predict] {fid}: retry {attempt}/{MAX_RUN_RETRIES} for {model_cfg['id']} ({setting['id']})")
+                print(f"[predict] {fid}: retry {attempt}/{max_run_retries} for {model_cfg['id']} ({setting['id']})")
             res = runner.run(fixture, setting, sys_p, usr_p, validate_fn=_validate)
             total_cost += res.cost_usd
             audit = _leak_audit(res.sources, fixture["lock_at_utc"])
@@ -227,6 +236,8 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
                 "repair_retries": res.repair_retries,
                 "validation_errors": validation_errors,
                 "error": res.error,
+                "raw_text": res.raw_text,
+                "thinking_text": res.thinking_text,
             }
             if score_calibration:
                 record["score_calibration"] = score_calibration
@@ -235,7 +246,7 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
             if not res.error and not validation_errors and prediction:
                 break  # success
             
-            if attempt < MAX_RUN_RETRIES:
+            if attempt < max_run_retries:
                 print(f"  [predict] attempt {attempt} failed (err={res.error!r}, "
                       f"validation_errors={validation_errors}), retrying after sleeping 60s…")
                 time.sleep(60)
@@ -256,7 +267,7 @@ def cmd_predict(fixture_path: Path, parallel: int = 8) -> None:
         still_failed = res.error or validation_errors or not prediction
         if still_failed:
             print(f"\n{'='*60}")
-            print(f"  *** WARNING: {model_cfg['id']} ({setting['id']}) FAILED after {MAX_RUN_RETRIES} attempts ***")
+            print(f"  *** WARNING: {model_cfg['id']} ({setting['id']}) FAILED after {max_run_retries} attempts ***")
             print(f"  error            : {res.error}")
             print(f"  validation_errors: {validation_errors}")
             print(f"  prediction empty : {not prediction}")
@@ -430,7 +441,11 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
 
-    p = sub.add_parser("predict"); p.add_argument("--fixture", type=Path, required=True); p.add_argument("--parallel", type=int, default=8)
+    p = sub.add_parser("predict")
+    p.add_argument("--fixture", type=Path, required=True)
+    p.add_argument("--parallel", type=int, default=8)
+    p.add_argument("--models", nargs="*", help="optional model ids to run")
+    p.add_argument("--force", action="store_true", help="rerun even if a prediction file already exists")
     p = sub.add_parser("grade");   p.add_argument("--fixture-dir", type=Path, required=True)
     p = sub.add_parser("lock");    p.add_argument("--fixture", type=Path, required=True)
     p = sub.add_parser("populate")
@@ -445,7 +460,7 @@ def main() -> None:
 
     args = ap.parse_args()
     if args.cmd == "predict":
-        cmd_predict(args.fixture, args.parallel)
+        cmd_predict(args.fixture, args.parallel, set(args.models or []) or None, args.force)
     elif args.cmd == "grade":
         cmd_grade(args.fixture_dir)
     elif args.cmd == "lock":

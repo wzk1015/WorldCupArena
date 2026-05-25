@@ -49,9 +49,10 @@ class OpenAICompatRunner(BaseRunner):
         kwargs: dict[str, Any] = {
             "model": self.cfg["model"],
             "messages": [{"role": "system", "content": system_prompt}, *messages],
-            "response_format": {"type": "json_object"},
             "temperature": self.cfg.get("temperature", 0.3),
         }
+        if self.cfg.get("json_mode", True):
+            kwargs["response_format"] = {"type": "json_object"}
         if "gpt" in self.cfg["model"]:
             kwargs["max_completion_tokens"] = self.cfg.get("max_tokens", 8192)
             if self.use_reasoning:
@@ -62,8 +63,32 @@ class OpenAICompatRunner(BaseRunner):
             # max_tokens is universally supported across all OpenAI-compat providers
             # (Zhipu, Moonshot, DashScope, xAI, etc.); max_completion_tokens is OpenAI-only
             kwargs["max_tokens"] = self.cfg.get("max_tokens", 8192)
+        if self.cfg.get("extra_body"):
+            kwargs["extra_body"] = self.cfg["extra_body"]
+        if self.cfg.get("stream"):
+            kwargs["stream"] = True
+            kwargs["stream_options"] = {"include_usage": True}
 
         resp = client.chat.completions.create(**kwargs)
+        if self.cfg.get("stream"):
+            text_parts: list[str] = []
+            usage = None
+            for chunk in resp:
+                if getattr(chunk, "usage", None):
+                    usage = chunk.usage
+                for choice in chunk.choices or []:
+                    delta = getattr(choice, "delta", None)
+                    content = getattr(delta, "content", None)
+                    if content:
+                        text_parts.append(content)
+            return {
+                "text": "".join(text_parts),
+                "thinking": None,
+                "input_tokens": usage.prompt_tokens if usage else 0,
+                "output_tokens": usage.completion_tokens if usage else 0,
+                "tool_calls": 0,
+                "sources": [],
+            }
         text = resp.choices[0].message.content or ""
         usage = resp.usage
         return {

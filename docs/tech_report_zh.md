@@ -1,6 +1,6 @@
 # WorldCupArena 技术报告（中文版）
 
-草稿版本：2026-05-18。本文描述当前仓库实现、实验目标与方法设计；后续英文版和正式论文版可基于本文同步扩展。
+草稿版本：2026-05-25。本文描述当前仓库实现、实验目标与方法设计；后续英文版和正式论文版可基于本文同步扩展。
 
 ---
 
@@ -81,7 +81,25 @@ T5 主要用于世界杯或完整赛事预测。对于单场比赛，核心评�
 - `claude-opus-4-7-thinking-search`：Claude thinking + web_search；
 - `gpt-5.4-search`：GPT-5.4 reasoning + web_search。
 
-配置文件中保留了 open-weight LLM、Perplexity、Deep Research Agent、MiroThinker 等条目的注释模板，但它们不是当前默认活跃运行矩阵的一部分。新模型接入时只需要添加配置并注册 runner，绝大多数 OpenAI-compatible 接口可以复用 `OpenAICompatRunner`。
+当前新增 open-weight / 中国模型组通过云雾 OpenAI-compatible 中转接入：
+
+- `deepseek-r1`；
+- `qwen3-235b-thinking`；
+- `kimi-k2`；
+- `glm-4.5`；
+- `doubao-seed-1.6-thinking`；
+- `minimax-m1`；
+- `llama-4-maverick`；
+- `gemma-3-27b`。
+
+其中配置里的 `open_weight` 字段用于区分真正 open-weight 模型和中国闭源/半闭源模型。网站默认展示时会优先从 `open_weight=true` 的模型里按 leaderboard 选择前三个。
+
+当前新增 Deep Research Agent 组：
+
+- `yunwu-o4-mini-deep-research`：云雾 OpenAI-compatible Responses API + `web_search_preview`；
+- `gemini-deep-research`：Google Interactions API 的 `deep-research-pro-preview-12-2025` agent。
+
+新模型接入时只需要添加配置并注册 runner。绝大多数 OpenAI-compatible 接口可以复用 `OpenAICompatRunner`；需要长轮询、异步任务或特殊返回结构的 agent 则使用专用 runner。
 
 ## 6. 系统架构
 
@@ -125,7 +143,13 @@ WorldCupArena 的实现由几个相对独立的层组成。
 **AnthropicRunner**  
 使用 Anthropic Messages API。官方 API 下根据配置启用 thinking 和 `web_search_20250305`；对于代理 endpoint，则保留配置中的模型名和 base_url 覆盖能力。
 
-所有模型配置都支持 `api_key_env`、`base_url` 和 `base_url_env`。如果 `.env` 中存在对应的 base url override，runner 会优先使用它，以支持中转或自托管端点。
+**OpenAIDeepResearchRunner**  
+使用 Responses API 启动后台 deep research 任务，并轮询到 `completed`。当前默认通过云雾网关调用 `o4-mini-deep-research` 和 `web_search_preview`，记录 token、搜索工具调用数和来源。Deep Research 模型成本高且耗时长，因此配置中将 `max_run_retries` 和 `max_format_retries` 设为较低值，避免格式失败时重复触发完整研究。
+
+**GeminiDeepResearchRunner**  
+使用 Google Interactions API 启动 `deep-research-pro-preview-12-2025`。该 agent 不接受 `system_instruction` 参数，因此 runner 会把系统约束合并进 input。若最终研究报告不是严格 JSON，runner 会追加一次普通 Gemini JSON 编译 pass，把研究报告转换成 schema 对象；这一步避免重新运行完整 Deep Research。
+
+所有模型配置都支持 `api_key_env`、`base_url` 和 `base_url_env`。runner 会自动加载仓库根目录的 `.env`。如果 `.env` 中存在对应的 base url override，runner 会优先使用它，以支持中转或自托管端点。
 
 ## 8. 数据生命周期
 
@@ -170,6 +194,8 @@ data/results/<fixture_id>/<model_id>__<setting>.json
 3. 语义校验：检查概率和、比分分布、胜平负与最高概率比分是否一致、首发是否 11 人、stats 是否完整、fixture_id/setting 是否匹配等。
 
 如果失败，orchestrator 会把错误列表发回同一个模型，要求它返回修复后的完整 JSON，最多重试 `max_format_retries` 次。这个机制避免了赛后评分时才发现输出缺字段的情况。
+
+对于 Deep Research 这类昂贵 agent，模型配置可以覆盖 `max_format_retries` 和 `max_run_retries`。当前 deep research 条目默认不做格式修复重跑，而是在 runner 内部尽量把研究报告转换为 JSON，避免为了修一个括号重新花数分钟和数十万 token。
 
 ## 10. 比分校准设计
 
@@ -249,6 +275,7 @@ cost(i, j) = |minute_pred - minute_true| + actor_mismatch_penalty
 - 删除低信息量实验设定；
 - 将比分分布交给 pipeline 校准，减少模型手写长概率表；
 - 对格式修复设置上限；
+- 对 Deep Research 设置模型级重试上限，并把 JSON 收尾放在 runner 内部；
 - 搜索日志归档但不无限扩展上下文；
 - 通过 `base_url_env` 支持代理、自托管和替代 endpoint。
 
@@ -272,14 +299,15 @@ cost(i, j) = |minute_pred - minute_true| + actor_mismatch_penalty
 
 短期：
 
-- 稳定当前 6 个默认模型的 S1/S2 路径；
+- 稳定闭源、搜索、open-weight 和 Deep Research 四类模型的 S1/S2 路径；
 - 持续补充 fixture，扩大样本数；
 - 完善 search source 的 publication time 审计；
+- 校准云雾中转下各模型的真实 model id 和价格；
 - 将当前中文报告同步为更新版英文技术报告。
 
 中期：
 
-- 接入 open-weight LLM 和更多深度研究 Agent；
+- 接入更多深度研究 Agent，并区分“联网搜索模型”和“多步研究 agent”的真实增益；
 - 引入 bookmaker closing odds 和统计模型作为正式 baseline；
 - 增强 leaderboard 的分层可解释性，例如按 T1/T2/T3/T4 拆分趋势；
 - 记录 provider model version、response id、tool traces。

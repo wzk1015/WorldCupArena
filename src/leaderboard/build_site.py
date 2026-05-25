@@ -42,6 +42,7 @@ SNAPSHOTS = ROOT / "data" / "snapshots"
 LIVE_DIR = ROOT / "data" / "live"
 SEARCH_LOGS = ROOT / "data" / "search_logs"
 FIXTURES_YAML = ROOT / "configs" / "fixtures.yaml"
+MODELS_YAML = ROOT / "configs" / "models.yaml"
 COMMENTS_JSON = ROOT / "data" / "comments.json"
 OUT = ROOT / "docs" / "site" / "data.json"
 
@@ -70,11 +71,136 @@ def _load_fixtures() -> list[dict]:
     return [f for f in (cfg.get("fixtures") or []) if f.get("enabled", True)]
 
 
+def _model_family(model_id: str, provider: str | None = None) -> str:
+    key = str(model_id or "").lower()
+    provider = str(provider or "").lower()
+    if "claude" in key or provider == "anthropic":
+        return "claude"
+    if key.startswith(("gpt", "o1", "o3", "o4")) or "openai" in key or provider == "openai":
+        return "openai"
+    if "gemini" in key or provider == "google":
+        return "gemini"
+    if "deepseek" in key:
+        return "deepseek"
+    if "qwen" in key:
+        return "qwen"
+    if "kimi" in key or "moonshot" in key:
+        return "kimi"
+    if "glm" in key or "zhipu" in key:
+        return "glm"
+    if "doubao" in key:
+        return "doubao"
+    if "minimax" in key:
+        return "minimax"
+    if "llama" in key:
+        return "llama"
+    if "gemma" in key:
+        return "gemma"
+    return provider or "other"
+
+
+def _infer_model_metadata(model_id: str) -> dict:
+    family = _model_family(model_id)
+    return {
+        "model_category": None,
+        "provider": None,
+        "model_family": family,
+        "open_weight": family in {"deepseek", "qwen", "kimi", "glm", "minimax", "llama", "gemma"},
+        "config_order": 9999,
+    }
+
+
+def _load_model_metadata() -> dict[str, dict]:
+    if not MODELS_YAML.exists():
+        return {}
+    cfg = yaml.safe_load(MODELS_YAML.read_text()) or {}
+    meta: dict[str, dict] = {}
+    order = 0
+    for category, entries in cfg.items():
+        if category == "baselines":
+            continue
+        for m in entries or []:
+            model_id = m.get("id")
+            if not model_id:
+                continue
+            provider = m.get("provider")
+            meta[model_id] = {
+                "model_category": category,
+                "provider": provider,
+                "model_family": _model_family(model_id, provider),
+                "open_weight": bool(m.get("open_weight", category == "open_llm")),
+                "config_order": order,
+            }
+            order += 1
+    return meta
+
+
+MODEL_META = _load_model_metadata()
+
+
 def _clean_venue_country(country: str | None) -> str | None:
     country = (country or "").strip()
     if not country or country.lower() == "world":
         return None
     return country
+
+
+def _display_name_from_slug(slug: str | None) -> str | None:
+    if not slug:
+        return None
+    return str(slug).replace("-", " ")
+
+
+def _infer_fixture_names_from_wca_id(wca_id: str) -> dict:
+    """Best-effort fallback for fixtures that are registered but not ingested yet."""
+    parts = str(wca_id or "").split("_")
+    if len(parts) < 4:
+        return {}
+    date = parts[-1]
+    home = _display_name_from_slug(parts[-3])
+    away = _display_name_from_slug(parts[-2])
+    competition = _display_name_from_slug("_".join(parts[:-3]).replace("_", "-"))
+    return {
+        "home": home,
+        "away": away,
+        "competition": competition,
+        "date": date,
+    }
+
+
+def _has_prediction_files(wca_id: str) -> bool:
+    pred_dir = PREDICTIONS / wca_id
+    return pred_dir.exists() and any(pred_dir.glob("*.json"))
+
+
+def _fixture_header_from_registry(wca_id: str, fx: dict, existing: dict | None = None) -> dict:
+    inferred = _infer_fixture_names_from_wca_id(wca_id)
+    kick = _parse_iso(fx["kickoff_utc"]).isoformat()
+    base = dict(existing or {})
+    base.update({
+        "wca_id":      wca_id,
+        "home":        fx.get("home") or inferred.get("home"),
+        "home_logo":   fx.get("home_logo") or fx.get("home_team_logo"),
+        "away":        fx.get("away") or inferred.get("away"),
+        "away_logo":   fx.get("away_logo") or fx.get("away_team_logo"),
+        "kickoff_utc": kick,
+        "lock_at_utc": base.get("lock_at_utc"),
+        "venue":       base.get("venue"),
+        "venue_city":    base.get("venue_city"),
+        "venue_country": base.get("venue_country"),
+        "stage":         base.get("stage"),
+        "competition": fx.get("competition") or inferred.get("competition") or base.get("competition"),
+    })
+    return base
+
+
+def _header_mismatches_registry(hdr: dict | None, fx: dict) -> bool:
+    if not hdr or not hdr.get("kickoff_utc"):
+        return True
+    try:
+        return abs(_parse_iso(hdr["kickoff_utc"]) - _parse_iso(fx["kickoff_utc"])) > timedelta(minutes=1)
+    except Exception:
+        return True
 
 
 # ---------------------------------------------------------------------------
@@ -126,6 +252,7 @@ def build_leaderboard() -> dict:
     for m, v in by_model_composites.items():
         layers_mean = {k: sum(xs) / len(xs) for k, xs in by_model_layers[m].items() if xs}
         total = by_model_winner_total[m]
+        meta = MODEL_META.get(m) or _infer_model_metadata(m)
         main.append({
             "model_id":      m,
             "mean":          sum(v) / len(v),
@@ -134,6 +261,7 @@ def build_leaderboard() -> dict:
             "winner_correct": by_model_winner_correct[m],
             "winner_total":   total,
             "winner_acc":    by_model_winner_correct[m] / total if total else None,
+            **meta,
         })
     main.sort(key=lambda x: -x["mean"])
 
@@ -210,6 +338,7 @@ def _collect_predictions(wca_id: str) -> list[dict]:
             sources = rec.get("sources") or []
         win_probs = p.get("win_probs") or derive_win_probs_from_score_dist(p.get("score_dist") or [])
         most_likely_score = p.get("most_likely_score") or derive_most_likely_score(p.get("score_dist") or [])
+        meta = MODEL_META.get(rec["model_id"]) or _infer_model_metadata(rec["model_id"])
 
         out.append({
             "model_id":           rec["model_id"],
@@ -232,6 +361,7 @@ def _collect_predictions(wca_id: str) -> list[dict]:
             "stats":              p.get("stats") or {},
             "cost_usd":           rec.get("cost_usd"),
             "sources":            sources,
+            **meta,
         })
     return out
 
@@ -318,6 +448,79 @@ def _attach_display_picks(preds: list[dict]) -> None:
         pred["over_3_5_prob"] = round(over_3_5, 3)
 
 
+def _leaderboard_rank_map(leaderboard: dict) -> dict[str, int]:
+    return {row["model_id"]: idx for idx, row in enumerate(leaderboard.get("main") or [])}
+
+
+def _prediction_sort_key(pred: dict, rank_map: dict[str, int]) -> tuple:
+    rank = rank_map.get(pred.get("model_id"), 10000 + int(pred.get("config_order", 9999)))
+    composite = pred.get("composite")
+    composite_key = -(float(composite) if composite is not None else -1.0)
+    return (rank, composite_key, int(pred.get("config_order", 9999)), pred.get("model_id", ""))
+
+
+def _select_default_prediction_indexes(preds: list[dict], rank_map: dict[str, int]) -> set[int]:
+    selected: set[int] = set()
+
+    def add_best(predicate) -> None:
+        candidates = [(idx, pred) for idx, pred in enumerate(preds) if predicate(pred)]
+        if not candidates:
+            return
+        idx, _ = min(candidates, key=lambda item: _prediction_sort_key(item[1], rank_map))
+        selected.add(idx)
+
+    # One representative each for the main closed-model families.
+    for family in ("claude", "openai", "gemini"):
+        add_best(
+            lambda pred, family=family: pred.get("model_family") == family
+            and pred.get("model_category") != "deep_research_agent"
+        )
+
+    # Always surface all configured Deep Research agents.
+    for idx, pred in enumerate(preds):
+        if pred.get("model_category") == "deep_research_agent":
+            selected.add(idx)
+
+    # Then the strongest open-weight models according to the leaderboard.
+    open_candidates = [
+        (idx, pred)
+        for idx, pred in enumerate(preds)
+        if pred.get("model_category") == "open_llm" and pred.get("open_weight")
+    ]
+    open_candidates.sort(key=lambda item: _prediction_sort_key(item[1], rank_map))
+    for idx, _ in open_candidates[:3]:
+        selected.add(idx)
+
+    if not selected and preds:
+        selected.update(range(min(6, len(preds))))
+    return selected
+
+
+def _attach_default_visibility_to_preds(preds: list[dict], rank_map: dict[str, int]) -> None:
+    selected = _select_default_prediction_indexes(preds, rank_map)
+    for idx, pred in enumerate(preds):
+        pred["default_visible"] = idx in selected
+        pred["display_order"] = idx
+
+
+def _attach_default_visibility(payload: dict, leaderboard: dict) -> None:
+    rank_map = _leaderboard_rank_map(leaderboard)
+    for item in payload.get("incoming_matches") or []:
+        _attach_default_visibility_to_preds(item.get("predictions") or [], rank_map)
+    for item in payload.get("history") or []:
+        _attach_default_visibility_to_preds(item.get("predictions") or [], rank_map)
+    if payload.get("featured_match"):
+        _attach_default_visibility_to_preds(payload["featured_match"].get("predictions") or [], rank_map)
+
+
+def _select_featured_match(history: list[dict]) -> dict | None:
+    """Pick the most recent completed match that includes a Deep Research prediction."""
+    for item in history:
+        if any((p.get("model_category") == "deep_research_agent") for p in item.get("predictions") or []):
+            return item
+    return None
+
+
 def build_incoming_matches() -> list[dict]:
     """Return fixtures to display in the Incoming Matches section.
 
@@ -339,7 +542,9 @@ def build_incoming_matches() -> list[dict]:
             continue
         wca_id = fx["wca_id"]
 
+        has_predictions = _has_prediction_files(wca_id)
         is_future = kick > now and kick <= cutoff
+        is_future_with_predictions = kick > now and has_predictions
         live = _load_live_state(wca_id)
         truth = _load_truth_data(wca_id)
         # truth.json is authoritative — if it exists the match is done
@@ -349,29 +554,21 @@ def build_incoming_matches() -> list[dict]:
         is_in_progress = (not is_future and not is_finished and live is None
                           and kick <= now and now - kick < timedelta(hours=3))
 
-        # Skip far-future, and anything that's already finished (goes to history)
-        if not is_future and not is_live and not is_in_progress:
+        # Skip far-future unless predictions already exist, and anything done.
+        if not is_future and not is_future_with_predictions and not is_live and not is_in_progress:
             continue
         # If the match is finished, skip here (history picks it up)
         if is_finished:
             continue
 
         hdr = _load_fixture_header(wca_id)
-        if not hdr:
-            kick_str = kick.isoformat() if hasattr(kick, "isoformat") else str(fx["kickoff_utc"])
-            hdr = {
-                "wca_id":      wca_id,
-                "home":        fx.get("home"),
-                "away":        fx.get("away"),
-                "kickoff_utc": kick_str,
-                "lock_at_utc": None,
-                "venue":       None,
-                "venue_city":    None,
-                "venue_country": None,
-                "stage":         None,
-                "competition": None,
-            }
-        preds = _collect_predictions(wca_id)
+        snapshot_mismatch = bool(hdr and _header_mismatches_registry(hdr, fx))
+        if not hdr or snapshot_mismatch:
+            hdr = _fixture_header_from_registry(wca_id, fx, hdr)
+        if snapshot_mismatch:
+            hdr["snapshot_mismatch"] = True
+            hdr["data_warning"] = "Fixture snapshot does not match registry metadata; predictions are hidden until re-ingested."
+        preds = [] if snapshot_mismatch else _collect_predictions(wca_id)
         _attach_display_picks(preds)
         results.append({"fixture": hdr, "predictions": preds, "live": live})
     return results
@@ -575,6 +772,8 @@ def build_history() -> list[dict]:
             h, a = sc.get("home"), sc.get("away")
             if h is not None and a is not None:
                 result = f"{h}-{a}"
+        if not result:
+            continue
 
         # Composite scores from results dir (for leaderboard ordering within card)
         composites: dict[str, float] = {}
@@ -620,12 +819,15 @@ def main() -> None:
     _attach_comments(incoming, key="fixture")
     history = build_history()
     _attach_comments(history, key=None)
+    leaderboard = build_leaderboard()
     payload = {
         # "generated_at":     _now_iso(),
-        "leaderboard":      build_leaderboard(),
+        "leaderboard":      leaderboard,
         "incoming_matches": incoming,
+        "featured_match":   _select_featured_match(history),
         "history":          history,
     }
+    _attach_default_visibility(payload, leaderboard)
     OUT.parent.mkdir(parents=True, exist_ok=True)
 
     # # Only write if content changed (ignoring generated_at), so the cron commit
