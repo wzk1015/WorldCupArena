@@ -138,6 +138,46 @@ def _load_model_metadata() -> dict[str, dict]:
 MODEL_META = _load_model_metadata()
 
 
+def _load_model_roster() -> list[dict]:
+    if not MODELS_YAML.exists():
+        return []
+    cfg = yaml.safe_load(MODELS_YAML.read_text()) or {}
+    roster: list[dict] = []
+    for category, entries in cfg.items():
+        if category == "baselines":
+            continue
+        for m in entries or []:
+            model_id = m.get("id")
+            if not model_id:
+                continue
+            meta = MODEL_META.get(model_id) or _infer_model_metadata(model_id)
+            for setting in m.get("settings_supported") or []:
+                roster.append({
+                    "model_id": model_id,
+                    "setting": setting,
+                    **meta,
+                })
+    return roster
+
+
+MODEL_ROSTER = _load_model_roster()
+
+
+def _prediction_key_from_path(path: Path) -> tuple[str, str | None]:
+    stem = path.stem
+    if "__" not in stem:
+        return stem, None
+    model_id, setting = stem.rsplit("__", 1)
+    return model_id, setting
+
+
+def _short_error(err: object, *, max_len: int = 260) -> str:
+    text = " ".join(str(err or "").split())
+    if len(text) <= max_len:
+        return text
+    return text[: max_len - 1].rstrip() + "…"
+
+
 def _clean_venue_country(country: str | None) -> str | None:
     country = (country or "").strip()
     if not country or country.lower() == "world":
@@ -312,16 +352,83 @@ def _load_fixture_header(wca_id: str) -> dict | None:
     }
 
 
-def _collect_predictions(wca_id: str) -> list[dict]:
+def _empty_prediction_payload(
+    *,
+    model_id: str,
+    setting: str | None,
+    status: str,
+    error_summary: str | None = None,
+    cost_usd: float | None = None,
+    tokens: dict | None = None,
+    sources: list[dict] | None = None,
+) -> dict:
+    meta = MODEL_META.get(model_id) or _infer_model_metadata(model_id)
+    return {
+        "model_id":           model_id,
+        "setting":            setting,
+        "status":             status,
+        "error_summary":      error_summary,
+        "win_probs":          {},
+        "score_dist":         [],
+        "most_likely_score":  None,
+        "expected_goal_diff": None,
+        "advance_prob":       None,
+        "reasoning":          {},
+        "scorers":            [],
+        "assisters":          [],
+        "motm_probs":         [],
+        "lineups":            {},
+        "formations":         {},
+        "substitutions":      [],
+        "cards":              [],
+        "penalties":          [],
+        "own_goals":          [],
+        "stats":              {},
+        "cost_usd":           cost_usd,
+        "tokens":             tokens or {},
+        "sources":            sources or [],
+        **meta,
+    }
+
+
+def _prediction_display_sort_key(pred: dict) -> tuple:
+    return (
+        int(pred.get("config_order", 9999)),
+        str(pred.get("setting") or ""),
+        pred.get("model_id", ""),
+    )
+
+
+def _collect_predictions(
+    wca_id: str,
+    *,
+    include_errors: bool = False,
+    include_missing: bool = False,
+) -> list[dict]:
     pred_dir = PREDICTIONS / wca_id
     out = []
+    seen: set[tuple[str, str | None]] = set()
     for f in sorted(pred_dir.glob("*.json")):
+        fallback_model_id, fallback_setting = _prediction_key_from_path(f)
         try:
             rec = json.loads(f.read_text())
         except json.JSONDecodeError:
             print(f"  [warn] skipping malformed JSON: {f}")
             continue
+        model_id = rec.get("model_id") or fallback_model_id
+        setting = rec.get("setting") or fallback_setting
+        seen.add((model_id, setting))
         if rec.get("error"):
+            if include_errors:
+                out.append(_empty_prediction_payload(
+                    model_id=model_id,
+                    setting=setting,
+                    status="failed",
+                    error_summary=_short_error(rec.get("error")),
+                    cost_usd=rec.get("cost_usd"),
+                    tokens=rec.get("tokens") or {},
+                    sources=rec.get("sources") or [],
+                ))
             continue
         p = rec.get("prediction") or {}
 
@@ -359,10 +466,24 @@ def _collect_predictions(wca_id: str) -> list[dict]:
             "penalties":          p.get("penalties") or [],
             "own_goals":          p.get("own_goals") or [],
             "stats":              p.get("stats") or {},
+            "status":             "ok",
             "cost_usd":           rec.get("cost_usd"),
             "sources":            sources,
             **meta,
         })
+    if include_missing:
+        for expected in MODEL_ROSTER:
+            key = (expected["model_id"], expected.get("setting"))
+            if key in seen:
+                continue
+            out.append(_empty_prediction_payload(
+                model_id=expected["model_id"],
+                setting=expected.get("setting"),
+                status="not_run",
+                error_summary="Prediction has not been run for this fixture.",
+            ))
+    if include_errors or include_missing:
+        out.sort(key=_prediction_display_sort_key)
     return out
 
 
@@ -568,7 +689,11 @@ def build_incoming_matches() -> list[dict]:
         if snapshot_mismatch:
             hdr["snapshot_mismatch"] = True
             hdr["data_warning"] = "Fixture snapshot does not match registry metadata; predictions are hidden until re-ingested."
-        preds = [] if snapshot_mismatch else _collect_predictions(wca_id)
+        preds = [] if snapshot_mismatch else _collect_predictions(
+            wca_id,
+            include_errors=has_predictions,
+            include_missing=has_predictions,
+        )
         _attach_display_picks(preds)
         results.append({"fixture": hdr, "predictions": preds, "live": live})
     return results

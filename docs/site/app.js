@@ -529,23 +529,43 @@ function renderPredCard(p, f, idx) {
   const hName      = f.home || "Home";
   const aName      = f.away || "Away";
   const hasReason  = Object.keys(reasoning).length > 0;
+  const status     = p.status || "ok";
 
   const scoreWinner = outcomeFromScore(predScore, hName, aName);
   const predWinner = winnerFromWinProbs(wp, hName, aName) || scoreWinner;
-
-  return `
-    <div class="card rounded-lg p-3">
-
-      <!-- Header -->
+  const headerHtml = `
       <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
         <div class="flex items-center gap-2">
           <span class="text-base">${b.emoji}</span>
           <span class="font-bold text-xs sm:text-sm text-white">${esc(fmtModelId(p.model_id))}</span>
           <span class="chip chip-${(p.setting || "").toLowerCase()}"
-                data-tip="${esc(SETTING_TIPS[p.setting] || p.setting)}">${esc(p.setting)}</span>
+                data-tip="${esc(SETTING_TIPS[p.setting] || p.setting)}">${esc(p.setting || "")}</span>
         </div>
         ${p.cost_usd != null ? `<span class="text-xs text-gray-600">Cost: $${(+p.cost_usd).toFixed(3)}</span>` : ""}
+      </div>`;
+
+  if (status !== "ok") {
+    const failed = status === "failed";
+    const label = failed ? "Failed" : "Not Run";
+    const tone = failed
+      ? "color:#fca5a5;border-color:rgba(248,113,113,.28);background:rgba(248,113,113,.08);"
+      : "color:#cbd5e1;border-color:rgba(148,163,184,.25);background:rgba(148,163,184,.08);";
+    const detail = p.error_summary || (failed ? "Prediction failed for this model." : "Prediction has not been run for this fixture.");
+    return `
+    <div class="card rounded-lg p-3">
+      ${headerHtml}
+      <div class="rounded-lg px-3 py-2" style="${tone}">
+        <div class="text-[10px] uppercase tracking-wider mb-1">${label}</div>
+        <div class="text-xs leading-snug">${esc(detail)}</div>
       </div>
+    </div>`;
+  }
+
+  return `
+    <div class="card rounded-lg p-3">
+
+      <!-- Header -->
+      ${headerHtml}
 
       <!-- Minimalist Prediction -->
       ${predWinner || top3.length ? `
