@@ -38,6 +38,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 from datetime import datetime, timedelta, timezone
@@ -143,8 +144,9 @@ def _phase_lock_predict(fx: dict, fx_dir: Path) -> None:
     # if pred_dir.exists() and any(pred_dir.glob("*.json")):
     #     print(f"  [lock_predict] skip predict — predictions already exist")
     #     return
+    parallel = os.environ.get("PREDICT_PARALLEL", "4")
     _run([sys.executable, "-m", "src.pipeline.orchestrator", "predict",
-          "--fixture", str(fixture_path), "--parallel", "8"])
+          "--fixture", str(fixture_path), "--parallel", parallel])
 
 
 def _live_status(wca_id: str) -> str | None:

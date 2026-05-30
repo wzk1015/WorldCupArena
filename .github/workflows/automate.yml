@@ -11,10 +11,10 @@ name: automate
 #     truth_grade  T+3h  → T+48h  fetch truth + grade + rebuild leaderboard
 #
 # Every phase is idempotent: `ingest` skips if fixture.json exists, `populate`
-# skips if context_pack.squads is already set, `lock_predict` skips predict if
-# the predictions directory is non-empty, `truth_grade` skips truth-download
-# if truth.json exists. So the 10-minute cadence is safe — repeated ticks are
-# cheap no-ops, and missed ticks catch up automatically.
+# skips if context_pack.squads is already set, `lock_predict` reuses successful
+# prediction files and reruns only missing/failed files, `truth_grade` skips
+# truth-download if truth.json exists. So the 10-minute cadence is safe —
+# repeated ticks are cheap no-ops, and missed ticks catch up automatically.
 #
 # The scheduler commits any new/updated artifacts (fixture.json, truth.json,
 # predictions, results, leaderboard payload) back to main so the pages
@@ -64,16 +64,25 @@ jobs:
       - name: Scheduler tick
         env:
           PYTHONUNBUFFERED: "1"
+          PREDICT_PARALLEL:  "4"
           API_FOOTBALL_KEY:   ${{ secrets.API_FOOTBALL_KEY }}
           NEWSAPI_KEY:        ${{ secrets.NEWSAPI_KEY }}
           GNEWS_API_KEY:      ${{ secrets.GNEWS_API_KEY }}
           OPENAI_API_KEY:     ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL:    ${{ secrets.OPENAI_BASE_URL }}
           ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+          ANTHROPIC_DIRECT_BASE_URL: ${{ secrets.ANTHROPIC_DIRECT_BASE_URL }}
           GOOGLE_API_KEY:     ${{ secrets.GOOGLE_API_KEY }}
+          GOOGLE_BASE_URL:    ${{ secrets.GOOGLE_BASE_URL }}
           XAI_API_KEY:        ${{ secrets.XAI_API_KEY }}
           DEEPSEEK_API_KEY:   ${{ secrets.DEEPSEEK_API_KEY }}
           TOGETHER_API_KEY:   ${{ secrets.TOGETHER_API_KEY }}
           DASHSCOPE_API_KEY:  ${{ secrets.DASHSCOPE_API_KEY }}
+          YUNWU_API_KEY:      ${{ secrets.YUNWU_API_KEY }}
+          YUNWU_BASE_URL:     ${{ secrets.YUNWU_BASE_URL }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_BASE_URL: ${{ secrets.OPENROUTER_BASE_URL }}
           PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
           MIROMIND_API_KEY:   ${{ secrets.MIROMIND_API_KEY }}
         run: |

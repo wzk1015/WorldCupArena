@@ -278,24 +278,24 @@ search_llm:
 #     settings_supported: [S2]
 
 deep_research_agent:
-  - id: yunwu-o4-mini-deep-research
-    provider: openai_deep_research
-    model: openai/o4-mini-deep-research
-    api_key_env: OPENROUTER_API_KEY
-    base_url_env: OPENROUTER_BASE_URL
-    base_url: https://openrouter.ai/api/v1
-    price_per_mtok: { input: 2.00, output: 8.00 }
-    price_per_tool_call: 0.010
-    web_search_tool: web_search_preview
-    include_sources: false
-    settings_supported: [S2]
-    max_tokens: 30000
-    timeout_seconds: 600
-    max_wait_seconds: 1800
-    poll_seconds: 10
-    json_compiler_max_tokens: 20000
-    max_format_retries: 0
-    max_run_retries: 1
+  # - id: yunwu-o4-mini-deep-research
+  #   provider: openai_deep_research
+  #   model: openai/o4-mini-deep-research
+  #   api_key_env: OPENROUTER_API_KEY
+  #   base_url_env: OPENROUTER_BASE_URL
+  #   base_url: https://openrouter.ai/api/v1
+  #   price_per_mtok: { input: 2.00, output: 8.00 }
+  #   price_per_tool_call: 0.010
+  #   web_search_tool: web_search_preview
+  #   include_sources: false
+  #   settings_supported: [S2]
+  #   max_tokens: 30000
+  #   timeout_seconds: 600
+  #   max_wait_seconds: 1800
+  #   poll_seconds: 10
+  #   json_compiler_max_tokens: 20000
+  #   max_format_retries: 0
+  #   max_run_retries: 1
   - id: gemini-deep-research
     provider: google_deep_research
     model: deep-research-pro-preview-12-2025
