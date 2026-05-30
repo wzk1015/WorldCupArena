@@ -23,7 +23,17 @@ function fmtModelId(id) {
   return id;
 }
 
-let _allPreds = [];  // flat registry of all rendered pred cards (for modal)
+let _allPreds = [];     // flat registry of all rendered pred cards
+let _predFixtures = []; // fixture/history object per rendered pred
+
+function registerPreds(preds, fixture) {
+  const start = _allPreds.length;
+  for (const pred of preds || []) {
+    _allPreds.push(pred);
+    _predFixtures.push(fixture);
+  }
+  return start;
+}
 
 const SETTING_TIPS = {
   S1: "S1 · LLM with full injected context pack (official squads, recent form, ~20 news headlines, stats). No tools.",
@@ -141,34 +151,87 @@ function winnerFromWinProbs(wp, homeName, awayName) {
 }
 
 function toggleDetails(idx) {
-  const el  = document.getElementById(`pred-details-${idx}`);
   const btn = document.getElementById(`pred-details-btn-${idx}`);
-  if (!el) return;
-  const showing = el.style.display !== "none";
-  el.style.display = showing ? "none" : "block";
-  if (btn) btn.textContent = showing ? "👇 Show Full AI Analysis" : "👇 Hide Details";
+  const group = btn?.closest("[data-pred-grid]");
+  const row = btn?.closest("[data-pred-row]");
+  const panel = row?.querySelector("[data-pred-panel='1']");
+  if (!group || !row || !panel) return;
+
+  const showingSame = !panel.classList.contains("hidden")
+    && panel.dataset.panelType === "details"
+    && panel.dataset.predIdx === String(idx);
+
+  resetPredGridButtons(group);
+  if (showingSame) {
+    panel.classList.add("hidden");
+    panel.innerHTML = "";
+    panel.dataset.panelType = "";
+    panel.dataset.predIdx = "";
+    return;
+  }
+
+  panel.innerHTML = renderDetailsPanel(idx);
+  panel.dataset.panelType = "details";
+  panel.dataset.predIdx = String(idx);
+  panel.classList.remove("hidden");
+  if (btn) btn.textContent = "👇 Hide Details";
 }
 
 function toggleSources(idx) {
-  const el  = document.getElementById(`pred-sources-${idx}`);
   const btn = document.getElementById(`pred-sources-btn-${idx}`);
-  if (!el) return;
-  const showing = el.style.display !== "none";
-  el.style.display = showing ? "none" : "block";
-  if (btn) {
-    const count = el.querySelectorAll("a").length;
-    btn.textContent = showing ? `🔗 Sources (${count})` : `🔗 Hide sources`;
+  const group = btn?.closest("[data-pred-grid]");
+  const row = btn?.closest("[data-pred-row]");
+  const panel = row?.querySelector("[data-pred-panel='1']");
+  if (!group || !row || !panel) return;
+
+  const showingSame = !panel.classList.contains("hidden")
+    && panel.dataset.panelType === "sources"
+    && panel.dataset.predIdx === String(idx);
+
+  resetPredGridButtons(group);
+  if (showingSame) {
+    panel.classList.add("hidden");
+    panel.innerHTML = "";
+    panel.dataset.panelType = "";
+    panel.dataset.predIdx = "";
+    return;
   }
+
+  panel.innerHTML = renderSourcesPanel(idx);
+  panel.dataset.panelType = "sources";
+  panel.dataset.predIdx = String(idx);
+  panel.classList.remove("hidden");
+  if (btn) btn.textContent = "🔗 Hide sources";
+}
+
+function resetPredGridButtons(group) {
+  group.querySelectorAll("[id^='pred-details-btn-']").forEach(button => {
+    button.textContent = "👇 Show Full AI Analysis";
+  });
+  group.querySelectorAll("[id^='pred-sources-btn-']").forEach(button => {
+    const count = button.dataset.sourceCount || "0";
+    button.textContent = `🔗 Sources (${count})`;
+  });
 }
 
 function togglePredictionGroup(groupId, btn) {
   const group = document.getElementById(groupId);
   if (!group) return;
-  const extras = group.querySelectorAll("[data-pred-extra='1']");
+  const extras = group.querySelectorAll("[data-pred-extra-row='1']");
   const showingExtras = Array.from(extras).some(el => !el.classList.contains("hidden"));
+  const hiddenCount = btn?.dataset.hiddenCount || extras.length;
   extras.forEach(el => el.classList.toggle("hidden", showingExtras));
+  if (showingExtras) {
+    resetPredGridButtons(group);
+    group.querySelectorAll("[data-pred-panel='1']").forEach(panel => {
+      panel.classList.add("hidden");
+      panel.innerHTML = "";
+      panel.dataset.panelType = "";
+      panel.dataset.predIdx = "";
+    });
+  }
   if (btn) btn.textContent = showingExtras
-    ? `Show all models (+${extras.length})`
+    ? `Show all models (+${hiddenCount})`
     : "Show fewer models";
 }
 
@@ -519,17 +582,102 @@ function _renderDetails(p, f) {
   return html || `<div class="text-gray-500 text-xs">No detailed prediction data available.</div>`;
 }
 
-function renderPredCard(p, f, idx) {
+function renderSourcesPanel(idx) {
+  const p = _allPreds[idx] || {};
+  const sources = p.sources || [];
+  if (!sources.length) return "";
+  return `
+    <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🔗 Search Sources</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+      ${sources.map(s => {
+        const title = esc(s.title || s.url || "");
+        const url   = esc(s.url || "");
+        const date  = s.accessed_at ? esc(s.accessed_at.slice(0, 10)) : "";
+        return `<div class="text-xs leading-snug rounded-lg px-3 py-2" style="background:rgba(255,255,255,.045);">
+          <a href="${url}" target="_blank" rel="noopener"
+             class="text-blue-400 hover:text-blue-300 underline break-all">${title}</a>
+          ${date ? `<span class="text-gray-600 ml-1">${date}</span>` : ""}
+        </div>`;
+      }).join("")}
+    </div>`;
+}
+
+function renderDetailsPanel(idx) {
+  const p = _allPreds[idx] || {};
+  const f = _predFixtures[idx] || {};
+  const reasoning = p.reasoning || {};
+  const scoreDist = (p.score_dist || []).slice().sort((a, b) => (b.p || 0) - (a.p || 0));
+  const wp = p.win_probs || winProbsFromScoreDist(scoreDist) || {};
+  const top3 = scoreDist.slice(0, 3);
+  const hName = f.home || "Home";
+  const aName = f.away || "Away";
+  const hasReason = Object.keys(reasoning).length > 0;
+
+  return `
+    <div class="space-y-4">
+      ${wp.home != null ? `
+      <div>
+        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">📊 Win Probabilities</div>
+        <div class="grid grid-cols-3 gap-3">
+          ${[["home", hName], ["draw", "Draw"], ["away", aName]
+            ].map(([k, label]) => `
+            <div class="rounded-lg px-3 py-2 text-center" style="background:rgba(255,255,255,.06);">
+              <div class="text-[10px] text-gray-400 uppercase tracking-wider">${esc(label)}</div>
+              <div class="text-lg font-black font-mono text-gray-100">${fmtPct(wp[k])}</div>
+            </div>`).join("")}
+        </div>
+      </div>` : ""}
+
+      ${top3.length ? (() => {
+        const allScores = scoreDist.slice(0, 15);
+        const maxP = Math.max(...allScores.map(s => s.p || 0));
+        return `
+      <div>
+        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🎯 Score Distribution</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1">
+          ${allScores.map(s => {
+            const barW = maxP > 0 ? Math.round((s.p / maxP) * 100) : 0;
+            const sc   = (s.score || "").split("-");
+            const hg   = parseInt(sc[0] ?? "-1");
+            const ag   = parseInt(sc[1] ?? "-1");
+            const outcomeCls = hg > ag || ag > hg ? "text-gray-100" : "text-gray-300";
+            return `<div class="flex items-center gap-2">
+              <span class="font-mono font-bold text-sm w-10 text-right ${outcomeCls}">${esc(s.score)}</span>
+              <div class="flex-1 h-2 rounded-full overflow-hidden" style="background:rgba(255,255,255,.07);">
+                <div class="h-full rounded-full" style="width:${barW}%;background:rgba(255,255,255,.3);"></div>
+              </div>
+              <span class="font-mono text-xs text-gray-400 w-10">${fmtPct(s.p)}</span>
+            </div>`;
+          }).join("")}
+        </div>
+      </div>`;
+      })() : ""}
+
+      ${hasReason ? `
+        <div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">📖 Full Reasoning</div>
+          <div class="text-sm text-gray-200 leading-relaxed whitespace-pre-wrap">${esc(reasoning.overall)}</div>
+        </div>
+      ` : ""}
+      ${_renderDetails(p, f)}
+      <div class="pt-2 border-t border-white/5">
+        <button onclick="toggleDetails(${idx})" class="chip hover:bg-white/15 transition text-xs">🔼 Hide Detail</button>
+      </div>
+    </div>`;
+}
+
+function renderPredCard(p, f, idx, opts = {}) {
   const b          = modelBadge(p.model_id);
-  const reasoning  = p.reasoning || {};
   const scoreDist  = (p.score_dist || []).slice().sort((a, b) => (b.p || 0) - (a.p || 0));
   const wp         = p.win_probs || winProbsFromScoreDist(scoreDist) || {};
   const top3       = scoreDist.slice(0, 3);
   const predScore  = p.most_likely_score || (top3[0] ? top3[0].score : null);
   const hName      = f.home || "Home";
   const aName      = f.away || "Away";
-  const hasReason  = Object.keys(reasoning).length > 0;
   const status     = p.status || "ok";
+  const showActualSummary = opts.showActualSummary !== false;
+  const extraButtonAttr = opts.isExtra ? ' data-extra-button="details"' : "";
+  const extraSourcesButtonAttr = opts.isExtra ? ' data-extra-button="sources"' : "";
 
   const scoreWinner = outcomeFromScore(predScore, hName, aName);
   const predWinner = winnerFromWinProbs(wp, hName, aName) || scoreWinner;
@@ -596,7 +744,7 @@ function renderPredCard(p, f, idx) {
               return `<div class="text-xl font-black leading-tight font-mono whitespace-nowrap" style="${scoreColor}">${esc(predScore ? predScore.replace("-", " - ") : "—")}</div>`;
             })()}
           </div>
-          ${f.truth ? `<div class="ml-auto">
+          ${showActualSummary && f.truth ? `<div class="ml-auto">
             <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Actual</div>
             <div class="text-xl font-black font-mono leading-tight whitespace-nowrap" style="color:#fbbf24;">${esc(f.truth.score.replace("-", " - ") || "—")}</div>
             <div class="text-xs font-mono" style="color:#fbbf2480;">${esc(
@@ -610,109 +758,65 @@ function renderPredCard(p, f, idx) {
       <!-- Buttons -->
       <div class="flex flex-wrap gap-2 mt-1">
         <button id="pred-details-btn-${idx}" onclick="toggleDetails(${idx})"
-                class="chip hover:bg-white/15 transition text-[11px]">👇 Show Full AI Analysis</button>
+                class="chip hover:bg-white/15 transition text-[11px]"${extraButtonAttr}>👇 Show Full AI Analysis</button>
         ${p.sources && p.sources.length ? `
         <button id="pred-sources-btn-${idx}" onclick="toggleSources(${idx})"
-                class="chip hover:bg-white/15 transition text-[11px]">🔗 Sources (${p.sources.length})</button>` : ""}
-      </div>
-
-      <!-- Expandable sources -->
-      ${p.sources && p.sources.length ? `
-      <div id="pred-sources-${idx}"
-           style="display:none;border-top:1px solid rgba(255,255,255,.06);"
-           class="mt-3 pt-3 space-y-1">
-        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🔗 Search Sources</div>
-        ${p.sources.map(s => {
-          const title = esc(s.title || s.url || "");
-          const url   = esc(s.url || "");
-          const date  = s.accessed_at ? esc(s.accessed_at.slice(0, 10)) : "";
-          return `<div class="text-xs leading-snug">
-            <a href="${url}" target="_blank" rel="noopener"
-               class="text-blue-400 hover:text-blue-300 underline break-all">${title}</a>
-            ${date ? `<span class="text-gray-600 ml-1">${date}</span>` : ""}
-          </div>`;
-        }).join("")}
-      </div>` : ""}
-
-      <!-- Expandable details -->
-      <div id="pred-details-${idx}"
-           style="display:none;border-top:1px solid rgba(255,255,255,.06);"
-           class="mt-3 pt-3 space-y-4">
-
-        <!-- Win probabilities (full) -->
-        ${wp.home != null ? `
-        <div>
-          <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">📊 Win Probabilities</div>
-          <div class="flex gap-3">
-            ${[["home", hName], ["draw", "Draw"], ["away", aName]
-              ].map(([k, label]) => `
-              <div class="flex-1 rounded-lg px-3 py-2 text-center" style="background:rgba(255,255,255,.06);">
-                <div class="text-[10px] text-gray-400 uppercase tracking-wider">${esc(label)}</div>
-                <div class="text-lg font-black font-mono text-gray-100">${fmtPct(wp[k])}</div>
-              </div>`).join("")}
-          </div>
-        </div>` : ""}
-
-        <!-- Score distribution (full) -->
-        ${top3.length ? (() => {
-          const allScores = scoreDist.slice(0, 15);
-          const maxP = Math.max(...allScores.map(s => s.p || 0));
-          return `
-        <div>
-          <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">🎯 Score Distribution</div>
-          <div class="space-y-1">
-            ${allScores.map(s => {
-              const barW = maxP > 0 ? Math.round((s.p / maxP) * 100) : 0;
-              const sc   = (s.score || "").split("-");
-              const hg   = parseInt(sc[0] ?? "-1");
-              const ag   = parseInt(sc[1] ?? "-1");
-              const outcomeCls = hg > ag || ag > hg ? "text-gray-100" : "text-gray-300";
-              return `<div class="flex items-center gap-2">
-                <span class="font-mono font-bold text-sm w-10 text-right ${outcomeCls}">${esc(s.score)}</span>
-                <div class="flex-1 h-2 rounded-full overflow-hidden" style="background:rgba(255,255,255,.07);">
-                  <div class="h-full rounded-full" style="width:${barW}%;background:rgba(255,255,255,.3);"></div>
-                </div>
-                <span class="font-mono text-xs text-gray-400 w-10">${fmtPct(s.p)}</span>
-              </div>`;
-            }).join("")}
-          </div>
-        </div>`;
-        })() : ""}
-
-        ${hasReason ? `
-          <div>
-            <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">📖 Full Reasoning</div>
-            <div class="text-sm text-gray-200 leading-relaxed whitespace-pre-wrap">${esc(reasoning.overall)}</div>
-          </div>
-        ` : ""}
-        ${_renderDetails(p, f)}
-        <div class="pt-2 border-t border-white/5">
-          <button onclick="toggleDetails(${idx})" class="chip hover:bg-white/15 transition text-xs">🔼 Hide Detail</button>
-        </div>
+                class="chip hover:bg-white/15 transition text-[11px]"${extraSourcesButtonAttr} data-source-count="${p.sources.length}">🔗 Sources (${p.sources.length})</button>` : ""}
       </div>
     </div>`;
 }
 
-function renderPredList(preds, f, startIdx, groupId) {
+function renderPredGrid(preds, f, startIdx, groupId, opts = {}) {
   if (!preds.length) return `<div class="text-gray-500 text-sm py-2">No predictions for this fixture.</div>`;
-  const hiddenCount = preds.filter(p => p.default_visible === false).length;
-  const cards = preds.map((p, i) => {
-    const hidden = p.default_visible === false;
-    return `<div ${hidden ? `class="hidden" data-pred-extra="1"` : ""}>${
-      renderPredCard(p, f, startIdx + i)
-    }</div>`;
-  }).join("");
+  const allowFold = opts.allowFold !== false;
+  const hiddenCount = allowFold ? preds.filter(p => p.default_visible === false).length : 0;
+  const indexed = preds.map((p, i) => ({ pred: p, idx: startIdx + i, hidden: p.default_visible === false }));
+  const visibleItems = allowFold ? indexed.filter(item => !item.hidden) : indexed;
+  const hiddenItems = allowFold ? indexed.filter(item => item.hidden) : [];
+
+  const renderRows = (items, hiddenRows) => {
+    const rows = [];
+    for (let rowStart = 0; rowStart < items.length; rowStart += 2) {
+      const cards = items.slice(rowStart, rowStart + 2).map(item => `
+        <div>${renderPredCard(item.pred, f, item.idx, {
+          showActualSummary: opts.showActualSummary,
+          isExtra: hiddenRows,
+        })}</div>
+      `).join("");
+      rows.push(`
+        <div class="${hiddenRows ? "hidden " : ""}space-y-2" data-pred-row="1"${hiddenRows ? ' data-pred-extra-row="1"' : ""}>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">${cards}</div>
+          <div class="pred-expanded card rounded-lg p-4 hidden" data-pred-panel="1"></div>
+        </div>
+      `);
+    }
+    return rows.join("");
+  };
+
   return `
-    <div id="${groupId}" class="space-y-2">${cards}</div>
+    <div id="${groupId}" class="pred-grid space-y-2" data-pred-grid="1">
+      ${renderRows(visibleItems, false)}
+      ${renderRows(hiddenItems, true)}
+    </div>
     ${hiddenCount ? `
       <button onclick="togglePredictionGroup('${groupId}', this)"
-              class="chip hover:bg-white/15 transition text-xs mt-2">Show all models (+${hiddenCount})</button>
+              class="chip hover:bg-white/15 transition text-xs mt-2"
+              data-hidden-count="${hiddenCount}">Show all models (+${hiddenCount})</button>
     ` : ""}`;
 }
 
+function renderPredList(preds, f, startIdx, groupId) {
+  return renderPredGrid(preds, f, startIdx, groupId, {
+    allowFold: true,
+    showActualSummary: false,
+  });
+}
+
 function renderAllPredCards(preds, f, startIdx) {
-  if (!preds.length) return `<div class="text-gray-500 text-sm py-2">No predictions for this fixture.</div>`;
-  return `<div class="space-y-2">${preds.map((p, i) => renderPredCard(p, f, startIdx + i)).join("")}</div>`;
+  return renderPredGrid(preds, f, startIdx, `pred-grid-${startIdx}`, {
+    allowFold: false,
+    showActualSummary: true,
+  });
 }
 
 // ---------- Incoming matches -------------------------------------------------
@@ -722,8 +826,7 @@ function _renderOneFixture(nm, cardIdx) {
   const kick  = f.kickoff_utc ? new Date(f.kickoff_utc) : null;
   const cid   = `nm-countdown-${cardIdx}`;
   const preds = nm.predictions || [];
-  const nmStart = _allPreds.length;
-  _allPreds.push(...preds);
+  const nmStart = registerPreds(preds, f);
 
   const lv = nm.live;
   const isMatchLive = lv && lv.status && lv.status !== "Match Finished" && lv.status !== "Not Started";
@@ -824,8 +927,7 @@ function renderFeaturedMatch(match) {
   section.classList.remove("hidden");
 
   const preds = match.predictions || [];
-  const start = _allPreds.length;
-  _allPreds.push(...preds);
+  const start = registerPreds(preds, match);
   const date = match.kickoff_utc ? new Date(match.kickoff_utc).toISOString().slice(0, 10) : "";
   const scoreHtml = `<div class="text-3xl font-black font-mono" style="color:#fbbf24;">${esc((match.result || "—").replace("-", " – "))}</div>`;
   const predCards = renderAllPredCards(preds, match, start);
@@ -979,8 +1081,7 @@ function renderHistory(rows) {
          <div class="text-xs font-semibold mt-0.5" style="color:#fca5a5;">🔴 LIVE${lv.elapsed != null ? ` · ${lv.elapsed}′` : ""}</div>`
       : `<div class="text-3xl font-black font-mono" style="color:#fbbf24;">${esc((r.result || "—").replace("-", " – "))}</div>`;
 
-    const hStart = _allPreds.length;
-    _allPreds.push(...preds);
+    const hStart = registerPreds(preds, r);
 
     const predCards = renderPredList(preds, r, hStart, `pred-group-history-${hStart}`);
 
@@ -1047,7 +1148,7 @@ async function main() {
   buildReasoningModal();
   let data;
   try {
-    const resp = await fetch("data.json?ts=" + Date.now());
+    const resp = await fetch("data.json", { cache: "no-cache" });
     data = await resp.json();
   } catch (e) {
     document.getElementById("next-container").innerHTML =
@@ -1057,11 +1158,12 @@ async function main() {
   }
   // document.getElementById("generated-at").textContent = "Last updated " + fmtTimestamp(data.generated_at);
   _allPreds = [];
+  _predFixtures = [];
   renderIncomingMatches(data.incoming_matches || []);
   renderFeaturedMatch(data.featured_match || null);
   renderLeaderboard(data.leaderboard || { main: [] }, "main");
   wireTabs(data.leaderboard || { main: [] });
-  renderHistory(data.history || []);
+  requestAnimationFrame(() => renderHistory(data.history || []));
 }
 
 main();

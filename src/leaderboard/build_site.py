@@ -45,6 +45,7 @@ FIXTURES_YAML = ROOT / "configs" / "fixtures.yaml"
 MODELS_YAML = ROOT / "configs" / "models.yaml"
 COMMENTS_JSON = ROOT / "data" / "comments.json"
 OUT = ROOT / "docs" / "site" / "data.json"
+HIDDEN_SITE_MODELS = {"yunwu-o4-mini-deep-research"}
 
 
 def _load_comments() -> dict[str, str]:
@@ -121,7 +122,7 @@ def _load_model_metadata() -> dict[str, dict]:
             continue
         for m in entries or []:
             model_id = m.get("id")
-            if not model_id:
+            if not model_id or model_id in HIDDEN_SITE_MODELS:
                 continue
             provider = m.get("provider")
             meta[model_id] = {
@@ -300,6 +301,8 @@ def build_leaderboard() -> dict:
         layers_mean = {k: sum(xs) / len(xs) for k, xs in by_model_layers[m].items() if xs}
         total = by_model_winner_total[m]
         meta = MODEL_META.get(m) or _infer_model_metadata(m)
+        if m in HIDDEN_SITE_MODELS:
+            continue
         main.append({
             "model_id":      m,
             "mean":          sum(v) / len(v),
@@ -424,6 +427,8 @@ def _collect_predictions(
             continue
         model_id = rec.get("model_id") or fallback_model_id
         setting = rec.get("setting") or fallback_setting
+        if model_id in HIDDEN_SITE_MODELS:
+            continue
         seen.add((model_id, setting))
         if rec.get("error"):
             if include_errors:
