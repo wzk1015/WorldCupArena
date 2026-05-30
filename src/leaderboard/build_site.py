@@ -171,11 +171,18 @@ def _prediction_key_from_path(path: Path) -> tuple[str, str | None]:
     return model_id, setting
 
 
-def _short_error(err: object, *, max_len: int = 260) -> str:
-    text = " ".join(str(err or "").split())
-    if len(text) <= max_len:
-        return text
-    return text[: max_len - 1].rstrip() + "…"
+def _public_error_summary(err: object) -> str:
+    """Return a site-safe status message without provider internals."""
+    text = str(err or "").lower()
+    if "env var" in text or "api_key" in text or "api key" in text:
+        return "Configuration missing; this model will retry after secrets are available."
+    if "quota" in text or "ratelimit" in text or "rate limit" in text or "429" in text:
+        return "Provider quota or rate limit; this model will retry later."
+    if "timeout" in text or "timed out" in text:
+        return "Provider timeout; this model will retry later."
+    if "jsondecodeerror" in text or "no valid" in text:
+        return "Provider returned no final prediction; this model will retry later."
+    return "Prediction unavailable; this model will retry later."
 
 
 def _clean_venue_country(country: str | None) -> str | None:
@@ -424,7 +431,7 @@ def _collect_predictions(
                     model_id=model_id,
                     setting=setting,
                     status="failed",
-                    error_summary=_short_error(rec.get("error")),
+                    error_summary=_public_error_summary(rec.get("error")),
                     cost_usd=rec.get("cost_usd"),
                     tokens=rec.get("tokens") or {},
                     sources=rec.get("sources") or [],
@@ -480,7 +487,7 @@ def _collect_predictions(
                 model_id=expected["model_id"],
                 setting=expected.get("setting"),
                 status="not_run",
-                error_summary="Prediction has not been run for this fixture.",
+                error_summary="Not run yet; the scheduler will run this model when due.",
             ))
     if include_errors or include_missing:
         out.sort(key=_prediction_display_sort_key)

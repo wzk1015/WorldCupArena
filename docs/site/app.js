@@ -546,11 +546,11 @@ function renderPredCard(p, f, idx) {
 
   if (status !== "ok") {
     const failed = status === "failed";
-    const label = failed ? "Failed" : "Not Run";
+    const label = failed ? "Unavailable" : "Not Run";
     const tone = failed
       ? "color:#fca5a5;border-color:rgba(248,113,113,.28);background:rgba(248,113,113,.08);"
       : "color:#cbd5e1;border-color:rgba(148,163,184,.25);background:rgba(148,163,184,.08);";
-    const detail = p.error_summary || (failed ? "Prediction failed for this model." : "Prediction has not been run for this fixture.");
+    const detail = p.error_summary || (failed ? "Prediction unavailable; this model will retry later." : "Not run yet; the scheduler will run this model when due.");
     return `
     <div class="card rounded-lg p-3">
       ${headerHtml}
