@@ -42,15 +42,16 @@ closed_llm:
     price_per_mtok: { input: 3.70, output: 18.50 }
     settings_supported: [S1]
   - id: gpt-5.4
-    provider: openai
-    model: gpt-5.4
+    provider: openrouter
+    model: openai/gpt-5.4
     reasoning_effort: low
     reasoning_summary: auto
-    api_key_env: OPENAI_API_KEY
-    base_url_env: OPENAI_BASE_URL
-    base_url: https://api.openai.com/v1
-    price_per_mtok: { input: 3.00, output: 12.00 }
+    api_key_env: OPENROUTER_API_KEY
+    base_url_env: OPENROUTER_BASE_URL
+    base_url: https://openrouter.ai/api/v1
+    price_per_mtok: { input: 2.50, output: 15.00 }
     settings_supported: [S1]
+    timeout_seconds: 180
   # - id: grok-3
   #   provider: xai
   #   model: grok-3
@@ -127,97 +128,110 @@ closed_llm:
 #   # Re-add by uncommenting and keeping the same schema.
 
 open_llm:
-  # Routed through Yunwu's OpenAI-compatible endpoint. The exact upstream can be
-  # changed per key / platform without touching runner code.
+  # Routed through OpenRouter's OpenAI-compatible endpoint. The public `id` values
+  # stay stable for dashboard continuity; `model` is the exact OpenRouter slug.
   - id: deepseek-r1
-    provider: yunwu
-    model: deepseek-r1
-    api_key_env: YUNWU_API_KEY
-    base_url_env: YUNWU_BASE_URL
-    base_url: https://api.yunwu.ai/v1
-    price_per_mtok: { input: 0.55, output: 2.19 }
+    provider: openrouter
+    model: deepseek/deepseek-v4-pro
+    api_key_env: OPENROUTER_API_KEY
+    base_url_env: OPENROUTER_BASE_URL
+    base_url: https://openrouter.ai/api/v1
+    price_per_mtok: { input: 0.435, output: 0.870 }
     json_mode: false
     open_weight: true
     settings_supported: [S1]
     max_run_retries: 1
+    timeout_seconds: 180
   - id: qwen3-max
-    provider: yunwu
-    model: qwen3-max
-    api_key_env: YUNWU_API_KEY
-    base_url_env: YUNWU_BASE_URL
-    base_url: https://api.yunwu.ai/v1
-    price_per_mtok: { input: 1.60, output: 6.40 }
+    provider: openrouter
+    model: qwen/qwen3.7-max
+    api_key_env: OPENROUTER_API_KEY
+    base_url_env: OPENROUTER_BASE_URL
+    base_url: https://openrouter.ai/api/v1
+    price_per_mtok: { input: 1.25, output: 3.75 }
     json_mode: false
     open_weight: false
     settings_supported: [S1]
     max_run_retries: 1
+    timeout_seconds: 180
   - id: kimi-k2
-    provider: yunwu
-    model: kimi-k2-0711-preview
-    api_key_env: YUNWU_API_KEY
-    base_url_env: YUNWU_BASE_URL
-    base_url: https://api.yunwu.ai/v1
-    price_per_mtok: { input: 0.60, output: 2.50 }
-    json_mode: false
+    provider: openrouter
+    model: moonshotai/kimi-k2.6
+    api_key_env: OPENROUTER_API_KEY
+    base_url_env: OPENROUTER_BASE_URL
+    base_url: https://openrouter.ai/api/v1
+    price_per_mtok: { input: 0.684, output: 3.42 }
+    json_mode: true
+    max_tokens: 12000
+    extra_body: { reasoning: { effort: "none", exclude: true } }
     open_weight: true
     settings_supported: [S1]
     max_run_retries: 1
+    timeout_seconds: 180
   - id: glm-4.5
-    provider: yunwu
-    model: glm-4.5
-    api_key_env: YUNWU_API_KEY
-    base_url_env: YUNWU_BASE_URL
-    base_url: https://api.yunwu.ai/v1
-    price_per_mtok: { input: 0.70, output: 2.80 }
+    provider: openrouter
+    model: z-ai/glm-5.1
+    api_key_env: OPENROUTER_API_KEY
+    base_url_env: OPENROUTER_BASE_URL
+    base_url: https://openrouter.ai/api/v1
+    price_per_mtok: { input: 0.98, output: 3.08 }
     json_mode: false
-    stream: true
     open_weight: true
     settings_supported: [S1]
     max_run_retries: 1
+    timeout_seconds: 180
   - id: doubao-seed-1.6-thinking
-    provider: yunwu
-    model: doubao-seed-1-6-thinking-250615
-    api_key_env: YUNWU_API_KEY
-    base_url_env: YUNWU_BASE_URL
-    base_url: https://api.yunwu.ai/v1
-    price_per_mtok: { input: 0.80, output: 3.20 }
-    json_mode: false
+    provider: openrouter
+    model: bytedance-seed/seed-2.0-lite
+    api_key_env: OPENROUTER_API_KEY
+    base_url_env: OPENROUTER_BASE_URL
+    base_url: https://openrouter.ai/api/v1
+    price_per_mtok: { input: 0.25, output: 2.00 }
+    json_mode: true
+    max_tokens: 12000
+    extra_body: { reasoning: { effort: "none", exclude: true } }
     open_weight: false
     settings_supported: [S1]
     max_run_retries: 1
+    timeout_seconds: 180
   - id: minimax-m2.7
-    provider: yunwu
-    model: MiniMax-M2.7
-    api_key_env: YUNWU_API_KEY
-    base_url_env: YUNWU_BASE_URL
-    base_url: https://api.yunwu.ai/v1
-    price_per_mtok: { input: 0.40, output: 2.20 }
-    json_mode: false
+    provider: openrouter
+    model: minimax/minimax-m2.7
+    api_key_env: OPENROUTER_API_KEY
+    base_url_env: OPENROUTER_BASE_URL
+    base_url: https://openrouter.ai/api/v1
+    price_per_mtok: { input: 0.26, output: 1.20 }
+    json_mode: true
+    max_tokens: 20000
+    extra_body: { reasoning: { effort: low, exclude: true } }
     open_weight: false
     settings_supported: [S1]
     max_run_retries: 1
+    timeout_seconds: 180
   - id: llama-4-maverick
-    provider: yunwu
+    provider: openrouter
     model: meta-llama/llama-4-maverick
-    api_key_env: YUNWU_API_KEY
-    base_url_env: YUNWU_BASE_URL
-    base_url: https://api.yunwu.ai/v1
-    price_per_mtok: { input: 0.27, output: 0.85 }
+    api_key_env: OPENROUTER_API_KEY
+    base_url_env: OPENROUTER_BASE_URL
+    base_url: https://openrouter.ai/api/v1
+    price_per_mtok: { input: 0.15, output: 0.60 }
     json_mode: false
     open_weight: true
     settings_supported: [S1]
     max_run_retries: 1
+    timeout_seconds: 180
   - id: gemma-7b
-    provider: yunwu
-    model: gemma-7b-it
-    api_key_env: YUNWU_API_KEY
-    base_url_env: YUNWU_BASE_URL
-    base_url: https://api.yunwu.ai/v1
-    price_per_mtok: { input: 0.10, output: 0.30 }
+    provider: openrouter
+    model: google/gemma-4-31b-it
+    api_key_env: OPENROUTER_API_KEY
+    base_url_env: OPENROUTER_BASE_URL
+    base_url: https://openrouter.ai/api/v1
+    price_per_mtok: { input: 0.12, output: 0.37 }
     json_mode: false
     open_weight: true
     settings_supported: [S1]
     max_run_retries: 1
+    timeout_seconds: 180
 
 search_llm:
   - id: gemini-3.1-pro-preview-thinking-search
@@ -242,16 +256,17 @@ search_llm:
     tools: [web_search]
     settings_supported: [S2]
   - id: gpt-5.4-search
-    provider: openai
-    model: gpt-5.4
+    provider: openrouter
+    model: openai/gpt-5.4
     reasoning_effort: low
     reasoning_summary: auto
-    api_key_env: OPENAI_API_KEY
-    base_url_env: OPENAI_BASE_URL
-    base_url: https://api.openai.com/v1
-    price_per_mtok: { input: 3.00, output: 12.00 }
+    api_key_env: OPENROUTER_API_KEY
+    base_url_env: OPENROUTER_BASE_URL
+    base_url: https://openrouter.ai/api/v1
+    price_per_mtok: { input: 2.50, output: 15.00 }
     tools: [web_search]
     settings_supported: [S2]
+    timeout_seconds: 180
 
 #   - id: perplexity-sonar
 #     provider: perplexity
@@ -265,16 +280,17 @@ search_llm:
 deep_research_agent:
   - id: yunwu-o4-mini-deep-research
     provider: openai_deep_research
-    model: o4-mini-deep-research
-    api_key_env: YUNWU_API_KEY
-    base_url_env: YUNWU_BASE_URL
-    base_url: https://api.yunwu.ai/v1
+    model: openai/o4-mini-deep-research
+    api_key_env: OPENROUTER_API_KEY
+    base_url_env: OPENROUTER_BASE_URL
+    base_url: https://openrouter.ai/api/v1
     price_per_mtok: { input: 2.00, output: 8.00 }
     price_per_tool_call: 0.010
     web_search_tool: web_search_preview
+    include_sources: false
     settings_supported: [S2]
     max_tokens: 30000
-    timeout_seconds: 300
+    timeout_seconds: 600
     max_wait_seconds: 1800
     poll_seconds: 10
     json_compiler_max_tokens: 20000

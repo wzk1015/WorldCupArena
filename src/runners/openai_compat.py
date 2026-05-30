@@ -31,8 +31,24 @@ class OpenAICompatRunner(BaseRunner):
         return self.cfg.get("provider") == "openai" and "api.openai.com" in url
 
     def _client(self) -> OpenAI:
-        # import ipdb; ipdb.set_trace()
-        return OpenAI(api_key=self.api_key(), base_url=self.base_url())
+        kwargs: dict[str, Any] = {
+            "api_key": self.api_key(),
+            "base_url": self.base_url(),
+        }
+        if self.cfg.get("timeout_seconds"):
+            kwargs["timeout"] = float(self.cfg["timeout_seconds"])
+        headers = dict(self.cfg.get("default_headers") or {})
+        if self.cfg.get("provider") == "openrouter":
+            headers.setdefault("HTTP-Referer", "https://github.com/wzk1015/WorldCupArena")
+            headers.setdefault("X-Title", "WorldCupArena")
+        if headers:
+            kwargs["default_headers"] = headers
+        return OpenAI(**kwargs)
+
+    def _cost_payload(self, input_tokens: int, output_tokens: int, tool_calls: int = 0) -> dict[str, Any]:
+        cost = self.price_tokens(input_tokens, output_tokens)
+        cost += tool_calls * float(self.cfg.get("price_per_tool_call", 0))
+        return {"cost_usd": cost}
 
     def generate(self, system_prompt: str, messages: list[dict[str, Any]]) -> dict[str, Any]:
         if self._is_official_openai_api() and (self.use_reasoning or self.use_search):
@@ -49,8 +65,9 @@ class OpenAICompatRunner(BaseRunner):
         kwargs: dict[str, Any] = {
             "model": self.cfg["model"],
             "messages": [{"role": "system", "content": system_prompt}, *messages],
-            "temperature": self.cfg.get("temperature", 0.3),
         }
+        if not self.cfg.get("omit_temperature"):
+            kwargs["temperature"] = self.cfg.get("temperature", 0.3)
         if self.cfg.get("json_mode", True):
             kwargs["response_format"] = {"type": "json_object"}
         if "gpt" in self.cfg["model"]:
@@ -88,16 +105,38 @@ class OpenAICompatRunner(BaseRunner):
                 "output_tokens": usage.completion_tokens if usage else 0,
                 "tool_calls": 0,
                 "sources": [],
+                **self._cost_payload(
+                    usage.prompt_tokens if usage else 0,
+                    usage.completion_tokens if usage else 0,
+                    int(self.cfg.get("assumed_tool_calls", 0)),
+                ),
             }
-        text = resp.choices[0].message.content or ""
+        message = resp.choices[0].message
+        text = message.content or ""
+        thinking = getattr(message, "reasoning", None)
+        sources: list[dict[str, Any]] = []
+        for ann in getattr(message, "annotations", None) or []:
+            if getattr(ann, "type", None) == "url_citation":
+                self._append_source(
+                    sources,
+                    {
+                        "url": getattr(ann, "url", None),
+                        "accessed_at": self.now_iso(),
+                        "title": getattr(ann, "title", None),
+                    },
+                )
         usage = resp.usage
+        input_tokens = usage.prompt_tokens if usage else 0
+        output_tokens = usage.completion_tokens if usage else 0
+        tool_calls = int(self.cfg.get("assumed_tool_calls", 0))
         return {
             "text": text,
-            "thinking": None,
-            "input_tokens": usage.prompt_tokens if usage else 0,
-            "output_tokens": usage.completion_tokens if usage else 0,
-            "tool_calls": 0,
-            "sources": [],
+            "thinking": thinking,
+            "input_tokens": input_tokens,
+            "output_tokens": output_tokens,
+            "tool_calls": tool_calls,
+            "sources": sources,
+            **self._cost_payload(input_tokens, output_tokens, tool_calls),
         }
 
     def _generate_responses(

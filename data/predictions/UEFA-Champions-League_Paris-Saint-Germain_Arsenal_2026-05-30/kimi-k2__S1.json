@@ -2,24 +2,795 @@
   "fixture_id": "UEFA-Champions-League_Paris-Saint-Germain_Arsenal_2026-05-30",
   "model_id": "kimi-k2",
   "setting": "S1",
-  "submitted_at": "2026-05-29T22:44:14.245506+00:00",
-  "prediction": {},
-  "raw_prediction": {},
+  "submitted_at": "2026-05-30T12:32:58.196137+00:00",
+  "prediction": {
+    "fixture_id": "UEFA-Champions-League_Paris-Saint-Germain_Arsenal_2026-05-30",
+    "model_id": "claude-opus-4-5-20251101",
+    "setting": "S1",
+    "submitted_at": "2026-05-28T20:00:00Z",
+    "reasoning": {
+      "overall": "This is the 2026 UEFA Champions League Final in Budapest, a neutral venue. PSG enter with significant rest advantage having rotated heavily through domestic fixtures, while Arsenal have endured a grueling Premier League title race and late-season fixture congestion. PSG's squad depth and Luis Enrique's tactical flexibility (4-3-3/3-4-3 hybrid) allow them to control tempo through Vitinha and João Neves in midfield, while Arsenal's press under Arteta may be blunted by fatigue. PSG's wide threat through Dembélé and Kvaratskhelia against Arsenal's full-backs (Timber/White or Calafiori) is a key matchup. Arsenal's defensive solidity with Saliba-Gabriel is elite, but their attacking output has relied heavily on Saka and Ødegaard. The neutral venue removes true home advantage, but PSG's freshness and superior squad rotation give them a narrow edge in a tight final.",
+      "t1_result": "PSG are slight favorites due to rest advantage and squad depth in a final that likely stays tight until late. Arsenal's fatigue from domestic season may show in second half. A narrow PSG win or draw going to extra time are most probable outcomes.",
+      "t2_player": "PSG's front three of Dembélé, Kvaratskhelia and Barcola/Doué offers more unpredictability than Arsenal's attack. Vitinha controls tempo for PSG while Rice and Ødegaard must win midfield battle for Arsenal. L. Chevalier in goal for PSG vs David Raya for Arsenal is a high-level matchup.",
+      "t3_events": "Cagey first 45 minutes with few clear chances as both teams respect the occasion. Opening goal likely between 50-75 minutes. Substitutions around 65-75 minutes to inject fresh legs. Possible late goal as fatigue opens space.",
+      "t4_stats": "PSG with slightly more possession (53-47) due to midfield control. Arsenal higher defensive actions and fouls from pressing. Low shot count overall reflecting final tension, but PSG more shots on target from wide combinations."
+    },
+    "win_probs": {
+      "home": 0.385,
+      "draw": 0.295,
+      "away": 0.32
+    },
+    "headline_score": "2-1",
+    "expected_goal_diff": 0.15,
+    "match_profile": "normal",
+    "expected_total_goals": 2.35,
+    "advance_prob": 0.385,
+    "formations": {
+      "home": "4-3-3",
+      "away": "4-3-3"
+    },
+    "scorers": [
+      {
+        "player": "O. Dembélé",
+        "team": "home",
+        "minute_range": [
+          55,
+          70
+        ],
+        "p": 0.28
+      },
+      {
+        "player": "K. Kvaratskhelia",
+        "team": "home",
+        "minute_range": [
+          70,
+          85
+        ],
+        "p": 0.22
+      },
+      {
+        "player": "B. Saka",
+        "team": "away",
+        "minute_range": [
+          60,
+          75
+        ],
+        "p": 0.25
+      },
+      {
+        "player": "K. Havertz",
+        "team": "away",
+        "minute_range": [
+          75,
+          90
+        ],
+        "p": 0.18
+      },
+      {
+        "player": "B. Barcola",
+        "team": "home",
+        "minute_range": [
+          80,
+          95
+        ],
+        "p": 0.15
+      }
+    ],
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 47
+      },
+      "shots": {
+        "home": 12,
+        "away": 10
+      },
+      "shots_on_target": {
+        "home": 5,
+        "away": 4
+      },
+      "corners": {
+        "home": 6,
+        "away": 5
+      },
+      "pass_accuracy": {
+        "home": 87,
+        "away": 85
+      },
+      "fouls": {
+        "home": 11,
+        "away": 14
+      },
+      "saves": {
+        "home": 3,
+        "away": 4
+      },
+      "defensive_actions": {
+        "home": 18,
+        "away": 24
+      }
+    },
+    "lineups": {
+      "home": {
+        "starting": [
+          {
+            "name": "L. Chevalier",
+            "position": "GK",
+            "shirt": 1
+          },
+          {
+            "name": "A. Hakimi",
+            "position": "DF",
+            "shirt": 2
+          },
+          {
+            "name": "Marquinhos",
+            "position": "DF",
+            "shirt": 5
+          },
+          {
+            "name": "W. Pacho",
+            "position": "DF",
+            "shirt": 51
+          },
+          {
+            "name": "Nuno Mendes",
+            "position": "DF",
+            "shirt": 25
+          },
+          {
+            "name": "João Neves",
+            "position": "MF",
+            "shirt": 87
+          },
+          {
+            "name": "Vitinha",
+            "position": "MF",
+            "shirt": 17
+          },
+          {
+            "name": "Fabián Ruiz",
+            "position": "MF",
+            "shirt": 8
+          },
+          {
+            "name": "O. Dembélé",
+            "position": "FW",
+            "shirt": 10
+          },
+          {
+            "name": "K. Kvaratskhelia",
+            "position": "FW",
+            "shirt": 7
+          },
+          {
+            "name": "B. Barcola",
+            "position": "FW",
+            "shirt": 29
+          }
+        ],
+        "bench": [
+          {
+            "name": "M. Safonov",
+            "position": "GK",
+            "shirt": 39
+          },
+          {
+            "name": "L. Hernández",
+            "position": "DF",
+            "shirt": 21
+          },
+          {
+            "name": "Beraldo",
+            "position": "DF",
+            "shirt": 35
+          },
+          {
+            "name": "W. Zaïre-Emery",
+            "position": "MF",
+            "shirt": 33
+          },
+          {
+            "name": "Lee Kang-In",
+            "position": "MF",
+            "shirt": 19
+          },
+          {
+            "name": "D. Doué",
+            "position": "FW",
+            "shirt": 14
+          },
+          {
+            "name": "Gonçalo Ramos",
+            "position": "FW",
+            "shirt": 9
+          }
+        ]
+      },
+      "away": {
+        "starting": [
+          {
+            "name": "David Raya",
+            "position": "GK",
+            "shirt": 22
+          },
+          {
+            "name": "J. Timber",
+            "position": "DF",
+            "shirt": 12
+          },
+          {
+            "name": "W. Saliba",
+            "position": "DF",
+            "shirt": 2
+          },
+          {
+            "name": "Gabriel Magalhães",
+            "position": "DF",
+            "shirt": 6
+          },
+          {
+            "name": "R. Calafiori",
+            "position": "DF",
+            "shirt": 33
+          },
+          {
+            "name": "D. Rice",
+            "position": "MF",
+            "shirt": 41
+          },
+          {
+            "name": "M. Ødegaard",
+            "position": "MF",
+            "shirt": 8
+          },
+          {
+            "name": "Mikel Merino",
+            "position": "MF",
+            "shirt": 23
+          },
+          {
+            "name": "B. Saka",
+            "position": "FW",
+            "shirt": 7
+          },
+          {
+            "name": "K. Havertz",
+            "position": "FW",
+            "shirt": 29
+          },
+          {
+            "name": "Gabriel Martinelli",
+            "position": "FW",
+            "shirt": 11
+          }
+        ],
+        "bench": [
+          {
+            "name": "Kepa",
+            "position": "GK",
+            "shirt": 1
+          },
+          {
+            "name": "B. White",
+            "position": "DF",
+            "shirt": 4
+          },
+          {
+            "name": "P. Hincapié",
+            "position": "DF",
+            "shirt": 15
+          },
+          {
+            "name": "C. Nørgaard",
+            "position": "MF",
+            "shirt": 5
+          },
+          {
+            "name": "E. Eze",
+            "position": "MF",
+            "shirt": 10
+          },
+          {
+            "name": "V. Gyökeres",
+            "position": "FW",
+            "shirt": 9
+          },
+          {
+            "name": "L. Trossard",
+            "position": "FW",
+            "shirt": 19
+          }
+        ]
+      }
+    },
+    "sources": [],
+    "score_dist": [
+      {
+        "score": "2-1",
+        "p": 0.145
+      },
+      {
+        "score": "1-1",
+        "p": 0.139
+      },
+      {
+        "score": "0-1",
+        "p": 0.11
+      },
+      {
+        "score": "0-0",
+        "p": 0.101
+      },
+      {
+        "score": "1-2",
+        "p": 0.075
+      },
+      {
+        "score": "2-0",
+        "p": 0.074
+      },
+      {
+        "score": "0-2",
+        "p": 0.06
+      },
+      {
+        "score": "1-0",
+        "p": 0.056
+      },
+      {
+        "score": "2-2",
+        "p": 0.048
+      },
+      {
+        "score": "3-1",
+        "p": 0.034
+      },
+      {
+        "score": "3-0",
+        "p": 0.031
+      },
+      {
+        "score": "1-3",
+        "p": 0.028
+      },
+      {
+        "score": "0-3",
+        "p": 0.022
+      },
+      {
+        "score": "3-2",
+        "p": 0.019
+      },
+      {
+        "score": "2-3",
+        "p": 0.017
+      },
+      {
+        "score": "4-1",
+        "p": 0.011
+      },
+      {
+        "score": "4-0",
+        "p": 0.01
+      },
+      {
+        "score": "1-4",
+        "p": 0.008
+      },
+      {
+        "score": "3-3",
+        "p": 0.007
+      },
+      {
+        "score": "4-2",
+        "p": 0.005
+      }
+    ],
+    "most_likely_score": "2-1",
+    "over_under_probs": {
+      "over_1_5": 0.733,
+      "over_2_5": 0.46,
+      "over_3_5": 0.187,
+      "over_4_5": 0.067
+    }
+  },
+  "raw_prediction": {
+    "fixture_id": "UEFA-Champions-League_Paris-Saint-Germain_Arsenal_2026-05-30",
+    "model_id": "claude-opus-4-5-20251101",
+    "setting": "S1",
+    "submitted_at": "2026-05-28T20:00:00Z",
+    "reasoning": {
+      "overall": "This is the 2026 UEFA Champions League Final in Budapest, a neutral venue. PSG enter with significant rest advantage having rotated heavily through domestic fixtures, while Arsenal have endured a grueling Premier League title race and late-season fixture congestion. PSG's squad depth and Luis Enrique's tactical flexibility (4-3-3/3-4-3 hybrid) allow them to control tempo through Vitinha and João Neves in midfield, while Arsenal's press under Arteta may be blunted by fatigue. PSG's wide threat through Dembélé and Kvaratskhelia against Arsenal's full-backs (Timber/White or Calafiori) is a key matchup. Arsenal's defensive solidity with Saliba-Gabriel is elite, but their attacking output has relied heavily on Saka and Ødegaard. The neutral venue removes true home advantage, but PSG's freshness and superior squad rotation give them a narrow edge in a tight final.",
+      "t1_result": "PSG are slight favorites due to rest advantage and squad depth in a final that likely stays tight until late. Arsenal's fatigue from domestic season may show in second half. A narrow PSG win or draw going to extra time are most probable outcomes.",
+      "t2_player": "PSG's front three of Dembélé, Kvaratskhelia and Barcola/Doué offers more unpredictability than Arsenal's attack. Vitinha controls tempo for PSG while Rice and Ødegaard must win midfield battle for Arsenal. L. Chevalier in goal for PSG vs David Raya for Arsenal is a high-level matchup.",
+      "t3_events": "Cagey first 45 minutes with few clear chances as both teams respect the occasion. Opening goal likely between 50-75 minutes. Substitutions around 65-75 minutes to inject fresh legs. Possible late goal as fatigue opens space.",
+      "t4_stats": "PSG with slightly more possession (53-47) due to midfield control. Arsenal higher defensive actions and fouls from pressing. Low shot count overall reflecting final tension, but PSG more shots on target from wide combinations."
+    },
+    "win_probs": {
+      "home": 0.385,
+      "draw": 0.295,
+      "away": 0.32
+    },
+    "headline_score": "2-1",
+    "expected_goal_diff": 0.15,
+    "match_profile": "normal",
+    "expected_total_goals": 2.35,
+    "advance_prob": 0.385,
+    "formations": {
+      "home": "4-3-3",
+      "away": "4-3-3"
+    },
+    "scorers": [
+      {
+        "player": "O. Dembélé",
+        "team": "home",
+        "minute_range": [
+          55,
+          70
+        ],
+        "p": 0.28
+      },
+      {
+        "player": "K. Kvaratskhelia",
+        "team": "home",
+        "minute_range": [
+          70,
+          85
+        ],
+        "p": 0.22
+      },
+      {
+        "player": "B. Saka",
+        "team": "away",
+        "minute_range": [
+          60,
+          75
+        ],
+        "p": 0.25
+      },
+      {
+        "player": "K. Havertz",
+        "team": "away",
+        "minute_range": [
+          75,
+          90
+        ],
+        "p": 0.18
+      },
+      {
+        "player": "B. Barcola",
+        "team": "home",
+        "minute_range": [
+          80,
+          95
+        ],
+        "p": 0.15
+      }
+    ],
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 47
+      },
+      "shots": {
+        "home": 12,
+        "away": 10
+      },
+      "shots_on_target": {
+        "home": 5,
+        "away": 4
+      },
+      "corners": {
+        "home": 6,
+        "away": 5
+      },
+      "pass_accuracy": {
+        "home": 87,
+        "away": 85
+      },
+      "fouls": {
+        "home": 11,
+        "away": 14
+      },
+      "saves": {
+        "home": 3,
+        "away": 4
+      },
+      "defensive_actions": {
+        "home": 18,
+        "away": 24
+      }
+    },
+    "lineups": {
+      "home": {
+        "starting": [
+          {
+            "name": "L. Chevalier",
+            "position": "GK",
+            "shirt": 1
+          },
+          {
+            "name": "A. Hakimi",
+            "position": "DF",
+            "shirt": 2
+          },
+          {
+            "name": "Marquinhos",
+            "position": "DF",
+            "shirt": 5
+          },
+          {
+            "name": "W. Pacho",
+            "position": "DF",
+            "shirt": 51
+          },
+          {
+            "name": "Nuno Mendes",
+            "position": "DF",
+            "shirt": 25
+          },
+          {
+            "name": "João Neves",
+            "position": "MF",
+            "shirt": 87
+          },
+          {
+            "name": "Vitinha",
+            "position": "MF",
+            "shirt": 17
+          },
+          {
+            "name": "Fabián Ruiz",
+            "position": "MF",
+            "shirt": 8
+          },
+          {
+            "name": "O. Dembélé",
+            "position": "FW",
+            "shirt": 10
+          },
+          {
+            "name": "K. Kvaratskhelia",
+            "position": "FW",
+            "shirt": 7
+          },
+          {
+            "name": "B. Barcola",
+            "position": "FW",
+            "shirt": 29
+          }
+        ],
+        "bench": [
+          {
+            "name": "M. Safonov",
+            "position": "GK",
+            "shirt": 39
+          },
+          {
+            "name": "L. Hernández",
+            "position": "DF",
+            "shirt": 21
+          },
+          {
+            "name": "Beraldo",
+            "position": "DF",
+            "shirt": 35
+          },
+          {
+            "name": "W. Zaïre-Emery",
+            "position": "MF",
+            "shirt": 33
+          },
+          {
+            "name": "Lee Kang-In",
+            "position": "MF",
+            "shirt": 19
+          },
+          {
+            "name": "D. Doué",
+            "position": "FW",
+            "shirt": 14
+          },
+          {
+            "name": "Gonçalo Ramos",
+            "position": "FW",
+            "shirt": 9
+          }
+        ]
+      },
+      "away": {
+        "starting": [
+          {
+            "name": "David Raya",
+            "position": "GK",
+            "shirt": 22
+          },
+          {
+            "name": "J. Timber",
+            "position": "DF",
+            "shirt": 12
+          },
+          {
+            "name": "W. Saliba",
+            "position": "DF",
+            "shirt": 2
+          },
+          {
+            "name": "Gabriel Magalhães",
+            "position": "DF",
+            "shirt": 6
+          },
+          {
+            "name": "R. Calafiori",
+            "position": "DF",
+            "shirt": 33
+          },
+          {
+            "name": "D. Rice",
+            "position": "MF",
+            "shirt": 41
+          },
+          {
+            "name": "M. Ødegaard",
+            "position": "MF",
+            "shirt": 8
+          },
+          {
+            "name": "Mikel Merino",
+            "position": "MF",
+            "shirt": 23
+          },
+          {
+            "name": "B. Saka",
+            "position": "FW",
+            "shirt": 7
+          },
+          {
+            "name": "K. Havertz",
+            "position": "FW",
+            "shirt": 29
+          },
+          {
+            "name": "Gabriel Martinelli",
+            "position": "FW",
+            "shirt": 11
+          }
+        ],
+        "bench": [
+          {
+            "name": "Kepa",
+            "position": "GK",
+            "shirt": 1
+          },
+          {
+            "name": "B. White",
+            "position": "DF",
+            "shirt": 4
+          },
+          {
+            "name": "P. Hincapié",
+            "position": "DF",
+            "shirt": 15
+          },
+          {
+            "name": "C. Nørgaard",
+            "position": "MF",
+            "shirt": 5
+          },
+          {
+            "name": "E. Eze",
+            "position": "MF",
+            "shirt": 10
+          },
+          {
+            "name": "V. Gyökeres",
+            "position": "FW",
+            "shirt": 9
+          },
+          {
+            "name": "L. Trossard",
+            "position": "FW",
+            "shirt": 19
+          }
+        ]
+      }
+    },
+    "sources": []
+  },
   "sources": [],
   "leakage_audit": {
     "leaked": false,
     "leaked_sources": []
   },
-  "cost_usd": 0.0,
+  "cost_usd": 0.024637680000000002,
   "tokens": {
-    "input": 0,
-    "output": 0
+    "input": 16300,
+    "output": 3944
   },
   "tool_calls": 0,
-  "wall_seconds": 3.170967102050781e-05,
-  "repair_retries": 0,
-  "validation_errors": null,
-  "error": "RuntimeError: kimi-k2: env var YUNWU_API_KEY not set",
-  "raw_text": "",
-  "thinking_text": null
+  "wall_seconds": 108.30871605873108,
+  "repair_retries": 1,
+  "validation_errors": [],
+  "error": null,
+  "raw_text": " {\n  \"fixture_id\": \"UEFA-Champions-League_Paris-Saint-Germain_Arsenal_2026-05-30\",\n  \"model_id\": \"claude-opus-4-5-20251101\",\n  \"setting\": \"S1\",\n  \"submitted_at\": \"2026-05-28T20:00:00Z\",\n  \"reasoning\": {\n    \"overall\": \"This is the 2026 UEFA Champions League Final in Budapest, a neutral venue. PSG enter with significant rest advantage having rotated heavily through domestic fixtures, while Arsenal have endured a grueling Premier League title race and late-season fixture congestion. PSG's squad depth and Luis Enrique's tactical flexibility (4-3-3/3-4-3 hybrid) allow them to control tempo through Vitinha and João Neves in midfield, while Arsenal's press under Arteta may be blunted by fatigue. PSG's wide threat through Dembélé and Kvaratskhelia against Arsenal's full-backs (Timber/White or Calafiori) is a key matchup. Arsenal's defensive solidity with Saliba-Gabriel is elite, but their attacking output has relied heavily on Saka and Ødegaard. The neutral venue removes true home advantage, but PSG's freshness and superior squad rotation give them a narrow edge in a tight final.\",\n    \"t1_result\": \"PSG are slight favorites due to rest advantage and squad depth in a final that likely stays tight until late. Arsenal's fatigue from domestic season may show in second half. A narrow PSG win or draw going to extra time are most probable outcomes.\",\n    \"t2_player\": \"PSG's front three of Dembélé, Kvaratskhelia and Barcola/Doué offers more unpredictability than Arsenal's attack. Vitinha controls tempo for PSG while Rice and Ødegaard must win midfield battle for Arsenal. L. Chevalier in goal for PSG vs David Raya for Arsenal is a high-level matchup.\",\n    \"t3_events\": \"Cagey first 45 minutes with few clear chances as both teams respect the occasion. Opening goal likely between 50-75 minutes. Substitutions around 65-75 minutes to inject fresh legs. Possible late goal as fatigue opens space.\",\n    \"t4_stats\": \"PSG with slightly more possession (53-47) due to midfield control. Arsenal higher defensive actions and fouls from pressing. Low shot count overall reflecting final tension, but PSG more shots on target from wide combinations.\"\n  },\n  \"win_probs\": {\n    \"home\": 0.385,\n    \"draw\": 0.295,\n    \"away\": 0.32\n  },\n  \"headline_score\": \"2-1\",\n  \"expected_goal_diff\": 0.15,\n  \"match_profile\": \"normal\",\n  \"expected_total_goals\": 2.35,\n  \"advance_prob\": 0.385,\n  \"formations\": {\n    \"home\": \"4-3-3\",\n    \"away\": \"4-3-3\"\n  },\n  \"scorers\": [\n    {\n      \"player\": \"O. Dembélé\",\n      \"team\": \"home\",\n      \"minute_range\": [\n        55,\n        70\n      ],\n      \"p\": 0.28\n    },\n    {\n      \"player\": \"K. Kvaratskhelia\",\n      \"team\": \"home\",\n      \"minute_range\": [\n        70,\n        85\n      ],\n      \"p\": 0.22\n    },\n    {\n      \"player\": \"B. Saka\",\n      \"team\": \"away\",\n      \"minute_range\": [\n        60,\n        75\n      ],\n      \"p\": 0.25\n    },\n    {\n      \"player\": \"K. Havertz\",\n      \"team\": \"away\",\n      \"minute_range\": [\n        75,\n        90\n      ],\n      \"p\": 0.18\n    },\n    {\n      \"player\": \"B. Barcola\",\n      \"team\": \"home\",\n      \"minute_range\": [\n        80,\n        95\n      ],\n      \"p\": 0.15\n    }\n  ],\n  \"stats\": {\n    \"possession\": {\n      \"home\": 53,\n      \"away\": 47\n    },\n    \"shots\": {\n      \"home\": 12,\n      \"away\": 10\n    },\n    \"shots_on_target\": {\n      \"home\": 5,\n      \"away\": 4\n    },\n    \"corners\": {\n      \"home\": 6,\n      \"away\": 5\n    },\n    \"pass_accuracy\": {\n      \"home\": 87,\n      \"away\": 85\n    },\n    \"fouls\": {\n      \"home\": 11,\n      \"away\": 14\n    },\n    \"saves\": {\n      \"home\": 3,\n      \"away\": 4\n    },\n    \"defensive_actions\": {\n      \"home\": 18,\n      \"away\": 24\n    }\n  },\n  \"lineups\": {\n    \"home\": {\n      \"starting\": [\n        {\n          \"name\": \"L. Chevalier\",\n          \"position\": \"GK\",\n          \"shirt\": 1\n        },\n        {\n          \"name\": \"A. Hakimi\",\n          \"position\": \"DF\",\n          \"shirt\": 2\n        },\n        {\n          \"name\": \"Marquinhos\",\n          \"position\": \"DF\",\n          \"shirt\": 5\n        },\n        {\n          \"name\": \"W. Pacho\",\n          \"position\": \"DF\",\n          \"shirt\": 51\n        },\n        {\n          \"name\": \"Nuno Mendes\",\n          \"position\": \"DF\",\n          \"shirt\": 25\n        },\n        {\n          \"name\": \"João Neves\",\n          \"position\": \"MF\",\n          \"shirt\": 87\n        },\n        {\n          \"name\": \"Vitinha\",\n          \"position\": \"MF\",\n          \"shirt\": 17\n        },\n        {\n          \"name\": \"Fabián Ruiz\",\n          \"position\": \"MF\",\n          \"shirt\": 8\n        },\n        {\n          \"name\": \"O. Dembélé\",\n          \"position\": \"FW\",\n          \"shirt\": 10\n        },\n        {\n          \"name\": \"K. Kvaratskhelia\",\n          \"position\": \"FW\",\n          \"shirt\": 7\n        },\n        {\n          \"name\": \"B. Barcola\",\n          \"position\": \"FW\",\n          \"shirt\": 29\n        }\n      ],\n      \"bench\": [\n        {\n          \"name\": \"M. Safonov\",\n          \"position\": \"GK\",\n          \"shirt\": 39\n        },\n        {\n          \"name\": \"L. Hernández\",\n          \"position\": \"DF\",\n          \"shirt\": 21\n        },\n        {\n          \"name\": \"Beraldo\",\n          \"position\": \"DF\",\n          \"shirt\": 35\n        },\n        {\n          \"name\": \"W. Zaïre-Emery\",\n          \"position\": \"MF\",\n          \"shirt\": 33\n        },\n        {\n          \"name\": \"Lee Kang-In\",\n          \"position\": \"MF\",\n          \"shirt\": 19\n        },\n        {\n          \"name\": \"D. Doué\",\n          \"position\": \"FW\",\n          \"shirt\": 14\n        },\n        {\n          \"name\": \"Gonçalo Ramos\",\n          \"position\": \"FW\",\n          \"shirt\": 9\n        }\n      ]\n    },\n    \"away\": {\n      \"starting\": [\n        {\n          \"name\": \"David Raya\",\n          \"position\": \"GK\",\n          \"shirt\": 22\n        },\n        {\n          \"name\": \"J. Timber\",\n          \"position\": \"DF\",\n          \"shirt\": 12\n        },\n        {\n          \"name\": \"W. Saliba\",\n          \"position\": \"DF\",\n          \"shirt\": 2\n        },\n        {\n          \"name\": \"Gabriel Magalhães\",\n          \"position\": \"DF\",\n          \"shirt\": 6\n        },\n        {\n          \"name\": \"R. Calafiori\",\n          \"position\": \"DF\",\n          \"shirt\": 33\n        },\n        {\n          \"name\": \"D. Rice\",\n          \"position\": \"MF\",\n          \"shirt\": 41\n        },\n        {\n          \"name\": \"M. Ødegaard\",\n          \"position\": \"MF\",\n          \"shirt\": 8\n        },\n        {\n          \"name\": \"Mikel Merino\",\n          \"position\": \"MF\",\n          \"shirt\": 23\n        },\n        {\n          \"name\": \"B. Saka\",\n          \"position\": \"FW\",\n          \"shirt\": 7\n        },\n        {\n          \"name\": \"K. Havertz\",\n          \"position\": \"FW\",\n          \"shirt\": 29\n        },\n        {\n          \"name\": \"Gabriel Martinelli\",\n          \"position\": \"FW\",\n          \"shirt\": 11\n        }\n      ],\n      \"bench\": [\n        {\n          \"name\": \"Kepa\",\n          \"position\": \"GK\",\n          \"shirt\": 1\n        },\n        {\n          \"name\": \"B. White\",\n          \"position\": \"DF\",\n          \"shirt\": 4\n        },\n        {\n          \"name\": \"P. Hincapié\",\n          \"position\": \"DF\",\n          \"shirt\": 15\n        },\n        {\n          \"name\": \"C. Nørgaard\",\n          \"position\": \"MF\",\n          \"shirt\": 5\n        },\n        {\n          \"name\": \"E. Eze\",\n          \"position\": \"MF\",\n          \"shirt\": 10\n        },\n        {\n          \"name\": \"V. Gyökeres\",\n          \"position\": \"FW\",\n          \"shirt\": 9\n        },\n        {\n          \"name\": \"L. Trossard\",\n          \"position\": \"FW\",\n          \"shirt\": 19\n        }\n      ]\n    }\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "score_calibration": {
+    "applied": true,
+    "method": "winprob_poisson_generator_v1",
+    "model_weight": 0.62,
+    "favorite_margin": 0.0,
+    "lambda_home": 1.25,
+    "lambda_away": 1.1,
+    "target_total_goals": 2.366,
+    "target_goal_diff": 0.15,
+    "target_outcome_probs": {
+      "home": 0.385,
+      "draw": 0.295,
+      "away": 0.32
+    },
+    "forced_headline_outcome": "home",
+    "score_hint_used": "2-1",
+    "fitted_outcomes": {
+      "home": 0.397,
+      "draw": 0.279,
+      "away": 0.324
+    },
+    "before": {
+      "headline_score": "2-1",
+      "most_likely_score": "2-1",
+      "win_probs": {
+        "home": 0.385,
+        "draw": 0.295,
+        "away": 0.32
+      },
+      "score_dist_head": [
+        {
+          "score": "2-1",
+          "p": 0.145
+        },
+        {
+          "score": "1-1",
+          "p": 0.139
+        },
+        {
+          "score": "0-1",
+          "p": 0.11
+        },
+        {
+          "score": "0-0",
+          "p": 0.101
+        },
+        {
+          "score": "1-2",
+          "p": 0.075
+        }
+      ]
+    },
+    "after": {
+      "most_likely_score": "2-1",
+      "score_dist_head": [
+        {
+          "score": "2-1",
+          "p": 0.145
+        },
+        {
+          "score": "1-1",
+          "p": 0.139
+        },
+        {
+          "score": "0-1",
+          "p": 0.11
+        },
+        {
+          "score": "0-0",
+          "p": 0.101
+        },
+        {
+          "score": "1-2",
+          "p": 0.075
+        }
+      ]
+    }
+  }
 }

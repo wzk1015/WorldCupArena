@@ -23,6 +23,7 @@ PROVIDER_RUNNERS: dict[str, type[BaseRunner]] = {
     "moonshot":    OpenAICompatRunner,   # Kimi K2
     "zhipu":       OpenAICompatRunner,   # GLM
     "yunwu":       OpenAICompatRunner,   # OpenAI-compatible aggregation proxy
+    "openrouter":  OpenAICompatRunner,   # OpenRouter aggregation proxy
     # Dedicated runners
     "anthropic":   AnthropicRunner,
     "google":      GeminiRunner,

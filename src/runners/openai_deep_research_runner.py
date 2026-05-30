@@ -14,11 +14,18 @@ class OpenAIDeepResearchRunner(BaseRunner):
     category = "deep_research_agent"
 
     def _client(self) -> OpenAI:
-        return OpenAI(
-            api_key=self.api_key(),
-            base_url=self.base_url(),
-            timeout=float(self.cfg.get("timeout_seconds", 120)),
-        )
+        headers = dict(self.cfg.get("default_headers") or {})
+        if "openrouter.ai" in (self.base_url() or ""):
+            headers.setdefault("HTTP-Referer", "https://github.com/wzk1015/WorldCupArena")
+            headers.setdefault("X-Title", "WorldCupArena")
+        kwargs: dict[str, Any] = {
+            "api_key": self.api_key(),
+            "base_url": self.base_url(),
+            "timeout": float(self.cfg.get("timeout_seconds", 120)),
+        }
+        if headers:
+            kwargs["default_headers"] = headers
+        return OpenAI(**kwargs)
 
     def generate(self, system_prompt: str, messages: list[dict[str, Any]]) -> dict[str, Any]:
         client = self._client()
