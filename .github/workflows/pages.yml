@@ -2,8 +2,8 @@ name: pages
 
 # Publishes docs/site/ to GitHub Pages whenever main changes the site
 # sources or the underlying data payload. Triggered by:
-#   - the automate workflow committing updated data.json
-#   - any manual push touching docs/site/ or src/leaderboard/build_site.py
+#   - the automate workflow committing updated data*.json
+#   - any manual push touching docs/site/ or the site payload builders
 #
 # GH Pages setup: repo Settings → Pages → Source = "GitHub Actions".
 
@@ -14,6 +14,7 @@ on:
       - "docs/site/**"
       - "docs/leaderboard/**"
       - "src/leaderboard/build_site.py"
+      - "src/leaderboard/translate_site_data.py"
   workflow_dispatch:
 
 permissions:

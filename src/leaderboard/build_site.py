@@ -1,6 +1,12 @@
 """Build the data payload consumed by the project website.
 
-Emits a single JSON file at docs/site/data.json with three sections:
+Emits language-specific JSON files for the static site:
+
+    docs/site/data.en.json   original English payload
+    docs/site/data.zh.json   Simplified Chinese payload
+    docs/site/data.json      default Chinese payload
+
+Each payload has three sections:
 
     {
       "generated_at": ISO-8601 UTC,
@@ -18,7 +24,7 @@ Emits a single JSON file at docs/site/data.json with three sections:
                     [{model_id, setting, composite}, ...]}, ...]
     }
 
-The site reads this file with fetch('data.json') and renders everything
+The site reads a language-specific data file and renders everything
 client-side — no server, no build step. New predictions store model-owned
 `win_probs` plus system-generated `score_dist`/`most_likely_score`; older
 artifacts fall back to score_dist-derived win probabilities.
@@ -34,6 +40,7 @@ from pathlib import Path
 import yaml
 
 from ..pipeline.prediction_derivatives import derive_most_likely_score, derive_win_probs_from_score_dist
+from .translate_site_data import translate_payload_to_zh
 
 ROOT = Path(__file__).resolve().parents[2]
 RESULTS = ROOT / "data" / "results"
@@ -45,6 +52,8 @@ FIXTURES_YAML = ROOT / "configs" / "fixtures.yaml"
 MODELS_YAML = ROOT / "configs" / "models.yaml"
 COMMENTS_JSON = ROOT / "data" / "comments.json"
 OUT = ROOT / "docs" / "site" / "data.json"
+OUT_EN = ROOT / "docs" / "site" / "data.en.json"
+OUT_ZH = ROOT / "docs" / "site" / "data.zh.json"
 HIDDEN_SITE_MODELS = {"yunwu-o4-mini-deep-research"}
 
 
@@ -994,8 +1003,20 @@ def main() -> None:
             return [_round3(v) for v in obj]
         return obj
 
-    OUT.write_text(json.dumps(_round3(payload), ensure_ascii=False, indent=2))
-    print(f"wrote {OUT} "
+    rounded_payload = _round3(payload)
+    OUT_EN.write_text(json.dumps(rounded_payload, ensure_ascii=False, indent=2))
+    print(f"wrote {OUT_EN}")
+
+    try:
+        print("[translate] building Simplified Chinese site payload", flush=True)
+        zh_payload = translate_payload_to_zh(rounded_payload)
+    except Exception as exc:
+        print(f"[translate] failed to build Chinese payload; falling back to English data: {exc}")
+        zh_payload = rounded_payload
+
+    OUT_ZH.write_text(json.dumps(zh_payload, ensure_ascii=False, indent=2))
+    OUT.write_text(json.dumps(zh_payload, ensure_ascii=False, indent=2))
+    print(f"wrote {OUT}, {OUT_ZH}, {OUT_EN} "
           f"(leaderboard_models={len(payload['leaderboard']['main'])}, "
           f"incoming={len(incoming)}, "
           f"history={len(payload['history'])})")

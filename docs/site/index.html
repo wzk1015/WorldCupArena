@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>⚽ WorldCupArena — LLM Football Prediction Leaderboard</title>
-<meta name="description" content="Benchmarking LLMs and deep-research agents on real-world football prediction. Live leaderboard + next-match model predictions." />
+<title>⚽ WorldCupArena — AI 足球预测排行榜</title>
+<meta name="description" content="用真实足球比赛评测大模型和 Deep Research Agent 的预测能力，包含实时排行榜和即将进行比赛的模型预测。" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config = { theme: { extend: { fontFamily: { mono: ['Inter', 'system-ui', 'sans-serif'] } } } }</script>
@@ -69,6 +69,34 @@
   .tab-btn.active { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.28); }
   .pred-grid { align-items: start; }
   .pred-expanded { grid-column: 1 / -1; }
+  .team-name { overflow-wrap: anywhere; }
+  .lang-toggle { min-width: 4.75rem; justify-content:center; }
+  @media (max-width: 767px) {
+    body {
+      background:
+        radial-gradient(760px 360px at 20% -10%, rgba(34,197,94,.08), transparent 62%),
+        #0a0f1a;
+    }
+    section { scroll-margin-top: 4.5rem; }
+    .chip { padding: .22rem .6rem; }
+    .pred-action { padding: .38rem .7rem; font-size: .74rem; }
+    .pred-toggle {
+      width: 100%;
+      justify-content: center;
+      padding: .68rem .9rem;
+      border-radius: .75rem;
+      font-size: .86rem;
+      color: #bbf7d0;
+      background: rgba(34,197,94,.18);
+      border-color: rgba(34,197,94,.42);
+      box-shadow: 0 8px 24px rgba(34,197,94,.08);
+    }
+    .pred-expanded {
+      padding: .75rem;
+      overflow-x: auto;
+    }
+    [data-tip]::after { display: none; }
+  }
 </style>
 </head>
 <body class="min-h-screen">
@@ -79,22 +107,30 @@
       <span class="text-2xl">⚽</span>
       <span class="font-bold tracking-tight">WorldCup<span class="gradient-text">Arena</span></span>
     </div>
-    <nav class="hidden md:flex items-center gap-5 text-sm text-gray-300">
-      <a href="#next"        class="hover:text-white">Incoming Matches</a>
-      <a href="#featured"    class="hover:text-white">Featured Match</a>
-      <a href="#leaderboard" class="hover:text-white">Leaderboard</a>
-      <a href="#history"     class="hover:text-white">Past Matches</a>
-      <a href="https://github.com/wzk1015/WorldCupArena/" target="_blank" class="hover:text-white font-semibold text-green-400">GitHub ↗</a>
-    </nav>
+    <div class="flex items-center gap-2 sm:gap-4">
+      <nav class="hidden md:flex items-center gap-5 text-sm text-gray-300">
+        <a href="#next"        class="hover:text-white" data-i18n="nav_incoming">即将进行</a>
+        <a href="#featured"    class="hover:text-white" data-i18n="nav_featured">精选比赛</a>
+        <a href="#leaderboard" class="hover:text-white" data-i18n="nav_leaderboard">排行榜</a>
+        <a href="#history"     class="hover:text-white" data-i18n="nav_history">历史比赛</a>
+        <a href="https://github.com/wzk1015/WorldCupArena/" target="_blank" class="hover:text-white font-semibold text-green-400">GitHub ↗</a>
+      </nav>
+      <button id="lang-toggle"
+              onclick="toggleLanguage()"
+              class="chip lang-toggle hover:bg-white/15 transition text-xs"
+              data-i18n="lang_button"
+              data-i18n-title="lang_button_title"
+              title="切换到英文">English</button>
+    </div>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="max-w-6xl mx-auto px-4 pt-16 pb-10 text-center">
+<section class="max-w-6xl mx-auto px-4 pt-12 sm:pt-16 pb-8 sm:pb-10 text-center">
   <!-- <div class="inline-flex chip mb-4">🟢 LIVE <span class="opacity-60">· updates hourly</span></div> -->
   <h1 class="text-4xl md:text-5xl font-black leading-tight glow">WorldCupArena</h1>
-  <p class="mt-3 text-xl md:text-3xl font-semibold text-gray-300">
-    Which AI <span class="gradient-text">predicts football</span> best?
+  <p class="mt-3 text-xl md:text-3xl font-semibold text-gray-300" data-i18n-html="hero_tagline">
+    哪个 AI <span class="gradient-text">预测足球</span> 最准？
   </p>
   <!-- <p class="mt-5 text-gray-300 max-w-2xl mx-auto">
     GPT, Claude, Gemini, Grok, DeepSeek, Qwen, Perplexity, MiroThinker —
@@ -102,7 +138,7 @@
     scored on the same 100-point rubric.
   </p> -->
   <p class="mt-5 text-gray-300 max-w-2xl mx-auto">
-    by <a class="underline hover:text-white" href="https://www.wzk.plus" target="_blank">Zhaokai Wang</a>
+    <span data-i18n="byline_prefix">作者</span> <a class="underline hover:text-white" href="https://www.wzk.plus" target="_blank">Zhaokai Wang</a>
     · <a class="underline hover:text-white" href="mailto:zhaokaiwang99@gmail.com">zhaokaiwang99@gmail.com</a>
   </p>
   <!-- <p class="mt-3 text-xs text-gray-400">
@@ -119,46 +155,46 @@
 
 <!-- INCOMING MATCHES -->
 <section id="next" class="max-w-6xl mx-auto px-4 py-8">
-  <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">🔮 Incoming Matches</h2>
+  <h2 class="text-2xl font-bold mb-4 flex items-center gap-2" data-i18n="section_incoming">🔮 即将进行的比赛</h2>
   <div id="next-container" class="animate-fade space-y-6">
-    <div class="text-gray-400 text-sm">Loading predictions…</div>
+    <div class="text-gray-400 text-sm" data-i18n="loading_predictions">正在加载预测…</div>
   </div>
 </section>
 
 <!-- FEATURED MATCH -->
 <section id="featured" class="max-w-6xl mx-auto px-4 py-8">
-  <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">⭐ Featured Match</h2>
+  <h2 class="text-2xl font-bold mb-4 flex items-center gap-2" data-i18n="section_featured">⭐ 精选比赛</h2>
   <div id="featured-container" class="animate-fade">
-    <div class="text-gray-400 text-sm">Loading…</div>
+    <div class="text-gray-400 text-sm" data-i18n="loading">正在加载…</div>
   </div>
 </section>
 
 <!-- LEADERBOARD -->
 <section id="leaderboard" class="max-w-6xl mx-auto px-4 py-8">
   <div class="flex items-center justify-between mb-4">
-    <h2 class="text-2xl font-bold flex items-center gap-2">🏆 Leaderboard</h2>
+    <h2 class="text-2xl font-bold flex items-center gap-2" data-i18n="section_leaderboard">🏆 排行榜</h2>
     <div class="flex gap-2 text-xs">
-      <button class="tab-btn chip active" data-view="main">Composite Score</button>
-      <button class="tab-btn chip" data-view="layers">Per-layer Score</button>
+      <button class="tab-btn chip active" data-view="main" data-i18n="tab_composite">综合分</button>
+      <button class="tab-btn chip" data-view="layers" data-i18n="tab_layers">分层分数</button>
     </div>
   </div>
   <div id="leaderboard-container" class="card rounded-2xl p-4 animate-fade">
-    <div class="text-gray-400 text-sm">Loading…</div>
+    <div class="text-gray-400 text-sm" data-i18n="loading">正在加载…</div>
   </div>
 </section>
 
 <!-- HISTORY -->
 <section id="history" class="max-w-6xl mx-auto px-4 py-8 mb-16">
-  <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">📋 Past Matches</h2>
+  <h2 class="text-2xl font-bold mb-4 flex items-center gap-2" data-i18n="section_history">📋 历史比赛</h2>
   <div id="history-container" class="space-y-4 animate-fade">
-    <div class="text-gray-400 text-sm">Loading…</div>
+    <div class="text-gray-400 text-sm" data-i18n="loading">正在加载…</div>
   </div>
 </section>
 
-<footer class="border-t border-white/5 py-6 text-center text-xs text-gray-500">
-  Open-source · MIT · built for research · <a class="underline" href="https://github.com/wzk1015/WorldCupArena/" target="_blank">source</a>
+<footer class="border-t border-white/5 py-6 text-center text-xs text-gray-500" data-i18n-html="footer_html">
+  开源 · MIT · 研究项目 · <a class="underline" href="https://github.com/wzk1015/WorldCupArena/" target="_blank">source</a>
 </footer>
 
-<script src="app.js?v=20260530-row-local-panel"></script>
+<script src="app.js?v=20260603-bilingual-mobile"></script>
 </body>
 </html>
