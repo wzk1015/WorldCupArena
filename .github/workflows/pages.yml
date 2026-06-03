@@ -34,6 +34,18 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt python-dotenv pyyaml
+      - name: Build bilingual site payload
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_BASE_URL: ${{ secrets.OPENROUTER_BASE_URL }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          SITE_TRANSLATION_MODEL: ${{ vars.SITE_TRANSLATION_MODEL }}
+        run: python -m src.leaderboard.build_site
       - uses: actions/configure-pages@v5
       - name: Assemble site dir
         run: |

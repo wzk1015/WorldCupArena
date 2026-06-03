@@ -99,7 +99,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
           SITE_TRANSLATION_MODEL: ${{ vars.SITE_TRANSLATION_MODEL }}
-        run: python -m src.leaderboard.build_site || true
+        run: python -m src.leaderboard.build_site
 
       - name: Commit updated artifacts
         run: |
