@@ -109,9 +109,35 @@ def _model_family(model_id: str, provider: str | None = None) -> str:
     return provider or "other"
 
 
+def _display_model_name(model_id: str) -> str:
+    explicit = {
+        "gemini-3.1-pro-preview-thinking": "Gemini 3.1 Pro Preview (Thinking)",
+        "gemini-3.1-pro-preview-thinking-search": "Gemini 3.1 Pro Preview (Thinking + Search)",
+        "claude-opus-4-7-thinking": "Claude Opus 4.7 (Thinking)",
+        "claude-opus-4-7-thinking-search": "Claude Opus 4.7 (Thinking + Search)",
+        "gpt-5.4": "GPT-5.4",
+        "gpt-5.4-search": "GPT-5.4 (Search)",
+        "deepseek-r1": "DeepSeek V4 Pro",
+        "qwen3-max": "Qwen3.7 Max",
+        "kimi-k2": "Kimi K2.6",
+        "glm-4.5": "GLM-5.1",
+        "doubao-seed-1.6-thinking": "Doubao Seed 2.0 Lite",
+        "minimax-m2.7": "MiniMax M2.7",
+        "llama-4-maverick": "Llama 4 Maverick",
+        "gemma-7b": "Gemma 4 31B IT",
+        "gemini-deep-research": "Gemini Deep Research",
+    }
+    if model_id in explicit:
+        return explicit[model_id]
+    words = str(model_id or "").replace("_", "-").split("-")
+    acronyms = {"gpt", "glm", "qwen", "kimi", "llama", "gemma"}
+    return " ".join(word.upper() if word.lower() in acronyms else word.capitalize() for word in words if word)
+
+
 def _infer_model_metadata(model_id: str) -> dict:
     family = _model_family(model_id)
     return {
+        "display_name": _display_model_name(model_id),
         "model_category": None,
         "provider": None,
         "model_family": family,
@@ -135,6 +161,7 @@ def _load_model_metadata() -> dict[str, dict]:
                 continue
             provider = m.get("provider")
             meta[model_id] = {
+                "display_name": m.get("display_name") or _display_model_name(model_id),
                 "model_category": category,
                 "provider": provider,
                 "model_family": _model_family(model_id, provider),

@@ -89,6 +89,7 @@ const I18N = {
     show_all_models: "显示全部模型（+{count}）",
     show_all_models_mobile: "展开其余 {count} 个模型",
     show_fewer_models: "收起模型",
+    show_predictions: "展开模型预测",
     no_predictions: "这场比赛还没有模型预测。",
     cost: "成本",
     unavailable: "暂不可用",
@@ -200,6 +201,7 @@ const I18N = {
     show_all_models: "Show all models (+{count})",
     show_all_models_mobile: "Show {count} more models",
     show_fewer_models: "Show fewer models",
+    show_predictions: "Show predictions",
     no_predictions: "No predictions for this fixture.",
     cost: "Cost",
     unavailable: "Unavailable",
@@ -293,10 +295,38 @@ function renderVenueLocation(match) {
   }`;
 }
 
-function fmtModelId(id) {
+const MODEL_DISPLAY_NAMES = {
+  "gemini-3.1-pro-preview-thinking": "Gemini 3.1 Pro Preview (Thinking)",
+  "gemini-3.1-pro-preview-thinking-search": "Gemini 3.1 Pro Preview (Thinking + Search)",
+  "claude-opus-4-7-thinking": "Claude Opus 4.7 (Thinking)",
+  "claude-opus-4-7-thinking-search": "Claude Opus 4.7 (Thinking + Search)",
+  "gpt-5.4": "GPT-5.4",
+  "gpt-5.4-search": "GPT-5.4 (Search)",
+  "deepseek-r1": "DeepSeek V4 Pro",
+  "qwen3-max": "Qwen3.7 Max",
+  "kimi-k2": "Kimi K2.6",
+  "glm-4.5": "GLM-5.1",
+  "doubao-seed-1.6-thinking": "Doubao Seed 2.0 Lite",
+  "minimax-m2.7": "MiniMax M2.7",
+  "llama-4-maverick": "Llama 4 Maverick",
+  "gemma-7b": "Gemma 4 31B IT",
+  "gemini-deep-research": "Gemini Deep Research",
+};
+
+function fmtModelId(model) {
+  const id = typeof model === "string" ? model : model?.model_id;
+  const displayName = typeof model === "string" ? null : model?.display_name;
+  if (displayName) return displayName;
   if (!id) return id;
-  if (id.endsWith("-search")) return id.slice(0, -7) + t("model_search_suffix");
-  return id;
+  if (MODEL_DISPLAY_NAMES[id]) return MODEL_DISPLAY_NAMES[id];
+  const words = String(id).replaceAll("_", "-").split("-");
+  const acronyms = new Set(["gpt", "glm", "qwen", "kimi", "llama", "gemma", "api"]);
+  return words.filter(Boolean).map(word => {
+    const lower = word.toLowerCase();
+    if (acronyms.has(lower)) return word.toUpperCase();
+    if (/^\d+(\.\d+)?$/.test(word)) return word;
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  }).join(" ");
 }
 
 let _allPreds = [];     // flat registry of all rendered pred cards
@@ -364,7 +394,7 @@ function openReasoningModal(idx) {
   if (!p) return;
   const r = p.reasoning || {};
   document.getElementById("reasoning-modal-title").textContent =
-    `${fmtModelId(p.model_id)} (${p.setting}) — ${t("full_reasoning_suffix")}`;
+    `${fmtModelId(p)} (${p.setting}) — ${t("full_reasoning_suffix")}`;
   const rows = Object.entries(reasoningLabels())
     .filter(([k]) => r[k])
     .map(([k, label]) => `
@@ -986,7 +1016,7 @@ function renderPredCard(p, f, idx, opts = {}) {
       <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
         <div class="flex items-center gap-2">
           <span class="text-base">${b.emoji}</span>
-          <span class="font-bold text-xs sm:text-sm text-white">${esc(fmtModelId(p.model_id))}</span>
+          <span class="font-bold text-xs sm:text-sm text-white">${esc(fmtModelId(p))}</span>
           <span class="chip chip-${(p.setting || "").toLowerCase()}"
                 data-tip="${esc(settingTip(p.setting))}">${esc(p.setting || "")}</span>
         </div>
@@ -1070,12 +1100,18 @@ function renderPredCard(p, f, idx, opts = {}) {
 function renderPredGrid(preds, f, startIdx, groupId, opts = {}) {
   if (!preds.length) return `<div class="text-gray-500 text-sm py-2">${t("no_predictions")}</div>`;
   const mobileFoldTopN = Number(opts.mobileFoldTopN || 0);
+  const desktopFoldTopN = Number(opts.desktopFoldTopN || 0);
   const useMobileFold = mobileFoldTopN > 0 && isMobilePredLayout() && preds.length > mobileFoldTopN;
+  const useDesktopFold = !isMobilePredLayout() && desktopFoldTopN > 0 && preds.length > desktopFoldTopN;
   const allowFold = opts.allowFold !== false || useMobileFold;
   const indexed = preds.map((p, i) => ({
     pred: p,
     idx: startIdx + i,
-    hidden: useMobileFold ? i >= mobileFoldTopN : (allowFold && p.default_visible === false),
+    hidden: useMobileFold
+      ? i >= mobileFoldTopN
+      : useDesktopFold
+        ? i >= desktopFoldTopN
+        : (allowFold && p.default_visible === false),
   }));
   const hiddenCount = allowFold ? indexed.filter(item => item.hidden).length : 0;
   const visibleItems = allowFold ? indexed.filter(item => !item.hidden) : indexed;
@@ -1116,6 +1152,7 @@ function renderPredList(preds, f, startIdx, groupId) {
   return renderPredGrid(preds, f, startIdx, groupId, {
     allowFold: true,
     showActualSummary: false,
+    desktopFoldTopN: 4,
     mobileFoldTopN: 3,
   });
 }
@@ -1283,14 +1320,14 @@ function renderLeaderboard(lb, view) {
   if (view === "main") {
     el.innerHTML = `
       <div class="overflow-x-auto">
-        <table class="w-full text-sm">
+        <table class="leaderboard-table w-full text-sm">
           <thead class="text-gray-400 text-xs uppercase tracking-wider">
             <tr>
-              <th class="text-left py-2 px-3 w-12">#</th>
+              <th class="leaderboard-rank-cell text-left py-2 px-3 w-12">#</th>
               <th class="text-left py-2 px-3">${t("model")}</th>
-              <th class="text-right py-2 px-3">${t("composite_score")}</th>
-              <th class="text-right py-2 px-3">${t("result_accuracy")}</th>
-              <th class="text-right py-2 px-3">${t("games")}</th>
+              <th class="leaderboard-score-cell text-right py-2 px-3">${t("composite_score")}</th>
+              <th class="leaderboard-mobile-hide text-right py-2 px-3">${t("result_accuracy")}</th>
+              <th class="leaderboard-mobile-hide text-right py-2 px-3">${t("games")}</th>
             </tr>
           </thead>
           <tbody>
@@ -1307,22 +1344,22 @@ function renderLeaderboard(lb, view) {
               ).join(" ");
               return `
                 <tr class="border-t border-white/5 hover:bg-white/5 transition">
-                  <td class="py-2 px-3"><span class="rank-medal ${medal}">${i + 1}</span></td>
+                  <td class="leaderboard-rank-cell py-2 px-3"><span class="rank-medal ${medal}">${i + 1}</span></td>
                   <td class="py-2 px-3">
-                    <div class="flex items-center gap-2 flex-wrap">
-                      <span class="mr-1">${b.emoji}</span>
-                      <span class="font-bold text-white">${esc(fmtModelId(r.model_id))}</span>
-                      ${settingBadges}
+                    <div class="leaderboard-model-row flex items-center gap-2">
+                      <span class="shrink-0">${b.emoji}</span>
+                      <span class="leaderboard-model-name font-bold text-white">${esc(fmtModelId(r))}</span>
+                      <span class="leaderboard-setting-badges inline-flex items-center gap-1 flex-wrap">${settingBadges}</span>
                     </div>
                   </td>
-                  <td class="py-2 px-3 text-right font-mono">
+                  <td class="leaderboard-score-cell py-2 px-3 text-right font-mono">
                     <div class="inline-flex items-center gap-2">
-                      <div class="bar w-28"><div class="bar-fill" style="width:${Math.min(100, r.mean)}%"></div></div>
+                      <div class="leaderboard-score-bar bar w-28"><div class="bar-fill" style="width:${Math.min(100, r.mean)}%"></div></div>
                       <span class="font-bold text-white">${fmt2(r.mean)}</span>
                     </div>
                   </td>
-                  <td class="py-2 px-3 text-right font-mono font-bold text-gray-300">${winAcc}</td>
-                  <td class="py-2 px-3 text-right text-gray-500">${r.n}</td>
+                  <td class="leaderboard-mobile-hide py-2 px-3 text-right font-mono font-bold text-gray-300">${winAcc}</td>
+                  <td class="leaderboard-mobile-hide py-2 px-3 text-right text-gray-500">${r.n}</td>
                 </tr>`;
             }).join("")}
           </tbody>
@@ -1334,7 +1371,7 @@ function renderLeaderboard(lb, view) {
     const labels  = [t("layer_t1"), t("layer_t2"), t("layer_t3"), t("layer_t4"), t("layer_t5")];
     const palette = ["#22c55e", "#3b82f6", "#a855f7", "#ec4899", "#f59e0b", "#14b8a6", "#ef4444", "#eab308", "#64748b"];
     const datasets = rows.slice(0, 9).map((r, i) => ({
-      label: r.model_id,
+      label: fmtModelId(r),
       data: layers.map(l => (r.layers_mean || {})[l] || 0),
       backgroundColor: palette[i] + "cc",
       borderColor: palette[i], borderWidth: 2,
@@ -1385,7 +1422,7 @@ function renderHistory(rows) {
     el.innerHTML = `<div class="text-gray-400 text-sm">${t("no_graded")}</div>`;
     return;
   }
-  el.innerHTML = rows.map(r => {
+  el.innerHTML = rows.map((r, rowIdx) => {
     const date  = r.kickoff_utc ? new Date(r.kickoff_utc).toISOString().slice(0, 10) : "";
     const preds = r.predictions || [];
     const lv    = r.live;
@@ -1404,16 +1441,25 @@ function renderHistory(rows) {
     const hStart = registerPreds(preds, r);
 
     const predCards = renderPredList(preds, r, hStart, `pred-group-history-${hStart}`);
-
-    return `
-      <details open class="card rounded-xl p-4 col-span-2">
-        <summary class="flex items-center justify-between cursor-pointer select-none">
-          <div>
-            <div class="text-xs text-gray-400">${esc(date)} · ${esc(r.competition || "")} ${esc(r.stage || "")}</div>
-            <div class="font-semibold text-lg">${esc(r.home || "?")} <span class="text-gray-500 mx-2">${t("vs")}</span> ${esc(r.away || "?")}</div>
-          </div>
-        </summary>
-        <div class="mt-4 space-y-3">
+    const collapseOnMobile = isMobilePredLayout() && rowIdx >= 3;
+    const mobileScoreboard = collapseOnMobile ? `
+          <div class="mobile-history-scoreboard mt-3 md:hidden">
+            <div class="grid grid-cols-3 items-center gap-2">
+              <div class="text-center min-w-0">
+                ${r.home_logo ? `<img src="${esc(r.home_logo)}" alt="${esc(r.home)}" class="h-8 mx-auto mb-1"/>` : `<div class="text-2xl">🏠</div>`}
+                <div class="team-name text-xs font-bold leading-tight">${esc(r.home || "?")}</div>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-black font-mono" style="color:#fbbf24;">${esc((r.result || "—").replace("-", " – "))}</div>
+                <div class="mt-1 inline-flex chip text-[10px]">${t("show_predictions")}</div>
+              </div>
+              <div class="text-center min-w-0">
+                ${r.away_logo ? `<img src="${esc(r.away_logo)}" alt="${esc(r.away)}" class="h-8 mx-auto mb-1"/>` : `<div class="text-2xl">🛫</div>`}
+                <div class="team-name text-xs font-bold leading-tight">${esc(r.away || "?")}</div>
+              </div>
+            </div>
+          </div>` : "";
+    const fullPitch = `
           <div class="pitch rounded-xl p-3 sm:p-4 mb-4">
             <div class="grid grid-cols-3 items-center gap-2">
               <div class="text-center">
@@ -1431,7 +1477,21 @@ function renderHistory(rows) {
                 <div class="team-name font-bold text-sm sm:text-lg leading-tight">${esc(r.away || "?")}</div>
               </div>
             </div>
+          </div>`;
+
+    return `
+      <details${collapseOnMobile ? "" : " open"} class="card rounded-xl p-4 col-span-2">
+        <summary class="cursor-pointer select-none">
+          <div class="flex items-center justify-between">
+          <div>
+            <div class="text-xs text-gray-400">${esc(date)} · ${esc(r.competition || "")} ${esc(r.stage || "")}</div>
+            <div class="font-semibold text-lg">${esc(r.home || "?")} <span class="text-gray-500 mx-2">${t("vs")}</span> ${esc(r.away || "?")}</div>
           </div>
+          </div>
+          ${mobileScoreboard}
+        </summary>
+        <div class="mt-4 space-y-3">
+          ${collapseOnMobile ? "" : fullPitch}
           ${predCards}
           ${r.comment ? `<div class="mt-4 pt-3 border-t border-white/5 text-sm text-gray-400">
             <span class="text-gray-500 text-xs uppercase tracking-wider mr-2">${t("comment")}</span>${esc(r.comment)}<span class="ml-2 text-gray-500">——@wzk1015</span>

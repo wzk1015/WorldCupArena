@@ -95,6 +95,52 @@
       padding: .75rem;
       overflow-x: auto;
     }
+    .leaderboard-table {
+      table-layout: fixed;
+      font-size: .72rem;
+    }
+    .leaderboard-table th,
+    .leaderboard-table td {
+      padding: .45rem .35rem;
+    }
+    .leaderboard-mobile-hide,
+    .leaderboard-setting-badges {
+      display: none !important;
+    }
+    .leaderboard-rank-cell {
+      width: 2.1rem;
+    }
+    .leaderboard-score-cell {
+      width: 5.6rem;
+    }
+    .leaderboard-model-row {
+      min-width: 0;
+      flex-wrap: nowrap;
+    }
+    .leaderboard-model-name {
+      display: block;
+      min-width: 0;
+      max-width: calc(100vw - 9.7rem);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .leaderboard-score-bar {
+      width: 3.2rem;
+    }
+    .rank-medal {
+      width: 1.35rem;
+      height: 1.35rem;
+      font-size: .68rem;
+    }
+    .mobile-history-scoreboard {
+      border-radius: .75rem;
+      padding: .7rem;
+      background:
+        repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 28px, rgba(255,255,255,.015) 28px 56px),
+        linear-gradient(180deg, #0f2a18, #0a1e11);
+      border: 1px solid rgba(34,197,94,.2);
+    }
     [data-tip]::after { display: none; }
   }
 </style>
@@ -195,6 +241,6 @@
   开源 · MIT · 研究项目 · <a class="underline" href="https://github.com/wzk1015/WorldCupArena/" target="_blank">source</a>
 </footer>
 
-<script src="app.js?v=20260603-bilingual-mobile"></script>
+<script src="app.js?v=20260603-history-mobile-compact"></script>
 </body>
 </html>
