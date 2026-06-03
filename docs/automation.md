@@ -20,7 +20,7 @@ Every fixture flows through five pipeline phases. All times are relative to
 | **populate** | `populate`     | T-48h → T-24h | `src.pipeline.orchestrator populate --fixture …` | adds `context_pack` — squads + recent form + stats + **news headlines** |
 | **lock+predict** | `lock_predict` | T-24h → T+0h | `orchestrator lock` then `orchestrator predict` | `snapshot_hash` in `fixture.json` + `data/predictions/<id>/<model>__<setting>.json` |
 | **live update** | `live_update` | T+0h → T+3h | `src.pipeline.orchestrator live_update --fixture-id … --wca-id …` | `data/live/<id>.json` (real-time score/status); triggers `truth_grade` early if status = "Match Finished" |
-| **truth+grade** | `truth_grade` | T+3h → T+48h | `src.ingest.api_football --out truth.json` + `orchestrator grade` + `leaderboard.build` + `leaderboard.build_site` | `truth.json` + `data/results/<id>/*.json` + `docs/site/data.json` |
+| **truth+grade** | `truth_grade` | T+3h → T+48h | `src.ingest.api_football --out truth.json` + `orchestrator grade` + `leaderboard.build` + `leaderboard.build_site` | `truth.json` + `data/results/<id>/*.json` + generated site JSON |
 
 Phases scheduled by `src.pipeline.scheduler`:
 
@@ -29,7 +29,7 @@ T-7d  ─── ingest          ─── fixture.json  (from API-Football)
 T-48h ─── populate        ─── context_pack  (squads, form, news, stats)
 T-24h ─── lock_predict    ─── snapshot_hash + predictions/
 T+0h  ─── live_update     ─── data/live/<id>.json  (real-time score every 10 min)
-T+3h  ─── truth_grade     ─── truth.json + results/ + leaderboard + site/data.json
+T+3h  ─── truth_grade     ─── truth.json + results/ + leaderboard + generated site JSON
 ```
 
 Each phase has its own window (see `PHASES` in `src/pipeline/scheduler.py`).
@@ -108,13 +108,14 @@ Job outline:
 1. checkout + python setup + pip install
 2. python -m src.pipeline.scheduler show        # diagnostics
 3. python -m src.pipeline.scheduler tick        # runs every due phase
-4. python -m src.leaderboard.build_site || true # refresh docs/site/data.json
-5. git commit -m "automate: tick <timestamp>"   # if any artifact changed
+4. python -m src.leaderboard.build_site         # validate bilingual site payload
+5. git commit -m "automate: tick <timestamp>"   # if any source artifact changed
    git push                                     # back to main
 ```
 
 The commit step is what makes the site update visibly — once main moves, the
-`pages` workflow redeploys `docs/site/`.
+`pages` workflow regenerates `data.en.json`, `data.zh.json`, and default
+`data.json`, then redeploys `docs/site/`.
 
 Concurrency: one `automate` job at a time (`concurrency: group: automate,
 cancel-in-progress: false`) — long-running predict phases never get cancelled
@@ -141,13 +142,14 @@ fail the whole tick.
 
 ## 6. The website deploy: `.github/workflows/pages.yml`
 
-Trigger: push to `main` affecting `docs/site/**` or `docs/leaderboard/**`.
-The `automate` workflow commits both directories, so each successful tick
-triggers a site redeploy.
+Trigger: push to `main` affecting site sources, leaderboard builders, fixture
+config, or committed data artifacts. The `automate` workflow commits those
+source artifacts, so each successful tick triggers a site redeploy.
 
-The site itself is **static** — plain HTML + vanilla JS reading
-`docs/site/data.json`, which `src.leaderboard.build_site` regenerates on
-every tick. No build step, no Node dependency.
+The site itself is **static** — plain HTML + vanilla JS reading generated
+`data.en.json`, `data.zh.json`, and default `data.json`. These files are
+created during the Pages workflow and ignored by git to avoid recurring merge
+conflicts on large generated payloads. No Node dependency.
 
 See [docs/site/README.md](site/README.md) for site internals.
 

@@ -12,7 +12,6 @@ import hashlib
 import json
 import os
 import re
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -162,22 +161,22 @@ def _load_cache(path: Path = CACHE_PATH) -> dict[str, Any]:
 def _save_cache(cache: dict[str, Any], path: Path = CACHE_PATH) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     new_content = {k: v for k, v in cache.items() if k != "_meta"}
+    new_meta = {
+        "entity_count": len(cache.get("entities") or {}),
+        "text_count": len(cache.get("texts") or {}),
+    }
     old_meta = {}
     if path.exists():
         try:
             old_cache = json.loads(path.read_text())
             old_meta = old_cache.get("_meta") or {}
             old_content = {k: v for k, v in old_cache.items() if k != "_meta"}
-            if old_content == new_content:
+            if old_content == new_content and old_meta == new_meta:
                 cache["_meta"] = old_meta
                 return
         except Exception:
             pass
-    cache["_meta"] = {
-        "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "entity_count": len(cache.get("entities") or {}),
-        "text_count": len(cache.get("texts") or {}),
-    }
+    cache["_meta"] = new_meta
     path.write_text(json.dumps(cache, ensure_ascii=False, indent=2, sort_keys=True))
 
 

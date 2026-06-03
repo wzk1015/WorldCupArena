@@ -17,8 +17,8 @@ name: automate
 # repeated ticks are cheap no-ops, and missed ticks catch up automatically.
 #
 # The scheduler commits any new/updated artifacts (fixture.json, truth.json,
-# predictions, results, leaderboard payload) back to main so the pages
-# deploy workflow picks them up.
+# predictions, results, and translation cache) back to main so the pages
+# deploy workflow can rebuild the generated site payload.
 
 on:
   schedule:
@@ -107,7 +107,7 @@ jobs:
           git config user.email "bot@worldcuparena.local"
           echo "--- files written by pipeline ---"
           ls data/snapshots/ 2>/dev/null || echo "(data/snapshots missing)"
-          git add data/snapshots data/predictions data/results data/live data/search_logs data/i18n docs/site/data*.json docs/leaderboard
+          git add data/snapshots data/predictions data/results data/live data/search_logs data/i18n docs/leaderboard
           echo "--- git status after add ---"
           git status --short
           if ! git diff --cached --quiet; then
