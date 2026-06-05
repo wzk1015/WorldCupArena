@@ -32,6 +32,10 @@ T+0h  ─── live_update     ─── data/live/<id>.json  (real-time score 
 T+3h  ─── truth_grade     ─── truth.json + results/ + leaderboard + generated site JSON
 ```
 
+赛中 AI 预测不是这五个自动化阶段的一部分。GitHub workflow 只抓实时比分；
+如果需要比赛过程中每 5 分钟重新调用模型预测胜平负和最终比分，请使用下面的
+本地守护进程。
+
 Each phase has its own window (see `PHASES` in `src/pipeline/scheduler.py`).
 At every tick, for every fixture, every phase whose window is **currently
 open** runs — and each handler is idempotent, so a 10-minute cadence is
@@ -155,7 +159,49 @@ See [docs/site/README.md](site/README.md) for site internals.
 
 ---
 
-## 7. Local testing
+## 7. Local in-play AI predictions
+
+`src.pipeline.live_predict` is a manual matchday tool. It fetches the current
+API-Football fixture state, calls selected models, writes
+`data/live_predictions/<wca_id>/<model>__LIVE.json`, and rebuilds the static
+site payload. These records are **not** read by grading or leaderboard code,
+and `data/live_predictions/` is git-ignored to avoid matchday merge conflicts.
+
+One-off live prediction:
+
+```bash
+python -m src.pipeline.live_predict once \
+  --fixture-id 1540901 \
+  --wca-id ucl_sf1_l1_2026 \
+  --models gpt-5.4 gemini-3.1-pro-preview-thinking
+```
+
+Run a daemon that refreshes every 5 minutes:
+
+```bash
+python -m src.pipeline.live_predict daemon \
+  --fixture-id 1540901 \
+  --wca-id ucl_sf1_l1_2026 \
+  --models gpt-5.4 gemini-3.1-pro-preview-thinking \
+  --interval-seconds 300
+```
+
+Each cycle writes the latest raw live score to `data/live/<wca_id>.json`, writes
+the latest model forecast to `data/live_predictions/`, and then runs
+`python -m src.leaderboard.build_site` unless `--no-build-site` is supplied.
+Keep a local static server open while the daemon runs:
+
+```bash
+python -m http.server -d docs/site 8000
+```
+
+The live prediction schema is intentionally smaller than the pre-match schema:
+it contains current win/draw/loss probabilities, one most likely final score,
+future goalscorer candidates after the current minute, reasoning, sources,
+tokens, and cost. It does not predict lineups, match statistics, cards,
+substitutions, or key events.
+
+## 8. Local testing
 
 Simulate one cron tick end-to-end against a real fixture:
 
@@ -172,7 +218,7 @@ python -m src.pipeline.scheduler tick
 
 ---
 
-## 8. Timeline in one picture
+## 9. Timeline in one picture
 
 ```
      fixture added to fixtures.yaml

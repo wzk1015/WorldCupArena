@@ -47,6 +47,7 @@ RESULTS = ROOT / "data" / "results"
 PREDICTIONS = ROOT / "data" / "predictions"
 SNAPSHOTS = ROOT / "data" / "snapshots"
 LIVE_DIR = ROOT / "data" / "live"
+LIVE_PREDICTIONS = ROOT / "data" / "live_predictions"
 SEARCH_LOGS = ROOT / "data" / "search_logs"
 FIXTURES_YAML = ROOT / "configs" / "fixtures.yaml"
 MODELS_YAML = ROOT / "configs" / "models.yaml"
@@ -743,7 +744,12 @@ def build_incoming_matches() -> list[dict]:
             include_missing=has_predictions,
         )
         _attach_display_picks(preds)
-        results.append({"fixture": hdr, "predictions": preds, "live": live})
+        results.append({
+            "fixture": hdr,
+            "predictions": preds,
+            "live": live,
+            "live_predictions": _load_live_predictions(wca_id),
+        })
     return results
 
 
@@ -765,6 +771,56 @@ def _load_live_state(wca_id: str) -> dict | None:
         "score":   r0.get("goals"),   # {"home": N, "away": N}
         "events":  r0.get("events") or [],
     }
+
+
+def _load_live_predictions(wca_id: str) -> list[dict]:
+    """Load local in-play model forecasts.
+
+    These files are produced by src.pipeline.live_predict and are intentionally
+    excluded from grading/leaderboard aggregation.
+    """
+    pred_dir = LIVE_PREDICTIONS / wca_id
+    if not pred_dir.exists():
+        return []
+
+    rows: list[dict] = []
+    for path in sorted(pred_dir.glob("*.json")):
+        try:
+            record = json.loads(path.read_text())
+        except Exception:
+            continue
+        model_id = record.get("model_id") or _prediction_key_from_path(path)[0]
+        if model_id in HIDDEN_SITE_MODELS:
+            continue
+        meta = MODEL_META.get(model_id) or _infer_model_metadata(model_id)
+        pred = record.get("prediction") or {}
+        err = record.get("error")
+        rows.append({
+            "model_id": model_id,
+            "display_name": record.get("display_name") or meta.get("display_name") or _display_model_name(model_id),
+            "setting": record.get("setting") or "LIVE",
+            "model_category": meta.get("model_category"),
+            "provider": meta.get("provider"),
+            "model_family": meta.get("model_family"),
+            "status": "failed" if err else "ok",
+            "error_summary": _public_error_summary(err) if err else None,
+            "submitted_at": record.get("submitted_at"),
+            "live": record.get("live") or {},
+            "win_probs": pred.get("win_probs") or {},
+            "most_likely_score": pred.get("most_likely_score"),
+            "scorers": pred.get("scorers") or pred.get("future_scorers") or [],
+            "reasoning": pred.get("reasoning") or {},
+            "sources": record.get("sources") or [],
+            "cost_usd": record.get("cost_usd"),
+            "tokens": record.get("tokens") or {},
+            "tool_calls": record.get("tool_calls"),
+        })
+
+    rows.sort(key=lambda r: (
+        MODEL_META.get(r["model_id"], {}).get("config_order", 9999),
+        r.get("model_id") or "",
+    ))
+    return rows
 
 
 _STAT_TYPE_MAP = {

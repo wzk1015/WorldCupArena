@@ -2,13 +2,14 @@
 
 Static single-page site deployed to GitHub Pages. Renders:
 
-1. **Next match** — the upcoming fixture from `configs/fixtures.yaml` plus the
-   per-model win probabilities, most-likely score, and reasoning excerpts.
-2. **Leaderboard** — three views:
-   - Composite (100-point rubric, ranked)
-   - Per-layer radar chart (T1–T5 breakdown, Chart.js)
-   - S2 − S1 uplift (research agent vs context-fed LLM, when both exist)
-3. **History** — expandable cards for every graded fixture.
+1. **Incoming matches** — upcoming or currently live fixtures from
+   `configs/fixtures.yaml`, including pre-match model predictions.
+2. **In-play predictions** — optional local matchday forecasts from
+   `data/live_predictions/`, shown on incoming/live fixtures but excluded from
+   leaderboard scoring.
+3. **Leaderboard** — default result-accuracy ranking, with a toggle to the
+   composite 100-point rubric and a per-layer radar chart.
+4. **History** — expandable cards for every graded fixture.
 
 ## Files
 
@@ -25,6 +26,7 @@ No Node toolchain. The only build step is regenerating the static JSON payload.
 ```
 data/results/*/*.json  ─┐
 data/predictions/*/*/  ─┼─►  src.leaderboard.build_site  ─►  docs/site/data.en.json
+data/live_predictions/ ─┤
 configs/fixtures.yaml  ─┘                                      docs/site/data.zh.json
                                                                docs/site/data.json
                                                                         │
@@ -33,6 +35,20 @@ configs/fixtures.yaml  ─┘                                      docs/site/dat
                                                             (served via GitHub Pages)
 ```
 
+`build_site` always writes the English payload first, then builds the
+Simplified Chinese payload via `src.leaderboard.translate_site_data`. The
+Chinese payload is also copied to default `data.json`, so the site opens in
+Chinese by default.
+
+## Runtime modes
+
+The site supports URL-controlled modes without a build step:
+
+- `?theme=dark` or `?theme=light` switches the visual theme. Dark is default.
+- `?matchmate=1` enables MatchMate presentation: Chinese-only UI, MatchMate
+  branding, simplified controls, model display-name cleanup, and source links
+  capped to the first 20 items.
+
 ## Updating the site locally
 
 ```bash
@@ -40,6 +56,21 @@ python -m src.leaderboard.build_site
 python -m http.server -d docs/site 8000
 open http://localhost:8000
 ```
+
+For in-play prediction during a match, run the local daemon in another
+terminal:
+
+```bash
+python -m src.pipeline.live_predict daemon \
+  --fixture-id <api-football-id> \
+  --wca-id <wca-id> \
+  --models gpt-5.4 \
+  --interval-seconds 300
+```
+
+The daemon refreshes `data/live/`, `data/live_predictions/`, and the generated
+site JSON every cycle. These live predictions are intentionally local and
+git-ignored.
 
 To inspect the exact JSON currently served by GitHub Pages:
 

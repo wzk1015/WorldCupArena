@@ -31,7 +31,7 @@ WorldCupArena 的主要目标是建立一个可复现、可扩展、可自动运
 WorldCupArena 的一个基本样本是一场已经进入赛程表、但尚未开球的正式比赛。每场比赛在赛前形成一个 fixture snapshot，包含：
 
 - 比赛基础信息：联赛、轮次、主客队、开球时间、场地、API-Football fixture id；
-- 锁存时间：`lock_at_utc`，当前策略为开球前 1 小时；
+- 锁存时间：`lock_at_utc`，当前策略为开球前 24 小时；
 - 上下文包：阵容、近期战绩、新闻头条、技术统计等；
 - 快照哈希：`snapshot_hash`，用于保证预测后 fixture 内容没有被事后篡改。
 
@@ -81,25 +81,31 @@ T5 主要用于世界杯或完整赛事预测。对于单场比赛，核心评�
 - `claude-opus-4-7-thinking-search`：Claude thinking + web_search；
 - `gpt-5.4-search`：GPT-5.4 reasoning + web_search。
 
-当前新增 open-weight / 中国模型组通过云雾 OpenAI-compatible 中转接入：
+当前 open-weight / 中国模型组主要通过 OpenRouter 的 OpenAI-compatible
+接口接入，公共 `id` 保持稳定，真实 provider model slug 写在
+`configs/models.yaml` 的 `model` 字段中：
 
 - `deepseek-r1`；
-- `qwen3-235b-thinking`；
+- `qwen3-max`；
 - `kimi-k2`；
 - `glm-4.5`；
 - `doubao-seed-1.6-thinking`；
-- `minimax-m1`；
+- `minimax-m2.7`；
 - `llama-4-maverick`；
-- `gemma-3-27b`。
+- `gemma-7b`。
 
 其中配置里的 `open_weight` 字段用于区分真正 open-weight 模型和中国闭源/半闭源模型。网站默认展示时会优先从 `open_weight=true` 的模型里按 leaderboard 选择前三个。
 
 当前新增 Deep Research Agent 组：
 
-- `yunwu-o4-mini-deep-research`：云雾 OpenAI-compatible Responses API + `web_search_preview`；
+- `openai-o4-mini-deep-research` / 兼容 o4-mini deep research 配置：OpenAI Responses API + `web_search_preview`；
 - `gemini-deep-research`：Google Interactions API 的 `deep-research-pro-preview-12-2025` agent。
 
-新模型接入时只需要添加配置并注册 runner。绝大多数 OpenAI-compatible 接口可以复用 `OpenAICompatRunner`；需要长轮询、异步任务或特殊返回结构的 agent 则使用专用 runner。
+历史上测试过云雾中转，但当前网页默认隐藏失败的 `yunwu-o4-mini-deep-research`
+条目，主流程优先使用官方或 OpenRouter/OpenAI-compatible 路由。新模型接入时只
+需要添加配置并注册 runner。绝大多数 OpenAI-compatible 接口可以复用
+`OpenAICompatRunner`；需要长轮询、异步任务或特殊返回结构的 agent 则使用专用
+runner。
 
 ## 6. 系统架构
 
@@ -108,13 +114,14 @@ WorldCupArena 的实现由几个相对独立的层组成。
 | 模块 | 路径 | 职责 |
 |---|---|---|
 | 配置层 | `configs/` | 模型注册、实验设定、赛程、任务权重 |
-| 数据层 | `data/` | snapshots、predictions、results、live、search logs |
+| 数据层 | `data/` | snapshots、predictions、results、live、live_predictions、search logs |
 | ingest | `src/ingest/` | 从 API-Football 和新闻源拉取 fixture、truth、context pack |
 | prompt | `src/pipeline/prompt_build.py`, `prompts/` | 根据 setting 组装系统 prompt 和用户 prompt |
 | runner | `src/runners/` | 按 provider 调用模型 API，统一返回文本、tokens、sources、tool calls |
 | validate | `src/pipeline/validate.py` | JSON schema 和语义校验，失败后自动修复重试 |
 | calibration | `src/pipeline/score_calibration.py` | 将模型输出的核心概率校准为比分分布和衍生字段 |
 | orchestrator | `src/pipeline/orchestrator.py` | 单场比赛预测、锁存、评分、live update 的主入口 |
+| live predict | `src/pipeline/live_predict.py` | 本地赛中守护进程，周期性调用模型更新实时预测 |
 | scheduler | `src/pipeline/scheduler.py` | GitHub Actions cron 友好的全生命周期调度 |
 | grader | `src/graders/` | 各层指标与复合分计算 |
 | leaderboard | `src/leaderboard/`, `docs/site/` | 汇总结果并生成静态站点 |
@@ -165,6 +172,28 @@ T+3h  到 T+48h   truth_grade  拉取 truth.json，评分，重建 leaderboard
 
 `src/pipeline/scheduler.py` 将上述阶段包装为幂等任务。GitHub Actions 可以每 10 分钟运行一次 `scheduler tick`：如果某阶段已经完成就跳过，如果错过了某个窗口也会在下一次 tick 尽量补上。
 
+赛中 AI 预测是独立的本地工作流，不加入 GitHub Actions。比赛过程中可以运行：
+
+```bash
+python -m src.pipeline.live_predict daemon \
+  --fixture-id <api-football-id> \
+  --wca-id <wca-id> \
+  --models gpt-5.4 gemini-3.1-pro-preview-thinking \
+  --interval-seconds 300
+```
+
+该守护进程每轮先调用 API-Football 获取当前比分、比赛状态、已发生事件和实时技术
+统计，再调用指定模型输出一个更小的 live prediction JSON。实时预测只包含：
+胜平负概率、最可能最终比分、当前时刻之后的未来进球球员、简短推理、来源、token
+和成本。它不预测首发、技术统计、红黄牌、换人或“关键事件”。结果写入：
+
+```text
+data/live_predictions/<fixture_id>/<model_id>__LIVE.json
+```
+
+`data/live_predictions/` 默认不纳入 git，也不会被 `grade_match` 或 leaderboard
+读取。`build_site` 只把它挂到网页 incoming match 的 `live_predictions` 字段中展示。
+
 预测结果写入：
 
 ```text
@@ -182,6 +211,23 @@ data/search_logs/<fixture_id>/<model_id>__<setting>.json
 ```text
 data/results/<fixture_id>/<model_id>__<setting>.json
 ```
+
+站点 JSON 由 `src.leaderboard.build_site` 生成。它总是先写英文
+`docs/site/data.en.json`，再通过缓存优先的翻译器生成中文
+`docs/site/data.zh.json` 和默认 `docs/site/data.json`。这些生成文件不追踪进 git，
+以减少自动化运行和本地开发之间的冲突。
+
+网站当前是纯静态前端，运行在 `docs/site/index.html` + `docs/site/app.js`。
+近期展示层做了几类改造：
+
+- 中英双语：默认中文，非 MatchMate 模式下可切换英文；
+- 深浅主题：`?theme=dark|light` 控制主题，默认深色；
+- MatchMate 模式：`?matchmate=1` 时改为 “MatchMate AI比分预测” 品牌、隐藏语言按钮、简化排行榜控制、来源改名为“参考链接”并最多展示前 20 个；
+- 模型名称显示：优先使用 `models.yaml` 的 `display_name`，而不是 slug；MatchMate 模式下会把 Qwen、Doubao、thinking/search 字样转换成更适合中文用户的显示；
+- incoming match：电脑端展示全部模型，移动端默认只展开前三个模型；
+- past match：电脑端默认展示排行榜选出的前四个模型，移动端默认只展开最近三场历史比赛，其余历史比赛先显示比分牌；
+- 排行榜：默认按赛果准确率排序，可切换综合分；当前排序指标只显示对应指标，避免同时展示两套分数造成误读；
+- 实时预测：只在 incoming/live 比赛卡片中展示，不进入历史评分和排行榜。
 
 ## 9. 输出格式与校验
 
@@ -302,7 +348,8 @@ cost(i, j) = |minute_pred - minute_true| + actor_mismatch_penalty
 - 稳定闭源、搜索、open-weight 和 Deep Research 四类模型的 S1/S2 路径；
 - 持续补充 fixture，扩大样本数；
 - 完善 search source 的 publication time 审计；
-- 校准云雾中转下各模型的真实 model id 和价格；
+- 校准 OpenRouter、官方 API 和兼容 endpoint 下各模型的真实 model id、token 统计和价格；
+- 在真实比赛中验证 `live_predict` 守护进程的稳定性、网页刷新体验和成本记录；
 - 将当前中文报告同步为更新版英文技术报告。
 
 中期：

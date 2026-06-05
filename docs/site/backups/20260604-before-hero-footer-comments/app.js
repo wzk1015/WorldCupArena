@@ -6,9 +6,6 @@ const fmt2   = (x) => (x == null ? "—" : (+x).toFixed(2));
 const esc    = (s) => String(s ?? "").replace(/[<>&"']/g, c =>
   ({ "<":"&lt;", ">":"&gt;", "&":"&amp;", '"':"&quot;", "'":"&#39;" }[c]));
 
-const MATCHMATE_BRAND = "MatchMate AI比分预测";
-const WORLDCUPARENA_BRAND = "WorldCupArena";
-
 const I18N = {
   zh: {
     html_lang: "zh-CN",
@@ -23,8 +20,8 @@ const I18N = {
     nav_incoming: "即将进行",
     nav_leaderboard: "排行榜",
     nav_history: "历史比赛",
-    hero_tagline: "AI<span class=\"gradient-text\">预测足球比分</span>",
-    author_html: "作者 <a class=\"underline hover:text-white\" href=\"https://www.wzk.plus\" target=\"_blank\">Zhaokai Wang</a> · <a class=\"underline hover:text-white\" href=\"mailto:zhaokaiwang99@gmail.com\">zhaokaiwang99@gmail.com</a>",
+    hero_tagline: "哪个 AI <span class=\"gradient-text\">预测足球</span> 最准？",
+    byline_prefix: "作者",
     section_incoming: "🔮 即将进行的比赛",
     section_leaderboard: "🏆 排行榜",
     section_history: "📋 历史比赛",
@@ -91,7 +88,6 @@ const I18N = {
     hide_details: "👇 收起分析",
     sources: "🔗 来源（{count}）",
     hide_sources: "🔗 收起来源",
-    sources_omitted: "其余 {count} 个参考链接已省略。",
     show_all_models: "显示全部模型（+{count}）",
     show_all_models_mobile: "展开其余 {count} 个模型",
     show_fewer_models: "收起模型",
@@ -104,17 +100,11 @@ const I18N = {
     not_run_detail: "尚未运行；调度器会在合适时间执行。",
     pred_winner: "预测胜者",
     pred_score: "预测比分",
-    live_predictions: "赛中实时预测",
-    live_prediction_note: "赛中预测不计入排行榜",
-    live_current_snapshot: "基于 {score} · {minute}",
-    live_updated_at: "更新于 {time}",
-    live_final_score: "最可能最终比分",
-    future_scorers: "后续进球球员",
-    no_future_scorers: "暂无后续进球预测",
     vs: "VS",
     win: "胜 {pct}",
     draw_prob: "平局 {pct}",
     no_model_predictions: "暂无模型预测（通常开赛前 24 小时运行）。",
+    comment: "评论",
     no_fixtures: "未来 7 天暂无赛程。",
     live: "🟢 进行中",
     live_red: "🔴 进行中",
@@ -148,8 +138,8 @@ const I18N = {
     nav_incoming: "Incoming Matches",
     nav_leaderboard: "Leaderboard",
     nav_history: "Past Matches",
-    hero_tagline: "AI <span class=\"gradient-text\">Football Score Prediction</span>",
-    author_html: "by <a class=\"underline hover:text-white\" href=\"https://www.wzk.plus\" target=\"_blank\">Zhaokai Wang</a> · <a class=\"underline hover:text-white\" href=\"mailto:zhaokaiwang99@gmail.com\">zhaokaiwang99@gmail.com</a>",
+    hero_tagline: "Which AI <span class=\"gradient-text\">predicts football</span> best?",
+    byline_prefix: "by",
     section_incoming: "🔮 Incoming Matches",
     section_leaderboard: "🏆 Leaderboard",
     section_history: "📋 Past Matches",
@@ -216,7 +206,6 @@ const I18N = {
     hide_details: "👇 Hide Details",
     sources: "🔗 Sources ({count})",
     hide_sources: "🔗 Hide sources",
-    sources_omitted: "{count} more links omitted.",
     show_all_models: "Show all models (+{count})",
     show_all_models_mobile: "Show {count} more models",
     show_fewer_models: "Show fewer models",
@@ -229,17 +218,11 @@ const I18N = {
     not_run_detail: "Not run yet; the scheduler will run this model when due.",
     pred_winner: "Pred Winner",
     pred_score: "Pred Score",
-    live_predictions: "In-Play Predictions",
-    live_prediction_note: "In-play predictions are not counted in the leaderboard",
-    live_current_snapshot: "Based on {score} · {minute}",
-    live_updated_at: "Updated {time}",
-    live_final_score: "Most Likely Final Score",
-    future_scorers: "Future Scorers",
-    no_future_scorers: "No future scorers predicted",
     vs: "VS",
     win: "win {pct}",
     draw_prob: "draw {pct}",
     no_model_predictions: "No model predictions yet (runs 24 h before kickoff).",
+    comment: "Comment",
     no_fixtures: "No fixtures scheduled in the next 7 days.",
     live: "🟢 Live",
     live_red: "🔴 LIVE",
@@ -262,17 +245,6 @@ const I18N = {
   }
 };
 
-const MATCHMATE_I18N = {
-  zh: {
-    page_title: "MatchMate AI比分预测",
-    meta_description: "MatchMate AI比分预测：聚合多模型足球比分预测、赛果准确率和参考链接。",
-    footer_html: "作者 <a class=\"underline hover:text-white\" href=\"https://www.wzk.plus\" target=\"_blank\">Zhaokai Wang</a> · <a class=\"underline hover:text-white\" href=\"mailto:zhaokaiwang99@gmail.com\">zhaokaiwang99@gmail.com</a> · <a class=\"chip hover:bg-white/15 transition text-[11px]\" href=\"https://github.com/wzk1015/WorldCupArena/\" target=\"_blank\">GitHub ↗</a>",
-    search_sources: "🔗 参考链接",
-    sources: "🔗 参考链接（{count}）",
-    hide_sources: "🔗 收起参考链接",
-  }
-};
-
 function normalizeTheme(theme) {
   return theme === "light" ? "light" : "dark";
 }
@@ -282,13 +254,7 @@ function initialTheme() {
   return normalizeTheme(params.get("theme"));
 }
 
-function initialMatchMateMode() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get("matchmate") === "1";
-}
-
-const _matchmateMode = initialMatchMateMode();
-let _lang = _matchmateMode ? "zh" : (localStorage.getItem("wca_lang") === "en" ? "en" : "zh");
+let _lang = localStorage.getItem("wca_lang") === "en" ? "en" : "zh";
 let _theme = initialTheme();
 let _siteData = null;
 let _activeLeaderboardView = "main";
@@ -297,11 +263,7 @@ let _countdownIntervals = [];
 let _mobilePredView = null;
 
 function t(key, vars = {}) {
-  const matchmateText = _matchmateMode ? (MATCHMATE_I18N[_lang] && MATCHMATE_I18N[_lang][key]) : undefined;
-  let text = matchmateText
-    ?? (I18N[_lang] && I18N[_lang][key])
-    ?? I18N.en[key]
-    ?? key;
+  let text = (I18N[_lang] && I18N[_lang][key]) ?? I18N.en[key] ?? key;
   for (const [name, value] of Object.entries(vars)) {
     text = text.replaceAll(`{${name}}`, String(value));
   }
@@ -325,7 +287,6 @@ function showAllModelsText(count) {
 function applyStaticI18n() {
   document.documentElement.lang = t("html_lang");
   document.title = t("page_title");
-  document.documentElement.dataset.mode = _matchmateMode ? "matchmate" : "worldcuparena";
   const meta = document.querySelector('meta[name="description"]');
   if (meta) meta.setAttribute("content", t("meta_description"));
   document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -337,43 +298,15 @@ function applyStaticI18n() {
   document.querySelectorAll("[data-i18n-title]").forEach(el => {
     el.setAttribute("title", t(el.dataset.i18nTitle));
   });
-  applyBranding();
-  applyModeControls();
   updateThemeControls();
   updateLeaderboardSortButton();
 }
 
 async function toggleLanguage() {
-  if (_matchmateMode) return;
   _lang = _lang === "zh" ? "en" : "zh";
   localStorage.setItem("wca_lang", _lang);
   applyStaticI18n();
   await loadSiteData();
-}
-
-function brandHtml() {
-  if (_matchmateMode) return esc(MATCHMATE_BRAND);
-  return `${WORLDCUPARENA_BRAND.slice(0, 8)}<span class="gradient-text">${WORLDCUPARENA_BRAND.slice(8)}</span>`;
-}
-
-function applyBranding() {
-  document.querySelectorAll("[data-brand]").forEach(el => {
-    el.innerHTML = brandHtml();
-  });
-}
-
-function applyModeControls() {
-  const langToggle = document.getElementById("lang-toggle");
-  const navGithub = document.getElementById("github-nav-link");
-  const leaderboardControls = document.getElementById("leaderboard-controls");
-  if (langToggle) langToggle.classList.toggle("hidden", _matchmateMode);
-  if (navGithub) navGithub.classList.toggle("hidden", _matchmateMode);
-  if (leaderboardControls) leaderboardControls.classList.toggle("hidden", _matchmateMode);
-  if (_matchmateMode) {
-    _lang = "zh";
-    _activeLeaderboardView = "main";
-    _leaderboardSort = "result";
-  }
 }
 
 function setTheme(theme, options = {}) {
@@ -435,31 +368,17 @@ const MODEL_DISPLAY_NAMES = {
 function fmtModelId(model) {
   const id = typeof model === "string" ? model : model?.model_id;
   const displayName = typeof model === "string" ? null : model?.display_name;
-  if (displayName) return formatModelNameForMode(displayName);
+  if (displayName) return displayName;
   if (!id) return id;
-  if (MODEL_DISPLAY_NAMES[id]) return formatModelNameForMode(MODEL_DISPLAY_NAMES[id]);
+  if (MODEL_DISPLAY_NAMES[id]) return MODEL_DISPLAY_NAMES[id];
   const words = String(id).replaceAll("_", "-").split("-");
   const acronyms = new Set(["gpt", "glm", "qwen", "kimi", "llama", "gemma", "api"]);
-  const generated = words.filter(Boolean).map(word => {
+  return words.filter(Boolean).map(word => {
     const lower = word.toLowerCase();
     if (acronyms.has(lower)) return word.toUpperCase();
     if (/^\d+(\.\d+)?$/.test(word)) return word;
     return word.charAt(0).toUpperCase() + word.slice(1);
   }).join(" ");
-  return formatModelNameForMode(generated);
-}
-
-function formatModelNameForMode(name) {
-  if (!_matchmateMode) return name;
-  let out = String(name || "");
-  out = out.replace(/\s*\(\s*(?:thinking\s*\+\s*search|thinking\+search|search)\s*\)\s*/ig, "（自主搜索）");
-  out = out.replace(/\s*\(\s*thinking\s*\)\s*/ig, "");
-  out = out.replace(/\s*（\s*自主搜索\s*）\s*/g, "（自主搜索）");
-  out = out.replace(/\bDoubao\s+Seed\b/ig, "豆包 Seed");
-  if (/^Qwen/i.test(out) && !/^千问\s/i.test(out)) {
-    out = out.replace(/^Qwen/i, "千问 Qwen");
-  }
-  return out.trim();
 }
 
 let _allPreds = [];     // flat registry of all rendered pred cards
@@ -1046,14 +965,14 @@ function _renderDetails(p, f) {
   return html || `<div class="text-gray-500 text-xs">${t("no_details")}</div>`;
 }
 
-function renderSourcesList(sources) {
+function renderSourcesPanel(idx) {
+  const p = _allPreds[idx] || {};
+  const sources = p.sources || [];
   if (!sources.length) return "";
-  const visibleSources = _matchmateMode ? sources.slice(0, 20) : sources;
-  const omitted = Math.max(0, sources.length - visibleSources.length);
   return `
     <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("search_sources")}</div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-      ${visibleSources.map(s => {
+      ${sources.map(s => {
         const title = esc(s.title || s.url || "");
         const url   = esc(s.url || "");
         const date  = s.accessed_at ? esc(s.accessed_at.slice(0, 10)) : "";
@@ -1063,14 +982,7 @@ function renderSourcesList(sources) {
           ${date ? `<span class="text-gray-600 ml-1">${date}</span>` : ""}
         </div>`;
       }).join("")}
-    </div>
-    ${omitted ? `<div class="mt-2 text-xs text-gray-500">${t("sources_omitted", { count: omitted })}</div>` : ""}
-  `;
-}
-
-function renderSourcesPanel(idx) {
-  const p = _allPreds[idx] || {};
-  return renderSourcesList(p.sources || []);
+    </div>`;
 }
 
 function renderDetailsPanel(idx) {
@@ -1305,121 +1217,6 @@ function renderAllPredCards(preds, f, startIdx) {
   });
 }
 
-function liveMinuteLabel(live) {
-  if (live && live.elapsed != null) return `${live.elapsed}′`;
-  return (live && live.status) ? live.status : t("live");
-}
-
-function liveScoreLabel(live) {
-  const sc = (live && live.score) || {};
-  return `${sc.home ?? "?"}-${sc.away ?? "?"}`;
-}
-
-function liveTeamName(side, f) {
-  if (side === "home") return f.home || t("home");
-  if (side === "away") return f.away || t("away");
-  return side || "—";
-}
-
-function renderLivePredictions(items, f) {
-  if (!items || !items.length) return "";
-  const hName = f.home || t("home");
-  const aName = f.away || t("away");
-  return `
-    <div class="mb-4">
-      <div class="flex items-end justify-between gap-3 mb-2">
-        <div>
-          <div class="text-xs text-gray-400 uppercase tracking-wider">${t("live_predictions")}</div>
-          <div class="text-[11px] text-gray-500">${t("live_prediction_note")}</div>
-        </div>
-      </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
-        ${items.map(p => {
-          const b = modelBadge(p.model_id);
-          const live = p.live || {};
-          const wp = p.win_probs || {};
-          const predWinner = winnerFromWinProbs(wp, hName, aName);
-          const score = p.most_likely_score || "—";
-          const updated = p.submitted_at ? fmtLocalKickoff(new Date(p.submitted_at)) : "—";
-          const scorers = p.scorers || [];
-          const sources = p.sources || [];
-          const status = p.status || "ok";
-          const reasoning = (p.reasoning && p.reasoning.overall) || "";
-          if (status !== "ok") {
-            return `
-              <div class="card rounded-lg p-3">
-                <div class="flex items-center justify-between gap-2 mb-2">
-                  <div class="flex items-center gap-2 min-w-0">
-                    <span>${b.emoji}</span>
-                    <span class="font-bold text-xs sm:text-sm text-white truncate">${esc(fmtModelId(p))}</span>
-                    <span class="chip chip-live">LIVE</span>
-                  </div>
-                </div>
-                <div class="rounded-lg px-3 py-2" style="color:#fca5a5;border:1px solid rgba(248,113,113,.28);background:rgba(248,113,113,.08);">
-                  <div class="text-[10px] uppercase tracking-wider mb-1">${t("unavailable")}</div>
-                  <div class="text-xs leading-snug">${esc(p.error_summary || t("unavailable_detail"))}</div>
-                </div>
-              </div>`;
-          }
-          return `
-            <div class="card rounded-lg p-3">
-              <div class="flex items-center justify-between gap-2 mb-2">
-                <div class="flex items-center gap-2 min-w-0">
-                  <span>${b.emoji}</span>
-                  <span class="font-bold text-xs sm:text-sm text-white truncate">${esc(fmtModelId(p))}</span>
-                  <span class="chip chip-live">LIVE</span>
-                </div>
-                ${p.cost_usd != null ? `<span class="text-xs text-gray-600 whitespace-nowrap">${t("cost")}: $${(+p.cost_usd).toFixed(3)}</span>` : ""}
-              </div>
-              <div class="text-[11px] text-gray-500 mb-2">
-                ${esc(t("live_current_snapshot", { score: liveScoreLabel(live), minute: liveMinuteLabel(live) }))}
-                <span class="mx-1">·</span>${esc(t("live_updated_at", { time: updated }))}
-              </div>
-              <div class="grid grid-cols-3 gap-2 mb-3">
-                ${[["home", hName], ["draw", t("draw")], ["away", aName]].map(([key, label]) => `
-                  <div class="rounded-lg px-2 py-2 text-center" style="background:rgba(255,255,255,.055);">
-                    <div class="text-[10px] text-gray-500 uppercase tracking-wider truncate">${esc(label)}</div>
-                    <div class="text-lg font-black font-mono text-gray-100">${fmtPct(wp[key])}</div>
-                  </div>
-                `).join("")}
-              </div>
-              <div class="flex items-start gap-4 flex-wrap mb-3">
-                <div>
-                  <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">${t("pred_winner")}</div>
-                  <div class="text-lg font-black leading-tight" style="color:var(--prediction-primary);">${esc(predWinner || "—")}</div>
-                </div>
-                <div style="width:1px;height:2rem;background:var(--prediction-divider);"></div>
-                <div>
-                  <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">${t("live_final_score")}</div>
-                  <div class="text-lg font-black leading-tight font-mono" style="color:var(--prediction-primary);">${esc(String(score).replace("-", " - "))}</div>
-                </div>
-              </div>
-              <div class="mb-3">
-                <div class="text-xs text-gray-400 uppercase tracking-wider mb-1">${t("future_scorers")}</div>
-                ${scorers.length ? `
-                  <div class="flex flex-wrap gap-1.5">
-                    ${scorers.map(s => `
-                      <span class="chip">
-                        ${esc(s.player)}
-                        ${s.team ? `<span class="text-gray-500">${esc(liveTeamName(s.team, f))}</span>` : ""}
-                        ${s.minute != null ? `<span class="font-mono text-gray-400">${s.minute}′</span>` : ""}
-                        ${s.p != null ? `<span class="font-mono text-gray-400">${fmtPct(s.p)}</span>` : ""}
-                      </span>
-                    `).join("")}
-                  </div>` : `<div class="text-xs text-gray-500">${t("no_future_scorers")}</div>`}
-              </div>
-              ${reasoning ? `<div class="text-sm text-gray-300 leading-relaxed whitespace-pre-wrap">${esc(reasoning)}</div>` : ""}
-              ${sources.length ? `
-                <details class="mt-3">
-                  <summary class="chip hover:bg-white/15 transition text-[11px]">${t("sources", { count: sources.length })}</summary>
-                  <div class="mt-2">${renderSourcesList(sources)}</div>
-                </details>` : ""}
-            </div>`;
-        }).join("")}
-      </div>
-    </div>`;
-}
-
 // ---------- Incoming matches -------------------------------------------------
 
 function _renderOneFixture(nm, cardIdx) {
@@ -1427,7 +1224,6 @@ function _renderOneFixture(nm, cardIdx) {
   const kick  = f.kickoff_utc ? new Date(f.kickoff_utc) : null;
   const cid   = `nm-countdown-${cardIdx}`;
   const preds = nm.predictions || [];
-  const livePreds = nm.live_predictions || [];
   const nmStart = registerPreds(preds, f);
 
   const lv = nm.live;
@@ -1473,11 +1269,13 @@ function _renderOneFixture(nm, cardIdx) {
           </div>
         </div>
       </div>
-      ${renderLivePredictions(livePreds, f)}
       ${preds.length === 0
-        ? (livePreds.length ? "" : `<div class="text-gray-400 text-sm">${t("no_model_predictions")}</div>`)
+        ? `<div class="text-gray-400 text-sm">${t("no_model_predictions")}</div>`
         : renderAllPredCards(preds, f, nmStart)}
       ${f.data_warning ? `<div class="mt-3 text-xs text-amber-300/80">${esc(f.data_warning)}</div>` : ""}
+      ${nm.comment ? `<div class="mt-4 pt-3 border-t border-white/5 text-sm text-gray-400">
+        <span class="text-gray-500 text-xs uppercase tracking-wider mr-2">${t("comment")}</span>${esc(nm.comment)}<span class="ml-2 text-gray-500">——@wzk1015</span>
+      </div>` : ""}
     </div>`;
 
   // Start countdown timer after DOM insertion (called by caller)
@@ -1765,6 +1563,9 @@ function renderHistory(rows) {
         <div class="mt-4 space-y-3">
           ${collapseOnMobile ? "" : fullPitch}
           ${predCards}
+          ${r.comment ? `<div class="mt-4 pt-3 border-t border-white/5 text-sm text-gray-400">
+            <span class="text-gray-500 text-xs uppercase tracking-wider mr-2">${t("comment")}</span>${esc(r.comment)}<span class="ml-2 text-gray-500">——@wzk1015</span>
+          </div>` : ""}
         </div>
       </details>`;
   }).join("");
