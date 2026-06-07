@@ -12,6 +12,7 @@ import hashlib
 import json
 import os
 import re
+import unicodedata
 from pathlib import Path
 from typing import Any
 
@@ -192,6 +193,63 @@ def _looks_nontranslatable(value: str) -> bool:
     return False
 
 
+def _looks_englishish(value: str) -> bool:
+    return bool(re.search(r"[A-Za-z]", str(value or "")))
+
+
+def _cached_zh(cached: Any) -> str:
+    if isinstance(cached, dict):
+        return str(cached.get("zh") or "").strip()
+    return str(cached or "").strip()
+
+
+def _needs_cached_translation(src: str, cached: Any) -> bool:
+    zh = _cached_zh(cached)
+    return (not zh) or (zh == src and _looks_englishish(src))
+
+
+def _needs_cached_entity_translation(src: str, cached: Any) -> bool:
+    zh = _cached_zh(cached)
+    return _needs_cached_translation(src, cached) or _looks_englishish(zh)
+
+
+_ABBREV_ENTITY_RE = re.compile(r"^([A-Z])\.\s+(.+)$")
+
+
+def _latin_key(value: str) -> str:
+    normalized = unicodedata.normalize("NFKD", value)
+    asciiish = "".join(ch for ch in normalized if not unicodedata.combining(ch))
+    return re.sub(r"[^a-z]", "", asciiish.lower())
+
+
+def _fill_abbreviated_entity_translations(entities: dict[str, str], active_strings: set[str]) -> None:
+    full_by_key: dict[tuple[str, str], list[str]] = {}
+    for src, zh in entities.items():
+        if _ABBREV_ENTITY_RE.match(src):
+            continue
+        if not zh or zh == src or _looks_englishish(zh):
+            continue
+        parts = src.strip().split()
+        if len(parts) < 2:
+            continue
+        initial = _latin_key(parts[0][:1])
+        surname = _latin_key(parts[-1])
+        if initial and surname:
+            full_by_key.setdefault((initial, surname), []).append(src)
+
+    for src in active_strings:
+        m = _ABBREV_ENTITY_RE.match(src.strip())
+        if not m:
+            continue
+        initial = _latin_key(m.group(1))
+        surname = _latin_key(m.group(2).split()[-1])
+        candidates = full_by_key.get((initial, surname), [])
+        if len(candidates) == 1:
+            zh = entities.get(candidates[0])
+            if zh and not _looks_englishish(zh):
+                entities[src] = zh
+
+
 def _is_reasoning_path(path: tuple[str, ...]) -> bool:
     return "reasoning" in path and path[-1] in REASONING_KEYS
 
@@ -241,14 +299,28 @@ class LLMTranslator:
         if os.getenv("SITE_TRANSLATION_DISABLE_LLM"):
             self.enabled = False
             return
-        self.api_key = os.getenv("OPENROUTER_API_KEY") or os.getenv("OPENAI_API_KEY")
-        self.base_url = os.getenv("OPENROUTER_BASE_URL") or os.getenv("OPENAI_BASE_URL")
+
+        if os.getenv("OPENROUTER_API_KEY"):
+            self.api_key = os.getenv("OPENROUTER_API_KEY")
+            self.base_url = os.getenv("OPENROUTER_BASE_URL")
+            default_model = "openai/gpt-4.1-mini"
+        elif os.getenv("OPENAI_API_KEY"):
+            self.api_key = os.getenv("OPENAI_API_KEY")
+            self.base_url = os.getenv("OPENAI_BASE_URL")
+            default_model = "gpt-4.1-mini"
+        elif os.getenv("GPTPLUS5_API_KEY"):
+            self.api_key = os.getenv("GPTPLUS5_API_KEY")
+            self.base_url = os.getenv("GPTPLUS5_BASE_URL") or "https://az.gptplus5.com/v1"
+            default_model = "gpt-5.4-mini"
+        else:
+            self.api_key = None
+            self.base_url = None
+            default_model = ""
+
         if not self.api_key:
             self.enabled = False
             return
-        self.model = os.getenv("SITE_TRANSLATION_MODEL") or (
-            "openai/gpt-4.1-mini" if os.getenv("OPENROUTER_API_KEY") else "gpt-4.1-mini"
-        )
+        self.model = os.getenv("SITE_TRANSLATION_MODEL") or default_model
         self.enabled = True
 
     def _client(self):
@@ -462,7 +534,10 @@ def translate_payload_to_zh(payload: dict[str, Any], *, cache_path: Path = CACHE
     texts: dict[str, str] = {}
     _collect_strings(payload, (), entities, texts)
 
-    missing_entities = sorted(s for s in entities if s not in cache["entities"])
+    missing_entities = sorted(
+        s for s in entities
+        if _needs_cached_entity_translation(s, cache["entities"].get(s))
+    )
     print(
         f"[translate] collected entities={len(entities)} "
         f"(cached={len(entities) - len(missing_entities)}, missing={len(missing_entities)}), "
@@ -481,6 +556,7 @@ def translate_payload_to_zh(payload: dict[str, Any], *, cache_path: Path = CACHE
     )
     try:
         cache["entities"].update(llm.translate_entities(missing_entities))
+        _fill_abbreviated_entity_translations(cache["entities"], entities)
         if missing_entities:
             _save_cache(cache, cache_path)
     except Exception as exc:
@@ -488,7 +564,7 @@ def translate_payload_to_zh(payload: dict[str, Any], *, cache_path: Path = CACHE
 
     text_items = []
     for text_id, src in sorted(texts.items()):
-        if text_id in cache["texts"]:
+        if not _needs_cached_translation(src, cache["texts"].get(text_id)):
             continue
         text_items.append({
             "id": text_id,
@@ -522,6 +598,7 @@ def translate_payload_to_zh(payload: dict[str, Any], *, cache_path: Path = CACHE
     for text_id, src in texts.items():
         cache["texts"].setdefault(text_id, {"src": src, "zh": BUILTIN_TEXT_TRANSLATIONS.get(src, src)})
 
+    _fill_abbreviated_entity_translations(cache["entities"], entities)
     _save_cache(cache, cache_path)
     print(
         f"[translate] cache saved: entities={len(cache.get('entities') or {})}, "

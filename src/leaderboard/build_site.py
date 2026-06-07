@@ -199,6 +199,7 @@ def _load_model_roster() -> list[dict]:
 
 
 MODEL_ROSTER = _load_model_roster()
+ACTIVE_MODEL_SETTINGS = {(row["model_id"], row.get("setting")) for row in MODEL_ROSTER}
 
 
 def _prediction_key_from_path(path: Path) -> tuple[str, str | None]:
@@ -465,6 +466,8 @@ def _collect_predictions(
         model_id = rec.get("model_id") or fallback_model_id
         setting = rec.get("setting") or fallback_setting
         if model_id in HIDDEN_SITE_MODELS:
+            continue
+        if ACTIVE_MODEL_SETTINGS and (model_id, setting) not in ACTIVE_MODEL_SETTINGS:
             continue
         seen.add((model_id, setting))
         if rec.get("error"):
@@ -980,7 +983,8 @@ def build_history() -> list[dict]:
             if live and live.get("status") and live.get("status") != "Match Finished":
                 continue  # still live, shows in incoming
             # Exclude matches that kicked off recently but have no result/live yet
-            kick_dt = _parse_iso(hdr.get("kickoff_utc") or "")
+            kick_for_recent_check = hdr.get("kickoff_utc")
+            kick_dt = _parse_iso(kick_for_recent_check) if kick_for_recent_check else None
             if (kick_dt and live is None
                     and kick_dt <= now and now - kick_dt < timedelta(hours=3)):
                 continue

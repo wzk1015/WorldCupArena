@@ -121,6 +121,18 @@ Runs every (model × setting) pair configured in [configs/models.yaml](../config
 
 S2 model search sources are also saved to `data/search_logs/<fixture_id>/` for post-run review.
 
+#### GPTPlus5/New API proxy for plain LLMs
+
+To route supported `closed_llm`, `open_llm`, `search_llm`, and `deep_research_agent` roster entries through the GPTPlus5/New API OpenAI-compatible gateway, set these in `.env`:
+
+```bash
+WCA_MODEL_PROXY=gptplus5
+GPTPLUS5_API_KEY=...
+GPTPLUS5_BASE_URL=https://az.gptplus5.com/v1
+```
+
+The proxy keeps the public `model_id` filenames unchanged while swapping the runtime provider/model slug. Search-enabled entries use the gateway's OpenAI-compatible `web_search_options`; `gemini-deep-research` is routed to the closest GPTPlus5 Gemini thinking model with S2 search because GPTPlus5 does not expose Google's native Interactions deep-research agent API. If a roster entry has no GPTPlus5 mapping, it falls back to the configured provider and prints a warning; currently `llama-4-maverick` and `gemma-7b` have no confirmed GPTPlus5 model slug.
+
 ### 3.4 Grade (T+3h to T+24h after kickoff)
 
 ```bash

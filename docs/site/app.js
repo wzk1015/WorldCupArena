@@ -528,8 +528,9 @@ function openReasoningModal(idx) {
   const p = _allPreds[idx];
   if (!p) return;
   const r = p.reasoning || {};
+  const titleSetting = (!_matchmateMode && p.setting) ? ` (${p.setting})` : "";
   document.getElementById("reasoning-modal-title").textContent =
-    `${fmtModelId(p)} (${p.setting}) — ${t("full_reasoning_suffix")}`;
+    `${fmtModelId(p)}${titleSetting} — ${t("full_reasoning_suffix")}`;
   const rows = Object.entries(reasoningLabels())
     .filter(([k]) => r[k])
     .map(([k, label]) => `
@@ -1156,13 +1157,15 @@ function renderPredCard(p, f, idx, opts = {}) {
 
   const scoreWinner = outcomeFromScore(predScore, hName, aName);
   const predWinner = winnerFromWinProbs(wp, hName, aName) || scoreWinner;
+  const settingChip = (!_matchmateMode && p.setting)
+    ? `<span class="chip chip-${(p.setting || "").toLowerCase()}" data-tip="${esc(settingTip(p.setting))}">${esc(p.setting || "")}</span>`
+    : "";
   const headerHtml = `
       <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
         <div class="flex items-center gap-2">
           <span class="text-base">${b.emoji}</span>
           <span class="font-bold text-xs sm:text-sm text-white">${esc(fmtModelId(p))}</span>
-          <span class="chip chip-${(p.setting || "").toLowerCase()}"
-                data-tip="${esc(settingTip(p.setting))}">${esc(p.setting || "")}</span>
+          ${settingChip}
         </div>
         ${p.cost_usd != null ? `<span class="text-xs text-gray-600">${t("cost")}: $${(+p.cost_usd).toFixed(3)}</span>` : ""}
       </div>`;
@@ -1221,7 +1224,7 @@ function renderPredCard(p, f, idx, opts = {}) {
           </div>
           ${showActualSummary && f.truth ? `<div class="ml-auto">
             <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">${t("actual")}</div>
-            <div class="text-xl font-black font-mono leading-tight whitespace-nowrap" style="color:#fbbf24;">${esc(f.truth.score.replace("-", " - ") || "—")}</div>
+            <div class="text-xl font-black font-mono leading-tight whitespace-nowrap" style="color:#000;">${esc(f.truth.score.replace("-", " - ") || "—")}</div>
             <div class="text-xs font-mono" style="color:#fbbf2480;">${esc(
               f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : f.truth.result === "draw" ? t("draw") : f.truth.result || "—"
             )}</div>
@@ -1615,7 +1618,7 @@ function renderLeaderboard(lb, view) {
               const medal = i === 0 ? "rank-1" : i === 1 ? "rank-2" : i === 2 ? "rank-3" : "";
               const primary = leaderboardMetric(r, primaryKind);
               const settings = Object.keys((lb.by_model_setting || {})[r.model_id] || {}).sort();
-              const settingBadges = settings.map(s =>
+              const settingBadges = _matchmateMode ? "" : settings.map(s =>
                 `<span class="chip chip-${s.toLowerCase()}"
                        data-tip="${esc(settingTip(s))}">${esc(s)}</span>`
               ).join(" ");
@@ -1626,7 +1629,7 @@ function renderLeaderboard(lb, view) {
                     <div class="leaderboard-model-row flex items-center gap-2">
                       <span class="shrink-0">${b.emoji}</span>
                       <span class="leaderboard-model-name font-bold text-white">${esc(fmtModelId(r))}</span>
-                      <span class="leaderboard-setting-badges inline-flex items-center gap-1 flex-wrap">${settingBadges}</span>
+                      ${settingBadges ? `<span class="leaderboard-setting-badges inline-flex items-center gap-1 flex-wrap">${settingBadges}</span>` : ""}
                     </div>
                   </td>
                   <td class="leaderboard-score-cell py-2 px-3 text-right font-mono">
@@ -1713,13 +1716,14 @@ function renderHistory(rows) {
     const scoreHtml = isLive
       ? `<div class="text-3xl font-black font-mono" style="color:#f87171;">${esc(liveScore || "?–?")}</div>
          <div class="text-xs font-semibold mt-0.5" style="color:#fca5a5;">${t("live_red")}${lv.elapsed != null ? ` · ${lv.elapsed}′` : ""}</div>`
-      : `<div class="text-3xl font-black font-mono" style="color:#fbbf24;">${esc((r.result || "—").replace("-", " – "))}</div>`;
+      : `<div class="text-3xl font-black font-mono" style="color:#000;">${esc((r.result || "—").replace("-", " – "))}</div>`;
 
     const hStart = registerPreds(preds, r);
 
     const predCards = renderPredList(preds, r, hStart, `pred-group-history-${hStart}`);
-    const collapseOnMobile = isMobilePredLayout() && rowIdx >= 3;
-    const mobileScoreboard = collapseOnMobile ? `
+    const collapsedByDefault = rowIdx >= 3;
+    const compactMobileSummary = isMobilePredLayout() && collapsedByDefault;
+    const mobileScoreboard = compactMobileSummary ? `
           <div class="mobile-history-scoreboard mt-3 md:hidden">
             <div class="grid grid-cols-3 items-center gap-2">
               <div class="text-center min-w-0">
@@ -1727,7 +1731,7 @@ function renderHistory(rows) {
                 <div class="team-name text-xs font-bold leading-tight">${esc(r.home || "?")}</div>
               </div>
               <div class="text-center">
-                <div class="text-2xl font-black font-mono" style="color:#fbbf24;">${esc((r.result || "—").replace("-", " – "))}</div>
+                <div class="text-2xl font-black font-mono" style="color:#000;">${esc((r.result || "—").replace("-", " – "))}</div>
                 <div class="mt-1 inline-flex chip text-[10px]">${t("show_predictions")}</div>
               </div>
               <div class="text-center min-w-0">
@@ -1757,7 +1761,7 @@ function renderHistory(rows) {
           </div>`;
 
     return `
-      <details${collapseOnMobile ? "" : " open"} class="card rounded-xl p-4 col-span-2">
+      <details${collapsedByDefault ? "" : " open"} class="card rounded-xl p-4 col-span-2">
         <summary class="cursor-pointer select-none">
           <div class="flex items-center justify-between">
           <div>
@@ -1768,7 +1772,7 @@ function renderHistory(rows) {
           ${mobileScoreboard}
         </summary>
         <div class="mt-4 space-y-3">
-          ${collapseOnMobile ? "" : fullPitch}
+          ${compactMobileSummary ? "" : fullPitch}
           ${predCards}
         </div>
       </details>`;
@@ -1777,12 +1781,27 @@ function renderHistory(rows) {
 
 // ---------- Boot -------------------------------------------------------------
 
+function chineseNumber(n) {
+  const nums = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二", "十三", "十四"];
+  return nums[n] || String(n);
+}
+
+function fmtChineseTimeZone(offsetMinutes) {
+  if (!offsetMinutes) return "零时区";
+  const sign = offsetMinutes > 0 ? "东" : "西";
+  const abs = Math.abs(offsetMinutes);
+  const hours = Math.floor(abs / 60);
+  const minutes = abs % 60;
+  const base = `${sign}${chineseNumber(hours)}区`;
+  return minutes ? `${base}${minutes}分` : base;
+}
+
 function fmtTimestamp(iso) {
   if (!iso) return "—";
   const d   = new Date(iso);
   const pad = n => String(n).padStart(2, "0");
   return `${d.getUTCFullYear()}-${pad(d.getUTCMonth()+1)}-${pad(d.getUTCDate())} `
-       + `${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())} (UTC+0)`;
+       + `${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())} 零时区`;
 }
 
 function fmtLocalKickoff(date) {
@@ -1794,8 +1813,7 @@ function fmtLocalKickoff(date) {
   const hr  = pad(date.getHours());
   const mn  = pad(date.getMinutes());
   const off = -date.getTimezoneOffset();
-  const tz  = `UTC${off >= 0 ? "+" : ""}${Math.floor(off / 60)}${off % 60 ? `:${pad(Math.abs(off % 60))}` : ""}`;
-  return `${yr}-${mo}-${dy} ${hr}:${mn} ${tz}`;
+  return `${yr}-${mo}-${dy} ${hr}:${mn} ${fmtChineseTimeZone(off)}`;
 }
 
 function renderSiteData() {

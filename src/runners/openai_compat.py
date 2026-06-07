@@ -20,7 +20,7 @@ class OpenAICompatRunner(BaseRunner):
     def __init__(self, model_cfg: dict[str, Any]):
         super().__init__(model_cfg)
         tools = model_cfg.get("tools") or []
-        self.use_search = "web_search" in tools
+        self.use_search = "web_search" in tools or "google_search" in tools
         self.use_reasoning = bool(
             model_cfg.get("reasoning_effort")
             or (model_cfg.get("provider") == "openai" and model_cfg.get("model", "").startswith("gpt-5"))
@@ -74,12 +74,12 @@ class OpenAICompatRunner(BaseRunner):
             kwargs["max_completion_tokens"] = self.cfg.get("max_tokens", 8192)
             if self.use_reasoning:
                 kwargs["reasoning_effort"] = self.cfg.get("reasoning_effort", "low")
-            if self.use_search:
-                kwargs["web_search_options"] = {}
         else:
             # max_tokens is universally supported across all OpenAI-compat providers
             # (Zhipu, Moonshot, DashScope, xAI, etc.); max_completion_tokens is OpenAI-only
             kwargs["max_tokens"] = self.cfg.get("max_tokens", 8192)
+        if self.use_search:
+            kwargs["web_search_options"] = self.cfg.get("web_search_options", {})
         if self.cfg.get("extra_body"):
             kwargs["extra_body"] = self.cfg["extra_body"]
         if self.cfg.get("stream"):

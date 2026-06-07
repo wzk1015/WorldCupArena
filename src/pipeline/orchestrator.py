@@ -80,8 +80,9 @@ def _iter_model_setting_pairs(models_cfg: dict, settings_cfg: dict):
         if category == "baselines":
             continue
         for m in entries or []:
+            model_cfg = {**m, "model_category": category}
             for s_id in m.get("settings_supported", []):
-                yield m, settings_by_id[s_id]
+                yield model_cfg, settings_by_id[s_id]
 
 
 def _leak_audit(sources: list[dict[str, Any]], lock_at: str) -> dict[str, Any]:

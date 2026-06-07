@@ -138,6 +138,7 @@ finishes.
 | `OPENAI_API_KEY` / `ANTHROPIC_API_KEY` / `GOOGLE_API_KEY` / `XAI_API_KEY` | predict | at least one per provider in `models.yaml` |
 | `DEEPSEEK_API_KEY` / `TOGETHER_API_KEY` / `DASHSCOPE_API_KEY` | open-LLM predict | as above |
 | `PERPLEXITY_API_KEY` / `MIROMIND_API_KEY` | search-LLM / deep-research predict | as above |
+| `WCA_MODEL_PROXY=gptplus5` + `GPTPLUS5_API_KEY` / `GPTPLUS5_BASE_URL` | optional GPTPlus5/New API proxy for supported `closed_llm` / `open_llm` / `search_llm` / `deep_research_agent` entries | optional |
 
 Any provider whose key is missing is simply skipped; the scheduler does not
 fail the whole tick.

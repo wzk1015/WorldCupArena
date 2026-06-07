@@ -217,32 +217,32 @@ open_llm:
     settings_supported: [S1]
     max_run_retries: 1
     timeout_seconds: 180
-  - id: llama-4-maverick
-    display_name: Llama 4 Maverick
-    provider: openrouter
-    model: meta-llama/llama-4-maverick
-    api_key_env: OPENROUTER_API_KEY
-    base_url_env: OPENROUTER_BASE_URL
-    base_url: https://openrouter.ai/api/v1
-    price_per_mtok: { input: 0.15, output: 0.60 }
-    json_mode: false
-    open_weight: true
-    settings_supported: [S1]
-    max_run_retries: 1
-    timeout_seconds: 180
-  - id: gemma-7b
-    display_name: Gemma 4 31B IT
-    provider: openrouter
-    model: google/gemma-4-31b-it
-    api_key_env: OPENROUTER_API_KEY
-    base_url_env: OPENROUTER_BASE_URL
-    base_url: https://openrouter.ai/api/v1
-    price_per_mtok: { input: 0.12, output: 0.37 }
-    json_mode: false
-    open_weight: true
-    settings_supported: [S1]
-    max_run_retries: 1
-    timeout_seconds: 180
+  # - id: llama-4-maverick
+  #   display_name: Llama 4 Maverick
+  #   provider: openrouter
+  #   model: meta-llama/llama-4-maverick
+  #   api_key_env: OPENROUTER_API_KEY
+  #   base_url_env: OPENROUTER_BASE_URL
+  #   base_url: https://openrouter.ai/api/v1
+  #   price_per_mtok: { input: 0.15, output: 0.60 }
+  #   json_mode: false
+  #   open_weight: true
+  #   settings_supported: [S1]
+  #   max_run_retries: 1
+  #   timeout_seconds: 180
+  # - id: gemma-7b
+  #   display_name: Gemma 4 31B IT
+  #   provider: openrouter
+  #   model: google/gemma-4-31b-it
+  #   api_key_env: OPENROUTER_API_KEY
+  #   base_url_env: OPENROUTER_BASE_URL
+  #   base_url: https://openrouter.ai/api/v1
+  #   price_per_mtok: { input: 0.12, output: 0.37 }
+  #   json_mode: false
+  #   open_weight: true
+  #   settings_supported: [S1]
+  #   max_run_retries: 1
+  #   timeout_seconds: 180
 
 search_llm:
   - id: gemini-3.1-pro-preview-thinking-search
