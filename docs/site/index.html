@@ -13,7 +13,9 @@
   (() => {
     const params = new URLSearchParams(window.location.search);
     const theme = params.get("theme") === "light" ? "light" : "dark";
-    const matchmate = params.get("matchmate") === "1";
+    const matchmateParam = params.get("matchmate");
+    const matchmatePath = window.location.pathname.replace(/\/+$/, "") === "/predict";
+    const matchmate = matchmateParam === "1" || (matchmateParam !== "0" && matchmatePath);
     document.documentElement.dataset.theme = theme;
     document.documentElement.dataset.mode = matchmate ? "matchmate" : "worldcuparena";
     document.documentElement.style.colorScheme = theme;
@@ -112,6 +114,28 @@
   .pred-grid { align-items: start; }
   .pred-expanded { grid-column: 1 / -1; }
   .team-name { overflow-wrap: anywhere; }
+  .fixture-logo {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto .5rem;
+    object-fit: contain;
+    display: block;
+  }
+  .fixture-logo-sm {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: .25rem;
+  }
+  @media (min-width: 640px) {
+    .fixture-logo {
+      width: 6rem;
+      height: 6rem;
+    }
+    .fixture-logo-sm {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
   .lang-toggle { min-width: 4.75rem; justify-content:center; }
   html[data-mode="matchmate"] #lang-toggle,
   html[data-mode="matchmate"] #github-nav-link,
@@ -224,6 +248,23 @@
     .pred-expanded {
       padding: .75rem;
       overflow-x: auto;
+    }
+    .win-prob-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .45rem;
+    }
+    .win-prob-card {
+      min-width: 0;
+      padding: .5rem .38rem;
+    }
+    .win-prob-label {
+      max-width: 100%;
+      font-size: .62rem;
+      letter-spacing: 0;
+    }
+    .win-prob-value {
+      font-size: .98rem;
+      line-height: 1.2;
     }
     .leaderboard-table {
       table-layout: fixed;

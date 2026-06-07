@@ -49,6 +49,33 @@ The site supports URL-controlled modes without a build step:
   branding, simplified controls, model display-name cleanup, and source links
   capped to the first 20 items.
 
+
+## MatchMate `/predict/` integration
+
+MatchMate serves this directory directly at `/predict/`. Keep the generated
+payload fresh with a standalone process from the WorldCupArena repo root:
+
+```bash
+python -m src.leaderboard.site_daemon --interval-seconds 600
+```
+
+Each cycle runs `python -m src.pipeline.scheduler tick` and then
+`python -m src.leaderboard.build_site`, so `docs/site/data.en.json`,
+`docs/site/data.zh.json`, and `docs/site/data.json` are rewritten in-place.
+`index.html` and `app.js` are served from this same directory, so checked-out
+HTML/JS updates are visible immediately; add `--git-pull` if this daemon should
+pull source updates before each cycle.
+
+For a local page-only smoke test that does not require API keys or the pipeline:
+
+```bash
+SITE_TRANSLATION_DISABLE_LLM=1 python -m src.leaderboard.site_daemon --once --no-pipeline
+```
+
+When the page is opened under `/predict/`, it automatically enables MatchMate
+presentation mode. Use `/predict/?matchmate=0` to inspect the original
+WorldCupArena presentation.
+
 ## Updating the site locally
 
 ```bash

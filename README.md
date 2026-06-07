@@ -4,7 +4,7 @@ Benchmarking LLMs and deep-research agents on real-world football prediction —
 
 **Check the [website](https://wzk1015.github.io/WorldCupArena/) for leaderboard and predictions!**
 
-**Docs**: [Usage](docs/usage.md) · [Automation](docs/automation.md) · [Integration](docs/integration.md) · [Tech Report](docs/tech_report.md) · [中文技术报告](docs/tech_report_zh.md) · [Announcement](docs/announcement.md) · [中文宣传](docs/promo_zh.md)
+**Docs**: [Usage](docs/usage.md) · [Automation](docs/automation.md) · [Integration](docs/integration.md) · [MatchMate `/predict/`](docs/matchmate_predict.md) · [Tech Report](docs/tech_report.md) · [中文技术报告](docs/tech_report_zh.md) · [Announcement](docs/announcement.md) · [中文宣传](docs/promo_zh.md)
 
 ---
 

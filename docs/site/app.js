@@ -284,7 +284,9 @@ function initialTheme() {
 
 function initialMatchMateMode() {
   const params = new URLSearchParams(window.location.search);
-  return params.get("matchmate") === "1";
+  const matchmateParam = params.get("matchmate");
+  const matchmatePath = window.location.pathname.replace(/\/+$/, "") === "/predict";
+  return matchmateParam === "1" || (matchmateParam !== "0" && matchmatePath);
 }
 
 const _matchmateMode = initialMatchMateMode();
@@ -1082,6 +1084,9 @@ function renderDetailsPanel(idx) {
   const top3 = scoreDist.slice(0, 3);
   const hName = f.home || t("home");
   const aName = f.away || t("away");
+  const winProbItems = isMobilePredLayout()
+    ? [["home", t("h")], ["draw", t("draw")], ["away", t("a")]]
+    : [["home", hName], ["draw", t("draw")], ["away", aName]];
   const hasReason = Object.keys(reasoning).length > 0;
 
   return `
@@ -1089,12 +1094,11 @@ function renderDetailsPanel(idx) {
       ${wp.home != null ? `
       <div>
         <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("win_probabilities")}</div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          ${[["home", hName], ["draw", t("draw")], ["away", aName]
-            ].map(([k, label]) => `
-            <div class="rounded-lg px-3 py-2 text-center" style="background:rgba(255,255,255,.06);">
-              <div class="text-[10px] text-gray-400 uppercase tracking-wider">${esc(label)}</div>
-              <div class="text-lg font-black font-mono text-gray-100">${fmtPct(wp[k])}</div>
+        <div class="win-prob-grid grid grid-cols-3 gap-2 sm:gap-3">
+          ${winProbItems.map(([k, label]) => `
+            <div class="win-prob-card rounded-lg px-2 sm:px-3 py-2 text-center" style="background:rgba(255,255,255,.06);">
+              <div class="win-prob-label text-[10px] text-gray-400 uppercase tracking-wider truncate">${esc(label)}</div>
+              <div class="win-prob-value text-base sm:text-lg font-black font-mono text-gray-100">${fmtPct(wp[k])}</div>
             </div>`).join("")}
         </div>
       </div>` : ""}
@@ -1259,8 +1263,9 @@ function renderPredGrid(preds, f, startIdx, groupId, opts = {}) {
 
   const renderRows = (items, hiddenRows) => {
     const rows = [];
-    for (let rowStart = 0; rowStart < items.length; rowStart += 2) {
-      const cards = items.slice(rowStart, rowStart + 2).map(item => `
+    const rowSize = isMobilePredLayout() ? 1 : 2;
+    for (let rowStart = 0; rowStart < items.length; rowStart += rowSize) {
+      const cards = items.slice(rowStart, rowStart + rowSize).map(item => `
         <div>${renderPredCard(item.pred, f, item.idx, {
           showActualSummary: opts.showActualSummary,
           isExtra: hiddenRows,
@@ -1461,13 +1466,13 @@ function _renderOneFixture(nm, cardIdx) {
       <div class="pitch rounded-xl p-3 sm:p-5 mb-4 sm:mb-6">
         <div class="grid grid-cols-3 items-center gap-2">
           <div class="text-center">
-            ${f.home_logo ? `<img src="${esc(f.home_logo)}" alt="${esc(f.home)}" class="h-16 sm:h-24 mx-auto mb-2"/>` : `<div class="text-4xl">🏠</div>`}
+            ${f.home_logo ? `<img src="${esc(f.home_logo)}" alt="${esc(f.home)}" class="fixture-logo"/>` : `<div class="text-4xl">🏠</div>`}
             <div class="team-name font-bold text-sm sm:text-lg leading-tight">${esc(f.home || "?")}</div>
             ${nP > 0 ? `<div class="text-xs text-gray-400">${t("win", { pct: fmtPct(agg.home) })}</div>` : ""}
           </div>
           <div class="text-center">${centerMiddle}</div>
           <div class="text-center">
-            ${f.away_logo ? `<img src="${esc(f.away_logo)}" alt="${esc(f.away)}" class="h-16 sm:h-24 mx-auto mb-2"/>` : `<div class="text-4xl">🛫</div>`}
+            ${f.away_logo ? `<img src="${esc(f.away_logo)}" alt="${esc(f.away)}" class="fixture-logo"/>` : `<div class="text-4xl">🛫</div>`}
             <div class="team-name font-bold text-sm sm:text-lg leading-tight">${esc(f.away || "?")}</div>
             ${nP > 0 ? `<div class="text-xs text-gray-400">${t("win", { pct: fmtPct(agg.away) })}</div>` : ""}
           </div>
@@ -1718,7 +1723,7 @@ function renderHistory(rows) {
           <div class="mobile-history-scoreboard mt-3 md:hidden">
             <div class="grid grid-cols-3 items-center gap-2">
               <div class="text-center min-w-0">
-                ${r.home_logo ? `<img src="${esc(r.home_logo)}" alt="${esc(r.home)}" class="h-8 mx-auto mb-1"/>` : `<div class="text-2xl">🏠</div>`}
+                ${r.home_logo ? `<img src="${esc(r.home_logo)}" alt="${esc(r.home)}" class="fixture-logo fixture-logo-sm"/>` : `<div class="text-2xl">🏠</div>`}
                 <div class="team-name text-xs font-bold leading-tight">${esc(r.home || "?")}</div>
               </div>
               <div class="text-center">
@@ -1726,7 +1731,7 @@ function renderHistory(rows) {
                 <div class="mt-1 inline-flex chip text-[10px]">${t("show_predictions")}</div>
               </div>
               <div class="text-center min-w-0">
-                ${r.away_logo ? `<img src="${esc(r.away_logo)}" alt="${esc(r.away)}" class="h-8 mx-auto mb-1"/>` : `<div class="text-2xl">🛫</div>`}
+                ${r.away_logo ? `<img src="${esc(r.away_logo)}" alt="${esc(r.away)}" class="fixture-logo fixture-logo-sm"/>` : `<div class="text-2xl">🛫</div>`}
                 <div class="team-name text-xs font-bold leading-tight">${esc(r.away || "?")}</div>
               </div>
             </div>
@@ -1735,7 +1740,7 @@ function renderHistory(rows) {
           <div class="pitch rounded-xl p-3 sm:p-4 mb-4">
             <div class="grid grid-cols-3 items-center gap-2">
               <div class="text-center">
-                ${r.home_logo ? `<img src="${esc(r.home_logo)}" alt="${esc(r.home)}" class="h-16 sm:h-24 mx-auto mb-2"/>` : `<div class="text-3xl">🏠</div>`}
+                ${r.home_logo ? `<img src="${esc(r.home_logo)}" alt="${esc(r.home)}" class="fixture-logo"/>` : `<div class="text-3xl">🏠</div>`}
                 <div class="team-name font-bold text-sm sm:text-lg leading-tight">${esc(r.home || "?")}</div>
               </div>
               <div class="text-center">
@@ -1745,7 +1750,7 @@ function renderHistory(rows) {
                 ${renderVenueLocation(r)}
               </div>
               <div class="text-center">
-                ${r.away_logo ? `<img src="${esc(r.away_logo)}" alt="${esc(r.away)}" class="h-16 sm:h-24 mx-auto mb-2"/>` : `<div class="text-3xl">🛫</div>`}
+                ${r.away_logo ? `<img src="${esc(r.away_logo)}" alt="${esc(r.away)}" class="fixture-logo"/>` : `<div class="text-3xl">🛫</div>`}
                 <div class="team-name font-bold text-sm sm:text-lg leading-tight">${esc(r.away || "?")}</div>
               </div>
             </div>

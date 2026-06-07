@@ -46,6 +46,7 @@ DEFAULT_ENTITY_TRANSLATIONS = {
     "DFB Pokal": "德国杯",
     "DFB-Pokal": "德国杯",
     "FA Cup": "足总杯",
+    "Group Stage": "小组赛",
     "Final": "决赛",
     "Semi-finals": "半决赛",
     "Quarter-finals": "四分之一决赛",
@@ -407,6 +408,24 @@ def _glossary_for_text(text: str, entities: dict[str, str], *, limit: int = 80) 
     return dict(pairs[:limit])
 
 
+def _translate_entity_string(value: str, cache: dict[str, Any]) -> str:
+    entities = cache.get("entities", {})
+    exact = entities.get(value)
+    if exact and exact != value:
+        return exact
+    # API-Football often returns stages like "Group Stage - 1" or
+    # "Regular Season - 38". Translate the known phase prefix and preserve the
+    # round suffix instead of leaving the whole combined string in English.
+    for sep in (" - ", " – ", " — "):
+        if sep not in value:
+            continue
+        prefix, suffix = value.split(sep, 1)
+        translated_prefix = entities.get(prefix)
+        if translated_prefix:
+            return f"{translated_prefix}{sep}{suffix}"
+    return value
+
+
 def _translate_string(value: str, path: tuple[str, ...], cache: dict[str, Any]) -> str:
     if _looks_nontranslatable(value):
         return value
@@ -414,7 +433,7 @@ def _translate_string(value: str, path: tuple[str, ...], cache: dict[str, Any]) 
     if key in POSITION_KEYS:
         return POSITION_ZH.get(value, value)
     if _is_entity_path(path):
-        return cache.get("entities", {}).get(value, value)
+        return _translate_entity_string(value, cache)
     if _is_text_path(path):
         row = cache.get("texts", {}).get(_sha(value))
         return (row or {}).get("zh", value)
