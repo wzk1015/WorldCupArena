@@ -1559,7 +1559,7 @@ function renderPredCard(p, f, idx, opts = {}) {
           <span class="font-bold text-xs sm:text-sm text-white">${esc(fmtModelId(p))}</span>
           ${settingChip}
         </div>
-        ${p.cost_usd != null ? `<span class="text-xs text-gray-600">${t("cost")}: $${(+p.cost_usd).toFixed(3)}</span>` : ""}
+        ${(!_matchmateMode && p.cost_usd != null) ? `<span class="text-xs text-gray-600">${t("cost")}: $${(+p.cost_usd).toFixed(3)}</span>` : ""}
       </div>`;
 
   if (status !== "ok") {
@@ -2047,7 +2047,7 @@ function renderLivePredictions(items, f) {
                   <span class="font-bold text-xs sm:text-sm text-white truncate">${esc(fmtModelId(p))}</span>
                   <span class="chip chip-live">LIVE</span>
                 </div>
-                ${p.cost_usd != null ? `<span class="text-xs text-gray-600 whitespace-nowrap">${t("cost")}: $${(+p.cost_usd).toFixed(3)}</span>` : ""}
+                ${(!_matchmateMode && p.cost_usd != null) ? `<span class="text-xs text-gray-600 whitespace-nowrap">${t("cost")}: $${(+p.cost_usd).toFixed(3)}</span>` : ""}
               </div>
               <div class="text-[11px] text-gray-500 mb-2">
                 ${esc(liveBasisLabel(live, p.submitted_at))}
