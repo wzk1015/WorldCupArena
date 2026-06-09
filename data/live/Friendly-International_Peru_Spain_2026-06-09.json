@@ -56,7 +56,7 @@
       },
       "goals": {
         "home": 0,
-        "away": 2
+        "away": 3
       },
       "score": {
         "halftime": {
@@ -65,7 +65,7 @@
         },
         "fulltime": {
           "home": 0,
-          "away": 2
+          "away": 3
         },
         "extratime": {
           "home": null,
@@ -120,6 +120,28 @@
           "comments": "Right foot shot",
           "type": "Goal",
           "detail": "Normal Goal"
+        },
+        {
+          "time": {
+            "elapsed": 53,
+            "extra": null
+          },
+          "team": {
+            "id": 18710,
+            "name": "Spain",
+            "logo": "https://cdn.sportmonks.com/images/soccer/teams/22/18710.png"
+          },
+          "player": {
+            "id": 254169,
+            "name": "Pedro Gallese"
+          },
+          "assist": {
+            "id": null,
+            "name": null
+          },
+          "comments": "Own Goal",
+          "type": "Goal",
+          "detail": "Own Goal"
         },
         {
           "time": {
@@ -617,7 +639,7 @@
           "statistics": [
             {
               "type": "Corner Kicks",
-              "value": 2
+              "value": 3
             },
             {
               "type": "Total Shots",
@@ -625,11 +647,11 @@
             },
             {
               "type": "Ball Possession",
-              "value": "36.0%"
+              "value": "35.0%"
             },
             {
               "type": "Fouls",
-              "value": 0
+              "value": 2
             },
             {
               "type": "Goalkeeper Saves",
@@ -651,7 +673,7 @@
           "statistics": [
             {
               "type": "Corner Kicks",
-              "value": 3
+              "value": 4
             },
             {
               "type": "Total Shots",
@@ -659,11 +681,11 @@
             },
             {
               "type": "Ball Possession",
-              "value": "64.0%"
+              "value": "65.0%"
             },
             {
               "type": "Fouls",
-              "value": 3
+              "value": 4
             },
             {
               "type": "Goalkeeper Saves",
@@ -758,7 +780,7 @@
         "type_id": 1525,
         "participant_id": 18710,
         "score": {
-          "goals": 2,
+          "goals": 3,
           "participant": "away"
         },
         "description": "CURRENT"
@@ -791,7 +813,7 @@
         "type_id": 2,
         "participant_id": 18710,
         "score": {
-          "goals": 2,
+          "goals": 3,
           "participant": "away"
         },
         "description": "2ND_HALF"
@@ -824,7 +846,7 @@
         "type_id": 48996,
         "participant_id": 18710,
         "score": {
-          "goals": 0,
+          "goals": 1,
           "participant": "away"
         },
         "description": "2ND_HALF_ONLY"
@@ -957,6 +979,38 @@
           "name": "Goal",
           "code": "goal",
           "developer_name": "GOAL",
+          "model_type": "event",
+          "stat_group": null
+        }
+      },
+      {
+        "id": 157139258,
+        "fixture_id": 19701371,
+        "period_id": 6987303,
+        "participant_id": 18710,
+        "type_id": 15,
+        "section": "event",
+        "player_id": 254169,
+        "related_player_id": null,
+        "player_name": "Pedro Gallese",
+        "related_player_name": null,
+        "result": "0-3",
+        "info": "Own Goal",
+        "addition": "1st Own Goal",
+        "minute": 53,
+        "extra_minute": null,
+        "injured": null,
+        "on_bench": false,
+        "coach_id": null,
+        "sub_type_id": 15,
+        "detailed_period_id": 6987303,
+        "rescinded": null,
+        "sort_order": 3,
+        "type": {
+          "id": 15,
+          "name": "Own Goal",
+          "code": "owngoal",
+          "developer_name": "OWNGOAL",
           "model_type": "event",
           "stat_group": null
         }
@@ -2985,7 +3039,7 @@
         "type_id": 34,
         "participant_id": 18710,
         "data": {
-          "value": 3
+          "value": 4
         },
         "location": "away",
         "type": {
@@ -3003,7 +3057,7 @@
         "type_id": 34,
         "participant_id": 18775,
         "data": {
-          "value": 2
+          "value": 3
         },
         "location": "home",
         "type": {
@@ -3093,7 +3147,7 @@
         "type_id": 43,
         "participant_id": 18710,
         "data": {
-          "value": 61
+          "value": 79
         },
         "location": "away",
         "type": {
@@ -3111,7 +3165,7 @@
         "type_id": 43,
         "participant_id": 18775,
         "data": {
-          "value": 22
+          "value": 28
         },
         "location": "home",
         "type": {
@@ -3129,7 +3183,7 @@
         "type_id": 44,
         "participant_id": 18710,
         "data": {
-          "value": 19
+          "value": 32
         },
         "location": "away",
         "type": {
@@ -3147,7 +3201,7 @@
         "type_id": 44,
         "participant_id": 18775,
         "data": {
-          "value": 5
+          "value": 10
         },
         "location": "home",
         "type": {
@@ -3165,7 +3219,7 @@
         "type_id": 45,
         "participant_id": 18710,
         "data": {
-          "value": 64
+          "value": 65
         },
         "location": "away",
         "type": {
@@ -3183,7 +3237,7 @@
         "type_id": 45,
         "participant_id": 18775,
         "data": {
-          "value": 36
+          "value": 35
         },
         "location": "home",
         "type": {
@@ -3345,7 +3399,7 @@
         "type_id": 52,
         "participant_id": 18710,
         "data": {
-          "value": 2
+          "value": 3
         },
         "location": "away",
         "type": {
@@ -3399,7 +3453,7 @@
         "type_id": 53,
         "participant_id": 18775,
         "data": {
-          "value": 3
+          "value": 4
         },
         "location": "home",
         "type": {
@@ -3453,7 +3507,7 @@
         "type_id": 56,
         "participant_id": 18710,
         "data": {
-          "value": 3
+          "value": 4
         },
         "location": "away",
         "type": {
@@ -3471,7 +3525,7 @@
         "type_id": 56,
         "participant_id": 18775,
         "data": {
-          "value": 0
+          "value": 2
         },
         "location": "home",
         "type": {
@@ -3561,7 +3615,7 @@
         "type_id": 59,
         "participant_id": 18710,
         "data": {
-          "value": 4
+          "value": 5
         },
         "location": "away",
         "type": {
@@ -3597,7 +3651,7 @@
         "type_id": 60,
         "participant_id": 18710,
         "data": {
-          "value": 11
+          "value": 12
         },
         "location": "away",
         "type": {
@@ -3615,7 +3669,7 @@
         "type_id": 60,
         "participant_id": 18775,
         "data": {
-          "value": 8
+          "value": 11
         },
         "location": "home",
         "type": {
@@ -3669,7 +3723,7 @@
         "type_id": 78,
         "participant_id": 18710,
         "data": {
-          "value": 1
+          "value": 2
         },
         "location": "away",
         "type": {
@@ -3687,7 +3741,7 @@
         "type_id": 78,
         "participant_id": 18775,
         "data": {
-          "value": 2
+          "value": 3
         },
         "location": "home",
         "type": {
@@ -3741,7 +3795,7 @@
         "type_id": 80,
         "participant_id": 18710,
         "data": {
-          "value": 379
+          "value": 436
         },
         "location": "away",
         "type": {
@@ -3759,7 +3813,7 @@
         "type_id": 80,
         "participant_id": 18775,
         "data": {
-          "value": 215
+          "value": 251
         },
         "location": "home",
         "type": {
@@ -3772,7 +3826,7 @@
         }
       },
       {
-        "id": 934522205,
+        "id": 934524931,
         "fixture_id": 19701371,
         "type_id": 82,
         "participant_id": 18710,
@@ -3790,12 +3844,12 @@
         }
       },
       {
-        "id": 934522204,
+        "id": 934524930,
         "fixture_id": 19701371,
         "type_id": 82,
         "participant_id": 18775,
         "data": {
-          "value": 88
+          "value": 87
         },
         "location": "home",
         "type": {
@@ -3885,7 +3939,7 @@
         "type_id": 98,
         "participant_id": 18710,
         "data": {
-          "value": 1
+          "value": 4
         },
         "location": "away",
         "type": {
@@ -3903,7 +3957,7 @@
         "type_id": 98,
         "participant_id": 18775,
         "data": {
-          "value": 0
+          "value": 1
         },
         "location": "home",
         "type": {
@@ -3921,7 +3975,7 @@
         "type_id": 100,
         "participant_id": 18710,
         "data": {
-          "value": 2
+          "value": 4
         },
         "location": "away",
         "type": {
@@ -3939,7 +3993,7 @@
         "type_id": 100,
         "participant_id": 18775,
         "data": {
-          "value": 6
+          "value": 7
         },
         "location": "home",
         "type": {
@@ -3957,7 +4011,7 @@
         "type_id": 106,
         "participant_id": 18710,
         "data": {
-          "value": 5
+          "value": 12
         },
         "location": "away",
         "type": {
@@ -3975,7 +4029,7 @@
         "type_id": 106,
         "participant_id": 18775,
         "data": {
-          "value": 6
+          "value": 12
         },
         "location": "home",
         "type": {
@@ -3993,7 +4047,7 @@
         "type_id": 109,
         "participant_id": 18710,
         "data": {
-          "value": 3
+          "value": 4
         },
         "location": "away",
         "type": {
@@ -4011,7 +4065,7 @@
         "type_id": 109,
         "participant_id": 18775,
         "data": {
-          "value": 0
+          "value": 2
         },
         "location": "home",
         "type": {
@@ -4101,7 +4155,7 @@
         "type_id": 1527,
         "participant_id": 18710,
         "data": {
-          "value": 1
+          "value": 2
         },
         "location": "away",
         "type": {
@@ -4119,7 +4173,7 @@
         "type_id": 1527,
         "participant_id": 18775,
         "data": {
-          "value": 2
+          "value": 3
         },
         "location": "home",
         "type": {
@@ -4137,7 +4191,7 @@
         "type_id": 1605,
         "participant_id": 18710,
         "data": {
-          "value": 100
+          "value": 80
         },
         "location": "away",
         "type": {
@@ -4155,7 +4209,7 @@
         "type_id": 1605,
         "participant_id": 18775,
         "data": {
-          "value": 0
+          "value": 67
         },
         "location": "home",
         "type": {

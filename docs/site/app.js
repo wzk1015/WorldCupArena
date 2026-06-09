@@ -1590,9 +1590,9 @@ function renderPredCard(p, f, idx, opts = {}) {
       <div class="${livePred ? "grid grid-cols-1 sm:grid-cols-2 gap-3" : ""} mb-2">
         ${predWinner || top3.length ? `
         <div class="rounded-lg px-3 py-2" style="min-height:9rem;display:flex;flex-direction:column;background:${livePred ? "rgba(255,255,255,.035)" : "transparent"};border:${livePred ? "1px solid rgba(255,255,255,.06)" : "0"};">
-          <div style="flex:1 1 auto;">
-            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1.5">${t("prematch_prediction")}</div>
-            <div class="flex items-start gap-3 sm:gap-4 flex-wrap">
+          <div style="flex:1 1 auto;display:flex;flex-direction:column;">
+            <div class="text-[10px] text-gray-500 uppercase tracking-wider">${t("prematch_prediction")}</div>
+            <div class="flex items-start gap-3 sm:gap-4 flex-wrap" style="margin-top:auto;margin-bottom:auto;">
               <div>
                 <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">${t("pred_winner")}</div>
                 ${(() => {

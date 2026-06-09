@@ -1,0 +1,751 @@
+{
+  "fixture_id": "Friendly-International_Peru_Spain_2026-06-09",
+  "provider_fixture_id": "19701371",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-09T03:22:09+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 67,
+    "score": {
+      "home": 0,
+      "away": 3
+    },
+    "home": "Peru",
+    "away": "Spain",
+    "competition": "Friendly International",
+    "stage": "Friendlies 1",
+    "kickoff_utc": "2026-06-09T02:00:00+00:00",
+    "venue": "Estadio Cuauhtémoc",
+    "venue_city": "Puebla"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.001,
+      "draw": 0.004,
+      "away": 0.995
+    },
+    "most_likely_score": "0-4",
+    "scorers": [
+      {
+        "player": "Dani Olmo",
+        "minute": 78,
+        "p": 0.25,
+        "team": "away"
+      },
+      {
+        "player": "Ferran Torres",
+        "minute": 85,
+        "p": 0.22,
+        "team": "away"
+      }
+    ],
+    "reasoning": {
+      "overall": "比赛进行到第67分钟，西班牙已经以3-0遥遥领先秘鲁，并以65%的控球率完全掌控了比赛节奏。下半场初段西班牙进行了大规模轮换，换上了奥尔莫（Dani Olmo）和皮诺（Yéremy Pino）等生力军，这不仅保持了前场的压迫力，也让球队有足够的体能继续冲击秘鲁防线。秘鲁在进攻端表现乏力，难以制造实质性威胁。预计西班牙将稳健控制局面，并极有可能利用替补球员的活力在比赛尾声阶段再入一球，最终以4-0锁定胜局。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1351,
+    "output": 1240
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.009230549999999999,
+  "wall_seconds": 14.703,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.001,\n    \"draw\": 0.004,\n    \"away\": 0.995\n  },\n  \"most_likely_score\": \"0-4\",\n  \"scorers\": [\n    {\n      \"player\": \"Dani Olmo\",\n      \"team\": \"away\",\n      \"minute\": 78,\n      \"p\": 0.25\n    },\n    {\n      \"player\": \"Ferran Torres\",\n      \"team\": \"away\",\n      \"minute\": 85,\n      \"p\": 0.22\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛进行到第67分钟，西班牙已经以3-0遥遥领先秘鲁，并以65%的控球率完全掌控了比赛节奏。下半场初段西班牙进行了大规模轮换，换上了奥尔莫（Dani Olmo）和皮诺（Yéremy Pino）等生力军，这不仅保持了前场的压迫力，也让球队有足够的体能继续冲击秘鲁防线。秘鲁在进攻端表现乏力，难以制造实质性威胁。预计西班牙将稳健控制局面，并极有可能利用替补球员的活力在比赛尾声阶段再入一球，最终以4-0锁定胜局。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Game State Analysis and Prediction**\n\nOkay, let's break this down. Peru versus Spain, Spain is up 3-0 in the 67th minute. The flow of the game, based on possession (65% for Spain), is overwhelmingly in Spain's favor. They've made some key substitutions at half-time, bringing on fresh attackers like Olmo and Pino. Considering the current dominance and time remaining (around 23 minutes plus stoppage time), an immediate review of the probabilities is warranted.\n\nThe win probabilities are almost absurdly lopsided in favor of Spain: 0.995 for an away win, 0.001 for a home win, and 0.004 for a draw. Let's not waste our time on those. Given the situation, it is very likely Spain will score one more goal.\n\nOriginally, I was leaning towards a 0-4 final score, predicting a goal for either Olmo or Pino, but then I thought, hold on, the current score is 0-3 with 23 minutes left. Let's predict a final of 0-4, which is compatible with the win probability.\n\nSo, I'm going with a final score of 0-4. I'll need to choose a scorer. The goal needs to come after the 67th minute, so let's say Dani Olmo scores in the 78th minute (0.25 probability) or Ferran Torres scores in the 82nd minute (0.20 probability). I need to make the data consistent. Olmo is a better pick, he's fresh. So, the prediction is now \"0-4\". This must be compatible with the win probability.\n\nI've checked the substitutions again: Olmo came on for Fabian Ruiz, Pino came on for Mikel Oyarzabal, and Ferran Torres is still on the pitch.\n\nAlright, time to package this up neatly.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-09T02:03:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": null,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.13,
+        "draw": 0.22,
+        "away": 0.65
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Alvaro Morata",
+          "minute": 32,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 65,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "With the match just kicking off at a neutral venue in Mexico, Spain enters as the clear favorite. Their superior squad depth, technical quality, and tactical organization give them a significant edge over Peru, making a comfortable away win the most likely outcome."
+      },
+      "sources": [],
+      "cost_usd": 0.0050778,
+      "tokens": {
+        "input": 630,
+        "output": 701
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.857
+    },
+    {
+      "submitted_at": "2026-06-09T02:13:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": null,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.12,
+        "away": 0.85
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Alvaro Morata",
+          "minute": 34,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 68,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "Spain has taken an early lead and is dominating possession with 71%. Given the significant gap in quality and the early advantage, Spain is highly likely to control the rest of the match and extend their lead."
+      },
+      "sources": [],
+      "cost_usd": 0.0046000500000000005,
+      "tokens": {
+        "input": 763,
+        "output": 603
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.142
+    },
+    {
+      "submitted_at": "2026-06-09T02:19:34+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 19,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.14,
+        "away": 0.82
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Alvaro Morata",
+          "minute": 55,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 78,
+          "p": 0.3,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "Spain has taken an early lead and is dominating possession with 70%. Given their superior squad quality and current advantage, they are highly likely to control the rest of the match and secure the win, potentially adding another goal."
+      },
+      "sources": [],
+      "cost_usd": 0.0069657,
+      "tokens": {
+        "input": 784,
+        "output": 975
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.94
+    },
+    {
+      "submitted_at": "2026-06-09T02:25:14+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 25,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.15,
+        "away": 0.8
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Alvaro Morata",
+          "minute": 74,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 58,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "Spain has taken an early lead and is completely dominating possession (68%) while preventing Peru from registering a single shot. Given the significant gap in quality and the current match dynamics, Spain is highly likely to control the rest of the game and add to their advantage."
+      },
+      "sources": [],
+      "cost_usd": 0.0042,
+      "tokens": {
+        "input": 784,
+        "output": 536
+      },
+      "tool_calls": 0,
+      "wall_seconds": 33.491
+    },
+    {
+      "submitted_at": "2026-06-09T02:31:23+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 31,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.14,
+        "away": 0.82
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Álvaro Morata",
+          "minute": 72,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Mikel Oyarzabal",
+          "minute": 55,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第31分钟，西班牙凭借奥亚萨瓦尔（Mikel Oyarzabal）在开场第2分钟的进球以1-0领先秘鲁。从实时数据来看，西班牙占据了69%的绝对控球优势，而秘鲁至今未能完成任何射门，进攻端完全被压制。考虑到西班牙强大的中场控制力和目前的场面优势，预计他们将在下半场继续掌控比赛并寻找扩大比分的机会。秘鲁很难突破西班牙的防线，预测西班牙最终将以2-0获胜。"
+      },
+      "sources": [],
+      "cost_usd": 0.0083412,
+      "tokens": {
+        "input": 924,
+        "output": 1170
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.735
+    },
+    {
+      "submitted_at": "2026-06-09T02:37:04+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 37,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Ferran Torres",
+          "minute": 65,
+          "p": 0.45,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "西班牙在比赛前37分钟内已经取得2-0领先，并且控球率高达69%，完全掌控了比赛节奏。秘鲁进攻乏力，至今没有射正。预计西班牙将轻松获胜，并在下半场继续扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0038619,
+      "tokens": {
+        "input": 990,
+        "output": 448
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.231
+    },
+    {
+      "submitted_at": "2026-06-09T02:42:50+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 42,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.06,
+        "away": 0.92
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Ferran Torres",
+          "minute": 65,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Mikel Oyarzabal",
+          "minute": 78,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第42分钟，西班牙以2-0领先秘鲁。西班牙在控球率（65%）上占据绝对优势，且进攻效率极高，两次射正全部转化为进球（Mikel Oyarzabal和Pedri建功）。秘鲁目前仅有1次射门且无一射正，进攻端缺乏实质性威胁。考虑到两球的领先优势和场面压制，西班牙拿下比赛的概率极高。预计下半场西班牙将继续掌控比赛节奏，并有可能利用对手压上反扑的空间再入一球，最可能的最终比分为0-3。"
+      },
+      "sources": [],
+      "cost_usd": 0.0121275,
+      "tokens": {
+        "input": 990,
+        "output": 1760
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.303
+    },
+    {
+      "submitted_at": "2026-06-09T02:48:45+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.08,
+        "away": 0.9
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Ferran Torres",
+          "minute": 68,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场结束，西班牙以2-0领先秘鲁。西班牙在控球率（63%）和进攻效率上占据绝对优势，两次射正全部转化为进球（奥亚萨瓦尔和佩德里建功）。秘鲁虽然也有4次射门，但难以突破西班牙的防线。考虑到目前两球落后的局面以及双方实力的差距，西班牙在下半场极有可能继续掌控比赛并扩大比分，秘鲁翻盘的希望非常渺茫。预测最终比分为0-3，西班牙轻松取胜。"
+      },
+      "sources": [],
+      "cost_usd": 0.009371249999999998,
+      "tokens": {
+        "input": 1011,
+        "output": 1319
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.037
+    },
+    {
+      "submitted_at": "2026-06-09T02:54:29+00:00",
+      "live": {
+        "status": "Halftime",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.07,
+        "away": 0.9
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Ferran Torres",
+          "minute": 68,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Mikel Oyarzabal",
+          "minute": 75,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "半场结束，西班牙以2-0领先秘鲁。西班牙在控球率上占据绝对优势（65%），并且进攻效率极高，仅有的两次射正全部转化为进球（奥亚萨瓦尔和佩德里分别建功）。秘鲁虽然有5次射门但仅1次射正，难以实质性威胁西班牙的防线。下半场西班牙预计将继续掌控比赛节奏，利用传控消耗对手，并有可能进一步扩大比分。秘鲁翻盘希望渺茫，预计西班牙将轻松取胜。"
+      },
+      "sources": [],
+      "cost_usd": 0.0066916499999999995,
+      "tokens": {
+        "input": 1009,
+        "output": 894
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.265
+    },
+    {
+      "submitted_at": "2026-06-09T03:00:12+00:00",
+      "live": {
+        "status": "Halftime",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.08,
+        "away": 0.9
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Ferran Torres",
+          "minute": 68,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "半场结束时西班牙以2-0领先，控球率高达65%，且进攻效率极高（2次射正全部转化为进球）。秘鲁虽然有5次射门但仅1次射正，难以对西班牙球门造成实质性威胁。预计下半场西班牙将继续掌控比赛节奏，并有可能利用秘鲁压上进攻的空当再入一球，最终轻松取胜。"
+      },
+      "sources": [],
+      "cost_usd": 0.00694365,
+      "tokens": {
+        "input": 1009,
+        "output": 934
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.657
+    },
+    {
+      "submitted_at": "2026-06-09T03:05:55+00:00",
+      "live": {
+        "status": "Halftime",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.08,
+        "away": 0.9
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Ferran Torres",
+          "minute": 68,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "半场结束，西班牙以2-0领先秘鲁，并占据了65%的控球率。西班牙展现了极高的进攻效率，两次射正全部转化为进球。秘鲁虽然有5次射门但仅1次射正，难以对西班牙球门造成实质性威胁。预计下半场西班牙将继续掌控比赛节奏，大概率会进一步扩大比分，秘鲁翻盘希望渺茫。"
+      },
+      "sources": [],
+      "cost_usd": 0.0058600499999999995,
+      "tokens": {
+        "input": 1009,
+        "output": 762
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.45
+    },
+    {
+      "submitted_at": "2026-06-09T03:10:32+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 55,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.06,
+        "away": 0.92
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Dani Olmo",
+          "minute": 72,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Ferran Torres",
+          "minute": 84,
+          "p": 0.22,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第55分钟，西班牙以2-0领先秘鲁，并以64%的控球率完全掌控比赛节奏。西班牙在半场进行了大幅轮换，换上奥尔莫（Dani Olmo）和皮诺（Yéremy Pino）等进攻好手，前场依然保持极强威胁。秘鲁虽然有一定射门尝试，但面对西班牙的防线难以创造绝对得分机会。考虑到两球的领先优势和双方实力差距，西班牙拿下比赛几乎没有悬念，且极有可能利用秘鲁下半场压上反扑的空间再入一球，预测最终比分为0-3。"
+      },
+      "sources": [],
+      "cost_usd": 0.0131964,
+      "tokens": {
+        "input": 1288,
+        "output": 1880
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.325
+    },
+    {
+      "submitted_at": "2026-06-09T03:16:24+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 61,
+        "score": {
+          "home": 0,
+          "away": 3
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.01,
+        "away": 0.99
+      },
+      "most_likely_score": "0-4",
+      "scorers": [
+        {
+          "player": "Dani Olmo",
+          "minute": 76,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Ferran Torres",
+          "minute": 84,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第61分钟，西班牙已在客场取得3-0的巨大领先。西班牙控球率高达65%，牢牢掌控比赛节奏。下半场西班牙换上奥尔莫（Dani Olmo）和皮诺（Yéremy Pino）等进攻好手，体能充沛的替补阵容有望在比赛后段继续扩大比分。秘鲁进攻端乏力，很难在剩余时间内连扳三球，预计西班牙将轻松获胜并可能再入一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.01034565,
+      "tokens": {
+        "input": 1357,
+        "output": 1416
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.426
+    },
+    {
+      "submitted_at": "2026-06-09T03:22:09+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 67,
+        "score": {
+          "home": 0,
+          "away": 3
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.001,
+        "draw": 0.004,
+        "away": 0.995
+      },
+      "most_likely_score": "0-4",
+      "scorers": [
+        {
+          "player": "Dani Olmo",
+          "minute": 78,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Ferran Torres",
+          "minute": 85,
+          "p": 0.22,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第67分钟，西班牙已经以3-0遥遥领先秘鲁，并以65%的控球率完全掌控了比赛节奏。下半场初段西班牙进行了大规模轮换，换上了奥尔莫（Dani Olmo）和皮诺（Yéremy Pino）等生力军，这不仅保持了前场的压迫力，也让球队有足够的体能继续冲击秘鲁防线。秘鲁在进攻端表现乏力，难以制造实质性威胁。预计西班牙将稳健控制局面，并极有可能利用替补球员的活力在比赛尾声阶段再入一球，最终以4-0锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.009230549999999999,
+      "tokens": {
+        "input": 1351,
+        "output": 1240
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.703
+    }
+  ]
+}
