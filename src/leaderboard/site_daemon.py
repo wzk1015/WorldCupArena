@@ -47,6 +47,24 @@ def run_once(args: argparse.Namespace) -> bool:
             cmd.extend(["--phase", args.phase])
         ok = _run(cmd, env=env, strict=args.strict) == 0 and ok
 
+    if args.live_predict:
+        cmd = [
+            sys.executable, "-m", "src.pipeline.live_predict", "once",
+            "--fixture-id", args.live_fixture_id,
+            "--wca-id", args.live_wca_id,
+            "--no-build-site",
+        ]
+        if args.live_provider:
+            cmd.extend(["--provider", args.live_provider])
+        if args.live_models:
+            cmd.append("--models")
+            cmd.extend(args.live_models)
+        if args.always_predict_live:
+            cmd.append("--predict-every-cycle")
+        else:
+            cmd.append("--only-live")
+        ok = _run(cmd, env=env, strict=args.strict) == 0 and ok
+
     if args.build_site:
         ok = _run([sys.executable, "-m", "src.leaderboard.build_site"], env=env, strict=args.strict) == 0 and ok
 
@@ -69,9 +87,17 @@ def main() -> None:
     ap.add_argument("--phase", choices=["ingest", "populate", "lock_predict", "live_update", "truth_grade"], default=None)
     ap.add_argument("--git-pull", action="store_true", help="pull WorldCupArena before each cycle")
     ap.add_argument("--disable-translation-llm", action="store_true", help="use cached/fallback Chinese translations only")
+    ap.add_argument("--live-predict", action="store_true", help="run one live prediction cycle before rebuilding the site")
+    ap.add_argument("--live-fixture-id", default=None, help="football provider fixture id for --live-predict")
+    ap.add_argument("--live-wca-id", default=None, help="WorldCupArena fixture id for --live-predict")
+    ap.add_argument("--live-provider", default=None, help="football API provider override for --live-predict")
+    ap.add_argument("--live-models", nargs="*", default=None, help="model ids to use for --live-predict")
+    ap.add_argument("--always-predict-live", action="store_true", help="if true, create a fresh live prediction every cycle even before kickoff")
     ap.add_argument("--strict", action="store_true", help="exit on the first failed command")
     ap.set_defaults(pipeline=True, build_site=True)
     args = ap.parse_args()
+    if args.live_predict and (not args.live_fixture_id or not args.live_wca_id):
+        ap.error("--live-predict requires --live-fixture-id and --live-wca-id")
 
     print(f"[{_ts()}] WorldCupArena site daemon root={ROOT}", flush=True)
     while True:

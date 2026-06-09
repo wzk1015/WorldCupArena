@@ -92,11 +92,11 @@ def _apply_model_proxy(model_cfg: dict[str, Any]) -> dict[str, Any]:
             routed["json_mode"] = True
         else:
             routed["tools"] = ["web_search"]
-            routed["json_mode"] = False
+            routed["json_mode"] = model_id == "gemini-3.1-pro-preview-thinking-search"
         routed.setdefault("max_tokens", 12000)
     elif category == "deep_research_agent":
         routed["tools"] = ["web_search"]
-        routed["json_mode"] = False
+        routed["json_mode"] = model_id == "gemini-deep-research"
         routed["max_tokens"] = routed.get("json_compiler_max_tokens") or routed.get("max_tokens", 20000)
         routed.setdefault("timeout_seconds", 600)
         routed.setdefault("assumed_tool_calls", 1)

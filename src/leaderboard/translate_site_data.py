@@ -77,6 +77,14 @@ DEFAULT_ENTITY_TRANSLATIONS = {
     "Bayer Leverkusen": "勒沃库森",
     "1. FC Köln": "科隆",
     "Germany": "德国",
+    "Botswana": "博茨瓦纳",
+    "Niger": "尼日尔",
+    "Peru": "秘鲁",
+    "China PR": "中国",
+    "Thailand": "泰国",
+    "Friendly International": "国际友谊赛",
+    "Friendlies 1": "友谊赛第1组",
+    "Friendlies 3": "友谊赛第3组",
 }
 
 BUILTIN_TEXT_TRANSLATIONS = {
@@ -87,6 +95,14 @@ BUILTIN_TEXT_TRANSLATIONS = {
     "Prediction unavailable; this model will retry later.": "预测暂不可用；该模型稍后会自动重试。",
     "Not run yet; the scheduler will run this model when due.": "尚未运行；调度器会在合适时间执行该模型。",
     "Fixture snapshot does not match registry metadata; predictions are hidden until re-ingested.": "赛程快照与登记元数据不一致；重新 ingest 前会隐藏预测。",
+    "Var - Goal Disallowed - offside": "VAR - 进球因越位被取消",
+    "Goal Disallowed - offside": "进球因越位被取消",
+    "Var - Goal Disallowed": "VAR - 进球被取消",
+    "Goal Disallowed": "进球被取消",
+    "Var - Penalty confirmed": "VAR - 点球确认",
+    "Penalty confirmed": "点球确认",
+    "Var - Penalty cancelled": "VAR - 点球取消",
+    "Penalty cancelled": "点球取消",
 }
 
 ENTITY_KEYS = {
@@ -108,7 +124,24 @@ ENTITY_KEYS = {
 }
 
 ENTITY_LIST_KEYS = {"scorer_names", "assister_names"}
-TEXT_KEYS = {"comment", "data_warning", "error_summary", "title"}
+TEXT_KEYS = {"comment", "data_warning", "error_summary", "title", "label", "detail"}
+
+_ALLOWED_LATIN_TEXT_TOKENS = {
+    "ESPN", "FIFA", "UEFA", "AFC", "CAF", "CONCACAF", "CONMEBOL",
+    "VAR", "xG", "Elo", "Goal", "Goal.com", "Transfermarkt", "Flashscore",
+    "FOX", "Sports", "WorldCupArena", "MatchMate",
+}
+
+COMMON_TEXT_REPLACEMENTS = {
+    "FIFA": "国际足联",
+    "UEFA": "欧足联",
+    "AFC": "亚足联",
+    "CAF": "非洲足联",
+    "CONCACAF": "中北美及加勒比海足联",
+    "CONMEBOL": "南美足联",
+    "xG": "预期进球",
+    "World Cup": "世界杯",
+}
 REASONING_KEYS = {"overall", "t1_result", "t2_player", "t3_events", "t4_stats"}
 POSITION_KEYS = {"position", "pos"}
 NEVER_TRANSLATE_KEYS = {
@@ -203,9 +236,55 @@ def _cached_zh(cached: Any) -> str:
     return str(cached or "").strip()
 
 
+def _contains_unwanted_latin_text(value: str) -> bool:
+    tokens = re.findall(r"[A-Za-z][A-Za-zÀ-ÖØ-öø-ÿ.\'-]*", str(value or ""))
+    for token in tokens:
+        stripped = token.strip(".")
+        if len(stripped) <= 1:
+            continue
+        if stripped in _ALLOWED_LATIN_TEXT_TOKENS:
+            continue
+        if stripped.upper() in _ALLOWED_LATIN_TEXT_TOKENS:
+            continue
+        return True
+    return False
+
+
+_ENTITY_REPLACEMENT_PAIR_CACHE: dict[int, list[tuple[str, str]]] = {}
+
+
+def _entity_replacement_pairs(cache: dict[str, Any]) -> list[tuple[str, str]]:
+    cache_key = id(cache)
+    cached = _ENTITY_REPLACEMENT_PAIR_CACHE.get(cache_key)
+    if cached is not None:
+        return cached
+    entities = cache.get("entities", {}) or {}
+    pairs = [
+        (src, zh)
+        for src, zh in entities.items()
+        if src and zh and src != zh and not _looks_englishish(zh) and _looks_englishish(src) and len(src) >= 3
+    ]
+    pairs.sort(key=lambda item: -len(item[0]))
+    _ENTITY_REPLACEMENT_PAIR_CACHE[cache_key] = pairs
+    return pairs
+
+
+def _normalize_translated_text(value: str, cache: dict[str, Any] | None = None) -> str:
+    out = str(value or "")
+    for src, zh in COMMON_TEXT_REPLACEMENTS.items():
+        if src in out:
+            out = re.sub(rf"(?<![A-Za-z]){re.escape(src)}(?![A-Za-z])", zh, out)
+    if cache and _looks_englishish(out):
+        for src, zh in _entity_replacement_pairs(cache):
+            if src not in out:
+                continue
+            out = re.sub(rf"(?<![A-Za-zÀ-ÖØ-öø-ÿ]){re.escape(src)}(?![A-Za-zÀ-ÖØ-öø-ÿ])", zh, out)
+    return out
+
+
 def _needs_cached_translation(src: str, cached: Any) -> bool:
     zh = _cached_zh(cached)
-    return (not zh) or (zh == src and _looks_englishish(src))
+    return (not zh) or (zh == src and _looks_englishish(src)) or _contains_unwanted_latin_text(zh)
 
 
 def _needs_cached_entity_translation(src: str, cached: Any) -> bool:
@@ -278,8 +357,6 @@ def _is_text_path(path: tuple[str, ...]) -> bool:
 def _collect_strings(obj: Any, path: tuple[str, ...], entities: set[str], texts: dict[str, str]) -> None:
     if isinstance(obj, dict):
         for key, value in obj.items():
-            if key == "events":
-                continue
             _collect_strings(value, path + (str(key),), entities, texts)
         return
     if isinstance(obj, list):
@@ -374,8 +451,10 @@ class LLMTranslator:
         system = (
             "You translate football website entity names into Simplified Chinese. "
             "Return ONLY JSON. Use the most common Chinese football-media names. "
-            "For players without a famous Chinese name, transliterate naturally. "
-            "Keep model IDs, URLs, dates, and score strings unchanged if they appear."
+            "For every football player/person name written with Latin letters, output a Chinese name: "
+            "use the established Chinese football-media name when known, otherwise transliterate naturally. "
+            "Do not return a Latin player/person name unchanged. "
+            "Keep model IDs, URLs, dates, score strings, and already-Chinese strings unchanged if they appear."
         )
         total_batches = (len(strings) + 79) // 80
         for batch_no, start in enumerate(range(0, len(strings), 80), 1):
@@ -417,7 +496,11 @@ class LLMTranslator:
             "You translate football prediction website copy into Simplified Chinese. "
             "Return ONLY JSON as {\"items\":[{\"id\":\"...\",\"zh\":\"...\"}]}. "
             "Preserve JSON meaning, probabilities, scores, model names, and URLs. "
-            "Use the supplied glossary exactly for entity names."
+            "Use the supplied glossary exactly for entity names. "
+            "Translate every Latin-script football player, coach, stadium, city, and team name into Chinese; "
+            "if no official Chinese name is known, transliterate naturally. Do not leave names such as Gallese, "
+            "Gimenez, Lozano, Cubarsi, Laporte, Orebonye, or Dangda in Latin letters. Translate common football "
+            "organizations and metrics such as FIFA/UEFA/CAF/xG into common Chinese wording."
         )
         batch: list[dict[str, Any]] = []
         chars = 0
@@ -450,7 +533,7 @@ class LLMTranslator:
                 batch_out: dict[str, str] = {}
                 for row in rows:
                     if isinstance(row, dict) and row.get("id") and row.get("zh"):
-                        batch_out[str(row["id"])] = str(row["zh"]).strip()
+                        batch_out[str(row["id"])] = _normalize_translated_text(str(row["zh"]).strip())
                 out.update(batch_out)
                 if on_batch and batch_out:
                     on_batch(batch_out)
@@ -466,7 +549,7 @@ class LLMTranslator:
         for item in items:
             text = item.get("text") or ""
             size = len(text) + len(json.dumps(item.get("glossary") or {}, ensure_ascii=False))
-            if batch and (len(batch) >= 12 or chars + size > 10000):
+            if batch and (len(batch) >= 32 or chars + size > 24000):
                 flush()
             batch.append(item)
             chars += size
@@ -508,7 +591,7 @@ def _translate_string(value: str, path: tuple[str, ...], cache: dict[str, Any]) 
         return _translate_entity_string(value, cache)
     if _is_text_path(path):
         row = cache.get("texts", {}).get(_sha(value))
-        return (row or {}).get("zh", value)
+        return _normalize_translated_text((row or {}).get("zh", value), cache)
     return value
 
 
@@ -516,10 +599,7 @@ def _translate_obj(obj: Any, path: tuple[str, ...], cache: dict[str, Any]) -> An
     if isinstance(obj, dict):
         out = {}
         for key, value in obj.items():
-            if key == "events":
-                out[key] = value
-            else:
-                out[key] = _translate_obj(value, path + (str(key),), cache)
+            out[key] = _translate_obj(value, path + (str(key),), cache)
         return out
     if isinstance(obj, list):
         return [_translate_obj(item, path, cache) for item in obj]

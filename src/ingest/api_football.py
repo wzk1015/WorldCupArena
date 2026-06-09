@@ -257,7 +257,9 @@ def normalize_to_truth(raw: dict) -> dict:
 
 class APIFootballClient:
     def __init__(self, api_key: str | None = None):
-        self.api_key = api_key or os.environ["API_FOOTBALL_KEY"]
+        self.api_key = api_key or os.environ.get("API_FOOTBALL_KEY") or os.environ.get("APIFOOTBALL_API_KEY")
+        if not self.api_key:
+            raise RuntimeError("Set API_FOOTBALL_KEY or APIFOOTBALL_API_KEY in your .env")
         self._h = {"x-apisports-key": self.api_key}
 
     def _get(self, path: str, **params) -> dict[str, Any]:
@@ -287,6 +289,35 @@ class APIFootballClient:
     def team_recent_fixtures(self, team_id: int, last: int = 10) -> dict[str, Any]:
         """Last N completed fixtures for a team across all competitions."""
         return self._get("/fixtures", team=team_id, last=last, status="FT-AET-PEN")
+
+
+def football_api_provider(provider: str | None = None) -> str:
+    """Return the configured football data provider id."""
+    selected = (
+        provider
+        or os.environ.get("FOOTBALL_API_PROVIDER")
+        or os.environ.get("WCA_FOOTBALL_API_PROVIDER")
+        or "api_football"
+    )
+    return selected.strip().lower().replace("-", "_")
+
+
+def get_football_client(provider: str | None = None, api_key: str | None = None):
+    """Build the configured football API client.
+
+    Both clients expose fixture(), squad(), and team_recent_fixtures() and
+    return API-Football-like payloads to keep the rest of the pipeline stable.
+    """
+    selected = football_api_provider(provider)
+    if selected in {"api_football", "apisports", "api_sports"}:
+        key = api_key or os.environ.get("API_FOOTBALL_KEY") or os.environ.get("APIFOOTBALL_API_KEY")
+        return APIFootballClient(key)
+    if selected in {"sportmonks", "sportsmonk", "sportmonk"}:
+        from .sportmonks import SportMonksClient
+
+        key = api_key or os.environ.get("SPORTMONKS_API_KEY")
+        return SportMonksClient(key)
+    raise ValueError(f"Unsupported football API provider: {provider!r}")
 
 
 # ---------------------------------------------------------------------------
@@ -542,14 +573,15 @@ def populate_context_pack_with_news(
 # ---------------------------------------------------------------------------
 
 def main():
-    ap = argparse.ArgumentParser(description="Fetch a fixture from API-Football and save the raw response.")
-    ap.add_argument("--fixture-id", type=int, required=True, help="API-Football fixture ID")
+    ap = argparse.ArgumentParser(description="Fetch a fixture from the configured football API and save the raw response.")
+    ap.add_argument("--fixture-id", type=int, required=True, help="Provider fixture ID")
     ap.add_argument("--wca-id", type=str, required=True, help="WorldCupArena fixture_id (e.g. ucl_sf1_l1)")
     ap.add_argument("--lock-at", type=str, default="", help="lock_at_utc (ISO-8601, kickoff − 24 h). Leave empty for truth-only pulls.")
     ap.add_argument("--out", type=str, required=True, help="Output path (e.g. data/snapshots/ucl_sf1_l1/fixture.json)")
+    ap.add_argument("--provider", type=str, default=None, help="football API provider: api_football or sportmonks")
     args = ap.parse_args()
 
-    client = APIFootballClient()
+    client = get_football_client(args.provider)
     data = client.fixture(args.fixture_id)
     # Inject WorldCupArena extra fields
     data["fixture_id"] = args.wca_id

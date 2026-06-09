@@ -19,7 +19,7 @@ from typing import Any
 from dotenv import load_dotenv
 import yaml
 
-from ..ingest.api_football import APIFootballClient
+from ..ingest.api_football import football_api_provider, get_football_client
 from ..runners import build_runner
 from .prediction_derivatives import best_win_outcome, normalize_win_probs, score_outcome
 
@@ -30,7 +30,12 @@ DATA = ROOT / "data"
 LIVE_DIR = DATA / "live"
 LIVE_PREDICTIONS_DIR = DATA / "live_predictions"
 MODELS_YAML = CONFIGS / "models.yaml"
+FIXTURES_YAML = CONFIGS / "fixtures.yaml"
 DEFAULT_LIVE_MODELS = ["gpt-5.4"]
+LIVE_HISTORY_LIMIT = 288
+FINISHED_STATUSES = {"Match Finished"}
+HALFTIME_STATUSES = {"ht", "half time", "halftime"}
+NON_LIVE_STATUSES = {None, "Not Started", "Match Finished", "Match Postponed", "Match Cancelled"}
 
 load_dotenv(ROOT / ".env")
 
@@ -53,11 +58,20 @@ def _load_models() -> dict[str, dict[str, Any]]:
     return models
 
 
-def _api_football_key() -> str:
-    api_key = os.environ.get("APIFOOTBALL_API_KEY") or os.environ.get("API_FOOTBALL_KEY")
-    if not api_key:
-        raise RuntimeError("Set APIFOOTBALL_API_KEY or API_FOOTBALL_KEY in .env")
-    return api_key
+def _fixture_registry() -> list[dict[str, Any]]:
+    if not FIXTURES_YAML.exists():
+        return []
+    cfg = yaml.safe_load(FIXTURES_YAML.read_text()) or {}
+    return [fx for fx in (cfg.get("fixtures") or []) if fx.get("enabled", True)]
+
+
+def _provider_for_fixture(wca_id: str, explicit_provider: str | None = None) -> str:
+    if explicit_provider:
+        return football_api_provider(explicit_provider)
+    for fx in _fixture_registry():
+        if str(fx.get("wca_id")) == str(wca_id):
+            return football_api_provider(fx.get("provider"))
+    return football_api_provider(None)
 
 
 def _fixture_response(raw: dict[str, Any]) -> dict[str, Any]:
@@ -102,6 +116,32 @@ def _current_score(raw: dict[str, Any]) -> tuple[int, int]:
     return _safe_int(goals.get("home")), _safe_int(goals.get("away"))
 
 
+def _elapsed_from_kickoff(kickoff_utc: str | None, status_long: str | None) -> int | None:
+    if not kickoff_utc or status_long in NON_LIVE_STATUSES:
+        return None
+    try:
+        kickoff = datetime.fromisoformat(str(kickoff_utc).replace("Z", "+00:00"))
+        if kickoff.tzinfo is None:
+            kickoff = kickoff.replace(tzinfo=timezone.utc)
+    except ValueError:
+        return None
+
+    delta = int((datetime.now(timezone.utc) - kickoff).total_seconds() // 60)
+    if delta < 0:
+        return None
+
+    status = str(status_long or "").casefold()
+    if "half time" in status or status in {"ht", "halftime"}:
+        return 45
+    if "1st" in status or "first" in status:
+        return max(1, min(45, delta))
+    if "2nd" in status or "second" in status:
+        return max(46, min(90, delta - 15 if delta >= 60 else delta))
+    if "extra" in status:
+        return max(91, min(130, delta - 15))
+    return max(1, min(130, delta))
+
+
 def _live_summary(raw: dict[str, Any]) -> dict[str, Any]:
     r0 = _fixture_response(raw)
     fixture = r0.get("fixture") or {}
@@ -113,9 +153,16 @@ def _live_summary(raw: dict[str, Any]) -> dict[str, Any]:
     goals = r0.get("goals") or {}
     venue = fixture.get("venue") or {}
 
+    status_long = status.get("long")
+    elapsed = status.get("elapsed")
+    if elapsed is not None:
+        elapsed = _safe_int(elapsed, default=None)
+    if elapsed is None:
+        elapsed = _elapsed_from_kickoff(fixture.get("date"), status_long)
+
     return {
-        "status": status.get("long"),
-        "elapsed": status.get("elapsed"),
+        "status": status_long,
+        "elapsed": elapsed,
         "score": {"home": goals.get("home"), "away": goals.get("away")},
         "home": home.get("name"),
         "away": away.get("name"),
@@ -179,13 +226,21 @@ def _build_live_prompt(raw: dict[str, Any], wca_id: str) -> tuple[str, str]:
 
     system_prompt = (
         "You are WorldCupArena's in-play football prediction engine. "
-        "Return only a single valid JSON object. Do not include markdown."
+        "Return only a single valid JSON object. Do not include markdown. "
+        "Write narrative reasoning in Simplified Chinese, while keeping schema field names, "
+        "enum values, score strings, probabilities, and structured player names machine-stable."
     )
     user_prompt = f"""
 Update the live prediction for this match using only the current match state below.
 
 Current score: {current_score.get("home")} - {current_score.get("away")}
 Current time: {elapsed_text}
+
+Language and scoring constraints:
+- Write `reasoning.overall` in Simplified Chinese.
+- Keep `team` values exactly `home` or `away`.
+- Keep `most_likely_score` as an `H-A` score string and probabilities as numbers.
+- For `scorers[].player`, use the official/API player name form from the live state when available. Do not translate structured player-name fields into Chinese-only names; bilingual names may appear in the Chinese reasoning text.
 
 You must predict:
 - final win/draw/loss probabilities as win_probs.home, win_probs.draw, win_probs.away;
@@ -207,7 +262,7 @@ JSON schema:
   "scorers": [
     {{"player": "Player Name", "team": "home", "minute": 72, "p": 0.32}}
   ],
-  "reasoning": {{"overall": "Brief explanation of the in-play update."}},
+  "reasoning": {{"overall": "用中文简要说明本次赛中预测更新。"}},
   "sources": []
 }}
 
@@ -335,9 +390,12 @@ def _normalize_prediction(pred: dict[str, Any], raw: dict[str, Any]) -> dict[str
     }
 
 
-def fetch_live_fixture(fixture_id: str, wca_id: str) -> dict[str, Any]:
-    client = APIFootballClient(_api_football_key())
+def fetch_live_fixture(fixture_id: str, wca_id: str, provider: str | None = None) -> dict[str, Any]:
+    client = get_football_client(provider)
     raw = client.fixture(int(fixture_id))
+    raw["fixture_id"] = wca_id
+    raw["lock_at_utc"] = ""
+    raw.setdefault("context_pack", {})
     LIVE_DIR.mkdir(parents=True, exist_ok=True)
     (LIVE_DIR / f"{wca_id}.json").write_text(json.dumps(raw, ensure_ascii=False, indent=2))
     return raw
@@ -402,12 +460,62 @@ def run_live_prediction(
     return record
 
 
+def _live_history_entry(record: dict[str, Any]) -> dict[str, Any]:
+    pred = record.get("prediction") or {}
+    return {
+        "submitted_at": record.get("submitted_at"),
+        "live": record.get("live") or {},
+        "status": "failed" if record.get("error") else "ok",
+        "error": record.get("error"),
+        "win_probs": pred.get("win_probs") or {},
+        "most_likely_score": pred.get("most_likely_score"),
+        "scorers": pred.get("scorers") or [],
+        "reasoning": pred.get("reasoning") or {},
+        "sources": record.get("sources") or [],
+        "cost_usd": record.get("cost_usd"),
+        "tokens": record.get("tokens") or {},
+        "tool_calls": record.get("tool_calls"),
+        "wall_seconds": record.get("wall_seconds"),
+    }
+
+
+def _history_key(entry: dict[str, Any]) -> tuple[Any, ...]:
+    return (
+        entry.get("submitted_at"),
+        entry.get("status"),
+        entry.get("most_likely_score"),
+        json.dumps(entry.get("win_probs") or {}, sort_keys=True),
+    )
+
+
 def write_live_prediction(record: dict[str, Any]) -> Path:
     wca_id = record["fixture_id"]
     model_id = record["model_id"]
     out_dir = LIVE_PREDICTIONS_DIR / wca_id
     out_dir.mkdir(parents=True, exist_ok=True)
     path = out_dir / f"{model_id}__LIVE.json"
+
+    history: list[dict[str, Any]] = []
+    if path.exists():
+        try:
+            previous = json.loads(path.read_text())
+            history = list(previous.get("history") or [])
+            if not history and previous.get("submitted_at"):
+                history.append(_live_history_entry(previous))
+        except Exception:
+            history = []
+
+    history.append(_live_history_entry(record))
+    deduped: list[dict[str, Any]] = []
+    seen = set()
+    for entry in history:
+        key = _history_key(entry)
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(entry)
+    record["history"] = deduped[-LIVE_HISTORY_LIMIT:]
+
     path.write_text(json.dumps(record, ensure_ascii=False, indent=2))
     return path
 
@@ -418,21 +526,52 @@ def build_site() -> None:
     site_builder.main()
 
 
-def run_once(args: argparse.Namespace) -> None:
+def _normalized_status(value: Any) -> str:
+    return str(value or "").strip().casefold()
+
+
+def _is_halftime_status(value: Any) -> bool:
+    status = _normalized_status(value)
+    return status in HALFTIME_STATUSES or status.replace(" ", "") == "halftime"
+
+
+def _is_live_for_prediction(summary: dict[str, Any]) -> bool:
+    status = summary.get("status")
+    return status not in NON_LIVE_STATUSES and not _is_halftime_status(status)
+
+
+def run_once(args: argparse.Namespace) -> dict[str, Any]:
     models = _load_models()
     selected = args.models or DEFAULT_LIVE_MODELS
     unknown = [model_id for model_id in selected if model_id not in models]
     if unknown:
         raise SystemExit(f"Unknown model id(s): {', '.join(unknown)}")
 
-    raw = fetch_live_fixture(args.fixture_id, args.wca_id)
+    provider = _provider_for_fixture(args.wca_id, args.provider)
+    raw = fetch_live_fixture(args.fixture_id, args.wca_id, provider=provider)
     summary = _live_summary(raw)
     print(
         f"[live_predict] {args.wca_id}: "
         f"{summary.get('home')} {summary.get('score', {}).get('home')} - "
         f"{summary.get('score', {}).get('away')} {summary.get('away')} "
-        f"status={summary.get('status')!r} elapsed={summary.get('elapsed')!r}"
+        f"provider={provider} status={summary.get('status')!r} elapsed={summary.get('elapsed')!r}"
     )
+
+    if _is_halftime_status(summary.get("status")):
+        print(f"  [live_predict] skip model calls because status={summary.get('status')!r} is halftime")
+        return {
+            "status": summary.get("status"),
+            "predicted": False,
+            "finished": summary.get("status") in FINISHED_STATUSES,
+        }
+
+    if getattr(args, "only_live", False) and not getattr(args, "predict_every_cycle", False) and not _is_live_for_prediction(summary):
+        print(f"  [live_predict] skip model calls because status={summary.get('status')!r} and --only-live is set")
+        return {
+            "status": summary.get("status"),
+            "predicted": False,
+            "finished": summary.get("status") in FINISHED_STATUSES,
+        }
 
     for model_id in selected:
         record = run_live_prediction(
@@ -455,13 +594,22 @@ def run_once(args: argparse.Namespace) -> None:
     if not args.no_build_site:
         build_site()
 
+    return {
+        "status": summary.get("status"),
+        "predicted": True,
+        "finished": summary.get("status") in FINISHED_STATUSES,
+    }
+
 
 def run_daemon(args: argparse.Namespace) -> None:
     interval = max(30, int(args.interval_seconds))
     print(f"[live_predict] daemon interval={interval}s models={','.join(args.models or DEFAULT_LIVE_MODELS)}")
     while True:
         try:
-            run_once(args)
+            result = run_once(args)
+            if getattr(args, "stop_after_finished", False) and result.get("finished"):
+                print("[live_predict] stop-after-finished reached; daemon exiting")
+                return
         except KeyboardInterrupt:
             raise
         except Exception as exc:  # noqa: BLE001
@@ -474,9 +622,12 @@ def main() -> None:
     sub = parser.add_subparsers(dest="cmd", required=True)
 
     def add_common(p: argparse.ArgumentParser) -> None:
-        p.add_argument("--fixture-id", required=True, help="API-Football numeric fixture id")
+        p.add_argument("--fixture-id", required=True, help="football provider numeric fixture id")
         p.add_argument("--wca-id", required=True, help="WorldCupArena fixture id")
+        p.add_argument("--provider", default=None, help="football API provider; defaults to configs/fixtures.yaml")
         p.add_argument("--models", nargs="*", default=None, help="model ids from configs/models.yaml")
+        p.add_argument("--only-live", action="store_true", help="skip model calls until the fixture is in play")
+        p.add_argument("--predict-every-cycle", action="store_true", help="always create a fresh live prediction on each cycle, even before kickoff")
         p.add_argument("--no-build-site", action="store_true", help="write JSON but skip docs/site data rebuild")
 
     p_once = sub.add_parser("once", help="run one live prediction cycle")
@@ -486,6 +637,7 @@ def main() -> None:
     p_daemon = sub.add_parser("daemon", help="run live predictions repeatedly")
     add_common(p_daemon)
     p_daemon.add_argument("--interval-seconds", type=int, default=300)
+    p_daemon.add_argument("--stop-after-finished", action="store_true", help="exit the daemon once the fixture is finished")
     p_daemon.set_defaults(func=run_daemon)
 
     args = parser.parse_args()

@@ -27,7 +27,7 @@ import yaml
 
 from ..runners import build_runner
 from ..graders import grade_match
-from ..ingest.api_football import normalize_fixture, normalize_to_truth, populate_context_pack, APIFootballClient
+from ..ingest.api_football import normalize_fixture, normalize_to_truth, populate_context_pack, get_football_client, football_api_provider
 from ..ingest.news import populate_news
 from .prompt_build import build_prompt
 from .prediction_derivatives import strip_generated_score_fields
@@ -362,23 +362,22 @@ def cmd_grade(fixture_dir: Path) -> None:
 #     print(f"[leaderboard] wrote {len(rows)} rows -> {out}")
 
 
-def cmd_live_update(fixture_id: str, wca_id: str) -> None:
-    """Fetch the current live score from API-Football and write to data/live/<wca_id>.json.
+def cmd_live_update(fixture_id: str, wca_id: str, provider: str | None = None) -> None:
+    """Fetch the current live score from the configured football API.
 
     If the match status is "Match Finished", also writes truth.json and grades
     all predictions (same as truth_grade phase), so results appear immediately
     without waiting for the T+3h window.
     """
-    import os
-    api_key = os.environ.get("APIFOOTBALL_API_KEY") or os.environ.get("API_FOOTBALL_KEY")
-    if not api_key:
-        raise RuntimeError("Set APIFOOTBALL_API_KEY (or API_FOOTBALL_KEY) in your .env")
-
     LIVE_DIR.mkdir(parents=True, exist_ok=True)
     live_path = LIVE_DIR / f"{wca_id}.json"
 
-    client = APIFootballClient(api_key)
+    selected_provider = football_api_provider(provider)
+    client = get_football_client(selected_provider)
     raw = client.fixture(int(fixture_id))
+    raw["fixture_id"] = wca_id
+    raw["lock_at_utc"] = ""
+    raw.setdefault("context_pack", {})
     live_path.write_text(json.dumps(raw, ensure_ascii=False, indent=2))
 
     try:
@@ -386,7 +385,7 @@ def cmd_live_update(fixture_id: str, wca_id: str) -> None:
     except (KeyError, IndexError):
         status = None
 
-    print(f"[live_update] {wca_id}: status={status!r} → {live_path}")
+    print(f"[live_update] {wca_id}: provider={selected_provider} status={status!r} -> {live_path}")
 
     if status == "Match Finished":
         print(f"[live_update] match finished — running truth_grade")
@@ -404,24 +403,22 @@ def cmd_populate(
     with_news: bool = True,
     news_cap: int = 20,
     news_window_days: int = 7,
+    provider: str | None = None,
 ) -> None:
-    """Fetch squads + recent form + stats from API-Football and write into fixture.json.
+    """Fetch squads + recent form + stats and write them into fixture.json.
 
-    Reads APIFOOTBALL_API_KEY from the environment (same convention as other keys).
-    Run this before `lock` so the snapshot hash covers the populated context_pack.
-
-    When with_news is True, also populates context_pack.news_headlines via
-    ingest.news (NewsAPI / GNews / Google News RSS fallback).
+    The provider defaults to FOOTBALL_API_PROVIDER / WCA_FOOTBALL_API_PROVIDER,
+    with API-Football as the backward-compatible default.
     """
-    import os
-    api_key = os.environ.get("APIFOOTBALL_API_KEY") or os.environ.get("API_FOOTBALL_KEY")
-    if not api_key:
-        raise RuntimeError("Set APIFOOTBALL_API_KEY (or API_FOOTBALL_KEY) in your .env")
-    client = APIFootballClient(api_key)
+    selected_provider = football_api_provider(provider)
+    client = get_football_client(selected_provider)
     populate_context_pack(fixture_path, client, recent_n=recent_n)
     if with_news:
         populate_news(fixture_path, cap=news_cap, window_days=news_window_days)
-    print(f"[populate] {fixture_path}: context_pack updated (recent_n={recent_n}, news={with_news})")
+    print(
+        f"[populate] {fixture_path}: context_pack updated "
+        f"(provider={selected_provider}, recent_n={recent_n}, news={with_news})"
+    )
 
 
 def canonicalize_fixture(fixture: dict[str, Any]) -> str:
@@ -455,9 +452,11 @@ def main() -> None:
     p.add_argument("--no-news", action="store_true", help="skip news_headlines ingest")
     p.add_argument("--news-cap", type=int, default=20)
     p.add_argument("--news-window-days", type=int, default=7)
+    p.add_argument("--provider", default=None, help="football API provider: api_football or sportmonks")
     p = sub.add_parser("live_update", help="fetch live score; grade immediately if finished")
-    p.add_argument("--fixture-id", required=True, help="API-Football numeric fixture id")
+    p.add_argument("--fixture-id", required=True, help="provider fixture id")
     p.add_argument("--wca-id", required=True, help="internal wca_id (snapshot dir name)")
+    p.add_argument("--provider", default=None, help="football API provider: api_football or sportmonks")
 
     args = ap.parse_args()
     if args.cmd == "predict":
@@ -473,9 +472,10 @@ def main() -> None:
             with_news=not args.no_news,
             news_cap=args.news_cap,
             news_window_days=args.news_window_days,
+            provider=args.provider,
         )
     elif args.cmd == "live_update":
-        cmd_live_update(args.fixture_id, args.wca_id)
+        cmd_live_update(args.fixture_id, args.wca_id, provider=args.provider)
 
 
 if __name__ == "__main__":

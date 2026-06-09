@@ -49,6 +49,31 @@ const I18N = {
     away: "客队",
     substitute: "替补",
     actual: "实际",
+    event_timeline: "事件时间轴",
+    predicted_timeline: "预测事件时间轴",
+    actual_timeline: "实际比赛进程",
+    no_timeline_events: "暂无事件时间轴",
+    unspecified_goal: "未指定进球",
+    assist_prefix: "助攻",
+    penalty_goal: "点球",
+    penalty_saved: "点球被扑",
+    penalty_missed: "点球射失",
+    own_goal_label: "乌龙球",
+    yellow_card: "黄牌",
+    red_card: "红牌",
+    second_yellow_card: "两黄变红",
+    substitution_event: "换人",
+    key_event: "关键事件",
+    key_event_big_chance: "绝佳机会",
+    key_event_chance: "机会",
+    key_event_injury: "伤病",
+    key_event_missed_chance: "错失机会",
+    key_event_momentum: "走势变化",
+    key_event_save: "扑救",
+    key_event_set_piece: "定位球",
+    key_event_shot: "射门",
+    key_event_territory: "场面压制",
+    key_event_transition: "转换进攻",
     lineups: "⬡ 阵容",
     scorers: "⚽ 进球者",
     assisters: "🎯 助攻者",
@@ -88,6 +113,10 @@ const I18N = {
     full_reasoning: "📖 完整推理",
     hide_detail: "🔼 收起详情",
     show_details: "👇 展开完整分析",
+    show_prematch_prediction: "展开赛前预测",
+    hide_prematch_prediction: "收起赛前预测",
+    show_live_prediction: "展开实时预测",
+    hide_live_prediction: "收起实时预测",
     hide_details: "👇 收起分析",
     sources: "🔗 来源（{count}）",
     hide_sources: "🔗 收起来源",
@@ -104,10 +133,22 @@ const I18N = {
     not_run_detail: "尚未运行；调度器会在合适时间执行。",
     pred_winner: "预测胜者",
     pred_score: "预测比分",
+    prematch_prediction: "赛前预测",
+    latest_live_prediction: "最新实时预测",
+    latest_live_prediction_minute: "最新实时预测（第{minute}分钟）",
+    live_prediction_history: "实时预测历史",
+    live_history_minute_prefix: "第{minute}分钟：",
+    live_history_prematch_prefix: "赛前：",
+    live_history_item: "{time} · {basis} · 预测 {score}（{winner}）",
     live_predictions: "赛中实时预测",
     live_prediction_note: "赛中预测不计入排行榜",
     live_current_snapshot: "基于 {score} · {minute}",
+    live_current_state: "基于{state}",
+    live_current_score_state: "基于当前比分{score}",
     live_updated_at: "更新于 {time}",
+    live_match_minute: "比赛第 {minute} 分钟",
+    live_pre_match: "赛前",
+    live_unknown_state: "状态未知",
     live_final_score: "最可能最终比分",
     future_scorers: "后续进球球员",
     no_future_scorers: "暂无后续进球预测",
@@ -174,6 +215,31 @@ const I18N = {
     away: "Away",
     substitute: "Sub",
     actual: "Actual",
+    event_timeline: "Event Timeline",
+    predicted_timeline: "Predicted Event Timeline",
+    actual_timeline: "Actual Match Timeline",
+    no_timeline_events: "No timeline events available.",
+    unspecified_goal: "Unspecified goal",
+    assist_prefix: "Assist",
+    penalty_goal: "Penalty",
+    penalty_saved: "Penalty saved",
+    penalty_missed: "Penalty missed",
+    own_goal_label: "Own goal",
+    yellow_card: "Yellow card",
+    red_card: "Red card",
+    second_yellow_card: "Second yellow",
+    substitution_event: "Substitution",
+    key_event: "Key event",
+    key_event_big_chance: "Big chance",
+    key_event_chance: "Chance",
+    key_event_injury: "Injury",
+    key_event_missed_chance: "Missed chance",
+    key_event_momentum: "Momentum shift",
+    key_event_save: "Save",
+    key_event_set_piece: "Set piece",
+    key_event_shot: "Shot",
+    key_event_territory: "Territory",
+    key_event_transition: "Transition attack",
     lineups: "⬡ Lineups",
     scorers: "⚽ Scorers",
     assisters: "🎯 Assisters",
@@ -213,6 +279,10 @@ const I18N = {
     full_reasoning: "📖 Full Reasoning",
     hide_detail: "🔼 Hide Detail",
     show_details: "👇 Show Full AI Analysis",
+    show_prematch_prediction: "Show pre-match prediction",
+    hide_prematch_prediction: "Hide pre-match prediction",
+    show_live_prediction: "Show live prediction",
+    hide_live_prediction: "Hide live prediction",
     hide_details: "👇 Hide Details",
     sources: "🔗 Sources ({count})",
     hide_sources: "🔗 Hide sources",
@@ -229,10 +299,22 @@ const I18N = {
     not_run_detail: "Not run yet; the scheduler will run this model when due.",
     pred_winner: "Pred Winner",
     pred_score: "Pred Score",
+    prematch_prediction: "Pre-Match Prediction",
+    latest_live_prediction: "Latest In-Play Prediction",
+    latest_live_prediction_minute: "Latest In-Play Prediction ({minute}′)",
+    live_prediction_history: "In-Play Prediction History",
+    live_history_minute_prefix: "{minute}′: ",
+    live_history_prematch_prefix: "Pre-match: ",
+    live_history_item: "{time} · {basis} · predicts {score} ({winner})",
     live_predictions: "In-Play Predictions",
     live_prediction_note: "In-play predictions are not counted in the leaderboard",
     live_current_snapshot: "Based on {score} · {minute}",
+    live_current_state: "Based on {state}",
+    live_current_score_state: "Based on current score {score}",
     live_updated_at: "Updated {time}",
+    live_match_minute: "Match minute {minute}",
+    live_pre_match: "Pre-match",
+    live_unknown_state: "State unknown",
     live_final_score: "Most Likely Final Score",
     future_scorers: "Future Scorers",
     no_future_scorers: "No future scorers predicted",
@@ -289,6 +371,14 @@ function initialMatchMateMode() {
   return matchmateParam === "1" || (matchmateParam !== "0" && matchmatePath);
 }
 
+function initialPredictionCardsPerRow() {
+  const params = new URLSearchParams(window.location.search);
+  const raw = params.get("cards_per_row") || params.get("prediction_cards_per_row");
+  const value = Number.parseInt(raw || "", 10);
+  if (!Number.isFinite(value)) return 2;
+  return Math.max(1, Math.min(4, value));
+}
+
 const _matchmateMode = initialMatchMateMode();
 let _lang = _matchmateMode ? "zh" : (localStorage.getItem("wca_lang") === "en" ? "en" : "zh");
 let _theme = initialTheme();
@@ -297,6 +387,8 @@ let _activeLeaderboardView = "main";
 let _leaderboardSort = "result";
 let _countdownIntervals = [];
 let _mobilePredView = null;
+
+const PREDICTION_CARDS_PER_ROW = initialPredictionCardsPerRow();
 
 function t(key, vars = {}) {
   const matchmateText = _matchmateMode ? (MATCHMATE_I18N[_lang] && MATCHMATE_I18N[_lang][key]) : undefined;
@@ -589,15 +681,17 @@ function winnerFromWinProbs(wp, homeName, awayName) {
   return t("draw");
 }
 
-function toggleDetails(idx) {
-  const btn = document.getElementById(`pred-details-btn-${idx}`);
+function togglePredPanel(idx, type) {
+  const btnId = type === "live" ? `pred-live-btn-${idx}` : `pred-prematch-btn-${idx}`;
+  const btn = document.getElementById(btnId);
   const group = btn?.closest("[data-pred-grid]");
   const row = btn?.closest("[data-pred-row]");
   const panel = row?.querySelector("[data-pred-panel='1']");
   if (!group || !row || !panel) return;
 
+  const panelType = type === "live" ? "live" : "prematch";
   const showingSame = !panel.classList.contains("hidden")
-    && panel.dataset.panelType === "details"
+    && panel.dataset.panelType === panelType
     && panel.dataset.predIdx === String(idx);
 
   resetPredGridButtons(group);
@@ -609,11 +703,15 @@ function toggleDetails(idx) {
     return;
   }
 
-  panel.innerHTML = renderDetailsPanel(idx);
-  panel.dataset.panelType = "details";
+  panel.innerHTML = type === "live" ? renderLiveDetailsPanel(idx) : renderPrematchDetailsPanel(idx);
+  panel.dataset.panelType = panelType;
   panel.dataset.predIdx = String(idx);
   panel.classList.remove("hidden");
-  if (btn) btn.textContent = t("hide_details");
+  if (btn) btn.textContent = type === "live" ? t("hide_live_prediction") : t("hide_prematch_prediction");
+}
+
+function toggleDetails(idx) {
+  togglePredPanel(idx, "prematch");
 }
 
 function toggleSources(idx) {
@@ -644,6 +742,12 @@ function toggleSources(idx) {
 }
 
 function resetPredGridButtons(group) {
+  group.querySelectorAll("[id^='pred-prematch-btn-']").forEach(button => {
+    button.textContent = t("show_prematch_prediction");
+  });
+  group.querySelectorAll("[id^='pred-live-btn-']").forEach(button => {
+    button.textContent = t("show_live_prediction");
+  });
   group.querySelectorAll("[id^='pred-details-btn-']").forEach(button => {
     button.textContent = t("show_details");
   });
@@ -745,6 +849,458 @@ function _truthBlock(content) {
   </div>`;
 }
 
+function parseScore(score) {
+  const match = String(score || "").trim().match(/^(\d+)\s*[-:]\s*(\d+)$/);
+  if (!match) return { home: 0, away: 0 };
+  return { home: Number(match[1]) || 0, away: Number(match[2]) || 0 };
+}
+
+function oppositeSide(side) {
+  return side === "home" ? "away" : side === "away" ? "home" : side;
+}
+
+function eventMinute(item) {
+  if (item && item.minute != null && Number.isFinite(Number(item.minute))) return Number(item.minute);
+  const range = item && item.minute_range;
+  if (Array.isArray(range) && range.length >= 2) {
+    const a = Number(range[0]);
+    const b = Number(range[1]);
+    if (Number.isFinite(a) && Number.isFinite(b)) return Math.round((a + b) / 2);
+  }
+  return null;
+}
+
+function defaultGoalMinute(index, total) {
+  const templates = {
+    1: [58],
+    2: [34, 72],
+    3: [24, 55, 78],
+    4: [18, 42, 66, 84],
+    5: [12, 31, 52, 71, 86],
+  };
+  const arr = templates[Math.min(total, 5)] || [];
+  return arr[index] || Math.min(90, Math.max(8, Math.round(((index + 1) * 90) / (total + 1))));
+}
+
+function normalizeMinute(minute) {
+  const m = Number(minute);
+  if (!Number.isFinite(m)) return 0;
+  return Math.max(0, Math.min(130, Math.round(m)));
+}
+
+function sameEventMinute(a, b) {
+  const ma = eventMinute(a);
+  const mb = eventMinute(b);
+  return ma != null && mb != null && Math.abs(ma - mb) <= 1;
+}
+
+function goalSignature(team, player, minute) {
+  return `${team || ""}|${_normName(player || "")}|${minute == null ? "" : normalizeMinute(minute)}`;
+}
+
+function assignAssistsToGoals(goals, assisters) {
+  const used = new Set();
+  const byTeam = { home: [], away: [] };
+  for (const a of assisters || []) {
+    if (a && (a.player || a.name)) byTeam[a.team === "away" ? "away" : "home"].push(a);
+  }
+  for (const side of ["home", "away"]) {
+    byTeam[side].sort((a, b) => (b.p || 0) - (a.p || 0));
+  }
+  for (const g of goals) {
+    if (g.type !== "goal") continue;
+    const list = byTeam[g.side] || [];
+    let found = null;
+    for (const a of list) {
+      const name = a.player || a.name;
+      const key = `${g.side}|${_normName(name)}`;
+      if (used.has(key)) continue;
+      if (_normName(name) && _normName(name) === _normName(g.player)) continue;
+      if (a.minute != null && g.minute != null && Math.abs(Number(a.minute) - Number(g.minute)) > 2) continue;
+      found = { key, name };
+      break;
+    }
+    if (found) {
+      used.add(found.key);
+      g.assist = found.name;
+    }
+  }
+}
+
+function buildGoalEventsForScore(score, scorers = [], assisters = [], penalties = [], ownGoals = []) {
+  const target = parseScore(score);
+  const all = [];
+  const penaltyGoalSigs = new Set();
+  const penaltyGoalRefs = { home: [], away: [] };
+
+  for (const pen of penalties || []) {
+    if (!pen || pen.outcome !== "scored") continue;
+    const side = pen.team === "away" ? "away" : "home";
+    const minute = eventMinute(pen);
+    const taker = pen.taker || pen.player;
+    penaltyGoalSigs.add(goalSignature(side, taker, minute));
+    penaltyGoalRefs[side].push({ player: _normName(taker || ""), minute });
+    all.push({
+      type: "penalty_goal",
+      side,
+      minute,
+      extra: pen.extra,
+      player: taker || t("unspecified_goal"),
+      priority: 0,
+      p: pen.p || 1,
+    });
+  }
+
+  for (const og of ownGoals || []) {
+    if (!og) continue;
+    const ownTeam = og.team === "away" ? "away" : "home";
+    const creditedSide = og.for_team === "away" || og.scoring_team === "away"
+      ? "away"
+      : og.for_team === "home" || og.scoring_team === "home"
+        ? "home"
+        : oppositeSide(ownTeam);
+    all.push({
+      type: "own_goal",
+      side: creditedSide,
+      team: ownTeam,
+      minute: eventMinute(og),
+      extra: og.extra,
+      player: og.player || t("unspecified_goal"),
+      priority: 1,
+      p: og.p || 1,
+    });
+  }
+
+  for (const s of scorers || []) {
+    if (!s) continue;
+    const side = s.team === "away" ? "away" : "home";
+    const minute = eventMinute(s);
+    const sig = goalSignature(side, s.player, minute);
+    const scorerName = _normName(s.player || s.name || "");
+    const duplicatesPenalty = (penaltyGoalRefs[side] || []).some(ref => {
+      if (!ref.player || ref.player !== scorerName) return false;
+      if (ref.minute == null || minute == null) return true;
+      return Math.abs(Number(ref.minute) - Number(minute)) <= 2;
+    });
+    if (penaltyGoalSigs.has(sig) || duplicatesPenalty) continue;
+    all.push({
+      type: "goal",
+      side,
+      minute,
+      extra: s.extra,
+      player: s.player || s.name || t("unspecified_goal"),
+      priority: 2,
+      p: s.p || 0,
+      minute_range: s.minute_range,
+    });
+  }
+
+  const selected = [];
+  for (const side of ["home", "away"]) {
+    const needed = Math.max(0, target[side] || 0);
+    const candidates = all
+      .filter(e => e.side === side)
+      .sort((a, b) => (a.priority - b.priority) || ((b.p || 0) - (a.p || 0)) || ((a.minute ?? 999) - (b.minute ?? 999)));
+    const sideGoals = candidates.slice(0, needed).map(e => ({ ...e }));
+    while (sideGoals.length < needed) {
+      sideGoals.push({
+        type: "goal",
+        side,
+        minute: null,
+        player: t("unspecified_goal"),
+        priority: 9,
+        p: null,
+      });
+    }
+    sideGoals.forEach((g, i) => {
+      if (g.minute == null) g.minute = defaultGoalMinute(i, needed);
+      g.minute = normalizeMinute(g.minute);
+    });
+    assignAssistsToGoals(sideGoals, assisters || []);
+    selected.push(...sideGoals);
+  }
+  return selected;
+}
+
+function buildPredictedTimelineEvents(p) {
+  const events = buildGoalEventsForScore(
+    p.most_likely_score || p.headline_score,
+    p.scorers || [],
+    p.assisters || [],
+    p.penalties || [],
+    p.own_goals || [],
+  );
+
+  for (const pen of p.penalties || []) {
+    if (!pen || pen.outcome === "scored") continue;
+    events.push({
+      type: pen.outcome === "saved" ? "penalty_saved" : "penalty_missed",
+      side: pen.team === "away" ? "away" : "home",
+      minute: normalizeMinute(eventMinute(pen) ?? 70),
+      extra: pen.extra,
+      player: pen.taker || pen.player || "",
+    });
+  }
+  for (const c of p.cards || []) {
+    events.push({
+      type: c.color === "red" ? "red_card" : c.color === "second_yellow" ? "second_yellow" : "yellow_card",
+      side: c.team === "away" ? "away" : "home",
+      minute: normalizeMinute(eventMinute(c) ?? 60),
+      extra: c.extra,
+      player: c.player || "",
+    });
+  }
+  for (const sub of p.substitutions || []) {
+    events.push({
+      type: "substitution",
+      side: sub.team === "away" ? "away" : "home",
+      minute: normalizeMinute(eventMinute(sub) ?? 65),
+      extra: sub.extra,
+      off: sub.off || "",
+      on: sub.on || "",
+    });
+  }
+  for (const ev of p.key_events || []) {
+    events.push({
+      type: "key_event",
+      side: ev.team === "away" ? "away" : "home",
+      minute: normalizeMinute(eventMinute(ev) ?? 60),
+      extra: ev.extra,
+      player: ev.player || "",
+      label: timelineKeyEventLabel(ev),
+    });
+  }
+  return events.sort(timelineSort);
+}
+
+function buildActualTimelineEvents(tr) {
+  if (!tr) return [];
+  const events = buildGoalEventsForScore(
+    tr.score,
+    tr.scorers || [],
+    tr.assisters || [],
+    tr.penalties || [],
+    tr.own_goals || [],
+  );
+  for (const pen of tr.penalties || []) {
+    if (!pen || pen.outcome === "scored") continue;
+    events.push({
+      type: pen.outcome === "saved" ? "penalty_saved" : "penalty_missed",
+      side: pen.team === "away" ? "away" : "home",
+      minute: normalizeMinute(eventMinute(pen) ?? 70),
+      extra: pen.extra,
+      player: pen.taker || pen.player || "",
+    });
+  }
+  for (const c of tr.cards || []) {
+    events.push({
+      type: c.color === "red" ? "red_card" : c.color === "second_yellow" ? "second_yellow" : "yellow_card",
+      side: c.team === "away" ? "away" : "home",
+      minute: normalizeMinute(eventMinute(c) ?? 60),
+      extra: c.extra,
+      player: c.player || "",
+    });
+  }
+  for (const sub of tr.substitutions || []) {
+    events.push({
+      type: "substitution",
+      side: sub.team === "away" ? "away" : "home",
+      minute: normalizeMinute(eventMinute(sub) ?? 65),
+      extra: sub.extra,
+      off: sub.off || "",
+      on: sub.on || "",
+    });
+  }
+  for (const ev of tr.key_events || []) {
+    events.push({
+      type: "key_event",
+      side: ev.team === "away" ? "away" : "home",
+      minute: normalizeMinute(eventMinute(ev) ?? 60),
+      extra: ev.extra,
+      player: ev.player || "",
+      label: timelineKeyEventLabel(ev),
+    });
+  }
+  return events.sort(timelineSort);
+}
+
+function timelineSort(a, b) {
+  const sideRank = side => side === "home" ? 0 : 1;
+  return (a.minute - b.minute) || (sideRank(a.side) - sideRank(b.side)) || String(a.type).localeCompare(String(b.type));
+}
+
+function timelineIcon(ev) {
+  if (ev.type === "goal" || ev.type === "penalty_goal" || ev.type === "own_goal") return "⚽";
+  if (ev.type === "yellow_card") return "🟨";
+  if (ev.type === "red_card") return "🟥";
+  if (ev.type === "second_yellow") return "🟨🟥";
+  if (ev.type === "substitution") return "↔";
+  if (ev.type === "penalty_saved") return "🧤";
+  if (ev.type === "penalty_missed") return "✕";
+  return "•";
+}
+
+function timelineKeyEventLabel(ev) {
+  const raw = ev?.label || ev?.detail || ev?.type || "";
+  const normalized = String(raw).trim().toLowerCase().replace(/[\s-]+/g, "_");
+  const key = `key_event_${normalized}`;
+  const mapped = I18N[_lang]?.[key];
+  if (mapped) return mapped;
+  return raw || t("key_event");
+}
+
+function timelineEventLabel(ev, f) {
+  const teamName = ev.side === "home" ? (f.home || t("home")) : (f.away || t("away"));
+  if (ev.type === "goal") {
+    return `${teamName} · ${ev.player || t("unspecified_goal")}${ev.assist ? ` · ${t("assist_prefix")}：${ev.assist}` : ""}`;
+  }
+  if (ev.type === "penalty_goal") return `${teamName} · ${t("penalty_goal")} · ${ev.player || t("unspecified_goal")}`;
+  if (ev.type === "own_goal") return `${teamName} · ${t("own_goal_label")} · ${ev.player || t("unspecified_goal")}`;
+  if (ev.type === "penalty_saved") return `${teamName} · ${t("penalty_saved")} · ${ev.player || ""}`;
+  if (ev.type === "penalty_missed") return `${teamName} · ${t("penalty_missed")} · ${ev.player || ""}`;
+  if (ev.type === "yellow_card") return `${teamName} · ${t("yellow_card")} · ${ev.player || ""}`;
+  if (ev.type === "red_card") return `${teamName} · ${t("red_card")} · ${ev.player || ""}`;
+  if (ev.type === "second_yellow") return `${teamName} · ${t("second_yellow_card")} · ${ev.player || ""}`;
+  if (ev.type === "substitution") return `${teamName} · ${t("substitution_event")} · ${ev.off || "?"} → ${ev.on || "?"}`;
+  return `${teamName} · ${ev.label || t("key_event")}${ev.player ? ` · ${ev.player}` : ""}`;
+}
+
+function eventExtraMinute(ev) {
+  const raw = ev && (ev.extra ?? ev.minute_extra ?? ev.stoppage_extra ?? ev.added_time);
+  const n = Number(raw);
+  return Number.isFinite(n) && n > 0 ? Math.round(n) : 0;
+}
+
+function isShootoutEvent(ev) {
+  const text = `${ev?.type || ""} ${ev?.label || ""} ${ev?.detail || ""} ${ev?.period || ""}`.toLowerCase();
+  return Boolean(ev?.shootout || ev?.penalty_shootout)
+    || text.includes("shootout")
+    || text.includes("penalty shoot")
+    || text.includes("点球大战")
+    || Number(ev?.minute) > 120;
+}
+
+function timelineHasExtraTime(rows, hasShootout) {
+  return hasShootout || rows.some(ev => ev.extra_time || ev.period === "extra_time" || Number(ev.minute) > 105);
+}
+
+function timelinePlotMinute(ev, maxMinute, hasExtraTime, hasShootout) {
+  if (hasShootout && isShootoutEvent(ev)) return Math.min(maxMinute, 126);
+  const minute = normalizeMinute(eventMinute(ev));
+  const extra = eventExtraMinute(ev);
+  if (extra && [45, 90, 105, 120].includes(minute)) return Math.min(minute, maxMinute);
+  if (!hasExtraTime && minute > 90 && minute < 120) return 90;
+  if (ev?.period === "first_half_stoppage" && minute > 45 && minute < 60) return 45;
+  return Math.min(minute, maxMinute);
+}
+
+function timelineMinuteLabel(ev, hasExtraTime, hasShootout) {
+  if (hasShootout && isShootoutEvent(ev)) return _lang === "zh" ? "点球" : "PEN";
+  const minute = normalizeMinute(eventMinute(ev));
+  const extra = eventExtraMinute(ev);
+  if (extra && [45, 90, 105, 120].includes(minute)) return `${minute}+${extra}`;
+  if (!hasExtraTime && minute > 90 && minute < 120) return `90+${minute - 90}`;
+  if (ev?.period === "first_half_stoppage" && minute > 45 && minute < 60) return `45+${minute - 45}`;
+  return `${minute}`;
+}
+
+function timelineMarkerLabel(minute) {
+  if (minute === 130) return _lang === "zh" ? "点球" : "PEN";
+  return `${minute}′`;
+}
+
+function timelineMinuteText(label) {
+  return label === "点球" || label === "PEN" ? label : `${label}′`;
+}
+
+function assignTimelineLayout(rows, maxMinute, hasExtraTime, hasShootout) {
+  const lanesBySide = { home: [], away: [] };
+  const minGapMinutes = maxMinute > 95 ? 5 : 6;
+  return rows.map((ev, order) => {
+    const side = ev.side === "away" ? "away" : "home";
+    const plotMinute = timelinePlotMinute(ev, maxMinute, hasExtraTime, hasShootout);
+    let lane = 0;
+    while (
+      lane < 4
+      && lanesBySide[side].some(prev => prev.lane === lane && Math.abs(prev.plotMinute - plotMinute) <= minGapMinutes)
+    ) {
+      lane += 1;
+    }
+    lane = Math.min(lane, 3);
+    lanesBySide[side].push({ lane, plotMinute });
+    return { ...ev, _lane: lane, _plotMinute: plotMinute, _order: order };
+  });
+}
+
+function renderEventTimeline(title, events, f, opts = {}) {
+  const rows = (events || []).filter(ev => ev && ev.side && Number.isFinite(Number(eventMinute(ev)))).sort(timelineSort);
+  if (!rows.length) return "";
+  const hasShootout = rows.some(isShootoutEvent);
+  const hasExtraTime = timelineHasExtraTime(rows, hasShootout);
+  const maxMinute = hasShootout ? 130 : hasExtraTime ? 120 : 90;
+  const markers = hasShootout
+    ? [0, 15, 30, 45, 60, 75, 90, 105, 120, 130]
+    : hasExtraTime
+      ? [0, 15, 30, 45, 60, 75, 90, 105, 120]
+      : [0, 15, 30, 45, 60, 75, 90];
+  const layoutRows = assignTimelineLayout(rows, maxMinute, hasExtraTime, hasShootout);
+  const maxLane = Math.max(0, ...layoutRows.map(ev => ev._lane || 0));
+  const timelineHeight = Math.max(9.5, 8 + maxLane * 4.6);
+  const teamLogo = side => side === "home" ? f.home_logo : f.away_logo;
+  const teamName = side => side === "home" ? (f.home || t("home")) : (f.away || t("away"));
+  const eventNodes = layoutRows.map((ev, i) => {
+    const pct = Math.max(0, Math.min(100, (Number(ev._plotMinute) / maxMinute) * 100));
+    const isHome = ev.side === "home";
+    const lane = ev._lane || 0;
+    const vertical = isHome
+      ? `top:calc(50% - ${3.55 + lane * 2.25}rem);`
+      : `top:calc(50% + ${0.85 + lane * 2.25}rem);`;
+    const label = timelineEventLabel(ev, f);
+    const minuteLabel = timelineMinuteLabel(ev, hasExtraTime, hasShootout);
+    const minuteText = timelineMinuteText(minuteLabel);
+    const bg = opts.actual ? "var(--timeline-actual-node-bg)" : "var(--timeline-node-bg)";
+    const border = opts.actual ? "var(--timeline-actual-node-border)" : "var(--timeline-node-border)";
+    return `<div title="${esc(`${minuteText} · ${label}`)}" style="position:absolute;left:${pct}%;${vertical}transform:translateX(-50%);z-index:${20 + i};text-align:center;min-width:2.5rem;">
+      <div style="width:2rem;height:2rem;border-radius:9999px;display:inline-flex;align-items:center;justify-content:center;background:${bg};border:1px solid ${border};box-shadow:0 8px 20px rgba(0,0,0,.25);font-size:.95rem;">${timelineIcon(ev)}</div>
+      <div class="font-mono text-[10px] text-gray-400 mt-0.5 whitespace-nowrap">${esc(minuteText)}</div>
+    </div>`;
+  }).join("");
+  const detailRows = rows.map(ev => {
+    const minuteLabel = timelineMinuteLabel(ev, hasExtraTime, hasShootout);
+    const minuteText = timelineMinuteText(minuteLabel);
+    return `
+    <div class="rounded-lg px-2.5 py-1.5 text-xs" style="background:var(--timeline-detail-bg);border:1px solid var(--timeline-detail-border);">
+      <span class="font-mono text-gray-400 mr-1.5">${esc(minuteText)}</span>
+      <span class="mr-1.5">${timelineIcon(ev)}</span>
+      <span style="color:var(--prediction-primary);">${esc(timelineEventLabel(ev, f))}</span>
+    </div>`;
+  }).join("");
+  return `
+    <div class="rounded-xl p-3 sm:p-4" style="background:var(--timeline-surface-bg);border:1px solid var(--timeline-surface-border);">
+      <div class="text-xs text-gray-400 uppercase tracking-wider mb-3">${esc(title)}</div>
+      <div class="grid gap-3" style="grid-template-columns:minmax(4rem,5.5rem) minmax(0,1fr);">
+        <div class="flex flex-col justify-between py-2 text-xs text-gray-300">
+          ${["home", "away"].map(side => `
+            <div class="flex items-center gap-2 min-w-0">
+              ${teamLogo(side) ? `<img src="${esc(teamLogo(side))}" alt="${esc(teamName(side))}" class="fixture-logo fixture-logo-sm"/>` : `<span>${side === "home" ? "🏠" : "🛫"}</span>`}
+              <span class="truncate">${esc(teamName(side))}</span>
+            </div>`).join("")}
+        </div>
+        <div style="position:relative;height:${timelineHeight}rem;padding:1rem .5rem;overflow:visible;">
+          <div style="position:absolute;left:.5rem;right:.5rem;top:50%;height:2px;background:var(--timeline-line);"></div>
+          ${markers.map(m => {
+            const pct = Math.max(0, Math.min(100, (m / maxMinute) * 100));
+            const isBoundary = m === 45 || m === 90 || m === 105 || m === 120;
+            return `<div style="position:absolute;left:${pct}%;top:${isBoundary ? ".25rem" : "50%"};bottom:${isBoundary ? ".25rem" : "auto"};height:${isBoundary ? "auto" : ".75rem"};border-left:1px ${isBoundary ? "dashed" : "solid"} var(--timeline-tick);transform:translateX(-50%);"></div>
+              <div class="font-mono text-[10px] text-gray-500 whitespace-nowrap" style="position:absolute;left:${pct}%;top:calc(50% + .65rem);transform:translateX(-50%);">${timelineMarkerLabel(m)}</div>`;
+          }).join("")}
+          ${eventNodes}
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-3">${detailRows}</div>
+    </div>`;
+}
+
 function _renderDetails(p, f) {
   const hName  = f.home || t("home");
   const aName  = f.away || t("away");
@@ -783,196 +1339,15 @@ function _renderDetails(p, f) {
       </div>`;
   }
 
-  // Scorers
-  if ((p.scorers || []).length) {
-    const trScorers = tr && tr.scorers ? tr.scorers : null;
-    const trScorerNames = new Set((trScorers || []).map(s => _normName(s.player)));
-    html += `
-      <div>
-        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("scorers")}</div>
-        <table class="w-full text-xs" style="border-collapse:collapse;">
-          <thead><tr class="text-gray-500 text-left">
-            <th class="font-normal pb-1">${t("player")}</th>
-            <th class="font-normal pb-1 text-center">${t("team")}</th>
-            <th class="font-normal pb-1 text-center">${t("prob")}</th>
-            <th class="font-normal pb-1 text-center">${t("minutes")}</th>
-          </tr></thead>
-          <tbody>
-            ${p.scorers.map(s => {
-              const cls = tr ? hitColor(trScorerNames.has(_normName(s.player))) : "text-gray-200";
-              return `<tr style="border-top:1px solid rgba(255,255,255,.06)">
-                <td class="py-1 ${cls}">${esc(s.player)}</td>
-                <td class="py-1 text-center">${tTeam(s.team)}</td>
-                <td class="py-1 text-center font-mono text-gray-300">${fmtPct(s.p)}</td>
-                <td class="py-1 text-center text-gray-400">
-                  ${s.minute_range ? `${s.minute_range[0]}′–${s.minute_range[1]}′` : "—"}
-                </td>
-              </tr>`;}).join("")}
-          </tbody>
-        </table>
-        ${trScorers && trScorers.length ? _truthBlock(
-          trScorers.map(s => `<span class="text-gray-200 font-semibold">${esc(s.player)}</span> <span class="text-gray-400">(${tTeam(s.team)} ${s.minute}′)</span>`).join(" &nbsp;·&nbsp; ")
-        ) : tr ? _truthBlock(`<span class="text-gray-400">${t("no_goals")}</span>`) : ""}
-      </div>`;
+  const predictedTimeline = buildPredictedTimelineEvents(p);
+  if (predictedTimeline.length) {
+    html += renderEventTimeline(t("predicted_timeline"), predictedTimeline, f);
   }
-
-  // Assisters
-  if ((p.assisters || []).length) {
-    const trAssisters = tr && tr.assisters ? tr.assisters : null;
-    const trAssisterNames = new Set((trAssisters || []).map(a => _normName(a.player)));
-    html += `
-      <div>
-        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("assisters")}</div>
-        <table class="w-full text-xs" style="border-collapse:collapse;">
-          <thead><tr class="text-gray-500 text-left">
-            <th class="font-normal pb-1">${t("player")}</th>
-            <th class="font-normal pb-1 text-center">${t("team")}</th>
-            <th class="font-normal pb-1 text-center">${t("prob")}</th>
-          </tr></thead>
-          <tbody>
-            ${p.assisters.map(a => {
-              const cls = tr ? hitColor(trAssisterNames.has(_normName(a.player))) : "text-gray-200";
-              return `<tr style="border-top:1px solid rgba(255,255,255,.06)">
-                <td class="py-1 ${cls}">${esc(a.player)}</td>
-                <td class="py-1 text-center">${tTeam(a.team)}</td>
-                <td class="py-1 text-center font-mono text-gray-300">${fmtPct(a.p)}</td>
-              </tr>`;}).join("")}
-          </tbody>
-        </table>
-        ${trAssisters && trAssisters.length ? _truthBlock(
-          trAssisters.map(a => `<span class="text-gray-200 font-semibold">${esc(a.player)}</span> <span class="text-gray-400">(${tTeam(a.team)})</span>`).join(" &nbsp;·&nbsp; ")
-        ) : tr ? _truthBlock(`<span class="text-gray-400">${t("no_assists")}</span>`) : ""}
-      </div>`;
-  }
-
-  // Substitutions
-  if ((p.substitutions || []).length) {
-    const trSubs = tr && tr.substitutions ? tr.substitutions : null;
-    const trSubOff = new Set((trSubs || []).map(s => _normName(s.off)));
-    const trSubOn  = new Set((trSubs || []).map(s => _normName(s.on)));
-    html += `
-      <div>
-        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("substitutions")}</div>
-        <table class="w-full text-xs" style="border-collapse:collapse;">
-          <thead><tr class="text-gray-500 text-left">
-            <th class="font-normal pb-1 w-10 text-center">${t("min")}</th>
-            <th class="font-normal pb-1 text-center">${t("team")}</th>
-            <th class="font-normal pb-1">${t("off_on")}</th>
-          </tr></thead>
-          <tbody>
-            ${p.substitutions.map(s => {
-              const offCls = tr ? hitColor(trSubOff.has(_normName(s.off))) : "text-gray-300";
-              const onCls  = tr ? hitColor(trSubOn.has(_normName(s.on)))  : "text-gray-300";
-              return `<tr style="border-top:1px solid rgba(255,255,255,.06)">
-                <td class="py-1 text-center text-gray-400">${s.minute}′</td>
-                <td class="py-1 text-center">${tTeam(s.team)}</td>
-                <td class="py-1"><span class="${offCls}">${esc(s.off)}</span> → <span class="${onCls}">${esc(s.on)}</span></td>
-              </tr>`;}).join("")}
-          </tbody>
-        </table>
-        ${trSubs && trSubs.length ? _truthBlock(`
-          <table class="w-full mt-1" style="border-collapse:collapse;">
-            ${trSubs.map(s => `
-              <tr>
-                <td class="pr-3 text-gray-400 font-mono">${s.minute}′</td>
-                <td class="pr-2">${tTeam(s.team)}</td>
-                <td>${esc(s.off)} → <span class="text-amber-300">${esc(s.on)}</span></td>
-              </tr>`).join("")}
-          </table>`) : ""}
-      </div>`;
-  }
-
-  // Cards
-  if ((p.cards || []).length) {
-    const trCards = tr && tr.cards ? tr.cards : null;
-    const trCardPlayers = new Set((trCards || []).map(c => _normName(c.player)));
-    html += `
-      <div>
-        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("cards")}</div>
-        <table class="w-full text-xs" style="border-collapse:collapse;">
-          <thead><tr class="text-gray-500 text-left">
-            <th class="font-normal pb-1 w-10 text-center">${t("min")}</th>
-            <th class="font-normal pb-1">${t("player")}</th>
-            <th class="font-normal pb-1 text-center">${t("team")}</th>
-            <th class="font-normal pb-1 text-center">${t("card")}</th>
-          </tr></thead>
-          <tbody>
-            ${p.cards.map(c => {
-              const cls = tr ? hitColor(trCardPlayers.has(_normName(c.player))) : "text-gray-200";
-              return `<tr style="border-top:1px solid rgba(255,255,255,.06)">
-                <td class="py-1 text-center text-gray-400">${c.minute}′</td>
-                <td class="py-1 ${cls}">${esc(c.player)}</td>
-                <td class="py-1 text-center">${tTeam(c.team)}</td>
-                <td class="py-1 text-center">
-                  ${c.color === "red" ? "🟥" : c.color === "second_yellow" ? "🟨🟥" : "🟨"}
-                </td>
-              </tr>`;}).join("")}
-          </tbody>
-        </table>
-        ${trCards && trCards.length ? _truthBlock(`
-          <table class="w-full mt-1" style="border-collapse:collapse;">
-            ${trCards.map(c => `
-              <tr>
-                <td class="pr-3 text-gray-400 font-mono">${c.minute}′</td>
-                <td class="pr-2">${tTeam(c.team)}</td>
-                <td class="pr-3 text-gray-200 font-semibold">${esc(c.player)}</td>
-                <td>${c.color === "red" ? "🟥" : c.color === "second_yellow" ? "🟨🟥" : "🟨"}</td>
-              </tr>`).join("")}
-          </table>`) : tr ? _truthBlock(`<span class="text-gray-400">${t("no_cards")}</span>`) : ""}
-      </div>`;
-  }
-
-  // Penalties
-  if ((p.penalties || []).length) {
-    const trPens = tr && tr.penalties ? tr.penalties : null;
-    const trPenTakers = new Set((trPens || []).map(p => _normName(p.taker)));
-    html += `
-      <div>
-        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("penalties")}</div>
-        <table class="w-full text-xs" style="border-collapse:collapse;">
-          <thead><tr class="text-gray-500 text-left">
-            <th class="font-normal pb-1 w-10 text-center">${t("min")}</th>
-            <th class="font-normal pb-1">${t("taker")}</th>
-            <th class="font-normal pb-1 text-center">${t("team")}</th>
-            <th class="font-normal pb-1">${t("outcome")}</th>
-          </tr></thead>
-          <tbody>
-            ${p.penalties.map(pen => {
-              const cls = tr ? hitColor(trPenTakers.has(_normName(pen.taker))) : "text-gray-200";
-              return `<tr style="border-top:1px solid rgba(255,255,255,.06)">
-                <td class="py-1 text-center text-gray-400">${pen.minute}′</td>
-                <td class="py-1 ${cls}">${esc(pen.taker)}</td>
-                <td class="py-1 text-center">${tTeam(pen.team)}</td>
-                <td class="py-1 text-gray-300">
-                  ${pen.outcome === "scored" ? "✅" : pen.outcome === "saved" ? "🧤" : "❌"}
-                  ${esc(pen.outcome)}
-                </td>
-              </tr>`;}).join("")}
-          </tbody>
-        </table>
-        ${trPens && trPens.length ? _truthBlock(
-          trPens.map(pen => `<span class="text-gray-200 font-semibold">${esc(pen.taker)}</span> <span class="text-gray-400">${pen.minute}′ · ✅ scored</span>`).join(" &nbsp;·&nbsp; ")
-        ) : tr ? _truthBlock(`<span class="text-gray-400">${t("no_penalties")}</span>`) : ""}
-      </div>`;
-  }
-
-  // Own goals
-  if ((p.own_goals || []).length) {
-    const trOg = tr && tr.own_goals ? tr.own_goals : null;
-    const trOgPlayers = new Set((trOg || []).map(o => _normName(o.player)));
-    html += `
-      <div>
-        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("own_goals")}</div>
-        <div class="space-y-1 text-xs">
-          ${p.own_goals.map(og => {
-            const cls = tr ? hitColor(trOgPlayers.has(_normName(og.player))) : "text-gray-200";
-            return `<div>${og.minute}′ — <span class="${cls}">${esc(og.player)}</span> ${tTeam(og.team)}</div>`;
-          }).join("")}
-        </div>
-        ${trOg && trOg.length ? _truthBlock(
-          trOg.map(og => `<span class="text-gray-200 font-semibold">${esc(og.player)}</span> <span class="text-gray-400">${og.minute}′</span>`).join(" &nbsp;·&nbsp; ")
-        ) : tr ? _truthBlock(`<span class="text-gray-400">${t("no_own_goals")}</span>`) : ""}
-      </div>`;
+  if (tr) {
+    const actualTimeline = buildActualTimelineEvents(tr);
+    html += actualTimeline.length
+      ? renderEventTimeline(t("actual_timeline"), actualTimeline, f, { actual: true })
+      : _truthBlock(`<span class="text-gray-400">${t("no_timeline_events")}</span>`);
   }
 
   // Stats
@@ -1076,7 +1451,7 @@ function renderSourcesPanel(idx) {
   return renderSourcesList(p.sources || []);
 }
 
-function renderDetailsPanel(idx) {
+function renderPrematchDetailsPanel(idx) {
   const p = _allPreds[idx] || {};
   const f = _predFixtures[idx] || {};
   const reasoning = p.reasoning || {};
@@ -1089,7 +1464,6 @@ function renderDetailsPanel(idx) {
     ? [["home", t("h")], ["draw", t("draw")], ["away", t("a")]]
     : [["home", hName], ["draw", t("draw")], ["away", aName]];
   const hasReason = Object.keys(reasoning).length > 0;
-
   return `
     <div class="space-y-4">
       ${wp.home != null ? `
@@ -1137,7 +1511,23 @@ function renderDetailsPanel(idx) {
       ` : ""}
       ${_renderDetails(p, f)}
       <div class="pt-2 border-t border-white/5">
-        <button onclick="toggleDetails(${idx})" class="chip hover:bg-white/15 transition text-xs">${t("hide_detail")}</button>
+        <button onclick="togglePredPanel(${idx}, 'prematch')" class="chip hover:bg-white/15 transition text-xs">${t("hide_prematch_prediction")}</button>
+      </div>
+    </div>`;
+}
+
+function renderLiveDetailsPanel(idx) {
+  const p = _allPreds[idx] || {};
+  const f = _predFixtures[idx] || {};
+  const livePred = p._live_prediction || null;
+  if (!livePred) {
+    return `<div class="text-gray-500 text-sm">${t("unavailable_detail")}</div>`;
+  }
+  return `
+    <div class="space-y-4">
+      ${renderLivePredictionDetails(livePred, f, { showTimeline: true })}
+      <div class="pt-2 border-t border-white/5">
+        <button onclick="togglePredPanel(${idx}, 'live')" class="chip hover:bg-white/15 transition text-xs">${t("hide_live_prediction")}</button>
       </div>
     </div>`;
 }
@@ -1152,8 +1542,10 @@ function renderPredCard(p, f, idx, opts = {}) {
   const aName      = f.away || t("away");
   const status     = p.status || "ok";
   const showActualSummary = opts.showActualSummary !== false;
-  const extraButtonAttr = opts.isExtra ? ' data-extra-button="details"' : "";
+  const extraPrematchButtonAttr = opts.isExtra ? ' data-extra-button="prematch"' : "";
+  const extraLiveButtonAttr = opts.isExtra ? ' data-extra-button="live"' : "";
   const extraSourcesButtonAttr = opts.isExtra ? ' data-extra-button="sources"' : "";
+  const livePred = p._live_prediction || null;
 
   const scoreWinner = outcomeFromScore(predScore, hName, aName);
   const predWinner = winnerFromWinProbs(wp, hName, aName) || scoreWinner;
@@ -1194,53 +1586,62 @@ function renderPredCard(p, f, idx, opts = {}) {
       ${headerHtml}
 
       <!-- Minimalist Prediction -->
-      ${predWinner || top3.length ? `
-      <div class="mb-2">
-        <div class="flex items-start gap-3 sm:gap-4 flex-wrap">
-          <div>
-            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">${t("pred_winner")}</div>
-            ${(() => {
-              const truthOutcome = f.truth
-                ? (f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : t("draw"))
-                : null;
-              const winnerCorrect = truthOutcome && predWinner && truthOutcome === predWinner;
-              const winnerColor = truthOutcome
-                ? (winnerCorrect ? "color:#4ade80;" : "color:#f87171;")
-                : "color:var(--prediction-primary);";
-              return `<div class="text-xl font-black leading-tight" style="${winnerColor}">${esc(predWinner || "—")}</div>`;
-            })()}
+      ${predWinner || top3.length || livePred ? `
+      <div class="${livePred ? "grid grid-cols-1 sm:grid-cols-2 gap-3" : ""} mb-2">
+        ${predWinner || top3.length ? `
+        <div class="rounded-lg px-3 py-2" style="min-height:9rem;display:flex;flex-direction:column;background:${livePred ? "rgba(255,255,255,.035)" : "transparent"};border:${livePred ? "1px solid rgba(255,255,255,.06)" : "0"};">
+          <div style="flex:1 1 auto;">
+            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1.5">${t("prematch_prediction")}</div>
+            <div class="flex items-start gap-3 sm:gap-4 flex-wrap">
+              <div>
+                <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">${t("pred_winner")}</div>
+                ${(() => {
+                  const truthOutcome = f.truth
+                    ? (f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : t("draw"))
+                    : null;
+                  const winnerCorrect = truthOutcome && predWinner && truthOutcome === predWinner;
+                  const winnerColor = truthOutcome
+                    ? (winnerCorrect ? "color:#4ade80;" : "color:#f87171;")
+                    : "color:var(--prediction-primary);";
+                  return `<div class="text-xl font-black leading-tight" style="${winnerColor}">${esc(predWinner || "—")}</div>`;
+                })()}
+              </div>
+              <div style="width:1px;height:2.15rem;background:var(--prediction-divider);"></div>
+              <div>
+                <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">${t("pred_score")}</div>
+                ${(() => {
+                  const actualScore = f.truth ? f.truth.score : null;
+                  const scoreCorrect = predScore && actualScore && predScore === actualScore;
+                  const scoreColor = actualScore
+                    ? (scoreCorrect ? "color:#4ade80;" : "color:#f87171;")
+                    : "color:var(--prediction-primary);";
+                  return `<div class="text-xl font-black leading-tight font-mono whitespace-nowrap" style="${scoreColor}">${esc(predScore ? predScore.replace("-", " - ") : "—")}</div>`;
+                })()}
+              </div>
+              ${showActualSummary && f.truth ? `<div class="ml-auto">
+                <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">${t("actual")}</div>
+                <div class="text-xl font-black font-mono leading-tight whitespace-nowrap" style="color:var(--actual-score-color);">${esc(f.truth.score.replace("-", " - ") || "—")}</div>
+                <div class="text-xs font-mono" style="color:#fbbf2480;">${esc(
+                  f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : f.truth.result === "draw" ? t("draw") : f.truth.result || "—"
+                )}</div>
+              </div>` : ""}
+            </div>
           </div>
-          <div style="width:1px;height:2.15rem;background:var(--prediction-divider);"></div>
-          <div>
-            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">${t("pred_score")}</div>
-            ${(() => {
-              const actualScore = f.truth ? f.truth.score : null;
-              const scoreCorrect = predScore && actualScore && predScore === actualScore;
-              const scoreColor = actualScore
-                ? (scoreCorrect ? "color:#4ade80;" : "color:#f87171;")
-                : "color:var(--prediction-primary);";
-              return `<div class="text-xl font-black leading-tight font-mono whitespace-nowrap" style="${scoreColor}">${esc(predScore ? predScore.replace("-", " - ") : "—")}</div>`;
-            })()}
+          <div class="pt-2 flex justify-start" style="margin-top:auto;">
+            <button id="pred-prematch-btn-${idx}" onclick="togglePredPanel(${idx}, 'prematch')"
+                    class="chip pred-action hover:bg-white/15 transition text-[10px]"${extraPrematchButtonAttr}>${t("show_prematch_prediction")}</button>
           </div>
-          ${showActualSummary && f.truth ? `<div class="ml-auto">
-            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">${t("actual")}</div>
-            <div class="text-xl font-black font-mono leading-tight whitespace-nowrap" style="color:#000;">${esc(f.truth.score.replace("-", " - ") || "—")}</div>
-            <div class="text-xs font-mono" style="color:#fbbf2480;">${esc(
-              f.truth.result === "home" ? hName : f.truth.result === "away" ? aName : f.truth.result === "draw" ? t("draw") : f.truth.result || "—"
-            )}</div>
-          </div>` : ""}
-        </div>
+        </div>` : ""}
+        ${livePred ? renderInlineLivePrediction(livePred, f, { actionIdx: idx, extraButtonAttr: extraLiveButtonAttr }) : ""}
       </div>
       ` : ""}
 
       <!-- Buttons -->
-      <div class="flex flex-wrap gap-2 mt-1">
-        <button id="pred-details-btn-${idx}" onclick="toggleDetails(${idx})"
-                class="chip pred-action hover:bg-white/15 transition text-[11px]"${extraButtonAttr}>${t("show_details")}</button>
-        ${p.sources && p.sources.length ? `
+      ${p.sources && p.sources.length ? `
+      <div class="flex flex-wrap gap-2 mt-1 justify-end">
         <button id="pred-sources-btn-${idx}" onclick="toggleSources(${idx})"
-                class="chip pred-action hover:bg-white/15 transition text-[11px]"${extraSourcesButtonAttr} data-source-count="${p.sources.length}">${t("sources", { count: p.sources.length })}</button>` : ""}
-      </div>
+                class="chip pred-action hover:bg-white/15 transition text-[11px]"${extraSourcesButtonAttr} data-source-count="${p.sources.length}">${t("sources", { count: p.sources.length })}</button>
+      </div>` : ""}
     </div>`;
 }
 
@@ -1266,7 +1667,11 @@ function renderPredGrid(preds, f, startIdx, groupId, opts = {}) {
 
   const renderRows = (items, hiddenRows) => {
     const rows = [];
-    const rowSize = isMobilePredLayout() ? 1 : 2;
+    const desktopCardsPerRow = Math.max(1, Math.min(4, Number(PREDICTION_CARDS_PER_ROW) || 2));
+    const rowSize = isMobilePredLayout() ? 1 : desktopCardsPerRow;
+    const gridStyle = isMobilePredLayout()
+      ? ""
+      : ` style="grid-template-columns:repeat(${rowSize},minmax(0,1fr));"`;
     for (let rowStart = 0; rowStart < items.length; rowStart += rowSize) {
       const cards = items.slice(rowStart, rowStart + rowSize).map(item => `
         <div>${renderPredCard(item.pred, f, item.idx, {
@@ -1276,7 +1681,7 @@ function renderPredGrid(preds, f, startIdx, groupId, opts = {}) {
       `).join("");
       rows.push(`
         <div class="${hiddenRows ? "hidden " : ""}space-y-2" data-pred-row="1"${hiddenRows ? ' data-pred-extra-row="1"' : ""}>
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">${cards}</div>
+          <div class="grid grid-cols-1 gap-2"${gridStyle}>${cards}</div>
           <div class="pred-expanded card rounded-lg p-4 hidden" data-pred-panel="1"></div>
         </div>
       `);
@@ -1313,8 +1718,29 @@ function renderAllPredCards(preds, f, startIdx) {
   });
 }
 
-function liveMinuteLabel(live) {
-  if (live && live.elapsed != null) return `${live.elapsed}′`;
+function inferredLiveElapsed(live, submittedAt) {
+  if (live && live.elapsed != null) {
+    const elapsed = Number(live.elapsed);
+    return Number.isFinite(elapsed) ? Math.round(elapsed) : null;
+  }
+  if (!live || live.status === "Not Started" || !live.kickoff_utc || !submittedAt) return null;
+  const kickoff = new Date(live.kickoff_utc);
+  const submitted = new Date(submittedAt);
+  if (Number.isNaN(kickoff.getTime()) || Number.isNaN(submitted.getTime())) return null;
+  const delta = Math.floor((submitted.getTime() - kickoff.getTime()) / 60000);
+  if (!Number.isFinite(delta) || delta < 0) return null;
+  const status = String(live.status || "").toLowerCase();
+  if (status.includes("half time") || status === "ht" || status === "halftime") return 45;
+  if (status.includes("1st") || status.includes("first")) return Math.max(1, Math.min(45, delta));
+  if (status.includes("2nd") || status.includes("second")) return Math.max(46, Math.min(90, delta >= 60 ? delta - 15 : delta));
+  if (status.includes("extra")) return Math.max(91, Math.min(130, delta - 15));
+  return Math.max(1, Math.min(130, delta));
+}
+
+function liveMinuteLabel(live, submittedAt) {
+  const elapsed = inferredLiveElapsed(live, submittedAt);
+  if (elapsed != null) return `${elapsed}′`;
+  if (live && live.status === "Not Started") return t("live_pre_match");
   return (live && live.status) ? live.status : t("live");
 }
 
@@ -1323,10 +1749,254 @@ function liveScoreLabel(live) {
   return `${sc.home ?? "?"}-${sc.away ?? "?"}`;
 }
 
+function liveHasKnownScore(live) {
+  const sc = (live && live.score) || {};
+  return sc.home != null && sc.away != null;
+}
+
+function liveSnapshotLabel(live, submittedAt) {
+  if (!live) return t("live_unknown_state");
+  if (liveHasKnownScore(live)) return liveScoreLabel(live);
+  if (live.status === "Not Started") return t("live_pre_match");
+  return liveMinuteLabel(live, submittedAt);
+}
+
+function liveBasisLabel(live, submittedAt) {
+  const state = liveSnapshotLabel(live, submittedAt);
+  if (liveHasKnownScore(live)) return t("live_current_score_state", { score: state });
+  return t("live_current_state", { state });
+}
+
+function liveUpdatedStateLabel(live, submittedAt) {
+  const elapsed = inferredLiveElapsed(live, submittedAt);
+  if (elapsed != null) return t("live_match_minute", { minute: elapsed });
+  return liveSnapshotLabel(live, submittedAt);
+}
+
+function livePredictionTitle(item) {
+  const live = (item && item.live) || {};
+  const elapsed = inferredLiveElapsed(live, item && item.submitted_at);
+  if (elapsed != null) return t("latest_live_prediction_minute", { minute: elapsed });
+  return t("latest_live_prediction");
+}
+
 function liveTeamName(side, f) {
   if (side === "home") return f.home || t("home");
   if (side === "away") return f.away || t("away");
   return side || "—";
+}
+
+function attachLivePredictions(preds, livePreds) {
+  if (!livePreds || !livePreds.length) return preds || [];
+  const byModel = new Map();
+  for (const item of livePreds) {
+    if (item && item.model_id) byModel.set(item.model_id, item);
+  }
+  return (preds || []).map(pred => ({
+    ...pred,
+    _live_prediction: byModel.get(pred.model_id) || null,
+  }));
+}
+
+function unmatchedLivePredictions(preds, livePreds) {
+  const seen = new Set((preds || []).map(p => p.model_id));
+  return (livePreds || []).filter(item => item && !seen.has(item.model_id));
+}
+
+function livePredictionWinner(item, f) {
+  const hName = f.home || t("home");
+  const aName = f.away || t("away");
+  return winnerFromWinProbs((item && item.win_probs) || {}, hName, aName) || "—";
+}
+
+function livePredictionScore(item) {
+  const score = item && item.most_likely_score;
+  return score ? String(score).replace("-", " - ") : "—";
+}
+
+function livePredictionTimestamp(item) {
+  return item && item.submitted_at ? fmtLocalKickoff(new Date(item.submitted_at)) : "—";
+}
+
+function liveHistoryMinutePrefix(entry) {
+  const live = (entry && entry.live) || {};
+  const elapsed = inferredLiveElapsed(live, entry && entry.submitted_at);
+  if (elapsed != null) return t("live_history_minute_prefix", { minute: elapsed });
+  if (live.status === "Not Started") return t("live_history_prematch_prefix");
+  return "";
+}
+
+function renderInlineLivePrediction(item, f, opts = {}) {
+  if (!item) return "";
+  if ((item.status || "ok") !== "ok") {
+    return `
+      <div class="rounded-lg px-3 py-2" style="color:#fca5a5;border:1px solid rgba(248,113,113,.28);background:rgba(248,113,113,.08);">
+        <div class="text-[10px] uppercase tracking-wider mb-1">${esc(livePredictionTitle(item))}</div>
+        <div class="text-xs leading-snug">${esc(item.error_summary || t("unavailable_detail"))}</div>
+      </div>`;
+  }
+  const live = item.live || {};
+  const wp = item.win_probs || {};
+  const actionIdx = opts.actionIdx;
+  const actionButton = actionIdx != null ? `
+          <button id="pred-live-btn-${actionIdx}" onclick="togglePredPanel(${actionIdx}, 'live')"
+                  class="chip pred-action hover:bg-white/15 transition text-[10px]"${opts.extraButtonAttr || ""}>${t("show_live_prediction")}</button>` : "";
+  return `
+    <div class="rounded-lg px-3 py-2" style="min-height:9rem;display:flex;flex-direction:column;border:1px solid rgba(248,113,113,.24);background:rgba(248,113,113,.075);">
+      <div style="flex:1 1 auto;">
+        <div class="flex items-center justify-between gap-2 mb-1.5 flex-wrap">
+          <div class="text-[10px] text-gray-400 uppercase tracking-wider">${esc(livePredictionTitle(item))}</div>
+          <div class="flex items-center gap-1.5 flex-wrap justify-end">
+            <span class="chip chip-live text-[10px]">LIVE</span>
+          </div>
+        </div>
+        <div class="text-[11px] text-gray-500 mb-2">
+          ${esc(liveBasisLabel(live, item.submitted_at))}
+        </div>
+        <div class="flex items-start gap-3 flex-wrap">
+          <div>
+            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">${t("pred_winner")}</div>
+            <div class="text-lg font-black leading-tight" style="color:#fca5a5;">${esc(livePredictionWinner(item, f))}</div>
+          </div>
+          <div style="width:1px;height:2rem;background:rgba(255,255,255,.14);"></div>
+          <div>
+            <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">${t("live_final_score")}</div>
+            <div class="text-lg font-black leading-tight font-mono whitespace-nowrap" style="color:#fca5a5;">${esc(livePredictionScore(item))}</div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-1.5 mt-2">
+          ${[["home", f.home || t("home")], ["draw", t("draw")], ["away", f.away || t("away")]].map(([key, label]) => `
+            <div class="text-center rounded-md px-1.5 py-1" style="background:rgba(255,255,255,.055);">
+              <div class="text-[9px] text-gray-500 uppercase tracking-wider truncate">${esc(label)}</div>
+              <div class="text-xs font-black font-mono text-gray-100">${fmtPct(wp[key])}</div>
+            </div>`).join("")}
+        </div>
+        <div class="text-[10px] text-gray-500 mt-1.5">${esc(t("live_updated_at", { time: livePredictionTimestamp(item) }))}</div>
+      </div>
+      ${actionButton ? `<div class="pt-2 flex justify-start" style="margin-top:auto;">${actionButton}</div>` : ""}
+    </div>`;
+}
+
+function renderLivePredictionHistoryList(item, f) {
+  if (!item) return "";
+  const rawHistory = item.history && item.history.length ? item.history : [item];
+  const history = rawHistory.filter(Boolean);
+  if (!history.length) return "";
+  return `
+    <div>
+      <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("live_prediction_history")}</div>
+      <div class="space-y-1.5 pr-1" style="max-height:14rem;overflow-y:auto;">
+        ${history.map(entry => {
+          const status = entry.status || "ok";
+          const basis = liveBasisLabel(entry.live || {}, entry.submitted_at);
+          const minutePrefix = liveHistoryMinutePrefix(entry);
+          if (status !== "ok") {
+            return `
+              <div class="rounded-lg px-3 py-2 text-xs" style="color:#fca5a5;background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.2);">
+                ${minutePrefix ? `<span class="font-semibold text-gray-200">${esc(minutePrefix)}</span>` : ""}
+                <span class="font-mono text-gray-400">${esc(livePredictionTimestamp(entry))}</span>
+                <span class="mx-1">·</span>${esc(entry.error_summary || t("unavailable_detail"))}
+              </div>`;
+          }
+          return `
+            <div class="rounded-lg px-3 py-2 text-xs" style="background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.06);">
+              ${minutePrefix ? `<span class="font-semibold text-gray-200">${esc(minutePrefix)}</span>` : ""}${esc(t("live_history_item", {
+                time: livePredictionTimestamp(entry),
+                basis,
+                score: livePredictionScore(entry),
+                winner: livePredictionWinner(entry, f),
+              }))}
+            </div>`;
+        }).join("")}
+      </div>
+    </div>`;
+}
+
+function defaultLiveFutureGoalMinute(index, total, elapsed) {
+  const start = Math.max(1, Number(elapsed) || 0);
+  const spanStart = Math.min(84, start + 8);
+  const spanEnd = start < 45 ? 88 : 118;
+  const slots = Math.max(1, total + 1);
+  return normalizeMinute(Math.min(spanEnd, Math.round(spanStart + ((index + 1) * (spanEnd - spanStart)) / slots)));
+}
+
+function livePredictionGoalMinute(item, scorer, index, total) {
+  const elapsed = inferredLiveElapsed((item && item.live) || {}, item && item.submitted_at) || 0;
+  let minute = eventMinute(scorer);
+  if (minute == null) minute = defaultLiveFutureGoalMinute(index, total, elapsed);
+  minute = normalizeMinute(minute);
+  if (minute <= elapsed) minute = normalizeMinute(Math.min(130, elapsed + 5 + index * 7));
+  return minute;
+}
+
+function buildLivePredictionTimelineEvents(item) {
+  if (!item) return [];
+  const live = item.live || {};
+  const current = live.score || {};
+  const final = parseScore(item.most_likely_score);
+  const scorers = (item.scorers || []).filter(Boolean);
+  const events = [];
+  const used = new Set();
+
+  for (const side of ["home", "away"]) {
+    const finalGoals = final ? Math.max(0, Number(final[side]) || 0) : null;
+    const currentGoals = Math.max(0, Number(current[side]) || 0);
+    const needed = finalGoals == null
+      ? scorers.filter(s => (s.team === side)).length
+      : Math.max(0, finalGoals - currentGoals);
+    if (!needed) continue;
+
+    const sideScorers = scorers
+      .map((s, originalIndex) => ({ ...s, originalIndex }))
+      .filter(s => s.team === side)
+      .sort((a, b) => (eventMinute(a) ?? 999) - (eventMinute(b) ?? 999) || ((b.p || 0) - (a.p || 0)));
+
+    for (let i = 0; i < needed; i += 1) {
+      const scorer = sideScorers[i] || {};
+      if (scorer.originalIndex != null) used.add(scorer.originalIndex);
+      events.push({
+        type: "goal",
+        side,
+        minute: livePredictionGoalMinute(item, scorer, i, needed),
+        player: scorer.player || scorer.name || t("unspecified_goal"),
+        p: scorer.p ?? null,
+      });
+    }
+  }
+
+  if (!final) {
+    scorers.forEach((s, i) => {
+      if (used.has(i) || !s.team) return;
+      events.push({
+        type: "goal",
+        side: s.team,
+        minute: livePredictionGoalMinute(item, s, i, scorers.length),
+        player: s.player || s.name || t("unspecified_goal"),
+        p: s.p ?? null,
+      });
+    });
+  }
+
+  return events.sort(timelineSort);
+}
+
+function renderLivePredictionTimeline(item, f) {
+  const events = buildLivePredictionTimelineEvents(item);
+  return events.length
+    ? renderEventTimeline(t("predicted_timeline"), events, f)
+    : _truthBlock(`<span class="text-gray-400">${t("no_timeline_events")}</span>`);
+}
+
+function renderLivePredictionDetails(item, f, opts = {}) {
+  if (!item) return "";
+  const plainShell = opts.showTimeline;
+  const shellClass = plainShell ? "space-y-3" : "rounded-xl p-3 sm:p-4";
+  const shellStyle = plainShell ? "" : ' style="background:rgba(248,113,113,.06);border:1px solid rgba(248,113,113,.18);"';
+  return `
+    <div class="${shellClass}"${shellStyle}>
+      ${renderInlineLivePrediction(item, f)}
+      <div>${renderLivePredictionHistoryList(item, f)}</div>
+    </div>`;
 }
 
 function renderLivePredictions(items, f) {
@@ -1380,7 +2050,7 @@ function renderLivePredictions(items, f) {
                 ${p.cost_usd != null ? `<span class="text-xs text-gray-600 whitespace-nowrap">${t("cost")}: $${(+p.cost_usd).toFixed(3)}</span>` : ""}
               </div>
               <div class="text-[11px] text-gray-500 mb-2">
-                ${esc(t("live_current_snapshot", { score: liveScoreLabel(live), minute: liveMinuteLabel(live) }))}
+                ${esc(liveBasisLabel(live, p.submitted_at))}
                 <span class="mx-1">·</span>${esc(t("live_updated_at", { time: updated }))}
               </div>
               <div class="grid grid-cols-3 gap-2 mb-3">
@@ -1416,7 +2086,8 @@ function renderLivePredictions(items, f) {
                     `).join("")}
                   </div>` : `<div class="text-xs text-gray-500">${t("no_future_scorers")}</div>`}
               </div>
-              ${reasoning ? `<div class="text-sm text-gray-300 leading-relaxed whitespace-pre-wrap">${esc(reasoning)}</div>` : ""}
+              ${reasoning ? `<div class="text-sm text-gray-300 leading-relaxed whitespace-pre-wrap mb-3">${esc(reasoning)}</div>` : ""}
+              ${renderLivePredictionHistoryList(p, f)}
               ${sources.length ? `
                 <details class="mt-3">
                   <summary class="chip hover:bg-white/15 transition text-[11px]">${t("sources", { count: sources.length })}</summary>
@@ -1434,8 +2105,10 @@ function _renderOneFixture(nm, cardIdx) {
   const f     = nm.fixture;
   const kick  = f.kickoff_utc ? new Date(f.kickoff_utc) : null;
   const cid   = `nm-countdown-${cardIdx}`;
-  const preds = nm.predictions || [];
+  const basePreds = nm.predictions || [];
   const livePreds = nm.live_predictions || [];
+  const preds = attachLivePredictions(basePreds, livePreds);
+  const standaloneLivePreds = unmatchedLivePredictions(preds, livePreds);
   const nmStart = registerPreds(preds, f);
 
   const lv = nm.live;
@@ -1481,7 +2154,7 @@ function _renderOneFixture(nm, cardIdx) {
           </div>
         </div>
       </div>
-      ${renderLivePredictions(livePreds, f)}
+      ${renderLivePredictions(standaloneLivePreds, f)}
       ${preds.length === 0
         ? (livePreds.length ? "" : `<div class="text-gray-400 text-sm">${t("no_model_predictions")}</div>`)
         : renderAllPredCards(preds, f, nmStart)}
@@ -1716,7 +2389,7 @@ function renderHistory(rows) {
     const scoreHtml = isLive
       ? `<div class="text-3xl font-black font-mono" style="color:#f87171;">${esc(liveScore || "?–?")}</div>
          <div class="text-xs font-semibold mt-0.5" style="color:#fca5a5;">${t("live_red")}${lv.elapsed != null ? ` · ${lv.elapsed}′` : ""}</div>`
-      : `<div class="text-3xl font-black font-mono" style="color:#000;">${esc((r.result || "—").replace("-", " – "))}</div>`;
+      : `<div class="text-3xl font-black font-mono" style="color:var(--actual-score-color);">${esc((r.result || "—").replace("-", " – "))}</div>`;
 
     const hStart = registerPreds(preds, r);
 
@@ -1731,7 +2404,7 @@ function renderHistory(rows) {
                 <div class="team-name text-xs font-bold leading-tight">${esc(r.home || "?")}</div>
               </div>
               <div class="text-center">
-                <div class="text-2xl font-black font-mono" style="color:#000;">${esc((r.result || "—").replace("-", " – "))}</div>
+                <div class="text-2xl font-black font-mono" style="color:var(--actual-score-color);">${esc((r.result || "—").replace("-", " – "))}</div>
                 <div class="mt-1 inline-flex chip text-[10px]">${t("show_predictions")}</div>
               </div>
               <div class="text-center min-w-0">

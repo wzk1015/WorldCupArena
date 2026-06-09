@@ -113,7 +113,8 @@
         "properties": {
           "player": { "type":"string" },
           "team":   { "enum":["home","away"] },
-          "p":      { "type":"number", "minimum":0, "maximum":1 }
+          "p":      { "type":"number", "minimum":0, "maximum":1 },
+          "minute": { "type":"number", "minimum":0, "maximum":130 }
         }
       }
     },
@@ -161,6 +162,7 @@
     },
     "own_goals": {
       "type":"array",
+      "description":"Own goals by player. `team` is the player's own team; the goal is credited to the opposite side.",
       "items": {
         "type":"object",
         "required":["player","team","minute"],
@@ -169,6 +171,22 @@
           "player": { "type":"string" },
           "team":   { "enum":["home","away"] },
           "minute": { "type":"number", "minimum":0, "maximum":130 }
+        }
+      }
+    },
+    "key_events": {
+      "type":"array",
+      "description":"Optional important non-goal/card/substitution events for the match timeline. Do not duplicate goals, penalties, own goals, cards, or substitutions.",
+      "items": {
+        "type":"object",
+        "required":["team","minute","label"],
+        "additionalProperties": false,
+        "properties": {
+          "team":   { "enum":["home","away"] },
+          "minute": { "type":"number", "minimum":0, "maximum":130 },
+          "label":  { "type":"string" },
+          "player": { "type":"string" },
+          "type":   { "type":"string" }
         }
       }
     },

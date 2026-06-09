@@ -30,6 +30,8 @@
 
 Predict the outcome of this match. Produce a single JSON object conforming **exactly** to the JSON Schema below.
 
+Write all explanatory/narrative text in Simplified Chinese. Keep structured scoring fields machine-stable: official/API player names in player-name fields, exact schema enum values, `H-A` score strings, and numeric probabilities/statistics. If useful, mention Chinese or bilingual player names inside the Chinese reasoning text, not in structured player-name fields.
+
 ```json
 {{schema}}
 ```
@@ -47,17 +49,19 @@ Predict the outcome of this match. Produce a single JSON object conforming **exa
 7. `advance_prob`  (optional; knockout legs only) probability the `home` team advances on aggregate
 8. `lineups` { home, away } each with `starting` (exactly 11) and `bench`
 9. `formations` { home, away }
-10. `scorers`  every predicted scorer with `player`, `team`, `minute_range`, `p`
-11. `assisters` (optional) similar shape, no minutes
+10. `scorers`  every predicted scorer with `player`, `team`, `minute_range`, `p`. The most likely goal events implied by `scorers`, scored `penalties`, and `own_goals` must match `headline_score` in total goals per side.
+11. `assisters` (optional) `{player, team, p, minute?}`. When possible, set `minute` near the assisted goal so the timeline can attach the assist to the right scorer.
 12. `substitutions` (optional) `{team, off, on, minute}`
 13. `cards` (optional) `{player, team, color, minute}`
-14. `penalties` (optional) `{team, taker, outcome, minute}`
-15. `own_goals` (optional) `{player, team, minute}`
-16. `motm_probs` (optional) MOTM candidates with probability
-17. `stats`  all 8 required keys, each `{home, away}`
-18. `sources` (optional)  if you used retrieval, list every URL with `accessed_at`
+14. `penalties` (optional) `{team, taker, outcome, minute}`. A scored penalty counts as one goal for `team`.
+15. `own_goals` (optional) `{player, team, minute}` where `team` is the player's own team; the goal is credited to the opposite side.
+16. `key_events` (optional) `{team, minute, label, player?, type?}` for important non-goal/card/substitution events such as VAR review or injury stoppage. Do not duplicate goals, penalties, own goals, cards, or substitutions.
+17. `motm_probs` (optional) MOTM candidates with probability
+18. `stats`  all 8 required keys, each `{home, away}`
+19. `sources` (optional)  if you used retrieval, list every URL with `accessed_at`
 
 Do **not** output `score_dist`, `most_likely_score`, or `over_under_probs`; the system generates them.
+Before returning JSON, sanity-check the event timeline: if `headline_score` is `3-0`, the likely goal timeline should contain three credited home goals and zero credited away goals after counting scored penalties and own goals.
 For two-leg knockout ties, explicitly use the previous-leg score and aggregate game state:
 if the first leg had 6+ total goals, both teams' recent games are high-scoring, or one side
 must chase, do not let a generic low-score football prior dominate. High-event headline scores

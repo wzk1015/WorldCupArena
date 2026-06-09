@@ -33,14 +33,16 @@ artifacts fall back to score_dist-derived win probabilities.
 from __future__ import annotations
 
 import json
+import os
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
+import httpx
 import yaml
+from dotenv import dotenv_values
 
 from ..pipeline.prediction_derivatives import derive_most_likely_score, derive_win_probs_from_score_dist
-from .translate_site_data import translate_payload_to_zh
 
 ROOT = Path(__file__).resolve().parents[2]
 RESULTS = ROOT / "data" / "results"
@@ -55,7 +57,24 @@ COMMENTS_JSON = ROOT / "data" / "comments.json"
 OUT = ROOT / "docs" / "site" / "data.json"
 OUT_EN = ROOT / "docs" / "site" / "data.en.json"
 OUT_ZH = ROOT / "docs" / "site" / "data.zh.json"
+API_FOOTBALL_LOGO_CACHE = ROOT / "data" / "api_football_team_logos.json"
+API_FOOTBALL_BASE = "https://v3.football.api-sports.io"
+API_FOOTBALL_LOGO_PREFIX = "https://media.api-sports.io/football/teams/"
+API_FOOTBALL_FLAG_PREFIX = "https://media.api-sports.io/flags/"
+API_FOOTBALL_FLAG_CODES = {
+    "Botswana": "bw",
+    "Niger": "ne",
+    "Peru": "pe",
+    "Spain": "es",
+    "China PR": "cn",
+    "China": "cn",
+    "Thailand": "th",
+}
 HIDDEN_SITE_MODELS = {"yunwu-o4-mini-deep-research"}
+
+_API_FOOTBALL_LOGO_CACHE: dict | None = None
+_API_FOOTBALL_LOGO_CACHE_DIRTY = False
+_DOTENV_VALUES: dict | None = None
 
 
 def _load_comments() -> dict[str, str]:
@@ -80,6 +99,192 @@ def _load_fixtures() -> list[dict]:
         return []
     cfg = yaml.safe_load(FIXTURES_YAML.read_text()) or {}
     return [f for f in (cfg.get("fixtures") or []) if f.get("enabled", True)]
+
+
+def _norm_team_name(name: str | None) -> str:
+    return " ".join(str(name or "").casefold().replace(".", " " ).split())
+
+
+def _is_api_football_logo(url: str | None) -> bool:
+    value = str(url or "")
+    return value.startswith(API_FOOTBALL_LOGO_PREFIX) or value.startswith(API_FOOTBALL_FLAG_PREFIX)
+
+
+def _api_football_flag_for_team(team_name: str | None) -> str | None:
+    code = API_FOOTBALL_FLAG_CODES.get(str(team_name or "").strip())
+    if not code:
+        return None
+    return f"{API_FOOTBALL_FLAG_PREFIX}{code}.svg"
+
+
+def _dotenv_value(key: str) -> str | None:
+    global _DOTENV_VALUES
+    if _DOTENV_VALUES is None:
+        env_path = ROOT / ".env"
+        _DOTENV_VALUES = dict(dotenv_values(env_path)) if env_path.exists() else {}
+    value = _DOTENV_VALUES.get(key)
+    return str(value) if value else None
+
+
+def _api_football_key() -> str | None:
+    return (
+        os.environ.get("API_FOOTBALL_KEY")
+        or os.environ.get("APIFOOTBALL_API_KEY")
+        or _dotenv_value("API_FOOTBALL_KEY")
+        or _dotenv_value("APIFOOTBALL_API_KEY")
+    )
+
+
+def _team_search_variants(name: str | None) -> list[str]:
+    raw = str(name or "").strip()
+    variants = [raw]
+    aliases = {
+        "China PR": ["China", "China PR", "China PR National"],
+        "Curaçao": ["Curaçao", "Curacao"],
+        "Bayern München": ["Bayern Munich", "Bayern München"],
+    }
+    variants.extend(aliases.get(raw, []))
+    out = []
+    for item in variants:
+        if item and item not in out:
+            out.append(item)
+    return out
+
+
+def _cache_api_football_logo(team_name: str | None, logo: str | None, team_id: int | None = None) -> None:
+    global _API_FOOTBALL_LOGO_CACHE_DIRTY
+    if not team_name or not _is_api_football_logo(logo):
+        return
+    cache = _load_api_football_logo_cache()
+    key = _norm_team_name(team_name)
+    old = cache.setdefault("teams", {}).get(key)
+    item = {"name": team_name, "logo": logo}
+    if team_id is not None:
+        item["team_id"] = team_id
+    if old != item:
+        cache["teams"][key] = item
+        _API_FOOTBALL_LOGO_CACHE_DIRTY = True
+
+
+def _seed_api_football_logo_cache_from_snapshots(cache: dict) -> None:
+    if not SNAPSHOTS.exists():
+        return
+    teams = cache.setdefault("teams", {})
+    for path in SNAPSHOTS.glob("*/**/*.json"):
+        try:
+            raw = json.loads(path.read_text())
+            rows = raw.get("response") or []
+        except Exception:
+            continue
+        for row in rows[:1]:
+            for side in ("home", "away"):
+                team = ((row.get("teams") or {}).get(side) or {})
+                name = team.get("name")
+                logo = team.get("logo")
+                if name and _is_api_football_logo(logo):
+                    teams.setdefault(
+                        _norm_team_name(name),
+                        {"name": name, "logo": logo, "team_id": team.get("id")},
+                    )
+
+
+def _load_api_football_logo_cache() -> dict:
+    global _API_FOOTBALL_LOGO_CACHE, _API_FOOTBALL_LOGO_CACHE_DIRTY
+    if _API_FOOTBALL_LOGO_CACHE is not None:
+        return _API_FOOTBALL_LOGO_CACHE
+    if API_FOOTBALL_LOGO_CACHE.exists():
+        try:
+            cache = json.loads(API_FOOTBALL_LOGO_CACHE.read_text())
+        except Exception:
+            cache = {}
+    else:
+        cache = {}
+    cache.setdefault("teams", {})
+    before = len(cache["teams"])
+    _seed_api_football_logo_cache_from_snapshots(cache)
+    if len(cache["teams"]) != before:
+        _API_FOOTBALL_LOGO_CACHE_DIRTY = True
+    _API_FOOTBALL_LOGO_CACHE = cache
+    return cache
+
+
+def _save_api_football_logo_cache() -> None:
+    if not _API_FOOTBALL_LOGO_CACHE_DIRTY or _API_FOOTBALL_LOGO_CACHE is None:
+        return
+    API_FOOTBALL_LOGO_CACHE.parent.mkdir(parents=True, exist_ok=True)
+    API_FOOTBALL_LOGO_CACHE.write_text(json.dumps(_API_FOOTBALL_LOGO_CACHE, ensure_ascii=False, indent=2))
+
+
+def _search_api_football_logo(team_name: str | None) -> str | None:
+    api_key = _api_football_key()
+    if not api_key or not team_name:
+        return None
+    headers = {"x-apisports-key": api_key}
+    target_norm = _norm_team_name(team_name)
+    try:
+        with httpx.Client(base_url=API_FOOTBALL_BASE, headers=headers, timeout=20.0) as client:
+            for query in _team_search_variants(team_name):
+                response = client.get("/teams", params={"search": query})
+                response.raise_for_status()
+                rows = response.json().get("response") or []
+                if not rows:
+                    continue
+
+                def _score(row: dict) -> tuple[int, int]:
+                    team = row.get("team") or {}
+                    name_norm = _norm_team_name(team.get("name"))
+                    exact = 0 if name_norm == target_norm else 1
+                    national = 0 if team.get("national") else 1
+                    return exact, national
+
+                for row in sorted(rows, key=_score):
+                    team = row.get("team") or {}
+                    logo = team.get("logo")
+                    if _is_api_football_logo(logo):
+                        _cache_api_football_logo(team_name, logo, team.get("id"))
+                        return logo
+    except Exception as exc:
+        print(f"[site] API-Football logo lookup failed for {team_name!r}: {exc}")
+    return None
+
+
+def _api_football_logo_for_team(team_name: str | None, fallback: str | None = None) -> str | None:
+    fallback_text = str(fallback or "")
+    if fallback_text.startswith(API_FOOTBALL_LOGO_PREFIX):
+        _cache_api_football_logo(team_name, fallback)
+        return fallback
+    if not team_name:
+        return None
+
+    cache = _load_api_football_logo_cache()
+    cached = cache.get("teams", {}).get(_norm_team_name(team_name))
+    cached_logo = str((cached or {}).get("logo") or "")
+    if cached_logo.startswith(API_FOOTBALL_LOGO_PREFIX):
+        return cached_logo
+
+    # If an API-Football key is available, prefer the real team logo endpoint
+    # over any cached country-flag fallback. Without a key, flags keep national
+    # teams presentable while still coming from API-Sports media.
+    logo = _search_api_football_logo(team_name)
+    if logo:
+        return logo
+
+    if cached_logo.startswith(API_FOOTBALL_FLAG_PREFIX):
+        return cached_logo
+    if fallback_text.startswith(API_FOOTBALL_FLAG_PREFIX):
+        _cache_api_football_logo(team_name, fallback)
+        return fallback
+
+    flag = _api_football_flag_for_team(team_name)
+    if flag:
+        _cache_api_football_logo(team_name, flag)
+    return flag
+
+
+def _apply_api_football_logos(hdr: dict) -> dict:
+    hdr["home_logo"] = _api_football_logo_for_team(hdr.get("home"), hdr.get("home_logo"))
+    hdr["away_logo"] = _api_football_logo_for_team(hdr.get("away"), hdr.get("away_logo"))
+    return hdr
 
 
 def _model_family(model_id: str, provider: str | None = None) -> str:
@@ -277,7 +482,7 @@ def _fixture_header_from_registry(wca_id: str, fx: dict, existing: dict | None =
         "stage":         base.get("stage"),
         "competition": fx.get("competition") or inferred.get("competition") or base.get("competition"),
     })
-    return base
+    return _apply_api_football_logos(base)
 
 
 def _header_mismatches_registry(hdr: dict | None, fx: dict) -> bool:
@@ -372,7 +577,7 @@ def _load_fixture_header(wca_id: str) -> dict | None:
     raw = json.loads(path.read_text())
     if "response" in raw:
         r0 = raw["response"][0]
-        return {
+        return _apply_api_football_logos({
             "wca_id":      wca_id,
             "home":        r0["teams"]["home"]["name"],
             "home_logo":   r0["teams"]["home"].get("logo"),
@@ -385,8 +590,8 @@ def _load_fixture_header(wca_id: str) -> dict | None:
             "venue_country": _clean_venue_country((r0.get("league") or {}).get("country")),
             "stage":         (r0.get("league") or {}).get("round"),
             "competition":   (r0.get("league") or {}).get("name"),
-        }
-    return {
+        })
+    return _apply_api_football_logos({
         "wca_id":      wca_id,
         "home":        raw.get("home", {}).get("name"),
         "away":        raw.get("away", {}).get("name"),
@@ -397,7 +602,7 @@ def _load_fixture_header(wca_id: str) -> dict | None:
         "venue_country": _clean_venue_country(raw.get("venue_country")),
         "stage":         raw.get("stage"),
         "competition": raw.get("competition"),
-    }
+    })
 
 
 def _empty_prediction_payload(
@@ -431,6 +636,7 @@ def _empty_prediction_payload(
         "cards":              [],
         "penalties":          [],
         "own_goals":          [],
+        "key_events":         [],
         "stats":              {},
         "cost_usd":           cost_usd,
         "tokens":             tokens or {},
@@ -445,6 +651,11 @@ def _prediction_display_sort_key(pred: dict) -> tuple:
         str(pred.get("setting") or ""),
         pred.get("model_id", ""),
     )
+
+
+def _is_deep_research_model(model_id: str) -> bool:
+    meta = MODEL_META.get(model_id) or _infer_model_metadata(model_id)
+    return meta.get("model_category") == "deep_research_agent"
 
 
 def _collect_predictions(
@@ -471,7 +682,7 @@ def _collect_predictions(
             continue
         seen.add((model_id, setting))
         if rec.get("error"):
-            if include_errors:
+            if include_errors and not _is_deep_research_model(model_id):
                 out.append(_empty_prediction_payload(
                     model_id=model_id,
                     setting=setting,
@@ -517,6 +728,7 @@ def _collect_predictions(
             "cards":              p.get("cards") or [],
             "penalties":          p.get("penalties") or [],
             "own_goals":          p.get("own_goals") or [],
+            "key_events":         p.get("key_events") or [],
             "stats":              p.get("stats") or {},
             "status":             "ok",
             "cost_usd":           rec.get("cost_usd"),
@@ -526,7 +738,7 @@ def _collect_predictions(
     if include_missing:
         for expected in MODEL_ROSTER:
             key = (expected["model_id"], expected.get("setting"))
-            if key in seen:
+            if key in seen or _is_deep_research_model(expected["model_id"]):
                 continue
             out.append(_empty_prediction_payload(
                 model_id=expected["model_id"],
@@ -776,6 +988,26 @@ def _load_live_state(wca_id: str) -> dict | None:
     }
 
 
+def _public_live_prediction_entry(record: dict) -> dict:
+    pred = record.get("prediction") or {}
+    err = record.get("error")
+    status = record.get("status") or ("failed" if err else "ok")
+    return {
+        "status": status,
+        "error_summary": _public_error_summary(err) if err else record.get("error_summary"),
+        "submitted_at": record.get("submitted_at"),
+        "live": record.get("live") or {},
+        "win_probs": pred.get("win_probs") or record.get("win_probs") or {},
+        "most_likely_score": pred.get("most_likely_score") or record.get("most_likely_score"),
+        "scorers": pred.get("scorers") or record.get("scorers") or record.get("future_scorers") or [],
+        "reasoning": pred.get("reasoning") or record.get("reasoning") or {},
+        "sources": record.get("sources") or [],
+        "cost_usd": record.get("cost_usd"),
+        "tokens": record.get("tokens") or {},
+        "tool_calls": record.get("tool_calls"),
+    }
+
+
 def _load_live_predictions(wca_id: str) -> list[dict]:
     """Load local in-play model forecasts.
 
@@ -796,8 +1028,10 @@ def _load_live_predictions(wca_id: str) -> list[dict]:
         if model_id in HIDDEN_SITE_MODELS:
             continue
         meta = MODEL_META.get(model_id) or _infer_model_metadata(model_id)
-        pred = record.get("prediction") or {}
-        err = record.get("error")
+        latest = _public_live_prediction_entry(record)
+        history = [_public_live_prediction_entry(item) for item in (record.get("history") or [])]
+        if not history and record.get("submitted_at"):
+            history = [latest]
         rows.append({
             "model_id": model_id,
             "display_name": record.get("display_name") or meta.get("display_name") or _display_model_name(model_id),
@@ -805,18 +1039,8 @@ def _load_live_predictions(wca_id: str) -> list[dict]:
             "model_category": meta.get("model_category"),
             "provider": meta.get("provider"),
             "model_family": meta.get("model_family"),
-            "status": "failed" if err else "ok",
-            "error_summary": _public_error_summary(err) if err else None,
-            "submitted_at": record.get("submitted_at"),
-            "live": record.get("live") or {},
-            "win_probs": pred.get("win_probs") or {},
-            "most_likely_score": pred.get("most_likely_score"),
-            "scorers": pred.get("scorers") or pred.get("future_scorers") or [],
-            "reasoning": pred.get("reasoning") or {},
-            "sources": record.get("sources") or [],
-            "cost_usd": record.get("cost_usd"),
-            "tokens": record.get("tokens") or {},
-            "tool_calls": record.get("tool_calls"),
+            **latest,
+            "history": history,
         })
 
     rows.sort(key=lambda r: (
@@ -858,7 +1082,7 @@ def _load_truth_data(wca_id: str) -> dict | None:
     away_name = (teams_raw.get("away") or {}).get("name", "Away")
 
     events = r0.get("events") or []
-    scorers, assisters, cards, substitutions, own_goals, penalties = [], [], [], [], [], []
+    scorers, assisters, cards, substitutions, own_goals, penalties, key_events = [], [], [], [], [], [], []
     scorer_names, assister_names = [], []
     for ev in events:
         team_id   = (ev.get("team") or {}).get("id")
@@ -867,28 +1091,49 @@ def _load_truth_data(wca_id: str) -> dict | None:
         player    = (ev.get("player") or {}).get("name", "")
         assist    = (ev.get("assist") or {}).get("name")
         minute    = (ev.get("time") or {}).get("elapsed", 0)
+        extra     = (ev.get("time") or {}).get("extra")
         ev_type   = ev.get("type", "")
         detail    = ev.get("detail", "")
         if ev_type == "Goal":
             if detail == "Own Goal":
-                own_goals.append({"minute": minute, "player": player, "team": side})
+                # API-Football reports the team credited with the goal for own-goal
+                # events. Keep that as `for_team`; `team` is the player's own side
+                # so the web timeline can use the same semantics as predictions.
+                own_goals.append({
+                    "minute": minute,
+                    "extra": extra,
+                    "player": player,
+                    "team": "away" if side == "home" else "home",
+                    "for_team": side,
+                })
             elif detail == "Penalty":
-                penalties.append({"minute": minute, "taker": player, "team": side, "outcome": "scored"})
-                scorers.append({"minute": minute, "player": player, "team": side})
+                penalties.append({"minute": minute, "extra": extra, "taker": player, "team": side, "outcome": "scored"})
+                scorers.append({"minute": minute, "extra": extra, "player": player, "team": side})
                 scorer_names.append(player)
             else:
-                scorers.append({"minute": minute, "player": player, "team": side})
+                scorers.append({"minute": minute, "extra": extra, "player": player, "team": side})
                 scorer_names.append(player)
             if assist:
-                assisters.append({"player": assist, "team": side})
+                assisters.append({"minute": minute, "extra": extra, "player": assist, "team": side})
                 assister_names.append(assist)
         elif ev_type == "Card":
             color = "yellow" if detail == "Yellow Card" else "red" if detail == "Red Card" else "second_yellow"
-            cards.append({"minute": minute, "player": player, "team": side, "color": color})
+            cards.append({"minute": minute, "extra": extra, "player": player, "team": side, "color": color})
         elif ev_type == "subst":
             off = player
             on  = (ev.get("assist") or {}).get("name", "")
-            substitutions.append({"minute": minute, "team": side, "team_name": team_name, "off": off, "on": on})
+            substitutions.append({"minute": minute, "extra": extra, "team": side, "team_name": team_name, "off": off, "on": on})
+        elif ev_type or detail:
+            label = " - ".join(part for part in [ev_type, detail] if part)
+            key_events.append({
+                "minute": minute,
+                "extra": extra,
+                "team": side,
+                "player": player,
+                "type": ev_type,
+                "detail": detail,
+                "label": label,
+            })
 
     lineups_raw = r0.get("lineups") or []
     lineups: dict[str, dict] = {}
@@ -932,10 +1177,111 @@ def _load_truth_data(wca_id: str) -> dict | None:
         "substitutions":  substitutions,
         "own_goals":      own_goals,
         "penalties":      penalties,
+        "key_events":     key_events,
         "formations":     formations,
         "lineups":        lineups,
         "stats":          stats,
         "events":         events,
+    }
+
+
+def _side_from_event_team_name(team_name: str | None, hdr: dict) -> str:
+    def compact(value: str | None) -> str:
+        return "".join(ch for ch in str(value or "").lower() if ch.isalnum())
+
+    team_key = compact(team_name)
+    home_key = compact(hdr.get("home"))
+    away_key = compact(hdr.get("away"))
+    if team_key and home_key and team_key == home_key:
+        return "home"
+    if team_key and away_key and team_key == away_key:
+        return "away"
+    return "home"
+
+
+def _truth_from_live_state(live: dict | None, hdr: dict) -> dict | None:
+    if not live or not live.get("score"):
+        return None
+    sc = live.get("score") or {}
+    hg, ag = sc.get("home"), sc.get("away")
+    score = f"{hg}-{ag}" if hg is not None and ag is not None else None
+    if not score:
+        return None
+    result = "home" if (hg or 0) > (ag or 0) else "away" if (ag or 0) > (hg or 0) else "draw"
+
+    scorers, assisters, cards, substitutions, own_goals, penalties, key_events = [], [], [], [], [], [], []
+    scorer_names, assister_names = [], []
+    events = live.get("events") or []
+    for ev in events:
+        team_name = (ev.get("team") or {}).get("name", "")
+        side = _side_from_event_team_name(team_name, hdr)
+        player = (ev.get("player") or {}).get("name", "")
+        assist = (ev.get("assist") or {}).get("name")
+        minute = (ev.get("time") or {}).get("elapsed", 0)
+        extra = (ev.get("time") or {}).get("extra")
+        ev_type = ev.get("type", "")
+        detail = ev.get("detail", "")
+        if ev_type == "Goal":
+            if detail == "Own Goal":
+                own_goals.append({
+                    "minute": minute,
+                    "extra": extra,
+                    "player": player,
+                    "team": "away" if side == "home" else "home",
+                    "for_team": side,
+                })
+            elif detail == "Penalty":
+                penalties.append({"minute": minute, "extra": extra, "taker": player, "team": side, "outcome": "scored"})
+                scorers.append({"minute": minute, "extra": extra, "player": player, "team": side})
+                scorer_names.append(player)
+            else:
+                scorers.append({"minute": minute, "extra": extra, "player": player, "team": side})
+                scorer_names.append(player)
+            if assist:
+                assisters.append({"minute": minute, "extra": extra, "player": assist, "team": side})
+                assister_names.append(assist)
+        elif ev_type == "Card":
+            color = "yellow" if detail == "Yellow Card" else "red" if detail == "Red Card" else "second_yellow"
+            cards.append({"minute": minute, "extra": extra, "player": player, "team": side, "color": color})
+        elif ev_type == "subst":
+            substitutions.append({
+                "minute": minute,
+                "extra": extra,
+                "team": side,
+                "team_name": team_name,
+                "off": player,
+                "on": (ev.get("assist") or {}).get("name", ""),
+            })
+        elif ev_type or detail:
+            label = " - ".join(part for part in [ev_type, detail] if part)
+            key_events.append({
+                "minute": minute,
+                "extra": extra,
+                "team": side,
+                "player": player,
+                "type": ev_type,
+                "detail": detail,
+                "label": label,
+            })
+
+    return {
+        "score": score,
+        "result": result,
+        "home_name": hdr.get("home"),
+        "away_name": hdr.get("away"),
+        "scorer_names": scorer_names,
+        "assister_names": assister_names,
+        "scorers": scorers,
+        "assisters": assisters,
+        "cards": cards,
+        "substitutions": substitutions,
+        "own_goals": own_goals,
+        "penalties": penalties,
+        "key_events": key_events,
+        "formations": {},
+        "lineups": {},
+        "stats": {},
+        "events": events,
     }
 
 
@@ -996,7 +1342,7 @@ def build_history() -> list[dict]:
 
         truth = _load_truth_data(wca_id)
 
-        # If truth.json not yet available, try to build score from live.json
+        # If truth.json not yet available, try to build score and event timeline from live.json.
         result = None
         if truth:
             result = truth.get("score")
@@ -1005,6 +1351,7 @@ def build_history() -> list[dict]:
             h, a = sc.get("home"), sc.get("away")
             if h is not None and a is not None:
                 result = f"{h}-{a}"
+                truth = _truth_from_live_state(live, hdr)
         if not result:
             continue
 
@@ -1090,21 +1437,14 @@ def main() -> None:
             return [_round3(v) for v in obj]
         return obj
 
+    _save_api_football_logo_cache()
+
     rounded_payload = _round3(payload)
-    OUT_EN.write_text(json.dumps(rounded_payload, ensure_ascii=False, indent=2))
-    print(f"wrote {OUT_EN}")
-
-    try:
-        print("[translate] building Simplified Chinese site payload", flush=True)
-        zh_payload = translate_payload_to_zh(rounded_payload)
-    except Exception as exc:
-        print(f"[translate] failed to build Chinese payload; falling back to English data: {exc}")
-        zh_payload = rounded_payload
-
-    OUT_ZH.write_text(json.dumps(zh_payload, ensure_ascii=False, indent=2))
-    OUT.write_text(json.dumps(zh_payload, ensure_ascii=False, indent=2))
+    for out_path in (OUT_EN, OUT_ZH, OUT):
+        out_path.write_text(json.dumps(rounded_payload, ensure_ascii=False, indent=2))
     print(f"wrote {OUT}, {OUT_ZH}, {OUT_EN} "
-          f"(leaderboard_models={len(payload['leaderboard']['main'])}, "
+          f"(model_native_payload=1, "
+          f"leaderboard_models={len(payload['leaderboard']['main'])}, "
           f"incoming={len(incoming)}, "
           f"history={len(payload['history'])})")
 

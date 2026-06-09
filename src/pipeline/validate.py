@@ -11,6 +11,7 @@ Validation layers:
          - model win_probs sum ≈ 1
          - generated score_dist p values sum ≈ 1
          - generated headline score outcome matches argmax(win_probs)
+         - explicit goal events do not contradict headline_score
          - expected_total_goals and generated over/under probabilities match score_dist
          - stats contains all 8 required keys
          - lineups.*.starting has exactly 11 entries
@@ -68,6 +69,67 @@ def _validate_schema(pred: dict[str, Any]) -> list[str]:
     return [f"{'/'.join(map(str, e.path))}: {e.message}" for e in v.iter_errors(schema_pred)]
 
 
+def _score_parts(score: object) -> dict[str, int] | None:
+    parts = str(score or "").split("-")
+    if len(parts) != 2:
+        return None
+    try:
+        return {"home": int(parts[0]), "away": int(parts[1])}
+    except ValueError:
+        return None
+
+
+def _opposite_side(side: object) -> str | None:
+    if side == "home":
+        return "away"
+    if side == "away":
+        return "home"
+    return None
+
+
+def _validate_goal_event_story(pred: dict[str, Any]) -> list[str]:
+    """Catch only hard contradictions; probabilistic scorer lists may be longer."""
+    errs: list[str] = []
+    target = _score_parts(pred.get("headline_score"))
+    if not target:
+        return errs
+
+    possible = {"home": 0, "away": 0}
+    hard = {"home": 0, "away": 0}
+
+    for scorer in pred.get("scorers") or []:
+        side = scorer.get("team")
+        if side in possible:
+            possible[side] += 1
+
+    for pen in pred.get("penalties") or []:
+        if pen.get("outcome") != "scored":
+            continue
+        side = pen.get("team")
+        if side in hard:
+            hard[side] += 1
+            possible[side] += 1
+
+    for own_goal in pred.get("own_goals") or []:
+        credited = _opposite_side(own_goal.get("team"))
+        if credited in hard:
+            hard[credited] += 1
+            possible[credited] += 1
+
+    for side in ("home", "away"):
+        if hard[side] > target[side]:
+            errs.append(
+                f"goal timeline: explicit scored penalties/own goals credit {hard[side]} {side} goals "
+                f"but headline_score has {target[side]}"
+            )
+        if target[side] > 0 and possible[side] == 0:
+            errs.append(
+                f"goal timeline: headline_score has {target[side]} {side} goals "
+                "but no scorer, scored penalty, or credited own goal is available"
+            )
+    return errs
+
+
 def _validate_semantics(
     pred: dict[str, Any],
     *,
@@ -99,6 +161,8 @@ def _validate_semantics(
                 f"headline_score outcome '{headline_outcome}' does not match "
                 f"highest win_probs bucket '{favorite}'"
             )
+
+    errs.extend(_validate_goal_event_story(pred))
 
     sd = pred.get("score_dist") or []
     if not sd:

@@ -25,7 +25,7 @@ From the WorldCupArena repo root, generate the ignored site payload once:
 
 ```bash
 cd /home/wzk/MatchMate/WorldCupArena
-SITE_TRANSLATION_DISABLE_LLM=1 python3 -m src.leaderboard.site_daemon --once --no-pipeline
+python3 -m src.leaderboard.site_daemon --once --no-pipeline
 ```
 
 Then run only the MatchMate frontend:
@@ -61,39 +61,74 @@ Use the URL printed by Vite. If `5173` is already occupied, Vite may choose
 
 ## Continuous WorldCupArena Maintenance
 
-To keep the site data fresh, run the WorldCupArena daemon as its own process:
+To keep the site data fresh, run the WorldCupArena daemon as its own process.
+The match page expects a 300 second cadence for live matchday updates:
 
 ```bash
 cd /home/wzk/MatchMate/WorldCupArena
-python3 -m src.leaderboard.site_daemon --interval-seconds 600
+python3 -m src.leaderboard.site_daemon \
+  --interval-seconds 300
 ```
 
-Each cycle runs:
+Each cycle can run:
 
 ```bash
 python -m src.pipeline.scheduler tick
+python -m src.pipeline.live_predict once ...
 python -m src.leaderboard.build_site
 ```
 
+`live_predict` only runs when `--live-predict` is passed. The default live mode
+uses `--only-live`, so before kickoff it refreshes the provider snapshot and
+rebuilds the site, but skips model calls. During halftime/HT it also refreshes
+the provider snapshot but skips model calls, even if `--always-predict-live` /
+`--predict-every-cycle` is enabled. Once the fixture is in play, each 300 second
+cycle generates a fresh live prediction for each selected model and appends it to
+that model's live prediction history.
+
+Example for the Peru vs Spain fixture using three models:
+
+```bash
+cd /home/wzk/MatchMate/WorldCupArena
+python3 -m src.leaderboard.site_daemon \
+  --interval-seconds 300 \
+  --no-pipeline \
+  --live-predict \
+  --live-fixture-id 19701371 \
+  --live-wca-id Friendly-International_Peru_Spain_2026-06-09 \
+  --live-provider sportmonks \
+  --live-models gpt-5.4 gemini-3.1-pro-preview-thinking claude-opus-4-7-thinking
+```
+
+Add `--always-predict-live` only when you deliberately want a fresh model
+prediction on every daemon cycle, even before kickoff. For normal matchday live
+prediction, omit it so the 5 minute prediction cadence starts only after the
+match has begun.
+
 So the daemon updates `docs/site/data.en.json`, `docs/site/data.zh.json`, and
-`docs/site/data.json` in-place. Checked-out changes to `index.html` and
-`app.js` are also visible immediately because MatchMate serves this directory
-directly.
+`docs/site/data.json` in-place. These payloads are now model-native: the site
+builder no longer performs LLM post-processing translation, so prediction runs
+should produce Chinese narrative text directly when Chinese display text is
+needed. Checked-out changes to `index.html` and `app.js` are also visible
+immediately because MatchMate serves this directory directly.
 
 Useful options:
 
 ```bash
 python3 -m src.leaderboard.site_daemon --once
 python3 -m src.leaderboard.site_daemon --once --no-pipeline
-python3 -m src.leaderboard.site_daemon --interval-seconds 600 --git-pull
+python3 -m src.leaderboard.site_daemon --interval-seconds 300 --git-pull
 python3 -m src.leaderboard.site_daemon --phase live_update
 python3 -m src.leaderboard.site_daemon --disable-translation-llm
+python3 -m src.leaderboard.site_daemon --live-predict --live-fixture-id 19701371 --live-wca-id Friendly-International_Peru_Spain_2026-06-09
+python3 -m src.leaderboard.site_daemon --always-predict-live --live-predict --live-fixture-id 19701371 --live-wca-id Friendly-International_Peru_Spain_2026-06-09
 python3 -m src.leaderboard.site_daemon --strict
+python3 -m src.pipeline.live_predict daemon --fixture-id 19701371 --wca-id Friendly-International_Peru_Spain_2026-06-09 --provider sportmonks --interval-seconds 300 --only-live --stop-after-finished
 ```
 
 Running the real pipeline requires WorldCupArena runtime secrets in
-`WorldCupArena/.env`, such as API-Football and model provider keys. Page-only
-smoke tests can use `--no-pipeline` and do not need those secrets.
+`WorldCupArena/.env`, such as football provider and model provider keys.
+Page-only smoke tests can use `--no-pipeline` and do not need those secrets.
 
 ## Production Service
 

@@ -7,7 +7,7 @@ ticks catch up on the next run and running two back-to-back is a no-op.
 
 Phases (windows relative to kickoff):
 
-    ingest       : T-7d  → T-24h   pull fixture.json from API-Football
+    ingest       : T-7d  → T-24h   pull fixture.json from the configured football API
     populate     : T-48h → T-24h   fill context_pack (squads/form/news/stats)
     lock_predict : T-24h → T+0h    lock snapshot + run all model predictions
     live_update  : T+0h  → T+3h    fetch live score every tick → data/live/<id>.json;
@@ -23,7 +23,7 @@ order. Every phase checks "is my work already done?" before acting:
                    24h window), runs ingest + populate inline before locking;
                    skip lock if snapshot_hash is set;
                    skip predict if predictions/<wca_id>/ has any json
-    live_update  — always overwrites data/live/<id>.json with latest API response;
+    live_update  — always overwrites data/live/<id>.json with latest provider response;
                    if status == "Match Finished", calls _phase_truth_grade immediately
     truth_grade  — skip truth download if truth.json exists;
                    grade is always safe to rerun
@@ -78,6 +78,15 @@ def _load_fixtures() -> list[dict]:
     return [f for f in (cfg.get("fixtures") or []) if f.get("enabled", True)]
 
 
+def _fixture_provider(fx: dict) -> str:
+    return (
+        fx.get("provider")
+        or os.environ.get("FOOTBALL_API_PROVIDER")
+        or os.environ.get("WCA_FOOTBALL_API_PROVIDER")
+        or "api_football"
+    )
+
+
 def _active_phases(kickoff: datetime, now: datetime) -> list[str]:
     """All phases whose window is currently open for this fixture."""
     return [name for (name, a, b) in PHASES if kickoff + a <= now < kickoff + b]
@@ -101,6 +110,7 @@ def _phase_ingest(fx: dict, fx_dir: Path) -> None:
     fx_dir.mkdir(parents=True, exist_ok=True)
     lock_at = (_parse_iso(fx["kickoff_utc"]) - timedelta(hours=24)).isoformat()
     _run([sys.executable, "-m", "src.ingest.api_football",
+          "--provider", _fixture_provider(fx),
           "--fixture-id", str(fx["provider_id"]),
           "--wca-id", fx["wca_id"],
           "--lock-at", lock_at,
@@ -119,6 +129,7 @@ def _phase_populate(fx: dict, fx_dir: Path) -> None:
         print(f"  [populate] skip — context_pack.squads already populated")
         return
     _run([sys.executable, "-m", "src.pipeline.orchestrator", "populate",
+          "--provider", _fixture_provider(fx),
           "--fixture", str(fixture_path)])
 
 
@@ -173,6 +184,7 @@ def _phase_live_update(fx: dict, fx_dir: Path) -> None:
     LIVE_DIR.mkdir(parents=True, exist_ok=True)
     live_path = LIVE_DIR / f"{fx['wca_id']}.json"
     _run([sys.executable, "-m", "src.ingest.api_football",
+          "--provider", _fixture_provider(fx),
           "--fixture-id", str(fx["provider_id"]),
           "--wca-id", fx["wca_id"],
           "--lock-at", "",
@@ -189,6 +201,7 @@ def _phase_truth_grade(fx: dict, fx_dir: Path) -> None:
     truth_path = fx_dir / "truth.json"
     if not truth_path.exists():
         _run([sys.executable, "-m", "src.ingest.api_football",
+              "--provider", _fixture_provider(fx),
               "--fixture-id", str(fx["provider_id"]),
               "--wca-id", fx["wca_id"],
               "--lock-at", "",

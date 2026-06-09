@@ -113,7 +113,7 @@ class OpenAICompatRunner(BaseRunner):
             }
         message = resp.choices[0].message
         text = message.content or ""
-        thinking = getattr(message, "reasoning", None)
+        thinking = getattr(message, "reasoning", None) or getattr(message, "reasoning_content", None)
         sources: list[dict[str, Any]] = []
         for ann in getattr(message, "annotations", None) or []:
             if getattr(ann, "type", None) == "url_citation":
