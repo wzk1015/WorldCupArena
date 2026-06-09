@@ -4,12 +4,12 @@
   "model_id": "gemini-3.1-pro-preview-thinking",
   "display_name": "Gemini 3.1 Pro Preview (Thinking)",
   "setting": "LIVE",
-  "submitted_at": "2026-06-09T03:22:09+00:00",
+  "submitted_at": "2026-06-09T03:50:38+00:00",
   "live": {
     "status": "2nd Half",
-    "elapsed": 67,
+    "elapsed": 90,
     "score": {
-      "home": 0,
+      "home": 1,
       "away": 3
     },
     "home": "Peru",
@@ -22,40 +22,27 @@
   },
   "prediction": {
     "win_probs": {
-      "home": 0.001,
-      "draw": 0.004,
-      "away": 0.995
+      "home": 0.0,
+      "draw": 0.0,
+      "away": 1.0
     },
-    "most_likely_score": "0-4",
-    "scorers": [
-      {
-        "player": "Dani Olmo",
-        "minute": 78,
-        "p": 0.25,
-        "team": "away"
-      },
-      {
-        "player": "Ferran Torres",
-        "minute": 85,
-        "p": 0.22,
-        "team": "away"
-      }
-    ],
+    "most_likely_score": "1-3",
+    "scorers": [],
     "reasoning": {
-      "overall": "比赛进行到第67分钟，西班牙已经以3-0遥遥领先秘鲁，并以65%的控球率完全掌控了比赛节奏。下半场初段西班牙进行了大规模轮换，换上了奥尔莫（Dani Olmo）和皮诺（Yéremy Pino）等生力军，这不仅保持了前场的压迫力，也让球队有足够的体能继续冲击秘鲁防线。秘鲁在进攻端表现乏力，难以制造实质性威胁。预计西班牙将稳健控制局面，并极有可能利用替补球员的活力在比赛尾声阶段再入一球，最终以4-0锁定胜局。"
+      "overall": "比赛已进行到第90分钟，西班牙以3-1领先秘鲁。考虑到常规时间已经结束，西班牙锁定胜局的概率几乎为100%。预计最终比分将维持在目前的1-3，但在伤停补时阶段替补登场的攻击手仍有极小概率创造进球。"
     }
   },
   "sources": [],
   "tokens": {
-    "input": 1351,
-    "output": 1240
+    "input": 2463,
+    "output": 1154
   },
   "tool_calls": 0,
-  "cost_usd": 0.009230549999999999,
-  "wall_seconds": 14.703,
+  "cost_usd": 0.00985635,
+  "wall_seconds": 14.676,
   "error": null,
-  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.001,\n    \"draw\": 0.004,\n    \"away\": 0.995\n  },\n  \"most_likely_score\": \"0-4\",\n  \"scorers\": [\n    {\n      \"player\": \"Dani Olmo\",\n      \"team\": \"away\",\n      \"minute\": 78,\n      \"p\": 0.25\n    },\n    {\n      \"player\": \"Ferran Torres\",\n      \"team\": \"away\",\n      \"minute\": 85,\n      \"p\": 0.22\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛进行到第67分钟，西班牙已经以3-0遥遥领先秘鲁，并以65%的控球率完全掌控了比赛节奏。下半场初段西班牙进行了大规模轮换，换上了奥尔莫（Dani Olmo）和皮诺（Yéremy Pino）等生力军，这不仅保持了前场的压迫力，也让球队有足够的体能继续冲击秘鲁防线。秘鲁在进攻端表现乏力，难以制造实质性威胁。预计西班牙将稳健控制局面，并极有可能利用替补球员的活力在比赛尾声阶段再入一球，最终以4-0锁定胜局。\"\n  },\n  \"sources\": []\n}",
-  "thinking_text": "**Game State Analysis and Prediction**\n\nOkay, let's break this down. Peru versus Spain, Spain is up 3-0 in the 67th minute. The flow of the game, based on possession (65% for Spain), is overwhelmingly in Spain's favor. They've made some key substitutions at half-time, bringing on fresh attackers like Olmo and Pino. Considering the current dominance and time remaining (around 23 minutes plus stoppage time), an immediate review of the probabilities is warranted.\n\nThe win probabilities are almost absurdly lopsided in favor of Spain: 0.995 for an away win, 0.001 for a home win, and 0.004 for a draw. Let's not waste our time on those. Given the situation, it is very likely Spain will score one more goal.\n\nOriginally, I was leaning towards a 0-4 final score, predicting a goal for either Olmo or Pino, but then I thought, hold on, the current score is 0-3 with 23 minutes left. Let's predict a final of 0-4, which is compatible with the win probability.\n\nSo, I'm going with a final score of 0-4. I'll need to choose a scorer. The goal needs to come after the 67th minute, so let's say Dani Olmo scores in the 78th minute (0.25 probability) or Ferran Torres scores in the 82nd minute (0.20 probability). I need to make the data consistent. Olmo is a better pick, he's fresh. So, the prediction is now \"0-4\". This must be compatible with the win probability.\n\nI've checked the substitutions again: Olmo came on for Fabian Ruiz, Pino came on for Mikel Oyarzabal, and Ferran Torres is still on the pitch.\n\nAlright, time to package this up neatly.\n\n\n",
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.0,\n    \"draw\": 0.0,\n    \"away\": 1.0\n  },\n  \"most_likely_score\": \"1-3\",\n  \"scorers\": [\n    {\n      \"player\": \"Borja Iglesias\",\n      \"team\": \"away\",\n      \"minute\": 92,\n      \"p\": 0.03\n    },\n    {\n      \"player\": \"Dani Olmo\",\n      \"team\": \"away\",\n      \"minute\": 94,\n      \"p\": 0.02\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已进行到第90分钟，西班牙以3-1领先秘鲁。考虑到常规时间已经结束，西班牙锁定胜局的概率几乎为100%。预计最终比分将维持在目前的1-3，但在伤停补时阶段替补登场的攻击手仍有极小概率创造进球。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Match Analysis: Peru vs. Spain**\n\nOkay, here's the situation: Peru is hosting Spain, the score is 1-3, and we're at the 90th minute. Spain's got this; the win probability for the away team is essentially 1.00, and I'm assigning it. The most likely final score is going to stay at 1-3. The match is effectively over, we're in stoppage time.\n\nNow, let's think about potential late goals. I see a small chance of a late goal, so I need to check the players currently on the pitch for both teams. Checking the substitutions, it looks like Borja Iglesias and Dani Olmo are in for Spain, and Maxloren Castro is on for Peru, but I'll focus on Spain's. The prompt states that any goals must occur after the 90th minute.\n\nI'll add Borja Iglesias to the potential scorers, assigning him a 0.03 probability at the 92nd minute and Dani Olmo at the 94th minute with a p of 0.02. I think that's reasonable given the limited time remaining.\n\nThe reasoning? Well, the game is in the 90th minute, and Spain is up 3-1. Considering it's almost over, Spain's win is highly probable. The expected score will remain at 1-3, but there's still a tiny chance of a goal during stoppage time.\n\nHere's the JSON structure, making sure everything aligns with the constraints. The `reasoning` and the `team` values are correct, the scores align with the win probability, and the scorer minutes are strictly after the 90th minute. Seems solid.\n\n\n",
   "history": [
     {
       "submitted_at": "2026-06-09T02:03:53+00:00",
@@ -746,6 +733,196 @@
       },
       "tool_calls": 0,
       "wall_seconds": 14.703
+    },
+    {
+      "submitted_at": "2026-06-09T03:27:53+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 72,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.005,
+        "draw": 0.015,
+        "away": 0.98
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": ""
+      },
+      "sources": [],
+      "cost_usd": 0.0082614,
+      "tokens": {
+        "input": 1904,
+        "output": 994
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.571
+    },
+    {
+      "submitted_at": "2026-06-09T03:33:37+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 78,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.005,
+        "draw": 0.015,
+        "away": 0.98
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第78分钟，西班牙以3-1领先秘鲁，并占据了63%的控球率。考虑到比赛剩余时间不多且西班牙拥有两球优势，客队获胜的概率极高。由于这是一场友谊赛，双方都进行了大量换人，比赛节奏可能会在尾声阶段有所放缓，最可能的比分维持在1-3。不过，替补登场的奥尔莫（Dani Olmo）或伊格莱西亚斯（Borja Iglesias）仍有机会利用反击扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0076104,
+      "tokens": {
+        "input": 2118,
+        "output": 855
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.917
+    },
+    {
+      "submitted_at": "2026-06-09T03:39:17+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 84,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.001,
+        "draw": 0.009,
+        "away": 0.99
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进行到第84分钟，西班牙以3-1领先秘鲁。由于剩余时间极少且西班牙在控球率上占据绝对优势（63%），秘鲁扳平或反超的可能性微乎其微。西班牙下半场进行了大量换人调整，目前主要以控制比赛节奏为主。预计1-3的比分将保持到终场，但不排除西班牙替补前锋在最后时刻利用反击再入一球的微小可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.0093114,
+      "tokens": {
+        "input": 2190,
+        "output": 1113
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.505
+    },
+    {
+      "submitted_at": "2026-06-09T03:44:59+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 89,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.0,
+        "away": 1.0
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第89分钟，西班牙目前以3-1领先秘鲁。考虑到常规时间所剩无几，且西班牙在控球率和整体局面上占据绝对优势，比赛结果基本已成定局。预计比分将维持在1-3，西班牙取得最终胜利。"
+      },
+      "sources": [],
+      "cost_usd": 0.00677775,
+      "tokens": {
+        "input": 2189,
+        "output": 711
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.018
+    },
+    {
+      "submitted_at": "2026-06-09T03:50:38+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "Peru",
+        "away": "Spain",
+        "competition": "Friendly International",
+        "stage": "Friendlies 1",
+        "kickoff_utc": "2026-06-09T02:00:00+00:00",
+        "venue": "Estadio Cuauhtémoc",
+        "venue_city": "Puebla"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.0,
+        "away": 1.0
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进行到第90分钟，西班牙以3-1领先秘鲁。考虑到常规时间已经结束，西班牙锁定胜局的概率几乎为100%。预计最终比分将维持在目前的1-3，但在伤停补时阶段替补登场的攻击手仍有极小概率创造进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.00985635,
+      "tokens": {
+        "input": 2463,
+        "output": 1154
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.676
     }
   ]
 }
