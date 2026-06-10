@@ -203,6 +203,9 @@ const I18N = {
     user_prediction_guest: "登录后保存到账号；当前预览会暂存在本机。",
     user_prediction_result: "赛果",
     user_prediction_score: "比分",
+    user_prediction_optional_score: "预测比分",
+    user_prediction_hide_score: "不预测比分",
+    user_prediction_invalid_result: "请选择胜平负",
     user_prediction_home_win: "{team}胜",
     user_prediction_draw: "平局",
     user_prediction_away_win: "{team}胜",
@@ -422,6 +425,9 @@ const I18N = {
     user_prediction_guest: "Sign in to save to your account; local preview is stored on this device.",
     user_prediction_result: "Result",
     user_prediction_score: "Score",
+    user_prediction_optional_score: "Predict score",
+    user_prediction_hide_score: "Skip score",
+    user_prediction_invalid_result: "Choose a result",
     user_prediction_home_win: "{team} win",
     user_prediction_draw: "Draw",
     user_prediction_away_win: "{team} win",
@@ -873,7 +879,7 @@ function normalizePredictionRecord(raw) {
   const fixtureId = raw.fixture_id || raw.wca_id;
   const score = normalizeScoreString(raw.score || raw.predicted_score || raw.prediction?.score);
   const winner = normalizeWinnerSide(raw.winner || raw.predicted_winner || raw.prediction?.winner || outcomeSideFromScoreString(score));
-  if (!fixtureId || !score || !winner) return null;
+  if (!fixtureId || !winner) return null;
   return {
     fixture_id: String(fixtureId),
     wca_id: String(fixtureId),
@@ -1037,7 +1043,8 @@ function selectUserPredictionOutcome(wcaId, outcome) {
   form.dataset.outcome = normalizeWinnerSide(outcome);
   form.querySelectorAll("[data-user-outcome]").forEach(btn => {
     const active = btn.dataset.userOutcome === form.dataset.outcome;
-    btn.classList.toggle("chip-live", active);
+    btn.dataset.selected = active ? "1" : "0";
+    btn.setAttribute("aria-pressed", active ? "true" : "false");
   });
 }
 
@@ -1049,6 +1056,20 @@ function syncUserPredictionOutcomeFromScore(wcaId) {
   const score = normalizeScoreString(`${home}-${away}`);
   const outcome = outcomeSideFromScoreString(score);
   if (outcome) selectUserPredictionOutcome(wcaId, outcome);
+}
+
+function toggleUserPredictionScore(wcaId, checked = null) {
+  const form = document.getElementById(userPredictionFormId(wcaId));
+  if (!form) return;
+  const next = checked == null ? form.dataset.scoreVisible !== "1" : Boolean(checked);
+  form.dataset.scoreVisible = next ? "1" : "0";
+  const scoreWrap = form.querySelector("[data-user-score-wrap]");
+  const checkbox = form.querySelector("[data-user-score-toggle]");
+  if (scoreWrap) scoreWrap.classList.toggle("hidden", !next);
+  if (checkbox) checkbox.checked = next;
+  if (!next) {
+    form.querySelectorAll("[data-user-score]").forEach(input => { input.value = ""; });
+  }
 }
 
 function showUserPredictionMessage(wcaId, message, tone = "error") {
@@ -1063,11 +1084,13 @@ function readUserPredictionForm(wcaId) {
   const form = document.getElementById(userPredictionFormId(wcaId));
   const fixture = findFixtureByWcaId(wcaId);
   if (!form || !fixture) return null;
+  const winner = normalizeWinnerSide(form.dataset.outcome);
+  if (!winner) return { error: t("user_prediction_invalid_result") };
+  const scoreVisible = form.dataset.scoreVisible === "1";
   const home = form.querySelector("[data-user-score='home']")?.value;
   const away = form.querySelector("[data-user-score='away']")?.value;
-  const score = normalizeScoreString(`${home}-${away}`);
-  if (!score) return { error: t("user_prediction_invalid_score") };
-  const winner = outcomeSideFromScoreString(score);
+  const score = scoreVisible ? normalizeScoreString(`${home}-${away}`) : "";
+  if (scoreVisible && !score) return { error: t("user_prediction_invalid_score") };
   return {
     fixture_id: String(wcaId),
     wca_id: String(wcaId),
@@ -1107,9 +1130,14 @@ async function saveUserPredictionForFixture(wcaId) {
   renderSiteData();
 }
 
-function renderOutcomeButton(wcaId, outcome, label, selected) {
-  return `<button type="button" data-user-outcome="${esc(outcome)}" onclick="selectUserPredictionOutcome(${jsArg(wcaId)}, ${jsArg(outcome)})"
-          class="chip hover:bg-white/15 transition text-[11px] ${selected === outcome ? "chip-live" : ""}">${esc(label)}</button>`;
+function renderOutcomeButton(wcaId, outcome, label, selected, logoUrl = "") {
+  const active = selected === outcome;
+  const logo = logoUrl ? `<img src="${esc(logoUrl)}" alt="" class="mx-auto mb-1" style="width:2rem;height:2rem;object-fit:contain;" />` : "";
+  return `<button type="button" data-user-outcome="${esc(outcome)}" data-selected="${active ? "1" : "0"}" aria-pressed="${active ? "true" : "false"}" onclick='selectUserPredictionOutcome(${jsArg(wcaId)}, ${jsArg(outcome)})'
+          class="user-outcome-btn rounded-lg px-2 sm:px-3 py-2 text-center transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-green-400/40 flex flex-col items-center justify-center">
+            ${logo}
+            <div class="text-sm sm:text-base font-black leading-tight">${esc(label)}</div>
+          </button>`;
 }
 
 function renderUserPredictionEditor(nm) {
@@ -1118,6 +1146,8 @@ function renderUserPredictionEditor(nm) {
   if (!isFixtureOpenForUserPrediction(f, nm?.live)) return "";
   const existing = getUserPrediction(f.wca_id);
   const parsed = existing ? parseUserScoreString(existing.score) : null;
+  const selected = normalizeWinnerSide(existing?.winner || outcomeSideFromScoreString(existing?.score));
+  const scoreVisible = Boolean(parsed);
   const status = _userPredictionSaveStatus[f.wca_id] || (existing ? "saved" : "");
   const statusText = status === "saving" ? t("user_prediction_saving")
     : status === "local" ? t("user_prediction_local_saved")
@@ -1125,16 +1155,28 @@ function renderUserPredictionEditor(nm) {
   return `
     <div class="rounded-xl p-3 sm:p-4 mb-4" style="background:rgba(34,197,94,.07);border:1px solid rgba(34,197,94,.18);">
       <div class="text-xs font-bold text-gray-200 uppercase tracking-wider text-center mb-3">${t("user_prediction_title")}</div>
-      <div id="${userPredictionFormId(f.wca_id)}" class="flex flex-col items-center gap-2">
+      <div id="${userPredictionFormId(f.wca_id)}" data-outcome="${esc(selected)}" data-score-visible="${scoreVisible ? "1" : "0"}" class="flex flex-col gap-3">
         <div>
-          <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1 text-center">${t("user_prediction_score")}</div>
-          <div class="flex items-center justify-center gap-1.5">
-            <input data-user-score="home" inputmode="numeric" type="number" min="0" max="30" value="${esc(parsed ? parsed.home : "")}" class="w-14 rounded-lg px-2 py-1.5 text-center font-mono text-sm bg-white/10 border border-white/10 text-white outline-none" />
-            <span class="text-gray-500 font-bold">-</span>
-            <input data-user-score="away" inputmode="numeric" type="number" min="0" max="30" value="${esc(parsed ? parsed.away : "")}" class="w-14 rounded-lg px-2 py-1.5 text-center font-mono text-sm bg-white/10 border border-white/10 text-white outline-none" />
+          <div class="text-[10px] text-gray-500 uppercase tracking-wider text-center mb-2">${t("user_prediction_result")}</div>
+          <div class="grid grid-cols-3 gap-2 sm:gap-3">
+            ${renderOutcomeButton(f.wca_id, "home", t("user_prediction_home_win", { team: f.home || t("home") }), selected, f.home_logo || "")}
+            ${renderOutcomeButton(f.wca_id, "draw", t("user_prediction_draw"), selected)}
+            ${renderOutcomeButton(f.wca_id, "away", t("user_prediction_away_win", { team: f.away || t("away") }), selected, f.away_logo || "")}
           </div>
         </div>
-        <button type="button" onclick="saveUserPredictionForFixture(${jsArg(f.wca_id)})" class="chip chip-live hover:bg-white/15 transition justify-center py-1.5 text-[11px]">${existing ? t("user_prediction_update") : t("user_prediction_save")}</button>
+        <label class="inline-flex self-center items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-bold cursor-pointer" style="background:var(--soft-surface-bg);border:1px solid var(--soft-surface-border);color:var(--prediction-primary);">
+          <input data-user-score-toggle class="user-score-checkbox" type="checkbox" ${scoreVisible ? "checked" : ""} onchange='toggleUserPredictionScore(${jsArg(f.wca_id)}, this.checked)' style="width:1.05rem;height:1.05rem;" />
+          <span>${t("user_prediction_optional_score")}</span>
+        </label>
+        <div data-user-score-wrap class="${scoreVisible ? "self-center" : "hidden self-center"}">
+          <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1 text-center">${t("user_prediction_score")}</div>
+          <div class="flex items-center justify-center gap-1.5">
+            <input data-user-score="home" oninput='syncUserPredictionOutcomeFromScore(${jsArg(f.wca_id)})' inputmode="numeric" type="number" min="0" max="30" value="${esc(parsed ? parsed.home : "")}" class="w-14 rounded-lg px-2 py-1.5 text-center font-mono text-sm bg-white/10 border border-white/10 text-white outline-none" />
+            <span class="text-gray-500 font-bold">-</span>
+            <input data-user-score="away" oninput='syncUserPredictionOutcomeFromScore(${jsArg(f.wca_id)})' inputmode="numeric" type="number" min="0" max="30" value="${esc(parsed ? parsed.away : "")}" class="w-14 rounded-lg px-2 py-1.5 text-center font-mono text-sm bg-white/10 border border-white/10 text-white outline-none" />
+          </div>
+        </div>
+        <button type="button" onclick='saveUserPredictionForFixture(${jsArg(f.wca_id)})' class="chip chip-live self-center hover:bg-white/15 transition justify-center py-2 px-5 text-sm font-black">${existing ? t("user_prediction_update") : t("user_prediction_save")}</button>
         <div data-user-pred-message class="text-[11px] text-gray-500 text-center">${esc(statusText)}</div>
       </div>
     </div>`;
@@ -1142,7 +1184,7 @@ function renderUserPredictionEditor(nm) {
 
 function userPredictionEvaluation(match) {
   const pred = getUserPrediction(match?.wca_id);
-  if (!pred || !match?.result) return { pred, actualWinner: "", winnerCorrect: false, scoreCorrect: false };
+  if (!pred || !match?.result) return { pred, actualWinner: "", winnerCorrect: false, scoreCorrect: false, hasScore: false };
   const actualScore = normalizeScoreString(match.result);
   const actualWinner = outcomeSideFromScoreString(actualScore);
   const winner = pred.winner || outcomeSideFromScoreString(pred.score);
@@ -1150,24 +1192,25 @@ function userPredictionEvaluation(match) {
     pred,
     actualWinner,
     winnerCorrect: Boolean(winner && actualWinner && winner === actualWinner),
-    scoreCorrect: Boolean(actualScore && normalizeScoreString(pred.score) === actualScore),
+    scoreCorrect: Boolean(pred.score && actualScore && normalizeScoreString(pred.score) === actualScore),
+    hasScore: Boolean(pred.score),
   };
 }
 
 function renderUserPredictionHistoryCard(match) {
   if (!userPredictionEnabled()) return "";
-  const { pred, winnerCorrect, scoreCorrect } = userPredictionEvaluation(match);
+  const { pred, winnerCorrect, scoreCorrect, hasScore } = userPredictionEvaluation(match);
   if (!pred) return "";
   return `
     <div class="rounded-xl p-3" style="background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.16);">
       <div class="flex flex-wrap items-center justify-between gap-2">
         <div>
           <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1">${t("user_prediction_history_title")}</div>
-          ${pred ? `<div class="text-sm text-gray-200"><span class="font-mono font-black">${esc(pred.score.replace("-", " - "))}</span><span class="mx-2 text-gray-500">·</span>${esc(userOutcomeLabel(pred.winner, match))}</div>` : `<div class="text-sm text-gray-500">${t("user_prediction_no_history")}</div>`}
+          ${pred ? `<div class="text-sm text-gray-200">${pred.score ? `<span class="font-mono font-black">${esc(pred.score.replace("-", " - "))}</span><span class="mx-2 text-gray-500">·</span>` : ""}${esc(userOutcomeLabel(pred.winner, match))}</div>` : `<div class="text-sm text-gray-500">${t("user_prediction_no_history")}</div>`}
         </div>
         ${pred ? `<div class="flex flex-wrap gap-1.5 text-[10px]">
           <span class="chip ${winnerCorrect ? "chip-live" : ""}">${winnerCorrect ? t("user_prediction_correct_result") : t("user_prediction_wrong_result")}</span>
-          <span class="chip ${scoreCorrect ? "chip-live" : ""}">${scoreCorrect ? t("user_prediction_exact_score") : t("user_prediction_wrong_score")}</span>
+          ${hasScore ? `<span class="chip ${scoreCorrect ? "chip-live" : ""}">${scoreCorrect ? t("user_prediction_exact_score") : t("user_prediction_wrong_score")}</span>` : ""}
         </div>` : ""}
       </div>
     </div>`;
@@ -1182,12 +1225,12 @@ function currentUserLeaderboardRow() {
   let scoreCorrect = 0;
   for (const match of history) {
     if (!match.result) continue;
-    const { pred, winnerCorrect: wc, scoreCorrect: sc } = userPredictionEvaluation(match);
+    const { pred, winnerCorrect: wc, scoreCorrect: sc, hasScore } = userPredictionEvaluation(match);
     if (!pred) continue;
     winnerTotal += 1;
-    scoreTotal += 1;
+    if (hasScore) scoreTotal += 1;
     if (wc) winnerCorrect += 1;
-    if (sc) scoreCorrect += 1;
+    if (hasScore && sc) scoreCorrect += 1;
   }
   if (!_currentUser && Object.keys(_userPredictions).length === 0) return null;
   const winnerAcc = winnerTotal ? winnerCorrect / winnerTotal : null;
