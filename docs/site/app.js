@@ -26,6 +26,7 @@ const I18N = {
     hero_tagline: "AI<span class=\"gradient-text\">预测足球比分</span>",
     author_html: "作者 <a class=\"underline hover:text-white\" href=\"https://www.wzk.plus\" target=\"_blank\">Zhaokai Wang</a> · <a class=\"underline hover:text-white\" href=\"mailto:zhaokaiwang99@gmail.com\">zhaokaiwang99@gmail.com</a>",
     section_incoming: "🔮 即将进行的比赛",
+    section_tournament: "🏟️ 完整赛事预测",
     section_leaderboard: "🏆 排行榜",
     section_history: "📋 历史比赛",
     tab_composite: "总榜",
@@ -157,6 +158,34 @@ const I18N = {
     draw_prob: "平局 {pct}",
     no_model_predictions: "暂无模型预测（通常开赛前 24 小时运行）。",
     no_fixtures: "未来 7 天暂无赛程。",
+    no_tournament_predictions: "暂无完整赛事预测；运行 tournament_predict 后会显示在这里。",
+    tournament_champion: "预测冠军",
+    tournament_runner_up: "亚军",
+    tournament_third_place: "季军",
+    tournament_show_path: "展开完整预测",
+    tournament_hide_path: "收起完整预测",
+    tournament_group_stage: "小组赛比分与进球者",
+    tournament_standings: "小组积分榜",
+    tournament_knockout: "淘汰赛路径",
+    tournament_top_scorers: "射手榜",
+    tournament_group: "小组 {group}",
+    tournament_pts: "积分",
+    tournament_gd: "净胜球",
+    tournament_gf: "进球",
+    tournament_ga: "失球",
+    tournament_rank: "排名",
+    tournament_goals: "进球",
+    tournament_no_scorers: "无进球者",
+    tournament_scorers_label: "进球者",
+    tournament_penalty_shootout: "点球大战",
+    tournament_reasoning: "预测说明",
+    tournament_stage_R32: "1/16决赛",
+    tournament_stage_R16: "1/8决赛",
+    tournament_stage_QF: "1/4决赛",
+    tournament_stage_SF: "半决赛",
+    tournament_stage_THIRD_PLACE: "季军赛",
+    tournament_stage_FINAL: "决赛",
+    tournament_bracket_champion: "冠军",
     live: "🟢 进行中",
     live_red: "🔴 进行中",
     kickoff_in: "开赛倒计时 {h}小时 {m}分 {s}秒",
@@ -168,6 +197,30 @@ const I18N = {
     leaderboard_sort_composite: "排序：综合分",
     leaderboard_sort_to_result: "切换为赛果准确率排序",
     leaderboard_sort_to_composite: "切换为综合分排序",
+    login_with_logto: "登录",
+    logged_in_as: "已登录：{name}",
+    user_prediction_title: "我的预测",
+    user_prediction_guest: "登录后保存到账号；当前预览会暂存在本机。",
+    user_prediction_result: "赛果",
+    user_prediction_score: "比分",
+    user_prediction_home_win: "{team}胜",
+    user_prediction_draw: "平局",
+    user_prediction_away_win: "{team}胜",
+    user_prediction_save: "保存预测",
+    user_prediction_update: "修改预测",
+    user_prediction_saved: "已保存",
+    user_prediction_saving: "保存中…",
+    user_prediction_local_saved: "后端未连接，已暂存在本机",
+    user_prediction_invalid_score: "请填写有效比分",
+    user_prediction_locked: "已开赛，预测已锁定",
+    user_prediction_history_title: "我的预测",
+    user_prediction_no_history: "这场没有你的预测",
+    user_prediction_correct_result: "赛果正确",
+    user_prediction_wrong_result: "赛果未中",
+    user_prediction_exact_score: "比分命中",
+    user_prediction_wrong_score: "比分未中",
+    user_leaderboard_name: "我的预测",
+    user_leaderboard_exact: "比分 {correct}/{total}",
     games: "场次",
     layer_t1: "T1 赛果",
     layer_t2: "T2 球员",
@@ -192,6 +245,7 @@ const I18N = {
     hero_tagline: "AI <span class=\"gradient-text\">Football Score Prediction</span>",
     author_html: "by <a class=\"underline hover:text-white\" href=\"https://www.wzk.plus\" target=\"_blank\">Zhaokai Wang</a> · <a class=\"underline hover:text-white\" href=\"mailto:zhaokaiwang99@gmail.com\">zhaokaiwang99@gmail.com</a>",
     section_incoming: "🔮 Incoming Matches",
+    section_tournament: "🏟️ Full Tournament Predictions",
     section_leaderboard: "🏆 Leaderboard",
     section_history: "📋 Past Matches",
     tab_composite: "Ranking",
@@ -323,6 +377,34 @@ const I18N = {
     draw_prob: "draw {pct}",
     no_model_predictions: "No model predictions yet (runs 24 h before kickoff).",
     no_fixtures: "No fixtures scheduled in the next 7 days.",
+    no_tournament_predictions: "No full-tournament predictions yet; run tournament_predict to populate this section.",
+    tournament_champion: "Predicted Champion",
+    tournament_runner_up: "Runner-up",
+    tournament_third_place: "Third place",
+    tournament_show_path: "Show full prediction",
+    tournament_hide_path: "Hide full prediction",
+    tournament_group_stage: "Group Match Scores & Scorers",
+    tournament_standings: "Group Standings",
+    tournament_knockout: "Knockout Path",
+    tournament_top_scorers: "Top Scorers",
+    tournament_group: "Group {group}",
+    tournament_pts: "Pts",
+    tournament_gd: "GD",
+    tournament_gf: "GF",
+    tournament_ga: "GA",
+    tournament_rank: "Rank",
+    tournament_goals: "Goals",
+    tournament_no_scorers: "No scorers",
+    tournament_scorers_label: "Scorers",
+    tournament_penalty_shootout: "Penalties",
+    tournament_reasoning: "Prediction Notes",
+    tournament_stage_R32: "Round of 32",
+    tournament_stage_R16: "Round of 16",
+    tournament_stage_QF: "Quarterfinals",
+    tournament_stage_SF: "Semifinals",
+    tournament_stage_THIRD_PLACE: "Third-place Match",
+    tournament_stage_FINAL: "Final",
+    tournament_bracket_champion: "Champion",
     live: "🟢 Live",
     live_red: "🔴 LIVE",
     kickoff_in: "kickoff in {h}h {m}m {s}s",
@@ -334,6 +416,30 @@ const I18N = {
     leaderboard_sort_composite: "Sort: Composite Score",
     leaderboard_sort_to_result: "Switch to result accuracy sorting",
     leaderboard_sort_to_composite: "Switch to composite score sorting",
+    login_with_logto: "Log in",
+    logged_in_as: "Signed in: {name}",
+    user_prediction_title: "My Prediction",
+    user_prediction_guest: "Sign in to save to your account; local preview is stored on this device.",
+    user_prediction_result: "Result",
+    user_prediction_score: "Score",
+    user_prediction_home_win: "{team} win",
+    user_prediction_draw: "Draw",
+    user_prediction_away_win: "{team} win",
+    user_prediction_save: "Save prediction",
+    user_prediction_update: "Update prediction",
+    user_prediction_saved: "Saved",
+    user_prediction_saving: "Saving…",
+    user_prediction_local_saved: "Backend not connected; saved locally",
+    user_prediction_invalid_score: "Enter a valid score",
+    user_prediction_locked: "Kickoff passed; prediction locked",
+    user_prediction_history_title: "My Prediction",
+    user_prediction_no_history: "No prediction for this match",
+    user_prediction_correct_result: "Correct result",
+    user_prediction_wrong_result: "Wrong result",
+    user_prediction_exact_score: "Exact score",
+    user_prediction_wrong_score: "Score missed",
+    user_leaderboard_name: "My Prediction",
+    user_leaderboard_exact: "Score {correct}/{total}",
     games: "#Games",
     layer_t1: "T1 Result",
     layer_t2: "T2 Players",
@@ -435,6 +541,7 @@ function applyStaticI18n() {
   applyModeControls();
   updateThemeControls();
   updateLeaderboardSortButton();
+  updateUserAuthButton();
 }
 
 async function toggleLanguage() {
@@ -529,6 +636,7 @@ const MODEL_DISPLAY_NAMES = {
 function fmtModelId(model) {
   const id = typeof model === "string" ? model : model?.model_id;
   const displayName = typeof model === "string" ? null : model?.display_name;
+  if (id === USER_PREDICTION_MODEL_ID) return t("user_leaderboard_name");
   if (displayName) return formatModelNameForMode(displayName);
   if (!id) return id;
   if (MODEL_DISPLAY_NAMES[id]) return formatModelNameForMode(MODEL_DISPLAY_NAMES[id]);
@@ -544,6 +652,7 @@ function fmtModelId(model) {
 }
 
 function formatModelNameForMode(name) {
+  if (name === USER_PREDICTION_MODEL_ID) return t("user_leaderboard_name");
   if (!_matchmateMode) return name;
   let out = String(name || "");
   out = out.replace(/\s*\(\s*(?:thinking\s*\+\s*search|thinking\+search|search)\s*\)\s*/ig, "（自主搜索）");
@@ -570,6 +679,7 @@ function registerPreds(preds, fixture) {
 
 function modelBadge(id) {
   const key = (id || "").toLowerCase();
+  if (key === USER_PREDICTION_MODEL_ID) return { emoji: "我" };
   if (key.includes("gpt") || key.includes("o1") || key.includes("o3") || key.includes("o4"))
                                return { emoji: "🟢" };
   if (key.includes("claude"))  return { emoji: "🟠" };
@@ -586,6 +696,517 @@ function modelBadge(id) {
   if (key.includes("perplexity")) return { emoji: "🔷" };
   if (key.includes("mirothinker")) return { emoji: "✨" };
   return { emoji: "🤖" };
+}
+
+
+// ---------- Current-user predictions -----------------------------------------
+
+const USER_PREDICTION_MODEL_ID = "__current_user__";
+const USER_PREDICTION_STORAGE_PREFIX = "matchmate:user_predictions:v1";
+
+function userPredictionEnabled() {
+  return new URLSearchParams(window.location.search).get("user_predict") === "1";
+}
+
+let _currentUser = null;
+let _currentUserAccessToken = "";
+let _userPredictions = {};
+let _userPredictionSaveStatus = {};
+let _authMessageListenerReady = false;
+
+function userPredictionConfig() {
+  return window.MATCHMATE_USER_PREDICTION_CONFIG || window.WCA_USER_PREDICTION_CONFIG || {};
+}
+
+function userPredictionApiBase() {
+  const cfg = userPredictionConfig();
+  return String(cfg.apiBase || cfg.userPredictionApiBase || "").replace(/\/+$/, "");
+}
+
+function safeJsonParse(value) {
+  try { return JSON.parse(value); } catch { return null; }
+}
+
+function normalizeUserIdentity(raw) {
+  if (!raw || typeof raw !== "object") return null;
+  const user = raw.user && typeof raw.user === "object" ? raw.user : raw;
+  const id = user.id || user.sub || user.userId || user.user_id || user.email;
+  if (!id) return null;
+  return {
+    id: String(id),
+    name: String(user.name || user.displayName || user.username || user.email || id),
+    email: user.email || "",
+  };
+}
+
+function readLocalAuthValue(keys) {
+  for (const key of keys) {
+    try {
+      const value = localStorage.getItem(key) || sessionStorage.getItem(key);
+      if (value) return value;
+    } catch {}
+  }
+  return "";
+}
+
+function readCurrentUserFromHost() {
+  const globals = [
+    window.__MATCHMATE_AUTH__,
+    window.__MATCHMATE_LOGTO__,
+    window.__LOGTO_USER__,
+    window.MatchMateAuth && (typeof window.MatchMateAuth.getState === "function" ? window.MatchMateAuth.getState() : window.MatchMateAuth),
+  ];
+  for (const value of globals) {
+    const user = normalizeUserIdentity(value);
+    if (user) return user;
+  }
+  const local = readLocalAuthValue([
+    "matchmate:logto:user",
+    "matchmate:user",
+    "logto:user",
+    "logto_user",
+    "matchmate.auth.user",
+  ]);
+  return normalizeUserIdentity(safeJsonParse(local));
+}
+
+function readCurrentAccessToken() {
+  const cfg = userPredictionConfig();
+  if (cfg.accessToken) return String(cfg.accessToken);
+  const globals = [window.__MATCHMATE_AUTH__, window.__MATCHMATE_LOGTO__];
+  for (const value of globals) {
+    if (value && typeof value === "object") {
+      const token = value.accessToken || value.access_token || value.token;
+      if (token) return String(token);
+    }
+  }
+  return readLocalAuthValue([
+    "matchmate:logto:access_token",
+    "matchmate:access_token",
+    "logto:access_token",
+    "logto_access_token",
+  ]);
+}
+
+function setupAuthMessageBridge() {
+  if (!userPredictionEnabled()) return;
+  if (_authMessageListenerReady) return;
+  _authMessageListenerReady = true;
+  window.addEventListener("message", event => {
+    const data = event && event.data;
+    if (!data || typeof data !== "object") return;
+    if (!["matchmate:auth:state", "matchmate:logto:state", "logto:user"].includes(data.type)) return;
+    const user = normalizeUserIdentity(data.user || data.auth || data);
+    if (!user) return;
+    _currentUser = user;
+    _currentUserAccessToken = data.accessToken || data.access_token || _currentUserAccessToken;
+    updateUserAuthButton();
+    loadUserPredictions().then(renderSiteData).catch(console.error);
+  });
+}
+
+function requestHostAuthState() {
+  if (!userPredictionEnabled()) return;
+  setupAuthMessageBridge();
+  try {
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: "matchmate:auth:request", source: "worldcuparena-predict" }, "*");
+    }
+  } catch {}
+}
+
+function initUserSession() {
+  if (!userPredictionEnabled()) {
+    _currentUser = null;
+    _currentUserAccessToken = "";
+    _userPredictions = {};
+    updateUserAuthButton();
+    return;
+  }
+  _currentUser = readCurrentUserFromHost();
+  _currentUserAccessToken = readCurrentAccessToken();
+  setupAuthMessageBridge();
+  requestHostAuthState();
+  updateUserAuthButton();
+}
+
+function userDisplayName() {
+  return _currentUser ? (_currentUser.name || _currentUser.email || _currentUser.id) : "";
+}
+
+function buildLoginUrl() {
+  const cfg = userPredictionConfig();
+  const raw = cfg.loginUrl || cfg.logtoLoginUrl || (_matchmateMode ? "/login" : "https://logto.io/");
+  let url;
+  try { url = new URL(raw, window.location.origin); }
+  catch { return raw; }
+  if (!url.searchParams.has("redirect_uri") && !url.searchParams.has("returnTo")) {
+    url.searchParams.set("redirect_uri", window.location.href);
+  }
+  return url.toString();
+}
+
+function handleUserAuthButton() {
+  if (!userPredictionEnabled()) return;
+  if (_currentUser) return;
+  window.location.href = buildLoginUrl();
+}
+
+function updateUserAuthButton() {
+  const btn = document.getElementById("user-auth-button");
+  if (!btn) return;
+  const enabled = userPredictionEnabled();
+  btn.classList.toggle("hidden", !enabled);
+  btn.style.display = enabled ? "" : "none";
+  if (!enabled) return;
+  btn.textContent = _currentUser ? t("logged_in_as", { name: userDisplayName() }) : t("login_with_logto");
+  btn.setAttribute("title", _currentUser ? t("logged_in_as", { name: userDisplayName() }) : t("login_with_logto"));
+}
+
+function userPredictionStorageKey() {
+  const userId = _currentUser ? _currentUser.id : "local-preview";
+  return `${USER_PREDICTION_STORAGE_PREFIX}:${userId}`;
+}
+
+function normalizePredictionRecord(raw) {
+  if (!raw || typeof raw !== "object") return null;
+  const fixtureId = raw.fixture_id || raw.wca_id;
+  const score = normalizeScoreString(raw.score || raw.predicted_score || raw.prediction?.score);
+  const winner = normalizeWinnerSide(raw.winner || raw.predicted_winner || raw.prediction?.winner || outcomeSideFromScoreString(score));
+  if (!fixtureId || !score || !winner) return null;
+  return {
+    fixture_id: String(fixtureId),
+    wca_id: String(fixtureId),
+    score,
+    winner,
+    home: raw.home || raw.fixture?.home || "",
+    away: raw.away || raw.fixture?.away || "",
+    kickoff_utc: raw.kickoff_utc || raw.fixture?.kickoff_utc || "",
+    updated_at: raw.updated_at || raw.client_updated_at || new Date().toISOString(),
+  };
+}
+
+function loadLocalUserPredictions() {
+  const raw = readLocalAuthValue([userPredictionStorageKey()]);
+  const parsed = safeJsonParse(raw);
+  const rows = Array.isArray(parsed) ? parsed : Object.values(parsed || {});
+  const out = {};
+  for (const item of rows) {
+    const record = normalizePredictionRecord(item);
+    if (record) out[record.fixture_id] = record;
+  }
+  return out;
+}
+
+function writeLocalUserPredictions() {
+  try {
+    localStorage.setItem(userPredictionStorageKey(), JSON.stringify(_userPredictions));
+  } catch (err) {
+    console.warn("failed to store user predictions locally", err);
+  }
+}
+
+function authHeaders() {
+  return _currentUserAccessToken ? { Authorization: `Bearer ${_currentUserAccessToken}` } : {};
+}
+
+async function fetchRemoteUserPredictions() {
+  const apiBase = userPredictionApiBase();
+  if (!apiBase) return null;
+  const resp = await fetch(`${apiBase}/predictions/me`, {
+    headers: { Accept: "application/json", ...authHeaders() },
+    credentials: "include",
+  });
+  if (!resp.ok) throw new Error(`user predictions fetch failed: ${resp.status}`);
+  const payload = await resp.json();
+  const rows = Array.isArray(payload) ? payload : (payload.predictions || []);
+  const out = {};
+  for (const item of rows) {
+    const record = normalizePredictionRecord(item);
+    if (record) out[record.fixture_id] = record;
+  }
+  return out;
+}
+
+async function persistRemoteUserPrediction(record) {
+  const apiBase = userPredictionApiBase();
+  if (!apiBase) return false;
+  const resp = await fetch(`${apiBase}/predictions/me/${encodeURIComponent(record.fixture_id)}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json", Accept: "application/json", ...authHeaders() },
+    credentials: "include",
+    body: JSON.stringify(record),
+  });
+  if (!resp.ok) throw new Error(`user prediction save failed: ${resp.status}`);
+  return true;
+}
+
+async function loadUserPredictions() {
+  if (!userPredictionEnabled()) {
+    _userPredictions = {};
+    _userPredictionSaveStatus = {};
+    return;
+  }
+  _userPredictions = loadLocalUserPredictions();
+  try {
+    const remote = await fetchRemoteUserPredictions();
+    if (remote) {
+      _userPredictions = remote;
+      writeLocalUserPredictions();
+    }
+  } catch (err) {
+    console.warn("using local user predictions", err);
+  }
+}
+
+function getUserPrediction(wcaId) {
+  if (!userPredictionEnabled()) return null;
+  return _userPredictions[String(wcaId || "")] || null;
+}
+
+function safeDomId(value) {
+  return String(value || "").replace(/[^a-zA-Z0-9_-]/g, "_");
+}
+
+function userPredictionFormId(wcaId) {
+  return `user-pred-form-${safeDomId(wcaId)}`;
+}
+
+function jsArg(value) {
+  return JSON.stringify(String(value ?? ""));
+}
+
+function parseUserScoreString(score) {
+  const match = String(score || "").trim().match(/^(\d{1,2})\s*[-:]\s*(\d{1,2})$/);
+  if (!match) return null;
+  const home = Number(match[1]);
+  const away = Number(match[2]);
+  if (!Number.isInteger(home) || !Number.isInteger(away) || home < 0 || away < 0 || home > 30 || away > 30) return null;
+  return { home, away };
+}
+
+function normalizeScoreString(score) {
+  const parsed = parseUserScoreString(score);
+  return parsed ? `${parsed.home}-${parsed.away}` : "";
+}
+
+function normalizeWinnerSide(side) {
+  const value = String(side || "").toLowerCase();
+  if (["home", "draw", "away"].includes(value)) return value;
+  return "";
+}
+
+function outcomeSideFromScoreString(score) {
+  const parsed = parseUserScoreString(score);
+  if (!parsed) return "";
+  if (parsed.home > parsed.away) return "home";
+  if (parsed.away > parsed.home) return "away";
+  return "draw";
+}
+
+function userOutcomeLabel(side, match) {
+  if (side === "home") return t("user_prediction_home_win", { team: match.home || t("home") });
+  if (side === "away") return t("user_prediction_away_win", { team: match.away || t("away") });
+  if (side === "draw") return t("user_prediction_draw");
+  return "—";
+}
+
+function isFixtureOpenForUserPrediction(match, live) {
+  if (!match || !match.wca_id) return false;
+  if (live && live.status && live.status !== "Not Started") return false;
+  if (!match.kickoff_utc) return true;
+  const kickoff = new Date(match.kickoff_utc);
+  return Number.isNaN(kickoff.getTime()) || kickoff > new Date();
+}
+
+function findFixtureByWcaId(wcaId) {
+  const id = String(wcaId || "");
+  for (const item of (_siteData?.incoming_matches || [])) {
+    const fixture = item.fixture || {};
+    if (fixture.wca_id === id) return { ...fixture, live: item.live || null };
+  }
+  for (const item of (_siteData?.history || [])) {
+    if (item.wca_id === id) return item;
+  }
+  return null;
+}
+
+function selectUserPredictionOutcome(wcaId, outcome) {
+  const form = document.getElementById(userPredictionFormId(wcaId));
+  if (!form) return;
+  form.dataset.outcome = normalizeWinnerSide(outcome);
+  form.querySelectorAll("[data-user-outcome]").forEach(btn => {
+    const active = btn.dataset.userOutcome === form.dataset.outcome;
+    btn.classList.toggle("chip-live", active);
+  });
+}
+
+function syncUserPredictionOutcomeFromScore(wcaId) {
+  const form = document.getElementById(userPredictionFormId(wcaId));
+  if (!form) return;
+  const home = form.querySelector("[data-user-score='home']")?.value;
+  const away = form.querySelector("[data-user-score='away']")?.value;
+  const score = normalizeScoreString(`${home}-${away}`);
+  const outcome = outcomeSideFromScoreString(score);
+  if (outcome) selectUserPredictionOutcome(wcaId, outcome);
+}
+
+function showUserPredictionMessage(wcaId, message, tone = "error") {
+  const form = document.getElementById(userPredictionFormId(wcaId));
+  const msg = form?.querySelector("[data-user-pred-message]");
+  if (!msg) return;
+  msg.textContent = message;
+  msg.style.color = tone === "ok" ? "#86efac" : "#fca5a5";
+}
+
+function readUserPredictionForm(wcaId) {
+  const form = document.getElementById(userPredictionFormId(wcaId));
+  const fixture = findFixtureByWcaId(wcaId);
+  if (!form || !fixture) return null;
+  const home = form.querySelector("[data-user-score='home']")?.value;
+  const away = form.querySelector("[data-user-score='away']")?.value;
+  const score = normalizeScoreString(`${home}-${away}`);
+  if (!score) return { error: t("user_prediction_invalid_score") };
+  const winner = outcomeSideFromScoreString(score);
+  return {
+    fixture_id: String(wcaId),
+    wca_id: String(wcaId),
+    home: fixture.home || "",
+    away: fixture.away || "",
+    kickoff_utc: fixture.kickoff_utc || "",
+    score,
+    winner,
+    updated_at: new Date().toISOString(),
+  };
+}
+
+async function saveUserPredictionForFixture(wcaId) {
+  if (!userPredictionEnabled()) return;
+  const fixture = findFixtureByWcaId(wcaId);
+  if (!fixture || !isFixtureOpenForUserPrediction(fixture, fixture.live)) {
+    showUserPredictionMessage(wcaId, t("user_prediction_locked"));
+    return;
+  }
+  const record = readUserPredictionForm(wcaId);
+  if (!record || record.error) {
+    showUserPredictionMessage(wcaId, record?.error || t("user_prediction_invalid_score"));
+    return;
+  }
+  _userPredictions[record.fixture_id] = record;
+  _userPredictionSaveStatus[record.fixture_id] = "saving";
+  writeLocalUserPredictions();
+  renderSiteData();
+  try {
+    const remote = await persistRemoteUserPrediction(record);
+    _userPredictionSaveStatus[record.fixture_id] = remote ? "saved" : "local";
+  } catch (err) {
+    console.warn("user prediction saved locally only", err);
+    _userPredictionSaveStatus[record.fixture_id] = "local";
+  }
+  writeLocalUserPredictions();
+  renderSiteData();
+}
+
+function renderOutcomeButton(wcaId, outcome, label, selected) {
+  return `<button type="button" data-user-outcome="${esc(outcome)}" onclick="selectUserPredictionOutcome(${jsArg(wcaId)}, ${jsArg(outcome)})"
+          class="chip hover:bg-white/15 transition text-[11px] ${selected === outcome ? "chip-live" : ""}">${esc(label)}</button>`;
+}
+
+function renderUserPredictionEditor(nm) {
+  if (!userPredictionEnabled()) return "";
+  const f = nm?.fixture || {};
+  if (!isFixtureOpenForUserPrediction(f, nm?.live)) return "";
+  const existing = getUserPrediction(f.wca_id);
+  const parsed = existing ? parseUserScoreString(existing.score) : null;
+  const status = _userPredictionSaveStatus[f.wca_id] || (existing ? "saved" : "");
+  const statusText = status === "saving" ? t("user_prediction_saving")
+    : status === "local" ? t("user_prediction_local_saved")
+      : status === "saved" ? t("user_prediction_saved") : (_currentUser ? t("logged_in_as", { name: userDisplayName() }) : t("user_prediction_guest"));
+  return `
+    <div class="rounded-xl p-3 sm:p-4 mb-4" style="background:rgba(34,197,94,.07);border:1px solid rgba(34,197,94,.18);">
+      <div class="text-xs font-bold text-gray-200 uppercase tracking-wider text-center mb-3">${t("user_prediction_title")}</div>
+      <div id="${userPredictionFormId(f.wca_id)}" class="flex flex-col items-center gap-2">
+        <div>
+          <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1 text-center">${t("user_prediction_score")}</div>
+          <div class="flex items-center justify-center gap-1.5">
+            <input data-user-score="home" inputmode="numeric" type="number" min="0" max="30" value="${esc(parsed ? parsed.home : "")}" class="w-14 rounded-lg px-2 py-1.5 text-center font-mono text-sm bg-white/10 border border-white/10 text-white outline-none" />
+            <span class="text-gray-500 font-bold">-</span>
+            <input data-user-score="away" inputmode="numeric" type="number" min="0" max="30" value="${esc(parsed ? parsed.away : "")}" class="w-14 rounded-lg px-2 py-1.5 text-center font-mono text-sm bg-white/10 border border-white/10 text-white outline-none" />
+          </div>
+        </div>
+        <button type="button" onclick="saveUserPredictionForFixture(${jsArg(f.wca_id)})" class="chip chip-live hover:bg-white/15 transition justify-center py-1.5 text-[11px]">${existing ? t("user_prediction_update") : t("user_prediction_save")}</button>
+        <div data-user-pred-message class="text-[11px] text-gray-500 text-center">${esc(statusText)}</div>
+      </div>
+    </div>`;
+}
+
+function userPredictionEvaluation(match) {
+  const pred = getUserPrediction(match?.wca_id);
+  if (!pred || !match?.result) return { pred, actualWinner: "", winnerCorrect: false, scoreCorrect: false };
+  const actualScore = normalizeScoreString(match.result);
+  const actualWinner = outcomeSideFromScoreString(actualScore);
+  const winner = pred.winner || outcomeSideFromScoreString(pred.score);
+  return {
+    pred,
+    actualWinner,
+    winnerCorrect: Boolean(winner && actualWinner && winner === actualWinner),
+    scoreCorrect: Boolean(actualScore && normalizeScoreString(pred.score) === actualScore),
+  };
+}
+
+function renderUserPredictionHistoryCard(match) {
+  if (!userPredictionEnabled()) return "";
+  const { pred, winnerCorrect, scoreCorrect } = userPredictionEvaluation(match);
+  if (!pred) return "";
+  return `
+    <div class="rounded-xl p-3" style="background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.16);">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <div>
+          <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1">${t("user_prediction_history_title")}</div>
+          ${pred ? `<div class="text-sm text-gray-200"><span class="font-mono font-black">${esc(pred.score.replace("-", " - "))}</span><span class="mx-2 text-gray-500">·</span>${esc(userOutcomeLabel(pred.winner, match))}</div>` : `<div class="text-sm text-gray-500">${t("user_prediction_no_history")}</div>`}
+        </div>
+        ${pred ? `<div class="flex flex-wrap gap-1.5 text-[10px]">
+          <span class="chip ${winnerCorrect ? "chip-live" : ""}">${winnerCorrect ? t("user_prediction_correct_result") : t("user_prediction_wrong_result")}</span>
+          <span class="chip ${scoreCorrect ? "chip-live" : ""}">${scoreCorrect ? t("user_prediction_exact_score") : t("user_prediction_wrong_score")}</span>
+        </div>` : ""}
+      </div>
+    </div>`;
+}
+
+function currentUserLeaderboardRow() {
+  if (!userPredictionEnabled()) return null;
+  const history = (_siteData && _siteData.history) || [];
+  let winnerTotal = 0;
+  let winnerCorrect = 0;
+  let scoreTotal = 0;
+  let scoreCorrect = 0;
+  for (const match of history) {
+    if (!match.result) continue;
+    const { pred, winnerCorrect: wc, scoreCorrect: sc } = userPredictionEvaluation(match);
+    if (!pred) continue;
+    winnerTotal += 1;
+    scoreTotal += 1;
+    if (wc) winnerCorrect += 1;
+    if (sc) scoreCorrect += 1;
+  }
+  if (!_currentUser && Object.keys(_userPredictions).length === 0) return null;
+  const winnerAcc = winnerTotal ? winnerCorrect / winnerTotal : null;
+  return {
+    model_id: USER_PREDICTION_MODEL_ID,
+    is_user: true,
+    n: winnerTotal,
+    winner_total: winnerTotal,
+    winner_correct: winnerCorrect,
+    winner_acc: winnerAcc,
+    score_total: scoreTotal,
+    score_correct: scoreCorrect,
+    mean: winnerAcc == null ? 0 : winnerAcc * 100,
+  };
+}
+
+function withCurrentUserLeaderboardRow(rows) {
+  const mine = currentUserLeaderboardRow();
+  return mine ? [...(rows || []), mine] : (rows || []);
 }
 
 // ---------- Reasoning modal --------------------------------------------------
@@ -672,6 +1293,23 @@ function winProbsFromScoreDist(scoreDist) {
     draw: totals.draw / total,
     away: totals.away / total,
   };
+}
+
+const WIN_PROB_KEYS = ["home", "draw", "away"];
+
+function winProbPctLabels(wp) {
+  const values = WIN_PROB_KEYS.map(key => Math.max(0, Number(wp && wp[key])));
+  if (values.some(value => !Number.isFinite(value))) return {};
+  const total = values.reduce((sum, value) => sum + value, 0);
+  if (total <= 0) return {};
+  const exact = values.map(value => value / total * 100);
+  const ints = exact.map(value => Math.floor(value));
+  let remainder = 100 - ints.reduce((sum, value) => sum + value, 0);
+  const order = exact
+    .map((value, idx) => ({ idx, frac: value - Math.floor(value) }))
+    .sort((a, b) => b.frac - a.frac || a.idx - b.idx);
+  for (let i = 0; i < remainder; i++) ints[order[i % order.length].idx] += 1;
+  return Object.fromEntries(WIN_PROB_KEYS.map((key, idx) => [key, `${ints[idx]}%`]));
 }
 
 function winnerFromWinProbs(wp, homeName, awayName) {
@@ -778,16 +1416,29 @@ function togglePredictionGroup(groupId, btn) {
     : t("show_fewer_models");
 }
 
-// Normalize player name: strip accents, reduce to "firstInitial.lastName"
-// "Harry Kane" == "H. Kane", "L. Díaz" == "L. Diaz"
+// Normalize player name: strip accents/role notes, reduce to "firstInitial.lastName".
+// "Kylian Mbappé (captain)" == "Kylian Mbappe" == "K. Mbappe".
+function _plainNameForMatch(s) {
+  return String(s || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[([{].*?[)\]}]/g, " ")
+    .replace(/[’\x27]/g, "")
+    .replace(/[^\p{Letter}\p{Number}\s.-]/gu, " ")
+    .replace(/[.-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function _normName(s) {
-  const stripped = (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "");
-  const parts = stripped.trim().split(/\s+/);
+  const stripped = _plainNameForMatch(s);
+  const parts = stripped.split(/\s+/).filter(Boolean);
   if (!parts.length) return stripped.toLowerCase();
   const last = parts[parts.length - 1].toLowerCase();
-  const init = parts[0].replace(/\./g, "")[0]?.toLowerCase() || "";
+  const init = parts[0][0]?.toLowerCase() || "";
   return `${init}.${last}`;
 }
+
 
 const POSITION_ALIASES = {
   GK: "GK",
@@ -1457,6 +2108,7 @@ function renderPrematchDetailsPanel(idx) {
   const reasoning = p.reasoning || {};
   const scoreDist = (p.score_dist || []).slice().sort((a, b) => (b.p || 0) - (a.p || 0));
   const wp = p.win_probs || winProbsFromScoreDist(scoreDist) || {};
+  const wpPct = winProbPctLabels(wp);
   const top3 = scoreDist.slice(0, 3);
   const hName = f.home || t("home");
   const aName = f.away || t("away");
@@ -1473,7 +2125,7 @@ function renderPrematchDetailsPanel(idx) {
           ${winProbItems.map(([k, label]) => `
             <div class="win-prob-card rounded-lg px-2 sm:px-3 py-2 text-center" style="background:rgba(255,255,255,.06);">
               <div class="win-prob-label text-[10px] text-gray-400 uppercase tracking-wider truncate">${esc(label)}</div>
-              <div class="win-prob-value text-base sm:text-lg font-black font-mono text-gray-100">${fmtPct(wp[k])}</div>
+              <div class="win-prob-value text-base sm:text-lg font-black font-mono text-gray-100">${wpPct[k] || fmtPct(wp[k])}</div>
             </div>`).join("")}
         </div>
       </div>` : ""}
@@ -1545,6 +2197,8 @@ function renderPredCard(p, f, idx, opts = {}) {
   const extraPrematchButtonAttr = opts.isExtra ? ' data-extra-button="prematch"' : "";
   const extraLiveButtonAttr = opts.isExtra ? ' data-extra-button="live"' : "";
   const extraSourcesButtonAttr = opts.isExtra ? ' data-extra-button="sources"' : "";
+  const sourceButtonHtml = p.sources && p.sources.length ? `<button id="pred-sources-btn-${idx}" onclick="toggleSources(${idx})"
+                  class="chip pred-action hover:bg-white/15 transition text-[10px]"${extraSourcesButtonAttr} data-source-count="${p.sources.length}">${t("sources", { count: p.sources.length })}</button>` : "";
   const livePred = p._live_prediction || null;
 
   const scoreWinner = outcomeFromScore(predScore, hName, aName);
@@ -1570,7 +2224,7 @@ function renderPredCard(p, f, idx, opts = {}) {
       : "color:#cbd5e1;border-color:rgba(148,163,184,.25);background:rgba(148,163,184,.08);";
     const detail = p.error_summary || (failed ? t("unavailable_detail") : t("not_run_detail"));
     return `
-    <div class="card rounded-lg p-3">
+    <div class="card rounded-lg p-3 h-full flex flex-col">
       ${headerHtml}
       <div class="rounded-lg px-3 py-2" style="${tone}">
         <div class="text-[10px] uppercase tracking-wider mb-1">${label}</div>
@@ -1580,16 +2234,16 @@ function renderPredCard(p, f, idx, opts = {}) {
   }
 
   return `
-    <div class="card rounded-lg p-3">
+    <div class="card rounded-lg p-3 h-full flex flex-col">
 
       <!-- Header -->
       ${headerHtml}
 
       <!-- Minimalist Prediction -->
       ${predWinner || top3.length || livePred ? `
-      <div class="${livePred ? "grid grid-cols-1 sm:grid-cols-2 gap-3" : ""} mb-2">
+      <div class="${livePred ? "grid grid-cols-1 sm:grid-cols-2 gap-3" : ""} mb-0 flex-1">
         ${predWinner || top3.length ? `
-        <div class="rounded-lg px-3 py-2" style="min-height:9rem;display:flex;flex-direction:column;background:${livePred ? "rgba(255,255,255,.035)" : "transparent"};border:${livePred ? "1px solid rgba(255,255,255,.06)" : "0"};">
+        <div class="rounded-lg px-3 py-2" style="min-height:6.75rem;display:flex;flex-direction:column;background:${livePred ? "rgba(255,255,255,.035)" : "transparent"};border:${livePred ? "1px solid rgba(255,255,255,.06)" : "0"};">
           <div style="flex:1 1 auto;display:flex;flex-direction:column;">
             <div class="text-[10px] text-gray-500 uppercase tracking-wider">${t("prematch_prediction")}</div>
             <div class="flex items-start gap-3 sm:gap-4 flex-wrap" style="margin-top:auto;margin-bottom:auto;">
@@ -1627,21 +2281,16 @@ function renderPredCard(p, f, idx, opts = {}) {
               </div>` : ""}
             </div>
           </div>
-          <div class="pt-2 flex justify-start" style="margin-top:auto;">
+          <div class="pt-2 flex items-center gap-2" style="margin-top:auto;">
             <button id="pred-prematch-btn-${idx}" onclick="togglePredPanel(${idx}, 'prematch')"
                     class="chip pred-action hover:bg-white/15 transition text-[10px]"${extraPrematchButtonAttr}>${t("show_prematch_prediction")}</button>
+            ${sourceButtonHtml ? `<div class="ml-auto">${sourceButtonHtml}</div>` : ""}
           </div>
         </div>` : ""}
         ${livePred ? renderInlineLivePrediction(livePred, f, { actionIdx: idx, extraButtonAttr: extraLiveButtonAttr }) : ""}
       </div>
       ` : ""}
 
-      <!-- Buttons -->
-      ${p.sources && p.sources.length ? `
-      <div class="flex flex-wrap gap-2 mt-1 justify-end">
-        <button id="pred-sources-btn-${idx}" onclick="toggleSources(${idx})"
-                class="chip pred-action hover:bg-white/15 transition text-[11px]"${extraSourcesButtonAttr} data-source-count="${p.sources.length}">${t("sources", { count: p.sources.length })}</button>
-      </div>` : ""}
     </div>`;
 }
 
@@ -1674,7 +2323,7 @@ function renderPredGrid(preds, f, startIdx, groupId, opts = {}) {
       : ` style="grid-template-columns:repeat(${rowSize},minmax(0,1fr));"`;
     for (let rowStart = 0; rowStart < items.length; rowStart += rowSize) {
       const cards = items.slice(rowStart, rowStart + rowSize).map(item => `
-        <div>${renderPredCard(item.pred, f, item.idx, {
+        <div class="h-full">${renderPredCard(item.pred, f, item.idx, {
           showActualSummary: opts.showActualSummary,
           isExtra: hiddenRows,
         })}</div>
@@ -1837,6 +2486,7 @@ function renderInlineLivePrediction(item, f, opts = {}) {
   }
   const live = item.live || {};
   const wp = item.win_probs || {};
+  const wpPct = winProbPctLabels(wp);
   const actionIdx = opts.actionIdx;
   const actionButton = actionIdx != null ? `
           <button id="pred-live-btn-${actionIdx}" onclick="togglePredPanel(${actionIdx}, 'live')"
@@ -1868,13 +2518,22 @@ function renderInlineLivePrediction(item, f, opts = {}) {
           ${[["home", f.home || t("home")], ["draw", t("draw")], ["away", f.away || t("away")]].map(([key, label]) => `
             <div class="text-center rounded-md px-1.5 py-1" style="background:rgba(255,255,255,.055);">
               <div class="text-[9px] text-gray-500 uppercase tracking-wider truncate">${esc(label)}</div>
-              <div class="text-xs font-black font-mono text-gray-100">${fmtPct(wp[key])}</div>
+              <div class="text-xs font-black font-mono text-gray-100">${wpPct[key] || fmtPct(wp[key])}</div>
             </div>`).join("")}
         </div>
         <div class="text-[10px] text-gray-500 mt-1.5">${esc(t("live_updated_at", { time: livePredictionTimestamp(item) }))}</div>
       </div>
       ${actionButton ? `<div class="pt-2 flex justify-start" style="margin-top:auto;">${actionButton}</div>` : ""}
     </div>`;
+}
+
+function livePredictionReasoningText(item) {
+  const reasoning = item && item.reasoning;
+  if (typeof reasoning === "string") return reasoning.trim();
+  if (reasoning && typeof reasoning === "object") {
+    return String(reasoning.overall || reasoning.summary || reasoning.analysis || "").trim();
+  }
+  return "";
 }
 
 function renderLivePredictionHistoryList(item, f) {
@@ -1885,11 +2544,12 @@ function renderLivePredictionHistoryList(item, f) {
   return `
     <div>
       <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("live_prediction_history")}</div>
-      <div class="space-y-1.5 pr-1" style="max-height:14rem;overflow-y:auto;">
+      <div class="space-y-1.5 pr-1" style="max-height:26rem;overflow-y:auto;">
         ${history.map(entry => {
           const status = entry.status || "ok";
           const basis = liveBasisLabel(entry.live || {}, entry.submitted_at);
           const minutePrefix = liveHistoryMinutePrefix(entry);
+          const reasoning = livePredictionReasoningText(entry);
           if (status !== "ok") {
             return `
               <div class="rounded-lg px-3 py-2 text-xs" style="color:#fca5a5;background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.2);">
@@ -1900,12 +2560,13 @@ function renderLivePredictionHistoryList(item, f) {
           }
           return `
             <div class="rounded-lg px-3 py-2 text-xs" style="background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.06);">
-              ${minutePrefix ? `<span class="font-semibold text-gray-200">${esc(minutePrefix)}</span>` : ""}${esc(t("live_history_item", {
+              <div>${minutePrefix ? `<span class="font-semibold text-gray-200">${esc(minutePrefix)}</span>` : ""}${esc(t("live_history_item", {
                 time: livePredictionTimestamp(entry),
                 basis,
                 score: livePredictionScore(entry),
                 winner: livePredictionWinner(entry, f),
-              }))}
+              }))}</div>
+              ${reasoning ? `<div class="mt-2 pt-2 border-t border-white/5"><div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1">${t("full_reasoning")}</div><div class="text-xs leading-relaxed text-gray-300 whitespace-pre-wrap">${esc(reasoning)}</div></div>` : ""}
             </div>`;
         }).join("")}
       </div>
@@ -2016,6 +2677,7 @@ function renderLivePredictions(items, f) {
           const b = modelBadge(p.model_id);
           const live = p.live || {};
           const wp = p.win_probs || {};
+          const wpPct = winProbPctLabels(wp);
           const predWinner = winnerFromWinProbs(wp, hName, aName);
           const score = p.most_likely_score || "—";
           const updated = p.submitted_at ? fmtLocalKickoff(new Date(p.submitted_at)) : "—";
@@ -2057,7 +2719,7 @@ function renderLivePredictions(items, f) {
                 ${[["home", hName], ["draw", t("draw")], ["away", aName]].map(([key, label]) => `
                   <div class="rounded-lg px-2 py-2 text-center" style="background:rgba(255,255,255,.055);">
                     <div class="text-[10px] text-gray-500 uppercase tracking-wider truncate">${esc(label)}</div>
-                    <div class="text-lg font-black font-mono text-gray-100">${fmtPct(wp[key])}</div>
+                    <div class="text-lg font-black font-mono text-gray-100">${wpPct[key] || fmtPct(wp[key])}</div>
                   </div>
                 `).join("")}
               </div>
@@ -2099,6 +2761,384 @@ function renderLivePredictions(items, f) {
     </div>`;
 }
 
+// ---------- Full tournament predictions --------------------------------------
+
+const WORLD_CUP_2026_LOGO = "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/250px-2026_FIFA_World_Cup_emblem.svg.png";
+const TOURNAMENT_TEAM_ALIASES = {
+  england: { zh: "英格兰", flag: "\u{1F3F4}\u{E0067}\u{E0062}\u{E0065}\u{E006E}\u{E0067}\u{E007F}" },
+  eng: { zh: "英格兰", flag: "\u{1F3F4}\u{E0067}\u{E0062}\u{E0065}\u{E006E}\u{E0067}\u{E007F}" },
+  scotland: { zh: "苏格兰", flag: "\u{1F3F4}\u{E0067}\u{E0062}\u{E0073}\u{E0063}\u{E0074}\u{E007F}" },
+  sco: { zh: "苏格兰", flag: "\u{1F3F4}\u{E0067}\u{E0062}\u{E0073}\u{E0063}\u{E0074}\u{E007F}" },
+};
+
+function tournamentLocalization() {
+  return (_siteData?.tournament_predictions?.name_localization) || { teams: {}, players: {} };
+}
+
+function tournamentStageLabel(stage) {
+  return t(`tournament_stage_${stage}`) || stage || "—";
+}
+
+function tournamentRawTeamName(team) {
+  return typeof team === "string" ? team : (team && (team.name || team.team)) || "—";
+}
+
+function tournamentTeamAlias(team) {
+  const raw = tournamentRawTeamName(team);
+  const id = typeof team === "object" && team ? String(team.id || team.team_id || "") : "";
+  const values = [raw, id].map(value => String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^A-Za-z0-9]/g, "")
+    .toLowerCase()
+  ).filter(Boolean);
+  if (values.some(value => value === "england" || value === "eng" || value.startsWith("england") || value.startsWith("eng"))) return TOURNAMENT_TEAM_ALIASES.england;
+  if (values.some(value => value === "scotland" || value === "sco" || value.startsWith("scotland") || value.startsWith("sco"))) return TOURNAMENT_TEAM_ALIASES.scotland;
+  return null;
+}
+
+function tournamentTeamName(team) {
+  const raw = tournamentRawTeamName(team);
+  const alias = tournamentTeamAlias(team);
+  if (alias) return alias.zh;
+  return tournamentLocalization().teams?.[raw] || raw;
+}
+
+function tournamentPlayerInfo(name) {
+  const raw = String(name || "").trim();
+  const players = tournamentLocalization().players || {};
+  if (players[raw]) return { raw, ...players[raw], zh: players[raw].zh || raw };
+  const norm = _normName(raw);
+  const plain = _plainNameForMatch(raw).toLowerCase();
+  for (const [key, item] of Object.entries(players)) {
+    const keyPlain = _plainNameForMatch(key).toLowerCase();
+    if (_normName(key) === norm || keyPlain === plain) return { raw: key, ...item, zh: item.zh || raw };
+  }
+  return { raw, zh: raw, photo: "" };
+}
+
+function tournamentCleanPlayerName(name) {
+  return String(name || "—").replace(/[（(][^（）()]*[）)]/g, "").replace(/\s+/g, " ").trim() || "—";
+}
+
+function tournamentPlayerName(name) {
+  return tournamentCleanPlayerName(tournamentPlayerInfo(name).zh || String(name || "—"));
+}
+
+function tournamentTeamFlag(team) {
+  const alias = tournamentTeamAlias(team);
+  if (alias) return alias.flag;
+  return typeof team === "object" && team ? (team.flag || "") : "";
+}
+
+function tournamentTeamHtml(team, opts = {}) {
+  const flag = tournamentTeamFlag(team);
+  const name = tournamentTeamName(team);
+  const raw = tournamentRawTeamName(team);
+  const title = raw && raw !== name ? ` title="${esc(raw)}"` : "";
+  const align = opts.align === "right" ? "justify-end text-right" : "";
+  return `<span class="inline-flex items-center gap-1.5 min-w-0 ${align}"${title}>${flag ? `<span class="shrink-0">${esc(flag)}</span>` : ""}<span class="truncate">${esc(name)}</span></span>`;
+}
+
+function tournamentScoreText(score) {
+  return String(score || "—").replace("-", " - ");
+}
+
+function tournamentDeciderText(decider) {
+  return String(decider || "").toUpperCase() === "PEN" ? t("tournament_penalty_shootout") : "";
+}
+
+function tournamentMatchTeam(match, side) {
+  if (side === "away") return tournamentTeamName(match.away);
+  if (side === "home") return tournamentTeamName(match.home);
+  return tournamentTeamName(side);
+}
+
+function tournamentScorerRows(match) {
+  const scorers = match.scorers || [];
+  return scorers.map(s => ({
+    team: tournamentMatchTeam(match, s.team),
+    player: tournamentPlayerName(s.player || t("unspecified_goal")),
+    minute: s.minute != null ? `${s.minute}′` : "",
+  }));
+}
+
+function tournamentScorersText(match) {
+  const rows = tournamentScorerRows(match);
+  if (!rows.length) return t("tournament_no_scorers");
+  return rows.map(row => `${row.team}: ${row.player}${row.minute ? ` ${row.minute}` : ""}`).join("；");
+}
+
+function renderTournamentScorersTooltip(match, opts = {}) {
+  const rows = tournamentScorerRows(match);
+  const placement = opts.placement === "left" ? "right-0" : "left-0";
+  const vertical = opts.vertical === "up" ? "bottom-5" : "top-5";
+  return `<span class="relative inline-flex group shrink-0">
+    <button type="button" class="inline-flex items-center justify-center rounded-full text-[9px] font-bold text-gray-400 transition hover:text-gray-200" style="width:.9rem;height:.9rem;border:1px solid rgba(148,163,184,.28);background:rgba(148,163,184,.09);" aria-label="${esc(t("tournament_scorers_label"))}">i</button>
+    <span class="hidden group-hover:block group-focus-within:block absolute ${placement} ${vertical} z-50 w-56 rounded-lg p-2 text-left" style="background:var(--tooltip-bg);border:1px solid var(--tooltip-border);box-shadow:0 18px 48px rgba(0,0,0,.22);">
+      <span class="block text-[10px] uppercase tracking-wider mb-1" style="color:var(--tooltip-title);">${t("tournament_scorers_label")}</span>
+      ${rows.length ? rows.map(row => `<span class="block text-[11px] leading-snug" style="color:var(--tooltip-text);"><span style="color:var(--tooltip-text);">${esc(row.team)}</span>：${esc(row.player)}${row.minute ? ` <span style="color:var(--tooltip-muted);">${esc(row.minute)}</span>` : ""}</span>`).join("") : `<span class="block text-[11px]" style="color:var(--tooltip-muted);">${t("tournament_no_scorers")}</span>`}
+    </span>
+  </span>`;
+}
+
+function toggleTournamentPrediction(idx) {
+  const panel = document.getElementById(`tournament-detail-${idx}`);
+  const btn = document.getElementById(`tournament-toggle-${idx}`);
+  if (!panel || !btn) return;
+  const nextHidden = !panel.classList.contains("hidden") ? true : false;
+  panel.classList.toggle("hidden", nextHidden);
+  btn.textContent = nextHidden ? t("tournament_show_path") : t("tournament_hide_path");
+}
+
+function renderTournamentSummaryBlock(p) {
+  const champion = p.champion || null;
+  const runnerUp = p.runner_up || null;
+  const thirdPlace = p.third_place || null;
+  return `
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+      ${[["tournament_champion", champion, "text-gray-100"], ["tournament_runner_up", runnerUp, "text-gray-100"], ["tournament_third_place", thirdPlace, "text-gray-100"]].map(([labelKey, team, color]) => `
+        <div class="rounded-lg px-3 py-2" style="background:var(--soft-surface-bg-strong);border:1px solid var(--soft-surface-border);">
+          <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1">${t(labelKey)}</div>
+          <div class="font-black text-lg ${color} min-w-0">${team ? tournamentTeamHtml(team) : "—"}</div>
+        </div>`).join("")}
+    </div>`;
+}
+
+function tournamentMatchesByNumber(matches) {
+  const out = {};
+  for (const match of matches || []) out[Number(match.match_no)] = match;
+  return out;
+}
+
+function tournamentBracketTeamLine(match, side) {
+  const team = side === "away" ? match.away : match.home;
+  const score = parseScore(match.score || "0-0");
+  const goals = side === "away" ? score.away : score.home;
+  const winnerSide = match.winner_side || (tournamentRawTeamName(match.winner) === tournamentRawTeamName(team) ? side : "");
+  const active = winnerSide === side;
+  return `<div class="flex items-center justify-between gap-2 ${active ? "text-white" : "text-gray-400"}">
+    <span class="min-w-0 text-[11px] font-semibold ${active ? "font-black" : ""}">${tournamentTeamHtml(team)}</span>
+    <span class="font-mono text-xs ${active ? "text-green-300" : "text-gray-500"}">${Number.isFinite(goals) ? goals : "—"}</span>
+  </div>`;
+}
+
+function tournamentBracketCard(match, opts = {}) {
+  if (!match) return `<div class="rounded-md border border-white/5 bg-white/[.025]" style="height:${opts.small ? "3rem" : "3.75rem"};"></div>`;
+  const decider = tournamentDeciderText(match.decider);
+  return `<div class="rounded-md px-2 py-1.5" style="background:var(--tournament-bracket-card-bg);border:1px solid var(--tournament-bracket-card-border);box-shadow:var(--tournament-bracket-card-shadow);min-height:${opts.small ? "3.15rem" : "3.75rem"};">
+    <div class="flex items-center justify-between gap-1 mb-1">
+      <span class="text-[9px] uppercase tracking-wider" style="color:var(--tournament-bracket-stage);">${esc(tournamentStageLabel(match.stage))}</span>
+      ${renderTournamentScorersTooltip(match, { placement: opts.tooltipPlacement || "left", vertical: opts.tooltipVertical || "down" })}
+    </div>
+    <div class="space-y-0.5">
+      ${tournamentBracketTeamLine(match, "home")}
+      ${tournamentBracketTeamLine(match, "away")}
+    </div>
+    ${decider ? `<div class="text-[10px] mt-0.5" style="color:var(--tournament-bracket-decider);">${esc(decider)}</div>` : ""}
+  </div>`;
+}
+
+function renderTournamentBracketColumn(label, matchNos, slots, byNo, opts = {}) {
+  return `<div class="flex flex-col gap-1 min-w-0">
+    <div class="text-center text-[10px] uppercase tracking-wider text-lime-200/70 h-4">${esc(label || "")}</div>
+    <div class="grid gap-1" style="grid-template-rows:repeat(16,minmax(1.8rem,1fr));height:34rem;">
+      ${matchNos.map((no, i) => `<div style="grid-row:${slots[i]} / span 2;align-self:center;">${tournamentBracketCard(byNo[no], { tooltipPlacement: opts.tooltipPlacement || "left", tooltipVertical: slots[i] >= 12 ? "up" : "down" })}</div>`).join("")}
+    </div>
+  </div>`;
+}
+
+function renderTournamentBracketCenter(final, third) {
+  return `<div class="flex flex-col gap-1 min-w-0">
+    <div class="h-4"></div>
+    <div class="grid gap-1" style="grid-template-rows:repeat(16,minmax(1.8rem,1fr));height:34rem;">
+      <div style="grid-row:7 / span 2;align-self:center;transform:translateY(-.75rem);">${tournamentBracketCard(final, { tooltipPlacement: "left" })}</div>
+      ${third ? `<div style="grid-row:10 / span 2;align-self:center;transform:translateY(-.75rem);">${tournamentBracketCard(third, { small: true, tooltipPlacement: "left", tooltipVertical: "up" })}</div>` : ""}
+    </div>
+  </div>`;
+}
+
+function renderTournamentBracket(p) {
+  const byNo = tournamentMatchesByNumber(p.knockout_matches || []);
+  const r32Slots = [1,3,5,7,9,11,13,15];
+  const r16Slots = [2,6,10,14];
+  const qfSlots = [4,12];
+  const sfSlots = [8];
+  const columns = [
+    { label: tournamentStageLabel("R32"), matches: [73,75,74,77,83,84,81,82], slots: r32Slots, tooltipPlacement: "right" },
+    { label: tournamentStageLabel("R16"), matches: [89,90,93,94], slots: r16Slots, tooltipPlacement: "right" },
+    { label: tournamentStageLabel("QF"), matches: [97,98], slots: qfSlots, tooltipPlacement: "right" },
+    { label: tournamentStageLabel("SF"), matches: [101], slots: sfSlots, tooltipPlacement: "right" },
+    { center: true },
+    { label: tournamentStageLabel("SF"), matches: [102], slots: sfSlots, tooltipPlacement: "left" },
+    { label: tournamentStageLabel("QF"), matches: [99,100], slots: qfSlots, tooltipPlacement: "left" },
+    { label: tournamentStageLabel("R16"), matches: [91,92,95,96], slots: r16Slots, tooltipPlacement: "left" },
+    { label: tournamentStageLabel("R32"), matches: [76,78,79,80,86,88,85,87], slots: r32Slots, tooltipPlacement: "left" },
+  ];
+  const final = byNo[104];
+  const third = byNo[103];
+  const champion = p.champion || final?.winner;
+  return `
+    <div>
+      <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("tournament_knockout")}</div>
+      <div class="overflow-x-auto rounded-xl" style="background:linear-gradient(180deg,#15203a 0%,#4b1168 58%,#742099 100%);border:1px solid rgba(255,255,255,.12);">
+        <div class="p-4 sm:p-5 relative" style="min-width:960px;min-height:43rem;">
+          <div class="absolute left-4 top-4 flex items-center gap-2">
+            <img src="${WORLD_CUP_2026_LOGO}" alt="FIFA World Cup 2026" style="height:3.4rem;width:auto;object-fit:contain;" onerror="this.style.display='none'" />
+            <div class="text-xs font-black leading-tight" style="color:#fff;">FIFA WORLD CUP<br><span style="color:#d9f99d;">2026</span></div>
+          </div>
+          <div class="absolute right-4 top-4 flex items-center gap-2 text-right">
+            <div>
+              <div class="text-xs font-black" style="color:#fff;">MatchMate AI 预测</div>
+              <div class="text-[11px]" style="color:#ecfccb;">模型：${esc(fmtModelId(p))}</div>
+              <div class="text-[10px]" style="color:#e5e7eb;">www.matchmate.tv/predict</div>
+            </div>
+            <img src="matchmate_logo_white.png" alt="MatchMate" style="height:4.4rem;width:4.4rem;object-fit:contain;border-radius:.8rem;background:#050816;padding:.28rem;" onerror="this.style.display='none'" />
+          </div>
+          <div class="absolute inset-x-0 top-16 text-center pointer-events-none">
+            <div class="text-[11px] uppercase tracking-[.22em]" style="color:#d9f99d;">${t("tournament_bracket_champion")}</div>
+            <div class="text-3xl font-black mt-1" style="color:#fff;">${champion ? tournamentTeamHtml(champion) : "—"}</div>
+          </div>
+          <div class="grid gap-2 pt-28" style="grid-template-columns:1fr .92fr .84fr .78fr .98fr .78fr .84fr .92fr 1fr;align-items:stretch;">
+            ${columns.map(col => col.center
+              ? renderTournamentBracketCenter(final, third)
+              : renderTournamentBracketColumn(col.label, col.matches, col.slots, byNo, { tooltipPlacement: col.tooltipPlacement })
+            ).join("")}
+          </div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function renderTournamentGroupMatchList(matches) {
+  if (!matches || !matches.length) return "";
+  return `<div class="mt-3 pt-3 border-t border-white/5 space-y-2">
+    ${[...matches].sort((a,b) => (a.match_no || 0) - (b.match_no || 0)).map(match => `
+      <div class="text-xs leading-snug">
+        <div class="flex items-center gap-2 min-w-0">
+          <span class="truncate flex-1 text-right">${esc(tournamentTeamName(match.home))}</span>
+          <span class="font-mono font-black text-gray-100 w-14 text-center">${esc(tournamentScoreText(match.score))}</span>
+          <span class="truncate flex-1">${esc(tournamentTeamName(match.away))}</span>
+          ${renderTournamentScorersTooltip(match, { placement: "left" })}
+        </div>
+      </div>`).join("")}
+  </div>`;
+}
+
+function renderTournamentStandings(standings, matches) {
+  const groups = Object.keys(standings || {}).sort();
+  if (!groups.length) return "";
+  const byGroup = {};
+  for (const match of matches || []) (byGroup[match.group] = byGroup[match.group] || []).push(match);
+  return `
+    <div>
+      <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("tournament_standings")}</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
+        ${groups.map(group => `
+          <div class="rounded-lg p-3" style="background:var(--soft-surface-bg);border:1px solid var(--soft-surface-border);">
+            <div class="font-bold text-sm text-white mb-2">${t("tournament_group", { group })}</div>
+            <table class="w-full text-xs">
+              <thead class="text-gray-500"><tr>
+                <th class="text-left font-normal py-1">#</th>
+                <th class="text-left font-normal py-1">${t("team")}</th>
+                <th class="text-right font-normal py-1">${t("tournament_pts")}</th>
+                <th class="text-right font-normal py-1">${t("tournament_gd")}</th>
+                <th class="text-right font-normal py-1">${t("tournament_gf")}</th>
+                <th class="text-right font-normal py-1">${t("tournament_ga")}</th>
+              </tr></thead>
+              <tbody>
+                ${(standings[group] || []).map(row => `
+                  <tr class="border-t border-white/5">
+                    <td class="py-1 font-mono text-gray-500">${esc(row.rank)}</td>
+                    <td class="py-1 font-semibold text-gray-200 min-w-0">${tournamentTeamHtml(row)}</td>
+                    <td class="py-1 text-right font-mono text-white">${esc(row.points)}</td>
+                    <td class="py-1 text-right font-mono">${esc(row.goal_difference)}</td>
+                    <td class="py-1 text-right font-mono">${esc(row.goals_for)}</td>
+                    <td class="py-1 text-right font-mono">${esc(row.goals_against)}</td>
+                  </tr>`).join("")}
+              </tbody>
+            </table>
+            ${renderTournamentGroupMatchList(byGroup[group] || [])}
+          </div>`).join("")}
+      </div>
+    </div>`;
+}
+
+function renderTournamentTopScorers(rows) {
+  if (!rows || !rows.length) return "";
+  return `
+    <div>
+      <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("tournament_top_scorers")}</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+        ${rows.slice(0, 5).map((row, i) => {
+          const info = tournamentPlayerInfo(row.player);
+          const photo = info.photo || "";
+          const displayName = tournamentCleanPlayerName(info.zh || row.player);
+          return `
+          <div class="rounded-lg px-3 py-2 flex items-center justify-between gap-3" style="background:var(--soft-surface-bg);border:1px solid var(--soft-surface-border);">
+            <div class="flex items-center gap-2 min-w-0">
+              <div class="shrink-0 rounded-full overflow-hidden flex items-center justify-center font-black text-xs" style="width:2.35rem;height:2.35rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);">
+                ${photo ? `<img src="${esc(photo)}" alt="${esc(displayName)}" style="width:100%;height:100%;object-fit:cover;"/>` : `<span>${i + 1}</span>`}
+              </div>
+              <div class="min-w-0">
+                <div class="text-sm font-bold text-gray-100 truncate">${esc(displayName)}</div>
+                <div class="text-[11px] text-gray-500 truncate">${esc(tournamentTeamName(row.team || info.team || ""))}</div>
+              </div>
+            </div>
+            <div class="font-mono font-black text-lg text-white whitespace-nowrap">${esc(row.goals)} <span class="text-xs text-gray-500">${t("tournament_goals")}</span></div>
+          </div>`;
+        }).join("")}
+      </div>
+    </div>`;
+}
+
+function renderTournamentDetails(p) {
+  const summaries = p.summary || {};
+  const notes = [summaries.group_stage, summaries.knockout].filter(Boolean).join("\n\n");
+  return `
+    <div class="mt-4 space-y-5">
+      ${notes ? `<div><div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("tournament_reasoning")}</div><div class="text-sm text-gray-300 leading-relaxed whitespace-pre-wrap">${esc(notes)}</div></div>` : ""}
+      ${renderTournamentBracket(p)}
+      ${renderTournamentStandings(p.group_standings || {}, p.group_matches || [])}
+      ${renderTournamentTopScorers(p.top_scorers || [])}
+    </div>`;
+}
+
+function renderTournamentPredictions(data) {
+  const el = document.getElementById("tournament-container");
+  if (!el) return;
+  const preds = (data && data.predictions) || [];
+  if (!preds.length) {
+    el.innerHTML = `<div class="text-gray-400 text-sm">${t("no_tournament_predictions")}</div>`;
+    return;
+  }
+  el.innerHTML = `
+    <div class="grid grid-cols-1 gap-3">
+      ${preds.map((p, idx) => {
+        const b = modelBadge(p.model_id);
+        const status = p.status || "ok";
+        if (status !== "ok") {
+          return `<div class="card rounded-xl p-4">
+            <div class="flex items-center gap-2 mb-2"><span>${b.emoji}</span><span class="font-bold text-white">${esc(fmtModelId(p))}</span></div>
+            <div class="rounded-lg px-3 py-2 text-sm" style="color:#fca5a5;border:1px solid rgba(248,113,113,.28);background:rgba(248,113,113,.08);">${esc(p.error_summary || t("unavailable_detail"))}</div>
+          </div>`;
+        }
+        return `<div class="card rounded-xl p-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="flex items-center gap-2 min-w-0">
+              <span>${b.emoji}</span>
+              <span class="font-bold text-white truncate">${esc(fmtModelId(p))}</span>
+              ${(!_matchmateMode && p.setting) ? `<span class="chip chip-${String(p.setting).toLowerCase()}">${esc(p.setting)}</span>` : ""}
+            </div>
+            <button id="tournament-toggle-${idx}" onclick="toggleTournamentPrediction(${idx})" class="chip chip-live hover:bg-white/15 transition text-xs justify-center py-1.5 px-3">${t("tournament_show_path")}</button>
+          </div>
+          <div class="mt-3">${renderTournamentSummaryBlock(p)}</div>
+          <div id="tournament-detail-${idx}" class="hidden">${renderTournamentDetails(p)}</div>
+        </div>`;
+      }).join("")}
+    </div>`;
+}
+
 // ---------- Incoming matches -------------------------------------------------
 
 function _renderOneFixture(nm, cardIdx) {
@@ -2124,6 +3164,7 @@ function _renderOneFixture(nm, cardIdx) {
     }
   }
   if (nP > 0) { agg.home /= nP; agg.draw /= nP; agg.away /= nP; }
+  const aggPct = winProbPctLabels(agg);
 
   const centerMiddle = isMatchLive
     ? `<div class="text-gray-400 text-xs">${esc(f.competition || "")}${f.stage ? ` · ${esc(f.stage)}` : ""}</div>
@@ -2133,7 +3174,7 @@ function _renderOneFixture(nm, cardIdx) {
     : `${kick ? `<div class="text-xs text-gray-300 font-medium mb-1">${fmtLocalKickoff(kick)}</div>` : ""}
        <div class="text-gray-400 text-xs">${esc(f.competition || "")}${f.stage ? ` · ${esc(f.stage)}` : ""}</div>
        <div class="mt-1 text-2xl font-black">${t("vs")}</div>
-       ${nP > 0 ? `<div class="text-xs text-gray-400">${t("draw_prob", { pct: fmtPct(agg.draw) })}</div>` : ""}
+       ${nP > 0 ? `<div class="text-xs text-gray-400">${t("draw_prob", { pct: aggPct.draw || fmtPct(agg.draw) })}</div>` : ""}
        <div class="text-xs text-gray-400 mt-1" id="${cid}">${kick ? "" : "—"}</div>
        ${renderVenueLocation(f)}`;
 
@@ -2144,16 +3185,17 @@ function _renderOneFixture(nm, cardIdx) {
           <div class="text-center">
             ${f.home_logo ? `<img src="${esc(f.home_logo)}" alt="${esc(f.home)}" class="fixture-logo"/>` : `<div class="text-4xl">🏠</div>`}
             <div class="team-name font-bold text-sm sm:text-lg leading-tight">${esc(f.home || "?")}</div>
-            ${nP > 0 ? `<div class="text-xs text-gray-400">${t("win", { pct: fmtPct(agg.home) })}</div>` : ""}
+            ${nP > 0 ? `<div class="text-xs text-gray-400">${t("win", { pct: aggPct.home || fmtPct(agg.home) })}</div>` : ""}
           </div>
           <div class="text-center">${centerMiddle}</div>
           <div class="text-center">
             ${f.away_logo ? `<img src="${esc(f.away_logo)}" alt="${esc(f.away)}" class="fixture-logo"/>` : `<div class="text-4xl">🛫</div>`}
             <div class="team-name font-bold text-sm sm:text-lg leading-tight">${esc(f.away || "?")}</div>
-            ${nP > 0 ? `<div class="text-xs text-gray-400">${t("win", { pct: fmtPct(agg.away) })}</div>` : ""}
+            ${nP > 0 ? `<div class="text-xs text-gray-400">${t("win", { pct: aggPct.away || fmtPct(agg.away) })}</div>` : ""}
           </div>
         </div>
       </div>
+      ${renderUserPredictionEditor(nm)}
       ${renderLivePredictions(standaloneLivePreds, f)}
       ${preds.length === 0
         ? (livePreds.length ? "" : `<div class="text-gray-400 text-sm">${t("no_model_predictions")}</div>`)
@@ -2265,7 +3307,10 @@ function toggleLeaderboardSort() {
 
 function renderLeaderboard(lb, view) {
   const el   = document.getElementById("leaderboard-container");
-  const rows = sortLeaderboardRows(lb.main || []);
+  const baseRows = lb.main || [];
+  const rows = view === "main"
+    ? sortLeaderboardRows(withCurrentUserLeaderboardRow(baseRows))
+    : sortLeaderboardRows(baseRows);
   if (rows.length === 0) {
     el.innerHTML = `<div class="text-gray-400 text-sm">${t("no_graded")}</div>`;
     return;
@@ -2291,12 +3336,14 @@ function renderLeaderboard(lb, view) {
               const medal = i === 0 ? "rank-1" : i === 1 ? "rank-2" : i === 2 ? "rank-3" : "";
               const primary = leaderboardMetric(r, primaryKind);
               const settings = Object.keys((lb.by_model_setting || {})[r.model_id] || {}).sort();
-              const settingBadges = _matchmateMode ? "" : settings.map(s =>
-                `<span class="chip chip-${s.toLowerCase()}"
-                       data-tip="${esc(settingTip(s))}">${esc(s)}</span>`
-              ).join(" ");
+              const settingBadges = r.is_user
+                ? `<span class="chip">${esc(t("user_leaderboard_exact", { correct: r.score_correct || 0, total: r.score_total || 0 }))}</span>`
+                : (_matchmateMode ? "" : settings.map(s =>
+                  `<span class="chip chip-${s.toLowerCase()}"
+                         data-tip="${esc(settingTip(s))}">${esc(s)}</span>`
+                ).join(" "));
               return `
-                <tr class="border-t border-white/5 hover:bg-white/5 transition">
+                <tr class="border-t border-white/5 hover:bg-white/5 transition"${r.is_user ? ' style="background:rgba(34,197,94,.055);"' : ""}>
                   <td class="leaderboard-rank-cell py-2 px-3"><span class="rank-medal ${medal}">${i + 1}</span></td>
                   <td class="py-2 px-3">
                     <div class="leaderboard-model-row flex items-center gap-2">
@@ -2446,6 +3493,7 @@ function renderHistory(rows) {
         </summary>
         <div class="mt-4 space-y-3">
           ${compactMobileSummary ? "" : fullPitch}
+          ${renderUserPredictionHistoryCard(r)}
           ${predCards}
         </div>
       </details>`;
@@ -2494,6 +3542,7 @@ function renderSiteData() {
   _allPreds = [];
   _predFixtures = [];
   renderIncomingMatches(_siteData.incoming_matches || []);
+  renderTournamentPredictions(_siteData.tournament_predictions || null);
   syncLeaderboardTabs();
   renderLeaderboard(_siteData.leaderboard || { main: [] }, _activeLeaderboardView);
   requestAnimationFrame(() => renderHistory(_siteData.history || []));
@@ -2548,6 +3597,8 @@ async function main() {
   buildReasoningModal();
   wireTabs();
   setupResponsivePredictions();
+  initUserSession();
+  await loadUserPredictions();
   await loadSiteData();
 }
 

@@ -50,10 +50,13 @@ PREDICTIONS = ROOT / "data" / "predictions"
 SNAPSHOTS = ROOT / "data" / "snapshots"
 LIVE_DIR = ROOT / "data" / "live"
 LIVE_PREDICTIONS = ROOT / "data" / "live_predictions"
+TOURNAMENT_SPEC = ROOT / "configs" / "world_cup_2026_tournament.json"
+TOURNAMENT_PREDICTIONS = ROOT / "data" / "tournament_predictions" / "world_cup_2026"
 SEARCH_LOGS = ROOT / "data" / "search_logs"
 FIXTURES_YAML = ROOT / "configs" / "fixtures.yaml"
 MODELS_YAML = ROOT / "configs" / "models.yaml"
 COMMENTS_JSON = ROOT / "data" / "comments.json"
+NAME_LOCALIZATION_JSON = ROOT / "data" / "i18n" / "world_cup_2026_names.zh.json"
 OUT = ROOT / "docs" / "site" / "data.json"
 OUT_EN = ROOT / "docs" / "site" / "data.en.json"
 OUT_ZH = ROOT / "docs" / "site" / "data.zh.json"
@@ -1394,6 +1397,113 @@ def _attach_comments(items: list[dict], key: str = "fixture") -> None:
             item["comment"] = comments[wca_id]
 
 
+def _load_name_localization() -> dict:
+    if not NAME_LOCALIZATION_JSON.exists():
+        return {"teams": {}, "players": {}}
+    try:
+        raw = json.loads(NAME_LOCALIZATION_JSON.read_text())
+    except Exception as exc:
+        print(f"[site] skipping name localization: {exc}")
+        return {"teams": {}, "players": {}}
+    teams = {
+        name: (item.get("zh") if isinstance(item, dict) else item)
+        for name, item in (raw.get("teams") or {}).items()
+        if name and item
+    }
+    players = {}
+    for name, item in (raw.get("players") or {}).items():
+        if not isinstance(item, dict):
+            continue
+        players[name] = {
+            "zh": item.get("zh") or name,
+            "team": item.get("team"),
+            "team_zh": item.get("team_zh"),
+            "number": item.get("number"),
+            "position": item.get("position"),
+            "photo": item.get("photo") or "",
+        }
+    return {
+        "teams": teams,
+        "players": players,
+        "sources": raw.get("sources") or [],
+    }
+
+
+def _public_tournament_prediction(record: dict, path: Path) -> dict:
+    fallback_model_id, fallback_setting = _prediction_key_from_path(path)
+    model_id = record.get("model_id") or fallback_model_id
+    meta = MODEL_META.get(model_id) or _infer_model_metadata(model_id)
+    pred = record.get("prediction") or {}
+    status = record.get("status") or ("failed" if record.get("error") else "ok")
+    return {
+        "model_id": model_id,
+        "display_name": record.get("display_name") or meta.get("display_name") or _display_model_name(model_id),
+        "setting": record.get("setting") or fallback_setting,
+        "model_category": record.get("model_category") or meta.get("model_category"),
+        "provider": meta.get("provider"),
+        "model_family": meta.get("model_family"),
+        "status": status,
+        "error_summary": _public_error_summary(record.get("error")) if record.get("error") else record.get("error_summary"),
+        "submitted_at": record.get("submitted_at"),
+        "champion": pred.get("champion"),
+        "runner_up": pred.get("runner_up"),
+        "third_place": pred.get("third_place"),
+        "summary": pred.get("summary") or {},
+        "group_matches": pred.get("group_matches") or [],
+        "group_standings": pred.get("group_standings") or {},
+        "third_place_qualifiers": pred.get("third_place_qualifiers") or [],
+        "third_place_slot_assignment": pred.get("third_place_slot_assignment") or {},
+        "round_of_32": pred.get("round_of_32") or [],
+        "knockout_matches": pred.get("knockout_matches") or [],
+        "top_scorers": pred.get("top_scorers") or [],
+        "sources": record.get("sources") or [],
+        "tokens": record.get("tokens") or {},
+        "tool_calls": record.get("tool_calls"),
+        "cost_usd": record.get("cost_usd"),
+        "wall_seconds": record.get("wall_seconds"),
+        **meta,
+    }
+
+
+def build_tournament_predictions() -> dict | None:
+    if not TOURNAMENT_SPEC.exists():
+        return None
+    try:
+        spec = json.loads(TOURNAMENT_SPEC.read_text())
+    except Exception as exc:
+        print(f"[site] skipping tournament spec: {exc}")
+        return None
+
+    rows: list[dict] = []
+    if TOURNAMENT_PREDICTIONS.exists():
+        for path in sorted(TOURNAMENT_PREDICTIONS.glob("*.json")):
+            try:
+                record = json.loads(path.read_text())
+            except Exception:
+                continue
+            model_id = record.get("model_id") or _prediction_key_from_path(path)[0]
+            if model_id in HIDDEN_SITE_MODELS:
+                continue
+            rows.append(_public_tournament_prediction(record, path))
+
+    rows.sort(key=lambda row: (
+        int(row.get("config_order", 9999)),
+        str(row.get("setting") or ""),
+        row.get("model_id") or "",
+    ))
+    return {
+        "tournament_id": spec.get("tournament_id"),
+        "name": spec.get("name"),
+        "format": spec.get("format") or {},
+        "groups": spec.get("groups") or {},
+        "group_stage_matches": spec.get("group_stage_matches") or [],
+        "knockout_matches": spec.get("knockout_matches") or [],
+        "sources": spec.get("sources") or [],
+        "name_localization": _load_name_localization(),
+        "predictions": rows,
+    }
+
+
 def main() -> None:
     incoming = build_incoming_matches()
     _attach_comments(incoming, key="fixture")
@@ -1406,6 +1516,7 @@ def main() -> None:
         "incoming_matches": incoming,
         "featured_match":   _select_featured_match(history),
         "history":          history,
+        "tournament_predictions": build_tournament_predictions(),
     }
     _attach_default_visibility(payload, leaderboard)
     OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -1441,7 +1552,7 @@ def main() -> None:
 
     rounded_payload = _round3(payload)
     for out_path in (OUT_EN, OUT_ZH, OUT):
-        out_path.write_text(json.dumps(rounded_payload, ensure_ascii=False, indent=2))
+        out_path.write_text(json.dumps(rounded_payload, ensure_ascii=False, separators=(",", ":")))
     print(f"wrote {OUT}, {OUT_ZH}, {OUT_EN} "
           f"(model_native_payload=1, "
           f"leaderboard_models={len(payload['leaderboard']['main'])}, "

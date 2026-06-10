@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>⚽ WorldCupArena — AI 足球预测排行榜</title>
 <meta name="description" content="用真实足球比赛评测大模型和 Deep Research Agent 的预测能力，包含实时排行榜和即将进行比赛的模型预测。" />
+<link rel="icon" type="image/png" href="matchmate_logo_white.png">
+<link rel="apple-touch-icon" href="matchmate_logo_white.png">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config = { theme: { extend: { fontFamily: { mono: ['Inter', 'system-ui', 'sans-serif'] } } } }</script>
@@ -38,6 +40,20 @@
     --timeline-actual-node-border: rgba(251,191,36,.45);
     --timeline-detail-bg: rgba(255,255,255,.045);
     --timeline-detail-border: rgba(255,255,255,.06);
+    --tournament-bracket-card-bg: rgba(8,13,24,.84);
+    --tournament-bracket-card-border: rgba(214,255,78,.32);
+    --tournament-bracket-card-shadow: 0 8px 24px rgba(0,0,0,.22);
+    --tournament-bracket-stage: rgba(217,249,157,.7);
+    --tournament-bracket-decider: rgba(236,252,203,.75);
+    --soft-surface-bg: rgba(255,255,255,.045);
+    --soft-surface-bg-strong: rgba(255,255,255,.06);
+    --soft-surface-border: rgba(255,255,255,.07);
+    --soft-divider: rgba(255,255,255,.14);
+    --tooltip-bg: rgba(7,10,18,.98);
+    --tooltip-border: rgba(148,163,184,.22);
+    --tooltip-title: #9ca3af;
+    --tooltip-text: #e5e7eb;
+    --tooltip-muted: #6b7280;
   }
   .font-mono { font-variant-numeric: tabular-nums; }
   body {
@@ -122,6 +138,10 @@
     outline: none;
   }
   .theme-select option { color: #111827; background: #ffffff; }
+  .brand-logo-mark {
+    width: 2rem; height: 2rem; border-radius: .5rem; object-fit: contain;
+    background: #050816; padding: .18rem; box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+  }
   .pred-grid { align-items: start; }
   .pred-expanded { grid-column: 1 / -1; }
   .team-name { overflow-wrap: anywhere; }
@@ -169,6 +189,20 @@
     --timeline-actual-node-border: rgba(180,83,9,.36);
     --timeline-detail-bg: rgba(15,23,42,.035);
     --timeline-detail-border: rgba(15,23,42,.08);
+    --tournament-bracket-card-bg: rgba(255,255,255,.94);
+    --tournament-bracket-card-border: rgba(15,23,42,.16);
+    --tournament-bracket-card-shadow: 0 8px 24px rgba(15,23,42,.1);
+    --tournament-bracket-stage: #64748b;
+    --tournament-bracket-decider: #64748b;
+    --soft-surface-bg: rgba(15,23,42,.045);
+    --soft-surface-bg-strong: rgba(15,23,42,.065);
+    --soft-surface-border: rgba(15,23,42,.12);
+    --soft-divider: rgba(15,23,42,.16);
+    --tooltip-bg: rgba(255,255,255,.98);
+    --tooltip-border: rgba(15,23,42,.14);
+    --tooltip-title: #64748b;
+    --tooltip-text: #1e293b;
+    --tooltip-muted: #94a3b8;
   }
   html[data-theme="light"] body {
     background:
@@ -198,6 +232,11 @@
     background: rgba(15,23,42,.055);
     border-color: rgba(15,23,42,.12);
     color: #334155;
+  }
+  html[data-theme="light"] input {
+    background: rgba(15,23,42,.045) !important;
+    border-color: rgba(15,23,42,.14) !important;
+    color: #0f172a !important;
   }
   html[data-theme="light"] .chip-s1 { background: rgba(37,99,235,.12); border-color: rgba(37,99,235,.3); color:#1d4ed8; }
   html[data-theme="light"] .chip-s2 { background: rgba(219,39,119,.12); border-color: rgba(219,39,119,.3); color:#be185d; }
@@ -237,6 +276,14 @@
   html[data-theme="light"] .hover\:text-white:hover { color: #0f172a !important; }
   html[data-theme="light"] .hover\:bg-white\/5:hover { background-color: rgba(15,23,42,.045) !important; }
   html[data-theme="light"] .hover\:bg-white\/15:hover { background-color: rgba(15,23,42,.09) !important; }
+  html[data-theme="light"] .win-prob-card,
+  html[data-theme="light"] [style*="background:rgba(255,255,255,.04"],
+  html[data-theme="light"] [style*="background:rgba(255,255,255,.045"],
+  html[data-theme="light"] [style*="background:rgba(255,255,255,.055"],
+  html[data-theme="light"] [style*="background:rgba(255,255,255,.06"] {
+    background: var(--soft-surface-bg) !important;
+    border-color: var(--soft-surface-border) !important;
+  }
   @media (max-width: 767px) {
     body {
       background:
@@ -354,16 +401,21 @@
 </style>
 </head>
 <body class="min-h-screen">
+<button id="user-auth-button"
+        onclick="handleUserAuthButton()"
+        class="hidden fixed top-3 right-3 sm:right-4 z-30 chip hover:bg-white/15 transition text-xs"
+        style="display:none;">登录</button>
 <!-- NAV -->
 <header class="sticky top-0 z-20 backdrop-blur bg-black/30 border-b border-white/5">
-  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between" style="padding-right:7.25rem;">
     <div class="flex items-center gap-2">
-      <span class="text-2xl">⚽</span>
+      <img src="matchmate_logo_white.png" alt="MatchMate" class="brand-logo-mark" width="32" height="32" />
       <span class="font-bold tracking-tight" data-brand>WorldCup<span class="gradient-text">Arena</span></span>
     </div>
     <div class="flex items-center gap-2 sm:gap-4">
       <nav class="hidden md:flex items-center gap-5 text-sm text-gray-300">
         <a href="#next"        class="hover:text-white" data-i18n="nav_incoming">即将进行</a>
+        <a href="#tournament"  class="hover:text-white" data-i18n="section_tournament">完整赛事预测</a>
         <a href="#leaderboard" class="hover:text-white" data-i18n="nav_leaderboard">排行榜</a>
         <a href="#history"     class="hover:text-white" data-i18n="nav_history">历史比赛</a>
         <a id="github-nav-link" href="https://github.com/wzk1015/WorldCupArena/" target="_blank" class="hover:text-white font-semibold text-green-400">GitHub ↗</a>
@@ -414,6 +466,14 @@
   </div>
 </section>
 
+<!-- FULL TOURNAMENT PREDICTIONS -->
+<section id="tournament" class="max-w-6xl mx-auto px-4 py-8">
+  <h2 class="text-2xl font-bold mb-4 flex items-center gap-2" data-i18n="section_tournament">🏟️ 完整赛事预测</h2>
+  <div id="tournament-container" class="animate-fade space-y-4">
+    <div class="text-gray-400 text-sm" data-i18n="loading">正在加载…</div>
+  </div>
+</section>
+
 <!-- LEADERBOARD -->
 <section id="leaderboard" class="max-w-6xl mx-auto px-4 py-8">
   <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
@@ -445,6 +505,6 @@
   开源 · MIT · 研究项目 · <a class="underline" href="https://github.com/wzk1015/WorldCupArena/" target="_blank">source</a>
 </footer>
 
-<script src="app.js?v=20260609-cost-mm0"></script>
+<script src="app.js?v=20260609-user-predict-param"></script>
 </body>
 </html>

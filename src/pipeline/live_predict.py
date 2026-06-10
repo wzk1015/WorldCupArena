@@ -237,7 +237,7 @@ Current score: {current_score.get("home")} - {current_score.get("away")}
 Current time: {elapsed_text}
 
 Language and scoring constraints:
-- Write `reasoning.overall` in Simplified Chinese.
+- Write `reasoning.overall` in Simplified Chinese as a complete in-play rationale, covering current score/time, match flow from available events/statistics, probability changes, final-score logic, and future-goalscorer logic.
 - Keep `team` values exactly `home` or `away`.
 - Keep `most_likely_score` as an `H-A` score string and probabilities as numbers.
 - For `scorers[].player`, use the official/API player name form from the live state when available. Do not translate structured player-name fields into Chinese-only names; bilingual names may appear in the Chinese reasoning text.
@@ -262,7 +262,7 @@ JSON schema:
   "scorers": [
     {{"player": "Player Name", "team": "home", "minute": 72, "p": 0.32}}
   ],
-  "reasoning": {{"overall": "用中文简要说明本次赛中预测更新。"}},
+  "reasoning": {{"overall": "用中文完整说明本次赛中预测更新，包括当前比分与时间、场面依据、概率判断、最可能最终比分和后续进球逻辑。"}},
   "sources": []
 }}
 
