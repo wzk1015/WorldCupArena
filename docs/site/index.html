@@ -80,6 +80,12 @@
     font-size:.7rem; font-weight:600; letter-spacing:.02em;
     background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12);
   }
+  /* Model brand logos (icons/*.svg, vendored from lobehub/lobe-icons).
+     Mono glyphs (OpenAI, Grok) ship black; invert to white on the dark default,
+     undo on the light theme. */
+  .model-logo { width:1.2em; height:1.2em; flex:none; }
+  .model-logo-mono { filter: invert(1); }
+  html[data-theme="light"] .model-logo-mono { filter: none; }
   .chip-s1 { background: rgba(59,130,246,.18); border-color: rgba(59,130,246,.4); color:#93c5fd; }
   .chip-s2 { background: rgba(236,72,153,.18); border-color: rgba(236,72,153,.4); color:#f9a8d4; }
   .chip-live { background: rgba(34,197,94,.18); border-color: rgba(34,197,94,.42); color:#bbf7d0; }
