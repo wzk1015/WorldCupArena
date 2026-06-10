@@ -686,22 +686,33 @@ function registerPreds(preds, fixture) {
 function modelBadge(id) {
   const key = (id || "").toLowerCase();
   if (key === USER_PREDICTION_MODEL_ID) return { emoji: "我" };
+  // icon: brand SVG under docs/site/icons/ (vendored from lobehub/lobe-icons, MIT).
+  // mono: black/currentColor glyph — CSS inverts it to white on the dark theme.
+  // emoji stays as the fallback for models without a brand icon.
   if (key.includes("gpt") || key.includes("o1") || key.includes("o3") || key.includes("o4"))
-                               return { emoji: "🟢" };
-  if (key.includes("claude"))  return { emoji: "🟠" };
-  if (key.includes("gemini"))  return { emoji: "🔵" };
-  if (key.includes("grok"))    return { emoji: "⬛" };
-  if (key.includes("deepseek"))return { emoji: "🟣" };
-  if (key.includes("qwen"))    return { emoji: "🔴" };
-  if (key.includes("kimi") || key.includes("moonshot")) return { emoji: "🌙" };
-  if (key.includes("glm") || key.includes("zhipu"))     return { emoji: "💠" };
-  if (key.includes("doubao"))  return { emoji: "🫘" };
-  if (key.includes("minimax")) return { emoji: "〽️" };
-  if (key.includes("gemma"))   return { emoji: "💎" };
-  if (key.includes("llama"))   return { emoji: "🦙" };
-  if (key.includes("perplexity")) return { emoji: "🔷" };
+                               return { emoji: "🟢", icon: "openai", mono: true };
+  if (key.includes("claude"))  return { emoji: "🟠", icon: "claude-color" };
+  if (key.includes("gemini"))  return { emoji: "🔵", icon: "gemini-color" };
+  if (key.includes("grok"))    return { emoji: "⬛", icon: "grok", mono: true };
+  if (key.includes("deepseek"))return { emoji: "🟣", icon: "deepseek-color" };
+  if (key.includes("qwen"))    return { emoji: "🔴", icon: "qwen-color" };
+  if (key.includes("kimi") || key.includes("moonshot")) return { emoji: "🌙", icon: "kimi", mono: true };
+  if (key.includes("glm") || key.includes("zhipu"))     return { emoji: "💠", icon: "zhipu-color" };
+  if (key.includes("doubao"))  return { emoji: "🫘", icon: "doubao-color" };
+  if (key.includes("minimax")) return { emoji: "〽️", icon: "minimax-color" };
+  if (key.includes("gemma"))   return { emoji: "💎", icon: "gemma-color" };
+  if (key.includes("llama"))   return { emoji: "🦙", icon: "meta-color" };
+  if (key.includes("perplexity")) return { emoji: "🔷", icon: "perplexity-color" };
   if (key.includes("mirothinker")) return { emoji: "✨" };
   return { emoji: "🤖" };
+}
+
+function badgeHtml(b, extraClass = "") {
+  if (b.icon) {
+    const cls = `model-logo${b.mono ? " model-logo-mono" : ""}${extraClass ? " " + extraClass : ""}`;
+    return `<img class="${cls}" src="icons/${b.icon}.svg" alt="" aria-hidden="true" loading="lazy"/>`;
+  }
+  return `<span${extraClass ? ` class="${extraClass}"` : ""}>${b.emoji}</span>`;
 }
 
 
@@ -2252,7 +2263,7 @@ function renderPredCard(p, f, idx, opts = {}) {
   const headerHtml = `
       <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
         <div class="flex items-center gap-2">
-          <span class="text-base">${b.emoji}</span>
+          ${badgeHtml(b, "text-base")}
           <span class="font-bold text-xs sm:text-sm text-white">${esc(fmtModelId(p))}</span>
           ${settingChip}
         </div>
@@ -2733,7 +2744,7 @@ function renderLivePredictions(items, f) {
               <div class="card rounded-lg p-3">
                 <div class="flex items-center justify-between gap-2 mb-2">
                   <div class="flex items-center gap-2 min-w-0">
-                    <span>${b.emoji}</span>
+                    ${badgeHtml(b)}
                     <span class="font-bold text-xs sm:text-sm text-white truncate">${esc(fmtModelId(p))}</span>
                     <span class="chip chip-live">LIVE</span>
                   </div>
@@ -2748,7 +2759,7 @@ function renderLivePredictions(items, f) {
             <div class="card rounded-lg p-3">
               <div class="flex items-center justify-between gap-2 mb-2">
                 <div class="flex items-center gap-2 min-w-0">
-                  <span>${b.emoji}</span>
+                  ${badgeHtml(b)}
                   <span class="font-bold text-xs sm:text-sm text-white truncate">${esc(fmtModelId(p))}</span>
                   <span class="chip chip-live">LIVE</span>
                 </div>
@@ -3162,14 +3173,14 @@ function renderTournamentPredictions(data) {
         const status = p.status || "ok";
         if (status !== "ok") {
           return `<div class="card rounded-xl p-4">
-            <div class="flex items-center gap-2 mb-2"><span>${b.emoji}</span><span class="font-bold text-white">${esc(fmtModelId(p))}</span></div>
+            <div class="flex items-center gap-2 mb-2">${badgeHtml(b)}<span class="font-bold text-white">${esc(fmtModelId(p))}</span></div>
             <div class="rounded-lg px-3 py-2 text-sm" style="color:#fca5a5;border:1px solid rgba(248,113,113,.28);background:rgba(248,113,113,.08);">${esc(p.error_summary || t("unavailable_detail"))}</div>
           </div>`;
         }
         return `<div class="card rounded-xl p-4">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div class="flex items-center gap-2 min-w-0">
-              <span>${b.emoji}</span>
+              ${badgeHtml(b)}
               <span class="font-bold text-white truncate">${esc(fmtModelId(p))}</span>
               ${(!_matchmateMode && p.setting) ? `<span class="chip chip-${String(p.setting).toLowerCase()}">${esc(p.setting)}</span>` : ""}
             </div>
@@ -3390,7 +3401,7 @@ function renderLeaderboard(lb, view) {
                   <td class="leaderboard-rank-cell py-2 px-3"><span class="rank-medal ${medal}">${i + 1}</span></td>
                   <td class="py-2 px-3">
                     <div class="leaderboard-model-row flex items-center gap-2">
-                      <span class="shrink-0">${b.emoji}</span>
+                      ${badgeHtml(b, "shrink-0")}
                       <span class="leaderboard-model-name font-bold text-white">${esc(fmtModelId(r))}</span>
                       ${settingBadges ? `<span class="leaderboard-setting-badges inline-flex items-center gap-1 flex-wrap">${settingBadges}</span>` : ""}
                     </div>
