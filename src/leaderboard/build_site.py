@@ -272,11 +272,15 @@ def _api_football_logo_for_team(team_name: str | None, fallback: str | None = No
     if logo:
         return logo
 
+    # SportMonks fixtures include team image_path URLs. Use them as a provider
+    # fallback when API-Football lookup is unavailable or rate-limited.
+    if fallback_text.startswith(("https://", "http://")):
+        if fallback_text.startswith(API_FOOTBALL_FLAG_PREFIX):
+            _cache_api_football_logo(team_name, fallback)
+        return fallback_text
+
     if cached_logo.startswith(API_FOOTBALL_FLAG_PREFIX):
         return cached_logo
-    if fallback_text.startswith(API_FOOTBALL_FLAG_PREFIX):
-        _cache_api_football_logo(team_name, fallback)
-        return fallback
 
     flag = _api_football_flag_for_team(team_name)
     if flag:
@@ -913,7 +917,7 @@ def build_incoming_matches() -> list[dict]:
     """Return fixtures to display in the Incoming Matches section.
 
     Includes:
-    - Future fixtures within the next 7 days (not yet kicked off)
+    - Future fixtures within the next 3 days (not yet kicked off)
     - Fixtures that have kicked off but are STILL LIVE according to data/live/
       (status != "Match Finished")
 
@@ -921,7 +925,7 @@ def build_incoming_matches() -> list[dict]:
     by build_history() instead.
     """
     now = datetime.now(timezone.utc)
-    cutoff = now + timedelta(days=7)
+    cutoff = now + timedelta(days=3)
     registry = _load_fixtures()
     results = []
     for fx in sorted(registry, key=lambda f: _parse_iso(f["kickoff_utc"])):
@@ -932,7 +936,6 @@ def build_incoming_matches() -> list[dict]:
 
         has_predictions = _has_prediction_files(wca_id)
         is_future = kick > now and kick <= cutoff
-        is_future_with_predictions = kick > now and has_predictions
         live = _load_live_state(wca_id)
         truth = _load_truth_data(wca_id)
         # truth.json is authoritative — if it exists the match is done
@@ -942,8 +945,9 @@ def build_incoming_matches() -> list[dict]:
         is_in_progress = (not is_future and not is_finished and live is None
                           and kick <= now and now - kick < timedelta(hours=3))
 
-        # Skip far-future unless predictions already exist, and anything done.
-        if not is_future and not is_future_with_predictions and not is_live and not is_in_progress:
+        # Skip far-future matches even when predictions already exist; the page
+        # should only surface the next 3 days plus live/in-progress fixtures.
+        if not is_future and not is_live and not is_in_progress:
             continue
         # If the match is finished, skip here (history picks it up)
         if is_finished:

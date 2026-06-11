@@ -102,7 +102,7 @@ def _run(cmd: list[str]) -> None:
 # ---------------------------------------------------------------------------
 
 def _phase_ingest(fx: dict, fx_dir: Path) -> None:
-    """Pull fixture.json from API-Football. No-op if already downloaded."""
+    """Pull fixture.json from the configured football provider. No-op if already downloaded."""
     fixture_path = fx_dir / "fixture.json"
     if fixture_path.exists():
         print(f"  [ingest] skip — {fixture_path} exists")

@@ -7,7 +7,7 @@
 # Fields:
 #   wca_id        : WorldCupArena ID. Becomes the snapshot/predictions/results
 #                   directory name. kebab_case, unique.
-#   provider_id   : API-Football numeric fixture id.
+#   provider_id   : football data provider numeric fixture id.
 #   kickoff_utc   : ISO-8601 kickoff time. lock_at_utc is derived as kickoff-24h.
 #   enabled       : false to freeze a fixture out of the automation (default true).
 #
@@ -75,16 +75,6 @@ fixtures:
     kickoff_utc: 2026-04-26T14:00:00+00:00
     enabled: true
 
-
-  - wca_id: World-Cup_Group-Stage-1_Mexico_South-Africa_2026-06-11
-    provider_id: 1489369
-    kickoff_utc: 2026-06-11T19:00:00+00:00
-    enabled: true
-
-  - wca_id: World-Cup_Group-Stage-1_Germany_Curaçao_2026-06-14
-    provider_id: 1489374
-    kickoff_utc: 2026-06-14T17:00:00+00:00
-    enabled: true
 
   - wca_id: UEFA-Champions-League_Atletico-Madrid_Arsenal_2026-04-29
     provider_id: 1540842
@@ -161,6 +151,871 @@ fixtures:
     kickoff_utc: 2026-05-30T16:00:00+00:00
     enabled: true
 
+  # FIFA World Cup 2026 group stage. Provider IDs are SportMonks fixture IDs.
+  - wca_id: World-Cup_Group-Stage-1_Mexico_South-Africa_2026-06-11
+    provider: sportmonks
+    provider_id: 19609127
+    kickoff_utc: 2026-06-11T19:00+00:00
+    competition: World Cup
+    stage: Group A
+    home: Mexico
+    away: South Africa
+    home_logo: https://media.api-sports.io/football/teams/16.png
+    away_logo: https://media.api-sports.io/football/teams/1531.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-2_South-Korea_Czech-Republic_2026-06-12
+    provider: sportmonks
+    provider_id: 19609153
+    kickoff_utc: 2026-06-12T02:00+00:00
+    competition: World Cup
+    stage: Group A
+    home: South Korea
+    away: Czech Republic
+    home_logo: https://media.api-sports.io/football/teams/17.png
+    away_logo: https://media.api-sports.io/football/teams/770.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-3_Canada_Bosnia-and-Herzegovina_2026-06-12
+    provider: sportmonks
+    provider_id: 19609154
+    kickoff_utc: 2026-06-12T19:00+00:00
+    competition: World Cup
+    stage: Group B
+    home: Canada
+    away: Bosnia and Herzegovina
+    home_logo: https://media.api-sports.io/football/teams/5529.png
+    away_logo: https://media.api-sports.io/football/teams/1113.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-4_United-States_Paraguay_2026-06-13
+    provider: sportmonks
+    provider_id: 19609133
+    kickoff_utc: 2026-06-13T01:00+00:00
+    competition: World Cup
+    stage: Group D
+    home: United States
+    away: Paraguay
+    home_logo: https://media.api-sports.io/football/teams/12522.png
+    away_logo: https://media.api-sports.io/football/teams/2380.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-5_Haiti_Scotland_2026-06-14
+    provider: sportmonks
+    provider_id: 19609155
+    kickoff_utc: 2026-06-14T01:00+00:00
+    competition: World Cup
+    stage: Group C
+    home: Haiti
+    away: Scotland
+    home_logo: https://media.api-sports.io/football/teams/2386.png
+    away_logo: https://media.api-sports.io/football/teams/1108.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-6_Australia_Turkey_2026-06-14
+    provider: sportmonks
+    provider_id: 19609156
+    kickoff_utc: 2026-06-14T04:00+00:00
+    competition: World Cup
+    stage: Group D
+    home: Australia
+    away: Turkey
+    home_logo: https://media.api-sports.io/football/teams/20.png
+    away_logo: https://media.api-sports.io/football/teams/777.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-7_Brazil_Morocco_2026-06-13
+    provider: sportmonks
+    provider_id: 19609131
+    kickoff_utc: 2026-06-13T22:00+00:00
+    competition: World Cup
+    stage: Group C
+    home: Brazil
+    away: Morocco
+    home_logo: https://media.api-sports.io/football/teams/6.png
+    away_logo: https://media.api-sports.io/football/teams/31.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-8_Qatar_Switzerland_2026-06-13
+    provider: sportmonks
+    provider_id: 19609130
+    kickoff_utc: 2026-06-13T19:00+00:00
+    competition: World Cup
+    stage: Group B
+    home: Qatar
+    away: Switzerland
+    home_logo: https://media.api-sports.io/football/teams/1569.png
+    away_logo: https://media.api-sports.io/football/teams/15.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-9_Ivory-Coast_Ecuador_2026-06-14
+    provider: sportmonks
+    provider_id: 19609157
+    kickoff_utc: 2026-06-14T23:00+00:00
+    competition: World Cup
+    stage: Group E
+    home: Ivory Coast
+    away: Ecuador
+    home_logo: https://media.api-sports.io/football/teams/1501.png
+    away_logo: https://media.api-sports.io/football/teams/2382.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-1_Germany_Curaçao_2026-06-14
+    provider: sportmonks
+    provider_id: 19609158
+    kickoff_utc: 2026-06-14T17:00+00:00
+    competition: World Cup
+    stage: Group E
+    home: Germany
+    away: Curaçao
+    home_logo: https://media.api-sports.io/football/teams/25.png
+    away_logo: https://media.api-sports.io/football/teams/5530.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-11_Netherlands_Japan_2026-06-14
+    provider: sportmonks
+    provider_id: 19609138
+    kickoff_utc: 2026-06-14T20:00+00:00
+    competition: World Cup
+    stage: Group F
+    home: Netherlands
+    away: Japan
+    home_logo: https://media.api-sports.io/football/teams/1118.png
+    away_logo: https://media.api-sports.io/football/teams/12.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-12_Sweden_Tunisia_2026-06-15
+    provider: sportmonks
+    provider_id: 19609159
+    kickoff_utc: 2026-06-15T02:00+00:00
+    competition: World Cup
+    stage: Group F
+    home: Sweden
+    away: Tunisia
+    home_logo: https://media.api-sports.io/football/teams/5.png
+    away_logo: https://media.api-sports.io/football/teams/28.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-13_Saudi-Arabia_Uruguay_2026-06-15
+    provider: sportmonks
+    provider_id: 19609161
+    kickoff_utc: 2026-06-15T22:00+00:00
+    competition: World Cup
+    stage: Group H
+    home: Saudi Arabia
+    away: Uruguay
+    home_logo: https://media.api-sports.io/football/teams/23.png
+    away_logo: https://media.api-sports.io/football/teams/7.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-14_Spain_Cape-Verde_2026-06-15
+    provider: sportmonks
+    provider_id: 19609162
+    kickoff_utc: 2026-06-15T16:00+00:00
+    competition: World Cup
+    stage: Group H
+    home: Spain
+    away: Cape Verde
+    home_logo: https://media.api-sports.io/football/teams/9.png
+    away_logo: https://media.api-sports.io/football/teams/1533.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-15_Iran_New-Zealand_2026-06-16
+    provider: sportmonks
+    provider_id: 19609160
+    kickoff_utc: 2026-06-16T01:00+00:00
+    competition: World Cup
+    stage: Group G
+    home: Iran
+    away: New Zealand
+    home_logo: https://media.api-sports.io/football/teams/22.png
+    away_logo: https://media.api-sports.io/football/teams/4673.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-16_Belgium_Egypt_2026-06-15
+    provider: sportmonks
+    provider_id: 19609139
+    kickoff_utc: 2026-06-15T19:00+00:00
+    competition: World Cup
+    stage: Group G
+    home: Belgium
+    away: Egypt
+    home_logo: https://media.api-sports.io/football/teams/1.png
+    away_logo: https://media.api-sports.io/football/teams/32.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-17_France_Senegal_2026-06-16
+    provider: sportmonks
+    provider_id: 19609143
+    kickoff_utc: 2026-06-16T19:00+00:00
+    competition: World Cup
+    stage: Group I
+    home: France
+    away: Senegal
+    home_logo: https://media.api-sports.io/football/teams/2.png
+    away_logo: https://media.api-sports.io/football/teams/13.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-18_Iraq_Norway_2026-06-16
+    provider: sportmonks
+    provider_id: 19609163
+    kickoff_utc: 2026-06-16T22:00+00:00
+    competition: World Cup
+    stage: Group I
+    home: Iraq
+    away: Norway
+    home_logo: https://media.api-sports.io/football/teams/1567.png
+    away_logo: https://media.api-sports.io/football/teams/1090.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-19_Argentina_Algeria_2026-06-17
+    provider: sportmonks
+    provider_id: 19609145
+    kickoff_utc: 2026-06-17T01:00+00:00
+    competition: World Cup
+    stage: Group J
+    home: Argentina
+    away: Algeria
+    home_logo: https://media.api-sports.io/football/teams/26.png
+    away_logo: https://media.api-sports.io/football/teams/1532.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-20_Austria_Jordan_2026-06-17
+    provider: sportmonks
+    provider_id: 19609164
+    kickoff_utc: 2026-06-17T04:00+00:00
+    competition: World Cup
+    stage: Group J
+    home: Austria
+    away: Jordan
+    home_logo: https://media.api-sports.io/football/teams/775.png
+    away_logo: https://media.api-sports.io/football/teams/1548.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-21_Ghana_Panama_2026-06-17
+    provider: sportmonks
+    provider_id: 19609167
+    kickoff_utc: 2026-06-17T23:00+00:00
+    competition: World Cup
+    stage: Group L
+    home: Ghana
+    away: Panama
+    home_logo: https://media.api-sports.io/football/teams/1504.png
+    away_logo: https://media.api-sports.io/football/teams/11.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-22_England_Croatia_2026-06-17
+    provider: sportmonks
+    provider_id: 19609149
+    kickoff_utc: 2026-06-17T20:00+00:00
+    competition: World Cup
+    stage: Group L
+    home: England
+    away: Croatia
+    home_logo: https://media.api-sports.io/football/teams/10.png
+    away_logo: https://media.api-sports.io/football/teams/3.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-23_Portugal_DR-Congo_2026-06-17
+    provider: sportmonks
+    provider_id: 19609166
+    kickoff_utc: 2026-06-17T17:00+00:00
+    competition: World Cup
+    stage: Group K
+    home: Portugal
+    away: DR Congo
+    home_logo: https://media.api-sports.io/football/teams/27.png
+    away_logo: https://media.api-sports.io/football/teams/1508.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-24_Uzbekistan_Colombia_2026-06-18
+    provider: sportmonks
+    provider_id: 19609165
+    kickoff_utc: 2026-06-18T02:00+00:00
+    competition: World Cup
+    stage: Group K
+    home: Uzbekistan
+    away: Colombia
+    home_logo: https://media.api-sports.io/football/teams/1568.png
+    away_logo: https://media.api-sports.io/football/teams/8.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-25_Czech-Republic_South-Africa_2026-06-18
+    provider: sportmonks
+    provider_id: 19609168
+    kickoff_utc: 2026-06-18T16:00+00:00
+    competition: World Cup
+    stage: Group A
+    home: Czech Republic
+    away: South Africa
+    home_logo: https://media.api-sports.io/football/teams/770.png
+    away_logo: https://media.api-sports.io/football/teams/1531.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-26_Switzerland_Bosnia-and-Herzegovina_2026-06-18
+    provider: sportmonks
+    provider_id: 19609169
+    kickoff_utc: 2026-06-18T19:00+00:00
+    competition: World Cup
+    stage: Group B
+    home: Switzerland
+    away: Bosnia and Herzegovina
+    home_logo: https://media.api-sports.io/football/teams/15.png
+    away_logo: https://media.api-sports.io/football/teams/1113.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-27_Canada_Qatar_2026-06-18
+    provider: sportmonks
+    provider_id: 19609170
+    kickoff_utc: 2026-06-18T22:00+00:00
+    competition: World Cup
+    stage: Group B
+    home: Canada
+    away: Qatar
+    home_logo: https://media.api-sports.io/football/teams/5529.png
+    away_logo: https://media.api-sports.io/football/teams/1569.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-28_Mexico_South-Korea_2026-06-19
+    provider: sportmonks
+    provider_id: 19609128
+    kickoff_utc: 2026-06-19T01:00+00:00
+    competition: World Cup
+    stage: Group A
+    home: Mexico
+    away: South Korea
+    home_logo: https://media.api-sports.io/football/teams/16.png
+    away_logo: https://media.api-sports.io/football/teams/17.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-29_Brazil_Haiti_2026-06-20
+    provider: sportmonks
+    provider_id: 19609172
+    kickoff_utc: 2026-06-20T00:30+00:00
+    competition: World Cup
+    stage: Group C
+    home: Brazil
+    away: Haiti
+    home_logo: https://media.api-sports.io/football/teams/6.png
+    away_logo: https://media.api-sports.io/football/teams/2386.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-30_Scotland_Morocco_2026-06-19
+    provider: sportmonks
+    provider_id: 19609171
+    kickoff_utc: 2026-06-19T22:00+00:00
+    competition: World Cup
+    stage: Group C
+    home: Scotland
+    away: Morocco
+    home_logo: https://media.api-sports.io/football/teams/1108.png
+    away_logo: https://media.api-sports.io/football/teams/31.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-31_Turkey_Paraguay_2026-06-20
+    provider: sportmonks
+    provider_id: 19609173
+    kickoff_utc: 2026-06-20T03:00+00:00
+    competition: World Cup
+    stage: Group D
+    home: Turkey
+    away: Paraguay
+    home_logo: https://media.api-sports.io/football/teams/777.png
+    away_logo: https://media.api-sports.io/football/teams/2380.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-32_United-States_Australia_2026-06-19
+    provider: sportmonks
+    provider_id: 19609134
+    kickoff_utc: 2026-06-19T19:00+00:00
+    competition: World Cup
+    stage: Group D
+    home: United States
+    away: Australia
+    home_logo: https://media.api-sports.io/football/teams/12522.png
+    away_logo: https://media.api-sports.io/football/teams/20.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-33_Germany_Ivory-Coast_2026-06-20
+    provider: sportmonks
+    provider_id: 19609135
+    kickoff_utc: 2026-06-20T20:00+00:00
+    competition: World Cup
+    stage: Group E
+    home: Germany
+    away: Ivory Coast
+    home_logo: https://media.api-sports.io/football/teams/25.png
+    away_logo: https://media.api-sports.io/football/teams/1501.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-34_Ecuador_Curaçao_2026-06-21
+    provider: sportmonks
+    provider_id: 19609174
+    kickoff_utc: 2026-06-21T00:00+00:00
+    competition: World Cup
+    stage: Group E
+    home: Ecuador
+    away: Curaçao
+    home_logo: https://media.api-sports.io/football/teams/2382.png
+    away_logo: https://media.api-sports.io/football/teams/5530.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-35_Netherlands_Sweden_2026-06-20
+    provider: sportmonks
+    provider_id: 19609176
+    kickoff_utc: 2026-06-20T17:00+00:00
+    competition: World Cup
+    stage: Group F
+    home: Netherlands
+    away: Sweden
+    home_logo: https://media.api-sports.io/football/teams/1118.png
+    away_logo: https://media.api-sports.io/football/teams/5.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-36_Tunisia_Japan_2026-06-21
+    provider: sportmonks
+    provider_id: 19609175
+    kickoff_utc: 2026-06-21T04:00+00:00
+    competition: World Cup
+    stage: Group F
+    home: Tunisia
+    away: Japan
+    home_logo: https://media.api-sports.io/football/teams/28.png
+    away_logo: https://media.api-sports.io/football/teams/12.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-37_Uruguay_Cape-Verde_2026-06-21
+    provider: sportmonks
+    provider_id: 19609178
+    kickoff_utc: 2026-06-21T22:00+00:00
+    competition: World Cup
+    stage: Group H
+    home: Uruguay
+    away: Cape Verde
+    home_logo: https://media.api-sports.io/football/teams/7.png
+    away_logo: https://media.api-sports.io/football/teams/1533.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-38_Spain_Saudi-Arabia_2026-06-21
+    provider: sportmonks
+    provider_id: 19609142
+    kickoff_utc: 2026-06-21T16:00+00:00
+    competition: World Cup
+    stage: Group H
+    home: Spain
+    away: Saudi Arabia
+    home_logo: https://media.api-sports.io/football/teams/9.png
+    away_logo: https://media.api-sports.io/football/teams/23.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-39_Belgium_Iran_2026-06-21
+    provider: sportmonks
+    provider_id: 19609152
+    kickoff_utc: 2026-06-21T19:00+00:00
+    competition: World Cup
+    stage: Group G
+    home: Belgium
+    away: Iran
+    home_logo: https://media.api-sports.io/football/teams/1.png
+    away_logo: https://media.api-sports.io/football/teams/22.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-40_New-Zealand_Egypt_2026-06-22
+    provider: sportmonks
+    provider_id: 19609177
+    kickoff_utc: 2026-06-22T01:00+00:00
+    competition: World Cup
+    stage: Group G
+    home: New Zealand
+    away: Egypt
+    home_logo: https://media.api-sports.io/football/teams/4673.png
+    away_logo: https://media.api-sports.io/football/teams/32.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-41_Norway_Senegal_2026-06-23
+    provider: sportmonks
+    provider_id: 19609180
+    kickoff_utc: 2026-06-23T00:00+00:00
+    competition: World Cup
+    stage: Group I
+    home: Norway
+    away: Senegal
+    home_logo: https://media.api-sports.io/football/teams/1090.png
+    away_logo: https://media.api-sports.io/football/teams/13.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-42_France_Iraq_2026-06-22
+    provider: sportmonks
+    provider_id: 19609179
+    kickoff_utc: 2026-06-22T21:00+00:00
+    competition: World Cup
+    stage: Group I
+    home: France
+    away: Iraq
+    home_logo: https://media.api-sports.io/football/teams/2.png
+    away_logo: https://media.api-sports.io/football/teams/1567.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-43_Argentina_Austria_2026-06-22
+    provider: sportmonks
+    provider_id: 19609146
+    kickoff_utc: 2026-06-22T17:00+00:00
+    competition: World Cup
+    stage: Group J
+    home: Argentina
+    away: Austria
+    home_logo: https://media.api-sports.io/football/teams/26.png
+    away_logo: https://media.api-sports.io/football/teams/775.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-44_Jordan_Algeria_2026-06-23
+    provider: sportmonks
+    provider_id: 19609181
+    kickoff_utc: 2026-06-23T03:00+00:00
+    competition: World Cup
+    stage: Group J
+    home: Jordan
+    away: Algeria
+    home_logo: https://media.api-sports.io/football/teams/1548.png
+    away_logo: https://media.api-sports.io/football/teams/1532.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-45_England_Ghana_2026-06-23
+    provider: sportmonks
+    provider_id: 19609183
+    kickoff_utc: 2026-06-23T20:00+00:00
+    competition: World Cup
+    stage: Group L
+    home: England
+    away: Ghana
+    home_logo: https://media.api-sports.io/football/teams/10.png
+    away_logo: https://media.api-sports.io/football/teams/1504.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-46_Panama_Croatia_2026-06-23
+    provider: sportmonks
+    provider_id: 19609151
+    kickoff_utc: 2026-06-23T23:00+00:00
+    competition: World Cup
+    stage: Group L
+    home: Panama
+    away: Croatia
+    home_logo: https://media.api-sports.io/football/teams/11.png
+    away_logo: https://media.api-sports.io/football/teams/3.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-47_Portugal_Uzbekistan_2026-06-23
+    provider: sportmonks
+    provider_id: 19609148
+    kickoff_utc: 2026-06-23T17:00+00:00
+    competition: World Cup
+    stage: Group K
+    home: Portugal
+    away: Uzbekistan
+    home_logo: https://media.api-sports.io/football/teams/27.png
+    away_logo: https://media.api-sports.io/football/teams/1568.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-48_Colombia_DR-Congo_2026-06-24
+    provider: sportmonks
+    provider_id: 19609182
+    kickoff_utc: 2026-06-24T02:00+00:00
+    competition: World Cup
+    stage: Group K
+    home: Colombia
+    away: DR Congo
+    home_logo: https://media.api-sports.io/football/teams/8.png
+    away_logo: https://media.api-sports.io/football/teams/1508.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-49_Scotland_Brazil_2026-06-24
+    provider: sportmonks
+    provider_id: 19609132
+    kickoff_utc: 2026-06-24T22:00+00:00
+    competition: World Cup
+    stage: Group C
+    home: Scotland
+    away: Brazil
+    home_logo: https://media.api-sports.io/football/teams/1108.png
+    away_logo: https://media.api-sports.io/football/teams/6.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-50_Morocco_Haiti_2026-06-24
+    provider: sportmonks
+    provider_id: 19609187
+    kickoff_utc: 2026-06-24T22:00+00:00
+    competition: World Cup
+    stage: Group C
+    home: Morocco
+    away: Haiti
+    home_logo: https://media.api-sports.io/football/teams/31.png
+    away_logo: https://media.api-sports.io/football/teams/2386.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-51_Switzerland_Canada_2026-06-24
+    provider: sportmonks
+    provider_id: 19609129
+    kickoff_utc: 2026-06-24T19:00+00:00
+    competition: World Cup
+    stage: Group B
+    home: Switzerland
+    away: Canada
+    home_logo: https://media.api-sports.io/football/teams/15.png
+    away_logo: https://media.api-sports.io/football/teams/5529.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-52_Bosnia-and-Herzegovina_Qatar_2026-06-24
+    provider: sportmonks
+    provider_id: 19609186
+    kickoff_utc: 2026-06-24T19:00+00:00
+    competition: World Cup
+    stage: Group B
+    home: Bosnia and Herzegovina
+    away: Qatar
+    home_logo: https://media.api-sports.io/football/teams/1113.png
+    away_logo: https://media.api-sports.io/football/teams/1569.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-53_Czech-Republic_Mexico_2026-06-25
+    provider: sportmonks
+    provider_id: 19609185
+    kickoff_utc: 2026-06-25T01:00+00:00
+    competition: World Cup
+    stage: Group A
+    home: Czech Republic
+    away: Mexico
+    home_logo: https://media.api-sports.io/football/teams/770.png
+    away_logo: https://media.api-sports.io/football/teams/16.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-54_South-Africa_South-Korea_2026-06-25
+    provider: sportmonks
+    provider_id: 19609184
+    kickoff_utc: 2026-06-25T01:00+00:00
+    competition: World Cup
+    stage: Group A
+    home: South Africa
+    away: South Korea
+    home_logo: https://media.api-sports.io/football/teams/1531.png
+    away_logo: https://media.api-sports.io/football/teams/17.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-55_Curaçao_Ivory-Coast_2026-06-25
+    provider: sportmonks
+    provider_id: 19609191
+    kickoff_utc: 2026-06-25T20:00+00:00
+    competition: World Cup
+    stage: Group E
+    home: Curaçao
+    away: Ivory Coast
+    home_logo: https://media.api-sports.io/football/teams/5530.png
+    away_logo: https://media.api-sports.io/football/teams/1501.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-56_Ecuador_Germany_2026-06-25
+    provider: sportmonks
+    provider_id: 19609136
+    kickoff_utc: 2026-06-25T20:00+00:00
+    competition: World Cup
+    stage: Group E
+    home: Ecuador
+    away: Germany
+    home_logo: https://media.api-sports.io/football/teams/2382.png
+    away_logo: https://media.api-sports.io/football/teams/25.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-57_Japan_Sweden_2026-06-25
+    provider: sportmonks
+    provider_id: 19609190
+    kickoff_utc: 2026-06-25T23:00+00:00
+    competition: World Cup
+    stage: Group F
+    home: Japan
+    away: Sweden
+    home_logo: https://media.api-sports.io/football/teams/12.png
+    away_logo: https://media.api-sports.io/football/teams/5.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-58_Tunisia_Netherlands_2026-06-25
+    provider: sportmonks
+    provider_id: 19609137
+    kickoff_utc: 2026-06-25T23:00+00:00
+    competition: World Cup
+    stage: Group F
+    home: Tunisia
+    away: Netherlands
+    home_logo: https://media.api-sports.io/football/teams/28.png
+    away_logo: https://media.api-sports.io/football/teams/1118.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-59_Turkey_United-States_2026-06-26
+    provider: sportmonks
+    provider_id: 19609189
+    kickoff_utc: 2026-06-26T02:00+00:00
+    competition: World Cup
+    stage: Group D
+    home: Turkey
+    away: United States
+    home_logo: https://media.api-sports.io/football/teams/777.png
+    away_logo: https://media.api-sports.io/football/teams/12522.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-60_Paraguay_Australia_2026-06-26
+    provider: sportmonks
+    provider_id: 19609188
+    kickoff_utc: 2026-06-26T02:00+00:00
+    competition: World Cup
+    stage: Group D
+    home: Paraguay
+    away: Australia
+    home_logo: https://media.api-sports.io/football/teams/2380.png
+    away_logo: https://media.api-sports.io/football/teams/20.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-61_Norway_France_2026-06-26
+    provider: sportmonks
+    provider_id: 19609144
+    kickoff_utc: 2026-06-26T19:00+00:00
+    competition: World Cup
+    stage: Group I
+    home: Norway
+    away: France
+    home_logo: https://media.api-sports.io/football/teams/1090.png
+    away_logo: https://media.api-sports.io/football/teams/2.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-62_Senegal_Iraq_2026-06-26
+    provider: sportmonks
+    provider_id: 19609195
+    kickoff_utc: 2026-06-26T19:00+00:00
+    competition: World Cup
+    stage: Group I
+    home: Senegal
+    away: Iraq
+    home_logo: https://media.api-sports.io/football/teams/13.png
+    away_logo: https://media.api-sports.io/football/teams/1567.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-63_Egypt_Iran_2026-06-27
+    provider: sportmonks
+    provider_id: 19609193
+    kickoff_utc: 2026-06-27T03:00+00:00
+    competition: World Cup
+    stage: Group G
+    home: Egypt
+    away: Iran
+    home_logo: https://media.api-sports.io/football/teams/32.png
+    away_logo: https://media.api-sports.io/football/teams/22.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-64_New-Zealand_Belgium_2026-06-27
+    provider: sportmonks
+    provider_id: 19609192
+    kickoff_utc: 2026-06-27T03:00+00:00
+    competition: World Cup
+    stage: Group G
+    home: New Zealand
+    away: Belgium
+    home_logo: https://media.api-sports.io/football/teams/4673.png
+    away_logo: https://media.api-sports.io/football/teams/1.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-65_Cape-Verde_Saudi-Arabia_2026-06-27
+    provider: sportmonks
+    provider_id: 19609194
+    kickoff_utc: 2026-06-27T00:00+00:00
+    competition: World Cup
+    stage: Group H
+    home: Cape Verde
+    away: Saudi Arabia
+    home_logo: https://media.api-sports.io/football/teams/1533.png
+    away_logo: https://media.api-sports.io/football/teams/23.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-66_Uruguay_Spain_2026-06-27
+    provider: sportmonks
+    provider_id: 19609141
+    kickoff_utc: 2026-06-27T00:00+00:00
+    competition: World Cup
+    stage: Group H
+    home: Uruguay
+    away: Spain
+    home_logo: https://media.api-sports.io/football/teams/7.png
+    away_logo: https://media.api-sports.io/football/teams/9.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-67_Panama_England_2026-06-27
+    provider: sportmonks
+    provider_id: 19609199
+    kickoff_utc: 2026-06-27T21:00+00:00
+    competition: World Cup
+    stage: Group L
+    home: Panama
+    away: England
+    home_logo: https://media.api-sports.io/football/teams/11.png
+    away_logo: https://media.api-sports.io/football/teams/10.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-68_Croatia_Ghana_2026-06-27
+    provider: sportmonks
+    provider_id: 19609150
+    kickoff_utc: 2026-06-27T21:00+00:00
+    competition: World Cup
+    stage: Group L
+    home: Croatia
+    away: Ghana
+    home_logo: https://media.api-sports.io/football/teams/3.png
+    away_logo: https://media.api-sports.io/football/teams/1504.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-69_Algeria_Austria_2026-06-28
+    provider: sportmonks
+    provider_id: 19609197
+    kickoff_utc: 2026-06-28T02:00+00:00
+    competition: World Cup
+    stage: Group J
+    home: Algeria
+    away: Austria
+    home_logo: https://media.api-sports.io/football/teams/1532.png
+    away_logo: https://media.api-sports.io/football/teams/775.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-70_Jordan_Argentina_2026-06-28
+    provider: sportmonks
+    provider_id: 19609198
+    kickoff_utc: 2026-06-28T02:00+00:00
+    competition: World Cup
+    stage: Group J
+    home: Jordan
+    away: Argentina
+    home_logo: https://media.api-sports.io/football/teams/1548.png
+    away_logo: https://media.api-sports.io/football/teams/26.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-71_Colombia_Portugal_2026-06-27
+    provider: sportmonks
+    provider_id: 19609147
+    kickoff_utc: 2026-06-27T23:30+00:00
+    competition: World Cup
+    stage: Group K
+    home: Colombia
+    away: Portugal
+    home_logo: https://media.api-sports.io/football/teams/8.png
+    away_logo: https://media.api-sports.io/football/teams/27.png
+    enabled: true
+
+  - wca_id: World-Cup_Group-Stage-72_DR-Congo_Uzbekistan_2026-06-27
+    provider: sportmonks
+    provider_id: 19609196
+    kickoff_utc: 2026-06-27T23:30+00:00
+    competition: World Cup
+    stage: Group K
+    home: DR Congo
+    away: Uzbekistan
+    home_logo: https://media.api-sports.io/football/teams/1508.png
+    away_logo: https://media.api-sports.io/football/teams/1568.png
+    enabled: true
+
   - wca_id: Friendly-International_Botswana_Niger_2026-06-09
     provider: sportmonks
     provider_id: 19710745
@@ -178,4 +1033,3 @@ fixtures:
     provider_id: 19709316
     kickoff_utc: 2026-06-09T11:35:00+00:00
     enabled: true
-
