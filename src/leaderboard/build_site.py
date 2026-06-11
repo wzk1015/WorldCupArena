@@ -1555,8 +1555,10 @@ def main() -> None:
     _save_api_football_logo_cache()
 
     rounded_payload = _round3(payload)
-    for out_path in (OUT_EN, OUT_ZH, OUT):
+    for out_path in (OUT_EN, OUT):
         out_path.write_text(json.dumps(rounded_payload, ensure_ascii=False, separators=(",", ":")))
+    from .translate_site_data import translate_payload_to_zh
+    OUT_ZH.write_text(json.dumps(translate_payload_to_zh(rounded_payload), ensure_ascii=False, separators=(",", ":")))
     print(f"wrote {OUT}, {OUT_ZH}, {OUT_EN} "
           f"(model_native_payload=1, "
           f"leaderboard_models={len(payload['leaderboard']['main'])}, "
