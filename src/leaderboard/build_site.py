@@ -483,10 +483,10 @@ def _fixture_header_from_registry(wca_id: str, fx: dict, existing: dict | None =
         "away_logo":   fx.get("away_logo") or fx.get("away_team_logo"),
         "kickoff_utc": kick,
         "lock_at_utc": base.get("lock_at_utc"),
-        "venue":       base.get("venue"),
-        "venue_city":    base.get("venue_city"),
-        "venue_country": base.get("venue_country"),
-        "stage":         base.get("stage"),
+        "venue":       fx.get("venue") or base.get("venue"),
+        "venue_city":    fx.get("venue_city") or base.get("venue_city"),
+        "venue_country": _clean_venue_country(fx.get("venue_country") or base.get("venue_country")),
+        "stage":         fx.get("stage") or base.get("stage"),
         "competition": fx.get("competition") or inferred.get("competition") or base.get("competition"),
     })
     return _apply_api_football_logos(base)

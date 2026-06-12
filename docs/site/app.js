@@ -46,6 +46,7 @@ const I18N = {
     reasoning_t3: "T3 · 事件与时间线",
     reasoning_t4: "T4 · 比赛数据",
     draw: "平局",
+    draw_winner_label: "🤝 平局",
     home: "主队",
     away: "客队",
     substitute: "替补",
@@ -268,6 +269,7 @@ const I18N = {
     reasoning_t3: "T3 · Events & Timeline",
     reasoning_t4: "T4 · Match Statistics",
     draw: "Draw",
+    draw_winner_label: "🤝 Draw",
     home: "Home",
     away: "Away",
     substitute: "Sub",
@@ -610,13 +612,64 @@ function updateThemeControls() {
   select.setAttribute("title", t("theme_select_title"));
 }
 
+const VENUE_ZH = {
+  "Estadio Azteca": "阿兹特克体育场",
+  "Estadio Akron": "阿克伦体育场",
+  "BMO Field": "BMO球场",
+  "SoFi Stadium": "SoFi体育场",
+  "Gillette Stadium": "吉列体育场",
+  "BC Place": "BC体育馆",
+  "MetLife Stadium": "大都会人寿体育场",
+  "Levi's Stadium": "李维斯体育场",
+  "NRG Stadium": "NRG体育场",
+  "Mercedes-Benz Stadium": "梅赛德斯-奔驰体育场",
+  "AT&T Stadium": "AT&T体育场",
+  "Estadio BBVA": "BBVA体育场",
+  "Arrowhead Stadium": "箭头体育场",
+  "Hard Rock Stadium": "硬石体育场",
+  "Lincoln Financial Field": "林肯金融球场",
+  "Lumen Field": "流明球场",
+};
+const CITY_ZH = {
+  "Mexico City": "墨西哥城",
+  "Zapopan": "萨波潘",
+  "Toronto": "多伦多",
+  "Inglewood": "英格尔伍德",
+  "Foxborough": "福克斯伯勒",
+  "Vancouver": "温哥华",
+  "East Rutherford": "东卢瑟福",
+  "Santa Clara": "圣克拉拉",
+  "Houston": "休斯敦",
+  "Atlanta": "亚特兰大",
+  "Arlington": "阿灵顿",
+  "Monterrey": "蒙特雷",
+  "Kansas City": "堪萨斯城",
+  "Miami Gardens": "迈阿密花园",
+  "Philadelphia": "费城",
+  "Seattle": "西雅图",
+};
+const COUNTRY_ZH = {
+  "United States": "美国",
+  "USA": "美国",
+  "Mexico": "墨西哥",
+  "Canada": "加拿大",
+};
+
+function localizedVenueText(value, map) {
+  const raw = String(value ?? "").trim();
+  if (!raw) return "";
+  return _lang === "zh" ? (map[raw] || raw) : raw;
+}
+
 function renderVenueLocation(match) {
   if (!match?.venue) return "";
   const country = String(match.venue_country ?? "").trim();
-  const visibleCountry = country.toLowerCase() === "world" ? "" : country;
-  return `<div class="text-[10px] text-gray-500 mt-1">${esc(match.venue)}</div>${
-    match.venue_city
-      ? `<div class="text-[10px] text-gray-500">${esc(match.venue_city)}${visibleCountry ? `, ${esc(visibleCountry)}` : ""}</div>`
+  const visibleCountry = country.toLowerCase() === "world" ? "" : localizedVenueText(country, COUNTRY_ZH);
+  const venue = localizedVenueText(match.venue, VENUE_ZH);
+  const city = localizedVenueText(match.venue_city, CITY_ZH);
+  return `<div class="text-[10px] text-gray-500 mt-1">${esc(venue)}</div>${
+    city
+      ? `<div class="text-[10px] text-gray-500">${esc(city)}${visibleCountry ? `, ${esc(visibleCountry)}` : ""}</div>`
       : ""
   }`;
 }
@@ -1371,6 +1424,24 @@ function winnerFromWinProbs(wp, homeName, awayName) {
   if (wp.home >= wp.draw && wp.home >= wp.away) return homeName;
   if (wp.away >= wp.home && wp.away >= wp.draw) return awayName;
   return t("draw");
+}
+
+function predictionWinnerDisplay(winner, f) {
+  const value = String(winner || "").trim();
+  if (!value) return { label: "—", flag: "" };
+  const home = String(f?.home || "").trim();
+  const away = String(f?.away || "").trim();
+  if (value === home) return { label: value, flag: f?.home_flag_img || "" };
+  if (value === away) return { label: value, flag: f?.away_flag_img || "" };
+  if (value === t("draw") || value.toLowerCase() === "draw" || value === "平局") return { label: t("draw_winner_label"), flag: "" };
+  return { label: value, flag: "" };
+}
+
+function renderPredictionWinnerLabel(winner, f, opts = {}) {
+  const display = predictionWinnerDisplay(winner, f);
+  const color = opts.color || "var(--prediction-primary)";
+  const sizeClass = opts.sizeClass || "text-2xl";
+  return `<div class="inline-flex items-center gap-1.5 whitespace-nowrap ${sizeClass} font-black leading-none max-w-full" style="color:${color};">${display.flag ? `<img src="${esc(display.flag)}" alt="" loading="lazy" style="height:1.05em;width:auto;flex:0 0 auto;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.18);">` : ""}<span class="truncate" style="font-size:.72em;font-weight:800;opacity:.9;vertical-align:middle">${esc(display.label)}</span></div>`;
 }
 
 function togglePredPanel(idx, type) {
@@ -2311,7 +2382,7 @@ function renderPredCard(p, f, idx, opts = {}) {
                   const winnerColor = truthOutcome
                     ? (winnerCorrect ? "color:#4ade80;" : "color:#f87171;")
                     : "color:var(--prediction-primary);";
-                  return `<div class="text-xl font-black leading-tight" style="${winnerColor}">${predWinner===hName&&f.home_flag_img?`<img src="${f.home_flag_img}" alt="" loading="lazy" style="height:1.4em;width:auto;vertical-align:-0.22em;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.18);"> `:predWinner===aName&&f.away_flag_img?`<img src="${f.away_flag_img}" alt="" loading="lazy" style="height:1.4em;width:auto;vertical-align:-0.22em;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.18);"> `:""}<span style="font-size:.55em;font-weight:500;opacity:.6;vertical-align:middle">${esc(predWinner || "—")}</span></div>`;
+                  return renderPredictionWinnerLabel(predWinner, f, { color: winnerColor.replace(/^color:/, "").replace(/;$/, ""), sizeClass: "text-2xl" });
                 })()}
               </div>
               <div style="width:1px;height:2.15rem;background:var(--prediction-divider);"></div>
@@ -2433,10 +2504,16 @@ function inferredLiveElapsed(live, submittedAt) {
   const delta = Math.floor((submitted.getTime() - kickoff.getTime()) / 60000);
   if (!Number.isFinite(delta) || delta < 0) return null;
   const status = String(live.status || "").toLowerCase();
-  if (status.includes("half time") || status === "ht" || status === "halftime") return 45;
+  if (status.includes("half time") || status.includes("halftime") || status === "ht") return 45;
   if (status.includes("1st") || status.includes("first")) return Math.max(1, Math.min(45, delta));
   if (status.includes("2nd") || status.includes("second")) return Math.max(46, Math.min(90, delta >= 60 ? delta - 15 : delta));
   if (status.includes("extra")) return Math.max(91, Math.min(130, delta - 15));
+  // Some providers only expose a generic "In Play" status. If natural elapsed
+  // has passed the halftime break, subtract a standard 15 minute interval so
+  // the display tracks match clock rather than wall-clock minutes.
+  if (status.includes("play") || status.includes("live") || status.includes("progress")) {
+    return Math.max(1, Math.min(90, delta > 60 ? delta - 15 : delta));
+  }
   return Math.max(1, Math.min(130, delta));
 }
 
@@ -2560,7 +2637,7 @@ function renderInlineLivePrediction(item, f, opts = {}) {
         <div class="flex items-start gap-3 flex-wrap">
           <div>
             <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">${t("pred_winner")}</div>
-            <div class="text-lg font-black leading-tight" style="color:#fca5a5;">${esc(livePredictionWinner(item, f))}</div>
+            ${renderPredictionWinnerLabel(livePredictionWinner(item, f), f, { color: "#fca5a5", sizeClass: "text-xl" })}
           </div>
           <div style="width:1px;height:2rem;background:rgba(255,255,255,.14);"></div>
           <div>
@@ -2780,7 +2857,7 @@ function renderLivePredictions(items, f) {
               <div class="flex items-start gap-4 flex-wrap mb-3">
                 <div>
                   <div class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">${t("pred_winner")}</div>
-                  <div class="text-lg font-black leading-tight" style="color:var(--prediction-primary);">${esc(predWinner || "—")}</div>
+                  ${renderPredictionWinnerLabel(predWinner, f, { color: "var(--prediction-primary)", sizeClass: "text-xl" })}
                 </div>
                 <div style="width:1px;height:2rem;background:var(--prediction-divider);"></div>
                 <div>

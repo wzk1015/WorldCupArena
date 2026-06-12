@@ -139,6 +139,8 @@ def _elapsed_from_kickoff(kickoff_utc: str | None, status_long: str | None) -> i
         return max(46, min(90, delta - 15 if delta >= 60 else delta))
     if "extra" in status:
         return max(91, min(130, delta - 15))
+    if "play" in status or "live" in status or "progress" in status:
+        return max(1, min(90, delta - 15 if delta > 60 else delta))
     return max(1, min(130, delta))
 
 
