@@ -1522,6 +1522,48 @@ def main() -> None:
         "history":          history,
         "tournament_predictions": build_tournament_predictions(),
     }
+    # Attach the country flag to each fixture so the prediction card can show it
+    # prominently next to the predicted winner. We attach BOTH the emoji (home_flag)
+    # and an image URL (home_flag_img) decoded from the emoji's country code — emoji
+    # flags don't render on Windows (they degrade to letters, e.g. "MX"), so the card
+    # uses the image; the emoji is kept as a lightweight fallback.
+    def _flag_img_url(_emoji: str) -> str:
+        _code = "".join(
+            chr(ord(_c) - 0x1F1E6 + ord("a")) for _c in _emoji if 0x1F1E6 <= ord(_c) <= 0x1F1FF
+        )
+        return f"https://media.api-sports.io/flags/{_code}.svg" if len(_code) == 2 else ""
+
+    _flag_by_team: dict[str, str] = {}
+    _groups = (payload.get("tournament_predictions") or {}).get("groups") or {}
+    for _grp in (_groups.values() if isinstance(_groups, dict) else _groups):
+        for _tm in (_grp or []):
+            if isinstance(_tm, dict) and _tm.get("name") and _tm.get("flag"):
+                _flag_by_team[_tm["name"]] = _tm["flag"]
+    for _m in (payload.get("incoming_matches") or []) + (payload.get("history") or []):
+        _fx = _m.get("fixture") or {}
+        for _side in ("home", "away"):
+            _emoji = _flag_by_team.get(_fx.get(_side))
+            if _emoji:
+                _fx[f"{_side}_flag"] = _emoji
+                _img = _flag_img_url(_emoji)
+                if _img:
+                    _fx[f"{_side}_flag_img"] = _img
+    # Tournament team objects (groups[].teams[]) carry their own flag emoji — attach a
+    # flag_img to each so 完整赛事预测 (tournamentTeamHtml) can render the flag image too.
+    def _attach_team_flag_imgs(_o):
+        if isinstance(_o, dict):
+            _fl = _o.get("flag")
+            if isinstance(_fl, str) and not _o.get("flag_img"):
+                _img = _flag_img_url(_fl)
+                if _img:
+                    _o["flag_img"] = _img
+            for _v in _o.values():
+                _attach_team_flag_imgs(_v)
+        elif isinstance(_o, list):
+            for _v in _o:
+                _attach_team_flag_imgs(_v)
+
+    _attach_team_flag_imgs(payload.get("tournament_predictions"))
     _attach_default_visibility(payload, leaderboard)
     OUT.parent.mkdir(parents=True, exist_ok=True)
 

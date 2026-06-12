@@ -2311,7 +2311,7 @@ function renderPredCard(p, f, idx, opts = {}) {
                   const winnerColor = truthOutcome
                     ? (winnerCorrect ? "color:#4ade80;" : "color:#f87171;")
                     : "color:var(--prediction-primary);";
-                  return `<div class="text-xl font-black leading-tight" style="${winnerColor}">${esc(predWinner || "—")}</div>`;
+                  return `<div class="text-xl font-black leading-tight" style="${winnerColor}">${predWinner===hName&&f.home_flag_img?`<img src="${f.home_flag_img}" alt="" loading="lazy" style="height:1.4em;width:auto;vertical-align:-0.22em;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.18);"> `:predWinner===aName&&f.away_flag_img?`<img src="${f.away_flag_img}" alt="" loading="lazy" style="height:1.4em;width:auto;vertical-align:-0.22em;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.18);"> `:""}<span style="font-size:.55em;font-weight:500;opacity:.6;vertical-align:middle">${esc(predWinner || "—")}</span></div>`;
                 })()}
               </div>
               <div style="width:1px;height:2.15rem;background:var(--prediction-divider);"></div>
@@ -2891,7 +2891,7 @@ function tournamentTeamHtml(team, opts = {}) {
   const raw = tournamentRawTeamName(team);
   const title = raw && raw !== name ? ` title="${esc(raw)}"` : "";
   const align = opts.align === "right" ? "justify-end text-right" : "";
-  return `<span class="inline-flex items-center gap-1.5 min-w-0 ${align}"${title}>${flag ? `<span class="shrink-0">${esc(flag)}</span>` : ""}<span class="truncate">${esc(name)}</span></span>`;
+  return `<span class="inline-flex items-center gap-1.5 min-w-0 ${align}"${title}>${(typeof team==="object"&&team&&team.flag_img)?`<img src="${esc(team.flag_img)}" alt="" loading="lazy" class="shrink-0" style="height:1em;width:auto;border-radius:2px;">`:(flag?`<span class="shrink-0">${esc(flag)}</span>`:"")}<span class="truncate">${esc(name)}</span></span>`;
 }
 
 function tournamentScoreText(score) {
