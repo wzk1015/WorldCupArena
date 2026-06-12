@@ -505,6 +505,29 @@ def _header_mismatches_registry(hdr: dict | None, fx: dict) -> bool:
 # Leaderboard (all graded fixtures, aggregated by model)
 # ---------------------------------------------------------------------------
 
+# Leaderboard reset: pre-tournament matches (UCL/EPL/etc. used to shake the
+# pipeline down before the World Cup kicked off) shouldn't dilute the World Cup
+# leaderboard. Ignore any fixture before LEADERBOARD_MIN_DATE in the leaderboard;
+# a few marquee pre-cup matches are still kept in `history` as worked examples.
+LEADERBOARD_MIN_DATE = "2026-06-10"
+HISTORY_EXAMPLE_WHITELIST = {
+    "UEFA-Champions-League_Paris-Saint-Germain_Arsenal_2026-05-30",
+    "UEFA-Champions-League_Bayern-München_Paris-Saint-Germain_2026-05-06",
+    "Premier-League_Chelsea_Tottenham_2026-05-19",
+    "Premier-League_Manchester-City_Aston-Villa_2026-05-24",
+}
+
+
+def _is_pre_cutoff(wca_id: str) -> bool:
+    """True if the fixture kicked off before LEADERBOARD_MIN_DATE (pre-World-Cup)."""
+    kick = (_load_fixture_header(wca_id) or {}).get("kickoff_utc")
+    day = str(kick)[:10] if kick else None
+    if not day:  # fall back to the trailing _YYYY-MM-DD in the wca_id
+        tail = wca_id[-10:]
+        day = tail if len(tail) == 10 and tail[4] == "-" and tail[7] == "-" else None
+    return bool(day and day < LEADERBOARD_MIN_DATE)
+
+
 def build_leaderboard() -> dict:
     by_model_composites: dict[str, list[float]] = defaultdict(list)
     by_model_layers: dict[str, dict[str, list[float]]] = defaultdict(lambda: defaultdict(list))
@@ -517,6 +540,8 @@ def build_leaderboard() -> dict:
     for fid_dir in sorted(RESULTS.glob("*")):
         wca_id = fid_dir.name
         if "_test" in wca_id.lower() or wca_id.lower().startswith("test_"):
+            continue
+        if _is_pre_cutoff(wca_id):   # leaderboard reset — World-Cup matches only
             continue
         if wca_id not in _truth_cache:
             _truth_cache[wca_id] = _load_truth_data(wca_id)
@@ -1324,6 +1349,9 @@ def build_history() -> list[dict]:
     rows = []
     for wca_id in wca_ids:
         if "_test" in wca_id.lower() or wca_id.lower().startswith("test_"):
+            continue
+        # Reset: drop pre-World-Cup matches from history except a few kept as examples.
+        if _is_pre_cutoff(wca_id) and wca_id not in HISTORY_EXAMPLE_WHITELIST:
             continue
         hdr = _load_fixture_header(wca_id) or {"wca_id": wca_id}
 
