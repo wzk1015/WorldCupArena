@@ -563,6 +563,19 @@ def _glossary_for_text(text: str, entities: dict[str, str], *, limit: int = 80) 
     return dict(pairs[:limit])
 
 
+def _load_team_name_seed() -> dict:
+    seed = ROOT / "data" / "i18n" / "team_name_zh.json"
+    if not seed.exists():
+        return {}
+    try:
+        return {str(k): str(v) for k, v in json.loads(seed.read_text()).items() if k and v}
+    except Exception:
+        return {}
+
+
+DEFAULT_ENTITY_TRANSLATIONS = {**_load_team_name_seed(), **DEFAULT_ENTITY_TRANSLATIONS}
+
+
 def _translate_entity_string(value: str, cache: dict[str, Any]) -> str:
     entities = cache.get("entities", {})
     exact = entities.get(value)
