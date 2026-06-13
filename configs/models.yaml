@@ -202,6 +202,11 @@ open_llm:
     settings_supported: [S1]
     max_run_retries: 1
     timeout_seconds: 180
+    # The default GPTPlus5 variant (doubao-seed-2-0-lite-260428) intermittently
+    # returns 500. On failure, auto-retry the 260215 variant on the same proxy.
+    # See build_runner_chain() in src/runners/__init__.py.
+    fallbacks:
+      - gptplus5_model: doubao-seed-2-0-lite-260215
   - id: minimax-m2.7
     display_name: MiniMax M2.7
     provider: openrouter
