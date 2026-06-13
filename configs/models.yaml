@@ -33,6 +33,10 @@ closed_llm:
     base_url: https://generativelanguage.googleapis.com/v1beta
     price_per_mtok: { input: 1.05, output: 6.30 }
     settings_supported: [S1]
+    # GPTPlus5 occasionally returns unparseable JSON for this model; fall back
+    # to the native Google endpoint (GOOGLE_API_KEY).
+    fallbacks:
+      - source: native
   - id: claude-opus-4-7-thinking
     display_name: Claude Opus 4.7 (Thinking)
     provider: anthropic
@@ -146,6 +150,9 @@ open_llm:
     settings_supported: [S1]
     max_run_retries: 1
     timeout_seconds: 180
+    # On GPTPlus5 timeout/error, fall back to the native OpenRouter endpoint.
+    fallbacks:
+      - source: native
   - id: qwen3-max
     display_name: Qwen3.7 Max
     provider: openrouter
@@ -206,7 +213,8 @@ open_llm:
     # returns 500. On failure, auto-retry the 260215 variant on the same proxy.
     # See build_runner_chain() in src/runners/__init__.py.
     fallbacks:
-      - gptplus5_model: doubao-seed-2-0-lite-260215
+      - gptplus5_model: doubao-seed-2-0-lite-260215   # alt variant, same proxy
+      - source: native                                # then the native OpenRouter endpoint
   - id: minimax-m2.7
     display_name: MiniMax M2.7
     provider: openrouter
