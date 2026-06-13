@@ -106,14 +106,53 @@ def _apply_model_proxy(model_cfg: dict[str, Any]) -> dict[str, Any]:
     return routed
 
 
-def build_runner(model_cfg: dict[str, Any]) -> BaseRunner:
-    model_cfg = _apply_model_proxy(model_cfg)
+def build_runner(model_cfg: dict[str, Any], apply_proxy: bool = True) -> BaseRunner:
+    if apply_proxy:
+        model_cfg = _apply_model_proxy(model_cfg)
     provider = model_cfg["provider"]
     if provider not in PROVIDER_RUNNERS:
         raise NotImplementedError(f"No runner registered for provider={provider}")
     return PROVIDER_RUNNERS[provider](model_cfg)
 
 
-__all__ = ["BaseRunner", "RunnerResult", "build_runner", "PROVIDER_RUNNERS",
+def _source_label(cfg: dict[str, Any]) -> str:
+    """Short human label for which source/variant a runner ended up using."""
+    return cfg.get("gptplus5_model") or cfg.get("model") or cfg.get("provider") or "primary"
+
+
+def build_runner_chain(model_cfg: dict[str, Any]) -> list[tuple[str, BaseRunner]]:
+    """Primary source plus any configured ``fallbacks``, as (label, runner) pairs.
+
+    Each entry in ``model_cfg["fallbacks"]`` is a partial override, tried in order
+    when the preceding source yields no usable prediction (5xx / timeout / unparseable
+    output). This lets an unstable model auto-retry on an alternate variant or source.
+    Common shapes::
+
+        fallbacks:
+          - {gptplus5_model: doubao-...-260215}  # same GPTPlus5 proxy, alt model variant
+          - {source: native}                     # the model's own provider (bypass proxy)
+          - {provider: openrouter, model: ..., api_key_env: OPENROUTER_API_KEY,
+             base_url_env: OPENROUTER_BASE_URL}   # explicit alternate source
+
+    Fallbacks that cannot be built (missing key / mapping / runner) are skipped, not fatal.
+    """
+    base = {k: v for k, v in model_cfg.items() if k != "fallbacks"}
+    chain: list[tuple[str, BaseRunner]] = [(_source_label(_apply_model_proxy(base)), build_runner(base))]
+    for fb in (model_cfg.get("fallbacks") or []):
+        # Re-route through the GPTPlus5 proxy only when the fallback names a proxy
+        # variant; `native` / explicit-source fallbacks use their own config verbatim.
+        use_proxy = "gptplus5_model" in fb
+        merged = {**base, **{k: v for k, v in fb.items() if k != "source"}}
+        try:
+            runner = build_runner(merged, apply_proxy=use_proxy)
+        except (NotImplementedError, RuntimeError) as e:
+            print(f"[runner] skip fallback {fb} for {model_cfg.get('id')}: {e}", flush=True)
+            continue
+        label = _source_label(_apply_model_proxy(merged) if use_proxy else merged)
+        chain.append((label, runner))
+    return chain
+
+
+__all__ = ["BaseRunner", "RunnerResult", "build_runner", "build_runner_chain", "PROVIDER_RUNNERS",
            "OpenAICompatRunner", "AnthropicRunner", "GeminiRunner",
            "OpenAIDeepResearchRunner", "GeminiDeepResearchRunner"]

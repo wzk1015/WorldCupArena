@@ -25,7 +25,7 @@ import time
 
 import yaml
 
-from ..runners import build_runner
+from ..runners import build_runner_chain
 from ..graders import grade_match
 from ..ingest.api_football import normalize_fixture, normalize_to_truth, populate_context_pack, get_football_client, football_api_provider
 from ..ingest.news import populate_news
@@ -176,7 +176,7 @@ def cmd_predict(
 
         sys_p, usr_p = build_prompt(fixture, setting)
         try:
-            runner = build_runner(model_cfg)
+            runner_chain = build_runner_chain(model_cfg)
         except NotImplementedError as e:
             return {"model": model_cfg["id"], "setting": setting["id"], "skipped": str(e)}
 
@@ -194,11 +194,20 @@ def cmd_predict(
         record = None
         total_cost = 0.0
         max_run_retries = int(model_cfg.get("max_run_retries", MAX_RUN_RETRIES))
-        for attempt in range(1, max_run_retries + 1):
+        # Ordered attempt plan: each source (primary + configured fallbacks) gets its
+        # retry budget, tried in order. The first source to yield a usable prediction
+        # wins; switching to the next source happens immediately (no inter-source sleep).
+        n_sources = len(runner_chain)
+        attempt_plan = [(lbl, rn, n)
+                        for (lbl, rn) in runner_chain
+                        for n in range(1, max_run_retries + 1)]
+        res = None
+        for (src_label, runner, attempt) in attempt_plan:
+            tail = "" if n_sources == 1 else f" via {src_label}"
             if attempt == 1:
-                print(f"[predict] {fid}: running {model_cfg['id']} on setting {setting['id']}")
+                print(f"[predict] {fid}: running {model_cfg['id']} on setting {setting['id']}{tail}")
             else:
-                print(f"[predict] {fid}: retry {attempt}/{max_run_retries} for {model_cfg['id']} ({setting['id']})")
+                print(f"[predict] {fid}: retry {attempt}/{max_run_retries} for {model_cfg['id']} ({setting['id']}){tail}")
             res = runner.run(fixture, setting, sys_p, usr_p, validate_fn=_validate)
             total_cost += res.cost_usd
             audit = _leak_audit(res.sources, fixture["lock_at_utc"])
@@ -225,6 +234,7 @@ def cmd_predict(
                 "fixture_id": fid,
                 "model_id": res.model_id,
                 "setting": res.setting,
+                "source": src_label,
                 "submitted_at": res.submitted_at,
                 "prediction": prediction,
                 "raw_prediction": raw_prediction,
