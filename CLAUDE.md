@@ -14,9 +14,9 @@ The primary goal of this project is to benchmark LLMs and deep-research agents o
 
 ## Development Process
 
-The lifecycle of a fixture is as follows:
-1.  **T-48h:** Ingest data (squads, form, news, odds) using `ingest.py`.
-2.  **T-24h:** Lock the snapshot and run predictions for all models.
+The lifecycle of a fixture is as follows (LEAD = `WCA_PREDICT_LEAD_H`, default **48h**; set in `src/pipeline/scheduler.py`):
+1.  **T-(LEAD+24h):** Ingest data (squads, form, news, odds) using `ingest.py`.
+2.  **T-LEAD (default T-48h):** Lock the snapshot and run predictions for all models. This is also the anti-leakage information horizon (`lock_at`).
 3.  **T+3h:** Ingest the results of the match.
 4.  **T+24h:** Grade the predictions and build the leaderboard.
 
