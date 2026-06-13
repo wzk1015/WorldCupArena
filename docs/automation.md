@@ -16,18 +16,18 @@ Every fixture flows through five pipeline phases. All times are relative to
 
 | Phase | Scheduler name | Window | Command | What it writes |
 |-------|---------------|--------|---------|----------------|
-| **ingest**   | `ingest`       | T-7d → T-24h | `src.ingest.api_football --fixture-id … --out fixture.json` | raw API-Football response → `data/snapshots/<id>/fixture.json` |
-| **populate** | `populate`     | T-48h → T-24h | `src.pipeline.orchestrator populate --fixture …` | adds `context_pack` — squads + recent form + stats + **news headlines** |
-| **lock+predict** | `lock_predict` | T-24h → T+0h | `orchestrator lock` then `orchestrator predict` | `snapshot_hash` in `fixture.json` + `data/predictions/<id>/<model>__<setting>.json` |
+| **ingest**   | `ingest`       | T-7d → T-LEAD | `src.ingest.api_football --fixture-id … --out fixture.json` | raw API-Football response → `data/snapshots/<id>/fixture.json` |
+| **populate** | `populate`     | T-LEAD-24h → T-LEAD | `src.pipeline.orchestrator populate --fixture …` | adds `context_pack` — squads + recent form + stats + **news headlines** |
+| **lock+predict** | `lock_predict` | T-LEAD → T+0h | `orchestrator lock` then `orchestrator predict` | `snapshot_hash` in `fixture.json` + `data/predictions/<id>/<model>__<setting>.json` |
 | **live update** | `live_update` | T+0h → T+3h | `src.pipeline.orchestrator live_update --fixture-id … --wca-id …` | `data/live/<id>.json` (real-time score/status); triggers `truth_grade` early if status = "Match Finished" |
 | **truth+grade** | `truth_grade` | T+3h → T+48h | `src.ingest.api_football --out truth.json` + `orchestrator grade` + `leaderboard.build` + `leaderboard.build_site` | `truth.json` + `data/results/<id>/*.json` + generated site JSON |
 
 Phases scheduled by `src.pipeline.scheduler`:
 
 ```
-T-7d  ─── ingest          ─── fixture.json  (from API-Football)
-T-48h ─── populate        ─── context_pack  (squads, form, news, stats)
-T-24h ─── lock_predict    ─── snapshot_hash + predictions/
+T-7d       ─── ingest          ─── fixture.json  (from API-Football)
+T-LEAD-24h ─── populate        ─── context_pack  (squads, form, news, stats)
+T-LEAD     ─── lock_predict    ─── snapshot_hash + predictions/   (LEAD = WCA_PREDICT_LEAD_H, default 48h)
 T+0h  ─── live_update     ─── data/live/<id>.json  (real-time score every 10 min)
 T+3h  ─── truth_grade     ─── truth.json + results/ + leaderboard + generated site JSON
 ```
@@ -56,7 +56,7 @@ fixtures:
     enabled: true
 ```
 
-`lock_at_utc` is always derived as `kickoff_utc − 24 hours`.
+`lock_at_utc` is derived as `kickoff_utc − WCA_PREDICT_LEAD_H hours` (default **48h**; set in `src/pipeline/scheduler.py`).
 
 Status check (dry-run; prints each fixture and the phase that would run now):
 

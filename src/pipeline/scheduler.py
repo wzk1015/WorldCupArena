@@ -52,13 +52,23 @@ LIVE_DIR  = ROOT / "data" / "live"
 FIXTURES_YAML = ROOT / "configs" / "fixtures.yaml"
 
 
+# Prediction lead time (hours before kickoff): when the snapshot is locked and
+# every model prediction runs. This is ALSO the anti-leakage information horizon
+# (lock_at) — sources published after kickoff-LEAD are flagged as leaks, so all
+# models predict on the same frozen pre-match info. Override per environment with
+# WCA_PREDICT_LEAD_H (prod can bump it without a code change). Default 48h.
+# Going earlier than ~48h risks missing predicted lineups / late team news, which
+# weakens predictions; 24h was the historical value.
+PREDICT_LEAD_H: int = int(os.environ.get("WCA_PREDICT_LEAD_H", "48"))
+_POPULATE_LEAD_H = PREDICT_LEAD_H + 24  # populate fills context in the 24h before lock
+
 # (phase_name, start_offset_from_kickoff, end_offset_from_kickoff)
 PHASES: list[tuple[str, timedelta, timedelta]] = [
-    ("ingest",       timedelta(days=-7),    timedelta(hours=-24)),
-    ("populate",     timedelta(hours=-48),  timedelta(hours=-24)),
-    ("lock_predict", timedelta(hours=-24),  timedelta(hours=0)),
-    ("live_update",  timedelta(hours=0),    timedelta(hours=3)),
-    ("truth_grade",  timedelta(hours=3),    timedelta(hours=48)),
+    ("ingest",       timedelta(days=-7),                 timedelta(hours=-PREDICT_LEAD_H)),
+    ("populate",     timedelta(hours=-_POPULATE_LEAD_H), timedelta(hours=-PREDICT_LEAD_H)),
+    ("lock_predict", timedelta(hours=-PREDICT_LEAD_H),   timedelta(hours=0)),
+    ("live_update",  timedelta(hours=0),                 timedelta(hours=3)),
+    ("truth_grade",  timedelta(hours=3),                 timedelta(hours=48)),
 ]
 PHASE_NAMES = [p[0] for p in PHASES]
 
@@ -108,7 +118,7 @@ def _phase_ingest(fx: dict, fx_dir: Path) -> None:
         print(f"  [ingest] skip — {fixture_path} exists")
         return
     fx_dir.mkdir(parents=True, exist_ok=True)
-    lock_at = (_parse_iso(fx["kickoff_utc"]) - timedelta(hours=24)).isoformat()
+    lock_at = (_parse_iso(fx["kickoff_utc"]) - timedelta(hours=PREDICT_LEAD_H)).isoformat()
     _run([sys.executable, "-m", "src.ingest.api_football",
           "--provider", _fixture_provider(fx),
           "--fixture-id", str(fx["provider_id"]),
