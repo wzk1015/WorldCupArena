@@ -10,9 +10,15 @@ Phases (windows relative to kickoff):
     ingest       : T-7d  → T-24h   pull fixture.json from the configured football API
     populate     : T-48h → T-24h   fill context_pack (squads/form/news/stats)
     lock_predict : T-24h → T+0h    lock snapshot + run all model predictions
+    repredict_24h: T-24h → T-1h    [opt-in] re-ingest fresh data + re-predict the models in
+                                   WCA_REPREDICT_MODELS (e.g. frontier families) on a later snapshot
+    repredict_1h : T-1h  → T+0h    [opt-in] once more right before kickoff (confirmed lineups)
     live_update  : T+0h  → T+3h    fetch live score every tick → data/live/<id>.json;
                                    immediately triggers truth_grade if "Match Finished"
     truth_grade  : T+3h  → T+48h   pull truth, grade, rebuild leaderboard
+
+The two repredict_* phases exist only when WCA_REPREDICT_MODELS is set (else the
+default benchmark — every model on ONE frozen T-LEAD snapshot — is unchanged).
 
 At each tick, for each fixture, every phase whose window is open runs in
 order. Every phase checks "is my work already done?" before acting:
@@ -23,6 +29,9 @@ order. Every phase checks "is my work already done?" before acting:
                    24h window), runs ingest + populate inline before locking;
                    skip lock if snapshot_hash is set;
                    skip predict if predictions/<wca_id>/ has any json
+    repredict_*  — skip unless WCA_REPREDICT_MODELS set + lock_predict already ran;
+                   fires once per window (marker .repredict_<tag>), --force overwrites
+                   only that subset's files
     live_update  — always overwrites data/live/<id>.json with latest provider response;
                    if status == "Match Finished", calls _phase_truth_grade immediately
     truth_grade  — skip truth download if truth.json exists;
@@ -62,6 +71,16 @@ FIXTURES_YAML = ROOT / "configs" / "fixtures.yaml"
 PREDICT_LEAD_H: int = int(os.environ.get("WCA_PREDICT_LEAD_H", "48"))
 _POPULATE_LEAD_H = PREDICT_LEAD_H + 24  # populate fills context in the 24h before lock
 
+# Optional near-kickoff re-prediction. Comma-separated model ids in WCA_REPREDICT_MODELS
+# (e.g. the frontier families "gpt-5.4,gemini-3.1-pro-preview-thinking,claude-opus-4-7-thinking");
+# empty/unset DISABLES the feature, leaving the default benchmark untouched (every model on one
+# frozen T-LEAD snapshot). When set, those models re-ingest fresh data → re-lock → predict
+# --force at T-24h and T-1h, so they predict on confirmed lineups / late news — i.e. a LATER
+# information horizon than the rest of the field. Use it to measure how much a near-kickoff
+# snapshot helps; those models' scores are then not directly comparable to the T-LEAD models.
+REPREDICT_MODELS: list[str] = [m.strip() for m in os.environ.get("WCA_REPREDICT_MODELS", "").split(",") if m.strip()]
+REPREDICT_OFFSETS_H = (24, 1)  # re-predict windows: [KO-24h, KO-1h) then [KO-1h, KO)
+
 # (phase_name, start_offset_from_kickoff, end_offset_from_kickoff)
 PHASES: list[tuple[str, timedelta, timedelta]] = [
     ("ingest",       timedelta(days=-7),                 timedelta(hours=-PREDICT_LEAD_H)),
@@ -70,6 +89,14 @@ PHASES: list[tuple[str, timedelta, timedelta]] = [
     ("live_update",  timedelta(hours=0),                 timedelta(hours=3)),
     ("truth_grade",  timedelta(hours=3),                 timedelta(hours=48)),
 ]
+# Opt-in near-kickoff re-prediction windows — appended only when WCA_REPREDICT_MODELS is set,
+# so the default phase set (and benchmark behaviour) is unchanged when the feature is off.
+if REPREDICT_MODELS:
+    _r24, _r1 = REPREDICT_OFFSETS_H
+    PHASES += [
+        ("repredict_24h", timedelta(hours=-_r24), timedelta(hours=-_r1)),
+        ("repredict_1h",  timedelta(hours=-_r1),  timedelta(hours=0)),
+    ]
 PHASE_NAMES = [p[0] for p in PHASES]
 
 
@@ -170,6 +197,45 @@ def _phase_lock_predict(fx: dict, fx_dir: Path) -> None:
           "--fixture", str(fixture_path), "--parallel", parallel])
 
 
+def _phase_repredict(fx: dict, fx_dir: Path, tag: str) -> None:
+    """Re-predict WCA_REPREDICT_MODELS close to kickoff, on a freshly re-ingested snapshot.
+
+    Fires once per window (marker .repredict_<tag>) and only after the T-LEAD lock_predict
+    has produced predictions. Re-ingest (lock_at=now) → populate → lock → predict --models
+    <subset> --force, overwriting ONLY those models' files so they predict on later info
+    (confirmed lineups / late news) than the rest of the field. No-op if the subset is empty.
+    """
+    if not REPREDICT_MODELS:
+        return
+    pred_dir = ROOT / "data" / "predictions" / fx["wca_id"]
+    if not (pred_dir.exists() and any(pred_dir.glob("*.json"))):
+        print(f"  [repredict_{tag}] skip — no T-LEAD predictions yet")
+        return
+    marker = pred_dir / f".repredict_{tag}"
+    if marker.exists():
+        print(f"  [repredict_{tag}] skip — already re-predicted")
+        return
+    fixture_path = fx_dir / "fixture.json"
+    fx_dir.mkdir(parents=True, exist_ok=True)
+    lock_at = _now().isoformat()
+    _run([sys.executable, "-m", "src.ingest.api_football",
+          "--provider", _fixture_provider(fx),
+          "--fixture-id", str(fx["provider_id"]), "--wca-id", fx["wca_id"],
+          "--lock-at", lock_at, "--out", str(fixture_path)])
+    raw = json.loads(fixture_path.read_text())
+    if not (raw.get("context_pack") or {}).get("squads"):
+        _run([sys.executable, "-m", "src.pipeline.orchestrator", "populate",
+              "--provider", _fixture_provider(fx), "--fixture", str(fixture_path)])
+    _run([sys.executable, "-m", "src.pipeline.orchestrator", "lock",
+          "--fixture", str(fixture_path)])
+    parallel = os.environ.get("PREDICT_PARALLEL", "4")
+    _run([sys.executable, "-m", "src.pipeline.orchestrator", "predict",
+          "--fixture", str(fixture_path), "--parallel", parallel,
+          "--models", *REPREDICT_MODELS, "--force"])
+    marker.touch()
+    print(f"  [repredict_{tag}] re-predicted {len(REPREDICT_MODELS)} model(s) on a fresh snapshot")
+
+
 def _live_status(wca_id: str) -> str | None:
     """Return the status.long string from data/live/<wca_id>.json, or None."""
     path = LIVE_DIR / f"{wca_id}.json"
@@ -224,11 +290,13 @@ def _phase_truth_grade(fx: dict, fx_dir: Path) -> None:
 
 
 _DISPATCH = {
-    "ingest":       _phase_ingest,
-    "populate":     _phase_populate,
-    "lock_predict": _phase_lock_predict,
-    "live_update":  _phase_live_update,
-    "truth_grade":  _phase_truth_grade,
+    "ingest":        _phase_ingest,
+    "populate":      _phase_populate,
+    "lock_predict":  _phase_lock_predict,
+    "repredict_24h": lambda fx, d: _phase_repredict(fx, d, "24h"),
+    "repredict_1h":  lambda fx, d: _phase_repredict(fx, d, "1h"),
+    "live_update":   _phase_live_update,
+    "truth_grade":   _phase_truth_grade,
 }
 
 
