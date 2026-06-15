@@ -93,7 +93,7 @@ def _apply_model_proxy(model_cfg: dict[str, Any]) -> dict[str, Any]:
         else:
             routed["tools"] = ["web_search"]
             routed["json_mode"] = model_id == "gemini-3.1-pro-preview-thinking-search"
-        routed.setdefault("max_tokens", 12000)
+        routed.setdefault("max_tokens", 32000)
     elif category == "deep_research_agent":
         routed["tools"] = ["web_search"]
         routed["json_mode"] = model_id == "gemini-deep-research"
