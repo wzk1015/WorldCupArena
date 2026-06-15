@@ -1008,9 +1008,11 @@ def build_incoming_matches() -> list[dict]:
         # truth.json is authoritative — if it exists the match is done
         is_finished = (truth is not None) or (live is not None and live.get("status") == "Match Finished")
         is_live = (not is_finished) and live is not None and live.get("status") not in (None, "Not Started", "Match Finished")
-        # Match kicked off recently but has no live file and no result yet — treat as live
+        # Match kicked off recently but has no live file and no result yet — treat as live.
+        # After a normal match window, stop surfacing it as "live" on the site;
+        # it will move to history once truth/live data arrives.
         is_in_progress = (not is_future and not is_finished and live is None
-                          and kick <= now and now - kick < timedelta(hours=3))
+                          and kick <= now and now - kick < timedelta(minutes=135))
 
         # Skip far-future matches even when predictions already exist; the page
         # should only surface the next 3 days plus live/in-progress fixtures.

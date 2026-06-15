@@ -169,6 +169,71 @@
   .user-score-checkbox { accent-color: #22c55e; }
   .pred-grid { align-items: start; }
   .pred-expanded { grid-column: 1 / -1; }
+  .prominent-toggle {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.9rem;
+    padding: .75rem 1rem;
+    border-radius: .8rem;
+    font-size: .9rem;
+    font-weight: 900;
+    color: #bbf7d0;
+    background: rgba(34,197,94,.16);
+    border: 1px solid rgba(34,197,94,.42);
+    box-shadow: 0 10px 28px rgba(34,197,94,.1);
+  }
+  .reasoning-summary {
+    cursor: pointer;
+    list-style: none;
+  }
+  .reasoning-summary::-webkit-details-marker { display: none; }
+  .reasoning-toggle-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .42rem;
+    flex: 0 0 auto;
+    min-width: 4.6rem;
+    min-height: 2rem;
+    padding: .38rem .68rem;
+    border-radius: 999px;
+    font-size: .78rem;
+    font-weight: 900;
+    color: #bbf7d0;
+    background: rgba(34,197,94,.2);
+    border: 1px solid rgba(34,197,94,.58);
+    box-shadow: 0 10px 24px rgba(34,197,94,.12);
+  }
+  .reasoning-section[open] .reasoning-toggle-chip {
+    color: #bae6fd;
+    background: rgba(14,165,233,.18);
+    border-color: rgba(14,165,233,.55);
+    box-shadow: 0 10px 24px rgba(14,165,233,.1);
+  }
+  .reasoning-toggle-collapse { display: none; }
+  .reasoning-section[open] .reasoning-toggle-expand { display: none; }
+  .reasoning-section[open] .reasoning-toggle-collapse { display: inline; }
+  .reasoning-summary-icon::before {
+    content: "+";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.35rem;
+    height: 1.35rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,.07);
+    color: #d1d5db;
+    font-size: .9rem;
+    font-weight: 900;
+  }
+  .reasoning-section[open] .reasoning-summary-icon::before { content: "-"; }
+  .reasoning-body p { margin-top: .75rem; margin-bottom: .75rem; }
+  .reasoning-body p:first-child { margin-top: 0; }
+  .reasoning-body p:last-child { margin-bottom: 0; }
+  .mobile-anchor { scroll-margin-top: 5.25rem; }
+  .mobile-toc { display: none; }
   .team-name { overflow-wrap: anywhere; }
   .fixture-logo {
     width: 4rem;
@@ -264,6 +329,25 @@
     border-color: rgba(15,23,42,.12);
     color: #334155;
   }
+  html[data-theme="light"] .prominent-toggle {
+    color: #166534;
+    background: rgba(34,197,94,.13);
+    border-color: rgba(22,163,74,.28);
+  }
+  html[data-theme="light"] .reasoning-toggle-chip {
+    color: #166534;
+    background: rgba(34,197,94,.14);
+    border-color: rgba(22,163,74,.32);
+  }
+  html[data-theme="light"] .reasoning-section[open] .reasoning-toggle-chip {
+    color: #075985;
+    background: rgba(14,165,233,.13);
+    border-color: rgba(2,132,199,.3);
+  }
+  html[data-theme="light"] .reasoning-summary-icon::before {
+    background: rgba(15,23,42,.07);
+    color: #334155;
+  }
   html[data-theme="light"] input {
     background: rgba(15,23,42,.045) !important;
     border-color: rgba(15,23,42,.14) !important;
@@ -327,23 +411,89 @@
         #f6f8fc;
     }
     section { scroll-margin-top: 4.5rem; }
+    header > div {
+      padding-left: 5.2rem !important;
+    }
+    .mobile-toc {
+      display: block;
+      position: fixed;
+      top: .75rem;
+      left: .75rem;
+      z-index: 60;
+      max-width: min(20rem, calc(100vw - 1.5rem));
+    }
+    .mobile-toc-toggle {
+      min-width: 3.4rem;
+      min-height: 2.35rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: .45rem .85rem;
+      font-size: .8rem;
+      font-weight: 900;
+      color: #bbf7d0;
+      background: rgba(10,15,26,.88);
+      border: 1px solid rgba(34,197,94,.42);
+      box-shadow: 0 14px 38px rgba(0,0,0,.36);
+      backdrop-filter: blur(14px);
+    }
+    .mobile-toc-panel {
+      width: min(20rem, calc(100vw - 1.5rem));
+      max-height: min(72vh, 34rem);
+      overflow-y: auto;
+      margin-top: .55rem;
+      padding: .7rem;
+      border-radius: 1rem;
+      background: rgba(10,15,26,.94);
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 20px 56px rgba(0,0,0,.46);
+      backdrop-filter: blur(16px);
+    }
+    .mobile-toc-link {
+      display: block;
+      border-radius: .65rem;
+      padding: .48rem .55rem;
+      color: #e5e7eb;
+      font-size: .82rem;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+    .mobile-toc-link:active,
+    .mobile-toc-link:hover { background: rgba(255,255,255,.08); }
+    .mobile-toc-sub {
+      display: block;
+      border-radius: .55rem;
+      padding: .38rem .55rem .38rem 1.15rem;
+      color: #9ca3af;
+      font-size: .74rem;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
+    }
+    .mobile-toc-sub:active,
+    .mobile-toc-sub:hover { background: rgba(255,255,255,.06); color: #e5e7eb; }
+    html[data-theme="light"] .mobile-toc-toggle {
+      color: #166534;
+      background: rgba(255,255,255,.92);
+      border-color: rgba(22,163,74,.28);
+      box-shadow: 0 14px 38px rgba(15,23,42,.16);
+    }
+    html[data-theme="light"] .mobile-toc-panel {
+      background: rgba(255,255,255,.96);
+      border-color: rgba(15,23,42,.12);
+      box-shadow: 0 20px 56px rgba(15,23,42,.18);
+    }
+    html[data-theme="light"] .mobile-toc-link { color: #0f172a; }
+    html[data-theme="light"] .mobile-toc-sub { color: #64748b; }
+    html[data-theme="light"] .mobile-toc-link:active,
+    html[data-theme="light"] .mobile-toc-link:hover,
+    html[data-theme="light"] .mobile-toc-sub:active,
+    html[data-theme="light"] .mobile-toc-sub:hover { background: rgba(15,23,42,.06); color: #0f172a; }
     .chip { padding: .22rem .6rem; }
     .pred-action { padding: .38rem .7rem; font-size: .74rem; }
     .pred-toggle {
-      width: 100%;
-      justify-content: center;
-      padding: .68rem .9rem;
-      border-radius: .75rem;
       font-size: .86rem;
-      color: #bbf7d0;
-      background: rgba(34,197,94,.18);
-      border-color: rgba(34,197,94,.42);
       box-shadow: 0 8px 24px rgba(34,197,94,.08);
-    }
-    html[data-theme="light"] .pred-toggle {
-      color: #166534;
-      background: rgba(34,197,94,.13);
-      border-color: rgba(22,163,74,.28);
     }
     .pred-expanded {
       padding: .75rem;
@@ -432,6 +582,16 @@
 </style>
 </head>
 <body class="min-h-screen">
+<div id="mobile-toc" class="mobile-toc">
+  <button id="mobile-toc-toggle"
+          type="button"
+          onclick="toggleMobileToc()"
+          class="mobile-toc-toggle"
+          data-i18n="mobile_toc"
+          aria-expanded="false"
+          aria-controls="mobile-toc-panel">目录</button>
+  <nav id="mobile-toc-panel" class="mobile-toc-panel hidden" aria-label="Mobile table of contents"></nav>
+</div>
 <button id="user-auth-button"
         onclick="handleUserAuthButton()"
         class="hidden fixed top-3 right-3 sm:right-4 z-30 chip hover:bg-white/15 transition text-xs"
@@ -536,6 +696,6 @@
   开源 · MIT · 研究项目 · <a class="underline" href="https://github.com/wzk1015/WorldCupArena/" target="_blank">source</a>
 </footer>
 
-<script src="app.js?v=20260610-user-pred-clickfix"></script>
+<script src="app.js?v=20260615-reasoning-expand-chip"></script>
 </body>
 </html>

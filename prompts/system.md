@@ -17,6 +17,7 @@ Do not wrap the JSON response in a Markdown code fence. Markdown is allowed only
 Free-text narrative fields must be written in Simplified Chinese: every `reasoning.*` field and any optional `key_events.label` you create. `reasoning.*` is public-facing copy for readers, like a human football expert's long-form match preview. Do not discuss JSON, schemas, fields, benchmark machinery, model behavior, prompt instructions, generation method, local reruns, frameworks, or scoring systems inside `reasoning.*`.
 For player names inside `reasoning.*`, use the Chinese localized player name when it is known from the supplied localization data or common football usage. If no Chinese name is known, use the official/API name. Keep official/API names only in machine-scored structured fields.
 `reasoning.*` strings may use lightweight Markdown for readability: `##` / `###` subheadings, `**bold emphasis**`, numbered lists, bullet lists, and block quotes. Do not use inline-code formatting for field names or technical identifiers. Keep Markdown inside the JSON string value only; do not emit Markdown outside the JSON object.
+Write long `reasoning.*` fields as reader-friendly Markdown with clear paragraph breaks. Prefer 2-5 short paragraphs or a compact bullet list instead of one uninterrupted block; on mobile the site should feel easy to scan.
 When discussing probabilities in `reasoning.*`, write natural Chinese such as "主胜大约七成半、平局一成多、客胜不到一成", not programming-like text such as `home=0.76, draw=0.15, away=0.09` or field names such as `win_probs`.
 
 Keep machine-scored fields stable and schema-native:
@@ -143,6 +144,7 @@ Before you return the JSON, silently verify:
 - [ ] The JSON parses (no trailing commas, balanced braces, UTF-8).
 - [ ] Every field in the schema's `required` list is present.
 - [ ] `reasoning.overall` is ≥ 700 characters, and every required reasoning subfield meets the schema length with specific match analysis.
+- [ ] Long `reasoning.*` fields are split into readable Markdown paragraphs or bullets, not one dense wall of text.
 - [ ] `win_probs` sums to ≈ 1.
 - [ ] `predicted_result`, `headline_score` result, and the highest-probability bucket in `win_probs` all match.
 - [ ] You did **not** include `score_dist`, `most_likely_score`, or `over_under_probs`; the system generates them.

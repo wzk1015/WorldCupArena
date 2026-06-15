@@ -114,6 +114,7 @@ const I18N = {
     nav_incoming: "即将进行",
     nav_leaderboard: "排行榜",
     nav_history: "历史比赛",
+    mobile_toc: "目录",
     hero_tagline: "AI<span class=\"gradient-text\">预测足球比分</span>",
     author_html: "作者 <a class=\"underline hover:text-white\" href=\"https://www.wzk.plus\" target=\"_blank\">Zhaokai Wang</a> · <a class=\"underline hover:text-white\" href=\"mailto:zhaokaiwang99@gmail.com\">zhaokaiwang99@gmail.com</a>",
     section_incoming: "🔮 即将进行的比赛",
@@ -129,6 +130,8 @@ const I18N = {
     setting_s2_tip: "S2 · 可调用工具的 Agent，自主联网搜索。不预先注入上下文，由模型自己检索信息。",
     model_search_suffix: "（联网）",
     reasoning: "推理",
+    reasoning_expand: "展开",
+    reasoning_collapse: "收起",
     full_reasoning_suffix: "完整推理",
     no_reasoning: "暂无推理内容。",
     reasoning_overall: "整体分析",
@@ -288,6 +291,7 @@ const I18N = {
     tournament_bracket_champion: "冠军",
     live: "🟢 进行中",
     live_red: "🔴 进行中",
+    awaiting_result: "赛果同步中",
     kickoff_in: "开赛倒计时 {h}小时 {m}分 {s}秒",
     no_graded: "暂无已评分比赛。",
     model: "模型",
@@ -345,6 +349,7 @@ const I18N = {
     nav_incoming: "Incoming Matches",
     nav_leaderboard: "Leaderboard",
     nav_history: "Past Matches",
+    mobile_toc: "Menu",
     hero_tagline: "AI <span class=\"gradient-text\">Football Score Prediction</span>",
     author_html: "by <a class=\"underline hover:text-white\" href=\"https://www.wzk.plus\" target=\"_blank\">Zhaokai Wang</a> · <a class=\"underline hover:text-white\" href=\"mailto:zhaokaiwang99@gmail.com\">zhaokaiwang99@gmail.com</a>",
     section_incoming: "🔮 Incoming Matches",
@@ -360,6 +365,8 @@ const I18N = {
     setting_s2_tip: "S2 · Tool-using agent, self-directed search. No context pre-injected — the model searches for everything itself.",
     model_search_suffix: " (Search)",
     reasoning: "Reasoning",
+    reasoning_expand: "Expand",
+    reasoning_collapse: "Collapse",
     full_reasoning_suffix: "Full Reasoning",
     no_reasoning: "No reasoning available.",
     reasoning_overall: "Overall Analysis",
@@ -519,6 +526,7 @@ const I18N = {
     tournament_bracket_champion: "Champion",
     live: "🟢 Live",
     live_red: "🔴 LIVE",
+    awaiting_result: "Awaiting result sync",
     kickoff_in: "kickoff in {h}h {m}m {s}s",
     no_graded: "No graded fixtures yet.",
     model: "Model",
@@ -635,6 +643,59 @@ function isMobilePredLayout() {
 
 function showAllModelsText(count) {
   return t(isMobilePredLayout() ? "show_all_models_mobile" : "show_all_models", { count });
+}
+
+function mobileTocMatchLabel(match) {
+  const home = match?.home || "?";
+  const away = match?.away || "?";
+  const date = match?.kickoff_utc ? `${new Date(match.kickoff_utc).toISOString().slice(5, 10)} · ` : "";
+  return `${date}${home} ${t("vs")} ${away}`;
+}
+
+function closeMobileToc() {
+  const panel = document.getElementById("mobile-toc-panel");
+  const toggle = document.getElementById("mobile-toc-toggle");
+  if (panel) panel.classList.add("hidden");
+  if (toggle) toggle.setAttribute("aria-expanded", "false");
+}
+
+function toggleMobileToc() {
+  const panel = document.getElementById("mobile-toc-panel");
+  const toggle = document.getElementById("mobile-toc-toggle");
+  if (!panel) return;
+  const nextOpen = panel.classList.contains("hidden");
+  panel.classList.toggle("hidden", !nextOpen);
+  if (toggle) toggle.setAttribute("aria-expanded", nextOpen ? "true" : "false");
+}
+
+function jumpToMobileTocTarget(id) {
+  const target = document.getElementById(id);
+  if (target && target.tagName === "DETAILS") target.open = true;
+  closeMobileToc();
+}
+
+function renderMobileToc() {
+  const panel = document.getElementById("mobile-toc-panel");
+  if (!panel) return;
+  const incoming = (_siteData?.incoming_matches || [])
+    .map((item, idx) => ({ id: `incoming-match-${idx}`, label: mobileTocMatchLabel(item.fixture || {}) }));
+  const history = (_siteData?.history || [])
+    .map((item, idx) => {
+      const lv = item.live;
+      const isLive = !item.result && lv && lv.status && lv.status !== "Match Finished" && lv.status !== "Not Started";
+      return isLive ? null : { id: `history-match-${idx}`, label: mobileTocMatchLabel(item) };
+    })
+    .filter(Boolean);
+  const link = (href, label) => `<a href="${href}" class="mobile-toc-link" onclick="closeMobileToc()">${esc(label)}</a>`;
+  const sub = (id, label) => `<a href="#${id}" class="mobile-toc-sub" onclick="jumpToMobileTocTarget('${id}')">${esc(label)}</a>`;
+  panel.innerHTML = `
+    ${link("#next", t("section_incoming"))}
+    ${incoming.map(item => sub(item.id, item.label)).join("")}
+    ${link("#tournament", t("section_tournament"))}
+    ${link("#leaderboard", t("section_leaderboard"))}
+    ${link("#history", t("section_history"))}
+    ${history.map(item => sub(item.id, item.label)).join("")}
+  `;
 }
 
 function applyStaticI18n() {
@@ -1453,11 +1514,21 @@ function reasoningEntries(r) {
 function renderReasoningSections(r) {
   const rows = reasoningEntries(r);
   if (!rows.length) return `<div class="text-gray-400 text-sm py-2">${t("no_reasoning")}</div>`;
-  return rows.map(([, label, text]) => `
-    <section class="rounded-lg px-3 py-3" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);">
-      <div class="text-[10px] text-gray-400 uppercase tracking-wider mb-1">${esc(label)}</div>
-      <div class="text-sm text-gray-200 leading-relaxed">${renderMarkdownText(text)}</div>
-    </section>`).join("");
+  return rows.map(([key, label, text], index) => {
+    const open = key === "overall" || (index === 0 && !rows.some(([k]) => k === "overall"));
+    return `
+    <details${open ? " open" : ""} class="reasoning-section rounded-lg px-3 py-3" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);">
+      <summary class="reasoning-summary flex items-center justify-between gap-3">
+        <span class="text-[10px] text-gray-400 uppercase tracking-wider">${esc(label)}</span>
+        <span class="reasoning-toggle-chip">
+          <span class="reasoning-toggle-expand">${t("reasoning_expand")}</span>
+          <span class="reasoning-toggle-collapse">${t("reasoning_collapse")}</span>
+          <span class="reasoning-summary-icon" aria-hidden="true"></span>
+        </span>
+      </summary>
+      <div class="reasoning-body text-sm text-gray-200 leading-relaxed mt-2">${renderMarkdownText(text)}</div>
+    </details>`;
+  }).join("");
 }
 
 function buildReasoningModal() {
@@ -1483,17 +1554,26 @@ function openReasoningModal(idx) {
   const titleSetting = (!_matchmateMode && p.setting) ? ` (${p.setting})` : "";
   document.getElementById("reasoning-modal-title").textContent =
     `${fmtModelId(p)}${titleSetting} — ${t("full_reasoning_suffix")}`;
-  const rows = reasoningEntries(r)
-    .map(([k, label]) => `
-      <tr style="border-top:1px solid rgba(255,255,255,.08)">
-        <td style="padding:.75rem .75rem .75rem 0;vertical-align:top;width:8rem;white-space:nowrap;"
-            class="text-xs font-semibold text-gray-400">${esc(label)}</td>
-        <td style="padding:.75rem 0;" class="text-sm text-gray-200 leading-relaxed">${renderMarkdownText(r[k])}</td>
-      </tr>`).join("");
+  const entries = reasoningEntries(r);
+  const hasOverall = entries.some(([k]) => k === "overall");
+  const rows = entries
+    .map(([key, label, text], index) => {
+      const open = key === "overall" || (index === 0 && !hasOverall);
+      return `
+        <details${open ? " open" : ""} class="reasoning-section rounded-lg px-3 py-3 mb-3" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);">
+          <summary class="reasoning-summary flex items-center justify-between gap-3">
+            <span class="text-[10px] text-gray-400 uppercase tracking-wider">${esc(label)}</span>
+            <span class="reasoning-toggle-chip">
+              <span class="reasoning-toggle-expand">${t("reasoning_expand")}</span>
+              <span class="reasoning-toggle-collapse">${t("reasoning_collapse")}</span>
+              <span class="reasoning-summary-icon" aria-hidden="true"></span>
+            </span>
+          </summary>
+          <div class="reasoning-body text-sm text-gray-200 leading-relaxed mt-2">${renderMarkdownText(text)}</div>
+        </details>`;
+    }).join("");
   document.getElementById("reasoning-modal-body").innerHTML =
-    `<table style="width:100%;border-collapse:collapse;"><tbody>${rows ||
-      `<tr><td class="text-gray-400 text-sm py-2">${t("no_reasoning")}</td></tr>`
-    }</tbody></table>`;
+    rows || `<div class="text-gray-400 text-sm py-2">${t("no_reasoning")}</div>`;
   document.getElementById("reasoning-modal").style.display = "flex";
 }
 
@@ -1931,7 +2011,7 @@ function buildGoalEventsForScore(score, scorers = [], assisters = [], penalties 
 
 function buildPredictedTimelineEvents(p) {
   const events = buildGoalEventsForScore(
-    p.most_likely_score || p.headline_score,
+    p.headline_score || p.most_likely_score,
     p.scorers || [],
     p.assisters || [],
     p.penalties || [],
@@ -2445,7 +2525,7 @@ function renderPredCard(p, f, idx, opts = {}) {
   const scoreDist  = (p.score_dist || []).slice().sort((a, b) => (b.p || 0) - (a.p || 0));
   const wp         = p.win_probs || winProbsFromScoreDist(scoreDist) || {};
   const top3       = scoreDist.slice(0, 3);
-  const predScore  = p.most_likely_score || (top3[0] ? top3[0].score : null);
+  const predScore  = p.headline_score || p.most_likely_score || (top3[0] ? top3[0].score : null);
   const hName      = f.home || t("home");
   const aName      = f.away || t("away");
   const status     = p.status || "ok";
@@ -2556,7 +2636,8 @@ function renderPredGrid(preds, f, startIdx, groupId, opts = {}) {
   const desktopFoldTopN = Number(opts.desktopFoldTopN || 0);
   const useMobileFold = mobileFoldTopN > 0 && isMobilePredLayout() && preds.length > mobileFoldTopN;
   const useDesktopFold = !isMobilePredLayout() && desktopFoldTopN > 0 && preds.length > desktopFoldTopN;
-  const allowFold = opts.allowFold !== false || useMobileFold;
+  const useTopNFold = useMobileFold || useDesktopFold;
+  const allowFold = opts.allowFold !== false;
   const indexed = preds.map((p, i) => ({
     pred: p,
     idx: startIdx + i,
@@ -2564,7 +2645,7 @@ function renderPredGrid(preds, f, startIdx, groupId, opts = {}) {
       ? i >= mobileFoldTopN
       : useDesktopFold
         ? i >= desktopFoldTopN
-        : (allowFold && p.default_visible === false),
+        : (allowFold && !useTopNFold && p.default_visible === false),
   }));
   const hiddenCount = allowFold ? indexed.filter(item => item.hidden).length : 0;
   const visibleItems = allowFold ? indexed.filter(item => !item.hidden) : indexed;
@@ -2601,7 +2682,7 @@ function renderPredGrid(preds, f, startIdx, groupId, opts = {}) {
     </div>
     ${hiddenCount ? `
       <button onclick="togglePredictionGroup('${groupId}', this)"
-              class="chip pred-toggle hover:bg-white/15 transition text-xs mt-2"
+              class="pred-toggle prominent-toggle hover:bg-white/15 transition mt-3"
               data-hidden-count="${hiddenCount}">${showAllModelsText(hiddenCount)}</button>
     ` : ""}`;
 }
@@ -2611,15 +2692,25 @@ function renderPredList(preds, f, startIdx, groupId) {
     allowFold: true,
     showActualSummary: false,
     desktopFoldTopN: 4,
-    mobileFoldTopN: 3,
+    mobileFoldTopN: 4,
   });
 }
 
 function renderAllPredCards(preds, f, startIdx) {
   return renderPredGrid(preds, f, startIdx, `pred-grid-${startIdx}`, {
-    allowFold: false,
+    allowFold: true,
     showActualSummary: true,
-    mobileFoldTopN: 3,
+    desktopFoldTopN: 4,
+    mobileFoldTopN: 4,
+  });
+}
+
+function renderIncomingPredCards(preds, f, startIdx, groupId) {
+  return renderPredGrid(preds, f, startIdx, groupId, {
+    allowFold: true,
+    showActualSummary: true,
+    desktopFoldTopN: 4,
+    mobileFoldTopN: 4,
   });
 }
 
@@ -3407,6 +3498,7 @@ function _renderOneFixture(nm, cardIdx) {
   const f     = nm.fixture;
   const kick  = f.kickoff_utc ? new Date(f.kickoff_utc) : null;
   const cid   = `nm-countdown-${cardIdx}`;
+  const fixtureId = `incoming-match-${cardIdx}`;
   const basePreds = nm.predictions || [];
   const livePreds = nm.live_predictions || [];
   const preds = attachLivePredictions(basePreds, livePreds);
@@ -3441,7 +3533,7 @@ function _renderOneFixture(nm, cardIdx) {
        ${renderVenueLocation(f)}`;
 
   const html = `
-    <div class="card rounded-2xl p-4 sm:p-6">
+    <div id="${fixtureId}" class="card rounded-2xl p-4 sm:p-6 mobile-anchor">
       <div class="pitch rounded-xl p-3 sm:p-5 mb-4 sm:mb-6">
         <div class="grid grid-cols-3 items-center gap-2">
           <div class="text-center">
@@ -3461,7 +3553,7 @@ function _renderOneFixture(nm, cardIdx) {
       ${renderLivePredictions(standaloneLivePreds, f)}
       ${preds.length === 0
         ? (livePreds.length ? "" : `<div class="text-gray-400 text-sm">${t("no_model_predictions")}</div>`)
-        : renderAllPredCards(preds, f, nmStart)}
+        : renderIncomingPredCards(preds, f, nmStart, `pred-group-incoming-${nmStart}`)}
       ${f.data_warning ? `<div class="mt-3 text-xs text-amber-300/80">${esc(f.data_warning)}</div>` : ""}
     </div>`;
 
@@ -3491,7 +3583,10 @@ function renderIncomingMatches(matches) {
       const el2 = document.getElementById(cid);
       if (!el2) return;
       const diff = kick - new Date();
-      if (diff <= 0) { el2.textContent = t("live"); return; }
+      if (diff <= 0) {
+        el2.textContent = Math.abs(diff) > 135 * 60000 ? t("awaiting_result") : t("live");
+        return;
+      }
       const h = Math.floor(diff / 3600000);
       const m = Math.floor((diff % 3600000) / 60000);
       const s = Math.floor((diff % 60000) / 1000);
@@ -3743,7 +3838,7 @@ function renderHistory(rows) {
           </div>`;
 
     return `
-      <details${collapsedByDefault ? "" : " open"} class="card rounded-xl p-4 col-span-2">
+      <details id="history-match-${rowIdx}"${collapsedByDefault ? "" : " open"} class="card rounded-xl p-4 col-span-2 mobile-anchor">
         <summary class="cursor-pointer select-none">
           <div class="flex items-center justify-between">
           <div>
@@ -3807,7 +3902,10 @@ function renderSiteData() {
   renderTournamentPredictions(_siteData.tournament_predictions || null);
   syncLeaderboardTabs();
   renderLeaderboard(_siteData.leaderboard || { main: [] }, _activeLeaderboardView);
-  requestAnimationFrame(() => renderHistory(_siteData.history || []));
+  requestAnimationFrame(() => {
+    renderHistory(_siteData.history || []);
+    renderMobileToc();
+  });
 }
 
 function setupResponsivePredictions() {
