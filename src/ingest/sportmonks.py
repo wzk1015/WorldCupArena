@@ -386,6 +386,68 @@ def _squad_to_api_football(raw: dict[str, Any], team_id: int) -> dict[str, Any]:
     return {"response": [{"team": {"id": team_id, "name": team_name}, "players": players}]}
 
 
+ODDS_INCLUDE = "bookmaker;market"
+# SportMonks pre-match markets we surface, chosen to match what the shared
+# api_football odds normaliser understands: 1 = FULLTIME_RESULT (1X2),
+# 80 = GOALS_OVER_UNDER. Everything else (correct score, player props, …) is
+# dropped — the prompt only consumes match_winner + totals.
+_ODDS_MARKET_WINNER = 1
+_ODDS_MARKET_TOTALS = 80
+
+
+def sportmonks_odds_to_api_football(raw: dict[str, Any]) -> dict[str, Any]:
+    """Reshape SportMonks pre-match odds into the API-Football ``/odds`` response
+    shape so the shared ``api_football._normalize_odds`` consumes it unchanged.
+
+    SportMonks ``/odds/pre-match/fixtures/{id}?include=bookmaker;market`` returns
+    one row per (bookmaker x market x outcome) under ``data``; each row carries
+    ``market_id``, ``label`` (Home/Draw/Away or Over/Under), ``value`` (decimal
+    odd), ``total`` (the O/U line) and a nested ``bookmaker``. We keep only 1X2
+    and Over/Under, grouped per bookmaker into ``bets`` named the way
+    ``_normalize_odds`` matches ("Match Winner" / "Goals Over/Under").
+    """
+    rows = raw.get("data") or []
+    by_bookmaker: dict[Any, dict[str, Any]] = {}
+    last_update: str | None = None
+    for row in rows:
+        market_id = row.get("market_id")
+        if market_id not in (_ODDS_MARKET_WINNER, _ODDS_MARKET_TOTALS):
+            continue
+        label = row.get("label")
+        odd = row.get("value")
+        if label is None or odd is None:
+            continue
+        last_update = row.get("latest_bookmaker_update") or last_update
+        bm_id = row.get("bookmaker_id")
+        bucket = by_bookmaker.setdefault(
+            bm_id,
+            {"id": bm_id, "name": (row.get("bookmaker") or {}).get("name"), "winner": [], "totals": []},
+        )
+        if market_id == _ODDS_MARKET_WINNER:
+            bucket["winner"].append({"value": str(label), "odd": str(odd)})
+        else:  # GOALS_OVER_UNDER -> "Over 2.5" / "Under 2.5" (what _normalize_total_line parses)
+            total = row.get("total")
+            value = f"{label} {total}" if total not in (None, "") else str(label)
+            bucket["totals"].append({"value": value, "odd": str(odd)})
+
+    bookmakers: list[dict[str, Any]] = []
+    for bucket in by_bookmaker.values():
+        bets: list[dict[str, Any]] = []
+        if bucket["winner"]:
+            bets.append({"name": "Match Winner", "values": bucket["winner"]})
+        if bucket["totals"]:
+            bets.append({"name": "Goals Over/Under", "values": bucket["totals"]})
+        if bets:
+            bookmakers.append({"id": bucket["id"], "name": bucket["name"], "bets": bets})
+
+    if not bookmakers:
+        return {"response": []}
+    entry: dict[str, Any] = {"bookmakers": bookmakers}
+    if last_update:
+        entry["update"] = last_update
+    return {"response": [entry]}
+
+
 class SportMonksClient:
     def __init__(self, api_key: str | None = None):
         self.api_key = api_key or os.environ["SPORTMONKS_API_KEY"]
@@ -428,3 +490,14 @@ class SportMonksClient:
         rows.sort(key=lambda item: item.get("starting_at") or "", reverse=True)
         converted = [sportmonks_fixture_to_api_football({"data": item})["response"][0] for item in rows[:last]]
         return {"response": converted}
+
+    def odds(self, fixture_id: int) -> dict[str, Any]:
+        """Pre-match bookmaker odds reshaped to the API-Football /odds shape.
+
+        Mirrors APIFootballClient.odds so populate_context_pack's polymorphic
+        ``client.odds(...)`` call now yields a non-empty ``odds`` block under the
+        SportMonks provider too. 401/403 (plan/league not covered) propagate and
+        are swallowed by populate_context_pack's try/except, same as api_football.
+        """
+        raw = self._get(f"/odds/pre-match/fixtures/{fixture_id}", include=ODDS_INCLUDE)
+        return sportmonks_odds_to_api_football(raw)
