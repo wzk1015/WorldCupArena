@@ -131,14 +131,15 @@ def price_tokens(self, input_tokens: int, output_tokens: int) -> float:
 Regardless of integration path, the model's final JSON response must conform to [schemas/prediction.schema.json](../schemas/prediction.schema.json). The required fields, in the order they must appear:
 
 1. `fixture_id`, `model_id`, `setting`, `submitted_at`
-2. `reasoning` — **must come first before any numeric field**. Required keys: `overall` (≥80 characters). Optional but recommended: `t1_result`, `t2_player`, `t3_events`, `t4_stats`.
-3. `win_probs` — `{home, draw, away}`, summing to 1 ±1e-2.
-4. `headline_score`, `expected_goal_diff`, `match_profile`, `expected_total_goals`, optional `advance_prob`. `headline_score` must land in the highest-probability `win_probs` bucket.
-5. Do not output `score_dist`, `most_likely_score`, or `over_under_probs`; the pipeline generates them before saving.
-6. `lineups.home.starting` and `lineups.away.starting` — exactly 11 players each.
-7. `formations.home`, `formations.away` — e.g. `"4-3-3"`.
-8. `scorers` — array, each with `{player, team, p}` (optional `minute_range`).
-9. `stats` — 8 required keys: `possession`, `shots`, `shots_on_target`, `corners`, `pass_accuracy`, `fouls`, `saves`, `defensive_actions`. Each value is `{home, away}`.
+2. `reasoning` — **must come first before any numeric field**. Required keys: `overall`, `market_odds`, `lineup_analysis`, `tactical_analysis`, `h2h_recent_form`, `player_matchups`, `injuries_availability`, `upset_draw_blowout_cases`, `score_result_rationale`, `t1_result`, `t2_player`, `t3_events`, `t4_stats`.
+3. `predicted_result` and `headline_score` — the model-owned final result and exact-score point forecast. They must agree with the highest-probability `win_probs` bucket.
+4. `win_probs` — `{home, draw, away}`, summing to 1 ±1e-2.
+5. `expected_goal_diff`, `match_profile`, `expected_total_goals`, optional `advance_prob`.
+6. Do not output `score_dist`, `most_likely_score`, or `over_under_probs`; the pipeline may generate them after saving for display/backward compatibility.
+7. `lineups.home.starting` and `lineups.away.starting` — exactly 11 players each.
+8. `formations.home`, `formations.away` — e.g. `"4-3-3"`.
+9. `scorers` — array, each with `{player, team, p}` (optional `minute_range`).
+10. `stats` — 8 required keys: `possession`, `shots`, `shots_on_target`, `corners`, `pass_accuracy`, `fouls`, `saves`, `defensive_actions`. Each value is `{home, away}`.
 
 Optional but scored: `assisters`, `substitutions`, `cards`, `penalties`, `own_goals`, `motm_probs`, `sources`.
 

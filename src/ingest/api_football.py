@@ -19,6 +19,7 @@ Key endpoints:
     GET /fixtures/events?fixture=<id>           goals / cards / subs
     GET /fixtures/lineups?fixture=<id>          starting XI + bench
     GET /fixtures/statistics?fixture=<id>       match stats
+    GET /odds?fixture=<fixture_id>              pre-match bookmaker odds
     GET /players/squads?team=<id>               squads
     GET /teams/statistics?team=<id>&season=YYYY  recent form
 """
@@ -290,6 +291,10 @@ class APIFootballClient:
         """Last N completed fixtures for a team across all competitions."""
         return self._get("/fixtures", team=team_id, last=last, status="FT-AET-PEN")
 
+    def odds(self, fixture_id: int) -> dict[str, Any]:
+        """Pre-match bookmaker odds for a fixture, when the API plan provides them."""
+        return self._get("/odds", fixture=fixture_id)
+
 
 def football_api_provider(provider: str | None = None) -> str:
     """Return the configured football data provider id."""
@@ -397,6 +402,158 @@ def _aggregate_stats(raw_fixtures: dict, team_id: int) -> dict[str, Any]:
                     totals.setdefault(wca_key, []).append(val)
 
     return {k: round(sum(v) / len(v), 1) for k, v in totals.items() if v}
+
+
+def _decimal_odd(value: Any) -> float | None:
+    try:
+        odd = float(value)
+    except (TypeError, ValueError):
+        return None
+    return odd if odd > 1.0 else None
+
+
+def _odds_outcome(value: Any, home_name: str, away_name: str) -> str | None:
+    text = " ".join(str(value or "").casefold().replace(".", " ").split())
+    home_norm = " ".join(home_name.casefold().replace(".", " ").split())
+    away_norm = " ".join(away_name.casefold().replace(".", " ").split())
+    if text in {"home", "1", home_norm} or text == home_norm:
+        return "home"
+    if text in {"draw", "x", "tie"}:
+        return "draw"
+    if text in {"away", "2", away_norm} or text == away_norm:
+        return "away"
+    if home_norm and home_norm in text and away_norm not in text:
+        return "home"
+    if away_norm and away_norm in text and home_norm not in text:
+        return "away"
+    return None
+
+
+def _normalize_match_winner_market(
+    values: list[dict[str, Any]],
+    home_name: str,
+    away_name: str,
+) -> dict[str, dict[str, float]] | None:
+    raw: dict[str, list[float]] = {"home": [], "draw": [], "away": []}
+    for item in values or []:
+        outcome = _odds_outcome(item.get("value") or item.get("name"), home_name, away_name)
+        odd = _decimal_odd(item.get("odd") or item.get("decimal"))
+        if outcome and odd:
+            raw[outcome].append(odd)
+    if any(not raw[outcome] for outcome in ("home", "draw", "away")):
+        return None
+    avg_decimal = {outcome: sum(vals) / len(vals) for outcome, vals in raw.items()}
+    implied = {outcome: 1.0 / avg_decimal[outcome] for outcome in avg_decimal}
+    total = sum(implied.values()) or 1.0
+    return {
+        outcome: {
+            "decimal": round(avg_decimal[outcome], 3),
+            "implied": round(implied[outcome], 3),
+            "no_vig": round(implied[outcome] / total, 3),
+        }
+        for outcome in ("home", "draw", "away")
+    }
+
+
+def _normalize_total_line(value: Any) -> float | None:
+    text = str(value or "").casefold().replace("over", "").replace("under", "").strip()
+    try:
+        return float(text)
+    except ValueError:
+        return None
+
+
+def _normalize_odds(raw_odds: dict[str, Any], raw_fixture: dict[str, Any]) -> dict[str, Any]:
+    """Convert API-Football /odds into a compact prompt-friendly context block."""
+    response = raw_odds.get("response") or []
+    if not response:
+        return {}
+
+    r0 = raw_fixture["response"][0]
+    home_name = ((r0.get("teams") or {}).get("home") or {}).get("name", "Home")
+    away_name = ((r0.get("teams") or {}).get("away") or {}).get("name", "Away")
+
+    bookmaker_rows: list[dict[str, Any]] = []
+    winner_markets: list[dict[str, dict[str, float]]] = []
+    total_lines: dict[float, dict[str, list[float]]] = {}
+    last_updated = None
+
+    for fixture_odds in response:
+        last_updated = fixture_odds.get("update") or fixture_odds.get("updated_at") or last_updated
+        for bm in fixture_odds.get("bookmakers") or []:
+            markets = []
+            for bet in bm.get("bets") or []:
+                name = bet.get("name") or ""
+                values = bet.get("values") or []
+                markets.append({
+                    "name": name,
+                    "values": [
+                        {"value": item.get("value"), "odd": item.get("odd")}
+                        for item in values
+                        if item.get("value") is not None and item.get("odd") is not None
+                    ],
+                })
+                lname = str(name).casefold()
+                if lname in {"match winner", "1x2", "fulltime result", "full time result"}:
+                    winner = _normalize_match_winner_market(values, home_name, away_name)
+                    if winner:
+                        winner_markets.append(winner)
+                elif "goals over/under" in lname or "over/under" in lname or lname == "total goals":
+                    for item in values:
+                        odd = _decimal_odd(item.get("odd"))
+                        line = _normalize_total_line(item.get("value"))
+                        text = str(item.get("value") or "").casefold()
+                        if odd is None or line is None:
+                            continue
+                        bucket = total_lines.setdefault(line, {"over": [], "under": []})
+                        if "over" in text:
+                            bucket["over"].append(odd)
+                        elif "under" in text:
+                            bucket["under"].append(odd)
+            if markets:
+                bookmaker_rows.append({
+                    "id": bm.get("id"),
+                    "name": bm.get("name"),
+                    "markets": markets,
+                })
+
+    consensus: dict[str, Any] = {}
+    if winner_markets:
+        consensus["match_winner"] = {}
+        for outcome in ("home", "draw", "away"):
+            decimals = [market[outcome]["decimal"] for market in winner_markets if outcome in market]
+            implied = [market[outcome]["implied"] for market in winner_markets if outcome in market]
+            if not decimals or not implied:
+                continue
+            consensus["match_winner"][outcome] = {
+                "decimal": round(sum(decimals) / len(decimals), 3),
+                "implied": round(sum(implied) / len(implied), 3),
+            }
+        total_implied = sum(v["implied"] for v in consensus["match_winner"].values()) or 1.0
+        for value in consensus["match_winner"].values():
+            value["no_vig"] = round(value["implied"] / total_implied, 3)
+        consensus["match_winner"]["bookmaker_count"] = len(winner_markets)
+
+    totals = []
+    for line, prices in sorted(total_lines.items()):
+        item: dict[str, Any] = {"line": line}
+        for side in ("over", "under"):
+            if prices[side]:
+                decimal = sum(prices[side]) / len(prices[side])
+                item[side] = {"decimal": round(decimal, 3), "implied": round(1.0 / decimal, 3)}
+        if "over" in item or "under" in item:
+            totals.append(item)
+    if totals:
+        consensus["totals"] = totals[:8]
+
+    return {
+        "source": "api_football_odds",
+        "last_updated": last_updated,
+        "home": home_name,
+        "away": away_name,
+        "consensus": consensus,
+        "bookmakers": bookmaker_rows[:12],
+    }
 
 
 def _parse_score(score: str) -> tuple[int, int] | None:
@@ -529,6 +686,13 @@ def populate_context_pack(
     home_recent_raw = client.team_recent_fixtures(home_id, last=recent_n)
     print(f"  fetching recent fixtures (away)…")
     away_recent_raw = client.team_recent_fixtures(away_id, last=recent_n)
+    print(f"  fetching bookmaker odds…")
+    try:
+        odds_raw = client.odds(int(r0["fixture"]["id"]))
+        odds = _normalize_odds(odds_raw, raw)
+    except Exception as e:  # noqa: BLE001
+        print(f"  odds unavailable: {type(e).__name__}: {e}")
+        odds = {}
 
     cp = raw.get("context_pack") or {}
     cp["squads"] = {
@@ -544,6 +708,8 @@ def populate_context_pack(
         "away": _aggregate_stats(away_recent_raw, away_id),
         "n":    recent_n,
     }
+    if odds:
+        cp["odds"] = odds
     tie_context = _infer_tie_context(raw, cp["recent_form"])
     if tie_context:
         cp["tie_context"] = tie_context

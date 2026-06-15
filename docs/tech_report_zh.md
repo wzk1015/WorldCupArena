@@ -231,13 +231,13 @@ data/results/<fixture_id>/<model_id>__<setting>.json
 
 ## 9. 输出格式与校验
 
-模型回答必须是完整 JSON 对象。`reasoning` 必须出现在输出中，且 `reasoning.overall` 至少 80 个字符。这样做是为了让模型显式说明判断依据，同时避免只给出一堆数字、没有可审计推理的输出。
+模型回答必须是完整 JSON 对象。`reasoning` 必须出现在输出开头，并拆成多个必填分析字段：市场赔率、阵容、战术、历史交手/近期状态、球员对位、伤停可用性、冷门/平局/大胜路径、比分与赛果逻辑，以及各层评分理由。这样做是为了让模型显式说明判断依据，避免只给出一组保守数字、没有可审计推理的输出。
 
 校验分三层：
 
 1. JSON 解析：runner 先做 best-effort JSON 提取；
 2. JSON Schema：用 `schemas/prediction.schema.json` 检查字段、类型、枚举和结构；
-3. 语义校验：检查概率和、比分分布、胜平负与最高概率比分是否一致、首发是否 11 人、stats 是否完整、fixture_id/setting 是否匹配等。
+3. 语义校验：检查概率和、`predicted_result`、`headline_score` 与最高概率胜平负是否一致，生成的兼容比分分布是否自洽，首发是否 11 人，stats 是否完整，fixture_id/setting 是否匹配等。
 
 如果失败，orchestrator 会把错误列表发回同一个模型，要求它返回修复后的完整 JSON，最多重试 `max_format_retries` 次。这个机制避免了赛后评分时才发现输出缺字段的情况。
 
@@ -248,11 +248,12 @@ data/results/<fixture_id>/<model_id>__<setting>.json
 当前策略是让模型拥有几类高层预测：
 
 - `win_probs`：主胜、平、客胜概率；
+- `predicted_result`：模型最终选择的胜平负结果；
 - `headline_score`：模型倾向的代表性比分；
 - `expected_total_goals`；
 - `expected_goal_diff`。
 
-而 `score_dist`、`most_likely_score` 和 over/under 概率由 pipeline 生成。`score_calibration.py` 会用独立 Poisson 网格，并结合模型给出的胜平负、总进球和代表性比分，生成一个归一化的比分分布。
+模型不再输出每个比分的概率。`score_dist`、`most_likely_score` 和 over/under 概率只由 pipeline 为展示和历史兼容生成。`score_calibration.py` 会用独立 Poisson 网格，并结合模型给出的胜平负、总进球和代表性比分，生成一个归一化的兼容比分分布；当 `headline_score` 与最高概率赛果一致时，系统会保留它作为最终展示的 `most_likely_score`。
 
 这样做的动机是降低模型在长 JSON 中手写几十个比分概率时的噪声，同时保留模型对比赛强弱、节奏和总进球的判断。最终保存的记录同时包含：
 

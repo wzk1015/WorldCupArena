@@ -17,18 +17,19 @@ tasks:
   # ------- T1: core result -------
   - id: match_winner_prob
     layer: T1_core_result
-    weight_in_layer: 0.55
+    weight_in_layer: 0.45
     metric: brier_3way
     output_field: win_probs
-    notes: Model-owned home/draw/away probabilities; score grid is generated to match them.
-  - id: most_likely_score
+    notes: Model-owned home/draw/away probabilities. The highest bucket must match predicted_result.
+  - id: headline_score
     layer: T1_core_result
-    weight_in_layer: 0.35
-    metric: rps_score
-    output_field: score_dist
+    weight_in_layer: 0.40
+    metric: scoreline_similarity
+    output_field: headline_score
+    notes: Directly scores the model-owned exact-score point forecast; no per-score probability distribution is required.
   - id: goal_diff_mae
     layer: T1_core_result
-    weight_in_layer: 0.05
+    weight_in_layer: 0.10
     metric: mae
     output_field: expected_goal_diff
   - id: qualification

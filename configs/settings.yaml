@@ -6,7 +6,8 @@
 #
 # Rationale:
 #   - S1 measures what an LLM can do when given the same evidence a human analyst
-#     would assemble (squads + recent form + news headlines + stats). No tool use.
+#     would assemble (squads + recent form + news headlines + stats + bookmaker
+#     odds when available). No tool use.
 #   - S2 measures what a tool-using model/agent can do on its own: it's told what
 #     kinds of evidence to gather (with short concrete examples) and is free to
 #     search for more. No context is pre-injected.
@@ -20,7 +21,7 @@ settings:
   S1:
     description: >-
       Full context pack injected (official squads + recent form + ~20 news
-      headlines + recent stats). No tools.
+      headlines + recent stats + bookmaker odds when available). No tools.
     tools_allowed: false
     inject:
       fixture_header: true
@@ -28,6 +29,7 @@ settings:
       recent_form: true
       news_headlines: true
       stats: true
+      odds: true
       search_guidance: false
 
   S2:

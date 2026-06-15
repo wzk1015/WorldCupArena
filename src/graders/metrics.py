@@ -50,6 +50,38 @@ def rps_score(score_dist: list[dict[str, Any]], actual_score: str) -> float:
     return brier_3way(agg, _result_of(actual_score))
 
 
+def scoreline_similarity(pred_score: str | None, actual_score: str) -> float:
+    """Score an exact-score point forecast without requiring score probabilities.
+
+    The metric rewards exact score first, then correct 1X2 result, then closeness
+    in goal difference, total goals, and per-team goals. It avoids the old
+    requirement that models provide a full scoreline probability distribution.
+    """
+    if not pred_score:
+        return 0.0
+    try:
+        ph, pa = _parse_score(str(pred_score))
+        ah, aa = _parse_score(actual_score)
+    except Exception:  # noqa: BLE001
+        return 0.0
+
+    if ph == ah and pa == aa:
+        return 100.0
+
+    pred_result = "home" if ph > pa else "away" if pa > ph else "draw"
+    actual_result = "home" if ah > aa else "away" if aa > ah else "draw"
+    result_component = 45.0 if pred_result == actual_result else 0.0
+
+    diff_err = abs((ph - pa) - (ah - aa))
+    total_err = abs((ph + pa) - (ah + aa))
+    team_err = abs(ph - ah) + abs(pa - aa)
+
+    diff_component = 25.0 * max(0.0, 1.0 - diff_err / 5.0)
+    total_component = 20.0 * max(0.0, 1.0 - total_err / 6.0)
+    team_component = 10.0 * max(0.0, 1.0 - team_err / 8.0)
+    return max(0.0, min(100.0, result_component + diff_component + total_component + team_component))
+
+
 # ----------------------------------------------------------------------
 # Regression-style
 # ----------------------------------------------------------------------

@@ -12,10 +12,10 @@ All prices are **approximations as of 2026-04** and should be verified against e
 
 | Setting | Injected context | ~Input tokens | Used by |
 |---|---|---:|---|
-| **S1** | fixture header + schema + squads + recent form + ~20 news headlines + recent stats | 19,000 | closed / open LLMs |
-| **S2** | fixture header + schema + self-search guidance block (examples of each evidence type) | 2,000 base + tool output | search-LLMs, agents |
+| **S1** | fixture header + schema + squads + recent form + ~20 news headlines + recent stats + bookmaker odds when available | 21,000 | closed / open LLMs |
+| **S2** | fixture header + schema + self-search guidance block (examples of squads/form/news/stats/odds) | 2,500 base + tool output | search-LLMs, agents |
 
-Output target per run: **~4,000 tokens** (reasoning block + structured JSON).
+Output target per run: **~5,500 tokens** (expanded reasoning block + structured JSON).
 S2 tool-use runs: effective input ~3× base once tool-call round-trips are included.
 Agents are billed per run (flat `price_per_run_usd`), independent of token counts.
 

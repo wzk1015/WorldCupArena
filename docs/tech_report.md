@@ -83,15 +83,15 @@ Two settings, one per family of model:
 
 The **Research Uplift** is defined as S2 − S1 for comparable model pairs (same base model in both its LLM and tool-using variants, e.g. Claude Sonnet vs Claude Sonnet + web_search). Earlier drafts of this report also had "no info, no tools" and "tools, no prompt guidance" cells; both were dropped because they answered questions we are not trying to measure (pure prior / unprompted retrieval).
 
-## 6. Probability elicitation
+## 6. Result, score, and market-aware elicitation
 
-All models are asked to return distributions, not point predictions. This is load-bearing:
+Models now return both calibrated 3-way result probabilities and model-owned point picks:
 
-1. Brier/RPS **separates well-calibrated uncertainty** from lucky guesses.
-2. It aligns with bookmaker odds baseline (odds are implicitly probabilities).
-3. It prevents the "always predict 1-0" degenerate strategy from scoring well under exact-match.
+1. `win_probs` preserves calibrated uncertainty for home/draw/away.
+2. `predicted_result` and `headline_score` preserve the model's actual final result and exact-score call.
+3. Bookmaker odds are injected or searched as a market prior, but the prompt requires an explicit agreement/deviation audit so models can justify draws, upsets, blowouts, and high-total matches instead of collapsing to conservative favourite wins.
 
-We normalise distributions post-hoc if the model returns unnormalised probabilities, but apply a small penalty (5 %) if the sum is off by > 1e-3.
+The pipeline no longer asks models to output per-score probabilities. It may still generate `score_dist` and `most_likely_score` after validation for display/backward compatibility, with `headline_score` promoted to the generated top score when coherent. T1 scoring directly evaluates `headline_score` with a point-score similarity metric.
 
 ## 7. Leakage audit
 

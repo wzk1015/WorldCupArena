@@ -656,6 +656,8 @@ def _empty_prediction_payload(
         "win_probs":          {},
         "score_dist":         [],
         "most_likely_score":  None,
+        "headline_score":     None,
+        "predicted_result":   None,
         "expected_goal_diff": None,
         "advance_prob":       None,
         "reasoning":          {},
@@ -739,7 +741,8 @@ def _collect_predictions(
         if not sources:
             sources = rec.get("sources") or []
         win_probs = p.get("win_probs") or derive_win_probs_from_score_dist(p.get("score_dist") or [])
-        most_likely_score = p.get("most_likely_score") or derive_most_likely_score(p.get("score_dist") or [])
+        headline_score = p.get("headline_score")
+        most_likely_score = headline_score or p.get("most_likely_score") or derive_most_likely_score(p.get("score_dist") or [])
         meta = MODEL_META.get(rec["model_id"]) or _infer_model_metadata(rec["model_id"])
 
         out.append({
@@ -748,6 +751,8 @@ def _collect_predictions(
             "win_probs":          win_probs,
             "score_dist":         p.get("score_dist") or [],
             "most_likely_score":  most_likely_score,
+            "headline_score":     headline_score,
+            "predicted_result":   p.get("predicted_result"),
             "expected_goal_diff": p.get("expected_goal_diff"),
             "advance_prob":       p.get("advance_prob"),
             "reasoning":          p.get("reasoning") or {},

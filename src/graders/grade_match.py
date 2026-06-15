@@ -30,6 +30,9 @@ METRIC_FNS = {
     "brier_binary":        lambda p, t: metrics.brier_binary(p.get("advance_prob", 0.5), t.get("advanced", False)),
     "brier_multiclass":    lambda p, t: metrics.brier_multiclass(p.get("champion_probs", {}), t.get("champion", "")),
     "rps_score":           lambda p, t: metrics.rps_score(p["score_dist"], t["score"]),
+    "scoreline_similarity": lambda p, t: metrics.scoreline_similarity(
+        p.get("headline_score") or p.get("most_likely_score"), t["score"]
+    ),
     "mae":                 lambda p, t: metrics.mae(p.get("expected_goal_diff", 0), t.get("goal_diff", 0)),
     "smape":               lambda p, t: metrics.smape(p.get("value", 0), t.get("value", 0)),
     "f1_set":              lambda p, t: metrics.f1_set(p.get("pred_set", []), t.get("truth_set", [])),
@@ -125,6 +128,11 @@ def grade_match(prediction: dict[str, Any], truth: dict[str, Any]) -> dict[str, 
         try:
             if metric in ("brier_3way",):
                 score = metrics.brier_3way(_win_probs(prediction), truth.get("result", ""))
+            elif metric == "scoreline_similarity":
+                score = metrics.scoreline_similarity(
+                    prediction.get("headline_score") or prediction.get("most_likely_score"),
+                    truth["score"],
+                )
             elif metric == "rps_score" and prediction.get("score_dist"):
                 score = metrics.rps_score(prediction["score_dist"], truth["score"])
             elif metric == "mae" and tid == "goal_diff_mae":

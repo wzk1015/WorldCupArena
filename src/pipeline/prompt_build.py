@@ -54,6 +54,95 @@ def _render_stats(stats: dict[str, Any]) -> str:
     return "### Recent stats\n```json\n" + json.dumps(stats, ensure_ascii=False, indent=2) + "\n```"
 
 
+def _render_odds(odds: dict[str, Any]) -> str:
+    if not odds:
+        return (
+            "### Bookmaker odds / market prior\n"
+            "- No pre-match bookmaker odds are available in this fixture snapshot. "
+            "Do not invent odds. For S1, make a market-aware forecast from the "
+            "supplied football evidence; for S2, search for reputable pre-match odds."
+        )
+
+    lines = ["### Bookmaker odds / market prior"]
+    source = odds.get("source")
+    updated = odds.get("last_updated") or odds.get("updated_at")
+    if source or updated:
+        bits = []
+        if source:
+            bits.append(f"source={source}")
+        if updated:
+            bits.append(f"last_updated={updated}")
+        lines.append(f"- Metadata: {', '.join(bits)}")
+
+    consensus = odds.get("consensus") or {}
+    match_winner = consensus.get("match_winner") or odds.get("match_winner")
+    if isinstance(match_winner, dict):
+        labels = {"home": "Home", "draw": "Draw", "away": "Away"}
+        rendered = []
+        for outcome in ("home", "draw", "away"):
+            item = match_winner.get(outcome)
+            if isinstance(item, dict):
+                decimal = item.get("decimal")
+                no_vig = item.get("no_vig") or item.get("probability") or item.get("implied")
+                if isinstance(no_vig, int | float):
+                    rendered.append(f"{labels[outcome]} {float(no_vig):.3f} no-vig")
+                elif decimal:
+                    rendered.append(f"{labels[outcome]} decimal {decimal}")
+            elif isinstance(item, int | float):
+                rendered.append(f"{labels[outcome]} {float(item):.3f}")
+        if rendered:
+            lines.append("- 1X2 consensus: " + "; ".join(rendered))
+
+    totals = consensus.get("totals") or odds.get("totals") or []
+    if isinstance(totals, list) and totals:
+        lines.append("- Totals market:")
+        for item in totals[:6]:
+            if not isinstance(item, dict):
+                continue
+            line = item.get("line")
+            over = item.get("over")
+            under = item.get("under")
+            over_bits = over if isinstance(over, dict) else {}
+            under_bits = under if isinstance(under, dict) else {}
+            lines.append(
+                f"  - {line}: over={over_bits.get('decimal', over)} "
+                f"under={under_bits.get('decimal', under)}"
+            )
+
+    bookmakers = odds.get("bookmakers") or []
+    if isinstance(bookmakers, list) and bookmakers:
+        lines.append("- Raw bookmaker snapshots:")
+        for bm in bookmakers[:6]:
+            if not isinstance(bm, dict):
+                continue
+            name = bm.get("name") or bm.get("bookmaker") or "bookmaker"
+            markets = bm.get("markets") or bm.get("bets") or []
+            snippets = []
+            for market in markets[:3]:
+                if not isinstance(market, dict):
+                    continue
+                market_name = market.get("name") or market.get("market") or market.get("label")
+                values = market.get("values") or market.get("outcomes") or []
+                if isinstance(values, dict):
+                    values = [{"value": k, "odd": v} for k, v in values.items()]
+                value_text = ", ".join(
+                    f"{v.get('value') or v.get('name')}={v.get('odd') or v.get('decimal')}"
+                    for v in values[:4]
+                    if isinstance(v, dict)
+                )
+                if market_name and value_text:
+                    snippets.append(f"{market_name}: {value_text}")
+            if snippets:
+                lines.append(f"  - {name}: " + " | ".join(snippets))
+
+    lines.append(
+        "- Treat odds as a calibrated market prior, not as the answer. Your reasoning must explain "
+        "where you agree with the market and where squad/tactical/injury/motivation evidence justifies "
+        "a draw, upset, blowout, or higher-total deviation."
+    )
+    return "\n".join(lines)
+
+
 def _parse_score(score: str) -> tuple[int, int] | None:
     parts = str(score or "").split("-")
     if len(parts) != 2:
@@ -258,10 +347,10 @@ def _render_search_guidance(fixture: dict[str, Any], ctx: dict[str, Any]) -> str
         f"Work through the factor checklist in the system prompt — squad quality, "
         f"recent form, head-to-head, tactics, formation matchup, player chemistry, "
         f"individual matchups, injuries/suspensions, stakes, fixture congestion, "
-        f"weather, referee, bookmaker signals — and gather evidence for the ones "
+        f"weather, referee, bookmaker odds / market-implied probabilities — and gather evidence for the ones "
         f"that materially move the forecast.\n"
         f"\n"
-        f"**Four core signals you MUST collect** (search for each before predicting):\n"
+        f"**Five core signals you MUST collect** (search for each before predicting):\n"
         f"\n"
         f"1. **Official 23-man squads** for both {home} and {away}, with position / age / club. {_example_squad()}.\n"
         f"2. **Recent form** — last ~10 matches per side (date, competition, opponent, result, score). {_example_form()}.\n"
@@ -269,12 +358,15 @@ def _render_search_guidance(fixture: dict[str, Any], ctx: dict[str, Any]) -> str
         f"covering injuries, suspensions, press-conference notes, tactical previews, and predicted lineups. {_example_news()}.\n"
         f"4. **Recent stats** — rolling per-team aggregates (xG, shots, possession, pass accuracy, "
         f"defensive actions) over a comparable window. {_example_stats()}.\n"
+        f"5. **Bookmaker odds / market prior** — collect at least one reputable pre-match "
+        f"1X2 market and, if available, totals/handicap lines. Convert decimal odds into "
+        f"rough implied probabilities and compare them with your football analysis.\n"
         f"\n"
         f"**Additional signals to search for** (pull whenever they sharpen the forecast): "
         f"**head-to-head record** (including venue splits), **key individual matchups** "
         f"(e.g. their winger vs your full-back), **set-piece specialists and takers**, "
         f"**referee profile** (cards/penalties per game), **weather forecast** for kickoff, "
-        f"and **closing bookmaker odds** as a market-prior cross-check.\n"
+        f"and **alternative bookmaker prices** as a market-prior cross-check.\n"
         f"{tie_guidance}"
         f"\n"
         f"Record every URL you actually visited under the prediction's `sources[]` "
@@ -320,6 +412,7 @@ def build_prompt(
            .replace("{{recent_form_block}}", _render_form(ctx.get("recent_form", {})) if inject.get("recent_form") else "")
            .replace("{{news_block}}", _render_news(ctx.get("news_headlines", [])) if inject.get("news_headlines") else "")
            .replace("{{stats_block}}", _render_stats(ctx.get("stats_last_n", {})) if inject.get("stats") else "")
+           .replace("{{odds_block}}", _render_odds(ctx.get("odds", {})) if inject.get("odds") else "")
            .replace("{{search_guidance_block}}",
                     _render_search_guidance(fixture, ctx) if inject.get("search_guidance") else "")
            .replace("{{schema}}", json.dumps(schema))

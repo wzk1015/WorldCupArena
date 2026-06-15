@@ -490,6 +490,48 @@ def _apply_forced_outcome_top_policy(
     return out
 
 
+def _apply_score_hint_top_policy(
+    rows: list[dict[str, Any]],
+    *,
+    score_hint: str | None,
+) -> list[dict[str, Any]]:
+    """Promote the model-owned headline_score to the generated top score.
+
+    The legacy score_dist is still generated for display/backward compatibility,
+    but the model's exact-score point forecast should remain visible as the
+    final `most_likely_score` whenever the score is valid and was selected.
+    Probability moves only inside the hinted score's outcome bucket.
+    """
+    if not rows or not score_hint:
+        return rows
+    target_outcome = _outcome(score_hint)
+    if not target_outcome:
+        return rows
+    if not any(row.get("score") == score_hint for row in rows):
+        return rows
+
+    out = [dict(row) for row in rows]
+    target = next(row for row in out if row["score"] == score_hint)
+    current_top_p = max(float(row["p"]) for row in out if row["score"] != score_hint)
+    needed = current_top_p + 0.006 - float(target["p"])
+    if needed <= 0:
+        return out
+
+    donors = [
+        row for row in sorted(out, key=lambda item: float(item["p"]), reverse=True)
+        if row.get("outcome") == target_outcome and row["score"] != score_hint
+    ]
+    for donor in donors:
+        if needed <= 0:
+            break
+        available = max(0.0, float(donor["p"]) - 0.001)
+        take = min(available, needed)
+        donor["p"] = float(donor["p"]) - take
+        target["p"] = float(target["p"]) + take
+        needed -= take
+    return out
+
+
 def _round_distribution(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     rows = sorted(rows, key=lambda r: float(r["p"]), reverse=True)
     out = [{"score": str(r["score"]), "p": round(float(r["p"]), 3)} for r in rows]
@@ -546,6 +588,10 @@ def calibrate_score_prediction(
     adjusted = _apply_forced_outcome_top_policy(
         adjusted,
         win_probs,
+        score_hint=model_top_score,
+    )
+    adjusted = _apply_score_hint_top_policy(
+        adjusted,
         score_hint=model_top_score,
     )
     score_dist = _round_distribution(adjusted)
