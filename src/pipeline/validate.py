@@ -225,7 +225,13 @@ def _validate_semantics(
 
     lineups = pred.get("lineups") or {}
     for side in ("home", "away"):
-        starting = (lineups.get(side) or {}).get("starting") or []
+        _side = lineups.get(side)
+        if isinstance(_side, list):
+            starting = _side
+        elif isinstance(_side, dict):
+            starting = _side.get("starting") or []
+        else:
+            starting = []
         if len(starting) != 11:
             errs.append(f"lineups.{side}.starting has {len(starting)} players, need 11")
 
@@ -333,6 +339,17 @@ def normalize_probabilities(pred: dict[str, Any], tol: float = 0.01) -> dict[str
     return generated
 
 
+def _normalize_lineups(pred):
+    """Tolerate models that emit lineups[side] as a flat starting list instead of
+    {starting, bench}; normalize to object form so schema/semantic checks pass."""
+    lu = pred.get("lineups") if isinstance(pred, dict) else None
+    if isinstance(lu, dict):
+        for side in ("home", "away"):
+            v = lu.get(side)
+            if isinstance(v, list):
+                lu[side] = {"starting": v, "bench": []}
+
+
 def validate(
     pred: dict[str, Any],
     *,
@@ -341,6 +358,7 @@ def validate(
     tol: float = 0.01,
 ) -> ValidationReport:
     pred, _ = calibrate_score_prediction(pred)
+    _normalize_lineups(pred)
     rep = ValidationReport()
     for e in _validate_schema(pred):
         rep.add(f"schema: {e}")
