@@ -48,19 +48,19 @@ ROOT = Path(__file__).resolve().parents[2]
 SCHEMA_PATH = ROOT / "schemas" / "prediction.schema.json"
 
 REQUIRED_REASONING_FIELDS: dict[str, int] = {
-    "overall": 240,
-    "market_odds": 80,
-    "lineup_analysis": 80,
-    "tactical_analysis": 80,
-    "h2h_recent_form": 80,
-    "player_matchups": 80,
-    "injuries_availability": 60,
-    "upset_draw_blowout_cases": 100,
-    "score_result_rationale": 80,
-    "t1_result": 40,
-    "t2_player": 40,
-    "t3_events": 40,
-    "t4_stats": 40,
+    "overall": 700,
+    "market_odds": 180,
+    "lineup_analysis": 500,
+    "tactical_analysis": 450,
+    "h2h_recent_form": 300,
+    "player_matchups": 450,
+    "injuries_availability": 220,
+    "upset_draw_blowout_cases": 350,
+    "score_result_rationale": 220,
+    "t1_result": 120,
+    "t2_player": 180,
+    "t3_events": 150,
+    "t4_stats": 150,
 }
 
 

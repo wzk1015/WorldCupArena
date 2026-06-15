@@ -30,7 +30,7 @@
 
     "reasoning": {
       "type": "object",
-      "description": "Output this BEFORE the numeric predictions. Explains the basis of the entire prediction.",
+      "description": "Output this BEFORE the numeric predictions. Explains the basis of the entire prediction. String values may contain lightweight Markdown for public display (headings, bold, ordered/bullet lists, block quotes, inline code).",
       "required": [
         "overall",
         "market_odds",
@@ -47,28 +47,28 @@
         "t4_stats"
       ],
       "properties": {
-        "overall":   { "type": "string", "minLength": 240,
-                        "description": "Main rationale: market odds, form, injuries, tactical matchup, H2H, key players, upset/draw/blowout cases, and final-score logic." },
-        "market_odds": { "type": "string", "minLength": 80,
+        "overall":   { "type": "string", "minLength": 700,
+                        "description": "Main rationale: market odds, form, injuries, tactical matchup, H2H, key players, upset/draw/blowout cases, and final-score logic. May contain lightweight Markdown." },
+        "market_odds": { "type": "string", "minLength": 180,
                         "description": "Bookmaker/implied-probability read and where the model agrees or disagrees." },
-        "lineup_analysis": { "type": "string", "minLength": 80,
+        "lineup_analysis": { "type": "string", "minLength": 500,
                         "description": "Expected XI, role balance, bench/rotation and availability effects." },
-        "tactical_analysis": { "type": "string", "minLength": 80,
+        "tactical_analysis": { "type": "string", "minLength": 450,
                         "description": "Pressing, buildup, transition, set pieces, width/centrality, tempo." },
-        "h2h_recent_form": { "type": "string", "minLength": 80,
+        "h2h_recent_form": { "type": "string", "minLength": 300,
                         "description": "Head-to-head, recent form, goals/xG trend, venue/travel/context." },
-        "player_matchups": { "type": "string", "minLength": 80,
+        "player_matchups": { "type": "string", "minLength": 450,
                         "description": "Concrete player-vs-player or unit-vs-unit matchups." },
-        "injuries_availability": { "type": "string", "minLength": 60,
+        "injuries_availability": { "type": "string", "minLength": 220,
                         "description": "Injuries, suspensions, fitness doubts, rotation risk, or evidence gaps." },
-        "upset_draw_blowout_cases": { "type": "string", "minLength": 100,
+        "upset_draw_blowout_cases": { "type": "string", "minLength": 350,
                         "description": "Explicit plausible draw, upset, and blowout routes before choosing." },
-        "score_result_rationale": { "type": "string", "minLength": 80,
+        "score_result_rationale": { "type": "string", "minLength": 220,
                         "description": "Why predicted_result, headline_score, win_probs, total goals, and goal diff cohere." },
-        "t1_result": { "type": "string", "minLength": 40, "description": "Why this win/draw/loss distribution and scoreline." },
-        "t2_player": { "type": "string", "minLength": 40, "description": "Why these starters, goalscorers, formations." },
-        "t3_events": { "type": "string", "minLength": 40, "description": "Expected event pattern: goal timing, card triggers, subs." },
-        "t4_stats":  { "type": "string", "minLength": 40, "description": "Why these possession/shot/pass numbers." }
+        "t1_result": { "type": "string", "minLength": 120, "description": "Why this win/draw/loss distribution and scoreline." },
+        "t2_player": { "type": "string", "minLength": 180, "description": "Why these starters, goalscorers, formations." },
+        "t3_events": { "type": "string", "minLength": 150, "description": "Expected event pattern: goal timing, card triggers, subs." },
+        "t4_stats":  { "type": "string", "minLength": 150, "description": "Why these possession/shot/pass numbers." }
       },
       "additionalProperties": false
     },

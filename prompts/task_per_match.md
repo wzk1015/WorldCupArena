@@ -33,7 +33,10 @@
 
 Predict the outcome of this match. Produce a single JSON object conforming **exactly** to the JSON Schema below.
 
-Write all explanatory/narrative text in Simplified Chinese. Keep structured scoring fields machine-stable: official/API player names in player-name fields, exact schema enum values, `H-A` score strings, and numeric probabilities/statistics. If useful, mention Chinese or bilingual player names inside the Chinese reasoning text, not in structured player-name fields.
+Write all explanatory/narrative text in Simplified Chinese. `reasoning.*` is public-facing match analysis for readers, like a human football expert's long-form preview. It must not mention JSON, schemas, field names, benchmark machinery, model behavior, prompt instructions, generation method, local reruns, frameworks, or scoring systems. In `reasoning.*`, use Chinese localized player names whenever known; only fall back to official/API names when no Chinese name is available. Keep structured scoring fields machine-stable: official/API player names in player-name fields, exact schema enum values, `H-A` score strings, and numeric probabilities/statistics. Do not put Chinese-only names in structured player-name fields.
+
+You may use lightweight Markdown **inside `reasoning.*` string values** to make the public reasoning easier to read: `##` / `###` subheadings, `**bold**`, ordered lists, bullet lists, and block quotes. Do not use inline-code formatting for field names or technical identifiers. Do not wrap the whole JSON in a Markdown code fence, and do not put Markdown outside the JSON object.
+When discussing probabilities in `reasoning.*`, write natural Chinese such as "主胜大约七成半、平局一成多、客胜不到一成", not programming-like text such as `home=0.76, draw=0.15, away=0.09` or field names such as `win_probs`.
 
 This benchmark now evaluates the model's own final result and final score point forecast. Do **not** output per-score probabilities. The system may still generate legacy display fields after your response, but your required score forecast is `headline_score` and your required result forecast is `predicted_result`.
 
@@ -43,17 +46,17 @@ This benchmark now evaluates the model's own final result and final score point 
 
 ### Field guide (all listed fields are required unless marked optional)
 
-1. `reasoning`  — **emit this first** and fill every required subfield with real analysis, not placeholders.
-   - `overall`  synthesis across market, squad quality, form, tactics, player availability, matchup paths, and final-score logic.
-   - `market_odds`  bookmaker/implied-probability read and where you agree or disagree.
-   - `lineup_analysis`  expected starting XIs, role balance, bench/rotation logic.
-   - `tactical_analysis`  pressing, buildup, transitions, set pieces, width/centrality, match tempo.
-   - `h2h_recent_form`  head-to-head, recent results, goals/xG trend, venue/travel/context.
-   - `player_matchups`  concrete duels: winger vs full-back, striker vs centre-backs, midfield pressure, set-piece targets.
-   - `injuries_availability`  injuries, suspensions, fitness doubts, late rotation risk; say when evidence is thin.
-   - `upset_draw_blowout_cases`  explicitly argue plausible draw/upset/blowout paths before choosing.
-   - `score_result_rationale`  why `predicted_result`, `headline_score`, `win_probs`, total goals, and goal diff cohere.
-   - `t1_result` / `t2_player` / `t3_events` / `t4_stats`  per-layer rationale.
+1. `reasoning`  — **emit this first** and fill every required subfield with long, match-specific analysis, not placeholders. Markdown formatting is allowed inside each string.
+   - `overall`  ≥700 chars, synthesis across market, squad quality, form, tactics, player availability, matchup paths, upset/draw/blowout cases, and final-score logic.
+   - `market_odds`  ≥180 chars, bookmaker/implied-probability read and where you agree or disagree. If odds are unavailable, state that and infer the market prior cautiously.
+   - `lineup_analysis`  ≥500 chars, expected starting XIs, role balance, bench/rotation logic, and availability uncertainty for both teams.
+   - `tactical_analysis`  ≥450 chars, pressing, buildup, transitions, set pieces, width/centrality, match tempo, and game-state changes.
+   - `h2h_recent_form`  ≥300 chars, head-to-head, recent results, goals/xG trend when available, venue/travel/context.
+   - `player_matchups`  ≥450 chars, concrete duels: winger vs full-back, striker vs centre-backs, midfield pressure, goalkeeper workload, set-piece targets.
+   - `injuries_availability`  ≥220 chars, injuries, suspensions, fitness doubts, late rotation risk; say when evidence is thin and do not invent absences.
+   - `upset_draw_blowout_cases`  ≥350 chars, explicitly argue plausible draw, underdog upset, favorite blowout, and high-total chaos paths before choosing.
+   - `score_result_rationale`  ≥220 chars, why the final result, exact score, probabilities, total goals, and goal diff cohere, written as natural football analysis rather than field-by-field bookkeeping.
+   - `t1_result` / `t2_player` / `t3_events` / `t4_stats`  specific per-layer rationale with names, matchups, event timing, and statistics.
 2. `predicted_result` one of `home`, `draw`, `away`; this is your final result pick and must match both the `headline_score` result and the highest `win_probs` bucket.
 3. `headline_score` one exact full-time score `"H-A"`; this is your final score pick. It is evaluated directly.
 4. `win_probs` `{home, draw, away}`, sum ≈ 1. Estimate from evidence plus market prior, but do not let odds force a conservative pick.
@@ -76,6 +79,7 @@ This benchmark now evaluates the model's own final result and final score point 
 
 Do **not** output `score_dist`, `most_likely_score`, or `over_under_probs`; the system generates them.
 Before returning JSON, sanity-check the event timeline: if `headline_score` is `3-0`, the likely goal timeline should contain three credited home goals and zero credited away goals after counting scored penalties and own goals.
+Do not describe that sanity-check inside `reasoning.*`; it is only an internal output check.
 You are allowed to make an aggressive point forecast when the scenario is coherent. A heavy favorite can win `4-0`, `5-1`, `6-0`, or `7-1`; a live underdog can win; a tactically balanced match can have draw as the highest-probability result. Avoid defaulting every favorite to `1-0`, `2-0`, or `2-1`.
 For two-leg knockout ties, explicitly use the previous-leg score and aggregate game state:
 if the first leg had 6+ total goals, both teams' recent games are high-scoring, or one side

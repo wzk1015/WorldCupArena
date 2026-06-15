@@ -22,6 +22,7 @@ import yaml
 from ..ingest.api_football import football_api_provider, get_football_client
 from ..runners import build_runner
 from .prediction_derivatives import best_win_outcome, normalize_win_probs, score_outcome
+from .reasoning_localization import localize_prediction_reasoning
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -230,7 +231,9 @@ def _build_live_prompt(raw: dict[str, Any], wca_id: str) -> tuple[str, str]:
         "You are WorldCupArena's in-play football prediction engine. "
         "Return only a single valid JSON object. Do not include markdown. "
         "Write narrative reasoning in Simplified Chinese, while keeping schema field names, "
-        "enum values, score strings, probabilities, and structured player names machine-stable."
+        "enum values, score strings, probabilities, and structured player names machine-stable. "
+        "Inside reasoning text, write public-facing football analysis only; do not mention JSON fields, "
+        "model behavior, prompts, frameworks, benchmarks, or generation mechanics."
     )
     user_prompt = f"""
 Update the live prediction for this match using only the current match state below.
@@ -239,7 +242,8 @@ Current score: {current_score.get("home")} - {current_score.get("away")}
 Current time: {elapsed_text}
 
 Language and scoring constraints:
-- Write `reasoning.overall` in Simplified Chinese as a complete in-play rationale, covering current score/time, match flow from available events/statistics, probability changes, final-score logic, and future-goalscorer logic.
+- Write `reasoning.overall` in Simplified Chinese as a complete public-facing in-play rationale, covering current score/time, match flow from available events/statistics, probability changes, final-score logic, and future-goalscorer logic.
+- Do not mention field names, JSON, model/framework details, prompt instructions, or implementation checks inside the reasoning. Write it like a human match analyst.
 - Keep `team` values exactly `home` or `away`.
 - Keep `most_likely_score` as an `H-A` score string and probabilities as numbers.
 - For `scorers[].player`, use the official/API player name form from the live state when available. Do not translate structured player-name fields into Chinese-only names; bilingual names may appear in the Chinese reasoning text.
@@ -384,12 +388,13 @@ def _normalize_prediction(pred: dict[str, Any], raw: dict[str, Any]) -> dict[str
     if not win_probs:
         raise ValueError("live prediction missing valid win_probs")
     score = _consistent_score(pred.get("most_likely_score") or pred.get("final_score"), win_probs, _current_score(raw))
-    return {
+    normalized = {
         "win_probs": win_probs,
         "most_likely_score": score,
         "scorers": _normalize_scorers(pred, raw, score),
         "reasoning": _normalize_reasoning(pred.get("reasoning")),
     }
+    return localize_prediction_reasoning(normalized, fixture=raw)
 
 
 def fetch_live_fixture(fixture_id: str, wca_id: str, provider: str | None = None) -> dict[str, Any]:

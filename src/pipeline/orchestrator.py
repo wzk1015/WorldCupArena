@@ -31,6 +31,7 @@ from ..ingest.api_football import normalize_fixture, normalize_to_truth, populat
 from ..ingest.news import populate_news
 from .prompt_build import build_prompt
 from .prediction_derivatives import strip_generated_score_fields
+from .reasoning_localization import localize_prediction_reasoning
 from .score_calibration import SCORE_CALIBRATION_METHOD, calibrate_score_prediction, diversify_prediction_records
 from .validate import validate, validate_or_repair
 
@@ -130,10 +131,22 @@ def cmd_predict(
     def _maybe_calibrate_record(record: dict[str, Any], setting_id: str) -> tuple[dict[str, Any], bool]:
         if not calibrate_scorelines or record.get("error") or not record.get("prediction"):
             return record, False
+        before_localization = json.dumps(record, ensure_ascii=False, sort_keys=True)
         if (record.get("score_calibration") or {}).get("method") == SCORE_CALIBRATION_METHOD:
-            return record, False
+            localize_prediction_reasoning(record["prediction"], fixture=fixture)
+            if record.get("raw_prediction"):
+                localize_prediction_reasoning(record["raw_prediction"], fixture=fixture)
+            report = validate(
+                record["prediction"],
+                fixture_id=fid,
+                setting_id=setting_id,
+                tol=tol,
+            )
+            record["validation_errors"] = report.errors
+            return record, json.dumps(record, ensure_ascii=False, sort_keys=True) != before_localization
 
         calibration_source = record.get("raw_prediction") or record["prediction"]
+        localize_prediction_reasoning(calibration_source, fixture=fixture)
 
         prediction, score_calibration = calibrate_score_prediction(
             calibration_source,
@@ -211,8 +224,8 @@ def cmd_predict(
             res = runner.run(fixture, setting, sys_p, usr_p, validate_fn=_validate)
             total_cost += res.cost_usd
             audit = _leak_audit(res.sources, fixture["lock_at_utc"])
-            prediction = res.prediction
-            raw_prediction = strip_generated_score_fields(res.prediction) if res.prediction else {}
+            prediction = localize_prediction_reasoning(res.prediction, fixture=fixture) if res.prediction else {}
+            raw_prediction = strip_generated_score_fields(prediction) if prediction else {}
             validation_errors = res.validation_errors
             score_calibration = None
             if calibrate_scorelines and not res.error and prediction:
@@ -230,6 +243,14 @@ def cmd_predict(
                     tol=tol,
                 )
                 validation_errors = calibration_report.errors
+            elif not res.error and prediction:
+                post_localization_report = validate(
+                    prediction,
+                    fixture_id=fid,
+                    setting_id=setting["id"],
+                    tol=tol,
+                )
+                validation_errors = post_localization_report.errors
             record = {
                 "fixture_id": fid,
                 "model_id": res.model_id,
@@ -295,10 +316,10 @@ def cmd_predict(
             print(" ", r)
 
     if calibrate_scorelines and diversify_fixture:
-        _diversify_fixture_prediction_files(out_dir, fid, tol)
+        _diversify_fixture_prediction_files(out_dir, fid, tol, fixture)
 
 
-def _diversify_fixture_prediction_files(out_dir: Path, fixture_id: str, tol: float) -> None:
+def _diversify_fixture_prediction_files(out_dir: Path, fixture_id: str, tol: float, fixture: dict[str, Any]) -> None:
     records: list[tuple[Path, dict[str, Any]]] = []
     for path in sorted(out_dir.glob("*.json")):
         try:
@@ -314,6 +335,10 @@ def _diversify_fixture_prediction_files(out_dir: Path, fixture_id: str, tol: flo
     diversified = diversify_prediction_records([record for _, record in records])
     changed = 0
     for (path, old_record), new_record in zip(records, diversified):
+        if new_record.get("prediction"):
+            localize_prediction_reasoning(new_record["prediction"], fixture=fixture)
+        if new_record.get("raw_prediction"):
+            localize_prediction_reasoning(new_record["raw_prediction"], fixture=fixture)
         report = validate(
             new_record.get("prediction") or {},
             fixture_id=fixture_id,

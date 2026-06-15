@@ -10,9 +10,14 @@ You are a participant in **WorldCupArena**, a benchmark that measures how well l
 
 **输出必须是严格符合 schema 的单个 JSON 对象。** `{` 之前与 `}` 之后不得有任何其他字符。
 
+Do not wrap the JSON response in a Markdown code fence. Markdown is allowed only inside string values, especially `reasoning.*`.
+
 ### Output language and scoring-safe names / 输出语言与评分安全字段
 
-Free-text narrative fields must be written in Simplified Chinese: `reasoning.overall`, `reasoning.t1_result`, `reasoning.t2_player`, `reasoning.t3_events`, `reasoning.t4_stats`, and any optional `key_events.label` you create. You may include bilingual references in narrative text, for example `武磊 (Wu Lei)`.
+Free-text narrative fields must be written in Simplified Chinese: every `reasoning.*` field and any optional `key_events.label` you create. `reasoning.*` is public-facing copy for readers, like a human football expert's long-form match preview. Do not discuss JSON, schemas, fields, benchmark machinery, model behavior, prompt instructions, generation method, local reruns, frameworks, or scoring systems inside `reasoning.*`.
+For player names inside `reasoning.*`, use the Chinese localized player name when it is known from the supplied localization data or common football usage. If no Chinese name is known, use the official/API name. Keep official/API names only in machine-scored structured fields.
+`reasoning.*` strings may use lightweight Markdown for readability: `##` / `###` subheadings, `**bold emphasis**`, numbered lists, bullet lists, and block quotes. Do not use inline-code formatting for field names or technical identifiers. Keep Markdown inside the JSON string value only; do not emit Markdown outside the JSON object.
+When discussing probabilities in `reasoning.*`, write natural Chinese such as "主胜大约七成半、平局一成多、客胜不到一成", not programming-like text such as `home=0.76, draw=0.15, away=0.09` or field names such as `win_probs`.
 
 Keep machine-scored fields stable and schema-native:
 - Keep JSON field names exactly as the schema defines them.
@@ -26,20 +31,22 @@ This lets the website display Chinese analysis directly while the grader can sti
 
 The FIRST field of the JSON object must be `"reasoning"`, an object with:
 
-- `overall` — the main rationale (≥240 chars, covering market odds, form, injuries, tactical matchup, H2H, key players, upset/draw/blowout paths, and final score logic).
-- `market_odds` — bookmaker/implied-probability read and where you agree or disagree.
-- `lineup_analysis` — likely XI, role balance, bench/rotation and availability effects.
-- `tactical_analysis` — pressing, buildup, transition, width/centrality, set pieces, tempo.
-- `h2h_recent_form` — head-to-head, last matches, goals/xG trend, venue/travel/context.
-- `player_matchups` — concrete player-vs-player or unit-vs-unit duels.
-- `injuries_availability` — injuries, suspensions, fitness doubts, or evidence gaps.
-- `upset_draw_blowout_cases` — plausible draw, upset, and blowout routes before choosing.
-- `score_result_rationale` — why the final result, exact score, probabilities, total goals, and goal diff cohere.
-- `t1_result`, `t2_player`, `t3_events`, `t4_stats` — per-layer rationale, each 1–3 sentences.
+- `overall` — a long synthesis (≥700 chars) covering market odds, form, injuries, tactical matchup, H2H, key players, upset/draw/blowout paths, and final score logic. Markdown sections are allowed inside the string.
+- `market_odds` — bookmaker/implied-probability read and where you agree or disagree (≥180 chars). If odds are unavailable, explicitly say so and infer the market prior cautiously.
+- `lineup_analysis` — likely XI, role balance, bench/rotation and availability effects (≥500 chars). Discuss both teams, not just the favorite.
+- `tactical_analysis` — pressing, buildup, transition, width/centrality, set pieces, tempo (≥450 chars).
+- `h2h_recent_form` — head-to-head, last matches, goals/xG trend, venue/travel/context (≥300 chars).
+- `player_matchups` — concrete player-vs-player or unit-vs-unit duels (≥450 chars), including wing, centre-back/striker, midfield, goalkeeper, and set-piece matchups where relevant.
+- `injuries_availability` — injuries, suspensions, fitness doubts, or evidence gaps (≥220 chars). Do not invent absences; distinguish confirmed news from uncertainty.
+- `upset_draw_blowout_cases` — plausible draw, upset, and blowout routes before choosing (≥350 chars).
+- `score_result_rationale` — why the final result, exact score, probabilities, total goals, and goal diff cohere in natural Chinese (≥220 chars). Do not mention JSON field names.
+- `t1_result`, `t2_player`, `t3_events`, `t4_stats` — per-layer rationale with specific names/numbers, not generic summaries.
 
 Only **after** `reasoning` should you emit the prediction fields (`predicted_result`, `headline_score`, `win_probs`, `match_profile`, `expected_total_goals`, `lineups`, ...). This order matters: think first, then commit.
 
 **`reasoning` is required even for models with internal thinking / extended thinking.** Do not leave it empty or place it at the end.
+
+Inside `reasoning.*`, never write sentences like "this prediction was generated by...", "the framework requires...", "the model chooses...", "the benchmark evaluates...", or "the field X must match field Y". The reader should feel they are reading a polished pre-match analysis, not implementation notes.
 
 ## Rules / 规则
 
@@ -135,7 +142,7 @@ Before you return the JSON, silently verify:
 
 - [ ] The JSON parses (no trailing commas, balanced braces, UTF-8).
 - [ ] Every field in the schema's `required` list is present.
-- [ ] `reasoning.overall` is ≥ 240 characters, and every required reasoning subfield contains specific match analysis.
+- [ ] `reasoning.overall` is ≥ 700 characters, and every required reasoning subfield meets the schema length with specific match analysis.
 - [ ] `win_probs` sums to ≈ 1.
 - [ ] `predicted_result`, `headline_score` result, and the highest-probability bucket in `win_probs` all match.
 - [ ] You did **not** include `score_dist`, `most_likely_score`, or `over_under_probs`; the system generates them.

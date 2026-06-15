@@ -6,6 +6,97 @@ const fmt2   = (x) => (x == null ? "—" : (+x).toFixed(2));
 const esc    = (s) => String(s ?? "").replace(/[<>&"']/g, c =>
   ({ "<":"&lt;", ">":"&gt;", "&":"&amp;", '"':"&quot;", "'":"&#39;" }[c]));
 
+function renderMarkdownInline(s) {
+  const codeBlocks = [];
+  const protectedText = esc(s).replace(/`([^`]+)`/g, (_, code) => {
+    const idx = codeBlocks.length;
+    codeBlocks.push(`<code class="px-1 py-0.5 rounded bg-black/30 text-gray-100">${code}</code>`);
+    return `\uE000${idx}\uE000`;
+  });
+  return protectedText
+    .replace(/\*\*([^*]+)\*\*/g, "<strong class=\"font-bold text-gray-100\">$1</strong>")
+    .replace(/__([^_]+)__/g, "<strong class=\"font-bold text-gray-100\">$1</strong>")
+    .replace(/(^|[^\*])\*([^\*]+)\*/g, '$1<em class="italic text-gray-100">$2</em>')
+    .replace(/\uE000(\d+)\uE000/g, (_, idx) => codeBlocks[Number(idx)] || "");
+}
+
+function renderMarkdownText(text) {
+  const lines = String(text || "").replace(/\r\n?/g, "\n").split("\n");
+  const out = [];
+  let paragraph = [];
+  let listType = "";
+
+  const flushParagraph = () => {
+    if (!paragraph.length) return;
+    out.push(`<p class="my-2">${paragraph.map(renderMarkdownInline).join("<br>")}</p>`);
+    paragraph = [];
+  };
+  const flushList = () => {
+    if (!listType) return;
+    out.push(`</${listType}>`);
+    listType = "";
+  };
+  const openList = (type) => {
+    flushParagraph();
+    if (listType && listType !== type) flushList();
+    if (!listType) {
+      const cls = type === "ol"
+        ? "list-decimal pl-5 my-2 space-y-1"
+        : "list-disc pl-5 my-2 space-y-1";
+      out.push(`<${type} class="${cls}">`);
+      listType = type;
+    }
+  };
+
+  for (const line of lines) {
+    if (!line.trim()) {
+      flushParagraph();
+      flushList();
+      continue;
+    }
+
+    const heading = line.match(/^\s{0,3}(#{1,4})\s+(.+?)\s*$/);
+    if (heading) {
+      flushParagraph();
+      flushList();
+      const levelClass = heading[1].length <= 2
+        ? "text-sm font-black text-white mt-3 mb-1"
+        : "text-xs font-bold text-gray-100 mt-3 mb-1";
+      out.push(`<div class="${levelClass}">${renderMarkdownInline(heading[2])}</div>`);
+      continue;
+    }
+
+    const ordered = line.match(/^\s*\d+[.)]\s+(.+)$/);
+    if (ordered) {
+      openList("ol");
+      out.push(`<li>${renderMarkdownInline(ordered[1])}</li>`);
+      continue;
+    }
+
+    const unordered = line.match(/^\s*[-*+]\s+(.+)$/);
+    if (unordered) {
+      openList("ul");
+      out.push(`<li>${renderMarkdownInline(unordered[1])}</li>`);
+      continue;
+    }
+
+    const quote = line.match(/^\s*>\s+(.+)$/);
+    if (quote) {
+      flushParagraph();
+      flushList();
+      out.push(`<blockquote class="my-2 pl-3 border-l border-white/20 text-gray-300">${renderMarkdownInline(quote[1])}</blockquote>`);
+      continue;
+    }
+
+    flushList();
+    paragraph.push(line.trimEnd());
+  }
+
+  flushParagraph();
+  flushList();
+  return out.join("");
+}
+
 const MATCHMATE_BRAND = "MatchMate AI比分预测";
 const WORLDCUPARENA_BRAND = "WorldCupArena";
 
@@ -41,6 +132,14 @@ const I18N = {
     full_reasoning_suffix: "完整推理",
     no_reasoning: "暂无推理内容。",
     reasoning_overall: "整体分析",
+    reasoning_market_odds: "赔率与市场先验",
+    reasoning_lineup_analysis: "阵容分析",
+    reasoning_tactical_analysis: "战术分析",
+    reasoning_h2h_recent_form: "历史交手与近期战绩",
+    reasoning_player_matchups: "球员对位",
+    reasoning_injuries_availability: "伤停与可用性",
+    reasoning_upset_draw_blowout_cases: "爆冷/平局/大胜路径",
+    reasoning_score_result_rationale: "比分与结果逻辑",
     reasoning_t1: "T1 · 赛果与比分",
     reasoning_t2: "T2 · 球员与阵容",
     reasoning_t3: "T3 · 事件与时间线",
@@ -264,6 +363,14 @@ const I18N = {
     full_reasoning_suffix: "Full Reasoning",
     no_reasoning: "No reasoning available.",
     reasoning_overall: "Overall Analysis",
+    reasoning_market_odds: "Odds & Market Prior",
+    reasoning_lineup_analysis: "Lineup Analysis",
+    reasoning_tactical_analysis: "Tactical Analysis",
+    reasoning_h2h_recent_form: "H2H & Recent Form",
+    reasoning_player_matchups: "Player Matchups",
+    reasoning_injuries_availability: "Injuries & Availability",
+    reasoning_upset_draw_blowout_cases: "Upset / Draw / Blowout Paths",
+    reasoning_score_result_rationale: "Score & Result Logic",
     reasoning_t1: "T1 · Result & Score",
     reasoning_t2: "T2 · Players & Lineups",
     reasoning_t3: "T3 · Events & Timeline",
@@ -1321,11 +1428,36 @@ function withCurrentUserLeaderboardRow(rows) {
 function reasoningLabels() {
   return {
     overall:   t("reasoning_overall"),
+    market_odds: t("reasoning_market_odds"),
+    lineup_analysis: t("reasoning_lineup_analysis"),
+    tactical_analysis: t("reasoning_tactical_analysis"),
+    h2h_recent_form: t("reasoning_h2h_recent_form"),
+    player_matchups: t("reasoning_player_matchups"),
+    injuries_availability: t("reasoning_injuries_availability"),
+    upset_draw_blowout_cases: t("reasoning_upset_draw_blowout_cases"),
+    score_result_rationale: t("reasoning_score_result_rationale"),
     t1_result: t("reasoning_t1"),
     t2_player: t("reasoning_t2"),
     t3_events: t("reasoning_t3"),
     t4_stats:  t("reasoning_t4"),
   };
+}
+
+function reasoningEntries(r) {
+  const src = r || {};
+  return Object.entries(reasoningLabels())
+    .map(([k, label]) => [k, label, String(src[k] || "").trim()])
+    .filter(([, , text]) => text);
+}
+
+function renderReasoningSections(r) {
+  const rows = reasoningEntries(r);
+  if (!rows.length) return `<div class="text-gray-400 text-sm py-2">${t("no_reasoning")}</div>`;
+  return rows.map(([, label, text]) => `
+    <section class="rounded-lg px-3 py-3" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);">
+      <div class="text-[10px] text-gray-400 uppercase tracking-wider mb-1">${esc(label)}</div>
+      <div class="text-sm text-gray-200 leading-relaxed">${renderMarkdownText(text)}</div>
+    </section>`).join("");
 }
 
 function buildReasoningModal() {
@@ -1351,13 +1483,12 @@ function openReasoningModal(idx) {
   const titleSetting = (!_matchmateMode && p.setting) ? ` (${p.setting})` : "";
   document.getElementById("reasoning-modal-title").textContent =
     `${fmtModelId(p)}${titleSetting} — ${t("full_reasoning_suffix")}`;
-  const rows = Object.entries(reasoningLabels())
-    .filter(([k]) => r[k])
+  const rows = reasoningEntries(r)
     .map(([k, label]) => `
       <tr style="border-top:1px solid rgba(255,255,255,.08)">
         <td style="padding:.75rem .75rem .75rem 0;vertical-align:top;width:8rem;white-space:nowrap;"
             class="text-xs font-semibold text-gray-400">${esc(label)}</td>
-        <td style="padding:.75rem 0;" class="text-sm text-gray-200 leading-relaxed">${esc(r[k])}</td>
+        <td style="padding:.75rem 0;" class="text-sm text-gray-200 leading-relaxed">${renderMarkdownText(r[k])}</td>
       </tr>`).join("");
   document.getElementById("reasoning-modal-body").innerHTML =
     `<table style="width:100%;border-collapse:collapse;"><tbody>${rows ||
@@ -2283,7 +2414,7 @@ function renderPrematchDetailsPanel(idx) {
       ${hasReason ? `
         <div>
           <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("full_reasoning")}</div>
-          <div class="text-sm text-gray-200 leading-relaxed whitespace-pre-wrap">${esc(reasoning.overall)}</div>
+          <div class="space-y-3">${renderReasoningSections(reasoning)}</div>
         </div>
       ` : ""}
       ${_renderDetails(p, f)}
@@ -2697,7 +2828,7 @@ function renderLivePredictionHistoryList(item, f) {
                 score: livePredictionScore(entry),
                 winner: livePredictionWinner(entry, f),
               }))}</div>
-              ${reasoning ? `<div class="mt-2 pt-2 border-t border-white/5"><div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1">${t("full_reasoning")}</div><div class="text-xs leading-relaxed text-gray-300 whitespace-pre-wrap">${esc(reasoning)}</div></div>` : ""}
+              ${reasoning ? `<div class="mt-2 pt-2 border-t border-white/5"><div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1">${t("full_reasoning")}</div><div class="text-xs leading-relaxed text-gray-300">${renderMarkdownText(reasoning)}</div></div>` : ""}
             </div>`;
         }).join("")}
       </div>
@@ -2879,7 +3010,7 @@ function renderLivePredictions(items, f) {
                     `).join("")}
                   </div>` : `<div class="text-xs text-gray-500">${t("no_future_scorers")}</div>`}
               </div>
-              ${reasoning ? `<div class="text-sm text-gray-300 leading-relaxed whitespace-pre-wrap mb-3">${esc(reasoning)}</div>` : ""}
+              ${reasoning ? `<div class="text-sm text-gray-300 leading-relaxed mb-3">${renderMarkdownText(reasoning)}</div>` : ""}
               ${renderLivePredictionHistoryList(p, f)}
               ${sources.length ? `
                 <details class="mt-3">
@@ -3228,7 +3359,7 @@ function renderTournamentDetails(p) {
   const notes = [summaries.group_stage, summaries.knockout].filter(Boolean).join("\n\n");
   return `
     <div class="mt-4 space-y-5">
-      ${notes ? `<div><div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("tournament_reasoning")}</div><div class="text-sm text-gray-300 leading-relaxed whitespace-pre-wrap">${esc(notes)}</div></div>` : ""}
+      ${notes ? `<div><div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("tournament_reasoning")}</div><div class="text-sm text-gray-300 leading-relaxed">${renderMarkdownText(notes)}</div></div>` : ""}
       ${renderTournamentBracket(p)}
       ${renderTournamentStandings(p.group_standings || {}, p.group_matches || [])}
       ${renderTournamentTopScorers(p.top_scorers || [])}
