@@ -71,13 +71,13 @@ class OpenAICompatRunner(BaseRunner):
         if self.cfg.get("json_mode", True):
             kwargs["response_format"] = {"type": "json_object"}
         if "gpt" in self.cfg["model"]:
-            kwargs["max_completion_tokens"] = self.cfg.get("max_tokens", 8192)
+            kwargs["max_completion_tokens"] = self.cfg.get("max_tokens", 32000)
             if self.use_reasoning:
                 kwargs["reasoning_effort"] = self.cfg.get("reasoning_effort", "low")
         else:
             # max_tokens is universally supported across all OpenAI-compat providers
             # (Zhipu, Moonshot, DashScope, xAI, etc.); max_completion_tokens is OpenAI-only
-            kwargs["max_tokens"] = self.cfg.get("max_tokens", 8192)
+            kwargs["max_tokens"] = self.cfg.get("max_tokens", 32000)
         if self.use_search:
             kwargs["web_search_options"] = self.cfg.get("web_search_options", {})
         if self.cfg.get("extra_body"):
@@ -149,7 +149,7 @@ class OpenAICompatRunner(BaseRunner):
             "model": self.cfg["model"],
             "instructions": system_prompt,
             "input": messages,
-            "max_output_tokens": self.cfg.get("max_tokens", 8192),
+            "max_output_tokens": self.cfg.get("max_tokens", 32000),
         }
         if not self.use_search:
             kwargs["text"] = {"format": {"type": "json_object"}}
