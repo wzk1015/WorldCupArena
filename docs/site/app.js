@@ -213,7 +213,6 @@ const I18N = {
     no_details: "暂无详细预测数据。",
     search_sources: "🔗 联网来源",
     win_probabilities: "📊 胜率预测",
-    score_distribution: "🎯 比分分布",
     full_reasoning: "📖 完整推理",
     hide_detail: "🔼 收起详情",
     show_details: "👇 展开完整分析",
@@ -448,7 +447,6 @@ const I18N = {
     no_details: "No detailed prediction data available.",
     search_sources: "🔗 Search Sources",
     win_probabilities: "📊 Win Probabilities",
-    score_distribution: "🎯 Score Distribution",
     full_reasoning: "📖 Full Reasoning",
     hide_detail: "🔼 Hide Detail",
     show_details: "👇 Show Full AI Analysis",
@@ -655,15 +653,20 @@ function mobileTocMatchLabel(match) {
 function closeMobileToc() {
   const panel = document.getElementById("mobile-toc-panel");
   const toggle = document.getElementById("mobile-toc-toggle");
-  if (panel) panel.classList.add("hidden");
+  if (panel) {
+    panel.hidden = true;
+    panel.classList.add("hidden");
+  }
   if (toggle) toggle.setAttribute("aria-expanded", "false");
 }
 
-function toggleMobileToc() {
+function toggleMobileToc(event) {
+  if (event) event.stopPropagation();
   const panel = document.getElementById("mobile-toc-panel");
   const toggle = document.getElementById("mobile-toc-toggle");
   if (!panel) return;
-  const nextOpen = panel.classList.contains("hidden");
+  const nextOpen = panel.hidden || panel.classList.contains("hidden");
+  panel.hidden = !nextOpen;
   panel.classList.toggle("hidden", !nextOpen);
   if (toggle) toggle.setAttribute("aria-expanded", nextOpen ? "true" : "false");
 }
@@ -671,6 +674,9 @@ function toggleMobileToc() {
 function jumpToMobileTocTarget(id) {
   const target = document.getElementById(id);
   if (target && target.tagName === "DETAILS") target.open = true;
+  if (target) {
+    requestAnimationFrame(() => target.scrollIntoView({ behavior: "smooth", block: "start" }));
+  }
   closeMobileToc();
 }
 
@@ -687,7 +693,7 @@ function renderMobileToc() {
     })
     .filter(Boolean);
   const link = (href, label) => `<a href="${href}" class="mobile-toc-link" onclick="closeMobileToc()">${esc(label)}</a>`;
-  const sub = (id, label) => `<a href="#${id}" class="mobile-toc-sub" onclick="jumpToMobileTocTarget('${id}')">${esc(label)}</a>`;
+  const sub = (id, label) => `<a href="#${id}" class="mobile-toc-sub" onclick="jumpToMobileTocTarget(${jsArg(id)})">${esc(label)}</a>`;
   panel.innerHTML = `
     ${link("#next", t("section_incoming"))}
     ${incoming.map(item => sub(item.id, item.label)).join("")}
@@ -696,6 +702,17 @@ function renderMobileToc() {
     ${link("#history", t("section_history"))}
     ${history.map(item => sub(item.id, item.label)).join("")}
   `;
+  closeMobileToc();
+}
+
+function setupMobileToc() {
+  const toc = document.getElementById("mobile-toc");
+  if (!toc) return;
+  toc.addEventListener("click", event => event.stopPropagation());
+  document.addEventListener("click", closeMobileToc);
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") closeMobileToc();
+  });
 }
 
 function applyStaticI18n() {
@@ -2445,7 +2462,6 @@ function renderPrematchDetailsPanel(idx) {
   const scoreDist = (p.score_dist || []).slice().sort((a, b) => (b.p || 0) - (a.p || 0));
   const wp = p.win_probs || winProbsFromScoreDist(scoreDist) || {};
   const wpPct = winProbPctLabels(wp);
-  const top3 = scoreDist.slice(0, 3);
   const hName = f.home || t("home");
   const aName = f.away || t("away");
   const winProbItems = isMobilePredLayout()
@@ -2465,31 +2481,6 @@ function renderPrematchDetailsPanel(idx) {
             </div>`).join("")}
         </div>
       </div>` : ""}
-
-      ${top3.length ? (() => {
-        const allScores = scoreDist.slice(0, 15);
-        const maxP = Math.max(...allScores.map(s => s.p || 0));
-        return `
-      <div>
-        <div class="text-xs text-gray-400 uppercase tracking-wider mb-2">${t("score_distribution")}</div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1">
-          ${allScores.map(s => {
-            const barW = maxP > 0 ? Math.round((s.p / maxP) * 100) : 0;
-            const sc   = (s.score || "").split("-");
-            const hg   = parseInt(sc[0] ?? "-1");
-            const ag   = parseInt(sc[1] ?? "-1");
-            const outcomeCls = hg > ag || ag > hg ? "text-gray-100" : "text-gray-300";
-            return `<div class="flex items-center gap-2">
-              <span class="font-mono font-bold text-sm w-10 text-right ${outcomeCls}">${esc(s.score)}</span>
-              <div class="flex-1 h-2 rounded-full overflow-hidden" style="background:rgba(255,255,255,.07);">
-                <div class="h-full rounded-full" style="width:${barW}%;background:rgba(255,255,255,.3);"></div>
-              </div>
-              <span class="font-mono text-xs text-gray-400 w-10">${fmtPct(s.p)}</span>
-            </div>`;
-          }).join("")}
-        </div>
-      </div>`;
-      })() : ""}
 
       ${hasReason ? `
         <div>
@@ -3956,6 +3947,7 @@ async function main() {
   applyStaticI18n();
   buildReasoningModal();
   wireTabs();
+  setupMobileToc();
   setupResponsivePredictions();
   initUserSession();
   await loadUserPredictions();

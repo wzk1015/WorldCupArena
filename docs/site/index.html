@@ -234,6 +234,7 @@
   .reasoning-body p:last-child { margin-bottom: 0; }
   .mobile-anchor { scroll-margin-top: 5.25rem; }
   .mobile-toc { display: none; }
+  .mobile-toc-panel[hidden] { display: none !important; }
   .team-name { overflow-wrap: anywhere; }
   .fixture-logo {
     width: 4rem;
@@ -419,7 +420,7 @@
       position: fixed;
       top: .75rem;
       left: .75rem;
-      z-index: 60;
+      z-index: 80;
       max-width: min(20rem, calc(100vw - 1.5rem));
     }
     .mobile-toc-toggle {
@@ -585,12 +586,12 @@
 <div id="mobile-toc" class="mobile-toc">
   <button id="mobile-toc-toggle"
           type="button"
-          onclick="toggleMobileToc()"
+          onclick="toggleMobileToc(event)"
           class="mobile-toc-toggle"
           data-i18n="mobile_toc"
           aria-expanded="false"
           aria-controls="mobile-toc-panel">目录</button>
-  <nav id="mobile-toc-panel" class="mobile-toc-panel hidden" aria-label="Mobile table of contents"></nav>
+  <nav id="mobile-toc-panel" class="mobile-toc-panel hidden" aria-label="Mobile table of contents" hidden></nav>
 </div>
 <button id="user-auth-button"
         onclick="handleUserAuthButton()"
@@ -696,6 +697,6 @@
   开源 · MIT · 研究项目 · <a class="underline" href="https://github.com/wzk1015/WorldCupArena/" target="_blank">source</a>
 </footer>
 
-<script src="app.js?v=20260615-reasoning-expand-chip"></script>
+<script src="app.js?v=20260619-mobile-toc-fix-us-test"></script>
 </body>
 </html>

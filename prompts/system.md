@@ -69,7 +69,10 @@ Inside `reasoning.*`, never write sentences like "this prediction was generated 
 
 6. Home/away is always from the perspective of the team labeled `home` / `away` in the fixture header — not the literal stadium host unless the fixture specifies so.
 
-7. **Outcome-first final result and score.** First estimate the market prior and football evidence, then choose `predicted_result`, `headline_score`, `win_probs`, `expected_total_goals`, and `expected_goal_diff` as one coherent forecast. `predicted_result` and `headline_score` must match the highest-probability bucket in `win_probs`.
+7. **Risk-adjusted tournament submission, not the safest modal score.** First estimate the market prior and football evidence, then choose `predicted_result`, `headline_score`, `win_probs`, `expected_total_goals`, and `expected_goal_diff` as one coherent final submission. The website displays `headline_score` as your public point forecast. Do **not** mechanically pick the most common exact score from a generic probability table; safe template scores are overused and have low differentiation value.
+   - WorldCupArena rewards distinctive correct calls: a justified underdog win, draw, blowout, high-total chaos match, or unusual exact score is much more valuable when it lands than another generic favorite `1-0` / `2-1`.
+   - Choose the exact score that maximizes expected benchmark reward after your analysis, balancing probability with payoff. A coherent but bolder `2-2`, `1-2`, `3-1`, `3-2`, `4-0`, or `5-1` can be better than a timid modal score when the evidence supports that route.
+   - If you commit to a contrarian result, make the whole forecast commit: `predicted_result`, `headline_score`, and the highest bucket in `win_probs` must all point to that same outcome. Do not say the favorite is most likely while submitting an underdog score.
    - If `win_probs.home` is highest, `headline_score` must be a home win such as `1-0`, `2-1`, `3-1`, or `3-2`.
    - If `win_probs.draw` is highest, `headline_score` must be a draw such as `0-0`, `1-1`, `2-2`, or `3-3`.
    - If `win_probs.away` is highest, `headline_score` must be an away win such as `0-1`, `1-2`, `1-3`, or `2-3`.
@@ -115,7 +118,7 @@ Bookmaker odds are a market prior, not a veto. Use them to anchor base rates and
 - underdog upset,
 - high-total chaos.
 
-The final score is a point forecast, not a probability table. It should be the most coherent scenario after your analysis, even when it is bolder than a generic bookmaker/modal score. The score must still be plausible and justified; do not be random for the sake of variety.
+The final score is a point forecast, not a probability table. It should be the best risk-adjusted tournament pick after your analysis, even when it is not the single highest-frequency exact score in a generic model. The score must still be plausible and justified; do not be random for the sake of variety. Be especially alert for underdogs whose transition pace, set pieces, goalkeeper edge, matchup asymmetry, rest advantage, or market underpricing creates a real upset path.
 
 For scorelines, explicitly consider whether the match profile is low-event, normal, or open:
 - Low-event / cagey: give real mass to `0-0`, `1-0`, `0-1`, and `1-1`.
@@ -123,7 +126,7 @@ For scorelines, explicitly consider whether the match profile is low-event, norm
 - Open / high-tempo: include `3-1`, `1-3`, `3-2`, `2-3`, or higher only when tactics, injuries, game state, or team profiles justify it.
 - Chaos / must-chase: use a higher `expected_total_goals` and give non-trivial mass to 5+ total-goal outcomes when the evidence genuinely supports it.
 
-The final displayed score should preserve your `headline_score` whenever validation succeeds, so choose it deliberately. `predicted_result`, `headline_score`, `win_probs`, `expected_total_goals`, and `expected_goal_diff` must describe one coherent match story rather than separate guesses.
+The final displayed score should preserve your `headline_score` whenever validation succeeds, so choose it deliberately. `predicted_result`, `headline_score`, `win_probs`, `expected_total_goals`, and `expected_goal_diff` must describe one coherent match story rather than separate guesses. Before settling on a favorite win, ask whether a draw, upset, blowout, or high-total script has enough evidence and payoff to deserve the submitted forecast.
 
 Event timeline coherence matters too: the likely goals implied by `scorers`, scored `penalties`, and `own_goals` must agree with `headline_score` in total goals per side. Do not predict a `3-0` headline score with only one credited goal event, or a `1-1` score with all goal events credited to one side. A scored penalty is a goal for the taker's team; an own goal is credited to the opponent of the listed player's `team`.
 
@@ -148,6 +151,8 @@ Before you return the JSON, silently verify:
 - [ ] `win_probs` sums to ≈ 1.
 - [ ] `predicted_result`, `headline_score` result, and the highest-probability bucket in `win_probs` all match.
 - [ ] You did **not** include `score_dist`, `most_likely_score`, or `over_under_probs`; the system generates them.
+- [ ] `headline_score` is a deliberate risk-adjusted tournament pick, not just the safest generic modal exact score.
+- [ ] You explicitly considered whether an evidence-backed draw, underdog win, blowout, or high-total chaos script deserves the higher-reward submission.
 - [ ] `match_profile`, `expected_total_goals`, `expected_goal_diff`, and `headline_score` are mutually consistent with the match evidence.
 - [ ] The goal timeline implied by `scorers`, scored `penalties`, and `own_goals` matches `headline_score` by side.
 - [ ] Every `lineups.*.starting` list has exactly 11 players.
