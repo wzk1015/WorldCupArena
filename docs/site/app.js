@@ -1771,8 +1771,12 @@ function togglePredictionGroup(groupId, btn) {
 
 // Normalize player name: strip accents/role notes, reduce to "firstInitial.lastName".
 // "Kylian Mbappé (captain)" == "Kylian Mbappe" == "K. Mbappe".
+const _plainNameCache = new Map();
 function _plainNameForMatch(s) {
-  return String(s || "")
+  const ck = String(s || "");
+  const hit = _plainNameCache.get(ck);
+  if (hit !== undefined) return hit;
+  const out = ck
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[([{].*?[)\]}]/g, " ")
@@ -1781,15 +1785,26 @@ function _plainNameForMatch(s) {
     .replace(/[.-]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+  _plainNameCache.set(ck, out);
+  return out;
 }
 
+const _normNameCache = new Map();
 function _normName(s) {
-  const stripped = _plainNameForMatch(s);
+  const ck = String(s || "");
+  const hit = _normNameCache.get(ck);
+  if (hit !== undefined) return hit;
+  const stripped = _plainNameForMatch(ck);
   const parts = stripped.split(/\s+/).filter(Boolean);
-  if (!parts.length) return stripped.toLowerCase();
-  const last = parts[parts.length - 1].toLowerCase();
-  const init = parts[0][0]?.toLowerCase() || "";
-  return `${init}.${last}`;
+  let out;
+  if (!parts.length) out = stripped.toLowerCase();
+  else {
+    const last = parts[parts.length - 1].toLowerCase();
+    const init = parts[0][0]?.toLowerCase() || "";
+    out = `${init}.${last}`;
+  }
+  _normNameCache.set(ck, out);
+  return out;
 }
 
 
@@ -3148,16 +3163,25 @@ function tournamentTeamName(team) {
   return tournamentLocalization().teams?.[raw] || raw;
 }
 
+let _tplIndexKey = null, _tplIndex = null;
+function _tournamentPlayerIndex(players) {
+  if (_tplIndexKey === players && _tplIndex) return _tplIndex;
+  const byNorm = new Map(), byPlain = new Map();
+  for (const [key, item] of Object.entries(players)) {
+    const nk = _normName(key), pk = _plainNameForMatch(key).toLowerCase();
+    if (!byNorm.has(nk)) byNorm.set(nk, { raw: key, item });
+    if (!byPlain.has(pk)) byPlain.set(pk, { raw: key, item });
+  }
+  _tplIndexKey = players; _tplIndex = { byNorm, byPlain };
+  return _tplIndex;
+}
 function tournamentPlayerInfo(name) {
   const raw = String(name || "").trim();
   const players = tournamentLocalization().players || {};
   if (players[raw]) return { raw, ...players[raw], zh: players[raw].zh || raw };
-  const norm = _normName(raw);
-  const plain = _plainNameForMatch(raw).toLowerCase();
-  for (const [key, item] of Object.entries(players)) {
-    const keyPlain = _plainNameForMatch(key).toLowerCase();
-    if (_normName(key) === norm || keyPlain === plain) return { raw: key, ...item, zh: item.zh || raw };
-  }
+  const idx = _tournamentPlayerIndex(players);
+  const hit = idx.byNorm.get(_normName(raw)) || idx.byPlain.get(_plainNameForMatch(raw).toLowerCase());
+  if (hit) return { raw: hit.raw, ...hit.item, zh: hit.item.zh || raw };
   return { raw, zh: raw, photo: "" };
 }
 
@@ -3230,9 +3254,13 @@ function toggleTournamentPrediction(idx) {
   const panel = document.getElementById(`tournament-detail-${idx}`);
   const btn = document.getElementById(`tournament-toggle-${idx}`);
   if (!panel || !btn) return;
-  const nextHidden = !panel.classList.contains("hidden") ? true : false;
-  panel.classList.toggle("hidden", nextHidden);
-  btn.textContent = nextHidden ? t("tournament_show_path") : t("tournament_hide_path");
+  const willShow = panel.classList.contains("hidden");
+  if (willShow && !panel.dataset.rendered) {
+    const p = ((_siteData && _siteData.tournament_predictions && _siteData.tournament_predictions.predictions) || [])[idx];
+    if (p) { panel.innerHTML = renderTournamentDetails(p); panel.dataset.rendered = "1"; }
+  }
+  panel.classList.toggle("hidden", !willShow);
+  btn.textContent = willShow ? t("tournament_hide_path") : t("tournament_show_path");
 }
 
 function renderTournamentSummaryBlock(p) {
@@ -3477,7 +3505,7 @@ function renderTournamentPredictions(data) {
             <button id="tournament-toggle-${idx}" onclick="toggleTournamentPrediction(${idx})" class="chip chip-live hover:bg-white/15 transition text-xs justify-center py-1.5 px-3">${t("tournament_show_path")}</button>
           </div>
           <div class="mt-3">${renderTournamentSummaryBlock(p)}</div>
-          <div id="tournament-detail-${idx}" class="hidden">${renderTournamentDetails(p)}</div>
+          <div id="tournament-detail-${idx}" class="hidden"></div>
         </div>`;
       }).join("")}
     </div>`;
@@ -3894,7 +3922,13 @@ function renderSiteData() {
   syncLeaderboardTabs();
   renderLeaderboard(_siteData.leaderboard || { main: [] }, _activeLeaderboardView);
   requestAnimationFrame(() => {
-    renderHistory(_siteData.history || []);
+    const histPending = _siteData._history_url && !(_siteData.history && _siteData.history.length);
+    if (histPending) {
+      const el = document.getElementById("history-container");
+      if (el) el.innerHTML = `<div class="text-gray-500 text-sm">${_lang === "en" ? "Loading history…" : "历史加载中…"}</div>`;
+    } else {
+      renderHistory(_siteData.history || []);
+    }
     renderMobileToc();
   });
 }
@@ -3913,6 +3947,11 @@ function setupResponsivePredictions() {
 }
 
 async function fetchDataForLanguage() {
+  const lang = _lang === "en" ? "en" : "zh";
+  try {
+    const resp = await fetch(`data.live.${lang}.json`, { cache: "no-cache" });
+    if (resp.ok) return await resp.json();
+  } catch (err) { /* fall through to full payload */ }
   const preferred = _lang === "en" ? "data.en.json" : "data.zh.json";
   const fallbacks = _lang === "en" ? ["data.en.json", "data.json"] : ["data.zh.json", "data.json"];
   let lastError = null;
@@ -3940,6 +3979,25 @@ async function loadSiteData() {
   }
   // document.getElementById("generated-at").textContent = "Last updated " + fmtTimestamp(data.generated_at);
   renderSiteData();
+  if (_siteData._history_url && !(_siteData.history && _siteData.history.length)) {
+    loadHistoryLazy(_siteData._history_url);
+  }
+}
+
+async function loadHistoryLazy(url) {
+  try {
+    const resp = await fetch(url, { cache: "no-cache" });
+    if (!resp.ok) throw new Error(`${url}: ${resp.status}`);
+    const data = await resp.json();
+    if (!_siteData) return;
+    _siteData.history = data.history || [];
+    renderHistory(_siteData.history);
+    renderMobileToc();
+  } catch (err) {
+    console.warn("history lazy-load failed:", err);
+    const el = document.getElementById("history-container");
+    if (el) el.innerHTML = `<div class="text-gray-500 text-sm">${t("no_graded")}</div>`;
+  }
 }
 
 async function main() {
