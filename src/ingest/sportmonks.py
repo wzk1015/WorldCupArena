@@ -130,7 +130,10 @@ def _team_payload(participant: dict[str, Any]) -> dict[str, Any]:
 
 def _score_pair(fixture: dict[str, Any]) -> dict[str, int | None]:
     scores = fixture.get("scores") or []
-    preferred = ["CURRENT", "2ND_HALF", "FT", "AET", "FULL_TIME", "1ST_HALF"]
+    # AET before FT: an extra-time knockout's full aggregate is the 120' (AET) line, not the 90'
+    # (FT) one. CURRENT is normally the authoritative final score; AET>FT only matters as a
+    # fallback when CURRENT is absent.
+    preferred = ["CURRENT", "2ND_HALF", "AET", "FT", "FULL_TIME", "1ST_HALF"]
     for desc in preferred:
         pair: dict[str, int | None] = {"home": None, "away": None}
         for row in scores:
