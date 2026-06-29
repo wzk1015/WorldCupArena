@@ -194,5 +194,15 @@ class BaseRunner(abc.ABC):
         except json.JSONDecodeError:
             start, end = text.find("{"), text.rfind("}")
             if start != -1 and end != -1 and end > start:
-                return json.loads(text[start : end + 1])
+                try:
+                    return json.loads(text[start : end + 1])
+                except json.JSONDecodeError:
+                    pass
+            # 容错兜底(2026-06-29):近乎合法的 LLM JSON —— 尾部被 max_tokens 截断、多余/缺失逗号等 ——
+            # 先 repair 再解析;下游 schema 校验仍把关正确性。旧逻辑直接 raise → 整条预测丢空,
+            # 是 claude(opus 长推理常被截断)长期 8/9 缺的真因。返回非 dict/空则照旧 raise(诚实失败)。
+            from json_repair import repair_json
+            obj = repair_json(text, return_objects=True)
+            if isinstance(obj, dict) and obj:
+                return obj
             raise
