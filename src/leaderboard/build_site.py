@@ -1138,6 +1138,27 @@ _STAT_TYPE_MAP = {
 }
 
 
+def _penalty_shootout_score(truth: dict) -> dict | None:
+    """Penalty-shootout tally {home, away} from a sportmonks-shaped truth file, or None.
+
+    The api-football wrapper hardcodes score.penalty to {None, None}; the real shootout count
+    lives in the raw sportmonks fixture `scores` under a penalty/shootout description. Returns the
+    participant-keyed goals when present (knockout only), else None — the advancing side is still
+    derived from teams.*.winner regardless, so this is display polish, not correctness-critical.
+    """
+    raw = truth.get("_sportmonks_raw") or {}
+    pair = {"home": None, "away": None}
+    for row in raw.get("scores") or []:
+        desc = str(row.get("description") or "").upper()
+        if "PENALT" not in desc and "SHOOTOUT" not in desc:
+            continue
+        sc = row.get("score") or {}
+        side = sc.get("participant")
+        if side in pair:
+            pair[side] = sc.get("goals")
+    return pair if (pair["home"] is not None or pair["away"] is not None) else None
+
+
 def _load_truth_data(wca_id: str) -> dict | None:
     path = SNAPSHOTS / wca_id / "truth.json"
     if not path.exists():
@@ -1151,12 +1172,37 @@ def _load_truth_data(wca_id: str) -> dict | None:
     hg = g.get("home")
     ag = g.get("away")
     score = f"{hg}-{ag}" if hg is not None and ag is not None else None
-    result = "home" if (hg or 0) > (ag or 0) else "away" if (ag or 0) > (hg or 0) else "draw" if score else None
 
     teams_raw = r0.get("teams") or {}
     home_id   = (teams_raw.get("home") or {}).get("id")
     home_name = (teams_raw.get("home") or {}).get("name", "Home")
     away_name = (teams_raw.get("away") or {}).get("name", "Away")
+
+    # Knockout ties are level after 90/120 min but still produce a winner (extra time / penalty
+    # shootout); derive result from teams.*.winner so it is never "draw" in a single-leg knockout
+    # (mirrors ingest.api_football.normalize_to_truth used for grading — keeps display, winner_acc
+    # and grading consistent). Only override a level scoreline when exactly one side is flagged
+    # winner; a genuine group-stage draw has winner None/False on both sides and stays "draw".
+    home_won = (teams_raw.get("home") or {}).get("winner")
+    away_won = (teams_raw.get("away") or {}).get("winner")
+    if (hg or 0) > (ag or 0):
+        result = "home"
+    elif (ag or 0) > (hg or 0):
+        result = "away"
+    elif not score:
+        result = None
+    elif home_won is True and away_won is not True:
+        result = "home"
+    elif away_won is True and home_won is not True:
+        result = "away"
+    else:
+        result = "draw"
+
+    # Penalty tally + decider (knockout) for display; advancing side comes from teams.*.winner.
+    penalty = _penalty_shootout_score(t)
+    status_short = str(((r0.get("fixture") or {}).get("status") or {}).get("short") or "").upper()
+    decider = "PEN" if (penalty or "PEN" in status_short) else "AET" if status_short == "AET" else None
+    advanced = home_won
 
     events = r0.get("events") or []
     scorers, assisters, cards, substitutions, own_goals, penalties, key_events = [], [], [], [], [], [], []
@@ -1244,6 +1290,9 @@ def _load_truth_data(wca_id: str) -> dict | None:
     return {
         "score":          score,
         "result":         result,
+        "advanced":       advanced,
+        "penalty":        penalty,
+        "decider":        decider,
         "home_name":      home_name,
         "away_name":      away_name,
         "scorer_names":   scorer_names,
