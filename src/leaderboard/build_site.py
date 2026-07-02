@@ -1674,10 +1674,19 @@ def main() -> None:
     _save_api_football_logo_cache()
 
     rounded_payload = _round3(payload)
-    for out_path in (OUT_EN, OUT):
-        out_path.write_text(json.dumps(rounded_payload, ensure_ascii=False, separators=(",", ":")))
     from .translate_site_data import translate_payload_to_zh
-    OUT_ZH.write_text(json.dumps(translate_payload_to_zh(rounded_payload), ensure_ascii=False, separators=(",", ":")))
+    zh_payload = translate_payload_to_zh(rounded_payload)
+    def _dump(obj):
+        return json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
+    for out_path in (OUT_EN, OUT):
+        out_path.write_text(_dump(rounded_payload))
+    OUT_ZH.write_text(_dump(zh_payload))
+    for full_path, full in ((OUT, rounded_payload), (OUT_EN, rounded_payload), (OUT_ZH, zh_payload)):
+        hist_name = full_path.name.replace("data.", "data.history.", 1)
+        live = {k: v for k, v in full.items() if k != "history"}
+        live["_history_url"] = hist_name
+        full_path.with_name(full_path.name.replace("data.", "data.live.", 1)).write_text(_dump(live))
+        full_path.with_name(hist_name).write_text(_dump({"history": full.get("history") or []}))
     print(f"wrote {OUT}, {OUT_ZH}, {OUT_EN} "
           f"(model_native_payload=1, "
           f"leaderboard_models={len(payload['leaderboard']['main'])}, "
