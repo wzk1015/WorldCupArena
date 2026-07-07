@@ -528,6 +528,25 @@ def _fixture_header_from_registry(wca_id: str, fx: dict, existing: dict | None =
     return _apply_api_football_logos(base)
 
 
+def _enrich_history_header(hdr: dict, wca_id: str, truth: dict | None) -> dict:
+    """Recover display fields for history rows whose pre-match snapshot was
+    captured during a provider outage (null team names -> "? vs ?" + no flag).
+    The wca_id and graded truth still carry the real teams, so fill the blanks
+    and re-derive flags from the recovered names. Only touches blank fields, so
+    healthy rows are left exactly as-is."""
+    if hdr.get("home") and hdr.get("away") and hdr.get("kickoff_utc"):
+        return hdr
+    inferred = _infer_fixture_names_from_wca_id(wca_id)
+    t = truth or {}
+    if not hdr.get("home"):
+        hdr["home"] = t.get("home_name") or inferred.get("home")
+    if not hdr.get("away"):
+        hdr["away"] = t.get("away_name") or inferred.get("away")
+    if not hdr.get("kickoff_utc") and inferred.get("date"):
+        hdr["kickoff_utc"] = inferred["date"] + "T00:00:00+00:00"
+    return _apply_api_football_logos(hdr)
+
+
 def _header_mismatches_registry(hdr: dict | None, fx: dict) -> bool:
     if not hdr or not hdr.get("kickoff_utc"):
         return True
@@ -1483,6 +1502,10 @@ def build_history() -> list[dict]:
                 truth = _truth_from_live_state(live, hdr)
         if not result:
             continue
+
+        # Recover team names/flags/kickoff for fixtures whose pre-match snapshot
+        # was captured during a provider outage (null teams -> "? vs ?").
+        hdr = _enrich_history_header(hdr, wca_id, truth)
 
         # Composite scores from results dir (for leaderboard ordering within card)
         composites: dict[str, float] = {}
