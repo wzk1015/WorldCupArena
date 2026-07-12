@@ -124,6 +124,9 @@
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
   .tab-btn.active { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.28); }
+  .scope-btn.active { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.28); }
+  /* Don't lean on Tailwind utility order for the pre-data state */
+  #leaderboard-scope.hidden { display: none !important; }
   .reasoning-modal-backdrop { background: rgba(0,0,0,.7); }
   .reasoning-modal-card { background: rgba(10,15,28,.97); }
   .leaderboard-metric {
@@ -358,6 +361,10 @@
   html[data-theme="light"] .chip-s2 { background: rgba(219,39,119,.12); border-color: rgba(219,39,119,.3); color:#be185d; }
   html[data-theme="light"] .chip-live { background: rgba(22,163,74,.12); border-color: rgba(22,163,74,.3); color:#15803d; }
   html[data-theme="light"] .tab-btn.active {
+    background: rgba(15,23,42,.1);
+    border-color: rgba(15,23,42,.22);
+  }
+  html[data-theme="light"] .scope-btn.active {
     background: rgba(15,23,42,.1);
     border-color: rgba(15,23,42,.22);
   }
@@ -670,13 +677,23 @@
 <section id="leaderboard" class="max-w-6xl mx-auto px-4 py-8">
   <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
     <h2 class="text-2xl font-bold flex items-center gap-2" data-i18n="section_leaderboard">🏆 排行榜</h2>
-    <div id="leaderboard-controls" class="flex flex-wrap items-center gap-2 text-xs">
-      <button id="leaderboard-sort-toggle"
-              class="chip hover:bg-white/15 transition"
-              onclick="toggleLeaderboardSort()"></button>
-      <div class="flex gap-2">
-        <button class="tab-btn chip active" data-view="main" data-i18n="tab_composite">总榜</button>
-        <button class="tab-btn chip" data-view="layers" data-i18n="tab_layers">分层分数</button>
+    <div class="flex flex-wrap items-center gap-2 text-xs">
+      <!-- Scope toggle stays visible in matchmate mode (unlike #leaderboard-controls);
+           hidden until the data payload carries leaderboard_knockout. -->
+      <div id="leaderboard-scope" class="hidden flex flex-wrap items-center gap-2" role="group">
+        <button id="leaderboard-scope-all" class="scope-btn chip active hover:bg-white/15 transition"
+                onclick="setLeaderboardScope('all')" data-i18n="leaderboard_scope_all">全程</button>
+        <button id="leaderboard-scope-knockout" class="scope-btn chip hover:bg-white/15 transition"
+                onclick="setLeaderboardScope('knockout')" data-i18n="leaderboard_scope_knockout">淘汰赛</button>
+      </div>
+      <div id="leaderboard-controls" class="flex flex-wrap items-center gap-2">
+        <button id="leaderboard-sort-toggle"
+                class="chip hover:bg-white/15 transition"
+                onclick="toggleLeaderboardSort()"></button>
+        <div class="flex gap-2">
+          <button class="tab-btn chip active" data-view="main" data-i18n="tab_composite">总榜</button>
+          <button class="tab-btn chip" data-view="layers" data-i18n="tab_layers">分层分数</button>
+        </div>
       </div>
     </div>
   </div>
@@ -697,6 +714,6 @@
   开源 · MIT · 研究项目 · <a class="underline" href="https://github.com/wzk1015/WorldCupArena/" target="_blank">source</a>
 </footer>
 
-<script src="app.js?v=predperf2-20260627"></script>
+<script src="app.js?v=koboard-20260712"></script>
 </body>
 </html>
