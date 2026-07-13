@@ -1,0 +1,182 @@
+{
+  "fixture_id": "World-Cup_Round-of-16_Paraguay_France_2026-07-04",
+  "provider_fixture_id": "19606967",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-04T22:37:56+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 82,
+    "score": {
+      "home": 0,
+      "away": 1
+    },
+    "home": "Paraguay",
+    "away": "France",
+    "competition": "World Cup",
+    "stage": "Round of 16",
+    "kickoff_utc": "2026-07-04T21:00:00+00:00",
+    "venue": "Philadelphia Stadium",
+    "venue_city": "Philadelphia"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.01,
+      "draw": 0.07,
+      "away": 0.92
+    },
+    "most_likely_score": "0-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进行到第82分钟，法国队凭借姆巴佩（基利安·姆巴佩）在第70分钟的点球破门，目前以1-0领先巴拉圭。从场面数据来看，法国队完全掌控了比赛节奏，控球率高达78%，并获得了10个角球和11次射门机会。相比之下，巴拉圭在进攻端显得非常挣扎，全场仅有3次射门且无一射正。考虑到比赛所剩时间不多，且法国队在防守端未受实质性威胁，法国队在常规时间内获胜的概率极高。巴拉圭虽然连续换上加布里埃尔·阿瓦洛斯（加布里埃尔·阿瓦洛斯）等进攻球员试图放手一搏，但面对法国队稳固的防线，扳平比分的难度极大。最可能的最终比分大概率维持在0-1。不过，随着巴拉圭在最后阶段大举压上，后防线势必留下巨大空当，法国队利用反击再入一球的可能性依然存在，姆巴佩利用速度优势在比赛尾声阶段扩大比分的概率值得关注。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1135,
+    "output": 2188
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.014976149999999999,
+  "wall_seconds": 26.526,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.01,\n    \"draw\": 0.07,\n    \"away\": 0.92\n  },\n  \"most_likely_score\": \"0-1\",\n  \"scorers\": [\n    {\n      \"player\": \"Kylian Mbappé\",\n      \"team\": \"away\",\n      \"minute\": 89,\n      \"p\": 0.15\n    },\n    {\n      \"player\": \"Gabriel Ávalos\",\n      \"team\": \"home\",\n      \"minute\": 90,\n      \"p\": 0.04\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛进行到第82分钟，法国队凭借姆巴佩（Kylian Mbappé）在第70分钟的点球破门，目前以1-0领先巴拉圭。从场面数据来看，法国队完全掌控了比赛节奏，控球率高达78%，并获得了10个角球和11次射门机会。相比之下，巴拉圭在进攻端显得非常挣扎，全场仅有3次射门且无一射正。考虑到比赛所剩时间不多，且法国队在防守端未受实质性威胁，法国队在常规时间内获胜的概率极高。巴拉圭虽然连续换上加布里埃尔·阿瓦洛斯（Gabriel Ávalos）等进攻球员试图放手一搏，但面对法国队稳固的防线，扳平比分的难度极大。最可能的最终比分大概率维持在0-1。不过，随着巴拉圭在最后阶段大举压上，后防线势必留下巨大空当，法国队利用反击再入一球的可能性依然存在，姆巴佩利用速度优势在比赛尾声阶段扩大比分的概率值得关注。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**My Thought Process on the In-Play Football Prediction**\n\nOkay, the task is clear: I need to generate a JSON object predicting the outcome of the Paraguay vs. France match, which is currently 0-1 in the 82nd minute. Simplified Chinese reasoning is required.\n\nFirst, I assessed the situation. France is dominating; they have 78% possession and a plethora of shots on target, whereas Paraguay has had difficulty producing offense, and it's getting late in the game. The score is 0-1, and there is an advantage.\n\nNow, I'll formulate my predictions. France's win probability is exceedingly high, around 90-95%, while a draw or a Paraguayan win are highly unlikely. Given the score and the remaining time, I'm leaning towards 0-1 as the most likely final score. However, Paraguay might push forward to try and equalize, which could leave them vulnerable to a French counter-attack. So, I need to account for a potential late goal from France, possibly by Mbappé, and, a very slight possibility of a goal by Paraguay's Ávalos.\n\nI need to write the reasoning in simplified Chinese. I must reflect the dominant match flow and stats, France's control, and Paraguay's struggle to create chances. I should highlight the improbability of Paraguay scoring and France's likelihood of securing the win. The reasoning should reflect the most likely final score. I'll note that a late goal by Mbappé is a distinct possibility.\n\nWith the predictions made and the reasoning drafted, I checked all the constraints, paying particular attention to the JSON format, the required Chinese language and the data constraints. I ensured the output is a single, valid JSON object, without any markdown formatting. The win probabilities align with the most likely score and include the predicted goalscorers with their estimated probabilities and the corresponding minutes. I ensured the output aligned with all the constraints.\n\nFinally, I did one last sanity check for syntax, adherence to constraints, and correct data. Now, the model is complete.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-07-04T21:04:38+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 4,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "France",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-04T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.23,
+        "away": 0.65
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 35,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "Antoine Griezmann",
+          "minute": 68,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚刚开场4分钟，目前比分维持在0-0。作为世界杯八分之一决赛，双方在开局阶段都显得比较谨慎，控球率暂时保持在50%对50%。尽管巴拉圭展现出了顽强的防守姿态，但法国队在整体实力、大赛经验以及锋线天赋上占据明显优势。随着比赛的深入，法国队有望逐渐掌控中场并创造出更多实质性的威胁。基于目前的场上局势和双方硬实力差距，法国队在常规时间内获胜的概率较高。预计法国队会通过边路突破或前场配合打破僵局，最可能的最终比分为0-2。在后续的进球预测中，法国队的核心攻击手如姆巴佩（基利安·姆巴佩）和格列兹曼（Antoine Griezmann）极有可能在比赛中后段利用对手防线空档取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.00781725,
+      "tokens": {
+        "input": 791,
+        "output": 1109
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.547
+    },
+    {
+      "submitted_at": "2026-07-04T22:10:15+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 55,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "France",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-04T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.1,
+        "draw": 0.25,
+        "away": 0.65
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 72,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第55分钟，巴拉圭与法国的比分依然是0-0。从场面数据来看，法国队占据了绝对的优势，控球率高达80%，并获得了7个角球和5次射门机会。巴拉圭队则主要依靠防守反击，仅有20%的控球率和2次射门。尽管法国队尚未打破僵局，但随着比赛的深入，巴拉圭的防线体能将面临巨大考验。法国队强大的进攻火力使得他们在下半场取得进球的概率极高。因此，客队获胜的概率被评估为65%，最可能的最终比分是0-1。预计法国队的核心前锋如基利安·姆巴佩有望在第70分钟左右利用个人能力或团队配合打破场上僵局。"
+      },
+      "sources": [],
+      "cost_usd": 0.004132799999999999,
+      "tokens": {
+        "input": 870,
+        "output": 511
+      },
+      "tool_calls": 0,
+      "wall_seconds": 7.872
+    },
+    {
+      "submitted_at": "2026-07-04T22:37:56+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 82,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Paraguay",
+        "away": "France",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-04T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.07,
+        "away": 0.92
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第82分钟，法国队凭借姆巴佩（基利安·姆巴佩）在第70分钟的点球破门，目前以1-0领先巴拉圭。从场面数据来看，法国队完全掌控了比赛节奏，控球率高达78%，并获得了10个角球和11次射门机会。相比之下，巴拉圭在进攻端显得非常挣扎，全场仅有3次射门且无一射正。考虑到比赛所剩时间不多，且法国队在防守端未受实质性威胁，法国队在常规时间内获胜的概率极高。巴拉圭虽然连续换上加布里埃尔·阿瓦洛斯（加布里埃尔·阿瓦洛斯）等进攻球员试图放手一搏，但面对法国队稳固的防线，扳平比分的难度极大。最可能的最终比分大概率维持在0-1。不过，随着巴拉圭在最后阶段大举压上，后防线势必留下巨大空当，法国队利用反击再入一球的可能性依然存在，姆巴佩利用速度优势在比赛尾声阶段扩大比分的概率值得关注。"
+      },
+      "sources": [],
+      "cost_usd": 0.014976149999999999,
+      "tokens": {
+        "input": 1135,
+        "output": 2188
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.526
+    }
+  ]
+}

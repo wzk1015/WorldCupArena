@@ -1,0 +1,1441 @@
+{
+  "fixture_id": "World-Cup_Round-of-32_Mexico_Ecuador_2026-07-01",
+  "provider_fixture_id": "19606954",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-01T03:58:52+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 0
+    },
+    "home": "Mexico",
+    "away": "Ecuador",
+    "competition": "World Cup",
+    "stage": "Round of 32",
+    "kickoff_utc": "2026-07-01T02:00:00+00:00",
+    "venue": "Mexico City Stadium",
+    "venue_city": "Mexico City"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.97,
+      "draw": 0.03,
+      "away": 0.0
+    },
+    "most_likely_score": "2-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进入第90分钟,墨西哥主场2-0领先厄瓜多尔。上半场胡利安·基诺内斯第22分钟破门、劳尔·希门尼斯第31分钟扩大比分,奠定了两球优势。虽然厄瓜多尔控球率57%略占优,角球8-3领先,但射正仅1次,进攻效率明显偏低,难以在补时阶段连追两球扳平。墨西哥15次射门、3次射正,场面上更具威胁,替补席上又派上Santiago Gimenez和奥尔贝林·皮内达等生力军巩固防线并伺机反击。厄瓜多尔在第95分钟经VAR复核后皮耶罗·欣卡皮耶被红牌罚下少一人作战,几乎彻底关闭了扳平的可能。综合场面与红牌影响,主队获胜概率极高,平局概率极低,客队几乎无翻盘机会。最可能的最终比分仍为2-0,与主胜结论一致。补时阶段若再有进球,更可能来自墨西哥利用对手10人和心态崩盘的反击机会,Gimenez作为前锋替补有较小把握把握机会,Pineda也可能远射建功;不预测厄瓜多尔进球,因为其射正效率与少一人局面均不支持。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 51879,
+    "output": 702
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.20493930000000002,
+  "wall_seconds": 22.088,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.97, \"draw\": 0.03, \"away\": 0.00},\n  \"most_likely_score\": \"2-0\",\n  \"scorers\": [\n    {\"player\": \"Santiago Gimenez\", \"team\": \"home\", \"minute\": 92, \"p\": 0.08},\n    {\"player\": \"Orbelín Pineda\", \"team\": \"home\", \"minute\": 94, \"p\": 0.05}\n  ],\n  \"reasoning\": {\"overall\": \"比赛进入第90分钟,墨西哥主场2-0领先厄瓜多尔。上半场Julián Quiñones第22分钟破门、Raúl Jiménez第31分钟扩大比分,奠定了两球优势。虽然厄瓜多尔控球率57%略占优,角球8-3领先,但射正仅1次,进攻效率明显偏低,难以在补时阶段连追两球扳平。墨西哥15次射门、3次射正,场面上更具威胁,替补席上又派上Santiago Gimenez和Orbelín Pineda等生力军巩固防线并伺机反击。厄瓜多尔在第95分钟经VAR复核后Piero Hincapié被红牌罚下少一人作战,几乎彻底关闭了扳平的可能。综合场面与红牌影响,主队获胜概率极高,平局概率极低,客队几乎无翻盘机会。最可能的最终比分仍为2-0,与主胜结论一致。补时阶段若再有进球,更可能来自墨西哥利用对手10人和心态崩盘的反击机会,Gimenez作为前锋替补有较小把握把握机会,Pineda也可能远射建功;不预测厄瓜多尔进球,因为其射正效率与少一人局面均不支持。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-01T00:59:07+00:00",
+      "live": {
+        "status": "Delayed",
+        "elapsed": null,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.88
+    },
+    {
+      "submitted_at": "2026-07-01T01:05:15+00:00",
+      "live": {
+        "status": "Delayed",
+        "elapsed": 5,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.28,
+        "away": 0.26
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Santiago Giménez",
+          "minute": 63,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 71,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Raúl Jiménez",
+          "minute": 74,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 58,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 82,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "开场仅5分钟，比分仍是0-0，比赛节奏刚刚展开，尚无进球、射门或明显场面数据可供参考，因此判断主要依赖赛前基本面与主客场因素。本场为世界杯32强淘汰赛，墨西哥坐镇墨西哥城主场，海拔与主场氛围对来访的厄瓜多尔构成一定压力，加之淘汰赛中主队往往更愿意主动掌控节奏，因此墨西哥胜率略微领先，设为约46%；厄瓜多尔防守组织性强、反击犀利，具备偷分能力，胜率给到约26%；由于双方风格都偏谨慎，加时甚至点球并非小概率事件，平局赛后90分钟内维持在28%左右。当前尚无任何事件发生，概率相较赛前变化很小，仅因比赛顺利开球、无早期失球或伤病信号，主队维持轻微优势。最可能的最终比分预计为1-0，符合墨西哥主场小胜的主线剧情，也与淘汰赛低比分、强调防守的整体趋势吻合。后续进球方面，若墨西哥打破僵局，中锋圣地亚哥·希门尼斯在下半时体能拉开后禁区把握机会的可能性最高，劳尔·希门尼斯作为经验丰富的支点后段登场或持续在场都具备终结能力，Hirving Lozano则可能凭借速度在边路制造并转化机会；厄瓜多尔一侧,恩纳·瓦伦西亚作为球队进攻核心是最可能的破门人选，中场莫伊塞斯·凯塞多在定位球或后插上时也存在一定进球概率。所有预测进球时间均设定在当前5分钟之后，符合比赛尚处早期的实际情况。"
+      },
+      "sources": [],
+      "cost_usd": 0.206275,
+      "tokens": {
+        "input": 50210,
+        "output": 1108
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.808
+    },
+    {
+      "submitted_at": "2026-07-01T01:11:37+00:00",
+      "live": {
+        "status": "Delayed",
+        "elapsed": null,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 6.58
+    },
+    {
+      "submitted_at": "2026-07-01T01:17:41+00:00",
+      "live": {
+        "status": "Delayed",
+        "elapsed": null,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.28,
+        "away": 0.24
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Santiago Giménez",
+          "minute": 58,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Raúl Jiménez",
+          "minute": 71,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 62,
+          "p": 0.17,
+          "team": "away"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 66,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Kendry Páez",
+          "minute": 78,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 82,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "本场墨西哥对阵厄瓜多尔的世界杯32强淘汰赛目前仍处于延迟开赛状态，比分保持0-0，尚无实质比赛数据与事件可供参考，因此本次预测主要基于赛前基本盘与主场因素进行判断。墨西哥坐镇墨西哥城主场，海拔与气候优势明显，加之球迷氛围强烈，理论上具备一定的主场加成；厄瓜多尔近年来体系稳固、中场硬度足，具备打平乃至偷袭的能力，因此胜平负概率给到主胜约48%、平局约28%、客胜约24%，反映主队略占优但整体差距有限的格局。淘汰赛阶段双方通常趋于谨慎，开局阶段进球概率偏低，进球更可能出现在下半场体能与战术调整之后，因此最可能的最终比分给到1-0，符合主胜概率最高的判断，也贴合淘汰赛低比分的常见走势。后续进球点方面，墨西哥端重点关注锋线核心圣地亚哥·希门尼斯与劳尔·希门尼斯的禁区终结能力，边路的Hirving Lozano则可能通过反击或定位球制造威胁；厄瓜多尔端老将恩纳·瓦伦西亚仍是最关键的支点，年轻中场肯德里·帕埃斯具备远射与前插能力，莫伊塞斯·凯塞多在比赛后段体能对比下也存在后插上得分机会。若比赛进入相持阶段，最可能的破局时间集中在60至80分钟之间，届时替补登场与体能下降将放大高质量前场球员的价值。"
+      },
+      "sources": [],
+      "cost_usd": 0.2043288,
+      "tokens": {
+        "input": 50209,
+        "output": 1003
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.961
+    },
+    {
+      "submitted_at": "2026-07-01T01:24:08+00:00",
+      "live": {
+        "status": "Delayed",
+        "elapsed": null,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.28,
+        "away": 0.26
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Santiago Giménez",
+          "minute": 58,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Raúl Jiménez",
+          "minute": 72,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 78,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 66,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 82,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "本场世界杯32强淘汰赛墨西哥主场对阵厄瓜多尔目前处于延迟开赛状态，比分仍为0-0，比赛尚未真正开始，暂无任何场上事件或技术统计可供参考，因此本次更新主要依据赛前基础面进行判断。墨西哥坐镇墨西哥城主场，海拔与气候优势明显，加之世界杯淘汰赛主场氛围加持，整体略占上风；厄瓜多尔中前场由莫伊塞斯·凯塞多、恩纳·瓦伦西亚等核心串联，身体对抗和反击威胁不容忽视，属于典型的难缠对手。综合来看，主胜概率约46%，平局约28%，客胜约26%，主队小幅领先但差距有限。淘汰赛通常节奏偏谨慎，双方先立足防守再寻求机会，因此最可能的最终比分设为1-0，由墨西哥凭借主场之利小胜晋级。后续进球方面，墨西哥端圣地亚哥·希门尼斯作为支点中锋在下半时体能拉开后最有希望把握机会，劳尔·希门尼斯和Hirving Lozano在替补或加强进攻阶段也具备破门能力；厄瓜多尔一旦落后，恩纳·瓦伦西亚和莫伊塞斯·凯塞多则是最可能扳平的得分点，因此将他们列入后续潜在进球者，进球时间集中安排在下半时中后段，与比赛通常的进球分布相吻合。若比赛正式开球后出现新的场面信息，将据此再行调整。"
+      },
+      "sources": [],
+      "cost_usd": 0.207052,
+      "tokens": {
+        "input": 50215,
+        "output": 1149
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.535
+    },
+    {
+      "submitted_at": "2026-07-01T01:30:32+00:00",
+      "live": {
+        "status": "Delayed",
+        "elapsed": null,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.45,
+        "draw": 0.28,
+        "away": 0.27
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Santiago Giménez",
+          "minute": 58,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Raúl Jiménez",
+          "minute": 71,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 74,
+          "p": 0.19,
+          "team": "away"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 66,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Kendry Páez",
+          "minute": 80,
+          "p": 0.13,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛目前显示为延迟开赛状态，比分仍为0-0，暂无任何进球、射门或控球等数据可参考，因此本次更新以赛前基本面为主进行判断。墨西哥坐镇本土墨西哥城球场，享有明显的主场氛围与海拔优势，加之作为东道主一路的心理加成，整体略占上风；厄瓜多尔近年来防守组织稳固、身体对抗强硬，中前场有凯塞多、佩斯等新生代球员，具备打对攻的能力，因此不能给主队过高的溢价。综合来看，将主胜概率设为0.45、平局0.28、客胜0.27，主队优势存在但并不悬殊。由于开赛延迟，实际比赛节奏、球员状态尚待观察，一旦开球后视场面再动态调整。最可能的最终比分给到1-0，符合主队小胜的整体判断，也贴合世界杯淘汰赛阶段两队普遍趋于谨慎、进球偏少的规律；若厄瓜多尔坚决打防反并压制住主队中前场，比赛滑向1-1甚至0-1都存在合理空间，但概率略低于1-0。后续进球方面，墨西哥端优先考虑桑地亚哥·希门尼斯（圣地亚哥·希门尼斯），其作为主力中锋在禁区内的把握机会能力较强，比赛中段体能与空间打开后最有可能率先建功；劳尔·希门尼斯（劳尔·希门尼斯）和洛萨诺（Hirving Lozano）作为经验丰富的进攻点，同样具备在下半场把握定位球或边路突破机会的可能。厄瓜多尔端则以队长恩内尔·巴伦西亚（恩纳·瓦伦西亚）为第一得分点，其在国家队的抢点与终结能力稳定，加上年轻的肯德里·佩斯（肯德里·帕埃斯）具备任意球和远射能力，若比赛后段主队压出，可能通过反击或定位球扳平或反超。所有预测进球时间均设定在比赛推进至中后段之后，以匹配淘汰赛通常在体能下降后才出现破门的规律。"
+      },
+      "sources": [],
+      "cost_usd": 0.21019330000000003,
+      "tokens": {
+        "input": 50209,
+        "output": 1320
+      },
+      "tool_calls": 0,
+      "wall_seconds": 35.895
+    },
+    {
+      "submitted_at": "2026-07-01T01:37:06+00:00",
+      "live": {
+        "status": "Delayed",
+        "elapsed": null,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 7.806
+    },
+    {
+      "submitted_at": "2026-07-01T01:43:10+00:00",
+      "live": {
+        "status": "Delayed",
+        "elapsed": null,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.75
+    },
+    {
+      "submitted_at": "2026-07-01T01:49:17+00:00",
+      "live": {
+        "status": "Delayed",
+        "elapsed": null,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.07
+    },
+    {
+      "submitted_at": "2026-07-01T01:55:19+00:00",
+      "live": {
+        "status": "Delayed",
+        "elapsed": null,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.28,
+        "away": 0.24
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Santiago Giménez",
+          "minute": 63,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Raúl Jiménez",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 71,
+          "p": 0.17,
+          "team": "away"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 55,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Kendry Páez",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "本场墨西哥对阵厄瓜多尔的世界杯32强淘汰赛目前尚未开球，比赛因故延迟，比分仍为0-0，尚无任何进攻数据或事件可供参考。基于赛前基本面进行首次赛中预测更新：墨西哥坐镇墨西哥城主场，高原环境和主场氛围会给球队带来明显优势，加上淘汰赛阶段主队通常会在开局阶段更主动地掌控节奏，因此将主胜概率设定在略高于半数以下的水平（0.48）。厄瓜多尔近年来在南美区表现稳健，防守组织度高、反击犀利，具备偷分能力，因此客胜概率给到0.24，同时考虑到淘汰赛谨慎程度普遍偏高、双方都不愿先失球，平局概率上调至0.28。综合来看，最可能的最终比分为1-0，即墨西哥凭借主场之利小胜过关，这与主胜概率最高的判断保持一致，且没有低于当前0-0比分。后续进球方面，由于比赛尚未开始，所有潜在射手的进球时间都设在开赛之后：墨西哥方面，中锋圣地亚哥·希门尼斯作为目前锋线首选，具备在下半场体能拉开后把握机会的能力，是最有可能取得进球的球员；劳尔·希门尼斯作为经验丰富的替补/搭档，在比赛后段常能凭定位球或抢点破门；边路的Hirving Lozano则可能利用速度在中场后段撕开防线。厄瓜多尔方面，队长恩纳·瓦伦西亚仍是最稳定的得分点，反击中一击致命的可能性不低；年轻中场肯德里·帕埃斯具备远射和后插上的能力，若比赛拖入尾声也存在破门空间。若开球后出现红黄牌、伤病或先失球等实质变化，将在后续更新中相应调整概率与比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.2068226,
+      "tokens": {
+        "input": 50213,
+        "output": 1137
+      },
+      "tool_calls": 0,
+      "wall_seconds": 29.127
+    },
+    {
+      "submitted_at": "2026-07-01T02:01:43+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 1,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.28,
+        "away": 0.24
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Santiago Giménez",
+          "minute": 63,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 74,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 68,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Kendry Páez",
+          "minute": 79,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Edson Álvarez",
+          "minute": 82,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 88,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚刚开始1分钟，比分0-0,双方控球率各占50%,场面上暂无实质性事件可供参考。目前只能基于赛前基本面进行判断:墨西哥作为东道主坐镇墨西哥城主场,享有海拔高度与全场山呼海啸的助威优势,加之世界杯32强淘汰赛的主场氛围加成,整体获胜概率略占上风。厄瓜多尔虽在南美区预选赛中展现出稳固的防守体系与Caicedo、Páez等中场新星的组织能力,但客场作战面对高原压力仍是不小挑战。综合来看,主队胜率约48%,平局约28%,客队约24%。最可能的最终比分定为1-0,即墨西哥小胜——这与主场作战、淘汰赛谨慎心态以及厄瓜多尔擅长打低比分对抗的风格相吻合。在后续进球候选人方面,墨西哥这边圣地亚哥·希门尼斯作为中锋定位球和禁区嗅觉最强,是最热门首选;Hirving Lozano的边路突破和埃德松·阿尔瓦雷斯的中场后插上远射亦具威胁。厄瓜多尔方面,老将恩纳·瓦伦西亚依旧是锋线支点,年轻的肯德里·帕埃斯具备远射与定位球才能,莫伊塞斯·凯塞多后插上抢点也需提防。进球时间多押注在下半场体能下降与战术调整之后的60分钟以后时段。随着比赛推进,若出现早期换人、伤病或高压逼抢等信号,概率将进一步调整。"
+      },
+      "sources": [],
+      "cost_usd": 0.20296720000000001,
+      "tokens": {
+        "input": 50301,
+        "output": 911
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.955
+    },
+    {
+      "submitted_at": "2026-07-01T02:08:01+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 8,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.27,
+        "away": 0.15
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Raúl Jiménez",
+          "minute": 63,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Santiago Giménez",
+          "minute": 74,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 58,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 82,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "开场8分钟双方仍是0-0，但场面呈现明显的一边倒态势。墨西哥作为东道主在主场墨西哥城球场展现出强烈的控制欲，控球率高达82%，并已有3次射门尝试，而厄瓜多尔控球仅18%、零射门，完全陷入被动防守。基于开局压制程度、主场氛围以及晋级16强的动力，墨西哥获胜概率上调至0.58，平局概率0.27，厄瓜多尔取胜概率压低至0.15。考虑到淘汰赛阶段厄瓜多尔通常防守组织严密、且比赛才刚开始，墨西哥虽占优但短时间内很难形成大比分，最可能的最终比分定为1-0小胜。后续进球方面，墨西哥中锋劳尔·希门尼斯作为禁区终结点最具威胁，下半时初段的破门概率最高；替补或搭档前锋圣地亚哥·希门尼斯常在比赛后段登场制造杀机，也被列为重要候选；边路爆点Hirving Lozano在打开对方防线后有望在60分钟前后建功。厄瓜多尔方面，一旦被迫压出，恩纳·瓦伦西亚凭借反击经验仍具备终场前偷袭破门的可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.19878620000000002,
+      "tokens": {
+        "input": 50341,
+        "output": 677
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.059
+    },
+    {
+      "submitted_at": "2026-07-01T02:14:26+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 14,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.28,
+        "away": 0.2
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Santiago Giménez",
+          "minute": 58,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 72,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 68,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Edson Álvarez",
+          "minute": 80,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 85,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "开场14分钟，墨西哥主场对阵厄瓜多尔的1/16淘汰赛暂时0-0。从早期数据看，墨西哥占据明显主动：控球率61%对39%，射门数4-0，完全把比赛节奏拽在自己脚下，厄瓜多尔目前更多是被动退防、尚未组织出有威胁的反击。结合主场之利、控球和射门压制，墨西哥取胜概率上调至约52%，平局约28%，厄瓜多尔取胜约20%。考虑到淘汰赛通常趋于谨慎、厄瓜多尔防线纪律性较好，而墨西哥虽然占优但把握机会效率一般，最可能的最终比分定为1-0墨西哥小胜。后续进球方面，若墨西哥率先破门，最可能来自持续冲击禁区的圣地亚哥·希门尼斯，其次是边路突击的Hirving Lozano，以及后插上的埃德松·阿尔瓦雷斯；厄瓜多尔一旦落后被迫压出，恩纳·瓦伦西亚凭经验最可能抓住反击机会，中场核心莫伊塞斯·凯塞多远射也存在一定概率。所有预测进球时间均设定在当前14分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.19910070000000002,
+      "tokens": {
+        "input": 50341,
+        "output": 694
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.442
+    },
+    {
+      "submitted_at": "2026-07-01T02:20:48+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 20,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.28,
+        "away": 0.17
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Santiago Giménez",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 72,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 68,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Edson Álvarez",
+          "minute": 80,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 85,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "开场20分钟战成0-0，墨西哥作为主场球队展现出明显的场面优势。控球率62%对38%，射门次数6比1，角球1比0，这些数据都表明墨西哥在主场球迷的助威下占据主动，正持续向厄瓜多尔球门施压。厄瓜多尔目前采取相对保守的防守反击策略，仅有1次射门尝试，进攻端威胁有限。结合世界杯淘汰赛的紧张属性以及东道主的主场加成，墨西哥胜率上调至55%，平局概率28%，厄瓜多尔取胜概率17%。考虑到淘汰赛通常节奏偏谨慎，加之厄瓜多尔防线组织性较强（Caicedo等中场球员的拦截能力出色），预计全场比分不会太高，最可能的最终比分锁定为1-0墨西哥小胜。后续进球方面，墨西哥中锋圣地亚哥·希门尼斯作为禁区终结点在下半时开局阶段最有机会打破僵局；边锋Hirving Lozano的突破能力有望在比赛中段制造威胁；厄瓜多尔方面若能觅得反击机会，恩纳·瓦伦西亚作为经验丰富的锋线核心是最可能的破门人选，莫伊塞斯·凯塞多则可能在末段通过前插或定位球争夺扳平比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.2001367,
+      "tokens": {
+        "input": 50371,
+        "output": 744
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.637
+    },
+    {
+      "submitted_at": "2026-07-01T02:27:02+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 27,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.24,
+        "away": 0.14
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Julián Quiñones",
+          "minute": 68,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Santiago Giménez",
+          "minute": 75,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 82,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Roberto Alvarado",
+          "minute": 58,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Kendry Páez",
+          "minute": 70,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第27分钟，墨西哥凭借第22分钟胡利安·基诺内斯接罗伯托·阿尔瓦拉多助攻的入球，在主场1-0领先厄瓜多尔。从场面数据看，墨西哥占据明显主动：控球率59%，7次射门、1次射正、1个角球，进攻组织清晰；厄瓜多尔仅有1次射门且未形成射正，进攻端受到压制。结合主场之利、墨西哥城海拔对客队体能的额外消耗，以及先进球带来的心理和战术优势，墨西哥赢球概率明显抬升到六成以上，平局约两成多，厄瓜多尔翻盘概率被压到较低区间。基于目前1-0的比分不可回退，最可能的最终比分锁定为2-0——墨西哥有较大机会在下半场利用体能和空间扩大比分，而厄瓜多尔虽然会加大压上但受制于进攻效率，扳平难度较大。后续进球方面，最可能建功的仍是状态火热的Quiñones，其次是替补/持续威胁的圣地亚哥·希门尼斯和边路串联的Alvarado；厄瓜多尔一旦获得机会，进球点集中在核心前锋恩纳·瓦伦西亚以及具备远射能力的肯德里·帕埃斯身上，出球时间大概率落在中后段随着场面拉开而出现。"
+      },
+      "sources": [],
+      "cost_usd": 0.20207180000000002,
+      "tokens": {
+        "input": 50494,
+        "output": 824
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.795
+    },
+    {
+      "submitted_at": "2026-07-01T02:33:25+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 33,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.08,
+        "away": 0.04
+      },
+      "most_likely_score": "3-0",
+      "scorers": [
+        {
+          "player": "Raúl Jiménez",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Julián Quiñones",
+          "minute": 67,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Roberto Alvarado",
+          "minute": 74,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 71,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Kendry Páez",
+          "minute": 82,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到上半场第33分钟，墨西哥主场2-0领先厄瓜多尔。开局阶段墨西哥迅速掌控局面，第22分钟胡利安·基诺内斯接罗伯托·阿尔瓦拉多的助攻首开纪录，第31分钟劳尔·希门尼斯再接Quiñones妙传扩大比分，短短9分钟内两度洞穿对手球门，进攻效率极高。从场面数据看，墨西哥控球率高达63%，8次射门2次射正，角球1比0，全面压制;厄瓜多尔仅有1次射门且未射正，进攻端几乎哑火，短时间内很难对局势构成实质威胁。综合两球领先、主场之利、控场能力和进攻火力，墨西哥获胜概率大幅上调至0.88，平局概率压缩到0.08，厄瓜多尔翻盘概率仅剩0.04。考虑到墨西哥仍会在下半场保持主动，而厄瓜多尔为扳回比分不得不压上进攻从而暴露防线,最可能的最终比分定为3-0。后续进球方面,劳尔·希门尼斯和胡利安·基诺内斯状态火热且已经进入进球节奏,是下半场再下一城的首选;罗伯托·阿尔瓦拉多作为助攻发起点也有一定机会破门。厄瓜多尔方面若能扳回颜面,最可能来自锋线核心恩纳·瓦伦西亚的把握机会,或年轻中场肯德里·帕埃斯在末段防守松懈时的远射尝试,但概率明显低于墨西哥球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.20227530000000002,
+      "tokens": {
+        "input": 50584,
+        "output": 817
+      },
+      "tool_calls": 0,
+      "wall_seconds": 29.251
+    },
+    {
+      "submitted_at": "2026-07-01T02:39:54+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 39,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.09,
+        "away": 0.03
+      },
+      "most_likely_score": "3-0",
+      "scorers": [
+        {
+          "player": "Julián Quiñones",
+          "minute": 62,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Raúl Jiménez",
+          "minute": 74,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Santiago Giménez",
+          "minute": 80,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Roberto Alvarado",
+          "minute": 68,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 78,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场进行到39分钟，墨西哥主场2-0领先厄瓜多尔。开场后墨西哥迅速掌握主动，第22分钟胡利安·基诺内斯接罗伯托·阿尔瓦拉多助攻首开纪录，第31分钟劳尔·希门尼斯再下一城，两个进球间隔仅9分钟，进攻效率极高。从场面数据看，墨西哥控球率60%，总射门8次、射正2次，角球1次；厄瓜多尔仅有1次射门、0射正，几乎没有形成任何有威胁的反击，攻防两端全面被压制。综合双人领先、主场之利、淘汰赛压力下厄瓜多尔必须压出进攻反而更易被反击打穿等因素，墨西哥获胜概率显著上调至0.88，平局概率仅0.09（需厄瓜多尔连入两球且墨西哥零封反弹），厄瓜多尔翻盘概率降至0.03。最终比分方面，考虑到墨西哥进攻火力充沛且下半场厄瓜多尔必然压上留出空间，最可能的比分为3-0，符合主队获胜的最高概率约束。后续进球预测方面：Quiñones状态火热、已有进球和助攻，具备梅开二度潜力；Jiménez作为中锋在禁区内嗅觉敏锐，仍可能扩大比分；替补席上的圣地亚哥·希门尼斯若下半场登场也有把握机会的能力；助攻功臣Alvarado同样具备远射与插上得分能力；厄瓜多尔方面若能扳回颜面，最有可能的进球者是核心前锋恩纳·瓦伦西亚，但概率相对较低。所有预测进球时间均设定在当前39分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.20333720000000002,
+      "tokens": {
+        "input": 50586,
+        "output": 874
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.672
+    },
+    {
+      "submitted_at": "2026-07-01T02:46:27+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.1,
+        "away": 0.04
+      },
+      "most_likely_score": "3-0",
+      "scorers": [
+        {
+          "player": "Raúl Jiménez",
+          "minute": 68,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Julián Quiñones",
+          "minute": 75,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Roberto Alvarado",
+          "minute": 82,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 78,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场结束，墨西哥主场2-0领先厄瓜多尔。第22分钟胡利安·基诺内斯率先破门（罗伯托·阿尔瓦拉多助攻），第31分钟劳尔·希门尼斯再下一城（Quiñones助攻），两球均由流畅的进攻配合打入，显示主队进攻端状态火热。场面数据上墨西哥控球率59%、射门10次（射正2次），厄瓜多尔仅3次射门（射正1次），虽然厄瓜多尔角球数4-1占优显示其在边路施加了一定压力，但整体威胁明显不足。基于两球领先、主场之利、世界杯淘汰赛主队优势明显以及场面完全占优，墨西哥晋级/取胜概率大幅提升至86%，平局概率10%，厄瓜多尔翻盘概率仅约4%。最可能的最终比分为3-0：墨西哥进攻端手感极佳，下半场厄瓜多尔必须压上追分，将进一步暴露防守空间，主队大概率再入一球锁定胜局。后续进球预测方面，劳尔·希门尼斯和胡利安·基诺内斯作为已破门的锋线核心延续手感的可能性最高，Alvarado作为进攻组织者也具备直接得分能力；厄瓜多尔若能扳回一球，最有可能来自锋线核心恩纳·瓦伦西亚在对方压上后的反击或定位球机会，但整体概率有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.20089520000000002,
+      "tokens": {
+        "input": 50616,
+        "output": 736
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.768
+    },
+    {
+      "submitted_at": "2026-07-01T03:09:05+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 54,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.85,
+        "draw": 0.11,
+        "away": 0.04
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到下半场第54分钟，墨西哥主场2-0领先厄瓜多尔。上半场墨西哥凭借第22分钟基诺内斯(胡利安·基诺内斯)接阿尔瓦拉多(罗伯托·阿尔瓦拉多)助攻破门，随后第31分钟希门尼斯(劳尔·希门尼斯)由基诺内斯助攻再下一城，两粒进球都来自流畅的进攻配合，主队进攻端明显更有威胁。技术统计支持墨西哥的场面优势：10次射门对2次，射正2对1，56%的控球率，反映主队在中前场的掌控力更强。厄瓜多尔虽然获得5次角球，但转化为射门机会有限，中场休息时连换两人试图调整，但阿兰·佛朗哥(阿兰·弗兰科)上场即吃到黄牌，说明客队情绪与节奏都未真正稳定下来。基于两球领先、场面占优以及世界杯淘汰赛主场氛围加成，墨西哥获胜概率大幅提升至约0.85，平局概率约0.11（若厄瓜多尔连追两球），客队反超概率极低约0.04。最可能的最终比分维持2-0：墨西哥两球在手后大概率会控制节奏、消耗时间，而厄瓜多尔剩余时间需要至少两球，压上进攻反而增加被反击风险；不过若继续压上，墨西哥再入一球的概率也不低，因此3-0是仅次于2-0的备选。后续进球候选集中在主队：希门尼斯与基诺内斯手感火热且是反击终结者，阿尔瓦拉多具备助攻转终结的能力；客队方面若能扳回一球，替补登场的梅迪纳(亚伊马尔·梅迪纳)带来的前场活力最具可能性，但整体客队进球期望值较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.2107927,
+      "tokens": {
+        "input": 50866,
+        "output": 1221
+      },
+      "tool_calls": 0,
+      "wall_seconds": 27.004
+    },
+    {
+      "submitted_at": "2026-07-01T03:15:32+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 60,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.1,
+        "away": 0.04
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第60分钟，墨西哥主场2-0领先厄瓜多尔。上半场胡利安·基诺内斯在第22分钟率先破门，劳尔·希门尼斯在第31分钟由Quiñones助攻扩大比分，两球都来自流畅的进攻组合，显示墨西哥前场配合已经完全打开局面。数据层面，墨西哥控球率54%，射门11次(2次射正)，明显压制对手；厄瓜多尔虽然拿到5个角球，但3射1正的转化效率偏低，威胁有限。厄瓜多尔中场休息时一口气换了两名球员并很快吃到黄牌，说明球队心态受到影响，短时间内难以在结构上追回两球差距。综合来看，墨西哥晋级/取胜概率大幅上升，判断主胜约86%，平局10%，客胜仅4%。最终比分最可能维持2-0——领先方通常会在剩余时间收缩阵型控制节奏，而厄瓜多尔缺乏高效射门支撑连入两球的场面。后续进球方面，墨西哥若加码，Quiñones和Jiménez作为已进球的主攻点仍最具威胁，替补登场的Medina是厄瓜多尔追分最可能的爆点，Alvarado作为助攻发起者也具备后插上得分的可能，因此这几名球员被列为60分钟后潜在破门人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.202945,
+      "tokens": {
+        "input": 50870,
+        "output": 796
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.297
+    },
+    {
+      "submitted_at": "2026-07-01T03:21:55+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 66,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.09,
+        "away": 0.03
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第66分钟，墨西哥主场2-0领先厄瓜多尔。上半场胡利安·基诺内斯在第22分钟由罗伯托·阿尔瓦拉多助攻首开纪录，随后第31分钟劳尔·希门尼斯再下一城，由Quiñones助攻扩大领先优势，墨西哥的双线配合已经证明了他们的进攻效率。数据显示墨西哥全场共12次射门、2次射正，转化率极高；反观厄瓜多尔虽然控球率略占优（53%对47%）、拿到5个角球，但仅有3次射门、1次射正，说明控球未能转化为真正威胁。厄瓜多尔在下半场开场立即做出双换人调整（亚伊马尔·梅迪纳和Angelo Preciado登场），并且阿兰·弗兰科在第46分钟吃到黄牌，显示客队试图加强攻势但同时也进入更冒险的状态。综合当前2球领先、剩余时间不足30分钟、厄瓜多尔进攻乏力等因素，墨西哥获胜概率大幅上升至约88%，平局约9%（需厄瓜多尔在末段连入两球），厄瓜多尔逆转的可能性极低约3%。最可能的最终比分为2-0，因为墨西哥进入领先控局阶段可能放缓节奏，而厄瓜多尔难以在短时间内攻破对方防线。若后续再有进球，墨西哥方面劳尔·希门尼斯和胡利安·基诺内斯状态火热、最有可能扩大比分，替补前锋圣地亚哥·希门尼斯若登场也具备把握机会的能力；厄瓜多尔方面若能扳回一球，核心射手恩纳·瓦伦西亚和新星肯德里·帕埃斯是最具威胁的选择。"
+      },
+      "sources": [],
+      "cost_usd": 0.2057126,
+      "tokens": {
+        "input": 50868,
+        "output": 946
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.22
+    },
+    {
+      "submitted_at": "2026-07-01T03:28:08+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 73,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 6.888
+    },
+    {
+      "submitted_at": "2026-07-01T03:34:03+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 79,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.96,
+        "draw": 0.03,
+        "away": 0.01
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第79分钟，墨西哥主场2-0领先厄瓜多尔。上半场胡利安·基诺内斯第22分钟率先破门，劳尔·希门尼斯第31分钟再下一城，奠定了两球优势。厄瓜多尔尽管控球率略占优(54%对46%)，且获得6个角球，但3次射门仅1次射正，进攻效率明显不足，难以对墨西哥球门形成实质性威胁。反观墨西哥14次射门3次射正，进攻端更具锐度。厄瓜多尔中场休息时连换两人，第59分钟再用凯文·罗德里格斯换下恩纳·瓦伦西亚寻求变化，但至今未能改写比分。比赛只剩十余分钟加补时，两球差距在如此有限的时间内被逆转的概率极低，墨西哥获胜概率高达96%，平局与厄瓜多尔翻盘的可能性都被压缩到很小。最可能的最终比分维持2-0，符合墨西哥获胜的主导态势。后续进球方面，墨西哥仍持续施压，主力射手劳尔·希门尼斯与Quiñones具备终结比赛的能力，替补上场的布莱恩·古铁雷斯也可能利用体能优势打入锁定胜局的一球；厄瓜多尔方面则需全力压上，替补前锋凯文·罗德里格斯是最有可能扳回颜面的候选人，但整体进球概率均不高。"
+      },
+      "sources": [],
+      "cost_usd": 0.2025713,
+      "tokens": {
+        "input": 51044,
+        "output": 741
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.171
+    },
+    {
+      "submitted_at": "2026-07-01T03:40:09+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 85,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.97,
+        "draw": 0.02,
+        "away": 0.01
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第85分钟，墨西哥主场2-0领先厄瓜多尔。上半场胡利安·基诺内斯第22分钟首开纪录，劳尔·希门尼斯第31分钟锦上添花，墨西哥在两球领先后完全掌控了比赛节奏。从场面数据看，厄瓜多尔虽然控球率略高（55%对45%），角球也多出几个（7对3），但真正具备威胁的射门非常有限——全场仅4次射门、1次射正，进攻端始终未能撕开墨西哥的防线；反观墨西哥14次射门、3次射正，效率更高，反击威胁明显。厄瓜多尔虽在中场做出3次换人试图加强攻势，但比赛所剩时间已不足5分钟加补时，短时间内连追两球的可能性微乎其微。综合来看，主队获胜概率极高，平局与厄瓜多尔逆转概率都可以忽略，最可能的最终比分维持在2-0。后续进球方面，墨西哥在最后阶段仍有反击空间，替补上场的Santiago Gimenez前插机会较大，可能锁定胜局；厄瓜多尔若压上进攻，前场生力军凯文·罗德里格斯存在打进安慰球的可能，但整体概率均偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.2007546,
+      "tokens": {
+        "input": 51213,
+        "output": 609
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.884
+    },
+    {
+      "submitted_at": "2026-07-01T03:46:22+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.98,
+        "draw": 0.015,
+        "away": 0.005
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第90分钟，墨西哥主场2比0领先厄瓜多尔。上半场墨西哥效率极高，第22分钟胡利安·基诺内斯（基尼奥内斯）在罗伯托·阿尔瓦拉多（阿尔瓦拉多）助攻下率先破门，第31分钟劳尔·希门尼斯（希门尼斯）再下一城，两球都在半场结束前完成，奠定了整场比赛的走势。下半场厄瓜多尔虽然通过多次换人加强中前场轮换，控球率也达到55%，角球8比3占优，但真正转化为射正的只有1次，全场4次射门难以对墨西哥球门构成实质威胁；墨西哥则以14次射门、3次射正的效率优势主导了比赛质量，并通过第58、73、80分钟的连续换人稳固中后场结构，明显进入控节奏、耗时间的收尾阶段。进入伤停补时，两球领先加上对手锋线乏力，墨西哥获胜几乎已无悬念，主胜概率被推至极高水平，平局和客胜只保留极小的数学空间，用于覆盖极端补时连丢球的尾部风险。最可能的最终比分维持2比0，因为剩余时间过短，任何一方再进球的窗口都非常有限。若补时阶段还有进球，最可能来自墨西哥替补登场、体能占优的前场球员，Santiago Gimenez（希门尼斯）作为新鲜前锋在反击中最具威胁，奥尔贝林·皮内达（皮内达）在二点球和远射上也有机会；厄瓜多尔方面若压上寻求安慰球，凯文·罗德里格斯（罗德里格斯）作为支点前锋在定位球和角球争顶中概率最高，但整体后续进球期望值都不高。"
+      },
+      "sources": [],
+      "cost_usd": 0.0202797,
+      "tokens": {
+        "input": 1551,
+        "output": 786
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.492
+    },
+    {
+      "submitted_at": "2026-07-01T03:52:38+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.97,
+        "draw": 0.02,
+        "away": 0.01
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，墨西哥主场2-0领先厄瓜多尔。上半场胡利安·基诺内斯第22分钟率先破门，劳尔·希门尼斯第31分钟再下一城，为球队奠定了两球优势。虽然厄瓜多尔在控球率上以57%占优，角球数8-3更多，但射门效率明显不足，5次射门仅1次射正，难以对墨西哥球门形成实质威胁；反观墨西哥14次射门3次射正，进攻转化率更高。下半场厄瓜多尔多次换人（亚伊马尔·梅迪纳、凯文·罗德里格斯、霍尔迪·凯塞多、肯德里·帕埃斯等）试图加强进攻，但直至第90分钟仍未能取得进球，追平希望极其渺茫。墨西哥主帅也在第58、73、80分钟连续换人（Santiago Gimenez、奥贝德·巴尔加斯、奥尔贝林·皮内达等）以稳固防线并保持前场活力。综合当前比分、剩余时间仅剩伤停补时以及双方场面走势，主队获胜概率极高，平局与客队翻盘概率均可忽略。最可能最终比分锁定为2-0。若补时阶段出现进球，替补登场且状态积极的Santiago Gimenez和奥尔贝林·皮内达最有希望为墨西哥再下一城；厄瓜多尔方面凯文·罗德里格斯作为前锋替补，也存在极小的扳回一球的可能性。"
+      },
+      "sources": [],
+      "cost_usd": 0.20591240000000002,
+      "tokens": {
+        "input": 51562,
+        "output": 818
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.138
+    },
+    {
+      "submitted_at": "2026-07-01T03:58:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.97,
+        "draw": 0.03,
+        "away": 0.0
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进入第90分钟,墨西哥主场2-0领先厄瓜多尔。上半场胡利安·基诺内斯第22分钟破门、劳尔·希门尼斯第31分钟扩大比分,奠定了两球优势。虽然厄瓜多尔控球率57%略占优,角球8-3领先,但射正仅1次,进攻效率明显偏低,难以在补时阶段连追两球扳平。墨西哥15次射门、3次射正,场面上更具威胁,替补席上又派上Santiago Gimenez和奥尔贝林·皮内达等生力军巩固防线并伺机反击。厄瓜多尔在第95分钟经VAR复核后皮耶罗·欣卡皮耶被红牌罚下少一人作战,几乎彻底关闭了扳平的可能。综合场面与红牌影响,主队获胜概率极高,平局概率极低,客队几乎无翻盘机会。最可能的最终比分仍为2-0,与主胜结论一致。补时阶段若再有进球,更可能来自墨西哥利用对手10人和心态崩盘的反击机会,Gimenez作为前锋替补有较小把握把握机会,Pineda也可能远射建功;不预测厄瓜多尔进球,因为其射正效率与少一人局面均不支持。"
+      },
+      "sources": [],
+      "cost_usd": 0.20493930000000002,
+      "tokens": {
+        "input": 51879,
+        "output": 702
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.088
+    }
+  ]
+}

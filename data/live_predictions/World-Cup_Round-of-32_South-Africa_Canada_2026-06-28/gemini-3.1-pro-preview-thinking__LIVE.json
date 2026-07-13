@@ -1,0 +1,760 @@
+{
+  "fixture_id": "World-Cup_Round-of-32_South-Africa_Canada_2026-06-28",
+  "provider_fixture_id": "19606960",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-28T20:55:58+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 1
+    },
+    "home": "South Africa",
+    "away": "Canada",
+    "competition": "World Cup",
+    "stage": "Round of 32",
+    "kickoff_utc": "2026-06-28T19:00:00+00:00",
+    "venue": "Los Angeles Stadium",
+    "venue_city": null
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.01,
+      "draw": 0.04,
+      "away": 0.95
+    },
+    "most_likely_score": "0-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入伤停补时阶段（90分钟），加拿大凭借斯蒂芬·欧斯塔基奥（Stephen Eustaquio）在补时阶段的关键进球，目前以1-0领先南非。从全场数据来看，虽然南非占据了58%的控球率，但进攻效率较为低下，全场仅有1次射正。相反，加拿大在反击中表现得极具威胁，12次射门中有7次射正，并最终成功打破僵局。考虑到比赛所剩时间极少，加拿大拿下本场比赛胜利的概率极高。南非在最后时刻可能会大举压上尝试扳平，但留给他们的时间已经所剩无几。预计最终比分将维持在0-1，加拿大将顺利守住胜果。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1778,
+    "output": 821
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.007039200000000001,
+  "wall_seconds": 10.165,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.01,\n    \"draw\": 0.04,\n    \"away\": 0.95\n  },\n  \"most_likely_score\": \"0-1\",\n  \"scorers\": [],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入伤停补时阶段（90分钟），加拿大凭借斯蒂芬·欧斯塔基奥（Stephen Eustaquio）在补时阶段的关键进球，目前以1-0领先南非。从全场数据来看，虽然南非占据了58%的控球率，但进攻效率较为低下，全场仅有1次射正。相反，加拿大在反击中表现得极具威胁，12次射门中有7次射正，并最终成功打破僵局。考虑到比赛所剩时间极少，加拿大拿下本场比赛胜利的概率极高。南非在最后时刻可能会大举压上尝试扳平，但留给他们的时间已经所剩无几。预计最终比分将维持在0-1，加拿大将顺利守住胜果。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Game's Almost Over: Canada's Got This**\n\nOkay, it's the 90th minute, practically stoppage time. Canada is up 1-0 against South Africa, thanks to a goal by Stephen Eustaquio at minute 92 - that's definitely stoppage time. The score is 0-1, and given that the event list shows the goal at 92', and we're at 90', this match is effectively done. Canada is leading, and the win probabilities reflect that: a near-certain away win at 95%, with home at a measly 1% and a draw at 4%. My most likely score prediction remains 0-1.\n\nI considered scorers, but there's really no time left. The prompt specifically says any scorer has to be after the current elapsed time. It's too late for anyone to score. Even though maybe Jonathan David or Cyle Larin *could* grab a counter, it's just not realistic now. So I'll just leave the scorers list empty.\n\nLet's quickly check the stats: South Africa had 58% possession but only 1 shot on target out of 6 shots. Canada has 42% possession but generated much better attacks, with 7 shots on target out of 12. Canada has been significantly more dangerous throughout the match.\n\nThe reasoning is pretty straightforward: South Africa had the ball more, but Canada was far more effective in attack. Their goal in stoppage time seals it, and with so little time left, the result is all but decided. Canada is in the bag.\n\nHere's the JSON structure:\n\n```json\n{\n  \"win_probs\": {\n    \"home\": 0.01,\n    \"draw\": 0.04,\n    \"away\": 0.95\n  },\n  \"most_likely_score\": \"0-1\",\n  \"scorers\": [],\n  \"sources\": []\n}\n```\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-28T19:04:46+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 4,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-28T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.3,
+        "away": 0.45
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 62,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Percy Tau",
+          "minute": 75,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚刚开场4分钟，目前比分0-0。从开局阶段的数据来看，加拿大队以55%的控球率稍稍占据场上主动，但双方均处于互相试探阶段，尚未产生有威胁的进攻事件。作为世界杯1/16决赛，比赛的容错率极低，双方开局都会相对谨慎。综合双方整体实力，加拿大队拥有多名在欧洲顶级联赛效力的核心球员，前场冲击力和战术执行力更强，因此赢面较大。南非队预计会采取稳守反击的策略，试图利用速度寻找机会。随着比赛深入，加拿大队有望通过持续的压迫打破僵局，最可能的最终比分预测为0-1。在进球球员方面，加拿大队的主力前锋 乔纳森·戴维 具备极强的门前嗅觉，极有可能在下半场为球队建功；而南非队的 Percy Tau 则是他们反击中的关键人物，具备一定的冷门威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.0033999,
+      "tokens": {
+        "input": 898,
+        "output": 390
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.412
+    },
+    {
+      "submitted_at": "2026-06-28T19:11:05+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 11,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-28T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.28,
+        "away": 0.5
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 58,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Cyle Larin",
+          "minute": 75,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 64,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第11分钟，目前比分依然是0-0。从开场的数据来看，南非队（南非）在控球率上占据了明显的优势（61%），并且已经完成了一次命中门框范围的射门，展现出了积极的战术意图和良好的竞技状态。相比之下，加拿大队（加拿大）虽然控球率较低，但也获得了一次角球和一次射门机会，门将也做出了一次成功扑救，防守端保持稳健。尽管南非开局表现亮眼，但加拿大在整体阵容深度和锋线球员的个人能力上更具优势。在世界杯淘汰赛阶段，比赛经验和反击效率往往决定最终走向。随着比赛的深入，预计加拿大队会逐渐适应节奏，利用前场的速度和冲击力制造实质性威胁。因此，预测加拿大队最终获胜的概率较高，最可能的最终比分为0-1。在后续进球者方面，加拿大的核心前锋 乔纳森·戴维 和 赛尔·拉林 是最有可能在下半场打破僵局的关键人物，而南非的 莱尔·福斯特 也有机会在反击中制造麻烦。"
+      },
+      "sources": [],
+      "cost_usd": 0.00792855,
+      "tokens": {
+        "input": 999,
+        "output": 1092
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.165
+    },
+    {
+      "submitted_at": "2026-06-28T19:17:15+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-28T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.32,
+        "away": 0.4
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 62,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Percy Tau",
+          "minute": 75,
+          "p": 0.22,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第17分钟，南非与加拿大目前战成0-0平。这是一场世界杯1/32决赛的较量，双方开场后展现出了不同的战术意图。南非队在控球率上占据了67%的绝对优势，并且已经完成了一次命中目标的射门，展现出较强的中场控制力。而加拿大队虽然控球率仅为33%，但通过快速反击获得了2次角球机会，并在防守端表现积极。考虑到加拿大队在整体阵容深度和反击犀利度上略占优势，随着比赛深入，他们利用转换进攻打破僵局的可能性较大。南非队虽然控球占优，但需要转化为更多实质性的威胁。综合目前的场面数据与球队实力，加拿大队在常规时间内小胜的概率最高，最可能的最终比分预测为0-1。预计加拿大队的核心前锋如 乔纳森·戴维 有望在下半场利用对手体能下降或防线压上时完成致命一击。"
+      },
+      "sources": [],
+      "cost_usd": 0.0035563500000000002,
+      "tokens": {
+        "input": 999,
+        "output": 398
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.183
+    },
+    {
+      "submitted_at": "2026-06-28T19:23:29+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 23,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-28T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.3,
+        "away": 0.45
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 65,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第23分钟，南非与加拿大暂时战成0-0平。从场面数据来看，南非队占据了高达65%的控球率，但加拿大队在防守反击中表现得更具威胁，已经完成了3次射门并获得2个角球。双方门将各做出了一次成功扑救，比赛处于僵持阶段。作为世界杯1/16决赛，双方在开局阶段都保持了一定的战术纪律性。尽管南非控球占优，但加拿大拥有更出色的锋线终结能力和反击速度。综合判断，加拿大队在后续比赛中打破僵局的可能性更大，客胜概率最高。预计最终比分为0-1，加拿大的核心前锋 乔纳森·戴维 极有可能在下半场利用对手体能下降时的防线空当完成致命一击。"
+      },
+      "sources": [],
+      "cost_usd": 0.008640450000000001,
+      "tokens": {
+        "input": 999,
+        "output": 1205
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.056
+    },
+    {
+      "submitted_at": "2026-06-28T19:29:40+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 29,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-28T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.35,
+        "away": 0.4
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 65,
+          "p": 0.28,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第29分钟，南非与加拿大暂时战成0-0平。作为世界杯1/16决赛，双方在开局阶段都相对谨慎。场面上，南非队占据了64%的控球率，试图通过传导控制比赛节奏；而加拿大队虽然控球率仅为36%，但反击十分犀利，已经完成了3次射门并获得2个角球，双方各有1次射正，门将也各自做出1次扑救。这显示出加拿大在防守反击中更具实质性威胁，而南非的控球尚未转化为足够的绝对机会。随着比赛深入，加拿大队凭借更丰富的球星个人能力和高效的转换进攻，打破僵局的可能性略高。因此，客队加拿大的获胜概率被评估为40%，平局概率为35%，南非获胜概率为25%。最可能的最终比分预测为0-1，预计加拿大前锋 乔纳森·戴维 有望在下半场第65分钟左右利用反击或定位球机会攻入制胜一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.01315125,
+      "tokens": {
+        "input": 999,
+        "output": 1921
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.857
+    },
+    {
+      "submitted_at": "2026-06-28T19:36:02+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 36,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-28T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.35,
+        "away": 0.43
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 65,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 58,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第36分钟，南非与加拿大暂时战成0-0平。从场面数据来看，南非队占据了60%的控球率，但在进攻转化上略显乏力，仅有2次射门1次射正。加拿大队虽然控球率处于劣势（40%），但反击打得更为直接，完成了3次射门并有1次射正，同时获得了2次角球机会。双方门将均有扑救表现，比赛整体呈现出胶着的防守态势。考虑到这是一场世界杯1/32决赛的淘汰赛，双方在接近半场结束时都会更加谨慎。随着比赛时间的推移，平局的概率在逐渐上升。然而，加拿大队在锋线上拥有更强的个人能力和终结手段，预计在下半场随着体能下降和阵型拉开，加拿大队更有可能通过快速反击打破僵局。因此，客队取胜的概率略高，最可能的常规时间比分为0-1。进球预测方面，加拿大的核心前锋乔纳森·戴维（乔纳森·戴维）是最具威胁的得分点，极有可能在下半场中段利用对方防线空当完成致命一击；南非队若想有所建树，莱尔·福斯特（莱尔·福斯特）将是前场的关键人物。"
+      },
+      "sources": [],
+      "cost_usd": 0.015709050000000002,
+      "tokens": {
+        "input": 999,
+        "output": 2327
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.049
+    },
+    {
+      "submitted_at": "2026-06-28T19:42:32+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 42,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-28T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.42,
+        "away": 0.33
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第42分钟，比分依然是0-0。从上半场的场面来看，南非队在控球率上以56%占据一定优势，但加拿大队在进攻端更具威胁，完成了5次射门其中2次射正。作为世界杯1/16决赛，双方在防守端都表现得非常谨慎，不愿轻易冒险。随着半场即将结束，常规时间内平局的概率正在显著上升。加拿大队凭借更高效的反击和锋线实力在胜率上略微领先于南非队。考虑到淘汰赛的性质和目前的胶着状态，0-0是最可能的最终比分，双方极有可能将悬念留到加时赛。如果下半场有进球产生，加拿大队的前锋 乔纳森·戴维 和南非队的攻击手 莱尔·福斯特 将是最具威胁的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.008627850000000001,
+      "tokens": {
+        "input": 999,
+        "output": 1203
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.428
+    },
+    {
+      "submitted_at": "2026-06-28T19:48:48+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-28T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.35,
+        "away": 0.43
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 65,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Cyle Larin",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 72,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第45分钟，南非与加拿大暂时战成0-0平。从上半场的场面来看，尽管南非在控球率上以55%略占优势，但加拿大在进攻端表现得更具实质性威胁。加拿大半场共完成8次射门，其中4次射正，并获得了3次角球机会；相比之下，南非仅有3次射门和1次射正。南非门将做出了3次关键扑救，是球队力保城门不失的关键。考虑到这是一场世界杯淘汰赛，下半场双方可能会在防守端继续保持警惕，但加拿大凭借更高效的进攻创造力，打破僵局的可能性更大。随着比赛深入，南非的防线在持续施压下可能会出现体能下降或注意力不集中的漏洞。因此，预测加拿大在常规时间内获胜的概率最高，最可能的最终比分为0-1。在进球球员方面，加拿大的锋线核心如 乔纳森·戴维 极有可能在下半场中段利用反击或门前抢点机会攻入制胜一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.01318905,
+      "tokens": {
+        "input": 999,
+        "output": 1927
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.918
+    },
+    {
+      "submitted_at": "2026-06-28T20:06:43+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 51,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-28T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.23,
+        "draw": 0.35,
+        "away": 0.42
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 75,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Percy Tau",
+          "minute": 82,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第51分钟，南非与加拿大目前战成0-0平。从场面数据来看，尽管南非队在控球率上以55%略占优势，但加拿大队在进攻端展现出了更强的实质性威胁。加拿大队目前已经完成了7次射门，其中4次射正，迫使南非门将做出了3次关键扑救。相比之下，南非队仅有3次射门且只有1次射正，进攻效率和创造绝对机会的能力略显不足。考虑到这是一场世界杯1/16决赛的淘汰赛，双方在下半场初期可能会继续保持一定的战术谨慎。然而，加拿大队凭借更具穿透力的反击和更高的射门质量，更有可能在比赛中后段打破僵局。因此，客队加拿大获胜的概率略高，最可能的最终比分预测为0-1。在进球球员方面，加拿大的锋线尖刀 乔纳森·戴维 极有可能在第75分钟左右利用南非防线体能下降的空档完成致命一击；南非的 Percy Tau 同样具备利用个人能力反击得分的机会，但整体概率相对较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0037768500000000004,
+      "tokens": {
+        "input": 999,
+        "output": 433
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.847
+    },
+    {
+      "submitted_at": "2026-06-28T20:13:02+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 58,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-28T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.42,
+        "away": 0.36
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第58分钟，南非与加拿大依然互交白卷。从场面数据来看，南非虽然占据了57%的控球率，但在进攻端的实质威胁不足，仅有3次射门且1次射正。相比之下，加拿大展现出了更高的进攻效率，在43%的控球率下完成了7次射门，其中4次射正，迫使南非门将做出了3次关键扑救。考虑到这是一场世界杯三十二强淘汰赛，随着比赛深入，双方在防守端会更加谨慎，避免致命失误。加拿大虽然进攻更具威胁，但南非防守表现顽强且门将状态出色。综合目前的比赛走势与时间消耗，常规时间内互交白卷进入加时赛的可能性正在逐渐增加。如果比赛僵局被打破，加拿大利用反击由锋线核心得分的概率相对较高，但0-0依然是目前最可能保持到常规时间结束的比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0033117,
+      "tokens": {
+        "input": 1078,
+        "output": 346
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.578
+    },
+    {
+      "submitted_at": "2026-06-28T20:19:20+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 64,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-28T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.45,
+        "away": 0.33
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第64分钟，南非与加拿大目前依然战成0-0平。从场面数据来看，南非队虽然以60%的控球率掌控了比赛节奏，但他们在进攻三区的转化率较低，仅有3次射门且只有1次射正。相反，加拿大队在40%的控球率下展现了极高的反击效率，目前已完成7次射门，其中4次命中门框范围，迫使南非门将做出了3次关键扑救。随着比赛进入最后阶段，双方体能逐渐下降，防守端的容错率变得极低。考虑到加拿大队在进攻端的实质性威胁更大，他们取得进球的概率略高于主队。然而，在剩余时间不足30分钟的情况下，双方维持均势互交白卷的可能性正在急剧上升。因此，平局是目前概率最高的结果，0-0是最可能的最终比分。如果比赛在尾声阶段被改写，加拿大队更有可能利用高效的快速反击完成致命一击。"
+      },
+      "sources": [],
+      "cost_usd": 0.01052625,
+      "tokens": {
+        "input": 1145,
+        "output": 1480
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.746
+    },
+    {
+      "submitted_at": "2026-06-28T20:25:42+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 70,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-28T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.2,
+        "draw": 0.55,
+        "away": 0.25
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第70分钟，南非与加拿大依然维持0-0的平局。从场面数据来看，南非虽然占据了60%的控球率，但在进攻端的实质威胁不足，全场仅有4次射门且只有1次射正。相比之下，加拿大在40%的控球率下打出了更高效的反击，完成了7次射门其中4次射正，南非门将做出了3次关键扑救力保城门不失。随着比赛进入最后20分钟，双方在世界杯淘汰赛的压力下可能会踢得更加保守，避免在常规时间尾声阶段犯错。加拿大在下半场通过换人调整了中后场，试图保持体能和防守硬度。综合目前的比赛节奏和双方的进攻效率，常规时间内互交白卷进入加时赛的可能性正在急剧上升。因此，平局是目前概率最高的结果，最可能的最终比分为0-0。如果比赛在最后阶段出现进球，加拿大凭借更具威胁的进攻转化，抓住反击机会破门的概率略高于南非。"
+      },
+      "sources": [],
+      "cost_usd": 0.00965685,
+      "tokens": {
+        "input": 1289,
+        "output": 1318
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.021
+    },
+    {
+      "submitted_at": "2026-06-28T20:37:26+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 82,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-28T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.1,
+        "draw": 0.75,
+        "away": 0.15
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第82分钟，南非与加拿大依然维持着0-0的平局。从场面数据来看，南非队虽然占据了61%的控球率，但在进攻端的效率并不高，全场5次射门仅有1次射正。相比之下，加拿大队在有限的控球时间里展现了更强的反击威胁，9次射门中有5次射正，迫使南非门将做出了4次扑救。加拿大队在下半场进行了密集的人员调整，试图在常规时间最后阶段打破僵局。然而，考虑到比赛所剩时间无几，双方在防守端都会更加谨慎，避免在最后时刻犯错。因此，常规时间以0-0平局收场的概率极高。如果出现绝杀，进攻更具威胁且体能充沛的加拿大替补球员更有可能把握住机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.0040173000000000006,
+      "tokens": {
+        "input": 1564,
+        "output": 377
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.895
+    },
+    {
+      "submitted_at": "2026-06-28T20:43:37+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 88,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-28T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.88,
+        "away": 0.07
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第88分钟，南非与加拿大依然维持0-0的平局。从全场数据来看，加拿大在进攻端表现更为活跃，共完成11次射门其中6次射正，但南非门将发挥出色，贡献了5次关键扑救，力保城门不失。南非虽然占据了57%的控球率，但创造出的实质性威胁较少，仅有1次射正。加拿大在下半场进行了密集的人员调整，试图在常规时间最后阶段打破僵局。然而，考虑到比赛所剩时间极少，双方在防守端都会更加谨慎以避免遭到绝杀，比赛进入加时赛的概率极高。因此，0-0是最可能的常规时间最终比分。如果最后时刻出现进球，加拿大凭借更多的射门威胁和替补登场的攻击手略占优势。"
+      },
+      "sources": [],
+      "cost_usd": 0.00811335,
+      "tokens": {
+        "input": 1565,
+        "output": 1027
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.478
+    },
+    {
+      "submitted_at": "2026-06-28T20:49:48+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-28T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.95,
+        "away": 0.03
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第90分钟，南非与加拿大依然维持0-0的平局。从全场数据来看，加拿大虽然控球率仅有42%，但在进攻端制造了更多威胁，全场11次射门中有6次射正；而南非队控球率占优（58%），但仅有1次射正，很大程度上依靠门将的5次扑救力保城门不失。由于常规时间所剩无几，双方在伤停补时阶段大概率会踢得相对保守，以确保将比赛拖入加时赛。因此，常规时间以平局收场的概率极高，最可能的最终比分是0-0。在极短的补时阶段内，出现绝杀进球的可能性微乎其微，故不预测后续进球者。"
+      },
+      "sources": [],
+      "cost_usd": 0.0035049,
+      "tokens": {
+        "input": 1712,
+        "output": 271
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.067
+    },
+    {
+      "submitted_at": "2026-06-28T20:55:58+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "South Africa",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-28T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入伤停补时阶段（90分钟），加拿大凭借斯蒂芬·欧斯塔基奥（Stephen Eustaquio）在补时阶段的关键进球，目前以1-0领先南非。从全场数据来看，虽然南非占据了58%的控球率，但进攻效率较为低下，全场仅有1次射正。相反，加拿大在反击中表现得极具威胁，12次射门中有7次射正，并最终成功打破僵局。考虑到比赛所剩时间极少，加拿大拿下本场比赛胜利的概率极高。南非在最后时刻可能会大举压上尝试扳平，但留给他们的时间已经所剩无几。预计最终比分将维持在0-1，加拿大将顺利守住胜果。"
+      },
+      "sources": [],
+      "cost_usd": 0.007039200000000001,
+      "tokens": {
+        "input": 1778,
+        "output": 821
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.165
+    }
+  ]
+}

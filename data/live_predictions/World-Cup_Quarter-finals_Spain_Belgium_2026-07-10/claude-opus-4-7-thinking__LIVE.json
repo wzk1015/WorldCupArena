@@ -1,0 +1,399 @@
+{
+  "fixture_id": "World-Cup_Quarter-finals_Spain_Belgium_2026-07-10",
+  "provider_fixture_id": "19606971",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-10T20:51:00+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 1
+    },
+    "home": "Spain",
+    "away": "Belgium",
+    "competition": "World Cup",
+    "stage": "Quarter-finals",
+    "kickoff_utc": "2026-07-10T19:00:00+00:00",
+    "venue": "Los Angeles Stadium",
+    "venue_city": null
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.9,
+      "draw": 0.08,
+      "away": 0.02
+    },
+    "most_likely_score": "2-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进入第90分钟，西班牙2-1领先比利时。上半场法比安·鲁伊斯第30分钟率先破门，比利时由查尔斯·德凯特拉雷在第41分钟(Castagne助攻)迅速扳平，下半场西班牙持续施压并在第88分钟由米克尔·梅里诺再入一球反超比分。从场面数据看，西班牙控球率高达69%，射门16-5、射正7-2、角球5-1全面占优，比利时门将已做出5次扑救，进攻端非常被动。考虑到目前只剩常规时间尾声与伤停补时,加上西班牙刚刚进球士气高涨、比利时后防承压明显,主队守住胜果概率很高,给予西班牙约90%胜率。比利时虽然换上Lukaku、Trossard、Saelemaekers等攻击手加强反扑,但留给他们的时间极其有限,追平仅约8%,再度反超几乎不可能,客胜概率仅约2%。最可能的最终比分即维持2-1西班牙小胜。90分钟之后进球概率整体偏低:西班牙可能通过反击由费兰·托雷斯、尼科·威廉姆斯等替补前锋锁定胜局;比利时若孤注一掷压上,Lukaku或Saelemaekers有机会抓住定位球或禁区混战制造威胁,但总体机率有限。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 51764,
+    "output": 770
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.2057718,
+  "wall_seconds": 18.761,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.90, \"draw\": 0.08, \"away\": 0.02},\n  \"most_likely_score\": \"2-1\",\n  \"scorers\": [\n    {\"player\": \"Ferran Torres\", \"team\": \"home\", \"minute\": 92, \"p\": 0.05},\n    {\"player\": \"Romelu Lukaku\", \"team\": \"away\", \"minute\": 93, \"p\": 0.05},\n    {\"player\": \"Nico Williams\", \"team\": \"home\", \"minute\": 94, \"p\": 0.04},\n    {\"player\": \"Alexis Saelemaekers\", \"team\": \"away\", \"minute\": 92, \"p\": 0.03}\n  ],\n  \"reasoning\": {\"overall\": \"比赛进入第90分钟，西班牙2-1领先比利时。上半场Fabián Ruiz第30分钟率先破门，比利时由Charles De Ketelaere在第41分钟(Castagne助攻)迅速扳平，下半场西班牙持续施压并在第88分钟由Mikel Merino再入一球反超比分。从场面数据看，西班牙控球率高达69%，射门16-5、射正7-2、角球5-1全面占优，比利时门将已做出5次扑救，进攻端非常被动。考虑到目前只剩常规时间尾声与伤停补时,加上西班牙刚刚进球士气高涨、比利时后防承压明显,主队守住胜果概率很高,给予西班牙约90%胜率。比利时虽然换上Lukaku、Trossard、Saelemaekers等攻击手加强反扑,但留给他们的时间极其有限,追平仅约8%,再度反超几乎不可能,客胜概率仅约2%。最可能的最终比分即维持2-1西班牙小胜。90分钟之后进球概率整体偏低:西班牙可能通过反击由Ferran Torres、Nico Williams等替补前锋锁定胜局;比利时若孤注一掷压上,Lukaku或Saelemaekers有机会抓住定位球或禁区混战制造威胁,但总体机率有限。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-10T19:04:56+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 4,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-10T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.26,
+        "away": 0.19
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Lamine Yamal",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Álvaro Morata",
+          "minute": 72,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 63,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Nico Williams",
+          "minute": 66,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Romelu Lukaku",
+          "minute": 78,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Jérémy Doku",
+          "minute": 81,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第4分钟，双方仍是0-0。开局阶段西班牙控球率达到61%，明显掌握主动，比利时仅有39%的控球，并已有1次犯规，说明他们更多依靠防守站位和反击应对。目前尚未出现射门、角球等威胁性事件，比赛整体节奏偏稳,风险事件极少，这也让当前比分维持在0-0符合场面走势。基于赛前实力对比，西班牙作为公认的夺冠热门之一，中前场组织能力和边路突破更胜一筹，加上开场就掌握球权，胜率略微上调至约55%左右；比利时拥有德布劳内、卢卡库、多库等经验丰富的攻击手，具备一击致命的反击能力，胜率维持在约19%；考虑到淘汰赛紧张性和比利时的防守韧性，平局概率约26%。综合来看，最可能的最终比分为2-1，西班牙凭借控球优势在中后段打开局面，但比利时也有能力在反击中扳回一球。后续进球时间预计集中在下半场：西班牙方面，拉明·亚马尔的边路突破和尼科·威廉姆斯的高速反抢最具威胁，Álvaro Morata则是禁区内把握机会的关键点；比利时方面，凯文·德布劳内的组织串联，配合罗梅卢·卢卡库的支点作用和热雷米·多库的边路冲击，构成主要的进球来源。"
+      },
+      "sources": [],
+      "cost_usd": 0.203167,
+      "tokens": {
+        "input": 50830,
+        "output": 816
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.708
+    },
+    {
+      "submitted_at": "2026-07-10T19:32:56+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 32,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-10T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.23,
+        "away": 0.15
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Álvaro Morata",
+          "minute": 68,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Nico Williams",
+          "minute": 74,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 62,
+          "p": 0.17,
+          "team": "home"
+        },
+        {
+          "player": "Romelu Lukaku",
+          "minute": 82,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 76,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Fabián Ruiz",
+          "minute": 78,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到上半场第32分钟，西班牙凭借法比安·鲁伊斯在第30分钟的进球以1-0领先比利时。从场面数据看，西班牙完全掌控比赛节奏，控球率高达62%，射门次数5-1、射正2-0、角球1-0均全面压制对手，比利时目前进攻端几乎没有形成有效威胁，仅有的一次射门也未能射正。基于这一趋势，西班牙获胜概率明显上升至62%左右，平局概率约23%，比利时逆转的可能性被压缩到15%左右。考虑到比利时仍有近60分钟时间追赶，且拥有De Bruyne、Lukaku这样的球星，完全打平并非不可能，但需要战术调整和西班牙节奏放缓的配合。最可能的最终比分定为2-0：西班牙控场能力强，进球后仍在持续制造机会，下半场极有可能再入一球锁定胜局；而比利时想要在西班牙严密的中场压迫下打入两球难度较大。后续进球人选方面，西班牙锋线Morata作为中锋抢点能力突出，是二次进球的首选；边路快马尼科·威廉姆斯和天才少年拉明·亚马尔凭借突破和临门一脚同样具备较高破门概率；法比安·鲁伊斯作为已进球球员，状态火热也存在梅开二度可能。比利时方面若能扳回一球，最可能来自禁区抢点能力最强的Lukaku或组织核心De Bruyne的远射或定位球。"
+      },
+      "sources": [],
+      "cost_usd": 0.2042622,
+      "tokens": {
+        "input": 50976,
+        "output": 846
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.77
+    },
+    {
+      "submitted_at": "2026-07-10T19:44:41+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 44,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Spain",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-10T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.3,
+        "away": 0.22
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Álvaro Morata",
+          "minute": 67,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 72,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Fabián Ruiz",
+          "minute": 78,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Nico Williams",
+          "minute": 63,
+          "p": 0.11,
+          "team": "home"
+        },
+        {
+          "player": "Charles De Ketelaere",
+          "minute": 75,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Romelu Lukaku",
+          "minute": 82,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 70,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场即将结束,双方1-1战平。西班牙第30分钟由法比安·鲁伊斯首开纪录,比利时则在第41分钟通过查尔斯·德凯特拉雷接Castagne助攻迅速扳平,比赛节奏紧凑。从场面数据看,西班牙控球率高达64%,射门7次(3次射正),角球1个,全面压制对手;比利时仅有2次射门(1次射正)和0角球,进攻主要依赖反击效率。西班牙虽在第43分钟由保·库巴西吃到黄牌,需在后续对抗中稍作收敛,但整体主导权仍在斗牛士一方。综合控球、射门质量与World Cup淘汰赛阶段两队的进攻配置,西班牙取胜概率略高于四成,平局概率约三成,比利时凭反击晋级的概率略低。最可能的最终比分为2-1西班牙小胜,符合当前场面走向与比分不能倒退的约束。后续进球方面,西班牙锋线上的Morata、边路的拉明·亚马尔和尼科·威廉姆斯具备最高把握机会,中场法比安·鲁伊斯的远射与二点球也值得关注;比利时若再入球,大概率仍来自De Ketelaere的跑位、Lukaku的支点终结或De Bruyne在反击中的直接参与。"
+      },
+      "sources": [],
+      "cost_usd": 0.2041586,
+      "tokens": {
+        "input": 51098,
+        "output": 816
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.207
+    },
+    {
+      "submitted_at": "2026-07-10T20:12:21+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 57,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Spain",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-10T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.28,
+        "away": 0.2
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Lamine Yamal",
+          "minute": 74,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Álvaro Morata",
+          "minute": 80,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Nico Williams",
+          "minute": 68,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Romelu Lukaku",
+          "minute": 82,
+          "p": 0.11,
+          "team": "away"
+        },
+        {
+          "player": "Fabián Ruiz",
+          "minute": 78,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Charles De Ketelaere",
+          "minute": 76,
+          "p": 0.08,
+          "team": "away"
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 85,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "第57分钟，西班牙与比利时1-1战平。上半场法比安·鲁伊斯第30分钟率先破门，比利时则由De Ketelaere在41分钟接Castagne助攻扳平，随后西班牙的Cubarsí吃到黄牌。从场面数据看，西班牙掌握明显主动权，控球率达到64%，射门9次、射正3次，角球3次，全面压制只有2次射门、1次射正的比利时，攻势更具持续性和威胁性。基于当前场面走势，西班牙在下半场剩余时间继续制造机会的概率更高，因此上调其胜率至约0.52，平局约0.28，比利时爆冷取胜概率下调至约0.20。综合射门效率与场面控制，最可能的最终比分为2-1，即西班牙在剩余时间内再入一球锁定胜局。后续进球人选方面，西班牙一侧优先考虑锋线终结点拉明·亚马尔和替补出场概率较大的Morata，同时尼科·威廉姆斯的边路突破和法比安·鲁伊斯的二次进攻也具备破门可能；比利时端则依赖Lukaku的中路支点作用、De Ketelaere的持续威胁以及De Bruyne在僵局中的一击致命能力，所有预测进球时间均设定在57分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.20397730000000003,
+      "tokens": {
+        "input": 51099,
+        "output": 806
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.879
+    },
+    {
+      "submitted_at": "2026-07-10T20:51:00+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Spain",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-10T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.9,
+        "draw": 0.08,
+        "away": 0.02
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进入第90分钟，西班牙2-1领先比利时。上半场法比安·鲁伊斯第30分钟率先破门，比利时由查尔斯·德凯特拉雷在第41分钟(Castagne助攻)迅速扳平，下半场西班牙持续施压并在第88分钟由米克尔·梅里诺再入一球反超比分。从场面数据看，西班牙控球率高达69%，射门16-5、射正7-2、角球5-1全面占优，比利时门将已做出5次扑救，进攻端非常被动。考虑到目前只剩常规时间尾声与伤停补时,加上西班牙刚刚进球士气高涨、比利时后防承压明显,主队守住胜果概率很高,给予西班牙约90%胜率。比利时虽然换上Lukaku、Trossard、Saelemaekers等攻击手加强反扑,但留给他们的时间极其有限,追平仅约8%,再度反超几乎不可能,客胜概率仅约2%。最可能的最终比分即维持2-1西班牙小胜。90分钟之后进球概率整体偏低:西班牙可能通过反击由费兰·托雷斯、尼科·威廉姆斯等替补前锋锁定胜局;比利时若孤注一掷压上,Lukaku或Saelemaekers有机会抓住定位球或禁区混战制造威胁,但总体机率有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.2057718,
+      "tokens": {
+        "input": 51764,
+        "output": 770
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.761
+    }
+  ],
+  "live_refreshed_at": "2026-07-10T20:56:46+00:00"
+}

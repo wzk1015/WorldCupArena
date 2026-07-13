@@ -1,0 +1,513 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-56_Ecuador_Germany_2026-06-25",
+  "provider_fixture_id": "19609136",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-25T21:36:44+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 81,
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "home": "Ecuador",
+    "away": "Germany",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-25T20:00:00+00:00",
+    "venue": "New York New Jersey Stadium",
+    "venue_city": "East Rutherford"
+  },
+  "prediction": {},
+  "sources": [],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 524.238,
+  "error": "APITimeoutError: Request timed out.",
+  "raw_text": "",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-25T20:04:51+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 4,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Ecuador",
+        "away": "Germany",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.11,
+        "draw": 0.21,
+        "away": 0.68
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Leroy Sané",
+          "minute": 39,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 68,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚到4分钟，德国已经凭借第2分钟勒罗伊·萨内在弗洛里安·维尔茨助攻下的进球1比0领先，这会明显把赛中胜负天平推向德国一侧。开局阶段的数据也支持这一点：德国目前1次射门、1次射正就取得进球，控球率达到82%，厄瓜多尔暂时0射门、控球仅18%，说明前几分钟德国在中前场的压制和球权控制都更强。由于时间还非常早，比赛仍有很长空间发生变化，因此平局和厄瓜多尔逆转并非完全没有机会，但在先失球且开局场面被动的情况下，主队胜率被明显压低。综合当前比分、时间节点以及已有场面信息，德国赢球仍是最可能结果，而最稳健的最终比分判断是0比2：这既符合德国早段优势，也考虑到世界杯小组赛中领先一方在控制节奏后未必会把比分迅速拉得过大。后续进球逻辑上，若德国继续保持这样的控球和前场效率，他们再次破门的概率高于厄瓜多尔扳平；从已出现的进攻连线看，Sané和Wirtz是德国当前最值得关注的后续进球点，其中Sané作为已经打开局面的球员，延续威胁的可能性略高，Wirtz则有望继续通过前腰区域的渗透参与直接得分。"
+      },
+      "sources": [],
+      "cost_usd": 0.01196,
+      "tokens": {
+        "input": 926,
+        "output": 643
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.878
+    },
+    {
+      "submitted_at": "2026-06-25T20:11:41+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 11,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Ecuador",
+        "away": "Germany",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.29,
+        "away": 0.53
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Florian Wirtz",
+          "minute": 34,
+          "p": 0.19,
+          "team": "away"
+        },
+        {
+          "player": "Leroy Sané",
+          "minute": 67,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Nilson Angulo",
+          "minute": 58,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛踢到11分钟已经是1比1，开局节奏明显偏快：德国第2分钟就由勒罗伊·萨内先拔头筹，厄瓜多尔第9分钟凭借尼尔森·安古洛迅速扳平，说明双方在前场转换阶段都已经制造出实质威胁。从现有数据看，德国控球63%对37%占优，射门2比1领先，整体上还是更像后续更可能持续施压的一方；但厄瓜多尔仅有1次射正就取得进球，也体现出反击效率和比赛韧性，因此平局概率仍然不能低估。基于当前时间点和已出现的比赛走势，德国胜面的确高于厄瓜多尔，主要原因是他们在控球、组织稳定性以及持续创造机会的能力上更值得看高一线，不过由于比分已经回到同一起跑线，且时间还很早，平局仍是相当现实的结果。综合来看，最可能的最终比分倾向于1比2：这既符合德国当前略占优势的场面，也反映了两队开局高效率之后比赛节奏可能逐步回归常态，未必会无限制对攻。后续进球人方面，更应关注已经参与进球的德国前场核心，像送出助攻的弗洛里安·维尔茨以及已经破门的勒罗伊·萨内，他们最有可能在德国继续占据球权时再次制造决定性时刻；厄瓜多尔如果再进球，则更可能来自快速推进和前场直接冲击，尼尔森·安古洛这类已经找到感觉的攻击点仍值得重点留意。"
+      },
+      "sources": [],
+      "cost_usd": 0.01084,
+      "tokens": {
+        "input": 1282,
+        "output": 509
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.995
+    },
+    {
+      "submitted_at": "2026-06-25T20:18:41+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 18,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Ecuador",
+        "away": "Germany",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.31,
+        "away": 0.47
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Leroy Sané",
+          "minute": 57,
+          "p": 0.19,
+          "team": "away"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 71,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Nilson Angulo",
+          "minute": 68,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛踢到18分钟已经是1比1，开局节奏明显偏快：德国在第2分钟由勒罗伊·萨内先拔头筹，厄瓜多尔在第9分钟由尼尔森·安古洛迅速扳平，说明双方在前20分钟都抓住了有限机会。就目前可见的场面数据看，德国控球达到76%，射门3比1领先，整体主动权更强，比赛更多时间在厄瓜多尔半场展开；但厄瓜多尔唯一一次射正就转化为进球，反击效率很高，这让平局概率保持在不低的位置。基于当前比分和时间，德国后续继续创造机会的可能性仍然更大，因此客胜概率最高；不过比分已经被追平，且时间还很早，比赛远未进入一边倒走势，所以平局仍是重要结果。最可能的最终比分倾向于1比2：这既符合德国在控球和进攻组织上的持续优势，也考虑到厄瓜多尔已经证明自己能通过快速推进或直接冲击制造威胁。后续进球逻辑上，德国更可能由前场核心和边路突击点再次决定比赛，勒罗伊·萨内与弗洛里安·维尔茨都处在更容易接近终结区域的位置；如果厄瓜多尔再次进球，通常更像是利用转换进攻、由尼尔森·安古洛这类已经进入状态的攻击手完成。整体来看，接下来比赛大概率会继续保持开放，但德国在控球主导下更接近打入制胜球。"
+      },
+      "sources": [],
+      "cost_usd": 0.013445,
+      "tokens": {
+        "input": 2426,
+        "output": 492
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.89
+    },
+    {
+      "submitted_at": "2026-06-25T20:25:57+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 25,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Ecuador",
+        "away": "Germany",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.23,
+        "draw": 0.31,
+        "away": 0.46
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Leroy Sané",
+          "minute": 63,
+          "p": 0.21,
+          "team": "away"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 74,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Nilson Angulo",
+          "minute": 68,
+          "p": 0.11,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第25分钟，比分已经来到1比1，开局节奏很快：德国在第2分钟由勒罗伊·萨内先拔头筹，厄瓜多尔第9分钟由尼尔森·安古洛迅速扳平。就目前可见信息看，德国仍然占据一定主动，他们拥有更高控球率（57%对43%）、更多射门（4比1）和更多射正（2比1），说明德国在扳平后依然更稳定地把球推进到有威胁区域。厄瓜多尔效率很高，唯一一次射门就转化为进球，这让比赛保持开放，也意味着德国虽然场面略优，但并没有建立足够大的安全边际。\n\n在这种25分钟1比1的局面下，平局仍然是一个重要结果，因为双方都已经取得进球，后续比赛有可能进入一段更谨慎的平衡期。不过从现有攻势质量和控球走势来看，德国后续再进一球的概率略高，因此客胜目前是最值得倾向的结果，平局次之，主胜相对更低。基于这个走势，最可能的终场比分判断为1比2：既符合德国在进攻端稍占上风的现实，也保留了厄瓜多尔在前25分钟展现出的反击效率。\n\n后续进球人方面，德国如果继续维持目前的球权和射门优势，已经取得进球的勒罗伊·萨内仍是最直接的终结点，而为首球送出助攻的弗洛里安·维尔茨也具备在禁区前沿制造决定性一击的能力。厄瓜多尔这边，尼尔森·安古洛既然已经把握住一次机会，若比赛继续拉开空间，他仍是最值得关注的再次破门人选。整体来看，接下来更像是一场德国机会更多、但厄瓜多尔随时可能利用转换制造回应的比赛。"
+      },
+      "sources": [],
+      "cost_usd": 0.01604,
+      "tokens": {
+        "input": 2462,
+        "output": 659
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.688
+    },
+    {
+      "submitted_at": "2026-06-25T20:33:14+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 33,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Ecuador",
+        "away": "Germany",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.36,
+        "away": 0.34
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到33分钟，比分1-1，开局就由双方各入一球，说明这场球进入了相对开放但又较均衡的节奏。德国在控球和射门数上略占上风，场面组织更主动；厄瓜多尔虽然控球稍少，但已经通过一次高效率进攻扳平，说明他们的反击和把握机会能力不差。结合当前走势，后续比赛更像是围绕中场争夺展开，双方都会继续寻找第二个进球，但目前没有哪一方展现出足以明显拉开差距的压制力。"
+      },
+      "sources": [],
+      "cost_usd": 0.02069,
+      "tokens": {
+        "input": 2462,
+        "output": 969
+      },
+      "tool_calls": 0,
+      "wall_seconds": 33.319
+    },
+    {
+      "submitted_at": "2026-06-25T20:40:40+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 40,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Ecuador",
+        "away": "Germany",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.39,
+        "away": 0.33
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛踢到40分钟，比分仍是1-1，开局很早就出现对攻：德国第2分钟先拔头筹，但厄瓜多尔第9分钟迅速扳平，说明双方都能在转换和前场推进中制造威胁。当前数据上德国控球59%、射门6比2、射正2比1，占据更多主动；厄瓜多尔则在效率上不差，整体更像是被压制但反击有威胁的一方。基于这个走势，后半段德国继续制造更多机会的概率略高，但首要风险是双方都已进球、比赛节奏偏开放，因此平局仍是最稳的落点。综合来看，平局概率略高于客胜和主胜，最可能的终局是1-1；若比赛再出球，更现实的方向是德国凭借更强的持续压迫再进一球，或者厄瓜多尔利用反击再度回应。后续进球人选上，更看好德国的进攻核心和终结点继续参与得分，弗洛里安·维尔茨与勒罗伊·萨内是最符合比赛走势的候选；厄瓜多尔方面，尼尔森·安古洛仍是最可能在转换进攻中再度制造进球的名字。"
+      },
+      "sources": [],
+      "cost_usd": 0.015455,
+      "tokens": {
+        "input": 2462,
+        "output": 620
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.013
+    },
+    {
+      "submitted_at": "2026-06-25T20:47:45+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Ecuador",
+        "away": "Germany",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.19,
+        "draw": 0.34,
+        "away": 0.47
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Leroy Sané",
+          "minute": 68,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 76,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Nilson Angulo",
+          "minute": 71,
+          "p": 0.11,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "半场45分钟战成1比1，比赛开局节奏很快：德国在第2分钟由勒罗伊·萨内先拔头筹，厄瓜多尔随后第9分钟由尼尔森·安古洛迅速扳平。就目前已知比赛内容看，比分虽然均势，但场面并不完全均衡。德国上半场控球达到63%，总射门6比2领先，射正2比1，占据了更多主动推进和持续施压的时间；厄瓜多尔则更依赖效率较高的反击与有限机会完成终结。这样的半场结构通常意味着，下半场如果比赛继续按照现有节奏发展，德国拿到下一粒进球的概率略高于厄瓜多尔。基于当前1比1的比分和45分钟节点，平局仍然保留很强可能性，因为两队都已经取得进球，且世界杯小组赛阶段往往会让下半场前段先进入相对谨慎的博弈；但德国在控球、射门数量和比赛主导权上的优势，使其胜面高于另外两种结果。综合判断，德国胜出的概率最高，平局次之，厄瓜多尔逆转取胜空间相对更小。最可能的最终比分因此倾向于1比2：这既符合德国上半场创造机会更多的走势，也保留了厄瓜多尔防守韧性使比赛不至于被迅速拉开的可能。至于后续进球逻辑，德国更可能通过持续压迫、边路推进和前场核心之间的配合制造决定性机会，像勒罗伊·萨内、弗洛里安·维尔茨这类已经参与关键进攻的球员，下半场继续成为直接得分点的概率较高；厄瓜多尔若再进球，更像是通过快速转换或局部高效终结完成，因此尼尔森·安古洛仍是他们后续最值得关注的威胁点。"
+      },
+      "sources": [],
+      "cost_usd": 0.0122425,
+      "tokens": {
+        "input": 1435,
+        "output": 577
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.94
+    },
+    {
+      "submitted_at": "2026-06-25T21:10:57+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 55,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Ecuador",
+        "away": "Germany",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.26,
+        "draw": 0.32,
+        "away": 0.42
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 72,
+          "p": 0.29,
+          "team": "away"
+        },
+        {
+          "player": "Leroy Sané",
+          "minute": 79,
+          "p": 0.17,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛第55分钟战成1-1，局面进入下半场中段后，德国仍然在控球和射门上占优，61%的控球率和7次射门说明他们更接近持续施压的一方；厄瓜多尔虽然前场效率不低，早早扳平后也能守住比分，但2次射门的数据意味着他们更多是依靠反击和有限机会。综合当前走势，比赛后段更像是德国继续加强进攻、争取再进一球的剧本，因此客胜概率略高于平局，平局次之，主胜相对最低。最可能的终局是1-2，符合德国在后程拿到决定性进球的判断。若再有进球，最值得关注的仍是已经取得进球且处在前场核心位置的凯·哈弗茨，以及具备边路爆发和终结能力的勒罗伊·萨内；厄瓜多尔方面则更可能由反击中的前场球员制造惊喜，但从当前场面看，未来进球的天平仍偏向德国。"
+      },
+      "sources": [],
+      "cost_usd": 0.0158925,
+      "tokens": {
+        "input": 1551,
+        "output": 801
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.608
+    },
+    {
+      "submitted_at": "2026-06-25T21:19:45+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 64,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Ecuador",
+        "away": "Germany",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.24,
+        "draw": 0.41,
+        "away": 0.35
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到64分钟，场上仍是1比1，这让平局结果的权重继续维持在最高。开场阶段双方很早就完成进球交换，德国由勒罗伊·萨内率先破门，厄瓜多尔随后由尼尔森·安古洛迅速扳平，说明比赛节奏在前段较开放，但此后比分一直没有再被改写，比赛逐渐进入更谨慎的拉锯。就现有数据看，德国控球率61%、射门7比3、射正2比1，整体推进和压制力更强，因此他们的取胜概率仍略高于厄瓜多尔；不过德国到目前为止也只形成有限的真正门前威胁，而厄瓜多尔在比分持平后有较强动力继续收缩并等待反击，这使得剩余时间里比赛走向僵持的可能性依然最大。基于当前时间点和比分，最合理的最终比分仍是1比1，因为它既符合比赛已进入后段、总进球尚不高的结构，也符合德国占优但未完全转化为决定性优势的场面。未来进球方面，如果接下来出现破门，德国方向略更值得防范，尤其是已经取得进球的勒罗伊·萨内这类能够在转换中直接制造杀伤的球员；而厄瓜多尔若再进球，更可能来自反击或边路推进后的机会，尼尔森·安古洛仍是最有代表性的候选之一。总体来看，平局仍是第一落点，但德国在最后25分钟左右打入制胜球的概率，明显高于厄瓜多尔直接反超。"
+      },
+      "sources": [],
+      "cost_usd": 0.01694,
+      "tokens": {
+        "input": 2750,
+        "output": 671
+      },
+      "tool_calls": 0,
+      "wall_seconds": 72.479
+    },
+    {
+      "submitted_at": "2026-06-25T21:36:44+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 81,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Ecuador",
+        "away": "Germany",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "failed",
+      "error": "APITimeoutError: Request timed out.",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 524.238
+    }
+  ]
+}

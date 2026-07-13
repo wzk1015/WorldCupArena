@@ -1,0 +1,981 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-43_Argentina_Austria_2026-06-22",
+  "provider_fixture_id": "19609146",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-22T19:00:03+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 0
+    },
+    "home": "Argentina",
+    "away": "Austria",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-22T17:00:00+00:00",
+    "venue": "Dallas Stadium",
+    "venue_city": "Arlington"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.985,
+      "draw": 0.01,
+      "away": 0.005
+    },
+    "most_likely_score": "2-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进入第90分钟，阿根廷凭借梅西（里奥·梅西）第38分钟的进球以2-0领先奥地利，场上局势几乎已经锁定。从比赛进程看，阿根廷虽然在上半场第9分钟由梅西罚丢点球，但随后牢牢掌控节奏：控球率54%，全场10次射门、4次射正，明显压制对手；奥地利仅6射1正，进攻端缺乏威胁，难以在补时阶段连追两球。双方均已进行多次换人，奥地利后段连换Arnautovic、Wanner、Chukwuemeka等进攻球员意图加强前场，但实际威胁有限；阿根廷也通过Paredes、Tagliafico等换人稳固防线和中场节奏。考虑到比赛仅剩补时时间、奥地利需在数分钟内打入两球的难度极高，阿根廷取胜概率应给到接近确定的水平，平局与奥地利获胜的概率几乎可以忽略。最可能的最终比分维持2-0：奥地利补时连入两球的可能性极低，而阿根廷在大比分领先且已用替补稳节奏的情况下，继续大举压上扩大比分的动力也不强。后续进球只考虑90分钟之后：阿根廷反击中由替补登场的Julián Álvarez或劳塔罗·马丁内斯把握机会的概率略高，梅西在补时阶段再下一城制造个人梅开二度的可能性也存在，但整体补时进球概率都不高，因此仅列出少量低概率的主队候选射手，客队补时破门概率过低不予列入。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 21151,
+    "output": 1048
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0976467,
+  "wall_seconds": 24.933,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.985, \"draw\": 0.01, \"away\": 0.005},\n  \"most_likely_score\": \"2-0\",\n  \"scorers\": [\n    {\"player\": \"Julián Álvarez\", \"team\": \"home\", \"minute\": 93, \"p\": 0.06},\n    {\"player\": \"Lautaro Martínez\", \"team\": \"home\", \"minute\": 94, \"p\": 0.05},\n    {\"player\": \"Lionel Messi\", \"team\": \"home\", \"minute\": 92, \"p\": 0.05}\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已进入第90分钟，阿根廷凭借梅西（Lionel Messi）第38分钟的进球以2-0领先奥地利，场上局势几乎已经锁定。从比赛进程看，阿根廷虽然在上半场第9分钟由梅西罚丢点球，但随后牢牢掌控节奏：控球率54%，全场10次射门、4次射正，明显压制对手；奥地利仅6射1正，进攻端缺乏威胁，难以在补时阶段连追两球。双方均已进行多次换人，奥地利后段连换Arnautovic、Wanner、Chukwuemeka等进攻球员意图加强前场，但实际威胁有限；阿根廷也通过Paredes、Tagliafico等换人稳固防线和中场节奏。考虑到比赛仅剩补时时间、奥地利需在数分钟内打入两球的难度极高，阿根廷取胜概率应给到接近确定的水平，平局与奥地利获胜的概率几乎可以忽略。最可能的最终比分维持2-0：奥地利补时连入两球的可能性极低，而阿根廷在大比分领先且已用替补稳节奏的情况下，继续大举压上扩大比分的动力也不强。后续进球只考虑90分钟之后：阿根廷反击中由替补登场的Julián Álvarez或Lautaro Martínez把握机会的概率略高，梅西在补时阶段再下一城制造个人梅开二度的可能性也存在，但整体补时进球概率都不高，因此仅列出少量低概率的主队候选射手，客队补时破门概率过低不予列入。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-22T17:10:17+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 10,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.74,
+        "draw": 0.18,
+        "away": 0.08
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lautaro Martínez",
+          "minute": 55,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Lionel Messi",
+          "minute": 38,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 70,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Ángel Di María",
+          "minute": 78,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Marko Arnautović",
+          "minute": 82,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第10分钟，阿根廷与奥地利暂时0-0。开场阶段阿根廷完全占据主导，控球率高达77%，并已经制造出一次明显的得分机会——第8分钟经过VAR判罚获得点球，但第9分钟梅西(里奥·梅西)主罚被扑出，错失先拔头筹的良机。奥地利目前0射门、控球仅23%，进攻端尚未组织起像样的威胁，主要依靠中后场密集防守和犯规来限制对手。基于阿根廷整体实力与开场压制态势，主队胜率显著领先，设定为0.74，平局0.18，奥地利取胜概率压低至0.08。考虑到阿根廷虽然罚失点球但攻势绵密，预计后续仍会持续创造机会并最终破门，奥地利想要全场零封难度极大、但偶尔反击或定位球或可制造一次威胁，因此最可能的最终比分判断为2-0。后续进球方面，劳塔罗(劳塔罗·马丁内斯)作为中锋仍是最具威胁的禁区终结者，梅西在调整心态后凭借任意球与组织能力具备扳回一城的实力，替补或下半场登场的胡利安·阿尔瓦雷斯(胡利安·阿尔瓦雷斯)与迪马利亚(Ángel Di María)也具备改变战局的能力；奥地利方面若有进球机会，最可能由经验丰富的阿瑙托维奇(马尔科·阿瑙托维奇)在反击中把握。"
+      },
+      "sources": [],
+      "cost_usd": 0.0877862,
+      "tokens": {
+        "input": 19731,
+        "output": 799
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.295
+    },
+    {
+      "submitted_at": "2026-06-22T17:16:32+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 16,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.66,
+        "draw": 0.22,
+        "away": 0.12
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 58,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "minute": 71,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Marcus Sabitzer",
+          "minute": 82,
+          "p": 0.14,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第16分钟，场上比分仍是0-0。开局阶段阿根廷已经制造威胁，第8分钟经过VAR介入获得点球，但梅西在第9分钟主罚没有命中，错失了早早打破僵局的机会。从场面看，阿根廷射门数1-0领先，控球率虽略低于奥地利（46%对54%），但进攻威胁明显更直接，犯规数双方持平，节奏并不激烈。综合赛前实力差距和开场15分钟阿根廷已经创造点球机会的事实，主队仍是绝对热门，错失点球只是短期情绪波动，并不会改变整体走势，因此把阿根廷取胜概率定在0.66，平局0.22，奥地利爆冷取胜0.12。最可能的最终比分给到2-0：阿根廷大概率会继续控制比赛并在下半场撕开奥地利防线，而奥地利目前0射门、进攻乏力，下半场体能下滑后扳平甚至破门的难度更大。后续进球人选方面，梅西作为核心和点球主罚者，下半场有强烈的回应动机，给到约58分钟取得进球；劳塔罗·马丁内斯本就是禁区终结点，VAR环节也与他相关，预计71分钟前后形成第二个进球；J·阿尔瓦雷斯作为替补/轮换前锋在78分钟左右有补射机会。奥地利方面若有进球，最有可能来自中前场组织核心萨比策一类球员在80分钟后利用阿根廷压上后的空当完成一次远射或反击。所有进球时间均设定在当前16分钟之后，且预测比分不低于当前0-0。"
+      },
+      "sources": [],
+      "cost_usd": 0.0893883,
+      "tokens": {
+        "input": 19729,
+        "output": 886
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.296
+    },
+    {
+      "submitted_at": "2026-06-22T17:22:47+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 22,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.21,
+        "away": 0.11
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lautaro Martínez",
+          "minute": 67,
+          "p": 0.32,
+          "team": "home"
+        },
+        {
+          "player": "Lionel Messi",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 75,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Marcel Sabitzer",
+          "minute": 80,
+          "p": 0.14,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第22分钟，阿根廷与奥地利仍是0-0。开场阶段阿根廷完全占据主动，第7分钟经VAR介入获得点球，但第9分钟梅西(里奥·梅西)主罚被奥地利门将扑出，错失了打破僵局的最佳机会。从场面数据看，阿根廷控球率56%，已完成1次射门并制造点球，奥地利则0射门、4次犯规，明显处于被动防守状态，这反映出两队实力与气势上的差距。综合考虑阿根廷的整体实力、临场压制力以及奥地利尚未展现出有效进攻手段，胜平负概率调整为主胜0.68、平0.21、客胜0.11。错失点球短期内可能影响阿根廷的心态，但下半场体能下降后奥地利防线难以长时间承压，阿根廷有较大概率通过持续施压完成破门，并在领先后再下一城，因此最可能的最终比分定为2-0。后续进球人选方面，劳塔罗(劳塔罗·马丁内斯)作为中锋在禁区内嗅觉敏锐，是最可能的破门者；梅西仍是组织与终结的核心，有望在下半场用运动战弥补点球失误；替补登场的J·阿尔瓦雷斯(胡利安·阿尔瓦雷斯)在比赛后段冲击力突出，也具备进球机会。奥地利方面，若能获得反击机会，萨比策(马塞尔·萨比策)凭借其远射与定位球能力，是相对最可能扳回一城的人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0875716,
+      "tokens": {
+        "input": 19763,
+        "output": 781
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.559
+    },
+    {
+      "submitted_at": "2026-06-22T17:29:01+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 29,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.24,
+        "away": 0.14
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "minute": 67,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 75,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Marko Arnautović",
+          "minute": 82,
+          "p": 0.14,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第29分钟，阿根廷与奥地利仍然是0-0。开场阶段阿根廷就通过VAR获得点球机会，但梅西在第9分钟主罚被扑出，这一错失虽然让阿根廷暂时未能领先，但也清晰反映出他们才是场上更具威胁的一方。从控球率（52%对48%）和整体场面走势来看，阿根廷掌握着节奏，奥地利目前的1次射门和1个角球更多来自零星反击，并未形成持续压制。考虑到点球未进通常会让占优一方在短时间内加大投入寻找进球，因此阿根廷在下半场前后破门的概率相对较高，胜率维持在0.62左右；奥地利依靠防守反击抢分的可能性存在但有限，给到约0.14；平局概率0.24，主要源于上半场剩余时间双方仍可能保持谨慎。最可能的最终比分定为1-0，对应阿根廷小胜但奥地利防线整体顶住的剧本。后续进球点上，梅西刚刚罚失点球，下半场调整后仍是最稳定的得分来源；劳塔罗·马丁内斯作为锋线支点禁区嗅觉出色，朱利安·阿尔瓦雷斯则常以替补或后插上方式打开僵局；奥地利方面，经验丰富的阿瑙托维奇是最具可能在比赛末段制造冷门的人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0869241,
+      "tokens": {
+        "input": 19793,
+        "output": 740
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.121
+    },
+    {
+      "submitted_at": "2026-06-22T17:35:16+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 35,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.24,
+        "away": 0.14
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "minute": 67,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 75,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Marcus Thuram",
+          "minute": 82,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第35分钟，比分仍为0-0。开局阶段阿根廷明显占据主动，第7分钟经过VAR介入获得点球，但梅西在第9分钟主罚被扑出，错失了打破僵局的最好机会。从数据看双方控球各半、射门同为2次，但阿根廷有1次射正，奥地利则1次射正都没有，整体威胁度阿根廷更高，奥地利目前更多依靠角球（2次）制造定位球机会。综合实力差距与场面走势，阿根廷在剩余时间里仍是更可能取胜的一方，因此主胜概率维持在0.62左右，平局0.24，奥地利爆冷的概率压低到0.14。考虑到点球被扑通常会让进攻方在中后段继续加压、而上半场后段往往难再进球，最可能的最终比分给到阿根廷1-0小胜。后续进球点上，梅西作为主罚者大概率会在下半场寻找救赎机会，劳塔罗(劳塔罗·马丁内斯)在禁区内的嗅觉以及替补登场的胡利安·阿尔瓦雷斯(胡利安·阿尔瓦雷斯)都是潜在破门人选；奥地利方面若能扳平，最可能来自反击或定位球，图拉姆(马库斯·图拉姆)给到一个较低的概率作为客队进球点。"
+      },
+      "sources": [],
+      "cost_usd": 0.08643569999999999,
+      "tokens": {
+        "input": 19821,
+        "output": 708
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.694
+    },
+    {
+      "submitted_at": "2026-06-22T17:41:25+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 41,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.72,
+        "draw": 0.2,
+        "away": 0.08
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 67,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "minute": 72,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Marko Arnautović",
+          "minute": 80,
+          "p": 0.14,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第41分钟，阿根廷凭借梅西(里奥·梅西)第38分钟由梅迪纳(法昆多·梅迪纳)助攻打进的进球，1-0领先奥地利。开场阶段阿根廷其实就已经占据明显主动，第7分钟劳塔罗(劳塔罗·马丁内斯)的进球虽被VAR取消，第9分钟梅西又罚失点球，但球队整体节奏并未受影响，最终在上半场结束前由队长亲自破门打破僵局。从场面数据看，阿根廷控球率58%，2次射正、3次射门，奥地利虽然有2个角球但2次射门0射正，进攻端缺乏真正的威胁，整体被压制得比较明显。综合考虑阿根廷的整体实力优势、目前的比分领先以及上半场展现出的统治力，胜率明显倾向主队，给到72%左右；奥地利仍有大半场时间需要扳平甚至反超，可能性较低，给到8%；考虑到世界杯小组赛阶段奥地利可能会下半场加强进攻、阿根廷也存在罚失点球后心态波动的可能，平局概率保留20%。最终比分最可能是2-0，阿根廷在控制比赛的同时大概率还会有一次破门机会。后续进球方面，梅西状态在线且是球队核心，下半场继续建功的可能性最高；劳塔罗作为锋线第一射手、此前已有一粒被吹掉的进球，状态同样值得期待；替补登场的J·阿尔瓦雷斯(胡利安·阿尔瓦雷斯)在比赛后段也具备扩大比分的能力；奥地利方面若要追分，最可能由经验丰富的阿瑙托维奇(马尔科·阿瑙托维奇)在禁区内把握机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.08955110000000001,
+      "tokens": {
+        "input": 19908,
+        "output": 859
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.481
+    },
+    {
+      "submitted_at": "2026-06-22T17:47:39+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.2,
+        "away": 0.12
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 67,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "minute": 72,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 80,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Marko Arnautović",
+          "minute": 78,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场结束阶段，阿根廷凭借梅西(里奥·梅西)第38分钟由法昆多·梅迪纳助攻的进球1-0领先奥地利。整体场面阿根廷占优：控球率58%对42%，射门3比2，射正2比0，奥地利门将已有1次扑救，角球虽然落后但并未制造有威胁的射门(射正0次)。值得注意的是阿根廷第9分钟曾射失点球，否则比分可能更大；第41分钟奥地利后卫斯特凡·波施吃到黄牌，下半场防守动作会更受限。综合领先优势、场面控制和奥地利锋线乏力，阿根廷取胜概率提升到0.68，平局0.20，奥地利翻盘概率仅0.12。最可能最终比分定为2-0：阿根廷下半场大概率再下一城，而奥地利目前射正挂零、难以打破对手防线。后续进球方面，梅西手感火热且仍是首选终结点，给到最高概率；劳塔罗·马丁内斯此前已有VAR介入的争议镜头，跑位活跃，次选；替补可能登场的胡利安·阿尔瓦雷斯作为后段冲击点列入；奥地利方面给到马尔科·阿瑙托维奇作为唯一具备扳回一城能力的支点，但概率明显偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.086691,
+      "tokens": {
+        "input": 19985,
+        "output": 689
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.902
+    },
+    {
+      "submitted_at": "2026-06-22T17:53:49+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.2,
+        "away": 0.12
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 67,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "minute": 72,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 78,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Marko Arnautović",
+          "minute": 75,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Michael Gregoritsch",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场结束阶段比分 1-0，阿根廷由梅西（里奥·梅西）在第 38 分钟由 法昆多·梅迪纳 助攻打进一球占先。尽管梅西此前在第 9 分钟罚失点球，且第 7 分钟劳塔罗（劳塔罗·马丁内斯）有一次 VAR 介入，但阿根廷整体掌控了比赛节奏：控球率 55%，射门 3 次、射正 2 次，明显压制奥地利（射门 2 次、射正 0 次）。奥地利仅靠两个角球制造了一些威胁，但缺乏真正的射正，且 斯特凡·波施 第 41 分钟吃到黄牌，下半场防守动作将受限。综合领先优势、场面压制以及奥地利进攻效率偏低，阿根廷胜率显著上调至 0.68，平局 0.20，奥地利取胜 0.12。下半场阿根廷大概率延续主导并扩大比分，但奥地利仍有零星反击机会，最可能的最终比分定为 2-0。后续进球方面，梅西状态在线且是定位球与组织核心，二度建功概率最高；劳塔罗作为支点中锋有多次接近机会，朱利安·阿尔瓦雷斯（胡利安·阿尔瓦雷斯）若替补登场也具备终结能力；奥地利方面，若调整进攻，阿瑙托维奇（马尔科·阿瑙托维奇）和格雷戈里奇（迈克尔·格雷戈里奇）是最具威胁的扳回一城人选。所有预测进球时间均设定在第 45 分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0892662,
+      "tokens": {
+        "input": 19981,
+        "output": 829
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.539
+    },
+    {
+      "submitted_at": "2026-06-22T18:10:34+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 55,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.74,
+        "draw": 0.18,
+        "away": 0.08
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 72,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 83,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Marko Arnautović",
+          "minute": 80,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第55分钟，阿根廷凭借梅西在第38分钟的进球1-0领先奥地利。从场面来看，阿根廷牢牢掌控了比赛节奏，控球率达到60%，射门3次、射正2次，明显压制对手；奥地利仅有2次射门且无射正，进攻端缺乏威胁。值得注意的是上半场第9分钟梅西还罚丢了一粒点球，否则领先优势可能更大，这也说明阿根廷整场创造机会的能力远胜对手。奥地利方面第41分钟斯特凡·波施吃到黄牌，防线压力较大，加之需要追分但进攻火力不足，后续可能被迫压上从而留出更多反击空间。综合比分、场面控制与世界杯小组赛阿根廷的整体实力，主队胜率明显占优，平局概率有限，奥地利逆转的可能性很低。最可能的最终比分定为2-0，符合阿根廷继续掌控比赛并扩大领先的判断。后续进球方面，梅西作为已经进球且持续活跃的核心，再下一城的概率最高；劳塔罗·马丁内斯作为锋线主力同样具备破门能力；替补登场的胡利安·阿尔瓦雷斯在比赛后段也常成为奇兵；奥地利方面若有进球，最具威胁的是经验丰富的阿瑙托维奇，但整体把握机会能力有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.08775290000000001,
+      "tokens": {
+        "input": 19982,
+        "output": 747
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.986
+    },
+    {
+      "submitted_at": "2026-06-22T18:16:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 61,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.72,
+        "draw": 0.21,
+        "away": 0.07
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "minute": 82,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 86,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Marko Arnautović",
+          "minute": 88,
+          "p": 0.11,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第61分钟，阿根廷凭借梅西第38分钟的进球以1-0领先奥地利。从场面上看，阿根廷掌控了60%的控球率，射门3次、射正2次，整体压制对手；奥地利虽然射门次数同为3次，但0射正、仅靠2个角球制造威胁，进攻效率偏低。上半场阿根廷还有过第7分钟的VAR介入与第9分钟梅西的点球被扑，整体机会创造质量明显高于对手。奥地利方面波什在41分钟已经吃到黄牌，防线压力较大。综合比分领先、场面占优以及奥地利缺乏射正这些因素，阿根廷赢球概率显著抬升至约0.72，平局约0.21（奥地利若能扳平基本是单球），奥地利逆转概率被压到约0.07。最可能的最终比分判断为2-0：阿根廷在剩余近30分钟里凭借控球与对手体能下滑有较大概率再下一城，而奥地利在零射正且需要冒险压上的情况下追平甚至反超的难度很大。后续进球人选方面，梅西作为已破门的核心仍是首选；劳塔罗与替补登场可能性较高的阿尔瓦雷斯具备终结能力，是阿根廷扩大比分的主要候选；奥地利端则把阿瑙托维奇列为最有威胁的进球点，对应他们若孤注一掷压上后的可能反扑。所有候选进球时间均设定在61分钟之后，并按比赛末段战术节奏分布。"
+      },
+      "sources": [],
+      "cost_usd": 0.08852990000000001,
+      "tokens": {
+        "input": 19982,
+        "output": 789
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.587
+    },
+    {
+      "submitted_at": "2026-06-22T18:23:17+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 68,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.74,
+        "draw": 0.18,
+        "away": 0.08
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 82,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "minute": 78,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 86,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Marko Arnautović",
+          "minute": 84,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第68分钟，阿根廷凭借梅西第38分钟的进球暂时1比0领先奥地利。上半场阿根廷虽然在第9分钟由梅西罚失点球，但随后通过梅西的运动战破门取得领先，整体场面控制较为稳健，控球率57%略占优势，射门3次射正2次效率不错；奥地利虽然总射门4次略多，但只有1次射正，进攻威胁有限，且第40分钟斯特凡·波施吃到黄牌后防线动作受限。综合一球领先、领先方为夺冠热门、对手必须压上但缺乏明确创造力的局面，阿根廷获胜概率明显上升至约0.74，平局约0.18，奥地利逆转概率压低至约0.08。最可能的最终比分判断为2比0：阿根廷在对手压上后更有可能利用反击或定位球扩大比分，而奥地利要在剩余时间内连入两球难度较大，因此2-0比1-0和1-1更契合当前胜平负倾向。后续进球预测集中在阿根廷一方，梅西作为已经进球且持续制造威胁的核心，再下一城概率最高；劳塔罗与替补登场可能性较高的J. Álvarez同样是扩大比分的潜在终结者；奥地利方面若能扳回一球，最可能由经验丰富的Arnautović在压上阶段把握机会，但整体概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0875124,
+      "tokens": {
+        "input": 19982,
+        "output": 734
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.042
+    },
+    {
+      "submitted_at": "2026-06-22T18:29:26+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 74,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.17,
+        "away": 0.05
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第74分钟，阿根廷凭借梅西第38分钟的进球以1-0领先奥地利。从场面来看，阿根廷整体掌控比赛，控球率达到59%，并且在上半场早些时候还浪费了一次点球机会（梅西第9分钟射失），整体进攻威胁明显高于对手。奥地利虽然射门数与阿根廷持平（各4次），但射正只有1次，进攻效率较低，且第40分钟斯特凡·波施已吃到黄牌，后场动作受限。阿根廷在第57分钟换上奥塔门迪，明显是加强防守、保住领先的信号。综合比分、时间、场面控制和换人意图，阿根廷获胜的概率显著上升至约0.78，平局约0.17，奥地利逆转的可能性已经很低，约为0.05。最可能的最终比分仍是1-0，阿根廷锁定胜局的概率最高；若再有进球，阿根廷在反击中扩大比分的可能性更大，梅西、劳塔罗和替补登场的J·阿尔瓦雷斯都是潜在的破门人选；奥地利方面只能寄望于压上后由阿瑙托维奇等前场球员搏一个安慰球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0866503,
+      "tokens": {
+        "input": 20069,
+        "output": 670
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.763
+    },
+    {
+      "submitted_at": "2026-06-22T18:35:38+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 80,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.11,
+        "away": 0.03
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到80分钟，阿根廷凭借梅西（里奥·梅西）第38分钟的进球以1-0领先奥地利。从场面看，阿根廷控球率达到59%，整体掌控节奏，尽管第9分钟梅西罚丢点球略有波澜，但此后逐渐稳住局势并在上半场打破僵局。两队射门数同为5次，但阿根廷射正2次稍占优，奥地利仅1次射正，进攻威胁有限。下半场斯卡洛尼连续换上阿尔瓦雷斯（Julián Álvarez）、尼科·冈萨雷斯（Nico González）和奥塔门迪（尼古拉斯·奥塔门迪），既加强了防守稳固性，也保留了反击锐度；奥地利则换上阿瑙托维奇（Marko Arnautovic）等人试图扳平，但目前尚未形成实质性威胁。综合领先优势、控球与剩余时间不足10分钟的客观条件，阿根廷取胜概率显著升高至0.86，平局0.11，奥地利翻盘概率仅0.03。最可能的最终比分维持1-0：奥地利缺乏破门效率，阿根廷在领先后倾向控制节奏而非全力压上。80分钟后若再有进球，最可能由替补登场、体能充沛的阿尔瓦雷斯把握反击机会，梅西仍是定位球与组织端的潜在得分点；奥地利方面阿瑙托维奇是补时阶段抢分的最大希望，但概率偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0894327,
+      "tokens": {
+        "input": 20486,
+        "output": 737
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.284
+    },
+    {
+      "submitted_at": "2026-06-22T18:41:43+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 86,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.1,
+        "away": 0.02
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分1-0，阿根廷主场领先，比赛已进行到第86分钟，仅剩常规时间最后几分钟及补时。从场面来看，梅西(里奥·梅西)在第38分钟为阿根廷打破僵局，尽管早段第9分钟有一粒点球被扑出，但球队整体掌控比赛，控球率58%，射门6次（2次射正），节奏稳健。奥地利下半场连续三次换人（Arnautovic、Prass、Friedl登场）试图加强进攻，但仅有5次射门、1次射正，且第76分钟Laimer领到黄牌，进攻组织受限。考虑到比赛已临近尾声，阿根廷领先且通过换上Julián Álvarez、Nico González等生力军稳住局势，主队赢球概率极高，平局只在奥地利最后阶段扳平的小概率情境下出现，奥地利逆转几乎不可能。最可能的最终比分维持1-0，符合主胜逻辑且不低于当前比分。后续进球方面，阿根廷依靠替补攻击手反击仍有破门空间，Julián Álvarez最具威胁；奥地利押上进攻时Arnautovic是最可能的得分点；梅西若仍在场也存在锁定胜局的可能性。所有潜在进球时间均设在86分钟之后的尾声及补时阶段。"
+      },
+      "sources": [],
+      "cost_usd": 0.0888592,
+      "tokens": {
+        "input": 20646,
+        "output": 674
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.383
+    },
+    {
+      "submitted_at": "2026-06-22T18:47:48+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.12,
+        "away": 0.02
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，阿根廷凭借梅西第38分钟的进球，目前以1-0领先奥地利。整体场面阿根廷掌控更多，控球率57%，射门6次、射正2次，并且早些时候还有一次被判无效的进攻和梅西第9分钟罚失点球，整体威胁更大；奥地利虽然角球占优（2-0）、射门5次但只有1次射正，进攻锐度有限。下半场阿根廷已经用尽全部5个换人名额（包括第64分钟换上J·阿尔瓦雷斯和尼科·冈萨雷斯、第81-82分钟换上帕雷德斯和塔利亚菲科），明显在收缩阵型保胜果；奥地利方面则陆续换上阿瑙托维奇、维默等进攻球员搏命，但中场拉伊默与波施已各吃黄牌，体能与纪律都在下滑。考虑到只剩补时阶段，奥地利在剩余几分钟内通过运动战或定位球扳平的概率非常低，阿根廷取胜概率给到0.86，平局0.12，奥地利取胜0.02。最可能最终比分维持1-0；若补时仍有进球，最有可能来自阿根廷的反击终结者J·阿尔瓦雷斯或尼科·冈萨雷斯，奥地利方面则以替补登场、状态较新的阿瑙托维奇 (Marko Arnautovic) 最具威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.0904317,
+      "tokens": {
+        "input": 20901,
+        "output": 708
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.615
+    },
+    {
+      "submitted_at": "2026-06-22T18:53:54+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.11,
+        "away": 0.01
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进行到90分钟，阿根廷凭借梅西第38分钟的进球暂时1-0领先奥地利。从场面来看，阿根廷控球率53%略占优，射门8次、射正2次，整体掌控着比赛节奏；奥地利虽有2次角球和5次射门，但仅1次射正，缺乏真正威胁，加之上半场梅西第9分钟罚失点球后阿根廷依然取得领先，心理层面更加稳固。下半场阿根廷通过阿尔瓦雷斯、尼科·冈萨雷斯、帕雷德斯等多次换人加强中前场轮换以巩固优势，奥地利则连续换上阿瑙托维奇、维默、丘克乌埃梅卡等攻击手孤注一掷，但在创造实质机会上效果有限。进入读秒阶段，奥地利需要在补时内连入一球才能扳平，难度极大，因此主胜概率明显占据压倒性优势，平局概率仅来自补时绝平的小概率事件，奥地利逆转几乎不可能。最可能的最终比分维持在1-0，阿根廷小胜带走三分。若补时阶段仍有进球，最可能来自阿根廷反击中的阿尔瓦雷斯或尼科·冈萨雷斯，奥地利方面则只有阿瑙托维奇凭借经验在禁区内抢点存在一定可能性。"
+      },
+      "sources": [],
+      "cost_usd": 0.0903762,
+      "tokens": {
+        "input": 20991,
+        "output": 687
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.146
+    },
+    {
+      "submitted_at": "2026-06-22T19:00:03+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.985,
+        "draw": 0.01,
+        "away": 0.005
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，阿根廷凭借梅西（里奥·梅西）第38分钟的进球以2-0领先奥地利，场上局势几乎已经锁定。从比赛进程看，阿根廷虽然在上半场第9分钟由梅西罚丢点球，但随后牢牢掌控节奏：控球率54%，全场10次射门、4次射正，明显压制对手；奥地利仅6射1正，进攻端缺乏威胁，难以在补时阶段连追两球。双方均已进行多次换人，奥地利后段连换Arnautovic、Wanner、Chukwuemeka等进攻球员意图加强前场，但实际威胁有限；阿根廷也通过Paredes、Tagliafico等换人稳固防线和中场节奏。考虑到比赛仅剩补时时间、奥地利需在数分钟内打入两球的难度极高，阿根廷取胜概率应给到接近确定的水平，平局与奥地利获胜的概率几乎可以忽略。最可能的最终比分维持2-0：奥地利补时连入两球的可能性极低，而阿根廷在大比分领先且已用替补稳节奏的情况下，继续大举压上扩大比分的动力也不强。后续进球只考虑90分钟之后：阿根廷反击中由替补登场的Julián Álvarez或劳塔罗·马丁内斯把握机会的概率略高，梅西在补时阶段再下一城制造个人梅开二度的可能性也存在，但整体补时进球概率都不高，因此仅列出少量低概率的主队候选射手，客队补时破门概率过低不予列入。"
+      },
+      "sources": [],
+      "cost_usd": 0.0976467,
+      "tokens": {
+        "input": 21151,
+        "output": 1048
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.933
+    }
+  ]
+}

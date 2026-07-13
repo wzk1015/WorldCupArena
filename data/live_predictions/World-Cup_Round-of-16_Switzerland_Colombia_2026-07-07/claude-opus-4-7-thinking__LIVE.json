@@ -1,0 +1,307 @@
+{
+  "fixture_id": "World-Cup_Round-of-16_Switzerland_Colombia_2026-07-07",
+  "provider_fixture_id": "19606961",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-07T22:45:45+00:00",
+  "live": {
+    "status": "Penalty In Progress",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 0
+    },
+    "home": "Switzerland",
+    "away": "Colombia",
+    "competition": "World Cup",
+    "stage": "Round of 16",
+    "kickoff_utc": "2026-07-07T20:00:00+00:00",
+    "venue": "Vancouver Stadium",
+    "venue_city": "Vancouver"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.3,
+      "draw": 0.55,
+      "away": 0.15
+    },
+    "most_likely_score": "0-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进入点球大战，常规时间与加时赛全部战成0-0。从比赛过程看，哥伦比亚在射门数（15比7）和角球数（7比3）上占优，全场压制力更强，但瑞士门将做出3次关键扑救，加之双方合计43次犯规，节奏被反复打断，最终双方都未能在运动战中破门。加时阶段两队均已用完常规换人名额并投入生力军（哥伦比亚换上库乔·埃尔南德斯与理查德·里奥斯，瑞士派上鲁文·巴尔加斯与泽基·阿姆杜尼），仍未能改写比分，体能与专注度双双临近极限，进入点球是合理归宿。点球大战目前的进程对瑞士明显有利：哥伦比亚由Quintero首罚命中，瑞士由Xhaka跟进扳平，随后达文森·桑切斯主罚被扑，瑞士在同轮次已取得一球净胜，占据心理与数学双重优势。因此从晋级角度看，瑞士推进下一轮的概率明显高于哥伦比亚。不过在官方比分口径下，本场90分钟加加时的最终定格仍是0-0平局，点球结果只决定晋级归属而不改变比分记录，故最可能最终比分锁定为0-0，平局概率相应最高。由于比赛已进入点球阶段，运动战不会再有进球产生，90分钟之后的进球名单为空。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1463,
+    "output": 583
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0161986,
+  "wall_seconds": 28.129,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.30, \"draw\": 0.55, \"away\": 0.15},\n  \"most_likely_score\": \"0-0\",\n  \"scorers\": [],\n  \"reasoning\": {\"overall\": \"比赛进入点球大战，常规时间与加时赛全部战成0-0。从比赛过程看，哥伦比亚在射门数（15比7）和角球数（7比3）上占优，全场压制力更强，但瑞士门将做出3次关键扑救，加之双方合计43次犯规，节奏被反复打断，最终双方都未能在运动战中破门。加时阶段两队均已用完常规换人名额并投入生力军（哥伦比亚换上Cucho Hernández与Richard Ríos，瑞士派上Rubén Vargas与Zeki Amdouni），仍未能改写比分，体能与专注度双双临近极限，进入点球是合理归宿。点球大战目前的进程对瑞士明显有利：哥伦比亚由Quintero首罚命中，瑞士由Xhaka跟进扳平，随后Davinson Sánchez主罚被扑，瑞士在同轮次已取得一球净胜，占据心理与数学双重优势。因此从晋级角度看，瑞士推进下一轮的概率明显高于哥伦比亚。不过在官方比分口径下，本场90分钟加加时的最终定格仍是0-0平局，点球结果只决定晋级归属而不改变比分记录，故最可能最终比分锁定为0-0，平局概率相应最高。由于比赛已进入点球阶段，运动战不会再有进球产生，90分钟之后的进球名单为空。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-07T20:09:22+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 9,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T20:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.34,
+        "away": 0.36
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Luis Díaz",
+          "minute": 58,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Breel Embolo",
+          "minute": 67,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "James Rodríguez",
+          "minute": 76,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Jhon Durán",
+          "minute": 82,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Xherdan Shaqiri",
+          "minute": 71,
+          "p": 0.17,
+          "team": "home"
+        },
+        {
+          "player": "Granit Xhaka",
+          "minute": 88,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "开场9分钟,瑞士与哥伦比亚在温哥华体育场的世界杯16强战仍是0-0僵持。从场面数据看,瑞士控球率达到61%,显示出中场组织和节奏掌控的优势,哥伦比亚则以39%的控球率退守反击,但已经获得一次角球机会,进攻端的威胁并不低。双方犯规都不多(瑞士1次、哥伦比亚2次),说明比赛开局节奏偏理性,还处在互相试探阶段。基于淘汰赛的整体强度以及两队近期状态,哥伦比亚在球员个人能力和边路突击层面略占上风,尤其是路易斯·迪亚斯和J罗组织的进攻链条一旦启动,穿透力明显;瑞士则更依赖整体防守和恩博洛的支点作用寻找反击空间。综合来看,哥伦比亚赢球的概率略高于瑞士,但考虑到瑞士在大赛淘汰赛的稳健性以及现阶段的控球优势,平局的概率同样不低,三种结果的分布相对接近。预计比赛在中后段会逐步打开,哥伦比亚利用反击或定位球先下一城的可能性最大,瑞士随后被迫压出会给对手更多空间,但也可能凭借恩博洛或替补奇兵扳回一球。最可能的最终比分定在1-2,哥伦比亚小胜。进球时间点主要集中在下半场,迪亚斯是最可能的破门人选,J罗和杜兰在比赛后段也具备终结能力;瑞士方面,恩博洛是首选射手,沙奇里替补登场后的定位球威胁以及扎卡的中场远射也是潜在得分来源。"
+      },
+      "sources": [],
+      "cost_usd": 0.0185185,
+      "tokens": {
+        "input": 940,
+        "output": 813
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.659
+    },
+    {
+      "submitted_at": "2026-07-07T21:09:48+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 54,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T20:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.38,
+        "away": 0.34
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到54分钟，瑞士与哥伦比亚在温哥华0-0战平。整体节奏偏谨慎，双方控球五五开，犯规数同为6次，反映出这是一场典型的淘汰赛拉锯战，双方都不愿在中场先失位置。从射门数据看，哥伦比亚略占场面主动，5次射门配合4次角球说明他们通过边路和定位球持续制造压力，但只有1次射正，锋线终结欠火候；瑞士射门3次却有2次射正，效率更高，门将做出1次扑救即化解了对手的最好机会。下半场开场瑞士就用吉布里尔·索乌换下阿尔东·贾沙里，明显是想加强中场对抗和推进，这一调整让球队在过去几分钟的攻防转换中更为稳固。综合来看，哥伦比亚创造机会的能力略高，但瑞士的防守组织与反击质量足以抵消这种压制，加上淘汰赛后段两队心态都会更保守，比赛进入僵持后半段的可能性上升，因此平局概率最高。最可能的最终比分维持0-0，若打破僵局，哥伦比亚通过角球或路易斯·迪亚斯个人突破率先得手的概率最高，其次是瑞士依靠Embolo的支点作用和快速转换偷袭一球，哈梅斯·罗德里格斯的定位球威胁也不容忽视。整体上进球时间大概率落在70分钟之后的体能瓶颈期或补时阶段。"
+      },
+      "sources": [],
+      "cost_usd": 0.0159803,
+      "tokens": {
+        "input": 1014,
+        "output": 661
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.355
+    },
+    {
+      "submitted_at": "2026-07-07T21:59:25+00:00",
+      "live": {
+        "status": "Break Time",
+        "elapsed": 119,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T20:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.44,
+        "away": 0.28
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分仍是0-0，比赛时间已来到119分钟，进入加时赛末段的Break Time阶段，双方即将迎来常规加时的收尾，点球大战几乎不可避免。从场面数据看，瑞士射门6次、射正2次，控球率52%；哥伦比亚射门7次、射正2次，控球率48%，两队火力和创造力都非常接近，谁也没能建立起明显优势，符合典型的淘汰赛消耗战剧本。两队从下半场开始都用尽了换人名额，瑞士派上塞德里克·伊滕、鲁文·巴尔加斯等生力军试图强攻，哥伦比亚则用库乔·埃尔南德斯、胡安·费尔南多·金特罗加强前场，但均未能改写比分。加上黄牌累积（Xhaka、Zakaria、路易斯·苏亚雷斯均已吃牌），双方体能与专注度都逼近极限，最后1分钟出现运动战破门的概率极低。基于此，最可能的最终（120分钟）比分依然是0-0，比赛大概率将由点球决出胜负，因此在90/120分钟维度下平局概率明显高于任何一方胜出；主客队获胜概率因整体表现均衡而基本对等。剩余时间不足以支撑对具体射手做出有实际意义的预测，因此不列出后续进球球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.20004790000000003,
+      "tokens": {
+        "input": 51052,
+        "output": 603
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.017
+    },
+    {
+      "submitted_at": "2026-07-07T22:05:35+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 110,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T20:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.189
+    },
+    {
+      "submitted_at": "2026-07-07T22:39:05+00:00",
+      "live": {
+        "status": "Penalty In Progress",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T20:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.2,
+        "draw": 0.6,
+        "away": 0.2
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分0-0，比赛已走完常规时间与加时赛全部120分钟，现进入点球大战阶段。从场面数据看，哥伦比亚整体进攻更为积极，射门15次、射正3次、角球7次均占优；瑞士射门7次、射正2次、角球3次略处下风，但控球率53%略高，并靠格兰特·扎卡领衔的中场拦截化解了不少威胁，双方犯规数都超过20次，显示比赛节奏拼抢激烈、空间受限。两队在下半场及加时段都做了大量换人，包括哥伦比亚的J罗、金特罗、路易斯·苏亚雷斯、库乔·埃尔南德斯，以及瑞士的恩多耶、瓦尔加斯、里德等进攻端调整，但均未能在运动战中打破僵局。由于比赛以0-0进入点球，正赛最终比分锁定为0-0平局，因此平局概率最高，两队晋级机会在点球大战中接近五五开，考虑到哥伦比亚整体射手水平与门将扑救经验略优，客队晋级略占心理层面优势，但差距非常有限。最可能最终比分为0-0。由于点球大战进球不计入正式比分，且90分钟及加时赛已结束，运动战不会再产生进球，因此不再列出后续破门球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.2161762,
+      "tokens": {
+        "input": 51291,
+        "output": 1427
+      },
+      "tool_calls": 0,
+      "wall_seconds": 32.387
+    },
+    {
+      "submitted_at": "2026-07-07T22:45:45+00:00",
+      "live": {
+        "status": "Penalty In Progress",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T20:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.55,
+        "away": 0.15
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进入点球大战，常规时间与加时赛全部战成0-0。从比赛过程看，哥伦比亚在射门数（15比7）和角球数（7比3）上占优，全场压制力更强，但瑞士门将做出3次关键扑救，加之双方合计43次犯规，节奏被反复打断，最终双方都未能在运动战中破门。加时阶段两队均已用完常规换人名额并投入生力军（哥伦比亚换上库乔·埃尔南德斯与理查德·里奥斯，瑞士派上鲁文·巴尔加斯与泽基·阿姆杜尼），仍未能改写比分，体能与专注度双双临近极限，进入点球是合理归宿。点球大战目前的进程对瑞士明显有利：哥伦比亚由Quintero首罚命中，瑞士由Xhaka跟进扳平，随后达文森·桑切斯主罚被扑，瑞士在同轮次已取得一球净胜，占据心理与数学双重优势。因此从晋级角度看，瑞士推进下一轮的概率明显高于哥伦比亚。不过在官方比分口径下，本场90分钟加加时的最终定格仍是0-0平局，点球结果只决定晋级归属而不改变比分记录，故最可能最终比分锁定为0-0，平局概率相应最高。由于比赛已进入点球阶段，运动战不会再有进球产生，90分钟之后的进球名单为空。"
+      },
+      "sources": [],
+      "cost_usd": 0.0161986,
+      "tokens": {
+        "input": 1463,
+        "output": 583
+      },
+      "tool_calls": 0,
+      "wall_seconds": 28.129
+    }
+  ]
+}

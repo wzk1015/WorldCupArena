@@ -1,0 +1,770 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-5_Haiti_Scotland_2026-06-14",
+  "provider_fixture_id": "19609155",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-14T03:01:56+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 1
+    },
+    "home": "Haiti",
+    "away": "Scotland",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-14T01:00:00+00:00",
+    "venue": "Boston Stadium",
+    "venue_city": "Foxborough"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.05,
+      "draw": 0.14,
+      "away": 0.81
+    },
+    "most_likely_score": "0-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前已经到90分钟，比分是Haiti 0比1 Scotland，常规时间已基本走完，因此结果分布明显向客队守住优势倾斜。现有比赛信息显示，Scotland在28分钟由John McGinn打入唯一进球，此后虽然Haiti在数据上略占主动，拥有54%控球、14次射门、4个角球，射门总量也高于Scotland的9次，但真正打在门框范围内双方都是2次，说明Haiti的进攻效率和绝对威胁并不高，更多是追分阶段的外围施压而非持续高质量机会。Scotland在领先后通过75分钟和82分钟连续换人加强体能与防守稳定性，这类比赛进程在90分钟时通常会进一步压低主队扳平概率，同时也保留少量客队反击再进一球的空间。基于当前比分、已到90分钟的时间条件以及双方射正质量接近但客队已兑现领先的事实，客胜概率维持最高，平局仍保留在补时阶段由主队抓到一次机会的可能，但已经明显低于客胜，主胜则只剩极小尾部概率。最可能最终比分因此保持为0-1，这既符合当前领先方Scotland的最高胜率，也符合比赛已进入最后时段、剩余有效进球时间有限的逻辑。至于后续进球者，只应考虑90分钟之后的补时阶段：如果Scotland再进球，更可能来自刚替补上场、具备反击终结点属性的Lyndon Dykes，或由Ryan Christie这类后上场球员利用转换机会完成；如果Haiti扳平，则更可能来自末段替补登场、承担冲击任务的Yassin Fortuné。但整体上，补时再出现进球的总概率不高，0比1收尾仍是单一最可能结局。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 6688,
+    "output": 567
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.025225,
+  "wall_seconds": 17.206,
+  "error": null,
+  "raw_text": "{\"win_probs\":{\"home\":0.05,\"draw\":0.14,\"away\":0.81},\"most_likely_score\":\"0-1\",\"scorers\":[{\"player\":\"Lyndon Dykes\",\"team\":\"away\",\"minute\":92,\"p\":0.05},{\"player\":\"Yassin Fortuné\",\"team\":\"home\",\"minute\":93,\"p\":0.03},{\"player\":\"Ryan Christie\",\"team\":\"away\",\"minute\":95,\"p\":0.03}],\"reasoning\":{\"overall\":\"当前已经到90分钟，比分是Haiti 0比1 Scotland，常规时间已基本走完，因此结果分布明显向客队守住优势倾斜。现有比赛信息显示，Scotland在28分钟由John McGinn打入唯一进球，此后虽然Haiti在数据上略占主动，拥有54%控球、14次射门、4个角球，射门总量也高于Scotland的9次，但真正打在门框范围内双方都是2次，说明Haiti的进攻效率和绝对威胁并不高，更多是追分阶段的外围施压而非持续高质量机会。Scotland在领先后通过75分钟和82分钟连续换人加强体能与防守稳定性，这类比赛进程在90分钟时通常会进一步压低主队扳平概率，同时也保留少量客队反击再进一球的空间。基于当前比分、已到90分钟的时间条件以及双方射正质量接近但客队已兑现领先的事实，客胜概率维持最高，平局仍保留在补时阶段由主队抓到一次机会的可能，但已经明显低于客胜，主胜则只剩极小尾部概率。最可能最终比分因此保持为0-1，这既符合当前领先方Scotland的最高胜率，也符合比赛已进入最后时段、剩余有效进球时间有限的逻辑。至于后续进球者，只应考虑90分钟之后的补时阶段：如果Scotland再进球，更可能来自刚替补上场、具备反击终结点属性的Lyndon Dykes，或由Ryan Christie这类后上场球员利用转换机会完成；如果Haiti扳平，则更可能来自末段替补登场、承担冲击任务的Yassin Fortuné。但整体上，补时再出现进球的总概率不高，0比1收尾仍是单一最可能结局。\"},\"sources\":[]}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-14T01:03:26+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 3,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.24,
+        "draw": 0.43,
+        "away": 0.33
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛刚进行到3分钟，当前比分仍是0比0，且已知赛中信息非常有限：暂无关键事件出现，控球率为50%对50%，说明开局阶段双方都还没有建立明显优势，比赛节奏和场面倾向基本均衡。在这种情况下，赛中预测会比开赛前更强调“时间消耗而比分未变”的因素：随着前3分钟没有进球被消化，平局概率会小幅抬升，而任何一方直接取胜的概率都会相应受到压缩。基于现有状态，苏格兰整体取胜机会仍略高于海地，但这种优势尚未在比赛内容里体现出来，因此目前最高的单一结果方向是平局。最可能最终比分设为0-0，原因是当前没有射门、机会或压制性数据支持短期内必然出现进球，同时比赛仅开始不久，低比分平局仍是最稳妥的赛中落点。至于后续进球者，由于现场数据里没有提供首发、射门分布、定位球主罚或任何具体球员参与信息，现阶段无法仅凭当前赛况可靠锁定未来最可能破门的官方球员姓名，因此暂不列出未来进球者预测；如果随后出现攻势、射门热点或明确球员参与数据，进球者判断会更容易收敛。"
+      },
+      "sources": [],
+      "cost_usd": 0.0121575,
+      "tokens": {
+        "input": 2187,
+        "output": 446
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.985
+    },
+    {
+      "submitted_at": "2026-06-14T01:09:06+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 9,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.17,
+        "draw": 0.32,
+        "away": 0.51
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到9分钟，比分仍是0比0，样本还很早，但已出现一定场面倾向。现有数据里，Scotland控球达到80.0%，并且以2次射门领先Haiti的1次，说明客队开局阶段更多掌控球权与推进节奏；不过截至目前没有进球、没有关键事件，意味着优势主要体现在过程控制，而非已经转化为高质量终结。因此，本次赛中更新将Scotland的胜率提升到全场最高，但仍保留相当比例的平局概率，因为时间尚早、领先优势尚未形成，而且0比0在前10分钟后依然是很常见的演化路径。基于当前0比0和早段数据，最可能的最终比分更新为0比1：这既符合Scotland目前较强的控场信号，也反映出比赛仍可能保持低比分的现实。Haiti仍有主场端的反击与定位球机会，所以主胜并未被完全排除，但从眼下的控球与射门分布看，其概率低于平局和客胜。未来进球逻辑上，如果比赛继续沿着当前节奏发展，后续首个进球更可能来自Scotland，但由于实时数据未提供官方/API球员名单，现阶段不适合指定具体球员作为高置信度进球者，因此暂不列出后续进球球员预测。"
+      },
+      "sources": [],
+      "cost_usd": 0.0127525,
+      "tokens": {
+        "input": 2221,
+        "output": 480
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.608
+    },
+    {
+      "submitted_at": "2026-06-14T01:14:44+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 14,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.14,
+        "draw": 0.31,
+        "away": 0.55
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到14分钟，当前比分仍是0比0。就现有赛中信息看，苏格兰虽然还没有取得进球，但控球率达到76%，总射门也以3比2略占优势，说明比赛主动权更多在客队手中；海地控球仅24%，更多处于防守和等待转换的节奏。由于目前没有出现进球、红黄牌、换人或明确重大机会等事件，比分仍保持均衡，因此平局概率不能降得过低；但从控球和射门分布来看，苏格兰后续持续施压并率先破门的可能性更高，所以客胜仍是最高结果概率。基于14分钟时点和0比0的局面，最可能的最终比分更新为0比1，这既反映了苏格兰的场面优势，也保留了比赛总进球数暂时偏低的判断。如果苏格兰继续维持当前控球压制，比赛更可能在中后段出现打破僵局的进球；海地若想改写走势，更依赖反击效率而不是持续压制。至于后续进球者，当前实时状态未提供可用的球员名单、首发或个人射门数据，因此无法基于现有信息稳定给出具体球员级别的未来进球预测。"
+      },
+      "sources": [],
+      "cost_usd": 0.0122875,
+      "tokens": {
+        "input": 2221,
+        "output": 449
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.217
+    },
+    {
+      "submitted_at": "2026-06-14T01:20:26+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 20,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.43,
+        "away": 0.32
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到20分钟，比分仍为0比0，说明双方都还没有把开局阶段的攻势转化为进球。从现有赛中数据看，Scotland控球率61%明显高于Haiti的39%，射门4比3也略占优势，这表明客队在场面组织和持续压迫上稍强一些；不过这种优势目前并不大，Haiti也有一定反击和射门产出，因此比赛仍处于相对开放但暂时均衡的状态。由于前20分钟没有进球、且射门总量仅7次，比赛的即时预期进球水平还不算高，这会明显抬升平局概率，尤其是0比0和1比1这类结果的权重。综合当前时间点、比分状态以及Scotland小幅场面优势，本次更新将平局维持为最高概率，其次是Scotland小优下的客胜，再之后是Haiti主场方向的胜出机会。最可能最终比分给出0-0，因为当前无进球、节奏数据显示并非压倒性局面，且Scotland虽然控球更多，但优势尚不足以把客胜概率推到超过平局。至于后续进球逻辑，如果比赛后段出现进球，更可能来自Scotland继续依靠更高控球累积机会，或Haiti利用转换进攻制造效率型破门；但由于当前实时状态未提供任何球员出场与个人射门信息，无法可靠指定官方/API格式的潜在进球球员，因此本次未来进球者列表留空。"
+      },
+      "sources": [],
+      "cost_usd": 0.0103575,
+      "tokens": {
+        "input": 1077,
+        "output": 511
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.146
+    },
+    {
+      "submitted_at": "2026-06-14T01:26:11+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 26,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.43,
+        "away": 0.35
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到26分钟，当前比分仍是0-0，场面信息非常有限，但现有数据表明苏格兰在控球上以56%对44%略占上风，射门4比3也只是轻微领先，说明比赛节奏存在一定来回，但暂时没有哪一方形成明显压制。由于至今没有进球且没有关键事件出现，0-0在时间推进后的权重会自然上升，平局概率因此被抬高。与此同时，苏格兰在控球和射门上的小幅优势仍让他们保有略高于海地的取胜机会，所以客胜概率高于主胜，但不足以压过平局。基于当前26分钟的均势偏客队局面，最终结果更可能落在低比分区间，最可能的最终比分维持为0-0，这也与当前最高的平局概率一致。如果后续出现进球，更可能来自比赛后段，尤其是60分钟后体能变化和阵型前压带来的空间；但就现有实时状态而言，尚缺乏明确到具体球员的射门、关键机会或定位球主罚信息，因此无法可靠锁定某位后续进球者，未来进球名单暂时留空更符合当前证据强度。整体看，本场已从开局阶段转入谨慎拉锯，苏格兰小优、平局最稳，海地若想提高胜率需要在后续把有限控球转化为更清晰的射门质量。"
+      },
+      "sources": [],
+      "cost_usd": 0.0087975,
+      "tokens": {
+        "input": 1077,
+        "output": 407
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.479
+    },
+    {
+      "submitted_at": "2026-06-14T01:31:52+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 31,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.27,
+        "away": 0.55
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到31分钟，Haiti主场0比1落后Scotland，当前唯一进球来自29分钟的John McGinn。基于现有赛中信息，Scotland在前31分钟以59%控球率、4比3射门、1比0射正占优，并且已经把仅有的一次射正转化为进球，说明他们在场面和效率上都略占上风；Haiti目前还没有射正，进攻威胁相对有限，因此相比开场前，客队取胜概率已经明显上调。虽然只是一球差距，且比赛还剩接近60分钟，平局仍有现实可能，因为Haiti只要抓住一次定位球或反击就能扳平；但从当前数据看，主队持续制造高质量机会的证据不足，所以主胜仍是三项中最低。最可能最终比分维持在0比1，原因是当前比赛节奏并不算大开大合，总射门数只有7次，Scotland领先后有机会继续依靠控球管理比赛，而Haiti若迟迟无法提升射正质量，比分可能保持胶着。后续进球逻辑上，若Scotland继续保持中场控制，已有进球的John McGinn仍是相对更可信的客队再次破门人选；而Haiti方面由于现场状态未显示明确射手热点，只能给出较分散的主队下半场扳平进球概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.012645,
+      "tokens": {
+        "input": 2316,
+        "output": 457
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.099
+    },
+    {
+      "submitted_at": "2026-06-14T01:37:32+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 37,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.17,
+        "draw": 0.28,
+        "away": 0.55
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前进行到37分钟，比分是Haiti 0-1 Scotland，且唯一进球来自28分钟的John McGinn。基于现有赛中信息，Scotland不仅领先，而且场面数据也略占优势：射门7比4、射正2比0、控球57%比43%，说明客队在进攻推进和比赛控制上更稳定；Haiti虽然并非完全被压制，但截至目前没有射正，意味着其扳平威胁还没有充分转化为高质量机会。在这种时间节点下，1球领先的一方通常会显著提升不败概率，因此本次更新将away胜率维持在最高。与此同时，比赛还远未进入末段，Haiti仍有较长时间争取扳平，所以draw概率不能压得过低；但考虑到Scotland目前既有领先优势，又有更好的射门与控球表现，其继续守住优势甚至扩大比分的可能性仍高于主队逆转。最可能最终比分选择0-1，一方面它与当前场面最直接匹配，另一方面也符合away为最高胜率的约束；次选逻辑会是0-2或1-1，但就单一最可能结果而言，客队小胜最合理。后续进球球员方面，只预测37分钟之后：若Scotland再进球，最可能仍来自已经取得进球、前插能力强的John McGinn，或由中锋Lyndon Dykes把握转换机会；若Haiti扳平，则更可能由前场核心Duckens Nazon在下半场获得机会。整体来看，Scotland更接近带走三分，但Haiti仍保留追平空间。"
+      },
+      "sources": [],
+      "cost_usd": 0.01055,
+      "tokens": {
+        "input": 1172,
+        "output": 508
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.274
+    },
+    {
+      "submitted_at": "2026-06-14T01:43:13+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 43,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.21,
+        "draw": 0.31,
+        "away": 0.48
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "43分钟时苏格兰以0比1领先，现有赛中信息显示比赛仍然比较开放，但优势更偏向客队。比分上，唯一进球来自28分钟的John McGinn，这让苏格兰在接近半场结束时占据实质领先；数据上双方总射门都是7次，说明海地并非被完全压制，但苏格兰控球58%对42%、射正2比1，体现出客队在球权和关键机会质量上略优。海地目前落后且已有11次犯规、并在39分钟吃到黄牌，说明其追分中的对抗强度较高，但这也可能削弱后续防守稳定性。基于当前0比1的比分和43分钟的时间位置，苏格兰已经进入更有利的比赛状态，因此客胜概率保持最高；不过双方射门数接近，意味着海地仍有把比赛拖回平局的现实可能，所以平局概率仍然不可忽视。主胜需要海地在剩余时间内至少净胜两球，结合现有射正与控球态势，这一结果相对更难实现。最终比分逻辑上，0比1仍是单一最可能结果，因为它同时符合苏格兰已领先、比赛接近半场且场面优势不算压倒性的特征；其次才会是1比1或0比2这样的分支。后续进球者方面，现有事件里唯一已经证明终结能力并完成进球的是John McGinn，如果比赛在下半场继续由苏格兰获得更高质量转换机会，他依然是最合理的未来进球候选；海地虽然有追平机会，但当前缺少明确的高质量射正与已形成进球事件的个人依据，因此未来进球人选信心不宜给得过高。"
+      },
+      "sources": [],
+      "cost_usd": 0.015015,
+      "tokens": {
+        "input": 2376,
+        "output": 605
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.143
+    },
+    {
+      "submitted_at": "2026-06-14T01:48:54+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.27,
+        "away": 0.55
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到45分钟，Haiti主场0比1落后Scotland，现有比分来自28分钟John McGinn的进球。基于已知赛中信息，场面并不是一边倒：Haiti总射门8比7略多，但射正只有1次，说明其进攻尝试不少、真正高质量机会有限；Scotland控球55%占优，射正2次并已兑现1球，进攻效率和比赛控制力更好。结合半场领先这一关键状态，客队在下半场拥有更清晰的比赛路径：既可以继续利用控球和转换寻找第二球，也可以在领先后适当收缩，迫使Haiti压上后暴露空间。因此胜平负概率更新为Scotland获胜最高，平局次之，Haiti逆转概率最低。最可能最终比分判断为0-1，因为当前数据体现出两队机会数量接近但质量都不算特别高，Scotland已把更有效的一次优势转化为领先，而Haiti虽然有反扑空间，但上半场射正偏少，马上扳平并不具备特别强的证据。至于后续进球逻辑，若比赛在45分钟后继续出现进球，Scotland更可能通过Che Adams或再次由John McGinn参与终结，来源主要是客队已有领先、控球稍优且反击空间可能增大；Haiti若能取得进球，更可能来自其下半场加强压迫后的前场核心机会，因此给到Duckens Nazon一定的后续进球概率。但整体上，未来进球分布仍偏谨慎，单场停留在0-1或扩大到0-2、被追成1-1是最主要的几个收尾方向。"
+      },
+      "sources": [],
+      "cost_usd": 0.01094,
+      "tokens": {
+        "input": 1232,
+        "output": 524
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.327
+    },
+    {
+      "submitted_at": "2026-06-14T02:09:48+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 54,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.2,
+        "draw": 0.29,
+        "away": 0.51
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "54分钟时Haiti主场0比1落后Scotland，现阶段赛果基础明显偏向客队。已发生的关键变化只有28分钟John McGinn为Scotland打入正常进球，之后比赛没有再出现进球事件；从统计看，双方总射门8比7接近，但Haiti只有1次射正，而Scotland有2次射正并保持55%控球，说明主队虽然有一定出手数量，但真正高质量机会转化不足，客队则在领先后对比赛节奏的控制略占上风。基于当前时间点和比分状态，Scotland带着一球优势进入下半场中段，胜率应高于开场前；同时由于分差只有1球，平局概率仍然不可忽视，但Haiti逆转需要至少打进2球，这与其截至目前偏低的射正效率并不完全匹配，因此主胜概率最低。最终比分逻辑上，0比1既符合当前比赛走势，也符合客队最高胜率这一判断；相比0比2或1比2，现有数据更支持比赛继续胶着、总进球数维持偏低。后续进球者方面，当前可用实时信息里只有John McGinn明确贡献了进球，而没有更多持续压制或高频射正到具体球员层面的证据，因此此刻不强行给出54分钟后的高可信未来进球者名单，更新后的最稳妥判断是剩余时间可能不再产生进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.012405,
+      "tokens": {
+        "input": 936,
+        "output": 671
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.368
+    },
+    {
+      "submitted_at": "2026-06-14T02:15:36+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 60,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.17,
+        "draw": 0.29,
+        "away": 0.54
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到60分钟，Haiti暂时0比1落后Scotland，当前唯一进球来自28分钟的John McGinn。基于现有赛中信息，这是一场比分接近但效率略偏向客队的比赛：射门方面Haiti 8次、Scotland 7次，主队在总射门上并不吃亏，但射正仅1次，而Scotland 2次射正就取得1球，说明客队把握机会更好；控球率54%对46%也显示Scotland在比赛节奏和球权控制上略占优势。进入下半场后暂无新的关键进球事件，意味着客队目前更可能转向控制风险、保护领先。由此，概率上仍应以Scotland守住优势为首选结果，客胜概率最高；但由于分差只有1球，且Haiti射门数量尚可，平局仍保留一定可能，主胜则需要至少连进两球，难度明显更高。最终比分逻辑上，最可能是Scotland以0比1直接收下比赛，因为这既符合当前比分，也符合双方到60分钟为止创造质量有限、节奏并非大开大合的走势。若后续再有进球，更现实的分支是Haiti压上后追成1比1，或Scotland利用转换打成0比2，因此未来进球候选更偏向两队前场核心与已完成破门的球员：John McGinn具备再次利用中前场后插上得分的可能；Haiti若扳平，更可能来自其前场攻击手；而若Scotland扩大优势，则中锋或二线插上球员在比赛末段也有机会。综合更新后，本场预测维持客队优势，最可能最终比分为0比1。"
+      },
+      "sources": [],
+      "cost_usd": 0.01132,
+      "tokens": {
+        "input": 1288,
+        "output": 540
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.593
+    },
+    {
+      "submitted_at": "2026-06-14T02:21:22+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 66,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.28,
+        "away": 0.54
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到66分钟，Haiti主场0比1落后Scotland，当前唯一进球来自28分钟的John McGinn。就现有赛况看，场面并不是一边倒：双方总射门都是8次，但Scotland控球54%略优，射正2比1也稍占上风，说明客队虽然优势不大，却在把握关键机会方面更有效。Haiti到现在只有1次射正，进攻转化率偏低，而且17次犯规也反映出其在追分阶段节奏被打断、对抗成本较高。基于比分、时间和有限数据，Scotland在还剩约25分钟常规时间的情况下仍然是更可能守住领先的一方，因此客胜概率最高；同时由于双方创造力都不算强、射正数偏少，平局仍保留一定空间，但需要Haiti在后段显著提升终结效率。主胜需要Haiti连进至少2球，结合目前只打出1次射正的表现，概率相对最低。最可能的最终比分维持在0-1，因为这同时符合当前比赛强度、Scotland现有微弱优势以及剩余时间不断减少的逻辑。后续进球方面，如果比赛再出球，更倾向于出现在Haiti压上后的转换阶段，因此Scotland球员的未来进球概率略高；其中已有进球的John McGinn仍是客队最可信的后续得分点。另一方面，若Haiti扳平，更可能来自后程持续前压中的个别机会，因此给到Jean-Ricner Bellegarde较低但存在的破门可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.013655,
+      "tokens": {
+        "input": 2450,
+        "output": 502
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.418
+    },
+    {
+      "submitted_at": "2026-06-14T02:27:02+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 72,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.14,
+        "draw": 0.24,
+        "away": 0.62
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前进行到72分钟，Haiti主场0比1落后Scotland，比赛已经进入最后约20分钟，比分与时间共同决定了Scotland明显占优。已知唯一进球来自28分钟John McGinn，这让客队在剩余时间里可以更偏向控制节奏和保护领先。数据层面两队整体较接近：Haiti总射门8比9、控球48%比52%、角球1比3，但真正威胁并不高，Haiti只有1次射正，Scotland也只有2次射正，说明这不是一场开放式高转化比赛，更像是中低节奏下客队凭效率领先。基于这种赛况，随着时间流逝，主队扳平窗口在缩小，而客队守住胜果的概率持续上升，因此当前胜平负更新为Haiti胜面较低、平局仍保留一定可能、Scotland取胜概率最高。最可能最终比分判断为0-1：它既符合当前低射正、低比分走势，也符合领先方在72分钟后的保守策略。若再出现进球，逻辑上有两条主线：其一是Haiti因追分压上，通过换上的Josué Casimir等前场点制造扳平机会；其二是Scotland利用Haiti后压后的空间打反击扩大优势，其中已有进球的John McGinn仍是较合理的后续进球候选。因此后续进球预测以少量增量为主，0-1仍是单一最可能终局，1-1次之，0-2也具备一定概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.0105475,
+      "tokens": {
+        "input": 1369,
+        "output": 475
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.015
+    },
+    {
+      "submitted_at": "2026-06-14T02:32:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 77,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.24,
+        "away": 0.64
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到77分钟，Haiti主场0比1落后Scotland，现阶段时间已经不多，比分与剩余时段共同决定了客队明显占优。已知比赛进程里，唯一进球来自28分钟的John McGinn，这说明Scotland较早建立领先后一直把优势保持到现在。数据层面两队总射门同为8次、控球也接近均势（Haiti 49%，Scotland 51%），说明场面并非一边倒，但关键差异在于射正质量：Haiti只有1次射正，Scotland有2次射正并已转化为进球，反映客队效率更高。Haiti虽然在下半场有人员调整，理论上增强了后段追分意图，但截至77分钟仍未扳平，说明其持续制造高质量机会的能力有限。基于当前0比1、剩余时间有限、统计接近但客队效率更优的组合，客胜概率维持最高，平局仍有一定空间，因为Haiti只需1球即可追平，而主胜则需要至少连入2球，在时间与现有进攻产出约束下难度最大。因此更新为home 0.12、draw 0.24、away 0.64。最可能最终比分选择0-1：它既符合当前客队最高胜率，也符合比赛已进入最后阶段且双方累计射正不多的低比分走势。后续进球逻辑上，更可能出现的是比赛末段的单个进球，而不是连续多球；若Haiti压上，替补登场的Josué Casimir属于更有可能参与终结的人选，所以给出一条主队追平候选；但在空间增大的情况下，Scotland由既有进球者John McGinn再次利用反击锁定胜局的可能性也存在。总体看，未来最常见路径仍是无新增进球直接收于0比1，其次才是1比1或0比2。"
+      },
+      "sources": [],
+      "cost_usd": 0.0146825,
+      "tokens": {
+        "input": 2513,
+        "output": 560
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.887
+    },
+    {
+      "submitted_at": "2026-06-14T02:38:42+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 83,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.11,
+        "draw": 0.22,
+        "away": 0.67
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到83分钟，Haiti目前0比1落后Scotland，现有信息里唯一进球来自28分钟的John McGinn。结合数据看，场面并没有出现明显一边倒：Haiti总射门8比9、控球47%比53%，但射正只有1次，而Scotland射正2次并已把领先保持到比赛后段，这说明Scotland虽然优势不大，却在效率和比赛控制上更占优。Haiti下半场有换人调整，说明他们在追分，但截至目前仍未把进攻转化为足够高质量的终结。进入最后十分钟后，时间因素会显著压低落后方翻盘概率，因此主胜空间已经很小，平局仍有一定机会，但客胜应是最主要结果。基于当前比分、剩余时间较短以及双方统计接近但Scotland更高效的情况，概率更新为Haiti胜11%、平局22%、Scotland胜67%。最可能最终比分维持在0-1，因为这是与当前比赛状态最一致的终局：Scotland继续守住优势，而Haiti虽有反扑但未必能完成最后一击。未来进球逻辑上，若比赛再出球，更可能来自Haiti压上后留下空间，Scotland通过反击扩大比分；但Haiti在末段也存在凭借直接进攻或定位球追成1比1的次优路径，因此后续潜在进球人选分别更偏向已证明终结能力的John McGinn，以及替补登场、可能承担冲击任务的Josué Casimir。"
+      },
+      "sources": [],
+      "cost_usd": 0.0133325,
+      "tokens": {
+        "input": 2513,
+        "output": 470
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.768
+    },
+    {
+      "submitted_at": "2026-06-14T02:44:30+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 89,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.06,
+        "draw": 0.17,
+        "away": 0.77
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到89分钟，Haiti主场0比1落后Scotland，现阶段时间对落后方非常不利，因此胜平负概率进一步向客队倾斜。已知唯一进球来自28分钟John McGinn，这说明Scotland较早建立领先并把优势保持到了终盘。结合现有数据看，双方控球率都是50%，角球3比3，总射门Haiti以12比9略占优，但两队射正都只有2次，说明Haiti虽然在数量上有一定推进和出手，但真正高质量机会并不多，至少还没有把场面转化为扳平进球；Scotland则在射门效率和比分管理上更占优。比赛末段双方都有换人，Scotland在75分钟连续调整，像Lyndon Dykes、Ryan Christie这样的后手更适合在最后时段利用空间反击或争顶，而Haiti也通过换人尝试加强冲击，不过从目前比分仍未改变来看，扳平窗口已经很窄。基于89分钟且仅剩补时的常见进球时空分布，最主要结果仍是Scotland守住1球优势，其次才是Haiti最后阶段追成1比1，Haiti反超的概率已经极低，因此客胜最高、平局次之、主胜最低。最可能最终比分判断为0比1，这既符合当前比分，也符合终场前剩余时间极少、双方射正有限和比赛已经长期维持单球差距的逻辑。后续进球逻辑上，如果补时内再有进球，更可能来自Haiti压上后的绝平尝试，或Scotland利用Haiti前压身后空间再下一城；因此未来潜在进球人选优先考虑末段替补前锋Lyndon Dykes，以及Haiti替补攻击手Josué Casimir，但两者发生概率都不高。"
+      },
+      "sources": [],
+      "cost_usd": 0.0149525,
+      "tokens": {
+        "input": 2741,
+        "output": 540
+      },
+      "tool_calls": 0,
+      "wall_seconds": 28.503
+    },
+    {
+      "submitted_at": "2026-06-14T02:50:27+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.12,
+        "away": 0.85
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前时间已到90分钟，比分是Haiti 0-1 Scotland，苏格兰凭借John McGinn在第28分钟的进球保持领先。就现有赛中信息看，比赛并不是一边倒：Haiti在总射门13比9、控球51%比49%、角球4比3上略占优势，但双方射正同为2次，说明Haiti虽然推进和出手更多，真正转化为高质量终结的效率有限；苏格兰则在有限机会里更早完成破门，之后通过75分钟和82分钟连续换人加强体能与守势，比赛末段更像是在守住1球优势。到了90分钟这一节点，常规时间已经结束，剩余通常只是不长的补时，因此落后方扳平空间明显缩小，领先方直接带走胜利的概率显著上升。基于当前比分、时间位置以及射正质量接近但苏格兰已兑现领先这一事实，最新概率判断为：客胜远高于平局，平局又明显高于主胜。最可能最终比分因此维持在0-1，这既符合当前场面，也符合时间临近结束时单球领先最常见的收束路径。至于90分钟后的潜在进球，理论上Haiti会压上争取最后一次机会，Scotland也可能获得反击空间，但现有数据没有显示某位球员在末段形成持续高威胁，且双方全场射正总量都不高，所以补时阶段再出现进球的总体概率偏低，本次更新不额外给出明确的后续进球者预测。"
+      },
+      "sources": [],
+      "cost_usd": 0.011485,
+      "tokens": {
+        "input": 1780,
+        "output": 469
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.021
+    },
+    {
+      "submitted_at": "2026-06-14T02:56:13+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.18,
+        "away": 0.74
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛来到90分钟，场上比分是Haiti 0比1 Scotland，苏格兰凭借John McGinn在第28分钟的进球保持领先。根据现有赛中信息，这场比赛的核心判断首先来自时间与比分：常规时间已经走完，留给海地扳平的实际窗口只剩补时阶段，因此客队胜出的基础概率显著高于平局和主队逆转。就场面数据看，海地控球53%、射门13次、角球4次，表面上进攻发起更多，但真正转化到门框范围内的射正只有1次，说明其进攻效率和最后一击质量有限；苏格兰虽然控球47%、总射门9次，但射正2次并已经取得进球，整体把有限机会转化为领先优势。下半场双方主要以换人为主，比赛事件并未显示海地持续形成高质量绝对机会，因此在90分钟节点上，平局概率虽然因补时存在而不能忽略，但已经明显低于客胜。主胜则需要海地先追平再完成反超，在剩余时间极少的情况下属于低概率路径。基于这一时间压力、现比分结构以及双方到目前为止的效率对比，最终结果最可能维持为0比1。至于后续进球逻辑，补时阶段理论上最常见的两种分支是海地压上争取绝平，或苏格兰利用空间打反击锁定胜局；但从当前射正产出和比赛已接近尾声的背景看，再出现进球的总体概率并不高，因此本次更新不额外给出高置信度的未来进球者预测，最稳健的判断仍是苏格兰守住一球优势完赛。"
+      },
+      "sources": [],
+      "cost_usd": 0.0126125,
+      "tokens": {
+        "input": 1847,
+        "output": 533
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.888
+    },
+    {
+      "submitted_at": "2026-06-14T03:01:56+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.14,
+        "away": 0.81
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前已经到90分钟，比分是Haiti 0比1 Scotland，常规时间已基本走完，因此结果分布明显向客队守住优势倾斜。现有比赛信息显示，Scotland在28分钟由John McGinn打入唯一进球，此后虽然Haiti在数据上略占主动，拥有54%控球、14次射门、4个角球，射门总量也高于Scotland的9次，但真正打在门框范围内双方都是2次，说明Haiti的进攻效率和绝对威胁并不高，更多是追分阶段的外围施压而非持续高质量机会。Scotland在领先后通过75分钟和82分钟连续换人加强体能与防守稳定性，这类比赛进程在90分钟时通常会进一步压低主队扳平概率，同时也保留少量客队反击再进一球的空间。基于当前比分、已到90分钟的时间条件以及双方射正质量接近但客队已兑现领先的事实，客胜概率维持最高，平局仍保留在补时阶段由主队抓到一次机会的可能，但已经明显低于客胜，主胜则只剩极小尾部概率。最可能最终比分因此保持为0-1，这既符合当前领先方Scotland的最高胜率，也符合比赛已进入最后时段、剩余有效进球时间有限的逻辑。至于后续进球者，只应考虑90分钟之后的补时阶段：如果Scotland再进球，更可能来自刚替补上场、具备反击终结点属性的Lyndon Dykes，或由Ryan Christie这类后上场球员利用转换机会完成；如果Haiti扳平，则更可能来自末段替补登场、承担冲击任务的Yassin Fortuné。但整体上，补时再出现进球的总概率不高，0比1收尾仍是单一最可能结局。"
+      },
+      "sources": [],
+      "cost_usd": 0.025225,
+      "tokens": {
+        "input": 6688,
+        "output": 567
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.206
+    }
+  ]
+}

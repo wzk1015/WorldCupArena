@@ -1,0 +1,987 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-1_Mexico_South-Africa_2026-06-11",
+  "provider_fixture_id": "19609127",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-11T21:03:56+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 0
+    },
+    "home": "Mexico",
+    "away": "South Africa",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-11T19:00:00+00:00",
+    "venue": "Mexico City Stadium",
+    "venue_city": "Mexico City"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.98,
+      "draw": 0.02,
+      "away": 0.0
+    },
+    "most_likely_score": "2-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进行至第90分钟，墨西哥主场2-0领先南非，仅余补时阶段。从场面看，墨西哥从开场便完全掌控节奏：第9分钟Julián Quiñones（基诺内斯）由Érik Lira（利拉）助攻先拔头筹，第67分钟Raúl Jiménez（希门尼斯）再下一城锁定胜局。统计端墨西哥控球率61%、16次射门、4次射正，远超南非的3次射门2次射正，控制力压倒性。南非则在第49分钟Yaya Sithole（西索莱）和第84分钟Themba Zwane（祖瓦内）两度被罚下，目前9人应战，已无翻盘可能；尽管墨西哥César Montes（蒙特斯）在第92分钟染红变为10打9，对结果几乎无影响。综合时间、比分与人数优势，主胜概率压至0.98、平局0.02、客胜可忽略。最可能最终比分锁定2-0：补时阶段虽存在墨西哥利用人数优势再下一城的可能，但替补登场不久的攻击手在短短数分钟内破门概率有限，因此维持现比分为最优解。后续进球逻辑上，原首发射手Quiñones与Jiménez均已被换下不再具备进球资格，候选集中于第76分钟替补登场的Armando González（冈萨雷斯）、第79分钟登场的Alexis Vega（维加）以及更早登场的Gilberto Mora（莫拉），其中González作为前锋直接顶替Jiménez，补时抢点概率最高，Vega次之，Mora机会更低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1273,
+    "output": 696
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.017586099999999997,
+  "wall_seconds": 20.863,
+  "error": null,
+  "raw_text": "```json\n{\n  \"win_probs\": {\"home\": 0.98, \"draw\": 0.02, \"away\": 0.0},\n  \"most_likely_score\": \"2-0\",\n  \"scorers\": [\n    {\"player\": \"Armando González\", \"team\": \"home\", \"minute\": 93, \"p\": 0.08},\n    {\"player\": \"Alexis Vega\", \"team\": \"home\", \"minute\": 94, \"p\": 0.06},\n    {\"player\": \"Gilberto Mora\", \"team\": \"home\", \"minute\": 95, \"p\": 0.04}\n  ],\n  \"reasoning\": {\"overall\": \"比赛已进行至第90分钟，墨西哥主场2-0领先南非，仅余补时阶段。从场面看，墨西哥从开场便完全掌控节奏：第9分钟Julián Quiñones（基诺内斯）由Érik Lira（利拉）助攻先拔头筹，第67分钟Raúl Jiménez（希门尼斯）再下一城锁定胜局。统计端墨西哥控球率61%、16次射门、4次射正，远超南非的3次射门2次射正，控制力压倒性。南非则在第49分钟Yaya Sithole（西索莱）和第84分钟Themba Zwane（祖瓦内）两度被罚下，目前9人应战，已无翻盘可能；尽管墨西哥César Montes（蒙特斯）在第92分钟染红变为10打9，对结果几乎无影响。综合时间、比分与人数优势，主胜概率压至0.98、平局0.02、客胜可忽略。最可能最终比分锁定2-0：补时阶段虽存在墨西哥利用人数优势再下一城的可能，但替补登场不久的攻击手在短短数分钟内破门概率有限，因此维持现比分为最优解。后续进球逻辑上，原首发射手Quiñones与Jiménez均已被换下不再具备进球资格，候选集中于第76分钟替补登场的Armando González（冈萨雷斯）、第79分钟登场的Alexis Vega（维加）以及更早登场的Gilberto Mora（莫拉），其中González作为前锋直接顶替Jiménez，补时抢点概率最高，Vega次之，Mora机会更低。\"},\n  \"sources\": []\n}\n```",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-11T19:11:37+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 11,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.24,
+        "away": 0.14
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Santiago Giménez",
+          "minute": 38,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 67,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Raúl Jiménez",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Edson Álvarez",
+          "minute": 55,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 82,
+          "p": 0.09,
+          "team": "away"
+        },
+        {
+          "player": "Percy Tau",
+          "minute": 70,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比赛进行到第11分钟，比分仍为0-0。从开局阶段的场面来看，墨西哥在主场表现非常积极：控球率高达67%，已完成1次射门并射正1次，还赢得了1个角球，明显占据主导权；南非则更偏向防守，控球只有33%，尚无射门记录，并已有1次犯规，显示出他们试图通过身体对抗压制墨西哥的推进。结合主场之利、世界杯小组赛首战墨西哥进攻线的整体实力，以及目前场上的压制态势，主队取胜概率显著高于其他结果，因此将home胜率上调至0.62，平局保留0.24，南非客场取胜空间较小约0.14。最可能的最终比分定为2-0：考虑到墨西哥已经形成持续压制但南非整体防守纪律尚可，预计墨西哥会在上半场后段或下半场中段打破僵局，并在体能下降阶段再下一城；南非则更可能依靠反击寻找零星机会但难以洞穿主队防线。后续进球预测方面，Santiago Giménez（吉梅内斯）作为锋线支点最可能率先破门，给出38分钟、概率0.30；Hirving Lozano（洛萨诺）凭借边路速度在67分钟具备扩大比分的能力，概率0.22；Raúl Jiménez（劳尔·希门尼斯）作为替补或后段奇兵在78分钟存在终结机会，概率0.18；中场Edson Álvarez（埃德森·阿尔瓦雷斯）通过定位球或远射于55分钟具备一定破门概率0.10。南非方面，Lyle Foster与Percy Tau在反击中存在追分的小概率，分别给出0.09与0.08。所有进球时间均严格晚于当前11分钟，且最终比分不低于当前任一方比分，符合最高胜率为主队的约束。"
+      },
+      "sources": [],
+      "cost_usd": 0.0192511,
+      "tokens": {
+        "input": 753,
+        "output": 890
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.298
+    },
+    {
+      "submitted_at": "2026-06-11T19:15:46+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 15,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.74,
+        "draw": 0.18,
+        "away": 0.08
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Santiago Giménez",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 72,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 78,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Edson Álvarez",
+          "minute": 81,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分1-0，比赛进行至第15分钟，墨西哥作为主队已率先打破僵局。从场面统计来看，墨西哥控球率高达67%，射门1次且1次射正即转化为进球，角球1次，犯规为0，整体节奏与压制力明显占优；南非控球率仅33%，零射门、零角球，仅靠门将完成1次扑救，进攻端尚未形成有效威胁。综合主场作战、世界杯小组赛背景以及早早取得领先的心理优势，主队胜率显著上调至0.74，平局概率0.18，客队反扑取胜的概率压低至0.08。最可能的最终比分判断为2-0：墨西哥在控球与射正效率上占优，下半场体能与战术调整后大概率再下一城，而南非目前的进攻输出不足以支撑追平甚至反超。后续进球逻辑方面，预计墨西哥锋线核心Santiago Giménez（吉梅内斯）在中场附近最有可能扩大比分，边路爆点Hirving Lozano（洛萨诺）凭借速度与突破亦具威胁，中场Edson Álvarez（阿尔瓦雷斯）远射或定位球补射作为次级选项；南非方面若能扳回一球，最可能由前锋Lyle Foster（福斯特）在比赛后段反击中完成。所有预测进球时间均严格晚于当前第15分钟。"
+      },
+      "sources": [],
+      "cost_usd": 0.0158286,
+      "tokens": {
+        "input": 933,
+        "output": 669
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.85
+    },
+    {
+      "submitted_at": "2026-06-11T19:21:48+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 21,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.72,
+        "draw": 0.18,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Santiago Giménez",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Julián Quiñones",
+          "minute": 67,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 75,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分1-0，墨西哥在主场第9分钟由Julián Quiñones（基诺内斯）接Érik Lira（利拉）助攻率先破门，比赛进行到第21分钟。从场面统计看，墨西哥控球率61%，射门5次（射正2次），角球2个，犯规0次，全面压制南非；南非则0射门、0角球，仅有1次扑救数据，进攻端尚未制造任何威胁。结合主场之利、领先优势以及双方实力差距，墨西哥赢球概率显著抬升至0.72，平局0.18，南非翻盘空间被压缩到0.10。鉴于墨西哥仍掌握节奏且南非短期内难以组织有效反扑，最可能的最终比分定为2-0：墨西哥很可能在下半场体能消耗后再下一城，而南非需要先在战术上做出调整才有机会回敬一球。后续进球预测集中在墨西哥下半场发力时段，主力前锋Santiago Giménez（吉门尼斯）作为禁区终结者最具威胁，Quiñones有望梅开二度，边路爆点Hirving Lozano（洛萨诺）也具备打破僵局的能力；南非方面若能改善进攻，Lyle Foster（福斯特）是最可能扳回一球的支点。所有预测进球时间均严格晚于当前第21分钟，且最终比分不低于现有比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0157176,
+      "tokens": {
+        "input": 963,
+        "output": 657
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.693
+    },
+    {
+      "submitted_at": "2026-06-11T19:27:35+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 27,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.74,
+        "draw": 0.18,
+        "away": 0.08
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Julián Quiñones",
+          "minute": 63,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Santiago Giménez",
+          "minute": 72,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 81,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 78,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分1-0，比赛进行到第27分钟。墨西哥在主场凭借第9分钟Julián Quiñones（基尼奥内斯）接Érik Lira（利拉）助攻的进球取得领先，控球率58%、射门6次（2次射正）、角球2个，整体场面压制明显；南非则零射门、零射正、零角球，仅靠1次扑救维持，并已在第17分钟由Teboho Mokoena（莫科埃纳）吃到黄牌，中场拼抢节奏受限。综合主场优势、场面数据和南非进攻乏力，墨西哥获胜概率显著上调至0.74，平局0.18，南非取胜仅0.08。最可能的最终比分判断为2-0：墨西哥大概率在中下半场凭借持续压制再下一城，而南非缺乏制造机会的迹象，零射正状态短时间内难以扭转。后续进球方面，27分钟之后最有可能继续破门的是状态火热的Quiñones，其次是禁区终结能力强的Santiago Giménez（吉门内斯）替补/持续登场后的把握机会，边路爆点Hirving Lozano（洛萨诺）也具备直接得分或制造点球的能力；南非端则仅给Lyle Foster（福斯特）保留较低权重的反扑可能。所有预测进球时间均设定在第27分钟之后，且最终比分不低于当前比分，符合最高胜率方为主队的一致性约束。"
+      },
+      "sources": [],
+      "cost_usd": 0.0161468,
+      "tokens": {
+        "input": 959,
+        "output": 681
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.702
+    },
+    {
+      "submitted_at": "2026-06-11T19:33:23+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 33,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.7,
+        "draw": 0.2,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Julián Quiñones",
+          "minute": 67,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Santiago Giménez",
+          "minute": 74,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 82,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Alexis Vega",
+          "minute": 58,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 78,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分 1-0，比赛进行到第 33 分钟，墨西哥在主场墨西哥城率先取得领先。Julián Quiñones 在第 9 分钟由 Érik Lira 助攻破门，墨西哥目前在场面上占据明显优势：5 次射门对南非的 0 次、2 次射正对 0 次、2 个角球对 0 个、控球率 54% 对 46%。南非除了 Teboho Mokoena 第 17 分钟的黄牌外几乎未制造威胁，进攻端完全哑火。综合主场之利、比分领先与进攻压制，墨西哥获胜概率显著上调至 0.70，平局 0.20，南非翻盘概率压低至 0.10。考虑到比赛仍有近 60 分钟，墨西哥延续主导大概率再下一城，但南非小组赛通常防守紧凑，因此最可能最终比分定为 2-0。后续进球逻辑：状态火热的 Julián Quiñones 仍是首选射手，Santiago Giménez 作为支点中锋在墨西哥持续施压下具备很高的进球概率，边路爆点 Hirving Lozano 与 Alexis Vega 也有一定威胁；南非端给予 Lyle Foster 一个低概率的扳回机会，但整体不影响最终比分判断。所有给定的进球时间均严格晚于第 33 分钟，最终比分对双方均不低于当前比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0160765,
+      "tokens": {
+        "input": 1060,
+        "output": 657
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.719
+    },
+    {
+      "submitted_at": "2026-06-11T19:39:15+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 39,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.21,
+        "away": 0.11
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Julián Quiñones",
+          "minute": 67,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Santiago Giménez",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 82,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 75,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分1-0，墨西哥主场领先，比赛进行至第39分钟，仍处于上半场尾段。从场面来看，墨西哥由Julián Quiñones (基诺内斯) 在第9分钟率先破门，全场掌握节奏：控球率52%、射门6次（射正2次）、角球2次，明显压制南非的0射门、0射正和1次角球，南非进攻端几乎未对Memo Ochoa所镇守的球门构成威胁。Teboho Mokoena (莫科纳) 第17分钟的黄牌也削弱了南非中场的对抗能力，而墨西哥仅Brian Gutiérrez (古铁雷斯) 一张黄牌，整体仍可保持高位逼抢。综合主场优势、战术掌控与射门质量差，主胜概率上调至0.68，平局0.21（考虑到比赛尚有逾50分钟、世界杯小组赛常出现保守化），客胜仅0.11。最可能的最终比分判定为2-0：墨西哥下半场体能与轮换深度更佳，扩大比分概率高于被扳平，而南非在零射门数据下短时间内连入两球可能性极低。后续进球预测集中在主队进攻端：Quiñones延续手感、Giménez作为典型禁区终结者具备替补登场或下半场抢点能力、Lozano则是边路爆点；南非方面给Lyle Foster (福斯特) 留出小概率扳回一球的可能性，因其是球队最具威胁的支点前锋。所有进球时间均设置在第39分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0165131,
+      "tokens": {
+        "input": 963,
+        "output": 700
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.419
+    },
+    {
+      "submitted_at": "2026-06-11T19:45:14+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Julián Quiñones",
+          "minute": 67,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Santiago Giménez",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 72,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分1-0，墨西哥在主场上半场结束时取得领先，比赛进行到第45分钟。从场面数据看，墨西哥占据主导：控球率54%对46%，射门6比1，射正2比0，角球2比0，这些指标都显示主队在进攻端的压制。Julián Quiñones在第9分钟由Érik Lira助攻打入早期进球，墨西哥随后稳住节奏，南非整场仅有1次射门且无射正，进攻端非常乏力。第17分钟Teboho Mokoena吃到黄牌也限制了南非中场的拼抢强度。基于以上态势，主队胜率上调至0.68，平局概率0.22，客队取胜概率仅0.10。最可能的最终比分判定为2-0：墨西哥下半场仍将延续控球与射门优势，再下一城概率较高，而南非进攻贫乏，客场扳平甚至反超的可能性偏低。后续进球预测方面，Quiñones作为已破门的前锋状态在线，延续进攻威胁的可能性最高；替补或后续登场的Santiago Giménez在主队拉开比分阶段的把握机会能力突出；Hirving Lozano在边路突破制造威胁的概率也不可忽视。南非方面若能进球，最可能来自前锋Lyle Foster在比赛末段的反击机会。所有预测进球时间均设定在45分钟之后，且最终比分不低于当前任一方比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0161875,
+      "tokens": {
+        "input": 975,
+        "output": 680
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.283
+    },
+    {
+      "submitted_at": "2026-06-11T19:51:05+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Julián Quiñones",
+          "minute": 63,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Santiago Giménez",
+          "minute": 75,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 82,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 78,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Percy Tau",
+          "minute": 88,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场结束，墨西哥1-0领先南非。Quiñones第9分钟由Lira助攻破门，墨西哥早早取得领先后掌控比赛节奏。从场面数据看，墨西哥在控球率（57%对43%）、射门数（8对2）、射正（2对0）、角球（2对1）等关键指标上全面占优，南非整个上半场仅有2次射门且没有射正，进攻端威胁极为有限，仅靠Mokoena的黄牌反映出中场拦截压力较大。墨西哥作为东道主在主场墨西哥城作战，海拔与气候优势进一步放大主队胜率。综合领先优势、场面压制和主场因素，主胜概率提升至0.68，平局0.22，南非客胜仅0.10。下半场墨西哥很可能继续保持控球并寻求扩大比分，而南非需要前压会进一步暴露后防空间，因此最可能的最终比分为2-0。后续进球逻辑上，Quiñones已找到手感，再下一城概率最高；中锋Giménez常作为下半场战术替补或核心终结者，是扩大比分的主要候选；边路Lozano具备反击破门能力。南非若获得机会，前锋Foster和经验丰富的Tau在末段反击中具备一定威胁，但概率偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.015850799999999998,
+      "tokens": {
+        "input": 994,
+        "output": 658
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.966
+    },
+    {
+      "submitted_at": "2026-06-11T20:17:24+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 62,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.13,
+        "away": 0.05
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Julián Quiñones",
+          "minute": 75,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Brian Gutiérrez",
+          "minute": 82,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Érik Lira",
+          "minute": 88,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行至62分钟，墨西哥主场1-0领先南非。第9分钟Julián Quiñones（基诺内斯）由Érik Lira（利拉）助攻打入制胜球，奠定了墨西哥的进攻主导。从场面数据来看，墨西哥控球率55%、总射门12次（射正3次），明显压制南非（射门2次、射正1次），主队完全掌握节奏。更关键的是第50分钟南非Yaya Sithole（西托勒）被红牌罚下，南非此后将以10人应战近半小时，体能与防线压力都将进一步放大，反扑能力极为有限。基于主场优势、领先态势、控球与射门压制以及人数优势，墨西哥获胜概率显著拉高至0.82，平局概率0.13主要来自南非死守摆大巴的可能，南非客场翻盘几乎无望，仅给0.05。最终比分最可能定格在2-0：墨西哥在剩余约30分钟内利用人数优势再下一城的概率高于南非扳平，但锁定胜局后也可能放慢节奏控制比赛，因此再进2球以上的概率有限。后续进球者集中在墨西哥一方：Quiñones已有进球感觉，最有可能继续建功；Brian Gutiérrez（古铁雷斯）作为活跃的进攻点也具备破门威胁；Érik Lira（利拉）则可能在控场推进中获得远射或定位球机会。所有候选进球时间均设置在62分钟之后，符合赛中预测要求。"
+      },
+      "sources": [],
+      "cost_usd": 0.0163873,
+      "tokens": {
+        "input": 979,
+        "output": 690
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.905
+    },
+    {
+      "submitted_at": "2026-06-11T20:23:13+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 68,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.14,
+        "away": 0.04
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Julián Quiñones",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Santiago Giménez",
+          "minute": 82,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Alexis Vega",
+          "minute": 86,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 89,
+          "p": 0.06,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前第68分钟，墨西哥主场1-0领先南非。开场第9分钟Julián Quiñones（基尼奥内斯）由Érik Lira（利拉）助攻破门后，墨西哥一直掌控比赛节奏。射门数据14比3、射正3比2、控球率55%对45%均显示主队场面占优。更关键的是，南非中卫Yaya Sithole（西索莱）在第49分钟染红离场，客队此后以10人应战，体能与防守组织在最后20余分钟将进一步承压。综合主场之利、人数优势、领先态势与场面压制，主胜概率显著上调至0.82，平局保留0.14（南非摆大巴+墨西哥求稳的小概率），客队翻盘几乎不存在，仅给0.04。最可能的最终比分为2-0：墨西哥下半段大概率再下一城扩大领先，但因领先后节奏放缓且南非收缩防守，再进多球难度上升，故未选择更大比分。后续进球预测以墨西哥扩大比分为主线：Quiñones延续状态二度建功，替补登场或前场支点Santiago Giménez（吉梅内斯）抓住对手体能下降的机会，Alexis Vega（维加）作为边路突破手在78-86分钟区间存在机会；南非则给Lyle Foster（福斯特）一个补时反击偷袭的低概率窗口。所有进球分钟均设定在68分钟之后，符合赛中预测要求。"
+      },
+      "sources": [],
+      "cost_usd": 0.0163762,
+      "tokens": {
+        "input": 1006,
+        "output": 684
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.057
+    },
+    {
+      "submitted_at": "2026-06-11T20:29:12+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 74,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.11,
+        "away": 0.03
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Julián Quiñones",
+          "minute": 82,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Santiago Giménez",
+          "minute": 86,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Alexis Vega",
+          "minute": 89,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 88,
+          "p": 0.06,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前第74分钟，墨西哥主场1-0领先南非。开场第9分钟Julián Quiñones（基尼奥内斯）由Érik Lira（利拉）助攻破门后，墨西哥牢牢掌控节奏，控球率56%，总射门15次远多于南非的3次，角球3比1占优，进攻端优势明显。南非在第49分钟Yaya Sithole（西托莱）被红牌罚下后陷入十打十一的劣势，尽管随后通过Thalente Mbatha和Themba Zwane两次换人加强中前场，但全场仅有3脚射门，进攻威胁有限。综合比分领先、人数优势、场面压制以及仅剩约16分钟加补时的剩余时间，主队获胜概率显著抬升至0.86，平局0.11，客队逆转概率压低至0.03。最可能的最终比分判断为2-0：墨西哥在体能与人数双重优势下后段极有可能再下一城，而南非少一人想连入两球的可能性极低。后续进球以主队为主——Quiñones手感火热延续破门概率最高，替补/前锋线的Santiago Giménez（吉门内斯）常作为终结点出现在末段，Alexis Vega（贝加）在反击中也有机会；南非方面若能通过Lyle Foster（福斯特）抓住一次定位球或反击仍存在小概率扳回一城。"
+      },
+      "sources": [],
+      "cost_usd": 0.015836,
+      "tokens": {
+        "input": 1055,
+        "output": 645
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.323
+    },
+    {
+      "submitted_at": "2026-06-11T20:34:58+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 79,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.97,
+        "draw": 0.025,
+        "away": 0.005
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前第79分钟，墨西哥主场2-0领先南非。开场第9分钟Julián Quiñones（基尼奥内斯）破门，第67分钟Raúl Jiménez（吉梅内斯）扩大比分；南非第49分钟Yaya Sithole（西托莱）被红牌罚下，少打一人且落后两球，反扑空间极为有限。射门数据16-3、射正4-2、控球率57%-43%全面体现墨西哥的场面压制。结合仅剩约11分钟加补时、客队需要在少一人情况下连入三球的难度，主胜概率上调至0.97，平局0.025，客胜仅0.005。最可能的最终比分维持在2-0：墨西哥已用换人（Luis Chávez、Gilberto Mora登场）稳住中场节奏，更倾向控制而非强攻；不过Jiménez状态火热，Mora作为生力军具备终结能力，Quiñones反击中仍具威胁，因此后续若有进球大概率由主队在反击或定位球中完成，给出三名主队潜在射手的小概率加注。客队少一人且体能透支，79分钟后破门概率极低，不列入预测。"
+      },
+      "sources": [],
+      "cost_usd": 0.014363400000000002,
+      "tokens": {
+        "input": 1192,
+        "output": 538
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.995
+    },
+    {
+      "submitted_at": "2026-06-11T20:40:45+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 85,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.98,
+        "draw": 0.015,
+        "away": 0.005
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前第85分钟，墨西哥主场2-0领先南非。墨西哥在第9分钟由Julián Quiñones（基尼奥内斯）率先破门，第67分钟Raúl Jiménez（希门尼斯）扩大比分。南非在第49分钟Yaya Sithole（西托莱）被红牌罚下后已少打一人长达36分钟，体能与组织能力均明显下降。从场面统计看，墨西哥控球率57%、射门16次（射正4次），全面压制射门仅3次的南非，主队进攻效率与控制力占据绝对优势。结合比分、时间所剩无几（仅约5分钟加补时）以及南非少一人难以连入两球的现实，主胜概率极高，平局与客胜几乎可以忽略。最可能的最终比分维持在2-0，因为南非在少一人且体力透支的情况下打破僵局非常困难，而墨西哥在领先安全区往往会回收控制节奏；不过墨西哥利用空间反击仍有一定机会扩大比分，因此为Raúl Jiménez、替补登场状态较新的Gilberto Mora（莫拉）以及具备远射能力的Luis Chávez（查韦斯）保留了较低概率的后续进球可能，进球时间均设定在85分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0152403,
+      "tokens": {
+        "input": 1144,
+        "output": 595
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.448
+    },
+    {
+      "submitted_at": "2026-06-11T20:46:31+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.99,
+        "draw": 0.005,
+        "away": 0.005
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，墨西哥主场2-0领先南非。墨西哥在第9分钟由Julián Quiñones（基尼奥内斯）首开纪录，第67分钟Raúl Jiménez（希门尼斯）扩大比分。南非在第49分钟Yaya Sithole（西索莱）领到红牌后陷入十人应战，全场射门仅3次（射正2次），而墨西哥控球率59%、射门16次（射正4次），全面占优。考虑到比分优势、人数优势以及仅剩补时阶段，墨西哥获胜几乎已成定局，因此主胜概率压至0.99，平局与南非翻盘的概率极低。最可能最终比分维持当前2-0：南非在十人且时间所剩无几的情况下进球希望渺茫，而墨西哥在收尾阶段已通过换人（Armando González、Alexis Vega、Gilberto Mora等替补登场）保持前场冲击力，仍存在补时再进一球的可能，但概率有限。后续进球者优先考虑刚换上、体能充沛的墨西哥前场球员Armando González与Alexis Vega，分别给予小概率赋值，时间设定在补时阶段（92'与93'），均严格晚于当前比赛分钟。"
+      },
+      "sources": [],
+      "cost_usd": 0.0149332,
+      "tokens": {
+        "input": 1281,
+        "output": 551
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.823
+    },
+    {
+      "submitted_at": "2026-06-11T20:52:17+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.985,
+        "draw": 0.012,
+        "away": 0.003
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比分2-0，比赛已进入第90分钟，墨西哥主场领先南非两球。从场面看，墨西哥由Julián Quiñones第9分钟开场建功，Raúl Jiménez第67分钟扩大比分，控球率59%，总射门16次（射正4次），全面压制对手。南非方面更被动：第49分钟Yaya Sithole被红牌罚下，第84分钟换上不久的Themba Zwane经VAR确认再吃红牌，全队两人少一人作战，进攻端仅3次射门2次射正，几乎没有反扑能力。综合两球领先、剩余时间仅剩补时阶段、南非9打11的人数劣势以及墨西哥连续换上Armando González、Alexis Vega等生力军，主胜概率几乎锁定，平局与客胜空间极小，因此最可能最终比分维持2-0。后续进球逻辑：补时阶段仍有小概率出现进球，最有可能来自体能占优且刚登场的墨西哥替补前锋Armando González或Alexis Vega在反击中扩大比分，南非在两人少打的情况下进球概率可忽略。"
+      },
+      "sources": [],
+      "cost_usd": 0.0144337,
+      "tokens": {
+        "input": 1361,
+        "output": 508
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.762
+    },
+    {
+      "submitted_at": "2026-06-11T20:58:05+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.985,
+        "draw": 0.01,
+        "away": 0.005
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比分2-0，比赛已进入第90分钟，墨西哥主场领先南非两球。从场面看，墨西哥由Julián Quiñones第9分钟先拔头筹，Raúl Jiménez第67分钟扩大比分，控球率61%、总射门16次（4次射正），全面压制对手；南非仅3次射门（2次射正），且分别在第49分钟（Yaya Sithole）和第84分钟（Themba Zwane）两度被红牌罚下，目前以9人应战，已无翻盘可能。综合两球领先、剩余时间仅余补时、对手两人减员的局面，主胜概率压至接近确定，平局与客胜仅保留极小尾部概率以覆盖意外失球或乌龙等极端情形。最可能最终比分锁定为2-0：南非9人状态下短时间内连入两球的概率极低，而墨西哥继续扩大比分也需时间组织，补时阶段最常见结果是维持现状。后续进球逻辑上，若再有进球，大概率来自体能充沛的墨西哥替补前场球员，Armando González（第76分钟替补Raúl Jiménez登场）和Alexis Vega（第79分钟替补Quiñones登场）是面对9人南非最具威胁的终结点，给予较低但非零的进球概率，进球时间设定在补时阶段。"
+      },
+      "sources": [],
+      "cost_usd": 0.0156399,
+      "tokens": {
+        "input": 1277,
+        "output": 590
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.671
+    },
+    {
+      "submitted_at": "2026-06-11T21:03:56+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.98,
+        "draw": 0.02,
+        "away": 0.0
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进行至第90分钟，墨西哥主场2-0领先南非，仅余补时阶段。从场面看，墨西哥从开场便完全掌控节奏：第9分钟Julián Quiñones（基诺内斯）由Érik Lira（利拉）助攻先拔头筹，第67分钟Raúl Jiménez（希门尼斯）再下一城锁定胜局。统计端墨西哥控球率61%、16次射门、4次射正，远超南非的3次射门2次射正，控制力压倒性。南非则在第49分钟Yaya Sithole（西索莱）和第84分钟Themba Zwane（祖瓦内）两度被罚下，目前9人应战，已无翻盘可能；尽管墨西哥César Montes（蒙特斯）在第92分钟染红变为10打9，对结果几乎无影响。综合时间、比分与人数优势，主胜概率压至0.98、平局0.02、客胜可忽略。最可能最终比分锁定2-0：补时阶段虽存在墨西哥利用人数优势再下一城的可能，但替补登场不久的攻击手在短短数分钟内破门概率有限，因此维持现比分为最优解。后续进球逻辑上，原首发射手Quiñones与Jiménez均已被换下不再具备进球资格，候选集中于第76分钟替补登场的Armando González（冈萨雷斯）、第79分钟登场的Alexis Vega（维加）以及更早登场的Gilberto Mora（莫拉），其中González作为前锋直接顶替Jiménez，补时抢点概率最高，Vega次之，Mora机会更低。"
+      },
+      "sources": [],
+      "cost_usd": 0.017586099999999997,
+      "tokens": {
+        "input": 1273,
+        "output": 696
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.863
+    }
+  ]
+}

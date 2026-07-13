@@ -1,0 +1,231 @@
+{
+  "fixture_id": "World-Cup_Round-of-16_Canada_Morocco_2026-07-04",
+  "provider_fixture_id": "19606968",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-04T18:48:14+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 2
+    },
+    "home": "Canada",
+    "away": "Morocco",
+    "competition": "World Cup",
+    "stage": "Round of 16",
+    "kickoff_utc": "2026-07-04T17:00:00+00:00",
+    "venue": "Houston Stadium",
+    "venue_city": "Houston"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.001,
+      "draw": 0.019,
+      "away": 0.98
+    },
+    "most_likely_score": "0-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进入第90分钟，摩洛哥凭借奥纳希（阿兹丁·乌纳希）在第50分钟和第82分钟的梅开二度，客场2比0领先加拿大。从场面看，加拿大虽然在角球（8比1）、射门总数（7比3）上占优，并且控球率虽只有40%但主动施压明显，然而三次射正未能转化为进球，反观摩洛哥控球60%、效率极高，三次射正打入两球，比赛节奏完全被客队掌控。第82分钟的第二球基本锁定了胜负走向，加拿大此后又在第79分钟连做两次进攻换人（普罗米斯·戴维、雅各布·沙费尔伯格登场），但短短几分钟内难以扭转两球差距，加之摩洛哥在中后场的Amrabat等换人加强了防守强度。综合来看，客队获胜概率已接近确定，平局与主队翻盘的空间在补时阶段几乎可以忽略。最可能的最终比分锁定为0比2，与客队最高胜率保持一致。补时阶段可能出现的进球方面，加拿大在压上追分时后防线拉空，摩洛哥打反击有机会由替补前锋En-Nesyri或经验丰富的Ziyech扩大比分；而加拿大若能利用角球或最后阶段的定位球，也存在由乔纳森·戴维或替补登场的普罗米斯·戴维抢到一粒安慰球的可能，但整体概率都不高，比赛以0比2收场是最合理的判断。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1344,
+    "output": 682
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0175898,
+  "wall_seconds": 14.809,
+  "error": null,
+  "raw_text": "{\"win_probs\":{\"home\":0.001,\"draw\":0.019,\"away\":0.98},\"most_likely_score\":\"0-2\",\"scorers\":[{\"player\":\"Hakim Ziyech\",\"team\":\"away\",\"minute\":93,\"p\":0.06},{\"player\":\"Jonathan David\",\"team\":\"home\",\"minute\":92,\"p\":0.05},{\"player\":\"Youssef En-Nesyri\",\"team\":\"away\",\"minute\":94,\"p\":0.04},{\"player\":\"Promise David\",\"team\":\"home\",\"minute\":93,\"p\":0.03}],\"reasoning\":{\"overall\":\"比赛已进入第90分钟，摩洛哥凭借奥纳希（Azzedine Ounahi）在第50分钟和第82分钟的梅开二度，客场2比0领先加拿大。从场面看，加拿大虽然在角球（8比1）、射门总数（7比3）上占优，并且控球率虽只有40%但主动施压明显，然而三次射正未能转化为进球，反观摩洛哥控球60%、效率极高，三次射正打入两球，比赛节奏完全被客队掌控。第82分钟的第二球基本锁定了胜负走向，加拿大此后又在第79分钟连做两次进攻换人（Promise David、Jacob Shaffelburg登场），但短短几分钟内难以扭转两球差距，加之摩洛哥在中后场的Amrabat等换人加强了防守强度。综合来看，客队获胜概率已接近确定，平局与主队翻盘的空间在补时阶段几乎可以忽略。最可能的最终比分锁定为0比2，与客队最高胜率保持一致。补时阶段可能出现的进球方面，加拿大在压上追分时后防线拉空，摩洛哥打反击有机会由替补前锋En-Nesyri或经验丰富的Ziyech扩大比分；而加拿大若能利用角球或最后阶段的定位球，也存在由Jonathan David或替补登场的Promise David抢到一粒安慰球的可能，但整体概率都不高，比赛以0比2收场是最合理的判断。\"},\"sources\":[]}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-04T17:03:23+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 3,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Canada",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-04T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 7.519
+    },
+    {
+      "submitted_at": "2026-07-04T17:25:37+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 25,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Canada",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-04T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.34,
+        "away": 0.32
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 58,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Soufiane Rahimi",
+          "minute": 63,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Cyle Larin",
+          "minute": 74,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Ismael Saibari",
+          "minute": 79,
+          "p": 0.13,
+          "team": "away"
+        },
+        {
+          "player": "Alphonso Davies",
+          "minute": 68,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Hakim Ziyech",
+          "minute": 82,
+          "p": 0.11,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "开场25分钟双方仍是0-0，但场面呈现出较明显的反差。加拿大虽然只有39%的控球，却已经完成4次射门、2次射正并拿到4个角球，反击和边路推进制造了实际威胁；摩洛哥控球达61%，却尚未形成任何射门，进攻端相对沉闷，20分钟还领到一张黄牌（雷杜安·哈尔哈尔），22分钟又提前用苏菲扬·拉希米换下人员，说明主帅已经在调整前场火力。基于这些迹象，加拿大在上半场剩余时间内更有可能率先形成绝佳机会，但摩洛哥个人能力出色，一旦通过Rahimi、Saibari、Ziyech打出反击，同样具备破门实力。综合来看，两队胜平三种结果非常接近，胜率上主队(加拿大)略占优，客队(摩洛哥)与平局紧随其后，因此最可能的最终比分定为1-1，反映双方都能进球、但谁也难以拉开差距的走势。后续进球候选方面，主队优先考虑主射手乔纳森·戴维，其次是禁区嗅觉出色的赛尔·拉林以及边路突击手阿方索·戴维斯；客队则以刚登场、状态火热的Rahimi为首选，配合中场推进的Saibari以及经验丰富的Ziyech，进球时间集中在下半场中后段的常见破门窗口。"
+      },
+      "sources": [],
+      "cost_usd": 0.0902467,
+      "tokens": {
+        "input": 19951,
+        "output": 888
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.079
+    },
+    {
+      "submitted_at": "2026-07-04T18:15:03+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 60,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-04T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.28,
+        "away": 0.5
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第60分钟，加拿大主场0-1落后摩洛哥，落后的比分源自第50分钟Ounahi接Hakimi助攻打进的进球。场面上摩洛哥控球率高达67%，节奏和局面掌控更好，但真正形成的射门只有2次，全部命中门框范围，进攻效率型十足；加拿大虽然只有33%的控球，却已经打出5脚射门、拿到6个角球，明显是被迫压上后依靠边路和定位球制造威胁的一方，具备扳平的手段。考虑到摩洛哥已经吃到4张黄牌（其中Hakimi、Ounahi、El Khannouss都是主力），后段防守动作会更加谨慎，容易给加拿大留出禁区前沿的空间；而加拿大自己也有2张黄牌且犯规数高达16次，一旦继续压上，被摩洛哥打反击再丢球的风险同样存在。综合来看，摩洛哥凭借领先优势和场面控制拿下比赛的概率最高，但加拿大扳平也并非小概率事件，因此判断客队胜、平局、主队胜的概率分别约为0.50、0.28、0.22，最可能的最终比分维持在0-1摩洛哥小胜。后续进球方面，加拿大方面乔纳森·戴维作为禁区终结点和阿方索·戴维斯的边路突破是最主要的得分来源，需要为落后局面全力压上；摩洛哥则更可能通过反击终结比赛，苏菲扬·拉希米作为已经登场的前场生力军、En-Nesyri作为传统禁区支点，以及不断插上的Hakimi都具备再下一城的能力，因此把后续进球的可能性集中分配在这几位球员身上，并将时间点安排在比赛后半段。"
+      },
+      "sources": [],
+      "cost_usd": 0.0920412,
+      "tokens": {
+        "input": 20351,
+        "output": 905
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.226
+    },
+    {
+      "submitted_at": "2026-07-04T18:48:14+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Canada",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-04T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.001,
+        "draw": 0.019,
+        "away": 0.98
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，摩洛哥凭借奥纳希（阿兹丁·乌纳希）在第50分钟和第82分钟的梅开二度，客场2比0领先加拿大。从场面看，加拿大虽然在角球（8比1）、射门总数（7比3）上占优，并且控球率虽只有40%但主动施压明显，然而三次射正未能转化为进球，反观摩洛哥控球60%、效率极高，三次射正打入两球，比赛节奏完全被客队掌控。第82分钟的第二球基本锁定了胜负走向，加拿大此后又在第79分钟连做两次进攻换人（普罗米斯·戴维、雅各布·沙费尔伯格登场），但短短几分钟内难以扭转两球差距，加之摩洛哥在中后场的Amrabat等换人加强了防守强度。综合来看，客队获胜概率已接近确定，平局与主队翻盘的空间在补时阶段几乎可以忽略。最可能的最终比分锁定为0比2，与客队最高胜率保持一致。补时阶段可能出现的进球方面，加拿大在压上追分时后防线拉空，摩洛哥打反击有机会由替补前锋En-Nesyri或经验丰富的Ziyech扩大比分；而加拿大若能利用角球或最后阶段的定位球，也存在由乔纳森·戴维或替补登场的普罗米斯·戴维抢到一粒安慰球的可能，但整体概率都不高，比赛以0比2收场是最合理的判断。"
+      },
+      "sources": [],
+      "cost_usd": 0.0175898,
+      "tokens": {
+        "input": 1344,
+        "output": 682
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.809
+    }
+  ]
+}

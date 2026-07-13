@@ -1,0 +1,703 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-49_Scotland_Brazil_2026-06-24",
+  "provider_fixture_id": "19609132",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-24T23:59:47+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 3
+    },
+    "home": "Scotland",
+    "away": "Brazil",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-24T22:00:00+00:00",
+    "venue": "Miami Stadium",
+    "venue_city": "Miami Gardens"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.0,
+      "draw": 0.001,
+      "away": 0.999
+    },
+    "most_likely_score": "0-3",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入第90分钟，巴西队目前以3-0遥遥领先苏格兰队。从场面和数据来看，巴西队在控球率和射门数上均占据优势，维尼修斯（Vinicius Junior）梅开二度，马特乌斯·库尼亚（马特乌斯·库尼亚）也有一球入账，彻底终结了比赛悬念。由于常规时间已经结束，进入伤停补时阶段，苏格兰队扳平或逆转的可能性已经微乎其微。因此，巴西队获胜的概率接近100%。最可能的最终比分将维持在0-3。考虑到巴西队在比赛尾声换上了恩德里克（恩德里克）和内马尔（内马尔）等攻击手，他们在补时阶段利用反击再入一球的概率存在但较低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2133,
+    "output": 528
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.00556605,
+  "wall_seconds": 10.332,
+  "error": null,
+  "raw_text": "```json\n{\n  \"win_probs\": {\n    \"home\": 0.0,\n    \"draw\": 0.001,\n    \"away\": 0.999\n  },\n  \"most_likely_score\": \"0-3\",\n  \"scorers\": [\n    {\n      \"player\": \"Endrick\",\n      \"team\": \"away\",\n      \"minute\": 94,\n      \"p\": 0.05\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入第90分钟，巴西队目前以3-0遥遥领先苏格兰队。从场面和数据来看，巴西队在控球率和射门数上均占据优势，维尼修斯（Vinicius Junior）梅开二度，马特乌斯·库尼亚（Matheus Cunha）也有一球入账，彻底终结了比赛悬念。由于常规时间已经结束，进入伤停补时阶段，苏格兰队扳平或逆转的可能性已经微乎其微。因此，巴西队获胜的概率接近100%。最可能的最终比分将维持在0-3。考虑到巴西队在比赛尾声换上了恩德里克（Endrick）和内马尔（Neymar）等攻击手，他们在补时阶段利用反击再入一球的概率存在但较低。\"\n  },\n  \"sources\": []\n}\n```",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-24T22:04:59+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 4,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Scotland",
+        "away": "Brazil",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.15,
+        "draw": 0.25,
+        "away": 0.6
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Vinícius Júnior",
+          "minute": 35,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "Rodrygo",
+          "minute": 68,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛开场仅4分钟，目前苏格兰与巴西战成0-0平。尽管从开局的控球率来看，苏格兰出人意料地占据了65%的球权，但这更多是由于开场阶段的试探与短暂的倒脚控制所致。随着比赛的深入，整体实力明显占优的巴西队预计将逐渐接管比赛节奏，并展现出技术与速度上的绝对优势。基于双方阵容深度的巨大差距，巴西队最终获胜的概率依然高达60%，而苏格兰守住平局或爆冷取胜的难度极大。预计巴西队会在上半场中后段打破僵局，并在下半场利用对手压上反扑的空间扩大领先优势，最可能的最终比分为0-2。在进攻端，巴西队的前场核心 维尼修斯·儒尼奥尔 和 Rodrygo 拥有极强的个人突破与终结能力，极有可能在接下来的比赛中先后攻破苏格兰队的球门。"
+      },
+      "sources": [],
+      "cost_usd": 0.011869199999999998,
+      "tokens": {
+        "input": 1146,
+        "output": 1693
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.08
+    },
+    {
+      "submitted_at": "2026-06-24T22:12:11+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 12,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Scotland",
+        "away": "Brazil",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.11,
+        "away": 0.85
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 65,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Rayan",
+          "minute": 38,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第12分钟，巴西队凭借维尼修斯（维尼修斯·儒尼奥尔）在第7分钟的进球，暂时以1-0领先苏格兰队。从场面数据来看，尽管苏格兰队在开场阶段控球率高达63%，但他们未能创造出任何射门机会，进攻端显得办法不多。相反，巴西队展现了极高的反击和进攻效率，在仅有37%控球率的情况下已经完成了2次射门并取得领先。考虑到巴西队早早确立优势且整体实力明显占优，他们赢下比赛的概率极高。随着比赛深入，苏格兰队如果为了扳平比分而压上进攻，后防线将暴露出更多空间供巴西队利用。因此，巴西队极有可能进一步扩大比分，最可能的最终比分预测为0-3。在后续进球者方面，状态火热的维尼修斯有望再次建功，而送出助攻的拉扬（拉扬）同样在进攻端极具威胁，预计他们将在接下来的比赛中继续利用速度和技术撕开对手防线。"
+      },
+      "sources": [],
+      "cost_usd": 0.008902950000000001,
+      "tokens": {
+        "input": 1003,
+        "output": 1246
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.668
+    },
+    {
+      "submitted_at": "2026-06-24T22:19:30+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 19,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Scotland",
+        "away": "Brazil",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.11,
+        "away": 0.85
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 38,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Rodrygo",
+          "minute": 78,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Rayan",
+          "minute": 65,
+          "p": 0.22,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第19分钟，巴西队凭借维尼修斯（维尼修斯·儒尼奥尔）在第7分钟的闪电破门，目前在客场1-0领先苏格兰队。从目前的场面数据来看，尽管双方控球率平分秋色（50%对50%），但巴西队在进攻端展现出了绝对的压制力，已经完成了4次射门并高效地将唯一一次射正转化为进球。相比之下，苏格兰队至今未能完成任何射门，进攻端显得办法不多，难以对巴西队的防线造成实质性威胁。考虑到巴西队早早取得领先且整体实力占据绝对优势，他们赢下本场比赛的概率已经非常高。预计巴西队会在接下来的比赛中继续掌控节奏，并利用苏格兰队必须压上反扑的战术空当扩大战果，0-2是最有可能的最终比分。在后续的进球预测中，状态火热的维尼修斯极有可能在反击中梅开二度，而送出助攻的拉扬（拉扬）以及巴西队的其他攻击手也有望在下半场利用对手防线体能下降的机会取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.013427399999999999,
+      "tokens": {
+        "input": 1256,
+        "output": 1922
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.782
+    },
+    {
+      "submitted_at": "2026-06-24T22:26:48+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 26,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Scotland",
+        "away": "Brazil",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.15,
+        "away": 0.8
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 75,
+          "p": 0.4,
+          "team": "away"
+        },
+        {
+          "player": "Rayan",
+          "minute": 58,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第26分钟，巴西队目前以1-0领先苏格兰队。开场仅7分钟，维尼修斯（维尼修斯·儒尼奥尔）就在拉扬（拉扬）的助攻下为巴西首开纪录。虽然第22分钟维尼修斯的第二粒进球被VAR取消，但巴西队在场面上占据了绝对主动。从数据来看，巴西队控球率略占优势，且已经完成了5次射门，而苏格兰队至今未能完成任何射门，进攻端显得非常乏力。考虑到巴西队强大的进攻火力和目前的领先优势，他们有极高的概率拿下本场比赛。苏格兰队如果不能在战术上做出有效调整，很难对巴西队的防线造成实质性威胁。预计巴西队在下半场会继续扩大比分，最可能的最终比分为0-2。拉扬和维尼修斯在接下来的比赛中依然是巴西队最具威胁的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.0048762,
+      "tokens": {
+        "input": 1170,
+        "output": 579
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.022
+    },
+    {
+      "submitted_at": "2026-06-24T22:33:44+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 33,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Scotland",
+        "away": "Brazil",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.15,
+        "away": 0.8
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Rodrygo",
+          "minute": 62,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Vinicius Junior",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第33分钟，巴西队凭借维尼修斯（维尼修斯·儒尼奥尔）在第7分钟的进球，目前以1-0领先苏格兰队。从场面数据来看，虽然苏格兰队控球率略占优势（53%），但至今未能创造出任何射门机会（0脚射门）。相比之下，巴西队在进攻端展现出极高的威胁，已经完成5次射门。考虑到巴西队整体实力的绝对优势以及目前的领先局面，他们拿下本场比赛的概率极高。苏格兰队如果为了扳平比分而大举压上，后防线将暴露出更多空当，这非常有利于巴西队的前场快马进行反击。预计下半场巴西队有望再入一球锁定胜局，最可能的最终比分为0-2。后续进球者方面，巴西队的攻击手如罗德里戈（Rodrygo）或状态火热的维尼修斯有较大机会在下半场利用空间扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0093891,
+      "tokens": {
+        "input": 1106,
+        "output": 1306
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.013
+    },
+    {
+      "submitted_at": "2026-06-24T22:40:39+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 40,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Scotland",
+        "away": "Brazil",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.07,
+        "draw": 0.18,
+        "away": 0.75
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Rayan",
+          "minute": 65,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Vinicius Junior",
+          "minute": 78,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第40分钟，巴西队凭借维尼修斯（维尼修斯·儒尼奥尔）在第7分钟的进球以1-0领先苏格兰。尽管苏格兰在控球率上略占优势（52%），但他们在进攻端缺乏实质性威胁，至今没有一脚射正。相比之下，巴西队虽然控球率稍低，但已经完成了6次射门，展现了更高的进攻效率和反击威胁。考虑到巴西队整体实力的优势以及目前的领先局面，他们有很高的概率在下半场利用对手压上进攻留下的空间扩大比分。因此，巴西队获胜的概率极高。最可能的最终比分预测为0-2。在后续进球者方面，表现活跃的维尼修斯和送出助攻的拉扬（拉扬）都有可能在下半场继续为巴西队建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.0071778,
+      "tokens": {
+        "input": 1106,
+        "output": 955
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.433
+    },
+    {
+      "submitted_at": "2026-06-24T22:47:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Scotland",
+        "away": "Brazil",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.16,
+        "away": 0.8
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 65,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Rayan",
+          "minute": 78,
+          "p": 0.22,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第45分钟，目前比分为苏格兰 0-1 巴西。巴西队在开场第7分钟便由维尼修斯（维尼修斯·儒尼奥尔）接拉扬（拉扬）助攻早早取得领先。从上半场的数据来看，巴西队占据了53%的控球率，并完成了8次射门（2次射正），在进攻端展现出明显的压制力。第22分钟的VAR介入虽然没有改变比分，但也侧面反映了巴西在进攻三区的持续威胁。相比之下，苏格兰虽然获得了3次角球，但半场仅有2次射门且无一射正，难以对巴西的防线造成实质性考验。鉴于巴西队在比分和场面上的双重优势，以及苏格兰进攻端的乏力，巴西队赢下比赛的概率极高，平局和苏格兰逆转的可能性正在大幅降低。预计下半场苏格兰为了扳平比分必须将阵型前压，这将给巴西队留下更多反击空间。最可能的最终比分预计为 0-2。在后续进球逻辑方面，状态火热且极具速度优势的维尼修斯有望在下半场中段利用空间完成梅开二度，而上半场表现活跃并送出助攻的拉扬同样有机会在比赛后段扩大战果。"
+      },
+      "sources": [],
+      "cost_usd": 0.012696599999999999,
+      "tokens": {
+        "input": 1106,
+        "output": 1831
+      },
+      "tool_calls": 0,
+      "wall_seconds": 45.584
+    },
+    {
+      "submitted_at": "2026-06-24T23:17:27+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 62,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Scotland",
+        "away": "Brazil",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 78,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Rayan",
+          "minute": 85,
+          "p": 0.2,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第62分钟，巴西队目前以2-0领先苏格兰队。从场面数据来看，巴西队在进攻端占据绝对优势，全场已有12次射门其中5次射正，而苏格兰队仅有1次射正。维尼修斯·儒尼奥尔 状态火热，已经在上下半场各入一球完成梅开二度。考虑到两球落后的苏格兰队必须在接下来的比赛中大举压上以求挽回败局，这将给巴西队留下广阔的反击空间。因此，巴西队赢下比赛的概率极高。预计最终比分最可能为0-3，维尼修斯·儒尼奥尔 有望利用反击机会完成帽子戏法，或者由表现活跃的 拉扬 扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0065299500000000005,
+      "tokens": {
+        "input": 1263,
+        "output": 826
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.542
+    },
+    {
+      "submitted_at": "2026-06-24T23:24:17+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 69,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Scotland",
+        "away": "Brazil",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 82,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Rayan",
+          "minute": 88,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第69分钟，巴西队目前以2-0领先苏格兰队。从场面数据来看，尽管苏格兰在控球率上（49%）与巴西（51%）几乎平分秋色，但巴西队在进攻端的威胁远超对手。巴西队已经完成了13次射门，其中6次射正，而苏格兰仅有5次射门且只有1次射正。维尼修斯（维尼修斯·儒尼奥尔）状态火热，分别在第7分钟和第48分钟完成梅开二度，展现了极强的终结能力。鉴于常规时间仅剩20分钟左右，且巴西队手握两球优势并掌控绝对的进攻主动权，客队获胜的概率已经极高，苏格兰扳平甚至逆转的希望十分渺茫。随着苏格兰在比赛尾声阶段必须全线压上以求破门，巴西队将获得更多致命的反击空间。预计巴西队极有可能利用反击再下一城，最可能的最终比分定格在0-3。维尼修斯非常有希望在第82分钟左右利用速度优势完成帽子戏法，或者由表现活跃并已有助攻入账的拉扬（拉扬）在终场前扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.01584765,
+      "tokens": {
+        "input": 1263,
+        "output": 2305
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.569
+    },
+    {
+      "submitted_at": "2026-06-24T23:31:19+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 76,
+        "score": {
+          "home": 0,
+          "away": 3
+        },
+        "home": "Scotland",
+        "away": "Brazil",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.01,
+        "away": 0.99
+      },
+      "most_likely_score": "0-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第76分钟，巴西队目前以3-0客场遥遥领先苏格兰队。从场面数据来看，尽管双方控球率平分秋色（各占50.0%），但巴西队在进攻端展现出了压倒性的统治力与终结效率。巴西全场已完成16次射门，其中7次射正并高效转化为3粒进球。维尼修斯（Vinicius Junior）状态火热，分别在上下半场各入一球完成梅开二度，马特乌斯·库尼亚（马特乌斯·库尼亚）也扩大了比分。苏格兰队虽然也有7次射门和3次射正，但始终无法攻破对手大门。考虑到比赛仅剩15分钟左右的常规时间，巴西队全取三分的概率已高达99%，比赛悬念基本终结。最可能的最终比分将定格在0-3。不过，随着苏格兰在最后阶段可能阵型前压以求打入挽回颜面的一球，巴西队犀利的反击仍有制造进球的空间，正在寻求帽子戏法的维尼修斯以及库尼亚在比赛尾声阶段依然具备一定的进球概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.016653,
+      "tokens": {
+        "input": 1394,
+        "output": 2411
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.227
+    },
+    {
+      "submitted_at": "2026-06-24T23:38:15+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 83,
+        "score": {
+          "home": 0,
+          "away": 3
+        },
+        "home": "Scotland",
+        "away": "Brazil",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.0,
+        "away": 1.0
+      },
+      "most_likely_score": "0-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第83分钟，巴西队目前以3-0遥遥领先苏格兰队。从场面数据来看，巴西队虽然控球率略低于对手，但在进攻端展现了极高的效率，全场16次射门7次射正并打入3球。维尼修斯（Vinicius Junior）梅开二度，马特乌斯·库尼亚（马特乌斯·库尼亚）也有进球入账。考虑到比赛所剩时间无几，苏格兰队想要扳平比分已无可能，巴西队全取三分已成定局。因此，客队获胜的概率为100%。在接下来的垃圾时间里，双方可能会放慢节奏，最可能的最终比分维持在0-3。不过，替补登场的加布里埃尔·马丁内利（加布里埃尔·马丁内利）等球员仍有可能利用反击机会在比赛尾声阶段扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0047439,
+      "tokens": {
+        "input": 1530,
+        "output": 498
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.631
+    },
+    {
+      "submitted_at": "2026-06-24T23:45:56+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 3
+        },
+        "home": "Scotland",
+        "away": "Brazil",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.0,
+        "away": 1.0
+      },
+      "most_likely_score": "0-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第90分钟，当前比分为苏格兰 0-3 巴西。巴西队在整场比赛中展现了强大的进攻火力，维尼修斯（Vinicius Junior）梅开二度，马特乌斯·库尼亚（马特乌斯·库尼亚）也打入一球。尽管苏格兰在控球率上（49%）与巴西（51%）相差无几，且创造了10次射门（3次射正），但巴西队的进攻效率和绝对机会明显更多，全场17次射门8次射正。由于常规时间已经结束，即将进入伤停补时，且巴西队手握三球的巨大领先优势，胜负悬念已经彻底终结。因此，巴西队获胜的概率为100%，平局和苏格兰逆转的概率均为0。最可能的最终比分将大概率定格在 0-3。考虑到比赛所剩时间极短，双方在补时阶段大概率会以消耗时间为主，再次产生进球的可能性微乎其微，但如果巴西队在补时阶段获得反击空间，状态火热的维尼修斯仍有极小概率打入第三球完成帽子戏法。"
+      },
+      "sources": [],
+      "cost_usd": 0.02039205,
+      "tokens": {
+        "input": 1601,
+        "output": 2970
+      },
+      "tool_calls": 0,
+      "wall_seconds": 28.543
+    },
+    {
+      "submitted_at": "2026-06-24T23:53:03+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 3
+        },
+        "home": "Scotland",
+        "away": "Brazil",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.0,
+        "away": 1.0
+      },
+      "most_likely_score": "0-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，当前比分为苏格兰 0-3 巴西。从场面数据来看，巴西队占据了绝对优势，全场狂轰19脚射门其中8次射正，维尼修斯（Vinicius Junior）梅开二度，马特乌斯·库尼亚（马特乌斯·库尼亚）也打入一球，彻底杀死了比赛悬念。苏格兰虽然有11次射门和48%的控球率，但始终无法攻破对手球门。由于常规时间已经耗尽，即将进入伤停补时阶段，巴西队获胜的概率已达到100%，主胜和平局的概率降至0。最可能的最终比分将定格在0-3。在后续进球逻辑方面，虽然时间所剩无几，但巴西队换上的恩德里克（恩德里克）等替补攻击手仍有可能在补时阶段利用对手体能下降的空间，通过反击再入一球，不过整体概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.014150849999999998,
+      "tokens": {
+        "input": 1933,
+        "output": 1924
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.103
+    },
+    {
+      "submitted_at": "2026-06-24T23:59:47+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 3
+        },
+        "home": "Scotland",
+        "away": "Brazil",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.001,
+        "away": 0.999
+      },
+      "most_likely_score": "0-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，巴西队目前以3-0遥遥领先苏格兰队。从场面和数据来看，巴西队在控球率和射门数上均占据优势，维尼修斯（Vinicius Junior）梅开二度，马特乌斯·库尼亚（马特乌斯·库尼亚）也有一球入账，彻底终结了比赛悬念。由于常规时间已经结束，进入伤停补时阶段，苏格兰队扳平或逆转的可能性已经微乎其微。因此，巴西队获胜的概率接近100%。最可能的最终比分将维持在0-3。考虑到巴西队在比赛尾声换上了恩德里克（恩德里克）和内马尔（内马尔）等攻击手，他们在补时阶段利用反击再入一球的概率存在但较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.00556605,
+      "tokens": {
+        "input": 2133,
+        "output": 528
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.332
+    }
+  ]
+}

@@ -1,0 +1,436 @@
+{
+  "fixture_id": "World-Cup_Round-of-32_Argentina_Cape-Verde-Islands_2026-07-03",
+  "provider_fixture_id": "19606946",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-04T00:37:27+00:00",
+  "live": {
+    "status": "Extra Time",
+    "elapsed": 130,
+    "score": {
+      "home": 3,
+      "away": 2
+    },
+    "home": "Argentina",
+    "away": "Cape Verde Islands",
+    "competition": "World Cup",
+    "stage": "Round of 32",
+    "kickoff_utc": "2026-07-03T22:00:00+00:00",
+    "venue": "Miami Stadium",
+    "venue_city": "Miami Gardens"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.99,
+      "draw": 0.01,
+      "away": 0.0
+    },
+    "most_likely_score": "3-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进行到加时赛第130分钟，阿根廷目前以3-2领先佛得角。这已经超出了常规的120分钟加时赛时间，属于极度超长的伤停补时阶段。从全场数据来看，阿根廷占据了绝对优势，控球率达到65%，狂轰22脚射门且10次射正。然而佛得角展现出了惊人的韧性，在常规时间和加时赛中两度扳平比分。直到第111分钟，克里斯蒂安·罗梅罗接到梅西的助攻打入关键的第三球，才让阿根廷再次取得领先。鉴于比赛时间已经到达130分钟，主裁判随时可能吹响终场哨音。阿根廷在此时被绝平的概率微乎其微，因此主队获胜的概率极高，最可能的最终比分将定格在当前的3-2。由于比赛即将结束，后续产生进球的可能性极低，预计不会有新的进球者。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1486,
+    "output": 2226
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.015584099999999998,
+  "wall_seconds": 21.8,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.99,\n    \"draw\": 0.01,\n    \"away\": 0.0\n  },\n  \"most_likely_score\": \"3-2\",\n  \"scorers\": [],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进行到加时赛第130分钟，阿根廷目前以3-2领先佛得角。这已经超出了常规的120分钟加时赛时间，属于极度超长的伤停补时阶段。从全场数据来看，阿根廷占据了绝对优势，控球率达到65%，狂轰22脚射门且10次射正。然而佛得角展现出了惊人的韧性，在常规时间和加时赛中两度扳平比分。直到第111分钟，克里斯蒂安·罗梅罗接到梅西的助攻打入关键的第三球，才让阿根廷再次取得领先。鉴于比赛时间已经到达130分钟，主裁判随时可能吹响终场哨音。阿根廷在此时被绝平的概率微乎其微，因此主队获胜的概率极高，最可能的最终比分将定格在当前的3-2。由于比赛即将结束，后续产生进球的可能性极低，预计不会有新的进球者。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Analysis of the Football Match Prediction**\n\nOkay, here's what I'm thinking. The user wants a live prediction for the Argentina vs. Cape Verde Islands match. The time is 130 minutes, with the score 3-2 in Argentina's favor. This means it's well into extra time, probably with substantial stoppage time, or a data anomaly. My task is to predict the final outcome within specific JSON constraints.\n\nFirst, I need to analyze the current match state. Argentina is the home team, Cape Verde the away. It's a World Cup Round of 32 match. The score is 3-2 at 130 minutes – effectively the end of the game. Argentina has dominated, but Cape Verde has shown resilience.\n\nGiven the time, the prediction is straightforward. Argentina has a very high probability of winning, let's say 99%. A draw is possible, but highly unlikely at 1%, and Cape Verde has essentially no chance (0%) of winning from this position.\n\nThe \"most likely score\" is going to be 3-2 because of the game's timing. The crucial decision here is whether to predict future goalscorers. The prompt says I must predict \"likely future goalscorers only after 130'\". However, at 130 minutes, another goal is exceptionally improbable. So, providing an empty array `[]` for `scorers` is the most realistic. If I must predict *likely* goalscorers, this suggests they could only occur after 130'. Giving an entry with a low probability contradicts the `most_likely_score`. So, the `scorers` should be `[]` to align with the `most_likely_score` of 3-2.\n\nHere's the reasoning (simplified Chinese): \"The match has reached the 130th minute of extra time, with Argentina leading Cape Verde 3-2. This is well beyond the standard 120-minute extra time, indicating an extremely long stoppage time period. According to the overall data, Argentina has a clear advantage, with 65% possession, 22 shots, and 10 on target. However, Cape Verde has shown surprising resilience, equalizing twice during regulation and extra time. It wasn't until the 111th minute that Cristian Romero, assisted by Lionel Messi, scored the crucial third goal, putting Argentina back in the lead. Given the time, the referee is likely to blow the final whistle at any moment. The probability of Argentina being equalized at this point is extremely low, so the probability of the home team winning is very high, and the most likely final score will be the current 3-2. Because the game is about to end, the possibility of subsequent goals is extremely low, and I do not expect any new goalscorers.\"\n\nFinally, I need to format the output as a single, valid JSON object, without any markdown, with `win_probs`, `most_likely_score`, `scorers`, `reasoning`, and `sources` fields. I'll make sure all the values align, and then it's ready to go.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-07-03T22:06:52+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 6,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-03T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.85,
+        "draw": 0.11,
+        "away": 0.04
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "L. Messi",
+          "minute": 35,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "J. Alvarez",
+          "minute": 68,
+          "p": 0.35,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚刚开场6分钟，目前比分维持在0-0。阿根廷作为夺冠热门，在面对佛得角时拥有绝对的整体实力优势。虽然开局阶段控球率（52%对48%）并未拉开显著差距，但这主要是因为比赛尚处于相互试探阶段。随着比赛深入，阿根廷的中前场控制力将逐渐显现，预计他们将完全主导比赛节奏并创造大量得分机会。基于双方实力悬殊，阿根廷获胜的概率极高，最可能的最终比分预测为2-0。在进攻端，阿根廷的核心前锋如 L. Messi 和 J. Alvarez 极有可能在接下来的比赛中打破僵局并扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.009414299999999999,
+      "tokens": {
+        "input": 806,
+        "output": 1360
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.301
+    },
+    {
+      "submitted_at": "2026-07-03T22:29:19+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 29,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-03T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.09,
+        "away": 0.03
+      },
+      "most_likely_score": "3-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 55,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 78,
+          "p": 0.35,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第29分钟，阿根廷凭借梅西（里奥·梅西）的进球取得了1-0的领先。从目前的场面数据来看，阿根廷占据了绝对的主动权，控球率高达66%，并且在仅有的两次射门中就高效地把握住机会转化为进球。佛得角虽然尝试了一次射门，但未能命中门框范围，整体处于被动防守的态势。作为世界杯1/16决赛，阿根廷在整体实力上本就占据压倒性优势，如今早早打破僵局，他们顺利赢下比赛的概率已经极高，主胜概率大幅上升。佛得角想要在落后的情况下扳平甚至逆转，难度极大。考虑到阿根廷强大的进攻火力和目前的领先优势，他们很可能会在接下来的比赛中继续扩大比分。随着比赛深入，佛得角不得不阵型前压以寻求扳平机会，这将给阿根廷留下更多进攻空间。因此，3-0是一个非常合理的最终比分预测。在后续进球者方面，状态出色的梅西有望在下半场梅开二度，而阿根廷的其他攻击手如胡利安·阿尔瓦雷斯（胡利安·阿尔瓦雷斯）也有很大机会利用对手体能下降和防线空当取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.01161825,
+      "tokens": {
+        "input": 877,
+        "output": 1698
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.896
+    },
+    {
+      "submitted_at": "2026-07-03T23:07:58+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 52,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-03T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.1,
+        "away": 0.02
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 68,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 81,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第52分钟，阿根廷目前1-0领先佛得角。从上半场及开场阶段的数据来看，阿根廷占据了绝对优势，控球率高达66%，并且有3次射正，而佛得角至今未能创造出有威胁的射门（0射正）。梅西在第29分钟的进球为阿根廷打开了局面。考虑到双方实力的巨大差距以及阿根廷对比赛节奏的完全掌控，佛得角很难在下半场实现翻盘。预计阿根廷会在接下来的比赛中继续施压并利用对手体能下降扩大比分，2-0是最可能的最终结果。梅西状态出色，有望在下半场再次破门，而阿根廷的其他锋线球员也极有可能在比赛后半段抓住反击或阵地战机会取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.007228200000000001,
+      "tokens": {
+        "input": 878,
+        "output": 1001
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.068
+    },
+    {
+      "submitted_at": "2026-07-03T23:24:56+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 69,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Argentina",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-03T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.28,
+        "away": 0.1
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Julián Álvarez",
+          "minute": 82,
+          "p": 0.28,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第69分钟，阿根廷与佛得角目前战成1-1平。从场面数据来看，阿根廷虽然占据了64%的绝对控球优势，但在创造绝对得分机会上并未完全压制对手，佛得角甚至在总射门数上以5比4略微领先，并在第59分钟由德罗伊·杜阿尔特（德罗伊·杜阿尔特）顽强扳平比分。面对僵局，阿根廷在60分钟后连续进行换人调整，换上胡利安·阿尔瓦雷斯（胡利安·阿尔瓦雷斯）等攻击手，意图在常规时间内解决战斗。考虑到阿根廷强大的整体实力和替补席深度，他们在最后20多分钟内再次取得领先的概率依然最高。佛得角虽然反击犀利，但随着体能下降，防守端将面临巨大考验。综合判断，阿根廷在常规时间内绝杀对手的几率较大，最可能的最终比分为2-1。在后续进球者方面，刚刚替补登场、体能充沛且冲击力极强的胡利安·阿尔瓦雷斯极有可能在比赛尾声阶段利用对手防线松懈完成致命一击。"
+      },
+      "sources": [],
+      "cost_usd": 0.0124614,
+      "tokens": {
+        "input": 1248,
+        "output": 1770
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.935
+    },
+    {
+      "submitted_at": "2026-07-03T23:47:44+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Argentina",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-03T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.86,
+        "away": 0.02
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，阿根廷与佛得角目前战成1-1平。阿根廷在场面上占据绝对优势，控球率高达67%，并创造了10次射门（5次射正）。里奥·梅西在第29分钟首开纪录，但佛得角的德罗伊·杜阿尔特在下半场抓住机会扳平了比分。尽管阿根廷随后换上了Julián Álvarez和蒂亚戈·阿尔马达等攻击手试图改写比分，但佛得角的防守十分顽强，门将也做出了4次关键扑救。考虑到常规时间即将结束，仅剩伤停补时阶段，本场比赛在90分钟（含补时）内以平局收场的概率极高。阿根廷凭借强大的阵容深度和持续的压迫，仍有小概率在补时阶段完成绝杀；而佛得角反击得手的概率微乎其微。最可能的常规时间最终比分是1-1。如果补时阶段有进球产生，替补登场且体能充沛的阿根廷前锋Julián Álvarez是最具威胁的潜在得分手。"
+      },
+      "sources": [],
+      "cost_usd": 0.01493835,
+      "tokens": {
+        "input": 1255,
+        "output": 2162
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.628
+    },
+    {
+      "submitted_at": "2026-07-04T00:04:52+00:00",
+      "live": {
+        "status": "Break Time",
+        "elapsed": 124,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Argentina",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-03T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.98,
+        "away": 0.01
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第124分钟，加时赛即将或已经结束，当前比分为1-1。从场面数据来看，阿根廷队在控球率（68%）和射门数（15对6）上占据绝对优势，但佛得角门将贡献了7次关键扑救，顽强地将比赛拖入点球大战的边缘。梅西在第29分钟首开纪录，而德罗伊·杜阿尔特在第59分钟扳平比分。由于加时赛所剩时间已经耗尽，常规及加时赛阶段以平局收场的概率极高，因此最终比分最可能定格在1-1。考虑到比赛即将进入点球大战，运动战中已无剩余时间，因此不再预测后续的进球球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.0112119,
+      "tokens": {
+        "input": 1258,
+        "output": 1570
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.293
+    },
+    {
+      "submitted_at": "2026-07-04T00:11:00+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 116,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Argentina",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-03T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.95,
+        "draw": 0.04,
+        "away": 0.01
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到加时赛第116分钟，当前比分为阿根廷2-1领先佛得角。阿根廷在加时赛初段由利桑德罗·马丁内斯打入关键进球，重新确立了领先优势。从全场数据来看，阿根廷在控球率（66%）和射门数（16次）上占据绝对优势，佛得角门将虽然做出了多次扑救，但在比赛所剩无几的情况下，佛得角想要扳平比分难度极大。阿根廷大概率将通过控制节奏将领先优势保持到终场。因此，阿根廷获胜的概率极高，最可能的最终比分就是维持目前的2-1。如果佛得角大举压上，阿根廷的劳塔罗·马丁内斯等前锋可能会在反击中获得机会，但考虑到时间所剩无几，再次进球的概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0046578,
+      "tokens": {
+        "input": 1292,
+        "output": 524
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.13
+    },
+    {
+      "submitted_at": "2026-07-04T00:22:25+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 127,
+        "score": {
+          "home": 2,
+          "away": 2
+        },
+        "home": "Argentina",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-03T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.97,
+        "away": 0.01
+      },
+      "most_likely_score": "2-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第127分钟，即加时赛下半场的伤停补时阶段，目前阿根廷与佛得角战成2-2平。从场面数据来看，阿根廷队占据了65%的控球率，并完成了20次射门（9次射正），展现了强大的进攻压制力；然而佛得角队表现出极强的韧性，门将贡献了7次关键扑救，且球队在两度落后的情况下两度扳平比分，包括加时赛第103分钟 西德尼·洛佩斯·卡布拉尔 的关键进球。由于比赛所剩时间已经极少，主裁判随时可能吹响终场哨，双方在运动战或定位球中再次破门并绝杀比赛的概率微乎其微。比赛大概率将以2-2的比分结束加时赛，并进入残酷的点球大战。因此，平局的概率极高，2-2是最可能的最终比分。仅为阿根廷核心球员保留极低概率的读秒绝杀可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.0110775,
+      "tokens": {
+        "input": 1448,
+        "output": 1517
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.337
+    },
+    {
+      "submitted_at": "2026-07-04T00:37:27+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 130,
+        "score": {
+          "home": 3,
+          "away": 2
+        },
+        "home": "Argentina",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-03T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.99,
+        "draw": 0.01,
+        "away": 0.0
+      },
+      "most_likely_score": "3-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到加时赛第130分钟，阿根廷目前以3-2领先佛得角。这已经超出了常规的120分钟加时赛时间，属于极度超长的伤停补时阶段。从全场数据来看，阿根廷占据了绝对优势，控球率达到65%，狂轰22脚射门且10次射正。然而佛得角展现出了惊人的韧性，在常规时间和加时赛中两度扳平比分。直到第111分钟，克里斯蒂安·罗梅罗接到梅西的助攻打入关键的第三球，才让阿根廷再次取得领先。鉴于比赛时间已经到达130分钟，主裁判随时可能吹响终场哨音。阿根廷在此时被绝平的概率微乎其微，因此主队获胜的概率极高，最可能的最终比分将定格在当前的3-2。由于比赛即将结束，后续产生进球的可能性极低，预计不会有新的进球者。"
+      },
+      "sources": [],
+      "cost_usd": 0.015584099999999998,
+      "tokens": {
+        "input": 1486,
+        "output": 2226
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.8
+    }
+  ]
+}

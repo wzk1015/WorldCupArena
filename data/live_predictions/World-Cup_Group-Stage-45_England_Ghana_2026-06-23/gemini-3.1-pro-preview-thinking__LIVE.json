@@ -1,0 +1,862 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-45_England_Ghana_2026-06-23",
+  "provider_fixture_id": "19609183",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-23T22:00:05+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 0
+    },
+    "home": "England",
+    "away": "Ghana",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-23T20:00:00+00:00",
+    "venue": "Boston Stadium",
+    "venue_city": "Foxborough"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.08,
+      "draw": 0.91,
+      "away": 0.01
+    },
+    "most_likely_score": "0-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前比赛已进入常规时间最后一分钟及伤停补时阶段，比分依然是0-0。从场面数据来看，英格兰占据了绝对优势，控球率高达79%，并狂轰19脚射门，但仅有4次射正，未能将优势转化为进球。加纳则采取了极其坚决的防守策略，全场犯规多达24次，有效破坏了英格兰的进攻节奏。随着比赛所剩时间无几，平局的概率急剧上升，成为最可能的结果。尽管英格兰在最后时刻仍会大举压上尝试绝杀，但破门时间窗口已经非常狭窄。因此，0-0是最可能的最终比分。如果在补时阶段出现进球，替补登场的拉什福德（马库斯·拉什福德）等体能充沛的攻击手将是最具威胁的潜在得分点。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1743,
+    "output": 1399
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.010643849999999998,
+  "wall_seconds": 26.432,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.08,\n    \"draw\": 0.91,\n    \"away\": 0.01\n  },\n  \"most_likely_score\": \"0-0\",\n  \"scorers\": [\n    {\n      \"player\": \"Marcus Rashford\",\n      \"team\": \"home\",\n      \"minute\": 96,\n      \"p\": 0.04\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"当前比赛已进入常规时间最后一分钟及伤停补时阶段，比分依然是0-0。从场面数据来看，英格兰占据了绝对优势，控球率高达79%，并狂轰19脚射门，但仅有4次射正，未能将优势转化为进球。加纳则采取了极其坚决的防守策略，全场犯规多达24次，有效破坏了英格兰的进攻节奏。随着比赛所剩时间无几，平局的概率急剧上升，成为最可能的结果。尽管英格兰在最后时刻仍会大举压上尝试绝杀，但破门时间窗口已经非常狭窄。因此，0-0是最可能的最终比分。如果在补时阶段出现进球，替补登场的拉什福德（Marcus Rashford）等体能充沛的攻击手将是最具威胁的潜在得分点。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Analyzing the England vs. Ghana Match in the Dying Seconds**\n\nOkay, here's the situation: It's the 90th minute, the score is deadlocked at 0-0. England, the home team, has completely dominated possession – 79% – and has peppered the Ghana goal with 19 shots, though only four were on target. Ghana, playing a classic defensive game, has just two shots and one on target but has resorted to a staggering 24 fouls to disrupt England's rhythm.\n\nMy initial thought was that a draw was highly probable, maybe around 85-90%. England *could* snatch a late winner, giving them maybe a 10-12% chance of a home win, while an away win felt like a long shot at 1-3%. But then, the event list shows a substitution for Ghana in the 95th minute. This tells me the match has progressed *at least* to the 95th minute, even if the displayed elapsed time is still 90'. I need to treat this as added injury time now. The draw probability just spiked. Let's make it more realistic: 0.92 for a draw, 0.07 for a home win, and 0.01 for an away win. 0-0 is still the most likely score.\n\nNow, if a goal *does* happen, it's going to be in these closing moments. Analyzing the scorers, I need to consider which players are subbed in. I see Marcus Rashford was subbed in at 83'. Bukayo Saka was subbed in at 65'. But, wait, I see the following in the events list: \"player\": \"Bukayo Saka\", \"assist\": \"Anthony Gordon\" which implies that Saka was subbed in, and Gordon was subbed out, and therefore Saka is the more likely candidate to score. Since the match is at least at 95' and the prompt says scorers' minute must be *strictly* after the current elapsed time, 96' or 97' are fine. I'll stick with Marcus Rashford at 96', with a probability of 0.03.\n\nI need to make sure the scorer's minute is strictly after the current elapsed minute. So, 92, 95, 96 are fine for the scorers.\n\nNow, after reevaluating the data, I'm adjusting the probabilities slightly, and making sure the final values meet the conditions set out in the constraints:\n*   Home Win: 0.08\n*   Draw: 0.91\n*   Away Win: 0.01\n\nAnd the most likely score is, by far, \"0-0\".\n\nHere's the simplified Chinese reasoning: \"当前比赛已进入常规时间最后一分钟及伤停补时阶段，比分依然是0-0。从场面数据来看，英格兰（主队）占据了绝对优势，控球率高达79%，并狂轰19脚射门，但仅有4次射正，未能转化为进球。加纳（客队）则采取了极其坚决的防守策略，全场犯规多达24次，有效破坏了英格兰的进攻节奏。随着比赛所剩时间无几，平局的概率急剧上升，成为最可能的结果。尽管英格兰在最后时刻仍会大举压上尝试绝杀，但破门难度极大。因此，0-0是最可能的最终比分。如果在补时阶段出现进球，替补登场的拉什福德（Marcus Rashford）或萨卡（Bukayo Saka）等攻击手是最具威胁的潜在得分点。\"\n\nChecking the constraints, all's good to go!\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-23T20:05:46+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 5,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 35,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 68,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 55,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Mohammed Kudus",
+          "minute": 75,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第5分钟，目前比分0-0。从开局阶段的场面来看，英格兰队迅速掌控了比赛节奏，控球率高达86%，将加纳队完全压制在半场。加纳队目前以密集防守和伺机反击为主，控球率仅为14%。考虑到英格兰队在整体实力上的明显优势以及开局展现出的绝对中场控制力，他们全取三分的概率极高。加纳队虽然防守阵型紧凑，但长时间处于被动防守状态极易在后续比赛中出现盯人失误或体能瓶颈。预计英格兰队将通过持续的边中结合施压打破僵局，最可能的最终比分为2-0。在后续进球者方面，英格兰的进攻核心哈里·凯恩（哈里·凯恩）作为主要得分手和点球主罚者，极有可能在半场结束前为球队首开纪录；而贝林厄姆（裘德·贝林厄姆）或萨卡（布卡约·萨卡）等前场攻击手也有望在下半场利用加纳队阵型前压或体能下降的机会扩大比分。加纳队若想制造威胁，库杜斯（Mohammed Kudus）的个人能力与反击速度将是最大倚仗，但面对英格兰稳固的防线，取得进球的难度较大。"
+      },
+      "sources": [],
+      "cost_usd": 0.014722049999999999,
+      "tokens": {
+        "input": 893,
+        "output": 2188
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.335
+    },
+    {
+      "submitted_at": "2026-06-23T20:11:56+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 11,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 38,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 71,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第11分钟，目前比分依然是0-0。从开局阶段的场面来看，英格兰队展现出了绝对的统治力，控球率高达惊人的86%，几乎将比赛完全控制在对方半场。加纳队目前只能采取被动防守的策略，控球率仅有14%。尽管英格兰尚未创造出实质性的得分机会或打破僵局，但如此悬殊的控球优势表明进球只是时间问题。基于两队的实力差距和当前的比赛走势，英格兰队拿下本场比赛的概率极高，胜率预估为68%。加纳队若想爆冷，只能依赖零星的反击，但难度极大。综合判断，最可能的最终比分是2-0。在后续的进球预测中，哈里·凯恩（哈里·凯恩）作为英格兰的绝对进攻核心和点球手，极有可能在半场结束前利用阵地战或定位球首开纪录；而布卡约·萨卡（布卡约·萨卡）在边路的犀利突破将在下半场加纳体能下降时发挥重要作用，有望为球队锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.0119658,
+      "tokens": {
+        "input": 914,
+        "output": 1747
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.651
+    },
+    {
+      "submitted_at": "2026-06-23T20:18:16+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 18,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.75,
+        "draw": 0.18,
+        "away": 0.07
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 38,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 65,
+          "p": 0.35,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第18分钟，目前比分依然是0-0。从开场阶段的数据来看，英格兰队展现出了压倒性的控制力，控球率高达惊人的90%，并且已经完成了3次射门和1次角球。加纳队目前只能疲于防守，控球率仅有10%，尚未能组织起有效的进攻或完成任何射门。鉴于英格兰队在场面上的绝对统治力，他们打破僵局只是时间问题，因此主队获胜的概率极高。加纳队如果不能有效改善中场脱节的问题并打出反击，很难在这场比赛中拿分。综合目前的攻防态势，英格兰队极有可能在接下来的比赛中连入两球，2-0是最可能的最终比分。在后续的比赛中，英格兰队的前场核心如 哈里·凯恩 和 裘德·贝林厄姆 将有极大的机会利用阵地战或定位球机会取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0125664,
+      "tokens": {
+        "input": 952,
+        "output": 1836
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.37
+    },
+    {
+      "submitted_at": "2026-06-23T20:24:24+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 24,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.75,
+        "draw": 0.18,
+        "away": 0.07
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 42,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 68,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第24分钟，目前比分依然是0-0。从场面数据来看，英格兰队展现出了压倒性的控制力，控球率高达惊人的88%，并已经完成了3次射门。加纳队目前完全处于被动防守状态，控球率仅有12%，且尚未完成任何射门，只能通过频繁的犯规（已累计5次）来勉强破坏英格兰队的进攻节奏。鉴于英格兰队在场面上的绝对优势，他们打破僵局只是时间问题，因此主队获胜的概率极高。预计最终比分最可能是2-0。在后续的比赛中，英格兰队的核心攻击手如 哈里·凯恩 和 裘德·贝林厄姆 极有可能利用对手防线收缩带来的压力，分别在半场结束前和下半场中段取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0032865,
+      "tokens": {
+        "input": 952,
+        "output": 363
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.628
+    },
+    {
+      "submitted_at": "2026-06-23T20:30:33+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 30,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.24,
+        "away": 0.08
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 58,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 76,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第30分钟，英格兰与加纳的比分依然是0-0。从场面数据来看，英格兰占据了绝对的统治地位，控球率高达86%，并完成了3次射门。然而，加纳队展现出了极强的防守韧性，虽然控球率仅有14%且零射门，但他们通过积极的拼抢和战术犯规（已累计7次犯规）有效地破坏了英格兰的进攻节奏，导致英格兰得势不得分。尽管目前比分未被改写，但英格兰持续的半场压迫大概率会在下半场随着加纳防线体能下降而转化为进球。因此，英格兰获胜的概率依然保持在较高水平。加纳若想爆冷，只能依赖零星的反击，但目前缺乏实质性威胁。预计英格兰最终能够打破僵局，最可能的最终比分为1-0。哈里·凯恩（哈里·凯恩）作为锋线绝对核心和点球主罚手，在下半场极有可能利用阵地战或定位球机会建功；而祖德·贝林厄姆（裘德·贝林厄姆）的后插上也是撕裂密集防线的关键武器。"
+      },
+      "sources": [],
+      "cost_usd": 0.014935200000000001,
+      "tokens": {
+        "input": 952,
+        "output": 2212
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.679
+    },
+    {
+      "submitted_at": "2026-06-23T20:36:40+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 36,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.24,
+        "away": 0.08
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 58,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 76,
+          "p": 0.22,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第36分钟，英格兰与加纳暂时战成0-0平。从场面数据来看，英格兰占据了绝对的统治地位，控球率高达84%，并完成了4次射门。而加纳队目前完全处于被动防守状态，控球率仅为16%，且尚未完成任何射门，只能通过频繁的犯规（8次）来破坏英格兰的进攻节奏。尽管加纳的密集防守暂时保住了球门不失，但英格兰持续的高压态势使得他们打破僵局的可能性极大。随着比赛深入和加纳防线体能的消耗，英格兰获胜的概率依然最高。预计下半场英格兰能够找到破门良机，最可能的最终比分为1-0。哈里·凯恩（哈里·凯恩）作为锋线核心，极有可能在下半场利用阵地战或定位球机会完成致命一击，而贝林厄姆（裘德·贝林厄姆）的后插上同样是重要的得分手段。"
+      },
+      "sources": [],
+      "cost_usd": 0.0035258999999999998,
+      "tokens": {
+        "input": 952,
+        "output": 401
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.064
+    },
+    {
+      "submitted_at": "2026-06-23T20:42:45+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 42,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.65,
+        "draw": 0.25,
+        "away": 0.1
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 65,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 78,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第42分钟，英格兰与加纳暂时战成0-0平。场面呈现出明显的一边倒态势，英格兰控球率高达82%，并完成了5次射门，而加纳队则完全处于被动防守状态，控球率仅有18%且至今零射门。加纳队主要依靠犯规（8次）来破坏英格兰的进攻节奏，德克兰·赖斯（德克兰·赖斯）在第41分钟吃到黄牌也反映了中场拼抢和由攻转守时的激烈程度。尽管上半场即将以平局收场，但基于英格兰绝对的控球压制力和进攻主动权，他们最终获胜的概率依然最高。随着比赛深入，加纳队的体能下降可能会在下半场暴露出更多防守空当。考虑到加纳密集的防守阵型，英格兰可能需要耐心寻找破局机会，1-0的微弱优势获胜是最可能的结果。在后续进球逻辑上，作为进攻核心的哈里·凯恩（哈里·凯恩）以及边路极具威胁的布卡约·萨卡（布卡约·萨卡）是最有可能在下半场利用个人能力或阵地战配合打破僵局的球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.01443225,
+      "tokens": {
+        "input": 1019,
+        "output": 2121
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.947
+    },
+    {
+      "submitted_at": "2026-06-23T20:49:04+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.28,
+        "away": 0.1
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 65,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第45分钟，英格兰与加纳暂时战成0-0平。从上半场的数据来看，英格兰占据了绝对的统治地位，控球率高达81%，并完成了5次射门。然而，面对加纳密集的防守，三狮军团尚未能将控球优势转化为进球。加纳队则完全处于守势，半场零射门，控球率仅为19%，他们的战术意图非常明显，即通过顽强的防守和身体对抗（双方各8次犯规）来破坏英格兰的进攻节奏。德克兰·赖斯（德克兰·赖斯）在第41分钟的黄牌也反映了中场拼抢的激烈程度。尽管上半场互交白卷，但考虑到英格兰巨大的场面优势和持续的施压，他们在下半场打破僵局的可能性依然很高。随着比赛深入，加纳球员的体能下降可能会暴露出更多防守空当。因此，英格兰获胜的概率依然保持在62%左右，平局概率约为28%。最可能的最终比分预测为1-0，英格兰小胜。在后续进球预测方面，哈里·凯恩（哈里·凯恩）作为英格兰的头号射手和点球主罚者，是最有可能在下半场为球队建功的关键人物。此外，布卡约·萨卡（布卡约·萨卡）在边路的突破也极具威胁，有望在比赛后段创造或打进关键进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.015106350000000001,
+      "tokens": {
+        "input": 1019,
+        "output": 2228
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.496
+    },
+    {
+      "submitted_at": "2026-06-23T21:11:08+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 56,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.29,
+        "away": 0.09
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 72,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 84,
+          "p": 0.18,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第56分钟，英格兰与加纳的比分依然僵持在0-0。从目前的场面数据来看，英格兰队占据了绝对的统治地位，控球率高达77%，并完成了6次射门和3次角球。然而，加纳队的密集防守十分顽强，至今未让对手取得进球。加纳队在进攻端完全被压制，目前0次射门的数据显示出他们将战术重心全部放在了死守平局和伺机反击上。上半场德克兰·赖斯（德克兰·赖斯）吃到黄牌，这可能会让英格兰在中场拦截时稍显忌惮。随着比赛进入下半场中段，留给英格兰破门的时间逐渐减少，平局的概率有一定程度的上升。但考虑到英格兰强大的阵容深度、持续的半场压迫以及加纳队体能的潜在消耗，英格兰依然有很大机会在比赛后段打破僵局。因此，英格兰获胜的概率依然最高，最可能的最终比分预测为1-0。在后续进球预测中，英格兰的锋线核心哈里·凯恩（哈里·凯恩）或后插上能力极强的朱德·贝林厄姆（裘德·贝林厄姆）极有可能在比赛的最后阶段利用定位球或阵地战撕开加纳的防线。"
+      },
+      "sources": [],
+      "cost_usd": 0.01161615,
+      "tokens": {
+        "input": 1019,
+        "output": 1674
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.723
+    },
+    {
+      "submitted_at": "2026-06-23T21:17:18+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 62,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.35,
+        "away": 0.1
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 75,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 82,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第62分钟，英格兰与加纳依然互交白卷（0-0）。从场面数据来看，英格兰占据了绝对的控球优势（高达76%），但在进攻端的实质性威胁稍显不足，目前仅完成6次射门。加纳队则采取了坚决的低位防守策略，控球率仅为24%，且只有1次射门，他们试图通过密集的防线和战术犯规来破坏英格兰的进攻节奏。随着比赛进入最后半小时，加纳球员的体能下降可能会导致防线出现空当。考虑到英格兰强大的阵容深度和持续的半场压迫，他们依然有较大机会在比赛尾声阶段打破僵局。因此，英格兰获胜的概率依然占据主导，但随着时间流逝，平局的风险也在逐渐增加。最可能的最终比分预测为1-0，英格兰艰难取胜。在后续的比赛中，英格兰的锋线核心如 哈里·凯恩 或后插上能力出色的 裘德·贝林厄姆 极有可能在70分钟后利用定位球或阵地战撕开对手防线。"
+      },
+      "sources": [],
+      "cost_usd": 0.0037674,
+      "tokens": {
+        "input": 1020,
+        "output": 428
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.592
+    },
+    {
+      "submitted_at": "2026-06-23T21:23:31+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 68,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.42,
+        "away": 0.1
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 78,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 85,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第68分钟，英格兰与加纳依然维持0-0的平局。从场面数据来看，英格兰占据了绝对的主导地位，控球率高达76%，并完成了8次射门。然而，加纳队展现出了极强的防守韧性和身体对抗能力，通过密集的防守和多达15次的犯规成功破坏了英格兰的进攻节奏，导致英格兰仅有1次射正。随着比赛进入最后20多分钟，加纳球员的体能消耗巨大，防线出现漏洞的概率正在增加。尽管平局的可能性随着时间推移不断上升，但英格兰凭借深厚的阵容深度和持续的高压态势，依然有较大机会在比赛尾声阶段打破僵局。因此，主队获胜的概率依然微弱领先于平局。综合判断，英格兰以1-0小胜是最可能出现的最终比分。在后续进球者的预测上，英格兰的锋线核心 哈里·凯恩 拥有极强的终结能力和主罚定位球的优势，是打破僵局的首选人物。此外，裘德·贝林厄姆 经常能在比赛后段通过后插上制造威胁，同样具备在最后时刻为球队建功的潜力。"
+      },
+      "sources": [],
+      "cost_usd": 0.0142443,
+      "tokens": {
+        "input": 1062,
+        "output": 2084
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.285
+    },
+    {
+      "submitted_at": "2026-06-23T21:29:40+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 74,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.46,
+        "away": 0.06
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 85,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Anthony Gordon",
+          "minute": 88,
+          "p": 0.08,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第74分钟，英格兰与加纳的比分依然是0-0。从场面数据来看，英格兰占据了绝对的主导地位，控球率高达76%，并完成了12次射门。然而，加纳的密集防守非常奏效，他们通过多达18次的犯规不断破坏英格兰的进攻节奏，导致英格兰仅有1次射正。尽管时间所剩无几，平局的概率正在急剧上升，但考虑到英格兰在进攻端的持续施压以及刚刚换上安东尼·戈登等生力军，主队在最后阶段打破僵局的可能性依然略高于平局。加纳全场仅有1次射门且无射正，客场爆冷取胜的希望渺茫。综合判断，英格兰极有可能在比赛尾声阶段通过阵地战或定位球完成致命一击，最可能的最终比分为1-0。作为头号射手和点球主罚者，哈里·凯恩以及替补登场冲击力十足的Gordon，是最有可能在剩余时间取得进球的球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.00385665,
+      "tokens": {
+        "input": 1195,
+        "output": 413
+      },
+      "tool_calls": 0,
+      "wall_seconds": 30.378
+    },
+    {
+      "submitted_at": "2026-06-23T21:36:01+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 81,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.38,
+        "draw": 0.58,
+        "away": 0.04
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第81分钟，英格兰与加纳的比分依然维持在0-0。从场面数据来看，英格兰占据了压倒性的优势，控球率高达77%，并完成了14次射门。然而，加纳采取了极具破坏性的防守策略，全场累计19次犯规有效切割了比赛节奏，导致英格兰仅有2次射正，进攻效率不佳。加纳方面则几乎完全放弃了进攻，仅有1次射门且0射正，全力死守一分。随着比赛进入最后10分钟，留给双方改变比分的时间已经非常有限，平局的概率大幅上升，成为当前最可能的结果。尽管英格兰在第65分钟换上了萨卡（布卡约·萨卡）等生力军试图加强边路突击，但在加纳的密集防守下破门难度极大。综合判断，0-0是最可能的最终比分。如果比赛在最后时刻出现绝杀，持续施压的英格兰队更有可能把握机会，替补登场的萨卡是打破僵局的关键人物。"
+      },
+      "sources": [],
+      "cost_usd": 0.0142254,
+      "tokens": {
+        "input": 1398,
+        "output": 2025
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.878
+    },
+    {
+      "submitted_at": "2026-06-23T21:42:10+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 87,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.8,
+        "away": 0.02
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第87分钟，英格兰与加纳的比分依然维持在0-0。从场面数据来看，英格兰占据了绝对的统治力，控球率高达77%，并狂轰14脚射门，但仅有2次射正，暴露出门前终结能力的不足。加纳队则采取了极其顽强的防守策略，全场仅有1次射门且无一射正，但通过多达20次的犯规有效破坏了英格兰的进攻节奏。随着比赛进入尾声，留给双方改变战局的时间已经所剩无几。英格兰虽然换上了布卡约·萨卡和埃贝雷奇·埃泽等攻击手试图做最后一搏，但在加纳密集的防守下，想要在常规时间及伤停补时阶段取得进球难度极大。因此，本场比赛以0-0平局收场的概率极高。如果比赛出现绝杀，英格兰的替补奇兵如布卡约·萨卡更有可能在补时阶段完成致命一击，但整体进球概率已经非常低。"
+      },
+      "sources": [],
+      "cost_usd": 0.004218899999999999,
+      "tokens": {
+        "input": 1534,
+        "output": 414
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.318
+    },
+    {
+      "submitted_at": "2026-06-23T21:48:09+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.85,
+        "away": 0.03
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，当前比分依然是0-0。从全场数据来看，英格兰队占据了绝对的控球优势（78%），并创造了14次射门机会，但仅有2次射正，进攻端缺乏致命一击。加纳队则采取了坚决的防守策略，全场多达22次犯规有效破坏了英格兰的进攻节奏，并成功将平局维持到了最后时刻。随着常规时间结束，比赛以平局收场的概率极高。尽管英格兰在下半场换上了拉什福德（马库斯·拉什福德）、萨卡（布卡约·萨卡）等攻击手试图打破僵局，但在所剩无几的伤停补时阶段，想要取得进球难度极大。因此，最可能的最终比分是0-0。如果英格兰能在最后时刻创造奇迹，替补登场且体能充沛的拉什福德是最有可能完成绝杀的球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.0038766000000000004,
+      "tokens": {
+        "input": 1604,
+        "output": 348
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.137
+    },
+    {
+      "submitted_at": "2026-06-23T21:54:10+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.15,
+        "draw": 0.83,
+        "away": 0.02
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，当前比分依然是0-0。从全场数据来看，英格兰队占据了绝对的优势，控球率高达78%，并狂轰17脚射门，但仅有3次射正，暴露出门前把握机会能力的不足。加纳队则采取了极其保守的防守反击策略，全场仅有22%的控球率和2次射门，同时通过高达23次的犯规来破坏英格兰队的进攻节奏。由于常规时间已经耗尽，比赛即将进入伤停补时阶段，双方在最后几分钟内改写比分的可能性正在急剧下降。因此，平局的概率目前占据绝对主导地位。尽管如此，英格兰队在比赛尾声阶段换上了拉什福德（马库斯·拉什福德）等攻击手，试图在最后时刻完成绝杀。如果比赛中出现进球，英格兰队在补时阶段利用定位球或乱战破门的可能性略高于加纳队的偷袭。综合判断，最可能的最终比分是0-0平局。"
+      },
+      "sources": [],
+      "cost_usd": 0.0040971,
+      "tokens": {
+        "input": 1676,
+        "output": 371
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.403
+    },
+    {
+      "submitted_at": "2026-06-23T22:00:05+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.91,
+        "away": 0.01
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已进入常规时间最后一分钟及伤停补时阶段，比分依然是0-0。从场面数据来看，英格兰占据了绝对优势，控球率高达79%，并狂轰19脚射门，但仅有4次射正，未能将优势转化为进球。加纳则采取了极其坚决的防守策略，全场犯规多达24次，有效破坏了英格兰的进攻节奏。随着比赛所剩时间无几，平局的概率急剧上升，成为最可能的结果。尽管英格兰在最后时刻仍会大举压上尝试绝杀，但破门时间窗口已经非常狭窄。因此，0-0是最可能的最终比分。如果在补时阶段出现进球，替补登场的拉什福德（马库斯·拉什福德）等体能充沛的攻击手将是最具威胁的潜在得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.010643849999999998,
+      "tokens": {
+        "input": 1743,
+        "output": 1399
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.432
+    }
+  ]
+}

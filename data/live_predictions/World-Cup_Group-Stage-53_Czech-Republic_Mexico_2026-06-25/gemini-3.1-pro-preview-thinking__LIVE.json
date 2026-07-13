@@ -1,0 +1,632 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-53_Czech-Republic_Mexico_2026-06-25",
+  "provider_fixture_id": "19609185",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-25T02:54:05+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 2
+    },
+    "home": "Czech Republic",
+    "away": "Mexico",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-25T01:00:00+00:00",
+    "venue": "Mexico City Stadium",
+    "venue_city": "Mexico City"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.001,
+      "draw": 0.009,
+      "away": 0.99
+    },
+    "most_likely_score": "0-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入第90分钟的伤停补时阶段，当前比分为捷克0-2落后于墨西哥。墨西哥在下半场凭借马特奥·查韦斯和胡利安·基诺内斯的进球确立了领先优势。尽管捷克在控球率和总射门数上略占优势，但他们全场仅有1次射正，进攻效率低下。考虑到比赛所剩时间极少，墨西哥拿下本场比赛的概率已经接近100%。最可能的最终比分将维持在0-2，后续出现进球的可能性微乎其微。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1903,
+    "output": 336
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.00411495,
+  "wall_seconds": 8.735,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.001,\n    \"draw\": 0.009,\n    \"away\": 0.990\n  },\n  \"most_likely_score\": \"0-2\",\n  \"scorers\": [],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入第90分钟的伤停补时阶段，当前比分为捷克0-2落后于墨西哥。墨西哥在下半场凭借Mateo Chávez和Julián Quiñones的进球确立了领先优势。尽管捷克在控球率和总射门数上略占优势，但他们全场仅有1次射正，进攻效率低下。考虑到比赛所剩时间极少，墨西哥拿下本场比赛的概率已经接近100%。最可能的最终比分将维持在0-2，后续出现进球的可能性微乎其微。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-25T01:06:04+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 6,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.3,
+        "away": 0.45
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Santiago Giménez",
+          "minute": 58,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 72,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Patrik Schick",
+          "minute": 81,
+          "p": 0.18,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第6分钟，目前比分为0-0。从开场数据来看，虽然墨西哥在名义上是客队，但本场比赛在墨西哥城进行，他们拥有巨大的主场优势。这一点在控球率上体现得非常明显，墨西哥开局控球率高达63%，迅速掌控了比赛节奏，而捷克队则以37%的控球率处于防守反击态势。考虑到墨西哥的场地优势和开场展现出的控制力，他们赢下比赛的概率更高。预计墨西哥会持续施压并在中场占据主动，最终最可能以1-0小胜捷克。进攻端，墨西哥的圣地亚哥·希门尼斯和Hirving Lozano等前锋有望在下半场打破僵局，而捷克队则需要依靠帕特里克·希克在反击或定位球中的个人能力。"
+      },
+      "sources": [],
+      "cost_usd": 0.009630599999999998,
+      "tokens": {
+        "input": 916,
+        "output": 1376
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.653
+    },
+    {
+      "submitted_at": "2026-06-25T01:13:01+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 13,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.3,
+        "away": 0.45
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Santiago Gimenez",
+          "minute": 65,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Patrik Schick",
+          "minute": 78,
+          "p": 0.2,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第13分钟，捷克与墨西哥暂时战成0-0平。尽管捷克在名义上是主队，但本场比赛在墨西哥城进行，墨西哥队拥有巨大的实际主场优势。开场阶段，墨西哥队掌控了55%的控球率，但尚未创造出射门机会；反观捷克队则更加务实，通过反击已经完成了2次射门。考虑到墨西哥队在主场球迷助威下的后发制人能力，以及他们在控球上的优势，预计随着比赛深入，墨西哥队会逐渐将控球转化为实质性的进攻威胁。因此，墨西哥队最终获胜的概率较高。预测最可能的最终比分为0-1，墨西哥前锋圣地亚哥·希门尼斯有望在下半场打破僵局。"
+      },
+      "sources": [],
+      "cost_usd": 0.009608549999999999,
+      "tokens": {
+        "input": 937,
+        "output": 1369
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.699
+    },
+    {
+      "submitted_at": "2026-06-25T01:20:10+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 20,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.38,
+        "away": 0.34
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Santiago Gimenez",
+          "minute": 68,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Patrik Schick",
+          "minute": 42,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第20分钟，目前比分为0-0。从开局阶段的场面来看，虽然墨西哥队坐拥墨西哥城主场之利，但捷克队反客为主，展现出了更强的进攻欲望。控球率双方目前各占50%，但捷克队已经完成了4次射门，而墨西哥队至今零射门，且犯规数达到4次，显示出他们在防守端承受了一定压力，尚未完全进入状态。尽管捷克队开局攻势占优，但墨西哥队在主场球迷的助威下，随着比赛深入有望逐渐找回进攻节奏并稳住阵脚。综合目前的比赛走势与双方整体实力，平局的概率正在上升，预计最终比分最可能为1-1。在后续的比赛中，捷克队的主力前锋帕特里克·希克（帕特里克·希克）凭借敏锐的门前嗅觉极具威胁，而墨西哥队的圣地亚哥·希门尼斯（圣地亚哥·希门尼斯）也有望在下半场利用反击或阵地战为球队建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.014352450000000001,
+      "tokens": {
+        "input": 937,
+        "output": 2122
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.965
+    },
+    {
+      "submitted_at": "2026-06-25T01:27:23+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 27,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.38,
+        "draw": 0.36,
+        "away": 0.26
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Patrik Schick",
+          "minute": 65,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Santiago Gimenez",
+          "minute": 78,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第27分钟，目前比分依然是0-0。尽管墨西哥队在墨西哥城作战，拥有巨大的主场氛围优势，但捷克队在开局阶段反客为主，掌控了比赛节奏。从实时数据来看，捷克队目前控球率达到56%，并且已经完成了4次射门，展现出较强的进攻欲望。相比之下，墨西哥队进入状态较慢，至今尚未完成任何射门，进攻端显得有些挣扎，只能依靠犯规来破坏对方的节奏。随着比赛接近半小时，0-0的比分使得平局的概率维持在较高水平。然而，基于捷克队在场面上的压制力和创造出的射门机会，他们打破僵局的可能性更大。因此，捷克队的获胜概率被评估为38%，平局概率为36%，而墨西哥队获胜概率为26%。综合目前的攻防数据，最可能的最终比分是1-0，捷克队有望通过持续的施压取得领先。在潜在进球者方面，捷克队的主力前锋 帕特里克·希克 是最具威胁的得分点，预计在下半场有较高概率寻找空间破门；而墨西哥队的 圣地亚哥·希门尼斯 则是他们伺机反击时的关键人物。"
+      },
+      "sources": [],
+      "cost_usd": 0.01554315,
+      "tokens": {
+        "input": 937,
+        "output": 2311
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.55
+    },
+    {
+      "submitted_at": "2026-06-25T01:34:43+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 34,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.38,
+        "away": 0.2
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Patrik Schick",
+          "minute": 62,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Santiago Gimenez",
+          "minute": 75,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第34分钟，捷克与墨西哥目前战成0-0平。从前场数据来看，名义上的主队捷克占据了明显的进攻优势，控球率达到52%，并且已经完成了5次射门。相比之下，墨西哥在进攻端表现十分挣扎，至今未能创造出任何射门机会，且犯规次数（5次）略多于捷克。尽管比赛在墨西哥城进行，但捷克队在场面上展现出了更强的侵略性和控制力。随着上半场进入尾声且比分未变，平局的概率自然有所上升。然而，基于捷克队在射门数上的绝对压制，他们打破僵局的可能性显著高于对手。因此，主胜概率目前被评估为最高，平局次之，客胜概率最低。考虑到墨西哥进攻乏力，而捷克虽然射门多但尚未转化为进球，预计全场比赛的进球数不会太多，1-0是目前最可能的最终比分。在后续进球逻辑上，捷克队的主力前锋如 帕特里克·希克 极有可能在下半场利用球队的持续施压取得领先进球；而墨西哥若想在下半场改变被动局面，圣地亚哥·希门尼斯 等锋线球员需要在反击中寻找机会，但整体破门概率相对偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.01180725,
+      "tokens": {
+        "input": 937,
+        "output": 1718
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.104
+    },
+    {
+      "submitted_at": "2026-06-25T01:42:11+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 42,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.33,
+        "away": 0.45
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Santiago Gimenez",
+          "minute": 68,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 75,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Patrik Schick",
+          "minute": 82,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第42分钟，捷克与墨西哥暂时战成0-0平。从上半场的数据来看，双方势均力敌，控球率各占50%。捷克队虽然完成了5次射门但无一射正，而墨西哥队4次射门中有1次射正。整体场面较为胶着，双方在防守端都表现得十分稳固。尽管墨西哥在赛程上被标记为客队，但本场比赛在墨西哥城进行，他们拥有巨大的实际主场优势。考虑到上半场即将以平局结束，且双方进攻端创造的绝对机会不多，平局的概率依然可观。但凭借主场球迷的声势和下半场的战术调整，墨西哥队更有可能在僵局中率先找到突破口。因此，墨西哥的获胜概率被评估为最高，最可能的最终比分预测为0-1。预计下半场随着体能下降，比赛空间会逐渐增大。墨西哥的攻击手如 圣地亚哥·希门尼斯 或 Hirving Lozano 极有可能在65分钟后利用反击或边路突破打破僵局；而捷克队若想改变战局，则需要高度依赖 帕特里克·希克 等核心球员在定位球或反击中的把握能力。"
+      },
+      "sources": [],
+      "cost_usd": 0.01698585,
+      "tokens": {
+        "input": 979,
+        "output": 2533
+      },
+      "tool_calls": 0,
+      "wall_seconds": 27.721
+    },
+    {
+      "submitted_at": "2026-06-25T02:11:38+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 56,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.45,
+        "away": 0.3
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第56分钟，捷克与墨西哥依然维持0-0的平局。从场面数据来看，双方势均力敌。墨西哥凭借主场之利（比赛在墨西哥城进行）占据了53%的控球率，但双方在进攻端的绝对机会都不多，各自仅有1次射正。随着比赛进入下半场中段，体能下降可能会导致防守端出现漏洞，但考虑到目前沉闷的进攻节奏和双方严密的防守，平局的可能性正在逐渐增加。我们预测最终比分最可能保持0-0。如果比赛尾声阶段能够打破僵局，墨西哥的圣地亚哥·希门尼斯和捷克的帕特里克·希克将是最具威胁的潜在得分手。"
+      },
+      "sources": [],
+      "cost_usd": 0.010175550000000002,
+      "tokens": {
+        "input": 979,
+        "output": 1452
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.756
+    },
+    {
+      "submitted_at": "2026-06-25T02:18:51+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 63,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.22,
+        "away": 0.7
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第63分钟，目前比分为捷克0-1落后于墨西哥。下半场第55分钟，马特奥·查韦斯（马特奥·查韦斯）打破僵局为墨西哥取得领先。从场面数据来看，双方互有攻守，捷克虽然在总射门数上以8比7略微占优，但射门质量欠佳，仅有1次射正；而墨西哥不仅控球率达到54%，且本场比赛在墨西哥城体育场进行，墨西哥队拥有极大的主场氛围优势。捷克在丢球后迅速换上 Denis Visinsky 试图加强进攻并改变战局，但面对墨西哥的严密防守，目前仍破门乏术。基于当前的时间和场面走势，墨西哥大概率能将领先优势保持到终场，其获胜概率已大幅升至70%，而捷克扳平的概率约为22%，逆转取胜的希望仅剩8%。最可能的最终比分预计定格在0-1。在后续比赛的战术博弈中，随着捷克大举压上，墨西哥将获得更多反击空间，此前送出助攻的 路易斯·罗莫 有望在第82分钟左右利用转换进攻的机会取得进球；而捷克的替补奇兵 Denis Visinsky 也有一定概率在第78分钟左右通过边路或定位球为球队制造实质性威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.0174972,
+      "tokens": {
+        "input": 1394,
+        "output": 2545
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.162
+    },
+    {
+      "submitted_at": "2026-06-25T02:26:48+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.08,
+        "away": 0.9
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第71分钟，捷克目前0-2落后于墨西哥。下半场风云突变，墨西哥在第55分钟和第61分钟由马特奥·查韦斯（马特奥·查韦斯）和胡利安·基尼奥内斯（胡利安·基诺内斯）连入两球，瞬间确立了巨大的领先优势。从场面数据来看，捷克虽然在控球率（51%）和总射门数（9次）上不落下风，但全场仅有1次射正，进攻端缺乏实质性威胁；反观墨西哥，在主场球迷的助威下踢得极为高效，仅有的3次射正就转化为了2粒进球。随着比赛进入最后20分钟，两球落后的捷克翻盘希望已经非常渺茫，墨西哥的胜率飙升至90%，平局和捷克逆转的概率分别降至8%和2%。捷克已经换上赫洛泽克（Adam Hlozek）等攻击手试图孤注一掷，但这势必会暴露后防空当。最可能的最终比分预计将维持在0-2，但如果比赛变得更加开放，替补登场的墨西哥前锋吉列尔莫·马丁内斯（吉列尔莫·马丁内斯 Ayala）极有可能利用反击机会扩大比分，而捷克的赫洛泽克则是球队打入挽回颜面进球的主要希望。"
+      },
+      "sources": [],
+      "cost_usd": 0.0125412,
+      "tokens": {
+        "input": 1552,
+        "output": 1732
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.773
+    },
+    {
+      "submitted_at": "2026-06-25T02:33:55+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 78,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第78分钟，当前比分为捷克0-2落后于墨西哥。墨西哥在下半场由马特奥·查韦斯和胡利安·基诺内斯连入两球，确立了明显的领先优势。尽管捷克在控球率（52%）和总射门数（10次）上略占优，但他们仅有1次射正，进攻效率低下。随着比赛进入尾声，墨西哥通过换人调整稳固防线并保持反击威胁，捷克扳平比分的希望已经非常渺茫。因此，墨西哥获胜的概率极高，最可能的最终比分维持在0-2。如果比赛末段还有进球，替补登场的吉列尔莫·马丁内斯 Ayala有望利用捷克大举压上留下的空当完成破门。"
+      },
+      "sources": [],
+      "cost_usd": 0.00577395,
+      "tokens": {
+        "input": 1623,
+        "output": 646
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.535
+    },
+    {
+      "submitted_at": "2026-06-25T02:40:42+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 85,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.02,
+        "away": 0.97
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第85分钟，墨西哥队凭借下半场马特奥·查韦斯和胡利安·基诺内斯的进球，目前以2-0领先捷克队。尽管捷克队在控球率（53%）和总射门数（10次）上略占优势，但他们全场仅有1次射正，进攻效率低下。墨西哥队在两球领先后进行了多次换人调整，意在稳固防守并消耗比赛时间。考虑到比赛所剩时间极少，且捷克队难以在短时间内连入两球，墨西哥队拿下本场比赛的概率极高。最可能的最终比分将维持在0-2。如果比赛最后阶段还有进球，很可能是墨西哥队利用对手大举压上留下的空当，由替补登场的攻击手在伤停补时阶段打入反击进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0065625,
+      "tokens": {
+        "input": 1762,
+        "output": 748
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.719
+    },
+    {
+      "submitted_at": "2026-06-25T02:47:24+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.01,
+        "away": 0.99
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，目前比分为捷克0-2墨西哥。墨西哥在下半场凭借马特奥·查韦斯和胡利安·基诺内斯的进球确立了领先优势。尽管捷克在控球率（52%）和总射门数（11次）上略占优，但他们全场仅有1次射正，进攻效率低下。考虑到常规时间已经耗尽，墨西哥拿下本场比赛的概率极高，捷克扳平或逆转的可能性微乎其微。因此，最可能的最终比分维持在0-2，预计伤停补时阶段双方都不会再有进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0044961,
+      "tokens": {
+        "input": 1762,
+        "output": 420
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.664
+    },
+    {
+      "submitted_at": "2026-06-25T02:54:05+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.001,
+        "draw": 0.009,
+        "away": 0.99
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟的伤停补时阶段，当前比分为捷克0-2落后于墨西哥。墨西哥在下半场凭借马特奥·查韦斯和胡利安·基诺内斯的进球确立了领先优势。尽管捷克在控球率和总射门数上略占优势，但他们全场仅有1次射正，进攻效率低下。考虑到比赛所剩时间极少，墨西哥拿下本场比赛的概率已经接近100%。最可能的最终比分将维持在0-2，后续出现进球的可能性微乎其微。"
+      },
+      "sources": [],
+      "cost_usd": 0.00411495,
+      "tokens": {
+        "input": 1903,
+        "output": 336
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.735
+    }
+  ]
+}

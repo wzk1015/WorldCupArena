@@ -1,0 +1,720 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-2_South-Korea_Czech-Republic_2026-06-12",
+  "provider_fixture_id": "19609153",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-12T03:54:33+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 1
+    },
+    "home": "Korea Republic",
+    "away": "Czech Republic",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-12T02:00:00+00:00",
+    "venue": "Guadalajara Stadium",
+    "venue_city": "Zapopan"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.86,
+      "draw": 0.11,
+      "away": 0.03
+    },
+    "most_likely_score": "2-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前来到90分钟，Korea Republic以2-1领先Czech Republic，比赛已经进入尾声，主队胜率明显处于最高位。结合现有赛况，捷克在59分钟由Ladislav Krejci先破门，但韩国队随后在67分钟由In-beom Hwang扳平，并在80分钟由Hyeon-gyu Oh反超，说明下半场走势已经明显向主队倾斜。数据上韩国队总射门15比7、射正6比4、控球62%比38%，整体压制力和持续推进能力都更强，当前领先并且控场占优，使得他们守住优势的概率大幅上升。平局仍保留一定可能，主要来自伤停补时阶段捷克压上后的单次机会；但从比赛进程看，客队在被反超后没有体现出足够持续的进攻数据优势，因此扳平概率低于主队直接收下比赛。由于当前已到90分钟，新增进球空间很有限，最可能最终比分仍是2-1，这也与主胜为最高概率保持一致。未来进球逻辑上，如果还有进球，更可能出现在补时开放阶段：韩国队可能利用捷克压上后的身后空间由刚刚建功的Hyeon-gyu Oh再度完成终结；而捷克若追平，替补中锋Tomas Chory这类前场冲击点在最后时段的定位球或传中争顶中具备相对更现实的威胁。总体来看，主队已占据时间、比分和场面三重优势，预测以韩国队小胜结束为主。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 3117,
+    "output": 489
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0151275,
+  "wall_seconds": 12.319,
+  "error": null,
+  "raw_text": "{\"win_probs\":{\"home\":0.86,\"draw\":0.11,\"away\":0.03},\"most_likely_score\":\"2-1\",\"scorers\":[{\"player\":\"Hyeon-gyu Oh\",\"team\":\"home\",\"minute\":92,\"p\":0.08},{\"player\":\"Tomas Chory\",\"team\":\"away\",\"minute\":93,\"p\":0.06}],\"reasoning\":{\"overall\":\"当前来到90分钟，Korea Republic以2-1领先Czech Republic，比赛已经进入尾声，主队胜率明显处于最高位。结合现有赛况，捷克在59分钟由Ladislav Krejci先破门，但韩国队随后在67分钟由In-beom Hwang扳平，并在80分钟由Hyeon-gyu Oh反超，说明下半场走势已经明显向主队倾斜。数据上韩国队总射门15比7、射正6比4、控球62%比38%，整体压制力和持续推进能力都更强，当前领先并且控场占优，使得他们守住优势的概率大幅上升。平局仍保留一定可能，主要来自伤停补时阶段捷克压上后的单次机会；但从比赛进程看，客队在被反超后没有体现出足够持续的进攻数据优势，因此扳平概率低于主队直接收下比赛。由于当前已到90分钟，新增进球空间很有限，最可能最终比分仍是2-1，这也与主胜为最高概率保持一致。未来进球逻辑上，如果还有进球，更可能出现在补时开放阶段：韩国队可能利用捷克压上后的身后空间由刚刚建功的Hyeon-gyu Oh再度完成终结；而捷克若追平，替补中锋Tomas Chory这类前场冲击点在最后时段的定位球或传中争顶中具备相对更现实的威胁。总体来看，主队已占据时间、比分和场面三重优势，预测以韩国队小胜结束为主。\"},\"sources\":[]}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-12T02:02:04+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 2,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.31,
+        "draw": 0.38,
+        "away": 0.31
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛刚进行到2分钟，当前比分仍是0比0，现有赛中信息非常有限，且还没有任何射门、关键机会、犯规或定位球等事件出现。从目前仅有的数据看，控球率是Korea Republic 49%对Czech Republic 51%，差距极小，说明开局阶段双方基本处于均衡试探，没有形成明确的场面压制。基于这种极早期、低信息量且比分未被打破的状态，平局概率相对被上调，而两队取胜概率保持接近。最可能最终比分因此维持在0-0，因为这是与当前比赛节奏、时间节点和缺乏进攻事件最一致的结果；如果后续出现连续射门、明显压制或定位球威胁，胜平负分布才会更明显向某一方倾斜。至于后续进球者，由于实时状态中没有提供首发、射门分布、xG、触球热点或明确进攻核心信息，现阶段无法可靠锁定具体球员，因此暂不列出未来进球者预测，待出现更充分的比赛数据后再更新会更稳妥。"
+      },
+      "sources": [],
+      "cost_usd": 0.01188,
+      "tokens": {
+        "input": 2196,
+        "output": 426
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.121
+    },
+    {
+      "submitted_at": "2026-06-12T02:08:20+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 8,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.39,
+        "away": 0.27
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第8分钟，当前比分仍为0比0，且已知赛中信息非常有限：双方暂时没有出现进球、红黄牌、换人或关键事件，场面数据仅显示韩国队控球率53%略高于捷克队的47%，角球1比0小幅领先。这类早段、差距很小的控球与角球优势，说明韩国队开局进入状态稍快、推进更主动一些，但证据强度还不足以把胜负明显拉开，因此本次更新仍以平局为最高单项概率。结合0比0的当前状态和仅8分钟的时间点，比赛还有很长时间，胜平负概率不会被早段微弱优势大幅改写，所以我将韩国队取胜概率维持在略高于捷克队的位置，而把平局放在最高，反映出当前比赛仍高度开放但尚未形成明确压制。最可能最终比分选择0-0，原因是它与当前最高的平局概率一致，同时在没有射门、绝佳机会或高压围攻等更强进攻信号支持下，零封到终场仍是最稳健的单一比分路径。当然，随着比赛推进，1比0或1比1也会是接近的次优结果，但现阶段不足以超过0比0。后续进球者方面，只能基于常规进攻核心逻辑进行保守推演：若韩国队把现有的轻微控场优势转化为机会，Son Heung-Min最可能成为主队的破门点；若捷克队逐步找到反击和禁区终结节奏，Patrik Schick是最合理的客队潜在得分手；此外Hwang Hee-Chan也具备在比赛后段利用速度与冲击力制造进球的可能。所有进球时间均放在第8分钟之后，以符合当前赛况。"
+      },
+      "sources": [],
+      "cost_usd": 0.01395,
+      "tokens": {
+        "input": 2214,
+        "output": 561
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.193
+    },
+    {
+      "submitted_at": "2026-06-12T02:14:44+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 14,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.37,
+        "away": 0.21
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到14分钟，当前比分仍是0比0。就现有赛中信息看，Korea Republic开局阶段占据了更主动的场面：控球率59%对41%领先，角球3比0占优，射门2比0也说明主队已经把更多进攻推进到了对方半场和禁区周边。Czech Republic暂时还没有形成射门记录，并且门将已经有1次扑救，这进一步反映出客队前14分钟更多处于被动防守状态。由于目前没有进球、红黄牌、伤停或换人等事件，比赛仍处在样本较小的早段，因此虽然主队实时胜率上调，但平局概率依然维持在较高区间。综合当前比分、时间点和有限统计，主胜概率略高于平局，客胜处于相对较低位置。最可能最终比分给到1-0，是因为主队已展现出一定压制力，但比赛时间还很长，现阶段数据优势尚不足以支撑更大比分判断；同时0-0仍是重要备选结果，只是考虑到Korea Republic持续获得角球和射门，出现一粒主队进球的路径更符合当前走势。后续进球逻辑方面，若主队继续维持控球和定位球压力，他们更接近成为下一支破门球队；但由于实时数据中没有提供可用的官方球员级射门或首发信息，现阶段无法可靠锁定具体未来进球者，因此不列出球员级得分预测。"
+      },
+      "sources": [],
+      "cost_usd": 0.013255,
+      "tokens": {
+        "input": 2266,
+        "output": 506
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.125
+    },
+    {
+      "submitted_at": "2026-06-12T02:20:51+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 20,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.4,
+        "draw": 0.38,
+        "away": 0.22
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Unknown",
+          "minute": 67,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Unknown",
+          "minute": 74,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到20分钟，当前比分仍是0-0。就现有赛中数据看，Korea Republic在开局阶段占据更主动的场面：控球率62%对38%领先，射门4比1、角球3比1，且已有1次射正，而Czech Republic暂时没有射正。这说明主队在推进、压制和进入进攻三区方面更活跃，至少在前20分钟形成了更持续的施压。由于目前没有出现进球、红黄牌、伤退或换人等改变比赛结构的事件，预测主要依据当前时间点的比分稳定性与基础场面优势进行调整。0-0打到20分钟，会自然抬高平局尤其是低比分平局的概率，但主队在控球和射门端的领先又使其胜率高于客队，因此当前更合理的分布是主胜略高、平局紧随其后、客胜最低。最可能最终比分给到1-0，是因为它既符合Korea Republic现阶段更强的进攻存在感，也兼顾了比赛仍处于早段、整体机会数量尚不算很多的事实；0-0虽然也有现实可能，但考虑到主队已经累积出一定压迫数据，单边小胜比闷平略占优。后续进球逻辑上，若比赛继续维持现在的控球和射门趋势，下一粒更可能来自主队，并大概率出现在下半场中段以后，因为前20分钟尚未转化为高质量多次射正，说明破门效率未完全打开；客队则更像依赖转换进攻或定位球寻找有限机会，所以也保留较低概率的后续进球可能。由于实时状态中未提供可用的官方球员事件或明确射门球员名单，未来潜在进球者只能保守列为Unknown。"
+      },
+      "sources": [],
+      "cost_usd": 0.0098475,
+      "tokens": {
+        "input": 855,
+        "output": 514
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.456
+    },
+    {
+      "submitted_at": "2026-06-12T02:26:45+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 26,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.42,
+        "away": 0.24
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到26分钟，当前比分仍是0-0。就现有赛中信息看，Korea Republic在场面上稍占主动：控球率55%对45%，总射门4比1，射正1比0，说明主队更多把球推进到前场并形成了有限但更清晰的尝试；同时双方角球都是3个，表示Czech Republic也并非完全被压制，定位球和阶段性推进仍能制造一定存在感。到目前为止没有进球、红黄牌、换人或其他关键事件，意味着比赛节奏总体还处在试探与拉扯阶段，真实优势还没有大到足以明显拉开胜负概率。基于0-0的当前比分和前26分钟偏谨慎、机会质量有限的走势，平局仍然是最高结果概率；不过由于主队在射门和控球上的边际优势，Korea Republic的取胜概率被上调到略高于Czech Republic。综合判断，本次更新给出home 0.34、draw 0.42、away 0.24。最终比分方面，在当前低比分、低射正环境下，0-0是最单点化的结果，而且与平局为最高概率相匹配；如果后续比赛开放度提升，1-0或1-1会是次一级的延伸路径。后续进球逻辑上，若先出现进球，更可能来自Korea Republic继续利用更高控球和更多射门带来的累积压力；但由于当前没有提供可用的官方球员级实时名单或射门者信息，无法稳定指向具体未来进球球员，因此本次不输出26分钟后的候选进球者。"
+      },
+      "sources": [],
+      "cost_usd": 0.01024,
+      "tokens": {
+        "input": 844,
+        "output": 542
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.679
+    },
+    {
+      "submitted_at": "2026-06-12T02:32:46+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 32,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.31,
+        "draw": 0.46,
+        "away": 0.23
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到32分钟，当前比分仍是0比0，从已给出的赛中信息看，场面相对均衡但韩国队略占主动。韩国队控球率52%对48%稍优，总射门4比2、射正1比0，也说明主队在前32分钟里制造机会的频率更高一些；不过双方角球都是3次，捷克队并未被完全压制，更多体现为韩国队小幅占优而不是明显优势。由于目前没有进球、红黄牌、伤退或换人等打破平衡的事件，比赛基础走势仍然是低比分格局。随着时间来到32分钟而比分依旧僵持，平局概率相较开场前会自然上升，尤其是0比0在半场前后继续维持的可能性不低，因此我将平局设为最高结果概率。与此同时，韩国队在射门与控球上的轻微优势，使其胜率仍高于捷克队，但优势不足以压过平局大势。基于现有节奏和数据，最可能的最终比分维持在0-0；如果下半场出现进球，更像是由韩国队率先打破僵局，或捷克队依靠中锋终结能力完成回应，因此后续进球人选更偏向韩国队核心进攻点Son Heung-Min，以及捷克队禁区终结点Patrik Schick。两人的进球分钟都放在32分钟之后，符合当前比赛推进逻辑，但整体上本场后续进球预期仍然不高，故只给出中等偏低的个体进球概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.012895,
+      "tokens": {
+        "input": 2284,
+        "output": 479
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.435
+    },
+    {
+      "submitted_at": "2026-06-12T02:38:44+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 38,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.41,
+        "away": 0.25
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到38分钟，当前比分仍是0比0。就现有赛中数据看，韩国队在场面上略占上风：控球率54%对46%，总射门5比3，射正1比0，但优势并不大，且两队角球同为3个，说明捷克队在定位球和局部推进上也有回应。到目前为止没有进球、红黄牌、换人或明确关键事件出现，意味着比赛整体仍处于相对均衡、机会质量有限的阶段。基于0比0进入上半场后段这一时间点，平局概率较开场前会自然上升；同时韩国队凭借更主动的控球和更多射门，主胜概率略高于客胜，但还不足以压倒平局成为最强结果。因此本次更新将平局设为最高概率，主胜次之，客胜最低。最终比分逻辑上，0比0最符合当前节奏：韩国虽有轻微优势，但射正只有1次，尚未形成持续高压；捷克目前0射正，也限制了其短时内反超胜率的提升。若下半场比赛开放度增加，1比0或1比1会是次级候选，但在现阶段，最可能的单一最终比分仍是0比0。至于后续进球者，由于当前实时状态未提供任何官方/API球员级射门、首发或关键参与者信息，无法在满足姓名格式要求的前提下可靠指定具体球员，因此暂不列出38分钟后的未来进球者名单。"
+      },
+      "sources": [],
+      "cost_usd": 0.01354,
+      "tokens": {
+        "input": 2284,
+        "output": 522
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.582
+    },
+    {
+      "submitted_at": "2026-06-12T02:44:41+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 44,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.46,
+        "away": 0.2
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到44分钟，当前比分仍是0比0，半场前的实时预测应明显向平局倾斜。就现有比赛状态看，韩国队（Korea Republic）在场面上略占优势：控球51%对49%基本均衡，但射门6比2、射正1比0，说明韩国队在进攻推进和进入射门区域方面更主动一些；同时双方角球都是3个，表明捷克队（Czech Republic）并非完全被压制，仍有一定反击和定位球存在感。不过截至目前没有出现进球、红黄牌、换人或其他重大事件，且两队真正高质量机会都不多，这使得0比0在44分钟这个时间点的基线概率继续上升。基于比分未被打破、上半场临近结束以及数据仅显示韩国队小幅占优而非明显压制，胜平负概率调整为主队略优于客队，但平局仍为最大结果区间，因此给出韩国胜34%、平46%、捷克胜20%。最可能最终比分维持在0-0，因为这与当前最大概率的平局方向一致，也最符合双方到目前为止射正很少、比赛节奏相对谨慎的状态。后续进球逻辑上，下半场如果出现进球，更可能来自韩国队持续较多的射门与边路/角球施压，但现阶段缺少球员级事件和首发信息，无法可靠锁定具体未来进球者；同时由于比赛已到44分钟，留给上半场的时间很短，任何未来进球更大概率会发生在下半场中后段而非立刻出现，因此本次更新不列出明确的未来进球人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.01264,
+      "tokens": {
+        "input": 2284,
+        "output": 462
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.361
+    },
+    {
+      "submitted_at": "2026-06-12T03:05:54+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 50,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.38,
+        "draw": 0.42,
+        "away": 0.2
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到50分钟，比分仍是0比0，在没有任何已发生关键事件可用的情况下，判断主要依据是现有技术统计。韩国队控球55%、总射门8比2明显占优，说明他们在场面推进和进入进攻三区方面更主动；但射正仅1比0，且双方门将扑救合计只有1次，说明真正高质量机会仍然不多，比赛更多是韩国队占据主动但尚未把优势转化为高威胁终结。捷克队角球3比3并未在定位球上落后太多，不过运动战产出偏少，暂时更像是以稳守和等待转换机会为主。基于50分钟时仍是僵局、且有效射正数据偏低，平局概率较开场后段有所上升；同时由于韩国队在射门数和控球上的优势，他们的胜率仍高于捷克队，但不足以压过平局成为最可能结果。因此当前更新为主胜38%、平局42%、客胜20%。最可能最终比分维持在0比0，因为比赛已进入下半场早段，若进攻效率没有明显提升，剩余时间被消耗后无球收场的单一比分路径最稳健。后续进球逻辑上，韩国队若能继续保持射门和控球优势，更可能先打破平衡；但目前缺少明确的高频射正、绝对机会或官方球员级别进攻数据，无法可靠锁定某位50分钟后的具体进球人选，所以本次不列出未来进球者预测。"
+      },
+      "sources": [],
+      "cost_usd": 0.01219,
+      "tokens": {
+        "input": 2284,
+        "output": 432
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.308
+    },
+    {
+      "submitted_at": "2026-06-12T03:12:08+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 57,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.41,
+        "draw": 0.43,
+        "away": 0.16
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到57分钟，当前仍是0比0。从已有赛中数据看，韩国队在场面上占据更明显主动：控球率56%对44%，总射门10比2，射正3比0，同时捷克队门将已经有3次扑救，说明韩国队的进攻质量和持续压制更强。捷克队虽然拿到4个角球、比韩国队多1个，但整体进攻产出偏低，至今没有射正，这使得其即时取胜概率受到明显压缩。由于比分仍未被改写，且比赛已经进入下半场中段，平局概率被时间因素持续抬升；在这种情况下，0比0和1比0都会成为主要候选结果。考虑到韩国队创造机会更多、后续更可能打入制胜球，因此主胜概率高于客胜，但由于目前迟迟未进球，平局仍是最高单项结果概率。最可能最终比分维持在0比0，符合当前比赛节奏与时间消耗逻辑；若后续出现进球，最有可能来自韩国队在持续压迫中的一次把握机会。至于57分钟之后的潜在进球者，当前提供的实时状态中没有任何官方球员级射门、首发或事件信息，无法在不引入外部信息的前提下为具体球员给出可靠且机器稳定的后续进球预测，因此本次不列出未来进球者。"
+      },
+      "sources": [],
+      "cost_usd": 0.011665,
+      "tokens": {
+        "input": 2284,
+        "output": 397
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.017
+    },
+    {
+      "submitted_at": "2026-06-12T03:18:09+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 63,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.26,
+        "draw": 0.3,
+        "away": 0.44
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到63分钟，Korea Republic主场0比1落后Czech Republic，当前唯一进球来自59分钟Ladislav Krejci的破门。就现阶段可用信息看，韩国在场面数据上明显更主动：控球60%、总射门11比2、射正4比0、角球4比4，说明主队在大部分时间里推进和压制做得更好，而捷克更多依赖较少次数但更高价值的反击或定位球机会，并且已经把领先优势拿到手。概率更新时，需要同时权衡“场面优势”和“比分/时间优势”：韩国的数据支持其后续扳平的可能性不低，因此平局概率不能压得太低；但比赛已经进入后段，捷克1球领先且已经证明自己能够把有限机会转化为进球，所以客胜仍然是当前最高结果。基于这个平衡，客胜略高于平局，主胜则因仍需至少连入两球而被压低。最可能最终比分维持在0-1，因为这既符合当前客队领先、剩余时间缩短后的常见收敛路径，也与捷克至今创造机会不多、比赛未必迅速演变成对攻战的走势一致。至于63分钟后的后续进球逻辑，韩国继续进攻最有希望带来扳平，但现有实时状态没有提供更多可稳定引用的前场球员官方姓名信息，因此不强行指定具体未来进球者；相对而言，若再有进球，更可能来自韩国持续施压后的回报，或捷克在韩国压上后的反击补刀，但整体上‘不再进球’仍是单一最可能分支。"
+      },
+      "sources": [],
+      "cost_usd": 0.012105,
+      "tokens": {
+        "input": 912,
+        "output": 655
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.637
+    },
+    {
+      "submitted_at": "2026-06-12T03:24:23+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 69,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.21,
+        "draw": 0.29,
+        "away": 0.5
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到69分钟，Korea Republic暂时0比1落后Czech Republic，当前唯一进球来自59分钟Ladislav Krejci，说明比分变化出现得较晚，留给主队扳平的时间仍有一些，但已经明显少于整场比赛的大部分时段。从现有数据看，韩国队在场面上并不差，控球60%、总射门12比3、射正4比1，角球4比4，说明主队持续在推进和制造机会，而捷克队更多依赖效率与防守反击，且门将已经完成4次扑救，这也是客队能够守住领先的重要依据。概率上，相比均势局面，0比1且时间来到69分钟会显著推高客队取胜概率；不过韩国队的射门和控球优势又抬高了扳平可能，因此平局仍有较强存在感，主胜则因至少需要连追两球而被压低。综合当前比分、剩余时间和已有比赛内容，客胜仍是最高概率结果，最可能最终比分维持在0比1；若韩国队将现有攻势转化为更高质量机会，1比1是第二层级的重要分支，而若主队后段压上过多，捷克也存在通过替补冲击再进一球形成0比2的路径。后续进球人逻辑上，韩国若追平，更可能来自刚替补登场、具备直接冲击力的Hee-chan Hwang；捷克若再进球，则更可能来自64分钟后上场、适合反击终结和禁区处理的Tomas Chory或Adam Hlozek。"
+      },
+      "sources": [],
+      "cost_usd": 0.014205,
+      "tokens": {
+        "input": 2604,
+        "output": 513
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.446
+    },
+    {
+      "submitted_at": "2026-06-12T03:30:25+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 75,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.43,
+        "draw": 0.39,
+        "away": 0.18
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Hyeon-gyu Oh",
+          "minute": 82,
+          "p": 0.17,
+          "team": "home"
+        },
+        {
+          "player": "Adam Hlozek",
+          "minute": 88,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前75分钟比分1比1，比赛已经进入最后阶段。就现有赛况看，捷克在59分钟由Ladislav Krejci先入一球，但韩国在67分钟由In-beom Hwang迅速扳平，说明主队在落后后的回应能力较强。数据层面韩国优势非常明显：控球63%对37%，总射门13比3，射正5比1，且捷克门将已经有4次扑救，反映出韩国持续制造了更高频率的威胁，而捷克更多依赖有限机会完成进球。进入75分钟后，留给双方的常规时间和补时已不多，因此平局概率仍然很高；但在两队之中，韩国凭借更持续的压制、更多射门和刚完成扳平后的势头，拿到制胜球的概率高于捷克，所以主胜被上调为最高结果。基于时间所剩不多与当前1比1的比分结构，最可能的最终比分是韩国再进一球后的2比1，而不是更大分差。未来进球人方面，更应优先考虑仍可能留在前场、且由换人提升冲击力的韩国攻击点，因此Hyeon-gyu Oh作为后段抢点或转换进攻中的候选更合理；若比赛进一步拉开、捷克获得反击或定位球机会，Adam Hlozek这类替补攻击手是客队后续破门的相对可行人选，但整体概率低于韩国下一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0157675,
+      "tokens": {
+        "input": 2797,
+        "output": 585
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.243
+    },
+    {
+      "submitted_at": "2026-06-12T03:36:35+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 81,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.13,
+        "draw": 0.23,
+        "away": 0.64
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到81分钟，Korea Republic目前1-2落后Czech Republic，留给主队追分的时间已经不多。就现有比赛进程看，下半场是决定走势的关键：59分钟Ladislav Krejci先为客队打开局面，67分钟In-beom Hwang扳平，但78分钟Tomáš Souček再次让Czech Republic取得领先。这个时间点的再度反超，通常会显著抬高领先一方守住胜局的概率。现有数据同时显示，Korea Republic在场面上更主动，控球63%、总射门13比3、射正5次且角球4比4，说明主队持续在推进和施压；但比分仍然落后，反映出Czech Republic在有限机会中的效率更高，而且韩国在压上后也给了对手反击空间。因此，概率上仍以客胜最高，其次是平局，主胜因时间不足而被明显压低。最可能最终比分判断为1-2，因为当前已进入最后十分钟区间，单球差距下最常见结局仍是领先方直接守住；若再有进球，更现实的两个方向是韩国持续压上后由替补攻击手或前场核心完成扳平，或者捷克利用韩国后场空间再进一球把比分扩大。后续进球人选方面，主队若追平，更可能来自刚登场后具备冲击力的Hee-chan Hwang或中路终结点Hyeon-gyu Oh；客队若再进球，则更可能来自反击中的前场替补Tomas Chory。总体而言，韩国有制造最后阶段机会的基础，但从当前比分、时间位置以及捷克刚完成反超的比赛节奏看，Czech Republic守住1-2的概率仍然最大。"
+      },
+      "sources": [],
+      "cost_usd": 0.0139325,
+      "tokens": {
+        "input": 1415,
+        "output": 693
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.723
+    },
+    {
+      "submitted_at": "2026-06-12T03:42:44+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 87,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.84,
+        "draw": 0.12,
+        "away": 0.04
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到87分钟，Korea Republic目前2比1领先Czech Republic，主队已经非常接近拿下比赛。从已发生的进程看，Czech Republic在59分钟由Ladislav Krejci先破门，但Korea Republic随后在67分钟由In-beom Hwang扳平、80分钟由Hyeon-gyu Oh反超，说明比赛后段的走势明显向主队倾斜。统计层面主队优势也较清晰：控球63%对37%，总射门14比4，射正6比2，且客队门将已有4次扑救，反映Korea Republic整体制造机会更多、持续压制能力更强。基于当前仅剩常规时间末段和补时，领先一方的胜率显著上升，因此主胜概率维持最高；同时由于只差1球，客队仍有末段直接扳平的可能，所以平局概率保留在中等偏低区间；而客队需要在极短时间内连进至少2球逆转，结合其到目前为止只有4次射门的数据，这种路径概率最低。最可能的最终比分因此仍是2比1，既符合当前主队领先格局，也符合末段通常进球总量有限的比赛分布。后续进球逻辑上，如果再出现进球，更可能来自两种情形：一是Czech Republic压上后的定位球或禁区冲击带来扳平机会，二是Korea Republic利用客队压上身后空间完成反击锁定胜局。球员层面，刚完成反超且替补登场见效的Hyeon-gyu Oh，以及同样具备冲击力的Hee-chan Hwang，是主队最现实的后续得分点；客队若形成最后一波高空或禁区强攻，替补中锋Tomas Chory是相对更合理的潜在进球人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0159125,
+      "tokens": {
+        "input": 2921,
+        "output": 574
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.138
+    },
+    {
+      "submitted_at": "2026-06-12T03:48:46+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.09,
+        "away": 0.03
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已到90分钟，Korea Republic以2-1领先，时间对领先一方非常有利，因此主胜概率明显占优。结合现有比赛进程，Czech Republic在59分钟由Ladislav Krejci先开纪录，但Korea Republic随后在67分钟由In-beom Hwang扳平，并在80分钟由替补出场后的Hyeon-gyu Oh反超，说明下半场后段主队对比赛的控制和调整效果更好。数据层面，Korea Republic以14比4领先总射门、6比2领先射正、控球率64%对36%，整体压制力更强，且捷克门将已有4次扑救，也反映客队持续承压。基于当前90分钟的比分和场面，剩余时间通常只够少量补时，比赛最常见结局是维持现比分结束，因此将2-1设为最可能最终比分，同时主胜概率维持在高位。平局仍保留一定可能，主要来自Czech Republic在补时阶段压上形成一次有效机会；但考虑到其全场创造力和射门产量都偏低，追平概率有限。客胜则需要连续两球逆转，在当前时间节点下属于极低概率事件。后续进球逻辑上，若补时出现进球，更可能来自比赛末段继续获得空间的Korea Republic，Hyeon-gyu Oh作为刚替补建功的前场点位，属于主队追加进球的相对更可能人选；而若Czech Republic最后一搏奏效，Tomas Chory这类前场冲击点更符合补时追分场景。不过整体而言，补时再进球概率不高，比赛大概率就以Korea Republic 2-1获胜收尾。"
+      },
+      "sources": [],
+      "cost_usd": 0.0155475,
+      "tokens": {
+        "input": 3093,
+        "output": 521
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.337
+    },
+    {
+      "submitted_at": "2026-06-12T03:54:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Korea Republic",
+        "away": "Czech Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.11,
+        "away": 0.03
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前来到90分钟，Korea Republic以2-1领先Czech Republic，比赛已经进入尾声，主队胜率明显处于最高位。结合现有赛况，捷克在59分钟由Ladislav Krejci先破门，但韩国队随后在67分钟由In-beom Hwang扳平，并在80分钟由Hyeon-gyu Oh反超，说明下半场走势已经明显向主队倾斜。数据上韩国队总射门15比7、射正6比4、控球62%比38%，整体压制力和持续推进能力都更强，当前领先并且控场占优，使得他们守住优势的概率大幅上升。平局仍保留一定可能，主要来自伤停补时阶段捷克压上后的单次机会；但从比赛进程看，客队在被反超后没有体现出足够持续的进攻数据优势，因此扳平概率低于主队直接收下比赛。由于当前已到90分钟，新增进球空间很有限，最可能最终比分仍是2-1，这也与主胜为最高概率保持一致。未来进球逻辑上，如果还有进球，更可能出现在补时开放阶段：韩国队可能利用捷克压上后的身后空间由刚刚建功的Hyeon-gyu Oh再度完成终结；而捷克若追平，替补中锋Tomas Chory这类前场冲击点在最后时段的定位球或传中争顶中具备相对更现实的威胁。总体来看，主队已占据时间、比分和场面三重优势，预测以韩国队小胜结束为主。"
+      },
+      "sources": [],
+      "cost_usd": 0.0151275,
+      "tokens": {
+        "input": 3117,
+        "output": 489
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.319
+    }
+  ]
+}

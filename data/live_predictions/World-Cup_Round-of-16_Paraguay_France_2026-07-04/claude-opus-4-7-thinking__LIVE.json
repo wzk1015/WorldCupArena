@@ -1,0 +1,242 @@
+{
+  "fixture_id": "World-Cup_Round-of-16_Paraguay_France_2026-07-04",
+  "provider_fixture_id": "19606967",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-04T22:38:23+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 83,
+    "score": {
+      "home": 0,
+      "away": 1
+    },
+    "home": "Paraguay",
+    "away": "France",
+    "competition": "World Cup",
+    "stage": "Round of 16",
+    "kickoff_utc": "2026-07-04T21:00:00+00:00",
+    "venue": "Philadelphia Stadium",
+    "venue_city": "Philadelphia"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.05,
+      "draw": 0.13,
+      "away": 0.82
+    },
+    "most_likely_score": "0-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "目前比赛进行到第83分钟，法国凭借姆巴佩（基利安·姆巴佩）第70分钟点球1-0领先巴拉圭。从场面看，法国完全掌控比赛节奏——控球率高达78%，射门11次（2次射正），角球10个，而巴拉圭仅有22%控球、3次射门且0射正，进攻端始终无法制造真正的威胁。巴拉圭虽然通过频繁换人（Canale、Caballero、Ávalos、Mauricio先后登场）加强进攻力量，但留给他们的时间只剩不到10分钟外加补时，且法国防线在1球领先下会更倾向于稳守和控球消耗时间。综合来看，法国获胜的概率非常高，给到0.82；巴拉圭若想扳平需要在极短时间内打破长时间未能射正的困局，胜平的空间被极度压缩，平局约0.13，巴拉圭反超几乎无望，约0.05。最可能的最终比分锁定为0-1，法国晋级八强。至于剩余时间的进球者，法国依靠反击仍有扩大比分的机会，姆巴佩状态火热且是点球主罚人，最有可能再下一城；替补登场的巴尔科拉（布拉德利·巴尔科拉）在开阔空间下也具备终结能力。巴拉圭若孤注一掷压上，理论上换上的中锋加布里埃尔·阿瓦洛斯有争顶机会扳平，但概率明显偏低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 20292,
+    "output": 712
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.08825240000000001,
+  "wall_seconds": 20.888,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.05, \"draw\": 0.13, \"away\": 0.82},\n  \"most_likely_score\": \"0-1\",\n  \"scorers\": [\n    {\"player\": \"Kylian Mbappé\", \"team\": \"away\", \"minute\": 89, \"p\": 0.11},\n    {\"player\": \"Bradley Barcola\", \"team\": \"away\", \"minute\": 90, \"p\": 0.06},\n    {\"player\": \"Gabriel Ávalos\", \"team\": \"home\", \"minute\": 88, \"p\": 0.05}\n  ],\n  \"reasoning\": {\"overall\": \"目前比赛进行到第83分钟，法国凭借姆巴佩（Kylian Mbappé）第70分钟点球1-0领先巴拉圭。从场面看，法国完全掌控比赛节奏——控球率高达78%，射门11次（2次射正），角球10个，而巴拉圭仅有22%控球、3次射门且0射正，进攻端始终无法制造真正的威胁。巴拉圭虽然通过频繁换人（Canale、Caballero、Ávalos、Mauricio先后登场）加强进攻力量，但留给他们的时间只剩不到10分钟外加补时，且法国防线在1球领先下会更倾向于稳守和控球消耗时间。综合来看，法国获胜的概率非常高，给到0.82；巴拉圭若想扳平需要在极短时间内打破长时间未能射正的困局，胜平的空间被极度压缩，平局约0.13，巴拉圭反超几乎无望，约0.05。最可能的最终比分锁定为0-1，法国晋级八强。至于剩余时间的进球者，法国依靠反击仍有扩大比分的机会，姆巴佩状态火热且是点球主罚人，最有可能再下一城；替补登场的巴尔科拉（Bradley Barcola）在开阔空间下也具备终结能力。巴拉圭若孤注一掷压上，理论上换上的中锋Gabriel Ávalos有争顶机会扳平，但概率明显偏低。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-04T21:04:56+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 4,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "France",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-04T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.28,
+        "away": 0.54
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 58,
+          "p": 0.34,
+          "team": "away"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 72,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Antoine Griezmann",
+          "minute": 65,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Randal Kolo Muani",
+          "minute": 80,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Miguel Almirón",
+          "minute": 70,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Julio Enciso",
+          "minute": 78,
+          "p": 0.09,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "开场第4分钟，巴拉圭与法国仍是0-0，双方控球率各占一半，比赛刚刚拉开序幕，尚无实质性事件可供参考，因此判断主要基于赛前实力对比与世界杯淘汰赛的整体走向。法国作为夺冠热门，中前场星光熠熠，个人能力与整体配合明显强于巴拉圭，在淘汰赛阶段控场和终结能力更有保障；巴拉圭虽然凭借顽强防守和快速反击闯入16强，但正面对抗法国时进攻资源相对有限，更可能采取深度防守、伺机反击的策略。综合来看，法国胜出的概率明显高于巴拉圭，同时考虑到淘汰赛比分普遍偏紧、巴拉圭防守韧性较强，平局的可能性也不算低，因此给出主胜约18%、平局约28%、客胜约54%的分布。最可能的最终比分定为0-1，这符合客队胜率最高的判断，也贴合淘汰赛中一球小胜的常见剧本。后续进球方面，Mbappé作为法国头号终结点，任何一次快下或定位球都可能改写比分，给予最高的进球概率；Dembélé的突破和Griezmann的串联能力同样是破密集防守的关键选项，Kolo Muani则可能在下半场替补登场后利用体能差扩大战果。巴拉圭方面，若能形成反击，Almirón的速度和Enciso的灵光一现是最有可能的破门来源，但整体概率明显低于法国球员。所有进球时间均安排在第4分钟之后，符合当前比赛进程。"
+      },
+      "sources": [],
+      "cost_usd": 0.0894586,
+      "tokens": {
+        "input": 19733,
+        "output": 889
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.132
+    },
+    {
+      "submitted_at": "2026-07-04T22:10:23+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 55,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "France",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-04T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.27,
+        "away": 0.65
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 72,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Bradley Barcola",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Antoine Griezmann",
+          "minute": 68,
+          "p": 0.11,
+          "team": "away"
+        },
+        {
+          "player": "Marcus Thuram",
+          "minute": 85,
+          "p": 0.09,
+          "team": "away"
+        },
+        {
+          "player": "Antonio Sanabria",
+          "minute": 80,
+          "p": 0.07,
+          "team": "home"
+        },
+        {
+          "player": "Miguel Almirón",
+          "minute": 88,
+          "p": 0.05,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "本场1/4决赛前的16强战进行到下半场第55分钟，比分依旧是0-0。从场面数据看，法国队完全掌控了比赛节奏：控球率高达80%，7次角球对巴拉圭0次，射门5比2占优，明显在对方半场展开持续压制；巴拉圭则被迫深度退防，仅靠零星反击和门将扑救维持均势（已有1次门将扑救记录）。上半场巴尔科拉(布拉德利·巴尔科拉)第19分钟吃到黄牌是唯一的重要事件，并未改变法国进攻主导的格局。基于此，法国获胜概率大幅上调至0.65，平局0.27，巴拉圭爆冷仅0.08——考虑到淘汰赛紧张氛围下法国可能久攻不下、进入加时的风险，因此保留一定平局空间。最可能的最终比分设为0-1，即法国在下半场后段凭借持续压制打入制胜球；65-85分钟是最可能的破门窗口，此时体能下降、防线出现空档。后续进球预测集中在法国队：姆巴佩(Mbappé)作为头号终结者概率最高，登贝莱(Dembélé)边路突破、巴尔科拉替补冲击、格列兹曼(Griezmann)定位球威胁均纳入考量；巴拉圭方面若能反击得手，萨纳夫里亚(Sanabria)和阿尔米隆(Almirón)是最具威胁的前场球员，但概率较低。所有预测进球时间均设定在55分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0912272,
+      "tokens": {
+        "input": 19866,
+        "output": 958
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.643
+    },
+    {
+      "submitted_at": "2026-07-04T22:38:23+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 83,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Paraguay",
+        "away": "France",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-04T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.13,
+        "away": 0.82
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第83分钟，法国凭借姆巴佩（基利安·姆巴佩）第70分钟点球1-0领先巴拉圭。从场面看，法国完全掌控比赛节奏——控球率高达78%，射门11次（2次射正），角球10个，而巴拉圭仅有22%控球、3次射门且0射正，进攻端始终无法制造真正的威胁。巴拉圭虽然通过频繁换人（Canale、Caballero、Ávalos、Mauricio先后登场）加强进攻力量，但留给他们的时间只剩不到10分钟外加补时，且法国防线在1球领先下会更倾向于稳守和控球消耗时间。综合来看，法国获胜的概率非常高，给到0.82；巴拉圭若想扳平需要在极短时间内打破长时间未能射正的困局，胜平的空间被极度压缩，平局约0.13，巴拉圭反超几乎无望，约0.05。最可能的最终比分锁定为0-1，法国晋级八强。至于剩余时间的进球者，法国依靠反击仍有扩大比分的机会，姆巴佩状态火热且是点球主罚人，最有可能再下一城；替补登场的巴尔科拉（布拉德利·巴尔科拉）在开阔空间下也具备终结能力。巴拉圭若孤注一掷压上，理论上换上的中锋加布里埃尔·阿瓦洛斯有争顶机会扳平，但概率明显偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.08825240000000001,
+      "tokens": {
+        "input": 20292,
+        "output": 712
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.888
+    }
+  ]
+}

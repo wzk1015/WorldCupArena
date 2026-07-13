@@ -1,0 +1,795 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-7_Brazil_Morocco_2026-06-13",
+  "provider_fixture_id": "19609131",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-14T00:01:31+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "home": "Brazil",
+    "away": "Morocco",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-13T22:00:00+00:00",
+    "venue": "New York New Jersey Stadium",
+    "venue_city": "East Rutherford"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.19,
+      "draw": 0.67,
+      "away": 0.14
+    },
+    "most_likely_score": "1-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前比赛已经进入90分钟，比分1比1，常规时间已基本走完，因此平局概率明显高于任一方取胜。已知进程显示摩洛哥由Ismael Saibari在21分钟先开纪录，巴西则由Vinicius Junior在32分钟扳平，之后直到90分钟都没有再出现进球，说明比赛在下半场虽然有人员调整，但比分层面始终胶着。数据上巴西稍占主动，射门13比12、射正5比2、角球6比1、控球52%对48%，这说明巴西整体制造机会能力略强，因此在最后补时阶段其绝杀概率略高于摩洛哥；但这种优势并不足以在只剩极短时间的情况下压倒平局结果。基于当前时间点，胜平负概率调整为巴西胜19%、平局67%、摩洛哥胜14%，其中平局是最稳态结果。最可能最终比分因此保持为1-1，既符合当前长时间僵持的走势，也符合90分钟节点后新增进球空间很有限的现实。未来进球逻辑上，只能考虑补时阶段的少量机会：巴西因射正和角球优势，更可能由已进球的Vinicius Junior或替补登场的Matheus Cunha完成最后一击；摩洛哥若抓住转换或定位球，则Ismael Saibari与刚在89分钟登场、体能充沛的Soufiane Rahimi是相对更合理的人选。不过总体上，后续再进球的总概率仍低于比赛就此维持1比1结束的概率。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 3133,
+    "output": 523
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0156775,
+  "wall_seconds": 11.242,
+  "error": null,
+  "raw_text": "{\"win_probs\":{\"home\":0.19,\"draw\":0.67,\"away\":0.14},\"most_likely_score\":\"1-1\",\"scorers\":[{\"player\":\"Vinicius Junior\",\"team\":\"home\",\"minute\":91,\"p\":0.08},{\"player\":\"Matheus Cunha\",\"team\":\"home\",\"minute\":93,\"p\":0.06},{\"player\":\"Soufiane Rahimi\",\"team\":\"away\",\"minute\":92,\"p\":0.05},{\"player\":\"Ismael Saibari\",\"team\":\"away\",\"minute\":94,\"p\":0.04}],\"reasoning\":{\"overall\":\"当前比赛已经进入90分钟，比分1比1，常规时间已基本走完，因此平局概率明显高于任一方取胜。已知进程显示摩洛哥由Ismael Saibari在21分钟先开纪录，巴西则由Vinicius Junior在32分钟扳平，之后直到90分钟都没有再出现进球，说明比赛在下半场虽然有人员调整，但比分层面始终胶着。数据上巴西稍占主动，射门13比12、射正5比2、角球6比1、控球52%对48%，这说明巴西整体制造机会能力略强，因此在最后补时阶段其绝杀概率略高于摩洛哥；但这种优势并不足以在只剩极短时间的情况下压倒平局结果。基于当前时间点，胜平负概率调整为巴西胜19%、平局67%、摩洛哥胜14%，其中平局是最稳态结果。最可能最终比分因此保持为1-1，既符合当前长时间僵持的走势，也符合90分钟节点后新增进球空间很有限的现实。未来进球逻辑上，只能考虑补时阶段的少量机会：巴西因射正和角球优势，更可能由已进球的Vinicius Junior或替补登场的Matheus Cunha完成最后一击；摩洛哥若抓住转换或定位球，则Ismael Saibari与刚在89分钟登场、体能充沛的Soufiane Rahimi是相对更合理的人选。不过总体上，后续再进球的总概率仍低于比赛就此维持1比1结束的概率。\"},\"sources\":[]}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-13T22:05:51+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 5,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.53,
+        "draw": 0.29,
+        "away": 0.18
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Unknown",
+          "minute": 61,
+          "p": 0.21,
+          "team": "home"
+        },
+        {
+          "player": "Unknown",
+          "minute": 74,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比赛进行到5分钟，比分仍为0比0，且暂无关键事件出现，现有统计仅显示双方控球率各为50%，说明开局阶段整体较为均衡，比赛节奏和场面信息都非常有限。在这种样本极少的赛中时点，预测应主要基于当前时间、比分状态以及两队赛前相对实力框架进行微调：0比0在第5分钟属于完全正常的开局，不足以显著削弱任何一方，但巴西作为整体实力更强的一方，仍然保有更高的取胜基础概率，因此主胜保持领先；同时由于比赛刚开始、比分未被打破，平局概率也维持在较高区间；摩洛哥客胜概率存在，但明显低于前两者。最可能最终比分判断为1比0，因为在早段没有形成明显压制信号时，低比分结果通常更稳健，而主队优势更多体现在更高的率先进球与把握一次关键机会的能力上。后续进球逻辑方面，若比赛继续维持当前这种均衡开局，首球更可能出现在下半场或上半场后段，由巴西完成；考虑到没有可用的官方球员级实时数据，未来进球者只能保守列为Unknown，其中主队进球概率高于客队。若摩洛哥后续能继续把比赛拖入僵持，其扳平或偷到一球的可能性会提升，但截至第5分钟，主队小胜仍是最合理的赛中更新结论。"
+      },
+      "sources": [],
+      "cost_usd": 0.009465,
+      "tokens": {
+        "input": 1044,
+        "output": 457
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.732
+    },
+    {
+      "submitted_at": "2026-06-13T22:11:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 11,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.37,
+        "draw": 0.36,
+        "away": 0.27
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到11分钟，当前比分仍是0比0。仅根据现有赛中信息看，开局阶段的场面更偏向摩洛哥：他们已有2次射门，控球率达到70%，而巴西暂时0次射门、控球率仅30%，说明前11分钟摩洛哥在持球和推进上更主动，巴西更多处于观察和调整阶段。不过，时间点还很早，样本非常小，0比0本身仍然是最强的即时比分锚点，因此平局概率依旧维持在较高水平。综合巴西整体实力预期与摩洛哥更好的开局表现，巴西的胜率相比赛前应有一定下调，但还没有被完全逆转；摩洛哥的即时不败概率则因前11分钟的控场而有所提升。基于当前没有出现进球、红牌、点球或持续高压转化为高质量机会的明确信号，最可能的最终比分仍先落在0比0，这也与当前平局概率处于高位相匹配。后续进球逻辑上，如果比赛走势延续，摩洛哥有机会继续通过控球制造下一波威胁；但如果巴西在中前场逐步找回节奏，他们的进攻质量通常会在比赛深入后上升。因此本次更新不强行给出具体未来进球人选，等待更明确的射门分布、关键机会或官方球员事件信息后再细化会更稳健。"
+      },
+      "sources": [],
+      "cost_usd": 0.01232,
+      "tokens": {
+        "input": 2222,
+        "output": 451
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.518
+    },
+    {
+      "submitted_at": "2026-06-13T22:17:49+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.4,
+        "away": 0.26
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到17分钟，比分仍是0比0。就现有赛中信息看，摩洛哥开局阶段在数据上更主动：控球率59%对41%领先，射门6比1明显占优，说明巴西暂时未能持续把比赛带入自己熟悉的压制节奏。与此同时，事件列表为空，代表到目前为止没有出现进球、红牌、点球或换人等会显著改变基线概率的强事件，因此预测需要主要依据当前比分、比赛时间和这17分钟内的基础场面数据来调整。相比开赛前的名义实力，巴西通常仍有更高的长期反弹能力，但在本场实时状态下，摩洛哥前17分钟的控球与射门优势削弱了巴西即时胜率，且0比0进入比赛中段前，会自然抬高平局概率。基于这一点，本次更新将平局设为最高结果概率，其次是巴西主胜，摩洛哥客胜略低但并不低到可以忽略，因为他们已经展现出一定前场推进效率。最可能最终比分因此维持在0比0，这既符合当前时间点无进球的事实，也符合平局概率最高的约束；同时，1比1会是次一级的接近结果，而若巴西后续提升控制力，1比0也是可行路径。未来进球逻辑上，若比赛继续按照现阶段节奏发展，下一球并非高确定性事件，更多取决于两队能否把目前的射门量转化为禁区内高质量机会。由于实时状态中没有提供官方球员级射门或首发信息，无法可靠锁定具体个人，因此后续可能进球者只能以未知球员占位表示；时间上更倾向落在下半场中段到末段，因为前17分钟虽有摩洛哥场面优势，但尚未形成已兑现的破门信号，而巴西若完成调整，通常会在比赛推进后提升进攻质量。"
+      },
+      "sources": [],
+      "cost_usd": 0.01165,
+      "tokens": {
+        "input": 1078,
+        "output": 597
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.834
+    },
+    {
+      "submitted_at": "2026-06-13T22:23:49+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 23,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.39,
+        "draw": 0.36,
+        "away": 0.25
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到23分钟，比分仍为0比0，场面信息非常有限且暂无关键事件记录，因此预测需要主要依据时间点、比分状态以及现有基础数据进行更新。巴西控球率53%略占优势，但摩洛哥总射门6比3反而更多，说明比赛并非巴西单方面压制，摩洛哥在进攻尝试和推进效率上具备一定威胁；与此同时，角球1比0、犯规3比4都显示比赛节奏存在对抗，但还没有形成足以显著改写胜负预期的强烈信号。在这种23分钟0比0的局面下，平局概率会较开赛前有所上升，因为可用比赛时间减少且尚未出现进球，但考虑到巴西整体实力与轻微控球优势，其赢面仍保持全场最高。基于此，当前更合理的胜平负分布是巴西胜略高、平局次之、摩洛哥胜最低。最终比分方面，既然主胜概率最高，最可能比分必须对应巴西小胜，而在比赛尚处上半场中段、双方射门数都不低但转化尚未出现的情况下，1比0比2比0或2比1更稳健，也比0比0更符合巴西仍保有最高胜率的判断。后续进球逻辑上，比赛并未显示单边围攻，更像是巴西掌控部分球权、摩洛哥用更直接方式制造射门，因此若出现下一球，大概率来自下半场战术调整、个人能力兑现或定位球质量提升。不过由于当前实时数据未提供首发、射正、预期进球或具体球员事件，无法可靠锁定23分钟之后最可能的具体进球者，因此本次未来进球者列表保持为空，以避免在缺乏官方/API球员信息时做出不稳定预测。"
+      },
+      "sources": [],
+      "cost_usd": 0.010645,
+      "tokens": {
+        "input": 1096,
+        "output": 527
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.062
+    },
+    {
+      "submitted_at": "2026-06-13T22:29:56+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 29,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.31,
+        "draw": 0.29,
+        "away": 0.4
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到29分钟，Brazil目前0比1落后Morocco，现有唯一进球来自21分钟Ismael Saibari，助攻者是Brahim Díaz。基于当前赛况，虽然Brazil控球55%略占优，但进攻产出一般，3次射门且0次射正，说明控球尚未有效转化为真正威胁；Morocco控球45%但已经完成7次射门、1次射正并取得进球，反映其反击和向前推进效率更高。就赛中概率更新而言，客队在先取得领先且场面数据不落下风的情况下，away胜率应维持最高；但由于时间仍早、Brazil整体实力和后续压上空间仍在，home逆转并未失去可能，因此不会把away胜率拉得过高，平局也保留相当概率。综合当前比分、时间节点和射门对比，最可能的最终比分是0-1，这既符合Morocco已领先的现实，也符合Brazil暂时缺少射正、短时内扳平把握有限的走势。后续进球逻辑上，若Brazil提升前场压迫并增加禁区触球，最可能由核心攻击手完成追分；而Morocco若继续获得转换进攻空间，现有进球人与助攻人所在的前场连线仍是最有希望扩大比分的来源。因此未来潜在进球人优先考虑Vinícius Júnior、Rodrygo，以及Morocco的Ismael Saibari、Brahim Díaz，且预测分钟均放在29分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.010625,
+      "tokens": {
+        "input": 1178,
+        "output": 512
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.975
+    },
+    {
+      "submitted_at": "2026-06-13T22:35:58+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 35,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.24,
+        "draw": 0.29,
+        "away": 0.47
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第35分钟，Brazil暂时0比1落后Morocco，当前唯一进球来自第21分钟Ismael Saibari，助攻者是Brahim Díaz。基于现有赛中信息，虽然Brazil控球率53%略占优，但进攻产出偏弱，3次射门且0次射正，说明控球暂时没有转化为足够直接的威胁；反而Morocco在更少控球下已经完成12次射门、2次射正，并把一次关键机会转化为进球，比赛内容上客队的进攻推进和终结效率明显更好。因此，相比开场前，主队取胜概率已经明显下调，客队领先且场面制造机会更多，away胜面目前最高。与此同时，比赛还处于上半场中后段，Brazil作为传统强队仍有较长时间调整和反扑，平局概率不能低估，所以draw仍保持在接近三成；但在主队尚未形成射正的情况下，直接逆转所需条件更多，home胜率低于平局与客胜。最可能最终比分判断为0-1：这既符合当前客队领先的状态，也符合到目前为止Brazil进攻效率不足、Morocco防守端暂未被射正的走势。若后续出现进球，更现实的路径一是Brazil下半场加强压上后扳平，二是Morocco利用Brazil压上后的空间再进一球，因此候选后续进球人更偏向已有关键参与者Brahim Díaz，以及Brazil方面在持续施压下产生的团队性扳平机会。整体而言，当前更新应以Morocco守住优势为主线，平局为次优结果，Brazil逆转概率相对最低。"
+      },
+      "sources": [],
+      "cost_usd": 0.010535,
+      "tokens": {
+        "input": 1196,
+        "output": 503
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.055
+    },
+    {
+      "submitted_at": "2026-06-13T22:41:55+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 41,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.36,
+        "draw": 0.34,
+        "away": 0.3
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 68,
+          "p": 0.19,
+          "team": "home"
+        },
+        {
+          "player": "Ismael Saibari",
+          "minute": 74,
+          "p": 0.13,
+          "team": "away"
+        },
+        {
+          "player": "Brahim Díaz",
+          "minute": 79,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Bruno Guimarães",
+          "minute": 83,
+          "p": 0.09,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到41分钟，当前比分1比1。摩洛哥先由Ismael Saibari在21分钟破门，巴西则在32分钟由Vinicius Junior扳平，说明双方上半场都已经找到过有效终结机会。就现有数据看，巴西控球52%略占优，但摩洛哥总射门12比4明显更多、射正2比1也稍强，说明摩洛哥在进攻推进和制造打门次数上更活跃，而巴西的效率更高，有限机会就完成了进球。由于比分已经被扳平，且比赛仍有较长时间，胜平负概率相比0比0开局会更向‘双方都有继续进球可能’倾斜；但考虑到巴西在整体阵容强度与控球稳定性上通常更具后程优势，同时扳平后心理势头回升，因此主胜仍被略微抬高，不过不会形成明显压倒性优势，平局依然保持很强可能。最可能最终比分给到2比1，是因为当前1比1基础上，再出现一个决定胜负的进球比连续多球更常见，而巴西在扳平后更有机会利用下半场调整与持续控球把比赛推向小胜。未来进球人选方面，优先考虑已经取得进球、参与度高或直接制造过进球的球员，因此巴西侧Vinicius Junior仍是最现实的后续得分点，Bruno Guimarães作为已经送出助攻的中前场球员也具备后插上威胁；摩洛哥侧Ismael Saibari已完成破门，延续状态的概率最高，Brahim Díaz则因已有助攻、持续参与进攻组织，成为客队后续最可能的补充得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.014915,
+      "tokens": {
+        "input": 2456,
+        "output": 585
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.108
+    },
+    {
+      "submitted_at": "2026-06-13T22:48:00+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.35,
+        "draw": 0.39,
+        "away": 0.26
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛来到45分钟、比分1-1，半场前双方各入一球，比赛仍处于明显开放但结果未分的状态。已有进球过程显示，Morocco先由Ismael Saibari破门，随后Brazil由Vinicius Junior扳平，说明两队都已经证明自己能在正常进攻中创造有效终结。就现有数据看，Brazil控球56%略占优势，但Morocco总射门12比4明显更多，且射正2比1也不落下风，这意味着场面并不是Brazil单方面压制，Morocco在转换和直接推进上的威胁真实存在。Brazil半场末段还吃到两张黄牌，这会在下半场一定程度限制防守对抗强度，也削弱其把比赛完全拉回自己节奏的确定性。基于当前1-1的比分、半场时间点以及数据呈现出的对攻但效率有限特征，平局概率被上调为最高；同时考虑到Brazil整体实力和控球能力，主胜仍保留较高可能，但不足以压过平局。Away取胜并非没有路径，不过在客队已经打出高射门量却只领先过短时间的前提下，其转化为最终胜势的概率仍略低。最可能最终比分因此维持在1-1：这既符合半场战平的常见收敛路径，也符合目前双方机会分布虽活跃但真正高质量终结并不持续的比赛结构。后续进球并非不可能，但从现有信息出发，更合理的更新是下半场总进球预期适中、而不是必然继续快速拉高，因此未来具体进球者暂不强推。"
+      },
+      "sources": [],
+      "cost_usd": 0.015205,
+      "tokens": {
+        "input": 2512,
+        "output": 595
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.674
+    },
+    {
+      "submitted_at": "2026-06-13T23:14:16+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 59,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.39,
+        "draw": 0.35,
+        "away": 0.26
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 74,
+          "p": 0.19,
+          "team": "home"
+        },
+        {
+          "player": "Ismael Saibari",
+          "minute": 78,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Bruno Guimarães",
+          "minute": 83,
+          "p": 0.09,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到59分钟，当前Brazil与Morocco战成1比1，局面仍然开放。已知进程上，Morocco在21分钟由Ismael Saibari先破门，Brazil在32分钟由Vinicius Junior扳平，说明双方都已经证明了各自能在运动战中创造并完成机会。数据层面，Brazil控球55%并有4个角球，显示其在阵地推进和持续压制上略占优势；但Morocco总射门12比6明显更多，说明客队反击和直接制造威胁的效率不低。两队目前射正都是2次，因此比分打平与现阶段攻防质量基本吻合。进入下半场后Brazil在46分钟连续换人，通常意味着主队希望提升后场稳定性与中场覆盖，在主场环境与整体控球略优的背景下，Brazil后30分钟小幅占优，所以主胜概率被更新为最高，但由于Morocco射门数量领先、且比赛仍有充足时间，平局概率仍然很高，客胜也不能排除。最终比分逻辑上，1比1已经是强竞争结果，但考虑到剩余时间足够再产生1球、且双方此前都已取得正常进球，2比1比继续1比1更略占先，因此将其设为最可能最终比分，并与主胜最高概率保持一致。后续进球者方面，更优先考虑已在比赛中形成直接产出的Brazil攻击点Vinicius Junior，以及已有进球记录、反击威胁突出的Ismael Saibari；同时Bruno Guimarães已经送出助攻，若Brazil继续加强中前场压迫，他作为二线跟进者也有一定后续得分机会。整体判断是Brazil略占先机，但比赛大概率只会再出现0到1个进球，若有下一球，更倾向于由主队率先打入。"
+      },
+      "sources": [],
+      "cost_usd": 0.0154475,
+      "tokens": {
+        "input": 2627,
+        "output": 592
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.972
+    },
+    {
+      "submitted_at": "2026-06-13T23:20:22+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 65,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.38,
+        "draw": 0.36,
+        "away": 0.26
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Guimarães",
+          "minute": 83,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Ismael Saibari",
+          "minute": 81,
+          "p": 0.09,
+          "team": "away"
+        },
+        {
+          "player": "Brahim Díaz",
+          "minute": 86,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到65分钟，当前比分1比1，局面仍然开放。已知进程显示摩洛哥由Ismael Saibari先入球，巴西随后由Vinicius Junior扳平，说明双方都已经证明了各自能够在运动战中制造有效威胁。数据层面，巴西控球56%略占主动，角球4比0也说明其阵地推进和持续施压能力更强；但摩洛哥总射门12比7反而更多，意味着他们的反击和直接进攻效率不低，比赛并不是巴西单边压制。射正方面巴西3比2稍优，结合1比1的实时比分，可以判断巴西在机会质量和控场稳定性上略有优势，但优势不足以把平局概率压得很低。基于65分钟这一时间点，剩余常规时间与补时大约还有25至30分钟，比赛通常仍有1球空间，但出现多球大开大合的概率已低于上半场初段，因此胜平负分布应以主队小优、平局紧随其后、客胜第三的结构为主。最可能最终比分给到2比1巴西，一方面符合巴西当前略高的控球、角球和射正表现，另一方面也贴合世界杯强队在最后阶段凭个人能力或持续压迫拿到制胜球的常见路径；同时1比1仍是非常强的单一结果竞争者，所以平局概率保持在较高水平。后续进球人方面，优先考虑已在本场取得进球且继续处于高威胁位置的Vinicius Junior，以及已送出助攻、参与前场组织和二次进攻的Bruno Guimarães；摩洛哥若再进球，最合理的候选仍是已经破门的Ismael Saibari和送出助攻的Brahim Díaz，因为现有赛中信息里他们是最明确的进攻落点。整体来看，本次更新较倾向巴西在最后阶段凭更强的控场和边路个人能力拿下比赛，但摩洛哥的射门数量提醒我们客队随时可能通过反击把比赛重新拉回平局甚至制造冷门。"
+      },
+      "sources": [],
+      "cost_usd": 0.0164225,
+      "tokens": {
+        "input": 2627,
+        "output": 657
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.645
+    },
+    {
+      "submitted_at": "2026-06-13T23:26:18+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.39,
+        "draw": 0.37,
+        "away": 0.24
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 79,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Guimarães",
+          "minute": 84,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Ismael Saibari",
+          "minute": 82,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到71分钟，当前比分1比1，已经进入决定性阶段，平局基线明显上升，但由于仍有接近20分钟常规时间，且双方都已经创造出一定数量的射门，本场仍保留再进球空间。从已知进程看，Morocco在21分钟由Ismael Saibari先开纪录，Brazil在32分钟由Vinicius Junior扳平，说明双方都已经证明了自己能够在运动战中制造有效终结。数据层面，Brazil控球58%并有4个角球，显示其在阵地推进和持续施压方面略占优势；虽然Morocco总射门12次高于Brazil的8次，但Brazil的比赛控制力和下半场调整空间更好，这使主队在最后阶段取得制胜球的概率略高于对手。基于71分钟1比1这一时点，平局仍是非常强的结果候选，因此平局概率维持在较高水平；但综合Brazil更高控球、更多角球以及已完成的中场调整，主胜被小幅上调为最高单项概率，客胜则略低。最可能最终比分因此设为2-1，既符合主胜为最高概率，也符合比赛已进入后程、再出现1球决定胜负的常见赛中分布。后续进球者逻辑上，Brazil方面优先考虑已经取得进球且通常承担前场终结任务的Vinicius Junior，以及已送出助攻、能后插上制造威胁的Bruno Guimarães；Morocco方面则优先保留已打破僵局的Ismael Saibari作为反击中的主要得分候选。总体判断是：Brazil稍占上风，但Morocco的射门活跃度意味着比赛不会完全失去悬念。"
+      },
+      "sources": [],
+      "cost_usd": 0.0146825,
+      "tokens": {
+        "input": 2627,
+        "output": 541
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.415
+    },
+    {
+      "submitted_at": "2026-06-13T23:32:21+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 77,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.42,
+        "away": 0.24
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到77分钟，比分是1比1，已经进入典型的赛中收官阶段，平局概率因此被明显抬高。已知进程上，Morocco由Ismael Saibari先开纪录，Brazil在32分钟由Vinicius Junior扳平，此后直到现在再无进球，说明双方虽然都制造过威胁，但比赛整体没有形成持续高频破门。数据层面，Brazil控球59%并有4个角球，说明其更多掌握球权和阵地推进；Morocco总射门12比9反而更多，显示其反击或直接进攻效率不差。不过双方射正合计仅5次，且当前仍是平分，意味着接下来剩余时间内再出现多球的概率有限。基于77分钟的时间位置，单场结果从开放状态逐渐转向保守分布，平局仍是最大单项结果；但Brazil凭借更高控球、更多角球以及主导比赛节奏的迹象，赢面略高于Morocco，因此主胜保留次高概率，客胜最低。最可能最终比分保持在1比1，这既符合当前时间所剩不多的现实，也与双方至今机会质量并未压倒性倾斜相匹配。若后续再有进球，Brazil方向更可能来自已取得进球且持续处于前场核心区域的Vinicius Junior，或替补登场后具备禁区终结能力的Matheus Cunha；Morocco方面则仍以已经破门的Ismael Saibari这类前场直接威胁点最值得关注。总体判断是：平局最稳，但最后十多分钟仍存在单个制胜球窗口，且更偏向Brazil略占优势的一方。"
+      },
+      "sources": [],
+      "cost_usd": 0.016845,
+      "tokens": {
+        "input": 2874,
+        "output": 644
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.372
+    },
+    {
+      "submitted_at": "2026-06-13T23:38:25+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 83,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.46,
+        "away": 0.2
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到83分钟，比分是1-1，已经进入典型的赛末阶段，剩余常规时间加补时有限，因此平局概率自然上升并成为当前最大结果。已知进程上，摩洛哥由Ismael Saibari在21分钟先开纪录，巴西由Vinicius Junior在32分钟扳平，此后很长时间没有再出现进球，说明双方在进入下半场后虽然仍有调整和推进，但比赛整体已从早段的破门阶段转入更谨慎的收官阶段。数据层面，巴西控球58%稍占主动，角球4比0也说明其阵地推进更多；但摩洛哥总射门12比9反而领先，显示客队反击和直接攻击同样有效，双方威胁度并没有拉开明显差距。射正方面巴西3比2，仅有轻微优势，不足以支撑巴西在83分钟时成为明显更高胜率一方。结合这个时间点，任何下一球都极可能直接决定比赛走向，但由于目前场面并非单边压制、且双方都已完成多次换人补充体能，最终再无进球的路径仍然最稳，因此把平局放在最高概率。巴西作为主队且在控球、角球和持续施压迹象上略优，所以主胜概率高于客胜；摩洛哥射门数更多，说明其偷袭绝非低威胁，因此客胜仍保留现实空间。基于这些因素，最可能最终比分维持在1-1，同时次级结果是巴西2-1和摩洛哥1-2。未来进球人选方面，只考虑83分钟之后，巴西若完成绝杀，更可能来自已有进球感觉、个人突破能力强的Vinicius Junior，或下半场替补登场、体能更充沛的Matheus Cunha；摩洛哥若再度领先，先前已进球的Ismael Saibari仍是最直接的终结点，而64分钟登场的Chemsdine Talbi则具备利用比赛末段空间制造冲击的可能。总体判断是：平局最稳，巴西小幅更接近绝杀，但优势不足以压过1-1守到终场的基础概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.014435,
+      "tokens": {
+        "input": 1730,
+        "output": 674
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.337
+    },
+    {
+      "submitted_at": "2026-06-13T23:44:07+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 89,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.26,
+        "draw": 0.61,
+        "away": 0.13
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛来到89分钟，比分1比1，常规时间所剩极少，因此平局概率被显著抬高。已知比赛进程中，Morocco由Ismael Saibari在21分钟先开纪录，Brazil在32分钟由Vinicius Junior扳平，之后虽然Brazil控球55%略占优势、角球4比0领先，且射正4比2稍好，但Morocco总射门12比10并未处于被动，说明整体场面更接近拉锯而不是Brazil单方面围攻。下半场双方都进行了人员调整，但现有信息里没有显示89分钟前再出现进球或决定性压制信号，所以从赛中更新角度看，胜负概率都要继续向平局收缩。基于当前时间点，最可能最终比分是1比1，这既符合剩余时间很短的现实，也符合双方到目前为止各有一段有效进攻、但都未形成持续高效终结的走势。若补时内再出球，Brazil因控球、角球和射正略优而拥有稍高的绝杀机会，因此主胜概率高于客胜；但Morocco射门数更多，反击偷一个的可能性仍然存在，所以仍保留一定客胜尾部概率。未来进球者方面，只考虑89分钟后的潜在得分人选，Brazil侧更可能来自已经取得进球、且通常承担前场终结任务的Vinicius Junior，或替补登场后具备禁区抢点能力的Matheus Cunha；Morocco侧则以此前已进球的Ismael Saibari和替补上场、可能在最后阶段冲击防线的Chemsdine Talbi作为更现实的人选。不过总体而言，补时阶段再进球的总概率不高，因而1比1仍是最稳健的终局判断。"
+      },
+      "sources": [],
+      "cost_usd": 0.01581,
+      "tokens": {
+        "input": 2874,
+        "output": 575
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.17
+    },
+    {
+      "submitted_at": "2026-06-13T23:49:44+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.68,
+        "away": 0.14
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已到90分钟，比分1比1，常规时间已经进入最后阶段，因此平局概率明显高于任何一方取胜。现有比赛进程显示，Morocco由Ismael Saibari在21分钟先入球，Brazil则由Vinicius Junior在32分钟扳平，之后长时间再无进球，说明双方在形成破门后的持续终结效率都较为有限。统计层面上，Brazil控球55%、总射门11次、射正4次、角球4次，场面略占主动；但Morocco总射门12次甚至更多，说明客队反击和推进同样有效，整体并不存在一边倒优势。基于90分钟这个时间节点，剩余时间通常只够补时内出现极少量高质量机会，所以1比1作为最终比分仍是最可能结果。概率上，Brazil因控球、射正和角球数据略优，绝杀机会稍高于Morocco，因此主胜概率略高于客胜，但两者都显著低于平局。后续进球逻辑方面，如补时出现制胜球，更可能来自已经在本场有直接威胁或刚替补登场、体能更好的前场球员；Brazil侧可关注已进球的Vinicius Junior以及替补前锋Matheus Cunha，Morocco侧则可关注已进球的Ismael Saibari和替补攻击手Chemsdine Talbi。不过整体而言，补时再进球的总概率不高，故本次更新维持平局为主判断，最可能最终比分为1比1。"
+      },
+      "sources": [],
+      "cost_usd": 0.01254,
+      "tokens": {
+        "input": 1926,
+        "output": 515
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.513
+    },
+    {
+      "submitted_at": "2026-06-13T23:55:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.68,
+        "away": 0.14
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已经来到90分钟，比分是1比1，常规时间基本结束，因此平局概率明显升至最高。已知进程上，Morocco在21分钟由Ismael Saibari先破门，Brazil在32分钟由Vinicius Junior扳平，此后虽然双方都进行了多次换人调整，但没有再形成改变比分的已知结果，说明比赛后段整体处于胶着状态。统计层面Brazil控球54%略占优，射门11比12稍落后，但射正4比2更有效，角球4比0也体现出一定压制；Morocco则在总射门上不落下风，反击威胁仍在，所以并不能把主胜拉得过高。基于当前已到90分钟这一时间点，剩余通常只是一小段补时，进球总空间已经很小，较此前阶段相比，胜负概率都被压缩，平局成为最可能结局。综合比分、时间、双方进攻产出和比赛已持续均势的事实，Brazil小幅占据数据优势，因此主胜概率略高于客胜，但两者都显著低于平局。最可能最终比分因此维持在1-1；若补时内再出进球，更可能来自Brazil前场已取得进球且持续具备终结能力的Vinicius Junior，或替补登场提升冲击力的Matheus Cunha；Morocco一侧则以已进球的Ismael Saibari和刚替补上场、可能利用最后冲刺制造机会的Soufiane Rahimi作为相对更可行的后续得分点。不过这些补时进球都属于低概率事件，核心判断仍是比赛大概率以平局收尾。"
+      },
+      "sources": [],
+      "cost_usd": 0.0159925,
+      "tokens": {
+        "input": 3133,
+        "output": 544
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.49
+    },
+    {
+      "submitted_at": "2026-06-14T00:01:31+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.19,
+        "draw": 0.67,
+        "away": 0.14
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已经进入90分钟，比分1比1，常规时间已基本走完，因此平局概率明显高于任一方取胜。已知进程显示摩洛哥由Ismael Saibari在21分钟先开纪录，巴西则由Vinicius Junior在32分钟扳平，之后直到90分钟都没有再出现进球，说明比赛在下半场虽然有人员调整，但比分层面始终胶着。数据上巴西稍占主动，射门13比12、射正5比2、角球6比1、控球52%对48%，这说明巴西整体制造机会能力略强，因此在最后补时阶段其绝杀概率略高于摩洛哥；但这种优势并不足以在只剩极短时间的情况下压倒平局结果。基于当前时间点，胜平负概率调整为巴西胜19%、平局67%、摩洛哥胜14%，其中平局是最稳态结果。最可能最终比分因此保持为1-1，既符合当前长时间僵持的走势，也符合90分钟节点后新增进球空间很有限的现实。未来进球逻辑上，只能考虑补时阶段的少量机会：巴西因射正和角球优势，更可能由已进球的Vinicius Junior或替补登场的Matheus Cunha完成最后一击；摩洛哥若抓住转换或定位球，则Ismael Saibari与刚在89分钟登场、体能充沛的Soufiane Rahimi是相对更合理的人选。不过总体上，后续再进球的总概率仍低于比赛就此维持1比1结束的概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.0156775,
+      "tokens": {
+        "input": 3133,
+        "output": 523
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.242
+    }
+  ]
+}

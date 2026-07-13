@@ -1,0 +1,745 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-64_New-Zealand_Belgium_2026-06-27",
+  "provider_fixture_id": "19609192",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-27T04:35:52+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 80,
+    "score": {
+      "home": 0,
+      "away": 3
+    },
+    "home": "New Zealand",
+    "away": "Belgium",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-27T03:00:00+00:00",
+    "venue": "Vancouver Stadium",
+    "venue_city": "Vancouver"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.001,
+      "draw": 0.004,
+      "away": 0.995
+    },
+    "most_likely_score": "0-3",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进入第80分钟，比利时客场3比0领先新西兰。特罗萨德上下半场各入一球，德布劳内第66分钟扩大领先优势后已被奥纳纳替换下场，比利时显然进入控场和轮换阶段。从场面看，比利时全场26次射门、7次射正、控球率59%，角球7比3，全面碾压；新西兰仅3次射门、1次射正，进攻端基本无解，门将已经做出4次扑救才把比分维持在三球差距。新西兰下半场两黄牌、注意力下滑，连续换上本·奥尔德、杰西·兰德尔、McCowatt等攻击球员仍未能在比利时禁区制造实质威胁。剩余10分钟外加补时，新西兰想要打破僵局并连入数球几乎不可能，因此主胜与平局概率被压到极低，客胜概率接近锁定。最可能的最终比分仍是0比3：比利时已完成战术目标，主力前场球员相继被换下，进攻锐度自然下降；不过凭借替补登场的费尔南德斯-帕尔多、萨勒马克斯的冲击力，以及奥纳纳后插上的能量，仍存在再下一城打成0比4的尾盘风险，所以把后续进球者锁定在这几名比利时替补和仍在场的范阿肯身上，时间集中在85至90+分钟段。新西兰在这种被动局面下基本不具备终结机会，未列入后续进球候选。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1180,
+    "output": 706
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.017427,
+  "wall_seconds": 17.912,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.001, \"draw\": 0.004, \"away\": 0.995},\n  \"most_likely_score\": \"0-3\",\n  \"scorers\": [\n    {\"player\": \"Matías Fernández-Pardo\", \"team\": \"away\", \"minute\": 86, \"p\": 0.14},\n    {\"player\": \"Alexis Saelemaekers\", \"team\": \"away\", \"minute\": 88, \"p\": 0.11},\n    {\"player\": \"Amadou Onana\", \"team\": \"away\", \"minute\": 90, \"p\": 0.07},\n    {\"player\": \"Hans Vanaken\", \"team\": \"away\", \"minute\": 84, \"p\": 0.06}\n  ],\n  \"reasoning\": {\"overall\": \"比赛进入第80分钟，比利时客场3比0领先新西兰。特罗萨德上下半场各入一球，德布劳内第66分钟扩大领先优势后已被奥纳纳替换下场，比利时显然进入控场和轮换阶段。从场面看，比利时全场26次射门、7次射正、控球率59%，角球7比3，全面碾压；新西兰仅3次射门、1次射正，进攻端基本无解，门将已经做出4次扑救才把比分维持在三球差距。新西兰下半场两黄牌、注意力下滑，连续换上Ben Old、Jesse Randall、McCowatt等攻击球员仍未能在比利时禁区制造实质威胁。剩余10分钟外加补时，新西兰想要打破僵局并连入数球几乎不可能，因此主胜与平局概率被压到极低，客胜概率接近锁定。最可能的最终比分仍是0比3：比利时已完成战术目标，主力前场球员相继被换下，进攻锐度自然下降；不过凭借替补登场的费尔南德斯-帕尔多、萨勒马克斯的冲击力，以及奥纳纳后插上的能量，仍存在再下一城打成0比4的尾盘风险，所以把后续进球者锁定在这几名比利时替补和仍在场的范阿肯身上，时间集中在85至90+分钟段。新西兰在这种被动局面下基本不具备终结机会，未列入后续进球候选。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-27T03:03:14+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 3,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "New Zealand",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.07,
+        "draw": 0.18,
+        "away": 0.75
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Romelu Lukaku",
+          "minute": 62,
+          "p": 0.34,
+          "team": "away"
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 38,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Jérémy Doku",
+          "minute": 78,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Youri Tielemans",
+          "minute": 70,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Chris Wood",
+          "minute": 80,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚刚开打3分钟，比分仍是0-0，两队控球率各占一半，场上尚未出现实质性事件，因此判断主要依靠赛前实力对比与本届世界杯小组赛的整体走势。比利时作为欧洲传统强队，整体阵容深度、个人能力和大赛经验都明显高于新西兰，无论中场组织还是锋线终结都占据压倒性优势；新西兰虽然身体对抗和拼抢积极性不错，但在面对高水平传切与边路突破时防线压力会逐步放大。开场阶段双方都比较谨慎，所以暂时没有进球并不意外，预计随着比利时逐步掌控节奏，控球率与射门数会向客队倾斜，新西兰可能被迫退守半场，依赖反击和定位球寻找机会。基于这种力量对比，客胜概率被设定为绝对主导，平局概率次之，主胜概率非常低；考虑到新西兰防守组织尚算紧凑，且比利时小组赛通常不会全力压上，最终比分最可能落在0-2，比利时在中段和下半场各入一球的剧本最为常见。后续进球点上，卢卡库作为禁区终结点和德布劳内的组织串联是首要进球来源，多库的边路突破能制造单点爆破，蒂勒曼斯的远射和二点球也具备威胁；新西兰一方若能扳回一城，最具可能的依然是伍德利用身体优势在定位球或反击中抢点。"
+      },
+      "sources": [],
+      "cost_usd": 0.017197599999999997,
+      "tokens": {
+        "input": 853,
+        "output": 759
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.084
+    },
+    {
+      "submitted_at": "2026-06-27T03:10:31+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 10,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "New Zealand",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.15,
+        "away": 0.8
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Romelu Lukaku",
+          "minute": 62,
+          "p": 0.34,
+          "team": "away"
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 38,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Jérémy Doku",
+          "minute": 78,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Leandro Trossard",
+          "minute": 85,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Chris Wood",
+          "minute": 70,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第10分钟，新西兰0-0比利时，开场阶段比利时已经完全掌控了局面。控球率高达79%对21%，射门数1-0，红魔从开局就把对手压制在本方半场，而新西兰还没有形成任何有效的进攻组织。考虑到双方在世界排名、阵容深度和技术能力上的巨大差距，比利时作为夺冠热门球队之一，对阵首次大赛走深的新西兰，本来就处于压倒性优势，而开场10分钟的场面也完全印证了这一点。综合赛前实力差距与目前的场上态势，比利时获胜概率维持在很高水平，新西兰要拿分需要奇迹般的防守表现加上对方把握机会不佳。最可能的最终比分判断为0-2，比利时凭借中前场的个人能力在上下半场各取一球较为合理，过早大比分领先反而会让比利时降速控制节奏。后续进球人选方面，德布劳内作为中场组织核心，在对方阵型尚未完全收缩之前的上半场后段最具威胁；卢卡库作为禁区终结点是最稳定的破门来源，下半场体能下降阶段的中段最容易取得进球；多库和特罗萨德则更可能在比赛后段作为变阵或冲击边路的得分手出现。新西兰一侧，伍德是为数不多具备单点解决能力的球员，在死球或反击中存在小概率扳回一城的可能，但整体上仍以零封收场的剧本概率最高。"
+      },
+      "sources": [],
+      "cost_usd": 0.0175787,
+      "tokens": {
+        "input": 836,
+        "output": 783
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.251
+    },
+    {
+      "submitted_at": "2026-06-27T03:17:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "New Zealand",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.09,
+        "away": 0.87
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Romelu Lukaku",
+          "minute": 28,
+          "p": 0.34,
+          "team": "away"
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 41,
+          "p": 0.27,
+          "team": "away"
+        },
+        {
+          "player": "Jérémy Doku",
+          "minute": 63,
+          "p": 0.24,
+          "team": "away"
+        },
+        {
+          "player": "Leandro Trossard",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Charles De Ketelaere",
+          "minute": 85,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Chris Wood",
+          "minute": 74,
+          "p": 0.07,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "开场17分钟双方仍是0-0，但场面完全是一边倒。比利时控球率高达78%，已经送出6脚射门、3次射正，并在第12分钟拿到一次VAR点球复核，整体施压强度远高于一支小组赛常规客队的水准。新西兰目前0射门、0角球，控球只有22%，门将已经做出一次扑救，完全被压制在本方半场，进攻端尚未形成有效组织。基于这种节奏，比利时获胜概率大幅上调至接近0.87，平局概率压缩在0.09左右，新西兰翻盘空间极小。考虑到VAR点球若被判罚很可能由德布劳内（De Bruyne）主罚，而卢卡库（Lukaku）作为禁区终结点已经多次获得机会，前场杜库（Doku）、特罗萨德（Trossard）的边路突破也持续制造威胁，预计比利时会在上半场结束前先取得领先，随后在体能和阵型拉开后再下一城，下半场中后段还有一次扩大比分的机会，因此最可能的最终比分定为0-3。后续进球预测优先放在卢卡库与德布劳内身上，并把杜库、特罗萨德及替补登场的德凯特拉雷（De Ketelaere）作为补充选项；新西兰若想破门，伍德（Wood）通过反击争顶仍是最现实的方式，但概率明显偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0170533,
+      "tokens": {
+        "input": 964,
+        "output": 729
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.628
+    },
+    {
+      "submitted_at": "2026-06-27T03:25:04+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 25,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "New Zealand",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.18,
+        "away": 0.77
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Romelu Lukaku",
+          "minute": 38,
+          "p": 0.34,
+          "team": "away"
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 58,
+          "p": 0.26,
+          "team": "away"
+        },
+        {
+          "player": "Leandro Trossard",
+          "minute": 67,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Jérémy Doku",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Chris Wood",
+          "minute": 82,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第25分钟，新西兰与比利时仍是0-0。从场面来看，比利时完全掌控了局势，控球率高达74%，已经完成7次射门，其中3次射正，并赢得2个角球；新西兰则尚未形成任何射门，控球率仅26%，门将已经做出2次扑救，整体被压制在本方半场。第22分钟围绕特罗萨德的VAR介入也显示比利时已逼近破门，只是暂未转化为进球。综合双方实力差距和当前节奏，比利时取胜概率显著占优，新西兰想全身而退非常困难，平局空间有限。最可能的最终比分判断为0-2，比利时大概率在上半场结束前先下一城，并在下半场再扩大一球。后续进球点上，卢卡库作为禁区终结点最具威胁，德布劳内的远射和直塞能在中场阶段制造杀机，特罗萨德此前已有近距离威胁，多库的突破在下半场体力下降阶段杀伤力更大；新西兰若有反扑，伍德是最现实的支点，但概率明显偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0149776,
+      "tokens": {
+        "input": 1023,
+        "output": 605
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.591
+    },
+    {
+      "submitted_at": "2026-06-27T03:32:41+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 32,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "New Zealand",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.18,
+        "away": 0.77
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 64,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Romelu Lukaku",
+          "minute": 73,
+          "p": 0.26,
+          "team": "away"
+        },
+        {
+          "player": "Leandro Trossard",
+          "minute": 58,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Jeremy Doku",
+          "minute": 81,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Chris Wood",
+          "minute": 86,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第32分钟，比利时凭借特罗萨德（莱昂德罗·特罗萨德）在第28分钟的进球客场1-0领先新西兰。从场面数据看，比利时完全占据主导：控球率70%对30%，射门7比0，射正3比0，角球3比1，新西兰至今未制造任何射门，门将已经做出两次扑救。第22分钟还有一次VAR介入涉及新西兰球员芬恩·瑟曼，整体压力始终倾向于客队一侧。基于双方实力差距以及当前场面走势，比利时获胜的概率显著占优，平局只能寄望于新西兰中后段稳住防线并争取定位球机会，而新西兰逆转的可能性非常低。最可能的最终比分定为0-2：比利时大概率会在下半场利用持续的控场和边路渗透再下一城，而新西兰短期内缺乏明显的反击火力，难以扳平。后续进球人选方面，德布劳内（凯文·德布劳内）作为组织核心兼远射威胁，是下一个破门的最大热门；卢卡库（罗梅卢·卢卡库）在禁区内的把握机会能力使他成为加分主力候选；已经进球的特罗萨德保持状态，仍可能扩大比分；替补登场后多库（热雷米·多库）的边路突破也值得关注。新西兰方面，伍德（克里斯·伍德）依然是最具威胁的反击点，若有定位球或长传机会，他可能在比赛末段制造一次冷门式的追分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0172864,
+      "tokens": {
+        "input": 947,
+        "output": 745
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.545
+    },
+    {
+      "submitted_at": "2026-06-27T03:40:15+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 40,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "New Zealand",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.18,
+        "away": 0.77
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Romelu Lukaku",
+          "minute": 63,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 71,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Jeremy Doku",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Leandro Trossard",
+          "minute": 56,
+          "p": 0.17,
+          "team": "away"
+        },
+        {
+          "player": "Chris Wood",
+          "minute": 82,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到上半场40分钟，新西兰0-1落后于比利时。第28分钟Trossard打破僵局，此前第22分钟的VAR复核未改变比赛走向。从场面来看，比利时完全占据主动：控球率61%对39%，射门9比0，射正3比0，角球3比1，新西兰目前甚至未能完成一次射门，全靠门将两次扑救勉强维持比分差距。比利时整体技术与个人能力明显高出一档，新西兰只能依靠密集防守与零星反击，进攻端缺乏组织和威胁。基于此，比利时获胜概率显著上升至七成以上，平局空间被压缩在两成以内，新西兰逆转的可能性极低。考虑到比利时进攻效率较高且仍有大量比赛时间，再下一城的概率不小，而新西兰若想扳平需要至少两球，难度极大，因此最可能的最终比分定为0-2。后续进球方面，比利时方面Lukaku作为禁区终结者最具威胁，De Bruyne的远射和定位球、Doku的边路突破都是潜在得分点，Trossard状态在线也可能梅开二度；新西兰若能取得入球，前锋克里斯·伍德依靠身体和反击机会是最现实的选择，但概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0160913,
+      "tokens": {
+        "input": 1024,
+        "output": 665
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.761
+    },
+    {
+      "submitted_at": "2026-06-27T03:47:54+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "New Zealand",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.14,
+        "away": 0.82
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Romelu Lukaku",
+          "minute": 63,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 71,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Jeremy Doku",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Leandro Trossard",
+          "minute": 82,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Chris Wood",
+          "minute": 87,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场结束阶段，比利时凭借特罗萨德（Trossard）第28分钟的入球以1-0领先新西兰。整个上半场比利时完全掌控了比赛节奏，控球率达到61%，全场轰出13次射门、4次射正，3次角球，而新西兰仅有1次射门且未能射正，门将已经做出3次扑救才将失球控制在1个。第22分钟还有一次涉及新西兰球员芬恩·瑟曼的VAR判罚介入，显示新西兰防线压力极大。综合比赛流向，比利时无论在阵容深度、技战术层面还是当前场面，都具备压倒性优势，新西兰下半场扳平乃至逆转的难度非常大，因此客胜概率显著抬升至0.82，平局空间有限，主胜几乎被压缩到极小区间。最可能的最终比分判定为0-2，符合比利时持续制造威胁、再下一城的趋势，同时也未脱离新西兰偶有反击的可能。下半场进球候选方面，比利时方面应以中锋卢卡库（Lukaku）的禁区终结、德布劳内（De Bruyne）的远射与组织、多库（Doku）的边路突破，以及继续保持状态的特罗萨德为主；新西兰若想有所作为，最现实的得分点仍是头号前锋伍德（克里斯·伍德），通过定位球或反击争取颜面进球，但概率明显偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0168165,
+      "tokens": {
+        "input": 985,
+        "output": 712
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.464
+    },
+    {
+      "submitted_at": "2026-06-27T04:13:21+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 58,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "New Zealand",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.2,
+        "away": 0.75
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 72,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Romelu Lukaku",
+          "minute": 78,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Leandro Trossard",
+          "minute": 83,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Jérémy Doku",
+          "minute": 88,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Chris Wood",
+          "minute": 85,
+          "p": 0.08,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到下半场第58分钟，比利时凭借特罗萨德（莱昂德罗·特罗萨德）在第28分钟的入球以1-0领先新西兰。从场面数据来看，比利时完全掌控比赛节奏，控球率达到60%，射门17次、射正4次、角球4次，持续向新西兰半场施压；反观新西兰射门挂零、射正挂零，全场仅靠门将3次扑救才将分差维持在一球。中场休息时新西兰一口气换上本·奥尔德和杰西·兰德尔两名进攻球员试图加强反击，但斯塔梅尼奇（马尔科·斯塔梅尼奇）随即吃到黄牌，说明球队在压力下纪律出现松动。综合来看，比利时取胜概率明显占优，给予约0.75的胜率；新西兰若想扳平需要在毫无射门的情况下连入一球，难度极大，胜率仅约0.05；考虑到比利时可能会在领先后控制节奏、新西兰换人后偶有反扑机会，平局概率约0.20。最可能的最终比分判断为0-2，比利时在剩余30多分钟内凭借持续的射门压力极可能再下一城，德布劳内（凯文·德布劳内）的组织串联和卢卡库（罗梅卢·卢卡库）的禁区终结是最大威胁来源，特罗萨德和多库（热雷米·多库）也具备梅开二度或边路爆破的能力；新西兰方面，前锋伍德（克里斯·伍德）是为数不多有望抓住定位球机会扳回一城的点，但概率偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0173863,
+      "tokens": {
+        "input": 984,
+        "output": 743
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.653
+    },
+    {
+      "submitted_at": "2026-06-27T04:20:51+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 65,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "New Zealand",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Leandro Trossard",
+          "minute": 78,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Matías Fernández-Pardo",
+          "minute": 82,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Hans Vanaken",
+          "minute": 86,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Jesse Randall",
+          "minute": 80,
+          "p": 0.09,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第65分钟，比利时客场2比0领先新西兰，特罗萨德上下半场各入一球，是本场最具威胁的进攻点。从场面看，比利时控球率达到60%，总射门19比2、射正5比1、角球4比1，几乎全方位压制对手，新西兰仅有1次射正，进攻端基本被锁死。新西兰半场已用两次换人调整，但比利时随后换上费尔南德斯-帕尔多增加锋线冲击，攻势并未减弱。考虑到比分差距、剩余时间不足三十分钟、以及新西兰在本届赛事整体实力差距，逆转或扳平概率极低，比利时取胜概率压倒性领先，平局和新西兰获胜的可能性都非常小。最终比分上，比利时延续控制并再下一城的剧本最为合理，0比3是最具代表性的落点；若新西兰为荣誉而战压上拼抢，反而可能被打反击进一步扩大失球。后续进球点方面，状态火热的特罗萨德仍是首选目标，刚替补登场的费尔南德斯-帕尔多体能占优、面对疲态防线具备破门机会，中场组织者瓦纳肯远射或定位球同样值得关注；新西兰一侧若能扳回一球，新上场的兰德尔在前场冲击中最具机会，但概率明显偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0165945,
+      "tokens": {
+        "input": 1075,
+        "output": 682
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.97
+    },
+    {
+      "submitted_at": "2026-06-27T04:28:25+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 73,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "New Zealand",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第73分钟，比利时凭借特罗萨德上下半场各入一球，客场2比0领先新西兰。从场面数据看，比利时24次射门、6次射正、59%控球率全面压制，新西兰仅有3次射门、1次射正，门将已做出4次扑救才把比分维持在两球之内，进攻端几乎没有形成有效威胁。新西兰下半场连续换上本·奥尔德、杰西·兰德尔、McCowatt等攻击手试图加强反扑，但同时Boxall顶替Payne的换人偏向稳守，加上Stamenić和Just相继吃牌，球队节奏被打乱，难以在最后阶段连追两球。比利时这边换上费尔南德斯-帕尔多后进攻轮换依然犀利，且在领先两球的情况下仍保持高位压迫，扩大比分的可能性甚至高于被扳回一球的概率。综合来看，客胜概率已接近锁定，平局和主胜的空间被压缩到极低水平，最可能的最终比分维持在0比2。后续进球预测方面，比利时端以状态火热的特罗萨德为首选，替补登场的费尔南德斯-帕尔多面对体能下降的新西兰后防具备打穿空间的能力，Vanaken在禁区内的二点处理也是一个潜在得分点；新西兰若想扳回颜面，主要支点仍是中锋克里斯·伍德，他在定位球和长传冲吊中最有机会把握仅有的射门机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.0171347,
+      "tokens": {
+        "input": 1091,
+        "output": 708
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.188
+    },
+    {
+      "submitted_at": "2026-06-27T04:35:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 80,
+        "score": {
+          "home": 0,
+          "away": 3
+        },
+        "home": "New Zealand",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.001,
+        "draw": 0.004,
+        "away": 0.995
+      },
+      "most_likely_score": "0-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进入第80分钟，比利时客场3比0领先新西兰。特罗萨德上下半场各入一球，德布劳内第66分钟扩大领先优势后已被奥纳纳替换下场，比利时显然进入控场和轮换阶段。从场面看，比利时全场26次射门、7次射正、控球率59%，角球7比3，全面碾压；新西兰仅3次射门、1次射正，进攻端基本无解，门将已经做出4次扑救才把比分维持在三球差距。新西兰下半场两黄牌、注意力下滑，连续换上本·奥尔德、杰西·兰德尔、McCowatt等攻击球员仍未能在比利时禁区制造实质威胁。剩余10分钟外加补时，新西兰想要打破僵局并连入数球几乎不可能，因此主胜与平局概率被压到极低，客胜概率接近锁定。最可能的最终比分仍是0比3：比利时已完成战术目标，主力前场球员相继被换下，进攻锐度自然下降；不过凭借替补登场的费尔南德斯-帕尔多、萨勒马克斯的冲击力，以及奥纳纳后插上的能量，仍存在再下一城打成0比4的尾盘风险，所以把后续进球者锁定在这几名比利时替补和仍在场的范阿肯身上，时间集中在85至90+分钟段。新西兰在这种被动局面下基本不具备终结机会，未列入后续进球候选。"
+      },
+      "sources": [],
+      "cost_usd": 0.017427,
+      "tokens": {
+        "input": 1180,
+        "output": 706
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.912
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-39_Belgium_Iran_2026-06-21",
+  "provider_fixture_id": "19609152",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-21T20:58:34+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 0
+    },
+    "home": "Belgium",
+    "away": "Iran",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-21T19:00:00+00:00",
+    "venue": "Los Angeles Stadium",
+    "venue_city": null
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.08,
+      "draw": 0.88,
+      "away": 0.04
+    },
+    "most_likely_score": "0-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入第90分钟的常规时间尾声，当前比分依然是0-0。从全场数据来看，比利时队占据了绝对优势，控球率高达71%，并狂轰21脚射门（7次射正），但伊朗队防守顽强且门将发挥神勇，贡献了7次关键扑救，力保城门不失。值得注意的是，比利时球员恩戈伊（内森·恩戈伊）在第66分钟被红牌罚下，这使得比利时在最后阶段只能以十人应战。尽管伊朗队在人数上占据优势，但他们在进攻端的投入依然有限，全场仅有7次射门。考虑到比赛所剩时间无几，且双方在体能和战术上都已达到极限，0-0的平局是最可能的结果。比利时虽然少打一人但整体实力占优，伊朗则更倾向于守住平局或利用反击尝试绝杀，但在短短的伤停补时阶段改变比分的概率已经非常低。因此，最终比分极大概率定格在0-0，平局的概率在此时占据绝对主导。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1972,
+    "output": 1814
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0134988,
+  "wall_seconds": 20.355,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.08,\n    \"draw\": 0.88,\n    \"away\": 0.04\n  },\n  \"most_likely_score\": \"0-0\",\n  \"scorers\": [\n    {\n      \"player\": \"Mehdi Taremi\",\n      \"team\": \"away\",\n      \"minute\": 93,\n      \"p\": 0.02\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入第90分钟的常规时间尾声，当前比分依然是0-0。从全场数据来看，比利时队占据了绝对优势，控球率高达71%，并狂轰21脚射门（7次射正），但伊朗队防守顽强且门将发挥神勇，贡献了7次关键扑救，力保城门不失。值得注意的是，比利时球员恩戈伊（Nathan Ngoy）在第66分钟被红牌罚下，这使得比利时在最后阶段只能以十人应战。尽管伊朗队在人数上占据优势，但他们在进攻端的投入依然有限，全场仅有7次射门。考虑到比赛所剩时间无几，且双方在体能和战术上都已达到极限，0-0的平局是最可能的结果。比利时虽然少打一人但整体实力占优，伊朗则更倾向于守住平局或利用反击尝试绝杀，但在短短的伤停补时阶段改变比分的概率已经非常低。因此，最终比分极大概率定格在0-0，平局的概率在此时占据绝对主导。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Match Analysis: Belgium vs. Iran (90')**\n\nOkay, here's the breakdown. We're at the 90th minute; it's Belgium versus Iran, and the score is deadlocked at 0-0. Belgium has been dominant, with 71% possession and a barrage of shots – 21 total, 7 on target – but Iran's goalkeeper has been a wall, making 7 saves. The red card to Belgium's Nathan Ngoy at 66' changes things, putting Belgium down a man.\n\nGiven the time, a draw is the most likely outcome, I'd peg the probabilities like this: Draw at 88%, Belgium win at 8%, and an Iran upset at 4%. The 0-0 scoreline is overwhelmingly the most probable final result.\n\nAs for potential late scorers? The prompt is \"likely future goalscorers *only after* 90'\". Looking at the events, there aren't many clear candidates. I'll include Mehdi Taremi with a low probability, for the 93rd minute (p=0.02).\n\nIn the 90th minute, Belgium's tactical superiority is evident, while Iran is trying to defend the draw. Therefore, the chance of a goal in stoppage time is very slim. So, a 0-0 draw is most likely.\n\n```json\n{\n  \"win_probs\": {\n    \"home\": 0.08,\n    \"draw\": 0.88,\n    \"away\": 0.04\n  },\n  \"most_likely_score\": \"0-0\",\n  \"scorers\": [\n    {\n      \"player\": \"Mehdi Taremi\",\n      \"team\": \"away\",\n      \"minute\": 93,\n      \"p\": 0.02\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入第90分钟的常规时间尾声，当前比分依然是0-0。从全场数据来看，比利时队占据了绝对优势，控球率高达71%，并狂轰21脚射门（7次射正），但伊朗队门将发挥神勇，贡献了7次扑救，力保城门不失。值得注意的是，比利时球员恩戈伊（Nathan Ngoy）在第66分钟被红牌罚下，这使得比利时在最后阶段只能以十人应战。尽管伊朗队在人数上占据优势，但他们在进攻端的投入依然有限（全场仅7次射门3次射正）。考虑到比赛所剩时间无几，且双方在体能和战术上都已达到极限，0-0的平局是最可能的结果。比利时虽然少打一人但整体实力占优，伊朗则希望守住平局或利用反击偷袭，但在伤停补时阶段改变比分的概率已经非常低。因此，最终比分极大概率定格在0-0，平局的概率大幅上升。\"\n  },\n  \"sources\": []\n}\n```\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-21T19:30:42+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 30,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Belgium",
+        "away": "Iran",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.65,
+        "draw": 0.25,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Romelu Lukaku",
+          "minute": 55,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第30分钟，比利时与伊朗暂时战成0-0平。从目前的场面数据来看，比利时占据了绝对的统治力，控球率高达74%，并已经完成了7次射门（其中2次射正），持续对伊朗的防线施加压力。伊朗队则明确了防守反击的战术，控球率仅为26%，但在第25分钟塔雷米（迈赫迪·塔雷米）制造了一次VAR介入的插曲，证明伊朗在有限的反击机会中依然具备一定的威胁。比利时中锋卢卡库（罗梅卢·卢卡库）开场仅3分钟便领到黄牌，这可能会在一定程度上限制他在禁区内的动作幅度。尽管比分尚未被改写，但比利时凭借压倒性的控球和进攻主导权，依然是拿下本场比赛的最大热门。随着比赛的深入，伊朗队的体能消耗将逐渐增大，防守端可能会暴露出更多空当。因此，比利时获胜的概率依然保持在65%左右，平局概率约为25%，而伊朗爆冷取胜的概率仅为10%。综合目前的攻防态势，最可能的最终比分是比利时2-0获胜。预计比利时会在下半场通过持续的阵地战打破僵局，卢卡库作为锋线核心极有可能在第55分钟左右寻觅到破门良机；而随着伊朗在落后情况下被迫将阵型前压，比利时有望在比赛尾声阶段（如第78分钟）利用对手身后的空间再下一城，锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.0127764,
+      "tokens": {
+        "input": 1122,
+        "output": 1841
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.376
+    },
+    {
+      "submitted_at": "2026-06-21T19:52:35+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Belgium",
+        "away": "Iran",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.24,
+        "away": 0.08
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Romelu Lukaku",
+          "minute": 65,
+          "p": 0.38,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场比赛进行到第45分钟，比利时与伊朗暂时战成0-0平。从半场数据来看，比利时展现了压倒性的控制力，控球率高达81%，并狂轰11脚射门（其中4次射正）。然而，伊朗队的防守十分顽强，门将贡献了4次关键扑救，力保城门不失。伊朗队虽然控球率仅有19%，但也在反击中制造了一定威胁，包括第25分钟一次涉及塔雷米（迈赫迪·塔雷米）的VAR事件以及1次射正。尽管比分尚未改变，但比利时队在场面上的绝对优势意味着他们在下半场打破僵局的可能性极高。随着比赛深入，伊朗队的体能可能会在持续的高压防守下出现瓶颈。因此，比利时的胜率依然占据绝对主导地位。考虑到伊朗的密集防守策略，预计最终比分不会太大，1-0是目前最可能的结果。在进球球员方面，作为比利时锋线核心的卢卡库（罗梅卢·卢卡库）虽然早早领到黄牌，但依然是下半场最有可能为球队建功的关键人物。"
+      },
+      "sources": [],
+      "cost_usd": 0.0145677,
+      "tokens": {
+        "input": 1190,
+        "output": 2114
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.76
+    },
+    {
+      "submitted_at": "2026-06-21T20:14:25+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 59,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Belgium",
+        "away": "Iran",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.32,
+        "away": 0.1
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Romelu Lukaku",
+          "minute": 74,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 83,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第59分钟，比利时与伊朗暂时战成0-0平。从场面数据来看，比利时占据了绝对的统治地位，控球率高达81%，并已经完成了12次射门（其中4次射正）。然而，伊朗队的防守十分顽强，门将贡献了4次关键扑救，力保城门不失。伊朗队虽然控球率仅有19%，但在反击中也有过零星威胁，上半场塔雷米（迈赫迪·塔雷米）还曾引发VAR介入。随着比赛进入最后半小时，体能下降可能会导致防线出现漏洞。尽管目前比分僵持，但比利时持续的高压态势使得他们打破僵局的概率依然最高。平局的概率随着时间推移在逐渐上升，但比利时仍有较大机会以1-0拿下比赛。考虑到比利时的猛攻，主力前锋如卢卡库（罗梅卢·卢卡库）或中场核心极有可能在70至85分钟左右利用阵地战或远射完成致命一击。"
+      },
+      "sources": [],
+      "cost_usd": 0.014587649999999999,
+      "tokens": {
+        "input": 1263,
+        "output": 2105
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.366
+    },
+    {
+      "submitted_at": "2026-06-21T20:36:28+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 81,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Belgium",
+        "away": "Iran",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.68,
+        "away": 0.14
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第81分钟，比利时与伊朗依然维持0-0的平局。从场面数据来看，比利时在大部分时间里占据了绝对优势，控球率高达78%，并创造了17次射门和6次射正，但伊朗防线顽强，门将贡献了6次关键扑救。比赛的重大转折点出现在第66分钟，比利时球员内森·恩戈伊（内森·恩戈伊）被红牌罚下，导致球队只能以十人应战。这一突发情况极大地削弱了比利时的进攻压迫力，同时伊朗在多打一人的情况下虽然有机会尝试反击，但面对强敌依然会以稳固防守保住积分为首要任务。随着比赛进入最后十分钟，双方体能下降且战术博弈趋于谨慎，全场互交白卷的概率急剧上升。因此，0-0是最可能的最终比分。如果比赛在最后阶段出现进球，比利时的罗梅卢·卢卡库（罗梅卢·卢卡库）凭借个人能力依然是定位球或乱战中最具威胁的得分点，而伊朗的迈赫迪·塔雷米（迈赫迪·塔雷米）则极有可能利用人数优势在快速反击中完成致命一击。"
+      },
+      "sources": [],
+      "cost_usd": 0.012430950000000001,
+      "tokens": {
+        "input": 1681,
+        "output": 1693
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.616
+    },
+    {
+      "submitted_at": "2026-06-21T20:58:34+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Belgium",
+        "away": "Iran",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.88,
+        "away": 0.04
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟的常规时间尾声，当前比分依然是0-0。从全场数据来看，比利时队占据了绝对优势，控球率高达71%，并狂轰21脚射门（7次射正），但伊朗队防守顽强且门将发挥神勇，贡献了7次关键扑救，力保城门不失。值得注意的是，比利时球员恩戈伊（内森·恩戈伊）在第66分钟被红牌罚下，这使得比利时在最后阶段只能以十人应战。尽管伊朗队在人数上占据优势，但他们在进攻端的投入依然有限，全场仅有7次射门。考虑到比赛所剩时间无几，且双方在体能和战术上都已达到极限，0-0的平局是最可能的结果。比利时虽然少打一人但整体实力占优，伊朗则更倾向于守住平局或利用反击尝试绝杀，但在短短的伤停补时阶段改变比分的概率已经非常低。因此，最终比分极大概率定格在0-0，平局的概率在此时占据绝对主导。"
+      },
+      "sources": [],
+      "cost_usd": 0.0134988,
+      "tokens": {
+        "input": 1972,
+        "output": 1814
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.355
+    }
+  ]
+}

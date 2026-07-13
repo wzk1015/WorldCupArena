@@ -1,0 +1,423 @@
+{
+  "fixture_id": "World-Cup_Quarter-finals_Argentina_Switzerland_2026-07-12",
+  "provider_fixture_id": "19606969",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-12T03:43:59+00:00",
+  "live": {
+    "status": "Extra Time",
+    "elapsed": 130,
+    "score": {
+      "home": 3,
+      "away": 1
+    },
+    "home": "Argentina",
+    "away": "Switzerland",
+    "competition": "World Cup",
+    "stage": "Quarter-finals",
+    "kickoff_utc": "2026-07-12T01:00:00+00:00",
+    "venue": "Kansas City Stadium",
+    "venue_city": "Kansas City"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 1.0,
+      "draw": 0.0,
+      "away": 0.0
+    },
+    "most_likely_score": "3-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进行到第130分钟，进入了加时赛的最后阶段甚至已经超时。阿根廷目前以3-1领先瑞士，凭借 Julián Álvarez 和 劳塔罗·马丁内斯 在加时赛中的关键进球，阿根廷已经彻底锁定了胜局。从场面数据来看，阿根廷全场控球率达到59%，狂轰22脚射门，完全掌控了比赛节奏。考虑到比赛时间已经所剩无几，瑞士队扳平比分的可能性已经不存在。因此，阿根廷获胜的概率为100%，最可能的最终比分就是目前的3-1，预计在剩余的极短时间内不会再有新的进球产生。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1648,
+    "output": 456
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0046032,
+  "wall_seconds": 8.899,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 1.0,\n    \"draw\": 0.0,\n    \"away\": 0.0\n  },\n  \"most_likely_score\": \"3-1\",\n  \"scorers\": [],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进行到第130分钟，进入了加时赛的最后阶段甚至已经超时。阿根廷目前以3-1领先瑞士，凭借 Julián Álvarez 和 Lautaro Martínez 在加时赛中的关键进球，阿根廷已经彻底锁定了胜局。从场面数据来看，阿根廷全场控球率达到59%，狂轰22脚射门，完全掌控了比赛节奏。考虑到比赛时间已经所剩无几，瑞士队扳平比分的可能性已经不存在。因此，阿根廷获胜的概率为100%，最可能的最终比分就是目前的3-1，预计在剩余的极短时间内不会再有新的进球产生。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-12T01:04:28+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 4,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-12T01:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.25,
+        "away": 0.2
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Julián Álvarez",
+          "minute": 65,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Breel Embolo",
+          "minute": 78,
+          "p": 0.2,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第4分钟，阿根廷与瑞士的比分暂时维持在0-0。开场阶段，瑞士队展现出了强烈的控球意图，控球率高达82%，并率先完成了一次射门。相比之下，阿根廷队开局较为谨慎，似乎在主动回撤以试探对手的战术布置，目前控球率仅为18%。不过，开场仅4分钟的数据具有较大的偶然性，通常反映的是开球后的单次长传或控球阶段，并不能完全代表整场比赛的走势。考虑到这是世界杯四分之一决赛，双方在防守端都会格外小心。尽管瑞士队开局抢占了球权，但阿根廷队在整体实力、球星个人能力以及大赛经验上依然占据明显优势。因此，阿根廷队在常规时间内获胜的概率依然最高。随着比赛深入，阿根廷队预计会逐渐夺回中场控制权，并利用锋线球员的穿插跑动制造威胁。考虑到淘汰赛的容错率极低，比赛可能会非常胶着，1-0是目前最可能出现的最终比分。在后续的比赛中，阿根廷的锋线尖刀 胡利安·阿尔瓦雷斯 极有可能在下半场利用对手体能下降的机会打破僵局；而瑞士队方面，如果需要反扑，布雷尔·恩博洛 的身体素质和冲击力将是他们最倚仗的得分武器。"
+      },
+      "sources": [],
+      "cost_usd": 0.0119805,
+      "tokens": {
+        "input": 802,
+        "output": 1768
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.988
+    },
+    {
+      "submitted_at": "2026-07-12T01:12:16+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 12,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-12T01:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.76,
+        "draw": 0.17,
+        "away": 0.07
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 65,
+          "p": 0.35,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第12分钟，阿根廷目前以1-0领先瑞士。在第10分钟，梅西（里奥·梅西）助攻麦卡利斯特（亚历克西斯·麦卡利斯特）打破僵局，展现了阿根廷极高的进攻效率。从场面数据来看，虽然瑞士队控球率略占优势（53%），且也有2次射门，但尚未命中门框范围。阿根廷在取得领先后，可以更加从容地控制比赛节奏。考虑到阿根廷的整体实力和早早取得的领先优势，他们赢下本场比赛的概率大幅提升。预计瑞士队在落后的情况下会逐渐压上进攻，这可能会暴露出更多后防空当。最可能的最终比分预测为2-0，梅西等核心球员有望在下半场利用对手的防线漏洞扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.009640049999999999,
+      "tokens": {
+        "input": 865,
+        "output": 1386
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.87
+    },
+    {
+      "submitted_at": "2026-07-12T02:08:23+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 53,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-12T01:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.75,
+        "draw": 0.18,
+        "away": 0.07
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 75,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Breel Embolo",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第53分钟，阿根廷目前以1-0领先瑞士。麦卡利斯特（亚历克西斯·麦卡利斯特）在开场第10分钟接梅西（里奥·梅西）助攻早早打破僵局。从场面数据来看，落后的瑞士队在控球率上占据优势（57%），但进攻效率并不理想，双方总射门数均为3次，且各自仅有1次射正。阿根廷在取得领先后明显采取了更为务实的防守反击策略，而瑞士队虽然试图施压，但面对阿根廷稳固的防线显得办法不多，且战术犯规较多（12次），主力前锋恩博洛（布雷尔·恩博洛）也已染黄。考虑到阿根廷的整体实力、世界杯淘汰赛经验以及目前的比分优势，他们有极高的概率将胜果保持到终场。随着比赛深入，瑞士队势必全线压上，这将给阿根廷留下广阔的反击空间。预计阿根廷极有可能在下半场中后段利用反击再入一球，彻底杀死比赛悬念。最可能的最终比分为2-0。状态出色的梅西极有可能在第75分钟左右通过反击或定位球建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.014350349999999998,
+      "tokens": {
+        "input": 911,
+        "output": 2126
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.277
+    },
+    {
+      "submitted_at": "2026-07-12T02:34:02+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 79,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Argentina",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-12T01:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.35,
+        "draw": 0.55,
+        "away": 0.1
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到第79分钟，阿根廷与瑞士战成1-1平。阿根廷在开场第10分钟由麦卡利斯特（亚历克西斯·麦卡利斯特）接梅西（里奥·梅西）助攻早早取得领先，但瑞士队在下半场第68分钟由恩多耶（丹·恩多耶）扳平比分。从场面数据来看，瑞士队在控球率（53%）和射门数（9次射门，5次射正）上占据一定优势，给阿根廷防线施加了不小压力。然而，瑞士前锋恩博洛（布雷尔·恩博洛）在第72分钟领到本场个人第二张黄牌，这使得瑞士队在最后阶段面临少打一人的被动局面。考虑到常规时间所剩无几，平局的概率目前最高。不过，阿根廷在人数占优的情况下，势必会在最后10多分钟发起猛攻，试图在常规时间内解决战斗。梅西或阿尔瓦雷斯等攻击手随时可能利用对方防线体能下降和人数劣势完成致命一击。综合判断，1-1是最可能的常规时间最终比分，但阿根廷绝杀取胜的概率显著高于瑞士队。"
+      },
+      "sources": [],
+      "cost_usd": 0.00791805,
+      "tokens": {
+        "input": 1073,
+        "output": 1078
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.357
+    },
+    {
+      "submitted_at": "2026-07-12T03:07:35+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 112,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Argentina",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-12T01:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.15,
+        "draw": 0.75,
+        "away": 0.1
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到加时赛第112分钟，当前比分为1-1。阿根廷在开场不久由亚历克西斯·麦卡利斯特首开纪录，但瑞士在下半场由丹·恩多耶扳平比分。从场面数据来看，双方射门数均为9次，但瑞士队射正次数更多（5次对2次），展现出了极强的韧性。随着加时赛所剩时间无几，双方体能均已到达极限，防守端会更加谨慎，避免在最后时刻犯错。因此，比赛被拖入点球大战的概率极高。如果能在常规时间结束前出现绝杀，替补登场的劳塔罗·马丁内斯将是阿根廷最具威胁的攻击点。"
+      },
+      "sources": [],
+      "cost_usd": 0.005972400000000001,
+      "tokens": {
+        "input": 1332,
+        "output": 726
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.47
+    },
+    {
+      "submitted_at": "2026-07-12T03:24:49+00:00",
+      "live": {
+        "status": "Extra Time - Break",
+        "elapsed": 129,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Argentina",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-12T01:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.98,
+        "away": 0.01
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第129分钟，比分依然是1-1平。阿根廷在开场不久由亚历克西斯·麦卡利斯特（亚历克西斯·麦卡利斯特）首开纪录，但瑞士在下半场由丹·恩多耶（丹·恩多耶）扳平比分。从数据上看，阿根廷占据了59%的控球率和17次射门，但瑞士的反击同样极具威胁，有5次射正。考虑到加时赛已经进入最后的伤停补时阶段，双方球员体能均已到达极限，且都在为即将到来的点球大战做准备，在常规比赛时间内再次改写比分的可能性微乎其微。因此，本场比赛最可能的最终比分将定格在1-1，双方将通过点球大战决出胜负。"
+      },
+      "sources": [],
+      "cost_usd": 0.00486675,
+      "tokens": {
+        "input": 1437,
+        "output": 533
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.757
+    },
+    {
+      "submitted_at": "2026-07-12T03:31:12+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Argentina",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-12T01:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.98,
+        "away": 0.01
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第130分钟，远远超过了常规的120分钟加时赛时间，这意味着比赛可能处于加时赛超长补时的最后阶段，或者即将进入点球大战。目前比分依然是1-1。阿根廷在控球率（60%）和总射门数（17次）上占据优势，但瑞士队在射正次数上以5比3领先，展现了更高的反击效率。鉴于比赛所剩时间极少，任何一方在运动战中完成绝杀的可能性已经微乎其微。因此，本场世界杯四分之一决赛以1-1平局收场并进入点球大战的概率极高。基于当前时间，不再预测后续的运动战进球球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.011974199999999999,
+      "tokens": {
+        "input": 1510,
+        "output": 1649
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.927
+    },
+    {
+      "submitted_at": "2026-07-12T03:37:41+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 130,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Argentina",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-12T01:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.99,
+        "draw": 0.01,
+        "away": 0.0
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "本场世界杯四分之一决赛已经进行到第130分钟，进入了加时赛最后的超长补时阶段。目前阿根廷以2-1领先瑞士。回顾比赛，阿根廷在第10分钟由麦卡利斯特（亚历克西斯·麦卡利斯特）首开纪录，瑞士在第67分钟由恩多耶（丹·恩多耶）顽强扳平比分。加时赛第112分钟，阿尔瓦雷斯（Julián Álvarez）接洛佩斯（何塞·曼努埃尔·洛佩斯）助攻打入关键进球，帮助阿根廷再次取得领先。从全场数据来看，阿根廷占据59%的控球率，并狂轰19脚射门，整体掌控了比赛节奏和场面主动权。由于比赛所剩时间已经极其有限，瑞士队虽然会全线压上进行最后的反扑，但改变比分的可能性微乎其微。因此，阿根廷将领先优势保持到终场的概率极高，最可能的最终比分将定格在2-1，预计后续不会再有进球产生。"
+      },
+      "sources": [],
+      "cost_usd": 0.01227975,
+      "tokens": {
+        "input": 1615,
+        "output": 1680
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.16
+    },
+    {
+      "submitted_at": "2026-07-12T03:43:59+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 130,
+        "score": {
+          "home": 3,
+          "away": 1
+        },
+        "home": "Argentina",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-12T01:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 1.0,
+        "draw": 0.0,
+        "away": 0.0
+      },
+      "most_likely_score": "3-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第130分钟，进入了加时赛的最后阶段甚至已经超时。阿根廷目前以3-1领先瑞士，凭借 Julián Álvarez 和 劳塔罗·马丁内斯 在加时赛中的关键进球，阿根廷已经彻底锁定了胜局。从场面数据来看，阿根廷全场控球率达到59%，狂轰22脚射门，完全掌控了比赛节奏。考虑到比赛时间已经所剩无几，瑞士队扳平比分的可能性已经不存在。因此，阿根廷获胜的概率为100%，最可能的最终比分就是目前的3-1，预计在剩余的极短时间内不会再有新的进球产生。"
+      },
+      "sources": [],
+      "cost_usd": 0.0046032,
+      "tokens": {
+        "input": 1648,
+        "output": 456
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.899
+    }
+  ]
+}

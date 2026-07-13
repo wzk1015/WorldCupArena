@@ -1,0 +1,479 @@
+{
+  "fixture_id": "World-Cup_Quarter-finals_Norway_England_2026-07-11",
+  "provider_fixture_id": "19606970",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-11T23:36:05+00:00",
+  "live": {
+    "status": "Extra Time",
+    "elapsed": 130,
+    "score": {
+      "home": 1,
+      "away": 2
+    },
+    "home": "Norway",
+    "away": "England",
+    "competition": "World Cup",
+    "stage": "Quarter-finals",
+    "kickoff_utc": "2026-07-11T21:00:00+00:00",
+    "venue": "Miami Stadium",
+    "venue_city": "Miami Gardens"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.08,
+      "draw": 0.15,
+      "away": 0.77
+    },
+    "most_likely_score": "1-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "目前比分1-2，英格兰在加时赛末段领先挪威，比赛已进入第130分钟，加时补时阶段，留给挪威的反扑窗口非常有限。场面上英格兰全场14次射门、8次射正，控球率55%，裘德·贝林厄姆上半场补时扳平后又在93分钟完成反超，攻击效率明显高于对手；挪威虽有11次射门、6个角球，但射正仅4次，且下半场至加时已完成多次换人（Haaland、Schjelderup均已被换下，Strand Larsen、Nusa、Bobb等替补登场），进攻组织在体能透支下明显下滑。综合当前比分、剩余时间极短以及双方形势，英格兰获胜概率大幅上升至约0.77，平局概率约0.15（若挪威绝平将进入点球，此处仅计常规比分层面的平局可能性），挪威直接翻盘可能性极低，约0.08。最可能的最终比分维持在1-2，即英格兰1球小胜晋级四强。后续若真的再有进球，英格兰方面Bellingham状态火热、Eze替补出场具备直塞与远射能力，最可能在防反或定位球中打入锁定胜局的一球；挪威方面若孤注一掷压上，替补前锋Strand Larsen和Sørloth在禁区内的争顶或高球第二点是仅有的扳平希望，而Haaland已被换下不再计入。综合来看，绝大多数情景下比赛将以1-2结束，任何补时进球出现的概率都相对偏低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 51864,
+    "output": 929
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.20908330000000003,
+  "wall_seconds": 22.626,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.08, \"draw\": 0.15, \"away\": 0.77},\n  \"most_likely_score\": \"1-2\",\n  \"scorers\": [\n    {\"player\": \"Erling Haaland\", \"team\": \"home\", \"minute\": 133, \"p\": 0.05},\n    {\"player\": \"Jude Bellingham\", \"team\": \"away\", \"minute\": 135, \"p\": 0.06},\n    {\"player\": \"Alexander Sørloth\", \"team\": \"home\", \"minute\": 132, \"p\": 0.04},\n    {\"player\": \"Eberechi Eze\", \"team\": \"away\", \"minute\": 134, \"p\": 0.05}\n  ],\n  \"reasoning\": {\"overall\": \"目前比分1-2，英格兰在加时赛末段领先挪威，比赛已进入第130分钟，加时补时阶段，留给挪威的反扑窗口非常有限。场面上英格兰全场14次射门、8次射正，控球率55%，Jude Bellingham上半场补时扳平后又在93分钟完成反超，攻击效率明显高于对手；挪威虽有11次射门、6个角球，但射正仅4次，且下半场至加时已完成多次换人（Haaland、Schjelderup均已被换下，Strand Larsen、Nusa、Bobb等替补登场），进攻组织在体能透支下明显下滑。综合当前比分、剩余时间极短以及双方形势，英格兰获胜概率大幅上升至约0.77，平局概率约0.15（若挪威绝平将进入点球，此处仅计常规比分层面的平局可能性），挪威直接翻盘可能性极低，约0.08。最可能的最终比分维持在1-2，即英格兰1球小胜晋级四强。后续若真的再有进球，英格兰方面Bellingham状态火热、Eze替补出场具备直塞与远射能力，最可能在防反或定位球中打入锁定胜局的一球；挪威方面若孤注一掷压上，替补前锋Strand Larsen和Sørloth在禁区内的争顶或高球第二点是仅有的扳平希望，而Haaland已被换下不再计入。综合来看，绝大多数情景下比赛将以1-2结束，任何补时进球出现的概率都相对偏低。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-11T21:07:19+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 7,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.27,
+        "away": 0.55
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 38,
+          "p": 0.34,
+          "team": "away"
+        },
+        {
+          "player": "Erling Haaland",
+          "minute": 55,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 63,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Phil Foden",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Martin Ødegaard",
+          "minute": 82,
+          "p": 0.14,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "开场第7分钟，双方仍是0-0，比赛刚刚进入节奏。从早期数据看，英格兰控球率高达74%，挪威仅26%，英格兰明显掌握主动，通过中场传导压制对手，挪威则退守半场依靠反击寻找机会。考虑到世界杯八强赛的舞台以及英格兰整体阵容深度、中前场创造力和大赛经验的优势，胜率天平向客队倾斜，英格兰取胜概率约55%，平局27%，挪威获胜概率约18%。挪威的希望主要寄托在哈兰德的个人爆发以及厄德高的组织串联，一旦获得反击空间仍具威胁，因此不能完全排除爆冷或战平的可能。综合场上态势与两队进攻火力，最可能的最终比分为1-2，即英格兰凭借持续压制小胜挪威，而挪威可能凭借一次高效反击扳回一球。后续进球方面，凯恩作为英格兰头号射手在禁区内嗅觉敏锐，最有可能率先破门；萨卡与福登具备边路突破和远射能力，是扩大比分的潜在人选；挪威一方，哈兰德只要获得一次高质量传球就能改写比分，厄德高的定位球与远射也值得警惕。所有预测进球时间均设定在当前第7分钟之后，随比赛推进如出现红牌、伤病或战术调整将再行更新。"
+      },
+      "sources": [],
+      "cost_usd": 0.20227530000000002,
+      "tokens": {
+        "input": 50814,
+        "output": 771
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.885
+    },
+    {
+      "submitted_at": "2026-07-11T21:40:55+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 40,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.28,
+        "away": 0.3
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到40分钟，挪威凭借第36分钟Schjelderup接Ødegaard助攻打入的进球，暂时1-0领先英格兰。从场面来看，英格兰控球率高达65%，明显掌控中场节奏，但真正形成的射门只有1次且没有射正，进攻端效率不足；相反挪威虽然只有35%的控球，却完成了2次射门且全部射正，展现出极高的把握机会能力，典型的防守反击成功案例。犯规数双方接近（挪威4次、英格兰3次），角球方面英格兰仅有1次，说明英格兰的进攻还未真正打透挪威的防线。基于领先优势和高效反击，挪威主胜概率略高，约42%；考虑到英格兰整体实力更强、下半场必然加大攻势且仍有充裕时间扳平，客胜概率维持在30%左右；平局概率约28%，反映1-0僵持到终场的可能性也不低。综合考虑，最可能的最终比分为1-0，即挪威依靠这粒进球守到终场。后续进球方面，英格兰随着落后必然压上，凯恩、萨卡、福登等前场核心得分概率上升；挪威方面则要警惕哈兰德的反击一击致命，以及Schjelderup梅开二度的可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.20301160000000001,
+      "tokens": {
+        "input": 50983,
+        "output": 777
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.707
+    },
+    {
+      "submitted_at": "2026-07-11T22:08:44+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 53,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.24,
+        "draw": 0.28,
+        "away": 0.48
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Jude Bellingham",
+          "minute": 71,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Eberechi Eze",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Harry Kane",
+          "minute": 82,
+          "p": 0.17,
+          "team": "away"
+        },
+        {
+          "player": "Anthony Gordon",
+          "minute": 66,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Andreas Schjelderup",
+          "minute": 74,
+          "p": 0.13,
+          "team": "home"
+        },
+        {
+          "player": "Martin Ødegaard",
+          "minute": 86,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第53分钟，比分1-1。挪威在第36分钟由Schjelderup（厄德高助攻）率先破门，英格兰则在下半场刚开场的第47分钟由Bellingham（Gordon助攻）迅速扳平，显示英格兰调整到位、势头正盛。半场英格兰一次性换上Eze和Madueke两名进攻球员，明显加码前场，中场休息后立刻收到回报。从场面数据看，英格兰控球率高达68%，角球2-0，射门虽只有4次但2次射正并已转化为进球，整体控制力明显更强；挪威虽有5次射门3次射正，但控球仅32%，更依赖厄德高牵引下的反击和定位球。综合来看，剩余约40分钟英格兰凭借控球、板凳深度和进攻组合的活性，取胜概率最高，约48%；挪威若能守住并抓反击仍有机会，胜率约24%；平局约28%。最可能的最终比分为1-2，英格兰完成逆转。后续进球点方面，英格兰这边Bellingham状态火热、Eze刚登场带来变化、Gordon边路持续制造威胁，加上Kane作为终结者，都是继续破门的重点人选；挪威若追平或反超，最可能仍来自Schjelderup的把握机会能力和厄德高的直接参与，因此将他们列为主要候选进球者。"
+      },
+      "sources": [],
+      "cost_usd": 0.20411420000000002,
+      "tokens": {
+        "input": 51161,
+        "output": 801
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.96
+    },
+    {
+      "submitted_at": "2026-07-11T22:20:55+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 65,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 7.564
+    },
+    {
+      "submitted_at": "2026-07-11T22:26:56+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.41,
+        "away": 0.37
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第71分钟，挪威与英格兰在迈阿密1-1战平。上半场第36分钟Schjelderup接Ødegaard助攻为挪威首开纪录，下半场刚开场英格兰通过Bellingham在Gordon策动下迅速扳平，随后英格兰双换人（Eze、Madueke登场）加强中前场活力，挪威也在第60分钟换上Aursnes稳固中场，第56分钟一次VAR回看未改变比分走向。数据层面英格兰控球60%占优，射门次数与挪威打平（6-6），但挪威射正3次略高一档，两队场面基本均势且比分胶着。考虑到淘汰赛阶段体能下降、双方均已用换人牌，且英格兰传控稍占优、挪威由Haaland领衔的反击威胁仍在，剩余约二十分钟内继续僵持或一方偷袭得手概率较高，因此平局概率最大，英格兰凭借场面控制力略高于挪威。综合来看最可能的最终比分是1-1；若比分再变，英格兰方面Bellingham状态火热、Kane经验丰富、替补出场的Eze具备突破打门能力，挪威方面Haaland是最大威胁点，Schjelderup也可能续写进球，这些球员被列为71分钟后潜在破门人选，概率按场面权重递减分布。"
+      },
+      "sources": [],
+      "cost_usd": 0.20487640000000001,
+      "tokens": {
+        "input": 51277,
+        "output": 819
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.289
+    },
+    {
+      "submitted_at": "2026-07-11T23:05:42+00:00",
+      "live": {
+        "status": "Break Time",
+        "elapsed": 125,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.53
+    },
+    {
+      "submitted_at": "2026-07-11T23:11:40+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 116,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.72,
+        "away": 0.16
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进入加时下半场第116分钟，比分依旧胶着在1-1。挪威由谢尔德鲁普上半场先拔头筹，英格兰下半场开局由贝林厄姆迅速扳平，此后场面陷入拉锯。控球率英格兰略占优（58%对42%），但射门与射正数据两队接近（挪威9射4正、英格兰8射3正），角球5比4，谁都没能真正撕开对方防线。加时阶段双方都进行了大范围换人，挪威用上博布、努萨、佩德森、厄斯蒂高等人加强前后场轮换，英格兰则依次派上埃泽、马杜埃凯、里斯·詹姆斯、斯彭斯、罗杰斯，明显是在为点球大战与最后一搏做准备。到了第116分钟，两队体能都已见底，阵型压得较为保守，进攻端更多依赖定位球和个人闪光。综合场上节奏、双方投入以及只剩下不到5分钟加正常补时的现实，1-1握手言和、直接进入点球大战的可能性最高，因此平局概率给到0.72，主队小胜与客队小胜的概率分别压低到0.12与0.16，最可能的最终比分锁定1-1。至于116分钟之后的潜在破门，若真有决定性一击，最有威胁的仍是英格兰的贝林厄姆——他本场已入一球（另一粒93分钟进球此前存在争议），处于绝佳状态；埃泽作为生力军带球突破能力强，也具备偷袭机会；挪威一侧则要看瑟尔洛特能否在最后阶段利用高点争顶或反击创造机会，但整体概率都不高，更符合本场此刻的僵持基调。"
+      },
+      "sources": [],
+      "cost_usd": 0.018932900000000003,
+      "tokens": {
+        "input": 1297,
+        "output": 764
+      },
+      "tool_calls": 0,
+      "wall_seconds": 39.89
+    },
+    {
+      "submitted_at": "2026-07-11T23:18:11+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 123,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.082
+    },
+    {
+      "submitted_at": "2026-07-11T23:29:47+00:00",
+      "live": {
+        "status": "Extra Time - Break",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.17,
+        "away": 0.78
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分挪威1-2英格兰,比赛已进入加时赛尾声(130分钟处于加时休息/收尾阶段),留给挪威扳平的时间极为有限。场面上英格兰通过Bellingham在47分钟和93分钟的两粒进球完成逆转,射门11-10、射正5-4、控球55%略占优,整体节奏与终结效率都优于挪威;挪威虽有Schjelderup早早破门以及6个角球的定位球威胁,但下半场及加时被英格兰压制,进攻端换上Sørloth、Bobb、Nusa后仍未能再度改写比分。基于剩余时间极短、英格兰领先且防守组织完整(Konsa等替补加固后防),英格兰获胜概率显著抬升至约0.78,考虑到挪威仍具备定位球和身体对抗优势(Haaland、Sørloth在禁区内的高点威胁),存在小概率打成平局并拖入点球大战,平局概率约0.17,挪威直接反超几乎不可能,给到0.05。最可能的最终比分维持在1-2,即当前比分收尾,这与英格兰胜率最高相吻合且不低于双方现有进球数。后续进球方面,130分钟之后仅剩很短时段,进球概率整体偏低:挪威若能扳平,最可能来自Sørloth或替补登场的Haaland通过角球或长传冲吊完成头球攻门;英格兰若再下一城,则最可能由状态火热的Bellingham把握反击,或由Eze在挪威压上后利用空间打入锁定胜局的一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.2134271,
+      "tokens": {
+        "input": 51803,
+        "output": 1176
+      },
+      "tool_calls": 0,
+      "wall_seconds": 27.208
+    },
+    {
+      "submitted_at": "2026-07-11T23:36:05+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.15,
+        "away": 0.77
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分1-2，英格兰在加时赛末段领先挪威，比赛已进入第130分钟，加时补时阶段，留给挪威的反扑窗口非常有限。场面上英格兰全场14次射门、8次射正，控球率55%，裘德·贝林厄姆上半场补时扳平后又在93分钟完成反超，攻击效率明显高于对手；挪威虽有11次射门、6个角球，但射正仅4次，且下半场至加时已完成多次换人（Haaland、Schjelderup均已被换下，Strand Larsen、Nusa、Bobb等替补登场），进攻组织在体能透支下明显下滑。综合当前比分、剩余时间极短以及双方形势，英格兰获胜概率大幅上升至约0.77，平局概率约0.15（若挪威绝平将进入点球，此处仅计常规比分层面的平局可能性），挪威直接翻盘可能性极低，约0.08。最可能的最终比分维持在1-2，即英格兰1球小胜晋级四强。后续若真的再有进球，英格兰方面Bellingham状态火热、Eze替补出场具备直塞与远射能力，最可能在防反或定位球中打入锁定胜局的一球；挪威方面若孤注一掷压上，替补前锋Strand Larsen和Sørloth在禁区内的争顶或高球第二点是仅有的扳平希望，而Haaland已被换下不再计入。综合来看，绝大多数情景下比赛将以1-2结束，任何补时进球出现的概率都相对偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.20908330000000003,
+      "tokens": {
+        "input": 51864,
+        "output": 929
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.626
+    }
+  ],
+  "live_refreshed_at": "2026-07-11T23:41:56+00:00"
+}

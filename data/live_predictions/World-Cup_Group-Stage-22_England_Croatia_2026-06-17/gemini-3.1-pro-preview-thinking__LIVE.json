@@ -1,0 +1,277 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-22_England_Croatia_2026-06-17",
+  "provider_fixture_id": "19609149",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-17T21:45:47+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 3,
+      "away": 2
+    },
+    "home": "England",
+    "away": "Croatia",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-17T20:00:00+00:00",
+    "venue": "Dallas Stadium",
+    "venue_city": "Arlington"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.93,
+      "draw": 0.06,
+      "away": 0.01
+    },
+    "most_likely_score": "3-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入第90分钟的伤停补时阶段，目前英格兰以3-2领先克罗地亚。从全场数据来看，英格兰占据了明显的主导地位，全场狂轰19脚射门且有9次射正，并获得了8次角球机会；而克罗地亚虽然只有6次射门，但进攻效率极高，成功打入两球紧咬比分。由于常规时间已经结束，比赛所剩时间极少，英格兰保持胜果全取三分的概率已经非常高。克罗地亚势必会在最后时刻大举压上尝试绝平，这可能会给英格兰留下广阔的反击空间。替补登场的拉什福德（马库斯·拉什福德）利用速度打反击，或者克罗地亚的克拉马里奇（Andrej Kramaric）在禁区内抢点，是补时阶段潜在的进球点。综合当前局势与剩余时间，最可能的最终比分依然是维持目前的3-2。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2046,
+    "output": 1162
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.009468899999999999,
+  "wall_seconds": 14.925,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.93,\n    \"draw\": 0.06,\n    \"away\": 0.01\n  },\n  \"most_likely_score\": \"3-2\",\n  \"scorers\": [\n    {\n      \"player\": \"Marcus Rashford\",\n      \"team\": \"home\",\n      \"minute\": 94,\n      \"p\": 0.05\n    },\n    {\n      \"player\": \"Andrej Kramaric\",\n      \"team\": \"away\",\n      \"minute\": 95,\n      \"p\": 0.03\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入第90分钟的伤停补时阶段，目前英格兰以3-2领先克罗地亚。从全场数据来看，英格兰占据了明显的主导地位，全场狂轰19脚射门且有9次射正，并获得了8次角球机会；而克罗地亚虽然只有6次射门，但进攻效率极高，成功打入两球紧咬比分。由于常规时间已经结束，比赛所剩时间极少，英格兰保持胜果全取三分的概率已经非常高。克罗地亚势必会在最后时刻大举压上尝试绝平，这可能会给英格兰留下广阔的反击空间。替补登场的拉什福德（Marcus Rashford）利用速度打反击，或者克罗地亚的克拉马里奇（Andrej Kramaric）在禁区内抢点，是补时阶段潜在的进球点。综合当前局势与剩余时间，最可能的最终比分依然是维持目前的3-2。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Match Analysis: England vs. Croatia - Stoppage Time**\n\nOkay, here's the situation: we're at the 90-minute mark, plus stoppage time. England's up 3-2 against Croatia. Looking at the data, England has thoroughly dominated the match. Nineteen shots, with nine on target, eight corners, and a slight edge in possession. Croatia's had fewer opportunities with only six shots, but they've been efficient in converting those chances into goals.\n\nGiven the score and the remaining time, England's probability of a win is exceptionally high—somewhere in the 90-95% range. A draw is a small possibility, maybe 4-9%, and a Croatian win is essentially negligible, under 1%. The most likely final score, without a doubt, is the current 3-2.\n\nThe question now is whether there'll be any late drama? A late goal is possible, although unlikely, but it is stoppage time. I'm thinking about potential scorers. Rashford and Saka came on as subs, and for Croatia, Kramaric. Given the time, I'm going to add a very low probability for each. I had initially considered Bellingham, but he was subbed off earlier.\n\nBased on the game's flow and the remaining time, my reasoning is straightforward. The score is 3-2, England has the upper hand statistically, and it's stoppage time.\n\nNow, let's put this into JSON format, checking all constraints:\n\n*   **Win Probabilities:** England (Home) 93%, Draw 6%, Croatia (Away) 1%\n*   **Most Likely Score:** \"3-2\"\n*   **Potential Scorers:**\n    *   Marcus Rashford, Home, 94', 0.05 probability\n    *   Andrej Kramaric, Away, 95', 0.03 probability\n\nThe whole reasoning can be summarized as follows:\n\n\"The match has entered stoppage time of the 90th minute, with England currently leading Croatia 3-2. Looking at the full-game data, England has a clear advantage, having fired 19 shots in total with 9 on target, and a slightly higher possession rate of 53%; while Croatia, despite only having 6 shots, has been highly efficient in its attack, scoring two goals. Given the very little time remaining in the match, the probability of England taking all three points is already very high. Croatia will inevitably push hard in the final moments to try for an equalizer, which could leave space for England to counterattack. Substitute players Marcus Rashford and Croatia's Andrej Kramaric could both pose a threat during stoppage time. However, the most likely final score remains the current 3-2.\"\n\nAll set.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-17T20:27:19+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 27,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Croatia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.72,
+        "draw": 0.2,
+        "away": 0.08
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 62,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 75,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Andrej Kramarić",
+          "minute": 81,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第27分钟，目前比分为英格兰 1-0 领先克罗地亚。从场面数据来看，英格兰占据了59%的控球率，并已经完成了5次射门，展现出极强的中场控制力与进攻欲望。第12分钟，哈里·凯恩（哈里·凯恩）通过点球破门为英格兰首开纪录。相比之下，克罗地亚目前仅有1次射门且未能命中门框范围，在进攻端显得较为被动和乏力。鉴于英格兰在比分和场面上的双重优势，其最终获胜的概率已大幅提升至72%，而克罗地亚想要逆转取胜的难度极大，客胜概率仅剩8%。考虑到英格兰稳健的防守体系以及持续的进攻施压，他们极有可能在下半场利用对手急于扳平比分而留下的防守空当再入一球，因此 2-0 是目前最可能出现的最终比分。在后续进球者方面，状态火热的哈里·凯恩依然是英格兰最具威胁的得分点，有望在下半场完成梅开二度；此外，萨卡等前场攻击手也有较大机会在快速反击中建功。克罗地亚若能觅得良机，克拉马里奇将是他们最有可能打破僵局的球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.0184968,
+      "tokens": {
+        "input": 1134,
+        "output": 2747
+      },
+      "tool_calls": 0,
+      "wall_seconds": 31.125
+    },
+    {
+      "submitted_at": "2026-06-17T20:43:23+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 43,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Croatia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.75,
+        "draw": 0.18,
+        "away": 0.07
+      },
+      "most_likely_score": "3-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 65,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第43分钟，英格兰目前以2-1领先克罗地亚。从上半场的数据和事件来看，英格兰占据了场面主动，拥有52%的控球率并完成了8次射门。哈里·凯恩（哈里·凯恩）状态火热，已经完成梅开二度，包括一粒点球和接德克兰·赖斯（德克兰·赖斯）助攻的运动战进球。克罗地亚虽然射门次数仅有2次，但反击效率极高，由马丁·巴图里纳（马丁·巴图里纳）打入一球。鉴于英格兰在半场结束前再次取得领先，且在进攻端展现出明显的压制力，他们拿下本场比赛的概率已大幅上升至75%。克罗地亚需要在下半场大举压上，这势必会给英格兰留下更多反击空间。平局概率目前评估为18%，而克罗地亚逆转取胜的概率仅剩7%。预计下半场英格兰会利用对手急于扳平的心理继续扩大战果，最可能的最终比分为3-1。哈里·凯恩极有希望在下半场完成帽子戏法，其他中前场核心球员也有望利用防线身后的空间取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0174657,
+      "tokens": {
+        "input": 1274,
+        "output": 2560
+      },
+      "tool_calls": 0,
+      "wall_seconds": 27.618
+    },
+    {
+      "submitted_at": "2026-06-17T21:14:02+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 59,
+        "score": {
+          "home": 3,
+          "away": 2
+        },
+        "home": "England",
+        "away": "Croatia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.72,
+        "draw": 0.18,
+        "away": 0.1
+      },
+      "most_likely_score": "4-2",
+      "scorers": [
+        {
+          "player": "Jude Bellingham",
+          "minute": 76,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第59分钟，英格兰目前以3-2领先克罗地亚。这是一场进球大战，双方在进攻端都展现了极高的效率。从数据来看，英格兰占据了明显的射门优势（12次射门，4次射正），并且控球率与对手平分秋色（50%）。克罗地亚虽然射门次数较少（仅4次），但把握机会能力极强，2次射正全部转化为进球。考虑到英格兰在场面上的压制力以及哈里·凯恩（哈里·凯恩）和裘德·贝林厄姆（裘德·贝林厄姆）的出色状态，英格兰有很大机会在接下来的比赛中继续扩大比分或稳固胜局。克罗地亚虽然反击犀利，但在防守端承受了巨大压力，随着体能下降可能会暴露出更多空当。综合判断，英格兰最终获胜的概率高达72%，平局概率为18%，克罗地亚逆转取胜的概率仅为10%。预计英格兰会在下半场后半段利用对手压上进攻留下的防守漏洞再入一球，最可能的最终比分为4-2。状态火热的裘德·贝林厄姆有望在第76分钟左右通过反击再次破门。"
+      },
+      "sources": [],
+      "cost_usd": 0.01844955,
+      "tokens": {
+        "input": 1413,
+        "output": 2693
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.513
+    },
+    {
+      "submitted_at": "2026-06-17T21:29:58+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 74,
+        "score": {
+          "home": 3,
+          "away": 2
+        },
+        "home": "England",
+        "away": "Croatia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.14,
+        "away": 0.04
+      },
+      "most_likely_score": "3-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第74分钟，目前比分为英格兰 3-2 克罗地亚。从场面数据来看，英格兰占据了绝对的主导地位，控球率达到53%，并且狂轰18脚射门，其中10次射正；而克罗地亚虽然只有4次射门和2次射正，却展现了惊人的进攻效率，将两次射正全部转化为进球。尽管克罗地亚的反击极具威胁，但英格兰在整体局面上依然掌控着比赛节奏。随着比赛进入尾声，落后的克罗地亚势必会大举压上寻求扳平比分，这将给英格兰留下更多反击空间。基于当前的比分优势和比赛剩余时间，英格兰全取三分的概率极高。我们预测最可能的最终比分维持在3-2，但英格兰也有机会利用对手防线前压的空当扩大战果，已经梅开二度的哈里·凯恩（哈里·凯恩）有望在比赛最后阶段通过反击完成帽子戏法。"
+      },
+      "sources": [],
+      "cost_usd": 0.0191961,
+      "tokens": {
+        "input": 1488,
+        "output": 2799
+      },
+      "tool_calls": 0,
+      "wall_seconds": 27.843
+    },
+    {
+      "submitted_at": "2026-06-17T21:45:47+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 2
+        },
+        "home": "England",
+        "away": "Croatia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.93,
+        "draw": 0.06,
+        "away": 0.01
+      },
+      "most_likely_score": "3-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟的伤停补时阶段，目前英格兰以3-2领先克罗地亚。从全场数据来看，英格兰占据了明显的主导地位，全场狂轰19脚射门且有9次射正，并获得了8次角球机会；而克罗地亚虽然只有6次射门，但进攻效率极高，成功打入两球紧咬比分。由于常规时间已经结束，比赛所剩时间极少，英格兰保持胜果全取三分的概率已经非常高。克罗地亚势必会在最后时刻大举压上尝试绝平，这可能会给英格兰留下广阔的反击空间。替补登场的拉什福德（马库斯·拉什福德）利用速度打反击，或者克罗地亚的克拉马里奇（Andrej Kramaric）在禁区内抢点，是补时阶段潜在的进球点。综合当前局势与剩余时间，最可能的最终比分依然是维持目前的3-2。"
+      },
+      "sources": [],
+      "cost_usd": 0.009468899999999999,
+      "tokens": {
+        "input": 2046,
+        "output": 1162
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.925
+    }
+  ]
+}

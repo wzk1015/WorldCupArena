@@ -1,0 +1,277 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-22_England_Croatia_2026-06-17",
+  "provider_fixture_id": "19609149",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-17T21:45:34+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 3,
+      "away": 2
+    },
+    "home": "England",
+    "away": "Croatia",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-17T20:00:00+00:00",
+    "venue": "Dallas Stadium",
+    "venue_city": "Arlington"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.86,
+      "draw": 0.1,
+      "away": 0.04
+    },
+    "most_likely_score": "3-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛来到90分钟，英格兰目前3比2领先克罗地亚，胜负天平已经明显偏向主队。就已知比赛进程看，英格兰的进攻产量和持续施压更强，19次射门、9次射正、8个角球都明显占优，说明他们不仅把握住了哈里·凯恩和裘德·贝林厄姆的进球机会，也在整体推进和禁区威胁上持续压制对手。克罗地亚虽然只有6次射门、4次射正，却仍能打进2球，体现出反击和关键机会的效率，因此在补时阶段依然保留扳平希望，但从总量上看，他们再追一球的概率仍低于英格兰守住优势的概率。当前阶段的核心判断是：主队大概率以一球优势收下比赛，最可能的结果就是维持3比2到终场；如果补时被拉长，英格兰借助前场空间再进一球的可能性，略高于克罗地亚完成绝平。后续潜在进球人选方面，哈里·凯恩作为已经梅开二度的终结点，仍是英格兰最值得关注的补时得分点；若克罗地亚最后阶段持续压上，替补登场的Andrej Kramaric具备抢点或二点球破门的机会；而英格兰也可能通过反击由马库斯·拉什福德利用速度制造最后一击。总体来看，主胜概率在90分钟时点已经建立明显优势，平局主要依赖克罗地亚在补时内抓住一次高质量机会，客胜则需要极端剧本，因此概率最低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 3243,
+    "output": 648
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0178275,
+  "wall_seconds": 13.627,
+  "error": null,
+  "raw_text": "<think>**Considering future scorers**\n\nI need to develop a single JSON object that predicts likely future scorers only after the 90th minute. It might make sense to include some empty options for low-probability cases. I’m thinking that home teams are highly likely to score, maybe at a 0.85 chance, while draws could be around 0.11 and away teams at 0.04. For this specific scenario, I might list Harry Kane or Marcus Rashford for a late goal, and perhaps Andrej Kramaric if there's a chase. But I want to clarify: these scorers could just be potential options.</think>\n\n{\"win_probs\":{\"home\":0.86,\"draw\":0.10,\"away\":0.04},\"most_likely_score\":\"3-2\",\"scorers\":[{\"player\":\"Harry Kane \",\"team\":\"home\",\"minute\":92,\"p\":0.12},{\"player\":\"Andrej Kramaric\",\"team\":\"away\",\"minute\":93,\"p\":0.1},{\"player\":\"Marcus Rashford\",\"team\":\"home\",\"minute\":94,\"p\":0.08}],\"reasoning\":{\"overall\":\"比赛来到90分钟，England目前3比2领先Croatia，胜负天平已经明显偏向主队。就已知比赛进程看，England的进攻产量和持续施压更强，19次射门、9次射正、8个角球都明显占优，说明他们不仅把握住了Harry Kane和Jude Bellingham的进球机会，也在整体推进和禁区威胁上持续压制对手。Croatia虽然只有6次射门、4次射正，却仍能打进2球，体现出反击和关键机会的效率，因此在补时阶段依然保留扳平希望，但从总量上看，他们再追一球的概率仍低于England守住优势的概率。当前阶段的核心判断是：主队大概率以一球优势收下比赛，最可能的结果就是维持3比2到终场；如果补时被拉长，England借助前场空间再进一球的可能性，略高于Croatia完成绝平。后续潜在进球人选方面，Harry Kane作为已经梅开二度的终结点，仍是England最值得关注的补时得分点；若Croatia最后阶段持续压上，替补登场的Andrej Kramaric具备抢点或二点球破门的机会；而England也可能通过反击由Marcus Rashford利用速度制造最后一击。总体来看，主胜概率在90分钟时点已经建立明显优势，平局主要依赖Croatia在补时内抓住一次高质量机会，客胜则需要极端剧本，因此概率最低。\"},\"sources\":[]}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-17T20:27:05+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 27,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Croatia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 61,
+          "p": 0.24,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到27分钟，英格兰1比0领先，唯一进球来自哈里·凯恩 的点球。从目前已知信息看，英格兰开局阶段掌控力更强，控球率59%对41%占优，射门5比1、角球2比1也说明主队在进攻端制造了更多压力。虽然比分只是一个球差距，但克罗地亚到目前为止还没有射正，英格兰门将也暂时没有受到实质考验，这让主队继续守住优势的概率明显上升。基于当前时间点和场面数据，英格兰取胜仍是最可能结果；平局的可能主要来自克罗地亚在后续比赛中逐步提升控球和中前场配合后扳回一球，而客队直接逆转所需条件更多，因此概率相对更低。最终比分方面，1比0当然仍有现实基础，但考虑到英格兰已经建立节奏优势，且克罗地亚为追分后比赛空间可能变大，2比0比其他单一比分更符合当前走势。后续进球逻辑上，若英格兰继续保持前场压制，最有机会再次改写比分的仍是已经取得进球、并且通常承担关键终结任务的哈里·凯恩。"
+      },
+      "sources": [],
+      "cost_usd": 0.0106625,
+      "tokens": {
+        "input": 1307,
+        "output": 493
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.202
+    },
+    {
+      "submitted_at": "2026-06-17T20:43:03+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 43,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Croatia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.23,
+        "away": 0.15
+      },
+      "most_likely_score": "3-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 68,
+          "p": 0.29,
+          "team": "home"
+        },
+        {
+          "player": "Martin Baturina",
+          "minute": 74,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到43分钟，英格兰暂时2比1领先克罗地亚，走势上主队更占优。英格兰已经完成8次射门、3个角球，控球率也以52%略占上风，说明他们在前场持续制造压力；克罗地亚目前只有2次射门，却把握住了一次机会，由马丁·巴图里纳一度扳平，显示客队反击和最后一传依然有威胁。哈里·凯恩本场已经打进两球，其中包括早段点球和第42分钟的再度破门，这个时间点的进球对比赛心理影响很大，通常会显著提升领先一方在中场调整后的掌控力。\n\n从当前比分和时间看，英格兰带着1球优势进入半场前段末尾，胜面已经明显上升。虽然只领先1球意味着平局风险仍然存在，但结合射门数量、角球数以及Kane持续活跃的门前表现，主队继续扩大比分的可能性高于被持续压制。克罗地亚并非没有机会，他们在有限进攻回合里已经取得进球，若下半场提升推进速度，仍有希望再度追平，因此平局概率不能压得过低；不过从现有场面信息判断，客队直接反超所需条件更多，所以客胜概率最低。\n\n最可能的最终比分看好为3比1。这个判断基于英格兰目前更稳定的进攻输出，以及克罗地亚为了追分在下半场后段可能压上，从而给主队留下更多转换空间。后续进球人选方面，哈里·凯恩自然仍是最值得关注的名字，他已完成梅开二度，又承担点球和禁区终结职责，只要英格兰继续获得禁区内触球和定位球机会，他最像下一位改写比分的人。若克罗地亚还能进球，马丁·巴图里纳作为已经完成破门、且在现有有效进攻中最直接的终结点，依然是客队后续最现实的得分候选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0160875,
+      "tokens": {
+        "input": 2571,
+        "output": 644
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.397
+    },
+    {
+      "submitted_at": "2026-06-17T21:13:48+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 58,
+        "score": {
+          "home": 3,
+          "away": 2
+        },
+        "home": "England",
+        "away": "Croatia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.22,
+        "away": 0.2
+      },
+      "most_likely_score": "4-2",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 72,
+          "p": 0.21,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 79,
+          "p": 0.11,
+          "team": "home"
+        },
+        {
+          "player": "Petar Musa",
+          "minute": 83,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到58分钟，英格兰3比2领先，局面已经进入高波动但主队稍占主动的阶段。现有信息里，英格兰在射门方面以12比4明显占优，角球4比1也说明他们在更多时间里把比赛压在克罗地亚半场；虽然控球是50对50，但比赛节奏和威胁制造更偏向英格兰。比分演变也能看出这一点：英格兰先由哈里·凯恩点球破门，随后又由裘德·贝林厄姆和哈里·凯恩完成进球，说明他们在中前场的终结点比较集中且持续有威胁。克罗地亚两次追近比分，证明反击和把握机会能力不差，因此这场比赛仍然存在悬念，但在剩余三十多分钟里，领先的一方加上更强的射门产量，通常更接近守住优势。基于当前3比2的比分和双方已经打出的开放节奏，平局与客队逆转的概率不能忽略，不过英格兰赢面的提升更明显；最合理的判断是主胜概率最高，其次是平局，客胜最低。最终比分上，3比2本身当然仍有可能直接保持到终场，但考虑到这场比赛到58分钟已经产生5球，而且英格兰的进攻数据更扎实，4比2比其他单一比分更像是最可能落点：它既符合主队场面上的优势，也符合克罗地亚后续压上后留下空间的比赛逻辑。至于58分钟之后的进球人选，英格兰最值得继续看好的是哈里·凯恩，他已经梅开二度且包括点球在内承担核心终结职责，只要主队再获得禁区内机会或定位球，他依然是第一候选；裘德·贝林厄姆后插上能力也很适合这种对攻局面。克罗地亚方面，如果他们继续追分，佩塔尔·穆萨这类已经取得进球、站位更靠近门前的球员，仍是后续偷到一球的主要可能来源。整体来看，比赛还会有来回，但更新后的判断更倾向于英格兰以一球到两球优势带走胜利。"
+      },
+      "sources": [],
+      "cost_usd": 0.0163625,
+      "tokens": {
+        "input": 2693,
+        "output": 642
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.781
+    },
+    {
+      "submitted_at": "2026-06-17T21:29:37+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 74,
+        "score": {
+          "home": 3,
+          "away": 2
+        },
+        "home": "England",
+        "away": "Croatia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.72,
+        "draw": 0.18,
+        "away": 0.1
+      },
+      "most_likely_score": "3-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到74分钟，英格兰目前3比2领先克罗地亚，局势仍然开放，但主队已经明显占据更有利的位置。从现有进程看，这是一场节奏快、转折多的对攻战：哈里·凯恩早早通过点球破门，随后马丁·巴图里纳和佩塔尔·穆萨两次帮助克罗地亚追平，英格兰则依靠裘德·贝林厄姆和Kane的进球始终重新建立优势。进入最后阶段时，比分只差一球，理论上仍有很大悬念，但英格兰的整体场面优势相当清晰。数据层面，英格兰以18次射门、10次射正、8个角球持续施压，而克罗地亚只有4次射门、2次射正，却已经打进2球，说明客队把握机会效率很高，但这种高效率在最后十几分钟能否继续维持，通常比持续制造机会更不稳定。再结合克罗地亚门将已经做出7次扑救，可以看出英格兰创造出的威胁次数更多，继续进球的基础也更扎实。\n\n因此，当前概率判断仍然更倾向英格兰守住胜局。主队领先且进攻输出更连续，胜面应保持在明显高于平局和客胜的位置；平局的可能性主要来自克罗地亚在最后阶段孤注一掷后的单次高效反击或定位球扳平；而克罗地亚直接反超则需要在剩余时间里至少再进两球，同时还要限制英格兰后续机会，这在现有比赛走势下难度最大。\n\n最可能的最终比分仍然是3比2。原因不只是英格兰领先，还因为单场进入最后15分钟后，比分保持不变本身就是最常见的收尾路径之一。虽然本场已经出现5个进球，比赛开放度很高，但英格兰如果在后段适度回收、用控球和定位球拖慢节奏，完全有机会把优势带到终场。另一方面，克罗地亚必须压出来争取扳平，这会让比赛两端空间变大，所以4比2和3比3也是需要防范的次级结果，但综合领先方位置、射门差距和已形成的场面压力，3比2仍是最合理的单一终局预测。\n\n后续进球人选方面，如果英格兰再进一球，哈里·凯恩依然是最值得优先考虑的名字。他已经梅开二度，其中包括点球，说明终结状态和在禁区内的存在感都在线；而英格兰持续获得射门和角球，也强化了他继续扩大比分的机会。裘德·贝林厄姆同样值得关注，他后插上的冲击力很适合这种比赛尾声的开放局面。克罗地亚这边若能再次破门，最现实的逻辑是由已经取得进球、且能够在有限机会中完成终结的佩塔尔·穆萨承担，或者由前场接应与二点球抢射完成扳平。总体来看，英格兰更接近下一粒进球，但克罗地亚仍保留制造最后悬念的能力。"
+      },
+      "sources": [],
+      "cost_usd": 0.01985,
+      "tokens": {
+        "input": 2756,
+        "output": 864
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.349
+    },
+    {
+      "submitted_at": "2026-06-17T21:45:34+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 2
+        },
+        "home": "England",
+        "away": "Croatia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.1,
+        "away": 0.04
+      },
+      "most_likely_score": "3-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到90分钟，英格兰目前3比2领先克罗地亚，胜负天平已经明显偏向主队。就已知比赛进程看，英格兰的进攻产量和持续施压更强，19次射门、9次射正、8个角球都明显占优，说明他们不仅把握住了哈里·凯恩和裘德·贝林厄姆的进球机会，也在整体推进和禁区威胁上持续压制对手。克罗地亚虽然只有6次射门、4次射正，却仍能打进2球，体现出反击和关键机会的效率，因此在补时阶段依然保留扳平希望，但从总量上看，他们再追一球的概率仍低于英格兰守住优势的概率。当前阶段的核心判断是：主队大概率以一球优势收下比赛，最可能的结果就是维持3比2到终场；如果补时被拉长，英格兰借助前场空间再进一球的可能性，略高于克罗地亚完成绝平。后续潜在进球人选方面，哈里·凯恩作为已经梅开二度的终结点，仍是英格兰最值得关注的补时得分点；若克罗地亚最后阶段持续压上，替补登场的Andrej Kramaric具备抢点或二点球破门的机会；而英格兰也可能通过反击由马库斯·拉什福德利用速度制造最后一击。总体来看，主胜概率在90分钟时点已经建立明显优势，平局主要依赖克罗地亚在补时内抓住一次高质量机会，客胜则需要极端剧本，因此概率最低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0178275,
+      "tokens": {
+        "input": 3243,
+        "output": 648
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.627
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-52_Bosnia-and-Herzegovina_Qatar_2026-06-24",
+  "provider_fixture_id": "19609186",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-24T03:04:23+00:00",
+  "live": {
+    "status": "Not Started",
+    "elapsed": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "home": "Bosnia and Herzegovina",
+    "away": "Qatar",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-24T19:00:00+00:00",
+    "venue": "Seattle Stadium",
+    "venue_city": "Seattle"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.58,
+      "draw": 0.24,
+      "away": 0.18
+    },
+    "most_likely_score": "2-1",
+    "scorers": [
+      {
+        "player": "Edin Džeko",
+        "minute": 28,
+        "p": 0.3,
+        "team": "home"
+      },
+      {
+        "player": "Ermedin Demirović",
+        "minute": 63,
+        "p": 0.22,
+        "team": "home"
+      },
+      {
+        "player": "Akram Afif",
+        "minute": 71,
+        "p": 0.2,
+        "team": "away"
+      },
+      {
+        "player": "Almoez Ali",
+        "minute": 82,
+        "p": 0.16,
+        "team": "away"
+      },
+      {
+        "player": "Benjamin Tahirović",
+        "minute": 78,
+        "p": 0.14,
+        "team": "home"
+      }
+    ],
+    "reasoning": {
+      "overall": "比赛尚未开球，目前比分0-0，时间为赛前阶段，暂无任何场上事件或技术统计可供参考，因此本次更新主要基于双方整体实力与世界杯小组赛背景做出判断。波黑作为欧洲传统硬度较高的球队，前场拥有Džeko、Demirović等具备终结能力的攻击手，整体身体对抗与定位球威胁明显占优；卡塔尔虽然亚洲杯表现稳定，Afif和阿尔莫埃兹·阿里在反击中具备一定破门能力，但面对欧洲球队在中后场对抗与高空球处理上压力较大。综合考虑，波黑胜率明显领先，平局概率次之，卡塔尔取胜难度较高，因此主胜概率给到接近六成。最可能的最终比分判断为2-1，理由是波黑大概率凭借中前场质量先取得领先并扩大优势，但世界杯小组赛节奏下卡塔尔具备一次反击或定位球扳回一球的能力，完全零封并非最高概率事件。后续进球预测集中在开球之后的常规进球高发时段：上半场中段波黑率先打破僵局的可能性最大，下半场随着体能下降双方均有再下一城的机会，因此把Džeko安排在上半场中段，Demirović与Tahirović放在下半场补射时间窗，卡塔尔方面则把Afif和阿尔莫埃兹·阿里安排在反击效率较高的70-85分钟区间。所有预测进球时间均设在当前时间之后，且最终比分与最高胜率方向一致。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 19736,
+    "output": 817
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0881377,
+  "wall_seconds": 23.181,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.58, \"draw\": 0.24, \"away\": 0.18},\n  \"most_likely_score\": \"2-1\",\n  \"scorers\": [\n    {\"player\": \"Edin Džeko\", \"team\": \"home\", \"minute\": 28, \"p\": 0.30},\n    {\"player\": \"Ermedin Demirović\", \"team\": \"home\", \"minute\": 63, \"p\": 0.22},\n    {\"player\": \"Akram Afif\", \"team\": \"away\", \"minute\": 71, \"p\": 0.20},\n    {\"player\": \"Almoez Ali\", \"team\": \"away\", \"minute\": 82, \"p\": 0.16},\n    {\"player\": \"Benjamin Tahirović\", \"team\": \"home\", \"minute\": 78, \"p\": 0.14}\n  ],\n  \"reasoning\": {\"overall\": \"比赛尚未开球，目前比分0-0，时间为赛前阶段，暂无任何场上事件或技术统计可供参考，因此本次更新主要基于双方整体实力与世界杯小组赛背景做出判断。波黑作为欧洲传统硬度较高的球队，前场拥有Džeko、Demirović等具备终结能力的攻击手，整体身体对抗与定位球威胁明显占优；卡塔尔虽然亚洲杯表现稳定，Afif和Almoez Ali在反击中具备一定破门能力，但面对欧洲球队在中后场对抗与高空球处理上压力较大。综合考虑，波黑胜率明显领先，平局概率次之，卡塔尔取胜难度较高，因此主胜概率给到接近六成。最可能的最终比分判断为2-1，理由是波黑大概率凭借中前场质量先取得领先并扩大优势，但世界杯小组赛节奏下卡塔尔具备一次反击或定位球扳回一球的能力，完全零封并非最高概率事件。后续进球预测集中在开球之后的常规进球高发时段：上半场中段波黑率先打破僵局的可能性最大，下半场随着体能下降双方均有再下一城的机会，因此把Džeko安排在上半场中段，Demirović与Tahirović放在下半场补射时间窗，卡塔尔方面则把Afif和Almoez Ali安排在反击效率较高的70-85分钟区间。所有预测进球时间均设在当前时间之后，且最终比分与最高胜率方向一致。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-24T03:04:23+00:00",
+      "live": {
+        "status": "Not Started",
+        "elapsed": null,
+        "score": {
+          "home": null,
+          "away": null
+        },
+        "home": "Bosnia and Herzegovina",
+        "away": "Qatar",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.24,
+        "away": 0.18
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Edin Džeko",
+          "minute": 28,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Ermedin Demirović",
+          "minute": 63,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Akram Afif",
+          "minute": 71,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Almoez Ali",
+          "minute": 82,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Benjamin Tahirović",
+          "minute": 78,
+          "p": 0.14,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛尚未开球，目前比分0-0，时间为赛前阶段，暂无任何场上事件或技术统计可供参考，因此本次更新主要基于双方整体实力与世界杯小组赛背景做出判断。波黑作为欧洲传统硬度较高的球队，前场拥有Džeko、Demirović等具备终结能力的攻击手，整体身体对抗与定位球威胁明显占优；卡塔尔虽然亚洲杯表现稳定，Afif和阿尔莫埃兹·阿里在反击中具备一定破门能力，但面对欧洲球队在中后场对抗与高空球处理上压力较大。综合考虑，波黑胜率明显领先，平局概率次之，卡塔尔取胜难度较高，因此主胜概率给到接近六成。最可能的最终比分判断为2-1，理由是波黑大概率凭借中前场质量先取得领先并扩大优势，但世界杯小组赛节奏下卡塔尔具备一次反击或定位球扳回一球的能力，完全零封并非最高概率事件。后续进球预测集中在开球之后的常规进球高发时段：上半场中段波黑率先打破僵局的可能性最大，下半场随着体能下降双方均有再下一城的机会，因此把Džeko安排在上半场中段，Demirović与Tahirović放在下半场补射时间窗，卡塔尔方面则把Afif和阿尔莫埃兹·阿里安排在反击效率较高的70-85分钟区间。所有预测进球时间均设在当前时间之后，且最终比分与最高胜率方向一致。"
+      },
+      "sources": [],
+      "cost_usd": 0.0881377,
+      "tokens": {
+        "input": 19736,
+        "output": 817
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.181
+    }
+  ]
+}

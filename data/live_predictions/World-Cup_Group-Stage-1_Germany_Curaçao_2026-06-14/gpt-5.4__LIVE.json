@@ -1,0 +1,859 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-1_Germany_Curaçao_2026-06-14",
+  "provider_fixture_id": "19609158",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-14T18:53:43+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 7,
+      "away": 1
+    },
+    "home": "Germany",
+    "away": "Curacao",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-14T17:00:00+00:00",
+    "venue": "Houston Stadium",
+    "venue_city": "Houston"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.999,
+      "draw": 0.001,
+      "away": 0.0
+    },
+    "most_likely_score": "7-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前来到90分钟，比分是Germany 7比1领先Curacao，比赛结果实际上已经基本锁定。结合现有进程看，Germany从第6分钟就由Felix Nmecha首开纪录，虽然Curacao在第21分钟由Livano Comenencia一度追到1比1，但此后Germany完全掌控节奏，尤其下半场47、50、68、78和88分钟连续进球，把优势扩大到6球。数据层面也明显一边倒：Germany射门26比8、射正12比2、控球67%比33%、角球8比1，说明主队不仅领先，而且持续制造高质量机会，7比1与场面强度相符。基于90分钟这个时间点，剩余常规比赛时间几乎耗尽，因此主胜概率被进一步上调到接近确定，平局与客胜仅保留理论上的极小尾部概率。从最终比分分布看，7比1本身就是最稳定且最符合当前状态的结果，因为要再改写比分只可能依赖伤停补时中的极少数进攻回合；Germany若继续压上，最可能把比分带到8比1，其次才是Curacao偷到1球形成7比2，但这些都低于直接停留在7比1的概率。后续进球者逻辑上也应优先考虑Germany当前进攻端最活跃、最近已经参与终结或助攻的球员，例如Kai Havertz和Deniz Undav；Curacao若在补时中抓到一次反击或定位球，Livano Comenencia仍是相对更合理的人选，但整体概率很低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 3232,
+    "output": 502
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.01561,
+  "wall_seconds": 10.86,
+  "error": null,
+  "raw_text": "{\"win_probs\":{\"home\":0.999,\"draw\":0.001,\"away\":0.0},\"most_likely_score\":\"7-1\",\"scorers\":[{\"player\":\"Kai Havertz\",\"team\":\"home\",\"minute\":91,\"p\":0.08},{\"player\":\"Deniz Undav\",\"team\":\"home\",\"minute\":92,\"p\":0.06},{\"player\":\"Livano Comenencia\",\"team\":\"away\",\"minute\":91,\"p\":0.01}],\"reasoning\":{\"overall\":\"当前来到90分钟，比分是Germany 7比1领先Curacao，比赛结果实际上已经基本锁定。结合现有进程看，Germany从第6分钟就由Felix Nmecha首开纪录，虽然Curacao在第21分钟由Livano Comenencia一度追到1比1，但此后Germany完全掌控节奏，尤其下半场47、50、68、78和88分钟连续进球，把优势扩大到6球。数据层面也明显一边倒：Germany射门26比8、射正12比2、控球67%比33%、角球8比1，说明主队不仅领先，而且持续制造高质量机会，7比1与场面强度相符。基于90分钟这个时间点，剩余常规比赛时间几乎耗尽，因此主胜概率被进一步上调到接近确定，平局与客胜仅保留理论上的极小尾部概率。从最终比分分布看，7比1本身就是最稳定且最符合当前状态的结果，因为要再改写比分只可能依赖伤停补时中的极少数进攻回合；Germany若继续压上，最可能把比分带到8比1，其次才是Curacao偷到1球形成7比2，但这些都低于直接停留在7比1的概率。后续进球者逻辑上也应优先考虑Germany当前进攻端最活跃、最近已经参与终结或助攻的球员，例如Kai Havertz和Deniz Undav；Curacao若在补时中抓到一次反击或定位球，Livano Comenencia仍是相对更合理的人选，但整体概率很低。\"},\"sources\":[]}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-14T17:10:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 10,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.84,
+        "draw": 0.12,
+        "away": 0.04
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Florian Wirtz",
+          "minute": 39,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Felix Nmecha",
+          "minute": 68,
+          "p": 0.14,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到10分钟，Germany已经凭借Felix Nmecha在第6分钟的进球1比0领先，这会显著把赛中胜率推向主队。现有场面数据也明显支持这一点：Germany前10分钟4次射门、1次射正并取得进球，控球率65%，而Curacao仍是0射门、0射正，说明主队不仅比分领先，开局主动权和压制力也更强。基于当前比分、时间点和早段统计，主胜概率应明显高于平局和客胜；但由于比赛还很早，仍需给平局保留一定空间，尤其是如果Germany后续效率下降或Curacao通过定位球、反击找到一次扳平机会。最可能最终比分方面，1比0当然具备现实性，但考虑到Germany已经持续制造射门且控球优势明确，比赛剩余时间充足，再进1球的路径比被完全锁定更合理，因此2比0比1比0更适合作为单一最高概率终场比分，同时也与主胜最高概率保持一致。后续进球逻辑上，若Germany继续维持现有控球和前场压迫，下一球更大概率仍来自主队；已送出助攻的Florian Wirtz在进攻参与度上很突出，是较合理的后续进球候选，而已经打开进球账户的Felix Nmecha也具备再次把握二点球或后插上机会的可能。Curacao目前进攻样本为零，因此暂不看好其后续进球成为主线情景。"
+      },
+      "sources": [],
+      "cost_usd": 0.010015,
+      "tokens": {
+        "input": 1156,
+        "output": 475
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.356
+    },
+    {
+      "submitted_at": "2026-06-14T17:16:43+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 16,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.09,
+        "away": 0.03
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Florian Wirtz",
+          "minute": 34,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Felix Nmecha",
+          "minute": 68,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前16分钟，Germany以1比0领先，且比赛早段已经由Felix Nmecha在第6分钟破门。结合现有技术统计，Germany以7次射门对0次、2次射正对0次、77%控球对23%控球形成明显压制，说明比赛节奏和场面主导权都在主队一侧，Curacao到目前为止尚未形成有效反击威胁。这种局面使Germany的胜率相较开赛前和0比0阶段明显上升，而平局概率主要来自主队后续把握机会下降、比分长期维持在1比0或被一次偶发进攻扳平；Curacao直接逆转所需条件更多，因此概率维持在较低水平。最可能最终比分判断为2比0：它既符合Germany当前的优势和持续创造机会的趋势，也比3比0、3比1这类比分更贴合16分钟时仅有1球领先的常见演变路径。后续进球逻辑上，若Germany继续保持高控球和前场压制，第二个进球更可能仍由主队产生；在已出现的进攻参与者中，Florian Wirtz已经送出助攻，持续参与前场关键回合的可能性较高，因此是更合理的后续进球候选，Felix Nmecha则因已经取得进球、具备前插和终结存在感，也保留再次破门的次要可能性。"
+      },
+      "sources": [],
+      "cost_usd": 0.013295,
+      "tokens": {
+        "input": 2318,
+        "output": 500
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.767
+    },
+    {
+      "submitted_at": "2026-06-14T17:22:26+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 22,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.13,
+        "away": 0.05
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Florian Wirtz",
+          "minute": 41,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Felix Nmecha",
+          "minute": 68,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "No scorer",
+          "minute": 90,
+          "p": 0.0,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到22分钟，Germany主场1比0领先，且唯一进球来自第6分钟Felix Nmecha，助攻者是Florian Wirtz。就目前可用的赛中信息看，Germany在场面上明显占优：射门8比1、射正2比0、控球率70%对30%，说明领先并非偶然，而是建立在持续压制和更稳定进攻推进之上。Curacao到目前还没有射正，也没有迫使Germany门将做出扑救，这使得客队短时间内扳平的概率被明显压低。基于当前比分、时间节点和数据强弱差，主胜概率继续维持高位，平局仍保留一定空间，主要因为现在仍处上半场中段，1球领先并未完全锁定比赛；但客胜需要比赛走势发生显著逆转，因此概率最低。最终比分方面，1比0当然有可行性，但结合Germany前22分钟已经制造出较多射门与高控球压制，后续再进1球的路径比Curacao扳平更清晰，因此将2比0视为最可能的终场比分，更符合主胜为最高概率的判断。后续进球人逻辑上，优先看已经参与进球并处于前场关键连接位的球员：Florian Wirtz既有助攻又大概率继续获得禁区前沿触球机会，因此是后续最有代表性的潜在得分点；Felix Nmecha已经取得进球，也具备二次破门可能。由于当前没有更多个人射门分布数据，未来进球预测以Germany前场已直接制造进球的球员为主，而Curacao在没有射正、控球明显落后的情况下，后续进球可能性偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.013865,
+      "tokens": {
+        "input": 2318,
+        "output": 538
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.051
+    },
+    {
+      "submitted_at": "2026-06-14T17:28:09+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 28,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.67,
+        "draw": 0.21,
+        "away": 0.12
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Florian Wirtz",
+          "minute": 54,
+          "p": 0.19,
+          "team": "home"
+        },
+        {
+          "player": "Felix Nmecha",
+          "minute": 68,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Livano Comenencia",
+          "minute": 74,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第28分钟，比分是1比1。Germany在第6分钟由Felix Nmecha先开纪录，Curacao在第21分钟由Livano Comenencia扳平，说明当前并非一边倒的比分，但从已知场面数据看，Germany仍然明显占优：总射门8比2、控球率69%比31%、射正2比1，持续压制能力和后续制造机会的频率都更高。基于这种赛中态势，主队取胜概率相较开场后的均衡状态已重新上升，平局仍保留较高可能，因为Curacao已经证明自己能把有限机会转化为进球，而客胜概率则相对最低。最终比分逻辑上，1比1之后最符合当前优势分布的是Germany再进一球并守住结果，因此最可能最终比分更新为2比1；更大的主胜比分如3比1也有空间，但需要Germany把控球优势进一步转化为更多射正，现阶段不如2比1稳健。后续进球者方面，已送出助攻且处于进攻核心区域的Florian Wirtz最有机会在下半场直接参与终结，先前已经进球的Felix Nmecha也具备再次把握二次进攻或禁区前插的概率；若Curacao再度取得进球，现有进球者Livano Comenencia仍是最合理的延续人选，因为客队整体进攻样本有限，未来得分更可能集中在少数高效点上。"
+      },
+      "sources": [],
+      "cost_usd": 0.01326,
+      "tokens": {
+        "input": 2376,
+        "output": 488
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.448
+    },
+    {
+      "submitted_at": "2026-06-14T17:33:57+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 33,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.69,
+        "draw": 0.21,
+        "away": 0.1
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Florian Wirtz",
+          "minute": 58,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Felix Nmecha",
+          "minute": 71,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Livano Comenencia",
+          "minute": 76,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前33分钟比分为1比1，但场面信息明显偏向主队Germany。Germany在6分钟由Felix Nmecha先开纪录，21分钟被Curacao通过Livano Comenencia扳平；从结果看暂时均势，但从过程看并不均衡。Germany目前拥有72%控球、10次射门、3次射正和3个角球，而Curacao只有28%控球、2次射门、1次射正、0个角球，说明主队持续把比赛压在客队半场，进攻组织和二次进攻频率都更高。Curacao能够把比分追成1比1，更多体现为一次有效反击兑现，而不是持续制造威胁，因此在同样比分下，后续概率应继续向Germany倾斜。基于当前时间点，比赛还剩较长时段，Germany有充足时间把控球优势转化为更多高质量机会；因此主胜仍是最高概率，平局次之，客胜最低。最可能最终比分给到2比1，因为这既符合Germany当前明显占优的射门和控球结构，也比3比1这类更大胜幅更贴合上半场33分钟时仍是平局的现实。后续进球逻辑上，Germany继续压制时，中前场核心和已经参与进球的球员最可能再次决定比赛，尤其是已送出助攻的Florian Wirtz，以及已经取得进球、能进入禁区终结的Felix Nmecha；而Curacao若再进球，更可能来自反击或少量高效率机会，Livano Comenencia作为已破门球员仍是客队最可信的后续得分点。整体来看，这次更新相较1比1的表面比分，更强调Germany在场面和机会产出上的持续优势，因此维持主胜为主、平局防范、客胜低概率的赛中判断。"
+      },
+      "sources": [],
+      "cost_usd": 0.01452,
+      "tokens": {
+        "input": 2394,
+        "output": 569
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.661
+    },
+    {
+      "submitted_at": "2026-06-14T17:39:43+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 39,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.76,
+        "draw": 0.16,
+        "away": 0.08
+      },
+      "most_likely_score": "3-1",
+      "scorers": [
+        {
+          "player": "Florian Wirtz",
+          "minute": 58,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Felix Nmecha",
+          "minute": 71,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Livano Comenencia",
+          "minute": 67,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "39分钟时Germany以2-1领先，比赛仍在上半场，但从现有场面数据看，主队优势相当明显：Germany控球率71%，总射门11比3，角球4比0，射正3比1，说明比赛大部分时间都在主队掌控之下，并且持续把球推进到Curacao禁区附近。虽然Curacao已经抓住一次机会由Livano Comenencia破门，证明客队反击仍有威胁，但他们整体持球和进攻产量明显偏低，想在剩余时间持续维持高效转化难度较大。基于当前比分与数据强弱对比，Germany仍然是明显更可能赢球的一方，因此主胜概率保持最高；同时因为现在只领先1球，平局概率不能忽略，但低于主胜很多；客胜则需要下半场持续反击成功并显著改善场面，概率最低。最可能最终比分判断为3-1：这既符合Germany当前领先且持续压制的比赛走势，也反映出Curacao仍可能制造少量威胁但整体火力不足。后续进球逻辑上，Germany若继续维持高控球和射门频率，更可能先打入下一球，Florian Wirtz作为已送出助攻且参与进攻组织的核心，是较合理的后续进球候选；已经在6分钟破门的Felix Nmecha也具备再次得分的可能。Curacao方面，若再有进球，最可能仍来自转换进攻中的Livano Comenencia。"
+      },
+      "sources": [],
+      "cost_usd": 0.014775,
+      "tokens": {
+        "input": 2394,
+        "output": 586
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.461
+    },
+    {
+      "submitted_at": "2026-06-14T17:45:42+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.15,
+        "away": 0.07
+      },
+      "most_likely_score": "3-1",
+      "scorers": [
+        {
+          "player": "Florian Wirtz",
+          "minute": 63,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Felix Nmecha",
+          "minute": 74,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Livano Comenencia",
+          "minute": 69,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比赛在45分钟时为Germany主场2比1领先Curacao。仅基于现有赛中信息，Germany不仅在比分上占优，而且场面控制也很明显：控球率70%对30%，总射门12比3，射正4比1，角球5比0，说明主队持续把比赛压在客队半场并制造了更多稳定威胁。上半场进程上，Germany在6分钟由Felix Nmecha先开纪录，Curacao在21分钟由Livano Comenencia一度扳平，但Germany又在38分钟由Nico Schlotterbeck再度超出，这种“被追平后还能重新建立领先”的走势，通常会进一步强化领先方在下半场的胜率。概率上，半场已领先1球的一方本就占据明显优势，而结合Germany显著更高的控球与射门产量，其取胜概率需要继续上调；Curacao虽然把握住了有限机会，但从数据看持续进攻能力偏弱，因此客胜概率保持低位，平局则主要来自Germany下半场效率下降或防线再丢一球的情形。最可能最终比分判断为3-1：这既符合Germany当前领先且场面更强的状态，也比2-1更能反映其继续创造机会的趋势，同时仍保留Curacao偶有反击但整体后续输出受限的预期。后续进球者逻辑上，更应优先考虑Germany一侧的进攻核心和已在上半场参与进球、进入危险区域更频繁的球员，因此Florian Wirtz作为已送出助攻的创造点，是下半场最有希望直接参与并转化为进球的人选；Felix Nmecha已取得进球，也具备再次得分的现实可能。Curacao方面若再进球，更可能来自其上半场唯一破门者Livano Comenencia，在反击或少数高效机会中延续威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.0148975,
+      "tokens": {
+        "input": 2455,
+        "output": 584
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.042
+    },
+    {
+      "submitted_at": "2026-06-14T17:51:49+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 3,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.93,
+        "draw": 0.05,
+        "away": 0.02
+      },
+      "most_likely_score": "4-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 67,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 74,
+          "p": 0.21,
+          "team": "home"
+        },
+        {
+          "player": "Livano Comenencia",
+          "minute": 81,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前以官方即时比分45分钟3-1为基准更新，德国在半场结束前已经建立两球优势，胜面明显扩大。比赛进程上，德国早早由Felix Nmecha破门，随后虽被Livano Comenencia一度追回，但整体场面始终由德国掌控；从现有统计看，德国16次射门、5次射正、71%控球和6个角球，全面压制库拉索的4次射门与29%控球，这说明3-1并非偶然，更像是持续高压下的合理结果。概率上，半场领先两球且数据优势显著时，主胜通常会维持在极高区间，因此主胜给到0.93，平局只保留给德国下半场效率明显下降且库拉索把握反击机会的低概率情形，客胜则仅剩极小逆转空间。最可能最终比分判断为4-1：这既符合德国当前进攻产量和持续制造机会的能力，也考虑到领先后节奏可能略降，不一定继续大比分拉开。后续进球逻辑上，德国仍最有希望再入一球，优先看中前场终结点和二线跟进者，因此Kai Havertz、Florian Wirtz是更合理的未来进球候选；而库拉索若再进球，更可能来自反击或定位球中的Livano Comenencia，但整体概率明显低于德国继续扩大比分。另需注意，事件流中出现了50分钟德国进球记录，但当前官方比赛状态仍是45分钟3-1，因此本次预测只按45分钟即时比分与现有统计进行赛中更新。"
+      },
+      "sources": [],
+      "cost_usd": 0.01712,
+      "tokens": {
+        "input": 2510,
+        "output": 723
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.883
+    },
+    {
+      "submitted_at": "2026-06-14T18:13:01+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 58,
+        "score": {
+          "home": 4,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.978,
+        "draw": 0.017,
+        "away": 0.005
+      },
+      "most_likely_score": "5-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 72,
+          "p": 0.21,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 79,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 84,
+          "p": 0.11,
+          "team": "home"
+        },
+        {
+          "player": "Livano Comenencia",
+          "minute": 76,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "58分钟时Germany已经4比1领先Curacao，比分和时间共同决定主队胜率已处于极高区间。比赛进程上，Germany在6分钟由Felix Nmecha先开纪录，虽然21分钟被Livano Comenencia扳回一球，但随后38分钟Nico Schlotterbeck再度拉开差距，下半场开局47分钟Jamal Musiala进球、50分钟Kai Havertz点球命中，说明主队不仅整体实力优势明显，而且在中前场持续制造高质量机会。现有数据也明显倾向Germany：17比4的总射门、7比2的射正、72%比28%的控球和6比0的角球，反映出主队长时间压制并且继续获得前场回合，因此从赛中更新看，主胜概率继续上调，平局和客胜只保留极小尾部可能。最终比分逻辑上，Germany已经手握3球优势，且场面没有显示Curacao具备持续反扑能力，所以最可能结果是在现有基础上再出现1球左右的增量，5比1因此成为最符合当前强弱差、时间剩余和进攻效率的单一比分。后续进球人方面，优先考虑已经取得进球、且通常处于Germany高频终结区域的Kai Havertz与Jamal Musiala；同时Florian Wirtz此前已有助攻、持续参与前场组织，也具备较高后续直接得分可能。客队若再进球，更可能来自已破门的Livano Comenencia通过反击或定位球抓住有限机会，但整体概率明显低于Germany继续扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.014485,
+      "tokens": {
+        "input": 2632,
+        "output": 527
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.495
+    },
+    {
+      "submitted_at": "2026-06-14T18:18:44+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 63,
+        "score": {
+          "home": 4,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.986,
+        "draw": 0.011,
+        "away": 0.003
+      },
+      "most_likely_score": "5-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 74,
+          "p": 0.19,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 81,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Livano Comenencia",
+          "minute": 86,
+          "p": 0.05,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前进行到63分钟，Germany以4-1领先，比赛已经进入对主队极为有利的强势区间。已发生的进球分布显示Germany在6分钟先开纪录，虽然21分钟被Curacao追到1-1，但随后38分钟再次领先，并在下半场47分钟和50分钟短时间内连进两球，把分差迅速扩大到3球。这个时间点配合比分，意味着Curacao不仅需要在剩余时间里持续追分，还要同时限制Germany继续得分，现实难度非常高。现有数据也明显支持这一判断：Germany总射门18比4、射正8比2、角球7比0、控球69%比31%，说明主队不只是比分领先，而且在场面、推进次数和禁区威胁上都长期占优。基于这种比赛流向，主胜概率被进一步推高，平局和客胜只保留极低尾部可能。最可能的最终比分方面，4-1已经是一个很强的终局候选，但考虑到Germany持续压制、射门产量高且已经由Felix Nmecha、Nico Schlotterbeck、Jamal Musiala、Kai Havertz等多人完成终结，后续再进1球的概率仍高于比分完全冻结，因此将5-1作为单一最可能最终比分；同时也保留4-1收尾或5-2、6-1等次级路径。后续进球人逻辑上，更应优先考虑已经取得进球且处于优势进攻体系中的Germany球员，其中Kai Havertz与Jamal Musiala在下半场阶段继续取得进球的机会较高；若Curacao获得零星反击或定位球机会，Livano Comenencia作为已进球球员之一，仍是客队后续最合理的潜在得分点，但整体概率明显低于主队球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.012105,
+      "tokens": {
+        "input": 1488,
+        "output": 559
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.025
+    },
+    {
+      "submitted_at": "2026-06-14T18:24:44+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 69,
+        "score": {
+          "home": 4,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.986,
+        "draw": 0.011,
+        "away": 0.003
+      },
+      "most_likely_score": "5-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 78,
+          "p": 0.19,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 83,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Livano Comenencia",
+          "minute": 86,
+          "p": 0.06,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前进行到69分钟，Germany以4-1领先Curacao，三球优势叠加剩余时间已不多，主胜概率已经被大幅抬升。已发生的比赛内容也明显支持这一判断：Germany在前69分钟打出持续压制，21次射门、8次射正、69%控球和7个角球，远高于Curacao的4次射门、2次射正和0个角球，说明主队不仅比分领先，而且场面、推进次数和禁区威胁都占据绝对上风。进球时间线同样显示Germany在上半场建立主动后，下半场46至50分钟迅速再入两球，把比赛带入强控制局面；Curacao虽然由Livano Comenencia打进1球，但整体创造力和持续施压能力不足，想在最后20多分钟追三球以上的难度极高，因此平局和客胜只保留极低尾部概率。最终比分判断上，4-1已经是很稳的主胜基线，但结合Germany当前射门产量、前场效率和比赛开放程度，主队再进1球的可能性仍高于双方都不再进球，所以最可能最终比分更新为5-1；其次才是维持4-1或扩大到6-1。后续进球人逻辑方面，优先考虑已经取得进球、且处于Germany主要终结链条中的球员，Kai Havertz点球破门后仍是较自然的追加得分候选，Jamal Musiala则凭借前插与禁区活动能力继续具备较高再进球概率；若Curacao在Germany节奏放缓后抓到反击机会，已有进球的Livano Comenencia仍是客队最可信的后续得分点。总体而言，这场比赛在69分钟时胜负悬念已经很小，主要变化更可能体现在Germany是否把比分继续扩大，而非结果方向发生逆转。"
+      },
+      "sources": [],
+      "cost_usd": 0.012345,
+      "tokens": {
+        "input": 1488,
+        "output": 575
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.406
+    },
+    {
+      "submitted_at": "2026-06-14T18:30:28+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 75,
+        "score": {
+          "home": 4,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.988,
+        "draw": 0.009,
+        "away": 0.003
+      },
+      "most_likely_score": "4-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到75分钟，Germany主场4比1领先Curacao，三球优势在这个时间点已经把结果强烈推向主队胜利。已发生进程显示Germany从开场就建立主动：6分钟Felix Nmecha首开纪录，虽然21分钟被Livano Comenencia一度扳成1比1，但随后38分钟Nico Schlotterbeck再度超出，进入下半场后Germany在46至50分钟这段时间连续扩大比分，其中Jamal Musiala进球、Kai Havertz罚入点球，说明主队不仅控制比赛，而且在关键阶段把握机会能力明显更强。统计层面也支持这一判断：Germany总射门22比5、射正8比2、角球7比0、控球68%比32%，场面压制很清晰，Curacao到目前为止创造力和持续施压能力都有限。基于当前比分、时间和数据优势，主胜概率进一步上调到极高水平，平局和客胜只保留极低尾部概率，主要对应Germany最后阶段突然失控或Curacao连续高效追分的低频情景。最可能最终比分方面，4比1本身已是明显优势，而比赛只剩约15分钟加补时，领先一方往往会适度控制节奏，因此4比1作为单一最可能终场比分最合理；但考虑到Germany射门量和压制力仍然很强，继续打成5比1的次高可能性也不能忽视。后续进球人逻辑上，更应优先考虑Germany已在本场完成进球、且处于前场终结区域的球员，如Kai Havertz和Jamal Musiala，他们最符合继续扩大比分的路径；若Curacao再进一球，更可能来自已证明个人终结能力的Livano Comenencia，通常会出现在Germany防线强度下降或比赛开放度提升后的反击场景。"
+      },
+      "sources": [],
+      "cost_usd": 0.0125025,
+      "tokens": {
+        "input": 1593,
+        "output": 568
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.303
+    },
+    {
+      "submitted_at": "2026-06-14T18:36:11+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 81,
+        "score": {
+          "home": 5,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.988,
+        "draw": 0.009,
+        "away": 0.003
+      },
+      "most_likely_score": "5-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前81分钟比分为5-1，德国已经建立四球领先，比赛结果层面基本失去悬念，因此主胜概率被进一步上调到极高水平，平局与客胜只保留极低尾部概率。从已知比赛进程看，德国在第6分钟先开纪录，虽在第21分钟被库拉索追回一球，但随后又在第38、47、50和68分钟持续扩大优势，说明主队不仅开局进入状态快，而且上下半场都能稳定制造决定性机会。统计数据同样强烈支持这一判断：德国23次射门、9次射正、68%控球和7个角球，全面压制库拉索的6次射门、2次射正和0个角球，场面优势与5-1比分高度一致。基于81分钟这一时间点，剩余常规时间加补时已经不多，通常更容易出现的是领先方节奏管理与零星追加进球，而不是落后四球一方完成系统性逆转，所以最可能最终比分仍然是5-1；这既符合当前巨大分差，也反映了尾段时间窗口有限。与此同时，德国持续高压的数据意味着他们仍有一定概率再进一球，因此6-1是次优情景，但其发生概率仍低于比分维持不变。未来进球者逻辑上更偏向德国球员，因为主队进攻资源更集中、替补登场后的前场活跃度仍在，像Deniz Undav这类已参与进球的进攻点，以及已经罚入点球的Kai Havertz，都属于最后时段继续扩大比分的合理候选；库拉索若再进球，更可能来自反击或比赛开放阶段下的偶发机会，因此仅给予很低概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.0240525,
+      "tokens": {
+        "input": 6453,
+        "output": 528
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.658
+    },
+    {
+      "submitted_at": "2026-06-14T18:41:56+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 86,
+        "score": {
+          "home": 6,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.997,
+        "draw": 0.002,
+        "away": 0.001
+      },
+      "most_likely_score": "6-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第86分钟比分已经来到6比1，德国主场大幅领先，比赛胜负悬念实际上已经基本结束。结合现有赛况，德国在进攻端从开场到下半场持续压制：24次射门、10次射正、67%控球率、7个角球，都明显高于库拉索的7次射门、2次射正和0个角球。进球时间分布也说明德国并非只是在某一个时段爆发，而是上半场早早领先、下半场又连续扩大优势，比赛流向始终偏向主队。库拉索虽然在21分钟由Livano Comenencia打进1球，但之后没有形成足够的持续反扑数据支撑，且整体场面控制力不足，因此德国胜率被进一步抬升到接近锁定的水平，平局和客胜只保留极低尾部概率。最可能的最终比分判断为6比1，原因是当前已进入86分钟，常规时间所剩不多，虽然大比分领先一方仍可能借由持续压迫再进1球，但在如此悬殊比分下，领先方比赛节奏往往会有所回落，现有比分直接保持到终场的单一结果概率最高。至于86分钟之后的潜在进球人选，德国仍然是更可能继续进球的一侧，因为其进攻产量和替补后的前场活跃度依旧更强；已在比赛中破门且终结位置靠前的Deniz Undav、点球破门的Kai Havertz都属于更合理的后续得分候选。库拉索若再进球，更可能来自替补冲击点或零星反击，因此仅给予Jearl Margaritha较低概率。总体来看，比赛大概率以德国大胜收尾，若还有进球，也更倾向于出现在主队一侧。"
+      },
+      "sources": [],
+      "cost_usd": 0.01604,
+      "tokens": {
+        "input": 3050,
+        "output": 561
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.557
+    },
+    {
+      "submitted_at": "2026-06-14T18:47:50+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 6,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.998,
+        "draw": 0.001,
+        "away": 0.001
+      },
+      "most_likely_score": "6-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已到90分钟，Germany以6-1大幅领先，胜负悬念实际上已经终结。根据现有赛况，主队从第6分钟Felix Nmecha破门开始建立优势，虽然Curacao在第21分钟由Livano Comenencia一度追到1-1，但随后Germany在第38、47、50、68和78分钟连续进球，把分差扩大到5球。比赛进程与数据也完全支持这一判断：Germany控球68%，总射门24比8，射正10比2，角球8比0，持续形成压制，说明6-1并非偶然，而是场面优势长期兑现后的结果。到了90分钟这个节点，可用时间只剩补时，概率模型会把主胜进一步上调到接近锁定，平局和客胜仅保留理论上的极低尾部概率。最可能最终比分因此仍是6-1，因为在如此晚的时间点，维持现有比分通常比再出现进球更常见；但考虑到Germany进攻效率高、替补上来的Deniz Undav已经取得进球，且Kai Havertz也有点球入账，若补时还有破门，继续由主队扩大比分的可能性明显高于客队再追一球。Curacao若在补时阶段再进球，需要在被长期压制的情况下把有限机会转化为得分，因此概率很低。综合当前比分、时间与比赛走势，本次赛中更新将主胜设为压倒性最高概率，最可能终局为6-1，后续潜在进球人选也以Germany球员为主，仅保留极小概率给Curacao的反击得分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0127675,
+      "tokens": {
+        "input": 2029,
+        "output": 513
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.98
+    },
+    {
+      "submitted_at": "2026-06-14T18:53:43+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 7,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.999,
+        "draw": 0.001,
+        "away": 0.0
+      },
+      "most_likely_score": "7-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前来到90分钟，比分是Germany 7比1领先Curacao，比赛结果实际上已经基本锁定。结合现有进程看，Germany从第6分钟就由Felix Nmecha首开纪录，虽然Curacao在第21分钟由Livano Comenencia一度追到1比1，但此后Germany完全掌控节奏，尤其下半场47、50、68、78和88分钟连续进球，把优势扩大到6球。数据层面也明显一边倒：Germany射门26比8、射正12比2、控球67%比33%、角球8比1，说明主队不仅领先，而且持续制造高质量机会，7比1与场面强度相符。基于90分钟这个时间点，剩余常规比赛时间几乎耗尽，因此主胜概率被进一步上调到接近确定，平局与客胜仅保留理论上的极小尾部概率。从最终比分分布看，7比1本身就是最稳定且最符合当前状态的结果，因为要再改写比分只可能依赖伤停补时中的极少数进攻回合；Germany若继续压上，最可能把比分带到8比1，其次才是Curacao偷到1球形成7比2，但这些都低于直接停留在7比1的概率。后续进球者逻辑上也应优先考虑Germany当前进攻端最活跃、最近已经参与终结或助攻的球员，例如Kai Havertz和Deniz Undav；Curacao若在补时中抓到一次反击或定位球，Livano Comenencia仍是相对更合理的人选，但整体概率很低。"
+      },
+      "sources": [],
+      "cost_usd": 0.01561,
+      "tokens": {
+        "input": 3232,
+        "output": 502
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.86
+    }
+  ]
+}

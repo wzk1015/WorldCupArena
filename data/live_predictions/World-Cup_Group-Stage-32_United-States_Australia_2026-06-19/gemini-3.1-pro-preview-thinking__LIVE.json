@@ -1,0 +1,334 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-32_United-States_Australia_2026-06-19",
+  "provider_fixture_id": "19609134",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-19T20:51:00+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 0
+    },
+    "home": "United States",
+    "away": "Australia",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-19T19:00:00+00:00",
+    "venue": "Seattle Stadium",
+    "venue_city": "Seattle"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.99,
+      "draw": 0.01,
+      "away": 0.0
+    },
+    "most_likely_score": "2-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入第90分钟，美国队目前以2-0领先澳大利亚队。从场面数据来看，美国队占据了绝对优势，控球率高达63%，并完成了10次射门和6次角球，而澳大利亚队在进攻端表现乏力，仅有4次射门。由于常规时间已经结束，即将进入伤停补时阶段，美国队获胜的概率已经接近100%。考虑到剩余时间极短，最可能的最终比分将维持在目前的2-0。在补时阶段，如果澳大利亚队全线压上导致后防空虚，美国队的 亚历克斯·弗里曼 有极小概率通过反击再入一球。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2202,
+    "output": 1198
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0098595,
+  "wall_seconds": 13.381,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.99,\n    \"draw\": 0.01,\n    \"away\": 0.00\n  },\n  \"most_likely_score\": \"2-0\",\n  \"scorers\": [\n    {\n      \"player\": \"Alex Freeman\",\n      \"team\": \"home\",\n      \"minute\": 93,\n      \"p\": 0.05\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入第90分钟，美国队目前以2-0领先澳大利亚队。从场面数据来看，美国队占据了绝对优势，控球率高达63%，并完成了10次射门和6次角球，而澳大利亚队在进攻端表现乏力，仅有4次射门。由于常规时间已经结束，即将进入伤停补时阶段，美国队获胜的概率已经接近100%。考虑到剩余时间极短，最可能的最终比分将维持在目前的2-0。在补时阶段，如果澳大利亚队全线压上导致后防空虚，美国队的 Alex Freeman 有极小概率通过反击再入一球。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Analyzing the Match State**\n\nI'm focusing intently on the match state now, it is the 90th minute, and the United States is winning 2-0 against Australia. Cameron Burgess scored an own goal for the US, and Alex Freeman scored as well. The US is dominating with 6 shots. I have begun evaluating how the US secured their win, and which aspects helped them achieve a victory.\n\n\n**Predicting Further Outcomes**\n\nNow I'm evaluating probabilities, focusing on potential late goals. Considering the match state, I'm predicting the most likely score at 2-0. I have analyzed the possession, shots, and corners to assess the likelihood of further scores during stoppage time, which is practically inevitable. I've considered that Alex Freeman has a small probability of scoring at the 93rd minute.\n\n\n**Confirming Victory Likelihood**\n\nMy analysis indicates a near-certain US victory. The win probability is at 99%, with a tiny chance of a draw. I've cemented the 2-0 scoreline as the most probable final result, given the lack of time left and US dominance. I've re-evaluated the chances of a late goal, with Alex Freeman being the only one with a slight chance in a late counter.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-19T19:15:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 15,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T19:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.65,
+        "draw": 0.22,
+        "away": 0.13
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Folarin Balogun",
+          "minute": 38,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Christian Pulisic",
+          "minute": 65,
+          "p": 0.32,
+          "team": "home"
+        },
+        {
+          "player": "Mitchell Duke",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第15分钟，美国队凭借澳大利亚球员卡梅隆·伯吉斯（卡梅伦·伯吉斯）在第11分钟的乌龙球，暂时以1-0领先。从开场的数据来看，主场作战的美国队占据了绝对的主动权，控球率高达75%，牢牢控制了比赛节奏。尽管澳大利亚在有限的球权下完成了2次射门并有1次射正，但整体局面依然被美国队压制。基于早早取得领先以及压倒性的控球优势，美国队最终获胜的概率大幅提升至65%。澳大利亚若想扳平比分，必须在反击中提高效率，但面对美国队的防线难度较大。预计美国队会在后续比赛中利用对手阵型前压的空当继续扩大战果，最可能的最终比分为2-0。在后续进球者方面，美国队锋线核心巴洛贡（福拉林·巴洛贡）和普利西奇（克里斯蒂安·普利希奇）有很大机会在接下来的比赛中破门得分，而澳大利亚的米切尔·杜克（Mitchell Duke）则是客队最具威胁的反击点。"
+      },
+      "sources": [],
+      "cost_usd": 0.010277399999999999,
+      "tokens": {
+        "input": 1064,
+        "output": 1454
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.922
+    },
+    {
+      "submitted_at": "2026-06-19T19:33:30+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 33,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T19:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.72,
+        "draw": 0.19,
+        "away": 0.09
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Christian Pulisic",
+          "minute": 65,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Folarin Balogun",
+          "minute": 82,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第33分钟，美国队凭借澳大利亚后卫卡梅隆·伯吉斯（卡梅伦·伯吉斯）在第11分钟的乌龙球，暂时以1-0领先。从场面数据来看，坐镇西雅图主场的美国队占据了绝对优势，控球率高达68%，并完成了5次射门。尽管美国队目前还没有射正，但他们牢牢控制着中场和比赛节奏。澳大利亚队在意外丢球后显得较为被动，控球率仅为32%，且乔丹·博斯（乔丹·博斯）早早领到黄牌，防守端面临巨大压力。考虑到美国队的主场优势、控球压制力以及目前的领先局面，他们全取三分的概率已大幅上升。澳大利亚若想扳平比分，必须在下半场阵型前压，这势必会给美国队留下更多反击空间。因此，预测美国队有极大概率获胜，最可能的最终比分是2-0。在后续比赛中，随着对手体能下降和防线压上，美国队的核心攻击手如克里斯蒂安·普利西奇（克里斯蒂安·普利希奇）或弗拉林·巴洛贡（福拉林·巴洛贡）极有可能在下半场利用速度和技术优势扩大领先优势。"
+      },
+      "sources": [],
+      "cost_usd": 0.01249815,
+      "tokens": {
+        "input": 1127,
+        "output": 1796
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.135
+    },
+    {
+      "submitted_at": "2026-06-19T19:51:23+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T19:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.92,
+        "draw": 0.06,
+        "away": 0.02
+      },
+      "most_likely_score": "3-0",
+      "scorers": [
+        {
+          "player": "Christian Pulisic",
+          "minute": 68,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Folarin Balogun",
+          "minute": 82,
+          "p": 0.2,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第45分钟，美国队目前以2-0领先澳大利亚队。从上半场的场面来看，主场作战的美国队占据了绝对优势，控球率高达71%，并完成了8次射门。澳大利亚队在防守端显得较为吃力，不仅在第11分钟由卡梅伦·伯吉斯不慎自摆乌龙，还早早领到了两张黄牌。半场结束前，亚历克斯·弗里曼经VAR确认的进球进一步巩固了美国队的领先优势。鉴于两球领先且场面完全压制，美国队最终获胜的概率极高，达到92%。澳大利亚队想要在下半场连扳两球难度极大，平局概率约为6%，而客队逆转取胜的概率仅剩2%。预计下半场美国队会继续利用控球优势掌控比赛节奏，并在对手阵型前压时寻找空当。最可能的最终比分为3-0。预计像克里斯蒂安·普利希奇或福拉林·巴洛贡这样的核心攻击手有望在下半场进一步扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.014015399999999999,
+      "tokens": {
+        "input": 1318,
+        "output": 2005
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.205
+    },
+    {
+      "submitted_at": "2026-06-19T20:15:34+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 60,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T19:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.92,
+        "draw": 0.07,
+        "away": 0.01
+      },
+      "most_likely_score": "3-0",
+      "scorers": [
+        {
+          "player": "Alex Freeman",
+          "minute": 78,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Christian Pulisic",
+          "minute": 85,
+          "p": 0.2,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第60分钟，美国队目前以2-0领先澳大利亚队。从场面数据来看，美国队占据了绝对的主动权，控球率高达71%，并完成了9次射门。上半场第11分钟，澳大利亚后卫伯吉斯（卡梅伦·伯吉斯）不慎自摆乌龙，随后在半场结束前，弗里曼（亚历克斯·弗里曼）为美国队扩大比分。澳大利亚在下半场伊始连换三人，试图通过伊兰昆达（内斯托里·伊拉昆达）等人的冲击力挽回劣势，但目前仅有29%的控球率和2次射门，进攻端显得办法不多。考虑到两球的领先优势以及美国队在主场（西雅图）的压制力，美国队获胜的概率极高。澳大利亚在急于压上的过程中后防线可能会暴露出更多空当，美国队有望利用反击再下一城。因此，最可能的最终比分预测为3-0。后续进球逻辑上，状态出色的弗里曼或美国队的其他攻击手有较大机会在比赛后段利用空间取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.01282575,
+      "tokens": {
+        "input": 1529,
+        "output": 1781
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.213
+    },
+    {
+      "submitted_at": "2026-06-19T20:33:14+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 78,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T19:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.96,
+        "draw": 0.03,
+        "away": 0.01
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第78分钟，美国队目前以2-0领先澳大利亚队。从场面数据来看，美国队占据了绝对的主导地位，控球率高达67%，并创造了10次射门机会和6个角球。上半场澳大利亚后卫 卡梅伦·伯吉斯 的乌龙球以及 亚历克斯·弗里曼 在半场结束前的进球为美国队奠定了胜局。澳大利亚队虽然在下半场进行了多次换人调整，试图通过换上 内斯托里·伊拉昆达 和 克里斯蒂安·沃尔帕托 等生力军来改变战局，但整体进攻依然受制于人，全场仅有4次射门。考虑到比赛仅剩10多分钟加伤停补时，美国队拥有两球优势且牢牢控制着中场节奏，主队全取三分的概率极高。最可能的最终比分将维持在2-0。在后续的比赛中，如果比分再次被改写，状态出色的 亚历克斯·弗里曼 有望利用对手防线压上留下的空当完成梅开二度，而澳大利亚的替补奇兵 内斯托里·伊拉昆达 则是客队在反击中最具威胁的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.0160083,
+      "tokens": {
+        "input": 1920,
+        "output": 2221
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.259
+    },
+    {
+      "submitted_at": "2026-06-19T20:51:00+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T19:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.99,
+        "draw": 0.01,
+        "away": 0.0
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，美国队目前以2-0领先澳大利亚队。从场面数据来看，美国队占据了绝对优势，控球率高达63%，并完成了10次射门和6次角球，而澳大利亚队在进攻端表现乏力，仅有4次射门。由于常规时间已经结束，即将进入伤停补时阶段，美国队获胜的概率已经接近100%。考虑到剩余时间极短，最可能的最终比分将维持在目前的2-0。在补时阶段，如果澳大利亚队全线压上导致后防空虚，美国队的 亚历克斯·弗里曼 有极小概率通过反击再入一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0098595,
+      "tokens": {
+        "input": 2202,
+        "output": 1198
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.381
+    }
+  ]
+}

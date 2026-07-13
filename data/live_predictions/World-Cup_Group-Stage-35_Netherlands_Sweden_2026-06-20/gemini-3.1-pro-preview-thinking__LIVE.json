@@ -1,0 +1,538 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-35_Netherlands_Sweden_2026-06-20",
+  "provider_fixture_id": "19609176",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-20T18:50:53+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 5,
+      "away": 1
+    },
+    "home": "Netherlands",
+    "away": "Sweden",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-20T17:00:00+00:00",
+    "venue": "Houston Stadium",
+    "venue_city": "Houston"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 1.0,
+      "draw": 0.0,
+      "away": 0.0
+    },
+    "most_likely_score": "5-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进行到第90分钟，当前比分为荷兰5-1遥遥领先瑞典。从场面和数据来看，尽管瑞典在总射门数（14对9）和射正数（7对6）上甚至略占优势，但荷兰队展现了极高的进攻转化率，布莱恩·布罗比和科迪·加克波等人表现出色，帮助球队早早锁定胜局。瑞典仅由安东尼·埃兰加扳回一城。由于比赛已进入伤停补时阶段，且分差巨大，荷兰队获胜的概率已达到100%，比赛悬念彻底终结。最可能的最终比分将维持在目前的5-1。考虑到补时阶段双方可能还会有零星的进攻尝试，替补登场的孟菲斯·德佩或瑞典前锋亚历山大·伊萨克存在微小的进球可能，但整体比分发生改变的概率极低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2106,
+    "output": 1507
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.011705400000000001,
+  "wall_seconds": 14.866,
+  "error": null,
+  "raw_text": "```json\n{\n  \"win_probs\": {\n    \"home\": 1.0,\n    \"draw\": 0.0,\n    \"away\": 0.0\n  },\n  \"most_likely_score\": \"5-1\",\n  \"scorers\": [\n    {\n      \"player\": \"Memphis Depay\",\n      \"team\": \"home\",\n      \"minute\": 93,\n      \"p\": 0.05\n    },\n    {\n      \"player\": \"Alexander Isak\",\n      \"team\": \"away\",\n      \"minute\": 94,\n      \"p\": 0.02\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进行到第90分钟，当前比分为荷兰5-1遥遥领先瑞典。从场面和数据来看，尽管瑞典在总射门数（14对9）和射正数（7对6）上甚至略占优势，但荷兰队展现了极高的进攻转化率，Brian Brobbey和Cody Gakpo等人表现出色，帮助球队早早锁定胜局。瑞典仅由Anthony Elanga扳回一城。由于比赛已进入伤停补时阶段，且分差巨大，荷兰队获胜的概率已达到100%，比赛悬念彻底终结。最可能的最终比分将维持在目前的5-1。考虑到补时阶段双方可能还会有零星的进攻尝试，替补登场的Memphis Depay或瑞典前锋Alexander Isak存在微小的进球可能，但整体比分发生改变的概率极低。\"\n  },\n  \"sources\": []\n}\n```",
+  "thinking_text": "**Match Analysis: Netherlands vs. Sweden**\n\nOkay, here's the situation: the clock shows 90 minutes, and the score is a decisive 5-1 in favor of the Netherlands against Sweden. Despite Sweden having more shots overall (14 to 9) and shots on target (7 to 6), the Netherlands has been incredibly clinical in their finishing. Brobbey and Gakpo both netted braces, really putting the game beyond Sweden's reach early on. Elanga managed a goal for Sweden, but it's been largely a one-sided affair.\n\nGiven that we're deep into stoppage time, the Netherlands has a near-certain probability of winning, essentially 100%. The most probable final score will remain 5-1. While there's always a slight chance of a late goal in stoppage time, maybe a player like Memphis Depay, who came on as a sub, could find the net. I'll assign him a small probability around minute 93. It's also worth noting that Isak could get one at 94, though the chances seem very low at this point. The 5-1 scoreline is the key thing, and the high conversion rate from the Netherlands really tells the story.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-20T17:16:00+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 16,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.75,
+        "draw": 0.18,
+        "away": 0.07
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 62,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Alexander Isak",
+          "minute": 75,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第16分钟，荷兰队目前以1-0领先瑞典队。开场仅5分钟，布莱恩·布罗贝伊（布莱恩·布罗比）接科迪·加克波（科迪·加克波）助攻闪电破门，为荷兰队取得梦幻开局。从场面数据来看，荷兰队占据了绝对的主动权，控球率高达63%，并已完成3次射门（2次射正）。瑞典队虽然处于劣势，但也完成了1次射正，展现出一定的反击威胁。鉴于荷兰队早早确立领先优势且牢牢掌控中场节奏，他们拿下本场比赛的胜率已大幅提升至75%左右。瑞典队若想扳平比分，必须在后续比赛中增加进攻投入，但这也会给荷兰队留下更多反击空间。平局概率约为18%，而瑞典队逆转取胜的概率仅剩7%。综合目前的攻防态势，最可能的最终比分是2-0。在后续的比赛中，状态活跃且已贡献一次助攻的加克波极有可能在下半场利用瑞典队阵型前压时的空当扩大比分。同时，瑞典队的锋线核心如亚历山大·伊萨克（亚历山大·伊萨克）也具备在反击中制造威胁的能力，是客队追平比分的关键人物。"
+      },
+      "sources": [],
+      "cost_usd": 0.01525755,
+      "tokens": {
+        "input": 1067,
+        "output": 2244
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.941
+    },
+    {
+      "submitted_at": "2026-06-20T17:23:32+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 23,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 30 column 4 (char 866)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.622
+    },
+    {
+      "submitted_at": "2026-06-20T17:30:59+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 30,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.1,
+        "away": 0.02
+      },
+      "most_likely_score": "3-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 68,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Brian Brobbey",
+          "minute": 52,
+          "p": 0.28,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第30分钟，荷兰队目前以2-0领先瑞典队。开场仅5分钟，布罗贝伊（布莱恩·布罗比）接加克波（科迪·加克波）助攻首开纪录，随后在第17分钟又接邓弗里斯传球完成梅开二度。从场面数据来看，荷兰队完全掌控了比赛节奏，控球率高达65%，4次射门有3次射正，进攻效率极高。相比之下，瑞典队仅有35%的控球率和1次射正，在防守端显得十分被动。基于目前的巨大优势和场面压制力，荷兰队最终获胜的概率极高。预计下半场瑞典队必须压上进攻，这会给荷兰队留下更多反击空间。综合来看，最可能的最终比分为3-0。在后续的比赛中，状态火热的布罗贝伊有望在下半场初段冲击帽子戏法，而频频制造威胁的加克波也有很大机会利用对手防线空当取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.01841175,
+      "tokens": {
+        "input": 1389,
+        "output": 2691
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.669
+    },
+    {
+      "submitted_at": "2026-06-20T17:38:26+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 38,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.1,
+        "away": 0.02
+      },
+      "most_likely_score": "3-1",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 62,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Alexander Isak",
+          "minute": 81,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第38分钟，荷兰队目前以2-0领先瑞典队。荷兰队在开场阶段展现了极高的进攻效率，布罗贝伊（布莱恩·布罗比）在加克波（科迪·加克波）和邓弗里斯（邓泽尔·邓弗里斯）的助攻下早早完成梅开二度。数据方面，荷兰队占据60%的控球率，4次射门3次射正即取得两粒进球，展现了强大的终结能力与中场控制力。瑞典队虽然在射门总数上以5次略微领先，且有2次射正，但均被荷兰门将化解，整体防守端也显得较为被动。鉴于荷兰队手握两球优势且牢牢控制比赛节奏，他们最终获胜的概率极高。瑞典队想要在剩余时间内连扳两球难度极大。预计下半场荷兰队会继续利用控球优势消耗对手，并伺机通过反击制造威胁，状态活跃的加克波极有可能在下半场进一步扩大比分。同时，瑞典队在落后局面下势必大举压上，他们上半场已经展现出了一定的进攻威胁，有望在比赛后段由锋线核心扳回挽回颜面的一球。综合场面走势，最可能的最终比分预测为3-1。"
+      },
+      "sources": [],
+      "cost_usd": 0.01641465,
+      "tokens": {
+        "input": 1137,
+        "output": 2416
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.561
+    },
+    {
+      "submitted_at": "2026-06-20T17:46:01+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.65,
+        "draw": 0.22,
+        "away": 0.13
+      },
+      "most_likely_score": "3-1",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 68,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Brian Brobbey",
+          "minute": 75,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第45分钟，荷兰目前以2-1领先瑞典。荷兰队在开局阶段展现了强大的统治力，凭借布罗贝伊（布莱恩·布罗比）在第5和第17分钟的梅开二度早早确立优势，加克波（科迪·加克波）和邓弗里斯的助攻体现了荷兰队边路进攻的活跃。数据方面，荷兰队控球率高达61%，5次射门4次射正，进攻效率极高。然而，瑞典队并未放弃，半场结束前通过VAR确认扳回一城，且半场总射门数（6次）甚至略高于荷兰，表明瑞典在反击和阵地战中仍具威胁。鉴于荷兰队整体实力的优势以及控球主导权，他们最终获胜的概率依然最高。瑞典队半场前的进球虽然提升了士气，但想要完全逆转难度较大。预计下半场瑞典会进一步压上寻求扳平，这将给荷兰队留下广阔的反击空间。最可能的最终比分预测为3-1，加克波等锋线球员极有可能在下半场利用对手防线身后的空当再次破门。"
+      },
+      "sources": [],
+      "cost_usd": 0.01592325,
+      "tokens": {
+        "input": 1197,
+        "output": 2328
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.739
+    },
+    {
+      "submitted_at": "2026-06-20T18:13:21+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 58,
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.99,
+        "draw": 0.008,
+        "away": 0.002
+      },
+      "most_likely_score": "4-0",
+      "scorers": [
+        {
+          "player": "Crysencio Summerville",
+          "minute": 76,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Brian Brobbey",
+          "minute": 82,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第58分钟，荷兰队目前以3-0大幅领先瑞典队。从场面数据来看，荷兰队展现了极高的进攻效率，尽管总射门数（7次）略少于瑞典队（9次），但5次射正即斩获3球。布莱恩·布罗比完成梅开二度，科迪·加克波传射建功，邓泽尔·邓弗里斯更是贡献了两次助攻。瑞典队虽然在控球率上处于劣势（43%），但创造了多次射门机会，只是被荷兰门将的4次精彩扑救化解。鉴于3球的巨大优势且比赛仅剩30多分钟，荷兰队获胜的概率已接近绝对，平局和瑞典队逆转的可能性微乎其微。考虑到瑞典队必须全线压上以求挽回颜面，这将给荷兰队留下广阔的反击空间。下半场刚替补登场的生力军克里斯滕西奥·苏姆维尔有望利用反击再下一城，或者状态火热的布莱恩·布罗比有机会完成帽子戏法。预计最可能的最终比分为4-0。"
+      },
+      "sources": [],
+      "cost_usd": 0.0177996,
+      "tokens": {
+        "input": 1280,
+        "output": 2612
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.676
+    },
+    {
+      "submitted_at": "2026-06-20T18:21:00+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 66,
+        "score": {
+          "home": 4,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.985,
+        "draw": 0.012,
+        "away": 0.003
+      },
+      "most_likely_score": "5-1",
+      "scorers": [
+        {
+          "player": "Brian Brobbey",
+          "minute": 78,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Alexander Isak",
+          "minute": 84,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第66分钟，荷兰队目前以4-1遥遥领先瑞典队，基本锁定了本场比赛的胜局。从场面数据来看，荷兰队控球率占据56%，虽然总射门数（9次）少于瑞典队（12次），但6次射正即换来4粒进球，展现了极其恐怖的门前把握机会能力。布莱恩·布罗比和科迪·加克波双双梅开二度，状态火热。瑞典队在下半场连换三人后，由替补登场的安东尼·埃兰加接亚历山大·伊萨克助攻扳回一城，进攻端有所起色。考虑到荷兰队手握三球领先优势，接下来的比赛大概率会放缓节奏，控制体能消耗；而瑞典队为了挽回颜面必将继续大举压上，这给荷兰队留下了充足的反击空间。因此，荷兰队获胜的概率已占据绝对优势。预计最终比分最可能定格在5-1，布莱恩·布罗比有望在后续的反击中利用空间完成帽子戏法，而瑞典队的亚历山大·伊萨克也具备利用个人能力再次敲开对手大门的潜力。"
+      },
+      "sources": [],
+      "cost_usd": 0.01767885,
+      "tokens": {
+        "input": 1945,
+        "output": 2482
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.793
+    },
+    {
+      "submitted_at": "2026-06-20T18:28:31+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 73,
+        "score": {
+          "home": 4,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.995,
+        "draw": 0.004,
+        "away": 0.001
+      },
+      "most_likely_score": "4-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第73分钟，荷兰队目前以4-1大比分领先瑞典队。从场面数据来看，荷兰队展现了极高的进攻效率，全场9次射门6次射正即斩获4球，布罗贝伊（布莱恩·布罗比）和加克波（科迪·加克波）双双梅开二度，右路核心邓弗里斯（邓泽尔·邓弗里斯）也贡献了两次助攻。尽管瑞典队在射门总数上以12对9领先，且在第59分钟由替补登场的伊兰加（安东尼·埃兰加）接伊萨克（亚历山大·伊萨克）助攻扳回一城，但荷兰队凭借57%的控球率和门将的4次成功扑救有效稳固了领先优势。鉴于比赛仅剩不到20分钟（含补时）且存在3球的巨大分差，荷兰队全取三分的概率已高达99.5%，瑞典队绝平或逆转的可能性微乎其微。最可能的最终比分预计将维持在目前的4-1。不过，考虑到瑞典队仍在积极尝试缩小分差，以及荷兰队前场球员在反击中的速度优势，比赛尾声阶段仍有一定概率产生进球。如果后续比分被改写，正在寻求帽子戏法的布罗贝伊或瑞典锋线核心伊萨克是最具威胁的潜在得分手。"
+      },
+      "sources": [],
+      "cost_usd": 0.016620450000000002,
+      "tokens": {
+        "input": 1837,
+        "output": 2332
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.108
+    },
+    {
+      "submitted_at": "2026-06-20T18:36:03+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 81,
+        "score": {
+          "home": 4,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.999,
+        "draw": 0.001,
+        "away": 0.0
+      },
+      "most_likely_score": "4-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第81分钟，当前比分为荷兰4-1大幅领先瑞典。从场面和数据来看，荷兰队本场比赛展现了极高的进攻效率，全场9次射门6次射正便斩获4粒进球，布罗贝伊和加克波各自完成梅开二度。尽管瑞典队在射门总数上以12次略占优势，并在下半场由替补登场的埃兰加扳回一城，但巨大的比分差距和所剩无几的时间意味着比赛悬念已经终结。荷兰队的胜率已接近百分之百。考虑到双方体能下降以及荷兰队可能放缓节奏，最可能的最终比分将维持在4-1。不过，在比赛最后的垃圾时间里，替补登场的德佩（孟菲斯·德佩）体能充沛，有望利用反击机会破门；而仍在场上的加克波也有冲击帽子戏法的动力。瑞典方面，伊萨克（亚历山大·伊萨克）作为锋线核心，仍有可能在最后阶段为球队再入一粒挽回颜面的进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.01611435,
+      "tokens": {
+        "input": 1907,
+        "output": 2240
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.746
+    },
+    {
+      "submitted_at": "2026-06-20T18:43:30+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 88,
+        "score": {
+          "home": 4,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.999,
+        "draw": 0.001,
+        "away": 0.0
+      },
+      "most_likely_score": "4-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第88分钟，当前比分为荷兰 4-1 瑞典。荷兰队凭借布罗贝伊（布莱恩·布罗比）和加克波（科迪·加克波）的各自梅开二度，早早确立了巨大的领先优势。瑞典队虽然在下半场由替补登场的埃兰加（安东尼·埃兰加）扳回一城，且全场射门数（12次）甚至略高于荷兰（9次），但荷兰队极高的射门转化率和稳健的控球（55%）让比赛彻底失去了悬念。考虑到常规时间仅剩2分钟加上伤停补时，瑞典队想要抹平三球的差距已无可能。因此，荷兰队获胜的概率接近100%。最可能的最终比分将大概率维持在当前的 4-1。在剩余的极短时间内，双方再次进球的概率极低，但如果出现反击或定位球机会，仍在场上寻求帽子戏法的加克波（科迪·加克波）或替补登场的德佩（孟菲斯·德佩）有微小的可能进一步扩大比分，而瑞典的伊萨克（亚历山大·伊萨克）也可能利用荷兰防线松懈打入挽回颜面的一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.011781,
+      "tokens": {
+        "input": 2106,
+        "output": 1519
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.592
+    },
+    {
+      "submitted_at": "2026-06-20T18:50:53+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 5,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 1.0,
+        "draw": 0.0,
+        "away": 0.0
+      },
+      "most_likely_score": "5-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第90分钟，当前比分为荷兰5-1遥遥领先瑞典。从场面和数据来看，尽管瑞典在总射门数（14对9）和射正数（7对6）上甚至略占优势，但荷兰队展现了极高的进攻转化率，布莱恩·布罗比和科迪·加克波等人表现出色，帮助球队早早锁定胜局。瑞典仅由安东尼·埃兰加扳回一城。由于比赛已进入伤停补时阶段，且分差巨大，荷兰队获胜的概率已达到100%，比赛悬念彻底终结。最可能的最终比分将维持在目前的5-1。考虑到补时阶段双方可能还会有零星的进攻尝试，替补登场的孟菲斯·德佩或瑞典前锋亚历山大·伊萨克存在微小的进球可能，但整体比分发生改变的概率极低。"
+      },
+      "sources": [],
+      "cost_usd": 0.011705400000000001,
+      "tokens": {
+        "input": 2106,
+        "output": 1507
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.866
+    }
+  ]
+}

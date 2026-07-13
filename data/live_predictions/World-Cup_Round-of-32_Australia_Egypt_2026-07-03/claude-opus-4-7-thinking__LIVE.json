@@ -1,0 +1,364 @@
+{
+  "fixture_id": "World-Cup_Round-of-32_Australia_Egypt_2026-07-03",
+  "provider_fixture_id": "19606945",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-03T20:48:42+00:00",
+  "live": {
+    "status": "Penalty In Progress",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "home": "Australia",
+    "away": "Egypt",
+    "competition": "World Cup",
+    "stage": "Round of 32",
+    "kickoff_utc": "2026-07-03T18:00:00+00:00",
+    "venue": "Dallas Stadium",
+    "venue_city": "Arlington"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.05,
+      "draw": 0.9,
+      "away": 0.05
+    },
+    "most_likely_score": "1-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "目前比分1-1，比赛已进入点球大战阶段，常规时间与加时赛均已结束，双方在90分钟内的比分定格在1-1。回顾场上进程：埃及队第13分钟由伊玛目·阿舒尔首开纪录，澳大利亚直到第55分钟才依靠穆罕默德·哈尼的乌龙球扳平比分，此后双方均未能在120分钟内改写比分。数据面上，澳大利亚射门16次但射正仅1次，控球率42%；埃及射门14次、射正4次，角球7-4占优、控球58%，整体埃及在进攻质量上略胜一筹，但双方门将和防线都保持了纪律性。由于比赛已经进入点球大战，比分本身不会再变化，最终常规比分锁定为1-1，因此平局概率显著最高，同时给主客队各留极小概率仅用于覆盖数据延迟等边缘情况。最可能的最终比分即为1-1，与平局概率最高相匹配。关于90分钟之后的进球者预测：由于常规时间和加时赛均已结束，接下来只剩点球大战决定晋级，不会再有传统意义上的运动战进球产生，因此不列出后续进球球员。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 21010,
+    "output": 1041
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0969955,
+  "wall_seconds": 22.649,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.05, \"draw\": 0.90, \"away\": 0.05},\n  \"most_likely_score\": \"1-1\",\n  \"scorers\": [],\n  \"reasoning\": {\"overall\": \"目前比分1-1，比赛已进入点球大战阶段，常规时间与加时赛均已结束，双方在90分钟内的比分定格在1-1。回顾场上进程：埃及队第13分钟由Emam Ashour首开纪录，澳大利亚直到第55分钟才依靠Mohamed Hany的乌龙球扳平比分，此后双方均未能在120分钟内改写比分。数据面上，澳大利亚射门16次但射正仅1次，控球率42%；埃及射门14次、射正4次，角球7-4占优、控球58%，整体埃及在进攻质量上略胜一筹，但双方门将和防线都保持了纪律性。由于比赛已经进入点球大战，比分本身不会再变化，最终常规比分锁定为1-1，因此平局概率显著最高，同时给主客队各留极小概率仅用于覆盖数据延迟等边缘情况。最可能的最终比分即为1-1，与平局概率最高相匹配。关于90分钟之后的进球者预测：由于常规时间和加时赛均已结束，接下来只剩点球大战决定晋级，不会再有传统意义上的运动战进球产生，因此不列出后续进球球员。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-03T18:06:25+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 6,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-03T18:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.3,
+        "away": 0.4
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Mohamed Salah",
+          "minute": 38,
+          "p": 0.32,
+          "team": "away"
+        },
+        {
+          "player": "Omar Marmoush",
+          "minute": 65,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Mitchell Duke",
+          "minute": 58,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Ajdin Hrustic",
+          "minute": 78,
+          "p": 0.14,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第6分钟，场上比分仍为0-0。开场阶段埃及明显掌握了比赛节奏，控球率高达74%，将澳大利亚压制在自己半场，只是尚未形成有威胁的射门；澳大利亚则依靠一次快速反击完成了本场首次射门，显示出防守反击的战术意图。基于开局的场面走势，埃及凭借萨拉赫、马尔穆什领衔的中前场技术优势更有希望率先打破僵局，因此埃及的胜率略高于澳大利亚，考虑到32强淘汰赛通常节奏偏谨慎，平局的概率也维持在相当水平。综合控球压制与反击效率的对比，预计最终比分最有可能是1-2，由埃及取胜。后续进球方面，萨拉赫作为埃及进攻核心，在上半场后段随着比赛完全展开最有机会终结机会；马尔穆什的插上和反抢能力有望在下半场中段扩大领先；澳大利亚方面，中锋Mitchell Duke在下半场中段的定位球或反击中具备扳平机会，Hrustic在比赛尾声压上强攻阶段也可能远射建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.0863987,
+      "tokens": {
+        "input": 19746,
+        "output": 721
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.226
+    },
+    {
+      "submitted_at": "2026-07-03T18:18:06+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 18,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Australia",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-03T18:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.2,
+        "draw": 0.26,
+        "away": 0.54
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Mohamed Salah",
+          "minute": 63,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Omar Marmoush",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Mitchell Duke",
+          "minute": 68,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Emam Ashour",
+          "minute": 71,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Ajdin Hrustic",
+          "minute": 82,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第18分钟，埃及凭借第13分钟伊玛目·阿舒尔接卡里姆·哈菲兹传球攻入的一球，客场1-0领先澳大利亚。从开场至今的场面来看，埃及掌握了68%的控球率，虽然射门数（2次）少于澳大利亚（3次），但射正率明显更高（1次射正对0次），进攻效率和节奏都占优；澳大利亚虽然抢到1个角球并有3次尝试，但威胁有限，且犯规次数（2次）多于对手，说明其在中前场的对抗中略显被动。基于领先优势加上比赛控制力，我们把埃及的获胜概率上调至0.54，平局概率0.26（考虑到还有70多分钟且澳大利亚身体对抗强、下半场加强反扑的可能），澳大利亚翻盘取胜概率下调至0.20。综合双方的得分能力与当前节奏，最可能的最终比分定为0-2：埃及在稳固防守的基础上，凭借边路推进和快速反击有很大机会再下一城，而澳大利亚要在落后局面下打破对方密集防守难度较大。后续进球方面，埃及方面穆罕默德·萨拉赫的经验和终结能力使其成为最有可能扩大比分的球员，奥马尔·马尔穆什的速度冲击和已经进球的伊玛目·阿舒尔也具备再度威胁球门的能力；澳大利亚方面，需要下半场加强前场投入，锋线的Mitchell Duke作为支点最有希望争到扳平机会，阿伊丁·赫鲁斯蒂奇的定位球和远射也是潜在得分点，因此其进球时间大多设定在下半场中后段。所有预测进球时间均在当前第18分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0907647,
+      "tokens": {
+        "input": 19876,
+        "output": 931
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.918
+    },
+    {
+      "submitted_at": "2026-07-03T19:13:03+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 58,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Australia",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-03T18:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 5.873
+    },
+    {
+      "submitted_at": "2026-07-03T19:19:08+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 64,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Australia",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-03T18:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.38,
+        "away": 0.32
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第64分钟，比分1-1。埃及队在第13分钟由伊玛目·阿舒尔首开纪录，澳大利亚则在第55分钟通过穆罕默德·哈尼的乌龙球扳平比分，比赛回到同一起跑线。从场面数据看，双方相当接近：澳大利亚控球率47%对53%，射门6比4，角球3比0略占主动，说明扳平后澳大利亚踢得更积极；但埃及射正1次、扑救数据也显示门前威胁并未消退，整体是一场胶着的对攻战。考虑到剩余不到30分钟、比分战平且双方都不敢过度冒险，平局概率被上调至最高，主客队获胜概率接近但因主队近段占据场面小幅领先，客队则凭借更高效率与后防组织略高于主队。综合来看，最可能的最终比分维持1-1，比赛存在进入加时的可能性。若在64分钟后仍有进球，伊玛目·阿舒尔作为客队主要进攻点最可能再次找到机会；主队方面，中场推进后乔丹·博斯的插上以及替补登场的凯·特鲁因可能在定位球或反击中形成威胁，但整体进球期望不高，故各潜在射手概率均较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0953379,
+      "tokens": {
+        "input": 20022,
+        "output": 1149
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.631
+    },
+    {
+      "submitted_at": "2026-07-03T20:25:06+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Australia",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-03T18:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.58,
+        "away": 0.2
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进入加时赛下半场后段，比分仍是1-1。埃及在第13分钟由伊玛目·阿舒尔首开纪录，澳大利亚在第55分钟凭借穆罕默德·哈尼的乌龙球扳平，之后双方进入僵持。数据面上埃及控球率57%略占优，射门12次、射正3次也稍好于澳大利亚的13次射门仅1次射正，但两队都没能在120分钟内分出胜负，才被拖入加时。进入130分钟后，两队体能都已明显透支，双方教练也用完了大部分换人名额，Trezeguet、Marmoush、穆罕默德·图雷、Mabil等进攻球员被派上，主要是为可能到来的点球大战做准备，同时保留一击致命的可能。综合来看，剩余不到10分钟走向平局并进入点球的概率最高，因此把和局概率提到最高，主客队获胜概率相近且都偏低。最可能的最终比分维持1-1，最终由点球决定晋级。若在剩余时间内还能进球，最可能来自替补登场且状态较好的Trezeguet、Marmoush这边或澳大利亚的Touré、Mabil反击，但整体命中率都很有限，因此每位候选射手的进球概率都压得较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0906167,
+      "tokens": {
+        "input": 20611,
+        "output": 776
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.323
+    },
+    {
+      "submitted_at": "2026-07-03T20:42:09+00:00",
+      "live": {
+        "status": "Penalty In Progress",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Australia",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-03T18:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.15,
+        "draw": 0.7,
+        "away": 0.15
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入点球大战阶段，常规时间和加时赛全部结束，场上比分定格在1-1。上半场第13分钟，埃及队由伊玛目·阿舒尔率先破门取得领先；下半场第55分钟，穆罕默德·哈尼不慎乌龙，帮助澳大利亚扳平比分。此后双方在加时赛内均无建树，最后阶段埃及两黄（海塞姆·哈桑第105分钟、亚瑟·易卜拉欣第120分钟）也反映出他们体能透支、动作变形的状态。从技术统计看，埃及控球率58%、7角球、4次射正，整体场面稍占优；澳大利亚16次射门却仅1次射正，进攻效率偏低，主要靠对方乌龙得分。基于以上过程，比赛本身的最终比分几乎锁定为1-1平局，因此把平局概率给到最高的0.70，最可能最终比分为1-1。由于此刻已进入点球大战、且不会再有运动战进球产生，90分钟之后不再列出进球球员。晋级层面点球大战接近五五开，但考虑埃及门将高压下扑救稳定、球队整体节奏更佳，晋级概率略微在两队间保持均衡，双方胜出概率各给0.15，反映点球大战的高度不确定性。"
+      },
+      "sources": [],
+      "cost_usd": 0.1013319,
+      "tokens": {
+        "input": 20792,
+        "output": 1319
+      },
+      "tool_calls": 0,
+      "wall_seconds": 28.862
+    },
+    {
+      "submitted_at": "2026-07-03T20:48:42+00:00",
+      "live": {
+        "status": "Penalty In Progress",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Australia",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-03T18:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.9,
+        "away": 0.05
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分1-1，比赛已进入点球大战阶段，常规时间与加时赛均已结束，双方在90分钟内的比分定格在1-1。回顾场上进程：埃及队第13分钟由伊玛目·阿舒尔首开纪录，澳大利亚直到第55分钟才依靠穆罕默德·哈尼的乌龙球扳平比分，此后双方均未能在120分钟内改写比分。数据面上，澳大利亚射门16次但射正仅1次，控球率42%；埃及射门14次、射正4次，角球7-4占优、控球58%，整体埃及在进攻质量上略胜一筹，但双方门将和防线都保持了纪律性。由于比赛已经进入点球大战，比分本身不会再变化，最终常规比分锁定为1-1，因此平局概率显著最高，同时给主客队各留极小概率仅用于覆盖数据延迟等边缘情况。最可能的最终比分即为1-1，与平局概率最高相匹配。关于90分钟之后的进球者预测：由于常规时间和加时赛均已结束，接下来只剩点球大战决定晋级，不会再有传统意义上的运动战进球产生，因此不列出后续进球球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.0969955,
+      "tokens": {
+        "input": 21010,
+        "output": 1041
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.649
+    }
+  ]
+}

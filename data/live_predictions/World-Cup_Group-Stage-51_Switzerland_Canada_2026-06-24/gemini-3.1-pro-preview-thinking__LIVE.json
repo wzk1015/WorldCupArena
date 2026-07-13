@@ -1,0 +1,797 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-51_Switzerland_Canada_2026-06-24",
+  "provider_fixture_id": "19609129",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-24T20:56:27+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 1
+    },
+    "home": "Switzerland",
+    "away": "Canada",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-24T19:00:00+00:00",
+    "venue": "Vancouver Stadium",
+    "venue_city": "Vancouver"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.92,
+      "draw": 0.07,
+      "away": 0.01
+    },
+    "most_likely_score": "2-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入第90分钟的伤停补时阶段，当前比分为瑞士 2-1 加拿大。下半场开局阶段，瑞士队展现了极高的进攻效率，凭借 鲁文·巴尔加斯 和 约翰·曼赞比 的进球迅速建立了两球领先优势。尽管加拿大队在场面上并不落后，全场贡献了10次射门和6次角球，并在第76分钟由替补登场的 普罗米斯·戴维 扳回一城，但瑞士队凭借56%的控球率和门将的3次关键扑救，成功将领先优势维持到了最后时刻。由于常规时间已经耗尽，仅剩几分钟的补时，瑞士队全取三分的概率极高，加拿大队逆转取胜的可能性微乎其微，绝平的机会也十分有限。因此，最可能的最终比分将定格在目前的 2-1。在补时阶段，加拿大队势必会全线压上进行最后的反扑，这可能会给瑞士队留下巨大的反击空间。替补登场体能充沛的 丹·恩多耶 有机会利用反击打入锁定胜局的一球；而加拿大队方面，状态火热的 普罗米斯·戴维 依然是他们最具威胁的绝平点，但整体而言，双方在补时阶段再次取得进球的概率已经较低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 3498,
+    "output": 466
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0066086999999999995,
+  "wall_seconds": 14.122,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.92,\n    \"draw\": 0.07,\n    \"away\": 0.01\n  },\n  \"most_likely_score\": \"2-1\",\n  \"scorers\": [\n    {\n      \"player\": \"Dan Ndoye\",\n      \"team\": \"home\",\n      \"minute\": 94,\n      \"p\": 0.04\n    },\n    {\n      \"player\": \"Promise David\",\n      \"team\": \"away\",\n      \"minute\": 95,\n      \"p\": 0.03\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入第90分钟的伤停补时阶段，当前比分为瑞士 2-1 加拿大。下半场开局阶段，瑞士队展现了极高的进攻效率，凭借 Rubén Vargas 和 Johan Manzambi 的进球迅速建立了两球领先优势。尽管加拿大队在场面上并不落后，全场贡献了10次射门和6次角球，并在第76分钟由替补登场的 Promise David 扳回一城，但瑞士队凭借56%的控球率和门将的3次关键扑救，成功将领先优势维持到了最后时刻。由于常规时间已经耗尽，仅剩几分钟的补时，瑞士队全取三分的概率极高，加拿大队逆转取胜的可能性微乎其微，绝平的机会也十分有限。因此，最可能的最终比分将定格在目前的 2-1。在补时阶段，加拿大队势必会全线压上进行最后的反扑，这可能会给瑞士队留下巨大的反击空间。替补登场体能充沛的 Dan Ndoye 有机会利用反击打入锁定胜局的一球；而加拿大队方面，状态火热的 Promise David 依然是他们最具威胁的绝平点，但整体而言，双方在补时阶段再次取得进球的概率已经较低。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-24T19:05:16+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 5,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.4,
+        "draw": 0.32,
+        "away": 0.28
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 62,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Jonathan David",
+          "minute": 75,
+          "p": 0.2,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第5分钟，瑞士与加拿大暂时战成0-0平。开场阶段，瑞士队迅速占据了场上的主动权，控球率达到64%，并已经获得了一次角球机会。这显示出这支欧洲劲旅试图通过传控来掌控比赛节奏，并压制温哥华现场狂热的东道主球迷氛围。加拿大队目前控球率仅为36%，战术意图明显，主要立足于稳固防守，伺机利用锋线球员的速度展开反击。考虑到瑞士队在整体战术素养和中场控制力上更胜一筹，尽管加拿大拥有主场之利，瑞士队赢下比赛的概率依然稍高。平局的可能性同样不容忽视，因为加拿大在主场防守会非常顽强。综合来看，1-0是目前最可能出现的最终比分，瑞士有望通过耐心的阵地战寻找破门良机。在后续的比赛中，瑞士队的前锋布雷尔·恩博洛（布雷尔·恩博洛）凭借其出色的身体素质和禁区内的嗅觉，是最有希望打破僵局的球员。而加拿大队若能打出高质量反击，乔纳森·戴维（乔纳森·戴维）将是他们最具威胁的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.015208199999999998,
+      "tokens": {
+        "input": 930,
+        "output": 2259
+      },
+      "tool_calls": 0,
+      "wall_seconds": 325.617
+    },
+    {
+      "submitted_at": "2026-06-24T19:17:21+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.45,
+        "draw": 0.3,
+        "away": 0.25
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 58,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Zeki Amdouni",
+          "minute": 75,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Jonathan David",
+          "minute": 68,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第17分钟，目前比分维持在0-0。从开局阶段的场面来看，瑞士队展现出了极强的中场控制力，控球率高达77%，并已经完成了2次射门（其中1次射正），迫使对方门将做出扑救。名义上的客队加拿大队虽然在温哥华作战拥有实际的主场氛围，但目前战术明显偏向防守反击，控球率仅为23%且尚未完成任何射门。基于瑞士队在场面上的绝对压制力，他们打破僵局的概率更高，因此主胜概率预估为45%。不过加拿大队防线目前保持完整，且具备极强的反击速度，平局概率仍有30%。综合当前的攻防态势，最可能的最终比分是瑞士队1-0小胜。在后续进球逻辑方面，瑞士队的 布雷尔·恩博洛 和 泽基·阿姆杜尼 极有可能在下半场通过阵地战或定位球机会转化为进球，而加拿大的 乔纳森·戴维 则是他们反击中最具威胁的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.015286949999999999,
+      "tokens": {
+        "input": 993,
+        "output": 2261
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.147
+    },
+    {
+      "submitted_at": "2026-06-24T19:24:01+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 24,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.32,
+        "away": 0.2
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 58,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Zeki Amdouni",
+          "minute": 72,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Jonathan David",
+          "minute": 65,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第24分钟，目前比分依然是0-0。从场面数据来看，作为主队的瑞士队在开局阶段占据了绝对的控球优势，控球率高达71%，并完成了3次射门（其中2次射正），展现了强烈的进攻意图。尽管加拿大队在温哥华体育场作战，拥有实际上的主场氛围，但他们目前主要采取低位防守和快速反击的策略，控球率仅为29%，且仅有1次射门。瑞士队的高压逼抢也体现在他们较高的犯规数（8次）上，这有效破坏了加拿大的反击节奏。综合目前的比赛走势，瑞士队持续的施压使他们更有可能率先打破僵局，因此瑞士队获胜的概率最高。预计随着比赛深入，加拿大队的防线体能消耗会进一步增加，最可能的最终比分为1-0。在后续进球逻辑方面，瑞士队的锋线核心 布雷尔·恩博洛 和 泽基·阿姆杜尼 在阵地战中极具威胁，是下半场破门的热门人选；而加拿大队若想改写比分，乔纳森·戴维 在反击中的速度和终结能力将是关键。"
+      },
+      "sources": [],
+      "cost_usd": 0.011803049999999999,
+      "tokens": {
+        "input": 993,
+        "output": 1708
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.72
+    },
+    {
+      "submitted_at": "2026-06-24T19:30:10+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 30,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.45,
+        "draw": 0.32,
+        "away": 0.23
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 62,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Zeki Amdouni",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Jonathan David",
+          "minute": 71,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第30分钟，瑞士与加拿大暂时战成0-0平。从场面数据来看，瑞士队占据了绝对的主动，控球率高达69%，并完成了3次射门（其中2次射正）。然而，尽管控球优势明显，他们尚未能撕开对手的防线转化为实质性的比分领先。加拿大队虽然在温哥华主场作战，但目前采取了务实的稳守反击策略，控球率仅为31%，仅有1次射门且射正。值得注意的是，瑞士队较高的犯规数（8次）侧面反映了加拿大队在反击时具备一定的速度与冲击力，迫使瑞士队多次采用战术犯规来破坏其由守转攻的节奏。考虑到瑞士队在中场的强大控制力以及加拿大队坚韧的低位防守，预计本场比赛将是一场进球数较少的拉锯战。随着比赛深入，下半场加拿大队防线体能下降后，瑞士队更有可能通过阵地战或定位球打破僵局。因此，当前判断判断瑞士队的获胜概率最高，平局次之。最可能的最终比分预测为1-0，瑞士队一球小胜。在后续进球者方面，瑞士队的主力前锋如恩博洛（布雷尔·恩博洛）或阿姆杜尼（泽基·阿姆杜尼）极有可能在下半场中后段抓住禁区内的机会建功；而加拿大队若想改写比分，反击中最具威胁的乔纳森·戴维（乔纳森·戴维）将是最关键的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.01761795,
+      "tokens": {
+        "input": 993,
+        "output": 2631
+      },
+      "tool_calls": 0,
+      "wall_seconds": 27.697
+    },
+    {
+      "submitted_at": "2026-06-24T19:36:30+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 36,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.45,
+        "draw": 0.32,
+        "away": 0.23
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 64,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Zeki Amdouni",
+          "minute": 82,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Jonathan David",
+          "minute": 76,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第36分钟，瑞士与加拿大暂时战成0-0平。从场面数据来看，瑞士队在控球率上占据了72%的绝对优势，但这种控球并未完全转化为压倒性的进攻威胁。双方目前各有2次射正，且双方门将都做出了2次扑救，这表明加拿大队虽然控球率仅有28%，但其防守反击策略非常高效，给瑞士队的防线带来了实质性考验。第32分钟，加拿大的拉林（赛尔·拉林）与瑞士中场核心扎卡（格拉尼特·扎卡）双双染黄，反映出中场绞杀的激烈程度。考虑到比赛在温哥华进行，加拿大队拥有实际上的主场氛围加成，这使得他们在被动局面下依然保持着极高的战术纪律性。随着比赛时间的推移，0-0的比分使得平局概率相较赛前有所上升。然而，瑞士队凭借更深厚的阵容底蕴和持续的半场压制力，依然是最有可能打破僵局的一方。预计下半场瑞士队会通过换人调整加快进攻节奏，1-0是目前最可能的最终比分。进球球员方面，瑞士队的恩博洛（布雷尔·恩博洛）和阿姆杜尼（泽基·阿姆杜尼）在禁区内的终结能力值得期待；而加拿大队若能抓住转换机会，乔纳森·戴维（乔纳森·戴维）将是最具威胁的反击利器。"
+      },
+      "sources": [],
+      "cost_usd": 0.013595399999999999,
+      "tokens": {
+        "input": 1128,
+        "output": 1970
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.077
+    },
+    {
+      "submitted_at": "2026-06-24T19:42:44+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 42,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.4,
+        "draw": 0.35,
+        "away": 0.25
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 62,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Jonathan David",
+          "minute": 75,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第42分钟，瑞士与加拿大暂时战成0-0平。从上半场的场面来看，瑞士队占据了绝对的控球优势（71%），但面对加拿大的防线并未能轻易转化为进球，4次射门中仅有2次射正。相反，加拿大队虽然控球率仅为29%，但防守反击打得十分坚决且高效，4次射门有3次命中目标，迫使瑞士门将做出了3次关键扑救。双方在中场的拼抢非常激烈，格拉尼特·扎卡 和 赛尔·拉林 均已领到黄牌。随着比赛临近半场，0-0的比分使得平局的概率维持在较高水平（35%）。不过，瑞士队凭借更强的整体实力和持续的阵地战施压能力，在下半场打破僵局的胜算依然最高（40%）。加拿大虽然名义上是客队，但在温哥华比赛享有主场氛围，其反击威胁同样不容小觑（胜率25%）。综合来看，最可能的最终比分是1-0，瑞士队小胜。在后续进球逻辑上，瑞士队的锋线球员如 布雷尔·恩博洛 极有可能在下半场中段利用对手防线体能下降的契机完成破门；而加拿大的 乔纳森·戴维 则是他们在快速反击中最具威胁的潜在得分手。"
+      },
+      "sources": [],
+      "cost_usd": 0.0194733,
+      "tokens": {
+        "input": 1128,
+        "output": 2903
+      },
+      "tool_calls": 0,
+      "wall_seconds": 31.019
+    },
+    {
+      "submitted_at": "2026-06-24T19:49:18+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.33,
+        "draw": 0.38,
+        "away": 0.29
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 62,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Breel Embolo",
+          "minute": 75,
+          "p": 0.22,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第45分钟，瑞士与加拿大暂时战成0-0平。从上半场的场面来看，瑞士队在控球率上占据绝对优势（70%），但面对加拿大的防线并未创造出太多绝对机会，半场仅有4次射门2次射正。相反，加拿大队在温哥华主场球迷的助威下，坚决贯彻防守反击战术，虽然控球率仅有30%，却完成了5次射门且3次射正，给瑞士门将制造了不小的麻烦。瑞士队半场高达11次的犯规也侧面反映了他们对加拿大快速反击的忌惮，格拉尼特·扎卡 和 赛尔·拉林 在第32分钟的双双染黄更是凸显了比赛的激烈程度。考虑到半场互交白卷的局面以及双方展现出的战术博弈，平局的概率目前最高（38%）。瑞士队虽然掌控球权，但破门乏术；加拿大队反击犀利，但把握机会能力仍需考验。预计下半场双方体能下降后，防线可能会出现松动，最可能的最终比分预测为1-1。在进球球员方面，下半场加拿大的前锋 乔纳森·戴维 有望利用反击速度率先打破僵局；而瑞士队则可能依靠 布雷尔·恩博洛 等攻击手的冲击力在比赛后段扳平比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.016551149999999997,
+      "tokens": {
+        "input": 1129,
+        "output": 2439
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.443
+    },
+    {
+      "submitted_at": "2026-06-24T20:06:09+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 51,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Zeki Amdouni",
+          "minute": 76,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Jonathan David",
+          "minute": 82,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第51分钟，瑞士队凭借下半场刚开场（第46分钟）鲁文·巴尔加斯 接 约翰·曼赞比 助攻打入的一球，暂时以 1-0 领先加拿大队。从目前的场面数据来看，瑞士队占据了绝对的控球优势（高达70%的控球率），牢牢掌控着中场节奏。然而，加拿大队在仅有30%控球率的情况下，依然创造了与瑞士队完全相同的射门数（5次）和射正数（3次），这表明加拿大队在温哥华的场地上打出了极具威胁的高效防守反击，瑞士门将已经做出了3次关键扑救。此外，瑞士队目前犯规数达到11次，说明他们在应对加拿大队的快速冲击时承受了一定压力，并采取了较多战术犯规。考虑到瑞士队已经取得比分领先且控球占优，他们顺利赢下比赛的概率大幅提升至68%。随着比赛深入，落后的加拿大队势必会大举压上寻求扳平比分，这不可避免地会给瑞士队留下更多后场空当。平局概率目前评估为22%，而加拿大队直接逆转取胜的难度极大，概率仅为10%。综合判断，最可能的最终比分是 2-0，瑞士队有望在下半场中后段利用对手阵型前压的机会，通过 泽基·阿姆杜尼 等攻击手再入一球彻底锁定胜局；当然，加拿大队的 乔纳森·戴维 依然是他们在反击中制造威胁并尝试改写比分的关键人物。"
+      },
+      "sources": [],
+      "cost_usd": 0.0135366,
+      "tokens": {
+        "input": 1198,
+        "output": 1949
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.245
+    },
+    {
+      "submitted_at": "2026-06-24T20:12:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 57,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Zeki Amdouni",
+          "minute": 76,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Jonathan David",
+          "minute": 83,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第57分钟，瑞士目前以1-0领先加拿大。下半场刚开始（第46分钟），鲁本·巴尔加斯（鲁文·巴尔加斯）接约翰·曼赞比（约翰·曼赞比）助攻打破僵局。从场面数据来看，瑞士队占据了绝对的控球优势（68%），掌控了比赛节奏。然而，加拿大在仅有32%控球率的情况下，依然创造了与瑞士相同的5次射门和3次射正，这表明他们的防守反击极具威胁，并迫使瑞士门将做出了3次扑救。随着比赛深入，落后的加拿大势必会加强进攻以寻求扳平比分，这可能会导致后防线暴露出更多空当。瑞士队凭借扎卡（格拉尼特·扎卡）在中场的调度和前场球员的速度，有望利用反击机会扩大领先优势。综合当前比分、剩余时间以及双方展现出的战术特点，瑞士队拿下本场比赛的概率较高。预计加拿大在比赛尾声阶段大举压上时，瑞士可能会再入一球锁定胜局，最可能的最终比分为2-0。后续进球者方面，瑞士的锋线球员如阿姆杜尼（泽基·阿姆杜尼）有望在反击中建功，而加拿大的乔纳森·戴维（乔纳森·戴维）则是客队最具威胁的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.0114765,
+      "tokens": {
+        "input": 1198,
+        "output": 1622
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.019
+    },
+    {
+      "submitted_at": "2026-06-24T20:18:45+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 63,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.92,
+        "draw": 0.07,
+        "away": 0.01
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第63分钟，瑞士队目前以2-0领先加拿大队。下半场开始后，瑞士队展现了极高的进攻效率，鲁本·巴尔加斯（鲁文·巴尔加斯）和约翰·曼赞比（约翰·曼赞比）在第46和57分钟连入两球，瞬间确立了巨大优势。从场面数据来看，瑞士队控球率高达65%，6次射门中有4次射正，完全主导了比赛节奏。加拿大队虽然也有3次射正，但在落后局面下显得办法不多，尽管在第58分钟进行了连换三人的大幅调整，试图通过换上马蒂厄·乔伊涅尔（马蒂厄·肖尼耶）等人来改善中前场活力，但面对瑞士队稳固的防守体系，翻盘难度极大。基于当前的比分和剩余时间，瑞士队全取三分的概率已高达92%，而加拿大队逆转的概率仅微乎其微。预计瑞士队在接下来的比赛中会适当放缓节奏，通过传导球消耗时间，因此2-0维持到终场是最可能的最终比分。不过，随着加拿大队阵型不可避免地前压，瑞士队的反击空间将进一步扩大，此前送出助攻的布雷尔·恩博洛（布雷尔·恩博洛）极有可能在第78分钟左右利用反击机会再入一球，而加拿大的替补球员也可能在比赛尾声阶段尝试远射或定位球制造威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.01852515,
+      "tokens": {
+        "input": 1479,
+        "output": 2694
+      },
+      "tool_calls": 0,
+      "wall_seconds": 30.432
+    },
+    {
+      "submitted_at": "2026-06-24T20:25:12+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 70,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.94,
+        "draw": 0.05,
+        "away": 0.01
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第70分钟，瑞士目前以2-0稳稳领先加拿大。下半场开局阶段，瑞士队展现了极高的进攻效率，鲁本·巴尔加斯（鲁文·巴尔加斯）和约翰·曼赞比（约翰·曼赞比）在15分钟内连入两球，彻底改变了比赛走势。从场面数据来看，瑞士队掌控了61%的控球率，虽然双方射门次数相当（瑞士6次，加拿大7次），但瑞士队的射门质量明显更高，4次射正即转化为2个进球。加拿大在落后局面下于第58分钟连换三人试图加强进攻，但面对瑞士稳固的防线和门将的出色发挥，破门乏术。考虑到比赛仅剩20分钟常规时间，且瑞士队拥有两球优势及控球主导权，主队获胜的概率已高达94%。综合目前的攻防节奏，最可能的最终比分将定格在2-0。在后续比赛中，随着加拿大不可避免地全线压上，瑞士队的反击空间将大幅增加，此前送出助攻的恩博洛（布雷尔·恩博洛）极有可能利用速度在尾声阶段制造威胁；而加拿大方面，替补登场的生力军奥卢瓦塞伊（塔尼·奥卢瓦塞伊）则是他们争取挽回颜面进球的主要依靠。"
+      },
+      "sources": [],
+      "cost_usd": 0.01407735,
+      "tokens": {
+        "input": 1479,
+        "output": 1988
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.387
+    },
+    {
+      "submitted_at": "2026-06-24T20:31:22+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 76,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.97,
+        "draw": 0.02,
+        "away": 0.01
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第76分钟，瑞士队目前以2-0领先加拿大队。下半场开始后，瑞士队展现了极高的进攻效率，鲁文·巴尔加斯和约翰·曼赞比在第46和第57分钟连入两球，迅速确立了领先优势。从全场数据来看，瑞士队占据57%的控球率，虽然总射门数（6次）略少于加拿大队（8次），但4次射正打入2球，把握机会的能力明显更胜一筹。加拿大队虽然在角球数（5对2）和射门数上占优，但面对瑞士队稳固的防守和门将的3次成功扑救，始终未能转化为进球。在第58分钟，加拿大队进行了连换三人的大幅度调整，试图通过换上马蒂厄·肖尼耶等人来加强中前场活力并挽回败局。然而，随着比赛进入尾声，留给加拿大队的时间已经非常有限，瑞士队全取三分的概率极高。在接下来的比赛中，加拿大队势必会全线压上，这不仅可能让他们在乱战中扳回一城，同时也给瑞士队留下了广阔的反击空间。已经贡献一次助攻的布雷尔·恩博洛极有可能利用对手防线身后的空当在比赛最后阶段再次破门。综合当前的场面、比分和剩余时间，瑞士队胜局已定，最可能的最终比分将维持在2-0。"
+      },
+      "sources": [],
+      "cost_usd": 0.01439235,
+      "tokens": {
+        "input": 1479,
+        "output": 2038
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.673
+    },
+    {
+      "submitted_at": "2026-06-24T20:37:39+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 82,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Switzerland",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.75,
+        "draw": 0.22,
+        "away": 0.03
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第82分钟，当前比分瑞士2-1领先加拿大。瑞士队在下半场初段发力，凭借鲁本·巴尔加斯（鲁文·巴尔加斯）和约翰·曼赞比（约翰·曼赞比）的进球确立了两球优势。然而，加拿大队并未放弃，他们在换人调整后攻势渐起，普罗米斯·戴维（普罗米斯·戴维）在第76分钟扳回一城，让比赛悬念重生。从数据来看，加拿大队在射门数（9对6）和角球数（5对2）上占据一定优势，展现出强烈的反扑意图；但瑞士队控球率达到57%，且整体防守较为稳固，门将贡献了3次关键扑救。考虑到比赛仅余常规时间8分钟及伤停补时，瑞士队守住胜果全取三分的概率极高，约为75%。加拿大队若能维持高压态势，绝平的概率在22%左右，而逆转取胜的希望极其渺茫（3%）。最可能的最终比分将定格在2-1。不过，随着加拿大队在最后时刻全线压上，防线身后将暴露出巨大空当，瑞士队前锋布雷尔·恩博洛（布雷尔·恩博洛）极有可能利用反击机会在第89分钟左右锁定胜局；同时，刚刚取得进球、状态火热的普罗米斯·戴维也是加拿大队在补时阶段创造绝平奇迹的关键人物。"
+      },
+      "sources": [],
+      "cost_usd": 0.018732,
+      "tokens": {
+        "input": 1754,
+        "output": 2681
+      },
+      "tool_calls": 0,
+      "wall_seconds": 29.576
+    },
+    {
+      "submitted_at": "2026-06-24T20:44:05+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 89,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Switzerland",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.92,
+        "draw": 0.07,
+        "away": 0.01
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第89分钟，瑞士队目前以2-1领先加拿大队。下半场开局阶段，瑞士队凭借鲁本·巴尔加斯（鲁文·巴尔加斯）和约翰·曼赞比（约翰·曼赞比）的进球确立了领先优势。尽管加拿大队在第76分钟由替补登场的普罗米斯·戴维（普罗米斯·戴维）扳回一城，并在全场数据上以10次射门和6个角球展现出较强的反扑势头，但留给他们的常规时间已经所剩无几。瑞士队在控球率上占据优势（56%），并且通过换人调整有效控制了比赛节奏，门将也做出了关键扑救。考虑到比赛即将进入伤停补时，瑞士队守住胜果的概率极高，加拿大队绝平的机会存在但相对较小。因此，最可能的最终比分维持在2-1。如果补时阶段出现进球，加拿大队可能会在全线压上时由状态火热的普罗米斯·戴维再次破门，或者瑞士队利用对手防线空当由恩博洛（布雷尔·恩博洛）打入锁定胜局的反击进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.013543949999999999,
+      "tokens": {
+        "input": 1823,
+        "output": 1846
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.854
+    },
+    {
+      "submitted_at": "2026-06-24T20:50:11+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Switzerland",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.92,
+        "draw": 0.07,
+        "away": 0.01
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟的伤停补时阶段，当前比分为瑞士 2-1 加拿大。回顾本场比赛的走势，瑞士队在下半场初段发力，凭借鲁本·巴尔加斯（鲁文·巴尔加斯）和约翰·曼赞比（约翰·曼赞比）的进球迅速建立起两球的领先优势。尽管加拿大队在场面上打得十分顽强，全场创造了10次射门和6个角球，并在第76分钟由替补登场的普罗米斯·戴维（普罗米斯·戴维）扳回一城，但瑞士队依靠56%的控球率和稳健的防守体系成功顶住了对手的反扑。由于常规时间已经结束，仅剩下短暂的伤停补时，瑞士队将大概率把领先优势转化为最终的胜利，主胜概率高达92%。加拿大队势必会在最后时刻全线压上尝试绝平，这可能会给瑞士队留下广阔的反击空间。替补登场体能充沛的恩多耶（丹·恩多耶）有望利用反击制造威胁，而加拿大队的普罗米斯·戴维依然是他们在禁区内最具威胁的得分点。不过考虑到剩余时间极短，再次出现进球的概率较低，最可能的最终比分将定格在目前的 2-1。"
+      },
+      "sources": [],
+      "cost_usd": 0.015465449999999999,
+      "tokens": {
+        "input": 1823,
+        "output": 2151
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.287
+    },
+    {
+      "submitted_at": "2026-06-24T20:56:27+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Switzerland",
+        "away": "Canada",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T19:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.92,
+        "draw": 0.07,
+        "away": 0.01
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟的伤停补时阶段，当前比分为瑞士 2-1 加拿大。下半场开局阶段，瑞士队展现了极高的进攻效率，凭借 鲁文·巴尔加斯 和 约翰·曼赞比 的进球迅速建立了两球领先优势。尽管加拿大队在场面上并不落后，全场贡献了10次射门和6次角球，并在第76分钟由替补登场的 普罗米斯·戴维 扳回一城，但瑞士队凭借56%的控球率和门将的3次关键扑救，成功将领先优势维持到了最后时刻。由于常规时间已经耗尽，仅剩几分钟的补时，瑞士队全取三分的概率极高，加拿大队逆转取胜的可能性微乎其微，绝平的机会也十分有限。因此，最可能的最终比分将定格在目前的 2-1。在补时阶段，加拿大队势必会全线压上进行最后的反扑，这可能会给瑞士队留下巨大的反击空间。替补登场体能充沛的 丹·恩多耶 有机会利用反击打入锁定胜局的一球；而加拿大队方面，状态火热的 普罗米斯·戴维 依然是他们最具威胁的绝平点，但整体而言，双方在补时阶段再次取得进球的概率已经较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0066086999999999995,
+      "tokens": {
+        "input": 3498,
+        "output": 466
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.122
+    }
+  ]
+}

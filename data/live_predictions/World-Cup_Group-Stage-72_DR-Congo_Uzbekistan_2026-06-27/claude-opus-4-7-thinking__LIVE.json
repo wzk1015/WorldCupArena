@@ -1,0 +1,778 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-72_DR-Congo_Uzbekistan_2026-06-27",
+  "provider_fixture_id": "19609196",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-28T01:31:06+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 3,
+      "away": 1
+    },
+    "home": "Congo DR",
+    "away": "Uzbekistan",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-27T23:30:00+00:00",
+    "venue": "Atlanta Stadium",
+    "venue_city": "Atlanta"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.97,
+      "draw": 0.02,
+      "away": 0.01
+    },
+    "most_likely_score": "3-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进行到第90分钟，刚果民主共和国以3-1领先乌兹别克斯坦。从赛事进程来看，乌兹别克斯坦由埃尔多尔·肖穆罗多夫在第10分钟率先破门取得领先，但刚果民主共和国在下半场强势反击——约阿内·维萨第68分钟罚入点球扳平，菲斯顿·马耶莱第78分钟再入一球反超，Wissa又在第91分钟梅开二度锁定胜局。从数据来看，刚果民主共和国全场18次射门、控球率58%，场面占据明显优势；乌兹别克斯坦仅3次射门且犯规高达15次，攻势乏力。目前比赛已到尾声，补时阶段时间极短，两队再进球的概率极低。因此主队获胜概率极高，最终比分大概率定格为3-1。由于距离终场哨响仅剩极少时间，不再预测后续进球球员。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 6769,
+    "output": 378
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.032038300000000006,
+  "wall_seconds": 9.654,
+  "error": null,
+  "raw_text": "```json\n{\"win_probs\":{\"home\":0.97,\"draw\":0.02,\"away\":0.01},\"most_likely_score\":\"3-1\",\"scorers\":[],\"reasoning\":{\"overall\":\"比赛已进行到第90分钟，刚果民主共和国以3-1领先乌兹别克斯坦。从赛事进程来看，乌兹别克斯坦由Eldor Shomurodov在第10分钟率先破门取得领先，但刚果民主共和国在下半场强势反击——Yoane Wissa第68分钟罚入点球扳平，Fiston Mayele第78分钟再入一球反超，Wissa又在第91分钟梅开二度锁定胜局。从数据来看，刚果民主共和国全场18次射门、控球率58%，场面占据明显优势；乌兹别克斯坦仅3次射门且犯规高达15次，攻势乏力。目前比赛已到尾声，补时阶段时间极短，两队再进球的概率极低。因此主队获胜概率极高，最终比分大概率定格为3-1。由于距离终场哨响仅剩极少时间，不再预测后续进球球员。\"},\"sources\":[]}\n```",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-27T23:33:46+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 3,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Congo DR",
+        "away": "Uzbekistan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.28,
+        "away": 0.42
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Eldor Shomurodov",
+          "minute": 38,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Abbosbek Fayzullaev",
+          "minute": 67,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Cédric Bakambu",
+          "minute": 58,
+          "p": 0.17,
+          "team": "home"
+        },
+        {
+          "player": "Yira Sor",
+          "minute": 74,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Jaloliddin Masharipov",
+          "minute": 81,
+          "p": 0.13,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚进行到第3分钟，亚特兰大体育场内刚果民主共和国与乌兹别克斯坦仍是0-0平局。从开场短短几分钟的迹象看，乌兹别克斯坦展现出更主动的姿态，控球率达到59%，并且已经完成1次射门且命中门框范围，迫使刚果(金)门将做出1次扑救；而刚果(金)目前尚未制造任何射门，控球只有41%，更多在退守组织。整体节奏偏向乌兹别克斯坦掌控，中前场推进更顺畅。基于这一开局倾向，结合两队世界杯小组赛的整体实力对比——乌兹别克斯坦阵容厚度与边路冲击力略占优势，刚果(金)则依赖反击和身体对抗——客队取胜概率被提高到约0.42，主队胜率维持在0.30附近，平局可能性约0.28。最可能的最终比分判断为1-2，符合客队稍占上风但比赛仍具开放性的判断：刚果(金)有能力依靠Bakambu或Yira Sor的速度与冲击在中后段制造威胁取得进球，而乌兹别克斯坦的Shomurodov在禁区内嗅觉灵敏，有望在上半场后段率先打破僵局，Fayzullaev和Masharipov的中场创造力则可能在下半场再下一城。后续进球倾向集中在上半场临近结束以及下半场50分钟之后的常规疲劳波段，这也是反击与定位球机会增多的阶段。"
+      },
+      "sources": [],
+      "cost_usd": 0.0169164,
+      "tokens": {
+        "input": 902,
+        "output": 734
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.454
+    },
+    {
+      "submitted_at": "2026-06-27T23:41:23+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 11,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Congo DR",
+        "away": "Uzbekistan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.33,
+        "away": 0.33
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Cedric Bakambu",
+          "minute": 63,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Eldor Shomurodov",
+          "minute": 71,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Yoane Wissa",
+          "minute": 78,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Abbosbek Fayzullaev",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第11分钟，刚果民主共和国与乌兹别克斯坦目前0-0战平。开局阶段双方节奏比较谨慎，控球率几乎五五开（乌兹别克斯坦51%对刚果49%），但刚果民主共和国已经完成1次射门并迫使对方门将做出1次扑救，进攻端略显主动，乌兹别克斯坦则尚未形成有效射门。犯规数都只有1次，场面整体克制但没有过多身体对抗。基于早期的进攻倾向以及世界杯小组赛中非洲球队在体能与对抗上的传统优势，刚果民主共和国的胜率被略微抬高至34%，乌兹别克斯坦与平局的概率分别为33%，整体仍属于势均力敌的格局。考虑到比赛刚开场不久，节奏偏低且双方都还在试探，预计全场进球数不会太多，最有可能的最终比分为1-0，由刚果民主共和国把握住中后段的一次机会取胜。后续进球时间点更可能出现在比赛中后段双方体能下降、防线松动之时：刚果方面，前锋塞德里克·巴坎布具备禁区终结能力，是最可能的破门人选，约阿内·维萨则凭借边路冲击力可在替补登场或拉边突破后制造威胁；乌兹别克斯坦方面，中锋埃尔多尔·肖穆罗多夫的支点作用以及阿布博斯别克·法伊祖拉耶夫在中前场的串联和远射能力，是他们扳平或反超的主要希望。"
+      },
+      "sources": [],
+      "cost_usd": 0.19830520000000001,
+      "tokens": {
+        "input": 49681,
+        "output": 783
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.108
+    },
+    {
+      "submitted_at": "2026-06-27T23:48:38+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 18,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Congo DR",
+        "away": "Uzbekistan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.3,
+        "away": 0.48
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Eldor Shomurodov",
+          "minute": 67,
+          "p": 0.24,
+          "team": "away"
+        },
+        {
+          "player": "Cédric Bakambu",
+          "minute": 62,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Abbosbek Fayzullaev",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Yoane Wissa",
+          "minute": 80,
+          "p": 0.17,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第18分钟，比分0-1，乌兹别克斯坦凭借第10分钟Shomurodov接Fayzullaev助攻的进球取得领先。从场面数据看，刚果（金）控球率略占优（52%对48%），但两队射门数都只有1次，刚果（金）尚无射正，而乌兹别克斯坦那1脚射门正是转化为进球的那次，效率明显更高。开局阶段乌兹别克斯坦还拿到1个角球，整体进攻威胁稍胜一筹。基于先进球+全场进攻效率领先的客队优势，目前客胜概率最高，约48%；考虑到比赛才进行不到20分钟，刚果（金）有充足时间利用控球反扑追平，平局概率约30%；主胜需要至少进两球且不失球，难度较大，给到约22%。综合走势判断，最可能的最终比分是1-2，即乌兹别克斯坦再下一城、刚果（金）扳回一球但难以翻盘。后续进球方面，乌兹别克斯坦方面继续看好状态火热的Shomurodov再下一城，以及组织核心Fayzullaev由助攻转化为进球；刚果（金）一侧寄望于锋线主力Bakambu把握控球优势完成扳平球，并由Wissa在末段制造威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.19753930000000003,
+      "tokens": {
+        "input": 49839,
+        "output": 710
+      },
+      "tool_calls": 0,
+      "wall_seconds": 36.71
+    },
+    {
+      "submitted_at": "2026-06-27T23:56:39+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 26,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Congo DR",
+        "away": "Uzbekistan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.27,
+        "draw": 0.3,
+        "away": 0.43
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Eldor Shomurodov",
+          "minute": 68,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Cédric Bakambu",
+          "minute": 63,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Yoane Wissa",
+          "minute": 78,
+          "p": 0.17,
+          "team": "home"
+        },
+        {
+          "player": "Abbosbek Fayzullaev",
+          "minute": 81,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Nathanaël Mbuku",
+          "minute": 55,
+          "p": 0.14,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到26分钟，乌兹别克斯坦凭借肖穆罗多夫第10分钟的入球以1-0领先刚果民主共和国。从场面看，刚果民主共和国虽然控球率略占优(54%)，但进攻效率明显不足，1次射门0次射正，且角球挂零，进攻组织尚未真正打开局面；乌兹别克斯坦防守反击思路清晰，仅1次射门便转化为进球，并已拿到1个角球，效率更高。第17分钟刚果民主共和国还经历了一次涉及姆布库的VAR判罚，加上萨迪基在21分钟领到黄牌，主队中场推进节奏受到一定影响。综合来看，乌兹别克斯坦目前在比分、效率和心理层面均占据主动，因此客胜概率最高，约43%；考虑到比赛还有大段时间且刚果民主共和国控球能力不弱，反扑空间仍在，平局概率约30%；主队完成逆转的难度相对更大，胜率约27%。最可能的最终比分判断为1-2：刚果民主共和国后续大概率会加强前压并扳回一球，但后防在对手反击下再丢一球的风险不低。后续进球方面，乌兹别克斯坦端继续看好状态火热的肖穆罗多夫以及组织核心法伊祖拉耶夫在反击中再下一城；刚果民主共和国一侧，巴坎布的支点作用和维萨的纵向冲击是扳平希望所在，姆布库若能借助突破或定位球形成威胁，也有望在比赛中段为球队取得入球。"
+      },
+      "sources": [],
+      "cost_usd": 0.017848799999999998,
+      "tokens": {
+        "input": 924,
+        "output": 780
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.631
+    },
+    {
+      "submitted_at": "2026-06-28T00:03:59+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 33,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Congo DR",
+        "away": "Uzbekistan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.3,
+        "away": 0.48
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Eldor Shomurodov",
+          "minute": 67,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Nathanaël Mbuku",
+          "minute": 71,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Cédric Bakambu",
+          "minute": 82,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Jasurbek Yakhshiboev",
+          "minute": 78,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Yoane Wissa",
+          "minute": 60,
+          "p": 0.14,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第33分钟，刚果民主共和国0比1落后乌兹别克斯坦。乌兹别克前锋绍穆罗多夫（埃尔多尔·肖穆罗多夫）在第10分钟由莫兹戈沃伊助攻打入比赛唯一进球，乌兹别克在早段抓住为数不多的机会取得领先。从场面数据看，刚果民主共和国控球率达到59%，总射门2次，但射正为0，而乌兹别克控球41%、总射门1次、射正1次，进攻效率明显更高，并已经拿到2个角球，反击与定位球是他们目前最具威胁的手段。第17分钟围绕姆布库（纳塔内尔·姆布库）的VAR判罚未能改变比分，第21分钟萨迪基（诺亚·萨迪基）领到黄牌，刚果民主共和国中场出球节奏受到一定影响。综合来看，乌兹别克手握领先并打出明确的防守反击思路，刚果民主共和国虽然占据控球但仍未真正威胁球门，因此乌兹别克获胜概率维持在最高一档，平局其次，刚果民主共和国全取三分的可能性偏低。考虑到刚果民主共和国仍有大约一个小时去追分，且他们更可能通过加强前压换取至少一粒进球，但同时也会暴露防线给反击留出空间，最可能的最终比分定在1比2。后续进球方面，乌兹别克方面绍穆罗多夫状态正佳，仍是反击中最危险的点，亚赫希博耶夫等替补也具备终结能力；刚果民主共和国方面，姆布库在边路持续制造突破，巴坎布（塞德里克·巴坎布）的禁区嗅觉和维萨（约阿内·维萨）的速度都是下半场可能改写比分的关键选项。"
+      },
+      "sources": [],
+      "cost_usd": 0.0188663,
+      "tokens": {
+        "input": 874,
+        "output": 845
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.812
+    },
+    {
+      "submitted_at": "2026-06-28T00:11:14+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 41,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Congo DR",
+        "away": "Uzbekistan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.27,
+        "draw": 0.3,
+        "away": 0.43
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Eldor Shomurodov",
+          "minute": 68,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Cédric Bakambu",
+          "minute": 63,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Nathanaël Mbuku",
+          "minute": 78,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Azizbek Turgunboev",
+          "minute": 82,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Yoane Wissa",
+          "minute": 88,
+          "p": 0.13,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第41分钟，刚果民主共和国在主场0-1落后乌兹别克斯坦。第10分钟Shomurodov接Mozgovoy助攻率先破门，乌兹别克斯坦凭借高效一击占得先机。从场面看，刚果(金)控球率56%略占优，总射门2次，但射正为0，进攻转化效率明显不足；乌兹别克斯坦虽然控球较少，却已拿到3个角球并有1次射正直接转化为进球，反击与定位球威胁更具杀伤力。第21分钟Sadiki吃到黄牌，中场拦截动作受限，对后半段防守端是隐患；第17分钟围绕Mbuku的VAR介入也消耗了主队的进攻节奏。综合判断，乌兹别克斯坦保持领先到终场的可能性最高，但仍有近50分钟比赛时间，主队下半场必然加大压上，扳平存在合理空间，因此客胜概率领先、平局其次、主胜垫底。最可能的最终比分定为1-2：主队下半场依托控球和边路推进至少能扳回一球，但防线在Sadiki带牌作战和角球失守的双重压力下，很可能再被乌兹别克斯坦利用反击或定位球扩大比分。后续进球人选方面，Shomurodov状态火热、是反击终结点，二度建功概率最高；主队方向上Bakambu作为中锋是禁区内最直接的得分手，Mbuku具备突破和远射能力、是制造平局的关键，替补或后插上的Wissa则是末段抢分的备选；乌兹别克斯坦边路推进者Turgunboev同样具备扩大比分的能力。所有候选进球时间均设定在第41分钟之后，集中在下半场博弈最激烈的60到90分钟区间。"
+      },
+      "sources": [],
+      "cost_usd": 0.0188145,
+      "tokens": {
+        "input": 875,
+        "output": 842
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.192
+    },
+    {
+      "submitted_at": "2026-06-28T00:18:32+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Congo DR",
+        "away": "Uzbekistan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.32,
+        "away": 0.38
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Eldor Shomurodov",
+          "minute": 73,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Yoane Wissa",
+          "minute": 68,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Cédric Bakambu",
+          "minute": 80,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Nathanaël Mbuku",
+          "minute": 75,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Azizbek Amonov",
+          "minute": 82,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场结束，乌兹别克斯坦凭借第10分钟Shomurodov接Mozgovoy助攻的进球客场1-0领先刚果民主共和国。从场面看，刚果民主共和国控球率达到61%，角球1次、射门3次，明显占据场面主动，但射正为0，进攻效率不足；乌兹别克斯坦虽然控球仅39%、射门只有1次，却把握住唯一射正机会取得领先，并通过3次角球和8次犯规展示出更具威胁的反击与高强度防守。第21分钟Sadiki领到黄牌，对刚果中场拦截会有一定影响；第17分钟围绕Mbuku的VAR复核也提示刚果在禁区附近已制造过险情。综合来看，刚果民主共和国后半段必然加强进攻、扳平概率不低，但乌兹别克斯坦防守组织扎实、反击锐利，下半场任何一方再进球都有较高可能。概率上将主队胜调整至约0.30、平局约0.32、客队胜约0.38，乌兹别克斯坦保持小幅领先优势。综合控球压制与反击效率，最可能的最终比分定为1-2，即刚果民主共和国扳平后被乌兹别克斯坦再下一城；后续进球候选方面，客队继续以Shomurodov为最大威胁点，主队则把希望寄托在Wissa、Bakambu的锋线终结以及Mbuku的边路突破上，乌兹别克斯坦的Amonov在反击中也具备得分能力。"
+      },
+      "sources": [],
+      "cost_usd": 0.20043640000000001,
+      "tokens": {
+        "input": 50082,
+        "output": 818
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.979
+    },
+    {
+      "submitted_at": "2026-06-28T00:42:48+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 57,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Congo DR",
+        "away": "Uzbekistan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.34,
+        "away": 0.44
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Cédric Bakambu",
+          "minute": 72,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Eldor Shomurodov",
+          "minute": 78,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Nathanaël Mbuku",
+          "minute": 83,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Yannick Bolasie",
+          "minute": 88,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Azizbek Turgunboev",
+          "minute": 85,
+          "p": 0.13,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第57分钟，乌兹别克斯坦凭借埃尔多尔·肖穆罗多夫在第10分钟的进球以1-0领先刚果民主共和国。从场面数据看，刚果(金)控球率高达65%，总射门5次明显多于对手的2次，角球1比3稍落后，但整体进攻组织更主动；不过刚果(金)5脚射门0次射正，进攻效率亟需提升。乌兹别克斯坦犯规多达11次，并已有两张黄牌(Khusanov、Nasrullaev)，明显采取退守反击策略，体能压力将随时间累积；而刚果(金)也已吃到两黄(Sadiki、Mbuku)，后场防守需谨慎。综合下半场已进行12分钟、刚果(金)持续施压且大概率会加大投入(包括换上前锋), 平局概率较此前明显上升，而乌兹别克斯坦凭借领先和反击仍保有一定优势。最可能的最终比分判断为1-2：刚果(金)依靠控球与定位球扳平甚至追平有较大概率，但乌方反击锐利、Shomurodov状态正佳，再下一城的可能不可忽视；纯粹0-1闷平的可能性也存在，但考虑到剩余30多分钟比赛节奏会更开放，进球大概率还会出现。后续进球人选方面，刚果(金)端Bakambu作为锋线核心最具威胁，Mbuku与Bolasie具备边路突破和远射能力；乌方则继续看好状态火热的Shomurodov，以及替补登场的Turgunboev在反击中把握机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.20165740000000001,
+      "tokens": {
+        "input": 50252,
+        "output": 850
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.883
+    },
+    {
+      "submitted_at": "2026-06-28T00:49:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 64,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Congo DR",
+        "away": "Uzbekistan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.28,
+        "away": 0.5
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第64分钟，刚果民主共和国在主场0比1落后于乌兹别克斯坦，落后球来自第10分钟Shomurodov的破门。从场面上看，刚果民主共和国掌握了约66%的控球率，并已完成7次射门，但全场零射正，进攻效率明显不足；乌兹别克斯坦虽然控球只有34%、射门仅3次，却保持了1次射正即转化为进球的高效率，且通过11次犯规打乱了对手的推进节奏。下半场刚果民主共和国已经换上Mayele加强锋线，意图扳平，但乌兹别克斯坦多人吃牌也说明其防守姿态明显，更倾向于退守保平。综合来看，客队保住领先优势的可能性最高，约五成；考虑到主队控球占优、还有近30分钟加伤停时间施压，扳平带来平局的概率约为28%；主队完成逆转难度较大，约22%。最可能的最终比分维持0比1客胜，即不再有进球或仅出现一方进球但不足以改变胜负归属。如果还有进球，主队替补登场的Mayele在禁区内的冲击力最具威胁，是最可能的扳平人选；而乌兹别克斯坦若打出反击，已经取得进球、状态在线的Shomurodov仍是终结反击的首选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0161135,
+      "tokens": {
+        "input": 1290,
+        "output": 613
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.886
+    },
+    {
+      "submitted_at": "2026-06-28T00:57:06+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 72,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Congo DR",
+        "away": "Uzbekistan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.35,
+        "away": 0.43
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第72分钟，比分0-1，乌兹别克斯坦凭借Shomurodov第10分钟的进球保持领先。从场面数据看，刚果民主共和国占据主导：控球率65%、射门11次远多于对手的3次，角球虽只有1个但持续在前场施压；不过射正只有1次，转化率偏低是当前最大的问题。乌兹别克斯坦退守较深，犯规数达到11次并已吃到多张黄牌（Khusanov、Nasrullaev），第59分钟连换两人明显是在加固中后场、消耗时间。刚果民主共和国方面，第51分钟换上Mayele搭档Bakambu，意图很明确就是加强禁区终结点，但第62分钟Moutoussamy的黄牌也说明球队心态略显急躁。综合来看，主队场面占优但缺乏致命一击，客队防线虽承压但组织有序，剩余不到20分钟加补时，主队扳平的可能性真实存在，却也很可能在压上进攻时被反击再下一城。因此把客队取胜概率略高于平局，主队取胜概率最低；最可能的最终比分仍维持0-1，反映客队领先优势与主队进攻乏力之间的平衡。后续进球方面，主队若得分，最可能来自新登场的Mayele和Bakambu以及边路冲击的Wissa；客队若再下一城，最可能由Shomurodov利用反击完成，或由替补登场的中场球员把握机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.20204590000000003,
+      "tokens": {
+        "input": 50612,
+        "output": 799
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.162
+    },
+    {
+      "submitted_at": "2026-06-28T01:17:59+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Congo DR",
+        "away": "Uzbekistan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.92,
+        "draw": 0.05,
+        "away": 0.03
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，刚果民主共和国以2-1领先乌兹别克斯坦。回顾比赛进程：乌兹别克斯坦由埃尔多尔·肖穆罗多夫在第10分钟率先破门，此后刚果(金)逐渐掌控比赛节奏，控球率高达63%，全场射门14次远超对手的3次。下半场刚果(金)发力，约阿内·维萨在第68分钟通过点球扳平比分，菲斯顿·马耶莱在第78分钟由Meschack Elia助攻完成反超进球。乌兹别克斯坦全场犯规多达14次，两张黄牌在身，进攻端几乎哑火，仅有1次射正。目前比赛仅剩补时阶段，刚果(金)在领先情况下可以从容控制比赛节奏，乌兹别克斯坦要在极短时间内扳平难度极大。因此主队获胜概率极高，达到92%，平局和客队逆转的可能性微乎其微。最可能的终场比分就是当前的2-1。补时阶段仍有小概率出现进球，刚果(金)的菲斯顿·马耶莱状态出色有反击机会，乌兹别克斯坦替补上场的阿布博斯别克·法伊祖拉耶夫是最有可能在最后时刻制造威胁的球员，但整体再进球概率很低。"
+      },
+      "sources": [],
+      "cost_usd": 0.03482810000000001,
+      "tokens": {
+        "input": 6728,
+        "output": 537
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.589
+    },
+    {
+      "submitted_at": "2026-06-28T01:24:51+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 1
+        },
+        "home": "Congo DR",
+        "away": "Uzbekistan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.96,
+        "draw": 0.02,
+        "away": 0.02
+      },
+      "most_likely_score": "3-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，刚果民主共和国以3-1领先乌兹别克斯坦。回顾比赛进程：乌兹别克斯坦凭借埃尔多尔·肖穆罗多夫第10分钟的进球率先取得领先，但刚果队在下半场强势反击，约阿内·维萨第68分钟罚入点球扳平，随后菲斯顿·马耶莱在第78分钟打进反超球，此后刚果队又再入一球将比分拉大至3-1。从数据来看，刚果队全场控球率59%，总射门15次，远超乌兹别克斯坦的3次射门，场面占据绝对优势。乌兹别克斯坦犯规多达15次，场面非常被动。目前比赛仅剩补时阶段，刚果队胜局已定，概率高达96%。最可能的终场比分就是当前的3-1。考虑到补时阶段可能仍有少量进球机会，菲斯顿·马耶莱状态火热且仍在场上，有小概率在补时锦上添花；替补上场的泰奥·邦贡达也有一定破门可能，但总体而言比分大概率维持不变。"
+      },
+      "sources": [],
+      "cost_usd": 0.033562699999999994,
+      "tokens": {
+        "input": 6706,
+        "output": 473
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.462
+    },
+    {
+      "submitted_at": "2026-06-28T01:31:06+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 1
+        },
+        "home": "Congo DR",
+        "away": "Uzbekistan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.97,
+        "draw": 0.02,
+        "away": 0.01
+      },
+      "most_likely_score": "3-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进行到第90分钟，刚果民主共和国以3-1领先乌兹别克斯坦。从赛事进程来看，乌兹别克斯坦由埃尔多尔·肖穆罗多夫在第10分钟率先破门取得领先，但刚果民主共和国在下半场强势反击——约阿内·维萨第68分钟罚入点球扳平，菲斯顿·马耶莱第78分钟再入一球反超，Wissa又在第91分钟梅开二度锁定胜局。从数据来看，刚果民主共和国全场18次射门、控球率58%，场面占据明显优势；乌兹别克斯坦仅3次射门且犯规高达15次，攻势乏力。目前比赛已到尾声，补时阶段时间极短，两队再进球的概率极低。因此主队获胜概率极高，最终比分大概率定格为3-1。由于距离终场哨响仅剩极少时间，不再预测后续进球球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.032038300000000006,
+      "tokens": {
+        "input": 6769,
+        "output": 378
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.654
+    }
+  ]
+}

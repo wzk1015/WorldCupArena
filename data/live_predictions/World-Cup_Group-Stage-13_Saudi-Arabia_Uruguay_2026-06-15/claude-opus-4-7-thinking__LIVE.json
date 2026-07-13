@@ -1,0 +1,375 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-13_Saudi-Arabia_Uruguay_2026-06-15",
+  "provider_fixture_id": "19609161",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-15T23:55:30+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "home": "Saudi Arabia",
+    "away": "Uruguay",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-15T22:00:00+00:00",
+    "venue": "Miami Stadium",
+    "venue_city": "Miami Gardens"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.1,
+      "draw": 0.75,
+      "away": 0.15
+    },
+    "most_likely_score": "1-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进入第90分钟，双方1-1战平。沙特阿拉伯在上半场41分钟由Al-Amri头槌破门取得领先，但乌拉圭凭借控球与射门数据上的全面压制，在80分钟由Maxi Araújo扳平比分。从场面看，乌拉圭65%控球率、20次射门7次射正，明显占据主动，而沙特更多依靠门将6次扑救才得以保住目前的平局。进入伤停补时阶段后，乌拉圭有动力继续追求胜利，且替补登场的Núñez、布莱恩·罗德里格斯带来冲击力，但沙特在主场附近的防守也已经收缩，门将状态出色。综合时间所剩无几和双方姿态，平局是迄今为止最可能的结局，因此1-1作为最可能终场比分。后续若再有进球，乌拉圭方面概率明显高于沙特，Valverde、Núñez具备远射和把握机会的能力，布莱恩·罗德里格斯的突破亦是威胁来源；沙特方面只有依靠反击和定位球，萨勒姆·道萨里仍是最具威胁的爆点，但整体进球概率较低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2156,
+    "output": 647
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0199467,
+  "wall_seconds": 15.456,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.10, \"draw\": 0.75, \"away\": 0.15},\n  \"most_likely_score\": \"1-1\",\n  \"scorers\": [\n    {\"player\": \"Federico Valverde\", \"team\": \"away\", \"minute\": 92, \"p\": 0.06},\n    {\"player\": \"Darwin Núñez\", \"team\": \"away\", \"minute\": 93, \"p\": 0.05},\n    {\"player\": \"Brian Rodríguez\", \"team\": \"away\", \"minute\": 94, \"p\": 0.03},\n    {\"player\": \"Salem Al-Dawsari\", \"team\": \"home\", \"minute\": 92, \"p\": 0.04}\n  ],\n  \"reasoning\": {\"overall\": \"比赛进入第90分钟，双方1-1战平。沙特阿拉伯在上半场41分钟由Al-Amri头槌破门取得领先，但乌拉圭凭借控球与射门数据上的全面压制，在80分钟由Maxi Araújo扳平比分。从场面看，乌拉圭65%控球率、20次射门7次射正，明显占据主动，而沙特更多依靠门将6次扑救才得以保住目前的平局。进入伤停补时阶段后，乌拉圭有动力继续追求胜利，且替补登场的Núñez、Brian Rodríguez带来冲击力，但沙特在主场附近的防守也已经收缩，门将状态出色。综合时间所剩无几和双方姿态，平局是迄今为止最可能的结局，因此1-1作为最可能终场比分。后续若再有进球，乌拉圭方面概率明显高于沙特，Valverde、Núñez具备远射和把握机会的能力，Brian Rodríguez的突破亦是威胁来源；沙特方面只有依靠反击和定位球，Salem Al-Dawsari仍是最具威胁的爆点，但整体进球概率较低。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-15T22:38:46+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 38,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Saudi Arabia",
+        "away": "Uruguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.1,
+        "draw": 0.28,
+        "away": 0.62
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Darwin Núñez",
+          "minute": 58,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Federico Valverde",
+          "minute": 72,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Facundo Pellistri",
+          "minute": 80,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Salem Al-Dawsari",
+          "minute": 75,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到上半场第38分钟，沙特阿拉伯与乌拉圭仍然互交白卷。从场面数据看，乌拉圭以61%的控球率占据主导，3次射门1次射正，整体在前场制造的威胁明显高于对手；沙特目前仅有1次射门且未能射正，更多时间需要靠门将和密集防守化解压力，犯规数也略高，显示防守端承压。考虑到双方实力差距以及南美球队在世界杯小组赛中的稳定性，乌拉圭后续转化机会的可能性相对较大，因此判断乌拉圭获胜概率明显领先，平局次之，沙特爆冷的可能性较低。综合赛前实力与目前场上节奏，最可能的最终比分预计为0-2，乌拉圭在下半场体能拉开后由前场球员完成破门。后续进球人选方面，努涅斯作为锋线核心具备最高把握机会的能力，巴尔韦德的远射与后插上、Pellistri的边路突破都是潜在得分点；沙特方面若能反击，多沙里在定位球或快速反击中仍是最具威胁的破门候选，但概率相对有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.0170015,
+      "tokens": {
+        "input": 1345,
+        "output": 650
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.773
+    },
+    {
+      "submitted_at": "2026-06-15T22:51:49+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Saudi Arabia",
+        "away": "Uruguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.2,
+        "draw": 0.27,
+        "away": 0.53
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Darwin Núñez",
+          "minute": 63,
+          "p": 0.32,
+          "team": "away"
+        },
+        {
+          "player": "Federico Valverde",
+          "minute": 78,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Maximiliano Araújo",
+          "minute": 70,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Salem Al-Dawsari",
+          "minute": 75,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Rodrigo Bentancur",
+          "minute": 82,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Feras Al-Brikan",
+          "minute": 68,
+          "p": 0.08,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "半场结束前沙特凭借第41分钟阿卜杜勒拉赫·阿姆里的进球1-0领先乌拉圭，但Al-Amri紧接着在44分钟领到黄牌，下半场防守动作会受到一定限制。从场面数据看，乌拉圭控球率59%占优，角球和射门虽略少，但整体节奏掌控更稳，沙特更多依靠快速反击和定位球制造威胁（4个角球、3次射正）。考虑到乌拉圭赛前实力明显占优，且通常下半场会加强进攻投入（Bielsa往往做出更具攻击性的换人），扳平甚至反超的概率较高。综合判断，乌拉圭获胜概率最高，平局其次，沙特保住胜果的可能性最低。最可能的最终比分为1-2，乌拉圭在下半场中段由Núñez先扳平、再由中场核心Valverde或边路替补完成反超。后续进球方面，Núñez作为前场支点和把握机会能力最强的射手概率最高；Valverde远射与后插上能力突出；Araújo和Bentancur具备一定补射或定位球得分潜力。沙特方面若能再下一城，Al-Dawsari的左路威胁和Al-Brikan的禁区抢点是最可能的来源，但整体概率明显低于乌拉圭球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.0233581,
+      "tokens": {
+        "input": 1523,
+        "output": 958
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.796
+    },
+    {
+      "submitted_at": "2026-06-15T23:16:53+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 61,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Saudi Arabia",
+        "away": "Uruguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.27,
+        "draw": 0.34,
+        "away": 0.39
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Darwin Núñez",
+          "minute": 74,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Federico Valverde",
+          "minute": 82,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Agustín Canobbio",
+          "minute": 78,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Salem Al-Dawsari",
+          "minute": 80,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Rodrigo Bentancur",
+          "minute": 88,
+          "p": 0.09,
+          "team": "away"
+        },
+        {
+          "player": "Feras Al-Brikan",
+          "minute": 85,
+          "p": 0.07,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到下半场第61分钟，沙特阿拉伯凭借第41分钟阿卜杜勒拉赫·阿姆里的进球暂时1-0领先乌拉圭。从场面数据看，乌拉圭控球率61%占据明显优势，射门6-5、射正3-3基本持平，整体压制力比沙特更强，只是临门一脚效率欠佳。中场休息时乌拉圭一口气换上Canobbio和Sanabria进行攻防调整，并保留了Núñez、Valverde等核心攻击点，下半场进攻意图明显加强。沙特方面后卫Al-Amri已经背上黄牌，后续防守动作将受到限制，定位球和反击是他们维持领先的主要手段。综合双方实力差距、剩余近30分钟的比赛时间以及乌拉圭已经做出的进攻性调整，乌拉圭至少追平的概率较高，反超也具备一定可能，因此客队胜出概率略高于平局，沙特保住胜果的概率最低。最可能的最终比分定在1-2，符合乌拉圭最终扳平后反超的剧本。后续进球点首推乌拉圭锋线Núñez，其次是后插上的Valverde和换上的Canobbio；沙特如果还能进球，更可能由Al-Dawsari在反击中完成。"
+      },
+      "sources": [],
+      "cost_usd": 0.0294002,
+      "tokens": {
+        "input": 1701,
+        "output": 1249
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.139
+    },
+    {
+      "submitted_at": "2026-06-15T23:29:59+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 74,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Saudi Arabia",
+        "away": "Uruguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.36,
+        "draw": 0.34,
+        "away": 0.3
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第74分钟，沙特阿拉伯凭借第41分钟Al-Amri的进球以1-0领先乌拉圭。从场面数据看，乌拉圭明显占据主导：控球率63%对37%，射门12比5，射正4比3，并且半场就连换两人加强进攻，努涅斯等攻击手已经登场，最后阶段会进一步压上施压。沙特门将已经做出4次扑救，防线承压严重，而且Al-Amri身背黄牌，防守动作受限，存在被打穿的风险。综合考虑剩余时间不多但乌拉圭攻势猛烈，主队赢球概率略高于平局，客队扳平甚至反超的可能性也不可忽视，三种结果都比较接近。最可能的最终比分仍是沙特1-0小胜，因为剩余时间有限且沙特可以选择回收防守消耗时间。后续进球点方面，乌拉圭一侧努涅斯作为支点中锋威胁最大，巴尔韦德的远射和换上的卡诺比奥的边路冲击也是潜在得分来源；沙特方面如果能打出反击，多萨里的个人能力和前锋布雷坎的禁区把握是主要选项。"
+      },
+      "sources": [],
+      "cost_usd": 0.0193732,
+      "tokens": {
+        "input": 1701,
+        "output": 707
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.144
+    },
+    {
+      "submitted_at": "2026-06-15T23:42:42+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 87,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Saudi Arabia",
+        "away": "Uruguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.18,
+        "away": 0.04
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第87分钟，沙特阿拉伯凭借第41分钟阿卜杜勒拉赫·阿姆里的进球以1-0领先乌拉圭。从场面统计看，乌拉圭完全掌控比赛节奏，控球率64%，14次射门5次射正，明显压制对手；沙特仅5次射门但有3次射正，效率极高，门将做出5次扑救表现亮眼。乌拉圭半场就换上Canobbio加强进攻，72分钟又派上de la Cruz寻求扳平，但至今未能撕破防线。考虑到所剩时间仅有3分钟加伤停补时，乌拉圭虽然占优但留给他们的时间不多，沙特只要稳守极有可能拿下三分，因此主队获胜概率显著上升至接近八成，平局概率保留一部分给乌拉圭最后阶段的高压逼抢，客胜几乎不可能发生。最可能的最终比分维持1-0。后续若有进球，乌拉圭一方扳平的概率最高，达尔文·努涅斯作为头号射手在终场前抢点的可能性最大，Canobbio作为生力军也有机会；沙特方面若打出反击，萨勒姆·道萨里存在锁定胜局的可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.018792299999999998,
+      "tokens": {
+        "input": 1889,
+        "output": 638
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.701
+    },
+    {
+      "submitted_at": "2026-06-15T23:55:30+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Saudi Arabia",
+        "away": "Uruguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.1,
+        "draw": 0.75,
+        "away": 0.15
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进入第90分钟，双方1-1战平。沙特阿拉伯在上半场41分钟由Al-Amri头槌破门取得领先，但乌拉圭凭借控球与射门数据上的全面压制，在80分钟由Maxi Araújo扳平比分。从场面看，乌拉圭65%控球率、20次射门7次射正，明显占据主动，而沙特更多依靠门将6次扑救才得以保住目前的平局。进入伤停补时阶段后，乌拉圭有动力继续追求胜利，且替补登场的Núñez、布莱恩·罗德里格斯带来冲击力，但沙特在主场附近的防守也已经收缩，门将状态出色。综合时间所剩无几和双方姿态，平局是迄今为止最可能的结局，因此1-1作为最可能终场比分。后续若再有进球，乌拉圭方面概率明显高于沙特，Valverde、Núñez具备远射和把握机会的能力，布莱恩·罗德里格斯的突破亦是威胁来源；沙特方面只有依靠反击和定位球，萨勒姆·道萨里仍是最具威胁的爆点，但整体进球概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0199467,
+      "tokens": {
+        "input": 2156,
+        "output": 647
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.456
+    }
+  ]
+}

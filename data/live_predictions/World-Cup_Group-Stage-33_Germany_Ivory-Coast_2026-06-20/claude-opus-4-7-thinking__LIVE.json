@@ -1,0 +1,765 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-33_Germany_Ivory-Coast_2026-06-20",
+  "provider_fixture_id": "19609135",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-20T21:54:13+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "home": "Germany",
+    "away": "Côte d'Ivoire",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-20T20:00:00+00:00",
+    "venue": "Toronto Stadium",
+    "venue_city": "Toronto"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.18,
+      "draw": 0.7,
+      "away": 0.12
+    },
+    "most_likely_score": "1-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进入第90分钟，比分仍是1-1。科特迪瓦由弗兰克·凯西在第30分钟率先打破僵局，德国在第68分钟由替补登场的德尼兹·翁达夫接纳迪姆·阿米里助攻扳平。从场面看，德国全场占据主动：控球率59%，射门15次（射正6次），角球8个，明显压制对手；科特迪瓦射门9次但仅2次射正，更多依靠门将5次扑救硬撑。下半场德国连续做出多达5次进攻性调整，包括Sané、Musiala、Havertz相继登场，明显是在追分；科特迪瓦同样用Adingra、Pépé等速度型球员加固反击。进入伤停补时阶段，留给双方的时间已非常有限，再进球的概率显著下降，平局成为最可能的结果，因此把和局概率上调到约0.70，德国凭借场面优势保留略高于客队的赢球可能（约0.18），科特迪瓦在被压制的情况下取胜机会约0.12。最可能的最终比分锁定为1-1。若补时阶段仍有进球，德国方面最具威胁的是状态正佳的Undav，以及边路冲击力强的Leweling和后插上的Goretzka；科特迪瓦一旦获得反击空间，新援Adingra与Guessand是最可能终结机会的人选。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 20750,
+    "output": 743
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0905205,
+  "wall_seconds": 18.357,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.18, \"draw\": 0.70, \"away\": 0.12},\n  \"most_likely_score\": \"1-1\",\n  \"scorers\": [\n    {\"player\": \"Deniz Undav\", \"team\": \"home\", \"minute\": 93, \"p\": 0.06},\n    {\"player\": \"Jamie Leweling\", \"team\": \"home\", \"minute\": 94, \"p\": 0.04},\n    {\"player\": \"Leon Goretzka\", \"team\": \"home\", \"minute\": 92, \"p\": 0.03},\n    {\"player\": \"Simon Adingra\", \"team\": \"away\", \"minute\": 93, \"p\": 0.04},\n    {\"player\": \"Evann Guessand\", \"team\": \"away\", \"minute\": 95, \"p\": 0.03}\n  ],\n  \"reasoning\": {\"overall\": \"比赛进入第90分钟，比分仍是1-1。科特迪瓦由Franck Kessié在第30分钟率先打破僵局，德国在第68分钟由替补登场的Deniz Undav接Nadiem Amiri助攻扳平。从场面看，德国全场占据主动：控球率59%，射门15次（射正6次），角球8个，明显压制对手；科特迪瓦射门9次但仅2次射正，更多依靠门将5次扑救硬撑。下半场德国连续做出多达5次进攻性调整，包括Sané、Musiala、Havertz相继登场，明显是在追分；科特迪瓦同样用Adingra、Pépé等速度型球员加固反击。进入伤停补时阶段，留给双方的时间已非常有限，再进球的概率显著下降，平局成为最可能的结果，因此把和局概率上调到约0.70，德国凭借场面优势保留略高于客队的赢球可能（约0.18），科特迪瓦在被压制的情况下取胜机会约0.12。最可能的最终比分锁定为1-1。若补时阶段仍有进球，德国方面最具威胁的是状态正佳的Undav，以及边路冲击力强的Leweling和后插上的Goretzka；科特迪瓦一旦获得反击空间，新援Adingra与Guessand是最可能终结机会的人选。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-20T20:17:27+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Germany",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T20:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "failed",
+      "error": "InternalServerError: Error code: 503 - {'error': {'message': 'system cpu overloaded (current: 96.4%, threshold: 95%)', 'type': 'new_api_error', 'param': '', 'code': 'system_cpu_overloaded'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 2.081
+    },
+    {
+      "submitted_at": "2026-06-20T20:24:13+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 24,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Germany",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T20:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.24,
+        "away": 0.14
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 58,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 38,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 71,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Serhou Guirassy",
+          "minute": 67,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Simon Adingra",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第24分钟，双方仍是0-0。从开场到现在的场面来看，德国队完全掌握了主动，控球率达到61%，已经完成4次射门、1次射正，并且制造了1个角球；科特迪瓦则相对被动，仅有1次射门且未能射正，门将已经做出1次扑救。整体节奏由德国主导，象牙海岸更多依靠紧凑防守和零星反击应对。基于这种开局走势，德国取胜的概率有所上调至62%左右，平局约24%，象牙海岸爆冷的可能性压缩到14%附近——非洲球队的速度型边路反击仍是唯一值得警惕的变量。从射门质量与控球区域推断，德国大概率会在中场后段率先打破僵局，下半场体能下降后还有机会扩大比分；科特迪瓦则可能在比赛后段利用对方压上后的空当扳回一球，因此最可能的最终比分定为2-1。后续进球方面，德国一侧弗洛里安·维尔茨在两个禁区之间的串联最具威胁，有望在上半场结束前制造首球；凯·哈弗茨作为禁区终结点，在下半场易边后接应传中或定位球的概率较高；贾马尔·穆西亚拉的盘带突破也可能在比赛后段撕开防线。象牙海岸方面，Serhou Guirassy是最可靠的支点和终结者，最有机会把握反击中的射门;边路快马西蒙·阿丁格拉在比赛末段对方阵型松散时也具备打入挽回比分进球的能力。"
+      },
+      "sources": [],
+      "cost_usd": 0.0877936,
+      "tokens": {
+        "input": 19678,
+        "output": 810
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.038
+    },
+    {
+      "submitted_at": "2026-06-20T20:31:13+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 31,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T20:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.27,
+        "away": 0.21
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Florian Wirtz",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Kai Havertz",
+          "minute": 71,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 78,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Niclas Füllkrug",
+          "minute": 84,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Sébastien Haller",
+          "minute": 67,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Simon Adingra",
+          "minute": 80,
+          "p": 0.14,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第31分钟，比分0-1，科特迪瓦凭借第30分钟弗兰克·凯西的进球率先打破僵局。从场面数据看，德国掌控62%的控球率，射门4比3、角球1比0略占优，但仅有1次射正，进攻效率尚未转化为威胁；科特迪瓦在38%控球下抓住机会高效转化，门将也已有1次扑救贡献。综合来看，德国作为整体实力更强、阵容更深的一方，仍有充足时间在剩余近60分钟内反扑，预计下半场会进一步加大压迫并通过边路与中路渗透制造更多机会，因此主队胜率上调至约0.52，平局约0.27，科特迪瓦守住胜果的难度较大，客胜概率约0.21。最可能的最终比分判断为2-1，对应德国先扳平再反超的剧本，与最高的主胜概率一致，且不低于当前任何一方的现有比分。后续进球点上，德国方面Wirtz、Havertz、Musiala在中前场的串联和终结能力最强，替补登场的Füllkrug也是典型的破密集防守利器，因此将其列为主要候选；科特迪瓦若能继续打反击，Haller的支点作用与Adingra的速度突击是最具威胁的得分来源，但概率明显低于德国球员。所有候选进球时间均设定在第31分钟之后，符合当前比赛进程。"
+      },
+      "sources": [],
+      "cost_usd": 0.0882117,
+      "tokens": {
+        "input": 19766,
+        "output": 815
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.421
+    },
+    {
+      "submitted_at": "2026-06-20T20:38:06+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 38,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T20:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "failed",
+      "error": "InternalServerError: Error code: 503 - {'error': {'message': 'system cpu overloaded (current: 98.4%, threshold: 95%)', 'type': 'new_api_error', 'param': '', 'code': 'system_cpu_overloaded'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 2.034
+    },
+    {
+      "submitted_at": "2026-06-20T20:44:39+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 44,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T20:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.28,
+        "away": 0.3
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 62,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 70,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 78,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Niclas Füllkrug",
+          "minute": 85,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Sébastien Haller",
+          "minute": 75,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Simon Adingra",
+          "minute": 82,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Franck Kessié",
+          "minute": 88,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场临近结束，比分0-1，科特迪瓦凭借第30分钟弗兰克·凯西的进球暂时领先。从场面数据看，德国占据明显的控球优势（58%对42%），射门次数6比4，角球2比0，整体在进攻端施加了更多压力，但射正只有1次，把握机会的效率明显偏低；科特迪瓦虽然处于被动，但已有2次射正并取得进球，反击效率非常高。综合来看，德国作为整体实力更强的一方，仍有充足的时间在下半场逐步加强攻势，扳平甚至反超的概率较高，因此主胜概率上调至最高一档；但鉴于科特迪瓦防守组织尚可且具备反击杀伤力，平局与客胜也都不能排除，三项概率相对接近。最可能的最终比分定为2-1主队反超，符合德国控球与射门占优、最终通过下半场体能与轮换优势完成翻盘的剧本。后续进球方面，下半场德国大概率加强前场压迫并依靠Havertz、Musiala、Wirtz、Füllkrug等具备终结能力的攻击手扩大进攻产出，其中Havertz与Musiala在禁区内出现机会的概率最高；科特迪瓦方面则更可能通过Haller的支点作用或Adingra的边路反击在防守反击中再下一城，Kessié梅开二度的可能性相对较低但依然存在。"
+      },
+      "sources": [],
+      "cost_usd": 0.08880740000000001,
+      "tokens": {
+        "input": 19762,
+        "output": 848
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.641
+    },
+    {
+      "submitted_at": "2026-06-20T20:51:55+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T20:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "failed",
+      "error": "InternalServerError: Error code: 503 - {'error': {'message': 'system cpu overloaded (current: 96.5%, threshold: 95%)', 'type': 'new_api_error', 'param': '', 'code': 'system_cpu_overloaded'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 2.075
+    },
+    {
+      "submitted_at": "2026-06-20T21:11:21+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 56,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T20:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.38,
+        "draw": 0.3,
+        "away": 0.32
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 72,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Niclas Füllkrug",
+          "minute": 84,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 68,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Sébastien Haller",
+          "minute": 80,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Simon Adingra",
+          "minute": 75,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第56分钟，科特迪瓦凭借第30分钟凯西埃（弗兰克·凯西）的入球客场1-0领先德国。从场面数据看，德国控球率高达61%，角球4-1、射门8-5占据全面优势，半场结束后又用吕迪格（安东尼奥·吕迪格）换上施洛特贝克加固后防同时释放进攻空间，显示出明显的反扑姿态；而科特迪瓦虽然进球但整体被压制，下半场需要靠防守反击维持领先。考虑到德国仍有约35分钟以上的常规时间（含补时），加之其阵中前场火力（哈弗茨、维尔茨、穆夏拉、菲尔克鲁格等）的换人冲击力，德国扳平的概率明显上升，主胜与平局概率回升，客胜概率虽因领先而保留一定比重但不再占优。综合判断最可能的最终比分是1-1：德国大概率能在中后段利用控球和定位球扳平，但科特迪瓦防线集体退守、加上时间所剩不多，德国完成反超的难度较大。后续进球倾向德国一方，哈弗茨与菲尔克鲁格作为禁区终结点最有可能成为扳平功臣，维尔茨和穆夏拉的突破组织也具备制造关键球的能力；科特迪瓦若有进球，则更可能来自哈勒（Sébastien Haller）或阿丁格拉（西蒙·阿丁格拉）的快速反击。"
+      },
+      "sources": [],
+      "cost_usd": 0.0889221,
+      "tokens": {
+        "input": 19853,
+        "output": 836
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.182
+    },
+    {
+      "submitted_at": "2026-06-20T21:18:43+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 63,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T20:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.32,
+        "draw": 0.34,
+        "away": 0.34
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 82,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Niclas Füllkrug",
+          "minute": 85,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 75,
+          "p": 0.13,
+          "team": "home"
+        },
+        {
+          "player": "Sébastien Haller",
+          "minute": 80,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Simon Adingra",
+          "minute": 88,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第63分钟，德国主场0-1落后科特迪瓦。第30分钟弗兰克·凯西为科特迪瓦攻入唯一进球，下半场开始时德国用安东尼奥·吕迪格换下尼科·施洛特贝克，明显是为加强反击与稳定后防做出调整。从场面数据看，德国控球率60%，角球4-2、射门8-7、射正2-2均略占优势，整体施压更明显，但转化效率不足，科特迪瓦的两次射正也颇具威胁。\n\n综合来看，德国仍有近30分钟时间进行反扑，凭借控球与角球优势，扳平比分的可能性不低，但科特迪瓦防守稳固并具备反击能力，完全保住胜果同样有机会。因此和局与客胜概率接近，主胜概率略低于两者。最可能的最终比分判断为1-1，对应德国在剩余时间扳平、双方均无力再下一城的最常见走势。\n\n后续进球方面，德国一侧由凯·哈弗茨、弗洛里安·维尔茨、Niclas Füllkrug和贾马尔·穆西亚拉领衔，他们在禁区内的把握能力与定位球终结能力使其成为最可能的扳平功臣；科特迪瓦若再下一城，则更可能来自反击中的Sébastien Haller或边路突击手西蒙·阿丁格拉。所有进球时间均设定在第63分钟之后，符合当前比赛进程。"
+      },
+      "sources": [],
+      "cost_usd": 0.0886668,
+      "tokens": {
+        "input": 19859,
+        "output": 821
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.424
+    },
+    {
+      "submitted_at": "2026-06-20T21:26:01+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T20:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.34,
+        "away": 0.36
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Deniz Undav",
+          "minute": 82,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Jamie Leweling",
+          "minute": 86,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Nadiem Amiri",
+          "minute": 78,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Franck Kessié",
+          "minute": 88,
+          "p": 0.08,
+          "team": "away"
+        },
+        {
+          "player": "Simon Adingra",
+          "minute": 84,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第71分钟，德国0-1暂时落后于科特迪瓦，凯西埃在第30分钟的进球让非洲球队取得领先。从场面上看，德国占据主动：控球率60%，角球6-2、射门10-8均占优，但射正只有2次，转化效率明显不足。下半场德国一口气换上Amiri、Leweling、Undav三名进攻球员，明显加大压上力度，意图扳平。基于此，平局概率被上调到0.34，主队取胜概率约0.30，客队保胜概率0.36——科特迪瓦虽然要后撤防守，但拥有反击空间，且只需再守不到20分钟加补时。综合最可能的最终比分定为1-1：德国持续施压最有可能换来一粒扳平球，而科特迪瓦再下一城的概率相对较低。后续进球预测集中在德国替补登场的Undav和Leweling身上，两人体能与冲击力占优，分别给到较高概率；Amiri作为组织型替补也具备远射与定位球得分可能。客队方面若能完成反击，凯西埃和边路爆点Adingra最具威胁，但概率明显低于德国球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.08813030000000001,
+      "tokens": {
+        "input": 20389,
+        "output": 686
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.169
+    },
+    {
+      "submitted_at": "2026-06-20T21:33:05+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 78,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T20:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.4,
+        "away": 0.18
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Deniz Undav",
+          "minute": 85,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Jamie Leweling",
+          "minute": 88,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Nadiem Amiri",
+          "minute": 90,
+          "p": 0.08,
+          "team": "home"
+        },
+        {
+          "player": "Franck Kessié",
+          "minute": 86,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第78分钟，比分1-1，德国队在第68分钟由替补登场的德尼兹·翁达夫接纳迪姆·阿米里助攻扳平了科特迪瓦弗兰克·凯西在第30分钟取得的进球。从场面数据看，德国控球率61%，射门12-8、射正3-2、角球8-2全面占优，下半场连换三人加强进攻意图明显，扳平后明显占据主动，最后阶段持续施压的概率较高。科特迪瓦体能下降、退守自家半场，反击虽具威胁但创造高质量机会的频率不高。综合判断德国在剩余十余分钟内打入制胜球的可能性略高于平局，但考虑到时间已不多、且科特迪瓦防线尚算稳固，平局概率与胜率非常接近，客队再下一城逆转的可能性较低。最可能的最终比分为2-1，由德国攻入致胜球；后续进球候选首推状态正佳、刚刚破门的Undav，其次是同样替补登场带来冲击力的Leweling与Amiri，科特迪瓦方面若能反击得手，最具威胁的仍是中场核心Kessié。"
+      },
+      "sources": [],
+      "cost_usd": 0.0866281,
+      "tokens": {
+        "input": 20203,
+        "output": 642
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.424
+    },
+    {
+      "submitted_at": "2026-06-20T21:40:12+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 85,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T20:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.51,
+        "away": 0.15
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第85分钟，比分1-1。科特迪瓦由弗兰克·凯西在第30分钟率先破门，德国队则在第68分钟由替补登场的德尼兹·翁达夫接纳迪姆·阿米里助攻扳平。从场面看，德国队全面占优：控球率62%，射门12次对8次，角球8比2，攻势更为持续，三次换人（Amiri、Leweling、Undav）也明显是为了加强进攻端的冲击力，已经取得了立竿见影的效果。科特迪瓦在第75分钟一口气换上Adingra、Fofana、Guessand三人，更多是为了稳住体能和防线，进攻端反扑的组织度有限。综合来看，常规时间仅剩约5分钟加补时，双方都不会轻易放弃，但在这种比分胶着、体能下降的阶段，平局是最自然的走向，因此把1-1设为最可能的最终比分，平局概率最高；德国凭借场面优势和板凳深度，仍有一定机会在末段抢分，胜率高于科特迪瓦，而客队偷一球完成反超的可能性相对较小。后续进球若出现，德国一侧最可能来自边路冲击力强的Leweling，以及禁区内具备终结能力的Havertz和Wirtz；科特迪瓦一侧则寄望于刚替补登场、speed充沛的Adingra和阿马德·迪亚洛在反击中制造杀机。"
+      },
+      "sources": [],
+      "cost_usd": 0.0900617,
+      "tokens": {
+        "input": 20486,
+        "output": 771
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.904
+    },
+    {
+      "submitted_at": "2026-06-20T21:47:13+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T20:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.7,
+        "away": 0.12
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第90分钟，德国与科特迪瓦战成1-1。上半场第30分钟Kessié为科特迪瓦首开纪录，德国在第68分钟由替补登场的Undav接Amiri传球扳平比分。从场面看，德国控球率59%，射门12次（3次射正），并取得8个角球，整体压制更明显；科特迪瓦8射2正，反击仍具威胁但已通过四次换人偏向防守和保平。德国此前在60分钟连换三人加强进攻，而科特迪瓦75分钟后连续换人调节体能与节奏，比赛进入伤停补时阶段，双方体能下降、攻防回合减少，再进球难度增大。综合考虑，平局概率明显升高，德国凭借场面优势在补时阶段仍有一定取胜机会，科特迪瓦逆转可能性较低，因此判断最可能的最终比分为1-1。若仍有进球，德国一方Undav、Leweling这类生力军在补时阶段把握机会的概率相对较高；科特迪瓦一方边路速度型替补Adingra存在反击破门的可能，但整体概率均较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0871535,
+      "tokens": {
+        "input": 20570,
+        "output": 597
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.574
+    },
+    {
+      "submitted_at": "2026-06-20T21:54:13+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-20T20:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.7,
+        "away": 0.12
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进入第90分钟，比分仍是1-1。科特迪瓦由弗兰克·凯西在第30分钟率先打破僵局，德国在第68分钟由替补登场的德尼兹·翁达夫接纳迪姆·阿米里助攻扳平。从场面看，德国全场占据主动：控球率59%，射门15次（射正6次），角球8个，明显压制对手；科特迪瓦射门9次但仅2次射正，更多依靠门将5次扑救硬撑。下半场德国连续做出多达5次进攻性调整，包括Sané、Musiala、Havertz相继登场，明显是在追分；科特迪瓦同样用Adingra、Pépé等速度型球员加固反击。进入伤停补时阶段，留给双方的时间已非常有限，再进球的概率显著下降，平局成为最可能的结果，因此把和局概率上调到约0.70，德国凭借场面优势保留略高于客队的赢球可能（约0.18），科特迪瓦在被压制的情况下取胜机会约0.12。最可能的最终比分锁定为1-1。若补时阶段仍有进球，德国方面最具威胁的是状态正佳的Undav，以及边路冲击力强的Leweling和后插上的Goretzka；科特迪瓦一旦获得反击空间，新援Adingra与Guessand是最可能终结机会的人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0905205,
+      "tokens": {
+        "input": 20750,
+        "output": 743
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.357
+    }
+  ]
+}

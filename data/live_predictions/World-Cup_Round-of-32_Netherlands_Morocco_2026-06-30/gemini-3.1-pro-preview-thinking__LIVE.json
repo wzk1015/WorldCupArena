@@ -1,0 +1,1045 @@
+{
+  "fixture_id": "World-Cup_Round-of-32_Netherlands_Morocco_2026-06-30",
+  "provider_fixture_id": "19606958",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-30T03:52:20+00:00",
+  "live": {
+    "status": "Penalties",
+    "elapsed": 130,
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "home": "Netherlands",
+    "away": "Morocco",
+    "competition": "World Cup",
+    "stage": "Round of 32",
+    "kickoff_utc": "2026-06-30T01:00:00+00:00",
+    "venue": "Monterrey Stadium",
+    "venue_city": "Guadalupe"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.0,
+      "draw": 1.0,
+      "away": 0.0
+    },
+    "most_likely_score": "1-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "目前比赛已经进入点球大战（130分钟），常规与加时赛比分锁定在1-1。荷兰队在第72分钟由加克波先拔头筹，摩洛哥队则在第91分钟凭借伊萨·迪奥普的进球绝平将比赛拖入加时。数据方面，摩洛哥队控球率高达70%，并在射门数（11比6）和角球数（8比5）上占据明显优势，但荷兰队门将贡献了5次扑救力保城门不失。当前点球大战前四轮结束，双方均罚丢两球，战成2-2平。由于比赛的常规及加时赛已经结束，官方常规赛果已确定为平局（1-1），因此平局概率为100%，最可能比分即为1-1。比赛已无运动战或加时赛时间，故不再预测后续进球者。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2536,
+    "output": 2289
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0170835,
+  "wall_seconds": 23.715,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.0,\n    \"draw\": 1.0,\n    \"away\": 0.0\n  },\n  \"most_likely_score\": \"1-1\",\n  \"scorers\": [],\n  \"reasoning\": {\n    \"overall\": \"目前比赛已经进入点球大战（130分钟），常规与加时赛比分锁定在1-1。荷兰队在第72分钟由加克波先拔头筹，摩洛哥队则在第91分钟凭借伊萨·迪奥普的进球绝平将比赛拖入加时。数据方面，摩洛哥队控球率高达70%，并在射门数（11比6）和角球数（8比5）上占据明显优势，但荷兰队门将贡献了5次扑救力保城门不失。当前点球大战前四轮结束，双方均罚丢两球，战成2-2平。由于比赛的常规及加时赛已经结束，官方常规赛果已确定为平局（1-1），因此平局概率为100%，最可能比分即为1-1。比赛已无运动战或加时赛时间，故不再预测后续进球者。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**My Analysis of the Match Situation**\n\nOkay, the match is in a penalty shootout, the clock reads 130', and the score after regular and extra time was 1-1. The events show a series of penalty shootout goals and misses, but let's stick with the overall picture. The initial state had a 1-1 score, which is after the full 120 minutes. Since the game is in penalties, for all intents and purposes in predicting the result, the final score of the match itself (1X2 result) is considered a draw (1-1). Therefore, the win probabilities are home: 0.0, draw: 1.0, and away: 0.0, which totals to 1.0. Given that the match is over, the most likely final score, and the only final score, is 1-1, and since there are no remaining minutes for open play goals, the array of `scorers` will be empty. The penalty shootout events themselves (Koopmeiners, El Aynaoui, Kluivert, Rahimi, Weghorst, Talbi, Timber, Hakimi) don't change the official 1X2 outcome, which is a draw (1-1).\n\nI have confirmed the 1-1 score after 120 minutes is the final score for the prediction purposes. The reasoning: The game's concluded at 1-1. Cody Gakpo scored for Netherlands in the 72nd minute, and Issa Diop equalized for Morocco in the 91st minute. Morocco controlled possession (70%) and had more shots (11 vs 6), but the match went to a penalty shootout. The penalty shootout is currently tied 2-2 after four rounds for each team. The 1X2 result is a draw (1-1), as the penalty shootout has no bearing on the 1X2 result. No further goals are possible in regular or extra time, so there are no scorers. This will be converted to Simplified Chinese to be clear.\n\nCurrently, the match is in the penalty shootout (130 minutes), and the score in regular and extra time has ended at 1-1. Recalling the game flow, the Netherlands opened the score with Gakpo in the 72nd minute, while Morocco managed an equalizer in the 91st minute thanks to Diop, sending the game into extra time. From the overall data, Morocco dominated possession with 70%, and also had more shots, (11 vs 6), but couldn't convert them to more goals. Currently, the penalty shootout is tied at 2-2 after four rounds, as both sides missed twice. Since the regular time and extra time have concluded, the final result for the match has been determined to be a draw (1-1), thus the probability of a draw is 100%. Moreover, there will be no more goals in regular or extra time, hence there is no further goal scorer prediction.\n\nYes, the final score *is* considered 1-1. Matches decided by penalty shootouts are settled as draws for predictions, and the score at the end of extra time is the final result.\n\nThe model constraints were followed.\n\n```json\n{\n  \"win_probs\": {\n    \"home\": 0.0,\n    \"draw\": 1.0,\n    \"away\": 0.0\n  },\n  \"most_likely_score\": \"1-1\",\n  \"scorers\": [],\n  \"reasoning\": {\n    \"overall\": \"目前比赛已经进入点球大战（130分钟），常规与加时赛比分锁定在1-1。荷兰队在第72分钟由加克波先拔头筹，摩洛哥队则在第91分钟凭借伊萨·迪奥普的进球绝平将比赛拖入加时。数据方面，摩洛哥队控球率高达70%，并在射门数（11比6）和角球数（8比5）上占据明显优势，但荷兰队门将贡献了5次扑救力保城门不失。当前点球大战前四轮结束，双方均罚丢两球，战成2-2平。由于比赛的常规及加时赛已经结束，官方常规赛果已确定为平局（1-1），因此平局概率为100%，最可能比分即为1-1。比赛已无运动战或加时赛时间，故不再预测后续进球者。\"\n  },\n  \"sources\": []\n}\n```\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-30T01:12:43+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 12,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.3,
+        "away": 0.22
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 65,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 78,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第12分钟，荷兰与摩洛哥暂时战成0-0平。开场阶段双方踢得相对谨慎，符合世界杯淘汰赛的典型节奏。从目前的场面数据来看，摩洛哥以54%的控球率略微占优，试图通过传导控制比赛节奏；但荷兰队展现出了更直接的进攻威胁，完成了全场唯一的一次射门并获得一次角球。考虑到荷兰队在整体实力、战术执行力以及大赛经验上的优势，他们更有可能在顶住摩洛哥的开场三板斧后，利用快速反击或定位球打破僵局。随着比赛深入，体能消耗可能会让防线出现松动，预计荷兰队将在下半场取得领先。综合判断，荷兰队获胜的概率最高，最可能的最终比分预测为1-0。在进球球员方面，荷兰队的前场核心 科迪·加克波 具备极强的终结能力，是打破僵局的热门人选；而摩洛哥的 Youssef En-Nesyri 则是他们在落后时反扑的关键威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.0084294,
+      "tokens": {
+        "input": 960,
+        "output": 1178
+      },
+      "tool_calls": 0,
+      "wall_seconds": 33.316
+    },
+    {
+      "submitted_at": "2026-06-30T01:19:04+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 19,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.28,
+        "away": 0.17
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 65,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 78,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第19分钟，荷兰与摩洛哥目前战成0-0平。从开场阶段的场面来看，荷兰队占据了54%的控球率，并完成了1次射门和1次角球，在进攻端表现出一定的控制力。摩洛哥队则立足于稳固防守，目前尚未形成射门，但整体阵型保持紧凑，防守反击意图明显。考虑到荷兰队在整体实力和控球上的优势，随着比赛深入，他们通过阵地战或定位球打破僵局的可能性较大，因此赢面更高。摩洛哥的反击同样具有威胁，但目前场面略显被动。综合当前的比赛节奏与数据，预计最终比分最可能为1-0，荷兰队小胜晋级。在后续进球者方面，荷兰队的前锋 科迪·加克波 有望在下半场利用对手防线松懈的机会完成致命一击，而摩洛哥的 Youssef En-Nesyri 则是反击战术中的关键潜在得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.013388549999999999,
+      "tokens": {
+        "input": 1213,
+        "output": 1923
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.19
+    },
+    {
+      "submitted_at": "2026-06-30T01:25:15+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 25,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.45,
+        "draw": 0.28,
+        "away": 0.27
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 65,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 78,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第25分钟，目前比分依然是0-0。从前25分钟的场面数据来看，客队摩洛哥表现得非常积极且极具侵略性，控球率达到54%，并且已经完成了3次射门（其中2次射正），迫使荷兰门将做出了2次关键扑救。相比之下，荷兰队开局进入状态较慢，目前仅有1次未中目标的射门。尽管摩洛哥在开局阶段占据了一定优势，但荷兰队在整体阵容深度和战术执行力上仍具备优势。随着比赛的深入，预计荷兰队会逐渐稳住阵脚并夺回中场控制权。基于目前的比赛走势和双方实力对比，荷兰队最终获胜的概率依然最高，约为45%，而平局和摩洛哥取胜的概率分别为28%和27%。最可能的最终比分预测为1-0，荷兰队有望在下半场打破僵局。在后续的进球逻辑中，科迪·加克波 等荷兰锋线球员将是撕开摩洛哥防线的关键人物，预计进球可能会在下半场60分钟之后双方体能出现拐点时产生；而摩洛哥的 Youssef En-Nesyri 同样具备在反击中制造威胁的能力。"
+      },
+      "sources": [],
+      "cost_usd": 0.0119196,
+      "tokens": {
+        "input": 1002,
+        "output": 1725
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.327
+    },
+    {
+      "submitted_at": "2026-06-30T01:31:33+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 31,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.35,
+        "away": 0.23
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 65,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 78,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第31分钟，荷兰与摩洛哥暂时战成0-0平。从目前的场面数据来看，摩洛哥在控球率上以52%略微占优，并且已经完成了3次射门，其中2次射正均被荷兰门将化解。相比之下，荷兰队开局略显慢热，仅有1次射门且未中目标。摩洛哥展现出了极强的战术执行力和反击威胁。考虑到比赛已经过了三分之一，且双方防守都较为稳固，平局的概率正在逐渐上升。不过，作为传统强队，荷兰队在阵容深度和关键球星的个人能力上仍占据优势，随着比赛深入，他们有望逐渐接管中场控制权，因此主胜概率依然最高，平局次之。结合世界杯淘汰赛的谨慎风格以及目前的胶着局势，最可能的最终比分预测为荷兰1-0小胜。进球逻辑方面，荷兰队的加克波（科迪·加克波）在边路的突破和内切射门将是破局关键，预计在下半场中段有机会建功；摩洛哥的恩内斯里（Youssef En-Nesyri）则随时可能在反击或定位球中制造致命威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.0142569,
+      "tokens": {
+        "input": 1002,
+        "output": 2096
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.157
+    },
+    {
+      "submitted_at": "2026-06-30T01:37:49+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 37,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.35,
+        "away": 0.23
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 68,
+          "p": 0.28,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行至第37分钟，场上比分依旧是0-0。从目前的场面数据来看，荷兰队虽然以53%的控球率占据场面上的微弱优势，但进攻端尚未打正球门；相反，摩洛哥队的反击更为犀利，已经完成了2次射正并迫使荷兰门将做出2次关键扑救。由于这是一场世界杯淘汰赛，双方在上半场尾声阶段都表现得较为谨慎。随着比赛深入，荷兰队有望凭借更深厚的阵容底蕴和战术调整在下半场打破僵局。因此，荷兰队在90分钟内获胜的概率略高，最可能的最终比分为1-0。预计下半场第68分钟左右，荷兰队锋线核心 科迪·加克波 有望通过阵地战或定位球机会攻入制胜一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0049077,
+      "tokens": {
+        "input": 1002,
+        "output": 612
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.311
+    },
+    {
+      "submitted_at": "2026-06-30T01:43:50+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 43,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.4,
+        "draw": 0.35,
+        "away": 0.25
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 65,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 75,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第43分钟，荷兰与摩洛哥暂时战成0-0平。从上半场的数据来看，双方场面非常胶着，控球率荷兰以51%微弱领先。摩洛哥在反击端表现出了极强的威胁，完成了3次射门且有2次射正，迫使荷兰门将做出了2次扑救；而荷兰虽然有2次射门，但尚未命中门框范围。第36分钟荷兰曾有一次VAR点球复核，但未能借此打破僵局。考虑到比赛即将进入下半场，随着体能消耗，荷兰有望利用阵容深度和战术调整逐渐占据主动。综合当前局势，我们预测荷兰的胜率略高，约为40%，平局概率为35%，摩洛哥胜率为25%。最可能的最终比分是1-0，预计荷兰的 科迪·加克波 可能会在下半场第65分钟左右通过边路内切或阵地战机会打破僵局。摩洛哥的 Youssef En-Nesyri 同样具备反击得分的潜力，但荷兰防线目前表现相对稳健，零封对手的可能性较大。"
+      },
+      "sources": [],
+      "cost_usd": 0.00881475,
+      "tokens": {
+        "input": 1069,
+        "output": 1221
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.169
+    },
+    {
+      "submitted_at": "2026-06-30T01:50:03+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.35,
+        "away": 0.23
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 68,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 75,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场比赛结束，荷兰与摩洛哥暂时战成0-0平。比赛场面非常胶着，控球率方面荷兰以51%微弱领先。摩洛哥在反击中展现了极强的威胁，半场完成4次射门其中2次射正，迫使荷兰门将做出了2次关键扑救。荷兰队虽然获得了4次角球，但在阵地战中破门乏术，第36分钟的VAR点球核查也未能打破僵局。考虑到这是一场世界杯淘汰赛，下半场双方大概率会继续保持防守端的专注度。荷兰队凭借更深厚的阵容底蕴和进攻端的调整能力，在常规时间内依然拥有略高的获胜概率。预计下半场比赛节奏会随着体能消耗而出现变化，荷兰队有望通过球星的个人能力完成致命一击，最可能的常规时间比分为1-0。进攻核心加克波（科迪·加克波）在下半场逐渐松懈的防线中将获得更多穿插空间，是打破僵局的头号热门。同时，摩洛哥的恩内斯里（Youssef En-Nesyri）在反击和定位球中的高空优势也不容忽视，随时可能制造威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.014511,
+      "tokens": {
+        "input": 1322,
+        "output": 2083
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.853
+    },
+    {
+      "submitted_at": "2026-06-30T02:12:26+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 57,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.32,
+        "draw": 0.42,
+        "away": 0.26
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第57分钟，荷兰与摩洛哥依然维持0-0的平局。从场面数据来看，双方势均力敌，摩洛哥甚至在控球率（53%）和射门数（5对4）上略微占优。两队的防守都非常严密，合计只有3次射正，比赛呈现出强烈的战术博弈和消耗战特征。考虑到这是一场世界杯淘汰赛，随着时间推移，双方在常规时间内会越来越谨慎，避免致命失误。摩洛哥坚韧的防守体系让荷兰队难以找到明显的突破口。因此，常规时间以平局收场的概率正在逐渐上升，0-0是最可能保留到终场哨响的比分。尽管互交白卷的可能性最大，但如果比赛在最后阶段被改写，荷兰队更有可能依靠锋线球员的个人能力或定位球打破僵局，加克波（科迪·加克波）是潜在的关键先生；而摩洛哥方面，恩内斯里（Youssef En-Nesyri）的反击与头球威胁同样不容忽视。"
+      },
+      "sources": [],
+      "cost_usd": 0.01096515,
+      "tokens": {
+        "input": 1071,
+        "output": 1562
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.178
+    },
+    {
+      "submitted_at": "2026-06-30T02:18:41+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 63,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.45,
+        "away": 0.25
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第63分钟，荷兰与摩洛哥依然维持0-0的平局。从场面数据来看，摩洛哥出人意料地占据了58%的控球率，并在总射门数上以6比4略微领先。然而，双方创造出的绝对得分机会都非常有限，全场合计仅有3次射正（荷兰1次，摩洛哥2次），比赛陷入了中场的激烈绞杀与战术博弈中。摩洛哥防线在下半场初段领到黄牌，显示出防守端的对抗强度正在上升。考虑到这是一场世界杯淘汰赛，随着比赛进入最后半小时，双方在战术选择上会更加谨慎，首要目标是避免致命失误。结合目前沉闷的进攻转化率，常规时间内互交白卷进入加时赛的概率已成为最高选项。因此，0-0是最可能的90分钟最终比分。尽管如此，如果僵局在尾声阶段被打破，荷兰队极有可能依靠加克波（科迪·加克波）的个人能力在反击中制造威胁，而摩洛哥的恩内斯里（Youssef En-Nesyri）也具备利用传中抢点一击致命的潜力。"
+      },
+      "sources": [],
+      "cost_usd": 0.014499449999999999,
+      "tokens": {
+        "input": 1071,
+        "output": 2123
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.381
+    },
+    {
+      "submitted_at": "2026-06-30T02:24:55+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 69,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.58,
+        "away": 0.24
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第69分钟，荷兰与摩洛哥依然维持0-0的平局。从场面数据来看，摩洛哥占据了61%的控球率，并完成了8次射门（3次射正），在进攻端表现得更为积极主动；而荷兰队则略显被动，仅有39%的控球率和1次射正。尽管摩洛哥在场面上占据一定优势，但荷兰门将的3次扑救力保城门不失。考虑到这是一场世界杯三十二强淘汰赛，随着比赛进入最后20多分钟，双方在战术上可能会更加谨慎，避免因失误导致被绝杀。因此，常规时间内互交白卷进入加时赛的可能性正在显著增加。平局的概率目前最高，最可能的常规时间最终比分是0-0。如果比赛尾声阶段有进球产生，摩洛哥的 Youssef En-Nesyri 或荷兰的 科迪·加克波 等核心攻击手有可能在反击或定位球中抓住机会，但整体进球概率偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.00833805,
+      "tokens": {
+        "input": 1071,
+        "output": 1145
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.615
+    },
+    {
+      "submitted_at": "2026-06-30T02:30:57+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 75,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.2,
+        "draw": 0.55,
+        "away": 0.25
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第75分钟，荷兰与摩洛哥依然维持0-0的平局。从目前的场面与数据来看，摩洛哥占据了明显的优势，控球率高达61%，并创造了8次射门（3次射正）和6个角球。相比之下，荷兰队在场面上相对被动，门将已经做出了3次关键扑救力保城门不失。随着常规时间仅剩15分钟左右，双方在防守端势必会更加谨慎，避免在最后阶段犯错，因此平局拖入加时赛的概率大幅上升，成为当前最可能的结果。尽管如此，摩洛哥凭借持续的进攻压迫和中场控制，在常规时间尾声完成绝杀的可能性略高于荷兰。如果比赛在最后阶段出现进球，摩洛哥的锋线球员更有可能利用体能优势或前场定位球机会打破僵局，而荷兰队则主要寄希望于前场核心球员的反击闪击。综合当前的比赛走势与时间因素，0-0是最可能的常规时间最终比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0132405,
+      "tokens": {
+        "input": 1324,
+        "output": 1881
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.887
+    },
+    {
+      "submitted_at": "2026-06-30T02:37:11+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 82,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.15,
+        "away": 0.03
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第82分钟，荷兰队凭借加克波（科迪·加克波）在第72分钟的进球，目前以1-0领先摩洛哥。从全场数据来看，摩洛哥在控球率（62%）和射门数（8次）上占据优势，但荷兰队的防守反击效率更高，门将也做出了4次关键扑救。随着比赛进入尾声，落后的摩洛哥势必会全线压上寻求扳平比分的机会，这不仅增加了他们绝平的可能性，同时也给荷兰队留下了广阔的反击空间。替补登场的韦格霍斯特（沃特·韦霍斯特）在反击和高空球争顶中极具威胁。综合当前比分和所剩无几的时间，荷兰队守住胜果的概率极高，最可能的最终比分是1-0。如果比赛还有进球，很可能出现在最后阶段荷兰队的反击中。"
+      },
+      "sources": [],
+      "cost_usd": 0.0073164,
+      "tokens": {
+        "input": 1286,
+        "output": 947
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.196
+    },
+    {
+      "submitted_at": "2026-06-30T02:43:15+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 88,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.92,
+        "draw": 0.07,
+        "away": 0.01
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第88分钟，荷兰队凭借加克波（科迪·加克波）在第72分钟的进球以1-0领先摩洛哥队。从场面数据来看，摩洛哥队占据了64%的控球率，并创造了更多的射门机会（9次射门，3次射正），但荷兰队的防守和门将表现稳健，成功守住了领先优势。由于比赛所剩时间极少，荷兰队获胜的概率已经非常高。摩洛哥队在最后阶段必然会全线压上寻求绝平机会，这可能会给荷兰队留下反击的空间。替补登场的高中锋韦格霍斯特（沃特·韦霍斯特）有可能在伤停补时阶段利用反击或定位球机会锁定胜局。不过，最可能的全场比分依然是维持现状的1-0。"
+      },
+      "sources": [],
+      "cost_usd": 0.0067347,
+      "tokens": {
+        "input": 1506,
+        "output": 818
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.655
+    },
+    {
+      "submitted_at": "2026-06-30T02:49:18+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.95,
+        "draw": 0.04,
+        "away": 0.01
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入常规时间的最后阶段（第90分钟），目前荷兰队以1-0领先摩洛哥队。从全场数据来看，摩洛哥队占据了65%的控球率，并创造了9次射门和7个角球，但在进攻端缺乏致命一击，未能攻破荷兰队的大门。荷兰队虽然控球率处于劣势，但凭借 科迪·加克波 在第72分钟的进球取得了领先，并且防守端表现稳健，门将贡献了4次扑救。考虑到比赛所剩时间极少，荷兰队全取三分的概率极高。摩洛哥队在最后时刻必然全线压上寻求绝平，这可能会给荷兰队留下反击的空间，替补登场的 沃特·韦霍斯特 有极小概率在伤停补时阶段利用反击锁定胜局。但最可能的结果依然是荷兰队将1-0的比分保持到终场。"
+      },
+      "sources": [],
+      "cost_usd": 0.0063357,
+      "tokens": {
+        "input": 1654,
+        "output": 730
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.33
+    },
+    {
+      "submitted_at": "2026-06-30T02:55:22+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.94,
+        "away": 0.03
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入常规时间的伤停补时阶段（第90分钟），当前比分为1-1。从场面数据来看，摩洛哥队占据了绝对的控球优势（66%），并在射门数上以10比6领先。荷兰队在第72分钟由加克波（科迪·加克波）打破僵局，但摩洛哥队展现了顽强的斗志，伊萨·迪奥普（伊萨·迪奥普）在第91分钟完成了绝平。由于常规时间所剩无几，本场比赛在90分钟内以1-1平局收场的概率极高，双方大概率将进入加时赛。因此，平局的概率被评估为94%，最可能的最终比分定格在1-1。在剩余的几分钟补时里，再次出现进球的可能性微乎其微，但如果发生，像韦格霍斯特（沃特·韦霍斯特）这样的高中锋替补可能会在最后时刻的乱战中制造威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.00782145,
+      "tokens": {
+        "input": 1869,
+        "output": 930
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.121
+    },
+    {
+      "submitted_at": "2026-06-30T03:01:27+00:00",
+      "live": {
+        "status": "Break",
+        "elapsed": 121,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 1.0,
+        "away": 0.0
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛已经进行到第121分钟，加时赛已经结束，场上比分依然维持在1-1平。荷兰队在常规时间第72分钟由加克波（科迪·加克波）先拔头筹，但摩洛哥队在第91分钟由迪奥普（伊萨·迪奥普）完成绝平，将比赛拖入加时。从全场数据来看，摩洛哥队占据了65.0%的控球率，并在射门数和角球数上压制了荷兰队，但双方在加时赛中均未能再次改写比分。由于加时赛已经结束，比赛即将进入点球大战，因此在常规及加时赛赛果的预测上，平局的概率已达到100%。最终比分锁定为1-1，且不会再有运动战或加时赛进球产生。"
+      },
+      "sources": [],
+      "cost_usd": 0.00668325,
+      "tokens": {
+        "input": 1871,
+        "output": 749
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.511
+    },
+    {
+      "submitted_at": "2026-06-30T03:07:31+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 112,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.84,
+        "away": 0.08
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到加时赛第112分钟，荷兰与摩洛哥战成1-1平。从场面数据来看，摩洛哥占据了65%的控球率，并创造了10次射门（4次射正），在常规时间第91分钟由伊萨·迪奥普（伊萨·迪奥普）完成绝平将比赛拖入加时；而荷兰队虽然控球率较低，但防守反击颇具威胁，加克波（科迪·加克波）在第72分钟首开纪录。随着加时赛所剩时间不足10分钟，双方球员体能均已到达极限，比赛节奏逐渐放缓，双方大概率会以稳固防守为主，进入点球大战的概率极高。因此，最可能的最终比分维持在1-1。如果在最后时刻出现绝杀进球，荷兰队替补登场的高中锋韦霍斯特（沃特·韦霍斯特）以及摩洛哥队替补上阵的拉希米（苏菲扬·拉希米）是利用对手体能下降创造奇迹的最具威胁的潜在得分手，但整体进球概率已经非常低。"
+      },
+      "sources": [],
+      "cost_usd": 0.011352600000000001,
+      "tokens": {
+        "input": 1872,
+        "output": 1490
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.354
+    },
+    {
+      "submitted_at": "2026-06-30T03:13:45+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 118,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.95,
+        "away": 0.03
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到加时赛第118分钟，当前比分为荷兰1-1摩洛哥。从场面数据来看，摩洛哥在控球率（65%）和射门数（11对6）上占据明显优势，并在常规时间补时阶段由伊萨·迪奥普完成绝平。然而，距离加时赛结束仅剩最后几分钟，双方球员体能均已到达极限，比赛节奏明显放缓，大概率都在为即将到来的点球大战做准备。因此，本场比赛在120分钟内以平局收场的概率极高（95%），最可能的最终比分维持在1-1。虽然常规运动战进球的可能性微乎其微，但如果出现绝杀，荷兰队替补登场的高中锋沃特·韦霍斯特可能会在最后的长传冲吊中制造威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.0071631,
+      "tokens": {
+        "input": 1872,
+        "output": 825
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.608
+    },
+    {
+      "submitted_at": "2026-06-30T03:19:54+00:00",
+      "live": {
+        "status": "Extra Time - Break",
+        "elapsed": 124,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.98,
+        "away": 0.01
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已经进行到加时赛第124分钟，比分维持在1-1平。荷兰队在第72分钟由加克波打破僵局，但摩洛哥队在常规时间补时阶段（第91分钟）由迪奥普绝平，将比赛拖入加时。从全场数据来看，摩洛哥队占据了68%的控球率，并完成了11次射门（5次射正），在场面上压制了荷兰队（32%控球率，6次射门）。尽管摩洛哥攻势占优，但双方在加时赛中均未能再次改写比分。由于比赛时间已经来到124分钟，加时赛即将结束，双方在运动战中再次进球的可能性微乎其微。因此，本场比赛极大概率将以1-1的比分结束，并进入残酷的点球大战。基于当前极少的剩余时间，预测平局概率高达98%，最可能的最终比分为1-1，后续不再预测加时赛进球者。"
+      },
+      "sources": [],
+      "cost_usd": 0.019885949999999996,
+      "tokens": {
+        "input": 2127,
+        "output": 2802
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.384
+    },
+    {
+      "submitted_at": "2026-06-30T03:26:15+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.98,
+        "away": 0.01
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第130分钟，当前比分为1-1。荷兰队在第72分钟由科迪·加克波打破僵局，但摩洛哥队在第91分钟由伊萨·迪奥普完成绝平，将比赛拖入加时。从全场数据来看，摩洛哥队占据了69%的控球率，并在射门数上以11对6领先，展现出了极强的场面压制力。然而，由于比赛时间已经来到加时赛的超长补时阶段（130分钟），双方在运动战中再次取得进球的时间窗口已经几乎完全关闭。因此，本场比赛以1-1的比分结束并进入点球大战的概率极高。预测平局概率达到98%，最可能的最终比分维持在1-1，且在剩余极短的时间内预计不会有新的进球产生。"
+      },
+      "sources": [],
+      "cost_usd": 0.009191699999999999,
+      "tokens": {
+        "input": 1872,
+        "output": 1147
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.38
+    },
+    {
+      "submitted_at": "2026-06-30T03:32:29+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 1.0,
+        "away": 0.0
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛已经进行到加时赛第130分钟，比分维持在1-1。荷兰队在下半场第72分钟凭借加克波（科迪·加克波）的进球取得领先，但摩洛哥队在常规时间补时阶段第91分钟由迪奥普（伊萨·迪奥普）顽强扳平，将比赛拖入加时。从整体数据来看，摩洛哥队表现出了极强的压制力，控球率高达70%，射门数11对6，射正数5对2均占据优势，荷兰门将做出了多达5次扑救才勉强维持均势。由于比赛已经进行到加时赛的超长补时阶段（130分钟），双方球员的体能均已到达极限，且比赛随时可能吹响结束哨音。在剩余的极短时间内，任何一方在运动战中完成绝杀的概率都微乎其微。因此，比赛以1-1平局收场并进入点球大战是目前最确定的结果，预计不会再有球员取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.013893599999999999,
+      "tokens": {
+        "input": 2018,
+        "output": 1869
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.743
+    },
+    {
+      "submitted_at": "2026-06-30T03:38:43+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.98,
+        "away": 0.01
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已经进行到第130分钟，比分依然维持在1-1。由于比赛时间已经远超常规的加时赛120分钟，加时赛极有可能随时结束并进入点球大战。回顾比赛进程，荷兰队在第72分钟由科迪·加克波打破僵局，但摩洛哥队在常规时间补时阶段由伊萨·迪奥普完成绝平。从全场数据来看，摩洛哥在控球率（71%）和射门数（11对6）上占据绝对优势，而荷兰队门将贡献了多次关键扑救。考虑到当前极端的时间节点，加时赛内再次产生运动战进球的可能性微乎其微。因此，预测本场比赛（不含点球大战）的最终比分将定格在1-1，双方以平局收场。"
+      },
+      "sources": [],
+      "cost_usd": 0.008034600000000001,
+      "tokens": {
+        "input": 2018,
+        "output": 939
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.627
+    },
+    {
+      "submitted_at": "2026-06-30T03:45:40+00:00",
+      "live": {
+        "status": "Penalties",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 1.0,
+        "away": 0.0
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到130分钟，目前处于点球大战阶段。常规时间和加时赛的最终比分已经定格在1-1。回顾比赛进程，荷兰队在第72分钟由加克波（科迪·加克波）首开纪录，但摩洛哥队在第91分钟凭借迪奥普（伊萨·迪奥普）的绝平进球将比赛拖入加时。从全场数据来看，摩洛哥队表现十分出色，占据了高达70%的控球率，并创造了11次射门（5次射正），而荷兰队在场面上相对被动，门将做出了5次关键扑救。由于120分钟的比赛已经完全结束，本场比赛的最终官方赛果（不含点球大战）已确定为平局，因此平局概率为100%，最可能的最终比分即为当前的1-1。后续不再有运动战或加时赛进球，因此不会产生新的常规进球者。双方将通过残酷的点球大战来决定谁能晋级世界杯下一轮。"
+      },
+      "sources": [],
+      "cost_usd": 0.00835695,
+      "tokens": {
+        "input": 2019,
+        "output": 990
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.007
+    },
+    {
+      "submitted_at": "2026-06-30T03:52:20+00:00",
+      "live": {
+        "status": "Penalties",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 1.0,
+        "away": 0.0
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛已经进入点球大战（130分钟），常规与加时赛比分锁定在1-1。荷兰队在第72分钟由加克波先拔头筹，摩洛哥队则在第91分钟凭借伊萨·迪奥普的进球绝平将比赛拖入加时。数据方面，摩洛哥队控球率高达70%，并在射门数（11比6）和角球数（8比5）上占据明显优势，但荷兰队门将贡献了5次扑救力保城门不失。当前点球大战前四轮结束，双方均罚丢两球，战成2-2平。由于比赛的常规及加时赛已经结束，官方常规赛果已确定为平局（1-1），因此平局概率为100%，最可能比分即为1-1。比赛已无运动战或加时赛时间，故不再预测后续进球者。"
+      },
+      "sources": [],
+      "cost_usd": 0.0170835,
+      "tokens": {
+        "input": 2536,
+        "output": 2289
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.715
+    }
+  ]
+}

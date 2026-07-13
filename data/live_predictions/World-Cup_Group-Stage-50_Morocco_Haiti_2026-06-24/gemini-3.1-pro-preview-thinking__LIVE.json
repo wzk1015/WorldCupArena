@@ -1,0 +1,730 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-50_Morocco_Haiti_2026-06-24",
+  "provider_fixture_id": "19609187",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-25T00:00:43+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 4,
+      "away": 2
+    },
+    "home": "Morocco",
+    "away": "Haiti",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-24T22:00:00+00:00",
+    "venue": "Atlanta Stadium",
+    "venue_city": "Atlanta"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.999,
+      "draw": 0.001,
+      "away": 0.0
+    },
+    "most_likely_score": "4-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进入第90分钟，当前比分为摩洛哥 4-2 海地。从场面数据来看，摩洛哥占据了绝对优势，控球率高达70%，并创造了22次射门（11次射正）。尽管海地在上半场凭借一粒乌龙球和一次反击进球一度制造威胁，但摩洛哥在下半场完全接管了比赛，拉希米（苏菲扬·拉希米）和亚辛（杰西姆·亚辛）接连建功，帮助球队反超并扩大比分。由于比赛已进入伤停补时阶段且摩洛哥手握两球领先优势，主队获胜的概率已接近100%。最可能的最终比分大概率将维持在目前的 4-2。在剩余的几分钟补时阶段中，双方再次破门的概率已经很低，但如果海地为了挽回颜面全线压上导致后防空虚，状态火热的亚辛仍有极小概率在反击中再入一球。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2487,
+    "output": 1452
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.01175895,
+  "wall_seconds": 16.091,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.999,\n    \"draw\": 0.001,\n    \"away\": 0.000\n  },\n  \"most_likely_score\": \"4-2\",\n  \"scorers\": [\n    {\n      \"player\": \"Gessime Yassine\",\n      \"team\": \"home\",\n      \"minute\": 94,\n      \"p\": 0.05\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已进入第90分钟，当前比分为摩洛哥 4-2 海地。从场面数据来看，摩洛哥占据了绝对优势，控球率高达70%，并创造了22次射门（11次射正）。尽管海地在上半场凭借一粒乌龙球和一次反击进球一度制造威胁，但摩洛哥在下半场完全接管了比赛，拉希米（Soufiane Rahimi）和亚辛（Gessime Yassine）接连建功，帮助球队反超并扩大比分。由于比赛已进入伤停补时阶段且摩洛哥手握两球领先优势，主队获胜的概率已接近100%。最可能的最终比分大概率将维持在目前的 4-2。在剩余的几分钟补时阶段中，双方再次破门的概率已经很低，但如果海地为了挽回颜面全线压上导致后防空虚，状态火热的亚辛仍有极小概率在反击中再入一球。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**My Analysis of the Morocco vs. Haiti Match**\n\nAlright, let's break this down. We're at the 90th minute, and the score is Morocco 4, Haiti 2. Morocco has absolutely controlled this match, with a dominant 70% possession and a plethora of shots – 22 total, half of them on target. Haiti snagged an early own goal and another, but Morocco's quality has clearly shone through. They've found the net at 39', 46', 78', and 89', demonstrating a superior offensive capability.\n\nGiven the two-goal lead in stoppage time, the win probability for Morocco is basically locked in at 99.9%. A draw is a near impossibility at 0.1%, and a Haiti victory is essentially non-existent. There's no way around it; this match is Morocco's.\n\nThe most likely final score is, without a doubt, the current 4-2. The clock is ticking down, and the chances of a dramatic shift are incredibly slim. However, because the instructions say to consider a *low* probability future scorer, let's explore that avenue. If Morocco pushes for another goal in the dying moments, a substitute like Gessime Yassine could potentially capitalize on a counter-attack. Considering the time, my best guess is Yassine at minute 94. The prompts allow this, and the minute is strictly after 90, therefore acceptable. I'll assign a very low probability of 5% to account for this.\n\nSo, here's my assessment:\n\n*   **Win Probabilities:** Morocco (home) at 0.999, Draw at 0.001, Haiti (away) at 0.0.\n*   **Most Likely Score:** 4-2.\n*   **Likely Future Scorers:** Gessime Yassine at 94', with a probability of 0.05.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-24T22:05:55+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 5,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Morocco",
+        "away": "Haiti",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.14,
+        "away": 0.04
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 34,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Brahim Diaz",
+          "minute": 68,
+          "p": 0.35,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛开场仅5分钟，目前比分维持在0-0。从开局阶段的数据来看，摩洛哥队展现出了压倒性的控制力，控球率高达83%，将海地队完全压制在半场。作为实力更强的一方，摩洛哥在场面上占据绝对主动，预计随着比赛深入，他们将把控球优势转化为实质性的射门威胁。海地队目前只能依靠密集的防守来抵挡对手的攻势，反击机会寥寥。基于双方悬殊的实力差距和开场后的场面走势，摩洛哥队获胜的概率极高。预测最终比分最可能为2-0，摩洛哥将稳稳拿下三分。在进攻端，摩洛哥的锋线核心尤塞夫·恩内斯里（Youssef En-Nesyri）和卜拉欣·迪亚斯（布拉欣·迪亚斯）在禁区内外的穿插跑动威胁极大，极有可能在接下来的比赛中分别建功，打破场上僵局并扩大领先优势。"
+      },
+      "sources": [],
+      "cost_usd": 0.013468349999999999,
+      "tokens": {
+        "input": 1151,
+        "output": 1946
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.755
+    },
+    {
+      "submitted_at": "2026-06-24T22:13:26+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 13,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Morocco",
+        "away": "Haiti",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.3,
+        "away": 0.22
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 38,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Hakim Ziyech",
+          "minute": 65,
+          "p": 0.35,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第13分钟，目前比分为摩洛哥0-1落后于海地。海地在第10分钟由伦尼·约瑟夫出人意料地打破僵局。从场面数据来看，摩洛哥占据了高达68%的控球率，但尚未形成射门；而海地虽然控球率仅有32%，却已经完成了2次射门并取得进球。尽管摩洛哥开局不利，但作为整体实力更强的一方，他们有充足的时间进行调整和反击。高控球率预示着摩洛哥将持续施压，预计他们能够在接下来的比赛中扳平甚至反超比分。因此，摩洛哥最终获胜的概率依然最高，最可能的最终比分预测为2-1。在后续进球者方面，摩洛哥的锋线核心如Youssef En-Nesyri和Hakim Ziyech极有可能在接下来的比赛中挺身而出，为球队建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.006171899999999999,
+      "tokens": {
+        "input": 1036,
+        "output": 807
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.368
+    },
+    {
+      "submitted_at": "2026-06-24T22:20:19+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 20,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Morocco",
+        "away": "Haiti",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.32,
+        "away": 0.2
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 42,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Brahim Diaz",
+          "minute": 76,
+          "p": 0.28,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第20分钟，目前比分为摩洛哥0-1落后于海地。海地在第10分钟凭借伦尼·约瑟夫的进球取得梦幻开局，并在仅有的32%控球率下展现了极高的反击效率。然而，从场面数据来看，摩洛哥完全掌控了比赛节奏，控球率高达68%，并已经完成了3次射门和2次角球。考虑到摩洛哥在整体实力和阵容深度上的巨大优势，他们有极大的概率在接下来的比赛中扳平甚至反超比分。海地虽然暂时领先，但要在剩余的70多分钟内顶住摩洛哥的持续猛攻将非常困难。预计摩洛哥会在半场结束前或下半场通过边路传中和中路渗透取得进球，最终最可能的比分是摩洛哥2-1逆转获胜。Youssef En-Nesyri和布拉欣·迪亚斯等前场核心有望在后续比赛中建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.008992199999999999,
+      "tokens": {
+        "input": 1076,
+        "output": 1248
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.041
+    },
+    {
+      "submitted_at": "2026-06-24T22:27:32+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 27,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Morocco",
+        "away": "Haiti",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.32,
+        "away": 0.2
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 42,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Brahim Diaz",
+          "minute": 75,
+          "p": 0.28,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第27分钟，海地凭借莱尼·约瑟夫（伦尼·约瑟夫）在第10分钟的进球，目前以1-0意外领先摩洛哥。从场面数据来看，摩洛哥完全掌控了比赛节奏，控球率高达70%，并已经尝试了4次射门和获得2个角球。海地虽然开局反击效率极高，但目前处于全面退守状态，控球率仅为30%。尽管摩洛哥目前比分落后，但考虑到双方整体实力的巨大差距以及充足的剩余比赛时间，摩洛哥逆转或扳平的概率依然很高。主队获胜的概率预估为48%，平局概率为32%，而海地守住胜果爆冷的概率为20%。预计摩洛哥会在上半场结束前持续施压并大概率扳平比分，下半场通过阵地战或定位球完成反超。最可能的最终比分预测为2-1。后续进球方面，摩洛哥的攻击手如 Youssef En-Nesyri 和 布拉欣·迪亚斯 极有可能在接下来的比赛中攻破对方球门。"
+      },
+      "sources": [],
+      "cost_usd": 0.0159411,
+      "tokens": {
+        "input": 1076,
+        "output": 2351
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.324
+    },
+    {
+      "submitted_at": "2026-06-24T22:34:34+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 34,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Morocco",
+        "away": "Haiti",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.45,
+        "draw": 0.35,
+        "away": 0.2
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 55,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Hakim Ziyech",
+          "minute": 78,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第34分钟，目前比分是摩洛哥0-1落后于海地。海地在第10分钟凭借摩洛哥门将布努（亚辛·布努）的乌龙球意外取得领先。然而，从场面数据来看，摩洛哥占据了绝对的主导地位，控球率高达70%，并且已经完成了7次射门（其中3次射正），而海地仅有2次射门且无一射正。摩洛哥的进攻压制力非常明显，海地门将已经做出了3次扑救。考虑到摩洛哥的整体实力和目前的场面控制力，他们有极大的机会在接下来的比赛中扳平甚至反超比分。因此，预测摩洛哥最终逆转获胜的概率依然最高，最可能的最终比分为2-1。预计摩洛哥的攻击群将在下半场持续施压，Youssef En-Nesyri 和 Hakim Ziyech 等核心球员极有可能在后续比赛中取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0073227,
+      "tokens": {
+        "input": 1070,
+        "output": 984
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.142
+    },
+    {
+      "submitted_at": "2026-06-24T22:41:29+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 41,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Morocco",
+        "away": "Haiti",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.16,
+        "away": 0.06
+      },
+      "most_likely_score": "3-1",
+      "scorers": [
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 62,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Hakim Ziyech",
+          "minute": 78,
+          "p": 0.35,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第41分钟，目前比分为1-1。海地在第10分钟凭借摩洛哥门将布努（亚辛·布努）的乌龙球意外取得领先，但摩洛哥在场面上占据了绝对的主动。数据方面，摩洛哥控球率高达67%，狂轰9脚射门且有4次射正，而海地仅有3次射门且0射正。摩洛哥的持续施压终于在第39分钟收到成效，阿什拉夫（阿什拉夫·哈基米）破门扳平比分，且进球经VAR确认有效。从目前的比赛走势来看，摩洛哥的整体实力和进攻压迫感远超对手，海地很难在下半场顶住摩洛哥的轮番冲击。因此，摩洛哥最终获胜的概率大幅提升。预计下半场摩洛哥将继续掌控局势并反超比分，恩内斯里（Youssef En-Nesyri）和齐耶赫（Hakim Ziyech）等攻击手有望在后续比赛中建功。最可能的最终比分预测为3-1，摩洛哥逆转取胜。"
+      },
+      "sources": [],
+      "cost_usd": 0.01189755,
+      "tokens": {
+        "input": 1197,
+        "output": 1689
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.051
+    },
+    {
+      "submitted_at": "2026-06-24T22:49:11+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 2,
+          "away": 2
+        },
+        "home": "Morocco",
+        "away": "Haiti",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.65,
+        "draw": 0.2,
+        "away": 0.15
+      },
+      "most_likely_score": "3-2",
+      "scorers": [
+        {
+          "player": "Ismael Saibari",
+          "minute": 68,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场比赛结束，目前比分为2-2。摩洛哥在场面上占据了绝对优势，控球率高达66%，并且完成了10次射门（5次射正）。海地虽然控球率仅有34%，但凭借一次乌龙球和一次反击高效地打入两球。摩洛哥在半场结束前顽强扳平比分，展现了强大的心理素质和进攻火力。考虑到摩洛哥在整体实力和场面控制上的明显优势，预计下半场他们将继续施压并极有可能反超比分。海地虽然反击犀利，但在持续的高压防守下体能可能会受到考验。因此，摩洛哥最终获胜的概率较高，最可能的最终比分预测为3-2。"
+      },
+      "sources": [],
+      "cost_usd": 0.006008100000000001,
+      "tokens": {
+        "input": 1348,
+        "output": 729
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.619
+    },
+    {
+      "submitted_at": "2026-06-24T23:11:17+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 56,
+        "score": {
+          "home": 2,
+          "away": 2
+        },
+        "home": "Morocco",
+        "away": "Haiti",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "3-2",
+      "scorers": [
+        {
+          "player": "Brahim Diaz",
+          "minute": 72,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 84,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第56分钟，摩洛哥与海地目前战成2-2平。从场面数据来看，主场作战的摩洛哥占据了绝对的统治地位，控球率高达68%，并创造了13次射门（其中7次射正）。海地虽然凭借开局的乌龙球和全场仅有的一次射正取得了两个进球，但防守端承受了巨大压力，门将已经做出了6次扑救，且球队犯规数达到10次，体能消耗严重。下半场刚开始（第46分钟），赛巴里（伊斯梅尔·赛巴里）接阿什拉夫（阿什拉夫·哈基米）助攻迅速扳平比分，显示出摩洛哥强烈的求胜欲望和极佳的进攻状态。基于目前的比赛走势与攻防两端的悬殊数据，摩洛哥在剩余的30多分钟内继续破门反超的概率极高。因此，预测摩洛哥最终取胜的概率最大，最可能的最终比分为3-2。在后续进球者方面，考虑到摩洛哥持续的阵地战压迫，进攻核心迪亚斯（布拉欣·迪亚斯）或主力前锋恩内斯里（Youssef En-Nesyri）极有可能在比赛后半段利用对手防线松懈完成致命一击。"
+      },
+      "sources": [],
+      "cost_usd": 0.0162666,
+      "tokens": {
+        "input": 1602,
+        "output": 2315
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.944
+    },
+    {
+      "submitted_at": "2026-06-24T23:18:17+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 63,
+        "score": {
+          "home": 2,
+          "away": 2
+        },
+        "home": "Morocco",
+        "away": "Haiti",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.65,
+        "draw": 0.25,
+        "away": 0.1
+      },
+      "most_likely_score": "3-2",
+      "scorers": [
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 78,
+          "p": 0.35,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第63分钟，目前比分为2-2。尽管海地利用对手的乌龙球和一次高效的反击取得了两个进球，但摩洛哥在场面上占据了绝对的统治地位。数据方面，摩洛哥拥有高达70%的控球率，并创造了13次射门（7次射正），而海地仅有4次射门。随着比赛进入最后半小时，摩洛哥持续的高压进攻极有可能再次撕开海地的防线。考虑到摩洛哥强大的进攻火力和海地门将已经做出的多次扑救，预计摩洛哥将在比赛后段打入制胜球。因此，摩洛哥获胜的概率最高，最可能的最终比分为3-2。"
+      },
+      "sources": [],
+      "cost_usd": 0.00523425,
+      "tokens": {
+        "input": 1349,
+        "output": 606
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.484
+    },
+    {
+      "submitted_at": "2026-06-24T23:25:13+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 70,
+        "score": {
+          "home": 2,
+          "away": 2
+        },
+        "home": "Morocco",
+        "away": "Haiti",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.35,
+        "away": 0.1
+      },
+      "most_likely_score": "3-2",
+      "scorers": [
+        {
+          "player": "Ismael Saibari",
+          "minute": 82,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第70分钟，目前比分为2-2。从场面数据来看，摩洛哥占据了绝对优势，控球率高达70%，并且已经完成了14次射门（其中8次射正）。海地虽然凭借一粒乌龙球和一次反击进球两度领先，但摩洛哥展现出了强大的韧性，阿什拉夫·哈基米和伊斯梅尔·赛巴里分别建功将比分扳平。考虑到摩洛哥在下半场持续施加的巨大进攻压力以及海地门将已经做出的7次扑救，摩洛哥在最后20多分钟内打入制胜球的可能性较高。因此，预测摩洛哥最终以3-2拿下比赛，赛巴里等攻击手有望在比赛末段完成绝杀。"
+      },
+      "sources": [],
+      "cost_usd": 0.006765149999999999,
+      "tokens": {
+        "input": 1349,
+        "output": 849
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.74
+    },
+    {
+      "submitted_at": "2026-06-24T23:32:21+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 77,
+        "score": {
+          "home": 2,
+          "away": 2
+        },
+        "home": "Morocco",
+        "away": "Haiti",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.4,
+        "draw": 0.5,
+        "away": 0.1
+      },
+      "most_likely_score": "2-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第77分钟，摩洛哥与海地战成2-2平。从场面数据来看，摩洛哥占据了绝对优势，控球率高达71%，并有多达14次射门（8次射正）。海地虽然进攻机会寥寥，但凭借一次乌龙球和高效的反击咬住了比分。随着比赛进入尾声，海地大概率会全线退守以保住平局，摩洛哥则会继续猛攻。考虑到剩余时间不多，平局的概率逐渐上升，成为最可能的结果。不过，如果摩洛哥能够把握住机会，已经取得进球的 伊斯梅尔·赛巴里 等攻击手仍有可能在最后阶段完成绝杀。"
+      },
+      "sources": [],
+      "cost_usd": 0.00533715,
+      "tokens": {
+        "input": 1489,
+        "output": 599
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.795
+    },
+    {
+      "submitted_at": "2026-06-24T23:39:48+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 84,
+        "score": {
+          "home": 2,
+          "away": 2
+        },
+        "home": "Morocco",
+        "away": "Haiti",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.68,
+        "away": 0.04
+      },
+      "most_likely_score": "2-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第84分钟，摩洛哥与海地目前战成2-2平。从场面数据来看，摩洛哥占据了绝对的统治地位，控球率高达72%，并狂轰16脚射门（8次射正），而海地仅有5次射门和28%的控球率。海地门将做出了多达7次扑救，顽强地将平局维持到了比赛尾声。考虑到常规时间所剩无几，平局（2-2）成为目前最可能出现的最终比分，概率大幅上升。不过，摩洛哥在下半场换上了多名进攻好手，如苏菲亚·拉希米（苏菲扬·拉希米）和阿泽丁·欧纳希，他们在前场的持续施压意味着主队仍有绝杀的可能。因此，摩洛哥的胜率仍保留在两成以上。如果比赛在最后阶段或伤停补时产生进球，体能充沛且冲击力强的替补前锋拉希米是最有可能打破僵局的球员。海地则大概率会全线退守，力保这宝贵的一分。"
+      },
+      "sources": [],
+      "cost_usd": 0.013804349999999998,
+      "tokens": {
+        "input": 1963,
+        "output": 1864
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.985
+    },
+    {
+      "submitted_at": "2026-06-24T23:47:01+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 2
+        },
+        "home": "Morocco",
+        "away": "Haiti",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.96,
+        "draw": 0.03,
+        "away": 0.01
+      },
+      "most_likely_score": "3-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，摩洛哥目前以3-2领先海地。从全场数据来看，摩洛哥占据了绝对优势，控球率高达71%，射门次数19对5，射正9对1。尽管海地在比赛中表现顽强，甚至一度领先，但摩洛哥凭借强大的整体实力在下半场完成了反超。考虑到比赛所剩时间极少，摩洛哥全取三分的概率极高。海地在最后阶段可能会尝试长传冲吊进行绝平，但面对摩洛哥稳固的防线难度很大。最可能的最终比分将维持在3-2。如果在伤停补时阶段还有进球，替补登场的 阿兹丁·乌纳希 可能会利用对手大举压上留下的空当完成致命一击，但整体进球概率已经很低。"
+      },
+      "sources": [],
+      "cost_usd": 0.00614145,
+      "tokens": {
+        "input": 2213,
+        "output": 606
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.055
+    },
+    {
+      "submitted_at": "2026-06-24T23:53:50+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 4,
+          "away": 2
+        },
+        "home": "Morocco",
+        "away": "Haiti",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.999,
+        "draw": 0.001,
+        "away": 0.0
+      },
+      "most_likely_score": "4-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，当前比分为摩洛哥4-2领先海地。从场面数据来看，摩洛哥占据了绝对优势，控球率高达71%，全场狂轰22脚射门且有11次射正。尽管海地在开局阶段凭借布努的乌龙球和伊西多尔（威尔逊·伊西多尔）的反击进球一度制造威胁，但摩洛哥在下半场完全接管了比赛，拉希米（苏菲扬·拉希米）和亚辛（杰西姆·亚辛）在尾声阶段的连续破门彻底锁定了胜局。由于比赛仅剩伤停补时阶段，且摩洛哥手握两球领先优势，主队获胜的概率已接近100%。最可能的最终比分将维持在4-2。在补时阶段，海地若大举压上可能会暴露出后防空档，状态火热的拉希米仍有极小概率在反击中再入一球，但整体而言比分再次被改写的可能性已经很低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0109704,
+      "tokens": {
+        "input": 2354,
+        "output": 1349
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.325
+    },
+    {
+      "submitted_at": "2026-06-25T00:00:43+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 4,
+          "away": 2
+        },
+        "home": "Morocco",
+        "away": "Haiti",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T22:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.999,
+        "draw": 0.001,
+        "away": 0.0
+      },
+      "most_likely_score": "4-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，当前比分为摩洛哥 4-2 海地。从场面数据来看，摩洛哥占据了绝对优势，控球率高达70%，并创造了22次射门（11次射正）。尽管海地在上半场凭借一粒乌龙球和一次反击进球一度制造威胁，但摩洛哥在下半场完全接管了比赛，拉希米（苏菲扬·拉希米）和亚辛（杰西姆·亚辛）接连建功，帮助球队反超并扩大比分。由于比赛已进入伤停补时阶段且摩洛哥手握两球领先优势，主队获胜的概率已接近100%。最可能的最终比分大概率将维持在目前的 4-2。在剩余的几分钟补时阶段中，双方再次破门的概率已经很低，但如果海地为了挽回颜面全线压上导致后防空虚，状态火热的亚辛仍有极小概率在反击中再入一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.01175895,
+      "tokens": {
+        "input": 2487,
+        "output": 1452
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.091
+    }
+  ]
+}

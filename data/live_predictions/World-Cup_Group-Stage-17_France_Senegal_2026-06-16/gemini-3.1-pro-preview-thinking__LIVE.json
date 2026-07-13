@@ -1,0 +1,315 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-17_France_Senegal_2026-06-16",
+  "provider_fixture_id": "19609143",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-16T20:48:29+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 0
+    },
+    "home": "France",
+    "away": "Senegal",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-16T19:00:00+00:00",
+    "venue": "New York New Jersey Stadium",
+    "venue_city": "East Rutherford"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.999,
+      "draw": 0.001,
+      "away": 0.0
+    },
+    "most_likely_score": "2-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入第90分钟，法国队目前以2-0领先塞内加尔队。从场面数据来看，法国队占据了55%的控球率，并且9次射门中有6次射正，进攻效率极高。下半场姆巴佩（基利安·姆巴佩）和替补登场的巴尔科拉（布拉德利·巴尔科拉）先后建功，彻底锁定了比赛胜局。塞内加尔虽然进行了多次换人调整试图反扑，但全场仅有1次射正，难以对法国队防线造成实质性威胁。鉴于常规时间已经结束，即将进入伤停补时，法国队获胜的概率已接近100%，平局和塞内加尔逆转的可能性微乎其微。最可能的最终比分将维持在2-0。在最后的补时阶段，塞内加尔可能会大举压上，这给法国队留下了反击空间，姆巴佩等前锋仍有极小概率在补时阶段利用反击再入一球，但整体而言，比分不再发生改变是最符合当前局势的预测。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1494,
+    "output": 2051
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.01449,
+  "wall_seconds": 20.031,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.999,\n    \"draw\": 0.001,\n    \"away\": 0.000\n  },\n  \"most_likely_score\": \"2-0\",\n  \"scorers\": [\n    {\n      \"player\": \"Kylian Mbappé\",\n      \"team\": \"home\",\n      \"minute\": 94,\n      \"p\": 0.05\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入第90分钟，法国队目前以2-0领先塞内加尔队。从场面数据来看，法国队占据了55%的控球率，并且9次射门中有6次射正，进攻效率极高。下半场姆巴佩（Kylian Mbappé）和替补登场的巴尔科拉（Bradley Barcola）先后建功，彻底锁定了比赛胜局。塞内加尔虽然进行了多次换人调整试图反扑，但全场仅有1次射正，难以对法国队防线造成实质性威胁。鉴于常规时间已经结束，即将进入伤停补时，法国队获胜的概率已接近100%，平局和塞内加尔逆转的可能性微乎其微。最可能的最终比分将维持在2-0。在最后的补时阶段，塞内加尔可能会大举压上，这给法国队留下了反击空间，姆巴佩等前锋仍有极小概率在补时阶段利用反击再入一球，但整体而言，比分不再发生改变是最符合当前局势的预测。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**My Analysis of the Football Match Prediction**\n\nOkay, here's the breakdown of my thinking for this prediction. The user wants a live update for the France vs. Senegal match at the 90th minute, with a 2-0 score. The output *must* be a JSON object, no markdown, and in Simplified Chinese with specific constraints. Let's get to it.\n\nFirst, I identified the critical data points: France vs. Senegal, score is 2-0, and the clock is at the 90-minute mark. This immediately tells me the game is very likely over, or close to it, and France has a massive advantage. I also reviewed the event timeline: VAR check, goals by Mbappé and Barcola, and the Senegal substitutions. The stats show France dominates possession and shots on goal.\n\nGiven the 90th minute, I determined the probabilities. France's win probability has to be nearly 100% (I'm going with 0.999), the draw is virtually impossible (0.001), and a Senegal win is negligible (0.000). The most likely final score has to be 2-0. I have to think about whether there is the possibility of another goal and if so, when and who by.\n\nNow, about potential scorers. It's almost certain the score won't change, but it is possible in stoppage time. Mbappé or Barcola *could* score on a counter if Senegal pushes forward in desperation. I am going to include Mbappe with a low probability at 94 minutes (p=0.04) just to show that consideration. I could keep the scorers array empty, which would indicate no new goals are expected, but this is a good demonstration of considering stoppage time.\n\nNext, I wrote the Simplified Chinese reasoning. I described the current state of the game, highlighting France's dominance. I explained that the score is essentially locked in and France's chances of winning are almost certain. I also explained the (small) chance of a goal in stoppage time.\n\nFinally, I formatted the JSON output, making sure it follows *every* constraint. No markdown, proper keys, correct schema, \"home\" and \"away\" for teams, the most likely score in the correct format, a minute strictly after 90 for the scorer. I had to pay close attention to ensure everything is correct, including the probabilities and match events to validate. I did a final double-check of everything, ensuring the probability and scorer's minute is valid. Now, I have the final JSON, ready to go.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-16T19:16:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 16,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Senegal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.24,
+        "away": 0.14
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 42,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Randal Kolo Muani",
+          "minute": 75,
+          "p": 0.3,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第16分钟，法国队与塞内加尔队暂时互交白卷，比分维持在0-0。从开场阶段的场面和数据来看，主场作战的法国队虽然占据了55%的控球率，但在进攻端显得较为慢热，至今尚未完成任何射门。相反，塞内加尔队展现出了极强的战术纪律性和反击威胁，已经取得了一次射门和一次角球机会。尽管开局略显沉闷，但考虑到法国队整体实力的绝对优势以及前场豪华的阵容配置，随着比赛深入，他们打破僵局的概率依然很高。因此，法国队最终获胜的概率仍保持在62%左右，平局概率为24%，而塞内加尔爆冷取胜的概率为14%。预计法国队会在适应了对方的防守强度后，利用边路速度和中路渗透创造实质性威胁。最可能的最终比分预测为2-0，法国队将凭借球星的个人能力拿下比赛。在后续进球球员方面，法国队的核心攻击手 基利安·姆巴佩 始终是最大的威胁，极有可能在上半场末段利用速度撕开防线建功；此外，锋线搭档如 Randal Kolo Muani 也有望在下半场利用对方体能下降扩大领先优势。"
+      },
+      "sources": [],
+      "cost_usd": 0.01591905,
+      "tokens": {
+        "input": 959,
+        "output": 2367
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.917
+    },
+    {
+      "submitted_at": "2026-06-16T19:30:41+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 30,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Senegal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.28,
+        "away": 0.14
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 65,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Nicolas Jackson",
+          "minute": 78,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第30分钟，法国与塞内加尔暂时战成0-0平。从场面数据来看，法国队在控球率上占据明显优势（61%），但面对塞内加尔严密的防守体系，进攻端显得办法不多，目前仅有1次射门。相反，塞内加尔在39%的控球率下打出了高效的反击，完成了2次射门，并且在角球数上与法国队持平（2-2）。考虑到比赛已经过了三分之一且法国队破门乏术，平局的概率较赛前有所上升。不过，凭借整体实力的绝对优势和阵容深度，法国队在下半场打破僵局的可能性依然最高。综合目前的胶着局势，预计本场比赛进球数不会太多，1-0是目前最可能的最终比分。随着比赛深入和防守端体能下降，法国队的核心前锋（如基利安·姆巴佩）有望利用个人能力在下半场中段完成致命一击；而塞内加尔若想改变战局，尼古拉斯·杰克逊等前锋的反击速度将是关键。"
+      },
+      "sources": [],
+      "cost_usd": 0.013720350000000001,
+      "tokens": {
+        "input": 959,
+        "output": 2018
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.346
+    },
+    {
+      "submitted_at": "2026-06-16T19:44:25+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 44,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Senegal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.33,
+        "away": 0.15
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 68,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Nicolas Jackson",
+          "minute": 75,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第44分钟，法国与塞内加尔暂时战成0-0平。从上半场的场面来看，尽管法国队在控球率上以56%占据主动，但他们在进攻三区的创造力略显不足，半场仅有1次射门且未能命中门框范围。相反，塞内加尔展现出了极强的战术纪律和反击威胁，完成了4次射门并有1次射正，迫使法国门将做出扑救。随着半场结束临近，0-0的比分使得平局的概率较赛前有所上升。然而，考虑到法国队深厚的替补席深度以及下半场主教练的战术调整能力，他们依然是更有可能打破僵局的一方。塞内加尔的高强度防守反击可能会在比赛后段带来体能瓶颈。综合判断，法国队有较大几率在下半场中后段通过核心球员的个人能力取得领先，1-0是目前最可能的最终比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.010664849999999998,
+      "tokens": {
+        "input": 1001,
+        "output": 1526
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.161
+    },
+    {
+      "submitted_at": "2026-06-16T20:20:40+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 65,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Senegal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.38,
+        "draw": 0.48,
+        "away": 0.14
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第65分钟，法国与塞内加尔依然维持0-0的平局。从场面数据来看，这是一场防守严密且节奏胶着的较量。法国队虽然占据55%的控球率并获得了4个角球，但在进攻端显得缺乏创造力，目前仅有3次射门且只有1次射正。相反，塞内加尔展现出了极强的战术执行力和反击威胁，在劣势控球下完成了5次射门。双方门将至今各做出1次扑救，绝对得分机会寥寥无几。随着比赛进入最后25分钟，平局的概率正在大幅上升。尽管法国队凭借更深厚的阵容底蕴依然保有绝杀的可能，但塞内加尔稳固的防线让0-0成为目前最可能保持到终场的比分。如果僵局被打破，法国队的核心前锋如 基利安·姆巴佩 最有可能在比赛尾声阶段利用对手体能下降的空档或定位球机会完成致命一击。"
+      },
+      "sources": [],
+      "cost_usd": 0.014142449999999999,
+      "tokens": {
+        "input": 1001,
+        "output": 2078
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.349
+    },
+    {
+      "submitted_at": "2026-06-16T20:34:37+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 79,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Senegal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.85,
+        "draw": 0.12,
+        "away": 0.03
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第79分钟，法国队目前以1-0领先塞内加尔。从场面数据来看，法国队占据55%的控球率，并有6次射门（3次射正），整体掌控着比赛节奏。在经历了第60分钟的VAR插曲后，姆巴佩（基利安·姆巴佩）在第66分钟接奥利塞（迈克尔·奥利斯）助攻打破僵局。塞内加尔虽然也有5次射门，但仅有1次射正，进攻端缺乏足够的实质性威胁。考虑到常规时间仅剩10余分钟，法国队全取三分的概率极高，胜率预估在85%左右。塞内加尔若想扳平比分需要大举压上，平局概率约为12%，而逆转取胜的希望极其渺茫。最可能的最终比分预计维持在1-0。不过，随着塞内加尔在最后阶段阵型前压，后防线势必会暴露出更多空当。这为法国队的反击提供了绝佳机会，状态火热的姆巴佩或奥利塞极有可能在比赛尾声或补时阶段利用速度再下一城，彻底杀死比赛悬念。"
+      },
+      "sources": [],
+      "cost_usd": 0.01646925,
+      "tokens": {
+        "input": 1141,
+        "output": 2424
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.559
+    },
+    {
+      "submitted_at": "2026-06-16T20:48:29+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Senegal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.999,
+        "draw": 0.001,
+        "away": 0.0
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，法国队目前以2-0领先塞内加尔队。从场面数据来看，法国队占据了55%的控球率，并且9次射门中有6次射正，进攻效率极高。下半场姆巴佩（基利安·姆巴佩）和替补登场的巴尔科拉（布拉德利·巴尔科拉）先后建功，彻底锁定了比赛胜局。塞内加尔虽然进行了多次换人调整试图反扑，但全场仅有1次射正，难以对法国队防线造成实质性威胁。鉴于常规时间已经结束，即将进入伤停补时，法国队获胜的概率已接近100%，平局和塞内加尔逆转的可能性微乎其微。最可能的最终比分将维持在2-0。在最后的补时阶段，塞内加尔可能会大举压上，这给法国队留下了反击空间，姆巴佩等前锋仍有极小概率在补时阶段利用反击再入一球，但整体而言，比分不再发生改变是最符合当前局势的预测。"
+      },
+      "sources": [],
+      "cost_usd": 0.01449,
+      "tokens": {
+        "input": 1494,
+        "output": 2051
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.031
+    }
+  ]
+}

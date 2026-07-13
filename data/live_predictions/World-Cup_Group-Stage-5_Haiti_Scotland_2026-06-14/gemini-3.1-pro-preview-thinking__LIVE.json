@@ -1,0 +1,913 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-5_Haiti_Scotland_2026-06-14",
+  "provider_fixture_id": "19609155",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-14T03:02:13+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 1
+    },
+    "home": "Haiti",
+    "away": "Scotland",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-14T01:00:00+00:00",
+    "venue": "Boston Stadium",
+    "venue_city": "Foxborough"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.01,
+      "draw": 0.05,
+      "away": 0.94
+    },
+    "most_likely_score": "0-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前比赛已进行到第90分钟并进入伤停补时阶段，苏格兰客场1-0领先海地。从比赛数据来看，海地虽然在控球率（54%）和总射门数（14对9）上占据优势，但双方射正次数均为2次，海地的进攻缺乏实质性威胁。苏格兰凭借麦金（John McGinn）在第28分钟的进球一直保持领先，并在下半场进行了密集换人以巩固防线。补时阶段苏格兰球员连续吃到黄牌，显示出比赛末段防守压力较大且对抗激烈。考虑到比赛所剩时间极少，苏格兰守住1-0胜果的概率极高（94%），海地绝平的可能性存在但较低（5%）。最可能的最终比分维持在0-1。若后续还有进球，极有可能是苏格兰利用海地全线压上、防线空虚的机会，由替补登场的锋线球员打入锁定胜局的反击进球。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1808,
+    "output": 1802
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.013251,
+  "wall_seconds": 18.626,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.01,\n    \"draw\": 0.05,\n    \"away\": 0.94\n  },\n  \"most_likely_score\": \"0-1\",\n  \"scorers\": [\n    {\n      \"player\": \"Ché Adams\",\n      \"team\": \"away\",\n      \"minute\": 96,\n      \"p\": 0.03\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"当前比赛已进行到第90分钟并进入伤停补时阶段，苏格兰客场1-0领先海地。从比赛数据来看，海地虽然在控球率（54%）和总射门数（14对9）上占据优势，但双方射正次数均为2次，海地的进攻缺乏实质性威胁。苏格兰凭借麦金（John McGinn）在第28分钟的进球一直保持领先，并在下半场进行了密集换人以巩固防线。补时阶段苏格兰球员连续吃到黄牌，显示出比赛末段防守压力较大且对抗激烈。考虑到比赛所剩时间极少，苏格兰守住1-0胜果的概率极高（94%），海地绝平的可能性存在但较低（5%）。最可能的最终比分维持在0-1。若后续还有进球，极有可能是苏格兰利用海地全线压上、防线空虚的机会，由替补登场的锋线球员打入锁定胜局的反击进球。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Match Analysis: Haiti vs. Scotland (90'+)**\n\nOkay, let's break this down. We're at the 90-minute mark, with Scotland leading Haiti 1-0. Given the score and the remaining time, Scotland's chances of securing the win are very high, I'd say around 94%. Haiti has been putting up a fight, with more shots (14) and possession (54%), but their conversion rate hasn't been there, with only 2 shots on target, same as Scotland. McGinn's goal in the 28th minute is holding strong.\n\nThe recent yellow cards for Scotland in stoppage time (91' and 95') show that it is under pressure.\n\nLooking at the probabilities, a draw is possible, but less likely (5%), and a Haiti win is a long shot, perhaps less than 1%. Therefore, the most likely final score is 0-1.\n\nIf there's another goal, it's most likely a late counter-attack by Scotland given Haiti's likely all-out effort to equalize. Considering the time, any goal would be deep into stoppage time. I'm going with a low probability scorer for Scotland: Ché Adams, and I'll put the minute at 96, strictly after the 90th minute.\n\nSo, here's my updated assessment:\n\n```json\n{\n  \"win_probs\": {\"home\": 0.01, \"draw\": 0.05, \"away\": 0.94},\n  \"most_likely_score\": \"0-1\",\n  \"scorers\": [\n    {\"player\": \"Ché Adams\", \"team\": \"away\", \"minute\": 96, \"p\": 0.03}\n  ],\n  \"reasoning\": {\"overall\": \"当前比赛已进行到第90分钟（进入伤停补时），苏格兰客场1-0领先海地。从比赛数据来看，海地虽然在控球率（54%）和总射门数（14对9）上占据优势，但双方射正次数均为2次，海地进攻缺乏实质性威胁。苏格兰凭借麦金（John McGinn）在第28分钟的进球一直保持领先，并在下半场进行了密集换人以巩固防线。补时阶段苏格兰球员连续吃到黄牌，显示出比赛末段防守压力较大且对抗激烈。考虑到比赛所剩时间极少，苏格兰守住1-0胜果的概率极高。海地绝平的可能性存在但较低。最可能的最终比分维持在0-1。若后续还有进球，可能是苏格兰利用海地全线压上防线空虚打入反击进球。\"},\n  \"sources\": []\n}\n```\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-14T01:03:37+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 3,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.13,
+        "draw": 0.22,
+        "away": 0.65
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Che Adams",
+          "minute": 35,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "John McGinn",
+          "minute": 68,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Frantzdy Pierrot",
+          "minute": 75,
+          "p": 0.08,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第3分钟，目前比分为0-0。由于比赛刚刚开场，双方处于试探阶段，控球率暂为50%对50%，尚未产生任何关键事件或射门数据。从整体实力、阵容深度和国际大赛经验来看，苏格兰（客队）明显占据优势，其中场控制力和锋线终结能力均高于海地（主队）。随着比赛的深入，预计苏格兰将逐渐接管比赛节奏并实施压制。因此，客队获胜的概率高达65%，平局概率为22%，而海地爆冷取胜的概率仅为13%。最可能的最终比分预测为0-2，苏格兰胜出。在后续进球逻辑方面，苏格兰的攻击手如 Che Adams 和中场核心 John McGinn 极有可能在上半场中后段或下半场利用运动战或定位球机会破门；海地则只能依赖 Frantzdy Pierrot 等球员的反击机会，但破门概率相对较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.01226085,
+      "tokens": {
+        "input": 829,
+        "output": 1808
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.963
+    },
+    {
+      "submitted_at": "2026-06-14T01:09:19+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 9,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.1,
+        "draw": 0.25,
+        "away": 0.65
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "John McGinn",
+          "minute": 34,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Scott McTominay",
+          "minute": 68,
+          "p": 0.3,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第9分钟，当前比分为0-0。从开场的数据来看，苏格兰（客队）占据了绝对的优势，控球率高达80%，并已经完成了2次射门。海地（主队）目前处于被动防守状态，仅有20%的控球率和1次反击射门。基于双方整体实力差距以及开场苏格兰展现出的场面压制力，客队赢下比赛的概率显著更高。预计苏格兰将持续施压并最终打破僵局。预测最终比分为0-2，苏格兰获胜。后续进球者方面，苏格兰的中前场核心球员如 John McGinn 和 Scott McTominay 极有可能在接下来的比赛中通过阵地战或定位球取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0068229,
+      "tokens": {
+        "input": 864,
+        "output": 939
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.903
+    },
+    {
+      "submitted_at": "2026-06-14T01:14:56+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 14,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.1,
+        "draw": 0.25,
+        "away": 0.65
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Che Adams",
+          "minute": 38,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Scott McTominay",
+          "minute": 68,
+          "p": 0.28,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第14分钟，目前比分为海地 0-0 苏格兰。从开场前15分钟的场面和数据来看，苏格兰占据了绝对的控球优势（高达76%），并完成了3次射门。海地则明显采取防守反击策略，仅有24%的控球率和2次射门，同时3次犯规也反映出他们防守端承受着一定的压力。基于苏格兰在场面上的绝对压制力以及整体阵容实力的优势，客队获胜的概率被评估为65%，平局概率为25%，主队获胜概率仅为10%。最可能的最终比分预测为0-2，苏格兰有望在持续的半场攻防演练中寻找破门良机。预计 Che Adams 和 Scott McTominay 等苏格兰核心球员将在接下来的比赛时间（如上半场中后段或下半场）内攻破对手球门。"
+      },
+      "sources": [],
+      "cost_usd": 0.0126105,
+      "tokens": {
+        "input": 868,
+        "output": 1857
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.77
+    },
+    {
+      "submitted_at": "2026-06-14T01:20:41+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 20,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.15,
+        "draw": 0.3,
+        "away": 0.55
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "John McGinn",
+          "minute": 55,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Scott McTominay",
+          "minute": 78,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Frantzdy Pierrot",
+          "minute": 65,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第20分钟，海地与苏格兰目前比分为0-0。从前20分钟的场面数据来看，客队苏格兰占据了61%的控球率，并完成了4次射门，基本掌控了比赛的节奏；主队海地虽然控球率仅为39%，但也完成了3次射门，展现出了不俗的防守反击能力。双方犯规数均为4次，说明中场拼抢和身体对抗较为激烈。综合双方整体实力差距以及苏格兰在场面上的控制力，苏格兰打破僵局并最终获胜的概率更高。因此，预测客胜概率为55%，平局概率为30%，主胜概率为15%。考虑到海地防守较为顽强且苏格兰在破密集防守时可能需要时间，最可能的最终比分预测为0-1。后续进球逻辑方面，预计苏格兰的 John McGinn 或 Scott McTominay 等中前场球员将在下半场利用远射或定位球机会得分，而海地的 Frantzdy Pierrot 则是主队最具威胁的反击点。"
+      },
+      "sources": [],
+      "cost_usd": 0.01073835,
+      "tokens": {
+        "input": 867,
+        "output": 1560
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.145
+    },
+    {
+      "submitted_at": "2026-06-14T01:26:24+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 26,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.15,
+        "draw": 0.3,
+        "away": 0.55
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "John McGinn",
+          "minute": 62,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Scott McTominay",
+          "minute": 78,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Frantzdy Pierrot",
+          "minute": 85,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第26分钟，目前比分为海地 0-0 苏格兰。从场面数据来看，苏格兰占据56%的控球率并有4次射门，略微占据主动；海地则以防守反击为主，取得3次射门，场面相对胶着。随着比赛接近半小时仍未打破僵局，平局的概率有所上升。但考虑到苏格兰在整体实力和大赛经验上优于海地，客队取胜的概率依然最高。结合目前的攻防节奏，预计苏格兰会在下半场通过中场球员的后排插上或定位球打破僵局，最可能的最终比分为0-1。进球球员方面，苏格兰的John McGinn和Scott McTominay在进攻端具备较大威胁，而海地的Frantzdy Pierrot则是主队最具威胁的反击点。"
+      },
+      "sources": [],
+      "cost_usd": 0.013568099999999998,
+      "tokens": {
+        "input": 868,
+        "output": 2009
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.625
+    },
+    {
+      "submitted_at": "2026-06-14T01:32:02+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 32,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.16,
+        "away": 0.8
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Che Adams",
+          "minute": 68,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Scott McTominay",
+          "minute": 81,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第32分钟，苏格兰客场1-0领先海地。苏格兰在第29分钟由约翰·麦金（John McGinn）打破僵局。从场面数据来看，苏格兰占据59%的控球率，完全掌控了比赛节奏；而海地目前3次射门均未射正，进攻端缺乏实质性威胁。鉴于苏格兰整体实力占优且已取得领先，其最终获胜的概率已大幅提升至80%，海地想要逆转的难度极大。预计苏格兰会在下半场利用海地被迫压上进攻留下的防守空当继续扩大战果，最可能的最终比分为0-2。在后续进球逻辑上，苏格兰的攻击手如切·亚当斯（Che Adams）或后插上得分能力极强的斯科特·麦克托米奈（Scott McTominay）极有可能在下半场（如第68或81分钟左右）再次破门。"
+      },
+      "sources": [],
+      "cost_usd": 0.013789649999999999,
+      "tokens": {
+        "input": 977,
+        "output": 2026
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.671
+    },
+    {
+      "submitted_at": "2026-06-14T01:37:43+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 37,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.2,
+        "away": 0.72
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Che Adams",
+          "minute": 65,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Scott McTominay",
+          "minute": 78,
+          "p": 0.22,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第37分钟，当前比分为海地 0-1 苏格兰。苏格兰凭借约翰·麦金（John McGinn）在第28分钟的进球取得领先。从场面数据来看，苏格兰占据57%的控球率，且有7次射门（2次射正），完全掌控了比赛节奏。海地虽然有4次射门，但无一射正，进攻端缺乏实质性威胁。鉴于苏格兰在比分和场面上的双重优势，且上半场即将结束，苏格兰获胜的概率大幅提升至72%，平局概率为20%，海地逆转获胜的概率仅剩8%。预计下半场海地为了扳平比分会阵型前移，这将给苏格兰留下更多反击与阵地战空间。最可能的最终比分预测为 0-2。后续进球逻辑上，苏格兰的攻击手如 Che Adams 或后插上能力极强的 Scott McTominay 有望在下半场利用海地防线压上后的空档进一步扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.01343685,
+      "tokens": {
+        "input": 977,
+        "output": 1970
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.053
+    },
+    {
+      "submitted_at": "2026-06-14T01:43:27+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 43,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.1,
+        "draw": 0.25,
+        "away": 0.65
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Scott McTominay",
+          "minute": 68,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Che Adams",
+          "minute": 75,
+          "p": 0.2,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第43分钟，苏格兰客场1-0领先海地。从场面数据来看，苏格兰占据了58%的控球率，双方总射门数均为7次，但苏格兰在进攻效率上略胜一筹，并由约翰·麦金（John McGinn）在第28分钟率先破门。海地方面犯规较多（11次），且已有球员领到黄牌，防守端承受了较大压力。基于当前比分和比赛时间，苏格兰带着领先优势进入中场休息的概率极高，客胜概率因此提升至65%，平局概率为25%，主胜概率降至10%。在最可能最终比分的判断上，苏格兰有望在下半场继续利用控球优势和对手急于扳平留下的空当扩大战果，0-2是最可能的最终比分。后续进球逻辑方面，苏格兰的麦克托米奈（Scott McTominay）或切·亚当斯（Che Adams）等中前场球员极有可能在下半场中后段抓住反击或定位球机会取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.00880425,
+      "tokens": {
+        "input": 1047,
+        "output": 1223
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.978
+    },
+    {
+      "submitted_at": "2026-06-14T01:49:07+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.2,
+        "away": 0.75
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Che Adams",
+          "minute": 68,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比赛进行到第45分钟，苏格兰凭借约翰·麦金（John McGinn）在第28分钟的进球以1-0客场领先海地。从上半场的数据来看，苏格兰占据了55%的控球率，虽然双方总射门数相当（海地8次，苏格兰7次），但苏格兰的射门质量更高。海地在落后的情况下踢得较为急躁，半场已累计11次犯规并吃到一张黄牌。考虑到苏格兰的整体实力优势以及目前的领先局面，下半场海地为了扳平比分必然会大举压上，这将给苏格兰留下充足的反击空间。因此，苏格兰最终获胜的概率高达75%。预计苏格兰会在下半场利用反击再下一城，最可能的最终比分为0-2。切·亚当斯（Che Adams）等攻击手有望在下半场抓住机会扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.00767025,
+      "tokens": {
+        "input": 1047,
+        "output": 1043
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.89
+    },
+    {
+      "submitted_at": "2026-06-14T02:10:01+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 55,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.1,
+        "draw": 0.22,
+        "away": 0.68
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Scott McTominay",
+          "minute": 75,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第55分钟，当前比分为海地 0-1 苏格兰。苏格兰凭借约翰·麦金（John McGinn）在第28分钟的进球取得领先。从场面数据来看，苏格兰占据55%的控球率，虽然海地在总射门数上以8比7略微领先，但仅有1次射正，进攻转化率较低。海地犯规较多（13次）且已有一张黄牌，显示出防守端的压力和急躁情绪。苏格兰的进攻更具威胁。鉴于苏格兰已经一球领先且控制着比赛节奏，他们拿下本场比赛的概率大幅提升至68%。海地若大举压上试图扳平比分，后防线将留下更多空当，平局概率约为22%，海地逆转获胜的概率仅为10%。最可能的最终比分预测为0-2。预计苏格兰会在下半场后半段利用反击再入一球锁定胜局，预测Scott McTominay等中前场球员在第75分钟左右取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.01456875,
+      "tokens": {
+        "input": 1047,
+        "output": 2138
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.887
+    },
+    {
+      "submitted_at": "2026-06-14T02:15:47+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 60,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.22,
+        "away": 0.7
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Scott McTominay",
+          "minute": 78,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第60分钟，当前比分为海地 0-1 苏格兰。苏格兰凭借约翰·麦金（John McGinn）在第28分钟的进球保持领先。从场面数据来看，苏格兰占据54%的控球率，虽然双方总射门数相当（海地8次，苏格兰7次），但苏格兰的进攻效率更高（2次射正打入1球，海地仅1次射正）。海地犯规次数高达16次，显示出他们在防守端的巨大压力和急躁情绪。考虑到比赛仅剩30分钟的常规时间，苏格兰在整体实力和节奏控制上占优，客队获胜的概率高达70%，平局概率约为22%，海地逆转的概率仅为8%。随着比赛深入，落后的海地势必需要全线压上寻求扳平比分，这将给苏格兰留下广阔的反击空间。预计苏格兰有望在比赛后半段利用反击再入一球，Scott McTominay 等具备后插上得分能力的球员是潜在的进球者。最可能的最终比分预测为 0-2。"
+      },
+      "sources": [],
+      "cost_usd": 0.01416345,
+      "tokens": {
+        "input": 1111,
+        "output": 2063
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.705
+    },
+    {
+      "submitted_at": "2026-06-14T02:21:35+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 66,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.22,
+        "away": 0.7
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第66分钟，苏格兰客场1-0领先海地。苏格兰凭借约翰·麦金（John McGinn）在第28分钟的进球取得领先，并在控球率（54%对46%）和射正数（2对1）上略占优势。海地虽然在射门总数上与苏格兰持平（均为8次），但进攻效率较低，且犯规次数高达17次，显示出他们在防守端承受了较大压力并试图通过身体对抗破坏对方节奏。随着比赛进入最后阶段，海地必须大举压上寻求扳平比分，这将给苏格兰留下反击空间。综合当前比分和剩余时间，苏格兰保持胜果的概率最高（70%），海地扳平的概率约为22%，逆转取胜的希望渺茫（8%）。最可能的最终比分为0-1。如果后续有进球，苏格兰的麦克托米奈（Scott McTominay）有望利用反击扩大比分，而海地的皮埃罗（Frantzdy Pierrot）则是主队最具威胁的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.012048749999999999,
+      "tokens": {
+        "input": 1131,
+        "output": 1724
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.435
+    },
+    {
+      "submitted_at": "2026-06-14T02:27:15+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 72,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.06,
+        "draw": 0.22,
+        "away": 0.72
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到第72分钟，苏格兰客场1-0领先海地。从比赛数据来看，双方控球率（海地48%，苏格兰52%）和射门数（8对9）相差不大，但海地全场8次射门仅有1脚射正，进攻端缺乏实质性威胁。苏格兰凭借麦金（John McGinn）在第28分钟的进球掌控了比赛节奏，并在防守端表现稳健。随着比赛进入最后20分钟，海地势必大举压上寻求扳平比分，这将给苏格兰留下反击空间。综合当前比分、剩余时间和场面数据，苏格兰保持领先并最终获胜的概率极高。我们预测最可能的最终比分为0-1，但苏格兰也有可能利用反击再入一球（如Scott McTominay），海地绝平的概率相对较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.01292865,
+      "tokens": {
+        "input": 1201,
+        "output": 1852
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.972
+    },
+    {
+      "submitted_at": "2026-06-14T02:33:14+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 78,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.15,
+        "away": 0.82
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第78分钟，目前比分为海地 0-1 苏格兰。苏格兰凭借约翰·麦金（John McGinn）在第28分钟的进球保持领先。从比赛数据来看，双方控球率旗鼓相当（海地49%，苏格兰51%），总射门数均为8次，但苏格兰在射正数上略占优势（2对1）。海地犯规次数高达21次，显示出他们在防守端的吃力以及急于夺回球权的急躁情绪。随着比赛进入尾声，海地必须大举压上以寻求扳平比分，这会给苏格兰留下反击空间。考虑到剩余时间不多且海地进攻效率低下，苏格兰守住胜果的概率极高（约82%），平局概率约为15%，海地逆转取胜的希望渺茫。最可能的最终比分维持在0-1。如果后续有进球，苏格兰利用反击再下一城的可能性更大。"
+      },
+      "sources": [],
+      "cost_usd": 0.0111006,
+      "tokens": {
+        "input": 1200,
+        "output": 1562
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.079
+    },
+    {
+      "submitted_at": "2026-06-14T02:38:54+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 83,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.12,
+        "away": 0.85
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第83分钟，当前比分为海地 0-1 苏格兰。苏格兰凭借约翰·麦金（John McGinn）在第28分钟的进球保持领先。从场面数据来看，苏格兰在控球率（53%对47%）和射门质量上略占优势。海地虽然尝试了8次射门，但仅有1次射正，且全场犯规次数高达22次，说明他们主要通过破坏性防守和高强度身体对抗来限制对手，但这也导致自身进攻节奏支离破碎。由于常规时间仅剩7分钟加补时，苏格兰全取三分的概率极高（85%）。海地若想扳平比分必须全线压上，这会给苏格兰留下反击空间。综合判断，最可能的最终比分将维持在0-1。在后续进球逻辑上，苏格兰的John McGinn有机会在补时阶段利用反击锁定胜局，而海地替补登场的Josué Casimir则存在微小的绝平可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.013514549999999998,
+      "tokens": {
+        "input": 1201,
+        "output": 1945
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.828
+    },
+    {
+      "submitted_at": "2026-06-14T02:44:59+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 89,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.09,
+        "away": 0.9
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已经进行到第89分钟，苏格兰客场1-0领先海地。从场面数据来看，双方控球率完全持平（50%对50%），海地虽然在总射门数上以12比9略微占优，但双方射正数均为2次，进攻效率都不高。苏格兰凭借上半场第28分钟John McGinn的进球保持领先，并在下半场进行了换人调整以稳固防守。由于常规时间所剩无几，海地扳平比分的时间窗口非常狭窄，而反超获胜的可能性微乎其微。因此，苏格兰拿下本场比赛的概率极高（90%）。最可能的最终比分维持在0-1。考虑到海地可能在伤停补时阶段全线压上，苏格兰的替补前锋（如Ché Adams）有极小概率通过反击再入一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0111195,
+      "tokens": {
+        "input": 1464,
+        "output": 1521
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.008
+    },
+    {
+      "submitted_at": "2026-06-14T02:50:42+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.09,
+        "away": 0.9
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进行到第90分钟，当前比分为海地 0-1 苏格兰。苏格兰凭借约翰·麦金（John McGinn）在上半场的进球保持领先。从全场数据来看，海地虽然在控球率（51%）和总射门数（13次）上略占优势，但射正仅有2次，进攻效率不足以转化得分；苏格兰同样只有2次射正但成功把握住了一次机会。由于比赛已进入伤停补时阶段，留给海地扳平比分的时间所剩无几。苏格兰大概率将守住胜果，客胜概率高达90%，平局概率约为9%，海地逆转的概率仅有1%。最可能的最终比分维持在0-1。如果在补时阶段有进球产生，苏格兰替补登场的林登·戴克斯（Lyndon Dykes）有可能利用对手全线压上防守空虚的机会打入反击进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.013496699999999999,
+      "tokens": {
+        "input": 1670,
+        "output": 1864
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.047
+    },
+    {
+      "submitted_at": "2026-06-14T02:56:28+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.08,
+        "away": 0.9
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟的伤停补时阶段，当前比分为海地 0-1 苏格兰。苏格兰凭借约翰·麦金（John McGinn）在第28分钟的进球保持领先。从场面数据来看，海地虽然控球率（53%）和总射门数（13次）占优，但射门转化率极低，仅有1次射正，进攻端缺乏实质威胁。苏格兰则通过稳固防守和多次换人调整来消耗时间并伺机反击。由于比赛所剩时间极短，苏格兰全取三分的概率极高，海地绝平的希望渺茫。最可能的最终比分维持在0-1。在后续进球逻辑上，海地大举压上可能导致后防空虚，苏格兰的替补前锋如劳伦斯·香克兰（Lawrence Shankland）有较小概率在补时阶段通过反击再入一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0134757,
+      "tokens": {
+        "input": 1746,
+        "output": 1848
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.125
+    },
+    {
+      "submitted_at": "2026-06-14T03:02:13+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Haiti",
+        "away": "Scotland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T01:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.05,
+        "away": 0.94
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已进行到第90分钟并进入伤停补时阶段，苏格兰客场1-0领先海地。从比赛数据来看，海地虽然在控球率（54%）和总射门数（14对9）上占据优势，但双方射正次数均为2次，海地的进攻缺乏实质性威胁。苏格兰凭借麦金（John McGinn）在第28分钟的进球一直保持领先，并在下半场进行了密集换人以巩固防线。补时阶段苏格兰球员连续吃到黄牌，显示出比赛末段防守压力较大且对抗激烈。考虑到比赛所剩时间极少，苏格兰守住1-0胜果的概率极高（94%），海地绝平的可能性存在但较低（5%）。最可能的最终比分维持在0-1。若后续还有进球，极有可能是苏格兰利用海地全线压上、防线空虚的机会，由替补登场的锋线球员打入锁定胜局的反击进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.013251,
+      "tokens": {
+        "input": 1808,
+        "output": 1802
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.626
+    }
+  ]
+}

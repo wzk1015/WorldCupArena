@@ -1,0 +1,493 @@
+{
+  "fixture_id": "World-Cup_Quarter-finals_Norway_England_2026-07-11",
+  "provider_fixture_id": "19606970",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-11T23:35:56+00:00",
+  "live": {
+    "status": "Extra Time",
+    "elapsed": 130,
+    "score": {
+      "home": 1,
+      "away": 2
+    },
+    "home": "Norway",
+    "away": "England",
+    "competition": "World Cup",
+    "stage": "Quarter-finals",
+    "kickoff_utc": "2026-07-11T21:00:00+00:00",
+    "venue": "Miami Stadium",
+    "venue_city": "Miami Gardens"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.0,
+      "draw": 0.01,
+      "away": 0.99
+    },
+    "most_likely_score": "1-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进行到加时赛的第130分钟，英格兰队目前以2-1领先挪威队。贝林厄姆（裘德·贝林厄姆）在加时赛初段的进球帮助英格兰反超比分。考虑到比赛时间已经远远超过常规的120分钟加时赛时间，目前处于加时赛的超长补时阶段，留给挪威队扳平比分的时间已经所剩无几。英格兰队在控球率和射门数上均占据优势，防守端也通过换人进行了巩固。基于当前极度有限的剩余时间，英格兰队保持领先并最终获胜的概率极高，最可能的最终比分即为当前的1-2。由于比赛即将结束，后续出现进球的可能性微乎其微。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1405,
+    "output": 664
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.00565845,
+  "wall_seconds": 9.354,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.0,\n    \"draw\": 0.01,\n    \"away\": 0.99\n  },\n  \"most_likely_score\": \"1-2\",\n  \"scorers\": [],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进行到加时赛的第130分钟，英格兰队目前以2-1领先挪威队。贝林厄姆（Jude Bellingham）在加时赛初段的进球帮助英格兰反超比分。考虑到比赛时间已经远远超过常规的120分钟加时赛时间，目前处于加时赛的超长补时阶段，留给挪威队扳平比分的时间已经所剩无几。英格兰队在控球率和射门数上均占据优势，防守端也通过换人进行了巩固。基于当前极度有限的剩余时间，英格兰队保持领先并最终获胜的概率极高，最可能的最终比分即为当前的1-2。由于比赛即将结束，后续出现进球的可能性微乎其微。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-11T21:07:01+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 7,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.24,
+        "draw": 0.28,
+        "away": 0.48
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 58,
+          "p": 0.38,
+          "team": "away"
+        },
+        {
+          "player": "Erling Haaland",
+          "minute": 74,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 81,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛目前进行到第7分钟，场上比分依然维持在0-0。从开场阶段的比赛走势与统计数据来看，英格兰队迅速掌控了中场主导权，控球率高达74.0%，通过耐心的传导施加进攻压力；而挪威队控球率仅为26.0%，战术意图非常明确，即通过紧凑的低位防守吸收压力，并伺机利用前场核心的速度与冲击力展开致命反击。基于双方整体阵容深度、大赛经验以及开场展现出的场面控制力，英格兰队在常规时间内赢下比赛的概率最高，评估为48.0%，平局概率为28.0%，挪威队取胜概率为24.0%。在世界杯四分之一决赛这种高强度、低容错率的淘汰赛背景下，双方防守端都会格外谨慎，因此最可能的最终比分预测为0-1，英格兰队凭借更强的阵地战攻坚能力小胜过关。在后续进球逻辑方面，随着比赛深入和防线体能消耗，英格兰主力中锋 哈里·凯恩 是打破僵局的最主要威胁点，预计在下半场中段迎来最佳破门机会；与此同时，挪威头号射手 埃尔林·哈兰德 在转换进攻中的威胁不容忽视，而英格兰中场 裘德·贝林厄姆 的后插上进攻同样是决定比赛走向的重要变数。"
+      },
+      "sources": [],
+      "cost_usd": 0.011361,
+      "tokens": {
+        "input": 782,
+        "output": 1673
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.153
+    },
+    {
+      "submitted_at": "2026-07-11T21:40:35+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 40,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.35,
+        "draw": 0.38,
+        "away": 0.27
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 68,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Erling Haaland",
+          "minute": 75,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 82,
+          "p": 0.2,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第40分钟，挪威凭借安德烈亚斯·谢尔德鲁普（安德烈亚斯·谢尔德鲁普）在第36分钟的进球，目前以1-0领先英格兰。从场面数据来看，英格兰虽然占据了高达65%的控球率，但进攻端缺乏实质性威胁，至今只有1次射门且未能射正。相反，挪威队的反击极为犀利，2次射门全部命中门框范围并转化为1个进球。尽管挪威暂时领先，但考虑到英格兰强大的整体实力和阵容深度，下半场三狮军团势必会加强攻势。因此，本场比赛最终走向平局的概率最高。最可能的最终比分为1-1。在后续进球逻辑方面，英格兰需要在下半场依靠核心球员打破僵局，哈里·凯恩 和 裘德·贝林厄姆 是最有可能挺身而出的得分手；而挪威的 埃尔林·哈兰德 则极具威胁，随时可能利用英格兰大举压上后的防线空当再次改写比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0163947,
+      "tokens": {
+        "input": 878,
+        "output": 2456
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.201
+    },
+    {
+      "submitted_at": "2026-07-11T22:08:35+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 53,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.35,
+        "away": 0.43
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Bukayo Saka",
+          "minute": 76,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 88,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第53分钟，目前比分为1-1。挪威在上半场凭借安德烈亚斯·谢尔德鲁普的进球取得领先，但英格兰在下半场伊始便由裘德·贝林厄姆迅速扳平比分。从场面数据来看，英格兰占据了高达68%的控球率，并且在半场进行了两次极具攻击性的换人调整（布卡约·萨卡和埃贝雷奇·埃泽替补登场），这表明他们正试图在常规时间内解决战斗。挪威虽然控球率较低，但反击效率不错，5次射门3次射正。考虑到英格兰目前的势头和阵容深度，他们在下半场逆转取胜的概率较高。预计英格兰将持续施压，布卡约·萨卡等替补登场的攻击手有望在比赛后段创造或打进致胜一球。最可能的最终比分为1-2。"
+      },
+      "sources": [],
+      "cost_usd": 0.0050127,
+      "tokens": {
+        "input": 982,
+        "output": 632
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.822
+    },
+    {
+      "submitted_at": "2026-07-11T22:20:14+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 65,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.23,
+        "draw": 0.35,
+        "away": 0.42
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Bukayo Saka",
+          "minute": 78,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 85,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第65分钟，挪威与英格兰目前战成1-1平。挪威在上半场凭借谢尔德鲁普（安德烈亚斯·谢尔德鲁普）的进球取得领先，但英格兰在下半场伊始通过贝林厄姆（裘德·贝林厄姆）迅速扳平比分。数据方面，英格兰占据了64%的绝对控球率，掌控了比赛的整体节奏；然而挪威的防守反击极具威胁，全场7次射门中有4次射正，第55分钟黑格姆（托尔比约恩·黑格姆）的进球虽被VAR取消，但也给英格兰防线敲响了警钟。考虑到英格兰在半场进行了针对性的换人调整（萨卡、埃泽替补登场），进攻端体能和边路冲击力占优，他们在常规时间内绝杀比赛的概率略高。挪威虽然防守顽强，但随着比赛深入和体能下降，低位防线可能出现漏洞。尽管平局进入加时赛的概率依然不低，但综合场面压制力判断，英格兰更有可能在常规时间末段再入一球，最可能的最终比分为1-2。替补登场的萨卡（布卡约·萨卡）在边路具备极强的突破与内切能力，非常有望在第75分钟之后利用挪威防线体能下降的空档完成致命一击或创造得分机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.01786155,
+      "tokens": {
+        "input": 1051,
+        "output": 2660
+      },
+      "tool_calls": 0,
+      "wall_seconds": 41.145
+    },
+    {
+      "submitted_at": "2026-07-11T22:26:44+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.15,
+        "draw": 0.55,
+        "away": 0.3
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第71分钟，挪威与英格兰战成1-1平。挪威在上半场由安德烈亚斯·谢尔德鲁普先拔头筹，但下半场刚开始裘德·贝林厄姆就为英格兰扳平比分。从数据来看，英格兰占据60%的控球率，但双方射门数均为6次，场面相对胶着。作为世界杯四分之一决赛，双方在最后20分钟可能会更加谨慎，避免致命失误。因此，常规时间以1-1平局收场的概率最大。英格兰凭借更深厚的阵容储备（如替补登场的布卡约·萨卡），在常规时间绝杀的概率略高于挪威。如果后续产生进球，布卡约·萨卡和裘德·贝林厄姆是英格兰最具威胁的得分点，而挪威则依赖马丁·厄德高的组织与反击。"
+      },
+      "sources": [],
+      "cost_usd": 0.0074865,
+      "tokens": {
+        "input": 1052,
+        "output": 1013
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.534
+    },
+    {
+      "submitted_at": "2026-07-11T23:05:34+00:00",
+      "live": {
+        "status": "Break Time",
+        "elapsed": 125,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 1.0,
+        "away": 0.0
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第125分钟，加时赛已经结束，目前比分维持在1-1平。挪威在第36分钟由安德烈亚斯·谢尔德鲁普首开纪录，英格兰则在下半场刚开始时由裘德·贝林厄姆扳平比分。从全场数据来看，英格兰占据了58%的控球率，但挪威在射门数和射正数上略占优势。由于加时赛已经结束，比赛即将进入点球大战，因此常规及加时赛的最终比分已锁定为1-1。平局概率为100%，且不会再有运动战进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0042115500000000005,
+      "tokens": {
+        "input": 1263,
+        "output": 458
+      },
+      "tool_calls": 0,
+      "wall_seconds": 7.385
+    },
+    {
+      "submitted_at": "2026-07-11T23:11:30+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 116,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.9,
+        "away": 0.05
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到加时赛第116分钟，当前比分依然维持在1-1平。从场面数据来看，英格兰队占据了58%的控球率，但双方在射门次数和射正次数上势均力敌（挪威9次射门4次射正，英格兰8次射门3次射正），防守端都表现得相当稳固。考虑到加时赛所剩时间仅有几分钟，双方球员体能均已到达极限，大概率会以平局结束并进入点球大战。因此，平局的概率极高，最可能的最终比分定格在1-1。尽管如此，在最后时刻仍有极小概率出现绝杀，例如状态出色的 裘德·贝林厄姆 可能会在反击或定位球中制造威胁，但整体而言比赛拖入点球大战已成定局。"
+      },
+      "sources": [],
+      "cost_usd": 0.00614985,
+      "tokens": {
+        "input": 1333,
+        "output": 754
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.506
+    },
+    {
+      "submitted_at": "2026-07-11T23:17:57+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 122,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.01,
+        "away": 0.99
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已经进行到加时赛的第122分钟，英格兰队以2-1领先挪威队。从场面和数据来看，英格兰队控球率占优（56%），且凭借贝林厄姆（裘德·贝林厄姆）在下半场开局和加时赛初段的梅开二度成功反超比分。由于比赛已经进入加时赛伤停补时的最后阶段，留给挪威队扳平比分将比赛拖入点球大战的时间所剩无几。因此，英格兰队在加时赛内直接取胜的概率极高，几乎已经锁定胜局。最可能的最终比分即为当前的1-2。考虑到主裁判随时可能吹响终场哨，预计不会再有新的进球产生。"
+      },
+      "sources": [],
+      "cost_usd": 0.0102144,
+      "tokens": {
+        "input": 1334,
+        "output": 1399
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.647
+    },
+    {
+      "submitted_at": "2026-07-11T23:29:26+00:00",
+      "live": {
+        "status": "Extra Time - Break",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.0,
+        "away": 1.0
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛已经进行到第130分钟，英格兰队以2-1领先挪威队。这场世界杯四分之一决赛已经进入加时赛的最后阶段（甚至超出了常规的120分钟加时赛时间，可能是由于超长补时或数据记录原因）。从场面数据来看，英格兰队控球率55%略占优势，双方射门数（10对11）和射正数（4对5）旗鼓相当。挪威队在第36分钟由安德烈亚斯·谢尔德鲁普（安德烈亚斯·谢尔德鲁普）先拔头筹，但英格兰队的裘德·贝林厄姆（裘德·贝林厄姆）在下半场开场和加时赛第93分钟梅开二度，将比分反超。考虑到比赛时间已经完全耗尽，主裁判随时可能吹响全场比赛结束的哨音，场上比分发生改变的可能性微乎其微。因此，英格兰队拿下本场比赛胜利的概率极高，最可能的最终比分将定格在1-2，预计不会再有新的进球产生。"
+      },
+      "sources": [],
+      "cost_usd": 0.013142850000000001,
+      "tokens": {
+        "input": 1369,
+        "output": 1858
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.054
+    },
+    {
+      "submitted_at": "2026-07-11T23:35:56+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Norway",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-11T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.01,
+        "away": 0.99
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到加时赛的第130分钟，英格兰队目前以2-1领先挪威队。贝林厄姆（裘德·贝林厄姆）在加时赛初段的进球帮助英格兰反超比分。考虑到比赛时间已经远远超过常规的120分钟加时赛时间，目前处于加时赛的超长补时阶段，留给挪威队扳平比分的时间已经所剩无几。英格兰队在控球率和射门数上均占据优势，防守端也通过换人进行了巩固。基于当前极度有限的剩余时间，英格兰队保持领先并最终获胜的概率极高，最可能的最终比分即为当前的1-2。由于比赛即将结束，后续出现进球的可能性微乎其微。"
+      },
+      "sources": [],
+      "cost_usd": 0.00565845,
+      "tokens": {
+        "input": 1405,
+        "output": 664
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.354
+    }
+  ],
+  "live_refreshed_at": "2026-07-11T23:41:56+00:00"
+}

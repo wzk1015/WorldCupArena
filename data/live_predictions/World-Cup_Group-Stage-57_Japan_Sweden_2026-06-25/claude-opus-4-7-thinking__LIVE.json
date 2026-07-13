@@ -1,0 +1,934 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-57_Japan_Sweden_2026-06-25",
+  "provider_fixture_id": "19609190",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-26T00:52:10+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "home": "Japan",
+    "away": "Sweden",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-25T23:00:00+00:00",
+    "venue": "Dallas Stadium",
+    "venue_city": "Arlington"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.1,
+      "draw": 0.78,
+      "away": 0.12
+    },
+    "most_likely_score": "1-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进入第90分钟，日本与瑞典在达拉斯体育场战成1比1。上半场两队互交白卷，下半场节奏明显加快：前田大然在第56分钟由堂安律助攻首开纪录，随后第62分钟埃兰加接居克雷斯传球扳平比分，比分自此再无变化。从场面数据看，日本控球率54%略占优、射门8次、射正3次，瑞典同样有8次射门和3次射正，并在角球上以7比2领先，说明瑞典通过边路和定位球持续制造威胁，而日本则更多依赖中场组织和反击。双方主帅在75分钟前后均完成多人轮换，瑞典在88分钟再次连换两人，明显是为终场冲刺保留体能；日本则用伊东纯也、小川航基等攻击手加强前场，并以谷口彰悟、渡边刚和长友佑都补强防线，意图先稳住平局。考虑到当前已是常规时间最后一分钟，体能下降、补时阶段双方都倾向于谨慎，加之居克雷斯第85分钟领到黄牌后冲抢动作会受限，平局的可能性显著高于任意一方完成绝杀，因此最可能的最终比分维持1比1。若补时阶段真的再入一球，瑞典凭借角球与高点优势（居克雷斯、埃兰加）略具威胁，日本方面替补登场的小川航基和伊东纯也是反击中最可能的终结点，但整体进球概率都偏低，平局收场仍是主基调。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1171,
+    "output": 734
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0179117,
+  "wall_seconds": 16.188,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.10, \"draw\": 0.78, \"away\": 0.12},\n  \"most_likely_score\": \"1-1\",\n  \"scorers\": [\n    {\"player\": \"Viktor Gyökeres\", \"team\": \"away\", \"minute\": 92, \"p\": 0.07},\n    {\"player\": \"Koki Ogawa\", \"team\": \"home\", \"minute\": 93, \"p\": 0.06},\n    {\"player\": \"Anthony Elanga\", \"team\": \"away\", \"minute\": 94, \"p\": 0.05},\n    {\"player\": \"Junya Ito\", \"team\": \"home\", \"minute\": 92, \"p\": 0.05}\n  ],\n  \"reasoning\": {\"overall\": \"比赛进入第90分钟，日本与瑞典在达拉斯体育场战成1比1。上半场两队互交白卷，下半场节奏明显加快：前田大然在第56分钟由堂安律助攻首开纪录，随后第62分钟埃兰加接居克雷斯传球扳平比分，比分自此再无变化。从场面数据看，日本控球率54%略占优、射门8次、射正3次，瑞典同样有8次射门和3次射正，并在角球上以7比2领先，说明瑞典通过边路和定位球持续制造威胁，而日本则更多依赖中场组织和反击。双方主帅在75分钟前后均完成多人轮换，瑞典在88分钟再次连换两人，明显是为终场冲刺保留体能；日本则用伊东纯也、小川航基等攻击手加强前场，并以谷口彰悟、渡边刚和长友佑都补强防线，意图先稳住平局。考虑到当前已是常规时间最后一分钟，体能下降、补时阶段双方都倾向于谨慎，加之居克雷斯第85分钟领到黄牌后冲抢动作会受限，平局的可能性显著高于任意一方完成绝杀，因此最可能的最终比分维持1比1。若补时阶段真的再入一球，瑞典凭借角球与高点优势（居克雷斯、埃兰加）略具威胁，日本方面替补登场的小川航基和伊东纯也是反击中最可能的终结点，但整体进球概率都偏低，平局收场仍是主基调。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-25T23:02:16+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 2,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Japan",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.36,
+        "draw": 0.3,
+        "away": 0.34
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Alexander Isak",
+          "minute": 58,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Takefusa Kubo",
+          "minute": 63,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Ayase Ueda",
+          "minute": 71,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 74,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Kaoru Mitoma",
+          "minute": 78,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Dejan Kulusevski",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚进行到第2分钟，比分仍为0-0，双方控球率各占一半，尚未出现可供解读的进攻或防守事件，整体仍处于试探阶段。世界杯小组赛的开场节奏通常偏谨慎，两队会先通过中场对抗和定位球落点确认对方的压迫强度，进球概率在前15分钟普遍偏低。从纸面实力和近期状态看，日本在技术流转、边路推进和高位逼抢的成熟度上略占优势，加之亚洲区预选赛与热身赛中前场组合的默契度更高，因此把胜率小幅向主队倾斜较为合理；瑞典依靠Isak与Gyökeres的双前锋冲击力，以及定位球高点能力，在反击和死球场景下随时具备打破僵局的可能，因此客胜概率与主胜较为接近，平局概率维持在三成左右，符合小组赛常见的低比分均衡走向。综合两队的进攻效率与防守稳健度，单方小胜是最具代表性的剧本，最可能的最终比分定为1-0，日本凭借控球和边路二过一更易在中段时间制造第一粒入球。后续进球人选方面，久保建英在右肋的内切射门、上田绮世的禁区抢点以及三笘薫的左路突破都是日本最现实的得分来源；瑞典方面则把希望寄托在Isak的纵深跑动、Gyökeres的支点终结以及Kulusevski后插上远射上，时间窗口主要集中在体能下降后的下半场中后段。若上半场尾段仍保持零封，比赛进入60至80分钟后的开放阶段将是入球高发区，这也是给出上述球员入球时间分布的核心依据。"
+      },
+      "sources": [],
+      "cost_usd": 0.0188663,
+      "tokens": {
+        "input": 769,
+        "output": 866
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.212
+    },
+    {
+      "submitted_at": "2026-06-25T23:09:07+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 9,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Japan",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.3,
+        "away": 0.4
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Alexander Isak",
+          "minute": 38,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 67,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Kaoru Mitoma",
+          "minute": 58,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Takefusa Kubo",
+          "minute": 74,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Dejan Kulusevski",
+          "minute": 82,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第9分钟，日本与瑞典在小组赛中仍是0-0。从开场阶段的场面看，瑞典稍占主动：控球率54%略高于日本的46%，已经制造了2个角球和1次射正，门将也迫使日本完成了一次扑救，整体压迫和前场推进更具威胁；日本暂时还没有形成射门，只有1次犯规，更多时间用在适应对方的高位逼抢上。基于这一开局形势，瑞典在身体对抗、定位球和锋线终结能力上的优势开始显现，因此把客队获胜概率上调至0.40，主队下降到0.30，平局维持在0.30。考虑到比赛仅过去9分钟，瑞典若能保持现有节奏，更可能凭借Isak和Gyökeres的支点作用先下一城，而日本则需要依靠Mitoma、Kubo的边路突破在中后段寻找反扑机会，因此最可能的最终比分定为1-2。后续进球点的判断上，Isak作为目前最具威胁的前场支点，最有可能率先破门；Gyökeres在体能充沛阶段的二点冲击同样值得关注；日本方面则把希望寄托在替补登场或体能下降阶段的边路爆点Mitoma与Kubo身上；终场前若瑞典扩大领先，Kulusevski的后插上也是潜在选项。所有预测进球时间均设定在第9分钟之后，与当前比赛进程保持一致。"
+      },
+      "sources": [],
+      "cost_usd": 0.1970879,
+      "tokens": {
+        "input": 49287,
+        "output": 796
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.22
+    },
+    {
+      "submitted_at": "2026-06-25T23:15:59+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 15,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Japan",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.3,
+        "away": 0.36
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Alexander Isak",
+          "minute": 58,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Kaoru Mitoma",
+          "minute": 67,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 78,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Takefusa Kubo",
+          "minute": 73,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Dejan Kulusevski",
+          "minute": 85,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第15分钟，双方仍是0-0。从开场一刻钟的场面看，日本队虽然控球率略占优（52%对48%），但进攻端尚未形成有效威胁，零射门、零射正、零角球，反而由瑞典门将完成了一次扑救——这说明日本的传导更多停留在中后场，缺乏穿透。瑞典队虽然控球少一些，但已经打出1次射门并射正，还拿到了2个角球，定位球和反击的威胁明显更直接，身体对抗和高点优势开始体现。基于此，原本赛前略偏向日本的局面在开场阶段被瑞典扳平甚至略微反超，胜平负概率调整为瑞典36%、日本34%、平局30%，三者非常接近，符合小组赛强强对话的胶着走势。综合双方的攻防特征：瑞典更可能凭借身体和定位球先下一城，而日本随后利用边路速度型球员（三笘、久保）冲击瑞典两个边后卫身后的空间扳平，最后阶段瑞典再依靠替补冲击或反击锁定胜局，因此最可能的最终比分定为1-2。在后续进球人选上，瑞典方面把伊萨克作为首选射手，他在禁区内的把握力最强；若比赛拖入末段，约凯雷斯的支点冲击和库卢塞夫斯基的远射也具备破门能力。日本方面则把宝压在三笘的左路突破和久保的内切串联上，这两人是中前场最具决定性的球员，也最有机会在中后段改变比分。所有进球时间都安排在第15分钟之后，符合当前比赛进程。"
+      },
+      "sources": [],
+      "cost_usd": 0.1981979,
+      "tokens": {
+        "input": 49287,
+        "output": 856
+      },
+      "tool_calls": 0,
+      "wall_seconds": 28.235
+    },
+    {
+      "submitted_at": "2026-06-25T23:22:56+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 22,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Japan",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.38,
+        "draw": 0.3,
+        "away": 0.32
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Takefusa Kubo",
+          "minute": 64,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Alexander Isak",
+          "minute": 58,
+          "p": 0.17,
+          "team": "away"
+        },
+        {
+          "player": "Ayase Ueda",
+          "minute": 71,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 76,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Wataru Endo",
+          "minute": 82,
+          "p": 0.08,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第22分钟，日本与瑞典在达拉斯体育场仍然互交白卷。从场面来看，日本控球率达到58%，并完成2次射门，整体节奏掌握得更主动，但尚未形成正面攻框；瑞典虽然控球较少，仅有1次射门，却是唯一射正的一方，并已经获得2个角球，反击和定位球威胁明显，门将久保健英(暂以日方守门员视角)做出了1次扑救。日本犯规偏多(4比1)，说明在中场争夺中略显被动，需要靠犯规打断瑞典的推进。综合判断，比赛仍属于势均力敌、低开局的对决，进球节奏不算快。基于World Cup小组赛阶段双方都需要分数、相对保守的整体氛围，最终最可能的比分定为1-0，由日本凭借控球优势在下半场把握住一次机会取胜，因此主胜概率略高于平局与客胜，分别给到38%、30%、32%。后续进球预测放在22分钟之后：日方进攻端久保建英（久保建英）的突破与远射能力使他成为最可能的破门者，其次是禁区终结点上田绮世（上田绮世），远藤航（远藤航）作为定位球与二点补射也保留小概率；瑞典方面，亚历山大·伊萨克（伊萨克）凭借速度与单兵能力最具反击杀伤，维克托·哲凯赖什（约克雷斯）在禁区内的支点作用也可能在比赛后段制造机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.19749490000000003,
+      "tokens": {
+        "input": 49287,
+        "output": 818
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.682
+    },
+    {
+      "submitted_at": "2026-06-25T23:29:55+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 29,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Japan",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.3,
+        "away": 0.36
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Alexander Isak",
+          "minute": 58,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Kaoru Mitoma",
+          "minute": 67,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 78,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Takefusa Kubo",
+          "minute": 72,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Dejan Kulusevski",
+          "minute": 84,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第29分钟，日本与瑞典在达拉斯球场仍是0-0。从场面数据看，双方势均力敌，日本控球率略占优（51%对49%），射门次数也以2比1稍微领先，但关键的射正数据上瑞典凭借1次射正反而占优，并通过2个角球展现了更直接的进攻威胁，门将水谷也已经做出1次扑救。日本目前的5次犯规明显多于瑞典的1次，显示防线在面对瑞典的身体对抗和前场压迫时有些被动，这通常意味着瑞典在中前场更具压力感。综合判断，瑞典凭借身体素质、定位球和Isak、Gyökeres的纵深威胁，下半时打开局面的概率略高于日本，因此瑞典胜的概率被微调至最高，日本胜次之，平局概率适中。考虑到日本的反击速度（三笘、久保、堂安）仍具威胁，全场完全被压制可能性不大，所以最可能的最终比分给到1-2，瑞典小胜但日本有进球。后续进球的人选方面，Isak作为瑞典锋线核心，在僵局后的60分钟前后最具突破可能；三笘和久保是日本反击端最直接的得分点，预计出现在中段；Gyökeres和Kulusevski则更可能在比赛末段瑞典扩大战果或锁定胜局时建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.0164428,
+      "tokens": {
+        "input": 929,
+        "output": 703
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.14
+    },
+    {
+      "submitted_at": "2026-06-25T23:36:49+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 36,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Japan",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.33,
+        "away": 0.33
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Takefusa Kubo",
+          "minute": 67,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Alexander Isak",
+          "minute": 71,
+          "p": 0.17,
+          "team": "away"
+        },
+        {
+          "player": "Ayase Ueda",
+          "minute": 74,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 82,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Daichi Kamada",
+          "minute": 88,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第36分钟，日本与瑞典在达拉斯体育场仍然互交白卷，比分维持0比0。从场面来看，日本队凭借54%的控球率略占主动，已经完成2次射门，但尚无射正；瑞典队虽然控球稍逊，仅有1脚射门，却已收获1次射正并取得2个角球，进攻效率反而更高。第32分钟伊萨克·希恩(伊萨克·希恩)的黄牌也意味着瑞典后防接下来在拼抢时需要有所收敛，这对日本边路的突击或将带来一定空间。日本的犯规数(6次)明显多于瑞典(3次)，反映出蓝武士在中前场的逼抢强度较高，但也可能在体能消耗与判罚尺度上埋下隐患。综合双方风格——日本依赖中前场组织与边路渗透，瑞典则以高大中锋和定位球为利器——下半场出现进球的概率较上半场会显著提升。考虑到日本目前掌握更多球权且对手已有一张黄牌，主队胜出的概率被略微抬高，但瑞典的反击与定位球威胁依然不可忽视，平局与客胜的概率几乎并列。最可能的最终比分预计为1比0，日本凭借持续施压在下半场中后段打破僵局并守住胜果。后续进球点方面，日本队的久保建英(Kubo)是边路最具突破创造力的球员，最有机会在65到70分钟之间撕开瑞典防线；上田绫世(Ueda)作为禁区终结点适合在75分钟前后通过抢点完成破门；瑞典方面，伊萨克(Isak)与基耶凯雷什(Gyökeres)的反击与高点冲击是主要威胁，分别可能在70分钟和80分钟后段制造杀机；若比赛进入收官阶段瑞典压上抢分，镰田大地(Kamada)也具备在85分钟之后反击中扩大比分的能力。"
+      },
+      "sources": [],
+      "cost_usd": 0.0194731,
+      "tokens": {
+        "input": 793,
+        "output": 894
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.177
+    },
+    {
+      "submitted_at": "2026-06-25T23:43:52+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 43,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Japan",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.34,
+        "away": 0.32
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Alexander Isak",
+          "minute": 74,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Takefusa Kubo",
+          "minute": 67,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Ayase Ueda",
+          "minute": 82,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 88,
+          "p": 0.13,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到43分钟，日本与瑞典在达拉斯体育场仍然互交白卷。从场面来看，日本占据56%的控球率，完成3次射门、1次射正，整体推进意图更主动，但9次犯规说明他们在中场对抗中不得不频繁通过战术犯规打断瑞典的反击节奏。瑞典虽然控球44%，射门只有1次，却已经拿到2个角球，定位球将是他们破门的重要武器。瑞典在32分钟通过伊萨克·希恩吃到黄牌，37分钟又用卢卡斯·贝尔格瓦尔换下他，显然是为了避免后防核心二黄离场，这次被动调整会影响他们后防的默契；日本39分钟用谷口彰悟换下板仓滉，更像是伤病或体能层面的处理。综合两边的临场状态，比赛走势依旧胶着，进球期望值偏低但并不缺乏机会，因此平局与两队取胜的概率被压得非常接近，主场作战的日本略占心理优势。最可能的最终比分判断为1-1：上半场剩余时间双方都难在短时间内打破僵局，进入下半场后日本控球的优势会逐渐转化为有威胁的射门，久保建英、上田绮世都具备在禁区内完成致命一击的能力；瑞典则依靠角球与边路传中寻找伊萨克或居凯雷什的高点，两人都是能在比赛末段抓住一次机会的终结者。后续进球的时间分布偏向65分钟以后，体能下降与换人调整会拉开比赛空间，因此把日本的潜在破门点放在67与82分钟，瑞典的反击与定位球机会则集中在74与88分钟前后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0180967,
+      "tokens": {
+        "input": 896,
+        "output": 799
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.428
+    },
+    {
+      "submitted_at": "2026-06-25T23:50:43+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Japan",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.36,
+        "draw": 0.34,
+        "away": 0.3
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Takefusa Kubo",
+          "minute": 63,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Alexander Isak",
+          "minute": 68,
+          "p": 0.17,
+          "team": "away"
+        },
+        {
+          "player": "Ayase Ueda",
+          "minute": 71,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 80,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Daichi Kamada",
+          "minute": 85,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场打满45分钟，日本与瑞典在达拉斯球场战成0-0。从场面看，日本占据控球优势（约55%），射门4次、射正2次，并取得1次角球，整体在进攻组织上更主动；瑞典则依靠反击和定位球制造威胁，拿到3个角球但只完成2次射门、1次射正，进攻效率有限。瑞典在第32分钟由伊萨克·希恩吃到黄牌，并在第37分钟用卢卡斯·贝尔格瓦尔换下后防核心，后场轮换可能影响下半场防线稳定性；日本则在第39分钟用谷口彰悟（Shogo Taniguchi）换下板仓滉（Ko Itakura），疑似伤病调整，需关注中后卫衔接。综合控球、射正与场面压迫，下半场日本继续掌握主动的概率略高，因此主胜概率小幅领先，但瑞典反击端有伊萨克（Isak）与约凯雷斯（Gyökeres）等高效终结点，平局与客胜概率仍不可忽视。最可能的最终比分判断为1-0日本小胜：上半场双方均未破门，下半场通常进球节奏放缓，日本若能利用控球优势在60到75分钟之间形成持续压制，最有机会取得领先；瑞典在落后情境下会被迫压上，但补时阶段再丢球或扳平的概率相对均衡，整体偏向单球小胜的格局。后续进球点上，日本方面久保建英（Kubo）的边路突破与远射、上田绮世（Ueda）的禁区抢点最具威胁，镰田大地（Kamada）则可能在末段把握二点球机会；瑞典方面，伊萨克作为反击箭头在60到70分钟最具爆发力，约凯雷斯则在比赛后段体能比拼中具备强攻属性，是潜在的扳平点。"
+      },
+      "sources": [],
+      "cost_usd": 0.0189662,
+      "tokens": {
+        "input": 861,
+        "output": 853
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.894
+    },
+    {
+      "submitted_at": "2026-06-26T00:07:41+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 52,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Japan",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.36,
+        "draw": 0.39,
+        "away": 0.25
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Takefusa Kubo",
+          "minute": 68,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Alexander Isak",
+          "minute": 71,
+          "p": 0.17,
+          "team": "away"
+        },
+        {
+          "player": "Ayase Ueda",
+          "minute": 76,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Kaoru Mitoma",
+          "minute": 82,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 79,
+          "p": 0.13,
+          "team": "away"
+        },
+        {
+          "player": "Lucas Bergvall",
+          "minute": 86,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到下半场第52分钟，日本与瑞典仍以0比0僵持。从场面看，日本控球率55%，4次射门、2次射正并赢得1次角球，整体推进更主动，节奏掌控略占优；瑞典控球45%但拿到3次角球，1次射正，依靠定位球和身体对抗形成了一定的威胁。瑞典在32分钟吃到黄牌、37分钟率先换人，意图调整中场和防线衔接；日本紧随其后在39分钟换上谷口彰悟加强后防应对瑞典的高空与反击。综合走势，日本的地面渗透与瑞典的定位球将是后续两套主要进球路径。考虑到双方实力接近、比赛仍有近40分钟、且任一队此前都未能突破僵局，平局概率小幅领先；日本因主导更多回合而胜率略高于瑞典。预计本场最有可能以1比1收场：日本通过边路推进或前场逼抢迫使瑞典失误得手，瑞典则依靠角球或快速反击由伊萨克终结。后续进球候选方面，日本侧久保建英是定位球与边路二点球的常规终结者，上田绮世在禁区抢点能力突出，三笘薫的内切威胁延续到比赛尾段；瑞典方面伊萨克作为最锋利的反击点最具威胁，约凯雷斯在拉边和争顶上能形成支点，替补登场的贝里瓦尔在末段插上也是一种可能的得分来源。"
+      },
+      "sources": [],
+      "cost_usd": 0.0179265,
+      "tokens": {
+        "input": 1020,
+        "output": 765
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.219
+    },
+    {
+      "submitted_at": "2026-06-26T00:14:29+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 59,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Japan",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.4,
+        "away": 0.26
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Takefusa Kubo",
+          "minute": 74,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Alexander Isak",
+          "minute": 81,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Ayase Ueda",
+          "minute": 68,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 86,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Daichi Kamada",
+          "minute": 78,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第59分钟，日本与瑞典在达拉斯体育场仍维持0-0僵局。从场面数据看，日本控球率57%、射门5次（射正2次），整体在进攻端略占主动，但角球数仅1次，说明真正能撕开瑞典禁区的机会并不多；瑞典虽然控球落后，却拿到5个角球，定位球是他们目前最实际的威胁来源。瑞典此前在第32分钟由伊萨克·希恩吃到黄牌，加上第37分钟提前换人调整，后防节奏受到一定影响；日本也在第39分钟用Shogo Taniguchi换下Ko Itakura，更偏向稳住防线、控制下半段节奏。综合两队风格——日本擅长中场推进与边路渗透，瑞典依赖身体对抗和定位球——下半场后段双方都有打破僵局的能力，但同时也都不愿冒险失球，因此最终走向平局的概率略高于任意一方取胜。胜平负方面，日本因控球与射门质量更占优，主胜概率略高于客胜；平局给到最高权重，最可能的最终比分定在1-1，这既符合当前0-0的基础，也契合双方在剩余约30分钟里各自有一次有效转化的合理预期。后续进球人选上，日本端久保建英(久保建英)在右路的突破和远射是首选爆点，前锋上田绫世(上田绮世)在抢点和角球反击中也具备终结能力，镰田大地(镰田大地)在禁区前沿的二点同样值得关注；瑞典端伊萨克(亚历山大·伊萨克)凭速度与门前嗅觉是反击最大威胁，吉厄克雷斯(维克托·哲凯赖什)则更可能在比赛末段利用对手压上的空当或定位球完成一击。所有候选进球时间均设定在第59分钟之后，符合当前比赛进程。"
+      },
+      "sources": [],
+      "cost_usd": 0.0193843,
+      "tokens": {
+        "input": 839,
+        "output": 880
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.83
+    },
+    {
+      "submitted_at": "2026-06-26T00:24:00+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 69,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Japan",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.33,
+        "draw": 0.42,
+        "away": 0.25
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行至第69分钟，比分1比1。日本队在第56分钟由前田大然（前田大然）打破僵局，堂安律（Ritsu Doan）送出助攻；瑞典随后在第62分钟由埃兰加（安东尼·埃兰加）接居凯雷斯（维克托·哲凯赖什）传球迅速扳平，比赛节奏被重新拉回均势。从场面数据看，日本控球率54%，射门7次、射正3次，整体推进略占主动，但犯规次数偏高，意味着中场对抗激烈，体能消耗较大；瑞典射门4次、射正2次，角球数5比1领先，定位球与边路冲击仍是他们的主要威胁来源。两队此前已各做调整，日本换上谷口彰悟（Shogo Taniguchi）加固后防，瑞典则提早换上贝里瓦尔（卢卡斯·贝尔格瓦尔）增加中场覆盖，双方思路都偏向稳住当前结果。综合两队近况、世界杯小组赛阶段保平避险的心理倾向，以及刚刚互交白卷后短时间内难以再形成高质量机会，平局概率被上调至最高。主队具备一定主动权，因此胜率略高于客队，但瑞典的反击与定位球能力让客胜也不能忽视。最可能的最终比分维持在1比1，剩余时间内若再进球，日本方面前田大然、上田绮世与堂安律具备终结能力，瑞典则更可能通过居凯雷斯的支点作用或埃兰加的反击二度建功，但综合判断维持平局的可能性高于再度破门，因此后续进球者列表保持空缺。"
+      },
+      "sources": [],
+      "cost_usd": 0.0163688,
+      "tokens": {
+        "input": 1109,
+        "output": 663
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.843
+    },
+    {
+      "submitted_at": "2026-06-26T00:30:58+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 75,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Japan",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.33,
+        "draw": 0.42,
+        "away": 0.25
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到75分钟，日本与瑞典1比1战平。上半场尾声瑞典先用Bergvall换下吃到黄牌的Hien稳住后防，下半场56分钟前田大然接堂安律助攻为日本破门，但仅过6分钟Elanga便利用Gyökeres的做球迅速扳平，比赛重新回到拉锯状态。从场面数据看，日本控球率53%、射门7次（射正3次），瑞典射门5次（射正3次）但角球6比1占优，说明瑞典在定位球和边路传中端形成了实质威胁，而日本则在中前场组织上更具主动权。森保一在66分钟一次性换上伊东纯也和小川航基，明显是想用速度和支点强化最后阶段的进攻，这让日本在75分钟后的攻击端权重略有上调。综合来看，世界杯小组赛阶段双方都需要积分，瑞典在扳平后体能与心理都处于相对舒适区，更可能选择保守控制；日本虽有意图争胜，但中场体能下滑、瑞典定位球反击隐患仍在，短时间内强行打穿对方密集防线难度较大。因此平局是当前概率最高的走向，日本主胜次之，瑞典逆转可能性最低，最可能的最终比分仍为1比1。若75分钟后出现进球，日本一侧最可能由刚登场的小川航基（Koki Ogawa）利用禁区抢点或伊东纯也（Junya Ito）的右路突破制造，瑞典一侧则需警惕Gyökeres在对方压上后的反击单点，以及Elanga在边路的二次冲击。"
+      },
+      "sources": [],
+      "cost_usd": 0.0178895,
+      "tokens": {
+        "input": 1065,
+        "output": 754
+      },
+      "tool_calls": 0,
+      "wall_seconds": 40.648
+    },
+    {
+      "submitted_at": "2026-06-26T00:38:38+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 83,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Japan",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.64,
+        "away": 0.18
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到83分钟，日本与瑞典1比1战平。日本由前田大然在56分钟率先破门，瑞典则在62分钟通过埃兰加的进球迅速回应，由约凯雷斯助攻完成扳平。从场面看，日本控球率54%略占优，射门7次、射正3次，整体进攻组织更连贯；瑞典虽然控球稍逊，但通过6次角球展示了定位球的威胁，射门5次、射正同为3次，两队进攻效率接近。日本主帅在66分钟和75分钟连续换上伊东纯也、小川航基等进攻球员，明显意图加强前场冲击；瑞典也用塞马、斯文森等替补稳住中后场节奏，双方都在为最后阶段做准备。考虑到比赛仅剩约7分钟加补时，双方体能下降、阵型趋于谨慎，加之小组赛积分价值使两队都不愿冒险失球，平局是最现实的走向。综合判断，1比1平局概率最高，主胜与客胜机会接近且偏低。若末段仍有进球，日本方面最可能来自刚登场的小川航基的禁区内争顶，或伊东纯也的边路突破制造机会；瑞典方面则更可能依靠约凯雷斯的中路支点作用，以及埃兰加利用反击空当再下一城。最终最可能比分定格在1比1。"
+      },
+      "sources": [],
+      "cost_usd": 0.016613,
+      "tokens": {
+        "input": 1155,
+        "output": 667
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.127
+    },
+    {
+      "submitted_at": "2026-06-26T00:45:19+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Japan",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.76,
+        "away": 0.12
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，比分依旧定格在1-1。日本队在第56分钟由前田大然抢点首开纪录，瑞典则在第62分钟凭借埃兰加的快速反击迅速扳平，两队此后均有过换人调整，日本队连续投入伊东纯也、小川航基、长友佑都和渡边刚等生力军意图抢分，瑞典也通过塞马、斯文松等替补加强边路和体能，整体形成对攻但都未能再下一城。从场面看，日本控球率略占优（54%对46%），射门和射正次数完全持平（各8脚射门、3脚射正），瑞典的角球数（7比2）反映出边路传中威胁更直接，而日本犯规次数偏多（18次），意味着后防线压力不小，刚刚吃到黄牌的谷口彰悟也需要谨慎。进入伤停补时阶段，双方体能下降、阵型回收，加之小组赛阶段一分对两队都有价值，继续维持平局的概率明显抬升，因此和局概率上调至接近四分之三，主客胜机会被大幅压缩。综合补时时长通常3至5分钟、双方均已用满或接近用满换人名额且攻防转换趋于谨慎的情况，最可能的最终比分仍为1-1。如果补时阶段还能再进球，日本方面具有冲击力的小川航基和伊东纯也最具威胁，瑞典则要看耶凯赖斯的支点作用和埃兰加的反击速度，因此把这几名球员列为补时阶段可能的破门人选，但整体概率都不高。"
+      },
+      "sources": [],
+      "cost_usd": 0.018104099999999998,
+      "tokens": {
+        "input": 1098,
+        "output": 759
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.93
+    },
+    {
+      "submitted_at": "2026-06-26T00:52:10+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Japan",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.1,
+        "draw": 0.78,
+        "away": 0.12
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进入第90分钟，日本与瑞典在达拉斯体育场战成1比1。上半场两队互交白卷，下半场节奏明显加快：前田大然在第56分钟由堂安律助攻首开纪录，随后第62分钟埃兰加接居克雷斯传球扳平比分，比分自此再无变化。从场面数据看，日本控球率54%略占优、射门8次、射正3次，瑞典同样有8次射门和3次射正，并在角球上以7比2领先，说明瑞典通过边路和定位球持续制造威胁，而日本则更多依赖中场组织和反击。双方主帅在75分钟前后均完成多人轮换，瑞典在88分钟再次连换两人，明显是为终场冲刺保留体能；日本则用伊东纯也、小川航基等攻击手加强前场，并以谷口彰悟、渡边刚和长友佑都补强防线，意图先稳住平局。考虑到当前已是常规时间最后一分钟，体能下降、补时阶段双方都倾向于谨慎，加之居克雷斯第85分钟领到黄牌后冲抢动作会受限，平局的可能性显著高于任意一方完成绝杀，因此最可能的最终比分维持1比1。若补时阶段真的再入一球，瑞典凭借角球与高点优势（居克雷斯、埃兰加）略具威胁，日本方面替补登场的小川航基和伊东纯也是反击中最可能的终结点，但整体进球概率都偏低，平局收场仍是主基调。"
+      },
+      "sources": [],
+      "cost_usd": 0.0179117,
+      "tokens": {
+        "input": 1171,
+        "output": 734
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.188
+    }
+  ]
+}

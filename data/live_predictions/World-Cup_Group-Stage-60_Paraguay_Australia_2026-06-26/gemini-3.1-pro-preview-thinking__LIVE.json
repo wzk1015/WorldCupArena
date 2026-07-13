@@ -1,0 +1,620 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-60_Paraguay_Australia_2026-06-26",
+  "provider_fixture_id": "19609188",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-26T03:51:51+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 0
+    },
+    "home": "Paraguay",
+    "away": "Australia",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-26T02:00:00+00:00",
+    "venue": "San Francisco Bay Area Stadium",
+    "venue_city": "Santa Clara"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.03,
+      "draw": 0.93,
+      "away": 0.04
+    },
+    "most_likely_score": "0-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入第90分钟，巴拉圭与澳大利亚的比分依然维持在0-0。从全场数据来看，澳大利亚在控球率（56%）和进攻威胁上占据一定优势，共完成10次射门其中4次射正，而巴拉圭的进攻相对乏力，仅有1次射正。尽管双方在下半场进行了多次换人调整试图打破僵局，但防守端均表现稳固，未给对手留下太多绝对机会。由于常规时间已经耗尽，比赛即将进入伤停补时阶段，平局的概率已经极高，达到90%以上。根据当前的比赛节奏和剩余时间，0-0是最可能的最终比分。虽然替补登场的 特特·延吉 等生力军可能会在补时阶段尝试完成绝杀，但产生进球的概率已经非常低。因此，预测本场比赛将以互交白卷的平局收场。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1561,
+    "output": 343
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0037999500000000003,
+  "wall_seconds": 13.247,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.03,\n    \"draw\": 0.93,\n    \"away\": 0.04\n  },\n  \"most_likely_score\": \"0-0\",\n  \"scorers\": [\n    {\n      \"player\": \"Tete Yengi\",\n      \"team\": \"away\",\n      \"minute\": 93,\n      \"p\": 0.02\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入第90分钟，巴拉圭与澳大利亚的比分依然维持在0-0。从全场数据来看，澳大利亚在控球率（56%）和进攻威胁上占据一定优势，共完成10次射门其中4次射正，而巴拉圭的进攻相对乏力，仅有1次射正。尽管双方在下半场进行了多次换人调整试图打破僵局，但防守端均表现稳固，未给对手留下太多绝对机会。由于常规时间已经耗尽，比赛即将进入伤停补时阶段，平局的概率已经极高，达到90%以上。根据当前的比赛节奏和剩余时间，0-0是最可能的最终比分。虽然替补登场的 Tete Yengi 等生力军可能会在补时阶段尝试完成绝杀，但产生进球的概率已经非常低。因此，预测本场比赛将以互交白卷的平局收场。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-26T02:06:17+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 6,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-26T02:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.31,
+        "draw": 0.36,
+        "away": 0.33
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Miguel Almirón",
+          "minute": 68,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Mitchell Duke",
+          "minute": 34,
+          "p": 0.22,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第6分钟，巴拉圭与澳大利亚暂时战成0-0平。从开场阶段的数据来看，客队澳大利亚反客为主，占据了高达75%的控球率，并已经完成了一次射门且命中门框范围，逼迫巴拉圭门将做出了一次扑救，同时还获得了一个角球。相比之下，巴拉圭开局阶段阵型相对回撤，立足于防守反击。考虑到世界杯小组赛的容错率较低，双方在初期的试探后可能会陷入中场的激烈绞杀。基于目前的场面走势，澳大利亚虽然在控球上占优，但巴拉圭的防守韧性极强。预计本场比赛平局的可能性最大，最可能的最终比分为1-1。在后续的比赛中，澳大利亚有望通过边路传中或定位球由 Mitchell Duke 率先打破僵局，而巴拉圭则极有可能利用对手压上后的身后空当，由核心球员 米格尔·阿尔米隆 在下半场完成致命一击扳平比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.014134049999999999,
+      "tokens": {
+        "input": 1233,
+        "output": 2038
+      },
+      "tool_calls": 0,
+      "wall_seconds": 29.921
+    },
+    {
+      "submitted_at": "2026-06-26T02:13:48+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 13,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-26T02:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.38,
+        "away": 0.34
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Mitchell Duke",
+          "minute": 34,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Julio Enciso",
+          "minute": 68,
+          "p": 0.22,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第13分钟，巴拉圭与澳大利亚暂时战成0-0平。从开场阶段的数据来看，澳大利亚反客为主，占据了高达79%的控球率，并已经完成了2次射门（其中1次射正）和2次角球。相比之下，巴拉圭开局较为被动，控球率仅为21%，尚未创造出射门机会，门将已经做出1次关键扑救。这表明巴拉圭目前采取了深度防守反击的策略，而澳大利亚则试图通过控球和前场压迫尽早打破僵局。尽管澳大利亚开局占优，但巴拉圭的防守韧性不容小觑，随着比赛深入，双方的场面预计会逐渐平衡。综合目前的局势，平局的可能性最大，澳大利亚凭借开场的压制力胜率略微领先于巴拉圭。最可能的最终比分预测为1-1。预计澳大利亚可能会在上半场中后段利用边路传中或定位球率先得分，Mitchell Duke是禁区内的重要抢点威胁；而巴拉圭则有望在下半场通过胡里奥·恩西索等球员的速度与个人能力在反击中扳平比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.01502025,
+      "tokens": {
+        "input": 1003,
+        "output": 2217
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.661
+    },
+    {
+      "submitted_at": "2026-06-26T02:21:01+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 21,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-26T02:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.35,
+        "away": 0.4
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Mitchell Duke",
+          "minute": 58,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第21分钟，巴拉圭与澳大利亚目前战成0-0平。从场面数据来看，澳大利亚占据了明显的优势，控球率高达63%，并且已经获得了3次角球和2次射门（其中1次射正），而巴拉圭目前还没有完成任何射门，主要处于被动防守状态。基于澳大利亚在进攻端的压制力，他们打破僵局的可能性更大。预计随着比赛深入，澳大利亚能够利用定位球或边路传中创造出致命机会。综合目前的比赛走势，澳大利亚取胜的概率较高，最可能的最终比分为0-1。预计澳大利亚的进攻球员将在下半场抓住机会打入制胜一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.00641445,
+      "tokens": {
+        "input": 1003,
+        "output": 851
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.095
+    },
+    {
+      "submitted_at": "2026-06-26T02:28:10+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 28,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-26T02:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.35,
+        "away": 0.43
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Mitchell Duke",
+          "minute": 62,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Craig Goodwin",
+          "minute": 75,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Miguel Almirón",
+          "minute": 81,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第28分钟，巴拉圭与澳大利亚暂时战成0-0平。从目前的场面数据来看，澳大利亚占据了明显的优势，控球率高达65%，并且已经完成了3次射门和3次角球，给巴拉圭的防线施加了持续的压力。相比之下，巴拉圭开局较为被动，至今未能完成任何射门，主要依靠密集防守和门将的扑救来维持均势。基于这种场面压制力，澳大利亚获胜的概率正在上升，成为目前最有可能拿下比赛的一方。如果澳大利亚能够保持这种进攻节奏，他们极有希望在下半场打破僵局，因此0-1被预测为最可能的最终比分。在后续进球者方面，澳大利亚的锋线支点 Mitchell Duke 和边路好手 Craig Goodwin 都有较高的破门机会；而巴拉圭若想在反击中有所斩获，核心球员 米格尔·阿尔米隆 将是他们最依赖的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.00381885,
+      "tokens": {
+        "input": 1003,
+        "output": 439
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.116
+    },
+    {
+      "submitted_at": "2026-06-26T02:35:25+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 35,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-26T02:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.2,
+        "draw": 0.38,
+        "away": 0.42
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Mitchell Duke",
+          "minute": 65,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Craig Goodwin",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第35分钟，巴拉圭与澳大利亚暂时战成0-0平。从场面数据来看，澳大利亚占据了明显的优势，控球率高达61%，并且已经完成了3次射门（其中1次射正）和3次角球。相比之下，巴拉圭在进攻端显得十分被动，至今尚未完成任何射门，主要依靠防守反击与门将的扑救来维持均势。考虑到澳大利亚在场面上的压制力以及巴拉圭进攻端的乏力，客队打破僵局的可能性更大。随着比赛深入，巴拉圭的体能下降可能会暴露出更多防守空当。因此，澳大利亚获胜的概率略高于平局，最可能的最终比分预测为0-1。预计澳大利亚的进攻球员如 Mitchell Duke 或 Craig Goodwin 有望在下半场抓住机会攻入制胜一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.00337785,
+      "tokens": {
+        "input": 1003,
+        "output": 369
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.77
+    },
+    {
+      "submitted_at": "2026-06-26T02:42:38+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 42,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-26T02:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.2,
+        "draw": 0.42,
+        "away": 0.38
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第42分钟，巴拉圭与澳大利亚暂时战成0-0平。从上半场的数据来看，澳大利亚占据了明显的场面优势，控球率高达61%，并且完成了4次射门，其中2次射正，迫使巴拉圭门将做出了2次关键扑救。相比之下，巴拉圭在进攻端显得较为挣扎，仅有1次偏出目标的射门，且未能获得任何角球机会，主要依靠防守反击与对手周旋。鉴于上半场即将以互交白卷结束，且双方整体创造的绝对得分机会有限，平局的概率目前最高（42%）。澳大利亚虽然场面占优，但破门乏术，客胜概率紧随其后（38%）。结合目前的攻防节奏，0-0是最可能出现的最终比分。如果下半场僵局被打破，澳大利亚的锋线箭头人物如 Mitchell Duke 更有可能在持续的压迫中寻觅到机会。而巴拉圭若能打出高效反击，米格尔·阿尔米隆 将是他们最具威胁的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.014787149999999999,
+      "tokens": {
+        "input": 1003,
+        "output": 2180
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.151
+    },
+    {
+      "submitted_at": "2026-06-26T02:50:03+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-26T02:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.35,
+        "away": 0.43
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Mitchell Duke",
+          "minute": 68,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Craig Goodwin",
+          "minute": 75,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场比赛结束，巴拉圭与澳大利亚暂时战成0-0平。从前45分钟的比赛数据来看，澳大利亚占据了明显的场上主动权，控球率高达62%，并且完成了6次射门，其中3次射正。相比之下，巴拉圭的进攻显得十分乏力，仅有1次偏出目标的射门，且门将已经做出了3次关键扑救，力保城门不失。鉴于澳大利亚在场面上的压制力和创造出的实质性威胁，他们打破僵局的可能性更大。随着比赛进入下半场，巴拉圭防线的体能下降可能会暴露出更多空当。因此，客队澳大利亚最终获胜的概率较高，最可能的最终比分预测为0-1。预计澳大利亚会在下半场中段通过持续的施压取得进球，Mitchell Duke 等锋线球员将是主要的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.00339675,
+      "tokens": {
+        "input": 1003,
+        "output": 372
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.485
+    },
+    {
+      "submitted_at": "2026-06-26T03:13:22+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 58,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-26T02:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.45,
+        "away": 0.33
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第58分钟，巴拉圭与澳大利亚依然维持0-0的平局。从场面数据来看，澳大利亚占据了明显的优势，控球率高达63%，并完成了6次射门（其中3次射正），获得了3个角球。相比之下，巴拉圭在进攻端显得较为被动，仅有37%的控球率和1次射正，主要依靠门将的3次成功扑救力保城门不失。下半场伊始，巴拉圭换上了毛里西奥（Mauricio）以期改善进攻，而澳大利亚的中场杰克逊·欧文（杰克逊·欧文）则领到了一张黄牌。考虑到比赛已经进入后半程且双方均未打破僵局，平局的概率逐渐上升并成为当前最可能的结果。尽管澳大利亚在场面上更具侵略性，有一定机会在比赛尾声阶段通过定位球或阵地战由杰克逊·欧文等人完成破门，但巴拉圭坚韧的防守使得0-0成为最可能的最终比分。如果巴拉圭能够抓住反击机会，替补登场的毛里西奥将是潜在的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.01594425,
+      "tokens": {
+        "input": 1139,
+        "output": 2341
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.718
+    },
+    {
+      "submitted_at": "2026-06-26T03:21:02+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 66,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-26T02:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.55,
+        "away": 0.27
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第66分钟，巴拉圭与澳大利亚依然维持着0-0的平局。从目前的场面数据来看，澳大利亚占据了明显的控球优势（62%），并且在射门数（6对4）和射正数（3对1）上也略微领先。然而，双方在进攻端的绝对机会都不多，巴拉圭门将做出了3次扑救，力保城门不失。随着比赛进入最后不到半小时的阶段，体能下降和防守求稳的心态将使进球变得更加困难。因此，平局的概率大幅上升，成为目前最可能的结果。如果比赛僵局被打破，澳大利亚可能会依靠持续的压迫由米切尔·杜克（Mitchell Duke）等前锋完成致命一击，而巴拉圭则可能利用胡里奥·恩西索（胡里奥·恩西索）的个人能力在反击中寻找机会。综合来看，0-0是最可能的最终比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.011389350000000001,
+      "tokens": {
+        "input": 1139,
+        "output": 1618
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.931
+    },
+    {
+      "submitted_at": "2026-06-26T03:28:32+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 73,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-26T02:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.15,
+        "draw": 0.6,
+        "away": 0.25
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第73分钟，巴拉圭与澳大利亚依然维持0-0的平局。从场面数据来看，澳大利亚占据了明显的优势，控球率高达61%，并创造了9次射门（3次射正），而巴拉圭则处于被动防守状态，仅有4次射门（1次射正）。巴拉圭门将贡献了3次关键扑救，力保城门不失。随着比赛进入尾声，双方体能下降，打破僵局的难度逐渐增大。考虑到剩余时间有限且防守端表现稳固，平局成为了目前最可能的结果，0-0是最具可能性的最终比分。如果比赛尾声阶段出现绝杀，澳大利亚替补登场的阿伊丁·赫鲁斯蒂奇（阿伊丁·赫鲁斯蒂奇）或巴拉圭的毛里西奥（Mauricio）将是潜在的关键人物，他们充沛的体能可能会在反击或前场压迫中制造致命威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.01560405,
+      "tokens": {
+        "input": 1463,
+        "output": 2233
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.419
+    },
+    {
+      "submitted_at": "2026-06-26T03:35:57+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 80,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-26T02:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.68,
+        "away": 0.2
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第80分钟，巴拉圭与澳大利亚依然维持着0-0的平局。从场面数据来看，澳大利亚占据了明显的优势，控球率高达61%，并创造了9次射门机会（其中3次射正）。然而，巴拉圭的防守十分顽强，门将贡献了3次关键扑救，力保城门不失。巴拉圭在进攻端显得较为被动，仅有4次射门和1次射正。随着比赛进入尾声，双方体能下降，打破僵局的难度越来越大。综合当前的时间和场上局势，本场比赛以0-0和局收场的概率极高。尽管如此，双方在下半场换上的生力军（如澳大利亚的 阿伊丁·赫鲁斯蒂奇 和巴拉圭的 亚历克斯·阿塞）仍有可能在最后时刻或伤停补时阶段利用反击或定位球制造威胁，但整体进球概率已经较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.01474095,
+      "tokens": {
+        "input": 1283,
+        "output": 2126
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.203
+    },
+    {
+      "submitted_at": "2026-06-26T03:43:51+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 88,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-26T02:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.88,
+        "away": 0.07
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第88分钟，巴拉圭与澳大利亚的比分依然维持在0-0。从全场数据来看，澳大利亚在场面上占据一定优势，控球率达到59%，并创造了9次射门（其中3次射正），而巴拉圭则更多处于守势，门将贡献了3次关键扑救，全队仅有1次射正。随着比赛进入尾声，双方体能均已大幅消耗，且防守端都没有暴露出致命破绽。在剩余的常规时间与伤停补时内，打破僵局的难度极大。因此，本场比赛以平局收场的概率极高，最可能的最终比分就是0-0。尽管进球希望渺茫，但如果出现绝杀，更有可能由替补登场的生力军（如澳大利亚的克里斯蒂安·沃尔帕托或巴拉圭的加布里埃尔·阿瓦洛斯）在补时阶段利用反击或定位球乱战机会完成。"
+      },
+      "sources": [],
+      "cost_usd": 0.0144879,
+      "tokens": {
+        "input": 1348,
+        "output": 2075
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.512
+    },
+    {
+      "submitted_at": "2026-06-26T03:51:51+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Paraguay",
+        "away": "Australia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-26T02:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.93,
+        "away": 0.04
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，巴拉圭与澳大利亚的比分依然维持在0-0。从全场数据来看，澳大利亚在控球率（56%）和进攻威胁上占据一定优势，共完成10次射门其中4次射正，而巴拉圭的进攻相对乏力，仅有1次射正。尽管双方在下半场进行了多次换人调整试图打破僵局，但防守端均表现稳固，未给对手留下太多绝对机会。由于常规时间已经耗尽，比赛即将进入伤停补时阶段，平局的概率已经极高，达到90%以上。根据当前的比赛节奏和剩余时间，0-0是最可能的最终比分。虽然替补登场的 特特·延吉 等生力军可能会在补时阶段尝试完成绝杀，但产生进球的概率已经非常低。因此，预测本场比赛将以互交白卷的平局收场。"
+      },
+      "sources": [],
+      "cost_usd": 0.0037999500000000003,
+      "tokens": {
+        "input": 1561,
+        "output": 343
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.247
+    }
+  ]
+}

@@ -1,0 +1,1375 @@
+{
+  "fixture_id": "World-Cup_Round-of-32_Germany_Paraguay_2026-06-29",
+  "provider_fixture_id": "19606957",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-29T23:24:40+00:00",
+  "live": {
+    "status": "Penalties",
+    "elapsed": 130,
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "home": "Germany",
+    "away": "Paraguay",
+    "competition": "World Cup",
+    "stage": "Round of 32",
+    "kickoff_utc": "2026-06-29T20:30:00+00:00",
+    "venue": "Boston Stadium",
+    "venue_city": "Foxborough"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.17,
+      "draw": 0.02,
+      "away": 0.81
+    },
+    "most_likely_score": "1-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进行至第130分钟，常规时间和加时赛比分锁定在1比1，目前进入点球大战阶段。回顾过程：巴拉圭由胡里奥·恩西索于第42分钟率先打破僵局，德国队在第54分钟由凯·哈弗茨接弗洛里安·维尔茨助攻扳平，此后120分钟双方未再改写比分。从场面数据看，德国控球率高达75%，射门21次、射正6次、角球16次，全面压制，但巴拉圭门将贡献6次扑救，加上后防顽强，硬是把比赛拖入点球。德国主帅Nagelsmann在加时阶段连续换上Amiri、Thiaw等生力军，意图制造决胜机会，但巴拉圭主帅Alfaro调度的Velázquez、Ojeda、Sanabria、Balbuena等替补也稳住了防线。进入点球大战后，德国首罚Havertz失手，此后Kimmich、Musiala罚中，三轮2中；巴拉圭三人Mauricio、古斯塔沃·戈麦斯、Galarza Fonda全部罚进，目前点球比分3比2领先一球，且仍各剩两轮主罚机会。这意味着德国进入‘必进+对手必失’的被动局面，每一轮都没有容错空间，而巴拉圭只要再保持一次稳定主罚就能直接终结比赛。考虑到点球大战的天然方差以及德国后续主罚者（Woltemade、Amiri等）经验略浅，综合判断巴拉圭晋级的概率明显占优，因此整体胜负概率大幅向客队倾斜，平局概率几乎归零，只保留极小尾部用于德国连续追平后进入突然死亡的反转情景。最可能的最终走向是巴拉圭通过点球大战胜出，故以1比2体现客队带走比赛的结果。130分钟之后能够改变结果的‘进球’只可能来自点球大战的后续主罚，因此重具体比分判断点球轮次中尚未出场的主罚人选：巴拉圭方面Sanabria和Velázquez具备较高把握，德国一侧则取决于Woltemade和Amiri能否顶住压力维持悬念，他们的命中与否将直接决定比赛的最终归属。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2265,
+    "output": 952
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0259925,
+  "wall_seconds": 45.32,
+  "error": null,
+  "raw_text": "```json\n{\n  \"win_probs\": {\"home\": 0.17, \"draw\": 0.02, \"away\": 0.81},\n  \"most_likely_score\": \"1-2\",\n  \"scorers\": [\n    {\"player\": \"Antonio Sanabria\", \"team\": \"away\", \"minute\": 131, \"p\": 0.55},\n    {\"player\": \"Nick Woltemade\", \"team\": \"home\", \"minute\": 132, \"p\": 0.5},\n    {\"player\": \"Gustavo Velázquez\", \"team\": \"away\", \"minute\": 133, \"p\": 0.42},\n    {\"player\": \"Nadiem Amiri\", \"team\": \"home\", \"minute\": 134, \"p\": 0.45}\n  ],\n  \"reasoning\": {\"overall\": \"比赛进行至第130分钟，常规时间和加时赛比分锁定在1比1，目前进入点球大战阶段。回顾过程：巴拉圭由Julio Enciso于第42分钟率先打破僵局，德国队在第54分钟由Kai Havertz接Florian Wirtz助攻扳平，此后120分钟双方未再改写比分。从场面数据看，德国控球率高达75%，射门21次、射正6次、角球16次，全面压制，但巴拉圭门将贡献6次扑救，加上后防顽强，硬是把比赛拖入点球。德国主帅Nagelsmann在加时阶段连续换上Amiri、Thiaw等生力军，意图制造决胜机会，但巴拉圭主帅Alfaro调度的Velázquez、Ojeda、Sanabria、Balbuena等替补也稳住了防线。进入点球大战后，德国首罚Havertz失手，此后Kimmich、Musiala罚中，三轮2中；巴拉圭三人Mauricio、Gustavo Gómez、Galarza Fonda全部罚进，目前点球比分3比2领先一球，且仍各剩两轮主罚机会。这意味着德国进入‘必进+对手必失’的被动局面，每一轮都没有容错空间，而巴拉圭只要再保持一次稳定主罚就能直接终结比赛。考虑到点球大战的天然方差以及德国后续主罚者（Woltemade、Amiri等）经验略浅，综合判断巴拉圭晋级的概率明显占优，因此整体胜负概率大幅向客队倾斜，平局概率几乎归零，只保留极小尾部用于德国连续追平后进入突然死亡的反转情景。最可能的最终走向是巴拉圭通过点球大战胜出，故以1比2体现客队带走比赛的结果。130分钟之后能够改变结果的‘进球’只可能来自点球大战的后续主罚，因此重点预测点球轮次中尚未出场的主罚人选：巴拉圭方面Sanabria和Velázquez具备较高把握，德国一侧则取决于Woltemade和Amiri能否顶住压力维持悬念，他们的命中与否将直接决定比赛的最终归属。\"},\n  \"sources\": []\n}\n```",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-29T20:35:58+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 5,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.23,
+        "away": 0.15
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Jamal Musiala",
+          "minute": 38,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Kai Havertz",
+          "minute": 67,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 74,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Niclas Füllkrug",
+          "minute": 82,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Miguel Almirón",
+          "minute": 71,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Antonio Sanabria",
+          "minute": 78,
+          "p": 0.16,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第5分钟，德国与巴拉圭暂时0-0僵持。从开局数据看，德国控球率高达74%，已经牢牢掌握节奏，但首脚射门未能命中目标；巴拉圭则借助前场反抢制造了1次角球和1次射正，对德国门将形成一次实质性威胁，整体打的是低位防守加快速反击的思路。综合两队世界杯1/16赛阶段的基本面，德国阵容厚度、攻击端创造力和定位球能力都明显占优，而巴拉圭虽然组织顽强，但持续高压消耗下半场容易掉档，这与开场阶段的场面观感一致。因此主胜概率维持在六成以上，平局保留一定空间以反映德国控球未转化为射正的隐患，客胜则因巴拉圭具备反击锐度而保留小幅权重。最可能的最终比分定在2-1：德国凭借中场穿插和边路传中在上半场后段及下半场打入两球，巴拉圭则有较大概率通过一次反击或定位球扳回一城。后续进球人选方面，主队侧重穿插型攻击手与禁区终结点，穆夏拉的内切推射、维尔茨的二点抢点、哈弗茨的禁区抢点以及替补登场后的菲尔克鲁格高点都是高概率得分路径；客队进球更可能来自反击端的阿尔米隆和禁区支点萨纳夫里亚，因此将其得分时间设定在比赛后段、巴拉圭加强反扑的窗口期。"
+      },
+      "sources": [],
+      "cost_usd": 0.0185,
+      "tokens": {
+        "input": 1055,
+        "output": 789
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.365
+    },
+    {
+      "submitted_at": "2026-06-29T20:42:02+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 12,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.24,
+        "away": 0.14
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 38,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 64,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Niclas Füllkrug",
+          "minute": 85,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Antonio Sanabria",
+          "minute": 70,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Miguel Almirón",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第12分钟，德国与巴拉圭仍然0-0僵持。从开局阶段来看，德国队明显掌控了比赛节奏，控球率高达77%，并且已经制造了一次角球和两次射门，整体压制态势非常清晰。巴拉圭虽然在反击中取得过一次射正，给德国门将带来一次扑救，但整体上更多是在退守半场，依靠零星反击寻找机会。综合淘汰赛阶段的实力对比和当前场面，德国推进顺畅、压迫线偏高，进球只是时间问题，因此主队胜率上调至62%左右，平局保留约24%的概率以应对德国惯有的转化效率问题，而巴拉圭爆冷取胜的可能性压缩到14%附近。最可能的最终比分定为2-0：以德国当前的控球与边路推进强度，预计在上半场后段就能通过定位球或禁区内抢点取得领先，下半场再依靠体能优势和替补冲击扩大比分；同时巴拉圭防线在长时间承压下失误概率上升，但其反击锋线缺乏稳定终结点，全场难以攻破德国门将把守的球门。后续进球点上，哈弗茨作为支点中锋在禁区抢点和头球争顶上最具威胁，最有可能率先打破僵局；穆夏拉与维尔茨之间的连线是德国推进的核心，下半场加速阶段任何一方都可能完成单刀或远射得手；菲尔克鲁格作为替补奇兵，比赛末段的禁区终结能力同样值得关注。巴拉圭方面，萨纳布里亚的回撤接应和阿尔米隆的边路冲击是仅有的反击亮点，若能抓住德国压上后留下的身后空间，存在偷袭破门的可能，但概率明显低于德国阵中的几名主要射手。"
+      },
+      "sources": [],
+      "cost_usd": 0.020964200000000002,
+      "tokens": {
+        "input": 1056,
+        "output": 922
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.686
+    },
+    {
+      "submitted_at": "2026-06-29T20:48:17+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 18,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.63,
+        "draw": 0.22,
+        "away": 0.15
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Jamal Musiala",
+          "minute": 38,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 67,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Kai Havertz",
+          "minute": 74,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Niclas Füllkrug",
+          "minute": 82,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Serge Gnabry",
+          "minute": 88,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Miguel Almirón",
+          "minute": 71,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Julio Enciso",
+          "minute": 79,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第18分钟，德国与巴拉圭仍然互交白卷。从场上走势来看，德国队完全掌控了局面，控球率高达79%，已经制造2次角球与2次射门，整体阵型压得较高，传导节奏稳定，逐渐把对手压回半场。巴拉圭虽然控球只有21%，但凭借一次防反完成了全场唯一一脚射正，让门将诺伊尔做出扑救，说明南美球队的反击威胁不能忽视，这也是为何巴拉圭依旧保留着一定的爆冷概率。\n\n从这种局面推断，德国队后续打破僵局的概率明显占优：他们的中前场组合具备在阵地战中通过短传渗透或边路传中找到机会的能力，控球时间越长越能放大体能与技术优势，进入下半场后对方防线下沉、体力下降时进球概率会进一步上升。因此把主队获胜概率提到0.63左右，平局给到0.22，留给巴拉圭爆冷的空间约0.15，符合当前场面与淘汰赛阶段强弱分明的基本盘。\n\n最可能的最终比分定为2-0：德国大概率会在上半场结束前或下半场中段先入一球，随后凭借控球优势在比赛后段再下一城；而巴拉圭虽有反击,但要在德国密集中场前形成多次有效射门难度较大，单刀或定位球扳平的概率有限，所以0-0、1-0、2-1等也是次级备选，但综合权衡后2-0是最佳落点。\n\n后续进球人选方面，穆夏拉（Musiala）作为前场最具突破能力的球员，最有可能率先撕开防线；维尔茨（Wirtz）在二点策应与远射上很可能制造下半场的第二球；哈弗茨（Havertz）作为支点的抢点也是常规威胁；替补登场的菲尔克鲁格（Füllkrug）和格纳布里（Gnabry）则是比赛末段加强进攻时的潜在得分点。巴拉圭一侧，阿尔米隆（Almirón）和恩西索（Enciso）具备一击致命的反击能力，若有机会进球大概率出现在下半场中后段的转换瞬间。"
+      },
+      "sources": [],
+      "cost_usd": 0.0203352,
+      "tokens": {
+        "input": 1056,
+        "output": 888
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.782
+    },
+    {
+      "submitted_at": "2026-06-29T20:54:39+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 24,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.24,
+        "away": 0.14
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 71,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 76,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Antonio Sanabria",
+          "minute": 82,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Miguel Almiron",
+          "minute": 88,
+          "p": 0.16,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第24分钟，德国与巴拉圭在波士顿体育场仍是0-0。开局阶段德国完全掌控了比赛节奏，控球率高达84%，已经制造了2次角球和2次射门，显示出明显的场面压制力。巴拉圭则被压缩在本方半场，仅有16%的控球，但凭借一次反击形成1次射正，迫使德国门将做出扑救，说明巴拉圭具备一定的反击威胁，并非完全没有进攻手段。综合赛前实力差距与目前的场面走势，德国晋级形势依旧明朗，胜率维持在六成附近；考虑到比赛仍是0-0且巴拉圭在淘汰赛通常会通过密集防守加快速反击拖入消耗战，平局概率有所抬升，而巴拉圭爆冷的可能性相对有限。基于德国持续的控球压制，预计他们会在下半场开始后通过边路传中和禁区前沿渗透逐步打破僵局，而巴拉圭在体能下降后防线容易出现漏洞，但他们的反击仍可能换来一粒安慰球，因此最可能的最终比分判断为2-1。后续进球点方面，德国这边Havertz作为中锋是禁区内最直接的得分点，Musiala和Wirtz凭借持球突破和远射也具备随时改写比分的能力；巴拉圭一侧，中锋Sanabria和边路快马Almiron在反击中最具威胁，是潜在的破门人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0175417,
+      "tokens": {
+        "input": 1056,
+        "output": 737
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.233
+    },
+    {
+      "submitted_at": "2026-06-29T21:04:38+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 34,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.27,
+        "away": 0.15
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 63,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 71,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 78,
+          "p": 0.17,
+          "team": "home"
+        },
+        {
+          "player": "Niclas Füllkrug",
+          "minute": 84,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Antonio Sanabria",
+          "minute": 67,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Miguel Almirón",
+          "minute": 82,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第34分钟，德国与巴拉圭暂时0-0。从场面数据来看，德国队完全掌控了比赛节奏，控球率高达83%，并已制造2个角球和3次射门，整体压迫力明显占优；巴拉圭则被压制在自己半场，控球只有17%，但靠一次射正展示了反击的威胁，门将也已有一次扑救。德国虽然射门数据领先，却尚未取得射正，说明进攻在禁区前沿仍欠火候，这也是比分依旧胶着的原因。综合双方世界杯淘汰赛的整体实力差距、德国的控场能力以及巴拉圭偶有的反击机会，主队取胜仍是最可能的走向，胜率明显高于平局，而巴拉圭爆冷的可能性被压得较低。考虑到德国进攻效率有待提升、巴拉圭防线相对密集，预计德国会在下半场依靠边路传中或定位球打破僵局，最可能的最终比分是1-0。后续破门人选方面，哈弗茨在禁区内的支点作用、维尔茨与穆夏拉的二线插上都最具威胁，富尔克鲁格作为替补登场后的抢点也值得关注；巴拉圭方面若能扳平或追近，则更可能由前锋萨纳布里亚或边路的阿尔米隆通过反击完成。"
+      },
+      "sources": [],
+      "cost_usd": 0.0171162,
+      "tokens": {
+        "input": 1056,
+        "output": 714
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.743
+    },
+    {
+      "submitted_at": "2026-06-29T21:10:44+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 40,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.27,
+        "away": 0.15
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Florian Wirtz",
+          "minute": 63,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Kai Havertz",
+          "minute": 71,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Miguel Almirón",
+          "minute": 74,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Antonio Rüdiger",
+          "minute": 85,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Julian Brandt",
+          "minute": 82,
+          "p": 0.09,
+          "team": "home"
+        },
+        {
+          "player": "Julio Enciso",
+          "minute": 88,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到40分钟，比分仍是0-0。从场面来看，德国队完全掌控了局势，控球率高达80%，并且已经制造了3次角球和3次射门，持续在巴拉圭半场施压。巴拉圭则以低位防守为主，控球仅20%，但反击中也曾打出一次射正，门将的扑救一定程度上稳住了局势。德国的攻势虽密集，却尚未转化为射正，说明巴拉圭的防线组织相当紧凑，禁区内拦截到位，这也是上半场依然零封的关键。考虑到淘汰赛阶段的谨慎节奏、德国压倒性的控球以及巴拉圭体能消耗将在下半场加剧，德国攻入首球的概率明显提升，因此将主队胜率上调至接近六成，平局保留较高权重以反映目前0-0且尚无射正的现状，巴拉圭爆冷的可能性较低但不可忽视，毕竟他们具备一击致命的反击能力。最可能的最终比分定为1-0，符合德国主导但破门效率有限的整体走势。后续进球方面，最有希望率先打破僵局的是德国的前场创造核心维尔茨（Wirtz）和支点哈弗茨（Havertz），穆夏拉（Musiala）的突破和定位球中的吕迪格（Rüdiger）头球同样是潜在得分点；如果出现意外失球，巴拉圭方面具备速度优势的阿尔米隆（Almirón）和恩西索（Enciso）将是反击端最可能的破门人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0188182,
+      "tokens": {
+        "input": 1056,
+        "output": 806
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.044
+    },
+    {
+      "submitted_at": "2026-06-29T21:16:56+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.5,
+        "draw": 0.27,
+        "away": 0.23
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 74,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 82,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Niclas Füllkrug",
+          "minute": 88,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Julio Enciso",
+          "minute": 70,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Miguel Almirón",
+          "minute": 80,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场结束前的最后时刻，德国在主场0-1落后巴拉圭，恩西索(胡里奥·恩西索)在第42分钟由加拉萨(Galarza Fonda)助攻完成破门。从场面上看，德国掌握了高达78%的控球率，角球4-2、射门4-3均占优，但4次射门0射正，进攻终结环节明显欠缺穿透力；巴拉圭则用极低的控球完成2脚射正并打入1球，效率远高于对手，这是典型的反击得分剧本。考虑到还有完整的下半场45分钟可供翻盘，加之德国的整体板凳深度和淘汰赛阶段被迫压上的战术倾向，主队扳平乃至反超的概率仍明显高于继续溃败。比赛走势预计是德国进一步压上，巴拉圭收缩防守伺机反击，下半场场面会被进一步打开，给德国制造更多机会，但同时也增加被再次打反击的风险，因此主胜概率上调至五成左右，平局保持在四分之一附近，巴拉圭爆冷取胜的概率维持在两成出头。最可能的最终比分定在2-1，对应德国在下半场通过中前场轮换和边路传中至少打入两球完成逆转。后续进球点更倾向于德国的禁区终结者哈弗茨(凯·哈弗茨)和具备远射与突破能力的维尔茨(弗洛里安·维尔茨)、穆夏拉(贾马尔·穆西亚拉)，替补登场的中锋富尔克鲁格(Füllkrug)在比赛末段也是高价值目标人选；巴拉圭一侧仍以已经状态在线的恩西索和边路反击点阿尔米隆(Almirón)为主要可能取分手，但概率明显低于德国球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.0190069,
+      "tokens": {
+        "input": 957,
+        "output": 836
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.26
+    },
+    {
+      "submitted_at": "2026-06-29T21:39:14+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 54,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.38,
+        "away": 0.28
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 72,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 78,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 84,
+          "p": 0.17,
+          "team": "home"
+        },
+        {
+          "player": "Leon Goretzka",
+          "minute": 88,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Julio Enciso",
+          "minute": 81,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到下半场第54分钟，德国0比1落后巴拉圭，唯一进球来自第42分钟恩西索（胡里奥·恩西索）的破门，加拉尔萨·丰达助攻。从场面上看，德国完全掌控节奏，控球率高达79%，角球6比2，射门5比3，但关键问题是5脚射门竟然没有一次命中目标，进攻终结质量明显不足。巴拉圭则展现出极强的效率，3射2正打入1球，典型的低控球高反击模式。半场结束后德国立刻换上戈雷茨卡加强中场推进，意图明显。基于此，下半场德国大概率持续围攻，进球可能性逐步累积，但巴拉圭的反击和定位球防守同样具备杀伤力，平局成为风险中位的最可能结果。综合判断，德国扳平概率略高于继续落败，主胜与平局接近，平局略占优；考虑到德国进攻效率低下、时间还剩约35分钟加补时，最可能的最终比分定为1比1。后续进球预测方面，德国端哈弗茨（凯·哈弗茨）作为禁区终结点最具威胁，穆西亚拉（贾马尔·穆西亚拉）和维尔茨（弗洛里安·维尔茨）通过创造力打开局面的概率次之，戈雷茨卡后插上抢点也是潜在路径；巴拉圭若再下一城，恩西索延续手感的可能性最大，但整体概率受制于其有限的反击次数。"
+      },
+      "sources": [],
+      "cost_usd": 0.0172494,
+      "tokens": {
+        "input": 1007,
+        "output": 731
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.169
+    },
+    {
+      "submitted_at": "2026-06-29T21:45:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 60,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.3,
+        "away": 0.42
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第60分钟，德国0-1落后巴拉圭，恩西索(胡里奥·恩西索)第42分钟由加拉萨·丰达助攻打入制胜球。从场面看，德国掌控了77%的控球率，已经累计6次角球和5次射门，但射正数为0，进攻效率明显不足，缺乏穿透防线的最后一击。巴拉圭虽然控球仅有23%，但4次射门中3次射正并把握住关键机会，反击效率极高，且犯规数仅2次，防守组织纪律性出色。半场德国已经换上戈雷茨卡换下纳梅查，意图加强中场推进与禁区前的支援。后续30分钟德国必然继续压上，主动权与领土优势会持续放大，但巴拉圭五后卫式的低位防守与门将的稳定表现使其要打破僵局并不容易；同时巴拉圭利用反击再下一城的可能性仍然存在。综合权衡，巴拉圭获胜概率略高于平局与德国逆转，三者差距并不悬殊。最可能的最终比分判断为0-1，即巴拉圭守住一球优势完赛。若仍有进球出现，德国方面最具威胁的点是哈弗茨(Havertz)在禁区内的支点作用与维尔茨(Wirtz)的肋部渗透，富尔克鲁格(Füllkrug)若登场可作为高点冲击；巴拉圭方面恩西索仍是反击核心，阿尔米隆(Almirón)在快速转换中也存在偷袭机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.0171754,
+      "tokens": {
+        "input": 1007,
+        "output": 727
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.12
+    },
+    {
+      "submitted_at": "2026-06-29T21:52:02+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 67,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.3,
+        "away": 0.18
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 82,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Gabriel Ávalos",
+          "minute": 88,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行至67分钟，双方1比1战平。巴拉圭凭借第42分钟恩西索（胡里奥·恩西索）抓住反击机会率先破门，但德国队在第54分钟由哈弗茨（凯·哈弗茨）接维尔茨（弗洛里安·维尔茨）助攻迅速扳平。从场面统计看，德国队控球率高达78%，角球6比2、射门8比4占优，明显掌握主动权，只是射正仅1次，转化效率偏低；巴拉圭4次射门有3次射正，进攻效率突出，但整体被压制，且已经在55与58分钟连续用恩西索和阿巴洛斯（加布里埃尔·阿瓦洛斯）换下进攻核心，攻防重心进一步向防守倾斜。综合来看，德国队下半场剩余时间将继续围攻，凭借边路传中、维尔茨与哈弗茨的组合，仍有较大概率在中后段打入制胜球，因此主胜概率最高，平局其次，巴拉圭凭借反击偷取胜局的可能性最低。最可能的最终比分为2比1德国小胜。后续进球方面，哈弗茨已经进入状态、抢点能力强，是主队最可能的破门点；维尔茨持续制造威胁，二次破门或再送助攻概率不低；巴拉圭如果还能进球，最可能来自新换上的中锋阿巴洛斯，在反击或定位球中冲击德国后防。"
+      },
+      "sources": [],
+      "cost_usd": 0.0162467,
+      "tokens": {
+        "input": 1156,
+        "output": 647
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.06
+    },
+    {
+      "submitted_at": "2026-06-29T21:58:20+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 73,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.45,
+        "draw": 0.33,
+        "away": 0.22
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 82,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 86,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 80,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Deniz Undav",
+          "minute": 88,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Gabriel Ávalos",
+          "minute": 84,
+          "p": 0.09,
+          "team": "away"
+        },
+        {
+          "player": "Mauricio",
+          "minute": 90,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第73分钟，德国1-1战平巴拉圭，进入决定淘汰赛走向的最后阶段。场面上德国完全掌控节奏，控球率高达78%，角球6-2、总射门8-5明显占优，显示出持续的区域压制；不过射正只有1次，转化效率仍是隐忧。巴拉圭依靠42分钟胡里奥·恩西索接Galarza Fonda助攻先入一球，但德国在54分钟由Havertz抢点扳平，势头随后倒向主队。半场后德国先换上Nmecha加强中场覆盖，63分钟再用Musiala替下Undav释放进攻能量，意图明确就是争取在常规时间解决战斗。巴拉圭则在55与57分钟连续换上Ávalos和毛里西奥，更多是为了体能补充和打反击预留出口，而非加强阵地战。综合控球、射门趋势与换人意图，德国在剩余约20分钟取得领先的可能性最高，因此主胜概率上调至0.45，平局仍有0.33，巴拉圭凭借淘汰赛偷一球或拖入加时的机会保留0.22。最可能的最终比分定在2-1，符合德国保持压制并打入一球、巴拉圭难以再创造高质量射门的判断。后续进球人选方面，Havertz作为禁区终结点最具威胁，Musiala和Wirtz的串联与远射也很可能制造破门，Undav作为替补前锋具备抢点价值；巴拉圭一侧，新登场的Ávalos身体对抗强，毛里西奥在反击中具备速度，是仅有的两个具备改变比分能力的点。"
+      },
+      "sources": [],
+      "cost_usd": 0.0189477,
+      "tokens": {
+        "input": 1206,
+        "output": 783
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.759
+    },
+    {
+      "submitted_at": "2026-06-29T22:04:20+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 79,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.46,
+        "away": 0.2
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第79分钟，德国与巴拉圭在波士顿球场战成1-1。上半场第42分钟恩西索接加拉萨·丰达助攻为巴拉圭率先破门，下半场第54分钟哈弗茨在维尔茨的传球后扳平比分。从场面数据看，德国全面压制对手——控球率高达77%，角球8比3，射门9比7，但射正只有1次，进攻在最后一传和射门选择上明显欠缺锐度；巴拉圭虽然控球仅23%，却把7次射门中的4次打正，门将的工作量反而是德国的三倍，反击效率非常高。教练层面，德国在第63分钟换上穆夏拉加强组织和突破，巴拉圭则连续两次换人补充前场和中场体能，第65分钟库巴斯吃到黄牌也意味着他们后腰区域开始承压。综合来看，德国掌握球权和领土优势，最后十多分钟仍会持续围攻，但巴拉圭密集防守加快速反击的策略足以让他们守住一分进入加时的可能性最高，因此平局概率最大；德国凭借替补攻击群仍有相当机会绝杀，主胜概率次之；巴拉圭再下一城需要再次完成高质量反击，难度略大但并非没有。最可能的最终比分定为1-1。后续进球候选方面，德国一侧穆夏拉作为新鲜替补在禁区前沿的威胁最大，哈弗茨的支点抢点能力以及维尔茨的远射和直塞同样具备终结价值；巴拉圭一侧若再进一球，新登场的阿瓦洛斯抢点和毛里西奥后插上反击的可能性最高，且更可能出现在补时阶段的快速转换中。"
+      },
+      "sources": [],
+      "cost_usd": 0.020264900000000002,
+      "tokens": {
+        "input": 1252,
+        "output": 845
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.161
+    },
+    {
+      "submitted_at": "2026-06-29T22:10:23+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 85,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.32,
+        "draw": 0.5,
+        "away": 0.18
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第85分钟，比分1比1。巴拉圭在第42分钟由胡里奥·恩西索（恩西索）头筹破门，德国第54分钟通过凯·哈弗茨（哈弗茨）扳平，弗洛里安·维尔茨（维尔茨）送出助攻。从场面看，德国压制非常明显，控球率高达77%，角球8比3、总射门9比6，处于全面主导态势；但射正只有1次，进攻效率与终结能力始终是隐患，反观巴拉圭4次射正显示其防反具有威胁。巴拉圭通过古斯塔沃·卡瓦列罗、Mauricio两次换人加固中后场和体能，安德烈斯·库瓦斯吃到黄牌也说明他们已进入贴身防守消耗节奏。德国方面贾马尔·穆西亚拉（穆夏拉）第63分钟登场带来突破点，加上Havertz、Wirtz在前场依旧活跃，最后5分钟加补时仍有机会创造定位球与禁区混战。综合来看，平局概率最高，德国保留一定的绝杀可能，巴拉圭则更多依赖偶发反击；因此最可能最终比分维持1比1，比赛走向加时的概率偏大。后续进球若出现，更可能来自德国阵中的Havertz、Musiala或Wirtz在禁区内的二点球与角球争抢，巴拉圭一侧加布里埃尔·阿瓦洛斯作为换上的支点中锋是最具威胁的反击落点。"
+      },
+      "sources": [],
+      "cost_usd": 0.0166759,
+      "tokens": {
+        "input": 1252,
+        "output": 651
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.151
+    },
+    {
+      "submitted_at": "2026-06-29T22:16:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.45,
+        "draw": 0.35,
+        "away": 0.2
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 105,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 98,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 115,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Gabriel Ávalos",
+          "minute": 110,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第90分钟，德国与巴拉圭1比1战平。上半场第42分钟恩西索接加拉萨·丰达助攻为巴拉圭首开纪录，下半场第54分钟哈弗茨接维尔茨传球扳平比分，此后场面继续呈现一边倒态势。德国控球率高达77%，射门12次、角球8次，明显掌握主动；巴拉圭仅有23%控球、6次射门，但凭借4次射正展示了高效反击的威胁。德国先后换上穆夏拉、内梅查、安东等生力军以加强进攻轮转，巴拉圭也用阿瓦洛斯、毛里西奥换下首发寻求体能补充和反击锋线。考虑到这是32强淘汰赛，常规时间战平将进入加时，因此最终结果需把加时阶段一并纳入评估。综合控球、射门质量、替补深度和主队属性，德国在加时中破门的概率明显占优，但巴拉圭依靠定位球或反击仍保留偷袭可能，平局并通过点球决出胜负的情形也无法排除。基于此，德国胜出概率上调至最高，平局次之，巴拉圭胜出概率最低。最可能的最终比分定为2比1德国小胜，符合主队凭借持续压迫在加时阶段再下一城的剧本。后续进球候选首推哈弗茨，他已经进入状态、抢点能力强；穆夏拉作为生力军在加时初段具备直接制造杀机的能力；维尔茨在加时后段持续创造机会也可能转化为进球；巴拉圭一侧则把希望寄托在阿瓦洛斯，期待他在反击中抓住为数不多的禁区机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.019624799999999998,
+      "tokens": {
+        "input": 1304,
+        "output": 800
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.865
+    },
+    {
+      "submitted_at": "2026-06-29T22:22:56+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.62,
+        "away": 0.16
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第90分钟，德国与巴拉圭暂时1比1战平。上半场第42分钟恩西索接加拉萨·丰达助攻为巴拉圭率先破门，下半场第54分钟哈弗茨接维尔茨传球扳平比分，此后双方未能再下一城。从场面来看，德国占据绝对主动，控球率高达76%，角球9比3、总射门12比6均明显领先，并通过穆夏拉、沃尔特马德、萨内等多次进攻调整持续加码前场压力；但射正只有2次，少于巴拉圭的4次，进攻效率始终被对手的密集防守和门将扑救所抑制。巴拉圭则依靠卡瓦列罗、毛里西奥等替补加固中后场，库巴斯第65分钟染黄后防线压力进一步上升，但球队整体退守的姿态明确，已不再主动追求第二球。考虑到比赛已进入第90分钟、补时时间通常在3到5分钟之间，绝大多数情形下比分将保持不变，因此平局概率明显高于两队取胜，1比1成为最可能的最终比分，并与平局概率最高的判断保持一致。德国凭借场面优势及多名攻击型替补，仍保留一定的绝杀可能性，故主队胜率略高于客队。后续进球者方面，鉴于德国持续围攻和前场新鲜兵力，穆夏拉、沃尔特马德和哈弗茨在补时阶段把握禁区机会的概率相对最高；巴拉圭如能完成一次反击，由前锋阿瓦洛斯终结的可能性最大，但整体概率有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.0192733,
+      "tokens": {
+        "input": 1354,
+        "output": 771
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.374
+    },
+    {
+      "submitted_at": "2026-06-29T22:29:19+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.66,
+        "away": 0.12
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进入第90分钟，德国与巴拉圭在波士顿体育场战成1-1。上半场第42分钟胡里奥·恩西索（恩西索）接马蒂亚斯·加拉尔萨 Fonda助攻为巴拉圭率先破门，下半场第54分钟凯·哈弗茨（哈弗茨）接弗洛里安·维尔茨（维尔茨）传球扳平。从场面看德国一边倒：控球率高达76%，14次射门、10个角球，远高于巴拉圭的7射4角，但射正仅3次，进攻效率不算理想，巴拉圭门将三次扑救都很关键。德国主帅在第63、79、88分钟连续换上Musiala（穆夏拉）、Pavlovic（帕夫洛维奇）、Sané（萨内），明显是想在终场前再赌一把；巴拉圭则在中后场用Mauricio、Caballero加固防线，第65分钟Cubas（库巴斯）的黄牌也说明他们以肉搏方式维持平局。临近补时，平局成为最可能的结果，因此把和局概率拉到最高，主胜留出一些尾段抢分空间，客胜概率相对最低。最可能最终比分维持1-1。如果补时阶段还有进球，最可能来自德国的Havertz、Musiala或Wirtz抓住禁区内的二点球与远射机会，替补登场的Woltemade（沃尔特马德）也具备争顶能力；巴拉圭若再得手，则更可能源于一次防守反击，由前锋Ávalos完成致命一击。"
+      },
+      "sources": [],
+      "cost_usd": 0.0179783,
+      "tokens": {
+        "input": 1354,
+        "output": 701
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.818
+    },
+    {
+      "submitted_at": "2026-06-29T22:35:32+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 110,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.35,
+        "draw": 0.5,
+        "away": 0.15
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分1比1，加时赛进行到110分钟。上半场42分钟胡里奥·恩西索接马蒂亚斯·加拉尔萨 Fonda助攻为巴拉圭首开纪录，下半场54分钟凯·哈弗茨接弗洛里安·维尔茨传中扳平。德国全场占据绝对主动，控球率高达76%，射门14比7、角球10比4，整体场面压制明显；巴拉圭仅靠3次射正与门将的发挥维持平局，并且在65分钟安德烈斯·库瓦斯吃到黄牌后中场拦截能力受限。德国在加时赛中已用Musiala、Woltemade等攻击手进一步加码，板凳火力更厚，但临门一脚转化率不高，巴拉圭则以Ávalos、Velázquez加强防守和身体对抗，明显在拖时间打点球。距离120分钟仅剩约10分钟加补时，进球窗口非常有限，因此和局收场进入点球大战是当前概率最高的走向，最可能的最终比分维持1比1。若加时尾段出现进球，德国凭借持续压制和替补冲击力更有可能打破僵局，因此后续进球候选以Musiala、Havertz、Woltemade为主，巴拉圭一侧仅给Ávalos和Almirón保留少量反击得分概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.0166204,
+      "tokens": {
+        "input": 1407,
+        "output": 617
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.676
+    },
+    {
+      "submitted_at": "2026-06-29T22:41:39+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 116,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.74,
+        "away": 0.08
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进入加时赛末段，第116分钟双方仍是1比1。上半场42分钟恩西索为巴拉圭首开纪录，下半场54分钟哈弗茨接维尔茨助攻为德国扳平，此后比分一直胶着至加时阶段。从场面看，德国完全掌控比赛节奏，控球率高达77%，射门16比7、角球11比4，持续在对方半场施压；巴拉圭则收缩防线、依靠零星反击维持平衡，门将多次化解威胁，全队仅3次射正但效率不俗。德国虽然占优，但射正只有3次，临门一脚的转化率明显不足，加之换上沃尔特马德、穆夏拉等攻击手后仍未能打破僵局，说明巴拉圭的低位防守组织相当稳固。距离加时结束只剩约四分钟外加伤停补时，体能临界、节奏放缓，双方都开始为点球大战做准备，巴拉圭尤其会以拖延和犯规消耗时间。综合判断，本场最可能以1比1的比分进入点球决战，平局概率显著高于任何一方在终场前再下一城；德国若要破门，最有可能由哈弗茨、穆夏拉或刚替补登场的沃尔特马德在禁区内的混战或定位球中完成，巴拉圭方面则可能依靠新援阿瓦洛斯在反击中制造意外，但整体进球概率都很低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0180079,
+      "tokens": {
+        "input": 1407,
+        "output": 692
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.671
+    },
+    {
+      "submitted_at": "2026-06-29T22:47:38+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 122,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.94,
+        "draw": 0.03,
+        "away": 0.03
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到加时赛第122分钟，德国2比1领先巴拉圭，已进入加时下半场补时阶段，留给双方的时间极其有限。场面上德国全场掌控明显，控球率高达78%，13个角球与18次射门均大幅领先，巴拉圭仅有7射3正，进攻资源在加时阶段几乎耗尽，且三个换人名额已全部用完，体能与组织都处于明显劣势。比分走向上，巴拉圭的恩西索（胡里奥·恩西索）在第42分钟率先破门，随后哈弗茨（凯·哈弗茨）于54分钟扳平，加时赛第102分钟塔（约纳坦·塔）头球完成反超并经VAR确认有效，这粒进球极大压缩了巴拉圭的反扑空间。考虑到所剩时间不足、巴拉圭需在阵地战中冒险压上而后防空虚，德国获胜概率被推到很高水平，平局与巴拉圭逆转的可能性都被压到极低。因此最可能的最终比分锁定在2比1，德国晋级。若仍有进球出现，更可能来自德国反击端的沃尔特马德（尼克·沃尔特马德）或穆夏拉（贾马尔·穆西亚拉）抓住对手压上后的身后空间；巴拉圭一侧则以萨纳夫里亚（安东尼奥·萨纳夫里亚）在禁区内的争顶机会最具威胁，但整体概率都偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0178414,
+      "tokens": {
+        "input": 1602,
+        "output": 644
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.622
+    },
+    {
+      "submitted_at": "2026-06-29T22:53:47+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 128,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.2,
+        "draw": 0.65,
+        "away": 0.15
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到加时赛第128分钟，德国与巴拉圭仍然战成1比1。恩西索上半场为巴拉圭首开纪录，哈弗茨则在下半场由维尔茨助攻扳平，此后双方虽多次换人调整，却始终未能再下一城。从场面看，德国掌控了高达77%的控球率，射门17比7、角球13比5全面占优，但有效射正只有3次，巴拉圭门将出击稳定，禁区内人数占优、退防纪律严明，使日耳曼战车始终缺乏致命一击。加时赛阶段巴拉圭进一步收缩防线，并通过萨纳布里亚、奥赫达等替补加强中场拦截，本队比分牌上的多张黄牌也说明他们已经用尽肢体对抗去消耗时间。综合来看，目前距离加时结束仅剩极短时间，再进球的概率显著下降，比赛大概率以1比1结束并进入点球大战，因此平局成为概率最高的结果，最可能的最终比分锁定为1比1。德国如能在最后阶段制造定位球或由换上的穆夏拉、沃尔特马德形成一次禁区内机会，仍存在偷袭可能，因此后续潜在破门者首选哈弗茨、穆夏拉、维尔茨与沃尔特马德；巴拉圭若能打出反击，前锋阿瓦洛斯与萨纳布里亚是最可能的终结者，但整体概率均较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.02035,
+      "tokens": {
+        "input": 1745,
+        "output": 751
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.883
+    },
+    {
+      "submitted_at": "2026-06-29T22:59:57+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.68,
+        "away": 0.1
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分1-1，比赛已进入加时赛末段第130分钟，留给两队的时间所剩无几，比赛极有可能拖入点球大战。从场面看，德国全场掌控绝对主动，控球率高达77%，射门18次、角球13次，远超巴拉圭的7射6角，恩西索上半场偷袭破门后，哈弗茨在54分钟由维尔茨助攻完成扳平。加时阶段巴拉圭多次换人并领到多张黄牌（库巴斯、阿尔米隆，包括主帅阿尔法罗），明显在打消耗、拖时间，而纳格尔斯曼连续派上穆夏拉、沃尔特马德等进攻牌持续围攻，但巴拉圭后防加上门将的4次扑救稳住阵脚。综合来看，平局走向点球的概率最高，因此最可能的最终比分维持1-1；德国凭借球权和体能轮换仍保留小概率绝杀可能，巴拉圭由于在己方半场承受压力、缺乏推进，反扑取胜的概率最低。后续进球预测仅给出小概率：德国端哈弗茨、穆夏拉、沃尔特马德是最具威胁的终结点，巴拉圭一侧若有突袭机会，新登场的萨纳布里亚是最可能的得分人，但整体仍以无新进球、走向点球为基准判断。"
+      },
+      "sources": [],
+      "cost_usd": 0.0187516,
+      "tokens": {
+        "input": 1788,
+        "output": 656
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.198
+    },
+    {
+      "submitted_at": "2026-06-29T23:06:03+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.16,
+        "draw": 0.71,
+        "away": 0.13
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入加时赛末段，第130分钟双方仍是1比1。上半场42分钟恩西索接加拉萨·丰达助攻为巴拉圭首开纪录，下半场54分钟哈弗茨接维尔茨传球扳平，此后比赛在常规时间内未能再分出胜负，进入加时。从全场数据看，德国占据压倒性主动，控球率高达76%，全场19次射门、5次射正、15个角球，巴拉圭只有7次射门、3次射正，靠门将5次扑救和密集低位防守苦苦支撑。加时阶段巴拉圭已用满换人名额，连续换上贝拉斯克斯、奥赫达、萨纳布里亚加固后腰与锋线接应；德国则在110分钟同时换上阿米里和蒂亚乌，明显是在为120分钟之后的潜在点球大战做准备，同时维持前场逼抢。105至115分钟之间双方教练席与场上接连吃牌，节奏被打散，门前真正高质量的机会越来越稀少。考虑到目前已经踢满加时全部时长还在补时阶段，留给场上分出胜负的窗口只剩极短一段，平局概率显著高于任何一方再进球；德国凭借控球与定位球仍保留一丝绝杀可能，巴拉圭则只剩反击偷袭机会，因此主胜概率略高于客胜，但都远低于打平。综合判断最可能的最终比分仍是1比1，比赛大概率以这一比分结束加时直接进入点球。若130分钟后仍要再添进球，德国一侧由哈弗茨、穆夏拉、沃尔特马德通过禁区混战或角球破门可能性最高，巴拉圭一侧则寄希望于萨纳布里亚或毛里西奥利用反击或定位球完成偷袭。"
+      },
+      "sources": [],
+      "cost_usd": 0.0227513,
+      "tokens": {
+        "input": 1844,
+        "output": 861
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.896
+    },
+    {
+      "submitted_at": "2026-06-29T23:12:15+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.52,
+        "away": 0.18
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进入加时下半场尾声，第130分钟双方仍以1-1僵持，常规进球窗口已经非常有限，只剩补时阶段的少数时间可供争夺。从场面来看，德国全程占据主导：控球率高达76%，射门21次、射正6次、角球16个，明显压制巴拉圭，但在巴拉圭门将多次扑救和南美球队顽强的低位防守下迟迟无法再下一城；巴拉圭则在第42分钟由Enciso（恩西索）取得领先，被Havertz（哈弗茨）在54分钟扳平后基本退守半场，进入加时后更是连续换上Ávalos、Sanabria（萨纳夫里亚）等支点和防守型球员，意图把比赛拖入点球大战。德国虽在加时阶段换上Woltemade（沃尔特马德）、Amiri（阿米里）等攻击力量，但球队体能透支、传导节奏明显放缓，加之106、115分钟连吃黄牌后动作有所收敛，最后几分钟难以制造高质量机会。基于以上态势，平局概率明显上升并成为最高项，平局概率给到约0.52；德国仍有压上抢点的可能但效率持续偏低，胜率维持在0.30左右；巴拉圭已基本放弃推进，反击只能寄望于零星定位球，胜率压低到0.18。综合判断，最可能的最终比分仍是1-1，比赛大概率进入点球决战。若在130分钟之后还能再进球，最可能来自德国的高点支点和加时替补，Woltemade凭借身高优势在角球与边路传中中威胁最大，Musiala（穆夏拉）和Havertz在禁区前沿仍有冷射机会；巴拉圭方面则以Sanabria利用反击偷袭的可能性最高，但整体概率都很低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0226366,
+      "tokens": {
+        "input": 1893,
+        "output": 845
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.734
+    },
+    {
+      "submitted_at": "2026-06-29T23:18:21+00:00",
+      "live": {
+        "status": "Penalties",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.56,
+        "draw": 0.05,
+        "away": 0.39
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行至第130分钟，常规时间与加时赛战成1-1，目前已进入点球大战阶段。从全场走势看，德国占据明显主动：控球率高达75%，21次射门、16次角球、6次射正，对巴拉圭半场形成了持续压迫；巴拉圭则更多依赖防守反击，全场仅7次射门、3次射正，但门将贡献了6次扑救，正是这份顽强让他们把比赛拖入点球。上半场42分钟Enciso接Galarza Fonda助攻先入一城，下半场54分钟哈弗茨在维尔茨的策动下扳平，此后双方在加时阶段都大量换人，德国连续投入Musiala、Amiri、Woltemade、Thiaw等生力军以保持冲击力，而巴拉圭则换上Sanabria、Ojeda、Balbuena等加强体能与防线，整体节奏被进一步拖慢，这也是常规与加时段双方都未能再下一城的核心原因。进入点球大战后，单兵质量与心理素质成为决定因素：德国队拥有更稳定的主罚梯队和近年大赛点球的经验积累，哈弗茨、Musiala均具备一击致命能力，门将层面也具备压迫感；巴拉圭门将状态出色，加上加时阶段他们在压力下守得很有韧性，仍有一定爆冷可能，因此胜负天平略向德国倾斜但并未一边倒。综合判断，德国晋级概率略高于巴拉圭，平局空间极小（仅保留若极个别情况下被记录为平的容错）。最可能的最终走向是德国通过点球大战险胜，结果以2-1的最终比分形式呈现，与净胜一球的点球决胜结果相吻合。后续进球预测聚焦点球轮次：德国端哈弗茨与Musiala被视为最稳的两位主罚者，命中概率最高；巴拉圭端Sanabria作为加时末段替补登场、状态新鲜，Caballero也具备稳定的射门能力，是他们最值得信赖的两名罚球人，因此将其列为130分钟后最可能取得进球的候选人。"
+      },
+      "sources": [],
+      "cost_usd": 0.0222851,
+      "tokens": {
+        "input": 1988,
+        "output": 807
+      },
+      "tool_calls": 0,
+      "wall_seconds": 29.893
+    },
+    {
+      "submitted_at": "2026-06-29T23:24:40+00:00",
+      "live": {
+        "status": "Penalties",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-29T20:30:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.17,
+        "draw": 0.02,
+        "away": 0.81
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行至第130分钟，常规时间和加时赛比分锁定在1比1，目前进入点球大战阶段。回顾过程：巴拉圭由胡里奥·恩西索于第42分钟率先打破僵局，德国队在第54分钟由凯·哈弗茨接弗洛里安·维尔茨助攻扳平，此后120分钟双方未再改写比分。从场面数据看，德国控球率高达75%，射门21次、射正6次、角球16次，全面压制，但巴拉圭门将贡献6次扑救，加上后防顽强，硬是把比赛拖入点球。德国主帅Nagelsmann在加时阶段连续换上Amiri、Thiaw等生力军，意图制造决胜机会，但巴拉圭主帅Alfaro调度的Velázquez、Ojeda、Sanabria、Balbuena等替补也稳住了防线。进入点球大战后，德国首罚Havertz失手，此后Kimmich、Musiala罚中，三轮2中；巴拉圭三人Mauricio、古斯塔沃·戈麦斯、Galarza Fonda全部罚进，目前点球比分3比2领先一球，且仍各剩两轮主罚机会。这意味着德国进入‘必进+对手必失’的被动局面，每一轮都没有容错空间，而巴拉圭只要再保持一次稳定主罚就能直接终结比赛。考虑到点球大战的天然方差以及德国后续主罚者（Woltemade、Amiri等）经验略浅，综合判断巴拉圭晋级的概率明显占优，因此整体胜负概率大幅向客队倾斜，平局概率几乎归零，只保留极小尾部用于德国连续追平后进入突然死亡的反转情景。最可能的最终走向是巴拉圭通过点球大战胜出，故以1比2体现客队带走比赛的结果。130分钟之后能够改变结果的‘进球’只可能来自点球大战的后续主罚，因此重具体比分判断点球轮次中尚未出场的主罚人选：巴拉圭方面Sanabria和Velázquez具备较高把握，德国一侧则取决于Woltemade和Amiri能否顶住压力维持悬念，他们的命中与否将直接决定比赛的最终归属。"
+      },
+      "sources": [],
+      "cost_usd": 0.0259925,
+      "tokens": {
+        "input": 2265,
+        "output": 952
+      },
+      "tool_calls": 0,
+      "wall_seconds": 45.32
+    }
+  ]
+}

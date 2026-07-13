@@ -1,0 +1,810 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-70_Jordan_Argentina_2026-06-28",
+  "provider_fixture_id": "19609198",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-28T03:57:40+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 3
+    },
+    "home": "Jordan",
+    "away": "Argentina",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-28T02:00:00+00:00",
+    "venue": "Dallas Stadium",
+    "venue_city": "Arlington"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.001,
+      "draw": 0.004,
+      "away": 0.995
+    },
+    "most_likely_score": "1-3",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进入第90分钟，约旦1比3落后阿根廷，已经处于补时阶段。阿根廷上半场由洛塞尔索打破僵局，劳塔罗·马丁内斯随后通过点球扩大比分，下半场塔马里为约旦扳回一城点燃希望，但梅西在第80分钟的进球彻底浇灭了反扑势头。从场面来看，阿根廷控球率高达73%，射门12比5、射正4比1、角球6比2全面占优，约旦犯规多达13次且已有三张黄牌，体能与组织都明显下滑。考虑到仅剩补时几分钟，约旦需要在极短时间内连入两球才能扳平，几乎不可能实现，因此阿根廷锁定胜局，胜率压倒性领先，平局与约旦获胜概率接近于零。最可能的最终比分维持1比3。补时阶段若再有进球，阿根廷凭借控球与替补登场的攻击手如何塞·曼努埃尔·洛佩斯、阿尔马达更具威胁，约旦方面新换上的奥尔万存在一定反击得分的可能，但整体概率都不高，比分大概率就此定格。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1352,
+    "output": 555
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.015269900000000001,
+  "wall_seconds": 13.199,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.001, \"draw\": 0.004, \"away\": 0.995},\n  \"most_likely_score\": \"1-3\",\n  \"scorers\": [\n    {\"player\": \"José Manuel López\", \"team\": \"away\", \"minute\": 93, \"p\": 0.07},\n    {\"player\": \"Thiago Almada\", \"team\": \"away\", \"minute\": 92, \"p\": 0.05},\n    {\"player\": \"Ali Olwan\", \"team\": \"home\", \"minute\": 94, \"p\": 0.03}\n  ],\n  \"reasoning\": {\"overall\": \"比赛进入第90分钟，约旦1比3落后阿根廷，已经处于补时阶段。阿根廷上半场由洛塞尔索打破僵局，劳塔罗·马丁内斯随后通过点球扩大比分，下半场塔马里为约旦扳回一城点燃希望，但梅西在第80分钟的进球彻底浇灭了反扑势头。从场面来看，阿根廷控球率高达73%，射门12比5、射正4比1、角球6比2全面占优，约旦犯规多达13次且已有三张黄牌，体能与组织都明显下滑。考虑到仅剩补时几分钟，约旦需要在极短时间内连入两球才能扳平，几乎不可能实现，因此阿根廷锁定胜局，胜率压倒性领先，平局与约旦获胜概率接近于零。最可能的最终比分维持1比3。补时阶段若再有进球，阿根廷凭借控球与替补登场的攻击手如何塞·曼努埃尔·洛佩斯、阿尔马达更具威胁，约旦方面新换上的奥尔万存在一定反击得分的可能，但整体概率都不高，比分大概率就此定格。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-28T02:05:54+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 5,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Jordan",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-28T02:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.13,
+        "away": 0.83
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 38,
+          "p": 0.34,
+          "team": "away"
+        },
+        {
+          "player": "Lautaro Martinez",
+          "minute": 62,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Julian Alvarez",
+          "minute": 75,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Enzo Fernandez",
+          "minute": 81,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Musa Al-Taamari",
+          "minute": 70,
+          "p": 0.08,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛开始仅5分钟，比分维持0-0，但场面呈现出极度一边倒的态势。阿根廷开场便牢牢掌控节奏，控球率高达84%，约旦只有16%，且已经被迫犯规一次以打断对手推进，说明约旦从开局就被压在自己半场进行防守。考虑到双方在世界杯舞台上的实力差距，阿根廷作为夺冠热门拥有梅西、劳塔罗、J·阿尔瓦雷斯、恩佐等顶级攻击手，整体技术、组织和终结能力都远高于首次或罕有大赛经验的约旦，目前的控球数据也印证了这种压制力。基于此，将阿根廷的胜率上调至0.83，平局压缩到0.13，约旦取胜概率仅0.04，主要保留极小概率的爆冷或定位球偷袭空间。最可能的最终比分预计为0-2：阿根廷大概率在上半场后半段凭借持续施压先下一城，下半场再利用约旦体能下降扩大比分，但考虑到约旦会主动收缩防线、阿根廷可能在领先后控制节奏，比分难以滚雪球到大比分。后续进球方面，梅西作为前场组织核心和定位球主罚者，最有可能在第38分钟左右率先打破僵局；劳塔罗在禁区内的嗅觉使其成为第二粒进球的首选，预计出现在60分钟前后；J·阿尔瓦雷斯和恩佐分别作为替补冲击点和中场远射威胁，进球时间靠后；约旦方面则留给攻击核心塔玛里一个反击或定位球破门的小概率窗口，以体现比赛仍有变数。"
+      },
+      "sources": [],
+      "cost_usd": 0.017933900000000003,
+      "tokens": {
+        "input": 827,
+        "output": 804
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.307
+    },
+    {
+      "submitted_at": "2026-06-28T02:13:30+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 13,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Jordan",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-28T02:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.12,
+        "away": 0.85
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 38,
+          "p": 0.34,
+          "team": "away"
+        },
+        {
+          "player": "Lautaro Martinez",
+          "minute": 64,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Julian Alvarez",
+          "minute": 71,
+          "p": 0.24,
+          "team": "away"
+        },
+        {
+          "player": "Giovani Lo Celso",
+          "minute": 58,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Nicolas Gonzalez",
+          "minute": 82,
+          "p": 0.13,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "开场13分钟双方仍然互交白卷，但场面已经呈现明显的一边倒态势。阿根廷控球率高达79%，约旦只有21%，而且阿根廷已经制造了1次角球，并在第7分钟由洛塞尔索（乔瓦尼·洛塞尔索）引发了一次VAR介入，显示客队从开场就持续在前场施压、寻找破门机会。约旦目前依靠收缩防线勉强守住球门，但完全无法把比赛推进到对方半场，进攻端几乎没有威胁。综合世界杯小组赛的整体班底差距、阿根廷的控制力以及当前压制节奏，客队取胜概率应明显上调至0.85左右，平局空间被进一步压缩到0.12，约旦爆冷取胜的可能性极低，仅保留0.03作为意外情境的缓冲。最可能的最终比分判断为0-2：阿根廷大概率会在上半场后段凭借持续渗透先下一城，下半场体能下滑后再扩大比分，而约旦在如此低控球的情况下很难制造有效射门，零封概率较高。后续进球人选方面，梅西（里奥·梅西）作为组织与终结核心，在前场任意球与禁区前沿机会最多，第38分钟前后率先打破僵局可能性最大；劳塔罗·马丁内斯（劳塔罗·马丁内斯）与胡利安·阿尔瓦雷斯（胡利安·阿尔瓦雷斯）作为禁区终结点，下半场60到75分钟之间扩大比分的概率较高；洛塞尔索（乔瓦尼·洛塞尔索）已经活跃于前场，远射或二点进攻有机会建功；尼古拉斯·冈萨雷斯（尼古拉斯·冈萨雷斯）若在末段替补登场，可在防线疲劳时给予最后一击。约旦由于控球与射门资源极度有限，本场预测中不列入进球人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0189514,
+      "tokens": {
+        "input": 802,
+        "output": 864
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.673
+    },
+    {
+      "submitted_at": "2026-06-28T02:20:46+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 20,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Jordan",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-28T02:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.09,
+        "away": 0.88
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Lautaro Martinez",
+          "minute": 38,
+          "p": 0.42,
+          "team": "away"
+        },
+        {
+          "player": "Julian Alvarez",
+          "minute": 58,
+          "p": 0.38,
+          "team": "away"
+        },
+        {
+          "player": "Giovani Lo Celso",
+          "minute": 74,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Nicolas Tagliafico",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到上半场第20分钟，约旦主场0-1落后于阿根廷。第19分钟洛塞尔索(Lo Celso)为阿根廷打破僵局，此前一分钟约旦的Abu Taha已吃到黄牌，反映出主队在中场拦截上的被动。从场面数据看，阿根廷控球率高达82%，已完成2次射门并有1次射正及1个角球，而约旦目前零射门、零角球，控球仅18%，整体被压制非常明显。综合赛前实力差、主队需要冒险压上扳平却缺乏有效进攻手段的局面，阿根廷扩大比分的概率显著上升，本场预测向客胜大幅倾斜。约旦在防线已承压且有球员吃牌的情况下，后续防守动作会更加谨慎，反而更难限制阿根廷前场的连续渗透。最可能的最终比分判断为0-3，体现阿根廷在中下半场再下两城的趋势：劳塔罗(劳塔罗·马丁内斯)作为中锋是把握机会的首选，阿尔瓦雷斯(胡利安·阿尔瓦雷斯)替补或前场轮换登场也具备很高的进球点；洛塞尔索状态在线，存在梅开二度可能；边后卫塔利亚菲科(Tagliafico)插上远射或定位球争顶也保留一定概率。约旦在控球与射门挂零的情况下短时间内进球可能性极低，因此暂不列入后续射手名单。"
+      },
+      "sources": [],
+      "cost_usd": 0.0162541,
+      "tokens": {
+        "input": 973,
+        "output": 684
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.864
+    },
+    {
+      "submitted_at": "2026-06-28T02:28:13+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 28,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Jordan",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-28T02:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.14,
+        "away": 0.82
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Lautaro Martinez",
+          "minute": 58,
+          "p": 0.38,
+          "team": "away"
+        },
+        {
+          "player": "Julian Alvarez",
+          "minute": 72,
+          "p": 0.32,
+          "team": "away"
+        },
+        {
+          "player": "Giovani Lo Celso",
+          "minute": 65,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Nicolas Tagliafico",
+          "minute": 80,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第28分钟，阿根廷凭借洛塞尔索（Lo Celso）第19分钟的进球以1-0领先约旦。从场面数据来看，阿根廷已经完全掌控了节奏，控球率高达80%，并完成2次射门、1次射正以及2个角球，而约旦至今颗粒无收，零射门零角球，控球只有20%，且约旦的阿布塔哈在第17分钟已经吃到黄牌，防线压力明显加大。综合实力差距、世界杯小组赛的对阵背景以及目前的全面压制态势，阿根廷继续扩大比分的概率非常高，而约旦想要扳平甚至翻盘的可能性极低。基于此判断，客队最终获胜的概率压倒性领先，平局空间被进一步压缩，主队取胜几乎可以忽略。最可能的最终比分锁定在0-3，符合阿根廷在控制比赛后于中后段再下两城的典型走势。后续进球人选方面，劳塔罗·马丁内斯（劳塔罗·马丁内斯）作为锋线核心是下半场最有可能破门的人选，胡利安·阿尔瓦雷斯（胡利安·阿尔瓦雷斯）在前场跑动和插上中同样具备高威胁，已经进球的洛塞尔索（Lo Celso）状态在线仍有梅开二度的机会，定位球场景下塔利亚菲科（Tagliafico）也存在小概率破门可能。约旦在体能与人员压力下，第28分钟后取得进球的可能性极低，因此进球预测全部集中在客队。"
+      },
+      "sources": [],
+      "cost_usd": 0.016994099999999998,
+      "tokens": {
+        "input": 933,
+        "output": 732
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.218
+    },
+    {
+      "submitted_at": "2026-06-28T02:35:31+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 35,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Jordan",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-28T02:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.05,
+        "away": 0.93
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Lautaro Martínez",
+          "minute": 58,
+          "p": 0.34,
+          "team": "away"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 71,
+          "p": 0.26,
+          "team": "away"
+        },
+        {
+          "player": "Giovani Lo Celso",
+          "minute": 66,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Nicolás González",
+          "minute": 80,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到上半场第35分钟，阿根廷凭借第19分钟Lo Celso的运动战进球以及第31分钟劳塔罗·马丁内斯主罚命中的点球，已经在客场2-0领先约旦。从场面数据看，阿根廷控球率高达77%，4次射门2次射正并已经拿到2个角球，而约旦则颗粒无收，0射门0角球，控球仅23%，且第17分钟Abu Taha已经吃到黄牌，中场防线压力极大，整体被压制得非常彻底。考虑到双方实力差距明显，阿根廷在剩余55分钟仍有足够时间继续扩大比分，而约旦在如此被动的局面下想要破门甚至追平几乎不现实，因此客胜概率被显著抬高至九成以上，平局与主胜概率压到极低。结合阿根廷目前的射门效率与压迫强度，下半场再入一球的可能性较大，因此最可能的最终比分定为0-3。后续进球点上，劳塔罗·马丁内斯状态在线且是中锋核心，再下一城概率最高；胡利安·阿尔瓦雷斯若替补登场或继续首发同样具备终结能力；Lo Celso已有进球，跟进二串一也存在机会；边路的尼古拉斯·冈萨雷斯则在末段比赛阶段具备打入收尾球的潜质。约旦因进攻端完全哑火，暂不列入后续射手预测。"
+      },
+      "sources": [],
+      "cost_usd": 0.0161986,
+      "tokens": {
+        "input": 1033,
+        "output": 669
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.751
+    },
+    {
+      "submitted_at": "2026-06-28T02:42:47+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 42,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Jordan",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-28T02:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.03,
+        "away": 0.96
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Lautaro Martínez",
+          "minute": 63,
+          "p": 0.38,
+          "team": "away"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 75,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Giovani Lo Celso",
+          "minute": 70,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Nicolás Tagliafico",
+          "minute": 82,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第42分钟，约旦在主场0-2落后于阿根廷。阿根廷第19分钟由洛塞尔索（Lo Celso）首开纪录，随后第31分钟劳塔罗·马丁内斯（劳塔罗·马丁内斯）点球扩大比分，期间还有一次VAR介入确认。从场面数据来看，阿根廷控球率高达75%，4次射门2次射正，而约旦虽有3次尝试但无一射正，且阿布塔哈早早领到黄牌，整体处于被压制的状态。综合两队实力差距、世界杯小组赛阿根廷需要锁定净胜球的动力，以及上半场尚未结束阿根廷已建立两球优势的走势，阿根廷取胜几乎没有悬念，约旦想要在下半场连追两球扳平几无可能，因此客胜概率给到极高水平，平局与主胜空间被压缩到很低。最可能的最终比分判断为0-3：阿根廷下半场大概率再下一城，而约旦在控球与射正双双低迷的情况下要打破僵局难度很大，单刀或定位球偶发性破门的概率不足以支撑1-3走向。后续进球人选方面，劳塔罗状态火热且承担禁区终结任务，再下一城概率最高；J·阿尔瓦雷斯通常在中后段替补登场或与劳塔罗联动，是补射和反击的次要选择；洛塞尔索作为前腰二点进攻顺位排在其后；定位球场景下塔利亚菲科（Tagliafico）等边后卫的远射或包抄也有小概率兑现。"
+      },
+      "sources": [],
+      "cost_usd": 0.0172605,
+      "tokens": {
+        "input": 965,
+        "output": 740
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.946
+    },
+    {
+      "submitted_at": "2026-06-28T02:52:30+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Jordan",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-28T02:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Lautaro Martínez",
+          "minute": 67,
+          "p": 0.34,
+          "team": "away"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 72,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Giovani Lo Celso",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Nicolás Tagliafico",
+          "minute": 85,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场结束阶段，约旦在主场以0-2落后阿根廷。开场第19分钟洛塞尔索（Lo Celso）首开纪录，随后第31分钟劳塔罗·马丁内斯（劳塔罗·马丁内斯）点球扩大比分，期间还有一次涉及塞内西（Senesi）的VAR介入，整体局面完全由阿根廷掌控。从数据上看，阿根廷控球率高达73%，射门4次、射正2次全部转化为威胁，而约旦控球仅27%、3次射门0射正，进攻端几乎无法形成有效冲击，加上阿布·塔哈（Abu Taha）早早染黄，防守动作受限，下半场承压会更明显。综合实力差距、当前比分与场面走势，阿根廷取胜概率被推到极高水平，平局与约旦翻盘的可能性极低。最可能的最终比分定位在0-3，符合阿根廷大概率再下一城的判断，同时也保留约旦零进球、阿根廷略微扩大领先的合理空间。后续进球点上，劳塔罗·马丁内斯状态火热、是禁区内最大威胁，再入一球可能性最高；洛塞尔索作为前场组织者具备二次破门能力；如阿尔瓦雷斯（胡利安·阿尔瓦雷斯）替补或继续出场，也极可能在比赛后段利用空间完成致命一击；定位球场景下塔利亚菲科（Tagliafico）一类后场球员也存在小概率破门。约旦方面缺乏稳定终结点，下半场再追回的概率被压到很低，因此进球预测集中在客队球员身上。"
+      },
+      "sources": [],
+      "cost_usd": 0.0174418,
+      "tokens": {
+        "input": 954,
+        "output": 752
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.762
+    },
+    {
+      "submitted_at": "2026-06-28T03:10:40+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 55,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Jordan",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-28T02:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Lautaro Martínez",
+          "minute": 70,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 78,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Giovani Lo Celso",
+          "minute": 82,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第55分钟，约旦在主场0-2落后阿根廷。阿根廷由Lo Celso第19分钟率先破门，劳塔罗·马丁内斯第31分钟点球扩大比分，半场前已牢牢掌控局面。从场面数据看，阿根廷控球率高达73%，5次射门3次射正，而约旦仅有3次射门且0射正，进攻端几乎没有威胁。约旦在中场休息时连换两人（Al-Mardi与Tamari登场）试图加强进攻，但目前尚未转化为实质性威胁，且第17分钟Abu Taha已吃到黄牌，防守端压力进一步加大。综合两队实力差距、比分态势以及阿根廷对比赛节奏的绝对掌控，主队逆转希望极其渺茫，平局也几乎不可能，客胜概率压倒性领先，定为0.95。最可能的最终比分判断为0-3：阿根廷领先两球后仍占据全面优势，剩余约35分钟内大概率再下一城，而约旦在控球与射正均处下风的情况下打破僵局的可能性极低。后续进球人选方面，劳塔罗·马丁内斯作为锋线核心已进一球且持续具备威胁，再下一城概率最高；胡利安·阿尔瓦雷斯若登场或继续在前场活动同样是热门射手；中场组织者Lo Celso也存在梅开二度的可能性。所有预测进球时间均设定在第55分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.19898970000000002,
+      "tokens": {
+        "input": 50226,
+        "output": 711
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.628
+    },
+    {
+      "submitted_at": "2026-06-28T03:17:43+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 62,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Jordan",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-28T02:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.1,
+        "draw": 0.22,
+        "away": 0.68
+      },
+      "most_likely_score": "1-3",
+      "scorers": [
+        {
+          "player": "Lautaro Martínez",
+          "minute": 78,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 84,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Mousa Tamari",
+          "minute": 80,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Giovani Lo Celso",
+          "minute": 73,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Mahmoud Al-Mardi",
+          "minute": 88,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第62分钟，约旦1比2落后于阿根廷。阿根廷在上半场通过洛塞尔索（Lo Celso）的运动战进球与劳塔罗·马丁内斯（劳塔罗·马丁内斯）的点球建立两球优势，下半场第55分钟塔马里（Mousa Tamari）为约旦扳回一球，将比分追近。从场面数据看，阿根廷控球率高达70%，射门6次、射正3次，整体节奏与威胁性明显优于约旦（控球30%、射正仅1次），仍掌握主动权；约旦虽然依靠下半场调整一度提升压迫，但进攻转化效率有限，扑救数据也显示其门将承受较大压力。综合来看，阿根廷取胜概率明显占优，平局概率主要来自约旦扳平的情绪推动与阿根廷可能的保守换人，约旦完成逆转的可能性较低。最可能的最终比分判断为1比3：阿根廷在剩余近30分钟内凭借控球与终结能力更有可能再下一城，而约旦在已有失球后防线压力增大，再失球的概率高于再进球。后续进球预测方面，阿根廷端劳塔罗状态火热且为禁区终结者，是最具威胁的得分点；阿尔瓦雷斯（胡利安·阿尔瓦雷斯）作为替补或持续在场的前场选项，常在比赛后段把握反击机会；洛塞尔索则具备远射与二点进攻能力。约旦方面，塔马里手感正佳，是最可能继续制造威胁的攻击手，替补登场的马尔迪（马哈茂德·马尔迪）则可能在比赛末段利用对手防线松动寻找机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.0184852,
+      "tokens": {
+        "input": 966,
+        "output": 806
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.684
+    },
+    {
+      "submitted_at": "2026-06-28T03:25:09+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 70,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Jordan",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-28T02:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.18,
+        "away": 0.74
+      },
+      "most_likely_score": "1-3",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 82,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Thiago Almada",
+          "minute": 85,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Alexis Mac Allister",
+          "minute": 88,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Mousa Tamari",
+          "minute": 80,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第70分钟，约旦1比2落后阿根廷。阿根廷上半场由洛塞尔索第19分钟率先破门，劳塔罗·马丁内斯第31分钟点球扩大比分，约旦则在第55分钟通过塔马里扳回一城，由哈达德助攻。整体场面来看，阿根廷掌控71%的控球率，射门7次、射正3次，明显压制约旦的5射1正，进攻组织和场面优势相当稳固。第60分钟前后阿根廷连换三人，梅西、阿尔马达、麦卡利斯特相继登场，潘帕斯军团在保留领先的同时进一步强化中前场的创造力，这种调整通常意味着球队希望通过控球消耗时间并伺机再下一城。约旦虽然在第46分钟做出双换试图加强进攻，并在55分钟收获进球带来短暂希望，但整体射门转化和控球能力仍处下风，且本场已经吃到黄牌，体能与纪律压力会在最后20分钟逐渐放大。综合现有比分、剩余时间以及双方场上态势，阿根廷取胜概率明显领先，约旦扳平的可能性有限，平局空间次之，主队翻盘的概率最低。最可能的最终比分判断为1比3：阿根廷凭借控球与替补攻击群有较大机会在剩余时间里再入一球，而约旦若在压上进攻中失位，被反击打穿的风险也会上升。后续进球人选方面，刚替补登场的梅西在前场自由人位置最具威胁，是最可能再下一城的人选；劳塔罗作为支点仍有补射机会；阿尔马达的远射和麦卡利斯特的后插上同样值得关注；约旦方面塔马里状态在线，若能再获机会，他依旧是最可能的破门者。"
+      },
+      "sources": [],
+      "cost_usd": 0.0197173,
+      "tokens": {
+        "input": 959,
+        "output": 874
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.737
+    },
+    {
+      "submitted_at": "2026-06-28T03:32:30+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 77,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Jordan",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-28T02:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.18,
+        "away": 0.74
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第77分钟，约旦1比2落后于阿根廷。上半场洛塞尔索第19分钟首开纪录，劳塔罗·马丁内斯第31分钟点球扩大比分；下半场易边再战后约旦主帅果断双换人，塔马里在第55分钟由哈达德助攻扳回一城，将比赛悬念重新拉回。但从场面数据来看，阿根廷控球率高达73%，射门8比5、射正3比1全面占优，整体压制依旧明显。第60分钟前后阿根廷连换三人，梅西和麦卡利斯特相继登场，中前场创造力进一步增强，这意味着潘帕斯军团有足够能力在剩余时间继续控制节奏并寻求杀死比赛的第三球。约旦虽在55分钟进球后士气有所回升，但控球时间有限，前场进攻多依赖反击和定位球，叠加阿扎布、亚赞·阿拉伯两张黄牌带来的防守压力，全力压上扳平的代价较高。综合判断，阿根廷取胜概率明显领先，平局空间主要来自约旦后段的孤注一掷，主队翻盘的可能性较低。最可能的最终比分维持1比2，阿根廷凭借控制力收下三分；后续进球点更倾向阿根廷替补登场的梅西、阿尔马达以及锋线的劳塔罗、麦卡利斯特，他们在阵地战和反击中都具备终结能力；约旦方面若能再下一城，塔马里、奥尔万和替补登场的阿尔马尔迪是更可能的得分者。"
+      },
+      "sources": [],
+      "cost_usd": 0.018599900000000003,
+      "tokens": {
+        "input": 1072,
+        "output": 791
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.627
+    },
+    {
+      "submitted_at": "2026-06-28T03:50:38+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "Jordan",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-28T02:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.001,
+        "draw": 0.004,
+        "away": 0.995
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经来到90分钟，约旦1比3落后阿根廷，时间几乎耗尽。从场面来看，阿根廷全场掌控节奏，控球率高达74%，11次射门4次射正，并通过洛塞尔索的运动战进球、劳塔罗的点球以及梅西在第80分钟的锁定胜局之球建立起稳固的两球领先。约旦虽然在55分钟由塔马里扳回一城，但全场仅5次射门1次射正，且角球与控球都明显处于下风，进攻威胁有限。考虑到目前只剩补时阶段，约旦要在极短时间内连入两球几乎不可能，因此阿根廷胜出的概率被推到极高水平，平局与约旦逆转的可能性几乎可以忽略。最可能的最终比分维持当前的1比3，这与阿根廷已经进入控制比赛、轮换替补保存体力的状态一致。若补时阶段仍有进球，阿根廷一方更具威胁：刚刚替补登场的何塞·曼努埃尔·洛佩斯(López)体能占优可能抓住反击机会，阿尔马达(Almada)和梅西(Messi)在前场仍具备终结能力；约旦方面，塔马里(Tamari)作为已经破门的攻击手仍是为数不多的得分点，但出现概率相对更低。"
+      },
+      "sources": [],
+      "cost_usd": 0.016391,
+      "tokens": {
+        "input": 1235,
+        "output": 639
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.423
+    },
+    {
+      "submitted_at": "2026-06-28T03:57:40+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "Jordan",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-28T02:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.001,
+        "draw": 0.004,
+        "away": 0.995
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进入第90分钟，约旦1比3落后阿根廷，已经处于补时阶段。阿根廷上半场由洛塞尔索打破僵局，劳塔罗·马丁内斯随后通过点球扩大比分，下半场塔马里为约旦扳回一城点燃希望，但梅西在第80分钟的进球彻底浇灭了反扑势头。从场面来看，阿根廷控球率高达73%，射门12比5、射正4比1、角球6比2全面占优，约旦犯规多达13次且已有三张黄牌，体能与组织都明显下滑。考虑到仅剩补时几分钟，约旦需要在极短时间内连入两球才能扳平，几乎不可能实现，因此阿根廷锁定胜局，胜率压倒性领先，平局与约旦获胜概率接近于零。最可能的最终比分维持1比3。补时阶段若再有进球，阿根廷凭借控球与替补登场的攻击手如何塞·曼努埃尔·洛佩斯、阿尔马达更具威胁，约旦方面新换上的奥尔万存在一定反击得分的可能，但整体概率都不高，比分大概率就此定格。"
+      },
+      "sources": [],
+      "cost_usd": 0.015269900000000001,
+      "tokens": {
+        "input": 1352,
+        "output": 555
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.199
+    }
+  ]
+}

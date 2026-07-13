@@ -1,0 +1,369 @@
+{
+  "fixture_id": "World-Cup_Round-of-32_Spain_Austria_2026-07-02",
+  "provider_fixture_id": "19606948",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-02T20:51:47+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 3,
+      "away": 0
+    },
+    "home": "Spain",
+    "away": "Austria",
+    "competition": "World Cup",
+    "stage": "Round of 32",
+    "kickoff_utc": "2026-07-02T19:00:00+00:00",
+    "venue": "Los Angeles Stadium",
+    "venue_city": null
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.995,
+      "draw": 0.003,
+      "away": 0.002
+    },
+    "most_likely_score": "3-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进行到90分钟，西班牙3-0领先奥地利。西班牙在36分钟由米克尔·奥亚萨瓦尔首开纪录，66分钟佩德罗·波罗扩大比分，89分钟Oyarzabal再入一球梅开二度，牢牢锁定胜局。场面数据同样一边倒：西班牙控球率66%，射门22次、射正10次、角球9次；奥地利仅5次射门、零射正、零角球，且犯规多达13次，进攻端毫无威胁，门将扑救5次也难改颓势。综合来看，奥地利在最后阶段完成逆转甚至扳回一球的可能性都极低，西班牙获胜概率提升至接近99.5%，平局与奥地利爆冷几乎可以忽略。最可能的最终比分维持在3-0。补时阶段，西班牙替补登场的费兰·托雷斯与米克尔·梅里诺保持前场压迫，仍具备再下一城的可能性，因此将其列为补时阶段的潜在破门人选，但整体加时进球概率有限；奥地利在体能与士气双重下滑的情况下，几乎不具备打入安慰球的条件。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 20563,
+    "output": 563
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.08649860000000001,
+  "wall_seconds": 14.193,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.995, \"draw\": 0.003, \"away\": 0.002},\n  \"most_likely_score\": \"3-0\",\n  \"scorers\": [\n    {\"player\": \"Ferran Torres\", \"team\": \"home\", \"minute\": 92, \"p\": 0.06},\n    {\"player\": \"Mikel Merino\", \"team\": \"home\", \"minute\": 93, \"p\": 0.05}\n  ],\n  \"reasoning\": {\"overall\": \"比赛已进行到90分钟，西班牙3-0领先奥地利。西班牙在36分钟由Mikel Oyarzabal首开纪录，66分钟Pedro Porro扩大比分，89分钟Oyarzabal再入一球梅开二度，牢牢锁定胜局。场面数据同样一边倒：西班牙控球率66%，射门22次、射正10次、角球9次；奥地利仅5次射门、零射正、零角球，且犯规多达13次，进攻端毫无威胁，门将扑救5次也难改颓势。综合来看，奥地利在最后阶段完成逆转甚至扳回一球的可能性都极低，西班牙获胜概率提升至接近99.5%，平局与奥地利爆冷几乎可以忽略。最可能的最终比分维持在3-0。补时阶段，西班牙替补登场的Ferran Torres与Mikel Merino保持前场压迫，仍具备再下一城的可能性，因此将其列为补时阶段的潜在破门人选，但整体加时进球概率有限；奥地利在体能与士气双重下滑的情况下，几乎不具备打入安慰球的条件。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-02T19:04:40+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 4,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.24,
+        "away": 0.14
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Lamine Yamal",
+          "minute": 63,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Álvaro Morata",
+          "minute": 38,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Nico Williams",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Marcel Sabitzer",
+          "minute": 71,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Michael Gregoritsch",
+          "minute": 84,
+          "p": 0.16,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第4分钟，西班牙0-0战平奥地利。虽然刚开场奥地利控球率高达70%，但更多是西班牙在完成首波压迫后主动回收、让对手在中后场倒脚，真正体现威胁的数据是射门与射正——西班牙已经完成1次射门并直接命中门框范围内，迫使奥地利门将做出1次扑救，进攻效率明显高于对手。综合赛前实力差距、西班牙整体球员个人能力和大赛经验，以及开场阶段就已经展现的射门威胁，西班牙依然是明显热门，胜率维持在0.62左右；奥地利本届状态不俗、防守组织度较高，加上淘汰赛容错率低，平局概率保留在0.24；奥地利爆冷取胜的概率压到0.14。最可能的最终比分给到2-1的西班牙小胜：一方面符合西班牙控制比赛但奥地利有反扑能力的走势，另一方面也与当前0-0、时间刚过4分钟的现状兼容，两队都仍有充足时间进球。后续进球方面，西班牙端把主要机会给到亚马尔（拉明·亚马尔）和莫拉塔（Álvaro Morata），前者边路突破和内切射门是首要得分手段，后者作为中锋在禁区内嗅觉出色；尼科·威廉姆斯（尼科·威廉姆斯）作为另一侧爆点在体能拉开后半段更容易撕破防线。奥地利端最可能的进球来源是萨比策（马塞尔·萨比策）远射和定位球，以及格雷戈里奇（迈克尔·格雷戈里奇）作为替补或支点在终场前把握机会，进球时间集中在下半场70分钟之后，均严格晚于当前第4分钟。"
+      },
+      "sources": [],
+      "cost_usd": 0.0912013,
+      "tokens": {
+        "input": 19804,
+        "output": 969
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.651
+    },
+    {
+      "submitted_at": "2026-07-02T19:38:01+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 38,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.15,
+        "away": 0.07
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lamine Yamal",
+          "minute": 72,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Mikel Oyarzabal",
+          "minute": 68,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Álvaro Morata",
+          "minute": 78,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Nico Williams",
+          "minute": 63,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Marcel Sabitzer",
+          "minute": 82,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场进行到38分钟，西班牙凭借奥亚萨瓦尔（Oyarzabal）在第37分钟由库库雷利亚（Cucurella）助攻打进的进球，以1-0领先奥地利。从场面看，西班牙完全掌控比赛：控球率62%，射门6次其中4次射正，5个角球，持续在对方半场施压；奥地利仅有1次射门且0射正，进攻端几乎无所作为，主要依靠中低位防守。刚刚失球对奥地利心理和阵型都会造成冲击，短时间内很难迅速重整反扑，西班牙延续压制的可能性很大。基于目前的比赛走势和实力差，西班牙获胜概率明显上调至0.78，平局0.15，奥地利翻盘可能性仅0.07。最可能的最终比分是2-0：西班牙有较大概率再入一球扩大优势，而奥地利在如此被动的局面下打破僵局的机会有限。后续进球方面，西班牙锋线亚马尔（Yamal）、尼科·威廉姆斯（尼科·威廉姆斯）在边路持续制造威胁，最有机会再下一城；奥亚萨瓦尔状态火热有望梅开二度，替补或下半场登场的莫拉塔（Morata）也可能成为破门点。奥地利若能扳回一球，中前场核心萨比策（Sabitzer）在比赛末段的定位球或反击机会最可能形成威胁，但整体概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0894512,
+      "tokens": {
+        "input": 19891,
+        "output": 857
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.86
+    },
+    {
+      "submitted_at": "2026-07-02T20:11:27+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 56,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.74,
+        "draw": 0.18,
+        "away": 0.08
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Mikel Oyarzabal",
+          "minute": 72,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 78,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Álvaro Morata",
+          "minute": 83,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Nico Williams",
+          "minute": 68,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Carney Chukwuemeka",
+          "minute": 80,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第56分钟，西班牙凭借第36分钟奥亚萨瓦尔（米克尔·奥亚萨瓦尔）接库库雷利亚（马克·库库雷利亚）传中的入球，以1-0领先奥地利。从场面数据来看，西班牙完全掌控比赛：控球率65%，射门11次其中6次射正，角球6次，而奥地利射门仅2次、0射正、0角球，奥地利门将已做出4次扑救，可见进攻端几乎被压制。奥地利在中场休息时一次性换上Chukwuemeka和Grillitsch两名中场，意图加强中场组织与推进，但从下半场至今仍未制造有效威胁。综合来看，西班牙胜率明显占优，上调至约0.74；奥地利若想追平需要在半场压力下完成质变，难度较大，负概率维持在0.08左右；平局需要奥地利后段扳平且西班牙不再进球，概率约0.18。基于西班牙持续的射门频率与压迫，最可能的最终比分为2-0，即再入一球锁定胜局。后续进球点最有可能仍集中在西班牙锋线：状态火热的奥亚萨瓦尔具备梅开二度可能，边路的亚马尔（拉明·亚马尔）与尼科·威廉姆斯（尼科·威廉姆斯）在开阔空间下极具威胁，替补登场的莫拉塔（Álvaro Morata）也可能在末段把握机会；奥地利方面若要进球，新登场的Chukwuemeka是相对更具冲击力的选项，但概率有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.0894512,
+      "tokens": {
+        "input": 20026,
+        "output": 830
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.66
+    },
+    {
+      "submitted_at": "2026-07-02T20:28:39+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 73,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.94,
+        "draw": 0.05,
+        "away": 0.01
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第73分钟，西班牙主场2-0领先奥地利。从场面数据看，西班牙完全掌控比赛：控球率67%、17次射门(7次射正)、8个角球，而奥地利仅3次射门且0射正、0角球，犯规多达9次，明显处于被动挨打的局面。奥地利在下半场开始及60分钟已经用完了4个换人名额，包括同时换上Arnautovic和Kalajdzic两名前锋，显示已经完全押注反扑，但阵型也因此更加冒险。基于此，西班牙晋级和取胜的概率提升至约94%，平局仅约5%，奥地利逆转几乎不可能(约1%)。最可能的最终比分锁定为2-0：西班牙2球领先已足够稳妥，剩余时间可能会更倾向于控球消耗时间，而奥地利虽会加强进攻但缺乏创造有威胁机会的能力，扑救数据(门将4次扑救)也说明他们防线尚未崩溃。若73分钟后仍有进球，西班牙一方Oyarzabal状态火热延续进球势头、拉明·亚马尔边路突破与费兰·托雷斯的替补冲击最有可能改写比分；奥地利若能扳回一球，最大希望寄托在两名新上场的中锋Arnautovic和Kalajdzic的头球争顶上，但概率明显偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0951418,
+      "tokens": {
+        "input": 20149,
+        "output": 1113
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.703
+    },
+    {
+      "submitted_at": "2026-07-02T20:34:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 79,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.96,
+        "draw": 0.035,
+        "away": 0.005
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第79分钟，西班牙主场2-0领先奥地利。Oyarzabal在第36分钟由Cucurella助攻首开纪录，佩德罗·波罗在第66分钟由亚历克斯·巴埃纳送出助攻扩大比分，两粒进球分布合理，反映出西班牙全场压制。数据端西班牙控球率高达67%，射门19次其中8次射正，角球8个，而奥地利仅3次射门、0射正、0角球，完全被压制在半场。奥地利虽在下半场做出4次换人（Chukwuemeka、Grillitsch、Arnautovic、Kalajdzic全部登场）试图加强前场冲击，但仍未能制造有效威胁；反观西班牙在71分钟换上米克尔·梅里诺和费兰·托雷斯保持锋线活力。剩下约十余分钟加补时，奥地利需要在没有射正的情况下连追两球，概率极低，西班牙获胜概率提升至0.96左右，平局约0.035，奥地利翻盘几乎可以忽略。最可能的最终比分锁定为2-0：西班牙已进入控制节奏、消耗时间的阶段，很可能满足于当前领先；但考虑到替补前场球员体能充沛且奥地利后防压上留有空间，仍存在扩大比分的可能，因此后续进球候选主要来自西班牙替补——费兰·托雷斯在反击中把握机会的概率最高，米克尔·梅里诺有插上第二落点的威胁，达尼·奥尔莫远射与直塞组织均具威胁；奥地利方面若出现进球，最可能来自替补前锋Arnautovic的定位球争顶，但概率很低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0921633,
+      "tokens": {
+        "input": 20329,
+        "output": 916
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.935
+    },
+    {
+      "submitted_at": "2026-07-02T20:51:47+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.995,
+        "draw": 0.003,
+        "away": 0.002
+      },
+      "most_likely_score": "3-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进行到90分钟，西班牙3-0领先奥地利。西班牙在36分钟由米克尔·奥亚萨瓦尔首开纪录，66分钟佩德罗·波罗扩大比分，89分钟Oyarzabal再入一球梅开二度，牢牢锁定胜局。场面数据同样一边倒：西班牙控球率66%，射门22次、射正10次、角球9次；奥地利仅5次射门、零射正、零角球，且犯规多达13次，进攻端毫无威胁，门将扑救5次也难改颓势。综合来看，奥地利在最后阶段完成逆转甚至扳回一球的可能性都极低，西班牙获胜概率提升至接近99.5%，平局与奥地利爆冷几乎可以忽略。最可能的最终比分维持在3-0。补时阶段，西班牙替补登场的费兰·托雷斯与米克尔·梅里诺保持前场压迫，仍具备再下一城的可能性，因此将其列为补时阶段的潜在破门人选，但整体加时进球概率有限；奥地利在体能与士气双重下滑的情况下，几乎不具备打入安慰球的条件。"
+      },
+      "sources": [],
+      "cost_usd": 0.08649860000000001,
+      "tokens": {
+        "input": 20563,
+        "output": 563
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.193
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-40_New-Zealand_Egypt_2026-06-22",
+  "provider_fixture_id": "19609177",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-22T02:59:27+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 3
+    },
+    "home": "New Zealand",
+    "away": "Egypt",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-22T01:00:00+00:00",
+    "venue": "Vancouver Stadium",
+    "venue_city": "Vancouver"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.001,
+      "draw": 0.004,
+      "away": 0.995
+    },
+    "most_likely_score": "1-3",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进行到第90分钟，新西兰1-3落后埃及，胜负基本已无悬念。上半场第15分钟芬恩·瑟曼头槌为新西兰先拔头筹，但下半场埃及全面接管比赛：第59分钟Mostafa Mohamed扳平，第67分钟穆罕默德·萨拉赫反超，第82分钟Trezeguet再下一城彻底锁定胜局。从数据看埃及19次射门7次射正、控球率55%，明显占优，新西兰仅4次射正且体能、阵型在连续换人后已被打散。比赛进入伤停补时阶段，留给新西兰追回两球的时间几乎为零，因此埃及获胜概率压倒性接近确定，平局与新西兰翻盘概率可忽略不计，最可能的最终比分维持当前1-3。补时阶段进球期望偏低，但埃及替补登场的Marmoush、哈姆扎·阿卜杜勒卡里姆在新西兰压上寻求进球时具备反击空间，新西兰方面替补前锋杰西·兰德尔存在小概率打入安慰球，因此后续进球候选以这几名球员为主，整体概率均较低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 21179,
+    "output": 602
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0894993,
+  "wall_seconds": 17.026,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.001, \"draw\": 0.004, \"away\": 0.995},\n  \"most_likely_score\": \"1-3\",\n  \"scorers\": [\n    {\"player\": \"Omar Marmoush\", \"team\": \"away\", \"minute\": 93, \"p\": 0.06},\n    {\"player\": \"Hamza Abdelkarim\", \"team\": \"away\", \"minute\": 92, \"p\": 0.05},\n    {\"player\": \"Jesse Randall\", \"team\": \"home\", \"minute\": 94, \"p\": 0.04}\n  ],\n  \"reasoning\": {\"overall\": \"比赛已进行到第90分钟，新西兰1-3落后埃及，胜负基本已无悬念。上半场第15分钟Finn Surman头槌为新西兰先拔头筹，但下半场埃及全面接管比赛：第59分钟Mostafa Mohamed扳平，第67分钟Mohamed Salah反超，第82分钟Trezeguet再下一城彻底锁定胜局。从数据看埃及19次射门7次射正、控球率55%，明显占优，新西兰仅4次射正且体能、阵型在连续换人后已被打散。比赛进入伤停补时阶段，留给新西兰追回两球的时间几乎为零，因此埃及获胜概率压倒性接近确定，平局与新西兰翻盘概率可忽略不计，最可能的最终比分维持当前1-3。补时阶段进球期望偏低，但埃及替补登场的Marmoush、Hamza Abdelkarim在新西兰压上寻求进球时具备反击空间，新西兰方面替补前锋Jesse Randall存在小概率打入安慰球，因此后续进球候选以这几名球员为主，整体概率均较低。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-22T01:15:11+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 15,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "New Zealand",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T01:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.3,
+        "away": 0.48
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Mohamed Salah",
+          "minute": 58,
+          "p": 0.34,
+          "team": "away"
+        },
+        {
+          "player": "Omar Marmoush",
+          "minute": 72,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Chris Wood",
+          "minute": 68,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Trielli",
+          "minute": 80,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第15分钟，新西兰与埃及仍以0-0僵持。从开场15分钟的场面数据看，两队控球率打成五五开，新西兰凭借主动逼抢获得了2次射门（1次射正）和1个角球，开局节奏稍占上风；埃及虽然射门数仅有1次，但门将已有1次扑救，整体防守站位稳固，更像是在按部就班地控制比赛节奏，等待萨拉赫等前场球员在中后段发力。考虑到赛前埃及在整体实力、阵容深度和大赛经验上明显占优，目前0-0的比分并未改变基本面，因此客队仍保持最高胜率，平局概率因低比分阶段而上调，新西兰爆冷的可能性有限。综合走势判断，最可能的最终比分为0-1，由埃及凭借中后段的个人能力打破僵局。后续进球点上，萨拉赫在下半场初段（55-65分钟）随着新西兰体能下降最具威胁，是最大热门；Marmoush作为前场支点也具备把握二点球和反击的能力；新西兰方面，克里斯·伍德依靠定位球和高点冲击仍保留扳平希望；另外不排除埃及在末段由替补或边路球员锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.08529980000000001,
+      "tokens": {
+        "input": 19669,
+        "output": 677
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.536
+    },
+    {
+      "submitted_at": "2026-06-22T01:39:02+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 39,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "New Zealand",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T01:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.28,
+        "away": 0.2
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分1-0，比赛进行到第39分钟，新西兰由芬恩·瑟曼在第15分钟头球破门取得领先，蒂姆·佩恩送出助攻。从场面数据看，新西兰虽然控球率仅45%略低于埃及的55%，但在射门效率上明显占优，全场7次射门3次射正，而埃及5次射门只有1次射正，表明新西兰的反击和定位球威胁更具杀伤力。值得注意的是新西兰已经吃到两张黄牌（萨普里特·辛格、卡勒姆·麦考特），加上犯规数偏高（6次对2次），下半场纪律层面存在隐患，可能被迫收缩防线。基于领先优势加上射门质量更佳，新西兰获胜概率上调至约52%，但考虑到埃及整体实力和控球占优，扳平的可能性不容忽视，平局概率约28%，埃及完成翻盘的概率约20%。最可能的最终比分定为1-0，新西兰在取得领先后大概率会选择稳守反击的策略，比赛进入低比分收官的剧本概率最大。后续进球预测方面，埃及方面穆罕默德·萨拉赫作为核心持球点最具威胁，奥马尔·马尔穆什的前插能力也可能转化为进球；新西兰若有第二球，反击中由克里斯·伍德完成致命一击的可能性最高，已有黄牌在身的卡勒姆·麦考特则可能在防守反击中获得机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.08769,
+      "tokens": {
+        "input": 20000,
+        "output": 740
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.408
+    },
+    {
+      "submitted_at": "2026-06-22T02:33:35+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 78,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "New Zealand",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T01:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.1,
+        "draw": 0.22,
+        "away": 0.68
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到78分钟，新西兰1-2落后埃及。新西兰在第15分钟由芬恩·瑟曼率先破门，但下半场埃及通过Mostafa Mohamed（59'）和穆罕默德·萨拉赫（67'）短时间内连入两球完成逆转，势头明显倒向埃及一边。从数据看，埃及控球率58%、射门15次（射正4次），全面压制新西兰的9次射门（射正4次），且犯规更少、比赛节奏掌控更佳，进攻端持续制造威胁。新西兰虽在66分钟换上本·奥尔德加强攻势，但落后局面下还剩约12分钟加补时，扳平难度较大。综合考虑：埃及取胜概率最高，约68%；新西兰若孤注一掷压上反扑，被埃及打反击再下一城的可能性也不低，但同时也存在追回一球逼平的空间，平局概率约22%；新西兰完成逆转的概率仅约10%。最可能的最终比分维持1-2，埃及守住胜果。后续进球方面，埃及方面Salah和Mostafa Mohamed状态火热、最有可能利用新西兰压上后的空当扩大比分；新西兰方面则寄望于锋线核心克里斯·伍德的支点作用以及替补登场的本·奥尔德的冲击力，在末段争取追分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0885928,
+      "tokens": {
+        "input": 20384,
+        "output": 712
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.347
+    },
+    {
+      "submitted_at": "2026-06-22T02:59:27+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "New Zealand",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T01:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.001,
+        "draw": 0.004,
+        "away": 0.995
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进行到第90分钟，新西兰1-3落后埃及，胜负基本已无悬念。上半场第15分钟芬恩·瑟曼头槌为新西兰先拔头筹，但下半场埃及全面接管比赛：第59分钟Mostafa Mohamed扳平，第67分钟穆罕默德·萨拉赫反超，第82分钟Trezeguet再下一城彻底锁定胜局。从数据看埃及19次射门7次射正、控球率55%，明显占优，新西兰仅4次射正且体能、阵型在连续换人后已被打散。比赛进入伤停补时阶段，留给新西兰追回两球的时间几乎为零，因此埃及获胜概率压倒性接近确定，平局与新西兰翻盘概率可忽略不计，最可能的最终比分维持当前1-3。补时阶段进球期望偏低，但埃及替补登场的Marmoush、哈姆扎·阿卜杜勒卡里姆在新西兰压上寻求进球时具备反击空间，新西兰方面替补前锋杰西·兰德尔存在小概率打入安慰球，因此后续进球候选以这几名球员为主，整体概率均较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0894993,
+      "tokens": {
+        "input": 21179,
+        "output": 602
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.026
+    }
+  ]
+}

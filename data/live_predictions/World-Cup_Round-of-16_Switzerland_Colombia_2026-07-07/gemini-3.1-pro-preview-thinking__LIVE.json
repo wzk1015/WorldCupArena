@@ -1,0 +1,289 @@
+{
+  "fixture_id": "World-Cup_Round-of-16_Switzerland_Colombia_2026-07-07",
+  "provider_fixture_id": "19606961",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-07T22:45:19+00:00",
+  "live": {
+    "status": "Penalty In Progress",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 0
+    },
+    "home": "Switzerland",
+    "away": "Colombia",
+    "competition": "World Cup",
+    "stage": "Round of 16",
+    "kickoff_utc": "2026-07-07T20:00:00+00:00",
+    "venue": "Vancouver Stadium",
+    "venue_city": "Vancouver"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.0,
+      "draw": 1.0,
+      "away": 0.0
+    },
+    "most_likely_score": "0-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "本场世界杯八分之一决赛已结束120分钟的鏖战，双方均未能攻破对手球门，当前比分为0-0，比赛已正式进入点球大战阶段。从全场数据来看，哥伦比亚在射门数（15对7）和角球数（7对3）上占据优势，但瑞士队的防守十分稳固，成功将比赛拖入点球决胜。在正在进行的点球大战中，哥伦比亚的胡安·金特罗和瑞士的格拉尼特·扎卡均已罚进，但哥伦比亚的达文森·桑切斯罚失，这使得瑞士队在晋级形势上占据主动。由于常规时间和加时赛均已结束，本场比赛的最终官方比分已锁定为0-0（平局），因此平局概率为100%，后续也不会再有常规或加时赛阶段的进球者。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1494,
+    "output": 2659
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0183204,
+  "wall_seconds": 25.363,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.0,\n    \"draw\": 1.0,\n    \"away\": 0.0\n  },\n  \"most_likely_score\": \"0-0\",\n  \"scorers\": [],\n  \"reasoning\": {\n    \"overall\": \"本场世界杯八分之一决赛已结束120分钟的鏖战，双方均未能攻破对手球门，当前比分为0-0，比赛已正式进入点球大战阶段。从全场数据来看，哥伦比亚在射门数（15对7）和角球数（7对3）上占据优势，但瑞士队的防守十分稳固，成功将比赛拖入点球决胜。在正在进行的点球大战中，哥伦比亚的胡安·金特罗和瑞士的格拉尼特·扎卡均已罚进，但哥伦比亚的达文森·桑切斯罚失，这使得瑞士队在晋级形势上占据主动。由于常规时间和加时赛均已结束，本场比赛的最终官方比分已锁定为0-0（平局），因此平局概率为100%，后续也不会再有常规或加时赛阶段的进球者。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**In-Play Football Prediction Analysis: Penalty Shootout Scenario**\n\nOkay, here's the breakdown. This in-play football prediction engine needs to output a single JSON object for a match in a penalty shootout. The goal is to predict the match result in the context of it being a penalty shootout. The input says \"current time: 90'\", but the match status is \"Penalty In Progress\" with events extending past 90' to 119' and into a shootout. This means the 90' is *effectively* 120' + penalty shootout. I need to output the prediction for the *match* itself, which is a draw, since it's gone to penalties. Therefore, the official match score is 0-0.\n\nSo, first, I will set `win_probs.draw` to 1.0, with `win_probs.home` and `win_probs.away` to 0.0. This aligns with a draw at the end of regulation and extra time. The `most_likely_score` will be \"0-0\", as per the match score, which matches the highest win probability. Given that it's a penalty shootout, there are no likely future goalscorers after 90' (or 120'), so the `scorers` array should be empty.\n\nThe reasoning needs to reflect the match state.  I must explain that the match ended 0-0 after 120 minutes and is now in a penalty shootout. Since it's in a penalty shootout, the match result is a draw (0-0). The reasoning in simplified Chinese will accurately explain this situation, avoiding mentioning JSON format, model, or prompts. The reasoning has to make it clear that, although there's a penalty shootout, the official *match* score and result is a draw. I'll include the details of Colombia having a penalty missed, but the overall result of the game itself is still a draw.\n\nI’ll create the JSON, keeping in mind the strict requirements: no markdown, no specific mentions of JSON or the engine, just the raw data.  I've double-checked all the constraints: the output is a single JSON object, the score is compatible with the win probabilities, and all the required fields are present and valid. The final check confirms no markdown and that the output is a valid JSON.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-07-07T20:08:05+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 8,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T20:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.31,
+        "draw": 0.38,
+        "away": 0.31
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Luis Díaz",
+          "minute": 38,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Breel Embolo",
+          "minute": 55,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第8分钟，目前比分为0-0。瑞士队在开场阶段占据了61%的控球率，试图通过中场的耐心传导控制比赛节奏，而哥伦比亚队虽然控球率较低（39%），但已经获得了一次角球机会，展现出他们在反击和定位球上的威胁。作为世界杯八分之一决赛，双方开局都相对谨慎，试探意味浓厚。考虑到两队实力接近且淘汰赛容错率低，平局的概率在初期较高。预计随着比赛深入，哥伦比亚的边路突击和瑞士的整体配合将逐渐创造出实质性机会。最可能的常规时间最终比分是1-1，将比赛拖入加时。路易斯·迪亚斯 和 布雷尔·恩博洛 是双方最有可能打破僵局的关键球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.010083149999999999,
+      "tokens": {
+        "input": 807,
+        "output": 1466
+      },
+      "tool_calls": 0,
+      "wall_seconds": 77.12
+    },
+    {
+      "submitted_at": "2026-07-07T21:09:32+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 54,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T20:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.4,
+        "away": 0.3
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第54分钟，瑞士与哥伦比亚的比分依然是0-0。从目前的场面数据来看，双方势均力敌，控球率各占50%，射门次数也相对较少（瑞士3次，哥伦比亚5次），反映出这场世界杯八分之一决赛的谨慎态势。由于比赛已经进入下半场，双方在防守端投入较大，都不愿轻易冒险。考虑到淘汰赛的性质以及目前的胶着状态，常规时间内互交白卷进入加时赛的可能性正在显著增加。因此，平局是目前概率最高的结果，最可能的最终比分为0-0。如果比赛中出现进球，哥伦比亚的 路易斯·迪亚斯 或瑞士的攻击手可能会在比赛后段利用对方体能下降的空当创造机会，但整体进球期望值依然偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.00753585,
+      "tokens": {
+        "input": 883,
+        "output": 1049
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.961
+    },
+    {
+      "submitted_at": "2026-07-07T21:59:17+00:00",
+      "live": {
+        "status": "Break Time",
+        "elapsed": 119,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T20:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.98,
+        "away": 0.01
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第119分钟，比分依然是0-0平。加时赛即将结束，双方在场面和数据上势均力敌，瑞士队控球率52%，哥伦比亚48%，双方各有2次射正。在仅剩1分钟左右的时间里，两队都将以稳固防守为主，避免在最后时刻犯错。因此，比赛进入点球大战的概率极高，常规及加时赛最终比分最可能定格在0-0。由于时间所剩无几，预计不会有球员在运动战中取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.00381675,
+      "tokens": {
+        "input": 1259,
+        "output": 396
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.416
+    },
+    {
+      "submitted_at": "2026-07-07T22:05:18+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 110,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T20:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.84,
+        "away": 0.08
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到加时赛第110分钟，目前瑞士与哥伦比亚的比分依然是0-0。从场面数据来看，这是一场势均力敌且防守严密的较量，双方控球率（52%对48%）和射正次数（各2次）都非常接近，犯规次数也较多，比赛节奏被频繁打断。尽管两队在常规时间下半场和加时赛中都进行了大量换人调整以期打破僵局，但双方防线依然稳固。由于加时赛仅剩最后10分钟，两队在体能严重下降的情况下都会踢得更加谨慎，首要目标是避免致命失误，因此比赛被拖入点球大战的概率极高。基于当前局势，120分钟结束时的最终比分最可能维持在0-0。如果在这最后阶段出现戏剧性的绝杀进球，替补登场、体能相对充沛的攻击手将是最具威胁的人物，例如瑞士的 塞德里克·伊滕 或哥伦比亚的 库乔·埃尔南德斯，但整体来看，常规运动战再次产生进球的概率已经非常低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0115689,
+      "tokens": {
+        "input": 1292,
+        "output": 1621
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.048
+    },
+    {
+      "submitted_at": "2026-07-07T22:38:41+00:00",
+      "live": {
+        "status": "Penalty In Progress",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T20:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 1.0,
+        "away": 0.0
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛已经进入点球大战阶段。在常规时间与加时赛的激烈角逐中，瑞士与哥伦比亚均未能攻破对方球门，比分定格在0-0。从全场比赛的场面和数据来看，哥伦比亚在进攻端表现更为积极，共完成15次射门，但仅有3次射正，未能转化为进球；而瑞士队虽然控球率略占优势（53%），但创造出的绝对得分机会寥寥，全场仅有7次射门。双方在加时赛末段进行了针对性的换人调整，例如哥伦比亚在第119分钟换上耶里·米纳（耶里·米纳），显然是为点球大战做最后的准备。由于比赛的常规及加时赛阶段已经结束，官方常规赛果已确定为平局，因此平局概率达到100%，最可能的最终比分即为当前的0-0。进入点球决胜阶段后，不再预测常规或加时赛的运动战进球球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.0158214,
+      "tokens": {
+        "input": 1400,
+        "output": 2278
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.966
+    },
+    {
+      "submitted_at": "2026-07-07T22:45:19+00:00",
+      "live": {
+        "status": "Penalty In Progress",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T20:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 1.0,
+        "away": 0.0
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "本场世界杯八分之一决赛已结束120分钟的鏖战，双方均未能攻破对手球门，当前比分为0-0，比赛已正式进入点球大战阶段。从全场数据来看，哥伦比亚在射门数（15对7）和角球数（7对3）上占据优势，但瑞士队的防守十分稳固，成功将比赛拖入点球决胜。在正在进行的点球大战中，哥伦比亚的胡安·金特罗和瑞士的格拉尼特·扎卡均已罚进，但哥伦比亚的达文森·桑切斯罚失，这使得瑞士队在晋级形势上占据主动。由于常规时间和加时赛均已结束，本场比赛的最终官方比分已锁定为0-0（平局），因此平局概率为100%，后续也不会再有常规或加时赛阶段的进球者。"
+      },
+      "sources": [],
+      "cost_usd": 0.0183204,
+      "tokens": {
+        "input": 1494,
+        "output": 2659
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.363
+    }
+  ]
+}

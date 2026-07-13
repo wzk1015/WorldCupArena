@@ -1,0 +1,308 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-30_Scotland_Morocco_2026-06-19",
+  "provider_fixture_id": "19609171",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-19T23:57:34+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 1
+    },
+    "home": "Scotland",
+    "away": "Morocco",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-19T22:00:00+00:00",
+    "venue": "Boston Stadium",
+    "venue_city": "Foxborough"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.01,
+      "draw": 0.09,
+      "away": 0.9
+    },
+    "most_likely_score": "0-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进行到第90分钟，当前比分苏格兰 0-1 摩洛哥。摩洛哥在开场第2分钟就凭借 伊斯梅尔·赛巴里 的进球取得领先，并在随后的比赛中牢牢掌控了局面。从数据来看，摩洛哥控球率达到60%，射门数11对6占据绝对优势，并获得了5次角球。反观苏格兰，全场至今0次射正，进攻端显得办法不多，很难对摩洛哥的球门造成实质性威胁。考虑到比赛已进入伤停补时阶段，留给苏格兰扳平比分的时间所剩无几。摩洛哥全取三分的概率极高，而平局概率仅在9%左右，苏格兰逆转取胜的希望极其渺茫。最可能的最终比分将维持在 0-1。苏格兰在最后时刻换上了 罗斯·斯图尔特 和 林登·戴克斯 等攻击手准备进行长传冲吊的绝地反击，这可能会带来乱战中的进球机会；但同时，全线压上也给摩洛哥留下了巨大的反击空间，替补登场体能充沛的 苏菲扬·拉希米 有可能在补时阶段利用反击彻底锁定胜局。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1844,
+    "output": 2082
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.015052800000000002,
+  "wall_seconds": 22.152,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.01,\n    \"draw\": 0.09,\n    \"away\": 0.90\n  },\n  \"most_likely_score\": \"0-1\",\n  \"scorers\": [\n    {\n      \"player\": \"Soufiane Rahimi\",\n      \"team\": \"away\",\n      \"minute\": 94,\n      \"p\": 0.08\n    },\n    {\n      \"player\": \"Ross Stewart\",\n      \"team\": \"home\",\n      \"minute\": 93,\n      \"p\": 0.03\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进行到第90分钟，当前比分苏格兰 0-1 摩洛哥。摩洛哥在开场第2分钟就凭借 Ismael Saibari 的进球取得领先，并在随后的比赛中牢牢掌控了局面。从数据来看，摩洛哥控球率达到60%，射门数11对6占据绝对优势，并获得了5次角球。反观苏格兰，全场至今0次射正，进攻端显得办法不多，很难对摩洛哥的球门造成实质性威胁。考虑到比赛已进入伤停补时阶段，留给苏格兰扳平比分的时间所剩无几。摩洛哥全取三分的概率极高，而平局概率仅在9%左右，苏格兰逆转取胜的希望极其渺茫。最可能的最终比分将维持在 0-1。苏格兰在最后时刻换上了 Ross Stewart 和 Lyndon Dykes 等攻击手准备进行长传冲吊的绝地反击，这可能会带来乱战中的进球机会；但同时，全线压上也给摩洛哥留下了巨大的反击空间，替补登场体能充沛的 Soufiane Rahimi 有可能在补时阶段利用反击彻底锁定胜局。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**My In-Play Prediction Process**\n\nOkay, here's how I'm approaching this in-play football prediction. First, I need to nail down the core problem: I'm predicting the outcome of the Scotland vs. Morocco match at the 90th minute, with the current score at 0-1. The format needs to be a clean JSON object, adhering to strict constraints on fields, values, and language.\n\nI begin by analyzing the current match state. I see it's a World Cup group stage game, Scotland at home against Morocco. The clock's ticking at the 90th minute, meaning stoppage time is imminent. Morocco's leading 1-0, with an early goal from Saibari. I note all the substitutions made by both teams as well as the yellow cards. The possession and shots stats tell a clear story: Morocco dominates with 60% possession and a significant shot advantage (11 shots, 2 on target) compared to Scotland's struggling attack (6 shots, 0 on target). They have not had a shot on goal. This indicates that Morocco controls the flow, and Scotland looks impotent.\n\nGiven the time and score, I can quickly calculate the probabilities. With virtually no time left, Morocco's win probability is incredibly high, around 90%. Scotland faces a steep uphill battle, needing a goal just to draw, which feels highly improbable given their current performance. I estimate a draw at only around 9%, and a Scottish win is almost zero, roughly 1%. The most likely final score, therefore, remains at 0-1.\n\nNow, considering potential scorers, since the time is the 90th minute, the chances of a goal are low. However, I must allow for extreme scenarios. If Scotland, desperate to level the score, pushes everyone forward, they might concede on a counter-attack or they may receive a fortuitous set-piece. I'll add a low probability scorer for Morocco on a counter, and I'll lean on a fresh substitute, Soufiane Rahimi, who entered late in the game to leverage his fresher legs. I will also add a low probability scorer for Scotland, perhaps a target man like Ross Stewart or Lyndon Dykes, who were also brought on late. The goal minutes should be after the 90th minute.\n\nNext, I formulate my reasoning in Simplified Chinese, as required. I summarize the current match state, which is that it's 90 minutes in, and Morocco is winning 1-0. I explain that Morocco took the lead early and has dominated the game flow. Their possession and shot data show a commanding advantage. Scotland hasn't had a shot on target. With the game in stoppage time, the time to draw is short, and Morocco's chance to win is very high. I conclude that the most likely final score will remain 0-1. I describe Scotland's late substitutions, which could bring the chance of a goal through long balls, but also could open the way for counter-attacks for Morocco.\n\nFinally, I format the output as a valid JSON object, ensuring it meets all requirements. I cross-check all fields. The win probabilities reflect the overwhelmingly likely outcome. The scorers and goal minutes are reasonable. The narrative reasoning is in the correct language. All constraints are met. I'm confident in the output.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-19T22:03:18+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 3,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Scotland",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T22:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.23,
+        "away": 0.65
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 41,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Brahim Díaz",
+          "minute": 65,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Scott McTominay",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛开场仅3分钟，摩洛哥便反客为主，凭借伊斯梅尔·赛巴里（伊斯梅尔·赛巴里）接布拉欣·迪亚斯（布拉欣·迪亚斯）的助攻闪电破门，取得了1-0的领先优势。从开局极短时间的统计来看，摩洛哥控球率高达90%，展现出了强烈的进攻欲望和对比赛节奏的绝对掌控。苏格兰在意外丢球后，赛前的战术部署被打乱，需要在后续比赛中逐渐压上进攻以寻求扳平比分，但这势必会给摩洛哥留下更多反击空间。考虑到摩洛哥整体技术能力占优且已经手握一球领先，他们赢下本场比赛的概率大幅提升。苏格兰虽然具备极强的身体对抗和韧性，但在如此被动的开局下想要逆转防守稳固的摩洛哥难度极大。预计摩洛哥能够利用对手急于扳平的心理，通过犀利的边路突击和快速反击再次扩大比分。因此，客队获胜是目前最可能的结果，0-2是最具可能性的最终比分。在后续的进球预测中，摩洛哥的锋线尖刀恩内斯里（Youssef En-Nesyri）和状态出色的布拉欣·迪亚斯有望在反击中建功，而苏格兰的麦克托米奈（斯科特·麦克托米奈）则可能在定位球或后插上进攻中创造威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.0144585,
+      "tokens": {
+        "input": 1008,
+        "output": 2127
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.057
+    },
+    {
+      "submitted_at": "2026-06-19T22:21:19+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 21,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Scotland",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T22:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.07,
+        "draw": 0.18,
+        "away": 0.75
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 42,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Brahim Díaz",
+          "minute": 65,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Scott McTominay",
+          "minute": 78,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第21分钟，摩洛哥目前以1-0领先苏格兰。开场仅2分钟，布拉欣·迪亚斯 就助攻 伊斯梅尔·赛巴里 闪电破门，为摩洛哥确立了梦幻开局。从目前的场面数据来看，摩洛哥完全掌控了比赛节奏，控球率高达73%，并获得了3次角球机会。相比之下，苏格兰开局极其被动，至今未能完成任何射门，控球率仅有27%，且已经出现了3次犯规，显示出他们在防守端的吃力与中场失势。基于摩洛哥在技术和场面上的绝对压制力以及比分领先的优势，他们拿下本场比赛的概率已经大幅上升。苏格兰若不能在战术上做出有效调整，很难在阵地战中占得便宜。预计摩洛哥会在后续比赛中利用对手急于扳平而压上反扑的空间再下一城，最可能的最终比分为0-2。在后续进球者方面，已经送出助攻、状态活跃的 布拉欣·迪亚斯 以及锋线核心 Youssef En-Nesyri 都有很大机会利用反击扩大比分；而苏格兰若能通过定位球制造零星威胁，后插上能力极强的 斯科特·麦克托米奈 将是他们最潜在的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.01575105,
+      "tokens": {
+        "input": 1051,
+        "output": 2325
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.99
+    },
+    {
+      "submitted_at": "2026-06-19T22:39:34+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 39,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Scotland",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T22:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "failed",
+      "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄-0.365926 (request id: 202606192239353118712798268d9d60ijPmKup)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.657
+    },
+    {
+      "submitted_at": "2026-06-19T23:14:24+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 59,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Scotland",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T22:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.22,
+        "away": 0.7
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第59分钟，摩洛哥凭借开场第2分钟 伊斯梅尔·赛巴里（由 布拉欣·迪亚斯 助攻）的闪电进球，目前以1-0领先苏格兰。从场面数据来看，摩洛哥占据了59%的控球率，并获得了5个角球和5次射门机会，牢牢掌控着比赛节奏。相比之下，苏格兰在进攻端表现十分挣扎，至今仅有2次射门且无一射正，未能给摩洛哥防线制造实质性威胁。考虑到比赛仅剩30多分钟，且摩洛哥在控球和防守端表现稳健，客队全取三分的概率已大幅提升至70%。苏格兰若想扳平比分必须在进攻端做出重大调整，平局概率约为22%，而主队逆转取胜的希望极其渺茫（8%）。最可能的最终比分预计维持在0-1。不过，随着苏格兰在比赛尾声阶段不可避免地大举压上，摩洛哥的 布拉欣·迪亚斯 等前场球员有望利用反击空间制造威胁，存在打入第二球彻底杀死比赛的可能性；而苏格兰方面，若能利用定位球机会，斯科特·麦克托米奈 等球员也有一定概率在最后时刻抢点破门。"
+      },
+      "sources": [],
+      "cost_usd": 0.01428315,
+      "tokens": {
+        "input": 1117,
+        "output": 2081
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.498
+    },
+    {
+      "submitted_at": "2026-06-19T23:39:28+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 84,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Scotland",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T22:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.13,
+        "away": 0.85
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第84分钟，摩洛哥凭借开场第2分钟 伊斯梅尔·赛巴里 的进球暂时以1-0领先苏格兰。从场面数据来看，摩洛哥占据了绝对的主动权，控球率高达63%，并且创造了9次射门和5个角球。相比之下，苏格兰在进攻端表现极为乏力，全场仅有3次射门且无一射正，未能给摩洛哥防线制造实质性威胁。考虑到比赛所剩时间无几（仅余常规时间6分钟及伤停补时），且苏格兰破门手段有限，摩洛哥将领先优势保持到终场并全取三分的概率极高。苏格兰虽然在下半场换上了 林登·戴克斯 等攻击手试图做最后一搏，但整体进攻运转依然不畅，扳平比分的希望较为渺茫。最可能的最终比分预计将维持在0-1。如果在最后阶段苏格兰大举压上导致后防空虚，摩洛哥的 布拉欣·迪亚斯 极有可能在反击中利用空间扩大比分；而苏格兰若能利用前场定位球或长传冲吊创造奇迹，替补登场的高中锋 林登·戴克斯 则是他们最可靠的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.015250199999999998,
+      "tokens": {
+        "input": 1408,
+        "output": 2186
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.972
+    },
+    {
+      "submitted_at": "2026-06-19T23:57:34+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Scotland",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T22:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.09,
+        "away": 0.9
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第90分钟，当前比分苏格兰 0-1 摩洛哥。摩洛哥在开场第2分钟就凭借 伊斯梅尔·赛巴里 的进球取得领先，并在随后的比赛中牢牢掌控了局面。从数据来看，摩洛哥控球率达到60%，射门数11对6占据绝对优势，并获得了5次角球。反观苏格兰，全场至今0次射正，进攻端显得办法不多，很难对摩洛哥的球门造成实质性威胁。考虑到比赛已进入伤停补时阶段，留给苏格兰扳平比分的时间所剩无几。摩洛哥全取三分的概率极高，而平局概率仅在9%左右，苏格兰逆转取胜的希望极其渺茫。最可能的最终比分将维持在 0-1。苏格兰在最后时刻换上了 罗斯·斯图尔特 和 林登·戴克斯 等攻击手准备进行长传冲吊的绝地反击，这可能会带来乱战中的进球机会；但同时，全线压上也给摩洛哥留下了巨大的反击空间，替补登场体能充沛的 苏菲扬·拉希米 有可能在补时阶段利用反击彻底锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.015052800000000002,
+      "tokens": {
+        "input": 1844,
+        "output": 2082
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.152
+    }
+  ]
+}

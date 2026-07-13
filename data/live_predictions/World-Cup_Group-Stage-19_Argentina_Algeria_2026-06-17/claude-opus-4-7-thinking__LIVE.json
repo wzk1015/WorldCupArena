@@ -1,0 +1,432 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-19_Argentina_Algeria_2026-06-17",
+  "provider_fixture_id": "19609145",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-17T02:54:34+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 3,
+      "away": 0
+    },
+    "home": "Argentina",
+    "away": "Algeria",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-17T01:00:00+00:00",
+    "venue": "Kansas City Stadium",
+    "venue_city": "Kansas City"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.99,
+      "draw": 0.005,
+      "away": 0.005
+    },
+    "most_likely_score": "3-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进行到第90分钟，阿根廷凭借梅西的帽子戏法（17'、60'、76'）以3-0领先阿尔及利亚。从场面看，阿根廷虽然控球率略低（47%对53%），但射门10次、射正高达6次，效率极高；阿尔及利亚7次射门0射正，进攻完全被压制，门将做出3次扑救但仍难挡梅西状态。阿尔及利亚在64分钟和81、82分钟连续换上进攻球员仍无建树，剩余时间仅有伤停补时，要在短时间内连入3球几乎不可能，因此主胜概率压至0.99，平局与客胜概率近乎为零。最可能的最终比分维持3-0，符合主队大胜的走势。补时阶段若再有进球，最大可能来自替补登场状态正佳的Julián Álvarez或劳塔罗·马丁内斯把握反击机会，但概率较低；阿尔及利亚锋无力，破门希望极小。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 6869,
+    "output": 507
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0347948,
+  "wall_seconds": 17.63,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.99, \"draw\": 0.005, \"away\": 0.005},\n  \"most_likely_score\": \"3-0\",\n  \"scorers\": [\n    {\"player\": \"Julián Álvarez\", \"team\": \"home\", \"minute\": 92, \"p\": 0.07},\n    {\"player\": \"Lautaro Martínez\", \"team\": \"home\", \"minute\": 93, \"p\": 0.05}\n  ],\n  \"reasoning\": {\"overall\": \"比赛已进行到第90分钟，阿根廷凭借梅西的帽子戏法（17'、60'、76'）以3-0领先阿尔及利亚。从场面看，阿根廷虽然控球率略低（47%对53%），但射门10次、射正高达6次，效率极高；阿尔及利亚7次射门0射正，进攻完全被压制，门将做出3次扑救但仍难挡梅西状态。阿尔及利亚在64分钟和81、82分钟连续换上进攻球员仍无建树，剩余时间仅有伤停补时，要在短时间内连入3球几乎不可能，因此主胜概率压至0.99，平局与客胜概率近乎为零。最可能的最终比分维持3-0，符合主队大胜的走势。补时阶段若再有进球，最大可能来自替补登场状态正佳的Julián Álvarez或Lautaro Martínez把握反击机会，但概率较低；阿尔及利亚锋无力，破门希望极小。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-17T01:16:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 16,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T01:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.74,
+        "draw": 0.18,
+        "away": 0.08
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 38,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "minute": 62,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 75,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Ángel Di María",
+          "minute": 82,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Farès Chaïbi",
+          "minute": 70,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Riyad Mahrez",
+          "minute": 80,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第16分钟，场上比分仍是0-0。从开场数据来看，阿根廷牢牢掌控了局面，控球率高达65%，已经制造了3次犯规压制对手节奏，而阿尔及利亚虽然在第8分钟有一次VAR介入（法雷斯·沙伊比相关）和一脚射门迫使门将做出扑救并赢得一个角球，但整体仍处于被压制状态。综合双方阵容深度、世界杯小组赛阶段的实际意义以及阿根廷作为夺冠热门的整体实力，主队赢球依然是最可能的结果，胜率给到约0.74，平局0.18，阿尔及利亚爆冷取胜的概率仅0.08左右。考虑到阿尔及利亚开局有一定威胁但缺乏稳定攻击手段，而阿根廷往往会在中前段通过Messi的组织和Lautaro、胡利安·阿尔瓦雷斯的跑位打开局面，最可能的最终比分定在2-0。后续进球方面，主队首粒进球大概率出现在上半场后段由Messi制造或亲自完成，下半场劳塔罗·马丁内斯和胡利安·阿尔瓦雷斯分别在60-75分钟区间扩大比分的概率较高，Di María若有出场也具备终结能力；阿尔及利亚方面若能扳回一城，最有可能来自Chaïbi的远射或Mahrez在边路的个人能力突破，但概率明显偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.03589,
+      "tokens": {
+        "input": 5610,
+        "output": 818
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.411
+    },
+    {
+      "submitted_at": "2026-06-17T01:31:38+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 31,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T01:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.13,
+        "away": 0.05
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 67,
+          "p": 0.32,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 58,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "minute": 75,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Rodrigo De Paul",
+          "minute": 80,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Riyad Mahrez",
+          "minute": 78,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第31分钟，阿根廷凭借梅西第17分钟的进球1-0领先阿尔及利亚。从场面数据看，阿根廷掌握65%控球率，已有1次射门并命中门框范围，而阿尔及利亚至今0射门，仅有1次门将扑救，进攻端几乎没有威胁，第8分钟Chaïbi涉及的VAR也未能改变比分走向。综合实力差距、场面控制力以及先进球带来的心理优势，阿根廷取胜概率上调至约82%，平局约13%，阿尔及利亚翻盘空间被压缩至5%左右。最可能的最终比分为2-0，阿根廷大概率在下半场再下一城扩大领先，而阿尔及利亚目前的进攻产出难以支撑扳平甚至破门。后续进球人选方面，梅西状态火热且已有进球，最有可能再度建功；J·阿尔瓦雷斯和劳塔罗作为锋线主力同样具备较高把握机会的能力；德保罗作为中场组织核心也有远射或插上得分的可能；阿尔及利亚一方则寄希望于马赫雷斯的个人能力制造冷门进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0340733,
+      "tokens": {
+        "input": 5724,
+        "output": 697
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.675
+    },
+    {
+      "submitted_at": "2026-06-17T01:46:33+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T01:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.15,
+        "away": 0.07
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 67,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "minute": 72,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 78,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Farès Chaïbi",
+          "minute": 80,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场结束阶段，阿根廷凭借梅西第17分钟接德保罗助攻的入球以1-0领先阿尔及利亚。从场面看，阿根廷控球率达61%，整体节奏由其掌控，虽然射门数仅与对手持平（各1次），但唯一的射正就转化为进球，效率极高；阿尔及利亚虽有1次角球并迫使门将做出1次扑救，但缺乏真正威胁，且早段两次VAR介入未能改变比分走势。综合考虑阿根廷的整体实力优势、主导态势以及阿尔及利亚需要冒险进攻所留出的反击空间，下半场阿根廷扩大比分的概率明显高于被扳平。主胜概率上调至约0.78，平局约0.15，阿尔及利亚翻盘的可能性较小，约0.07。最可能的最终比分判断为2-0，符合阿根廷继续掌控比赛并把握机会扩大领先的剧本。后续进球预测方面，梅西手感火热且为主要威胁点，再下一城概率最高；劳塔罗·马丁内斯与朱利安·阿尔瓦雷斯作为禁区终结者也具备较高把握机会的能力；若阿尔及利亚能扳回一球，开场便表现活跃的法雷斯·沙伊比最有可能成为破门者。"
+      },
+      "sources": [],
+      "cost_usd": 0.0346505,
+      "tokens": {
+        "input": 5830,
+        "output": 707
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.135
+    },
+    {
+      "submitted_at": "2026-06-17T02:09:47+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 54,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T01:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.74,
+        "draw": 0.18,
+        "away": 0.08
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 72,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Julian Alvarez",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Lautaro Martinez",
+          "minute": 83,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Farès Chaïbi",
+          "minute": 80,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第54分钟，阿根廷凭借梅西第17分钟的进球1-0领先阿尔及利亚。从场面数据看，阿根廷掌控56%的控球率，整体节奏占优，虽然射门数双方均为4次，但阿根廷射正1次并把握住了机会，而阿尔及利亚虽有2个角球但尚无射正，进攻威胁有限。阿根廷半场后用蒙铁尔换下莫利纳，显示出稳固防线、控制比赛的意图。综合判断，阿根廷取胜概率较高，给到约0.74，平局0.18，阿尔及利亚翻盘可能性较低约0.08。考虑到阿根廷领先后通常会通过控球消耗比赛，但梅西、阿尔瓦雷斯等前场球员仍具备扩大比分的能力，而阿尔及利亚进攻乏力难以扳平，最可能的最终比分定为2-0。后续进球方面，阿根廷端梅西仍是头号威胁，阿尔瓦雷斯和劳塔罗也具备破门能力；阿尔及利亚若有进球，前场的法雷斯·沙伊比可能性相对较高，但整体概率有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.03410660000000001,
+      "tokens": {
+        "input": 5918,
+        "output": 660
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.796
+    },
+    {
+      "submitted_at": "2026-06-17T02:24:42+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 69,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T01:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.97,
+        "draw": 0.02,
+        "away": 0.01
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前阿根廷主场2-0领先阿尔及利亚，比赛进行到第69分钟。梅西在第17分钟和第60分钟分别建功完成梅开二度，阿根廷牢牢掌握局面。从数据看，阿根廷射门7次（射正4次），控球率52%，而阿尔及利亚5次射门0射正，进攻端完全被压制，难以制造实质性威胁。阿根廷主帅在下半场已经用Julián Álvarez、劳塔罗·马丁内斯、蒂亚戈·阿尔马达等攻击手轮换登场，依然保持进攻强度。结合两球领先和剩余时间不到25分钟，阿根廷获胜概率极高，平局与翻盘概率几乎可以忽略。最可能的最终比分维持在2-0，但阿根廷生力军在体能占优的情况下仍有较大机会再下一城，因此3-0也具备一定概率。后续进球更可能来自替补登场的劳塔罗·马丁内斯和Julián Álvarez，他们是新鲜上场的禁区终结者；梅西仍在场上且状态火热，帽子戏法也存在可能；Almada则可能凭借中场推进与远射制造机会。阿尔及利亚目前0射正且需大举压上，反而更易被反击打穿，进球概率很低。"
+      },
+      "sources": [],
+      "cost_usd": 0.035483,
+      "tokens": {
+        "input": 6170,
+        "output": 684
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.27
+    },
+    {
+      "submitted_at": "2026-06-17T02:39:39+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 84,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T01:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.98,
+        "draw": 0.015,
+        "away": 0.005
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第84分钟，阿根廷凭借梅西在第17分钟和第60分钟的梅开二度，主场2-0领先阿尔及利亚。从场面数据看，阿根廷射门9次、射正5次，明显高于阿尔及利亚的6次射门、0射正，对方门将已做出3次扑救，进攻威胁完全被压制，仅剩常规时间不到10分钟加补时。阿尔及利亚虽在第64分钟一次性换上Amoura、Aouar、Mahrez三名进攻球员意图反扑，但至今仍未制造一次有效射正，要在短时间内连入两球难度极大，因此阿根廷锁定胜局的概率非常高，平局与翻盘概率几乎可以忽略。最可能的最终比分仍为2-0，比赛节奏放缓、阿根廷已多次换人控制场面，再进球的概率有限但仍存在，若有进球更可能来自替补登场的劳塔罗·马丁内斯或Julián Álvarez利用对手压上后的空档反击得手，梅西完成帽子戏法也有一定可能性。阿尔及利亚由于0射正且需在极短时间内连追两球，几乎没有进球预期。"
+      },
+      "sources": [],
+      "cost_usd": 0.0350279,
+      "tokens": {
+        "input": 6357,
+        "output": 622
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.977
+    },
+    {
+      "submitted_at": "2026-06-17T02:54:34+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T01:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.99,
+        "draw": 0.005,
+        "away": 0.005
+      },
+      "most_likely_score": "3-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进行到第90分钟，阿根廷凭借梅西的帽子戏法（17'、60'、76'）以3-0领先阿尔及利亚。从场面看，阿根廷虽然控球率略低（47%对53%），但射门10次、射正高达6次，效率极高；阿尔及利亚7次射门0射正，进攻完全被压制，门将做出3次扑救但仍难挡梅西状态。阿尔及利亚在64分钟和81、82分钟连续换上进攻球员仍无建树，剩余时间仅有伤停补时，要在短时间内连入3球几乎不可能，因此主胜概率压至0.99，平局与客胜概率近乎为零。最可能的最终比分维持3-0，符合主队大胜的走势。补时阶段若再有进球，最大可能来自替补登场状态正佳的Julián Álvarez或劳塔罗·马丁内斯把握反击机会，但概率较低；阿尔及利亚锋无力，破门希望极小。"
+      },
+      "sources": [],
+      "cost_usd": 0.0347948,
+      "tokens": {
+        "input": 6869,
+        "output": 507
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.63
+    }
+  ]
+}

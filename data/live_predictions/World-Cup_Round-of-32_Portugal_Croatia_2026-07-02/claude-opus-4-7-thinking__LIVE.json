@@ -1,0 +1,338 @@
+{
+  "fixture_id": "World-Cup_Round-of-32_Portugal_Croatia_2026-07-02",
+  "provider_fixture_id": "19606949",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-03T00:56:22+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 1
+    },
+    "home": "Portugal",
+    "away": "Croatia",
+    "competition": "World Cup",
+    "stage": "Round of 32",
+    "kickoff_utc": "2026-07-02T23:00:00+00:00",
+    "venue": "Toronto Stadium",
+    "venue_city": "Toronto"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.86,
+      "draw": 0.11,
+      "away": 0.03
+    },
+    "most_likely_score": "2-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进行到第90分钟，葡萄牙2-1领先克罗地亚。上半场双方僵持，克罗地亚在第53分钟由佩里西奇率先破门，葡萄牙则依靠C罗第68分钟的点球扳平，随后C罗在第81分钟被替换下场，替补登场的贡萨洛·拉莫斯在补时阶段抓住莱昂的助攻完成反超。全场数据上葡萄牙控球率63%、9个角球、14次射门，明显掌控局面，但克罗地亚射正6次高于葡萄牙的3次，仍具备一定威胁。目前进入伤停补时阶段，葡萄牙做出多次换人加强中前场保护球权，同时克罗地亚也换上进攻球员搏命，因此主胜概率进一步抬升至约0.86，平局概率约0.11，主要来自克罗地亚定位球或反击可能带来的绝平风险，客胜概率仅约0.03。综合来看最可能的最终比分维持2-1，即当前比分不变。若补时阶段仍有进球，葡萄牙方面替补前锋贡萨洛·拉莫斯和边路突击手弗朗西斯科·孔塞桑在反击中最具打入锁定胜局第三球的可能，克罗地亚方面则由压上进攻的伊万·佩里希奇和替补中场马里奥·帕沙利奇在最后时刻通过定位球或禁区混战抢点扳平的概率较低但仍存在。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 20736,
+    "output": 911
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0935767,
+  "wall_seconds": 21.225,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.86, \"draw\": 0.11, \"away\": 0.03},\n  \"most_likely_score\": \"2-1\",\n  \"scorers\": [\n    {\"player\": \"Gonçalo Ramos\", \"team\": \"home\", \"minute\": 92, \"p\": 0.08},\n    {\"player\": \"Francisco Conceição\", \"team\": \"home\", \"minute\": 93, \"p\": 0.05},\n    {\"player\": \"Ivan Perišić\", \"team\": \"away\", \"minute\": 94, \"p\": 0.04},\n    {\"player\": \"Mario Pašalić\", \"team\": \"away\", \"minute\": 92, \"p\": 0.03}\n  ],\n  \"reasoning\": {\"overall\": \"比赛进行到第90分钟，葡萄牙2-1领先克罗地亚。上半场双方僵持，克罗地亚在第53分钟由佩里西奇率先破门，葡萄牙则依靠C罗第68分钟的点球扳平，随后C罗在第81分钟被替换下场，替补登场的贡萨洛·拉莫斯在补时阶段抓住莱昂的助攻完成反超。全场数据上葡萄牙控球率63%、9个角球、14次射门，明显掌控局面，但克罗地亚射正6次高于葡萄牙的3次，仍具备一定威胁。目前进入伤停补时阶段，葡萄牙做出多次换人加强中前场保护球权，同时克罗地亚也换上进攻球员搏命，因此主胜概率进一步抬升至约0.86，平局概率约0.11，主要来自克罗地亚定位球或反击可能带来的绝平风险，客胜概率仅约0.03。综合来看最可能的最终比分维持2-1，即当前比分不变。若补时阶段仍有进球，葡萄牙方面替补前锋Gonçalo Ramos和边路突击手Francisco Conceição在反击中最具打入锁定胜局第三球的可能，克罗地亚方面则由压上进攻的Ivan Perišić和替补中场Mario Pašalić在最后时刻通过定位球或禁区混战抢点扳平的概率较低但仍存在。\", \"sources\": []}\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-02T23:04:14+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 4,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Portugal",
+        "away": "Croatia",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T23:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.28,
+        "away": 0.26
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Bruno Fernandes",
+          "minute": 63,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Rafael Leão",
+          "minute": 74,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Andrej Kramarić",
+          "minute": 68,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Gonçalo Ramos",
+          "minute": 82,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Ante Budimir",
+          "minute": 79,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚进行到第4分钟，双方仍是0-0。开场阶段克罗地亚控球率略占优（55%对45%），并已经完成1次射正，迫使葡萄牙门将做出1次扑救，显示出克罗地亚希望通过中场组织提前施压、抢占心理主动的意图。葡萄牙目前尚未形成射门，节奏偏慢，属于典型的强队观察对手、稳住阵型的开局。综合球队整体实力、锋线厚度以及大赛淘汰赛葡萄牙近年的进攻火力，主队仍是更被看好的一方，因此胜率给到约46%，克罗地亚凭借中场经验和战术纪律保留约26%的爆冷空间，平局约28%——考虑到淘汰赛容易进入僵持并被拖入加时的历史规律，平局概率不宜过低。最可能的最终比分定为1-0，反映葡萄牙掌控节奏后凭借一次高质量机会破门、并依靠防线锁定胜局的剧本。后续进球方面，葡萄牙端更倚重B费(布鲁诺·费尔南德斯)在由守转攻中的直塞与远射，以及莱昂(拉斐尔·莱奥)左路的突破终结，替补登场的拉莫斯(贡萨洛·拉莫斯)在体能下降阶段的抢点也具威胁；克罗地亚端则主要指望克拉马里奇(安德烈·克拉马里奇)在禁区弧顶的经验射门，以及可能替补上场的布迪米尔(安特·布迪米尔)利用高点争顶制造机会。所有进球时间均设定在当前第4分钟之后，符合比赛仍处早段、机会尚未真正显现的实际情况。"
+      },
+      "sources": [],
+      "cost_usd": 0.090798,
+      "tokens": {
+        "input": 19795,
+        "output": 949
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.269
+    },
+    {
+      "submitted_at": "2026-07-03T00:09:47+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 54,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Portugal",
+        "away": "Croatia",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T23:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.3,
+        "away": 0.18
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Cristiano Ronaldo",
+          "minute": 72,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Fernandes",
+          "minute": 78,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Bernardo Silva",
+          "minute": 68,
+          "p": 0.13,
+          "team": "home"
+        },
+        {
+          "player": "Rafael Leão",
+          "minute": 82,
+          "p": 0.11,
+          "team": "home"
+        },
+        {
+          "player": "Igor Matanovic",
+          "minute": 80,
+          "p": 0.09,
+          "team": "away"
+        },
+        {
+          "player": "Ante Budimir",
+          "minute": 88,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行至54分钟，双方仍是0-0。从场面看，葡萄牙牢牢掌控主动，控球率高达68%，角球6-1、总射门9-3占据全面优势，展现出典型的强队压制姿态；但目前射正只有1次，说明进攻在克罗地亚密集防守面前效率不高。克罗地亚全场仅3脚射门、0射正，中场休息时用马塔诺维奇换下布迪米尔，明显是想加强前场支点和反击威胁，但整体依然以防守为主。综合来看，葡萄牙持续施压之下打破僵局的概率最高，同时也需要防范克罗地亚利用定位球或反击偷袭，因此我们将葡萄牙取胜概率上调至0.52，平局约0.30，克罗地亚爆冷取胜的概率压低到0.18。最可能的最终比分定在1-0，符合葡萄牙进攻数据领先但把握机会效率一般的走向。后续进球方面，C罗（克里斯蒂亚诺·罗纳尔多）作为禁区终结点是首要人选，B费（布鲁诺·费尔南德斯）负责组织和远射，B席（贝尔纳多·席尔瓦）在肋部渗透，莱奥（拉斐尔·莱奥）替补登场后可利用体能差冲击边路，均给予较高概率；克罗地亚一侧，替补登场的马塔诺维奇（伊戈尔·马塔诺维奇）和可能后续登场的布迪米尔（安特·布迪米尔）在反击或定位球中存在偷袭空间，给予相对较低的进球概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.0895881,
+      "tokens": {
+        "input": 19958,
+        "output": 851
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.959
+    },
+    {
+      "submitted_at": "2026-07-03T00:16:11+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 61,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Portugal",
+        "away": "Croatia",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T23:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.3,
+        "away": 0.36
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到61分钟，葡萄牙主场0-1落后克罗地亚，佩里西奇在第53分钟接斯塔尼西奇助攻打破僵局。从场面数据看，葡萄牙控球率高达67%，射门9次、角球6次，明显占据主动，但射正仅1次，进攻效率偏低；克罗地亚虽只有33%控球和6次射门，却打出2次射正并抓住一次机会取得进球，防守端也保持较好组织。综合来看，葡萄牙拥有更多的进攻资源和主场优势，剩余近30分钟有足够时间去追平甚至反超，因此胜率仍有相当支撑；但克罗地亚在领先后往往能凭借经验和防守韧性稳住局面，加之葡萄牙第17分钟迪亚斯已吃到黄牌，后防在压上时存在风险，反击丢球隐患不小。因此三种结果概率较为接近，克罗地亚保住胜果的可能性略高，葡萄牙追平次之，反超的难度相对更大，最可能的最终比分为0-1。若后续再有进球，葡萄牙一方由核心B费和C罗把握禁区机会的可能性最高，边路突破的莱昂在最后阶段也具备打破僵局的能力；克罗地亚方面则更多依靠反击，前场的克拉马里奇和替补登场的布迪米尔是扩大比分的潜在得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.0988566,
+      "tokens": {
+        "input": 20023,
+        "output": 1339
+      },
+      "tool_calls": 0,
+      "wall_seconds": 28.964
+    },
+    {
+      "submitted_at": "2026-07-03T00:22:41+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 67,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Portugal",
+        "away": "Croatia",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T23:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 27.527
+    },
+    {
+      "submitted_at": "2026-07-03T00:29:14+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 74,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Portugal",
+        "away": "Croatia",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T23:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.42,
+        "away": 0.24
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第74分钟，双方1-1战平。克罗地亚由佩里西奇在第53分钟率先破门，葡萄牙则在第68分钟由C罗点球扳平，此前第61与第67分钟连续出现VAR介入，节奏被反复打断。数据面上葡萄牙占据66%的控球率、11次射门、7次角球，明显掌握场面主动，但真正射正只有2次，进攻转化效率偏低；克罗地亚在射正数(3次)反而略占优势，防守稳固、犯规较多(10次)，用身体和体能来消耗对手。葡萄牙在62分钟一口气换上B席、B费、康塞桑、拉莫斯四人，进攻端明显增兵，接下来的10多分钟主队压上抢分意愿会更强，绝平后气势也更足；克罗地亚体能吃紧、莫德里奇已吃黄，会更倾向退守打反击。综合来看，主队获胜概率有所回升，但淘汰赛阶段双方都不愿轻易失球，加上剩余时间有限、克罗地亚防守韧性强，平局在90分钟内出现的概率仍最高，因此最可能的最终比分维持1-1，进入加时。若74分钟后还有进球，最可能来自葡萄牙的替补攻击手：新上场的贡萨洛·拉莫斯和弗朗西斯科·孔塞桑具备直接冲击禁区的能力，C罗仍是定位球和禁区第一终结点，布鲁诺·费尔南德斯在边路和二点球也具威胁；克罗地亚一侧则更可能来自反击中的Perišić和高中锋Matanovic把握少数机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.0938394,
+      "tokens": {
+        "input": 20482,
+        "output": 976
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.025
+    },
+    {
+      "submitted_at": "2026-07-03T00:56:22+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Portugal",
+        "away": "Croatia",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T23:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.11,
+        "away": 0.03
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第90分钟，葡萄牙2-1领先克罗地亚。上半场双方僵持，克罗地亚在第53分钟由佩里西奇率先破门，葡萄牙则依靠C罗第68分钟的点球扳平，随后C罗在第81分钟被替换下场，替补登场的贡萨洛·拉莫斯在补时阶段抓住莱昂的助攻完成反超。全场数据上葡萄牙控球率63%、9个角球、14次射门，明显掌控局面，但克罗地亚射正6次高于葡萄牙的3次，仍具备一定威胁。目前进入伤停补时阶段，葡萄牙做出多次换人加强中前场保护球权，同时克罗地亚也换上进攻球员搏命，因此主胜概率进一步抬升至约0.86，平局概率约0.11，主要来自克罗地亚定位球或反击可能带来的绝平风险，客胜概率仅约0.03。综合来看最可能的最终比分维持2-1，即当前比分不变。若补时阶段仍有进球，葡萄牙方面替补前锋贡萨洛·拉莫斯和边路突击手弗朗西斯科·孔塞桑在反击中最具打入锁定胜局第三球的可能，克罗地亚方面则由压上进攻的伊万·佩里希奇和替补中场马里奥·帕沙利奇在最后时刻通过定位球或禁区混战抢点扳平的概率较低但仍存在。"
+      },
+      "sources": [],
+      "cost_usd": 0.0935767,
+      "tokens": {
+        "input": 20736,
+        "output": 911
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.225
+    }
+  ]
+}

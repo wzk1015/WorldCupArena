@@ -1,0 +1,754 @@
+{
+  "fixture_id": "World-Cup_Round-of-32_Cote-dIvoire_Norway_2026-06-30",
+  "provider_fixture_id": "19606955",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-30T18:56:53+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 2
+    },
+    "home": "Côte d'Ivoire",
+    "away": "Norway",
+    "competition": "World Cup",
+    "stage": "Round of 32",
+    "kickoff_utc": "2026-06-30T17:00:00+00:00",
+    "venue": "Dallas Stadium",
+    "venue_city": "Arlington"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.01,
+      "draw": 0.09,
+      "away": 0.9
+    },
+    "most_likely_score": "1-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进入第90分钟的常规时间尾声，当前比分为科特迪瓦 1-2 挪威。挪威队凭借 埃尔林·哈兰德 在第86分钟的关键进球再次取得领先，将比赛主动权牢牢掌握在手中。从全场数据来看，科特迪瓦虽然控球率略低（47%），但进攻打得非常积极，获得了多达13次角球和12次射门，并在下半场由 阿马德·迪亚洛 一度扳平比分。然而，挪威的进攻效率极高，4次射正即转化为2粒进球。由于比赛所剩时间仅有伤停补时，挪威守住胜果的概率极高。科特迪瓦势必在最后几分钟全线压上进行高空轰炸，这可能给替补登场的 乌马尔·迪亚基特 等生力军带来绝平机会；但同时，后防线的彻底空虚也极易被挪威利用，埃尔林·哈兰德 随时可能在反击中一剑封喉。综合判断，最可能的最终比分将维持在 1-2，挪威队大概率将赢下这场淘汰赛。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1871,
+    "output": 1890
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.01387155,
+  "wall_seconds": 20.811,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.01,\n    \"draw\": 0.09,\n    \"away\": 0.90\n  },\n  \"most_likely_score\": \"1-2\",\n  \"scorers\": [\n    {\n      \"player\": \"Erling Haaland\",\n      \"team\": \"away\",\n      \"minute\": 95,\n      \"p\": 0.08\n    },\n    {\n      \"player\": \"Oumar Diakité\",\n      \"team\": \"home\",\n      \"minute\": 94,\n      \"p\": 0.05\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已进入第90分钟的常规时间尾声，当前比分为科特迪瓦 1-2 挪威。挪威队凭借 Erling Haaland 在第86分钟的关键进球再次取得领先，将比赛主动权牢牢掌握在手中。从全场数据来看，科特迪瓦虽然控球率略低（47%），但进攻打得非常积极，获得了多达13次角球和12次射门，并在下半场由 Amad Diallo 一度扳平比分。然而，挪威的进攻效率极高，4次射正即转化为2粒进球。由于比赛所剩时间仅有伤停补时，挪威守住胜果的概率极高。科特迪瓦势必在最后几分钟全线压上进行高空轰炸，这可能给替补登场的 Oumar Diakité 等生力军带来绝平机会；但同时，后防线的彻底空虚也极易被挪威利用，Erling Haaland 随时可能在反击中一剑封喉。综合判断，最可能的最终比分将维持在 1-2，挪威队大概率将赢下这场淘汰赛。\"\n  },\n  \"sources\": []",
+  "thinking_text": "**Live Prediction - Côte d'Ivoire vs. Norway (90'+)**\n\nOkay, here's the situation: I'm being asked to give a real-time prediction for the Côte d'Ivoire vs. Norway match at the 90th minute, with Norway leading 2-1. It's a knockout match, so things are tense. The goal is a single JSON object with a specific schema. Let's see...\n\nFirst, I need to get the lay of the land. Norway is currently up 2-1, but Côte d'Ivoire is pushing hard. They've had more shots and corners, but Norway's been more clinical. The clock is ticking down – we're in stoppage time. Given the events so far (Nusa, Diallo, Haaland goals) and the match stats (12 shots and 13 corners for Côte d'Ivoire; 9 shots and 3 corners for Norway), I need to calculate probabilities and pick likely scorers for the remaining time.\n\nWith so little time left, the most likely outcome is a Norway win. Their lead is solid and Côte d'Ivoire is likely throwing everything forward to try and level the game, which can leave them vulnerable. The probabilities? I'm estimating a 90% chance of a Norway win, a 9% chance of a draw, and a tiny 1% chance of a Côte d'Ivoire victory (double goal in stoppage time? Highly unlikely). Therefore, my most likely final score is 1-2.\n\nNow, about potential scorers. Any goal will be during stoppage time. Côte d'Ivoire needs a goal. They've got Diakité, Guessand, and Diallo as potential threats. On the Norway side, Haaland is always a menace on the counter, and Bobb is a strong player, and that's not to mention Schjelderup. Given the remaining time, and Côte d'Ivoire's push, I'm going to put Haaland down for a stoppage-time goal, possibly on the counter, and Diakité with a low probability, since it might be a set play or a messy goal-line scramble. Minutes? They must be after the 90th minute. So, maybe Haaland at 95', and Diakité at 94'.\n\nHere's the reasoning in Simplified Chinese: \"当前状态：比赛已进入第90分钟的伤停补时阶段，当前比分为科特迪瓦 1-2 挪威。比赛流程：挪威凭借哈兰德在第86分钟的绝杀进球再次取得领先。从全场数据来看，科特迪瓦虽然控球率略低（47%），但进攻打得非常积极，获得了多达13次角球和12次射门。然而挪威的进攻效率极高，4次射正即转化为2粒进球。概率/最终比分：由于比赛所剩时间极少，挪威守住胜果的概率极高（约90%）。科特迪瓦势必在最后几分钟全线压上，这可能导致他们绝平，也可能给挪威留下反击空当。最可能的最终比分维持在 1-2。未来进球者：如果还有进球，科特迪瓦的替补前锋迪亚基特（Oumar Diakité）或格桑（Evann Guessand）是高空轰炸和乱战的潜在得分点；而挪威的哈兰德（Erling Haaland）则极有可能利用对手大举压上的后防空虚，在反击中锁定胜局。\"\n\nFinally, I need to assemble the JSON. It should include the win probabilities, the most likely score, likely scorers, reasoning, and sources (which in this case is the game itself):\n\n```json\n{\n  \"win_probs\": {\n    \"home\": 0.01,\n    \"draw\": 0.09,\n    \"away\": 0.90\n  },\n  \"most_likely_score\": \"1-2\",\n  \"scorers\": [\n    {\n      \"player\": \"Erling Haaland\",\n      \"team\": \"away\",\n      \"minute\": 95,\n      \"p\": 0.08\n    },\n    {\n      \"player\": \"Oumar Diakité\",\n      \"team\": \"home\",\n      \"minute\": 94,\n      \"p\": 0.05\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已进入第90分钟的伤停补时阶段，当前比分为科特迪瓦 1-2 挪威。挪威凭借哈兰德在第86分钟的\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-30T17:04:39+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 4,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.28,
+        "away": 0.5
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Erling Haaland",
+          "minute": 35,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "Martin Ødegaard",
+          "minute": 72,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Sébastien Haller",
+          "minute": 68,
+          "p": 0.18,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第4分钟，科特迪瓦与挪威暂时战成0-0平。这是一场关键的世界杯1/16决赛。尽管比赛刚刚开始，但挪威队迅速占据了场上的主动权，控球率高达77%，并且已经完成了一次射门。科特迪瓦目前主要处于防守态势，控球率仅为23%，尚未创造出射门机会。考虑到挪威队拥有顶级的锋线终结能力和中场控制力，且开场展现出了明显的压制力，他们在90分钟内获胜的概率更大。科特迪瓦虽然具备出色的身体素质和反击速度，但在阵地战防守中可能会面临巨大压力。综合目前的场面数据与双方实力对比，预测挪威队胜率最高，最可能的最终比分为0-1。在后续进球逻辑方面，挪威队的进攻核心 埃尔林·哈兰德 是打破僵局的最热门人选，预计他可能会在比赛中盘阶段利用中场创造的机会取得进球；而科特迪瓦若能打出反击，Sébastien Haller 将是他们最具威胁的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.01368045,
+      "tokens": {
+        "input": 927,
+        "output": 2017
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.314
+    },
+    {
+      "submitted_at": "2026-06-30T17:10:47+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 10,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.27,
+        "draw": 0.27,
+        "away": 0.46
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Erling Haaland",
+          "minute": 42,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "Sébastien Haller",
+          "minute": 68,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Martin Ødegaard",
+          "minute": 75,
+          "p": 0.22,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第10分钟，目前比分依然是0-0。从开场阶段的场面和数据来看，挪威队迅速掌控了比赛节奏，控球率高达61%，展现出较强的中场控制力。然而，科特迪瓦队在仅有39%控球率的情况下，打出了极具威胁的防守反击，目前已经完成2次射门并获得1个角球，这说明他们的战术非常明确，即通过稳固防守和快速的攻防转换来制造杀机。考虑到这是一场世界杯1/16决赛的单场淘汰赛，双方在开局阶段虽然互有攻守，但整体仍处于试探期。挪威队拥有世界级的锋线终结能力和中场创造力，随着比赛的深入，他们的高控球率有望逐渐撕扯开对手的防线并转化为实质性的进球机会。因此，数据判断略微看好挪威队在常规时间内解决战斗，客胜概率约为46%。科特迪瓦的身体对抗和冲击力不容小觑，但防守端可能会在下半场面临更大的压力。综合来看，最可能的最终比分预测为0-1，挪威队小胜晋级。在后续进球逻辑上，挪威队的核心前锋 埃尔林·哈兰德 是打破僵局的最危险人物，预计在半场结束前或下半场初段利用阵地战或定位球得分；而科特迪瓦方面，主力中锋 Sébastien Haller 在下半场中后段也有一定概率通过反击或抢点制造威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.0132195,
+      "tokens": {
+        "input": 968,
+        "output": 1937
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.366
+    },
+    {
+      "submitted_at": "2026-06-30T17:17:10+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.32,
+        "away": 0.43
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Erling Haaland",
+          "minute": 65,
+          "p": 0.45,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第17分钟，科特迪瓦与挪威暂时战成0-0平。从开场阶段的数据来看，双方互有攻守，场面十分胶着。挪威队以52%的控球率略微占优，但科特迪瓦队展现出了极强的边路冲击力，已经获得了2次角球机会。双方目前各完成1次射门，防守端都表现得较为谨慎，这非常符合世界杯淘汰赛阶段开局互相试探的特点。考虑到挪威队拥有世界级的锋线终结能力，随着比赛深入，他们在阵地战和反击中的威胁会逐渐放大。因此，挪威队在常规时间内取胜的概率相对较高。科特迪瓦虽然具备极强的身体素质和反击实力，但挪威整体战术素养和关键球处理能力更胜一筹。综合判断，最可能的最终比分是0-1，挪威队小胜。在进球球员方面，挪威的头号前锋 埃尔林·哈兰德 无疑是最具威胁的得分点，预计他极有可能在下半场利用对方防线体能下降或注意力不集中的机会打破僵局。"
+      },
+      "sources": [],
+      "cost_usd": 0.012677699999999998,
+      "tokens": {
+        "input": 968,
+        "output": 1851
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.898
+    },
+    {
+      "submitted_at": "2026-06-30T17:23:41+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 23,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.3,
+        "away": 0.45
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Erling Haaland",
+          "minute": 65,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "Sébastien Haller",
+          "minute": 78,
+          "p": 0.2,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第23分钟，科特迪瓦与挪威暂时战成0-0平。作为世界杯1/16决赛，双方开场阶段都踢得相对谨慎，处于互相试探的阶段。从目前的场面数据来看，挪威队凭借中场的技术优势占据了57%的控球率，但尚未创造出绝对的得分机会，仅完成1次射门。科特迪瓦虽然控球率略低（43%），但反击打得有声有色，已经获得了2次角球和2次射门，展现出了极强的身体对抗和冲击力。随着比赛深入，淘汰赛的容错率极低，预计上半场双方会继续保持防守端的专注度。然而，挪威队拥有顶级的锋线终结能力，在阵地战和拉锯战中往往能凭借球星个人能力打破僵局。综合目前的比赛节奏与控球优势，挪威队在常规时间内取胜的概率略高。最可能的最终比分预测为0-1，挪威队有望在下半场通过 埃尔林·哈兰德 等核心球员的发挥取得领先并保持到终场。科特迪瓦若想改变战局，则需要依靠 Sébastien Haller 等人在反击或定位球中寻找机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.0126147,
+      "tokens": {
+        "input": 968,
+        "output": 1841
+      },
+      "tool_calls": 0,
+      "wall_seconds": 104.327
+    },
+    {
+      "submitted_at": "2026-06-30T17:31:27+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 31,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.33,
+        "away": 0.42
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Erling Haaland",
+          "minute": 65,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第31分钟，科特迪瓦与挪威暂时战成0-0平。从目前的场面来看，这是一场非常谨慎的淘汰赛。挪威队掌控了55%的控球率，但进攻端缺乏实质性威胁，仅有1次射门；科特迪瓦则立足防守反击，利用角球（3次）和有限的射门（2次）制造了一些麻烦。双方加起来仅有3次射门，比赛节奏相对缓慢，防守端都表现得滴水不漏。随着上半场时间流逝且比分僵持，90分钟内平局的概率有所上升。然而，考虑到挪威队拥有顶级的锋线终结能力，他们在下半场打破僵局的可能性依然略高。综合目前的沉闷局势与双方实力，预计下半场随着体能下降，比赛空间会逐渐拉大，挪威更有可能凭借球星的个人能力完成致命一击。因此，最可能的最终比分预测为0-1，挪威在常规时间内小胜晋级。埃尔林·哈兰德 作为挪威的核心得分手，极有可能在下半场抓住为数不多的机会攻入制胜球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0150528,
+      "tokens": {
+        "input": 968,
+        "output": 2228
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.878
+    },
+    {
+      "submitted_at": "2026-06-30T17:37:47+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 37,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.38,
+        "away": 0.34
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Erling Haaland",
+          "minute": 65,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Sébastien Haller",
+          "minute": 78,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第37分钟，科特迪瓦与挪威暂时战成0-0平。从场面数据来看，尽管挪威队在控球率上以55%略占优势，但科特迪瓦队在进攻端展现出了更强的侵略性和压迫感。主队已经获得了多达7次角球，并完成了4次射门（1次射正），而挪威队目前仅有1次射门且未中目标。这表明科特迪瓦正在通过边路突击和定位球持续向对手施压，而挪威的进攻核心群暂时被有效限制，尚未获得足够的火力支援。随着上半场即将结束且比分未被改写，常规时间内平局的概率正在逐渐上升。考虑到这是一场世界杯淘汰赛，双方在下半场的战术博弈可能会更加谨慎，但同时也会在关键时刻发力。挪威拥有顶级的锋线终结能力，而科特迪瓦则占据了实际的进攻主动权，双方整体呈现均势。综合目前的攻防转换节奏，90分钟内双方各入一球战平的可能性最大，因此最可能比分预测为1-1。在后续进球逻辑上，下半场随着防守球员体能下降，挪威的埃尔林·哈兰德（埃尔林·哈兰德）极有可能利用反击空间或个人能力打破僵局；而科特迪瓦的塞巴斯蒂安·阿莱（Sébastien Haller）则有望利用球队频繁的角球和传中机会为球队建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.0189966,
+      "tokens": {
+        "input": 1010,
+        "output": 2847
+      },
+      "tool_calls": 0,
+      "wall_seconds": 30.346
+    },
+    {
+      "submitted_at": "2026-06-30T17:44:08+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 44,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.23,
+        "away": 0.65
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Erling Haaland",
+          "minute": 68,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Sébastien Haller",
+          "minute": 78,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第44分钟，挪威凭借安东尼奥·努萨（安东尼奥·努萨）在第39分钟接厄德高（马丁·厄德高）助攻打入的进球，暂时以1-0领先科特迪瓦。从上半场的数据来看，挪威占据了56%的控球率，并在总射门数上以6比4略微领先。不过，科特迪瓦获得了多达7次角球，显示出他们在边路进攻和定位球上给挪威防线施加了巨大压力，只是转化为实质威胁的效率较低（仅1次射正）。考虑到这是一场世界杯1/32决赛，一球落后的科特迪瓦必须在下半场大举压上寻求扳平，这将不可避免地暴露出后防空当。挪威拥有极强的快速反击能力，非常适合在领先且对手压上的局面下扩大战果。结合目前的比分优势和场面控制力，挪威在常规时间内获胜的概率已提升至65%，平局概率约为23%，而科特迪瓦逆转取胜的概率仅剩12%。预计下半场科特迪瓦可能会通过持续的施压扳回一城，但挪威极有可能利用反击再次破门，最可能的最终比分为1-2。后续进球逻辑方面，挪威的锋线杀手有望在第68分钟左右利用反击扩大比分，而科特迪瓦的中锋则可能在第78分钟左右利用高空优势或乱战破门。"
+      },
+      "sources": [],
+      "cost_usd": 0.01655745,
+      "tokens": {
+        "input": 1081,
+        "output": 2448
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.505
+    },
+    {
+      "submitted_at": "2026-06-30T18:06:43+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 51,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.25,
+        "away": 0.63
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Erling Haaland",
+          "minute": 73,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第51分钟，挪威队凭借努萨（安东尼奥·努萨）在第39分钟接厄德高（马丁·厄德高）助攻打入的进球，目前以1-0领先科特迪瓦队。从场面数据来看，挪威队占据了56%的控球率，并在进攻端表现出更高的效率。尽管科特迪瓦队在落后的情况下大举压上，并获得了多达9次角球，但他们总共只有5次射门且仅有1次射正，说明球队在将定位球和阵地战转化为实质性威胁方面存在较大困难。随着下半场时间推移，科特迪瓦队必须进一步前压以寻求扳平比分，这将给挪威队留下更多反击空间。综合当前的比赛进程与数据，挪威队保持领先并最终获胜的概率较高。预计科特迪瓦队在猛攻未果后防线会暴露出更多漏洞，挪威队有望在下半场中后段通过犀利的反击再入一球锁定胜局，最可能的最终比分为0-2。"
+      },
+      "sources": [],
+      "cost_usd": 0.0161889,
+      "tokens": {
+        "input": 1144,
+        "output": 2379
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.778
+    },
+    {
+      "submitted_at": "2026-06-30T18:12:58+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 57,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.26,
+        "away": 0.62
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第57分钟，挪威凭借安东尼奥·努萨（安东尼奥·努萨）在第39分钟接厄德高（马丁·厄德高）助攻打入的进球，暂时以1-0客场领先科特迪瓦。从场面数据来看，挪威控球率（53%）略占优势，且进攻效率更为务实。然而，科特迪瓦在不到60分钟内获得了惊人的10次角球，这表明他们在边路和进攻三区施加了巨大的压力，试图通过传中和定位球扳平比分，但目前缺乏致命一击，5次射门仅有1次射正。考虑到挪威已经一球领先且比赛进入下半场中段，他们完全可以采取稳守反击的策略来应对科特迪瓦的压迫。因此，挪威最终获胜的概率最高，平局次之，科特迪瓦逆转取胜的难度较大。最可能的最终比分维持在0-1，但如果科特迪瓦继续大举压上导致后防空虚，挪威极有可能利用反击空间扩大比分，哈兰德（埃尔林·哈兰德）等锋线核心是后续进球的重点候选；而科特迪瓦若能把握住密集的定位球机会，哈勒（Sébastien Haller）也有可能在比赛尾声阶段完成破门。"
+      },
+      "sources": [],
+      "cost_usd": 0.01974945,
+      "tokens": {
+        "input": 1145,
+        "output": 2944
+      },
+      "tool_calls": 0,
+      "wall_seconds": 30.415
+    },
+    {
+      "submitted_at": "2026-06-30T18:19:23+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 64,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.15,
+        "draw": 0.3,
+        "away": 0.55
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第64分钟，挪威队凭借上半场第39分钟 安东尼奥·努萨 接 马丁·厄德高 助攻打入的进球，目前以1-0客场领先科特迪瓦。从场面数据来看，落后的科特迪瓦队在进攻端投入了巨大兵力，狂轰8脚射门并获得了惊人的11次角球，给挪威队的防线施加了极大的压力。然而，挪威队依然掌控着52%的控球率，并且门将表现稳健，完成了3次关键扑救。考虑到比赛所剩时间逐渐减少，挪威队在防守反击中极具威胁，他们有较大几率将1-0的比分保持到终场，或者利用对手大举压上留下的空当由 埃尔林·哈兰德 等锋线杀手扩大比分。科特迪瓦队虽然攻势猛烈，但若不能尽快转化为进球，随着体能下降，扳平比分的难度将越来越大。因此，挪威队最终获胜的概率最高，最可能的最终比分为0-1。如果科特迪瓦能够把握住定位球机会，Sébastien Haller 有望在比赛尾声阶段打入扳平进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0084651,
+      "tokens": {
+        "input": 1144,
+        "output": 1153
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.25
+    },
+    {
+      "submitted_at": "2026-06-30T18:25:21+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 70,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.22,
+        "away": 0.7
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第70分钟，挪威凭借安东尼奥·努萨（安东尼奥·努萨）在第39分钟的进球，目前以1-0领先科特迪瓦。从场面数据来看，双方控球率平分秋色，但科特迪瓦在落后局面下展开了猛烈反扑，目前已完成10次射门并获得了惊人的12次角球，展现出极强的压迫感。相比之下，挪威的战术更为务实高效，防线在门将的3次扑救下保持稳固。科特迪瓦在第60分钟连续换上阿马德·迪亚洛（阿马德·迪亚洛）和埃利·瓦希（埃利·瓦希）以加强进攻。考虑到比赛仅剩20分钟的常规时间，挪威手握比分优势且防守严密，最终全取三分的概率最高。科特迪瓦虽然攻势如潮，但迟迟未能转化为进球，逼平的概率存在但逆转难度极大。因此，最可能的最终比分是0-1，挪威将领先优势保持到终场。在后续进球逻辑上，如果比分发生改变，科特迪瓦替补登场的生力军埃利·瓦希有望在最后阶段的狂攻中觅得良机；而挪威的马丁·厄德高（马丁·厄德高）则可能利用对手大举压上后的后防空虚，通过反击制造威胁或直接破门。"
+      },
+      "sources": [],
+      "cost_usd": 0.017301900000000002,
+      "tokens": {
+        "input": 1298,
+        "output": 2530
+      },
+      "tool_calls": 0,
+      "wall_seconds": 27.384
+    },
+    {
+      "submitted_at": "2026-06-30T18:31:55+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 76,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.22,
+        "away": 0.7
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第76分钟，挪威凭借安东尼奥·努萨（安东尼奥·努萨）在第39分钟的进球，目前以1-0客场领先科特迪瓦。从场面数据来看，双方控球率平分秋色（50%），但科特迪瓦在落后情况下攻势猛烈，完成了10次射门并获得了多达12次角球，给挪威防线施加了巨大压力。挪威门将做出了3次关键扑救，力保城门不失。考虑到比赛仅剩15分钟左右的常规时间，手握一球优势的挪威队胜率大幅提升，达到70%。科特迪瓦虽然场面占优，但随着时间流逝，扳平的难度正在增加，平局概率约为22%，主胜概率仅剩8%。最可能的最终比分是0-1，挪威有望将领先优势保持到终场。在后续进球逻辑上，科特迪瓦在第60分钟换上的埃利·瓦希（埃利·瓦希）体能充沛，是主队最后阶段强攻的关键人物；而挪威在第71分钟换上的奥斯卡·鲍勃（奥斯卡·博布）则极有可能利用对手大举压上留下的防线空当，在反击中制造威胁甚至完成破门。"
+      },
+      "sources": [],
+      "cost_usd": 0.01930425,
+      "tokens": {
+        "input": 1369,
+        "output": 2836
+      },
+      "tool_calls": 0,
+      "wall_seconds": 28.389
+    },
+    {
+      "submitted_at": "2026-06-30T18:38:23+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 83,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.15,
+        "draw": 0.72,
+        "away": 0.13
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第83分钟，科特迪瓦与挪威目前战成1-1平。上半场第39分钟，挪威凭借安东尼奥·努萨（安东尼奥·努萨）接厄德高（马丁·厄德高）的助攻先拔头筹。下半场科特迪瓦通过换人调整改变了战局，替补登场的阿马德·迪亚洛（阿马德·迪亚洛）在第74分钟接尼古拉斯·佩佩（尼古拉·佩佩）助攻将比分扳平。从比赛数据来看，科特迪瓦在进攻端表现得更为积极，狂轰12脚射门并获得了多达12次角球，而挪威虽然控球率微弱占优（51%），但射门数和角球数均落后于对手。考虑到比赛所剩时间无几，且双方在世界杯淘汰赛阶段的最后时刻都会更加谨慎以避免致命失误，常规时间内以1-1平局收场的概率极高。如果出现绝杀，科特迪瓦替补登场的前锋瓦希（埃利·瓦希）或挪威核心厄德高有望利用对方体能下降创造出反击机会。综合判断，平局进入加时赛是最可能的结果。"
+      },
+      "sources": [],
+      "cost_usd": 0.01365,
+      "tokens": {
+        "input": 1510,
+        "output": 1915
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.903
+    },
+    {
+      "submitted_at": "2026-06-30T18:44:29+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 89,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.88,
+        "away": 0.04
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第89分钟，科特迪瓦与挪威目前战成1-1平。挪威在第39分钟由安东尼奥·努萨（安东尼奥·努萨）接厄德高助攻先拔头筹，但科特迪瓦在下半场展现出极强的反扑势头。从比赛数据来看，科特迪瓦狂轰12次射门并获得了高达12个角球，这种持续的边路压迫和进攻输出最终在第74分钟收到成效，替补登场的阿马德·迪亚洛（阿马德·迪亚洛）成功扳平比分。挪威虽然控球率略占优势（52%），但下半场场面相对被动，防守端承受了巨大压力。鉴于常规时间仅剩最后的伤停补时阶段，且本场为世界杯1/16决赛，双方在最后时刻大概率会踢得相对谨慎，以确保不犯致命错误并将比赛拖入加时赛。因此，常规时间以1-1平局收场的概率极高。科特迪瓦凭借近期的进攻势头和角球优势，绝杀概率略高于挪威。如果在补时阶段出现进球，状态火热的阿马德·迪亚洛或挪威的核心中场马丁·厄德高（马丁·厄德高）是最具威胁的潜在得分手。"
+      },
+      "sources": [],
+      "cost_usd": 0.0187257,
+      "tokens": {
+        "input": 1580,
+        "output": 2709
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.68
+    },
+    {
+      "submitted_at": "2026-06-30T18:50:48+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.09,
+        "away": 0.9
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，当前比分为科特迪瓦 1-2 挪威。从场面和数据来看，科特迪瓦在进攻端投入了巨大精力，获得了多达12次角球和12次射门，并在第74分钟由 阿马德·迪亚洛 扳平比分。然而，挪威队展现了极高的进攻效率，埃尔林·哈兰德 在第86分钟的致命一击帮助挪威再次取得领先。由于常规时间即将结束，挪威队拿下比赛的概率已经高达90%，而科特迪瓦绝平将比赛拖入加时的概率约为9%。最可能的最终比分维持在 1-2。在伤停补时阶段，科特迪瓦势必全线压上，这可能会给挪威留下巨大的反击空间，埃尔林·哈兰德 有机会利用反击再下一城；同时，状态出色的 阿马德·迪亚洛 也是科特迪瓦制造绝平奇迹的最危险人物。"
+      },
+      "sources": [],
+      "cost_usd": 0.00786135,
+      "tokens": {
+        "input": 1721,
+        "output": 961
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.837
+    },
+    {
+      "submitted_at": "2026-06-30T18:56:53+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T17:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.09,
+        "away": 0.9
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟的常规时间尾声，当前比分为科特迪瓦 1-2 挪威。挪威队凭借 埃尔林·哈兰德 在第86分钟的关键进球再次取得领先，将比赛主动权牢牢掌握在手中。从全场数据来看，科特迪瓦虽然控球率略低（47%），但进攻打得非常积极，获得了多达13次角球和12次射门，并在下半场由 阿马德·迪亚洛 一度扳平比分。然而，挪威的进攻效率极高，4次射正即转化为2粒进球。由于比赛所剩时间仅有伤停补时，挪威守住胜果的概率极高。科特迪瓦势必在最后几分钟全线压上进行高空轰炸，这可能给替补登场的 乌马尔·迪亚基特 等生力军带来绝平机会；但同时，后防线的彻底空虚也极易被挪威利用，埃尔林·哈兰德 随时可能在反击中一剑封喉。综合判断，最可能的最终比分将维持在 1-2，挪威队大概率将赢下这场淘汰赛。"
+      },
+      "sources": [],
+      "cost_usd": 0.01387155,
+      "tokens": {
+        "input": 1871,
+        "output": 1890
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.811
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-40_New-Zealand_Egypt_2026-06-22",
+  "provider_fixture_id": "19609177",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-22T02:58:51+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 3
+    },
+    "home": "New Zealand",
+    "away": "Egypt",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-22T01:00:00+00:00",
+    "venue": "Vancouver Stadium",
+    "venue_city": "Vancouver"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.01,
+      "draw": 0.03,
+      "away": 0.96
+    },
+    "most_likely_score": "1-3",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经来到90分钟，新西兰目前1比3落后埃及，胜负格局已经非常清晰。新西兰在15分钟由芬恩·瑟曼先开纪录，但埃及下半场完成了明显的节奏反转，59分钟Mostafa Mohamed Zaki Abdelraouf扳平，67分钟穆罕默德·萨拉赫反超，82分钟Mahmoud Trezeguet再下一城，把比分拉开到两球。结合现有进程来看，埃及不但在比分上占优，比赛内容上也更有说服力：他们总射门19比9、射正7比4、控球55%比45%，说明客队在持续制造更高频率的威胁，逆转并扩大领先并非偶然。进入90分钟后，留给新西兰扳回两球甚至三球的时间已经极其有限，因此主胜和打平的概率都被压到很低，客胜自然大幅上升。最可能的最终比分仍是1比3，因为这是当前比分，且常规时间已走完，补时阶段再出现进球的总体概率不算高。不过如果补时里还有进球，场面逻辑更偏向埃及利用对手压上后的空间继续打击，穆罕默德·萨拉赫和刚刚进球的Mahmoud Trezeguet都是更合理的后续得分人选；另一方面，若新西兰孤注一掷抢到一次定位球或禁区内二点机会，也存在追回一球的较小可能，但这更像是缩小分差，而不是真正改变比赛结果。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 3367,
+    "output": 479
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0156025,
+  "wall_seconds": 11.884,
+  "error": null,
+  "raw_text": "{\"win_probs\":{\"home\":0.01,\"draw\":0.03,\"away\":0.96},\"most_likely_score\":\"1-3\",\"scorers\":[{\"player\":\"Mohamed Salah\",\"team\":\"away\",\"minute\":91,\"p\":0.08},{\"player\":\"Mahmoud Trezeguet\",\"team\":\"away\",\"minute\":92,\"p\":0.05},{\"player\":\"Jesse Randall\",\"team\":\"home\",\"minute\":92,\"p\":0.03}],\"reasoning\":{\"overall\":\"比赛已经来到90分钟，New Zealand目前1比3落后Egypt，胜负格局已经非常清晰。New Zealand在15分钟由Finn Surman先开纪录，但Egypt下半场完成了明显的节奏反转，59分钟Mostafa Mohamed Zaki Abdelraouf扳平，67分钟Mohamed Salah反超，82分钟Mahmoud Trezeguet再下一城，把比分拉开到两球。结合现有进程来看，Egypt不但在比分上占优，比赛内容上也更有说服力：他们总射门19比9、射正7比4、控球55%比45%，说明客队在持续制造更高频率的威胁，逆转并扩大领先并非偶然。进入90分钟后，留给New Zealand扳回两球甚至三球的时间已经极其有限，因此主胜和打平的概率都被压到很低，客胜自然大幅上升。最可能的最终比分仍是1比3，因为这是当前比分，且常规时间已走完，补时阶段再出现进球的总体概率不算高。不过如果补时里还有进球，场面逻辑更偏向Egypt利用对手压上后的空间继续打击，Mohamed Salah和刚刚进球的Mahmoud Trezeguet都是更合理的后续得分人选；另一方面，若New Zealand孤注一掷抢到一次定位球或禁区内二点机会，也存在追回一球的较小可能，但这更像是缩小分差，而不是真正改变比赛结果。\"},\"sources\":[]}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-22T01:14:39+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 14,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "New Zealand",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T01:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.29,
+        "draw": 0.43,
+        "away": 0.28
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到14分钟，比分仍是0比0，开局阶段整体比较均衡。现有数据里，两队控球各占50%，新西兰在进攻尝试上略微更主动一些，已经有2次射门、1次射正和1个角球；埃及目前只有1次射门且没有射正。从这个时间点看，新西兰的前场推进稍占上风，但优势还不足以明显拉开胜负预期，因为样本很小，双方都还没有形成持续压制。基于当前节奏，平局概率被上调到最高，说明比赛暂时更像一场谨慎对峙，最可能的发展是上半场中段继续在中场争夺与有限机会之间反复拉扯。考虑到新西兰已经制造出门前威胁，而埃及的整体实力与比赛经验通常也具备后程调整能力，主胜与客胜概率目前仍然接近，但都略低于平局。最终比分判断上，0比0依然是最符合现阶段信息的单一结果；如果后续先出现进球，更可能来自一次定位球、边路传中后的把握，或比赛节奏提升后的转换进攻，而不是连续围攻下的多球走势。因此现阶段对后续进球人数保持相对保守，零封到终场的可能性仍然是最高的。"
+      },
+      "sources": [],
+      "cost_usd": 0.010095,
+      "tokens": {
+        "input": 1194,
+        "output": 474
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.011
+    },
+    {
+      "submitted_at": "2026-06-22T01:38:23+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 38,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "New Zealand",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T01:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.31,
+        "away": 0.23
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到38分钟，新西兰凭借芬恩·瑟曼在第15分钟的进球以1比0领先，这让主队的赛中胜面明显上升。就目前可见信息看，埃及控球略占优，达到55%，说明他们在组织和推进上并没有完全落下风；但新西兰在进攻效率上更直接，7次射门、3次射正，整体威胁略高于埃及的5次射门和1次射正，这也解释了为什么领先的一方仍然是主队。现阶段的判断会把比分和时间权重放得很高：主队已经把领先优势带到了上半场后段，而客队虽然有一定球权基础，但真正转化为高质量终结的迹象还不够强，因此主胜仍是当前最高概率结果，不过平局依然保持相当现实的空间，因为1球差距在接近中场休息和整个下半场都还很容易被改写。最可能的最终比分仍然是1比0，这既符合新西兰目前效率更高的比赛走势，也符合世界杯小组赛中领先方在中后段更趋务实的常见逻辑。当然，埃及若能把控球优势进一步转化为更多射正，1比1会是最主要的次选路径；但在现有数据下，还不足以把客队反超抬到更高位置。后续进球判断方面，如果比赛再出现进球，更像是新西兰通过反击或定位球扩大优势，因此萨普里特·辛格这类更靠前、能参与最后一传和二点进攻的球员值得关注；而已经取得进球的芬恩·瑟曼在定位球二次冲击里也保留再次破门的可能。总体来说，当前更新应当从开场时更均衡的预期，调整为新西兰领先后占优，但优势并未大到可以排除平局反扑。"
+      },
+      "sources": [],
+      "cost_usd": 0.0188,
+      "tokens": {
+        "input": 2570,
+        "output": 825
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.996
+    },
+    {
+      "submitted_at": "2026-06-22T02:33:01+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 78,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "New Zealand",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T01:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.24,
+        "away": 0.64
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到第78分钟，新西兰暂时1比2落后埃及。就现有走势看，主队虽然在第15分钟由芬恩·瑟曼先开纪录，但下半场局面被埃及明显扭转，59分钟Mostafa Mohamed Zaki Abdelraouf扳平，67分钟穆罕默德·萨拉赫再进一球完成反超。数据层面，埃及目前控球58%对42%占优，总射门15比9也更主动，说明他们不仅在比分上领先，比赛主动权也更多掌握在客队脚下。进入最后十多分钟后，领先一方通常会更注重比赛管理，而落后的一方必须压上寻找机会，这会同时提升新西兰追平的可能，也给埃及留下反击空间。基于当前1比2的比分、时间所剩不多，以及埃及下半场连续进球后的势头，客胜仍是最大概率结果；但新西兰已经有4次射正，仍保留制造一球的机会，因此平局概率不能忽视。综合判断，最可能的最终比分仍是1比2，因为这同时符合时间消耗、埃及现阶段控制力以及双方后段进球风险并存的现实。若之后再有进球，埃及一侧更可能由已经破门且处在反击核心位置的穆罕默德·萨拉赫，或参与一传一射的Mostafa Mohamed Zaki Abdelraouf继续制造威胁；而新西兰若形成最后阶段反扑，已经取得进球的芬恩·瑟曼这类在定位球和禁区混战中有存在感的球员，也具备相对更高的补射或头球机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.0157125,
+      "tokens": {
+        "input": 2817,
+        "output": 578
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.428
+    },
+    {
+      "submitted_at": "2026-06-22T02:58:51+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "New Zealand",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T01:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.03,
+        "away": 0.96
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经来到90分钟，新西兰目前1比3落后埃及，胜负格局已经非常清晰。新西兰在15分钟由芬恩·瑟曼先开纪录，但埃及下半场完成了明显的节奏反转，59分钟Mostafa Mohamed Zaki Abdelraouf扳平，67分钟穆罕默德·萨拉赫反超，82分钟Mahmoud Trezeguet再下一城，把比分拉开到两球。结合现有进程来看，埃及不但在比分上占优，比赛内容上也更有说服力：他们总射门19比9、射正7比4、控球55%比45%，说明客队在持续制造更高频率的威胁，逆转并扩大领先并非偶然。进入90分钟后，留给新西兰扳回两球甚至三球的时间已经极其有限，因此主胜和打平的概率都被压到很低，客胜自然大幅上升。最可能的最终比分仍是1比3，因为这是当前比分，且常规时间已走完，补时阶段再出现进球的总体概率不算高。不过如果补时里还有进球，场面逻辑更偏向埃及利用对手压上后的空间继续打击，穆罕默德·萨拉赫和刚刚进球的Mahmoud Trezeguet都是更合理的后续得分人选；另一方面，若新西兰孤注一掷抢到一次定位球或禁区内二点机会，也存在追回一球的较小可能，但这更像是缩小分差，而不是真正改变比赛结果。"
+      },
+      "sources": [],
+      "cost_usd": 0.0156025,
+      "tokens": {
+        "input": 3367,
+        "output": 479
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.884
+    }
+  ]
+}
