@@ -154,24 +154,16 @@ def normalize_to_truth(raw: dict) -> dict:
     # ---- score / result ----
     h = int(goals_raw.get("home") or 0)
     a = int(goals_raw.get("away") or 0)
-    # Single-leg knockout ties are level after 90/120 min but still produce a winner (extra time
-    # or a penalty shootout). The headline goals stay level (e.g. 1-1), so deciding result purely
-    # on goals would record "draw" — which no model predicts and which never actually happens in a
-    # knockout, breaking brier_3way / winner_acc for that whole match. The provider marks the
-    # advancing side via teams.*.winner; override the draw ONLY when exactly one side is flagged
-    # the winner. A genuine group-stage draw has winner None/False on BOTH sides → stays "draw".
+    # FT(120') semantics: models are asked for the full-time result with penalty
+    # shootouts excluded (prompts/system.md #8), so the draw bucket in a knockout
+    # means "level after extra time → shootout" and models DO predict it. A
+    # knockout level after 120' therefore grades as "draw" (= correctly called
+    # the shootout). Do NOT derive the advancing side from teams.*.winner into
+    # `result` — that misgrades every draw pick; the advancing side is reported
+    # separately via `advanced`.
     home_won = teams["home"].get("winner")
     away_won = teams["away"].get("winner")
-    if h > a:
-        result = "home"
-    elif a > h:
-        result = "away"
-    elif home_won is True and away_won is not True:
-        result = "home"
-    elif away_won is True and home_won is not True:
-        result = "away"
-    else:
-        result = "draw"
+    result = "home" if h > a else "away" if a > h else "draw"
 
     # ---- events ----
     goals, subs, cards, own_goals, penalties = [], [], [], [], []
