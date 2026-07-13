@@ -296,6 +296,9 @@ const I18N = {
     model: "模型",
     composite_score: "综合分",
     result_accuracy: "赛果准确率",
+    exact_score_accuracy: "比分预测准确率",
+    scoreline_score: "比分预测分数",
+    leaderboard_sort_label: "排行榜排序指标",
     leaderboard_sort_result: "排序：赛果准确率",
     leaderboard_sort_composite: "排序：综合分",
     leaderboard_sort_to_result: "切换为赛果准确率排序",
@@ -532,6 +535,9 @@ const I18N = {
     model: "Model",
     composite_score: "Composite Score",
     result_accuracy: "Result Accuracy",
+    exact_score_accuracy: "Exact Score Accuracy",
+    scoreline_score: "Scoreline Score",
+    leaderboard_sort_label: "Leaderboard sorting metric",
     leaderboard_sort_result: "Sort: Result Accuracy",
     leaderboard_sort_composite: "Sort: Composite Score",
     leaderboard_sort_to_result: "Switch to result accuracy sorting",
@@ -615,7 +621,7 @@ let _lang = _matchmateMode ? "zh" : (localStorage.getItem("wca_lang") === "en" ?
 let _theme = initialTheme();
 let _siteData = null;
 let _activeLeaderboardView = "main";
-let _leaderboardSort = "result";
+let _leaderboardSort = _matchmateMode ? "composite" : "result";
 let _leaderboardScope = "all";   // "all" | "knockout" — sample-set slice, defaults to overall
 let _countdownIntervals = [];
 let _mobilePredView = null;
@@ -767,11 +773,9 @@ function applyModeControls() {
   const leaderboardControls = document.getElementById("leaderboard-controls");
   if (langToggle) langToggle.classList.toggle("hidden", _matchmateMode);
   if (navGithub) navGithub.classList.toggle("hidden", _matchmateMode);
-  if (leaderboardControls) leaderboardControls.classList.toggle("hidden", _matchmateMode);
+  if (leaderboardControls) leaderboardControls.classList.remove("hidden");
   if (_matchmateMode) {
     _lang = "zh";
-    _activeLeaderboardView = "main";
-    _leaderboardSort = "result";
   }
 }
 
@@ -1264,6 +1268,23 @@ function outcomeSideFromScoreString(score) {
   return "draw";
 }
 
+function scorelineSimilarity(predScore, actualScore) {
+  const pred = parseUserScoreString(predScore);
+  const actual = parseUserScoreString(actualScore);
+  if (!pred || !actual) return 0;
+  if (pred.home === actual.home && pred.away === actual.away) return 100;
+  const predResult = pred.home > pred.away ? "home" : pred.away > pred.home ? "away" : "draw";
+  const actualResult = actual.home > actual.away ? "home" : actual.away > actual.home ? "away" : "draw";
+  const resultComponent = predResult === actualResult ? 45 : 0;
+  const diffError = Math.abs((pred.home - pred.away) - (actual.home - actual.away));
+  const totalError = Math.abs((pred.home + pred.away) - (actual.home + actual.away));
+  const teamError = Math.abs(pred.home - actual.home) + Math.abs(pred.away - actual.away);
+  const diffComponent = 25 * Math.max(0, 1 - diffError / 5);
+  const totalComponent = 20 * Math.max(0, 1 - totalError / 6);
+  const teamComponent = 10 * Math.max(0, 1 - teamError / 8);
+  return Math.max(0, Math.min(100, resultComponent + diffComponent + totalComponent + teamComponent));
+}
+
 function userOutcomeLabel(side, match) {
   if (side === "home") return t("user_prediction_home_win", { team: match.home || t("home") });
   if (side === "away") return t("user_prediction_away_win", { team: match.away || t("away") });
@@ -1477,6 +1498,8 @@ function currentUserLeaderboardRow() {
   let winnerCorrect = 0;
   let scoreTotal = 0;
   let scoreCorrect = 0;
+  let scorelineTotal = 0;
+  let scorelineSum = 0;
   for (const match of history) {
     if (!match.result) continue;
     // Mirror the model boards' sample-set slice so 我的预测 stays comparable.
@@ -1487,6 +1510,10 @@ function currentUserLeaderboardRow() {
     if (hasScore) scoreTotal += 1;
     if (wc) winnerCorrect += 1;
     if (hasScore && sc) scoreCorrect += 1;
+    if (hasScore) {
+      scorelineTotal += 1;
+      scorelineSum += scorelineSimilarity(pred.score, match.result);
+    }
   }
   if (!_currentUser && Object.keys(_userPredictions).length === 0) return null;
   const winnerAcc = winnerTotal ? winnerCorrect / winnerTotal : null;
@@ -1499,6 +1526,10 @@ function currentUserLeaderboardRow() {
     winner_acc: winnerAcc,
     score_total: scoreTotal,
     score_correct: scoreCorrect,
+    exact_score_total: scoreTotal,
+    exact_score_correct: scoreCorrect,
+    exact_score_acc: scoreTotal ? scoreCorrect / scoreTotal : null,
+    scoreline_score: scorelineTotal ? scorelineSum / scorelineTotal : null,
     mean: winnerAcc == null ? 0 : winnerAcc * 100,
   };
 }
@@ -3667,11 +3698,24 @@ function leaderboardResultAcc(row) {
   return row?.winner_acc == null ? null : Number(row.winner_acc);
 }
 
+function leaderboardExactScoreAcc(row) {
+  return row?.exact_score_acc == null ? null : Number(row.exact_score_acc);
+}
+
 function formatWinnerAcc(row) {
   const acc = leaderboardResultAcc(row);
   if (acc == null) return "—";
   const detail = row.winner_correct != null && row.winner_total != null
     ? ` (${row.winner_correct}/${row.winner_total})`
+    : "";
+  return `${(acc * 100).toFixed(1)}%${detail}`;
+}
+
+function formatExactScoreAcc(row) {
+  const acc = leaderboardExactScoreAcc(row);
+  if (acc == null) return "—";
+  const detail = row.exact_score_correct != null && row.exact_score_total != null
+    ? ` (${row.exact_score_correct}/${row.exact_score_total})`
     : "";
   return `${(acc * 100).toFixed(1)}%${detail}`;
 }
@@ -3686,6 +3730,19 @@ function sortLeaderboardRows(rows) {
       if (primary) return primary;
       const total = (b.winner_total || 0) - (a.winner_total || 0);
       if (total) return total;
+    } else if (_leaderboardSort === "exact") {
+      const accA = leaderboardExactScoreAcc(a);
+      const accB = leaderboardExactScoreAcc(b);
+      const primary = (accB ?? -1) - (accA ?? -1);
+      if (primary) return primary;
+      const total = (b.exact_score_total || 0) - (a.exact_score_total || 0);
+      if (total) return total;
+    } else if (_leaderboardSort === "scoreline") {
+      const primary = (Number(b.scoreline_score) || 0) - (Number(a.scoreline_score) || 0);
+      if (primary) return primary;
+    } else if (_leaderboardSort === "composite") {
+      const primary = (Number(b.mean) || 0) - (Number(a.mean) || 0);
+      if (primary) return primary;
     }
     const composite = (b.mean || 0) - (a.mean || 0);
     if (composite) return composite;
@@ -3703,6 +3760,22 @@ function leaderboardMetric(row, kind) {
       barWidth: acc == null ? 0 : Math.max(0, Math.min(100, acc * 100)),
     };
   }
+  if (kind === "exact") {
+    const acc = leaderboardExactScoreAcc(row);
+    return {
+      label: t("exact_score_accuracy"),
+      display: formatExactScoreAcc(row),
+      barWidth: acc == null ? 0 : Math.max(0, Math.min(100, acc * 100)),
+    };
+  }
+  if (kind === "scoreline") {
+    const score = row?.scoreline_score == null ? null : Number(row.scoreline_score);
+    return {
+      label: t("scoreline_score"),
+      display: score == null ? "—" : fmt2(score),
+      barWidth: score == null ? 0 : Math.max(0, Math.min(100, score)),
+    };
+  }
   return {
     label: t("composite_score"),
     display: fmt2(row.mean),
@@ -3711,15 +3784,32 @@ function leaderboardMetric(row, kind) {
 }
 
 function updateLeaderboardSortButton() {
-  const btn = document.getElementById("leaderboard-sort-toggle");
-  if (!btn) return;
-  btn.textContent = t(_leaderboardSort === "result" ? "leaderboard_sort_result" : "leaderboard_sort_composite");
-  btn.setAttribute("title", t(_leaderboardSort === "result" ? "leaderboard_sort_to_composite" : "leaderboard_sort_to_result"));
-  btn.setAttribute("aria-label", btn.getAttribute("title"));
+  const select = document.getElementById("leaderboard-sort-select");
+  if (!select) return;
+  const options = [
+    ["composite", t("composite_score")],
+    ["result", t("result_accuracy")],
+    ["exact", t("exact_score_accuracy")],
+    ["scoreline", t("scoreline_score")],
+  ];
+  select.innerHTML = options.map(([value, label]) =>
+    `<option value="${value}">${esc(label)}</option>`
+  ).join("");
+  select.value = _leaderboardSort;
+  select.setAttribute("title", t("leaderboard_sort_label"));
+  select.setAttribute("aria-label", t("leaderboard_sort_label"));
 }
 
 function toggleLeaderboardSort() {
-  _leaderboardSort = _leaderboardSort === "result" ? "composite" : "result";
+  const kinds = ["composite", "result", "exact", "scoreline"];
+  _leaderboardSort = kinds[(kinds.indexOf(_leaderboardSort) + 1) % kinds.length];
+  updateLeaderboardSortButton();
+  renderLeaderboard(activeLeaderboardData(), _activeLeaderboardView);
+}
+
+function setLeaderboardSort(kind) {
+  if (!["composite", "result", "exact", "scoreline"].includes(kind)) return;
+  _leaderboardSort = kind;
   updateLeaderboardSortButton();
   renderLeaderboard(activeLeaderboardData(), _activeLeaderboardView);
 }
@@ -3737,7 +3827,7 @@ function renderLeaderboard(lb, view) {
 
   if (view === "main") {
     const primaryKind = _leaderboardSort;
-    const primaryLabel = leaderboardMetric(rows[0], primaryKind).label;
+    const metricKinds = ["composite", "result", "exact", "scoreline"];
     el.innerHTML = `
       <div class="overflow-x-auto">
         <table class="leaderboard-table w-full text-sm">
@@ -3745,7 +3835,11 @@ function renderLeaderboard(lb, view) {
             <tr>
               <th class="leaderboard-rank-cell text-left py-2 px-3 w-12">#</th>
               <th class="text-left py-2 px-3">${t("model")}</th>
-              <th class="leaderboard-score-cell text-right py-2 px-3">${primaryLabel}</th>
+              ${metricKinds.map(kind => {
+                const active = kind === primaryKind;
+                const mobileClass = active ? "" : "leaderboard-mobile-hide";
+                return `<th class="leaderboard-score-cell ${mobileClass} text-right py-2 px-3${active ? " text-white" : ""}">${leaderboardMetric(rows[0], kind).label}</th>`;
+              }).join("")}
               <th class="leaderboard-mobile-hide text-right py-2 px-3">${t("games")}</th>
             </tr>
           </thead>
@@ -3753,7 +3847,6 @@ function renderLeaderboard(lb, view) {
             ${rows.map((r, i) => {
               const b = modelBadge(r.model_id);
               const medal = i === 0 ? "rank-1" : i === 1 ? "rank-2" : i === 2 ? "rank-3" : "";
-              const primary = leaderboardMetric(r, primaryKind);
               const settings = Object.keys((lb.by_model_setting || {})[r.model_id] || {}).sort();
               const settingBadges = r.is_user
                 ? `<span class="chip">${esc(t("user_leaderboard_exact", { correct: r.score_correct || 0, total: r.score_total || 0 }))}</span>`
@@ -3771,12 +3864,17 @@ function renderLeaderboard(lb, view) {
                       ${settingBadges ? `<span class="leaderboard-setting-badges inline-flex items-center gap-1 flex-wrap">${settingBadges}</span>` : ""}
                     </div>
                   </td>
-                  <td class="leaderboard-score-cell py-2 px-3 text-right font-mono">
-                    <div class="leaderboard-metric">
-                      <div class="leaderboard-score-bar bar w-28"><div class="bar-fill" style="width:${primary.barWidth}%"></div></div>
-                      <span class="leaderboard-metric-value font-bold text-white">${primary.display}</span>
-                    </div>
-                  </td>
+                  ${metricKinds.map(kind => {
+                    const metric = leaderboardMetric(r, kind);
+                    const active = kind === primaryKind;
+                    const mobileClass = active ? "" : "leaderboard-mobile-hide";
+                    return `<td class="leaderboard-score-cell ${mobileClass} py-2 px-3 text-right font-mono">
+                      <div class="leaderboard-metric">
+                        <div class="leaderboard-score-bar bar w-20"><div class="bar-fill" style="width:${metric.barWidth}%"></div></div>
+                        <span class="leaderboard-metric-value font-bold${active ? " text-white" : " text-gray-300"}">${metric.display}</span>
+                      </div>
+                    </td>`;
+                  }).join("")}
                   <td class="leaderboard-mobile-hide py-2 px-3 text-right text-gray-500">${r.n}</td>
                 </tr>`;
             }).join("")}

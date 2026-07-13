@@ -7,8 +7,8 @@
 #   layer_weight    : weight of the parent layer in the composite score
 
 layer_weights:
-  T1_core_result:      0.35
-  T2_player_level:     0.25
+  T1_core_result:      0.40
+  T2_player_level:     0.20
   T3_event_level:      0.15
   T4_tactics_stats:    0.15
   T5_tournament_macro: 0.10
@@ -17,13 +17,19 @@ tasks:
   # ------- T1: core result -------
   - id: match_winner_prob
     layer: T1_core_result
-    weight_in_layer: 0.45
+    weight_in_layer: 0.35
     metric: brier_3way
     output_field: win_probs
     notes: Model-owned home/draw/away probabilities. The highest bucket must match predicted_result.
+  - id: exact_score
+    layer: T1_core_result
+    weight_in_layer: 0.20
+    metric: exact_score_accuracy
+    output_field: headline_score
+    notes: Strict exact match of home and away goals; no partial credit.
   - id: headline_score
     layer: T1_core_result
-    weight_in_layer: 0.40
+    weight_in_layer: 0.30
     metric: scoreline_similarity
     output_field: headline_score
     notes: Directly scores the model-owned exact-score point forecast; no per-score probability distribution is required.
@@ -69,28 +75,28 @@ tasks:
   # ------- T3: event level -------
   - id: goal_minute
     layer: T3_event_level
-    weight_in_layer: 0.35
+    weight_in_layer: 0.45
     metric: hungarian_minute_mae
     output_field: scorers
     notes: Bipartite-match predicted scorers to actual; MAE on minute.
   - id: substitution_times
     layer: T3_event_level
-    weight_in_layer: 0.15
+    weight_in_layer: 0.20
     metric: hungarian_minute_mae
     output_field: substitutions
   - id: cards
     layer: T3_event_level
-    weight_in_layer: 0.20
+    weight_in_layer: 0.25
     metric: event_f1
     output_field: cards
   - id: penalty_events
     layer: T3_event_level
-    weight_in_layer: 0.15
+    weight_in_layer: 0.05
     metric: event_f1
     output_field: penalties
   - id: own_goals
     layer: T3_event_level
-    weight_in_layer: 0.15
+    weight_in_layer: 0.05
     metric: event_f1
     output_field: own_goals
 

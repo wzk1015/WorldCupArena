@@ -27,6 +27,7 @@ import yaml
 
 from ..runners import build_runner_chain
 from ..graders import grade_match
+from ..graders.grade_match import SCORING_VERSION
 from ..ingest.api_football import normalize_fixture, normalize_to_truth, populate_context_pack, get_football_client, football_api_provider
 from ..ingest.news import populate_news
 from .prompt_build import build_prompt
@@ -364,9 +365,16 @@ def cmd_grade(fixture_dir: Path) -> None:
     # print(list(pred_dir.glob("*.json")))
     # print(pred_dir)
     for pred_file in sorted(pred_dir.glob("*.json")):
-        if (out_dir / pred_file.name).exists():
-            print(f"[grade] skip graded result {out_dir / pred_file.name}")
-            continue 
+        result_path = out_dir / pred_file.name
+        if result_path.exists():
+            try:
+                existing = json.loads(result_path.read_text())
+            except Exception:  # noqa: BLE001
+                existing = {}
+            if existing.get("scoring_version") == SCORING_VERSION:
+                print(f"[grade] skip current result {result_path}")
+                continue
+            print(f"[grade] refresh scoring version for {result_path}")
         record = json.loads(pred_file.read_text())
         if record.get("error"):
             continue
@@ -374,7 +382,7 @@ def cmd_grade(fixture_dir: Path) -> None:
         scored["model_id"] = record["model_id"]
         scored["setting"] = record["setting"]
         scored["leakage_audit"] = record.get("leakage_audit", {})
-        (out_dir / pred_file.name).write_text(json.dumps(scored, ensure_ascii=False, indent=2))
+        result_path.write_text(json.dumps(scored, ensure_ascii=False, indent=2))
     print(f"[grade] {fid}: done")
 
 

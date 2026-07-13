@@ -42,6 +42,8 @@ import httpx
 import yaml
 from dotenv import dotenv_values
 
+from ..graders import metrics as grading_metrics
+from ..graders.grade_tournament import grade_tournament_prediction
 from ..pipeline.prediction_derivatives import derive_most_likely_score, derive_win_probs_from_score_dist
 from ..pipeline.reasoning_localization import localize_prediction_reasoning
 
@@ -53,6 +55,7 @@ LIVE_DIR = ROOT / "data" / "live"
 LIVE_PREDICTIONS = ROOT / "data" / "live_predictions"
 TOURNAMENT_SPEC = ROOT / "configs" / "world_cup_2026_tournament.json"
 TOURNAMENT_PREDICTIONS = ROOT / "data" / "tournament_predictions" / "world_cup_2026"
+TOURNAMENT_TRUTH = ROOT / "configs" / "world_cup_2026_truth.json"
 SEARCH_LOGS = ROOT / "data" / "search_logs"
 FIXTURES_YAML = ROOT / "configs" / "fixtures.yaml"
 MODELS_YAML = ROOT / "configs" / "models.yaml"
@@ -598,6 +601,9 @@ def build_leaderboard(fixture_filter=None) -> dict:
     by_model_setting: dict[tuple[str, str], list[float]] = defaultdict(list)
     by_model_winner_correct: dict[str, int] = defaultdict(int)
     by_model_winner_total: dict[str, int] = defaultdict(int)
+    by_model_exact_score_correct: dict[str, int] = defaultdict(int)
+    by_model_exact_score_total: dict[str, int] = defaultdict(int)
+    by_model_scoreline_scores: dict[str, list[float]] = defaultdict(list)
 
     _truth_cache: dict[str, dict | None] = {}
 
@@ -611,7 +617,9 @@ def build_leaderboard(fixture_filter=None) -> dict:
             continue
         if wca_id not in _truth_cache:
             _truth_cache[wca_id] = _load_truth_data(wca_id)
-        truth_result = (_truth_cache[wca_id] or {}).get("result")
+        truth = _truth_cache[wca_id] or {}
+        truth_result = truth.get("result")
+        truth_score = truth.get("score")
 
         for f in fid_dir.glob("*.json"):
             r = json.loads(f.read_text())
@@ -625,22 +633,36 @@ def build_leaderboard(fixture_filter=None) -> dict:
             for k, v in (r.get("layers") or {}).items():
                 by_model_layers[model][k].append(float(v))
 
-            # Win prediction accuracy
-            if truth_result:
+            # Headline metrics are computed from the model-owned point forecast,
+            # independently of the composite task aggregation.
+            if truth_result or truth_score:
                 pred_file = PREDICTIONS / wca_id / f.name
                 if pred_file.exists():
                     pred_rec = json.loads(pred_file.read_text())
                     pred_obj = pred_rec.get("prediction") or {}
-                    wp = pred_obj.get("win_probs") or derive_win_probs_from_score_dist(pred_obj.get("score_dist") or [])
-                    if wp:
+                    wp = pred_obj.get("win_probs") or derive_win_probs_from_score_dist(
+                        pred_obj.get("score_dist") or []
+                    )
+                    if truth_result and wp:
                         predicted = max(wp, key=lambda k: wp[k])
                         by_model_winner_correct[model] += int(predicted == truth_result)
                         by_model_winner_total[model] += 1
+                    if truth_score:
+                        pred_score = pred_obj.get("headline_score") or pred_obj.get("most_likely_score")
+                        by_model_exact_score_correct[model] += int(
+                            grading_metrics.exact_score_accuracy(pred_score, truth_score) == 100.0
+                        )
+                        by_model_exact_score_total[model] += 1
+                        by_model_scoreline_scores[model].append(
+                            grading_metrics.scoreline_similarity(pred_score, truth_score)
+                        )
 
     main = []
     for m, v in by_model_composites.items():
         layers_mean = {k: sum(xs) / len(xs) for k, xs in by_model_layers[m].items() if xs}
         total = by_model_winner_total[m]
+        exact_total = by_model_exact_score_total[m]
+        scoreline_values = by_model_scoreline_scores[m]
         meta = MODEL_META.get(m) or _infer_model_metadata(m)
         if m in HIDDEN_SITE_MODELS:
             continue
@@ -652,6 +674,10 @@ def build_leaderboard(fixture_filter=None) -> dict:
             "winner_correct": by_model_winner_correct[m],
             "winner_total":   total,
             "winner_acc":    by_model_winner_correct[m] / total if total else None,
+            "exact_score_correct": by_model_exact_score_correct[m],
+            "exact_score_total": exact_total,
+            "exact_score_acc": by_model_exact_score_correct[m] / exact_total if exact_total else None,
+            "scoreline_score": sum(scoreline_values) / len(scoreline_values) if scoreline_values else None,
             **meta,
         })
     main.sort(key=lambda x: -x["mean"])
@@ -1634,6 +1660,13 @@ def build_tournament_predictions() -> dict | None:
         print(f"[site] skipping tournament spec: {exc}")
         return None
 
+    tournament_truth = None
+    if TOURNAMENT_TRUTH.exists():
+        try:
+            tournament_truth = json.loads(TOURNAMENT_TRUTH.read_text())
+        except Exception as exc:
+            print(f"[site] skipping tournament truth: {exc}")
+
     rows: list[dict] = []
     if TOURNAMENT_PREDICTIONS.exists():
         for path in sorted(TOURNAMENT_PREDICTIONS.glob("*.json")):
@@ -1644,7 +1677,10 @@ def build_tournament_predictions() -> dict | None:
             model_id = record.get("model_id") or _prediction_key_from_path(path)[0]
             if model_id in HIDDEN_SITE_MODELS:
                 continue
-            rows.append(_public_tournament_prediction(record, path))
+            row = _public_tournament_prediction(record, path)
+            if tournament_truth and row.get("status") == "ok":
+                row["evaluation"] = grade_tournament_prediction(row, tournament_truth)
+            rows.append(row)
 
     rows.sort(key=lambda row: (
         int(row.get("config_order", 9999)),
@@ -1659,6 +1695,7 @@ def build_tournament_predictions() -> dict | None:
         "group_stage_matches": spec.get("group_stage_matches") or [],
         "knockout_matches": spec.get("knockout_matches") or [],
         "sources": spec.get("sources") or [],
+        "provisional_truth": tournament_truth,
         "name_localization": _load_name_localization(),
         "predictions": rows,
     }

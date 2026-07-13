@@ -1,98 +1,137 @@
 {
+  "scoring_version": "wca-v2-availability-contrast-2026-07-13",
   "tasks": {
     "match_winner_prob": {
-      "score": 56.71000000000001
+      "score": 56.71000000000001,
+      "available": true
     },
-    "most_likely_score": {
-      "score": 41.40999999999999
+    "exact_score": {
+      "score": 0.0,
+      "available": true
+    },
+    "headline_score": {
+      "score": 30.0,
+      "available": true
     },
     "goal_diff_mae": {
-      "score": 30.400000000000006
+      "score": 30.400000000000006,
+      "available": true
     },
     "qualification": {
-      "score": 75.0
+      "score": null,
+      "available": false
     },
     "starting_xi": {
-      "score": 29.458333333333332
+      "score": 29.458333333333332,
+      "available": true
     },
     "formation": {
-      "score": 50.0
+      "score": 50.0,
+      "available": true
     },
     "goalscorers": {
-      "score": 0.0
+      "score": 0.0,
+      "available": true
     },
     "assist_providers": {
-      "score": 0.0
+      "score": 0.0,
+      "available": true
     },
     "man_of_the_match": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "goal_minute": {
-      "score": 58.916666666666664
+      "score": 58.916666666666664,
+      "available": true
     },
     "substitution_times": {
-      "score": 69.22222222222223
+      "score": 69.22222222222223,
+      "available": true
     },
     "cards": {
-      "score": 0.0
+      "score": 0.0,
+      "available": true
     },
     "penalty_events": {
-      "score": 100.0
+      "score": 100.0,
+      "available": true
     },
     "own_goals": {
-      "score": 100.0
+      "score": 100.0,
+      "available": true
     },
     "tactical_formation_match": {
-      "score": 0.0
+      "score": 50.0,
+      "available": true
     },
     "possession_pct": {
-      "score": 81.998199819982
+      "score": 81.998199819982,
+      "available": true
     },
     "shots": {
-      "score": 41.75824175824176
+      "score": 41.75824175824176,
+      "available": true
     },
     "shots_on_target": {
-      "score": 11.538461538461537
+      "score": 11.538461538461537,
+      "available": true
     },
     "corners": {
-      "score": 70.9090909090909
+      "score": 70.9090909090909,
+      "available": true
     },
     "pass_accuracy": {
-      "score": 96.49794801641588
+      "score": 96.49794801641588,
+      "available": true
     },
     "fouls": {
-      "score": 51.38888888888889
+      "score": 51.38888888888889,
+      "available": true
     },
     "saves": {
-      "score": 35.714285714285715
+      "score": 35.714285714285715,
+      "available": true
     },
     "tackles_and_interceptions": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "group_standings": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "bracket_advancement": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "champion": {
-      "score": 50.0
+      "score": null,
+      "available": false
     },
     "top_scorer": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "golden_glove_and_awards": {
-      "score": 0.0
+      "score": null,
+      "available": false
     }
   },
-  "layers": {
-    "T1_core_result": 50.95400000000001,
-    "T2_player_level": 13.837499999999999,
-    "T3_event_level": 61.00416666666666,
-    "T4_tactics_stats": 38.980511664536664,
-    "T5_tournament_macro": 10.0
+  "raw_layers": {
+    "T1_core_result": 33.566842105263156,
+    "T2_player_level": 15.374999999999998,
+    "T3_event_level": 50.356944444444444,
+    "T4_tactics_stats": 54.682954899454906
   },
-  "composite": 37.290976749680496,
+  "layers": {
+    "T1_core_result": 15.742883184393444,
+    "T2_player_level": 2.402702889792919,
+    "T3_event_level": 50.90437203160886,
+    "T4_tactics_stats": 61.65402150301246
+  },
+  "raw_composite": 35.84191304854462,
+  "composite": 19.118579407822143,
   "model_id": "gpt-5.4-search",
   "setting": "S2",
   "leakage_audit": {

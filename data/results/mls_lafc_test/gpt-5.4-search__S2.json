@@ -1,98 +1,137 @@
 {
+  "scoring_version": "wca-v2-availability-contrast-2026-07-13",
   "tasks": {
     "match_winner_prob": {
-      "score": 48.06999999999999
+      "score": 48.06999999999999,
+      "available": true
     },
-    "most_likely_score": {
-      "score": 37.51
+    "exact_score": {
+      "score": 0.0,
+      "available": true
+    },
+    "headline_score": {
+      "score": 23.333333333333336,
+      "available": true
     },
     "goal_diff_mae": {
-      "score": 25.6
+      "score": 25.6,
+      "available": true
     },
     "qualification": {
-      "score": 75.0
+      "score": null,
+      "available": false
     },
     "starting_xi": {
-      "score": 9.444444444444443
+      "score": 9.444444444444443,
+      "available": true
     },
     "formation": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "goalscorers": {
-      "score": 0.0
+      "score": 0.0,
+      "available": true
     },
     "assist_providers": {
-      "score": 0.0
+      "score": 0.0,
+      "available": true
     },
     "man_of_the_match": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "goal_minute": {
-      "score": 67.57142857142857
+      "score": 67.57142857142857,
+      "available": true
     },
     "substitution_times": {
-      "score": 67.77777777777777
+      "score": 67.77777777777777,
+      "available": true
     },
     "cards": {
-      "score": 0.0
+      "score": 0.0,
+      "available": true
     },
     "penalty_events": {
-      "score": 100.0
+      "score": 100.0,
+      "available": true
     },
     "own_goals": {
-      "score": 0.0
+      "score": 0.0,
+      "available": true
     },
     "tactical_formation_match": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "possession_pct": {
-      "score": 93.95100312531505
+      "score": 93.95100312531505,
+      "available": true
     },
     "shots": {
-      "score": 87.68328445747801
+      "score": 87.68328445747801,
+      "available": true
     },
     "shots_on_target": {
-      "score": 55.55555555555556
+      "score": 55.55555555555556,
+      "available": true
     },
     "corners": {
-      "score": 76.62337662337663
+      "score": 76.62337662337663,
+      "available": true
     },
     "pass_accuracy": {
-      "score": 96.38490164805954
+      "score": 96.38490164805954,
+      "available": true
     },
     "fouls": {
-      "score": 78.6231884057971
+      "score": 78.6231884057971,
+      "available": true
     },
     "saves": {
-      "score": 65.71428571428572
+      "score": 65.71428571428572,
+      "available": true
     },
     "tackles_and_interceptions": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "group_standings": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "bracket_advancement": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "champion": {
-      "score": 50.0
+      "score": null,
+      "available": false
     },
     "top_scorer": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "golden_glove_and_awards": {
-      "score": 0.0
+      "score": null,
+      "available": false
     }
   },
-  "layers": {
-    "T1_core_result": 44.596999999999994,
-    "T2_player_level": 2.8333333333333326,
-    "T3_event_level": 48.81666666666666,
-    "T4_tactics_stats": 55.453559552986775,
-    "T5_tournament_macro": 10.0
+  "raw_layers": {
+    "T1_core_result": 27.773157894736837,
+    "T2_player_level": 3.541666666666666,
+    "T3_event_level": 48.962698412698415,
+    "T4_tactics_stats": 79.21937078998111
   },
-  "composite": 32.95781726628134,
+  "layers": {
+    "T1_core_result": 9.227415742944354,
+    "T2_player_level": 0.2855585603522459,
+    "T3_event_level": 47.37391683894822,
+    "T4_tactics_stats": 95.5010912545606
+  },
+  "raw_composite": 34.49434096847777,
+  "composite": 17.059523522709746,
   "model_id": "gpt-5.4-search",
   "setting": "S2",
   "leakage_audit": {

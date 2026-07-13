@@ -1,98 +1,137 @@
 {
+  "scoring_version": "wca-v2-availability-contrast-2026-07-13",
   "tasks": {
     "match_winner_prob": {
-      "score": 78.12
+      "score": 78.12,
+      "available": true
     },
-    "most_likely_score": {
-      "score": 78.2796
+    "exact_score": {
+      "score": 0.0,
+      "available": true
+    },
+    "headline_score": {
+      "score": 87.5,
+      "available": true
     },
     "goal_diff_mae": {
-      "score": 48.0
+      "score": 48.0,
+      "available": true
     },
     "qualification": {
-      "score": 75.0
+      "score": null,
+      "available": false
     },
     "starting_xi": {
-      "score": 20.588235294117645
+      "score": 20.588235294117645,
+      "available": true
     },
     "formation": {
-      "score": 0.0
+      "score": 0.0,
+      "available": true
     },
     "goalscorers": {
-      "score": 38.14305671825355
+      "score": 38.14305671825355,
+      "available": true
     },
     "assist_providers": {
-      "score": 66.66666666666667
+      "score": 66.66666666666667,
+      "available": true
     },
     "man_of_the_match": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "goal_minute": {
-      "score": 69.0909090909091
+      "score": 69.0909090909091,
+      "available": true
     },
     "substitution_times": {
-      "score": 69.42857142857143
+      "score": 69.42857142857143,
+      "available": true
     },
     "cards": {
-      "score": 0.0
+      "score": 0.0,
+      "available": true
     },
     "penalty_events": {
-      "score": 100.0
+      "score": 100.0,
+      "available": true
     },
     "own_goals": {
-      "score": 100.0
+      "score": 100.0,
+      "available": true
     },
     "tactical_formation_match": {
-      "score": 0.0
+      "score": 0.0,
+      "available": true
     },
     "possession_pct": {
-      "score": 77.94486215538848
+      "score": 77.94486215538848,
+      "available": true
     },
     "shots": {
-      "score": 87.96296296296296
+      "score": 87.96296296296296,
+      "available": true
     },
     "shots_on_target": {
-      "score": 69.04761904761905
+      "score": 69.04761904761905,
+      "available": true
     },
     "corners": {
-      "score": 80.0
+      "score": 80.0,
+      "available": true
     },
     "pass_accuracy": {
-      "score": 93.6525974025974
+      "score": 93.6525974025974,
+      "available": true
     },
     "fouls": {
-      "score": 91.94847020933977
+      "score": 91.94847020933977,
+      "available": true
     },
     "saves": {
-      "score": 85.71428571428572
+      "score": 85.71428571428572,
+      "available": true
     },
     "tackles_and_interceptions": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "group_standings": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "bracket_advancement": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "champion": {
-      "score": 50.0
+      "score": null,
+      "available": false
     },
     "top_scorer": {
-      "score": 0.0
+      "score": null,
+      "available": false
     },
     "golden_glove_and_awards": {
-      "score": 0.0
+      "score": null,
+      "available": false
     }
   },
-  "layers": {
-    "T1_core_result": 76.51386000000001,
-    "T2_player_level": 29.526540439624036,
-    "T3_event_level": 64.5961038961039,
-    "T4_tactics_stats": 58.627079749219334,
-    "T5_tournament_macro": 10.0
+  "raw_layers": {
+    "T1_core_result": 61.465263157894725,
+    "T2_player_level": 32.807267155137815,
+    "T3_event_level": 54.97662337662338,
+    "T4_tactics_stats": 68.97303499908158
   },
-  "composite": 53.64496365670449,
+  "layers": {
+    "T1_core_result": 76.23881115342374,
+    "T2_player_level": 14.724289140539781,
+    "T3_event_level": 62.356380304240645,
+    "T4_tactics_stats": 87.46003187166951
+  },
+  "raw_composite": 55.266674945045764,
+  "composite": 63.045171086322995,
   "model_id": "claude-opus-4-7-thinking",
   "setting": "S1",
   "leakage_audit": {

@@ -15,6 +15,7 @@ from ..pipeline.prediction_derivatives import derive_win_probs_from_score_dist
 
 ROOT = Path(__file__).resolve().parents[2]
 TASKS_YAML = ROOT / "configs" / "tasks.yaml"
+SCORING_VERSION = "wca-v2-availability-contrast-2026-07-13"
 
 
 def load_tasks() -> dict[str, Any]:
@@ -31,6 +32,9 @@ METRIC_FNS = {
     "brier_multiclass":    lambda p, t: metrics.brier_multiclass(p.get("champion_probs", {}), t.get("champion", "")),
     "rps_score":           lambda p, t: metrics.rps_score(p["score_dist"], t["score"]),
     "scoreline_similarity": lambda p, t: metrics.scoreline_similarity(
+        p.get("headline_score") or p.get("most_likely_score"), t["score"]
+    ),
+    "exact_score_accuracy": lambda p, t: metrics.exact_score_accuracy(
         p.get("headline_score") or p.get("most_likely_score"), t["score"]
     ),
     "mae":                 lambda p, t: metrics.mae(p.get("expected_goal_diff", 0), t.get("goal_diff", 0)),
@@ -116,18 +120,90 @@ def _jaccard_with_position(pred_lineups: dict[str, Any], truth_lineups: dict[str
     return sum(per_side) / len(per_side) if per_side else 0.0
 
 
+_STAT_TRUTH_KEYS = {
+    "possession_pct": "possession",
+    "shots": "shots",
+    "shots_on_target": "shots_on_target",
+    "corners": "corners",
+    "pass_accuracy": "pass_accuracy",
+    "fouls": "fouls",
+    "saves": "saves",
+    "tackles_and_interceptions": "defensive_actions",
+}
+
+
+def _task_has_truth(task_id: str, truth: dict[str, Any]) -> bool:
+    """Whether a task has enough observed ground truth to be scored fairly."""
+    if task_id == "match_winner_prob":
+        return truth.get("result") in {"home", "draw", "away"}
+    if task_id in {"exact_score", "headline_score"}:
+        return bool(truth.get("score"))
+    if task_id == "goal_diff_mae":
+        return truth.get("goal_diff") is not None
+    if task_id == "qualification":
+        return truth.get("qualification_applicable") is True and truth.get("advanced") is not None
+
+    if task_id == "starting_xi":
+        lineups = truth.get("lineups") or {}
+        return all(bool((lineups.get(side) or {}).get("starting")) for side in ("home", "away"))
+    if task_id in {"formation", "tactical_formation_match"}:
+        formations = truth.get("formations") or {}
+        return all(bool(formations.get(side)) for side in ("home", "away"))
+    if task_id == "goalscorers":
+        return "scorer_names" in truth
+    if task_id == "assist_providers":
+        return "assister_names" in truth
+    if task_id == "man_of_the_match":
+        return bool(truth.get("motm"))
+
+    event_truth = {
+        "goal_minute": "goals",
+        "substitution_times": "substitutions",
+        "cards": "cards",
+        "penalty_events": "penalties",
+        "own_goals": "own_goals",
+    }
+    if task_id in event_truth:
+        # Empty is a valid observation for event tasks: no event occurred.
+        return event_truth[task_id] in truth
+
+    if task_id in _STAT_TRUTH_KEYS:
+        values = (truth.get("stats") or {}).get(_STAT_TRUTH_KEYS[task_id]) or {}
+        return all(values.get(side) is not None for side in ("home", "away"))
+
+    if task_id == "group_standings":
+        return bool(truth.get("group_standings"))
+    if task_id == "bracket_advancement":
+        return bool(truth.get("bracket"))
+    if task_id == "champion":
+        return bool(truth.get("champion"))
+    if task_id == "top_scorer":
+        return bool(truth.get("top_scorers"))
+    if task_id == "golden_glove_and_awards":
+        return bool(truth.get("awards"))
+    return False
+
+
 def grade_match(prediction: dict[str, Any], truth: dict[str, Any]) -> dict[str, Any]:
-    """Return a per-task score dict and a composite score."""
+    """Return availability-aware task/layer scores and a contrast composite."""
     cfg = load_tasks()
     per_task: dict[str, float] = {}
 
     for task in cfg["tasks"]:
         tid = task["id"]
         metric = task["metric"]
+        if not _task_has_truth(tid, truth):
+            per_task[tid] = {"score": None, "available": False}
+            continue
         score: float = 0.0
         try:
             if metric in ("brier_3way",):
                 score = metrics.brier_3way(_win_probs(prediction), truth.get("result", ""))
+            elif metric == "exact_score_accuracy":
+                score = metrics.exact_score_accuracy(
+                    prediction.get("headline_score") or prediction.get("most_likely_score"),
+                    truth["score"],
+                )
             elif metric == "scoreline_similarity":
                 score = metrics.scoreline_similarity(
                     prediction.get("headline_score") or prediction.get("most_likely_score"),
@@ -141,7 +217,7 @@ def grade_match(prediction: dict[str, Any], truth: dict[str, Any]) -> dict[str, 
                 score = metrics.brier_binary(prediction.get("advance_prob", 0.5), truth.get("advanced", False))
             elif metric == "jaccard_with_position":
                 score = _jaccard_with_position(prediction.get("lineups", {}), truth.get("lineups", {}))
-            elif metric == "exact_match" and tid == "formation":
+            elif metric == "exact_match" and tid in {"formation", "tactical_formation_match"}:
                 pred_f = (prediction.get("formations") or {})
                 truth_f = (truth.get("formations") or {})
                 sides = [metrics.exact_match(pred_f.get(s), truth_f.get(s)) for s in ("home", "away")]
@@ -183,16 +259,7 @@ def grade_match(prediction: dict[str, Any], truth: dict[str, Any]) -> dict[str, 
             elif metric == "smape":
                 key = tid.replace("tactical_formation_match", "").strip() or tid
                 # maps task id -> stats key
-                stat_key = {
-                    "possession_pct": "possession",
-                    "shots": "shots",
-                    "shots_on_target": "shots_on_target",
-                    "corners": "corners",
-                    "pass_accuracy": "pass_accuracy",
-                    "fouls": "fouls",
-                    "saves": "saves",
-                    "tackles_and_interceptions": "defensive_actions",
-                }.get(tid)
+                stat_key = _STAT_TRUTH_KEYS.get(tid)
                 if stat_key:
                     score = _stats_smape(prediction, truth, stat_key)
             elif metric == "kendall_tau":
@@ -217,17 +284,50 @@ def grade_match(prediction: dict[str, Any], truth: dict[str, Any]) -> dict[str, 
                     k=3,
                 )
         except Exception as e:  # noqa: BLE001
-            per_task[tid] = {"score": 0.0, "error": f"{type(e).__name__}: {e}"}
+            per_task[tid] = {
+                "score": 0.0,
+                "available": True,
+                "error": f"{type(e).__name__}: {e}",
+            }
             continue
-        per_task[tid] = {"score": float(score)}
+        per_task[tid] = {"score": float(score), "available": True}
 
-    # aggregate by layer
-    by_layer: dict[str, float] = {}
+    # Normalize within each layer over tasks that have truth. This prevents
+    # unavailable fields (e.g. MOTM or tournament champion on a group match)
+    # from becoming shared zero/default scores that compress the leaderboard.
+    layer_numerators: dict[str, float] = {}
+    layer_denominators: dict[str, float] = {}
     for task in cfg["tasks"]:
+        task_score = per_task[task["id"]]
+        if not task_score.get("available"):
+            continue
         lid = task["layer"]
-        contrib = per_task[task["id"]]["score"] * task["weight_in_layer"]
-        by_layer[lid] = by_layer.get(lid, 0.0) + contrib
+        weight = float(task["weight_in_layer"])
+        layer_numerators[lid] = layer_numerators.get(lid, 0.0) + float(task_score["score"]) * weight
+        layer_denominators[lid] = layer_denominators.get(lid, 0.0) + weight
 
-    composite = sum(by_layer.get(lid, 0.0) * w for lid, w in cfg["layer_weights"].items())
+    raw_layers = {
+        lid: layer_numerators[lid] / layer_denominators[lid]
+        for lid in layer_numerators
+        if layer_denominators.get(lid, 0.0) > 0
+    }
+    layer_weight_total = sum(
+        float(weight) for lid, weight in cfg["layer_weights"].items() if lid in raw_layers
+    )
+    raw_composite = (
+        sum(raw_layers[lid] * float(weight) for lid, weight in cfg["layer_weights"].items() if lid in raw_layers)
+        / layer_weight_total
+        if layer_weight_total
+        else 0.0
+    )
+    layers = {lid: metrics.contrast_calibrated_score(score) for lid, score in raw_layers.items()}
+    composite = metrics.contrast_calibrated_score(raw_composite)
 
-    return {"tasks": per_task, "layers": by_layer, "composite": composite}
+    return {
+        "scoring_version": SCORING_VERSION,
+        "tasks": per_task,
+        "raw_layers": raw_layers,
+        "layers": layers,
+        "raw_composite": raw_composite,
+        "composite": composite,
+    }

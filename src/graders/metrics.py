@@ -82,6 +82,38 @@ def scoreline_similarity(pred_score: str | None, actual_score: str) -> float:
     return max(0.0, min(100.0, result_component + diff_component + total_component + team_component))
 
 
+def exact_score_accuracy(pred_score: str | None, actual_score: str) -> float:
+    """Strict point-score accuracy: 100 only when both team goal counts match."""
+    if not pred_score:
+        return 0.0
+    try:
+        return 100.0 if _parse_score(str(pred_score)) == _parse_score(actual_score) else 0.0
+    except Exception:  # noqa: BLE001
+        return 0.0
+
+
+def contrast_calibrated_score(raw_score: float, temperature: float = 10.0) -> float:
+    """Map a raw 0..100 aggregate to a higher-contrast 0..100 score.
+
+    The fixed logistic transform is centered at 50 and rescaled to preserve the
+    endpoints. It is monotonic, so it cannot change model ordering, and unlike
+    cohort normalization it does not change when a new model joins the board.
+    Around the middle of the scale, a one-point raw difference becomes roughly
+    a 2.5-point displayed difference.
+    """
+    raw = max(0.0, min(100.0, float(raw_score)))
+    if temperature <= 0:
+        raise ValueError("temperature must be positive")
+
+    def _sigmoid(x: float) -> float:
+        return 1.0 / (1.0 + math.exp(-x))
+
+    lo = _sigmoid(-50.0 / temperature)
+    hi = _sigmoid(50.0 / temperature)
+    value = (_sigmoid((raw - 50.0) / temperature) - lo) / (hi - lo)
+    return 100.0 * max(0.0, min(1.0, value))
+
+
 # ----------------------------------------------------------------------
 # Regression-style
 # ----------------------------------------------------------------------

@@ -131,15 +131,16 @@
   .reasoning-modal-card { background: rgba(10,15,28,.97); }
   .leaderboard-metric {
     display: inline-grid;
-    grid-template-columns: 7rem 7.5rem;
+    grid-template-columns: 4.5rem 6.5rem;
     align-items: center;
     justify-content: end;
     gap: .5rem;
   }
   .leaderboard-metric-value {
     display: inline-block;
-    min-width: 7.5rem;
+    min-width: 6.5rem;
     text-align: right;
+    white-space: nowrap;
   }
   .theme-select {
     min-width: 4.5rem;
@@ -264,7 +265,6 @@
   .lang-toggle { min-width: 4.75rem; justify-content:center; }
   html[data-mode="matchmate"] #lang-toggle,
   html[data-mode="matchmate"] #github-nav-link,
-  html[data-mode="matchmate"] #leaderboard-controls,
   html[data-mode="matchmate"] #author-byline {
     display: none !important;
   }
@@ -687,9 +687,10 @@
                 onclick="setLeaderboardScope('knockout')" data-i18n="leaderboard_scope_knockout">淘汰赛</button>
       </div>
       <div id="leaderboard-controls" class="flex flex-wrap items-center gap-2">
-        <button id="leaderboard-sort-toggle"
-                class="chip hover:bg-white/15 transition"
-                onclick="toggleLeaderboardSort()"></button>
+        <select id="leaderboard-sort-select"
+                class="theme-select"
+                onchange="setLeaderboardSort(this.value)"
+                aria-label="排行榜排序"></select>
         <div class="flex gap-2">
           <button class="tab-btn chip active" data-view="main" data-i18n="tab_composite">总榜</button>
           <button class="tab-btn chip" data-view="layers" data-i18n="tab_layers">分层分数</button>
