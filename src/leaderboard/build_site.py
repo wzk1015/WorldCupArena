@@ -583,7 +583,16 @@ def _is_pre_cutoff(wca_id: str) -> bool:
     return bool(day and day < LEADERBOARD_MIN_DATE)
 
 
-def build_leaderboard() -> dict:
+def _is_knockout_wca_id(wca_id: str) -> bool:
+    """World-Cup knockout fixture (R32 onwards). Keyed on the immutable wca_id slug
+    rather than snapshot stage text, which is localized and can be null when the
+    provider was down at snapshot time. Any World-Cup slug that isn't a group-stage
+    matchday is knockout, so future rounds (semis/final/third place) match without
+    enumeration."""
+    return wca_id.startswith("World-Cup_") and "_Group-Stage" not in wca_id
+
+
+def build_leaderboard(fixture_filter=None) -> dict:
     by_model_composites: dict[str, list[float]] = defaultdict(list)
     by_model_layers: dict[str, dict[str, list[float]]] = defaultdict(lambda: defaultdict(list))
     by_model_setting: dict[tuple[str, str], list[float]] = defaultdict(list)
@@ -597,6 +606,8 @@ def build_leaderboard() -> dict:
         if "_test" in wca_id.lower() or wca_id.lower().startswith("test_"):
             continue
         if _is_pre_cutoff(wca_id):   # leaderboard reset — World-Cup matches only
+            continue
+        if fixture_filter is not None and not fixture_filter(wca_id):
             continue
         if wca_id not in _truth_cache:
             _truth_cache[wca_id] = _load_truth_data(wca_id)
@@ -1662,6 +1673,9 @@ def main() -> None:
     payload = {
         # "generated_at":     _now_iso(),
         "leaderboard":      leaderboard,
+        # Knockout-only slice (R32 onwards), same shape/metrics as `leaderboard`.
+        # Absent key ⇒ old data JSON; the site hides the scope toggle then.
+        "leaderboard_knockout": build_leaderboard(fixture_filter=_is_knockout_wca_id),
         "incoming_matches": incoming,
         "featured_match":   _select_featured_match(history),
         "history":          history,
@@ -1762,6 +1776,7 @@ def main() -> None:
     print(f"wrote {OUT}, {OUT_ZH}, {OUT_EN} "
           f"(model_native_payload=1, "
           f"leaderboard_models={len(payload['leaderboard']['main'])}, "
+          f"knockout_models={len(payload['leaderboard_knockout']['main'])}, "
           f"incoming={len(incoming)}, "
           f"history={len(payload['history'])})")
 

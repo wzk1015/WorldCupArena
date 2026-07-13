@@ -300,6 +300,8 @@ const I18N = {
     leaderboard_sort_composite: "排序：综合分",
     leaderboard_sort_to_result: "切换为赛果准确率排序",
     leaderboard_sort_to_composite: "切换为综合分排序",
+    leaderboard_scope_all: "全程",
+    leaderboard_scope_knockout: "淘汰赛",
     login_with_logto: "登录",
     logged_in_as: "已登录：{name}",
     user_prediction_title: "我的预测",
@@ -534,6 +536,8 @@ const I18N = {
     leaderboard_sort_composite: "Sort: Composite Score",
     leaderboard_sort_to_result: "Switch to result accuracy sorting",
     leaderboard_sort_to_composite: "Switch to composite score sorting",
+    leaderboard_scope_all: "Overall",
+    leaderboard_scope_knockout: "Knockout",
     login_with_logto: "Log in",
     logged_in_as: "Signed in: {name}",
     user_prediction_title: "My Prediction",
@@ -612,6 +616,7 @@ let _theme = initialTheme();
 let _siteData = null;
 let _activeLeaderboardView = "main";
 let _leaderboardSort = "result";
+let _leaderboardScope = "all";   // "all" | "knockout" — sample-set slice, defaults to overall
 let _countdownIntervals = [];
 let _mobilePredView = null;
 
@@ -781,7 +786,7 @@ function setTheme(theme, options = {}) {
     window.history.replaceState(null, "", url);
   }
   if (_siteData && _activeLeaderboardView === "layers") {
-    renderLeaderboard(_siteData.leaderboard || { main: [] }, _activeLeaderboardView);
+    renderLeaderboard(activeLeaderboardData(), _activeLeaderboardView);
   }
 }
 
@@ -1474,6 +1479,8 @@ function currentUserLeaderboardRow() {
   let scoreCorrect = 0;
   for (const match of history) {
     if (!match.result) continue;
+    // Mirror the model boards' sample-set slice so 我的预测 stays comparable.
+    if (_leaderboardScope === "knockout" && !isKnockoutWcaId(match.wca_id)) continue;
     const { pred, winnerCorrect: wc, scoreCorrect: sc, hasScore } = userPredictionEvaluation(match);
     if (!pred) continue;
     winnerTotal += 1;
@@ -3620,6 +3627,42 @@ function renderIncomingMatches(matches) {
 
 let chartInstance = null;
 
+// Knockout membership is keyed on the immutable wca_id slug (same rule as
+// build_site.py), not on the localized/nullable stage text.
+function isKnockoutWcaId(wcaId) {
+  const id = String(wcaId || "");
+  return id.startsWith("World-Cup_") && !id.includes("_Group-Stage");
+}
+
+function activeLeaderboardData() {
+  if (_leaderboardScope === "knockout" && _siteData && _siteData.leaderboard_knockout) {
+    return _siteData.leaderboard_knockout;
+  }
+  return (_siteData && _siteData.leaderboard) || { main: [] };
+}
+
+function updateLeaderboardScopeControls() {
+  const wrap = document.getElementById("leaderboard-scope");
+  if (!wrap) return;
+  // Old data JSON without the knockout slice ⇒ keep the toggle hidden, board as before.
+  const hasKnockout = Boolean(_siteData && _siteData.leaderboard_knockout);
+  if (!hasKnockout) _leaderboardScope = "all";
+  wrap.classList.toggle("hidden", !hasKnockout);
+  const allBtn = document.getElementById("leaderboard-scope-all");
+  const koBtn = document.getElementById("leaderboard-scope-knockout");
+  if (allBtn) allBtn.classList.toggle("active", _leaderboardScope === "all");
+  if (koBtn) koBtn.classList.toggle("active", _leaderboardScope === "knockout");
+}
+
+function setLeaderboardScope(scope) {
+  const next = scope === "knockout" ? "knockout" : "all";
+  if (next === "knockout" && !(_siteData && _siteData.leaderboard_knockout)) return;
+  if (next === _leaderboardScope) return;
+  _leaderboardScope = next;
+  updateLeaderboardScopeControls();
+  renderLeaderboard(activeLeaderboardData(), _activeLeaderboardView);
+}
+
 function leaderboardResultAcc(row) {
   return row?.winner_acc == null ? null : Number(row.winner_acc);
 }
@@ -3678,7 +3721,7 @@ function updateLeaderboardSortButton() {
 function toggleLeaderboardSort() {
   _leaderboardSort = _leaderboardSort === "result" ? "composite" : "result";
   updateLeaderboardSortButton();
-  renderLeaderboard((_siteData && _siteData.leaderboard) || { main: [] }, _activeLeaderboardView);
+  renderLeaderboard(activeLeaderboardData(), _activeLeaderboardView);
 }
 
 function renderLeaderboard(lb, view) {
@@ -3784,7 +3827,7 @@ function wireTabs() {
       _activeLeaderboardView = btn.dataset.view || "main";
       document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
-      renderLeaderboard((_siteData && _siteData.leaderboard) || { main: [] }, _activeLeaderboardView);
+      renderLeaderboard(activeLeaderboardData(), _activeLeaderboardView);
     };
   });
   syncLeaderboardTabs();
@@ -3920,7 +3963,8 @@ function renderSiteData() {
   renderIncomingMatches(_siteData.incoming_matches || []);
   renderTournamentPredictions(_siteData.tournament_predictions || null);
   syncLeaderboardTabs();
-  renderLeaderboard(_siteData.leaderboard || { main: [] }, _activeLeaderboardView);
+  updateLeaderboardScopeControls();
+  renderLeaderboard(activeLeaderboardData(), _activeLeaderboardView);
   requestAnimationFrame(() => {
     const histPending = _siteData._history_url && !(_siteData.history && _siteData.history.length);
     if (histPending) {
@@ -3992,6 +4036,8 @@ async function loadHistoryLazy(url) {
     if (!_siteData) return;
     _siteData.history = data.history || [];
     renderHistory(_siteData.history);
+    // 我的预测 row is evaluated against history — re-render the board now that it exists.
+    renderLeaderboard(activeLeaderboardData(), _activeLeaderboardView);
     renderMobileToc();
   } catch (err) {
     console.warn("history lazy-load failed:", err);
