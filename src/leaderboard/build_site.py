@@ -1197,11 +1197,12 @@ def _load_truth_data(wca_id: str) -> dict | None:
     home_name = (teams_raw.get("home") or {}).get("name", "Home")
     away_name = (teams_raw.get("away") or {}).get("name", "Away")
 
-    # Knockout ties are level after 90/120 min but still produce a winner (extra time / penalty
-    # shootout); derive result from teams.*.winner so it is never "draw" in a single-leg knockout
-    # (mirrors ingest.api_football.normalize_to_truth used for grading — keeps display, winner_acc
-    # and grading consistent). Only override a level scoreline when exactly one side is flagged
-    # winner; a genuine group-stage draw has winner None/False on both sides and stays "draw".
+    # FT(120') semantics: models predict the full-time result with penalty shootouts
+    # excluded (prompts/system.md #8), so a knockout level after extra time grades as
+    # "draw" (= correctly called the shootout). Never derive the advancing side from
+    # teams.*.winner into `result` — that misgrades every draw pick (mirrors
+    # ingest.api_football.normalize_to_truth used for grading). The advancing side is
+    # kept separately in `advanced`/`decider` for display.
     home_won = (teams_raw.get("home") or {}).get("winner")
     away_won = (teams_raw.get("away") or {}).get("winner")
     if (hg or 0) > (ag or 0):
@@ -1210,10 +1211,6 @@ def _load_truth_data(wca_id: str) -> dict | None:
         result = "away"
     elif not score:
         result = None
-    elif home_won is True and away_won is not True:
-        result = "home"
-    elif away_won is True and home_won is not True:
-        result = "away"
     else:
         result = "draw"
 
