@@ -1,0 +1,458 @@
+{
+  "fixture_id": "World-Cup_Semi-finals_England_Argentina_2026-07-15",
+  "provider_fixture_id": "19606973",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-15T21:03:04+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 2
+    },
+    "home": "England",
+    "away": "Argentina",
+    "competition": "World Cup",
+    "stage": "Semi-finals",
+    "kickoff_utc": "2026-07-15T19:00:00+00:00",
+    "venue": "Atlanta Stadium",
+    "venue_city": "Atlanta"
+  },
+  "prediction": {},
+  "sources": [],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 0.492,
+  "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄-0.846020 (request id: 202607152103045977154918268d9d67GpIVqMj)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
+  "raw_text": "",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-15T19:07:45+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 7,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-15T19:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.32,
+        "draw": 0.3,
+        "away": 0.38
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 70,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "minute": 63,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 78,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Lionel Messi",
+          "minute": 55,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 82,
+          "p": 0.16,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "本场世界杯半决赛英格兰对阵阿根廷，比赛进行到第7分钟，比分仍为0-0。开场阶段英格兰控球率略占优势（57%对43%），并已取得1个角球，显示出他们试图通过控球在中前场建立压迫；阿根廷则在开场就有3次犯规，说明他们在无球时选择用身体对抗打断英格兰节奏，这也符合斯卡洛尼球队在大赛淘汰赛阶段常见的防守思路。由于比赛才刚开始、双方均未创造实质威胁，比分维持均势属于合理走势。综合考量两队实力与阵容深度，阿根廷在梅西、劳塔罗、J·阿尔瓦雷斯组成的攻击线以及中场调度上更具比赛决定力，因此在概率上略微倾向阿根廷取胜（客队38%，主队32%，平局30%）。若比赛按此节奏发展，英格兰的控球有机会转化为定位球或凯恩的支点进球，而阿根廷更可能凭借前场个人能力在中后段完成致命一击，因此最可能的最终比分设定为1-2。后续进球方面，阿根廷阵中劳塔罗·马丁内斯、胡利安·阿尔瓦雷斯和里奥·梅西都是本届杯赛的稳定得分点，被列为客队主要候选破门者；英格兰方面则以哈里·凯恩作为首选，裘德·贝林厄姆作为后插上威胁列入名单，进球时间集中在中场休息之后到比赛尾声这一淘汰赛常见的破门窗口。"
+      },
+      "sources": [],
+      "cost_usd": 0.20904630000000002,
+      "tokens": {
+        "input": 50849,
+        "output": 1130
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.057
+    },
+    {
+      "submitted_at": "2026-07-15T20:08:08+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 53,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-15T19:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "failed",
+      "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄-0.846020 (request id: 202607152008085537963828268d9d67HXrWzIn)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.512
+    },
+    {
+      "submitted_at": "2026-07-15T20:13:38+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 58,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-15T19:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "failed",
+      "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄-0.846020 (request id: 202607152013389483410378268d9d6RK8hsqYE)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.51
+    },
+    {
+      "submitted_at": "2026-07-15T20:19:08+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 64,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-15T19:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "failed",
+      "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄-0.846020 (request id: 202607152019084026888738268d9d6zaxfzDkG)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.481
+    },
+    {
+      "submitted_at": "2026-07-15T20:24:37+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 69,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-15T19:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "failed",
+      "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄-0.846020 (request id: 202607152024378677798468268d9d60DBnzpmk)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.466
+    },
+    {
+      "submitted_at": "2026-07-15T20:30:06+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 75,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-15T19:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "failed",
+      "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄-0.846020 (request id: 202607152030067995211138268d9d6xS7D6yc5)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.465
+    },
+    {
+      "submitted_at": "2026-07-15T20:35:36+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 80,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-15T19:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "failed",
+      "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄-0.846020 (request id: 202607152035373091608278268d9d6ofLX6FIw)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.502
+    },
+    {
+      "submitted_at": "2026-07-15T20:41:06+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 86,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-15T19:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "failed",
+      "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄-0.846020 (request id: 20260715204107564585408268d9d6vjFLDjgt)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.507
+    },
+    {
+      "submitted_at": "2026-07-15T20:46:36+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-15T19:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "failed",
+      "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄-0.846020 (request id: 202607152046367602432338268d9d6RQMkVeBd)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.517
+    },
+    {
+      "submitted_at": "2026-07-15T20:52:05+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-15T19:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "failed",
+      "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄-0.846020 (request id: 202607152052057969067418268d9d6Gs5GfSyX)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.486
+    },
+    {
+      "submitted_at": "2026-07-15T20:57:34+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "England",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-15T19:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "failed",
+      "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄-0.846020 (request id: 20260715205735171612988268d9d6BnQfNvz4)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.492
+    },
+    {
+      "submitted_at": "2026-07-15T21:03:04+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "England",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-15T19:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "failed",
+      "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄-0.846020 (request id: 202607152103045977154918268d9d67GpIVqMj)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.492
+    }
+  ]
+}

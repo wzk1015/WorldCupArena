@@ -1,0 +1,265 @@
+{
+  "fixture_id": "World-Cup_Semi-finals_France_Spain_2026-07-14",
+  "provider_fixture_id": "19606974",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-14T20:26:34+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 2
+    },
+    "home": "France",
+    "away": "Spain",
+    "competition": "World Cup",
+    "stage": "Semi-finals",
+    "kickoff_utc": "2026-07-14T19:00:00+00:00",
+    "venue": "Dallas Stadium",
+    "venue_city": "Arlington"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.02,
+      "draw": 0.08,
+      "away": 0.9
+    },
+    "most_likely_score": "0-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进行到第71分钟，西班牙以2-0领先法国。从场面数据来看，法国队进攻严重受阻，全场仅有2次射门且无一射正，而西班牙队掌控了53%的控球率，并利用点球和运动战高效打入两球。法国队虽然已经进行了多次换人调整试图改变战局，但目前效果不佳。考虑到比赛所剩时间不足20分钟，西班牙队有极大概率将两球优势保持到终场。法国队必然会在最后阶段大举压上，这或许会给他们带来扳回一球的机会，但也容易被西班牙利用空间打出致命反击。综合来看，西班牙获胜的概率极高，最可能的最终比分是0-2。如果后续有进球产生，法国队的核心前锋或西班牙的反击球员将是潜在的得分手。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1069,
+    "output": 830
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.00635145,
+  "wall_seconds": 12.635,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.02,\n    \"draw\": 0.08,\n    \"away\": 0.90\n  },\n  \"most_likely_score\": \"0-2\",\n  \"scorers\": [\n    {\n      \"player\": \"Kylian Mbappé\",\n      \"team\": \"home\",\n      \"minute\": 85,\n      \"p\": 0.15\n    },\n    {\n      \"player\": \"Dani Olmo\",\n      \"team\": \"away\",\n      \"minute\": 88,\n      \"p\": 0.10\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛进行到第71分钟，西班牙以2-0领先法国。从场面数据来看，法国队进攻严重受阻，全场仅有2次射门且无一射正，而西班牙队掌控了53%的控球率，并利用点球和运动战高效打入两球。法国队虽然已经进行了多次换人调整试图改变战局，但目前效果不佳。考虑到比赛所剩时间不足20分钟，西班牙队有极大概率将两球优势保持到终场。法国队必然会在最后阶段大举压上，这或许会给他们带来扳回一球的机会，但也容易被西班牙利用空间打出致命反击。综合来看，西班牙获胜的概率极高，最可能的最终比分是0-2。如果后续有进球产生，法国队的核心前锋或西班牙的反击球员将是潜在的得分手。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-14T19:01:00+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 1,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Spain",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-14T19:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.35,
+        "away": 0.31
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 68,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 38,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚刚开场1分钟，目前比分0-0。双方控球率均等，正处于开局的互相试探阶段。作为世界杯半决赛，法国与西班牙的对决无疑是一场势均力敌的较量。考虑到半决赛中双方通常会采取较为谨慎的战术，且两队均具备顶级的防守与控场能力，常规时间内战平的可能性略微占据上风。法国队拥有极强的快速反击与球星个人解决战斗的能力，而西班牙则擅长通过细腻的传控网络主导比赛节奏。结合双方的战术特点，1-1是最可能的常规时间最终比分。预计随着比赛深入，西班牙可能会在半场结束前通过拉明·亚马尔（拉明·亚马尔）的边路内切或配合打破僵局，而法国队则极有可能在下半场依靠基利安·姆巴佩（基利安·姆巴佩）的速度与终结能力扳平比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.011984700000000001,
+      "tokens": {
+        "input": 782,
+        "output": 1772
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.397
+    },
+    {
+      "submitted_at": "2026-07-14T19:23:47+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 23,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "France",
+        "away": "Spain",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-14T19:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.28,
+        "away": 0.5
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 65,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Alvaro Morata",
+          "minute": 78,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第23分钟，西班牙凭借奥亚萨瓦尔（米克尔·奥亚萨瓦尔）的点球取得了1-0的领先。从场面数据来看，西班牙占据了56%的控球率，并且在进攻端表现出更高的效率，而法国队目前还没有射正。考虑到比赛还剩大量时间，法国队必然会大举反扑，姆巴佩（基利安·姆巴佩）等核心球员有望在下半场为球队扳回一城。然而，西班牙的控球体系能够有效消耗对手，并在反击中寻找机会。综合目前的比分优势和场面控制力，西班牙获胜的概率上升至50%，最可能的最终比分为1-2。预计法国队会在下半场加强攻势取得进球，但西班牙也有望通过换人调整再次超出比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0058863000000000006,
+      "tokens": {
+        "input": 896,
+        "output": 785
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.287
+    },
+    {
+      "submitted_at": "2026-07-14T20:08:11+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 53,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "France",
+        "away": "Spain",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-14T19:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.15,
+        "draw": 0.25,
+        "away": 0.6
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第53分钟，西班牙凭借奥亚萨瓦尔（米克尔·奥亚萨瓦尔）在第22分钟的点球以1-0领先法国。从场面数据来看，西班牙占据55%的控球率，并有5次射门，而法国队进攻受阻，至今0脚射正。法国队已经进行了两次换人调整试图改变局势，但面对西班牙稳固的传控体系，破门难度较大。考虑到比赛所剩时间以及西班牙的控球优势，西班牙保持领先并最终获胜的概率较高。法国队势必在下半场后半段大举压上，这可能给西班牙留下反击空间。预计最可能的最终比分为0-1，但如果法国队能抓住机会，姆巴佩等核心球员有望在比赛末段制造威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.01051785,
+      "tokens": {
+        "input": 999,
+        "output": 1503
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.096
+    },
+    {
+      "submitted_at": "2026-07-14T20:20:09+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 65,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "France",
+        "away": "Spain",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-14T19:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.1,
+        "away": 0.88
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第65分钟，西班牙目前以2-0领先法国。从场面数据来看，西班牙占据54%的控球率，并有6次射门，完全掌控了比赛节奏。法国队虽然进行了多次换人调整，包括换上德西雷·杜埃和马努·科内试图改变战局，但至今0脚射正，进攻端显得非常乏力。考虑到比赛只剩下25分钟左右加上补时，西班牙两球领先且防守稳固，客队获胜的概率极高。法国队想要连入两球扳平甚至逆转的难度极大。最可能的最终比分预计维持在0-2。不过，随着法国队在最后阶段必须全线压上，比赛末段可能会出现空间。如果法国队能把握住机会，替补登场的生力军德西雷·杜埃有一定可能在80分钟左右建功；而西班牙则极有可能利用对手身后留下的巨大空当，通过反击由米克尔·奥亚萨瓦尔等人进一步扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.016006199999999998,
+      "tokens": {
+        "input": 1036,
+        "output": 2368
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.699
+    },
+    {
+      "submitted_at": "2026-07-14T20:26:34+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "France",
+        "away": "Spain",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-14T19:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.08,
+        "away": 0.9
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第71分钟，西班牙以2-0领先法国。从场面数据来看，法国队进攻严重受阻，全场仅有2次射门且无一射正，而西班牙队掌控了53%的控球率，并利用点球和运动战高效打入两球。法国队虽然已经进行了多次换人调整试图改变战局，但目前效果不佳。考虑到比赛所剩时间不足20分钟，西班牙队有极大概率将两球优势保持到终场。法国队必然会在最后阶段大举压上，这或许会给他们带来扳回一球的机会，但也容易被西班牙利用空间打出致命反击。综合来看，西班牙获胜的概率极高，最可能的最终比分是0-2。如果后续有进球产生，法国队的核心前锋或西班牙的反击球员将是潜在的得分手。"
+      },
+      "sources": [],
+      "cost_usd": 0.00635145,
+      "tokens": {
+        "input": 1069,
+        "output": 830
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.635
+    }
+  ],
+  "live_refreshed_at": "2026-07-14T20:54:25+00:00"
+}
