@@ -1,0 +1,799 @@
+{
+  "fixture_id": "World-Cup_Round-of-32_France_Sweden_2026-06-30",
+  "provider_fixture_id": "19606956",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-30T22:53:02+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 3,
+      "away": 0
+    },
+    "home": "France",
+    "away": "Sweden",
+    "competition": "World Cup",
+    "stage": "Round of 32",
+    "kickoff_utc": "2026-06-30T21:00:00+00:00",
+    "venue": "New York New Jersey Stadium",
+    "venue_city": "East Rutherford"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.999,
+      "draw": 0.001,
+      "away": 0.0
+    },
+    "most_likely_score": "3-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入第90分钟，法国队目前以3-0遥遥领先瑞典队。从场面数据来看，法国队完全掌控了比赛，控球率高达62%，狂轰25脚射门且有12次射正。姆巴佩（基利安·姆巴佩）在上半场结束前和第74分钟梅开二度，巴尔科拉（布拉德利·巴尔科拉）也在下半场初段建功。目前法国队已经换下姆巴佩、奥利塞等主力球员，鸣金收兵的意图明显。考虑到常规时间已经结束，瑞典队在进攻端仅有2次射正，很难在伤停补时阶段连扳三球，法国队取胜的概率已接近100%。最可能的最终比分将维持在3-0。如果补时阶段还有进球，替补登场的马特塔（让-菲利普·马泰塔）等生力军有望利用对手体能下降的空当完成破门。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1987,
+    "output": 1613
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.01224825,
+  "wall_seconds": 15.56,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.999,\n    \"draw\": 0.001,\n    \"away\": 0.000\n  },\n  \"most_likely_score\": \"3-0\",\n  \"scorers\": [\n    {\n      \"player\": \"Jean-Philippe Mateta\",\n      \"team\": \"home\",\n      \"minute\": 93,\n      \"p\": 0.05\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入第90分钟，法国队目前以3-0遥遥领先瑞典队。从场面数据来看，法国队完全掌控了比赛，控球率高达62%，狂轰25脚射门且有12次射正。姆巴佩（Kylian Mbappé）在上半场结束前和第74分钟梅开二度，巴尔科拉（Bradley Barcola）也在下半场初段建功。目前法国队已经换下姆巴佩、奥利塞等主力球员，鸣金收兵的意图明显。考虑到常规时间已经结束，瑞典队在进攻端仅有2次射正，很难在伤停补时阶段连扳三球，法国队取胜的概率已接近100%。最可能的最终比分将维持在3-0。如果补时阶段还有进球，替补登场的马特塔（Jean-Philippe Mateta）等生力军有望利用对手体能下降的空当完成破门。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "```json\n{\n  \"win_probs\": {\n    \"home\": 0.999,\n    \"draw\": 0.001,\n    \"away\": 0.0\n  },\n  \"most_likely_score\": \"3-0\",\n  \"scorers\": [\n    {\n      \"player\": \"Jean-Philippe Mateta\",\n      \"team\": \"home\",\n      \"minute\": 93,\n      \"p\": 0.05\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入第90分钟，法国队目前以3-0遥遥领先瑞典队。从场面数据来看，法国队完全掌控了比赛，控球率高达62%，狂轰25脚射门且有12次射正。姆巴佩（Kylian Mbappé）在上半场结束前和第74分钟梅开二度，巴尔科拉（Bradley Barcola）也在下半场初段建功。目前法国队已经换下姆巴佩、奥利塞等主力球员，鸣金收兵的意图明显。考虑到常规时间已经结束，瑞典队在进攻端仅有2次射正，很难在伤停补时阶段连扳三球，法国队的胜率已接近100%。最可能的最终比分将维持在3-0。如果补时阶段还有进球，替补登场的马特塔（Jean-Philippe Mateta）有望利用对手大举压上或体能下降的空当完成破门。\"\n  },\n  \"sources\": []\n}\n```\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-30T21:02:41+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 2,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 41,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Antoine Griezmann",
+          "minute": 76,
+          "p": 0.3,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚刚开场2分钟，目前比分0-0。法国队迅速掌控了比赛节奏，控球率高达75%，而瑞典队则立足防守，开场便有一次犯规，显示出他们试图通过强硬的身体对抗来破坏法国队的进攻组织。作为夺冠热门，法国队在整体实力和阵容深度上占据明显优势。尽管比赛才刚刚开始，但从开场的控球压制力来看，法国队在常规时间内获胜的概率极高。瑞典队虽然防守坚韧，但在世界杯淘汰赛的高压下，想要全场零封法国队难度极大。考虑到法国队强大的攻击火力和瑞典队可能采取的密集防守策略，预计法国队会在上半场中后段打破僵局，并最终以2-0的比分稳步晋级。在进球球员方面，姆巴佩（基利安·姆巴佩）利用其绝对的速度和突破能力，极有可能在边路撕开防线取得进球；而格列兹曼（Antoine Griezmann）作为前场核心，也有望通过后插上或定位球机会建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.013104,
+      "tokens": {
+        "input": 918,
+        "output": 1927
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.983
+    },
+    {
+      "submitted_at": "2026-06-30T21:09:05+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 9,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.65,
+        "draw": 0.22,
+        "away": 0.13
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 38,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Antoine Griezmann",
+          "minute": 72,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Alexander Isak",
+          "minute": 65,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第9分钟，法国与瑞典暂时战成0-0平。从开场阶段的数据来看，法国队迅速掌控了比赛节奏，控球率高达72%。然而，面对瑞典队密集的防守，法国队尚未完成射门。相反，瑞典队采取了务实的防守反击策略，虽然控球率仅有28%，但已经完成了一次命中目标的射门，并迫使法国门将做出了一次扑救。此外，瑞典队开场拼抢积极，已有4次犯规，意在破坏法国队的进攻组织。尽管瑞典队的反击展现出一定威胁，但法国队在整体实力和场面控制上占据绝对优势。随着比赛深入，法国队的高压控球大概率会转化为实质性的射门机会。考虑到这是一场世界杯淘汰赛，法国队在适应了对手的防守强度后，有望打破僵局。因此，法国队获胜的概率依然最高。预计法国队的核心攻击手如 基利安·姆巴佩 和 Antoine Griezmann 将在后续比赛中发挥关键作用，利用个人能力或前场配合撕开瑞典队的防线。最可能的最终比分预测为2-0，法国队顺利晋级。"
+      },
+      "sources": [],
+      "cost_usd": 0.016197299999999998,
+      "tokens": {
+        "input": 978,
+        "output": 2408
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.784
+    },
+    {
+      "submitted_at": "2026-06-30T21:15:33+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 15,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.65,
+        "draw": 0.22,
+        "away": 0.13
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 55,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Antoine Griezmann",
+          "minute": 78,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第15分钟，目前比分为0-0。从开场阶段的数据来看，法国队占据了66%的绝对控球优势，但尚未创造出射门机会。瑞典队采取了非常务实的防守反击策略，通过积极的拼抢和战术犯规（已累计5次犯规）来破坏法国队的进攻节奏，并且已经完成了一次命中目标的射门，考验了法国队的门将。尽管法国队开局在进攻三区显得有些慢热，但凭借其强大的整体实力和对球权的控制，随着比赛深入，他们有很大机会打破瑞典队的密集防守。基于目前的场面走势，法国队获胜的概率依然最高，最可能的最终比分预测为2-0。在后续的比赛中，基利安·姆巴佩 利用个人能力在下半场打破僵局的可能性极大，而 Antoine Griezmann 也有望在比赛后段通过定位球或远射建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.0112182,
+      "tokens": {
+        "input": 1000,
+        "output": 1614
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.613
+    },
+    {
+      "submitted_at": "2026-06-30T21:21:52+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 21,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.24,
+        "away": 0.14
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 42,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Antoine Griezmann",
+          "minute": 75,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Alexander Isak",
+          "minute": 68,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第21分钟，法国与瑞典暂时战成0-0平。从开场阶段的数据来看，法国队占据了绝对的主动权，控球率高达65%，并且已经完成了3次射门，其中2次射正，给瑞典队的防线施加了持续的压力。瑞典队门将已经做出了2次关键扑救，显示出客队目前主要以稳固防守为主的战术意图。不过，瑞典队在仅有的35%控球率下也完成了1次射正，迫使法国队门将做出扑救，证明他们的防守反击同样具备一定威胁。尽管比分尚未改变，但考虑到法国队在场面上的压制力以及整体实力的优势，他们依然有极高的概率在常规时间内解决战斗。随着比赛深入，瑞典队的体能消耗可能会导致防守阵型出现漏洞。因此，法国队的获胜概率依然维持在较高水平。综合目前的攻防态势，预测最可能的最终比分为法国2-0获胜。在后续的比赛中，法国队的核心攻击手如 基利安·姆巴佩 极有可能利用个人能力和速度优势打破僵局，而 Antoine Griezmann 也有望在下半场通过远射或前场配合扩大比分。瑞典队若想破门，则需要依靠 亚历山大·伊萨克 在反击中的终结能力。"
+      },
+      "sources": [],
+      "cost_usd": 0.015748949999999998,
+      "tokens": {
+        "input": 1001,
+        "output": 2333
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.553
+    },
+    {
+      "submitted_at": "2026-06-30T21:28:10+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 28,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 42,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Antoine Griezmann",
+          "minute": 76,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第28分钟，法国与瑞典暂时战成0-0平。从目前的场面数据来看，主场作战的法国队占据了绝对的主动权，控球率高达66%，并已经完成了3次射门（其中2次射正）。瑞典队则立足于防守反击，仅有34%的控球率和1次射正。第21分钟，基利安·姆巴佩参与了一次VAR介入事件，这表明法国队在进攻端已经给瑞典队的禁区施加了实质性的威胁。考虑到法国队整体实力的优势以及持续的进攻压制，他们打破僵局的可能性极高。瑞典队虽然防守顽强，门将也已经做出了2次关键扑救，但在高压之下很难全场保持不失球。因此，法国队获胜的概率依然占据绝对主导。预计法国队将在上半场末段或下半场发力，最终比分最可能为2-0。在进球球员方面，表现活跃的基利安·姆巴佩是首开纪录的热门人选，而随着比赛深入，瑞典队防线体能下降，Antoine Griezmann等核心球员也有望进一步扩大领先优势。"
+      },
+      "sources": [],
+      "cost_usd": 0.0113295,
+      "tokens": {
+        "input": 1070,
+        "output": 1620
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.125
+    },
+    {
+      "submitted_at": "2026-06-30T21:34:29+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 34,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 52,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Antoine Griezmann",
+          "minute": 76,
+          "p": 0.28,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第34分钟，目前比分依然是0-0。从场面数据来看，主队法国队占据了绝对的统治地位，控球率高达73%，并已经完成了7次射门（其中3次射正）和4个角球。瑞典队则主要处于被动防守和伺机反击的状态，控球率仅为27%，只有2次射门。第21分钟，法国队核心球员 基利安·姆巴佩 参与了一次VAR判定，虽然未能改变比分，但足以说明法国队在进攻端已经给瑞典防线施加了巨大压力。基于法国队在场面上的压制力以及持续创造出的进攻机会，他们打破僵局的可能性非常大。随着比赛的深入，瑞典队在长时间的高压防守下体能消耗会加剧，可能会暴露更多防守空当。因此，预测法国队最终获胜的概率最高，最可能的最终比分是2-0。在后续进球球员的预测中，表现极其活跃且极具威胁的 基利安·姆巴佩 是最有可能为法国队首开纪录的球员，而 Antoine Griezmann 也有望在下半场利用前场配合或定位球机会扩大领先优势。"
+      },
+      "sources": [],
+      "cost_usd": 0.0094185,
+      "tokens": {
+        "input": 1068,
+        "output": 1317
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.802
+    },
+    {
+      "submitted_at": "2026-06-30T21:40:41+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 40,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.65,
+        "draw": 0.25,
+        "away": 0.1
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 65,
+          "p": 0.45,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第40分钟，法国队与瑞典队暂时战成0-0平。从场面数据来看，法国队占据了绝对的统治力，控球率高达74%，并已经完成了10次射门（其中3次射正）和4个角球。瑞典队则完全处于守势，仅有26%的控球率和2次射门。第21分钟，姆巴佩（基利安·姆巴佩）曾引发一次VAR介入，显示出法国队在进攻端持续施加的高压。瑞典门将已经做出了3次关键扑救，勉强维持了目前的平局。鉴于法国队压倒性的进攻优势和瑞典队疲软的反击能力，法国队在下半场打破僵局的概率极高。因此，法国队在常规时间内获胜的概率被评估为65%，而平局概率为25%，瑞典队爆冷取胜的概率仅为10%。最可能的最终比分预测为1-0，法国队小胜。在后续进球者方面，姆巴佩表现极为活跃，是法国队最具威胁的进攻核心，预计他极有可能在下半场利用个人能力或团队配合为法国队攻入制胜一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0144228,
+      "tokens": {
+        "input": 1070,
+        "output": 2111
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.611
+    },
+    {
+      "submitted_at": "2026-06-30T21:46:55+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.85,
+        "draw": 0.11,
+        "away": 0.04
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 65,
+          "p": 0.38,
+          "team": "home"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到半场结束（45分钟），法国队凭借姆巴佩（基利安·姆巴佩）在半场结束前的关键进球，暂时以1-0领先瑞典队。从上半场的数据来看，法国队占据了绝对的统治地位，控球率高达75%，狂轰15脚射门且有6次射正，并获得了6个角球。瑞典队在防守端承受了巨大压力，门将做出了5次扑救，但在半场结束前防线终于宣告失守。瑞典队半场仅有2次射门，进攻端几乎没有制造实质性威胁。鉴于法国队在场面上的压倒性优势以及已经取得的比分领先，他们赢下这场淘汰赛的概率极高。下半场瑞典队如果想要扳平比分，必须改变死守的策略压上进攻，这将给法国队留下更多致命的反击空间。因此，法国队获胜的概率大幅提升至85%。考虑到瑞典队被迫攻出来后防线会更加空虚，法国队极有可能利用速度优势再下一城，最可能的最终比分预测为2-0。在后续进球者方面，状态火热且极具威胁的姆巴佩（上半场还有一次进球被VAR吹掉）在下半场利用反击再次破门的机会极大；同时，上半场送出助攻的登贝莱（奥斯曼·登贝莱）也有望在下半场后半段利用对手体能下降和阵型前压的机会取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.015605099999999998,
+      "tokens": {
+        "input": 1146,
+        "output": 2286
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.097
+    },
+    {
+      "submitted_at": "2026-06-30T22:09:17+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 54,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.85,
+        "draw": 0.12,
+        "away": 0.03
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 70,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 82,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第54分钟，法国队目前以1-0领先瑞典队。从上半场到现在的场面数据来看，法国队占据了绝对的统治地位，控球率高达69%，并且已经完成了15次射门（其中6次射正）和6次角球，而瑞典队仅有3次射门且没有获得任何角球机会。基利安·姆巴佩 在半场结束前接 奥斯曼·登贝莱 助攻打破僵局，此前他还有一次进球因越位被取消，显示出极佳的进攻威胁。鉴于法国队在攻防两端的压倒性优势以及当前一球领先的局面，他们顺利拿下这场淘汰赛的概率极高。瑞典队如果想要扳平比分，必须在下半场中后段大幅压上，这将给法国队犀利的锋线留下更多反击空间。因此，法国队进一步扩大比分的可能性很大，最可能的最终比分预测为2-0。在后续的比赛中，随着瑞典队阵型前倾，基利安·姆巴佩 利用速度再次破门的机会依然很高，而状态活跃的 奥斯曼·登贝莱 也有望在比赛尾声阶段取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.011603549999999999,
+      "tokens": {
+        "input": 1145,
+        "output": 1651
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.518
+    },
+    {
+      "submitted_at": "2026-06-30T22:15:31+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 60,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.95,
+        "draw": 0.04,
+        "away": 0.01
+      },
+      "most_likely_score": "3-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 76,
+          "p": 0.45,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第60分钟，法国队目前以2-0领先瑞典队。从场面数据来看，法国队占据了绝对的统治地位，控球率高达68%，并且已经完成了17次射门（其中7次射正）。瑞典队在进攻端显得办法不多，仅有3次射门和32%的控球率，大部分时间处于被动防守状态。基利安·姆巴佩在上半场结束前打破僵局，随后布拉德利·巴尔科拉在下半场初段迅速扩大比分，法国队的进攻端展现出了极高的效率和压迫感。鉴于两球的领先优势以及场面上的压倒性优势，法国队顺利拿下本场比赛的概率极高。瑞典队如果想要挽回败局，必须在接下来的30分钟内大举压上，但这将给法国队留下巨大的反击空间。预计法国队会继续掌控比赛节奏，并利用对手防线的空当伺机反击。最可能的最终比分是3-0。状态火热的基利安·姆巴佩极有可能在比赛后半段利用其出色的速度和终结能力再入一球，完成梅开二度。"
+      },
+      "sources": [],
+      "cost_usd": 0.0113484,
+      "tokens": {
+        "input": 1214,
+        "output": 1599
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.985
+    },
+    {
+      "submitted_at": "2026-06-30T22:21:47+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 66,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.96,
+        "draw": 0.03,
+        "away": 0.01
+      },
+      "most_likely_score": "3-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 82,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 76,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第66分钟，法国队目前以2-0领先瑞典队。从场面数据来看，法国队占据了绝对的统治地位，控球率高达68%，并狂轰18脚射门（其中8次射正）。瑞典队在防守端疲于奔命，门将已经做出了6次扑救，但依然无法阻挡法国队猛烈的攻势。上半场结束前 基利安·姆巴佩 的进球打破僵局，下半场初段 布拉德利·巴尔科拉 在 迈克尔·奥利斯 的助攻下迅速扩大比分，彻底打乱了瑞典队的部署。考虑到两球落后且比赛只剩下不到半小时，瑞典队翻盘的希望极其渺茫，法国队的胜率已经飙升至96%。随着瑞典队必须在比赛尾声阶段阵型前压以寻求进球，法国队将获得更多反击空间。基利安·姆巴佩 极具威胁的速度和终结能力将再次成为关键，预计法国队有望在比赛末段再入一球，彻底锁定胜局。最可能的最终比分预测为3-0。"
+      },
+      "sources": [],
+      "cost_usd": 0.01478925,
+      "tokens": {
+        "input": 1215,
+        "output": 2145
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.49
+    },
+    {
+      "submitted_at": "2026-06-30T22:28:07+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 73,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.985,
+        "draw": 0.012,
+        "away": 0.003
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第73分钟，法国队目前以2-0领先瑞典队。从场面数据来看，法国队占据了绝对的统治力，控球率高达66%，狂轰20脚射门且9次射正，并获得了8个角球。相比之下，瑞典队仅有4次射门和1次射正，进攻端显得十分乏力，门将的7次扑救是他们没有丢更多球的主要原因。上半场临近结束时，姆巴佩（基利安·姆巴佩）打破僵局，下半场初段巴尔科拉（布拉德利·巴尔科拉）再下一城，法国队已彻底掌控了比赛节奏。考虑到比赛所剩时间不多且法国队优势极其明显，法国队在常规时间内获胜的概率极高，瑞典队连扳两球的希望十分渺茫。最可能的最终比分预计将维持在2-0。不过，随着瑞典队在比赛尾声阶段必须大举压上尝试反扑，法国队有望利用宽阔的反击空间制造致命威胁，姆巴佩或登贝莱等前场快马在比赛末段仍有一定概率利用速度优势再入一球，彻底终结悬念。"
+      },
+      "sources": [],
+      "cost_usd": 0.01536885,
+      "tokens": {
+        "input": 1605,
+        "output": 2172
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.42
+    },
+    {
+      "submitted_at": "2026-06-30T22:34:22+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 79,
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.999,
+        "draw": 0.001,
+        "away": 0.0
+      },
+      "most_likely_score": "3-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第79分钟，法国队目前以3-0遥遥领先瑞典队，胜负悬念已经基本终结。从场面数据来看，法国队展现了压倒性的优势，控球率高达64%，全场狂轰22脚射门且有11次射正，而瑞典队仅有可怜的4次射门和1次射正。基利安·姆巴佩（姆巴佩）状态火热，已经完成梅开二度，布拉德利·巴尔科拉（巴尔科拉）也有一球入账，迈克尔·奥利斯（奥利塞）更是贡献了两次助攻。瑞典队虽然进行了换人调整，但面对法国队强大的中前场压迫，始终无法组织起有效的反击。基于当前的时间和巨大的比分差距，法国队拿下本场比赛的概率已接近百分之百。在接下来的十多分钟里，法国队可能会适当放缓节奏以控制消耗，因此3-0是最有可能的最终比分。不过，考虑到法国队前场球员的个人能力以及姆巴佩追求帽子戏法的动力，比赛尾声阶段法国队仍有利用反击或定位球再入一球的可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.0073857,
+      "tokens": {
+        "input": 1424,
+        "output": 935
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.936
+    },
+    {
+      "submitted_at": "2026-06-30T22:40:37+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 85,
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.999,
+        "draw": 0.001,
+        "away": 0.0
+      },
+      "most_likely_score": "3-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第85分钟，法国队目前以3-0遥遥领先瑞典队，胜局已定。从场面数据来看，法国队完全掌控了比赛，控球率高达64%，狂轰23脚射门且有11次射正。姆巴佩（基利安·姆巴佩）表现抢眼，已经完成梅开二度，巴尔科拉（布拉德利·巴尔科拉）也有进球入账，而奥利塞（迈克尔·奥利斯）更是贡献了两次助攻。相比之下，瑞典队全场仅有4次射门和1次射正，进攻端几乎没有制造任何实质性威胁。鉴于常规时间仅剩最后5分钟加上伤停补时，且双方分差巨大，法国队获胜的概率已接近100%，瑞典队扳平或逆转的可能性完全可以忽略不计。最可能的最终比分将维持在目前的3-0。法国队在换上多名替补球员后，大概率会以控制节奏和消耗时间为主。不过，如果法国队在比赛尾声的反击中再次获得空间，正在寻求帽子戏法的姆巴佩，或者刚替补登场体能充沛的杜埃（德西雷·杜埃）仍有极小概率在终场前再入一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.01332345,
+      "tokens": {
+        "input": 1637,
+        "output": 1842
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.198
+    },
+    {
+      "submitted_at": "2026-06-30T22:46:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.999,
+        "draw": 0.001,
+        "away": 0.0
+      },
+      "most_likely_score": "3-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，法国队目前以3-0遥遥领先瑞典队。从场面数据来看，法国队完全掌控了比赛，控球率高达65%，并创造了24次射门（12次射正），而瑞典队仅有1次射正。姆巴佩（基利安·姆巴佩）和巴尔科拉（布拉德利·巴尔科拉）的进球已经为法国队锁定了胜局。由于比赛即将结束，法国队获胜的概率已接近100%。最可能的最终比分将维持在3-0。考虑到法国队在最后阶段换上了马特塔（让-菲利普·马泰塔）等生力军，他们在伤停补时阶段仍有极小概率利用反击或阵地战再入一球，但整体而言，比赛悬念已经终结。"
+      },
+      "sources": [],
+      "cost_usd": 0.01178625,
+      "tokens": {
+        "input": 2171,
+        "output": 1509
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.053
+    },
+    {
+      "submitted_at": "2026-06-30T22:53:02+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Sweden",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-06-30T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.999,
+        "draw": 0.001,
+        "away": 0.0
+      },
+      "most_likely_score": "3-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，法国队目前以3-0遥遥领先瑞典队。从场面数据来看，法国队完全掌控了比赛，控球率高达62%，狂轰25脚射门且有12次射正。姆巴佩（基利安·姆巴佩）在上半场结束前和第74分钟梅开二度，巴尔科拉（布拉德利·巴尔科拉）也在下半场初段建功。目前法国队已经换下姆巴佩、奥利塞等主力球员，鸣金收兵的意图明显。考虑到常规时间已经结束，瑞典队在进攻端仅有2次射正，很难在伤停补时阶段连扳三球，法国队取胜的概率已接近100%。最可能的最终比分将维持在3-0。如果补时阶段还有进球，替补登场的马特塔（让-菲利普·马泰塔）等生力军有望利用对手体能下降的空当完成破门。"
+      },
+      "sources": [],
+      "cost_usd": 0.01224825,
+      "tokens": {
+        "input": 1987,
+        "output": 1613
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.56
+    }
+  ]
+}

@@ -1,0 +1,347 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-15_Iran_New-Zealand_2026-06-16",
+  "provider_fixture_id": "19609160",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-16T02:58:07+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 2
+    },
+    "home": "Iran",
+    "away": "New Zealand",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-16T01:00:00+00:00",
+    "venue": "Los Angeles Stadium",
+    "venue_city": null
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.06,
+      "draw": 0.88,
+      "away": 0.06
+    },
+    "most_likely_score": "2-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进入第90分钟，当前比分为2-2平。回顾本场比赛，新西兰队凭借伊莱贾·贾斯特（伊莱贾·贾斯特）的梅开二度两度取得领先，且两次助攻均来自克里斯·伍德（克里斯·伍德）；而伊朗队展现出顽强的韧性，由拉明·雷扎伊安（拉明·雷扎伊安）和穆罕默德·莫赫比（穆罕默德·莫赫比）两度扳平比分。数据方面，新西兰队控球率（53%）和射正数（7对4）略占优势，但伊朗队总射门数（16对13）更多，场面势均力敌。由于常规时间已经耗尽，比赛即将进入伤停补时阶段，平局的概率已大幅上升至极高水平。综合当前局势与剩余时间，2-2是最可能的最终比分。如果补时阶段出现绝杀，伊朗队的莫赫比或新西兰队的锋线支点伍德是最具威胁的潜在进球者，但发生概率极低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1851,
+    "output": 1701
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.012659849999999999,
+  "wall_seconds": 18.672,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.06,\n    \"draw\": 0.88,\n    \"away\": 0.06\n  },\n  \"most_likely_score\": \"2-2\",\n  \"scorers\": [\n    {\n      \"player\": \"Mohammad Mohebi\",\n      \"team\": \"home\",\n      \"minute\": 93,\n      \"p\": 0.03\n    },\n    {\n      \"player\": \"Chris Wood\",\n      \"team\": \"away\",\n      \"minute\": 94,\n      \"p\": 0.03\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已进入第90分钟，当前比分为2-2平。回顾本场比赛，新西兰队凭借伊莱贾·贾斯特（Elijah Just）的梅开二度两度取得领先，且两次助攻均来自克里斯·伍德（Chris Wood）；而伊朗队展现出顽强的韧性，由拉明·雷扎伊安（Ramin Rezaeian）和穆罕默德·莫赫比（Mohammad Mohebi）两度扳平比分。数据方面，新西兰队控球率（53%）和射正数（7对4）略占优势，但伊朗队总射门数（16对13）更多，场面势均力敌。由于常规时间已经耗尽，比赛即将进入伤停补时阶段，平局的概率已大幅上升至极高水平。综合当前局势与剩余时间，2-2是最可能的最终比分。如果补时阶段出现绝杀，伊朗队的莫赫比或新西兰队的锋线支点伍德是最具威胁的潜在进球者，但发生概率极低。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Analyzing the Match: Iran vs. New Zealand (90')**\n\nOkay, so we're at the 90-minute mark, and it's a tense 2-2 draw between Iran and New Zealand.  Looking back, New Zealand's Elijah Just was the early star with two goals, both assisted by Chris Wood. Iran fought back impressively, equalizing twice through Ramin Rezaeian and Mohammad Mohebi.  Stats show New Zealand with a slight edge in possession (53%) and shots on target (7), but Iran has more overall shots (16). The game has been quite even, overall.\n\nGiven that the clock's ticking down, a draw seems incredibly likely, probably around an 88% chance. Both teams might still push for a late winner, but time is *very* limited. The current score, 2-2, is overwhelmingly the most probable final result.\n\nNow, if there *is* a dramatic late goal, we have to consider who the most likely scorers might be.  Since any goal would be in stoppage time, it has to be after 90'. I'm thinking, for Iran, Mohammad Mohebi, who already scored a goal, would have a low chance. For New Zealand, Chris Wood, who has been instrumental in both goals. But that's a very low probability, perhaps 3%.\n\nEssentially, it is very likely 2-2. If it is *not* 2-2, Mohebi or Wood are the only likely scorers.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-16T01:24:39+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 24,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Iran",
+        "away": "New Zealand",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.42,
+        "away": 0.33
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Mehdi Taremi",
+          "minute": 65,
+          "p": 0.28,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第24分钟，新西兰凭借伊莱贾·贾斯特在第7分钟的进球，目前1-0领先伊朗。从场面数据来看，尽管伊朗在控球率上以51%微弱占优，但进攻端创造力不足，目前仅有1次射门。相反，新西兰的战术执行非常高效，已经完成5次射门，克里斯·伍德在前场的支点作用和助攻极具威胁。考虑到比赛还有超过一个小时的时间，伊朗作为亚洲劲旅具备较强的战术调整能力和反扑底蕴。随着比赛深入，落后的伊朗势必会大举压上寻求扳平，平局的概率目前升至最高。新西兰虽然暂时领先，但要在剩下的时间里完全顶住伊朗的持续攻势并不容易。因此，1-1被认为是最可能的最终比分。在后续的比赛中，伊朗的主力前锋（如 迈赫迪·塔雷米）有望在下半场通过阵地战或定位球机会破门得分，帮助球队扳平比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.01493835,
+      "tokens": {
+        "input": 1069,
+        "output": 2193
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.276
+    },
+    {
+      "submitted_at": "2026-06-16T01:38:11+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 38,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Iran",
+        "away": "New Zealand",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.34,
+        "away": 0.24
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Mehdi Taremi",
+          "minute": 65,
+          "p": 0.32,
+          "team": "home"
+        },
+        {
+          "player": "Chris Wood",
+          "minute": 75,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第38分钟，当前比分为1-1。新西兰队在开场第7分钟凭借 伊莱贾·贾斯特 的进球取得梦幻开局（克里斯·伍德 助攻），但伊朗队稳住阵脚，在第32分钟由 拉明·雷扎伊安 扳平比分。从场面数据来看，双方势均力敌，伊朗队控球率52%略占优势，而新西兰队在射门数（7对6）和射正数（3对2）上稍稍领先，展现了极高的反击效率。随着半场临近，平局的概率显著上升，但考虑到伊朗队在整体实力、大赛经验和阵容深度上的优势，他们在下半场持续施压并反超比分的可能性更大。因此，预测伊朗队有较高的获胜概率，最可能的最终比分为2-1。在后续进球者方面，伊朗队的核心前锋 迈赫迪·塔雷米 有望在下半场利用对方体能下降的机会打破僵局，而新西兰队的锋线支柱 克里斯·伍德 同样具备利用定位球或反击再次改写比分的巨大威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.010486349999999998,
+      "tokens": {
+        "input": 1143,
+        "output": 1474
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.671
+    },
+    {
+      "submitted_at": "2026-06-16T01:51:45+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Iran",
+        "away": "New Zealand",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.38,
+        "draw": 0.35,
+        "away": 0.27
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Shahriar Moghanlou",
+          "minute": 65,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Chris Wood",
+          "minute": 73,
+          "p": 0.24,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场比赛结束，伊朗与新西兰暂时战成1-1平。从前45分钟的场面来看，新西兰队反客为主，开场仅7分钟便由伊莱贾·贾斯特（伊莱贾·贾斯特）接克里斯·伍德（克里斯·伍德）助攻先拔头筹。数据方面，新西兰队半场控球率达到52%，创造了9次射门其中5次射正，给伊朗防线制造了巨大压力，迫使伊朗门将做出了多达4次关键扑救。然而，伊朗队展现出了亚洲劲旅的韧性，在顶住对手的三板斧后，于第32分钟由拉明·雷扎伊安（拉明·雷扎伊安）接沙赫里亚尔·莫甘卢（Shahriar Moghanlou）的传球扳平比分。随着比分回到同一起跑线，伊朗队在半场结束前逐渐找回了比赛节奏。考虑到伊朗队拥有更丰富的大赛经验和更强的战术执行力，下半场他们有望通过调整进一步限制新西兰的攻势，并利用反击或定位球制造杀机。综合目前的场面走势与数据判断分析，伊朗队最终逆转取胜的概率（38%）略高于平局（35%）和新西兰获胜（27%），最可能的最终比分预测为2-1。在后续的进球球员预测中，上半场已经贡献助攻且表现活跃的伊朗前锋沙赫里亚尔·莫甘卢极有可能在下半场亲自建功；而新西兰方面，作为绝对进攻核心的克里斯·伍德依然是客队最具威胁的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.0146559,
+      "tokens": {
+        "input": 1142,
+        "output": 2136
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.638
+    },
+    {
+      "submitted_at": "2026-06-16T02:17:54+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 62,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Iran",
+        "away": "New Zealand",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.45,
+        "away": 0.27
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第62分钟，伊朗与新西兰战成1-1平。新西兰在开场第7分钟由伊莱贾·贾斯特接克里斯·伍德助攻闪击破门，随后伊朗在第32分钟凭借拉明·雷扎伊安的进球扳平比分。从场面数据来看，双方控球率旗鼓相当（49%对51%），但新西兰在进攻端表现得更具威胁，共完成10次射门且5次射正，迫使伊朗门将做出了4次关键扑救。伊朗在下半场伊始换上迈赫迪·加耶迪试图加强进攻，意图在边路寻找突破口。考虑到比赛已进入后半程且双方整体表现势均力敌，平局是目前最可能的结果。不过，随着体能下降，双方在最后阶段仍有机会利用反击或定位球改写比分。新西兰的锋线核心克里斯·伍德以及伊朗的替补奇兵迈赫迪·加耶迪是接下来最有可能取得进球的球员。综合判断，1-1的比分维持到终场的概率最高。"
+      },
+      "sources": [],
+      "cost_usd": 0.010593449999999999,
+      "tokens": {
+        "input": 1215,
+        "output": 1479
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.177
+    },
+    {
+      "submitted_at": "2026-06-16T02:31:16+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 76,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Iran",
+        "away": "New Zealand",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.22,
+        "away": 0.7
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第76分钟，当前比分是伊朗 1-2 新西兰。新西兰凭借 伊莱贾·贾斯特 的梅开二度（均由 克里斯·伍德 助攻）取得领先。从场面数据来看，新西兰占据了53%的控球率，并且在进攻端表现得更具威胁，全场12次射门中有7次射正，迫使伊朗门将做出了5次扑救。相比之下，伊朗虽然有9次射门，但仅有2次射正，进攻效率略显不足。由于比赛所剩时间不多（仅剩约15分钟及伤停补时），新西兰保持领先优势并最终获胜的概率极高。伊朗虽然在下半场进行了人员调整（换上 阿里·阿里普尔 和 迈赫迪·加耶迪 加强进攻），但面对新西兰稳固的防守和犀利的反击，扳平比分的难度较大。最可能的最终比分预计将维持在 1-2。如果后续还有进球，新西兰的锋线支点 克里斯·伍德 极有可能利用对手大举压上留下的空当通过反击扩大比分，而伊朗的替补前锋 阿里·阿里普尔 则是主队放手一搏时的潜在得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.00994875,
+      "tokens": {
+        "input": 1357,
+        "output": 1353
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.003
+    },
+    {
+      "submitted_at": "2026-06-16T02:44:48+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 89,
+        "score": {
+          "home": 2,
+          "away": 2
+        },
+        "home": "Iran",
+        "away": "New Zealand",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.06,
+        "draw": 0.88,
+        "away": 0.06
+      },
+      "most_likely_score": "2-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第89分钟，目前伊朗与新西兰战成2-2平。本场比赛双方大打对攻战，场面十分胶着。新西兰在控球率（54%）和射门质量上略占优势，全场12次射门有7次射正，伊莱贾·贾斯特 状态火热完成梅开二度，而锋线支点 克里斯·伍德 也贡献了两次助攻，给伊朗防线制造了极大威胁。伊朗方面则展现出顽强的韧性，拉明·雷扎伊安 传射建功，穆罕默德·莫赫比 关键时刻扳平比分，且伊朗门将贡献了5次关键扑救力保城门不再失守。鉴于常规时间所剩无几，双方体能均已到达极限，虽然都在尝试最后阶段的绝杀，但以平局收场的概率极高。因此，最可能的最终比分大概率定格在2-2。尽管后续进球概率极低，但在即将到来的伤停补时阶段，如果出现绝杀机会，新西兰的锋线核心 克里斯·伍德 以及伊朗替补登场保持体能优势的攻击手 阿里·阿里普尔 是最有可能完成致命一击的球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.01445115,
+      "tokens": {
+        "input": 1643,
+        "output": 2020
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.851
+    },
+    {
+      "submitted_at": "2026-06-16T02:58:07+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 2
+        },
+        "home": "Iran",
+        "away": "New Zealand",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.06,
+        "draw": 0.88,
+        "away": 0.06
+      },
+      "most_likely_score": "2-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，当前比分为2-2平。回顾本场比赛，新西兰队凭借伊莱贾·贾斯特（伊莱贾·贾斯特）的梅开二度两度取得领先，且两次助攻均来自克里斯·伍德（克里斯·伍德）；而伊朗队展现出顽强的韧性，由拉明·雷扎伊安（拉明·雷扎伊安）和穆罕默德·莫赫比（穆罕默德·莫赫比）两度扳平比分。数据方面，新西兰队控球率（53%）和射正数（7对4）略占优势，但伊朗队总射门数（16对13）更多，场面势均力敌。由于常规时间已经耗尽，比赛即将进入伤停补时阶段，平局的概率已大幅上升至极高水平。综合当前局势与剩余时间，2-2是最可能的最终比分。如果补时阶段出现绝杀，伊朗队的莫赫比或新西兰队的锋线支点伍德是最具威胁的潜在进球者，但发生概率极低。"
+      },
+      "sources": [],
+      "cost_usd": 0.012659849999999999,
+      "tokens": {
+        "input": 1851,
+        "output": 1701
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.672
+    }
+  ]
+}

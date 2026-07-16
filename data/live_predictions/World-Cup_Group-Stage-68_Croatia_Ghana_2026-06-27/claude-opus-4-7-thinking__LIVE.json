@@ -1,0 +1,883 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-68_Croatia_Ghana_2026-06-27",
+  "provider_fixture_id": "19609150",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-27T22:58:41+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 1
+    },
+    "home": "Croatia",
+    "away": "Ghana",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-27T21:00:00+00:00",
+    "venue": "Philadelphia Stadium",
+    "venue_city": "Philadelphia"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.86,
+      "draw": 0.12,
+      "away": 0.02
+    },
+    "most_likely_score": "2-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进行到第90分钟，克罗地亚2比1领先加纳。上半场第31分钟苏契奇接科瓦契奇助攻首开纪录，下半场第73分钟加纳后卫卢卡森扳平，但第83分钟弗拉希奇接莫德里奇精准传球再度反超。整体场面克罗地亚控球54%，射门8比5、射正4比1占优，角球与威胁创造也略胜一筹，加纳虽通过多次换人加强进攻冲击，但已显著消耗体能，且犯规数高达13次，组织能力受限。进入伤停补时阶段，克罗地亚通过引入格瓦迪奥尔等防守型替补稳固防线，意在压缩空间、消耗剩余时间，主队拿下三分的概率非常高。加纳要在剩余几分钟内再次破门难度极大，仅能依赖定位球或转换中的偶然机会，平局概率较低，逆转几乎可以忽略。综合判断最可能的最终比分维持2比1。若补时阶段仍有进球，克罗地亚一侧最具威胁的是替补登场仍具冲刺能力的马塔诺维奇与帕沙利奇，他们可能在加纳压上时获得反击机会；加纳方面则寄望于托马斯-阿桑特和速度型边锋苏莱马纳在最后时段制造混战或远射破门。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1232,
+    "output": 655
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0166759,
+  "wall_seconds": 16.217,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.86, \"draw\": 0.12, \"away\": 0.02},\n  \"most_likely_score\": \"2-1\",\n  \"scorers\": [\n    {\"player\": \"Igor Matanovic\", \"team\": \"home\", \"minute\": 92, \"p\": 0.07},\n    {\"player\": \"Brandon Thomas-Asante\", \"team\": \"away\", \"minute\": 93, \"p\": 0.06},\n    {\"player\": \"Mario Pašalić\", \"team\": \"home\", \"minute\": 94, \"p\": 0.05},\n    {\"player\": \"Kamaldeen Sulemana\", \"team\": \"away\", \"minute\": 95, \"p\": 0.05}\n  ],\n  \"reasoning\": {\"overall\": \"比赛已进行到第90分钟，克罗地亚2比1领先加纳。上半场第31分钟苏契奇接科瓦契奇助攻首开纪录，下半场第73分钟加纳后卫卢卡森扳平，但第83分钟弗拉希奇接莫德里奇精准传球再度反超。整体场面克罗地亚控球54%，射门8比5、射正4比1占优，角球与威胁创造也略胜一筹，加纳虽通过多次换人加强进攻冲击，但已显著消耗体能，且犯规数高达13次，组织能力受限。进入伤停补时阶段，克罗地亚通过引入格瓦迪奥尔等防守型替补稳固防线，意在压缩空间、消耗剩余时间，主队拿下三分的概率非常高。加纳要在剩余几分钟内再次破门难度极大，仅能依赖定位球或转换中的偶然机会，平局概率较低，逆转几乎可以忽略。综合判断最可能的最终比分维持2比1。若补时阶段仍有进球，克罗地亚一侧最具威胁的是替补登场仍具冲刺能力的马塔诺维奇与帕沙利奇，他们可能在加纳压上时获得反击机会；加纳方面则寄望于托马斯-阿桑特和速度型边锋苏莱马纳在最后时段制造混战或远射破门。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-27T21:06:48+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 6,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Croatia",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.26,
+        "away": 0.16
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Andrej Kramarić",
+          "minute": 38,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Mohammed Kudus",
+          "minute": 70,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Luka Modrić",
+          "minute": 64,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Petković",
+          "minute": 78,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Iñaki Williams",
+          "minute": 82,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Mateo Kovačić",
+          "minute": 55,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Jordan Ayew",
+          "minute": 60,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛开局仅6分钟，双方仍是0-0。从开场迹象看，克罗地亚通过中场的传控完全掌控了节奏，球权高达77%，而加纳只有23%，且已经吃到一次犯规，显示他们在缺球状态下主要依靠破坏性防守来应对压力。结合赛前实力对比，克罗地亚阵中莫德里奇、科瓦契奇组成的中场组织能力远胜加纳，再加上克拉马里奇、佩特科维奇的终结能力，整体技术层面占据明显优势。加纳的威胁主要来自库杜斯、伊纳基·威廉姆斯的速度与反击突破，他们更适合在对手压上后利用空间。基于这种场面态势，克罗地亚获胜的概率被设定为最高，平局次之，加纳爆冷取胜的可能性较小。考虑到加纳具备反击得分能力，且世界杯小组赛阶段克罗地亚也常出现先丢后追或被扳平的剧本，最可能的最终比分判定为克罗地亚2-1加纳。后续进球预测方面，克罗地亚的首球更可能由前场支点克拉马里奇在上半场后段把握机会打入，下半场莫德里奇或佩特科维奇通过定位球和替补冲击扩大比分；加纳的进球点则集中在库杜斯利用反击在70分钟前后取得回敬，威廉姆斯和阿尤在末段也存在搅局可能。所有预测进球时间均设定在当前6分钟之后，与场上节奏与体能消耗规律一致。"
+      },
+      "sources": [],
+      "cost_usd": 0.0181485,
+      "tokens": {
+        "input": 820,
+        "output": 817
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.657
+    },
+    {
+      "submitted_at": "2026-06-27T21:13:49+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 13,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Croatia",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.26,
+        "away": 0.22
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Andrej Kramarić",
+          "minute": 63,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Petković",
+          "minute": 78,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Mohammed Kudus",
+          "minute": 67,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Luka Modrić",
+          "minute": 55,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Iñaki Williams",
+          "minute": 81,
+          "p": 0.11,
+          "team": "away"
+        },
+        {
+          "player": "Mateo Kovačić",
+          "minute": 70,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第13分钟，克罗地亚与加纳仍是0-0。开局阶段加纳控球率略占优势（53%对47%），并已出现3次犯规，显示出他们试图通过身体对抗和高强度逼抢来打乱克罗地亚的中场节奏。克罗地亚虽然控球稍逊，但尚未出现明显失位，整体阵型保持紧凑，且暂无定位球或射门类关键事件出现，场面属于典型的世界杯小组赛试探期。综合赛前实力评估，克罗地亚拥有莫德里奇、科瓦契奇等顶级中场，控场和阵地组织能力明显高出一筹，随着比赛展开他们大概率会逐步夺回中场主导权，并在中前场创造更稳定的机会，因此主队胜率维持在偏高水平（0.52）。加纳具备速度与反击锋线，凭借库杜斯与伊尼亚基·威廉姆斯的冲击力存在偷分可能，但要在90分钟内完全压制克罗地亚仍较困难，胜率约为0.22；考虑到当前0-0、节奏偏慢且双方均显谨慎，平局概率给到0.26。最可能的最终比分判断为1-0，克罗地亚通过一次阵地战或定位球打破僵局后凭借控球管理比赛。后续进球点方面，克拉马里奇作为终结点最具威胁，佩特科维奇在下半场替补登场后常能制造高点冲击，莫德里奇与科瓦契奇也具备中远距离破门能力；加纳方面则将希望寄托于库杜斯的个人突破和威廉姆斯的反击插上，时间窗集中在比赛中后段。"
+      },
+      "sources": [],
+      "cost_usd": 0.0182595,
+      "tokens": {
+        "input": 815,
+        "output": 824
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.67
+    },
+    {
+      "submitted_at": "2026-06-27T21:20:45+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 20,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Croatia",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.28,
+        "away": 0.2
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Andrej Kramarić",
+          "minute": 63,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Petković",
+          "minute": 78,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Iñaki Williams",
+          "minute": 74,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Mohammed Kudus",
+          "minute": 82,
+          "p": 0.13,
+          "team": "away"
+        },
+        {
+          "player": "Mateo Kovačić",
+          "minute": 70,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第20分钟，克罗地亚与加纳在费城仍是0-0。从开场至今的迹象看，克罗地亚虽然控球率略低（46%对54%），但已经制造出1次射门，并且零犯规，整体在中场区域的组织和节奏掌控更为成熟；加纳目前射门挂零，反而已经累计3次犯规，说明他们在防守端通过身体对抗去打断克罗地亚的推进，显示出对方控球质量更具威胁。综合这些细节、加上克罗地亚在世界杯舞台上的经验、技术型中场的持球能力以及板凳深度，主队赢球被赋予较高概率，约52%；考虑到加纳速度型边路反击在世界杯小组赛中并不少见，平局保留约28%的空间；客队全取三分概率约20%。最可能的最终比分定在1-0：开局阶段双方都偏谨慎，进球更可能出现在体能下降、空间被拉开的下半场中后段，而克罗地亚通过持续控球和定位球资源最有机会先破僵局，加纳要把局面扳成多球对攻并不容易。后续进球人选方面，克罗地亚一侧Kramarić克拉马里奇在禁区前沿的跑位与终结能力突出，是中段攻势的首选射手；替补登场常见的Petković佩特科维奇身高臂长，适合做下半场后段头球与二点包抄的奇兵；Kovačić科瓦契奇的远射与前插也具备破门可能。加纳方面，伊尼亚基·威廉姆斯伊尼亚基·威廉姆斯的速度可在克罗地亚压上后的转换中制造杀机，Kudus库杜斯的盘带和远射则是他们扳平比分最现实的解决方案，因此把可能的破门时间放在60分钟之后较为合理。"
+      },
+      "sources": [],
+      "cost_usd": 0.01887,
+      "tokens": {
+        "input": 780,
+        "output": 864
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.006
+    },
+    {
+      "submitted_at": "2026-06-27T21:28:02+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 28,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Croatia",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.28,
+        "away": 0.2
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Andrej Kramarić",
+          "minute": 63,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Petković",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Mohammed Kudus",
+          "minute": 70,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Luka Modrić",
+          "minute": 55,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Iñaki Williams",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第28分钟，双方仍是0-0僵局。从场面来看，克罗地亚虽然控球率48%略低，但已经完成2次射门，进攻端组织更具威胁；加纳控球52%却尚未形成有效射门，且已经吃到4次犯规，说明在中场对抗中明显处于被动，只能通过战术犯规延缓克罗地亚的推进节奏。综合考虑克罗地亚整体技术层面与大赛经验的优势，主队在剩余时间内掌控比赛走势的可能性更大，因此把主队胜率上调至0.52左右，平局0.28，加纳爆冷胜出的概率压低至0.20。最可能的最终比分判断为1-0，理由是克罗地亚的进攻虽具威胁但终结效率历来偏低，而加纳目前的进攻支点尚未激活，比赛大概率以小比分主队取胜收尾。后续进球方面，克罗地亚下半时进入控制节奏后由克拉马里奇（Kramarić）抓住禁区机会的可能性最高，老将莫德里奇（Modrić）通过定位球或远射制造威胁也不可忽视，替补登场的佩特科维奇（Petković）则是末段攻坚的常用解决方案；加纳一旦取得反击空间，库杜斯（Kudus）个人能力最具破门可能，伊尼亚基·威廉姆斯（伊尼亚基·威廉姆斯）的速度也可能在防线压上后形成单刀机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.016605599999999998,
+      "tokens": {
+        "input": 903,
+        "output": 717
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.314
+    },
+    {
+      "submitted_at": "2026-06-27T21:35:21+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 35,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Croatia",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.23,
+        "away": 0.15
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Andrej Kramarić",
+          "minute": 67,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Mohammed Kudus",
+          "minute": 74,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Petar Sučić",
+          "minute": 78,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Iñaki Williams",
+          "minute": 86,
+          "p": 0.13,
+          "team": "away"
+        },
+        {
+          "player": "Mateo Kovačić",
+          "minute": 82,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到上半场第35分钟，克罗地亚凭借第31分钟佩塔尔·苏契奇（苏契奇）的进球，由Mateo Kovacic（科瓦契奇）助攻，以1-0领先加纳。从场面数据看，加纳虽然控球率略占优势（53%对47%），但全场尚未形成任何射门，更没有射正，进攻端明显缺乏威胁；反观克罗地亚已完成4次射门，其中2次射正，进攻效率与转化能力都更高。加纳已出现5次犯规，纪律性方面承压，反映出在中场对抗中处于被动。综合领先优势、射门质量与对手缺乏进攻火力，克罗地亚获胜概率显著提升，平局概率次之，加纳逆转难度较大。考虑到克罗地亚中场组织能力强、节奏控制成熟，下半场体能优势可能进一步放大，预计最有可能的最终比分为2-0。后续进球方面，克罗地亚替补登场或持续输出的Kramarić（克拉马里奇）具备终结机会的能力，Sučić与Kovačić在二线插上仍有再进球可能；加纳若想扳回，主要威胁集中在Kudus（库杜斯）的个人突破和伊尼亚基·威廉姆斯（伊尼亚基·威廉姆斯）的反击速度，但破门概率整体低于克罗地亚球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.0161653,
+      "tokens": {
+        "input": 964,
+        "output": 681
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.537
+    },
+    {
+      "submitted_at": "2026-06-27T21:42:19+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 42,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Croatia",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.24,
+        "away": 0.14
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Andrej Kramarić",
+          "minute": 67,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Mohammed Kudus",
+          "minute": 73,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Petar Sučić",
+          "minute": 78,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Luka Modrić",
+          "minute": 58,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Jordan Ayew",
+          "minute": 84,
+          "p": 0.11,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到上半场第42分钟，克罗地亚凭借第31分钟 佩塔尔·苏契奇（苏契奇）接 马特奥·科瓦契奇（科瓦契奇）助攻的入球以1比0领先加纳。从场面数据来看，克罗地亚射门数5次、射正2次，控球率51%，整体节奏更为稳健，中场组织能力明显占优；加纳全场仅1次射门且无射正，犯规已达6次，明显处于被动防守、用身体对抗压制对手的状态，进攻端尚未建立有效威胁。综合领先优势、场面控制以及加纳进攻端的低效，克罗地亚保持胜势的概率显著提升至0.62左右，平局概率约0.24，加纳逆转的概率压缩至0.14。最可能的最终比分判断为2比0：克罗地亚下半场仍将通过 Modrić（莫德里奇）与 Kovačić 的中场调度持续施压，Kramarić（克拉马里奇）和 Sučić 都具备在禁区前沿终结的能力，扩大比分的机会不小；同时加纳为了追分必然加强进攻，但目前的射门转化效率与中场控制力难以支撑多球反扑，更可能在比分继续被拉开后才打开局面。后续进球方面，下半场克罗地亚的 Kramarić 和 Sučić 是最可能再下一城的人选，Modrić 也有定位球或远射的破门可能；加纳一方则寄希望于 Kudus（库杜斯）的个人突破创造机会，乔丹·阿尤 在比赛末段加压阶段也有把握零星机会的潜力。"
+      },
+      "sources": [],
+      "cost_usd": 0.0173974,
+      "tokens": {
+        "input": 902,
+        "output": 760
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.432
+    },
+    {
+      "submitted_at": "2026-06-27T21:49:26+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Croatia",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.23,
+        "away": 0.15
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Andrej Kramarić",
+          "minute": 74,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Petar Sučić",
+          "minute": 67,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Mohammed Kudus",
+          "minute": 70,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Luka Modrić",
+          "minute": 82,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Mateo Kovačić",
+          "minute": 78,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Jordan Ayew",
+          "minute": 85,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场结束阶段，克罗地亚凭借第31分钟佩塔尔·苏契奇的进球（马特奥·科瓦契奇助攻）1-0领先加纳。从场面数据来看，克罗地亚控球率54%，全场5次射门2次射正，整体掌握了比赛节奏，中场组织和推进效率明显高于对手。加纳目前仅有1次射门、0次射正，并且已经累计7次犯规，反映出他们在中前场难以建立稳定的持球进攻，更多依赖身体对抗去打断克罗地亚的传导。基于这种局面，主队拿下比赛的概率明显占优，平局概率因为只领先一球仍需保留一定空间，而加纳完成翻盘的可能性较低。最可能的最终比分是2-0：克罗地亚有较大概率在下半场通过控球消耗对手并制造第二个进球锁定胜局，而加纳若不在战术和人员上做出明显调整，破门难度较大。后续进球点方面，克罗地亚一侧Sučić状态在线可能延续表现，Kramarić作为前场终结点是扩大比分的最大热门，Modrić和Kovačić则可能通过组织甚至直接打门贡献第二球；加纳若要追分，最具威胁的是Mohammed Kudus的个人突破和乔丹·阿尤的支点作用，但整体把握机会能力受限，概率相对较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0166796,
+      "tokens": {
+        "input": 938,
+        "output": 714
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.371
+    },
+    {
+      "submitted_at": "2026-06-27T22:07:48+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 52,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Croatia",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.26,
+        "away": 0.12
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到下半场52分钟，克罗地亚凭借佩塔尔·苏契奇在第31分钟由Kovacic助攻打入的进球以1-0领先加纳。从场面来看，克罗地亚控球率54%、5次射门2次射正，明显在节奏和创造力上占优；加纳全场仅1次射门、0射正，并已经吃到7次犯规，反映出他们被压制且不得不通过犯规来阻止克罗地亚的推进。加纳在中场休息时连换两人（Issahaku Fatawu、科乔·佩普拉·奥蓬）显示出主帅希望加强进攻并扳平比分的意图，但目前尚未转化为实质性的威胁。综合考虑克罗地亚领先、控场能力以及加纳进攻端的乏力，主队获胜概率明显抬升至约62%，平局约26%，加纳逆转概率约12%。最可能的最终比分维持在1-0，因为克罗地亚领先后通常会更注重控制节奏，而加纳目前尚未展现出有效的破门手段。后续若再有进球，克罗地亚方面最有可能由前场威胁球员Kramarić把握反击机会，Sučić、Kovacic也具备再下一城的能力；加纳方面则寄望于刚替补登场的Fatawu以及核心Kudus制造威胁，但破门概率相对有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.198801,
+      "tokens": {
+        "input": 49970,
+        "output": 752
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.011
+    },
+    {
+      "submitted_at": "2026-06-27T22:14:47+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 59,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Croatia",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.24,
+        "away": 0.14
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Andrej Kramarić",
+          "minute": 74,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Petar Sučić",
+          "minute": 82,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Issahaku Fatawu",
+          "minute": 78,
+          "p": 0.11,
+          "team": "away"
+        },
+        {
+          "player": "Luka Modrić",
+          "minute": 68,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Mohammed Kudus",
+          "minute": 85,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进入第59分钟，克罗地亚凭借苏契奇(佩塔尔·苏契奇)在第31分钟由科瓦契奇(马特奥·科瓦契奇)助攻的入球，1比0领先加纳。从场面数据看，克罗地亚控球率51%，射门5次、射正2次，整体压制力略占上风；加纳射门仅2次且无射正，犯规已达7次，进攻效率明显不足，下半场开局加纳一口气换上法塔乌(Issahaku Fatawu)和奥蓬(科乔·佩普拉·奥蓬)，意在加强中前场冲击力，但目前尚未形成实质威胁。综合领先优势、控球节奏与剩余时间约30余分钟，克罗地亚的获胜概率上调至0.62，平局0.24，加纳翻盘概率压至0.14。考虑到克罗地亚控制比赛节奏、加纳压上后会留出反击空间，最可能的最终比分是2比0，克罗地亚再下一城的可能性大于加纳扳平。后续进球方面，主队克拉马里奇(安德烈·克拉马里奇)作为前锋点终结能力强，最具威胁；苏契奇本场状态在线，存在梅开二度可能；莫德里奇(卢卡·莫德里奇)的远射与定位球同样不可忽视。加纳一方，新援法塔乌的突破和库杜斯(Mohammed Kudus)的个人能力是为数不多的得分点，但需依赖反击机会，整体进球概率偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0163836,
+      "tokens": {
+        "input": 1003,
+        "output": 685
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.199
+    },
+    {
+      "submitted_at": "2026-06-27T22:21:49+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 66,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Croatia",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Petar Sučić",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Andrej Kramarić",
+          "minute": 82,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Ante Budimir",
+          "minute": 85,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Issahaku Fatawu",
+          "minute": 80,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Mohammed Kudus",
+          "minute": 88,
+          "p": 0.11,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第66分钟，克罗地亚凭借苏契奇（佩塔尔·苏契奇）在第31分钟由科瓦契奇（马特奥·科瓦契奇）助攻打入的进球，以1比0领先加纳。从场面数据看，克罗地亚射门5次、射正2次，整体效率明显高于加纳的3次射门、0次射正，加纳虽然控球率略占优（51%对49%），但缺乏真正威胁，1次角球和高达9次犯规也说明他们在防守端被迫多次拦截，进攻端组织不够顺畅。加纳半场已经用掉两个换人名额（Issahaku Fatawu、科乔·佩普拉·奥蓬登场），意图加强边路冲击和中前场创造力，但目前尚未转化为射正。基于领先优势、剩余时间约25分钟加补时、以及克罗地亚控场和反击能力，主队胜出的概率明显上升至0.68，平局保留在0.22，加纳逆转空间有限给到0.10。最可能的最终比分定在2-0：克罗地亚在加纳压上寻找扳平球时具备扩大比分的反击机会，而加纳在零射正的背景下连进两球的概率较低。后续进球点上，苏契奇手感正佳、仍有再下一城的可能，克拉马里奇（安德烈·克拉马里奇）和布迪米尔（安特·布迪米尔）作为典型替补终结点适合在末段把握反击或定位球机会；加纳一侧，新登场的法塔乌（Issahaku Fatawu）边路突破最具威胁，库杜斯（Mohammed Kudus）若持续创造机会也存在抢回一球的可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.0176453,
+      "tokens": {
+        "input": 939,
+        "output": 766
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.543
+    },
+    {
+      "submitted_at": "2026-06-27T22:28:46+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 73,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Croatia",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.72,
+        "draw": 0.22,
+        "away": 0.06
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "克罗地亚在费城主场目前1-0领先加纳，比赛进行到73分钟。上半场31分钟苏契奇接科瓦契奇助攻首开纪录，这粒进球之后克罗地亚整体节奏稳定，控球率53%，射门5次中2次射正，明显压制了对手的反扑空间。加纳方面虽然中场休息时一次性换上法塔乌和奥蓬两名进攻属性更强的球员试图扭转局面，但全场3次射门0射正、犯规高达9次，进攻端始终没能制造出真正威胁，反映出他们在最后三十米的处理仍然乏力。克罗地亚66分钟用马塔诺维奇换下布迪米尔，保留了禁区支点和反击锋线深度，这对守住领先和打反击二度进球都更有利。综合场面、比分和剩余时间，主队获胜概率明显占优，给到0.72；加纳要在十几分钟内连入两球难度极大，客胜概率压低到0.06；考虑到加纳孤注一掷压上可能扳平，平局概率保留0.22。最可能的最终比分定为1-0，因为加纳进攻效率太低，而克罗地亚也倾向于通过控球消耗时间而非大举压上。后续进球人选方面，马塔诺维奇作为体能充沛的替补前锋最有希望抓住反击机会扩大比分，苏契奇本场已经进球且仍活跃于前场推进，也有再下一城的可能；加纳一侧若能扳平，最可能来自换上后表现积极的边路快马法塔乌。"
+      },
+      "sources": [],
+      "cost_usd": 0.0171902,
+      "tokens": {
+        "input": 1051,
+        "output": 719
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.425
+    },
+    {
+      "submitted_at": "2026-06-27T22:45:18+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Croatia",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.13,
+        "away": 0.01
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第90分钟，克罗地亚2-1领先加纳。从比赛走势看，克罗地亚由苏契奇在31分钟率先破门，加纳在73分钟通过卢卡森扳平，但仅10分钟后弗拉希奇接莫德里奇助攻再度为克罗地亚取得领先。射门数据上，克罗地亚7次射门、4次射正，明显优于加纳的4射1正，控球率53%也略占上风，整体场面更具压制力。进入伤停补时阶段，克罗地亚握有领先优势，且通过马塔诺维奇、帕萨利奇等替补调整在中前场维持了体能与控制力，主队拿下比赛的概率显著提升，平局窗口已经很窄，加纳要在剩余补时时间内再进一球难度极大。最可能的最终比分维持2-1克罗地亚获胜。若补时阶段还有进球，克罗地亚方面替补登场、跑动充沛的马塔诺维奇与帕萨利奇是冲击对方防线的最直接人选，而加纳如果孤注一掷压上，新登场的托马斯-阿桑特和苏雷曼纳具备速度与冲击力，可能在反击中制造威胁，但整体概率都偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0157361,
+      "tokens": {
+        "input": 1198,
+        "output": 611
+      },
+      "tool_calls": 0,
+      "wall_seconds": 30.45
+    },
+    {
+      "submitted_at": "2026-06-27T22:52:23+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Croatia",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.12,
+        "away": 0.02
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，克罗地亚在主场以2比1领先加纳。上半场第31分钟苏契奇接科瓦契奇助攻为格子军团首开纪录，下半场第73分钟卢卡森头球扳平，但仅仅十分钟后弗拉希奇便接莫德里奇妙传重新为克罗地亚取得领先，将比分定格在目前的2比1。从场面数据看，克罗地亚控球率53%，7次射门4次射正，明显压制对手；加纳全场仅4射1正，进攻效率有限，而且最近一次有威胁的进球已在第73分钟，此后被克罗地亚通过换上马塔诺维奇、帕萨利奇和格瓦迪奥尔等人加固防线。临近终场克罗地亚的领先优势相当稳固，因此主胜概率被显著拉高到接近九成，平局概率维持在补时阶段被绝杀扳平的少量空间，客胜概率几乎可以忽略。最可能的最终比分仍为2比1，与当前比分和最高胜率方向保持一致。补时阶段若再有进球，克罗地亚方面具备反击机会的替补前锋马塔诺维奇与帕萨利奇是最具威胁的人选；加纳若孤注一掷压上，反而可能给托马斯-阿桑特或速度型边锋苏雷曼纳留下偷袭空间，但整体出现新进球的概率不高。"
+      },
+      "sources": [],
+      "cost_usd": 0.0169238,
+      "tokens": {
+        "input": 1199,
+        "output": 675
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.661
+    },
+    {
+      "submitted_at": "2026-06-27T22:58:41+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Croatia",
+        "away": "Ghana",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.12,
+        "away": 0.02
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进行到第90分钟，克罗地亚2比1领先加纳。上半场第31分钟苏契奇接科瓦契奇助攻首开纪录，下半场第73分钟加纳后卫卢卡森扳平，但第83分钟弗拉希奇接莫德里奇精准传球再度反超。整体场面克罗地亚控球54%，射门8比5、射正4比1占优，角球与威胁创造也略胜一筹，加纳虽通过多次换人加强进攻冲击，但已显著消耗体能，且犯规数高达13次，组织能力受限。进入伤停补时阶段，克罗地亚通过引入格瓦迪奥尔等防守型替补稳固防线，意在压缩空间、消耗剩余时间，主队拿下三分的概率非常高。加纳要在剩余几分钟内再次破门难度极大，仅能依赖定位球或转换中的偶然机会，平局概率较低，逆转几乎可以忽略。综合判断最可能的最终比分维持2比1。若补时阶段仍有进球，克罗地亚一侧最具威胁的是替补登场仍具冲刺能力的马塔诺维奇与帕沙利奇，他们可能在加纳压上时获得反击机会；加纳方面则寄望于托马斯-阿桑特和速度型边锋苏莱马纳在最后时段制造混战或远射破门。"
+      },
+      "sources": [],
+      "cost_usd": 0.0166759,
+      "tokens": {
+        "input": 1232,
+        "output": 655
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.217
+    }
+  ]
+}

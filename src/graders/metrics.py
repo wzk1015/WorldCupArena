@@ -10,6 +10,11 @@ from typing import Any, Iterable, Sequence
 
 import numpy as np
 
+CONTRAST_TEMPERATURE = 5.0
+LAYER_CONTRAST_TEMPERATURE = 10.0
+SCORELINE_CONTRAST_CENTER = 70.0
+SCORELINE_CONTRAST_TEMPERATURE = 5.0
+
 
 # ----------------------------------------------------------------------
 # Probability scores
@@ -92,26 +97,67 @@ def exact_score_accuracy(pred_score: str | None, actual_score: str) -> float:
         return 0.0
 
 
-def contrast_calibrated_score(raw_score: float, temperature: float = 10.0) -> float:
-    """Map a raw 0..100 aggregate to a higher-contrast 0..100 score.
-
-    The fixed logistic transform is centered at 50 and rescaled to preserve the
-    endpoints. It is monotonic, so it cannot change model ordering, and unlike
-    cohort normalization it does not change when a new model joins the board.
-    Around the middle of the scale, a one-point raw difference becomes roughly
-    a 2.5-point displayed difference.
-    """
+def endpoint_logistic_score(
+    raw_score: float,
+    *,
+    center: float,
+    temperature: float,
+) -> float:
+    """Map a raw score through a fixed logistic curve while preserving 0 and 100."""
     raw = max(0.0, min(100.0, float(raw_score)))
+    if not 0.0 < center < 100.0:
+        raise ValueError("center must be between 0 and 100")
     if temperature <= 0:
         raise ValueError("temperature must be positive")
 
     def _sigmoid(x: float) -> float:
         return 1.0 / (1.0 + math.exp(-x))
 
-    lo = _sigmoid(-50.0 / temperature)
-    hi = _sigmoid(50.0 / temperature)
-    value = (_sigmoid((raw - 50.0) / temperature) - lo) / (hi - lo)
+    lo = _sigmoid((0.0 - center) / temperature)
+    hi = _sigmoid((100.0 - center) / temperature)
+    value = (_sigmoid((raw - center) / temperature) - lo) / (hi - lo)
     return 100.0 * max(0.0, min(1.0, value))
+
+
+def contrast_calibrated_score(
+    raw_score: float,
+    temperature: float = CONTRAST_TEMPERATURE,
+) -> float:
+    """Map a raw 0..100 composite aggregate to a higher-contrast 0..100 score.
+
+    The fixed logistic transform is centered at 50 and rescaled to preserve the
+    endpoints. It is monotonic, and unlike cohort normalization it does not
+    change when a new model joins the board. Around the middle of the scale, a
+    one-point raw difference becomes roughly a five-point displayed difference.
+    """
+    return endpoint_logistic_score(raw_score, center=50.0, temperature=temperature)
+
+
+def contrast_calibrated_mean(raw_scores: Iterable[float]) -> tuple[float, float]:
+    """Return (raw mean, contrasted mean), transforming only after averaging."""
+    values = [float(value) for value in raw_scores]
+    if not values:
+        return 0.0, 0.0
+    raw_mean = sum(values) / len(values)
+    return raw_mean, contrast_calibrated_score(raw_mean)
+
+
+def scoreline_calibrated_score(raw_score: float) -> float:
+    """Expand leaderboard scoreline means around their natural 70-point range."""
+    return endpoint_logistic_score(
+        raw_score,
+        center=SCORELINE_CONTRAST_CENTER,
+        temperature=SCORELINE_CONTRAST_TEMPERATURE,
+    )
+
+
+def scoreline_calibrated_mean(raw_scores: Iterable[float]) -> tuple[float, float]:
+    """Return (raw mean, contrasted scoreline mean), transforming after averaging."""
+    values = [float(value) for value in raw_scores]
+    if not values:
+        return 0.0, 0.0
+    raw_mean = sum(values) / len(values)
+    return raw_mean, scoreline_calibrated_score(raw_mean)
 
 
 # ----------------------------------------------------------------------

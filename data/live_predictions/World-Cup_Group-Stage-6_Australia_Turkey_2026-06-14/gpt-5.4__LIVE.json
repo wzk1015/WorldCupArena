@@ -1,0 +1,688 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-6_Australia_Turkey_2026-06-14",
+  "provider_fixture_id": "19609156",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-14T05:56:14+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 0
+    },
+    "home": "Australia",
+    "away": "Türkiye",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-14T04:00:00+00:00",
+    "venue": "Vancouver Stadium",
+    "venue_city": "Vancouver"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.972,
+      "draw": 0.024,
+      "away": 0.004
+    },
+    "most_likely_score": "2-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已到90分钟，Australia目前2比0领先Türkiye，时间对落后方极为不利，胜负概率因此进一步向主队锁定。已发生的关键事实是Australia分别在27分钟由Nestory Irankunda破门、75分钟由Connor Metcalfe再下一城，形成稳定的两球优势。虽然从现有统计看，Türkiye在控球率72%、总射门30比9、射正8比4、角球8比5上明显占优，说明场面主动和持续施压更多来自客队，但Australia的防守转换效率和门将扑救表现很强，8次门将扑救也反映出主队在承压下仍守住零封，并把有限机会转化为进球。进入90分钟后，概率判断更强调剩余时间而不是累计控球优势：Türkiye即便场面更好，也只剩补时窗口，要连追两球至少先扳回一球再继续施压，实际完成逆转的概率极低；Australia则可以更保守地收缩防线、利用对手压上后的空间寻求反击，因此主胜概率维持在极高水平，平局只保留给极少数补时连续失球情景，客胜则接近可以忽略。基于当前比分、事件时间分布以及比赛进入尾声后的常规进球率，最可能最终比分仍是2比0，这既符合主队最高胜率，也符合Australia在75分钟扩大优势后对比赛节奏的控制逻辑。至于90分钟后的潜在进球人选，只能低概率考虑补时场景：若Australia再抓到反击，替补前锋Tete Yengi是相对合理的人选；若Türkiye终于打穿防线，替补前锋Deniz Gül是客队补时破门的可行候选，但整体上补时再进球概率不高，零新增进球仍是主线。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 3065,
+    "output": 545
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0158375,
+  "wall_seconds": 12.616,
+  "error": null,
+  "raw_text": "{\"win_probs\":{\"home\":0.972,\"draw\":0.024,\"away\":0.004},\"most_likely_score\":\"2-0\",\"scorers\":[{\"player\":\"Tete Yengi\",\"team\":\"home\",\"minute\":91,\"p\":0.05},{\"player\":\"Deniz Gül\",\"team\":\"away\",\"minute\":92,\"p\":0.04}],\"reasoning\":{\"overall\":\"比赛已到90分钟，Australia目前2比0领先Türkiye，时间对落后方极为不利，胜负概率因此进一步向主队锁定。已发生的关键事实是Australia分别在27分钟由Nestory Irankunda破门、75分钟由Connor Metcalfe再下一城，形成稳定的两球优势。虽然从现有统计看，Türkiye在控球率72%、总射门30比9、射正8比4、角球8比5上明显占优，说明场面主动和持续施压更多来自客队，但Australia的防守转换效率和门将扑救表现很强，8次门将扑救也反映出主队在承压下仍守住零封，并把有限机会转化为进球。进入90分钟后，概率判断更强调剩余时间而不是累计控球优势：Türkiye即便场面更好，也只剩补时窗口，要连追两球至少先扳回一球再继续施压，实际完成逆转的概率极低；Australia则可以更保守地收缩防线、利用对手压上后的空间寻求反击，因此主胜概率维持在极高水平，平局只保留给极少数补时连续失球情景，客胜则接近可以忽略。基于当前比分、事件时间分布以及比赛进入尾声后的常规进球率，最可能最终比分仍是2比0，这既符合主队最高胜率，也符合Australia在75分钟扩大优势后对比赛节奏的控制逻辑。至于90分钟后的潜在进球人选，只能低概率考虑补时场景：若Australia再抓到反击，替补前锋Tete Yengi是相对合理的人选；若Türkiye终于打穿防线，替补前锋Deniz Gül是客队补时破门的可行候选，但整体上补时再进球概率不高，零新增进球仍是主线。\"},\"sources\":[]}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-14T04:03:47+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 3,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.24,
+        "draw": 0.45,
+        "away": 0.31
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛仅进行到3分钟，比分仍是0-0，样本非常有限，因此赛前实力与比赛初段的常规低进球节奏仍然主导判断。已知现场数据里，Türkiye控球率81%明显高于Australia的19%，说明开局阶段客队更能掌控球权与推进节奏，但由于尚无射门、重大机会或关键事件出现，这种早段控球优势还不足以把胜负概率大幅拉开。基于当前0-0且时间很早，平局概率仍保持最高；同时Türkiye因开局控球更优，away胜率略高于home。综合来看，当前更新为home 0.24、draw 0.45、away 0.31。最可能最终比分方面，既然平局概率最高，而且比赛只踢了3分钟、暂时没有形成高强度机会堆积，0-0仍是单一最可能结果，符合目前谨慎的赛中信息。后续进球逻辑上，如果Türkiye继续保持更高控球，他们的前场技术型球员更可能率先制造破门，因此Kerem Aktürkoğlu与Hakan Çalhanoğlu是更合理的客队进球候选；而Australia若在中后段通过直接打法、定位球或反击制造威胁，Mitchell Duke这类终结点具备成为主队后续进球者的可能。由于当前时间很早，任何未来进球预测都应保持中等偏低概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.0097275,
+      "tokens": {
+        "input": 1059,
+        "output": 472
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.708
+    },
+    {
+      "submitted_at": "2026-06-14T04:09:39+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 9,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.39,
+        "away": 0.43
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到9分钟，当前比分仍是0比0，样本很早但已有一定场面倾向。已知数据中，Australia目前1个角球、0次射门、控球率16%，而Türkiye有2个角球、4次射门、控球率84%，说明开局阶段Türkiye明显占据球权和进攻主动，Australia更多处于被压制和被动防守状态。虽然暂时还没有形成进球，且事件列表为空、没有显示出绝对机会或门将失误这类强信号，但从控球和射门分布看，比赛的即时胜率已经从开场前的相对中性位置向客队倾斜。基于目前仅9分钟的时间点，0比0仍然保留较高权重，因此平局概率不能压得过低；不过Türkiye持续输出射门并掌握节奏，使其取胜概率略高于平局，Australia在进攻端尚未形成射门，因此主胜概率目前最低。最可能最终比分方面，需要与最高胜率方向一致，因此采用客队小胜的0比1作为单一最可能结果：这既反映Türkiye当前场面优势，也符合比赛还很早、总进球期望尚未被拉高的现实。后续进球逻辑上，如果Türkiye继续维持高控球和前场压制，下一粒进球更可能来自客队；但由于当前没有官方球员级实时信息可用于稳定指向具体射手，因此本次不列出未来进球者名单。"
+      },
+      "sources": [],
+      "cost_usd": 0.0095125,
+      "tokens": {
+        "input": 1093,
+        "output": 452
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.332
+    },
+    {
+      "submitted_at": "2026-06-14T04:15:43+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 15,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.26,
+        "draw": 0.35,
+        "away": 0.39
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到15分钟，当前比分仍为0比0。就现有赛中信息看，Türkiye在开局阶段的场面优势更明显：控球率73%对27%，总射门3比0，角球2比1，说明Australia目前更多处于被动防守与回收阶段。虽然比分尚未被改写，且没有出现进球、红黄牌或换人等关键事件，但早段控球和射门分布已经使客队的即时胜率上调。由于比赛时间还很早，0比0仍然保留较大概率，因此平局概率不能压得过低；不过结合Türkiye已经建立的控场和进攻发起优势，客胜仍是三项结果中最高。基于当前0比0和15分钟节点，最可能的最终比分更新为0比1，这既反映了Türkiye更可能率先打破僵局，也考虑到Australia至今尚无射门、进攻输出有限，比赛未必会迅速演变成多球对攻。后续进球逻辑上，若场面趋势延续，下一阶段更可能由Türkiye制造决定性机会；但当前实时状态未提供任何官方球员级进攻数据、首发或射门归属信息，无法在不臆造姓名的前提下稳定给出未来进球者名单，因此本次未来进球者列表保持为空。"
+      },
+      "sources": [],
+      "cost_usd": 0.0222525,
+      "tokens": {
+        "input": 5877,
+        "output": 504
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.176
+    },
+    {
+      "submitted_at": "2026-06-14T04:21:35+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 21,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.23,
+        "draw": 0.45,
+        "away": 0.32
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到21分钟，比分仍为0比0，且截至目前没有出现进球、红黄牌或伤退等会显著改变走势的关键事件，因此赛中判断主要依据现有基础数据。Australia在控球率上以31%明显落后，射门1比4也处于下风，说明Türkiye开局阶段在球权控制和进攻组织上更主动；不过角球2比2持平，表示Australia并非完全被压制，仍能通过定位球或少量推进制造局部威胁。由于比赛时间还较早，Türkiye虽然场面优势更明显，但尚未把优势转化为进球，这会提升平局结果，尤其是半场前后继续僵持的概率。基于当前0比0与21分钟节点，主胜概率被压低，客胜概率因Türkiye的控球和射门优势而高于主胜，但由于领先优势尚未兑现，平局仍是最高概率结果。最可能最终比分因此维持在0-0，这与当前比赛节奏、射门总量不高以及Australia相对偏保守的控球结构相符。后续进球逻辑方面，若Türkiye持续保持接近当前的控球压制并扩大禁区内威胁，客队更像是下一支更接近进球的球队；但从现有实时状态看，尚无明确到足以锁定具体潜在进球者的官方/API球员信息，也缺乏射正、关键传球或个人高频终结数据支撑，因此本次更新不列出21分钟后的具体进球者预测。"
+      },
+      "sources": [],
+      "cost_usd": 0.0091675,
+      "tokens": {
+        "input": 1093,
+        "output": 429
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.871
+    },
+    {
+      "submitted_at": "2026-06-14T04:27:31+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 27,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.45,
+        "draw": 0.31,
+        "away": 0.24
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第27分钟澳大利亚1比0领先，当前唯一已知关键事件是Nestory Irankunda在第27分钟破门，这使主队在比分层面已经占据直接优势。虽然从现有数据看，Türkiye在控球率（64%对36%）、总射门（5对1）和已形成门将扑救的数据上占优，说明客队在场面推进和进攻发起上更积极，但他们暂时只把其中一部分转化为有效威胁，并且先失球；澳大利亚则呈现出机会不多但率先兑现的高效率特征。基于赛中状态更新，比分领先会显著抬升主队取胜概率，因此即使场面数据略偏向Türkiye，主胜仍保持最高，但不会被拉得过高，因为比赛还很早，且客队控球和射门优势意味着他们后续仍有较强扳平机会。综合来看，主胜概率最高，平局次之，客胜仍保留一定空间。最可能最终比分给到1-0：这既符合当前主队领先且比赛仅进行到27分钟的状态，也反映出澳大利亚可能转向更谨慎的比赛管理，而Türkiye虽然持续有球权和射门基础，但暂未显示出足够高的转化效率。未来进球逻辑上，若后续再有进球，最现实的路径一是Australia利用反击或有限高质量机会再下一城，Nestory Irankunda作为已进球球员，通常也是后续最值得继续关注的主队得分点；二是Türkiye凭借持续控球和更高射门量在下半场找到扳平机会，因此客队仍有一名后续进球者的中等概率，但基于当前提供的实时数据中没有明确更多高频威胁球员姓名，客队未来得分者只能保守处理。"
+      },
+      "sources": [],
+      "cost_usd": 0.02294,
+      "tokens": {
+        "input": 5972,
+        "output": 534
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.373
+    },
+    {
+      "submitted_at": "2026-06-14T04:33:23+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 33,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.43,
+        "draw": 0.31,
+        "away": 0.26
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到33分钟，Australia暂时1比0领先Türkiye，当前唯一进球来自27分钟的Nestory Irankunda，助攻者是Paul Okon-Engstler。从已知比赛数据看，Türkiye在场面上更主动，控球率68%、总射门7比2占优，角球2比2，Australia门将已经做出2次扑救，这说明客队在进攻推进和压制时间上更强；但Australia目前把仅有的高质量机会转化成了比分领先，因此即时胜率仍然保持在最高。进入33分钟后，时间因素开始明显放大领先方优势：Australia即使场面不占优，也可以依靠1比0的既有比分把比赛带入更谨慎的节奏，这就是主胜概率高于平局和客胜的核心原因。与此同时，Türkiye的控球和射门基础又不足以让其胜率反超，他们更现实的路径是先追平，再争取逆转，因此平局概率被抬高到次高位置，客胜保留但低于前两者。最可能最终比分方面，考虑到Australia射门量不高、更多像是效率领先，而Türkiye虽然攻势更多，但截至目前只有2次射正，说明其压制尚未完全转化为高把握机会，所以1比0作为单一最可能终局仍然最稳妥，也与当前主胜为最高概率相匹配。后续进球逻辑上，若再出现进球，时间大概率会落在下半场中后段：一方面Türkiye继续压上会给Australia留下反击空间，另一方面Australia已有进球人与助攻人是目前最明确的前场产出线索，因此未来进球人优先保留Nestory Irankunda与Paul Okon-Engstler。由于实时数据里没有更多客队明确个人进攻事件支撑，现阶段不强行指定Türkiye球员作为更高可信度的后续得分点。整体来看，这是一个场面上Türkiye略优、比分上Australia占先的比赛，概率分布因此呈现主胜略高、平局紧追、客胜仍有机会的结构。"
+      },
+      "sources": [],
+      "cost_usd": 0.0119575,
+      "tokens": {
+        "input": 1195,
+        "output": 598
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.539
+    },
+    {
+      "submitted_at": "2026-06-14T04:39:18+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 39,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.3,
+        "away": 0.22
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到39分钟，Australia 目前1-0领先 Türkiye，唯一进球来自27分钟 Nestory Irankunda，助攻为 Paul Okon-Engstler。场面数据呈现出明显反差：Australia 控球率只有31.0%，总射门2次、射正1次，但已经把握住一次关键机会；Türkiye 控球率达到69.0%，总射门8次、射正2次，并且同样有2个角球，说明客队持续压上并制造了更多进攻回合。由于比赛仍在上半场末段，Türkiye 的控球和射门优势让扳平概率不低，因此平局概率被抬高；但 Australia 已经领先且防线目前只让对手2次射正，同时门将已有2次扑救，领先方仍拥有最高取胜概率。综合当前比分、剩余时间和射门质量，胜平负概率调整为 home 0.48、draw 0.30、away 0.22。最可能最终比分选择1-0，因为当前比分已经成立，且尽管 Türkiye 压力较大，但尚未体现出高效终结；若后续进球发生，Australia 更可能通过反击或定位球由已经进球的 Nestory Irankunda 再次制造威胁，Paul Okon-Engstler 也因已参与进球而具备一定后续直接得分可能。所有预测的后续进球分钟均严格晚于当前39分钟。"
+      },
+      "sources": [],
+      "cost_usd": 0.02038,
+      "tokens": {
+        "input": 1348,
+        "output": 1134
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.812
+    },
+    {
+      "submitted_at": "2026-06-14T04:45:20+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.33,
+        "away": 0.21
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前45分钟比分是Australia 1-0领先Türkiye，现有赛况显示主队在27分钟由Nestory Irankunda破门，这使Australia在半场结束前已经把比赛带入自己更有利的比分区间。虽然从已给出的半场数据看，Türkiye控球68%、射门9比3、射正2比1，场面主动性和持续压制感明显更强，但Australia把有限机会转化为进球，说明比赛效率目前偏向主队。进入下半场后，比分领先的一方通常会更倾向于回收防线、压缩空间，而落后的Türkiye会继续维持更高控球和推进频率，因此相较开场前，主胜概率因领先优势明显上调，但不会拉到特别高，因为数据层面Türkiye并未处于下风，反而具备扳平比赛的过程基础。综合当前比分、时间节点以及已有攻防信息，主胜仍是最高单项结果，平局次之，客胜则因半场落后而被压低。最可能最终比分定为1-0，逻辑在于Australia已经拿到领先，且其上半场总射门不多，比赛很可能朝着主队守住优势、客队持续施压但未必高效兑现的方向发展；同时1-1也是重要次选，因为Türkiye的控球和射门体量足以支持下半场制造扳平机会。后续进球人方面，只能基于现有唯一已知球员信息与常规比赛走势推断：如果Australia再进球，更可能来自已经完成破门、反击威胁突出的Nestory Irankunda，或与其有直接连线的Paul Okon-Engstler；如果Türkiye扳平，则更可能由其前场核心型攻击手在持续压上中完成终结，因此给Arda Güler、Kerem Aktürkoğlu较高的下半场进球可能性。整体而言，本场更新后的判断是Australia因半场1球领先而占优，但Türkiye的场面数据保证了比赛悬念仍然存在。"
+      },
+      "sources": [],
+      "cost_usd": 0.0124375,
+      "tokens": {
+        "input": 1195,
+        "output": 630
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.113
+    },
+    {
+      "submitted_at": "2026-06-14T05:06:48+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 51,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.31,
+        "away": 0.21
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到51分钟，Australia以1比0领先Türkiye，现有比分来自27分钟Nestory Irankunda的进球。虽然Australia在比分上占优，但从已知场面数据看，Türkiye控球率达到70%，总射门11比4明显占优，说明比赛更多时间是在Australia半场展开，Australia更像是依靠效率和相对收缩的比赛方式保持领先。与此同时，双方射正都是2次，意味着Türkiye虽然进攻量更大，但真正高质量的终结并没有完全转化为扳平，Australia的防线和门将阶段性顶住了压力。46分钟Türkiye已经通过换上Kenan Yıldız主动调整，这通常会增强下半场前段的进攻推进和禁区威胁，因此客队后续取得进球的可能性仍然存在。概率上，领先一方在51分钟天然占据优势，所以Australia仍是最高胜率一侧；但由于Türkiye在控球和射门上的持续主动，平局概率被明显抬高，客胜则保留但低于前两者，因为他们不仅需要先扳平，还要在剩余时间内完成反超。最可能最终比分维持在1比0，逻辑是Australia已经建立领先，且目前双方射正数接近，说明Türkiye虽有围攻态势，但未必能稳定转化为至少1球；同时Australia的进攻次数不多，扩大比分的概率存在但不如守住优势那么高。后续进球人方面，Türkiye若追平，替补登场后更具冲击力的Kenan Yıldız是较合理的人选；Australia若再进球，当前已进球的Nestory Irankunda凭借反击终结能力仍是最直接选择，而送出助攻的Paul Okon-Engstler也具备后插上或二次进攻中的进球可能。整体判断是Australia赢面略高，但比赛远未锁定，Türkiye的控球优势使1比1成为最主要的次级结果。"
+      },
+      "sources": [],
+      "cost_usd": 0.011995,
+      "tokens": {
+        "input": 1258,
+        "output": 590
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.122
+    },
+    {
+      "submitted_at": "2026-06-14T05:12:45+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 57,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.32,
+        "away": 0.22
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "57分钟时Australia以1比0领先Türkiye，比分来自27分钟Nestory Irankunda的进球。虽然Australia目前占据比分优势，但从已知场面数据看，Türkiye在控球率上以70%对30%明显占优，总射门13比6、角球4比3也更主动，说明比赛走势更像是Australia效率更高、阵型更偏防守反击，而Türkiye持续在前场施压。Australia门将已经有3次扑救，也进一步反映客队在制造威胁。46分钟Türkiye率先调整，Kenan Yıldız替补出场，通常意味着下半场会继续增强进攻强度。基于当前时间点，领先一方随着时间流逝自然提高守住胜局的概率，因此Australia仍保有最高胜率；但考虑到Türkiye的控球、射门和下半场主动性，平局概率不能低估，尤其是1比1这一类结果依然现实。与此同时，Türkiye虽然场面更优，但在57分钟仍然落后，说明其转化率和Australia防线韧性限制了逆转概率，所以away胜率低于home与draw。最可能最终比分判断为1比0：它既符合Australia当前领先且时间已进入下半场中段的基本盘，也符合双方射正都不算特别高、比赛未必进入连续进球节奏的特征。后续进球人方面，若Türkiye扳平，替补登场且具备前场终结能力的Kenan Yıldız是更合理的人选；若Australia再进一球，已取得进球且更适合反击空间的Nestory Irankunda仍是最值得关注的名字。"
+      },
+      "sources": [],
+      "cost_usd": 0.010525,
+      "tokens": {
+        "input": 1258,
+        "output": 492
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.005
+    },
+    {
+      "submitted_at": "2026-06-14T05:18:48+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 63,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "failed",
+      "error": "AttributeError: 'str' object has no attribute 'choices'",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 140.277
+    },
+    {
+      "submitted_at": "2026-06-14T05:26:59+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.27,
+        "away": 0.15
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到71分钟，Australia 以 1-0 领先 Türkiye，唯一进球来自27分钟 Nestory Irankunda。当前局面显示 Türkiye 明显掌握球权，控球率66%，总射门20次、射正4次、角球5次，说明客队持续施压并有扳平基础；但 Australia 虽然控球只有34%，仍有8次射门和3次射正，并且门将已经完成4次扑救，领先方的防守韧性和反击威胁仍然存在。进入最后20分钟左右，1球领先会显著抬高主队不败概率，但 Türkiye 的射门量和换上 Kenan Yıldız、Yunus Akgün 后的进攻投入使平局概率不能低估。综合当前比分、时间消耗和场面压力，主胜仍是最高概率，平局次之，客胜需要 Türkiye 至少连进两球，难度较大。最可能最终比分维持为 1-0，因为比赛已到71分钟，Australia 可以收缩保护领先，而 Türkiye 虽然攻势强，但目前射正转化率不高。后续进球逻辑上，若还有进球，更可能先来自 Türkiye 的持续压迫，Kenan Yıldız 和 Yunus Akgün 是客队后段进攻中较合理的候选；Australia 若扩大比分，则更可能来自 Nishan Velupillay 在反击空间中的机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.0182625,
+      "tokens": {
+        "input": 1635,
+        "output": 945
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.912
+    },
+    {
+      "submitted_at": "2026-06-14T05:32:58+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 77,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.61,
+        "draw": 0.27,
+        "away": 0.12
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第77分钟澳大利亚1比0领先，时间已经进入比赛最后阶段，这使主队胜率在当前节点明显占优。已知比赛进程里，Australia在第27分钟由Nestory Irankunda破门，此后比分一直保持不变，说明Türkiye虽然长期处于追赶状态，但尚未把场面优势稳定转化为进球。数据层面，Türkiye控球67%、总射门21比8、角球6比4，持续施压的迹象更强；但射正仅4次，而Australia门将已有4次扑救，说明客队创造了较多攻势却临门一脚效率一般。Australia虽然控球只有33%，但以更低消耗守住领先，并且3次射正打入1球，比赛管理相对成功。基于当前1比0的比分和只剩十多分钟常规时间这一条件，领先一方天然更接近拿下比赛，因此主胜仍是最高概率；不过Türkiye的射门、控球和压制数据明显更强，平局概率不能压得太低，尤其是最后时段持续围攻可能带来一次扳平机会。客胜则需要在剩余时间内连入至少2球，结合目前转化效率与时间窗口，其概率最低。最可能最终比分定为1比0，因为它同时符合当前领先格局、时间所剩不多以及Australia已经展现出的防守韧性；次选逻辑是1比1，主要来自Türkiye持续进攻带来的单点破门可能。后续进球者方面，只预测77分钟后的潜在人选：若Türkiye扳平，更可能来自下半场换上后具备直接冲击力的Kenan Yıldız或Yunus Akgün；若Australia在对手压上后获得反击机会，Nishan Velupillay是较合理的终结点。"
+      },
+      "sources": [],
+      "cost_usd": 0.011805,
+      "tokens": {
+        "input": 1386,
+        "output": 556
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.512
+    },
+    {
+      "submitted_at": "2026-06-14T05:38:53+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 83,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.9,
+        "draw": 0.08,
+        "away": 0.02
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第83分钟澳大利亚2比0领先，比赛已经进入最后时段，比分与剩余时间共同决定了主队胜率显著占优。已发生的关键进球来自Nestory Irankunda和Connor Metcalfe，说明澳大利亚虽然控球和射门数据处于下风，但把握机会效率更高。现有统计显示Türkiye拥有69%控球、25次射门、6次射正、6个角球，持续施压的比赛流向很明显；不过澳大利亚门将已有6次扑救，且主队仅4次射正就打进2球，说明客队一方面制造了足够进攻量，另一方面自身防守转换与终结效率都不如主队。基于83分钟时2球差距，平局和客胜所需条件分别是至少连追2球或3球，时间窗口已经很小，因此主胜概率维持在很高区间。最可能最终比分判断为2-0：这既符合当前领先方在末段更可能收缩保护比分的常见赛况，也符合尽管Türkiye进攻数据更积极，但迟迟未能破门的现实。后续进球逻辑上，若再出现进球，更可能来自Türkiye在压上后的持续冲击，因此替补登场且具个人突破能力的Kenan Yıldız、Yunus Akgün是相对更可行的客队追分人选；同时，Türkiye大举压上也会给澳大利亚反击空间，因此替补前锋Tete Yengi具备在补时阶段扩大比分的机会。整体来看，概率分布仍以澳大利亚守住胜局为核心，次选是客队追回一球但不足以改写结果。"
+      },
+      "sources": [],
+      "cost_usd": 0.0117575,
+      "tokens": {
+        "input": 1559,
+        "output": 524
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.481
+    },
+    {
+      "submitted_at": "2026-06-14T05:44:38+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 89,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.97,
+        "draw": 0.025,
+        "away": 0.005
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已到89分钟，Australia以2比0领先Türkiye，时间对落后方极其不利，因此赛果概率已明显向主队锁定。已知进球分布显示Australia在27分钟由Nestory Irankunda首开纪录、75分钟由Connor Metcalfe再下一城，说明主队虽然控球和射门数据处于劣势，但把握机会效率更高。统计上Türkiye拥有70%控球、26次射门、6次射正以及更多角球，表明其持续施压，但Australia门将与整体防守在大部分时间里成功化解了攻势；Australia仅30%控球、9次射门、4次射正却打入2球，体现出高效反击和领先后的比赛管理。基于当前2球差距和仅剩常规时间尾声加补时，Australia获胜概率维持极高，平局和Türkiye逆转所需事件数量过多，因此概率被压低。最可能最终比分方面，2比0最符合现有时间节点与进球分布逻辑，因为领先一方更可能优先收缩守住结果，而落后方虽然继续前压，但未必能在极短时间内完成破门；次选才是2比1或3比0。后续进球者逻辑上，只能考虑89分钟之后的短时窗口：若Australia再进球，更可能来自替补前场或反击终结点，如Tete Yengi；若Türkiye扳回一球，则更可能来自下半场已登场、具备前场冲击力的Kenan Yıldız或Yunus Akgün。但整体而言，补时阶段再出现进球的总概率不高，无进球收尾仍是主线判断。"
+      },
+      "sources": [],
+      "cost_usd": 0.0124225,
+      "tokens": {
+        "input": 1801,
+        "output": 528
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.149
+    },
+    {
+      "submitted_at": "2026-06-14T05:50:24+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.965,
+        "draw": 0.028,
+        "away": 0.007
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已到90分钟，Australia以2-0领先Türkiye，赛果已非常接近定局。已发生的关键进球分别来自27分钟的Nestory Irankunda和75分钟的Connor Metcalfe，这说明Australia虽然控球和射门数据明显处于下风，仍然凭借更高的门前效率和防守端承压能力建立了两球优势。从现有数据看，Türkiye拥有71%控球、28次射门、8次射正以及更多角球，场面主动权更强，但Australia门将已做出7次扑救，说明客队迟迟未能把攻势转化为进球；反过来，Australia仅9次射门、4次射正就打入2球，体现出反击或有限机会下的终结效率。进入90分钟后，留给Türkiye扳平甚至逆转的实际时间极少，因此主胜概率被大幅上调，平局和客胜仅保留极小尾部可能。基于当前2-0比分、比赛所剩时间以及两队效率差异，最可能的最终比分仍是2-0；若补时阶段再有进球，更现实的方向是Türkiye在持续压上中追回1球，或Australia利用对手压出后的空间再入一球，但这些都低于比赛直接以当前比分结束的概率。后续进球人选方面，只能在90分钟后考虑：Türkiye若继续围攻，替补前场如Deniz Gül、Kenan Yıldız属于相对更可能的追分点；Australia若获得反击机会，前场替补Tete Yengi具备成为补时进球点的合理性。总体而言，本场更新后的核心判断是Australia极大概率守住胜局，最终比分最可能停留在2-0。"
+      },
+      "sources": [],
+      "cost_usd": 0.0128425,
+      "tokens": {
+        "input": 1921,
+        "output": 536
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.197
+    },
+    {
+      "submitted_at": "2026-06-14T05:56:14+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.972,
+        "draw": 0.024,
+        "away": 0.004
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已到90分钟，Australia目前2比0领先Türkiye，时间对落后方极为不利，胜负概率因此进一步向主队锁定。已发生的关键事实是Australia分别在27分钟由Nestory Irankunda破门、75分钟由Connor Metcalfe再下一城，形成稳定的两球优势。虽然从现有统计看，Türkiye在控球率72%、总射门30比9、射正8比4、角球8比5上明显占优，说明场面主动和持续施压更多来自客队，但Australia的防守转换效率和门将扑救表现很强，8次门将扑救也反映出主队在承压下仍守住零封，并把有限机会转化为进球。进入90分钟后，概率判断更强调剩余时间而不是累计控球优势：Türkiye即便场面更好，也只剩补时窗口，要连追两球至少先扳回一球再继续施压，实际完成逆转的概率极低；Australia则可以更保守地收缩防线、利用对手压上后的空间寻求反击，因此主胜概率维持在极高水平，平局只保留给极少数补时连续失球情景，客胜则接近可以忽略。基于当前比分、事件时间分布以及比赛进入尾声后的常规进球率，最可能最终比分仍是2比0，这既符合主队最高胜率，也符合Australia在75分钟扩大优势后对比赛节奏的控制逻辑。至于90分钟后的潜在进球人选，只能低概率考虑补时场景：若Australia再抓到反击，替补前锋Tete Yengi是相对合理的人选；若Türkiye终于打穿防线，替补前锋Deniz Gül是客队补时破门的可行候选，但整体上补时再进球概率不高，零新增进球仍是主线。"
+      },
+      "sources": [],
+      "cost_usd": 0.0158375,
+      "tokens": {
+        "input": 3065,
+        "output": 545
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.616
+    }
+  ]
+}

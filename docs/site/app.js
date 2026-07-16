@@ -305,6 +305,19 @@ const I18N = {
     leaderboard_sort_to_composite: "切换为综合分排序",
     leaderboard_scope_all: "全程",
     leaderboard_scope_knockout: "淘汰赛",
+    leaderboard_guide_button: "指标说明",
+    leaderboard_guide_metrics: "排行榜指标",
+    leaderboard_guide_layers: "分层预测",
+    leaderboard_guide_radar: "雷达图会在每个方向分别拉开模型差距，悬停可查看实际分数。",
+    leaderboard_guide_composite: "汇总模型在赛果、比分、球员、比赛事件和数据等方面的整体表现。",
+    leaderboard_guide_result: "模型预测胜、平、负方向正确的比赛比例。",
+    leaderboard_guide_exact: "模型预测比分与实际比分完全一致的比赛比例。",
+    leaderboard_guide_scoreline: "同时比较赛果方向、分差、总进球数和双方进球数，越接近真实比分越高。",
+    leaderboard_guide_t1: "看模型能否判断胜平负、比分和进球差。",
+    leaderboard_guide_t2: "看模型对首发、阵型、进球者和助攻者等球员信息的预测。",
+    leaderboard_guide_t3: "看模型对进球时间、换人、红黄牌等比赛过程的预测。",
+    leaderboard_guide_t4: "看模型对控球率、射门、角球和传球等技术统计的预测。",
+    leaderboard_guide_t5: "综合比较12个小组排名，以及每轮淘汰赛的晋级球队和具体对阵；越后面的轮次越重要。",
     login_with_logto: "登录",
     logged_in_as: "已登录：{name}",
     user_prediction_title: "我的预测",
@@ -333,11 +346,11 @@ const I18N = {
     user_leaderboard_name: "我的预测",
     user_leaderboard_exact: "比分 {correct}/{total}",
     games: "场次",
-    layer_t1: "T1 赛果",
+    layer_t1: "T1 赛果与比分",
     layer_t2: "T2 球员",
     layer_t3: "T3 事件",
     layer_t4: "T4 数据",
-    layer_t5: "T5 大赛背景",
+    layer_t5: "T5 整届赛事",
     load_error: "无法加载 data.json，自动化 workflow 可能还在运行。"
   },
   en: {
@@ -544,6 +557,19 @@ const I18N = {
     leaderboard_sort_to_composite: "Switch to composite score sorting",
     leaderboard_scope_all: "Overall",
     leaderboard_scope_knockout: "Knockout",
+    leaderboard_guide_button: "Metric Guide",
+    leaderboard_guide_metrics: "Leaderboard Metrics",
+    leaderboard_guide_layers: "Prediction Layers",
+    leaderboard_guide_radar: "Each radar axis spreads the model differences separately; hover to see the actual score.",
+    leaderboard_guide_composite: "Overall performance across results, scorelines, players, match events, and match statistics.",
+    leaderboard_guide_result: "The share of matches where the model correctly predicted a home win, draw, or away win.",
+    leaderboard_guide_exact: "The share of matches where the predicted score exactly matched the final score.",
+    leaderboard_guide_scoreline: "Rewards forecasts that are close in result direction, goal difference, total goals, and each team's goals.",
+    leaderboard_guide_t1: "How well the model predicts the result, scoreline, and goal difference.",
+    leaderboard_guide_t2: "How well it predicts lineups, formations, scorers, and assist providers.",
+    leaderboard_guide_t3: "How well it predicts goal timing, substitutions, and cards.",
+    leaderboard_guide_t4: "How well it predicts possession, shots, corners, passing, and other match statistics.",
+    leaderboard_guide_t5: "Combines all 12 group rankings with each knockout round's advancing teams and exact matchups, giving later rounds more weight.",
     login_with_logto: "Log in",
     logged_in_as: "Signed in: {name}",
     user_prediction_title: "My Prediction",
@@ -572,7 +598,7 @@ const I18N = {
     user_leaderboard_name: "My Prediction",
     user_leaderboard_exact: "Score {correct}/{total}",
     games: "#Games",
-    layer_t1: "T1 Result",
+    layer_t1: "T1 Result & Score",
     layer_t2: "T2 Players",
     layer_t3: "T3 Events",
     layer_t4: "T4 Stats",
@@ -740,6 +766,9 @@ function applyStaticI18n() {
   });
   document.querySelectorAll("[data-i18n-title]").forEach(el => {
     el.setAttribute("title", t(el.dataset.i18nTitle));
+  });
+  document.querySelectorAll("[data-i18n-aria-label]").forEach(el => {
+    el.setAttribute("aria-label", t(el.dataset.i18nAriaLabel));
   });
   applyBranding();
   applyModeControls();
@@ -1285,6 +1314,18 @@ function scorelineSimilarity(predScore, actualScore) {
   return Math.max(0, Math.min(100, resultComponent + diffComponent + totalComponent + teamComponent));
 }
 
+function endpointLogisticScore(rawScore, center, temperature) {
+  const raw = Math.max(0, Math.min(100, Number(rawScore) || 0));
+  const sigmoid = value => 1 / (1 + Math.exp(-value));
+  const low = sigmoid((0 - center) / temperature);
+  const high = sigmoid((100 - center) / temperature);
+  return 100 * Math.max(0, Math.min(1, (sigmoid((raw - center) / temperature) - low) / (high - low)));
+}
+
+function scorelineCalibratedScore(rawScore) {
+  return endpointLogisticScore(rawScore, 70, 5);
+}
+
 function userOutcomeLabel(side, match) {
   if (side === "home") return t("user_prediction_home_win", { team: match.home || t("home") });
   if (side === "away") return t("user_prediction_away_win", { team: match.away || t("away") });
@@ -1517,6 +1558,7 @@ function currentUserLeaderboardRow() {
   }
   if (!_currentUser && Object.keys(_userPredictions).length === 0) return null;
   const winnerAcc = winnerTotal ? winnerCorrect / winnerTotal : null;
+  const scorelineRawScore = scorelineTotal ? scorelineSum / scorelineTotal : null;
   return {
     model_id: USER_PREDICTION_MODEL_ID,
     is_user: true,
@@ -1529,7 +1571,8 @@ function currentUserLeaderboardRow() {
     exact_score_total: scoreTotal,
     exact_score_correct: scoreCorrect,
     exact_score_acc: scoreTotal ? scoreCorrect / scoreTotal : null,
-    scoreline_score: scorelineTotal ? scorelineSum / scorelineTotal : null,
+    scoreline_raw_score: scorelineRawScore,
+    scoreline_score: scorelineRawScore == null ? null : scorelineCalibratedScore(scorelineRawScore),
     mean: winnerAcc == null ? 0 : winnerAcc * 100,
   };
 }
@@ -3658,6 +3701,33 @@ function renderIncomingMatches(matches) {
 
 let chartInstance = null;
 
+function closeLeaderboardGuide() {
+  const panel = document.getElementById("leaderboard-guide");
+  const button = document.getElementById("leaderboard-guide-toggle");
+  if (panel) {
+    panel.hidden = true;
+    panel.classList.add("hidden");
+  }
+  if (button) button.setAttribute("aria-expanded", "false");
+}
+
+function toggleLeaderboardGuide(event) {
+  if (event) event.stopPropagation();
+  const panel = document.getElementById("leaderboard-guide");
+  const button = document.getElementById("leaderboard-guide-toggle");
+  if (!panel || !button) return;
+  const willOpen = panel.hidden || panel.classList.contains("hidden");
+  panel.hidden = !willOpen;
+  panel.classList.toggle("hidden", !willOpen);
+  button.setAttribute("aria-expanded", String(willOpen));
+}
+
+function setupLeaderboardGuide() {
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") closeLeaderboardGuide();
+  });
+}
+
 // Knockout membership is keyed on the immutable wca_id slug (same rule as
 // build_site.py), not on the localized/nullable stage text.
 function isKnockoutWcaId(wcaId) {
@@ -3887,12 +3957,77 @@ function renderLeaderboard(lb, view) {
     const labels  = [t("layer_t1"), t("layer_t2"), t("layer_t3"), t("layer_t4"), t("layer_t5")];
     const palette = ["#22c55e", "#3b82f6", "#a855f7", "#ec4899", "#f59e0b", "#14b8a6", "#ef4444", "#eab308", "#64748b"];
     const light = _theme === "light";
+    const domains = layers.map(layer => {
+      const values = rows
+        .map(row => Number((row.layers_mean || {})[layer]))
+        .filter(Number.isFinite);
+      return values.length ? { min: Math.min(...values), max: Math.max(...values) } : null;
+    });
+    const visualValue = (raw, index) => {
+      if (!Number.isFinite(raw)) return 0;
+      const domain = domains[index];
+      if (!domain || domain.max - domain.min < 0.0001) return 60;
+      return 20 + 80 * (raw - domain.min) / (domain.max - domain.min);
+    };
+    const axisTicksPlugin = {
+      id: "radarAxisTicks",
+      afterDatasetsDraw(chart) {
+        const scale = chart.scales.r;
+        if (!scale) return;
+        const ctx = chart.ctx;
+        const levels = [20, 60, 100];
+        ctx.save();
+        ctx.font = "600 10px Inter, system-ui, sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        domains.forEach((domain, axisIndex) => {
+          if (!domain) return;
+          const range = domain.max - domain.min;
+          const ticks = range < 0.0001
+            ? [{ visual: 60, raw: domain.min }]
+            : levels.map(visual => ({
+                visual,
+                raw: domain.min + ((visual - 20) / 80) * range,
+              }));
+          ticks.forEach(({ visual, raw }) => {
+            const point = scale.getPointPositionForValue(axisIndex, visual);
+            const dx = point.x - scale.xCenter;
+            const dy = point.y - scale.yCenter;
+            const length = Math.hypot(dx, dy) || 1;
+            let x = point.x + (-dy / length) * 8;
+            let y = point.y + (dx / length) * 8;
+            if (visual === 100) {
+              x -= (dx / length) * 9;
+              y -= (dy / length) * 9;
+            }
+            const label = Math.abs(raw - Math.round(raw)) < 0.05
+              ? String(Math.round(raw))
+              : range >= 20 ? raw.toFixed(0) : raw.toFixed(1);
+            const width = ctx.measureText(label).width + 7;
+            ctx.fillStyle = light ? "rgba(255,255,255,.88)" : "rgba(10,15,26,.84)";
+            ctx.fillRect(x - width / 2, y - 7, width, 14);
+            ctx.fillStyle = light ? "#475569" : "#94a3b8";
+            ctx.fillText(label, x, y + 0.5);
+          });
+        });
+        ctx.restore();
+      },
+    };
     const datasets = rows.slice(0, 9).map((r, i) => ({
       label: fmtModelId(r),
-      data: layers.map(l => (r.layers_mean || {})[l] || 0),
-      backgroundColor: palette[i] + "cc",
+      rawLayerValues: layers.map(layer => {
+        const value = Number((r.layers_mean || {})[layer]);
+        return Number.isFinite(value) ? value : null;
+      }),
+      data: layers.map((layer, layerIndex) => {
+        const value = Number((r.layers_mean || {})[layer]);
+        return visualValue(value, layerIndex);
+      }),
+      backgroundColor: palette[i] + "18",
       borderColor: palette[i], borderWidth: 2,
       pointBackgroundColor: palette[i],
+      pointRadius: 2,
+      pointHoverRadius: 4,
     }));
     if (chartInstance) chartInstance.destroy();
     chartInstance = new Chart(document.getElementById("layersChart"), {
@@ -3901,14 +4036,23 @@ function renderLeaderboard(lb, view) {
       options: {
         responsive: true,
         scales: { r: {
-          suggestedMin: 0, suggestedMax: 100,
+          min: 0, max: 100,
           angleLines: { color: light ? "rgba(15,23,42,.14)" : "rgba(255,255,255,.12)" },
           grid:        { color: light ? "rgba(15,23,42,.1)" : "rgba(255,255,255,.08)" },
           pointLabels: { color: light ? "#334155" : "#cbd5e1", font: { size: 11 } },
-          ticks:       { backdropColor: "transparent", color: light ? "#64748b" : "#64748b" },
+          ticks:       { display: false, stepSize: 20 },
         }},
-        plugins: { legend: { labels: { color: light ? "#334155" : "#cbd5e1", boxWidth: 12 } } },
+        plugins: {
+          legend: { labels: { color: light ? "#334155" : "#cbd5e1", boxWidth: 12 } },
+          tooltip: { callbacks: {
+            label(context) {
+              const raw = context.dataset.rawLayerValues?.[context.dataIndex];
+              return `${context.dataset.label}: ${raw == null ? "—" : fmt2(raw)}`;
+            },
+          } },
+        },
       },
+      plugins: [axisTicksPlugin],
     });
   }
 }
@@ -4150,6 +4294,7 @@ async function main() {
   buildReasoningModal();
   wireTabs();
   setupMobileToc();
+  setupLeaderboardGuide();
   setupResponsivePredictions();
   initUserSession();
   await loadUserPredictions();

@@ -1,0 +1,407 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-16_Belgium_Egypt_2026-06-15",
+  "provider_fixture_id": "19609139",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-15T20:57:16+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "home": "Belgium",
+    "away": "Egypt",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-15T19:00:00+00:00",
+    "venue": "Seattle Stadium",
+    "venue_city": "Seattle"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.12,
+      "draw": 0.74,
+      "away": 0.14
+    },
+    "most_likely_score": "1-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "目前比赛已进入第90分钟，比分仍为比利时1-1埃及。上半场第20分钟由伊玛目·阿舒尔接Salah助攻为埃及首开纪录，比利时则要到下半场第67分钟才通过穆罕默德·哈尼的乌龙球扳平。从数据上看，双方射门均为14次、射正各3次，控球比利时略占53%，但埃及角球数明显更多(7-2)，整体场面相当胶着。比利时在最后阶段连换Lukaku、Vanaken、Fernández-Pardo试图打开局面，埃及方面也通过多次换人巩固防线并保留反击点。考虑到只剩补时阶段，双方体能消耗大、心理上偏保守，最可能的结果是1-1平局，因此平局概率给到接近四分之三，主客胜机会相近且较低。最终比分预计维持1-1。若补时阶段仍有进球，比利时方面替补登场的Lukaku和Vanaken门前嗅觉最具威胁，埃及方面则依赖Salah的反击和Zizo的边路冲击，但整体进球概率都不高。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2714,
+    "output": 661
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.022270300000000003,
+  "wall_seconds": 16.459,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.12, \"draw\": 0.74, \"away\": 0.14},\n  \"most_likely_score\": \"1-1\",\n  \"scorers\": [\n    {\"player\": \"Romelu Lukaku\", \"team\": \"home\", \"minute\": 92, \"p\": 0.06},\n    {\"player\": \"Hans Vanaken\", \"team\": \"home\", \"minute\": 93, \"p\": 0.04},\n    {\"player\": \"Matías Fernández-Pardo\", \"team\": \"home\", \"minute\": 90, \"p\": 0.03},\n    {\"player\": \"Mohamed Salah\", \"team\": \"away\", \"minute\": 92, \"p\": 0.04},\n    {\"player\": \"Zizo\", \"team\": \"away\", \"minute\": 93, \"p\": 0.03}\n  ],\n  \"reasoning\": {\"overall\": \"目前比赛已进入第90分钟，比分仍为比利时1-1埃及。上半场第20分钟由Emam Ashour接Salah助攻为埃及首开纪录，比利时则要到下半场第67分钟才通过Mohamed Hany的乌龙球扳平。从数据上看，双方射门均为14次、射正各3次，控球比利时略占53%，但埃及角球数明显更多(7-2)，整体场面相当胶着。比利时在最后阶段连换Lukaku、Vanaken、Fernández-Pardo试图打开局面，埃及方面也通过多次换人巩固防线并保留反击点。考虑到只剩补时阶段，双方体能消耗大、心理上偏保守，最可能的结果是1-1平局，因此平局概率给到接近四分之三，主客胜机会相近且较低。最终比分预计维持1-1。若补时阶段仍有进球，比利时方面替补登场的Lukaku和Vanaken门前嗅觉最具威胁，埃及方面则依赖Salah的反击和Zizo的边路冲击，但整体进球概率都不高。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-15T19:17:57+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Belgium",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T19:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.27,
+        "away": 0.15
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Romelu Lukaku",
+          "minute": 38,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Mohamed Salah",
+          "minute": 70,
+          "p": 0.24,
+          "team": "away"
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 62,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Jeremy Doku",
+          "minute": 75,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Omar Marmoush",
+          "minute": 82,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第17分钟，比利时与埃及暂时0-0战平。从开局十几分钟的场面来看，埃及虽然控球率略占优(57%对43%)，但完全没有形成射门，控球更多停留在中后场组织阶段；比利时则在为数不多的进攻中已经制造了2次射门和1个角球，进攻效率明显更高。双方各吃一张黄牌(埃及的Marwan Ateya与比利时的Castagne)，对抗强度逐渐升级，但暂未影响阵型完整。综合纸面实力、阵容深度以及目前的射门质量差异，比利时在接下来的比赛里更可能率先打破僵局，因此主队胜的概率上调至约0.58，平局保留0.27，埃及爆冷取胜的概率约0.15。最可能的最终比分定为2-1：预计比利时凭借中前场的组织能力在上半场尾段或下半场初段先进一球，再在比赛后段通过替补或反击扩大领先；而埃及具备Salah等突击手，在落后情况下后段有机会扳回一球。后续进球人选方面，Lukaku作为禁区终结点最具威胁，De Bruyne的远射和定位球以及Doku的边路突破都是潜在得分来源；埃及方面Salah依旧是头号攻击点，Marmoush的速度也可能在比利时压上后形成反击破门机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.0193732,
+      "tokens": {
+        "input": 1426,
+        "output": 762
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.014
+    },
+    {
+      "submitted_at": "2026-06-15T19:30:47+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 30,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Belgium",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T19:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.28,
+        "away": 0.3
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Romelu Lukaku",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 72,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Mohamed Salah",
+          "minute": 80,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Jeremy Doku",
+          "minute": 65,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Omar Marmoush",
+          "minute": 75,
+          "p": 0.14,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第30分钟，比利时主场0-1落后埃及。第20分钟伊玛目·阿舒尔接Salah助攻打入一球，这是埃及的高效一击——他们仅有1次射门便转化为进球。从场面看，比利时控球率53%略占优，已有2次射门和1个角球，但尚无射正，进攻组织还在寻找节奏。两队各有一张黄牌，比利时犯规偏多（7次）显示防线在受到Salah带动的反击冲击下略显被动。\n\n考虑到比利时整体实力更强、主场作战，且比赛还有60多分钟，他们有充足时间扳平甚至反超。落后通常会促使主队加快进攻节奏，Lukaku、De Bruyne、Doku等攻击手的威胁将逐步释放。因此主胜概率上调至最高，但由于已经落后一球，平局概率也保持在相对较高水平；埃及凭借Salah的反击仍具备扩大比分的可能，客胜概率不低。\n\n最可能的最终比分定为2-1，符合比利时通过下半场加强攻势完成逆转的剧本。后续进球预测方面，比利时端以Lukaku的禁区终结、De Bruyne的远射或定位球、Doku的边路突破为主要威胁点；埃及端Salah作为最大反击发起人具备再下一城的能力，Marmoush也可能在埃及收缩反击时把握机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.0200244,
+      "tokens": {
+        "input": 1542,
+        "output": 774
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.573
+    },
+    {
+      "submitted_at": "2026-06-15T19:43:39+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 43,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Belgium",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T19:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.26,
+        "away": 0.26
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Romelu Lukaku",
+          "minute": 58,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "minute": 67,
+          "p": 0.27,
+          "team": "home"
+        },
+        {
+          "player": "Mohamed Salah",
+          "minute": 72,
+          "p": 0.24,
+          "team": "away"
+        },
+        {
+          "player": "Jérémy Doku",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Emam Ashour",
+          "minute": 85,
+          "p": 0.14,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比利时目前0-1落后埃及，比赛进行到上半场43分钟。第20分钟伊玛目·阿舒尔接Salah助攻打入一球，埃及把握住了为数不多的机会，全场2次射门2次射正即转化为进球，效率极高。比利时虽然控球率58%、总射门5次，但射正挂零，进攻在禁区前沿欠缺穿透力，同时9次犯规反映出防线被Salah为首的反击拉扯得有些被动。不过红魔整体实力明显占优，下半场预计会加大进攻投入，De Bruyne的组织和Lukaku、Doku的冲击力有望逐步打开局面，而埃及已有两张黄牌在身，体能与纪律将面临考验。综合来看，比利时扳平乃至反超的概率仍最高，平局次之，埃及全身而退守住胜果的可能性略低于平局。最可能的最终比分定在2-1比利时取胜：预计他们在下半场中段先扳平，并在70-80分钟之间凭借替补冲击或定位球完成反超。后续进球点上，Lukaku作为支点中锋最具威胁，De Bruyne的远射和直塞、Doku的边路突破也都是重要得分来源；埃及方面若能再下一城，Salah的个人能力和Ashour的二点把握仍是首选。"
+      },
+      "sources": [],
+      "cost_usd": 0.024260900000000002,
+      "tokens": {
+        "input": 1657,
+        "output": 980
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.673
+    },
+    {
+      "submitted_at": "2026-06-15T20:19:42+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 64,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Belgium",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T19:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.26,
+        "draw": 0.3,
+        "away": 0.44
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比利时目前在主场0-1落后埃及，比赛进行到第64分钟。埃及由伊玛目·阿舒尔在第20分钟接Salah助攻破门后，整体防守组织严密，5次角球与3次射正显示他们在反击中颇具威胁。比利时虽控球率56%、累计8次射门，但射正挂零，进攻在埃及的密集防线前缺乏穿透力，56分钟换上De Cuyper也表明主帅在寻求边路突破。剩余约半小时加伤停时间，比利时势必加大压上，Lukaku、De Bruyne和Doku将是扳平关键，但这也会给Salah领衔的埃及反击留出空间。综合来看，埃及继续保住领先甚至扩大比分的概率最高，比利时扳平需要明显提升射门质量，再度逆转难度更大，因此客胜概率领先，平局次之，主胜机会较小。最可能的最终比分维持0-1，埃及小胜带走三分；若后续进球，Lukaku的禁区终结与Salah的反击破门是首选剧本，De Bruyne定位球及Doku突破制造的机会亦不可忽视。"
+      },
+      "sources": [],
+      "cost_usd": 0.025789,
+      "tokens": {
+        "input": 1745,
+        "output": 1045
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.569
+    },
+    {
+      "submitted_at": "2026-06-15T20:32:20+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 77,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Belgium",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T19:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.4,
+        "away": 0.26
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第77分钟，比利时1-1扳平埃及，扳平进球来自第67分钟穆罕默德·哈尼的乌龙球，此前埃及由伊玛目·阿舒尔在第20分钟接Salah助攻先拔头筹。从场面看，比利时控球率57%，射门10次但射正仅1次，进攻效率不高；埃及虽然控球处于下风，但射门11次、射正4次，反击威胁更大，角球数也达到6个。比利时在56分钟和66分钟连换三人，加上Lukaku登场，明显在加码进攻，但目前转化为有效射门的能力仍有限。考虑到双方体能下滑、比利时压上后留出反击空间、埃及定位球依旧具威胁，平局仍是概率最高的结果，最可能的最终比分维持1-1。若再有进球，比利时方面Lukaku作为支点最具机会，De Bruyne的远射和定位球同样值得关注，De Ketelaere作为新鲜力量也有切入空间；埃及方面则寄望于Salah的反击单刀以及Ashour在二点球的把握能力。综合来看，胜平负三种结果概率分别向平局倾斜，比利时凭借主动权略高于埃及。"
+      },
+      "sources": [],
+      "cost_usd": 0.020424,
+      "tokens": {
+        "input": 2000,
+        "output": 704
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.638
+    },
+    {
+      "submitted_at": "2026-06-15T20:44:46+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 89,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Belgium",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T19:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.13,
+        "draw": 0.74,
+        "away": 0.13
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进入第89分钟，比分1-1。埃及在第20分钟由伊玛目·阿舒尔打破僵局，比利时则在第67分钟通过穆罕默德·哈尼的乌龙球扳平。从场面数据看，比利时控球占优（55%），射门12次但射正仅2次，进攻效率不高；埃及虽然控球略少，但角球6比2，射正3次，反击与定位球颇具威胁，整体两队势均力敌。比利时已用满三个换人窗口，包括投入Lukaku加强锋线，埃及亦完成多次调整以稳固局面。比赛只剩最后正常时间和补时阶段，双方体能均处于临界点，加上比分胶着，双方更可能选择保守踢法以确保不丢球。综合判断，平局概率明显最高，约74%，主客胜机会均约13%。最可能最终比分维持1-1。若仍有进球，比利时方面Lukaku抢点和De Bruyne定位球最具威胁；埃及方面Salah的反击和替补登场的哈姆扎·阿卜杜勒卡里姆具备一定机会，但整体进球概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0203315,
+      "tokens": {
+        "input": 2350,
+        "output": 629
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.024
+    },
+    {
+      "submitted_at": "2026-06-15T20:57:16+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Belgium",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T19:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.74,
+        "away": 0.14
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛已进入第90分钟，比分仍为比利时1-1埃及。上半场第20分钟由伊玛目·阿舒尔接Salah助攻为埃及首开纪录，比利时则要到下半场第67分钟才通过穆罕默德·哈尼的乌龙球扳平。从数据上看，双方射门均为14次、射正各3次，控球比利时略占53%，但埃及角球数明显更多(7-2)，整体场面相当胶着。比利时在最后阶段连换Lukaku、Vanaken、Fernández-Pardo试图打开局面，埃及方面也通过多次换人巩固防线并保留反击点。考虑到只剩补时阶段，双方体能消耗大、心理上偏保守，最可能的结果是1-1平局，因此平局概率给到接近四分之三，主客胜机会相近且较低。最终比分预计维持1-1。若补时阶段仍有进球，比利时方面替补登场的Lukaku和Vanaken门前嗅觉最具威胁，埃及方面则依赖Salah的反击和Zizo的边路冲击，但整体进球概率都不高。"
+      },
+      "sources": [],
+      "cost_usd": 0.022270300000000003,
+      "tokens": {
+        "input": 2714,
+        "output": 661
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.459
+    }
+  ]
+}

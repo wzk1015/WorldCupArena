@@ -1,0 +1,694 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-9_Ivory-Coast_Ecuador_2026-06-14",
+  "provider_fixture_id": "19609157",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-15T00:55:46+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 0
+    },
+    "home": "Côte d'Ivoire",
+    "away": "Ecuador",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-14T23:00:00+00:00",
+    "venue": "Philadelphia Stadium",
+    "venue_city": "Philadelphia"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.9,
+      "draw": 0.08,
+      "away": 0.02
+    },
+    "most_likely_score": "1-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前比分在90分钟时为1比0，Côte d'Ivoire刚刚由Amad Diallo在第90分钟打入关键进球，这对赛中概率产生了决定性影响。就已有比赛信息看，双方整体场面其实相当接近：总射门11比11，控球49%比51%，角球3比2，射正则是主队2比1，说明这并不是一场明显一边倒的比赛，而是长时间胶着后在末段被主队打破平衡。由于进球出现得极晚，留给Ecuador扳平的常规时间几乎已经没有，只能依赖补时内的最后冲击，因此主胜概率被大幅上调到绝对优势；但考虑到补时阶段仍可能出现定位球、长传冲吊或门前混战，平局仍保留小幅可能。客胜方面，在已经0比1落后且时间进入90分钟的前提下，要连进两球完成反超，现实概率极低。最可能最终比分因此是1比0，这既符合当前比分，也符合终场前领先一方通常优先收缩守住结果的比赛逻辑。后续进球方面，只应考虑90分钟后的补时：如果再有进球，最现实路径一是Ecuador压上后由替补冲击手如Kevin Rodríguez抓住最后机会扳成1比1；二是Ecuador大举压上留下身后空间，Côte d'Ivoire由刚进球、状态最热的Amad Diallo利用反击再下一城。但总体而言，补时再进球的总概率不高，无后续进球并以1比0结束仍是最主流结局。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 3152,
+    "output": 493
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.015275,
+  "wall_seconds": 10.767,
+  "error": null,
+  "raw_text": "{\"win_probs\":{\"home\":0.9,\"draw\":0.08,\"away\":0.02},\"most_likely_score\":\"1-0\",\"scorers\":[{\"player\":\"Amad Diallo\",\"team\":\"home\",\"minute\":91,\"p\":0.04},{\"player\":\"Kevin Rodríguez\",\"team\":\"away\",\"minute\":92,\"p\":0.03}],\"reasoning\":{\"overall\":\"当前比分在90分钟时为1比0，Côte d'Ivoire刚刚由Amad Diallo在第90分钟打入关键进球，这对赛中概率产生了决定性影响。就已有比赛信息看，双方整体场面其实相当接近：总射门11比11，控球49%比51%，角球3比2，射正则是主队2比1，说明这并不是一场明显一边倒的比赛，而是长时间胶着后在末段被主队打破平衡。由于进球出现得极晚，留给Ecuador扳平的常规时间几乎已经没有，只能依赖补时内的最后冲击，因此主胜概率被大幅上调到绝对优势；但考虑到补时阶段仍可能出现定位球、长传冲吊或门前混战，平局仍保留小幅可能。客胜方面，在已经0比1落后且时间进入90分钟的前提下，要连进两球完成反超，现实概率极低。最可能最终比分因此是1比0，这既符合当前比分，也符合终场前领先一方通常优先收缩守住结果的比赛逻辑。后续进球方面，只应考虑90分钟后的补时：如果再有进球，最现实路径一是Ecuador压上后由替补冲击手如Kevin Rodríguez抓住最后机会扳成1比1；二是Ecuador大举压上留下身后空间，Côte d'Ivoire由刚进球、状态最热的Amad Diallo利用反击再下一城。但总体而言，补时再进球的总概率不高，无后续进球并以1比0结束仍是最主流结局。\"},\"sources\":[]}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-14T23:05:30+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 5,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.31,
+        "draw": 0.38,
+        "away": 0.31
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第5分钟，当前比分仍是0比0。已知实时信息非常有限，暂无射门、绝佳机会、角球或关键事件，双方控球率也保持在50%对50%的完全均衡状态，仅有科特迪瓦出现1次犯规，这说明开局阶段更多是在相互试探，比赛节奏和场面优势都还没有明确向任何一方倾斜。在这种信息条件下，赛前实力差异若未被现场数据放大，赛中预测应明显向平局集中，尤其是0比0在早段仍具备较高权重。基于当前5分钟的无进球局面和均势场面，主胜、客胜概率保持接近，平局概率略高，因此更新为主胜0.31、平局0.38、客胜0.31。最可能最终比分选择0-0，既符合当前比赛尚未形成明显压制，也与平局为最高概率结果一致。至于后续进球逻辑，由于比赛时间还很早，仍存在下半场随着体能变化和战术调整而出现单个进球的可能，因此可列出双方最具代表性的潜在得分点作为低至中等概率候选：主队方向是Sebastián Haller，客队方向是Enner Valencia；但就当前证据而言，任何未来进球的把握都不高，且更可能出现在60分钟以后比赛空间变大之时。"
+      },
+      "sources": [],
+      "cost_usd": 0.00927,
+      "tokens": {
+        "input": 1068,
+        "output": 440
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.147
+    },
+    {
+      "submitted_at": "2026-06-14T23:11:15+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 11,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.31,
+        "draw": 0.42,
+        "away": 0.27
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到11分钟，比分仍是0-0，现有实时信息非常有限，场面整体偏谨慎。统计上，Côte d'Ivoire控球49%，Ecuador控球51%，射门方面主队暂时0次、客队1次，说明Ecuador在开局阶段只有极轻微的进攻数据优势，但优势幅度不足以显著改变比赛基线。由于目前没有进球、没有关键事件、射门总量也很低，这通常意味着比赛仍处在试探和阵型站位阶段，短时间内的随机波动较大，因此平局概率会被明显抬高。基于11分钟时仍是均势局面、双方控球接近、机会产出偏少，本次更新将平局设为最高概率，其次是主队小幅领先于客队的胜率，主要考虑到中立统计下主队并未被压制，但也没有形成足够证据支持主胜显著上扬。最可能最终比分因此维持在0-0，这既符合当前低节奏、低射门的比赛走势，也与平局为最高概率相一致。后续进球逻辑上，如果比赛在20到30分钟后开始出现更多射门和禁区触球，1-0或0-1会逐步取代0-0成为更突出的具体比分；但在当前信息下，暂时无法从实时状态中可靠识别出明确的高概率未来进球者，因此不列出后续进球人选，等待更多比赛事件和球员层面的进攻数据出现后再更新会更稳妥。"
+      },
+      "sources": [],
+      "cost_usd": 0.00913,
+      "tokens": {
+        "input": 1084,
+        "output": 428
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.56
+    },
+    {
+      "submitted_at": "2026-06-14T23:17:15+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.29,
+        "draw": 0.41,
+        "away": 0.3
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到17分钟，当前仍是0-0，属于典型的早段均势局面。已知现场数据里，厄瓜多尔目前控球55%略占上风，并且已经完成2次射门，而科特迪瓦暂时还没有射门，这说明开场阶段厄瓜多尔在推进和进入进攻区域方面稍好一些；不过这种优势还比较轻微，且比赛时间还很早，没有出现进球、红牌或其他强烈改变走势的事件，因此整体胜负判断仍然要以平局为中心。相较开球前的基础预期，厄瓜多尔因为早段在控球和射门上略优，客胜概率有小幅抬升，但幅度不足以压过平局；科特迪瓦虽然场面数据稍弱，但比分仍保持在可控的0-0，所以主胜概率并未被显著削弱。基于17分钟的无进球状态、目前射门总量偏低以及没有更多高质量机会信息，最可能的最终比分仍然是0-0，这也与平局为最高概率结果保持一致。至于后续进球逻辑，如果比赛继续维持当前这种谨慎节奏，未来总进球数大概率不会太高；而由于实时状态中没有提供明确的首发、射手或高威胁个人数据，现阶段不足以稳定识别某位官方球员名作为17分钟后的最可能进球者，因此本次不列出具体未来进球者。"
+      },
+      "sources": [],
+      "cost_usd": 0.01241,
+      "tokens": {
+        "input": 2228,
+        "output": 456
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.045
+    },
+    {
+      "submitted_at": "2026-06-14T23:23:11+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 23,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.36,
+        "draw": 0.4,
+        "away": 0.24
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到23分钟，当前比分仍是0比0。现有赛中信息显示，科特迪瓦在控球上略占优势（57%对43%），角球1比0、射门2比2、射正1比0，说明主队在开局阶段稍微更能把球推进到有效进攻区域，但整体机会数量仍然偏少，比赛节奏和威胁度都没有明显拉高。厄瓜多尔虽然控球略少，但总射门并未落后，说明客队并非被动挨打，只是暂时还没有形成射正。由于至今没有进球、也没有关键事件打破平衡，而时间只到上半场前段，因此平局概率仍然保持最高。与此同时，主队凭借更好的控球和唯一一次射正，胜率略高于客队。基于当前低事件密度、双方射门总量有限且门前质量一般，最可能的最终比分继续落在0比0；其次才是1比0或1比1这类低比分结果。后续进球逻辑上，如果比赛在30分钟后仍维持这种谨慎强度，进球更可能出现在下半场中后段，且大概率来自少数核心终结点把握有限机会。科特迪瓦若先破门，更可能依赖中锋Sébastien Haller或边路突击手Simon Adingra完成；厄瓜多尔方面，若反击或定位球质量提升，Enner Valencia依然是最合理的客队进球候选。因此本次更新将结果分布维持在“平局优先、主队略优、客队次之”的结构。"
+      },
+      "sources": [],
+      "cost_usd": 0.01054,
+      "tokens": {
+        "input": 1138,
+        "output": 513
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.097
+    },
+    {
+      "submitted_at": "2026-06-14T23:29:07+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 29,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.35,
+        "draw": 0.41,
+        "away": 0.24
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前进行到29分钟，比分仍为0-0，比赛尚处于相对均衡但节奏不算特别开放的阶段。已知数据中，Côte d'Ivoire控球率达到60%，说明其在组织和持球推进上占优；但Ecuador总射门4次，高于主队的2次，表明客队在转换进攻和尝试终结方面并不落下风。不过双方真正形成高质量门前威胁的证据有限：主队1次射正、客队0次射正，且到目前没有进球、没有明显关键事件出现，这通常会把最终结果进一步推向平局区间。基于当前0-0的时间点与统计结构，主队因控球优势和唯一一次射正而保留略高于客队的即时胜率，但由于比赛仍然胶着、有效机会偏少，平局仍是最大概率结果。最可能最终比分因此维持在0-0；如果下半场比赛被打开，更接近的次选路径会是1-0或1-1，但从当前信息看，短时间内出现连续进球的概率不高。至于29分钟之后的潜在进球者，现场数据未提供任何官方球员姓名或明确个人进攻参与信息，因此无法在保证名称准确性的前提下给出可靠的具体球员进球预测，故本次不列出后续进球者名单。"
+      },
+      "sources": [],
+      "cost_usd": 0.009815,
+      "tokens": {
+        "input": 842,
+        "output": 514
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.529
+    },
+    {
+      "submitted_at": "2026-06-14T23:34:55+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 34,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.29,
+        "draw": 0.39,
+        "away": 0.32
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到34分钟，比分仍是0比0，当前预测较明显向平局倾斜。就已知赛中信息看，Côte d'Ivoire控球略占优（54%对46%），但进攻产量偏低，仅2次射门、1次射正；Ecuador虽然控球稍少，却已经完成6次射门，说明其推进到进攻三区的次数更多，不过他们暂时没有射正，真正威胁门前的质量还不够高。场面因此呈现出一种主队控球略稳、客队出手更积极，但双方临门一脚效率都不足的均衡格局。唯一明确事件是28分钟Seko Fofana吃到黄牌，这会让主队中场后续对抗和拦截时更谨慎，但目前还不足以单独把胜负天平大幅拉向客队。基于34分钟仍无进球、双方合计仅1次射正，以及客队虽然射门更多却未形成门框范围内持续压力，平局概率被上调到最高；同时Ecuador的射门数量让他们保留略高于主队一线的后程偷袭可能，但还没有强到压过平局。最可能最终比分维持在0-0，因为现阶段比赛节奏更像是机会数量有限、质量一般的低比分对抗；若下半场某一方率先进球，更可能是1球优势决定比赛，而不是演变成多球大战。至于34分钟之后的潜在进球者，当前提供的实时数据缺少明确的高频射门球员、定位球主罚者或锋线触球信息，暂时不足以给出高置信度的具体球员进球预测，因此不列出明确后续进球者名单。"
+      },
+      "sources": [],
+      "cost_usd": 0.0178475,
+      "tokens": {
+        "input": 2345,
+        "output": 799
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.866
+    },
+    {
+      "submitted_at": "2026-06-14T23:41:03+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 41,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.27,
+        "draw": 0.46,
+        "away": 0.27
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到41分钟，当前仍是0比0，说明上半场前段双方都还没有把有限的进攻转化为进球。从已有数据看，Ecuador射门6比4略占优势，控球51%比49%也只是轻微领先，但两队射正合计只有1次，且Ecuador射正为0，说明虽然客队在推进和尝试次数上更主动一些，真正高质量机会并不多，整体节奏更接近谨慎拉锯而不是持续高压。Côte d'Ivoire这边已有Seko Fofana在28分钟吃到黄牌，这会让主队中场对抗在后续阶段略受约束，但目前还不足以显著改变胜负天平。基于41分钟仍无进球、双方数据接近且门前效率偏低，平局概率相对上升，因此将最终平局设为最高概率；同时由于比赛尚未进入最后阶段，单边取胜仍各自保留相近机会。最可能的最终比分维持在0-0，因为这与当前低射正、低转化率的比赛形态最一致；若下半场出现进球，更可能来自一次中场推进后的禁区前沿射门、定位球二点球或比赛后段防线体能下降后的单次把握。后续潜在进球人方面，主队可关注已有比赛存在感且具中前场远射与后插上能力的Seko Fofana；客队则更可能由前场终结点Enner Valencia或中场推进核心Moisés Caicedo参与打破僵局。但在当前信息下，未来进球总量仍倾向不高，0-0或1-1比大比分分胜负更符合现阶段走势。"
+      },
+      "sources": [],
+      "cost_usd": 0.0139025,
+      "tokens": {
+        "input": 2345,
+        "output": 536
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.248
+    },
+    {
+      "submitted_at": "2026-06-14T23:46:50+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.27,
+        "draw": 0.45,
+        "away": 0.28
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到45分钟，比分仍是0比0，赛果判断已经明显向平局倾斜。已知比赛信息里没有进球、射正转化或门将高接低挡的连续高压场景，上半场整体更像是节奏存在但禁区内终结质量有限。数据上，Ecuador控球54%、总射门6比4稍占主动，但他们射正为0，说明更多是外围尝试或进攻推进到最后一击效率不足；Côte d'Ivoire控球46%、射正1次、角球1比0，进攻次数略少但至少有一次打正门框范围。综合来看，双方上半场都制造了一些进攻回合，但都没有形成足够强的破门证据，因此0比0进入中场会抬高最终打平的概率。另一方面，Côte d'Ivoire在28、39、40分钟连续累计3张黄牌，Seko Fofana、Franck Kessié、Guela Doué都已染黄，这会影响下半场对抗强度与防守动作选择，给Ecuador在中后段创造更多推进空间，所以客队胜率没有被压得很低；但Ecuador虽然场面略优，却缺少射正支撑，说明其优势还不足以显著转化为领先概率，因此主胜与客胜仍然接近。基于当前0比0和半场数据，平局是最高概率结果，最可能最终比分维持在0比0；其次才是1比0或0比1这类单球分胜负。后续进球逻辑上，如果比赛在60分钟后仍未打开，双方通常会提高直接进攻比例，进球更可能来自核心终结者把握少数机会，因此未来潜在进球人选应集中在两队前场主要攻击点，例如Ecuador的Enner Valencia，以及Côte d'Ivoire的Sébastien Haller；若比赛因主队黄牌压力导致防线收缩或回追顾虑加大，Ecuador边路或二线插上球员如Jeremy Sarmiento也具备后程制造进球的可能。总体而言，目前最佳更新是平局概率最高，最可能终局为0比0，但下半场后段仍保留小概率由个别锋线核心打破僵局的空间。"
+      },
+      "sources": [],
+      "cost_usd": 0.01319,
+      "tokens": {
+        "input": 1322,
+        "output": 659
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.638
+    },
+    {
+      "submitted_at": "2026-06-14T23:52:35+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.46,
+        "away": 0.26
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到45分钟，比分仍是0比0。基于现有赛中信息，上半场整体呈现谨慎且效率偏低的局面：双方总射门都是6次，但射正合计只有1次，其中科特迪瓦1次射正、厄瓜多尔0次射正，说明两队都能推进到尝试射门阶段，但真正形成高质量终结的次数很有限。控球方面厄瓜多尔55%略占主动，不过角球0比2落后，说明科特迪瓦在部分进攻回合里更能把球送入危险区域，但持续压制力也不算强。这样的数据组合通常会把比赛拉向低比分和较高平局概率。概率上，半场0比0天然抬升平局权重，而双方进攻产出接近、没有一方形成明显射门质量优势，因此当前将平局设为最高概率是合理的。主胜与客胜之间差距很小：科特迪瓦有主观上的边路冲击和定位球潜在威胁，厄瓜多尔则凭借更多控球和更少犯规保持了比赛节奏稳定性。另一方面，科特迪瓦上半场已经出现3张黄牌，分别给到Seko Fofana、Franck Kessié和Guela Doué，这会在下半场影响他们对抗时的侵略性与防守选择，略微提升厄瓜多尔在后程利用中场推进制造机会的可能性；但由于厄瓜多尔上半场射正为0，这种优势目前还不足以压过平局。最可能最终比分因此仍是0-0，它既符合半场局面，也与当前最高的平局概率一致。若下半场出现进球，更可能来自比赛后段的个体能力兑现或定位球/转换进攻，而不是持续高压下的大比分走势。因此未来进球人选上，科特迪瓦更看好具备禁区终结能力的Sébastien Haller与冲击型边锋Simon Adingra；厄瓜多尔方面则优先考虑经验和门前把握能力更强的Enner Valencia。整体来看，下半场大概率仍是1球以内决定走向，若先破门的一方能迅速收缩，比赛就可能以1比0结束；但在当前时点，0比0仍是最稳健的单一结果预测。"
+      },
+      "sources": [],
+      "cost_usd": 0.01469,
+      "tokens": {
+        "input": 1322,
+        "output": 759
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.774
+    },
+    {
+      "submitted_at": "2026-06-15T00:14:03+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 59,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.48,
+        "away": 0.24
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到59分钟，比分仍是0比0，进入下半场中段后平局概率自然明显上升。现有数据说明场面整体比较胶着：Ecuador控球54%略占上风，总射门7比6也稍多，但双方真正高质量射门都不多，Côte d'Ivoire只有1次射正，Ecuador则仍无射正，这意味着虽然客队在控球和推进上略优，但还没有把优势转化为足够直接的门前威胁。角球2比0略偏向主队，说明主队也并非完全被压制，比赛更像是中场拉扯和试探为主。纪律层面上，Côte d'Ivoire已经累计3张黄牌，这会让他们后续防守动作更谨慎，也可能削弱逼抢强度，但在当前没有红牌、没有明确重大机会事件的前提下，这种影响更多是轻微地下调主胜而不是彻底改变走势。综合比分、时间和现有统计，当前最合理的更新是平局继续保持最高概率，其次主队与客队胜面的差距都不大，而Ecuador虽有些许控球和射门优势，但射正为零，暂不足以把客胜抬到最高。最可能最终比分因此维持在0-0；如果后面出现进球，更像是70分钟后比赛开放度上升带来的单球胜负，所以1-0或0-1属于次一级结果。后续潜在进球人方面，只能基于常规进攻承担者和中前场威胁点来判断：主队若打破僵局，更可能来自Seko Fofana或Franck Kessié这类具备后插上与中距离威胁的球员；客队若进球，则更偏向由Enner Valencia这类终结点完成，Moisés Caicedo则属于次级的后排插上可能。由于当前总进球预期不高，这些未来进球人概率都应保持在较低区间。"
+      },
+      "sources": [],
+      "cost_usd": 0.015495,
+      "tokens": {
+        "input": 2466,
+        "output": 622
+      },
+      "tool_calls": 0,
+      "wall_seconds": 32.026
+    },
+    {
+      "submitted_at": "2026-06-15T00:20:13+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 65,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.29,
+        "draw": 0.5,
+        "away": 0.21
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到65分钟，当前仍是0比0，进入最后约25分钟后的赛中预测应明显向平局倾斜。已知比赛信息里没有进球、红牌或换人等能显著打破平衡的事件，场面数据也显示双方机会质量都比较有限：Côte d'Ivoire总射门9次略多于Ecuador的7次，但射正仅1比0，说明两队虽然都有推进和尝试，却都没有持续制造高质量终结。控球率方面Ecuador以53%略占优，但角球0比2、射正为0，说明其控球更多体现为组织和周转，并未转化成足够直接的门前威胁。Côte d'Ivoire一侧三张黄牌意味着防守对抗较多，后段需要控制动作，这会稍微压制其防守侵略性，但在没有红牌风险兑现前，这种影响仍不足以完全改变均势。基于65分钟仍然0比0、双方射正合计仅1次、门将扑救总数也只有1次，后续总进球预期下降，最终打平的概率因此高于任何一方取胜。主队在射门和角球上略占先，因此胜率略高于客队，但优势不足以压过平局，所以本次更新将主胜、平、客胜分别评估为0.29、0.50、0.21。最可能最终比分维持在0-0，因为这是与当前低质量机会分布、时间所剩不多以及双方都缺乏明确进攻转化效率最一致的结果。至于65分钟后的潜在进球人选，只能从现有事件和数据里选择更可能在后插上、定位球或中场远射中产生影响的名字；Côte d'Ivoire在进攻端数据略好，因此未来若出现单个进球，更可能来自主队，中场属性较强且已深度参与比赛对抗的Seko Fofana、Franck Kessié是相对更合理的人选，但他们各自破门概率仍然不高，整体仍以无后续进球为主线判断。"
+      },
+      "sources": [],
+      "cost_usd": 0.015195,
+      "tokens": {
+        "input": 2466,
+        "output": 602
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.018
+    },
+    {
+      "submitted_at": "2026-06-15T00:26:28+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.5,
+        "away": 0.22
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到71分钟，当前仍是0-0，这使平局结果的基础概率明显上升。就现有比赛状态看，双方整体场面比较接近：Côte d'Ivoire射门10比8略多，角球2比0占优，但真正打正只有1比0，说明两队虽然都能推进到进攻三区，却都没有持续制造高质量终结机会。控球率49%对51%几乎持平，也进一步说明这不是一边倒的比赛。到目前为止唯一较明显的变化来自56分钟双方都进行了换人，主队换上Ange-Yoan Bonny和Amad Diallo，客队换上Nilson Angulo，这通常意味着最后20分钟节奏和冲击力可能提升，但在缺少更多高质量机会数据支撑的情况下，比赛仍更像是低得分走势。概率上，随着时间进入最后20分钟且比分未被打破，平局已成为最高概率结果；主队因射门、角球和主场环境略有优势，胜率略高于客队，但优势有限，因此给出home 0.28、draw 0.50、away 0.22。最可能最终比分因此维持在0-0，这既符合当前低射正数据，也符合时间消耗后的比赛状态。后续进球逻辑方面，如果比赛出现唯一进球，更可能来自替补带来的边路冲击或禁区内二点球机会；主队的Amad Diallo与Ange-Yoan Bonny作为下半场新投入的进攻点，具备更高的后段破门可能，而客队若偷到进球，Nilson Angulo是较合理的晚段候选。不过整体而言，未来再进球的总概率并不高，单个球员破门概率也应保持在较低区间。"
+      },
+      "sources": [],
+      "cost_usd": 0.011915,
+      "tokens": {
+        "input": 1514,
+        "output": 542
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.874
+    },
+    {
+      "submitted_at": "2026-06-15T00:32:27+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 77,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.24,
+        "draw": 0.56,
+        "away": 0.2
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到77分钟，当前仍是0-0，这会明显把终局分布推向平局。就已知场面数据看，科特迪瓦在进攻产量上略占优，11次射门、2次射正，对手门将已有2次扑救；厄瓜多尔有51%控球但0次射正，说明其控球转化为真正威胁的效率有限。角球方面主队2比0领先，也支持主队在更有威胁区域完成过更多推进。不过，这种优势并没有转化为进球，而且时间已经进入最后十多分钟，留给双方打破僵局的窗口越来越小，因此平局概率维持最高。主胜仍保留次高可能，原因是主队至少已经制造出一定门前考验，且下半场56分钟同时换上Amad Diallo与Ange-Yoan Bonny，带有加强冲击力的信号；厄瓜多尔方面也在56和62分钟连续调整，说明客队仍在尝试通过换人寻找终段变化，但在截至目前0射正的背景下，其反超到客胜的概率略低于主胜。基于当前比分、时间和有限统计，最可能最终比分仍是0-0；若出现唯一的晚段进球，更接近1-0而非多球结局，因为双方到目前为止整体射正总量偏低，比赛节奏更像是低比分收尾。未来进球人选上，主队更值得关注的是刚替补登场、可能承担最后阶段突击任务的Amad Diallo和Ange-Yoan Bonny；客队则以Nilson Angulo作为晚段反击中相对更可能的破门点，但整体后续进球概率仍不高。"
+      },
+      "sources": [],
+      "cost_usd": 0.0154525,
+      "tokens": {
+        "input": 1339,
+        "output": 807
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.778
+    },
+    {
+      "submitted_at": "2026-06-15T00:38:22+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 83,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.69,
+        "away": 0.13
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经来到83分钟，当前仍是0-0，这使得平局概率在赛中更新中明显上升。就现有比赛状态看，双方整体场面接近：Côte d'Ivoire共有11次射门、2次射正、3个角球，Ecuador有9次射门、1次射正、控球率51%略高于对手的49%。这说明主队在进攻尝试和定位球制造上稍占主动，但客队在控球层面并不落下风，整体仍是均势比赛。到目前为止没有进球事件，且射正总量只有3次，表明双方虽然都有推进和射门，但真正转化为高质量机会的次数有限，因此在常规时间只剩很短阶段的情况下，0-0被保持到终场的可能性最大。概率上，主队因射门、角球和主场因素获得略高于客队的胜率，但领先幅度不足以压过平局；客队则依靠更高控球维持一定偷袭机会。最终比分逻辑上，既然平局是最高概率结果，最可能最终比分维持为0-0。后续进球逻辑方面，如果最后阶段出现破门，更可能来自换人后带来的冲击力和比赛末段的开放空间，因此Amad Diallo、Ange-Yoan Bonny以及Ecuador替补登场的Nilson Angulo是相对更值得关注的83分钟后潜在进球人选，但他们各自的单点破门概率仍然不高，整体仍以无后续进球为主线。"
+      },
+      "sources": [],
+      "cost_usd": 0.0115275,
+      "tokens": {
+        "input": 1635,
+        "output": 496
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.234
+    },
+    {
+      "submitted_at": "2026-06-15T00:44:21+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 89,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.78,
+        "away": 0.1
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到89分钟，比分仍是0比0，留给常规时间和补时的窗口已经非常有限，因此平局概率被显著抬高。就现有比赛状态看，双方场面总体接近：Côte d'Ivoire总射门11比9稍占优，射正2比1也略好，但控球率49%对51%几乎均衡，角球3比1显示主队在部分时段有一定推进与压制，不过两队真正高质量机会都不多，门将扑救数据也仅为主队1次、客队2次，说明比赛更像是低转化率的胶着局面。事件层面上，后半段多次换人意味着双方都试图用新鲜体能争取最后阶段突破，例如主队换上Amad Diallo、Ange-Yoan Bonny，客队换上Kevin Rodríguez等，但截至89分钟仍未形成进球，说明防线稳定性暂时压过进攻效率。基于当前0比0且进入尾声，胜负概率都被压缩，其中主队凭借射门和角球的轻微优势保留略高于客队的绝杀可能，但整体最合理判断仍是平局。最可能最终比分因此维持在0-0，这也与当前最高的平局概率保持一致。至于89分钟之后的潜在进球逻辑，若比赛出现唯一进球，更可能来自替补攻击手利用最后时段冲击、定位球二点或禁区内混战完成终结，因此列出Amad Diallo、Kevin Rodríguez和Ange-Yoan Bonny作为相对更有希望的后续进球人选；不过他们各自概率都不高，整体仍以无后续进球收场为主线判断。"
+      },
+      "sources": [],
+      "cost_usd": 0.012685,
+      "tokens": {
+        "input": 1882,
+        "output": 532
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.432
+    },
+    {
+      "submitted_at": "2026-06-15T00:50:02+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.79,
+        "away": 0.09
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已到90分钟且比分仍为0比0，赛果已经高度向平局收敛。就现有比赛状态看，双方整体场面非常接近：Côte d'Ivoire射门11比9稍多，角球3比1占优，但控球率49%对51%略处下风，射正也只有2比1，说明两队都创造过一些机会，但真正高质量终结很有限，门将扑救数据也反映出双方并未持续形成强压。下半场的主要事件以换人为主，56、62、77分钟双方连续调整，像Amad Diallo、Ange-Yoan Bonny、Kevin Rodríguez等替补登场，更多体现为最后阶段尝试改变进攻节奏，但截至90分钟依然没有转化为进球。概率上，随着常规时间走完，未来剩余时间主要集中在补时，进球窗口明显缩小，因此平局概率大幅高于任一方取胜；主队因射门和角球略优，主胜保留微弱高于客胜的尾部可能，但差距不大。基于当前0比0、机会质量有限且时间极少，最可能最终比分继续维持0-0。至于补时内的未来进球者，只能给出低概率猜测：主队方面更可能由新鲜进攻点Amad Diallo或Ange-Yoan Bonny制造绝杀，客队则以Kevin Rodríguez这类后段换上的前场球员更具偷袭可能，但整体单个球员在90分钟后进球的概率都较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.01496,
+      "tokens": {
+        "input": 3026,
+        "output": 493
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.359
+    },
+    {
+      "submitted_at": "2026-06-15T00:55:46+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.9,
+        "draw": 0.08,
+        "away": 0.02
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比分在90分钟时为1比0，Côte d'Ivoire刚刚由Amad Diallo在第90分钟打入关键进球，这对赛中概率产生了决定性影响。就已有比赛信息看，双方整体场面其实相当接近：总射门11比11，控球49%比51%，角球3比2，射正则是主队2比1，说明这并不是一场明显一边倒的比赛，而是长时间胶着后在末段被主队打破平衡。由于进球出现得极晚，留给Ecuador扳平的常规时间几乎已经没有，只能依赖补时内的最后冲击，因此主胜概率被大幅上调到绝对优势；但考虑到补时阶段仍可能出现定位球、长传冲吊或门前混战，平局仍保留小幅可能。客胜方面，在已经0比1落后且时间进入90分钟的前提下，要连进两球完成反超，现实概率极低。最可能最终比分因此是1比0，这既符合当前比分，也符合终场前领先一方通常优先收缩守住结果的比赛逻辑。后续进球方面，只应考虑90分钟后的补时：如果再有进球，最现实路径一是Ecuador压上后由替补冲击手如Kevin Rodríguez抓住最后机会扳成1比1；二是Ecuador大举压上留下身后空间，Côte d'Ivoire由刚进球、状态最热的Amad Diallo利用反击再下一城。但总体而言，补时再进球的总概率不高，无后续进球并以1比0结束仍是最主流结局。"
+      },
+      "sources": [],
+      "cost_usd": 0.015275,
+      "tokens": {
+        "input": 3152,
+        "output": 493
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.767
+    }
+  ]
+}

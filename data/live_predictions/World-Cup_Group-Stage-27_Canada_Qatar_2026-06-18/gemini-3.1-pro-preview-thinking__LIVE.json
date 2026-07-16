@@ -1,0 +1,277 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-27_Canada_Qatar_2026-06-18",
+  "provider_fixture_id": "19609170",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-18T23:52:34+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 5,
+      "away": 0
+    },
+    "home": "Canada",
+    "away": "Qatar",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-18T22:00:00+00:00",
+    "venue": "Vancouver Stadium",
+    "venue_city": "Vancouver"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 1.0,
+      "draw": 0.0,
+      "away": 0.0
+    },
+    "most_likely_score": "5-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前比赛已经进入第90分钟，加拿大以5-0遥遥领先卡塔尔。从场面数据来看，加拿大占据了绝对的统治地位，控球率高达78%，狂轰27脚射门其中9次射正。而卡塔尔不仅在进攻端毫无建树，全场0射正，更是在第33分钟和第53分钟连吃两张红牌，目前只能以9人应战。在巨大的比分差距和人数劣势下，比赛胜负早已失去悬念，加拿大的胜率锁定在100%。考虑到比赛已进入伤停补时阶段，卡塔尔的防线已经完全崩溃，但加拿大也可能选择鸣金收兵，因此最可能的最终比分将维持在5-0。不过，如果补时阶段加拿大继续施压，已经梅开二度并正在寻求帽子戏法的乔纳森·戴维（乔纳森·戴维）仍有一定概率在最后时刻再入一球。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2487,
+    "output": 1477
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.01191645,
+  "wall_seconds": 16.436,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 1.0,\n    \"draw\": 0.0,\n    \"away\": 0.0\n  },\n  \"most_likely_score\": \"5-0\",\n  \"scorers\": [\n    {\n      \"player\": \"Jonathan David\",\n      \"team\": \"home\",\n      \"minute\": 93,\n      \"p\": 0.15\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"当前比赛已经进入第90分钟，加拿大以5-0遥遥领先卡塔尔。从场面数据来看，加拿大占据了绝对的统治地位，控球率高达78%，狂轰27脚射门其中9次射正。而卡塔尔不仅在进攻端毫无建树，全场0射正，更是在第33分钟和第53分钟连吃两张红牌，目前只能以9人应战。在巨大的比分差距和人数劣势下，比赛胜负早已失去悬念，加拿大的胜率锁定在100%。考虑到比赛已进入伤停补时阶段，卡塔尔的防线已经完全崩溃，但加拿大也可能选择鸣金收兵，因此最可能的最终比分将维持在5-0。不过，如果补时阶段加拿大继续施压，已经梅开二度并正在寻求帽子戏法的乔纳森·戴维（Jonathan David）仍有一定概率在最后时刻再入一球。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**My Analysis of the Canada vs. Qatar Match**\n\nOkay, so it's the 90th minute of the Canada vs. Qatar match. Canada is dominating, leading 5-0. Looking at the data, Canada's possession is a staggering 78%, and they've peppered the Qatar goal with 27 shots, 9 on target. Qatar, on the other hand, has been completely shut down offensively, with zero shots on target. Compounding their problems, Qatar has had two players sent off with red cards at 33' and 53', leaving them playing with only nine men.\n\nGiven the massive score difference and numerical disadvantage, the outcome is a foregone conclusion, with Canada's win probability essentially locked at 100%. Considering we're in stoppage time, Qatar's defense is likely completely demoralized, but Canada might also ease off the pressure. My primary prediction is a final score of 5-0. However, I am giving Jonathan David a very small probability, say 15%, of potentially netting a hat-trick in the dying moments around the 93rd minute since it's stoppage time. I'll need to keep an eye on the clock, and the rules of the model to make any adjustments. I'll keep the prediction JSON to be as follows:\n\n```json\n{\n  \"win_probs\": {\"home\": 1.0, \"draw\": 0.0, \"away\": 0.0},\n  \"most_likely_score\": \"5-0\",\n  \"scorers\": [\n    {\"player\": \"Jonathan David\", \"team\": \"home\", \"minute\": 93, \"p\": 0.15}\n  ],\n  \"reasoning\": {\n    \"overall\": \"当前比赛已经进入第90分钟，加拿大以5-0遥遥领先卡塔尔。从场面数据来看，加拿大占据了绝对的统治地位，控球率高达78%，狂轰27脚射门其中9次射正。而卡塔尔不仅在进攻端毫无建树（0射正），更是在第33分钟和第53分钟连吃两张红牌，目前只能以9人应战。在巨大的比分差距和人数劣势下，比赛胜负早已失去悬念，加拿大的胜率锁定在100%。考虑到比赛已进入伤停补时阶段，卡塔尔的防线已经完全崩溃，但加拿大也可能鸣金收兵。最可能的最终比分将维持在5-0。不过，如果补时阶段加拿大继续施压，已经梅开二度并正在寻求帽子戏法的乔纳森·戴维（Jonathan David）仍有一定概率在最后时刻再入一球。\"\n  },\n  \"sources\": []\n}\n```\n\nThis reflects the overwhelming dominance of Canada and the strong likelihood of the score staying at 5-0, but with a slight possibility of another goal for Canada's Jonathan David. All of this seems to align with all the constraints and rules of the task.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-18T22:27:35+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 27,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Canada",
+        "away": "Qatar",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T22:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.16,
+        "away": 0.06
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 58,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Alphonso Davies",
+          "minute": 74,
+          "p": 0.22,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第27分钟，加拿大目前以1-0领先卡塔尔。从场面数据来看，加拿大占据了绝对的主动权，控球率高达69%，并已经完成了5次射门和3次射正。拉林（赛尔·拉林）在第16分钟的进球为球队打开了局面。相比之下，卡塔尔在进攻端显得较为乏力，仅有2次射门且无一射正，大部分时间处于被动防守状态。基于目前的比分和场面压制力，加拿大获胜的概率大幅提升。预计随着比赛的深入，卡塔尔为了扳平比分可能会在下半场大举压上，这将给加拿大留下更多反击空间。因此，最可能的最终比分是2-0。在后续进球者方面，乔纳森·戴维（乔纳森·戴维）和阿方索·戴维斯（阿方索·戴维斯）凭借其出色的速度和门前嗅觉，极有可能在下半场利用对手防线前压留下的空当扩大领先优势。"
+      },
+      "sources": [],
+      "cost_usd": 0.0098238,
+      "tokens": {
+        "input": 1124,
+        "output": 1372
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.842
+    },
+    {
+      "submitted_at": "2026-06-18T22:44:48+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 44,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Canada",
+        "away": "Qatar",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T22:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.96,
+        "draw": 0.03,
+        "away": 0.01
+      },
+      "most_likely_score": "3-0",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 62,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Tajon Buchanan",
+          "minute": 75,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第44分钟，加拿大队以2-0领先卡塔尔队。从上半场的进程来看，主场作战的加拿大队完全掌控了比赛节奏，控球率高达62%，并创造了10次射门机会（其中5次射正）。拉林（赛尔·拉林）和乔纳森·戴维（乔纳森·戴维）分别在第16和第29分钟建功，为球队确立了明显的优势。更令卡塔尔雪上加霜的是，霍曼·阿明（Homam Al-Amin）在第33分钟被红牌罚下，导致他们只能以十人应战。在两球落后且少打一人的情况下，卡塔尔队翻盘的希望极其渺茫，他们上半场甚至没有一脚射正。基于当前的巨大优势，加拿大队获胜的概率极高。预计下半场加拿大队会利用人数优势继续施压，乔纳森·戴维等锋线球员有望进一步扩大比分。最可能的最终比分预测为3-0。"
+      },
+      "sources": [],
+      "cost_usd": 0.0107289,
+      "tokens": {
+        "input": 1458,
+        "output": 1460
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.34
+    },
+    {
+      "submitted_at": "2026-06-18T23:18:14+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 63,
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "home": "Canada",
+        "away": "Qatar",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T22:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.999,
+        "draw": 0.001,
+        "away": 0.0
+      },
+      "most_likely_score": "4-0",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 75,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Cyle Larin",
+          "minute": 84,
+          "p": 0.3,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第63分钟，加拿大目前以3-0遥遥领先卡塔尔。场面完全呈一边倒态势，加拿大不仅在比分上占据绝对优势，控球率更是高达72%，狂轰16脚射门且8次射正。反观卡塔尔，不仅进攻端毫无建树（0射正），更致命的是他们在第33分钟和第54分钟连吃两张红牌，目前只能以9人应战。在手握三球领先且多打两人的巨大优势下，加拿大获胜的概率已经接近100%。卡塔尔在少两人的情况下想要扳平甚至逆转完全不切实际。考虑到比赛还有近半小时，且对手防线因人数劣势已经千疮百孔，加拿大极有可能继续扩大战果。预计最终比分最可能定格在4-0。已经梅开二度的乔纳森·戴维（乔纳森·戴维）状态火热，非常有希望在接下来的比赛中完成帽子戏法；此外，首开纪录的赛尔·拉林（赛尔·拉林）也有望利用巨大的空间再下一城。"
+      },
+      "sources": [],
+      "cost_usd": 0.0145845,
+      "tokens": {
+        "input": 1860,
+        "output": 2005
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.724
+    },
+    {
+      "submitted_at": "2026-06-18T23:35:38+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 80,
+        "score": {
+          "home": 4,
+          "away": 0
+        },
+        "home": "Canada",
+        "away": "Qatar",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T22:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 1.0,
+        "draw": 0.0,
+        "away": 0.0
+      },
+      "most_likely_score": "4-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第80分钟，加拿大目前以4-0大比分领先卡塔尔。从场面和数据来看，加拿大完全掌控了比赛，控球率高达74%，并有多达17次射门（9次射正）。更关键的是，卡塔尔在第33分钟和第53分钟分别被红牌罚下两人，目前只能以9人应战。在两人的绝对人数优势和四球领先的情况下，比赛胜负悬念已经彻底终结，加拿大获胜的概率已达100%。考虑到比赛所剩时间不多，且加拿大可能已经开始控制节奏并为后续比赛保留体力，最可能的最终比分是维持4-0。不过，面对9人作战且体能透支的卡塔尔防线，替补登场的生力军（如 塔尼·奥卢瓦塞伊）或正在寻找帽子戏法的 乔纳森·戴维 仍有一定机会在最后阶段利用空间再入一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.012635700000000001,
+      "tokens": {
+        "input": 2284,
+        "output": 1625
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.229
+    },
+    {
+      "submitted_at": "2026-06-18T23:52:34+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 5,
+          "away": 0
+        },
+        "home": "Canada",
+        "away": "Qatar",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T22:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 1.0,
+        "draw": 0.0,
+        "away": 0.0
+      },
+      "most_likely_score": "5-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已经进入第90分钟，加拿大以5-0遥遥领先卡塔尔。从场面数据来看，加拿大占据了绝对的统治地位，控球率高达78%，狂轰27脚射门其中9次射正。而卡塔尔不仅在进攻端毫无建树，全场0射正，更是在第33分钟和第53分钟连吃两张红牌，目前只能以9人应战。在巨大的比分差距和人数劣势下，比赛胜负早已失去悬念，加拿大的胜率锁定在100%。考虑到比赛已进入伤停补时阶段，卡塔尔的防线已经完全崩溃，但加拿大也可能选择鸣金收兵，因此最可能的最终比分将维持在5-0。不过，如果补时阶段加拿大继续施压，已经梅开二度并正在寻求帽子戏法的乔纳森·戴维（乔纳森·戴维）仍有一定概率在最后时刻再入一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.01191645,
+      "tokens": {
+        "input": 2487,
+        "output": 1477
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.436
+    }
+  ]
+}

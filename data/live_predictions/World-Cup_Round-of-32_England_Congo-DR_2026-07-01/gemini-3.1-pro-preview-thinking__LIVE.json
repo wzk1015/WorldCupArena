@@ -1,0 +1,799 @@
+{
+  "fixture_id": "World-Cup_Round-of-32_England_Congo-DR_2026-07-01",
+  "provider_fixture_id": "19606952",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-01T17:56:04+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 1
+    },
+    "home": "England",
+    "away": "Congo DR",
+    "competition": "World Cup",
+    "stage": "Round of 32",
+    "kickoff_utc": "2026-07-01T16:00:00+00:00",
+    "venue": "Atlanta Stadium",
+    "venue_city": "Atlanta"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.95,
+      "draw": 0.04,
+      "away": 0.01
+    },
+    "most_likely_score": "2-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "目前比赛已经进入第90分钟，英格兰以2-1领先刚果民主共和国。尽管刚果民主共和国在开场第7分钟由布莱恩·奇彭加闪击破门，但英格兰在下半场展现了强大的压制力。全场比赛英格兰控球率达到60%，并创造了16次射门（7次射正）。替补登场的安东尼·戈登发挥了关键作用，两次助攻哈里·凯恩在第75分钟和第86分钟连入两球，成功反超比分。由于比赛已进入伤停补时阶段，英格兰拿下本场比赛的概率极高。刚果民主共和国虽然进行了多次换人试图挽回败局，但在英格兰的控制下很难创造出绝对机会。预计最可能的最终比分将定格在2-1，英格兰顺利取胜。考虑到补时阶段刚果民主共和国必然大举压上，英格兰仍有极小概率通过反击由状态火热的哈里·凯恩完成帽子戏法。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2046,
+    "output": 1886
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.014030099999999998,
+  "wall_seconds": 23.393,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.95,\n    \"draw\": 0.04,\n    \"away\": 0.01\n  },\n  \"most_likely_score\": \"2-1\",\n  \"scorers\": [\n    {\n      \"player\": \"Harry Kane \",\n      \"team\": \"home\",\n      \"minute\": 94,\n      \"p\": 0.06\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"目前比赛已经进入第90分钟，英格兰以2-1领先刚果民主共和国。尽管刚果民主共和国在开场第7分钟由Brian Cipenga闪击破门，但英格兰在下半场展现了强大的压制力。全场比赛英格兰控球率达到60%，并创造了16次射门（7次射正）。替补登场的Anthony Gordon发挥了关键作用，两次助攻Harry Kane在第75分钟和第86分钟连入两球，成功反超比分。由于比赛已进入伤停补时阶段，英格兰拿下本场比赛的概率极高。刚果民主共和国虽然进行了多次换人试图挽回败局，但在英格兰的控制下很难创造出绝对机会。预计最可能的最终比分将定格在2-1，英格兰顺利取胜。考虑到补时阶段刚果民主共和国必然大举压上，英格兰仍有极小概率通过反击由状态火热的Harry Kane完成帽子戏法。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-01T16:03:06+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 3,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "England",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.15,
+        "away": 0.07
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 38,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 71,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第3分钟，目前比分依然是0-0。由于比赛刚刚开场，双方正处于互相试探的阶段，控球率方面英格兰暂为49%，刚果民主共和国51%，这反映出开局阶段球权转换较为频繁，英格兰尚未完全建立起前场的绝对压迫优势。不过，作为世界杯32强淘汰赛，英格兰在整体阵容深度、战术素养以及大赛经验上均对刚果民主共和国占据压倒性优势。随着比赛的深入，英格兰的中场控制力预计将逐渐接管比赛。基于双方巨大的实力差距，英格兰在常规时间内获胜的概率依然极高。考虑到淘汰赛阶段强队通常会更加注重防守的稳定性，英格兰在打破僵局后可能会选择稳妥地控制比赛节奏，因此2-0是最具可能性的最终比分。在进球球员预测方面，哈里·凯恩（哈里·凯恩）作为球队的进攻枢纽和第一点球手，随时可能利用个人能力或定位球机会首开纪录；而朱德·贝林厄姆（裘德·贝林厄姆）出色的后插上和禁区内抢点能力，使他极有希望在下半场利用对手体能下降的契机为球队扩大领先优势。"
+      },
+      "sources": [],
+      "cost_usd": 0.013811700000000001,
+      "tokens": {
+        "input": 902,
+        "output": 2042
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.289
+    },
+    {
+      "submitted_at": "2026-07-01T16:09:35+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 9,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.28,
+        "away": 0.24
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 38,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 72,
+          "p": 0.3,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第9分钟，刚果民主共和国（Congo DR）凭借 布莱恩·奇彭加 在第7分钟的进球以1-0领先英格兰。从开场数据来看，刚果民主共和国出人意料地占据了74%的控球率，并且把握住了仅有的一次射门机会。相比之下，英格兰开局较为慢热，目前还没有完成任何射门。尽管遭遇了早期的挫折，但考虑到比赛还有80多分钟，且英格兰在整体阵容深度和实力上占据明显优势，他们依然有很大的机会扭转局势。因此，英格兰逆转获胜的概率依然最高，但刚果民主共和国爆冷或逼平的几率因这个进球而有所增加。最可能的最终比分预测为2-1，英格兰有望在调整状态后连扳两球。在后续进球者方面，作为英格兰的头号射手，哈里·凯恩 极有可能在进攻端挺身而出，而 裘德·贝林厄姆 的后插上能力也使他成为打入关键进球的热门人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.011858700000000002,
+      "tokens": {
+        "input": 1034,
+        "output": 1710
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.9
+    },
+    {
+      "submitted_at": "2026-07-01T16:16:01+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 16,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.28,
+        "away": 0.2
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 42,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 78,
+          "p": 0.3,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第16分钟，英格兰目前0-1意外落后于刚果民主共和国。刚果民主共和国在开局阶段表现得极具战术执行力，并在第7分钟由布莱恩·齐彭加（布莱恩·奇彭加）接尚塞尔·姆本巴（尚塞尔·姆本巴）的助攻早早打破僵局。从前15分钟的数据来看，刚果民主共和国不仅把握住了仅有的一次射门机会，甚至在控球率上以53%略微占优。反观英格兰，开场显得有些慢热，至今尚未完成任何射门。尽管早早落后，但考虑到双方整体实力的巨大差距以及比赛还有超过70分钟的常规时间，英格兰依然有充足的时间扭转局势。一球落后的局面确实让英格兰的胜率较赛前有所下降，但他们依然是更有希望获胜的一方。综合实力对比，英格兰在适应比赛节奏后大概率会接管中场并持续施压。预计英格兰能够在半场结束前扳平比分，并在下半场完成反超，最可能的最终比分预测为2-1。在后续的进球预测中，英格兰的锋线核心哈里·凯恩（哈里·凯恩）和中场大将裘德·贝林厄姆（裘德·贝林厄姆）是最有可能挺身而出攻破对手密集防线的关键球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.015840299999999998,
+      "tokens": {
+        "input": 1058,
+        "output": 2338
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.398
+    },
+    {
+      "submitted_at": "2026-07-01T16:22:42+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 22,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.28,
+        "away": 0.24
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 42,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 75,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第22分钟，英格兰目前0-1落后于刚果民主共和国。刚果民主共和国在第7分钟凭借布莱恩·奇彭加的进球取得梦幻开局。从场面数据来看，尽管英格兰占据55%的控球率，但至今尚未完成任何射门，且裘德·贝林厄姆早早吃到黄牌，显示出球队在进攻端缺乏节奏且略显急躁。刚果民主共和国则展现了极高的反击效率，唯一一次射门即转化为进球。尽管比分落后且开局慢热，考虑到英格兰在整体阵容深度和硬实力上的巨大优势，且比赛还有约70分钟，他们仍有充足的时间扭转战局。因此，英格兰逆转取胜的概率依然是三项中最高的，但平局（拖入加时）和刚果民主共和国爆冷获胜的概率较赛前已有显著提升。结合英格兰强大的反扑能力和刚果民主共和国坚决的防守反击策略，最可能的最终比分预测为2-1，英格兰有望在后续比赛中连扳两球完成逆转。在落后的局面下，英格兰势必大举压上，锋线核心哈里·凯恩以及中场核心裘德·贝林厄姆将是打破僵局和反超比分的关键人物，预计他们将在半场结束前或下半场中后段取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0168273,
+      "tokens": {
+        "input": 1122,
+        "output": 2484
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.215
+    },
+    {
+      "submitted_at": "2026-07-01T16:29:14+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 29,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.38,
+        "draw": 0.42,
+        "away": 0.2
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 65,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第29分钟，英格兰目前0-1落后于刚果民主共和国。刚果民主共和国在第7分钟凭借布莱恩·齐彭加（布莱恩·奇彭加）的进球取得梦幻开局。从场面数据来看，英格兰虽然占据55%的控球率，但进攻端表现极其挣扎，至今0次射门。相反，刚果民主共和国仅有1次射门就转化为进球，防守反击策略非常奏效。贝林厄姆（裘德·贝林厄姆）早早吃到黄牌也反映出英格兰中场在落后时的急躁情绪。尽管英格兰纸面实力远高于对手，但面对密集防守且一球落后的局面，90分钟内直接逆转取胜的难度正在增加。综合当前局势，英格兰在常规时间内扳平比分的可能性最大，因此平局（将比赛拖入加时赛）的概率上升至最高。最可能的最终比分预测为1-1。预计英格兰会在下半场大举压上加强攻势，哈里·凯恩 或 布卡约·萨卡 等核心攻击手有望在下半场中后段利用阵地战或定位球机会破门救主。"
+      },
+      "sources": [],
+      "cost_usd": 0.017413199999999997,
+      "tokens": {
+        "input": 1440,
+        "output": 2524
+      },
+      "tool_calls": 0,
+      "wall_seconds": 87.23
+    },
+    {
+      "submitted_at": "2026-07-01T16:36:38+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 36,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.33,
+        "away": 0.25
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 55,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 82,
+          "p": 0.28,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第36分钟，英格兰目前0-1落后于刚果民主共和国。刚果民主共和国在第7分钟由布莱恩·奇彭加接尚塞尔·姆本巴助攻闪击破门，取得了梦幻开局。从场面数据来看，尽管英格兰占据了57%的控球率，但他们在进攻端显得十分挣扎，至今仅创造出1次射门机会。相反，刚果民主共和国防守稳固，且反击极具威胁。裘德·贝林厄姆在第19分钟吃到黄牌，也反映出英格兰中场在落后局面下的急躁情绪。尽管比分落后且进攻受阻，但考虑到英格兰强大的整体实力、丰富的比赛经验以及替补席的深度，他们仍有较大机会在下半场通过战术调整扭转局势。因此，英格兰逆转取胜的概率依然保持最高（约42%），常规时间内逼平对手的概率为33%，而刚果民主共和国爆冷获胜的概率为25%。最可能的最终比分预测为2-1，英格兰有望在下半场连扳两球。预计哈里·凯恩等核心得分手将在下半场中段（如第55分钟左右）挺身而出扳平比分，而边路快马如布卡约·萨卡有望在比赛尾声阶段（第82分钟左右）利用对手体能下降的机会完成绝杀。"
+      },
+      "sources": [],
+      "cost_usd": 0.01655745,
+      "tokens": {
+        "input": 1207,
+        "output": 2427
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.16
+    },
+    {
+      "submitted_at": "2026-07-01T16:43:07+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 43,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.45,
+        "draw": 0.32,
+        "away": 0.23
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 62,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 84,
+          "p": 0.35,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第43分钟，目前比分为英格兰 0-1 刚果民主共和国。刚果民主共和国在开场第7分钟凭借 布莱恩·奇彭加 的进球取得领先，并在此后采取了较为稳健的防守策略。从场面数据来看，落后的英格兰队占据了58%的控球率，并完成了6次射门（2次射正），在进攻端施加了持续的压力。尽管目前处于落后，但英格兰队在整体实力和阵容深度上占据明显优势，下半场势必会进一步加强攻势。考虑到英格兰队创造机会的能力以及刚果民主共和国防线的体能消耗，英格兰队有很大机会在下半场连入两球实现逆转。综合目前的比赛进程与双方实力差距，英格兰队最终获胜的概率依然最高。预计最终比分最可能为 2-1，哈里·凯恩 和 布卡约·萨卡 等核心攻击手有望在下半场挺身而出为英格兰队建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.01086855,
+      "tokens": {
+        "input": 1207,
+        "output": 1524
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.284
+    },
+    {
+      "submitted_at": "2026-07-01T16:49:22+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.32,
+        "away": 0.2
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 62,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 78,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第45分钟，目前比分为英格兰 0-1 刚果民主共和国。刚果民主共和国在开场第7分钟由 布莱恩·奇彭加 闪击破门取得领先。尽管比分落后，英格兰在场面上占据明显主动，半场控球率达到59%，并完成了7次射门（3次射正），而对手仅有3次射门。半场结束前 哈里·凯恩 经历了VAR介入，显示出英格兰在进攻端持续施压并逐渐逼近进球。考虑到英格兰强大的整体实力和进攻火力，下半场他们有极大概率扳平甚至反超比分。因此，英格兰逆转获胜的概率依然最高，平局进入加时赛的可能性次之。结合英格兰的反扑决心与刚果民主共和国的防守压力，最可能的最终比分预测为 2-1，英格兰在下半场连入两球完成逆转。在后续进球者方面，作为核心射手的 哈里·凯恩 极有可能在下半场中段打破僵局，而 裘德·贝林厄姆 的后插上能力也将在比赛后段的猛攻中发挥关键作用。"
+      },
+      "sources": [],
+      "cost_usd": 0.01675695,
+      "tokens": {
+        "input": 1271,
+        "output": 2448
+      },
+      "tool_calls": 0,
+      "wall_seconds": 30.729
+    },
+    {
+      "submitted_at": "2026-07-01T17:11:58+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 56,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.45,
+        "draw": 0.35,
+        "away": 0.2
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 68,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 84,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第56分钟，英格兰目前0-1落后于刚果民主共和国。刚果民主共和国在第7分钟由布莱恩·奇彭加早早打破僵局，随后便转入防守。尽管比分落后，英格兰在场面上占据绝对主动，控球率达到58%，并创造了8次射门（其中4次射正），而对手仅有3次射门且只有1次射正便取得进球。刚果民主共和国门将已经做出了3次扑救，显示出英格兰攻势的猛烈。考虑到英格兰的整体实力优势以及比赛还有超过半小时的时间，他们有很大机会扳平甚至反超比分。哈里·凯恩（哈里·凯恩）和朱德·贝林厄姆（裘德·贝林厄姆）等核心球员在进攻端极具威胁，且凯恩在半场结束前曾有VAR介入的事件，显示其活跃度。综合目前的场面压制力和时间因素，英格兰逆转取胜的概率依然最高，最可能的最终比分预测为2-1。预计英格兰会在接下来的比赛中持续施压，凯恩有望在下半场中段扳平比分，随后英格兰可能会在比赛尾声阶段完成反超。"
+      },
+      "sources": [],
+      "cost_usd": 0.011238149999999999,
+      "tokens": {
+        "input": 1271,
+        "output": 1572
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.31
+    },
+    {
+      "submitted_at": "2026-07-01T17:18:19+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 63,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.32,
+        "draw": 0.45,
+        "away": 0.23
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 76,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 84,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第63分钟，英格兰目前0-1落后于刚果民主共和国。早前在第7分钟，布莱恩·奇彭加接尚塞尔·姆本巴的助攻为客队闪电破门。从场面数据来看，英格兰完全掌控了比赛节奏，占据了59%的控球率，并完成了9次射门（4次射正），而刚果民主共和国仅有3次射门（1次射正即转化为进球）。客队门将已经做出了4次关键扑救，说明英格兰的攻势非常猛烈。此外，第44分钟哈里·凯恩曾引发VAR介入，进一步印证了英格兰在进攻端施加的巨大压力。尽管英格兰纸面实力占优且攻势如潮，但留给他们的常规时间仅剩不到半小时。考虑到刚果民主共和国目前的密集防守策略，英格兰在90分钟内扳平比分的概率最高，因此平局（45%）是目前最可能的结果。客队死守获胜的概率约为23%，而英格兰连入两球直接逆转的概率为32%。最可能的常规时间最终比分为1-1。在后续进球逻辑上，预计英格兰会在接下来的比赛中持续围攻对手禁区，作为球队核心与头号射手，哈里·凯恩极有可能在比赛后半段（如第76分钟左右）挺身而出打入扳平比分的进球，裘德·贝林厄姆也有后插上破门的机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.01431885,
+      "tokens": {
+        "input": 1271,
+        "output": 2061
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.235
+    },
+    {
+      "submitted_at": "2026-07-01T17:24:43+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 69,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.38,
+        "away": 0.32
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 78,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Marcus Rashford",
+          "minute": 86,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第69分钟，英格兰目前0-1落后于刚果民主共和国。刚果民主共和国在开场第7分钟由 布莱恩·奇彭加 闪击破门，随后全线退守。从场面数据来看，英格兰占据了59%的控球率，并完成了10次射门（4次射正），但刚果民主共和国门将表现出色，贡献了4次关键扑救。为了扭转局势，英格兰在第61分钟换上了 马库斯·拉什福德 和 诺尼·马杜埃凯 以加强边路进攻与冲击力。考虑到英格兰强大的整体实力和持续的施压，他们在剩余时间及伤停补时内扳平比分的可能性极大。然而，由于比赛所剩时间不多，英格兰要在常规时间内连入两球完成逆转的难度正在增加，因此平局成为了目前概率最高的结果。当然，刚果民主共和国若能继续保持防守韧性，也有不小的机会爆冷获胜。综合判断，预测最可能的最终比分为1-1。在后续进球者方面，作为主力中锋的 哈里·凯恩 依然是英格兰最可靠的得分点，而替补登场的 马库斯·拉什福德 也有望利用体能优势在比赛尾声阶段创造威胁并完成破门。"
+      },
+      "sources": [],
+      "cost_usd": 0.0127491,
+      "tokens": {
+        "input": 1408,
+        "output": 1789
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.491
+    },
+    {
+      "submitted_at": "2026-07-01T17:31:03+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 76,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.15,
+        "draw": 0.35,
+        "away": 0.5
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第76分钟，英格兰目前0-1落后于刚果民主共和国。从场面数据来看，刚果民主共和国在第7分钟由布莱恩·奇彭加早早取得领先，随后采取了极为坚决的防守反击策略。英格兰虽然掌控了60.0%的控球率，并完成了10次射门（4次射正），但刚果民主共和国门将发挥出色，贡献了4次关键扑救。英格兰在第60分钟换上马库斯·拉什福德和诺尼·马杜埃凯以期加强边路冲击力，但面对密集的防线依然破门乏术。随着比赛进入尾声，留给英格兰的时间已经不多。刚果民主共和国成功守住胜果的概率已上升至50%，而英格兰在常规时间内绝平的概率约为35%，直接逆转取胜的概率仅剩15%。因此，0-1维持到终场是最可能的最终比分。在后续进球逻辑上，如果英格兰能够打破僵局，主力中锋哈里·凯恩以及替补登场的生力军马库斯·拉什福德是最有可能的得分点；而刚果民主共和国若能抓住英格兰大举压上留下的空当，替补登场的纳塔内尔·姆布库有望在反击中锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.0125244,
+      "tokens": {
+        "input": 1482,
+        "output": 1741
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.074
+    },
+    {
+      "submitted_at": "2026-07-01T17:37:22+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 82,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.3,
+        "away": 0.65
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第82分钟，目前比分为英格兰0-1落后于刚果民主共和国。从场面数据来看，英格兰占据了60%的控球率，并有多达10次射门和4次射正，但刚果民主共和国门将贡献了4次关键扑救，力保球门不失。刚果民主共和国在开场第7分钟由布莱恩·奇彭加闪击得手后，一直采取坚决的防守反击策略。英格兰下半场接连换上拉什福德（马库斯·拉什福德）和马杜埃凯（诺尼·马杜埃凯）等攻击手试图挽回败局，但留给他们的时间已经不多。考虑到常规时间仅剩不到10分钟加上伤停补时，刚果民主共和国守住这场历史性胜利的概率大幅上升至65%，而英格兰绝平的概率约为30%，逆转取胜的希望极其渺茫。最可能的最终比分维持在0-1。如果比赛尾声阶段有进球产生，英格兰的绝对核心哈里·凯恩是最有可能在狂攻中把握机会完成致命一击的球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.008383199999999999,
+      "tokens": {
+        "input": 1552,
+        "output": 1072
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.418
+    },
+    {
+      "submitted_at": "2026-07-01T17:43:29+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 88,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.15,
+        "draw": 0.82,
+        "away": 0.03
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已进行至第88分钟，英格兰与刚果民主共和国战成1-1平。刚果民主共和国在开场第7分钟由 布莱恩·奇彭加 闪击破门，随后英格兰掌控了比赛节奏，控球率达到60%，并完成了12次射门（5次射正）。下半场英格兰通过换人调整加强攻势，替补登场的 安东尼·戈登 在第75分钟助攻 哈里·凯恩 扳平比分。考虑到常规时间所剩无几，双方在世界杯淘汰赛阶段的最后时刻通常会踢得相对谨慎，以避免致命失误，比赛进入加时赛的概率极高。因此，常规时间最可能的最终比分是1-1。尽管如此，英格兰在伤停补时阶段仍具备一定的绝杀能力，状态出色的 哈里·凯恩 和替补登场的 布卡约·萨卡 等锋线球员是潜在的进球人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0164514,
+      "tokens": {
+        "input": 1766,
+        "output": 2317
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.271
+    },
+    {
+      "submitted_at": "2026-07-01T17:49:47+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.96,
+        "draw": 0.03,
+        "away": 0.01
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入常规时间的最后一分钟（第90分钟），英格兰目前以2-1领先刚果民主共和国。从场面数据来看，英格兰占据了61%的控球率，并创造了13次射门（5次射正），而刚果民主共和国仅有5次射门。尽管刚果民主共和国在开场第7分钟由布莱恩·奇彭加早早取得领先，但英格兰在下半场展现了强大的压制力，凭借哈里·凯恩在第75分钟和第86分钟的梅开二度成功反超比分。由于比赛即将进入伤停补时阶段，英格兰获胜的概率已经极高。刚果民主共和国势必会在最后时刻全线压上尝试扳平比分，但这也会给英格兰留下反击空间。综合当前局势，2-1是最可能的最终比分。如果伤停补时阶段还有进球产生，替补登场且已经贡献一次助攻的安东尼·戈登有望在反击中利用对手身后的空当完成破门。"
+      },
+      "sources": [],
+      "cost_usd": 0.0167286,
+      "tokens": {
+        "input": 1832,
+        "output": 2350
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.672
+    },
+    {
+      "submitted_at": "2026-07-01T17:56:04+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "England",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-01T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.95,
+        "draw": 0.04,
+        "away": 0.01
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛已经进入第90分钟，英格兰以2-1领先刚果民主共和国。尽管刚果民主共和国在开场第7分钟由布莱恩·奇彭加闪击破门，但英格兰在下半场展现了强大的压制力。全场比赛英格兰控球率达到60%，并创造了16次射门（7次射正）。替补登场的安东尼·戈登发挥了关键作用，两次助攻哈里·凯恩在第75分钟和第86分钟连入两球，成功反超比分。由于比赛已进入伤停补时阶段，英格兰拿下本场比赛的概率极高。刚果民主共和国虽然进行了多次换人试图挽回败局，但在英格兰的控制下很难创造出绝对机会。预计最可能的最终比分将定格在2-1，英格兰顺利取胜。考虑到补时阶段刚果民主共和国必然大举压上，英格兰仍有极小概率通过反击由状态火热的哈里·凯恩完成帽子戏法。"
+      },
+      "sources": [],
+      "cost_usd": 0.014030099999999998,
+      "tokens": {
+        "input": 2046,
+        "output": 1886
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.393
+    }
+  ]
+}

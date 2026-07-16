@@ -1,0 +1,5098 @@
+{
+  "tournament_id": "world_cup_2026",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "model_category": "closed_llm",
+  "setting": "S1",
+  "submitted_at": "2026-06-10T00:08:40+00:00",
+  "status": "ok",
+  "prediction": {
+    "summary": {
+      "group_stage": "2026年世界杯小组赛预测综合考虑了各队近期状态、伤病情况（如内马尔缺阵、梅西带伤、亚马尔首发等）以及扩军至48支球队后的出线形势。传统强队如法国、阿根廷、西班牙和德国在小组赛中展现出强大的统治力，而恩德里克、亚马尔等年轻球员将大放异彩。部分实力接近的小组中，平局较多，各队为争夺成绩最好的小组第三名竞争激烈。",
+      "knockout": "2026年世界杯淘汰赛阶段充满强强对话。巴西队凭借维尼修斯和恩德里克等年轻天才的出色发挥，一路过关斩将，在半决赛击败宿敌阿根廷，并在决赛中力克姆巴佩领衔的法国队，夺得队史第六座世界杯冠军。法国队和西班牙队展现了强大的欧洲足球底蕴，分别获得亚军和季军。梅西和C罗在四分之一决赛上演了史诗般的对决，最终阿根廷险胜，但止步半决赛。"
+    },
+    "champion": {
+      "id": "brazil",
+      "name": "Brazil",
+      "flag": "🇧🇷",
+      "group": "C",
+      "rank": 1
+    },
+    "runner_up": {
+      "id": "france",
+      "name": "France",
+      "flag": "🇫🇷",
+      "group": "I",
+      "rank": 1
+    },
+    "third_place": {
+      "id": "spain",
+      "name": "Spain",
+      "flag": "🇪🇸",
+      "group": "H",
+      "rank": 1
+    },
+    "group_matches": [
+      {
+        "match_no": 1,
+        "id": "M1",
+        "group": "A",
+        "home": "Mexico",
+        "away": "South Africa",
+        "score": "2-1",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Santiago Giménez",
+            "team": "home",
+            "minute": 24
+          },
+          {
+            "player": "Edson Álvarez",
+            "team": "home",
+            "minute": 68
+          },
+          {
+            "player": "Percy Tau",
+            "team": "away",
+            "minute": 82
+          }
+        ],
+        "reasoning": "墨西哥凭借主场优势和更强的中场控制力险胜南非。",
+        "kickoff_utc": "2026-06-11T19:00Z",
+        "venue": "Estadio Azteca, Mexico City"
+      },
+      {
+        "match_no": 2,
+        "id": "M2",
+        "group": "A",
+        "home": "South Korea",
+        "away": "Czech Republic",
+        "score": "1-1",
+        "result": "draw",
+        "scorers": [
+          {
+            "player": "Son Heung-min",
+            "team": "home",
+            "minute": 45
+          },
+          {
+            "player": "Patrik Schick",
+            "team": "away",
+            "minute": 71
+          }
+        ],
+        "reasoning": "韩国与捷克实力相当，孙兴慜的进球帮助球队拿到一分。",
+        "kickoff_utc": "2026-06-12T02:00Z",
+        "venue": "Estadio Akron, Zapopan"
+      },
+      {
+        "match_no": 3,
+        "id": "M3",
+        "group": "B",
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "score": "1-1",
+        "result": "draw",
+        "scorers": [
+          {
+            "player": "Jonathan David",
+            "team": "home",
+            "minute": 33
+          },
+          {
+            "player": "Edin Džeko",
+            "team": "away",
+            "minute": 59
+          }
+        ],
+        "reasoning": "加拿大在阿方索·戴维斯出战成疑的情况下，依靠戴维德的进球逼平波黑。",
+        "kickoff_utc": "2026-06-12T19:00Z",
+        "venue": "BMO Field, Toronto"
+      },
+      {
+        "match_no": 4,
+        "id": "M4",
+        "group": "D",
+        "home": "United States",
+        "away": "Paraguay",
+        "score": "2-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Christian Pulisic",
+            "team": "home",
+            "minute": 18
+          },
+          {
+            "player": "Folarin Balogun",
+            "team": "home",
+            "minute": 62
+          }
+        ],
+        "reasoning": "美国队主场作战，普利西奇发挥出色轻松击败巴拉圭。",
+        "kickoff_utc": "2026-06-13T01:00Z",
+        "venue": "SoFi Stadium, Inglewood"
+      },
+      {
+        "match_no": 5,
+        "id": "M5",
+        "group": "C",
+        "home": "Haiti",
+        "away": "Scotland",
+        "score": "0-2",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Scott McTominay",
+            "team": "away",
+            "minute": 41
+          },
+          {
+            "player": "John McGinn",
+            "team": "away",
+            "minute": 75
+          }
+        ],
+        "reasoning": "苏格兰整体实力占优，麦克托米奈继续展现得分能力。",
+        "kickoff_utc": "2026-06-14T01:00Z",
+        "venue": "Gillette Stadium, Foxborough"
+      },
+      {
+        "match_no": 6,
+        "id": "M6",
+        "group": "D",
+        "home": "Australia",
+        "away": "Turkey",
+        "score": "1-2",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Mitchell Duke",
+            "team": "home",
+            "minute": 22
+          },
+          {
+            "player": "Arda Güler",
+            "team": "away",
+            "minute": 54
+          },
+          {
+            "player": "Hakan Çalhanoğlu",
+            "team": "away",
+            "minute": 88
+          }
+        ],
+        "reasoning": "居莱尔等年轻球员发挥出色，土耳其逆转击败澳大利亚。",
+        "kickoff_utc": "2026-06-14T04:00Z",
+        "venue": "BC Place, Vancouver"
+      },
+      {
+        "match_no": 7,
+        "id": "M7",
+        "group": "C",
+        "home": "Brazil",
+        "away": "Morocco",
+        "score": "2-1",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Vinícius Júnior",
+            "team": "home",
+            "minute": 31
+          },
+          {
+            "player": "Rodrygo",
+            "team": "home",
+            "minute": 67
+          },
+          {
+            "player": "Youssef En-Nesyri",
+            "team": "away",
+            "minute": 81
+          }
+        ],
+        "reasoning": "巴西在内马尔缺阵的情况下，依靠维尼修斯和罗德里戈的发挥战胜摩洛哥。",
+        "kickoff_utc": "2026-06-13T22:00Z",
+        "venue": "MetLife Stadium, East Rutherford"
+      },
+      {
+        "match_no": 8,
+        "id": "M8",
+        "group": "B",
+        "home": "Qatar",
+        "away": "Switzerland",
+        "score": "0-3",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Zeki Amdouni",
+            "team": "away",
+            "minute": 14
+          },
+          {
+            "player": "Xherdan Shaqiri",
+            "team": "away",
+            "minute": 45
+          },
+          {
+            "player": "Granit Xhaka",
+            "team": "away",
+            "minute": 78
+          }
+        ],
+        "reasoning": "瑞士队经验丰富，多点开花轻松击败卡塔尔。",
+        "kickoff_utc": "2026-06-13T19:00Z",
+        "venue": "Levi's Stadium, Santa Clara"
+      },
+      {
+        "match_no": 9,
+        "id": "M9",
+        "group": "E",
+        "home": "Ivory Coast",
+        "away": "Ecuador",
+        "score": "1-1",
+        "result": "draw",
+        "scorers": [
+          {
+            "player": "Sébastien Haller",
+            "team": "home",
+            "minute": 39
+          },
+          {
+            "player": "Enner Valencia",
+            "team": "away",
+            "minute": 52
+          }
+        ],
+        "reasoning": "科特迪瓦与厄瓜多尔身体对抗激烈，最终握手言和。",
+        "kickoff_utc": "2026-06-14T23:00Z",
+        "venue": "Lincoln Financial Field, Philadelphia"
+      },
+      {
+        "match_no": 10,
+        "id": "M10",
+        "group": "E",
+        "home": "Germany",
+        "away": "Curaçao",
+        "score": "4-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Jamal Musiala",
+            "team": "home",
+            "minute": 12
+          },
+          {
+            "player": "Florian Wirtz",
+            "team": "home",
+            "minute": 28
+          },
+          {
+            "player": "Kai Havertz",
+            "team": "home",
+            "minute": 55
+          },
+          {
+            "player": "Niclas Füllkrug",
+            "team": "home",
+            "minute": 83
+          }
+        ],
+        "reasoning": "德国队实力碾压库拉索，穆西亚拉和维尔茨表现抢眼。",
+        "kickoff_utc": "2026-06-14T17:00Z",
+        "venue": "NRG Stadium, Houston"
+      },
+      {
+        "match_no": 11,
+        "id": "M11",
+        "group": "F",
+        "home": "Netherlands",
+        "away": "Japan",
+        "score": "2-1",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Cody Gakpo",
+            "team": "home",
+            "minute": 25
+          },
+          {
+            "player": "Xavi Simons",
+            "team": "home",
+            "minute": 61
+          },
+          {
+            "player": "Kaoru Mitoma",
+            "team": "away",
+            "minute": 74
+          }
+        ],
+        "reasoning": "荷兰队在缺少廷贝尔的情况下依然稳扎稳打，小胜日本。",
+        "kickoff_utc": "2026-06-14T20:00Z",
+        "venue": "AT&T Stadium, Arlington"
+      },
+      {
+        "match_no": 12,
+        "id": "M12",
+        "group": "F",
+        "home": "Sweden",
+        "away": "Tunisia",
+        "score": "2-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Alexander Isak",
+            "team": "home",
+            "minute": 34
+          },
+          {
+            "player": "Dejan Kulusevski",
+            "team": "home",
+            "minute": 68
+          }
+        ],
+        "reasoning": "瑞典锋线双星闪耀，轻松击败突尼斯。",
+        "kickoff_utc": "2026-06-15T02:00Z",
+        "venue": "Estadio BBVA, Guadalupe"
+      },
+      {
+        "match_no": 13,
+        "id": "M13",
+        "group": "H",
+        "home": "Saudi Arabia",
+        "away": "Uruguay",
+        "score": "0-2",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Darwin Núñez",
+            "team": "away",
+            "minute": 42
+          },
+          {
+            "player": "Federico Valverde",
+            "team": "away",
+            "minute": 76
+          }
+        ],
+        "reasoning": "乌拉圭中前场实力强劲，努涅斯破门完胜沙特。",
+        "kickoff_utc": "2026-06-15T22:00Z",
+        "venue": "Hard Rock Stadium, Miami Gardens"
+      },
+      {
+        "match_no": 14,
+        "id": "M14",
+        "group": "H",
+        "home": "Spain",
+        "away": "Cape Verde",
+        "score": "3-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Lamine Yamal",
+            "team": "home",
+            "minute": 19
+          },
+          {
+            "player": "Álvaro Morata",
+            "team": "home",
+            "minute": 44
+          },
+          {
+            "player": "Dani Olmo",
+            "team": "home",
+            "minute": 81
+          }
+        ],
+        "reasoning": "亚马尔首发登场并取得进球，西班牙大胜佛得角。",
+        "kickoff_utc": "2026-06-15T16:00Z",
+        "venue": "Mercedes-Benz Stadium, Atlanta"
+      },
+      {
+        "match_no": 15,
+        "id": "M15",
+        "group": "G",
+        "home": "Iran",
+        "away": "New Zealand",
+        "score": "1-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Mehdi Taremi",
+            "team": "home",
+            "minute": 58
+          }
+        ],
+        "reasoning": "伊朗凭借塔雷米的个人能力小胜新西兰。",
+        "kickoff_utc": "2026-06-16T01:00Z",
+        "venue": "SoFi Stadium, Inglewood"
+      },
+      {
+        "match_no": 16,
+        "id": "M16",
+        "group": "G",
+        "home": "Belgium",
+        "away": "Egypt",
+        "score": "2-1",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Romelu Lukaku",
+            "team": "home",
+            "minute": 27
+          },
+          {
+            "player": "Kevin De Bruyne",
+            "team": "home",
+            "minute": 72
+          },
+          {
+            "player": "Mohamed Salah",
+            "team": "away",
+            "minute": 45
+          }
+        ],
+        "reasoning": "比利时黄金一代余热未尽，德布劳内助球队险胜埃及。",
+        "kickoff_utc": "2026-06-15T19:00Z",
+        "venue": "Lumen Field, Seattle"
+      },
+      {
+        "match_no": 17,
+        "id": "M17",
+        "group": "I",
+        "home": "France",
+        "away": "Senegal",
+        "score": "2-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Kylian Mbappé",
+            "team": "home",
+            "minute": 31
+          },
+          {
+            "player": "Antoine Griezmann",
+            "team": "home",
+            "minute": 65
+          }
+        ],
+        "reasoning": "姆巴佩状态火热，法国队轻松击败塞内加尔。",
+        "kickoff_utc": "2026-06-16T19:00Z",
+        "venue": "MetLife Stadium, East Rutherford"
+      },
+      {
+        "match_no": 18,
+        "id": "M18",
+        "group": "I",
+        "home": "Iraq",
+        "away": "Norway",
+        "score": "0-3",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Erling Haaland",
+            "team": "away",
+            "minute": 15
+          },
+          {
+            "player": "Erling Haaland",
+            "team": "away",
+            "minute": 52
+          },
+          {
+            "player": "Martin Ødegaard",
+            "team": "away",
+            "minute": 84
+          }
+        ],
+        "reasoning": "哈兰德梅开二度，挪威展现出强大的进攻火力。",
+        "kickoff_utc": "2026-06-16T22:00Z",
+        "venue": "Gillette Stadium, Foxborough"
+      },
+      {
+        "match_no": 19,
+        "id": "M19",
+        "group": "J",
+        "home": "Argentina",
+        "away": "Algeria",
+        "score": "2-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Lionel Messi",
+            "team": "home",
+            "minute": 38
+          },
+          {
+            "player": "Julián Álvarez",
+            "team": "home",
+            "minute": 71
+          }
+        ],
+        "reasoning": "梅西带伤出战并打入一球，阿根廷稳稳拿下阿尔及利亚。",
+        "kickoff_utc": "2026-06-17T01:00Z",
+        "venue": "Arrowhead Stadium, Kansas City"
+      },
+      {
+        "match_no": 20,
+        "id": "M20",
+        "group": "J",
+        "home": "Austria",
+        "away": "Jordan",
+        "score": "2-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Marcel Sabitzer",
+            "team": "home",
+            "minute": 24
+          },
+          {
+            "player": "Christoph Baumgartner",
+            "team": "home",
+            "minute": 66
+          }
+        ],
+        "reasoning": "奥地利战术执行力极强，萨比策建功击败约旦。",
+        "kickoff_utc": "2026-06-17T04:00Z",
+        "venue": "Levi's Stadium, Santa Clara"
+      },
+      {
+        "match_no": 21,
+        "id": "M21",
+        "group": "L",
+        "home": "Ghana",
+        "away": "Panama",
+        "score": "2-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Mohammed Kudus",
+            "team": "home",
+            "minute": 41
+          },
+          {
+            "player": "Iñaki Williams",
+            "team": "home",
+            "minute": 79
+          }
+        ],
+        "reasoning": "加纳身体素质占优，库杜斯表现活跃完胜巴拿马。",
+        "kickoff_utc": "2026-06-17T23:00Z",
+        "venue": "Toronto Stadium, Toronto"
+      },
+      {
+        "match_no": 22,
+        "id": "M22",
+        "group": "L",
+        "home": "England",
+        "away": "Croatia",
+        "score": "1-1",
+        "result": "draw",
+        "scorers": [
+          {
+            "player": "Harry Kane",
+            "team": "home",
+            "minute": 35
+          },
+          {
+            "player": "Andrej Kramarić",
+            "team": "away",
+            "minute": 62
+          }
+        ],
+        "reasoning": "英格兰与克罗地亚上演强强对话，最终握手言和。",
+        "kickoff_utc": "2026-06-17T20:00Z",
+        "venue": "AT&T Stadium, Arlington"
+      },
+      {
+        "match_no": 23,
+        "id": "M23",
+        "group": "K",
+        "home": "Portugal",
+        "away": "DR Congo",
+        "score": "3-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Cristiano Ronaldo",
+            "team": "home",
+            "minute": 21
+          },
+          {
+            "player": "Bruno Fernandes",
+            "team": "home",
+            "minute": 54
+          },
+          {
+            "player": "Rafael Leão",
+            "team": "home",
+            "minute": 88
+          }
+        ],
+        "reasoning": "葡萄牙进攻端火力全开，C罗领衔大胜刚果民主共和国。",
+        "kickoff_utc": "2026-06-17T17:00Z",
+        "venue": "NRG Stadium, Houston"
+      },
+      {
+        "match_no": 24,
+        "id": "M24",
+        "group": "K",
+        "home": "Uzbekistan",
+        "away": "Colombia",
+        "score": "0-2",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Luis Díaz",
+            "team": "away",
+            "minute": 39
+          },
+          {
+            "player": "James Rodríguez",
+            "team": "away",
+            "minute": 73
+          }
+        ],
+        "reasoning": "哥伦比亚技术细腻，路易斯·迪亚斯带队击败乌兹别克斯坦。",
+        "kickoff_utc": "2026-06-18T02:00Z",
+        "venue": "Estadio Azteca, Mexico City"
+      },
+      {
+        "match_no": 25,
+        "id": "M25",
+        "group": "A",
+        "home": "Czech Republic",
+        "away": "South Africa",
+        "score": "2-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Tomáš Souček",
+            "team": "home",
+            "minute": 45
+          },
+          {
+            "player": "Adam Hložek",
+            "team": "home",
+            "minute": 81
+          }
+        ],
+        "reasoning": "捷克队高空优势明显，希克缺阵下依然完胜南非。",
+        "kickoff_utc": "2026-06-18T16:00Z",
+        "venue": "Mercedes-Benz Stadium, Atlanta"
+      },
+      {
+        "match_no": 26,
+        "id": "M26",
+        "group": "B",
+        "home": "Switzerland",
+        "away": "Bosnia and Herzegovina",
+        "score": "2-1",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Breel Embolo",
+            "team": "home",
+            "minute": 28
+          },
+          {
+            "player": "Ruben Vargas",
+            "team": "home",
+            "minute": 65
+          },
+          {
+            "player": "Ermedin Demirović",
+            "team": "away",
+            "minute": 51
+          }
+        ],
+        "reasoning": "瑞士队战术素养更高，恩博洛建功击败波黑。",
+        "kickoff_utc": "2026-06-18T19:00Z",
+        "venue": "SoFi Stadium, Inglewood"
+      },
+      {
+        "match_no": 27,
+        "id": "M27",
+        "group": "B",
+        "home": "Canada",
+        "away": "Qatar",
+        "score": "2-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Alphonso Davies",
+            "team": "home",
+            "minute": 16
+          },
+          {
+            "player": "Tajon Buchanan",
+            "team": "home",
+            "minute": 74
+          }
+        ],
+        "reasoning": "阿方索·戴维斯伤愈复出并进球，加拿大完胜卡塔尔。",
+        "kickoff_utc": "2026-06-18T22:00Z",
+        "venue": "BC Place, Vancouver"
+      },
+      {
+        "match_no": 28,
+        "id": "M28",
+        "group": "A",
+        "home": "Mexico",
+        "away": "South Korea",
+        "score": "1-1",
+        "result": "draw",
+        "scorers": [
+          {
+            "player": "Hirving Lozano",
+            "team": "home",
+            "minute": 55
+          },
+          {
+            "player": "Lee Kang-in",
+            "team": "away",
+            "minute": 32
+          }
+        ],
+        "reasoning": "墨西哥与韩国展开对攻，最终平局收场。",
+        "kickoff_utc": "2026-06-19T01:00Z",
+        "venue": "Estadio Akron, Zapopan"
+      },
+      {
+        "match_no": 29,
+        "id": "M29",
+        "group": "C",
+        "home": "Brazil",
+        "away": "Haiti",
+        "score": "4-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Endrick",
+            "team": "home",
+            "minute": 11
+          },
+          {
+            "player": "Endrick",
+            "team": "home",
+            "minute": 43
+          },
+          {
+            "player": "Raphinha",
+            "team": "home",
+            "minute": 60
+          },
+          {
+            "player": "Lucas Paquetá",
+            "team": "home",
+            "minute": 85
+          }
+        ],
+        "reasoning": "恩德里克梅开二度，巴西队年轻天才闪耀全场。",
+        "kickoff_utc": "2026-06-20T00:30Z",
+        "venue": "Lincoln Financial Field, Philadelphia"
+      },
+      {
+        "match_no": 30,
+        "id": "M30",
+        "group": "C",
+        "home": "Scotland",
+        "away": "Morocco",
+        "score": "1-1",
+        "result": "draw",
+        "scorers": [
+          {
+            "player": "Che Adams",
+            "team": "home",
+            "minute": 22
+          },
+          {
+            "player": "Hakim Ziyech",
+            "team": "away",
+            "minute": 68
+          }
+        ],
+        "reasoning": "苏格兰与摩洛哥防守严密，双方各拿一分。",
+        "kickoff_utc": "2026-06-19T22:00Z",
+        "venue": "Gillette Stadium, Foxborough"
+      },
+      {
+        "match_no": 31,
+        "id": "M31",
+        "group": "D",
+        "home": "Turkey",
+        "away": "Paraguay",
+        "score": "1-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Kenan Yıldız",
+            "team": "home",
+            "minute": 77
+          }
+        ],
+        "reasoning": "伊尔迪兹打入制胜球，土耳其小胜巴拉圭。",
+        "kickoff_utc": "2026-06-20T03:00Z",
+        "venue": "Levi's Stadium, Santa Clara"
+      },
+      {
+        "match_no": 32,
+        "id": "M32",
+        "group": "D",
+        "home": "United States",
+        "away": "Australia",
+        "score": "1-1",
+        "result": "draw",
+        "scorers": [
+          {
+            "player": "Weston McKennie",
+            "team": "home",
+            "minute": 40
+          },
+          {
+            "player": "Craig Goodwin",
+            "team": "away",
+            "minute": 82
+          }
+        ],
+        "reasoning": "美国队遭遇澳大利亚顽强抵抗，遗憾收获平局。",
+        "kickoff_utc": "2026-06-19T19:00Z",
+        "venue": "Lumen Field, Seattle"
+      },
+      {
+        "match_no": 33,
+        "id": "M33",
+        "group": "E",
+        "home": "Germany",
+        "away": "Ivory Coast",
+        "score": "2-1",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Leroy Sané",
+            "team": "home",
+            "minute": 29
+          },
+          {
+            "player": "Ilkay Gündoğan",
+            "team": "home",
+            "minute": 71
+          },
+          {
+            "player": "Ousmane Diomande",
+            "team": "away",
+            "minute": 48
+          }
+        ],
+        "reasoning": "德国队中场控制力极强，萨内破门击败科特迪瓦。",
+        "kickoff_utc": "2026-06-20T20:00Z",
+        "venue": "BMO Field, Toronto"
+      },
+      {
+        "match_no": 34,
+        "id": "M34",
+        "group": "E",
+        "home": "Ecuador",
+        "away": "Curaçao",
+        "score": "3-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Kendry Páez",
+            "team": "home",
+            "minute": 19
+          },
+          {
+            "player": "Moisés Caicedo",
+            "team": "home",
+            "minute": 55
+          },
+          {
+            "player": "Pervis Estupiñán",
+            "team": "home",
+            "minute": 88
+          }
+        ],
+        "reasoning": "厄瓜多尔年轻小将派斯发挥出色，大胜库拉索。",
+        "kickoff_utc": "2026-06-21T00:00Z",
+        "venue": "Arrowhead Stadium, Kansas City"
+      },
+      {
+        "match_no": 35,
+        "id": "M35",
+        "group": "F",
+        "home": "Netherlands",
+        "away": "Sweden",
+        "score": "1-1",
+        "result": "draw",
+        "scorers": [
+          {
+            "player": "Memphis Depay",
+            "team": "home",
+            "minute": 64
+          },
+          {
+            "player": "Viktor Gyökeres",
+            "team": "away",
+            "minute": 31
+          }
+        ],
+        "reasoning": "荷兰与瑞典实力接近，加克波与约克雷斯互交白卷后由德佩打破僵局。",
+        "kickoff_utc": "2026-06-20T17:00Z",
+        "venue": "NRG Stadium, Houston"
+      },
+      {
+        "match_no": 36,
+        "id": "M36",
+        "group": "F",
+        "home": "Tunisia",
+        "away": "Japan",
+        "score": "0-1",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Takefusa Kubo",
+            "team": "away",
+            "minute": 58
+          }
+        ],
+        "reasoning": "久保建英打入全场唯一进球，日本力克突尼斯。",
+        "kickoff_utc": "2026-06-21T04:00Z",
+        "venue": "Estadio BBVA, Guadalupe"
+      },
+      {
+        "match_no": 37,
+        "id": "M37",
+        "group": "H",
+        "home": "Uruguay",
+        "away": "Cape Verde",
+        "score": "3-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Facundo Pellistri",
+            "team": "home",
+            "minute": 23
+          },
+          {
+            "player": "Manuel Ugarte",
+            "team": "home",
+            "minute": 56
+          },
+          {
+            "player": "Darwin Núñez",
+            "team": "home",
+            "minute": 84
+          }
+        ],
+        "reasoning": "乌拉圭全场压制佛得角，乌加特和努涅斯先后建功。",
+        "kickoff_utc": "2026-06-21T22:00Z",
+        "venue": "Hard Rock Stadium, Miami Gardens"
+      },
+      {
+        "match_no": 38,
+        "id": "M38",
+        "group": "H",
+        "home": "Spain",
+        "away": "Saudi Arabia",
+        "score": "2-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Pedri",
+            "team": "home",
+            "minute": 37
+          },
+          {
+            "player": "Ferran Torres",
+            "team": "home",
+            "minute": 72
+          }
+        ],
+        "reasoning": "佩德里掌控中场，西班牙轻松击败沙特。",
+        "kickoff_utc": "2026-06-21T16:00Z",
+        "venue": "Mercedes-Benz Stadium, Atlanta"
+      },
+      {
+        "match_no": 39,
+        "id": "M39",
+        "group": "G",
+        "home": "Belgium",
+        "away": "Iran",
+        "score": "2-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Jérémy Doku",
+            "team": "home",
+            "minute": 41
+          },
+          {
+            "player": "Leandro Trossard",
+            "team": "home",
+            "minute": 80
+          }
+        ],
+        "reasoning": "多库边路突破犀利，比利时完胜伊朗。",
+        "kickoff_utc": "2026-06-21T19:00Z",
+        "venue": "SoFi Stadium, Inglewood"
+      },
+      {
+        "match_no": 40,
+        "id": "M40",
+        "group": "G",
+        "home": "New Zealand",
+        "away": "Egypt",
+        "score": "0-2",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Omar Marmoush",
+            "team": "away",
+            "minute": 29
+          },
+          {
+            "player": "Trezeguet",
+            "team": "away",
+            "minute": 67
+          }
+        ],
+        "reasoning": "埃及反击犀利，马尔穆什和特雷泽盖建功。",
+        "kickoff_utc": "2026-06-22T01:00Z",
+        "venue": "BC Place, Vancouver"
+      },
+      {
+        "match_no": 41,
+        "id": "M41",
+        "group": "I",
+        "home": "Norway",
+        "away": "Senegal",
+        "score": "1-1",
+        "result": "draw",
+        "scorers": [
+          {
+            "player": "Alexander Sørloth",
+            "team": "home",
+            "minute": 53
+          },
+          {
+            "player": "Sadio Mané",
+            "team": "away",
+            "minute": 26
+          }
+        ],
+        "reasoning": "挪威与塞内加尔身体对抗激烈，最终战平。",
+        "kickoff_utc": "2026-06-23T00:00Z",
+        "venue": "MetLife Stadium, East Rutherford"
+      },
+      {
+        "match_no": 42,
+        "id": "M42",
+        "group": "I",
+        "home": "France",
+        "away": "Iraq",
+        "score": "4-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Kylian Mbappé",
+            "team": "home",
+            "minute": 14
+          },
+          {
+            "player": "Kylian Mbappé",
+            "team": "home",
+            "minute": 44
+          },
+          {
+            "player": "Ousmane Dembélé",
+            "team": "home",
+            "minute": 68
+          },
+          {
+            "player": "Warren Zaïre-Emery",
+            "team": "home",
+            "minute": 89
+          }
+        ],
+        "reasoning": "姆巴佩再次梅开二度，法国队大胜伊拉克。",
+        "kickoff_utc": "2026-06-22T21:00Z",
+        "venue": "Lincoln Financial Field, Philadelphia"
+      },
+      {
+        "match_no": 43,
+        "id": "M43",
+        "group": "J",
+        "home": "Argentina",
+        "away": "Austria",
+        "score": "1-1",
+        "result": "draw",
+        "scorers": [
+          {
+            "player": "Lautaro Martínez",
+            "team": "home",
+            "minute": 35
+          },
+          {
+            "player": "Konrad Laimer",
+            "team": "away",
+            "minute": 78
+          }
+        ],
+        "reasoning": "奥地利高位逼抢奏效，逼平强大的阿根廷。",
+        "kickoff_utc": "2026-06-22T17:00Z",
+        "venue": "AT&T Stadium, Arlington"
+      },
+      {
+        "match_no": 44,
+        "id": "M44",
+        "group": "J",
+        "home": "Jordan",
+        "away": "Algeria",
+        "score": "0-2",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Riyad Mahrez",
+            "team": "away",
+            "minute": 41
+          },
+          {
+            "player": "Ismaël Bennacer",
+            "team": "away",
+            "minute": 83
+          }
+        ],
+        "reasoning": "马赫雷斯经验丰富，带领阿尔及利亚击败约旦。",
+        "kickoff_utc": "2026-06-23T03:00Z",
+        "venue": "Levi's Stadium, Santa Clara"
+      },
+      {
+        "match_no": 45,
+        "id": "M45",
+        "group": "L",
+        "home": "England",
+        "away": "Ghana",
+        "score": "2-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Jude Bellingham",
+            "team": "home",
+            "minute": 27
+          },
+          {
+            "player": "Bukayo Saka",
+            "team": "home",
+            "minute": 65
+          }
+        ],
+        "reasoning": "贝林厄姆和萨卡联手发威，英格兰完胜加纳。",
+        "kickoff_utc": "2026-06-23T20:00Z",
+        "venue": "Gillette Stadium, Foxborough"
+      },
+      {
+        "match_no": 46,
+        "id": "M46",
+        "group": "L",
+        "home": "Panama",
+        "away": "Croatia",
+        "score": "0-2",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Luka Modrić",
+            "team": "away",
+            "minute": 33
+          },
+          {
+            "player": "Joško Gvardiol",
+            "team": "away",
+            "minute": 71
+          }
+        ],
+        "reasoning": "莫德里奇掌控节奏，克罗地亚轻松战胜巴拿马。",
+        "kickoff_utc": "2026-06-23T23:00Z",
+        "venue": "Toronto Stadium, Toronto"
+      },
+      {
+        "match_no": 47,
+        "id": "M47",
+        "group": "K",
+        "home": "Portugal",
+        "away": "Uzbekistan",
+        "score": "2-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "João Neves",
+            "team": "home",
+            "minute": 48
+          },
+          {
+            "player": "Diogo Jota",
+            "team": "home",
+            "minute": 82
+          }
+        ],
+        "reasoning": "若昂·内维斯表现亮眼，葡萄牙击败乌兹别克斯坦。",
+        "kickoff_utc": "2026-06-23T17:00Z",
+        "venue": "NRG Stadium, Houston"
+      },
+      {
+        "match_no": 48,
+        "id": "M48",
+        "group": "K",
+        "home": "Colombia",
+        "away": "DR Congo",
+        "score": "3-1",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Jhon Arias",
+            "team": "home",
+            "minute": 17
+          },
+          {
+            "player": "Rafael Santos Borré",
+            "team": "home",
+            "minute": 55
+          },
+          {
+            "player": "Luis Sinisterra",
+            "team": "home",
+            "minute": 89
+          },
+          {
+            "player": "Yoane Wissa",
+            "team": "away",
+            "minute": 42
+          }
+        ],
+        "reasoning": "哥伦比亚多点开花，轻松战胜刚果民主共和国。",
+        "kickoff_utc": "2026-06-24T02:00Z",
+        "venue": "Estadio Akron, Zapopan"
+      },
+      {
+        "match_no": 49,
+        "id": "M49",
+        "group": "C",
+        "home": "Scotland",
+        "away": "Brazil",
+        "score": "0-2",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Vinícius Júnior",
+            "team": "away",
+            "minute": 38
+          },
+          {
+            "player": "Bruno Guimarães",
+            "team": "away",
+            "minute": 76
+          }
+        ],
+        "reasoning": "巴西队实力明显占优，维尼修斯再次破门。",
+        "kickoff_utc": "2026-06-24T22:00Z",
+        "venue": "Hard Rock Stadium, Miami Gardens"
+      },
+      {
+        "match_no": 50,
+        "id": "M50",
+        "group": "C",
+        "home": "Morocco",
+        "away": "Haiti",
+        "score": "3-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Brahim Díaz",
+            "team": "home",
+            "minute": 21
+          },
+          {
+            "player": "Amine Adli",
+            "team": "home",
+            "minute": 53
+          },
+          {
+            "player": "Azzedine Ounahi",
+            "team": "home",
+            "minute": 87
+          }
+        ],
+        "reasoning": "迪亚斯领衔摩洛哥攻击群，大胜海地。",
+        "kickoff_utc": "2026-06-24T22:00Z",
+        "venue": "Mercedes-Benz Stadium, Atlanta"
+      },
+      {
+        "match_no": 51,
+        "id": "M51",
+        "group": "B",
+        "home": "Switzerland",
+        "away": "Canada",
+        "score": "1-1",
+        "result": "draw",
+        "scorers": [
+          {
+            "player": "Manuel Akanji",
+            "team": "home",
+            "minute": 62
+          },
+          {
+            "player": "Jonathan David",
+            "team": "away",
+            "minute": 29
+          }
+        ],
+        "reasoning": "瑞士与加拿大互有攻守，最终握手言和。",
+        "kickoff_utc": "2026-06-24T19:00Z",
+        "venue": "BC Place, Vancouver"
+      },
+      {
+        "match_no": 52,
+        "id": "M52",
+        "group": "B",
+        "home": "Bosnia and Herzegovina",
+        "away": "Qatar",
+        "score": "2-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Miralem Pjanić",
+            "team": "home",
+            "minute": 44
+          },
+          {
+            "player": "Sead Kolašinac",
+            "team": "home",
+            "minute": 78
+          }
+        ],
+        "reasoning": "波黑老将皮亚尼奇发挥余热，击败卡塔尔。",
+        "kickoff_utc": "2026-06-24T19:00Z",
+        "venue": "Lumen Field, Seattle"
+      },
+      {
+        "match_no": 53,
+        "id": "M53",
+        "group": "A",
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "score": "1-1",
+        "result": "draw",
+        "scorers": [
+          {
+            "player": "Patrik Schick",
+            "team": "home",
+            "minute": 51
+          },
+          {
+            "player": "Edson Álvarez",
+            "team": "away",
+            "minute": 34
+          }
+        ],
+        "reasoning": "捷克与墨西哥为出线名额死拼，最终战平。",
+        "kickoff_utc": "2026-06-25T01:00Z",
+        "venue": "Estadio Azteca, Mexico City"
+      },
+      {
+        "match_no": 54,
+        "id": "M54",
+        "group": "A",
+        "home": "South Africa",
+        "away": "South Korea",
+        "score": "1-2",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Lyle Foster",
+            "team": "home",
+            "minute": 27
+          },
+          {
+            "player": "Hwang Hee-chan",
+            "team": "away",
+            "minute": 65
+          },
+          {
+            "player": "Son Heung-min",
+            "team": "away",
+            "minute": 88
+          }
+        ],
+        "reasoning": "韩国队锋线把握机会能力更强，逆转击败南非。",
+        "kickoff_utc": "2026-06-25T01:00Z",
+        "venue": "Estadio BBVA, Guadalupe"
+      },
+      {
+        "match_no": 55,
+        "id": "M55",
+        "group": "E",
+        "home": "Curaçao",
+        "away": "Ivory Coast",
+        "score": "0-3",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Nicolas Pépé",
+            "team": "away",
+            "minute": 18
+          },
+          {
+            "player": "Franck Kessié",
+            "team": "away",
+            "minute": 49
+          },
+          {
+            "player": "Simon Adingra",
+            "team": "away",
+            "minute": 77
+          }
+        ],
+        "reasoning": "科特迪瓦实力碾压库拉索，佩佩等人多点开花。",
+        "kickoff_utc": "2026-06-25T20:00Z",
+        "venue": "Lincoln Financial Field, Philadelphia"
+      },
+      {
+        "match_no": 56,
+        "id": "M56",
+        "group": "E",
+        "home": "Ecuador",
+        "away": "Germany",
+        "score": "1-2",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Enner Valencia",
+            "team": "home",
+            "minute": 58
+          },
+          {
+            "player": "Jamal Musiala",
+            "team": "away",
+            "minute": 32
+          },
+          {
+            "player": "Kai Havertz",
+            "team": "away",
+            "minute": 81
+          }
+        ],
+        "reasoning": "德国队展现冠军相，穆西亚拉再次建功击败厄瓜多尔。",
+        "kickoff_utc": "2026-06-25T20:00Z",
+        "venue": "MetLife Stadium, East Rutherford"
+      },
+      {
+        "match_no": 57,
+        "id": "M57",
+        "group": "F",
+        "home": "Japan",
+        "away": "Sweden",
+        "score": "2-1",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Takumi Minamino",
+            "team": "home",
+            "minute": 41
+          },
+          {
+            "player": "Ritsu Doan",
+            "team": "home",
+            "minute": 75
+          },
+          {
+            "player": "Alexander Isak",
+            "team": "away",
+            "minute": 22
+          }
+        ],
+        "reasoning": "日本队技术流打法克制瑞典，南野拓实破门。",
+        "kickoff_utc": "2026-06-25T23:00Z",
+        "venue": "AT&T Stadium, Arlington"
+      },
+      {
+        "match_no": 58,
+        "id": "M58",
+        "group": "F",
+        "home": "Tunisia",
+        "away": "Netherlands",
+        "score": "0-2",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Donyell Malen",
+            "team": "away",
+            "minute": 36
+          },
+          {
+            "player": "Jeremie Frimpong",
+            "team": "away",
+            "minute": 84
+          }
+        ],
+        "reasoning": "荷兰队边路进攻犀利，弗林蓬建功完胜突尼斯。",
+        "kickoff_utc": "2026-06-25T23:00Z",
+        "venue": "Arrowhead Stadium, Kansas City"
+      },
+      {
+        "match_no": 59,
+        "id": "M59",
+        "group": "D",
+        "home": "Turkey",
+        "away": "United States",
+        "score": "1-1",
+        "result": "draw",
+        "scorers": [
+          {
+            "player": "Orkun Kökçü",
+            "team": "home",
+            "minute": 55
+          },
+          {
+            "player": "Timothy Weah",
+            "team": "away",
+            "minute": 28
+          }
+        ],
+        "reasoning": "土耳其与美国队势均力敌，最终战成平局。",
+        "kickoff_utc": "2026-06-26T02:00Z",
+        "venue": "SoFi Stadium, Inglewood"
+      },
+      {
+        "match_no": 60,
+        "id": "M60",
+        "group": "D",
+        "home": "Paraguay",
+        "away": "Australia",
+        "score": "1-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Miguel Almirón",
+            "team": "home",
+            "minute": 67
+          }
+        ],
+        "reasoning": "阿尔米隆打入关键进球，巴拉圭小胜澳大利亚。",
+        "kickoff_utc": "2026-06-26T02:00Z",
+        "venue": "Levi's Stadium, Santa Clara"
+      },
+      {
+        "match_no": 61,
+        "id": "M61",
+        "group": "I",
+        "home": "Norway",
+        "away": "France",
+        "score": "1-2",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Erling Haaland",
+            "team": "home",
+            "minute": 45
+          },
+          {
+            "player": "Marcus Thuram",
+            "team": "away",
+            "minute": 21
+          },
+          {
+            "player": "Eduardo Camavinga",
+            "team": "away",
+            "minute": 88
+          }
+        ],
+        "reasoning": "法国队整体实力更胜一筹，卡马文加绝杀挪威。",
+        "kickoff_utc": "2026-06-26T19:00Z",
+        "venue": "Gillette Stadium, Foxborough"
+      },
+      {
+        "match_no": 62,
+        "id": "M62",
+        "group": "I",
+        "home": "Senegal",
+        "away": "Iraq",
+        "score": "3-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Nicolas Jackson",
+            "team": "home",
+            "minute": 34
+          },
+          {
+            "player": "Iliman Ndiaye",
+            "team": "home",
+            "minute": 61
+          },
+          {
+            "player": "Pape Matar Sarr",
+            "team": "home",
+            "minute": 85
+          }
+        ],
+        "reasoning": "塞内加尔锋线火力全开，杰克逊破门大胜伊拉克。",
+        "kickoff_utc": "2026-06-26T19:00Z",
+        "venue": "BMO Field, Toronto"
+      },
+      {
+        "match_no": 63,
+        "id": "M63",
+        "group": "G",
+        "home": "Egypt",
+        "away": "Iran",
+        "score": "1-1",
+        "result": "draw",
+        "scorers": [
+          {
+            "player": "Mostafa Mohamed",
+            "team": "home",
+            "minute": 52
+          },
+          {
+            "player": "Sardar Azmoun",
+            "team": "away",
+            "minute": 70
+          }
+        ],
+        "reasoning": "埃及与伊朗防守稳固，最终平局收场。",
+        "kickoff_utc": "2026-06-27T03:00Z",
+        "venue": "Lumen Field, Seattle"
+      },
+      {
+        "match_no": 64,
+        "id": "M64",
+        "group": "G",
+        "home": "New Zealand",
+        "away": "Belgium",
+        "score": "0-3",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Loïs Openda",
+            "team": "away",
+            "minute": 19
+          },
+          {
+            "player": "Youri Tielemans",
+            "team": "away",
+            "minute": 48
+          },
+          {
+            "player": "Amadou Onana",
+            "team": "away",
+            "minute": 76
+          }
+        ],
+        "reasoning": "比利时替补阵容依然强大，奥蓬达建功大胜新西兰。",
+        "kickoff_utc": "2026-06-27T03:00Z",
+        "venue": "BC Place, Vancouver"
+      },
+      {
+        "match_no": 65,
+        "id": "M65",
+        "group": "H",
+        "home": "Cape Verde",
+        "away": "Saudi Arabia",
+        "score": "1-1",
+        "result": "draw",
+        "scorers": [
+          {
+            "player": "Ryan Mendes",
+            "team": "home",
+            "minute": 38
+          },
+          {
+            "player": "Salem Al-Dawsari",
+            "team": "away",
+            "minute": 64
+          }
+        ],
+        "reasoning": "佛得角与沙特实力相近，双方各取一分。",
+        "kickoff_utc": "2026-06-27T00:00Z",
+        "venue": "NRG Stadium, Houston"
+      },
+      {
+        "match_no": 66,
+        "id": "M66",
+        "group": "H",
+        "home": "Uruguay",
+        "away": "Spain",
+        "score": "1-1",
+        "result": "draw",
+        "scorers": [
+          {
+            "player": "Ronald Araújo",
+            "team": "home",
+            "minute": 55
+          },
+          {
+            "player": "Nico Williams",
+            "team": "away",
+            "minute": 29
+          }
+        ],
+        "reasoning": "乌拉圭与西班牙上演强强对话，最终握手言和。",
+        "kickoff_utc": "2026-06-27T00:00Z",
+        "venue": "Estadio Akron, Zapopan"
+      },
+      {
+        "match_no": 67,
+        "id": "M67",
+        "group": "L",
+        "home": "Panama",
+        "away": "England",
+        "score": "0-3",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Phil Foden",
+            "team": "away",
+            "minute": 22
+          },
+          {
+            "player": "Declanc Rice",
+            "team": "away",
+            "minute": 57
+          },
+          {
+            "player": "Cole Palmer",
+            "team": "away",
+            "minute": 81
+          }
+        ],
+        "reasoning": "英格兰年轻球员发挥出色，帕尔默破门大胜巴拿马。",
+        "kickoff_utc": "2026-06-27T21:00Z",
+        "venue": "MetLife Stadium, East Rutherford"
+      },
+      {
+        "match_no": 68,
+        "id": "M68",
+        "group": "L",
+        "home": "Croatia",
+        "away": "Ghana",
+        "score": "1-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Mateo Kovačić",
+            "team": "home",
+            "minute": 68
+          }
+        ],
+        "reasoning": "科瓦契奇打入制胜球，克罗地亚小胜加纳。",
+        "kickoff_utc": "2026-06-27T21:00Z",
+        "venue": "Lincoln Financial Field, Philadelphia"
+      },
+      {
+        "match_no": 69,
+        "id": "M69",
+        "group": "J",
+        "home": "Algeria",
+        "away": "Austria",
+        "score": "1-2",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Amine Gouiri",
+            "team": "home",
+            "minute": 42
+          },
+          {
+            "player": "Michael Gregoritsch",
+            "team": "away",
+            "minute": 15
+          },
+          {
+            "player": "Marko Arnautović",
+            "team": "away",
+            "minute": 77
+          }
+        ],
+        "reasoning": "奥地利战术执行力极强，阿瑙托维奇建功击败阿尔及利亚。",
+        "kickoff_utc": "2026-06-28T02:00Z",
+        "venue": "Arrowhead Stadium, Kansas City"
+      },
+      {
+        "match_no": 70,
+        "id": "M70",
+        "group": "J",
+        "home": "Jordan",
+        "away": "Argentina",
+        "score": "0-3",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Enzo Fernández",
+            "team": "away",
+            "minute": 26
+          },
+          {
+            "player": "Alexis Mac Allister",
+            "team": "away",
+            "minute": 59
+          },
+          {
+            "player": "Alejandro Garnacho",
+            "team": "away",
+            "minute": 84
+          }
+        ],
+        "reasoning": "阿根廷中场完全占据主动，加纳乔破门大胜约旦。",
+        "kickoff_utc": "2026-06-28T02:00Z",
+        "venue": "AT&T Stadium, Arlington"
+      },
+      {
+        "match_no": 71,
+        "id": "M71",
+        "group": "K",
+        "home": "Colombia",
+        "away": "Portugal",
+        "score": "1-2",
+        "result": "away",
+        "scorers": [
+          {
+            "player": "Luis Díaz",
+            "team": "home",
+            "minute": 63
+          },
+          {
+            "player": "Bernardo Silva",
+            "team": "away",
+            "minute": 31
+          },
+          {
+            "player": "João Félix",
+            "team": "away",
+            "minute": 89
+          }
+        ],
+        "reasoning": "葡萄牙进攻端天赋尽显，菲利克斯绝杀哥伦比亚。",
+        "kickoff_utc": "2026-06-27T23:30Z",
+        "venue": "Hard Rock Stadium, Miami Gardens"
+      },
+      {
+        "match_no": 72,
+        "id": "M72",
+        "group": "K",
+        "home": "DR Congo",
+        "away": "Uzbekistan",
+        "score": "1-0",
+        "result": "home",
+        "scorers": [
+          {
+            "player": "Chancel Mbemba",
+            "team": "home",
+            "minute": 74
+          }
+        ],
+        "reasoning": "姆本巴利用角球破门，刚果民主共和国小胜乌兹别克斯坦。",
+        "kickoff_utc": "2026-06-27T23:30Z",
+        "venue": "Mercedes-Benz Stadium, Atlanta"
+      }
+    ],
+    "group_standings": {
+      "A": [
+        {
+          "team": "Czech Republic",
+          "team_id": "czech-republic",
+          "flag": "🇨🇿",
+          "group": "A",
+          "played": 3,
+          "wins": 1,
+          "draws": 2,
+          "losses": 0,
+          "goals_for": 4,
+          "goals_against": 2,
+          "goal_difference": 2,
+          "points": 5,
+          "rank": 1
+        },
+        {
+          "team": "Mexico",
+          "team_id": "mexico",
+          "flag": "🇲🇽",
+          "group": "A",
+          "played": 3,
+          "wins": 1,
+          "draws": 2,
+          "losses": 0,
+          "goals_for": 4,
+          "goals_against": 3,
+          "goal_difference": 1,
+          "points": 5,
+          "rank": 2
+        },
+        {
+          "team": "South Korea",
+          "team_id": "south-korea",
+          "flag": "🇰🇷",
+          "group": "A",
+          "played": 3,
+          "wins": 1,
+          "draws": 2,
+          "losses": 0,
+          "goals_for": 4,
+          "goals_against": 3,
+          "goal_difference": 1,
+          "points": 5,
+          "rank": 3
+        },
+        {
+          "team": "South Africa",
+          "team_id": "south-africa",
+          "flag": "🇿🇦",
+          "group": "A",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goals_for": 2,
+          "goals_against": 6,
+          "goal_difference": -4,
+          "points": 0,
+          "rank": 4
+        }
+      ],
+      "B": [
+        {
+          "team": "Switzerland",
+          "team_id": "switzerland",
+          "flag": "🇨🇭",
+          "group": "B",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goals_for": 6,
+          "goals_against": 2,
+          "goal_difference": 4,
+          "points": 7,
+          "rank": 1
+        },
+        {
+          "team": "Canada",
+          "team_id": "canada",
+          "flag": "🇨🇦",
+          "group": "B",
+          "played": 3,
+          "wins": 1,
+          "draws": 2,
+          "losses": 0,
+          "goals_for": 4,
+          "goals_against": 2,
+          "goal_difference": 2,
+          "points": 5,
+          "rank": 2
+        },
+        {
+          "team": "Bosnia and Herzegovina",
+          "team_id": "bosnia-and-herzegovina",
+          "flag": "🇧🇦",
+          "group": "B",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goals_for": 4,
+          "goals_against": 3,
+          "goal_difference": 1,
+          "points": 4,
+          "rank": 3
+        },
+        {
+          "team": "Qatar",
+          "team_id": "qatar",
+          "flag": "🇶🇦",
+          "group": "B",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goals_for": 0,
+          "goals_against": 7,
+          "goal_difference": -7,
+          "points": 0,
+          "rank": 4
+        }
+      ],
+      "C": [
+        {
+          "team": "Brazil",
+          "team_id": "brazil",
+          "flag": "🇧🇷",
+          "group": "C",
+          "played": 3,
+          "wins": 3,
+          "draws": 0,
+          "losses": 0,
+          "goals_for": 8,
+          "goals_against": 1,
+          "goal_difference": 7,
+          "points": 9,
+          "rank": 1
+        },
+        {
+          "team": "Morocco",
+          "team_id": "morocco",
+          "flag": "🇲🇦",
+          "group": "C",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goals_for": 5,
+          "goals_against": 3,
+          "goal_difference": 2,
+          "points": 4,
+          "rank": 2
+        },
+        {
+          "team": "Scotland",
+          "team_id": "scotland",
+          "flag": "🏴 SCO",
+          "group": "C",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goals_for": 3,
+          "goals_against": 3,
+          "goal_difference": 0,
+          "points": 4,
+          "rank": 3
+        },
+        {
+          "team": "Haiti",
+          "team_id": "haiti",
+          "flag": "🇭🇹",
+          "group": "C",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goals_for": 0,
+          "goals_against": 9,
+          "goal_difference": -9,
+          "points": 0,
+          "rank": 4
+        }
+      ],
+      "D": [
+        {
+          "team": "Turkey",
+          "team_id": "turkey",
+          "flag": "🇹🇷",
+          "group": "D",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goals_for": 4,
+          "goals_against": 2,
+          "goal_difference": 2,
+          "points": 7,
+          "rank": 1
+        },
+        {
+          "team": "United States",
+          "team_id": "united-states",
+          "flag": "🇺🇸",
+          "group": "D",
+          "played": 3,
+          "wins": 1,
+          "draws": 2,
+          "losses": 0,
+          "goals_for": 4,
+          "goals_against": 2,
+          "goal_difference": 2,
+          "points": 5,
+          "rank": 2
+        },
+        {
+          "team": "Paraguay",
+          "team_id": "paraguay",
+          "flag": "🇵🇾",
+          "group": "D",
+          "played": 3,
+          "wins": 1,
+          "draws": 0,
+          "losses": 2,
+          "goals_for": 1,
+          "goals_against": 3,
+          "goal_difference": -2,
+          "points": 3,
+          "rank": 3
+        },
+        {
+          "team": "Australia",
+          "team_id": "australia",
+          "flag": "🇦🇺",
+          "group": "D",
+          "played": 3,
+          "wins": 0,
+          "draws": 1,
+          "losses": 2,
+          "goals_for": 2,
+          "goals_against": 4,
+          "goal_difference": -2,
+          "points": 1,
+          "rank": 4
+        }
+      ],
+      "E": [
+        {
+          "team": "Germany",
+          "team_id": "germany",
+          "flag": "🇩🇪",
+          "group": "E",
+          "played": 3,
+          "wins": 3,
+          "draws": 0,
+          "losses": 0,
+          "goals_for": 8,
+          "goals_against": 2,
+          "goal_difference": 6,
+          "points": 9,
+          "rank": 1
+        },
+        {
+          "team": "Ecuador",
+          "team_id": "ecuador",
+          "flag": "🇪🇨",
+          "group": "E",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goals_for": 5,
+          "goals_against": 3,
+          "goal_difference": 2,
+          "points": 4,
+          "rank": 2
+        },
+        {
+          "team": "Ivory Coast",
+          "team_id": "ivory-coast",
+          "flag": "🇨🇮",
+          "group": "E",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goals_for": 5,
+          "goals_against": 3,
+          "goal_difference": 2,
+          "points": 4,
+          "rank": 3
+        },
+        {
+          "team": "Curaçao",
+          "team_id": "cura-ao",
+          "flag": "🇨🇼",
+          "group": "E",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goals_for": 0,
+          "goals_against": 10,
+          "goal_difference": -10,
+          "points": 0,
+          "rank": 4
+        }
+      ],
+      "F": [
+        {
+          "team": "Netherlands",
+          "team_id": "netherlands",
+          "flag": "🇳🇱",
+          "group": "F",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goals_for": 5,
+          "goals_against": 2,
+          "goal_difference": 3,
+          "points": 7,
+          "rank": 1
+        },
+        {
+          "team": "Japan",
+          "team_id": "japan",
+          "flag": "🇯🇵",
+          "group": "F",
+          "played": 3,
+          "wins": 2,
+          "draws": 0,
+          "losses": 1,
+          "goals_for": 4,
+          "goals_against": 3,
+          "goal_difference": 1,
+          "points": 6,
+          "rank": 2
+        },
+        {
+          "team": "Sweden",
+          "team_id": "sweden",
+          "flag": "🇸🇪",
+          "group": "F",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goals_for": 4,
+          "goals_against": 3,
+          "goal_difference": 1,
+          "points": 4,
+          "rank": 3
+        },
+        {
+          "team": "Tunisia",
+          "team_id": "tunisia",
+          "flag": "🇹🇳",
+          "group": "F",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goals_for": 0,
+          "goals_against": 5,
+          "goal_difference": -5,
+          "points": 0,
+          "rank": 4
+        }
+      ],
+      "G": [
+        {
+          "team": "Belgium",
+          "team_id": "belgium",
+          "flag": "🇧🇪",
+          "group": "G",
+          "played": 3,
+          "wins": 3,
+          "draws": 0,
+          "losses": 0,
+          "goals_for": 7,
+          "goals_against": 1,
+          "goal_difference": 6,
+          "points": 9,
+          "rank": 1
+        },
+        {
+          "team": "Egypt",
+          "team_id": "egypt",
+          "flag": "🇪🇬",
+          "group": "G",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goals_for": 4,
+          "goals_against": 3,
+          "goal_difference": 1,
+          "points": 4,
+          "rank": 2
+        },
+        {
+          "team": "Iran",
+          "team_id": "iran",
+          "flag": "🇮🇷",
+          "group": "G",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goals_for": 2,
+          "goals_against": 3,
+          "goal_difference": -1,
+          "points": 4,
+          "rank": 3
+        },
+        {
+          "team": "New Zealand",
+          "team_id": "new-zealand",
+          "flag": "🇳🇿",
+          "group": "G",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goals_for": 0,
+          "goals_against": 6,
+          "goal_difference": -6,
+          "points": 0,
+          "rank": 4
+        }
+      ],
+      "H": [
+        {
+          "team": "Spain",
+          "team_id": "spain",
+          "flag": "🇪🇸",
+          "group": "H",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goals_for": 6,
+          "goals_against": 1,
+          "goal_difference": 5,
+          "points": 7,
+          "rank": 1
+        },
+        {
+          "team": "Uruguay",
+          "team_id": "uruguay",
+          "flag": "🇺🇾",
+          "group": "H",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goals_for": 6,
+          "goals_against": 1,
+          "goal_difference": 5,
+          "points": 7,
+          "rank": 2
+        },
+        {
+          "team": "Saudi Arabia",
+          "team_id": "saudi-arabia",
+          "flag": "🇸🇦",
+          "group": "H",
+          "played": 3,
+          "wins": 0,
+          "draws": 1,
+          "losses": 2,
+          "goals_for": 1,
+          "goals_against": 5,
+          "goal_difference": -4,
+          "points": 1,
+          "rank": 3
+        },
+        {
+          "team": "Cape Verde",
+          "team_id": "cape-verde",
+          "flag": "🇨🇻",
+          "group": "H",
+          "played": 3,
+          "wins": 0,
+          "draws": 1,
+          "losses": 2,
+          "goals_for": 1,
+          "goals_against": 7,
+          "goal_difference": -6,
+          "points": 1,
+          "rank": 4
+        }
+      ],
+      "I": [
+        {
+          "team": "France",
+          "team_id": "france",
+          "flag": "🇫🇷",
+          "group": "I",
+          "played": 3,
+          "wins": 3,
+          "draws": 0,
+          "losses": 0,
+          "goals_for": 8,
+          "goals_against": 1,
+          "goal_difference": 7,
+          "points": 9,
+          "rank": 1
+        },
+        {
+          "team": "Norway",
+          "team_id": "norway",
+          "flag": "🇳🇴",
+          "group": "I",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goals_for": 5,
+          "goals_against": 3,
+          "goal_difference": 2,
+          "points": 4,
+          "rank": 2
+        },
+        {
+          "team": "Senegal",
+          "team_id": "senegal",
+          "flag": "🇸🇳",
+          "group": "I",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goals_for": 4,
+          "goals_against": 3,
+          "goal_difference": 1,
+          "points": 4,
+          "rank": 3
+        },
+        {
+          "team": "Iraq",
+          "team_id": "iraq",
+          "flag": "🇮🇶",
+          "group": "I",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goals_for": 0,
+          "goals_against": 10,
+          "goal_difference": -10,
+          "points": 0,
+          "rank": 4
+        }
+      ],
+      "J": [
+        {
+          "team": "Argentina",
+          "team_id": "argentina",
+          "flag": "🇦🇷",
+          "group": "J",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goals_for": 6,
+          "goals_against": 1,
+          "goal_difference": 5,
+          "points": 7,
+          "rank": 1
+        },
+        {
+          "team": "Austria",
+          "team_id": "austria",
+          "flag": "🇦🇹",
+          "group": "J",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goals_for": 5,
+          "goals_against": 2,
+          "goal_difference": 3,
+          "points": 7,
+          "rank": 2
+        },
+        {
+          "team": "Algeria",
+          "team_id": "algeria",
+          "flag": "🇩🇿",
+          "group": "J",
+          "played": 3,
+          "wins": 1,
+          "draws": 0,
+          "losses": 2,
+          "goals_for": 3,
+          "goals_against": 4,
+          "goal_difference": -1,
+          "points": 3,
+          "rank": 3
+        },
+        {
+          "team": "Jordan",
+          "team_id": "jordan",
+          "flag": "🇯🇴",
+          "group": "J",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goals_for": 0,
+          "goals_against": 7,
+          "goal_difference": -7,
+          "points": 0,
+          "rank": 4
+        }
+      ],
+      "K": [
+        {
+          "team": "Portugal",
+          "team_id": "portugal",
+          "flag": "🇵🇹",
+          "group": "K",
+          "played": 3,
+          "wins": 3,
+          "draws": 0,
+          "losses": 0,
+          "goals_for": 7,
+          "goals_against": 1,
+          "goal_difference": 6,
+          "points": 9,
+          "rank": 1
+        },
+        {
+          "team": "Colombia",
+          "team_id": "colombia",
+          "flag": "🇨🇴",
+          "group": "K",
+          "played": 3,
+          "wins": 2,
+          "draws": 0,
+          "losses": 1,
+          "goals_for": 6,
+          "goals_against": 3,
+          "goal_difference": 3,
+          "points": 6,
+          "rank": 2
+        },
+        {
+          "team": "DR Congo",
+          "team_id": "dr-congo",
+          "flag": "🇨🇩",
+          "group": "K",
+          "played": 3,
+          "wins": 1,
+          "draws": 0,
+          "losses": 2,
+          "goals_for": 2,
+          "goals_against": 6,
+          "goal_difference": -4,
+          "points": 3,
+          "rank": 3
+        },
+        {
+          "team": "Uzbekistan",
+          "team_id": "uzbekistan",
+          "flag": "🇺🇿",
+          "group": "K",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goals_for": 0,
+          "goals_against": 5,
+          "goal_difference": -5,
+          "points": 0,
+          "rank": 4
+        }
+      ],
+      "L": [
+        {
+          "team": "England",
+          "team_id": "england",
+          "flag": "🏴 ENG",
+          "group": "L",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goals_for": 6,
+          "goals_against": 1,
+          "goal_difference": 5,
+          "points": 7,
+          "rank": 1
+        },
+        {
+          "team": "Croatia",
+          "team_id": "croatia",
+          "flag": "🇭🇷",
+          "group": "L",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goals_for": 4,
+          "goals_against": 1,
+          "goal_difference": 3,
+          "points": 7,
+          "rank": 2
+        },
+        {
+          "team": "Ghana",
+          "team_id": "ghana",
+          "flag": "🇬🇭",
+          "group": "L",
+          "played": 3,
+          "wins": 1,
+          "draws": 0,
+          "losses": 2,
+          "goals_for": 2,
+          "goals_against": 3,
+          "goal_difference": -1,
+          "points": 3,
+          "rank": 3
+        },
+        {
+          "team": "Panama",
+          "team_id": "panama",
+          "flag": "🇵🇦",
+          "group": "L",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goals_for": 0,
+          "goals_against": 7,
+          "goal_difference": -7,
+          "points": 0,
+          "rank": 4
+        }
+      ]
+    },
+    "third_place_qualifiers": [
+      {
+        "team": "South Korea",
+        "team_id": "south-korea",
+        "flag": "🇰🇷",
+        "group": "A",
+        "played": 3,
+        "wins": 1,
+        "draws": 2,
+        "losses": 0,
+        "goals_for": 4,
+        "goals_against": 3,
+        "goal_difference": 1,
+        "points": 5,
+        "rank": 3,
+        "third_place_rank": 1
+      },
+      {
+        "team": "Ivory Coast",
+        "team_id": "ivory-coast",
+        "flag": "🇨🇮",
+        "group": "E",
+        "played": 3,
+        "wins": 1,
+        "draws": 1,
+        "losses": 1,
+        "goals_for": 5,
+        "goals_against": 3,
+        "goal_difference": 2,
+        "points": 4,
+        "rank": 3,
+        "third_place_rank": 2
+      },
+      {
+        "team": "Bosnia and Herzegovina",
+        "team_id": "bosnia-and-herzegovina",
+        "flag": "🇧🇦",
+        "group": "B",
+        "played": 3,
+        "wins": 1,
+        "draws": 1,
+        "losses": 1,
+        "goals_for": 4,
+        "goals_against": 3,
+        "goal_difference": 1,
+        "points": 4,
+        "rank": 3,
+        "third_place_rank": 3
+      },
+      {
+        "team": "Senegal",
+        "team_id": "senegal",
+        "flag": "🇸🇳",
+        "group": "I",
+        "played": 3,
+        "wins": 1,
+        "draws": 1,
+        "losses": 1,
+        "goals_for": 4,
+        "goals_against": 3,
+        "goal_difference": 1,
+        "points": 4,
+        "rank": 3,
+        "third_place_rank": 4
+      },
+      {
+        "team": "Sweden",
+        "team_id": "sweden",
+        "flag": "🇸🇪",
+        "group": "F",
+        "played": 3,
+        "wins": 1,
+        "draws": 1,
+        "losses": 1,
+        "goals_for": 4,
+        "goals_against": 3,
+        "goal_difference": 1,
+        "points": 4,
+        "rank": 3,
+        "third_place_rank": 5
+      },
+      {
+        "team": "Scotland",
+        "team_id": "scotland",
+        "flag": "🏴 SCO",
+        "group": "C",
+        "played": 3,
+        "wins": 1,
+        "draws": 1,
+        "losses": 1,
+        "goals_for": 3,
+        "goals_against": 3,
+        "goal_difference": 0,
+        "points": 4,
+        "rank": 3,
+        "third_place_rank": 6
+      },
+      {
+        "team": "Iran",
+        "team_id": "iran",
+        "flag": "🇮🇷",
+        "group": "G",
+        "played": 3,
+        "wins": 1,
+        "draws": 1,
+        "losses": 1,
+        "goals_for": 2,
+        "goals_against": 3,
+        "goal_difference": -1,
+        "points": 4,
+        "rank": 3,
+        "third_place_rank": 7
+      },
+      {
+        "team": "Algeria",
+        "team_id": "algeria",
+        "flag": "🇩🇿",
+        "group": "J",
+        "played": 3,
+        "wins": 1,
+        "draws": 0,
+        "losses": 2,
+        "goals_for": 3,
+        "goals_against": 4,
+        "goal_difference": -1,
+        "points": 3,
+        "rank": 3,
+        "third_place_rank": 8
+      }
+    ],
+    "third_place_slot_assignment": {
+      "77:away_slot": "F",
+      "80:away_slot": "E",
+      "87:away_slot": "I",
+      "74:away_slot": "A",
+      "79:away_slot": "C",
+      "82:away_slot": "J",
+      "81:away_slot": "B",
+      "85:away_slot": "G"
+    },
+    "round_of_32": [
+      {
+        "match_no": 73,
+        "id": "M73",
+        "stage": "R32",
+        "home": {
+          "id": "mexico",
+          "name": "Mexico",
+          "flag": "🇲🇽",
+          "group": "A",
+          "rank": 2
+        },
+        "away": {
+          "id": "canada",
+          "name": "Canada",
+          "flag": "🇨🇦",
+          "group": "B",
+          "rank": 2
+        },
+        "home_slot": [
+          "group_runner_up",
+          "A"
+        ],
+        "away_slot": [
+          "group_runner_up",
+          "B"
+        ]
+      },
+      {
+        "match_no": 74,
+        "id": "M74",
+        "stage": "R32",
+        "home": {
+          "id": "germany",
+          "name": "Germany",
+          "flag": "🇩🇪",
+          "group": "E",
+          "rank": 1
+        },
+        "away": {
+          "id": "south-korea",
+          "name": "South Korea",
+          "flag": "🇰🇷",
+          "group": "A",
+          "rank": 3
+        },
+        "home_slot": [
+          "group_winner",
+          "E"
+        ],
+        "away_slot": [
+          "best_third",
+          [
+            "A",
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        ]
+      },
+      {
+        "match_no": 75,
+        "id": "M75",
+        "stage": "R32",
+        "home": {
+          "id": "netherlands",
+          "name": "Netherlands",
+          "flag": "🇳🇱",
+          "group": "F",
+          "rank": 1
+        },
+        "away": {
+          "id": "morocco",
+          "name": "Morocco",
+          "flag": "🇲🇦",
+          "group": "C",
+          "rank": 2
+        },
+        "home_slot": [
+          "group_winner",
+          "F"
+        ],
+        "away_slot": [
+          "group_runner_up",
+          "C"
+        ]
+      },
+      {
+        "match_no": 76,
+        "id": "M76",
+        "stage": "R32",
+        "home": {
+          "id": "brazil",
+          "name": "Brazil",
+          "flag": "🇧🇷",
+          "group": "C",
+          "rank": 1
+        },
+        "away": {
+          "id": "japan",
+          "name": "Japan",
+          "flag": "🇯🇵",
+          "group": "F",
+          "rank": 2
+        },
+        "home_slot": [
+          "group_winner",
+          "C"
+        ],
+        "away_slot": [
+          "group_runner_up",
+          "F"
+        ]
+      },
+      {
+        "match_no": 77,
+        "id": "M77",
+        "stage": "R32",
+        "home": {
+          "id": "france",
+          "name": "France",
+          "flag": "🇫🇷",
+          "group": "I",
+          "rank": 1
+        },
+        "away": {
+          "id": "sweden",
+          "name": "Sweden",
+          "flag": "🇸🇪",
+          "group": "F",
+          "rank": 3
+        },
+        "home_slot": [
+          "group_winner",
+          "I"
+        ],
+        "away_slot": [
+          "best_third",
+          [
+            "C",
+            "D",
+            "F",
+            "G",
+            "H"
+          ]
+        ]
+      },
+      {
+        "match_no": 78,
+        "id": "M78",
+        "stage": "R32",
+        "home": {
+          "id": "ecuador",
+          "name": "Ecuador",
+          "flag": "🇪🇨",
+          "group": "E",
+          "rank": 2
+        },
+        "away": {
+          "id": "norway",
+          "name": "Norway",
+          "flag": "🇳🇴",
+          "group": "I",
+          "rank": 2
+        },
+        "home_slot": [
+          "group_runner_up",
+          "E"
+        ],
+        "away_slot": [
+          "group_runner_up",
+          "I"
+        ]
+      },
+      {
+        "match_no": 79,
+        "id": "M79",
+        "stage": "R32",
+        "home": {
+          "id": "czech-republic",
+          "name": "Czech Republic",
+          "flag": "🇨🇿",
+          "group": "A",
+          "rank": 1
+        },
+        "away": {
+          "id": "scotland",
+          "name": "Scotland",
+          "flag": "🏴 SCO",
+          "group": "C",
+          "rank": 3
+        },
+        "home_slot": [
+          "group_winner",
+          "A"
+        ],
+        "away_slot": [
+          "best_third",
+          [
+            "C",
+            "E",
+            "F",
+            "H",
+            "I"
+          ]
+        ]
+      },
+      {
+        "match_no": 80,
+        "id": "M80",
+        "stage": "R32",
+        "home": {
+          "id": "england",
+          "name": "England",
+          "flag": "🏴 ENG",
+          "group": "L",
+          "rank": 1
+        },
+        "away": {
+          "id": "ivory-coast",
+          "name": "Ivory Coast",
+          "flag": "🇨🇮",
+          "group": "E",
+          "rank": 3
+        },
+        "home_slot": [
+          "group_winner",
+          "L"
+        ],
+        "away_slot": [
+          "best_third",
+          [
+            "E",
+            "H",
+            "I",
+            "J",
+            "K"
+          ]
+        ]
+      },
+      {
+        "match_no": 81,
+        "id": "M81",
+        "stage": "R32",
+        "home": {
+          "id": "turkey",
+          "name": "Turkey",
+          "flag": "🇹🇷",
+          "group": "D",
+          "rank": 1
+        },
+        "away": {
+          "id": "bosnia-and-herzegovina",
+          "name": "Bosnia and Herzegovina",
+          "flag": "🇧🇦",
+          "group": "B",
+          "rank": 3
+        },
+        "home_slot": [
+          "group_winner",
+          "D"
+        ],
+        "away_slot": [
+          "best_third",
+          [
+            "B",
+            "E",
+            "F",
+            "I",
+            "J"
+          ]
+        ]
+      },
+      {
+        "match_no": 82,
+        "id": "M82",
+        "stage": "R32",
+        "home": {
+          "id": "belgium",
+          "name": "Belgium",
+          "flag": "🇧🇪",
+          "group": "G",
+          "rank": 1
+        },
+        "away": {
+          "id": "algeria",
+          "name": "Algeria",
+          "flag": "🇩🇿",
+          "group": "J",
+          "rank": 3
+        },
+        "home_slot": [
+          "group_winner",
+          "G"
+        ],
+        "away_slot": [
+          "best_third",
+          [
+            "A",
+            "E",
+            "H",
+            "I",
+            "J"
+          ]
+        ]
+      },
+      {
+        "match_no": 83,
+        "id": "M83",
+        "stage": "R32",
+        "home": {
+          "id": "colombia",
+          "name": "Colombia",
+          "flag": "🇨🇴",
+          "group": "K",
+          "rank": 2
+        },
+        "away": {
+          "id": "croatia",
+          "name": "Croatia",
+          "flag": "🇭🇷",
+          "group": "L",
+          "rank": 2
+        },
+        "home_slot": [
+          "group_runner_up",
+          "K"
+        ],
+        "away_slot": [
+          "group_runner_up",
+          "L"
+        ]
+      },
+      {
+        "match_no": 84,
+        "id": "M84",
+        "stage": "R32",
+        "home": {
+          "id": "spain",
+          "name": "Spain",
+          "flag": "🇪🇸",
+          "group": "H",
+          "rank": 1
+        },
+        "away": {
+          "id": "austria",
+          "name": "Austria",
+          "flag": "🇦🇹",
+          "group": "J",
+          "rank": 2
+        },
+        "home_slot": [
+          "group_winner",
+          "H"
+        ],
+        "away_slot": [
+          "group_runner_up",
+          "J"
+        ]
+      },
+      {
+        "match_no": 85,
+        "id": "M85",
+        "stage": "R32",
+        "home": {
+          "id": "switzerland",
+          "name": "Switzerland",
+          "flag": "🇨🇭",
+          "group": "B",
+          "rank": 1
+        },
+        "away": {
+          "id": "iran",
+          "name": "Iran",
+          "flag": "🇮🇷",
+          "group": "G",
+          "rank": 3
+        },
+        "home_slot": [
+          "group_winner",
+          "B"
+        ],
+        "away_slot": [
+          "best_third",
+          [
+            "E",
+            "F",
+            "G",
+            "I",
+            "J"
+          ]
+        ]
+      },
+      {
+        "match_no": 86,
+        "id": "M86",
+        "stage": "R32",
+        "home": {
+          "id": "argentina",
+          "name": "Argentina",
+          "flag": "🇦🇷",
+          "group": "J",
+          "rank": 1
+        },
+        "away": {
+          "id": "uruguay",
+          "name": "Uruguay",
+          "flag": "🇺🇾",
+          "group": "H",
+          "rank": 2
+        },
+        "home_slot": [
+          "group_winner",
+          "J"
+        ],
+        "away_slot": [
+          "group_runner_up",
+          "H"
+        ]
+      },
+      {
+        "match_no": 87,
+        "id": "M87",
+        "stage": "R32",
+        "home": {
+          "id": "portugal",
+          "name": "Portugal",
+          "flag": "🇵🇹",
+          "group": "K",
+          "rank": 1
+        },
+        "away": {
+          "id": "senegal",
+          "name": "Senegal",
+          "flag": "🇸🇳",
+          "group": "I",
+          "rank": 3
+        },
+        "home_slot": [
+          "group_winner",
+          "K"
+        ],
+        "away_slot": [
+          "best_third",
+          [
+            "D",
+            "E",
+            "I",
+            "J",
+            "L"
+          ]
+        ]
+      },
+      {
+        "match_no": 88,
+        "id": "M88",
+        "stage": "R32",
+        "home": {
+          "id": "united-states",
+          "name": "United States",
+          "flag": "🇺🇸",
+          "group": "D",
+          "rank": 2
+        },
+        "away": {
+          "id": "egypt",
+          "name": "Egypt",
+          "flag": "🇪🇬",
+          "group": "G",
+          "rank": 2
+        },
+        "home_slot": [
+          "group_runner_up",
+          "D"
+        ],
+        "away_slot": [
+          "group_runner_up",
+          "G"
+        ]
+      }
+    ],
+    "knockout_matches": [
+      {
+        "match_no": 73,
+        "id": "M73",
+        "stage": "R32",
+        "home": {
+          "id": "mexico",
+          "name": "Mexico",
+          "flag": "🇲🇽",
+          "group": "A",
+          "rank": 2
+        },
+        "away": {
+          "id": "canada",
+          "name": "Canada",
+          "flag": "🇨🇦",
+          "group": "B",
+          "rank": 2
+        },
+        "score": "2-1",
+        "winner": {
+          "id": "mexico",
+          "name": "Mexico",
+          "flag": "🇲🇽",
+          "group": "A",
+          "rank": 2
+        },
+        "loser": {
+          "id": "canada",
+          "name": "Canada",
+          "flag": "🇨🇦",
+          "group": "B",
+          "rank": 2
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Santiago Giménez",
+            "team": "home",
+            "minute": 34
+          },
+          {
+            "player": "Edson Álvarez",
+            "team": "home",
+            "minute": 76
+          },
+          {
+            "player": "Jonathan David",
+            "team": "away",
+            "minute": 52
+          }
+        ],
+        "reasoning": "墨西哥在中北美洲内战中凭借更丰富的经验和主场氛围险胜加拿大。"
+      },
+      {
+        "match_no": 74,
+        "id": "M74",
+        "stage": "R32",
+        "home": {
+          "id": "germany",
+          "name": "Germany",
+          "flag": "🇩🇪",
+          "group": "E",
+          "rank": 1
+        },
+        "away": {
+          "id": "south-korea",
+          "name": "South Korea",
+          "flag": "🇰🇷",
+          "group": "A",
+          "rank": 3
+        },
+        "score": "2-0",
+        "winner": {
+          "id": "germany",
+          "name": "Germany",
+          "flag": "🇩🇪",
+          "group": "E",
+          "rank": 1
+        },
+        "loser": {
+          "id": "south-korea",
+          "name": "South Korea",
+          "flag": "🇰🇷",
+          "group": "A",
+          "rank": 3
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Jamal Musiala",
+            "team": "home",
+            "minute": 41
+          },
+          {
+            "player": "Kai Havertz",
+            "team": "home",
+            "minute": 83
+          }
+        ],
+        "reasoning": "德国队整体实力碾压韩国，穆西亚拉和哈弗茨建功。"
+      },
+      {
+        "match_no": 75,
+        "id": "M75",
+        "stage": "R32",
+        "home": {
+          "id": "netherlands",
+          "name": "Netherlands",
+          "flag": "🇳🇱",
+          "group": "F",
+          "rank": 1
+        },
+        "away": {
+          "id": "morocco",
+          "name": "Morocco",
+          "flag": "🇲🇦",
+          "group": "C",
+          "rank": 2
+        },
+        "score": "1-0",
+        "winner": {
+          "id": "netherlands",
+          "name": "Netherlands",
+          "flag": "🇳🇱",
+          "group": "F",
+          "rank": 1
+        },
+        "loser": {
+          "id": "morocco",
+          "name": "Morocco",
+          "flag": "🇲🇦",
+          "group": "C",
+          "rank": 2
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Cody Gakpo",
+            "team": "home",
+            "minute": 66
+          }
+        ],
+        "reasoning": "荷兰队防守稳固，加克波打入制胜球淘汰摩洛哥。"
+      },
+      {
+        "match_no": 76,
+        "id": "M76",
+        "stage": "R32",
+        "home": {
+          "id": "brazil",
+          "name": "Brazil",
+          "flag": "🇧🇷",
+          "group": "C",
+          "rank": 1
+        },
+        "away": {
+          "id": "japan",
+          "name": "Japan",
+          "flag": "🇯🇵",
+          "group": "F",
+          "rank": 2
+        },
+        "score": "3-1",
+        "winner": {
+          "id": "brazil",
+          "name": "Brazil",
+          "flag": "🇧🇷",
+          "group": "C",
+          "rank": 1
+        },
+        "loser": {
+          "id": "japan",
+          "name": "Japan",
+          "flag": "🇯🇵",
+          "group": "F",
+          "rank": 2
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Vinícius Júnior",
+            "team": "home",
+            "minute": 22
+          },
+          {
+            "player": "Rodrygo",
+            "team": "home",
+            "minute": 54
+          },
+          {
+            "player": "Endrick",
+            "team": "home",
+            "minute": 88
+          },
+          {
+            "player": "Takefusa Kubo",
+            "team": "away",
+            "minute": 71
+          }
+        ],
+        "reasoning": "巴西队进攻火力全开，维尼修斯和恩德里克表现抢眼击败日本。"
+      },
+      {
+        "match_no": 77,
+        "id": "M77",
+        "stage": "R32",
+        "home": {
+          "id": "france",
+          "name": "France",
+          "flag": "🇫🇷",
+          "group": "I",
+          "rank": 1
+        },
+        "away": {
+          "id": "sweden",
+          "name": "Sweden",
+          "flag": "🇸🇪",
+          "group": "F",
+          "rank": 3
+        },
+        "score": "2-0",
+        "winner": {
+          "id": "france",
+          "name": "France",
+          "flag": "🇫🇷",
+          "group": "I",
+          "rank": 1
+        },
+        "loser": {
+          "id": "sweden",
+          "name": "Sweden",
+          "flag": "🇸🇪",
+          "group": "F",
+          "rank": 3
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Kylian Mbappé",
+            "team": "home",
+            "minute": 33
+          },
+          {
+            "player": "Antoine Griezmann",
+            "team": "home",
+            "minute": 75
+          }
+        ],
+        "reasoning": "法国队实力占优，姆巴佩和格列兹曼轻松带队晋级。"
+      },
+      {
+        "match_no": 78,
+        "id": "M78",
+        "stage": "R32",
+        "home": {
+          "id": "ecuador",
+          "name": "Ecuador",
+          "flag": "🇪🇨",
+          "group": "E",
+          "rank": 2
+        },
+        "away": {
+          "id": "norway",
+          "name": "Norway",
+          "flag": "🇳🇴",
+          "group": "I",
+          "rank": 2
+        },
+        "score": "1-2",
+        "winner": {
+          "id": "norway",
+          "name": "Norway",
+          "flag": "🇳🇴",
+          "group": "I",
+          "rank": 2
+        },
+        "loser": {
+          "id": "ecuador",
+          "name": "Ecuador",
+          "flag": "🇪🇨",
+          "group": "E",
+          "rank": 2
+        },
+        "winner_side": "away",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Kendry Páez",
+            "team": "home",
+            "minute": 45
+          },
+          {
+            "player": "Erling Haaland",
+            "team": "away",
+            "minute": 62
+          },
+          {
+            "player": "Erling Haaland",
+            "team": "away",
+            "minute": 85
+          }
+        ],
+        "reasoning": "哈兰德展现顶级射手本色，梅开二度帮助挪威逆转厄瓜多尔。"
+      },
+      {
+        "match_no": 79,
+        "id": "M79",
+        "stage": "R32",
+        "home": {
+          "id": "czech-republic",
+          "name": "Czech Republic",
+          "flag": "🇨🇿",
+          "group": "A",
+          "rank": 1
+        },
+        "away": {
+          "id": "scotland",
+          "name": "Scotland",
+          "flag": "🏴 SCO",
+          "group": "C",
+          "rank": 3
+        },
+        "score": "1-0",
+        "winner": {
+          "id": "czech-republic",
+          "name": "Czech Republic",
+          "flag": "🇨🇿",
+          "group": "A",
+          "rank": 1
+        },
+        "loser": {
+          "id": "scotland",
+          "name": "Scotland",
+          "flag": "🏴 SCO",
+          "group": "C",
+          "rank": 3
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Patrik Schick",
+            "team": "home",
+            "minute": 58
+          }
+        ],
+        "reasoning": "捷克队战术执行力更强，希克一锤定音淘汰苏格兰。"
+      },
+      {
+        "match_no": 80,
+        "id": "M80",
+        "stage": "R32",
+        "home": {
+          "id": "england",
+          "name": "England",
+          "flag": "🏴 ENG",
+          "group": "L",
+          "rank": 1
+        },
+        "away": {
+          "id": "ivory-coast",
+          "name": "Ivory Coast",
+          "flag": "🇨🇮",
+          "group": "E",
+          "rank": 3
+        },
+        "score": "2-0",
+        "winner": {
+          "id": "england",
+          "name": "England",
+          "flag": "🏴 ENG",
+          "group": "L",
+          "rank": 1
+        },
+        "loser": {
+          "id": "ivory-coast",
+          "name": "Ivory Coast",
+          "flag": "🇨🇮",
+          "group": "E",
+          "rank": 3
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Harry Kane",
+            "team": "home",
+            "minute": 28
+          },
+          {
+            "player": "Jude Bellingham",
+            "team": "home",
+            "minute": 72
+          }
+        ],
+        "reasoning": "英格兰中前场天赋尽显，凯恩和贝林厄姆破门完胜科特迪瓦。"
+      },
+      {
+        "match_no": 81,
+        "id": "M81",
+        "stage": "R32",
+        "home": {
+          "id": "turkey",
+          "name": "Turkey",
+          "flag": "🇹🇷",
+          "group": "D",
+          "rank": 1
+        },
+        "away": {
+          "id": "bosnia-and-herzegovina",
+          "name": "Bosnia and Herzegovina",
+          "flag": "🇧🇦",
+          "group": "B",
+          "rank": 3
+        },
+        "score": "2-1",
+        "winner": {
+          "id": "turkey",
+          "name": "Turkey",
+          "flag": "🇹🇷",
+          "group": "D",
+          "rank": 1
+        },
+        "loser": {
+          "id": "bosnia-and-herzegovina",
+          "name": "Bosnia and Herzegovina",
+          "flag": "🇧🇦",
+          "group": "B",
+          "rank": 3
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Arda Güler",
+            "team": "home",
+            "minute": 39
+          },
+          {
+            "player": "Hakan Çalhanoğlu",
+            "team": "home",
+            "minute": 81
+          },
+          {
+            "player": "Edin Džeko",
+            "team": "away",
+            "minute": 65
+          }
+        ],
+        "reasoning": "土耳其年轻一代发挥出色，居莱尔建功击败波黑。"
+      },
+      {
+        "match_no": 82,
+        "id": "M82",
+        "stage": "R32",
+        "home": {
+          "id": "belgium",
+          "name": "Belgium",
+          "flag": "🇧🇪",
+          "group": "G",
+          "rank": 1
+        },
+        "away": {
+          "id": "algeria",
+          "name": "Algeria",
+          "flag": "🇩🇿",
+          "group": "J",
+          "rank": 3
+        },
+        "score": "2-0",
+        "winner": {
+          "id": "belgium",
+          "name": "Belgium",
+          "flag": "🇧🇪",
+          "group": "G",
+          "rank": 1
+        },
+        "loser": {
+          "id": "algeria",
+          "name": "Algeria",
+          "flag": "🇩🇿",
+          "group": "J",
+          "rank": 3
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Kevin De Bruyne",
+            "team": "home",
+            "minute": 44
+          },
+          {
+            "player": "Romelu Lukaku",
+            "team": "home",
+            "minute": 78
+          }
+        ],
+        "reasoning": "比利时黄金一代余热未尽，德布劳内掌控比赛淘汰阿尔及利亚。"
+      },
+      {
+        "match_no": 83,
+        "id": "M83",
+        "stage": "R32",
+        "home": {
+          "id": "colombia",
+          "name": "Colombia",
+          "flag": "🇨🇴",
+          "group": "K",
+          "rank": 2
+        },
+        "away": {
+          "id": "croatia",
+          "name": "Croatia",
+          "flag": "🇭🇷",
+          "group": "L",
+          "rank": 2
+        },
+        "score": "2-1",
+        "winner": {
+          "id": "colombia",
+          "name": "Colombia",
+          "flag": "🇨🇴",
+          "group": "K",
+          "rank": 2
+        },
+        "loser": {
+          "id": "croatia",
+          "name": "Croatia",
+          "flag": "🇭🇷",
+          "group": "L",
+          "rank": 2
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Luis Díaz",
+            "team": "home",
+            "minute": 31
+          },
+          {
+            "player": "James Rodríguez",
+            "team": "home",
+            "minute": 76
+          },
+          {
+            "player": "Andrej Kramarić",
+            "team": "away",
+            "minute": 55
+          }
+        ],
+        "reasoning": "哥伦比亚技术细腻，路易斯·迪亚斯带队险胜克罗地亚。"
+      },
+      {
+        "match_no": 84,
+        "id": "M84",
+        "stage": "R32",
+        "home": {
+          "id": "spain",
+          "name": "Spain",
+          "flag": "🇪🇸",
+          "group": "H",
+          "rank": 1
+        },
+        "away": {
+          "id": "austria",
+          "name": "Austria",
+          "flag": "🇦🇹",
+          "group": "J",
+          "rank": 2
+        },
+        "score": "2-1",
+        "winner": {
+          "id": "spain",
+          "name": "Spain",
+          "flag": "🇪🇸",
+          "group": "H",
+          "rank": 1
+        },
+        "loser": {
+          "id": "austria",
+          "name": "Austria",
+          "flag": "🇦🇹",
+          "group": "J",
+          "rank": 2
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Lamine Yamal",
+            "team": "home",
+            "minute": 25
+          },
+          {
+            "player": "Dani Olmo",
+            "team": "home",
+            "minute": 68
+          },
+          {
+            "player": "Marcel Sabitzer",
+            "team": "away",
+            "minute": 49
+          }
+        ],
+        "reasoning": "西班牙控球优势明显，亚马尔再次闪耀击败奥地利。"
+      },
+      {
+        "match_no": 85,
+        "id": "M85",
+        "stage": "R32",
+        "home": {
+          "id": "switzerland",
+          "name": "Switzerland",
+          "flag": "🇨🇭",
+          "group": "B",
+          "rank": 1
+        },
+        "away": {
+          "id": "iran",
+          "name": "Iran",
+          "flag": "🇮🇷",
+          "group": "G",
+          "rank": 3
+        },
+        "score": "1-0",
+        "winner": {
+          "id": "switzerland",
+          "name": "Switzerland",
+          "flag": "🇨🇭",
+          "group": "B",
+          "rank": 1
+        },
+        "loser": {
+          "id": "iran",
+          "name": "Iran",
+          "flag": "🇮🇷",
+          "group": "G",
+          "rank": 3
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Granit Xhaka",
+            "team": "home",
+            "minute": 73
+          }
+        ],
+        "reasoning": "瑞士队经验丰富，扎卡打入关键进球小胜伊朗。"
+      },
+      {
+        "match_no": 86,
+        "id": "M86",
+        "stage": "R32",
+        "home": {
+          "id": "argentina",
+          "name": "Argentina",
+          "flag": "🇦🇷",
+          "group": "J",
+          "rank": 1
+        },
+        "away": {
+          "id": "uruguay",
+          "name": "Uruguay",
+          "flag": "🇺🇾",
+          "group": "H",
+          "rank": 2
+        },
+        "score": "1-1",
+        "winner": {
+          "id": "argentina",
+          "name": "Argentina",
+          "flag": "🇦🇷",
+          "group": "J",
+          "rank": 1
+        },
+        "loser": {
+          "id": "uruguay",
+          "name": "Uruguay",
+          "flag": "🇺🇾",
+          "group": "H",
+          "rank": 2
+        },
+        "winner_side": "home",
+        "decider": "PEN",
+        "scorers": [
+          {
+            "player": "Lionel Messi",
+            "team": "home",
+            "minute": 42
+          },
+          {
+            "player": "Darwin Núñez",
+            "team": "away",
+            "minute": 67
+          }
+        ],
+        "reasoning": "南美德比战况焦灼，阿根廷最终在点球大战中淘汰乌拉圭。"
+      },
+      {
+        "match_no": 87,
+        "id": "M87",
+        "stage": "R32",
+        "home": {
+          "id": "portugal",
+          "name": "Portugal",
+          "flag": "🇵🇹",
+          "group": "K",
+          "rank": 1
+        },
+        "away": {
+          "id": "senegal",
+          "name": "Senegal",
+          "flag": "🇸🇳",
+          "group": "I",
+          "rank": 3
+        },
+        "score": "2-1",
+        "winner": {
+          "id": "portugal",
+          "name": "Portugal",
+          "flag": "🇵🇹",
+          "group": "K",
+          "rank": 1
+        },
+        "loser": {
+          "id": "senegal",
+          "name": "Senegal",
+          "flag": "🇸🇳",
+          "group": "I",
+          "rank": 3
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Cristiano Ronaldo",
+            "team": "home",
+            "minute": 35
+          },
+          {
+            "player": "Bruno Fernandes",
+            "team": "home",
+            "minute": 82
+          },
+          {
+            "player": "Sadio Mané",
+            "team": "away",
+            "minute": 58
+          }
+        ],
+        "reasoning": "葡萄牙进攻端多点开花，C罗建功力克塞内加尔。"
+      },
+      {
+        "match_no": 88,
+        "id": "M88",
+        "stage": "R32",
+        "home": {
+          "id": "united-states",
+          "name": "United States",
+          "flag": "🇺🇸",
+          "group": "D",
+          "rank": 2
+        },
+        "away": {
+          "id": "egypt",
+          "name": "Egypt",
+          "flag": "🇪🇬",
+          "group": "G",
+          "rank": 2
+        },
+        "score": "2-1",
+        "winner": {
+          "id": "united-states",
+          "name": "United States",
+          "flag": "🇺🇸",
+          "group": "D",
+          "rank": 2
+        },
+        "loser": {
+          "id": "egypt",
+          "name": "Egypt",
+          "flag": "🇪🇬",
+          "group": "G",
+          "rank": 2
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Christian Pulisic",
+            "team": "home",
+            "minute": 27
+          },
+          {
+            "player": "Folarin Balogun",
+            "team": "home",
+            "minute": 64
+          },
+          {
+            "player": "Mohamed Salah",
+            "team": "away",
+            "minute": 51
+          }
+        ],
+        "reasoning": "美国队主场作战气势如虹，普利西奇带领球队击败埃及。"
+      },
+      {
+        "match_no": 89,
+        "id": "M89",
+        "stage": "R16",
+        "home": {
+          "id": "mexico",
+          "name": "Mexico",
+          "flag": "🇲🇽",
+          "group": "A",
+          "rank": 2
+        },
+        "away": {
+          "id": "netherlands",
+          "name": "Netherlands",
+          "flag": "🇳🇱",
+          "group": "F",
+          "rank": 1
+        },
+        "score": "1-2",
+        "winner": {
+          "id": "netherlands",
+          "name": "Netherlands",
+          "flag": "🇳🇱",
+          "group": "F",
+          "rank": 1
+        },
+        "loser": {
+          "id": "mexico",
+          "name": "Mexico",
+          "flag": "🇲🇽",
+          "group": "A",
+          "rank": 2
+        },
+        "winner_side": "away",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Santiago Giménez",
+            "team": "home",
+            "minute": 40
+          },
+          {
+            "player": "Xavi Simons",
+            "team": "away",
+            "minute": 55
+          },
+          {
+            "player": "Cody Gakpo",
+            "team": "away",
+            "minute": 84
+          }
+        ],
+        "reasoning": "荷兰队战术素养更高，加克波绝杀终结墨西哥的主场之旅。"
+      },
+      {
+        "match_no": 90,
+        "id": "M90",
+        "stage": "R16",
+        "home": {
+          "id": "germany",
+          "name": "Germany",
+          "flag": "🇩🇪",
+          "group": "E",
+          "rank": 1
+        },
+        "away": {
+          "id": "france",
+          "name": "France",
+          "flag": "🇫🇷",
+          "group": "I",
+          "rank": 1
+        },
+        "score": "1-2",
+        "winner": {
+          "id": "france",
+          "name": "France",
+          "flag": "🇫🇷",
+          "group": "I",
+          "rank": 1
+        },
+        "loser": {
+          "id": "germany",
+          "name": "Germany",
+          "flag": "🇩🇪",
+          "group": "E",
+          "rank": 1
+        },
+        "winner_side": "away",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Florian Wirtz",
+            "team": "home",
+            "minute": 32
+          },
+          {
+            "player": "Kylian Mbappé",
+            "team": "away",
+            "minute": 58
+          },
+          {
+            "player": "Ousmane Dembélé",
+            "team": "away",
+            "minute": 86
+          }
+        ],
+        "reasoning": "法德大战火星四射，姆巴佩和登贝莱的冲击力帮助法国笑到最后。"
+      },
+      {
+        "match_no": 91,
+        "id": "M91",
+        "stage": "R16",
+        "home": {
+          "id": "brazil",
+          "name": "Brazil",
+          "flag": "🇧🇷",
+          "group": "C",
+          "rank": 1
+        },
+        "away": {
+          "id": "norway",
+          "name": "Norway",
+          "flag": "🇳🇴",
+          "group": "I",
+          "rank": 2
+        },
+        "score": "3-0",
+        "winner": {
+          "id": "brazil",
+          "name": "Brazil",
+          "flag": "🇧🇷",
+          "group": "C",
+          "rank": 1
+        },
+        "loser": {
+          "id": "norway",
+          "name": "Norway",
+          "flag": "🇳🇴",
+          "group": "I",
+          "rank": 2
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Vinícius Júnior",
+            "team": "home",
+            "minute": 18
+          },
+          {
+            "player": "Raphinha",
+            "team": "home",
+            "minute": 45
+          },
+          {
+            "player": "Lucas Paquetá",
+            "team": "home",
+            "minute": 72
+          }
+        ],
+        "reasoning": "巴西队全面压制挪威，维尼修斯和拉菲尼亚轻松破门。"
+      },
+      {
+        "match_no": 92,
+        "id": "M92",
+        "stage": "R16",
+        "home": {
+          "id": "czech-republic",
+          "name": "Czech Republic",
+          "flag": "🇨🇿",
+          "group": "A",
+          "rank": 1
+        },
+        "away": {
+          "id": "england",
+          "name": "England",
+          "flag": "🏴 ENG",
+          "group": "L",
+          "rank": 1
+        },
+        "score": "0-2",
+        "winner": {
+          "id": "england",
+          "name": "England",
+          "flag": "🏴 ENG",
+          "group": "L",
+          "rank": 1
+        },
+        "loser": {
+          "id": "czech-republic",
+          "name": "Czech Republic",
+          "flag": "🇨🇿",
+          "group": "A",
+          "rank": 1
+        },
+        "winner_side": "away",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Phil Foden",
+            "team": "away",
+            "minute": 36
+          },
+          {
+            "player": "Bukayo Saka",
+            "team": "away",
+            "minute": 69
+          }
+        ],
+        "reasoning": "英格兰实力明显占优，福登和萨卡建功完胜捷克。"
+      },
+      {
+        "match_no": 93,
+        "id": "M93",
+        "stage": "R16",
+        "home": {
+          "id": "colombia",
+          "name": "Colombia",
+          "flag": "🇨🇴",
+          "group": "K",
+          "rank": 2
+        },
+        "away": {
+          "id": "spain",
+          "name": "Spain",
+          "flag": "🇪🇸",
+          "group": "H",
+          "rank": 1
+        },
+        "score": "0-2",
+        "winner": {
+          "id": "spain",
+          "name": "Spain",
+          "flag": "🇪🇸",
+          "group": "H",
+          "rank": 1
+        },
+        "loser": {
+          "id": "colombia",
+          "name": "Colombia",
+          "flag": "🇨🇴",
+          "group": "K",
+          "rank": 2
+        },
+        "winner_side": "away",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Pedri",
+            "team": "away",
+            "minute": 41
+          },
+          {
+            "player": "Álvaro Morata",
+            "team": "away",
+            "minute": 77
+          }
+        ],
+        "reasoning": "西班牙中场控制力极强，佩德里和莫拉塔破门淘汰哥伦比亚。"
+      },
+      {
+        "match_no": 94,
+        "id": "M94",
+        "stage": "R16",
+        "home": {
+          "id": "turkey",
+          "name": "Turkey",
+          "flag": "🇹🇷",
+          "group": "D",
+          "rank": 1
+        },
+        "away": {
+          "id": "belgium",
+          "name": "Belgium",
+          "flag": "🇧🇪",
+          "group": "G",
+          "rank": 1
+        },
+        "score": "1-2",
+        "winner": {
+          "id": "belgium",
+          "name": "Belgium",
+          "flag": "🇧🇪",
+          "group": "G",
+          "rank": 1
+        },
+        "loser": {
+          "id": "turkey",
+          "name": "Turkey",
+          "flag": "🇹🇷",
+          "group": "D",
+          "rank": 1
+        },
+        "winner_side": "away",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Kenan Yıldız",
+            "team": "home",
+            "minute": 53
+          },
+          {
+            "player": "Jérémy Doku",
+            "team": "away",
+            "minute": 34
+          },
+          {
+            "player": "Leandro Trossard",
+            "team": "away",
+            "minute": 82
+          }
+        ],
+        "reasoning": "比利时反击犀利，多库和特罗萨德帮助球队险胜土耳其。"
+      },
+      {
+        "match_no": 95,
+        "id": "M95",
+        "stage": "R16",
+        "home": {
+          "id": "argentina",
+          "name": "Argentina",
+          "flag": "🇦🇷",
+          "group": "J",
+          "rank": 1
+        },
+        "away": {
+          "id": "united-states",
+          "name": "United States",
+          "flag": "🇺🇸",
+          "group": "D",
+          "rank": 2
+        },
+        "score": "2-0",
+        "winner": {
+          "id": "argentina",
+          "name": "Argentina",
+          "flag": "🇦🇷",
+          "group": "J",
+          "rank": 1
+        },
+        "loser": {
+          "id": "united-states",
+          "name": "United States",
+          "flag": "🇺🇸",
+          "group": "D",
+          "rank": 2
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Julián Álvarez",
+            "team": "home",
+            "minute": 29
+          },
+          {
+            "player": "Enzo Fernández",
+            "team": "home",
+            "minute": 74
+          }
+        ],
+        "reasoning": "阿根廷整体实力更胜一筹，阿尔瓦雷斯和恩佐终结美国队的黑马之路。"
+      },
+      {
+        "match_no": 96,
+        "id": "M96",
+        "stage": "R16",
+        "home": {
+          "id": "switzerland",
+          "name": "Switzerland",
+          "flag": "🇨🇭",
+          "group": "B",
+          "rank": 1
+        },
+        "away": {
+          "id": "portugal",
+          "name": "Portugal",
+          "flag": "🇵🇹",
+          "group": "K",
+          "rank": 1
+        },
+        "score": "0-2",
+        "winner": {
+          "id": "portugal",
+          "name": "Portugal",
+          "flag": "🇵🇹",
+          "group": "K",
+          "rank": 1
+        },
+        "loser": {
+          "id": "switzerland",
+          "name": "Switzerland",
+          "flag": "🇨🇭",
+          "group": "B",
+          "rank": 1
+        },
+        "winner_side": "away",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Rafael Leão",
+            "team": "away",
+            "minute": 48
+          },
+          {
+            "player": "João Félix",
+            "team": "away",
+            "minute": 85
+          }
+        ],
+        "reasoning": "葡萄牙锋线天赋碾压瑞士，莱奥和菲利克斯先后建功。"
+      },
+      {
+        "match_no": 97,
+        "id": "M97",
+        "stage": "QF",
+        "home": {
+          "id": "netherlands",
+          "name": "Netherlands",
+          "flag": "🇳🇱",
+          "group": "F",
+          "rank": 1
+        },
+        "away": {
+          "id": "france",
+          "name": "France",
+          "flag": "🇫🇷",
+          "group": "I",
+          "rank": 1
+        },
+        "score": "0-1",
+        "winner": {
+          "id": "france",
+          "name": "France",
+          "flag": "🇫🇷",
+          "group": "I",
+          "rank": 1
+        },
+        "loser": {
+          "id": "netherlands",
+          "name": "Netherlands",
+          "flag": "🇳🇱",
+          "group": "F",
+          "rank": 1
+        },
+        "winner_side": "away",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Kylian Mbappé",
+            "team": "away",
+            "minute": 71
+          }
+        ],
+        "reasoning": "法国队防守反击极具威胁，姆巴佩一击致命淘汰荷兰。"
+      },
+      {
+        "match_no": 98,
+        "id": "M98",
+        "stage": "QF",
+        "home": {
+          "id": "spain",
+          "name": "Spain",
+          "flag": "🇪🇸",
+          "group": "H",
+          "rank": 1
+        },
+        "away": {
+          "id": "belgium",
+          "name": "Belgium",
+          "flag": "🇧🇪",
+          "group": "G",
+          "rank": 1
+        },
+        "score": "2-1",
+        "winner": {
+          "id": "spain",
+          "name": "Spain",
+          "flag": "🇪🇸",
+          "group": "H",
+          "rank": 1
+        },
+        "loser": {
+          "id": "belgium",
+          "name": "Belgium",
+          "flag": "🇧🇪",
+          "group": "G",
+          "rank": 1
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Lamine Yamal",
+            "team": "home",
+            "minute": 38
+          },
+          {
+            "player": "Nico Williams",
+            "team": "home",
+            "minute": 76
+          },
+          {
+            "player": "Loïs Openda",
+            "team": "away",
+            "minute": 62
+          }
+        ],
+        "reasoning": "西班牙青春风暴席卷赛场，亚马尔和尼科·威廉斯击败比利时。"
+      },
+      {
+        "match_no": 99,
+        "id": "M99",
+        "stage": "QF",
+        "home": {
+          "id": "brazil",
+          "name": "Brazil",
+          "flag": "🇧🇷",
+          "group": "C",
+          "rank": 1
+        },
+        "away": {
+          "id": "england",
+          "name": "England",
+          "flag": "🏴 ENG",
+          "group": "L",
+          "rank": 1
+        },
+        "score": "2-1",
+        "winner": {
+          "id": "brazil",
+          "name": "Brazil",
+          "flag": "🇧🇷",
+          "group": "C",
+          "rank": 1
+        },
+        "loser": {
+          "id": "england",
+          "name": "England",
+          "flag": "🏴 ENG",
+          "group": "L",
+          "rank": 1
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Endrick",
+            "team": "home",
+            "minute": 44
+          },
+          {
+            "player": "Vinícius Júnior",
+            "team": "home",
+            "minute": 81
+          },
+          {
+            "player": "Harry Kane",
+            "team": "away",
+            "minute": 59
+          }
+        ],
+        "reasoning": "巴西队在强强对话中把握机会能力更强，恩德里克打入关键球淘汰英格兰。"
+      },
+      {
+        "match_no": 100,
+        "id": "M100",
+        "stage": "QF",
+        "home": {
+          "id": "argentina",
+          "name": "Argentina",
+          "flag": "🇦🇷",
+          "group": "J",
+          "rank": 1
+        },
+        "away": {
+          "id": "portugal",
+          "name": "Portugal",
+          "flag": "🇵🇹",
+          "group": "K",
+          "rank": 1
+        },
+        "score": "2-1",
+        "winner": {
+          "id": "argentina",
+          "name": "Argentina",
+          "flag": "🇦🇷",
+          "group": "J",
+          "rank": 1
+        },
+        "loser": {
+          "id": "portugal",
+          "name": "Portugal",
+          "flag": "🇵🇹",
+          "group": "K",
+          "rank": 1
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Lionel Messi",
+            "team": "home",
+            "minute": 33
+          },
+          {
+            "player": "Lautaro Martínez",
+            "team": "home",
+            "minute": 88
+          },
+          {
+            "player": "Cristiano Ronaldo",
+            "team": "away",
+            "minute": 65
+          }
+        ],
+        "reasoning": "梅罗决战上演，梅西和劳塔罗的进球帮助阿根廷险胜葡萄牙晋级四强。"
+      },
+      {
+        "match_no": 101,
+        "id": "M101",
+        "stage": "SF",
+        "home": {
+          "id": "france",
+          "name": "France",
+          "flag": "🇫🇷",
+          "group": "I",
+          "rank": 1
+        },
+        "away": {
+          "id": "spain",
+          "name": "Spain",
+          "flag": "🇪🇸",
+          "group": "H",
+          "rank": 1
+        },
+        "score": "2-1",
+        "winner": {
+          "id": "france",
+          "name": "France",
+          "flag": "🇫🇷",
+          "group": "I",
+          "rank": 1
+        },
+        "loser": {
+          "id": "spain",
+          "name": "Spain",
+          "flag": "🇪🇸",
+          "group": "H",
+          "rank": 1
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Kylian Mbappé",
+            "team": "home",
+            "minute": 24
+          },
+          {
+            "player": "Warren Zaïre-Emery",
+            "team": "home",
+            "minute": 83
+          },
+          {
+            "player": "Lamine Yamal",
+            "team": "away",
+            "minute": 56
+          }
+        ],
+        "reasoning": "法国队大赛经验更丰富，姆巴佩和扎伊尔-埃梅里终结了西班牙的晋级之路。"
+      },
+      {
+        "match_no": 102,
+        "id": "M102",
+        "stage": "SF",
+        "home": {
+          "id": "brazil",
+          "name": "Brazil",
+          "flag": "🇧🇷",
+          "group": "C",
+          "rank": 1
+        },
+        "away": {
+          "id": "argentina",
+          "name": "Argentina",
+          "flag": "🇦🇷",
+          "group": "J",
+          "rank": 1
+        },
+        "score": "2-1",
+        "winner": {
+          "id": "brazil",
+          "name": "Brazil",
+          "flag": "🇧🇷",
+          "group": "C",
+          "rank": 1
+        },
+        "loser": {
+          "id": "argentina",
+          "name": "Argentina",
+          "flag": "🇦🇷",
+          "group": "J",
+          "rank": 1
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Vinícius Júnior",
+            "team": "home",
+            "minute": 39
+          },
+          {
+            "player": "Rodrygo",
+            "team": "home",
+            "minute": 75
+          },
+          {
+            "player": "Alexis Mac Allister",
+            "team": "away",
+            "minute": 61
+          }
+        ],
+        "reasoning": "南美超级德比战况激烈，维尼修斯和罗德里戈帮助巴西力克阿根廷。"
+      },
+      {
+        "match_no": 103,
+        "id": "M103",
+        "stage": "THIRD_PLACE",
+        "home": {
+          "id": "spain",
+          "name": "Spain",
+          "flag": "🇪🇸",
+          "group": "H",
+          "rank": 1
+        },
+        "away": {
+          "id": "argentina",
+          "name": "Argentina",
+          "flag": "🇦🇷",
+          "group": "J",
+          "rank": 1
+        },
+        "score": "2-1",
+        "winner": {
+          "id": "spain",
+          "name": "Spain",
+          "flag": "🇪🇸",
+          "group": "H",
+          "rank": 1
+        },
+        "loser": {
+          "id": "argentina",
+          "name": "Argentina",
+          "flag": "🇦🇷",
+          "group": "J",
+          "rank": 1
+        },
+        "winner_side": "home",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Dani Olmo",
+            "team": "home",
+            "minute": 42
+          },
+          {
+            "player": "Ferran Torres",
+            "team": "home",
+            "minute": 78
+          },
+          {
+            "player": "Alejandro Garnacho",
+            "team": "away",
+            "minute": 55
+          }
+        ],
+        "reasoning": "西班牙在季军战中表现更积极，奥尔莫和费兰·托雷斯击败阿根廷。"
+      },
+      {
+        "match_no": 104,
+        "id": "M104",
+        "stage": "FINAL",
+        "home": {
+          "id": "france",
+          "name": "France",
+          "flag": "🇫🇷",
+          "group": "I",
+          "rank": 1
+        },
+        "away": {
+          "id": "brazil",
+          "name": "Brazil",
+          "flag": "🇧🇷",
+          "group": "C",
+          "rank": 1
+        },
+        "score": "1-2",
+        "winner": {
+          "id": "brazil",
+          "name": "Brazil",
+          "flag": "🇧🇷",
+          "group": "C",
+          "rank": 1
+        },
+        "loser": {
+          "id": "france",
+          "name": "France",
+          "flag": "🇫🇷",
+          "group": "I",
+          "rank": 1
+        },
+        "winner_side": "away",
+        "decider": "REG",
+        "scorers": [
+          {
+            "player": "Kylian Mbappé",
+            "team": "home",
+            "minute": 45
+          },
+          {
+            "player": "Vinícius Júnior",
+            "team": "away",
+            "minute": 58
+          },
+          {
+            "player": "Endrick",
+            "team": "away",
+            "minute": 89
+          }
+        ],
+        "reasoning": "巴西队在决赛中展现出极强的冠军气质，恩德里克绝杀法国夺得大力神杯。"
+      }
+    ],
+    "top_scorers": [
+      {
+        "player": "Kylian Mbappé",
+        "team": "France",
+        "goals": 8
+      },
+      {
+        "player": "Vinícius Júnior",
+        "team": "Brazil",
+        "goals": 7
+      },
+      {
+        "player": "Endrick",
+        "team": "Brazil",
+        "goals": 5
+      },
+      {
+        "player": "Erling Haaland",
+        "team": "Norway",
+        "goals": 5
+      },
+      {
+        "player": "Lamine Yamal",
+        "team": "Spain",
+        "goals": 4
+      },
+      {
+        "player": "Cody Gakpo",
+        "team": "Netherlands",
+        "goals": 3
+      },
+      {
+        "player": "Cristiano Ronaldo",
+        "team": "Portugal",
+        "goals": 3
+      },
+      {
+        "player": "Dani Olmo",
+        "team": "Spain",
+        "goals": 3
+      },
+      {
+        "player": "Darwin Núñez",
+        "team": "Uruguay",
+        "goals": 3
+      },
+      {
+        "player": "Edson Álvarez",
+        "team": "Mexico",
+        "goals": 3
+      },
+      {
+        "player": "Harry Kane",
+        "team": "England",
+        "goals": 3
+      },
+      {
+        "player": "Jamal Musiala",
+        "team": "Germany",
+        "goals": 3
+      },
+      {
+        "player": "Jonathan David",
+        "team": "Canada",
+        "goals": 3
+      },
+      {
+        "player": "Kai Havertz",
+        "team": "Germany",
+        "goals": 3
+      },
+      {
+        "player": "Lionel Messi",
+        "team": "Argentina",
+        "goals": 3
+      },
+      {
+        "player": "Luis Díaz",
+        "team": "Colombia",
+        "goals": 3
+      },
+      {
+        "player": "Patrik Schick",
+        "team": "Czech Republic",
+        "goals": 3
+      },
+      {
+        "player": "Rodrygo",
+        "team": "Brazil",
+        "goals": 3
+      },
+      {
+        "player": "Santiago Giménez",
+        "team": "Mexico",
+        "goals": 3
+      },
+      {
+        "player": "Alejandro Garnacho",
+        "team": "Argentina",
+        "goals": 2
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "FIFA World Cup 26 official tournament page",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026"
+    },
+    {
+      "title": "2026 FIFA World Cup knockout stage",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage"
+    },
+    {
+      "title": "2026 FIFA World Cup Group A",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_A"
+    },
+    {
+      "title": "2026 FIFA World Cup Group B",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B"
+    },
+    {
+      "title": "2026 FIFA World Cup Group C",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_C"
+    },
+    {
+      "title": "2026 FIFA World Cup Group D",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_D"
+    },
+    {
+      "title": "2026 FIFA World Cup Group E",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_E"
+    },
+    {
+      "title": "2026 FIFA World Cup Group F",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_F"
+    },
+    {
+      "title": "2026 FIFA World Cup Group G",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_G"
+    },
+    {
+      "title": "2026 FIFA World Cup Group H",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_H"
+    },
+    {
+      "title": "2026 FIFA World Cup Group I",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_I"
+    },
+    {
+      "title": "2026 FIFA World Cup Group J",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_J"
+    },
+    {
+      "title": "2026 FIFA World Cup Group K",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_K"
+    },
+    {
+      "title": "2026 FIFA World Cup Group L",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_L"
+    },
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
+    "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
+    "https://www.theguardian.com/football/2026/jun/09/a-very-beginners-guide-to-the-world-cup-how-does-it-work-and-the-players-to-look-out-for",
+    "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/yamal-endrick-guler-co-the-young-guns-ready-to-storm-fifa-world-cup-2026/articleshow/131591795.cms",
+    "https://nypost.com/2026/06/09/betting/2026-world-cup-golden-boot-picks-best-bets-predictions-to-score-the-most-goals/",
+    "https://talksport.com/football/world-cup/4311921/world-cup-2026-injury-tracker-full-squads-messi/"
+  ],
+  "tokens": {
+    "input": 37399,
+    "output": 34906
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.25917674999999996,
+  "wall_seconds": 238.529,
+  "error": null,
+  "raw_text": {
+    "group_stage": "{\n  \"stage\": \"group_stage\",\n  \"model_tournament_summary\": \"2026年世界杯小组赛预测综合考虑了各队近期状态、伤病情况（如内马尔缺阵、梅西带伤、亚马尔首发等）以及扩军至48支球队后的出线形势。传统强队如法国、阿根廷、西班牙和德国在小组赛中展现出强大的统治力，而恩德里克、亚马尔等年轻球员将大放异彩。部分实力接近的小组中，平局较多，各队为争夺成绩最好的小组第三名竞争激烈。\",\n  \"group_matches\": [\n    {\n      \"match_no\": 1,\n      \"group\": \"A\",\n      \"home\": \"Mexico\",\n      \"away\": \"South Africa\",\n      \"score\": \"2-1\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Santiago Giménez\", \"minute\": 24},\n        {\"team\": \"home\", \"player\": \"Edson Álvarez\", \"minute\": 68},\n        {\"team\": \"away\", \"player\": \"Percy Tau\", \"minute\": 82}\n      ],\n      \"reasoning\": \"墨西哥凭借主场优势和更强的中场控制力险胜南非。\"\n    },\n    {\n      \"match_no\": 2,\n      \"group\": \"A\",\n      \"home\": \"South Korea\",\n      \"away\": \"Czech Republic\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Son Heung-min\", \"minute\": 45},\n        {\"team\": \"away\", \"player\": \"Patrik Schick\", \"minute\": 71}\n      ],\n      \"reasoning\": \"韩国与捷克实力相当，孙兴慜的进球帮助球队拿到一分。\"\n    },\n    {\n      \"match_no\": 3,\n      \"group\": \"B\",\n      \"home\": \"Canada\",\n      \"away\": \"Bosnia and Herzegovina\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Jonathan David\", \"minute\": 33},\n        {\"team\": \"away\", \"player\": \"Edin Džeko\", \"minute\": 59}\n      ],\n      \"reasoning\": \"加拿大在阿方索·戴维斯出战成疑的情况下，依靠戴维德的进球逼平波黑。\"\n    },\n    {\n      \"match_no\": 4,\n      \"group\": \"D\",\n      \"home\": \"United States\",\n      \"away\": \"Paraguay\",\n      \"score\": \"2-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Christian Pulisic\", \"minute\": 18},\n        {\"team\": \"home\", \"player\": \"Folarin Balogun\", \"minute\": 62}\n      ],\n      \"reasoning\": \"美国队主场作战，普利西奇发挥出色轻松击败巴拉圭。\"\n    },\n    {\n      \"match_no\": 5,\n      \"group\": \"C\",\n      \"home\": \"Haiti\",\n      \"away\": \"Scotland\",\n      \"score\": \"0-2\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Scott McTominay\", \"minute\": 41},\n        {\"team\": \"away\", \"player\": \"John McGinn\", \"minute\": 75}\n      ],\n      \"reasoning\": \"苏格兰整体实力占优，麦克托米奈继续展现得分能力。\"\n    },\n    {\n      \"match_no\": 6,\n      \"group\": \"D\",\n      \"home\": \"Australia\",\n      \"away\": \"Turkey\",\n      \"score\": \"1-2\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Mitchell Duke\", \"minute\": 22},\n        {\"team\": \"away\", \"player\": \"Arda Güler\", \"minute\": 54},\n        {\"team\": \"away\", \"player\": \"Hakan Çalhanoğlu\", \"minute\": 88}\n      ],\n      \"reasoning\": \"居莱尔等年轻球员发挥出色，土耳其逆转击败澳大利亚。\"\n    },\n    {\n      \"match_no\": 7,\n      \"group\": \"C\",\n      \"home\": \"Brazil\",\n      \"away\": \"Morocco\",\n      \"score\": \"2-1\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Vinícius Júnior\", \"minute\": 31},\n        {\"team\": \"home\", \"player\": \"Rodrygo\", \"minute\": 67},\n        {\"team\": \"away\", \"player\": \"Youssef En-Nesyri\", \"minute\": 81}\n      ],\n      \"reasoning\": \"巴西在内马尔缺阵的情况下，依靠维尼修斯和罗德里戈的发挥战胜摩洛哥。\"\n    },\n    {\n      \"match_no\": 8,\n      \"group\": \"B\",\n      \"home\": \"Qatar\",\n      \"away\": \"Switzerland\",\n      \"score\": \"0-3\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Zeki Amdouni\", \"minute\": 14},\n        {\"team\": \"away\", \"player\": \"Xherdan Shaqiri\", \"minute\": 45},\n        {\"team\": \"away\", \"player\": \"Granit Xhaka\", \"minute\": 78}\n      ],\n      \"reasoning\": \"瑞士队经验丰富，多点开花轻松击败卡塔尔。\"\n    },\n    {\n      \"match_no\": 9,\n      \"group\": \"E\",\n      \"home\": \"Ivory Coast\",\n      \"away\": \"Ecuador\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Sébastien Haller\", \"minute\": 39},\n        {\"team\": \"away\", \"player\": \"Enner Valencia\", \"minute\": 52}\n      ],\n      \"reasoning\": \"科特迪瓦与厄瓜多尔身体对抗激烈，最终握手言和。\"\n    },\n    {\n      \"match_no\": 10,\n      \"group\": \"E\",\n      \"home\": \"Germany\",\n      \"away\": \"Curaçao\",\n      \"score\": \"4-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Jamal Musiala\", \"minute\": 12},\n        {\"team\": \"home\", \"player\": \"Florian Wirtz\", \"minute\": 28},\n        {\"team\": \"home\", \"player\": \"Kai Havertz\", \"minute\": 55},\n        {\"team\": \"home\", \"player\": \"Niclas Füllkrug\", \"minute\": 83}\n      ],\n      \"reasoning\": \"德国队实力碾压库拉索，穆西亚拉和维尔茨表现抢眼。\"\n    },\n    {\n      \"match_no\": 11,\n      \"group\": \"F\",\n      \"home\": \"Netherlands\",\n      \"away\": \"Japan\",\n      \"score\": \"2-1\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Cody Gakpo\", \"minute\": 25},\n        {\"team\": \"home\", \"player\": \"Xavi Simons\", \"minute\": 61},\n        {\"team\": \"away\", \"player\": \"Kaoru Mitoma\", \"minute\": 74}\n      ],\n      \"reasoning\": \"荷兰队在缺少廷贝尔的情况下依然稳扎稳打，小胜日本。\"\n    },\n    {\n      \"match_no\": 12,\n      \"group\": \"F\",\n      \"home\": \"Sweden\",\n      \"away\": \"Tunisia\",\n      \"score\": \"2-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Alexander Isak\", \"minute\": 34},\n        {\"team\": \"home\", \"player\": \"Dejan Kulusevski\", \"minute\": 68}\n      ],\n      \"reasoning\": \"瑞典锋线双星闪耀，轻松击败突尼斯。\"\n    },\n    {\n      \"match_no\": 13,\n      \"group\": \"H\",\n      \"home\": \"Saudi Arabia\",\n      \"away\": \"Uruguay\",\n      \"score\": \"0-2\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Darwin Núñez\", \"minute\": 42},\n        {\"team\": \"away\", \"player\": \"Federico Valverde\", \"minute\": 76}\n      ],\n      \"reasoning\": \"乌拉圭中前场实力强劲，努涅斯破门完胜沙特。\"\n    },\n    {\n      \"match_no\": 14,\n      \"group\": \"H\",\n      \"home\": \"Spain\",\n      \"away\": \"Cape Verde\",\n      \"score\": \"3-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Lamine Yamal\", \"minute\": 19},\n        {\"team\": \"home\", \"player\": \"Álvaro Morata\", \"minute\": 44},\n        {\"team\": \"home\", \"player\": \"Dani Olmo\", \"minute\": 81}\n      ],\n      \"reasoning\": \"亚马尔首发登场并取得进球，西班牙大胜佛得角。\"\n    },\n    {\n      \"match_no\": 15,\n      \"group\": \"G\",\n      \"home\": \"Iran\",\n      \"away\": \"New Zealand\",\n      \"score\": \"1-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Mehdi Taremi\", \"minute\": 58}\n      ],\n      \"reasoning\": \"伊朗凭借塔雷米的个人能力小胜新西兰。\"\n    },\n    {\n      \"match_no\": 16,\n      \"group\": \"G\",\n      \"home\": \"Belgium\",\n      \"away\": \"Egypt\",\n      \"score\": \"2-1\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Romelu Lukaku\", \"minute\": 27},\n        {\"team\": \"home\", \"player\": \"Kevin De Bruyne\", \"minute\": 72},\n        {\"team\": \"away\", \"player\": \"Mohamed Salah\", \"minute\": 45}\n      ],\n      \"reasoning\": \"比利时黄金一代余热未尽，德布劳内助球队险胜埃及。\"\n    },\n    {\n      \"match_no\": 17,\n      \"group\": \"I\",\n      \"home\": \"France\",\n      \"away\": \"Senegal\",\n      \"score\": \"2-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Kylian Mbappé\", \"minute\": 31},\n        {\"team\": \"home\", \"player\": \"Antoine Griezmann\", \"minute\": 65}\n      ],\n      \"reasoning\": \"姆巴佩状态火热，法国队轻松击败塞内加尔。\"\n    },\n    {\n      \"match_no\": 18,\n      \"group\": \"I\",\n      \"home\": \"Iraq\",\n      \"away\": \"Norway\",\n      \"score\": \"0-3\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Erling Haaland\", \"minute\": 15},\n        {\"team\": \"away\", \"player\": \"Erling Haaland\", \"minute\": 52},\n        {\"team\": \"away\", \"player\": \"Martin Ødegaard\", \"minute\": 84}\n      ],\n      \"reasoning\": \"哈兰德梅开二度，挪威展现出强大的进攻火力。\"\n    },\n    {\n      \"match_no\": 19,\n      \"group\": \"J\",\n      \"home\": \"Argentina\",\n      \"away\": \"Algeria\",\n      \"score\": \"2-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Lionel Messi\", \"minute\": 38},\n        {\"team\": \"home\", \"player\": \"Julián Álvarez\", \"minute\": 71}\n      ],\n      \"reasoning\": \"梅西带伤出战并打入一球，阿根廷稳稳拿下阿尔及利亚。\"\n    },\n    {\n      \"match_no\": 20,\n      \"group\": \"J\",\n      \"home\": \"Austria\",\n      \"away\": \"Jordan\",\n      \"score\": \"2-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Marcel Sabitzer\", \"minute\": 24},\n        {\"team\": \"home\", \"player\": \"Christoph Baumgartner\", \"minute\": 66}\n      ],\n      \"reasoning\": \"奥地利战术执行力极强，萨比策建功击败约旦。\"\n    },\n    {\n      \"match_no\": 21,\n      \"group\": \"L\",\n      \"home\": \"Ghana\",\n      \"away\": \"Panama\",\n      \"score\": \"2-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Mohammed Kudus\", \"minute\": 41},\n        {\"team\": \"home\", \"player\": \"Iñaki Williams\", \"minute\": 79}\n      ],\n      \"reasoning\": \"加纳身体素质占优，库杜斯表现活跃完胜巴拿马。\"\n    },\n    {\n      \"match_no\": 22,\n      \"group\": \"L\",\n      \"home\": \"England\",\n      \"away\": \"Croatia\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Harry Kane\", \"minute\": 35},\n        {\"team\": \"away\", \"player\": \"Andrej Kramarić\", \"minute\": 62}\n      ],\n      \"reasoning\": \"英格兰与克罗地亚上演强强对话，最终握手言和。\"\n    },\n    {\n      \"match_no\": 23,\n      \"group\": \"K\",\n      \"home\": \"Portugal\",\n      \"away\": \"DR Congo\",\n      \"score\": \"3-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Cristiano Ronaldo\", \"minute\": 21},\n        {\"team\": \"home\", \"player\": \"Bruno Fernandes\", \"minute\": 54},\n        {\"team\": \"home\", \"player\": \"Rafael Leão\", \"minute\": 88}\n      ],\n      \"reasoning\": \"葡萄牙进攻端火力全开，C罗领衔大胜刚果民主共和国。\"\n    },\n    {\n      \"match_no\": 24,\n      \"group\": \"K\",\n      \"home\": \"Uzbekistan\",\n      \"away\": \"Colombia\",\n      \"score\": \"0-2\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Luis Díaz\", \"minute\": 39},\n        {\"team\": \"away\", \"player\": \"James Rodríguez\", \"minute\": 73}\n      ],\n      \"reasoning\": \"哥伦比亚技术细腻，路易斯·迪亚斯带队击败乌兹别克斯坦。\"\n    },\n    {\n      \"match_no\": 25,\n      \"group\": \"A\",\n      \"home\": \"Czech Republic\",\n      \"away\": \"South Africa\",\n      \"score\": \"2-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Tomáš Souček\", \"minute\": 45},\n        {\"team\": \"home\", \"player\": \"Adam Hložek\", \"minute\": 81}\n      ],\n      \"reasoning\": \"捷克队高空优势明显，希克缺阵下依然完胜南非。\"\n    },\n    {\n      \"match_no\": 26,\n      \"group\": \"B\",\n      \"home\": \"Switzerland\",\n      \"away\": \"Bosnia and Herzegovina\",\n      \"score\": \"2-1\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Breel Embolo\", \"minute\": 28},\n        {\"team\": \"home\", \"player\": \"Ruben Vargas\", \"minute\": 65},\n        {\"team\": \"away\", \"player\": \"Ermedin Demirović\", \"minute\": 51}\n      ],\n      \"reasoning\": \"瑞士队战术素养更高，恩博洛建功击败波黑。\"\n    },\n    {\n      \"match_no\": 27,\n      \"group\": \"B\",\n      \"home\": \"Canada\",\n      \"away\": \"Qatar\",\n      \"score\": \"2-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Alphonso Davies\", \"minute\": 16},\n        {\"team\": \"home\", \"player\": \"Tajon Buchanan\", \"minute\": 74}\n      ],\n      \"reasoning\": \"阿方索·戴维斯伤愈复出并进球，加拿大完胜卡塔尔。\"\n    },\n    {\n      \"match_no\": 28,\n      \"group\": \"A\",\n      \"home\": \"Mexico\",\n      \"away\": \"South Korea\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Hirving Lozano\", \"minute\": 55},\n        {\"team\": \"away\", \"player\": \"Lee Kang-in\", \"minute\": 32}\n      ],\n      \"reasoning\": \"墨西哥与韩国展开对攻，最终平局收场。\"\n    },\n    {\n      \"match_no\": 29,\n      \"group\": \"C\",\n      \"home\": \"Brazil\",\n      \"away\": \"Haiti\",\n      \"score\": \"4-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Endrick\", \"minute\": 11},\n        {\"team\": \"home\", \"player\": \"Endrick\", \"minute\": 43},\n        {\"team\": \"home\", \"player\": \"Raphinha\", \"minute\": 60},\n        {\"team\": \"home\", \"player\": \"Lucas Paquetá\", \"minute\": 85}\n      ],\n      \"reasoning\": \"恩德里克梅开二度，巴西队年轻天才闪耀全场。\"\n    },\n    {\n      \"match_no\": 30,\n      \"group\": \"C\",\n      \"home\": \"Scotland\",\n      \"away\": \"Morocco\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Che Adams\", \"minute\": 22},\n        {\"team\": \"away\", \"player\": \"Hakim Ziyech\", \"minute\": 68}\n      ],\n      \"reasoning\": \"苏格兰与摩洛哥防守严密，双方各拿一分。\"\n    },\n    {\n      \"match_no\": 31,\n      \"group\": \"D\",\n      \"home\": \"Turkey\",\n      \"away\": \"Paraguay\",\n      \"score\": \"1-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Kenan Yıldız\", \"minute\": 77}\n      ],\n      \"reasoning\": \"伊尔迪兹打入制胜球，土耳其小胜巴拉圭。\"\n    },\n    {\n      \"match_no\": 32,\n      \"group\": \"D\",\n      \"home\": \"United States\",\n      \"away\": \"Australia\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Weston McKennie\", \"minute\": 40},\n        {\"team\": \"away\", \"player\": \"Craig Goodwin\", \"minute\": 82}\n      ],\n      \"reasoning\": \"美国队遭遇澳大利亚顽强抵抗，遗憾收获平局。\"\n    },\n    {\n      \"match_no\": 33,\n      \"group\": \"E\",\n      \"home\": \"Germany\",\n      \"away\": \"Ivory Coast\",\n      \"score\": \"2-1\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Leroy Sané\", \"minute\": 29},\n        {\"team\": \"home\", \"player\": \"Ilkay Gündoğan\", \"minute\": 71},\n        {\"team\": \"away\", \"player\": \"Ousmane Diomande\", \"minute\": 48}\n      ],\n      \"reasoning\": \"德国队中场控制力极强，萨内破门击败科特迪瓦。\"\n    },\n    {\n      \"match_no\": 34,\n      \"group\": \"E\",\n      \"home\": \"Ecuador\",\n      \"away\": \"Curaçao\",\n      \"score\": \"3-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Kendry Páez\", \"minute\": 19},\n        {\"team\": \"home\", \"player\": \"Moisés Caicedo\", \"minute\": 55},\n        {\"team\": \"home\", \"player\": \"Pervis Estupiñán\", \"minute\": 88}\n      ],\n      \"reasoning\": \"厄瓜多尔年轻小将派斯发挥出色，大胜库拉索。\"\n    },\n    {\n      \"match_no\": 35,\n      \"group\": \"F\",\n      \"home\": \"Netherlands\",\n      \"away\": \"Sweden\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Memphis Depay\", \"minute\": 64},\n        {\"team\": \"away\", \"player\": \"Viktor Gyökeres\", \"minute\": 31}\n      ],\n      \"reasoning\": \"荷兰与瑞典实力接近，加克波与约克雷斯互交白卷后由德佩打破僵局。\"\n    },\n    {\n      \"match_no\": 36,\n      \"group\": \"F\",\n      \"home\": \"Tunisia\",\n      \"away\": \"Japan\",\n      \"score\": \"0-1\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Takefusa Kubo\", \"minute\": 58}\n      ],\n      \"reasoning\": \"久保建英打入全场唯一进球，日本力克突尼斯。\"\n    },\n    {\n      \"match_no\": 37,\n      \"group\": \"H\",\n      \"home\": \"Uruguay\",\n      \"away\": \"Cape Verde\",\n      \"score\": \"3-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Facundo Pellistri\", \"minute\": 23},\n        {\"team\": \"home\", \"player\": \"Manuel Ugarte\", \"minute\": 56},\n        {\"team\": \"home\", \"player\": \"Darwin Núñez\", \"minute\": 84}\n      ],\n      \"reasoning\": \"乌拉圭全场压制佛得角，乌加特和努涅斯先后建功。\"\n    },\n    {\n      \"match_no\": 38,\n      \"group\": \"H\",\n      \"home\": \"Spain\",\n      \"away\": \"Saudi Arabia\",\n      \"score\": \"2-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Pedri\", \"minute\": 37},\n        {\"team\": \"home\", \"player\": \"Ferran Torres\", \"minute\": 72}\n      ],\n      \"reasoning\": \"佩德里掌控中场，西班牙轻松击败沙特。\"\n    },\n    {\n      \"match_no\": 39,\n      \"group\": \"G\",\n      \"home\": \"Belgium\",\n      \"away\": \"Iran\",\n      \"score\": \"2-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Jérémy Doku\", \"minute\": 41},\n        {\"team\": \"home\", \"player\": \"Leandro Trossard\", \"minute\": 80}\n      ],\n      \"reasoning\": \"多库边路突破犀利，比利时完胜伊朗。\"\n    },\n    {\n      \"match_no\": 40,\n      \"group\": \"G\",\n      \"home\": \"New Zealand\",\n      \"away\": \"Egypt\",\n      \"score\": \"0-2\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Omar Marmoush\", \"minute\": 29},\n        {\"team\": \"away\", \"player\": \"Trezeguet\", \"minute\": 67}\n      ],\n      \"reasoning\": \"埃及反击犀利，马尔穆什和特雷泽盖建功。\"\n    },\n    {\n      \"match_no\": 41,\n      \"group\": \"I\",\n      \"home\": \"Norway\",\n      \"away\": \"Senegal\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Alexander Sørloth\", \"minute\": 53},\n        {\"team\": \"away\", \"player\": \"Sadio Mané\", \"minute\": 26}\n      ],\n      \"reasoning\": \"挪威与塞内加尔身体对抗激烈，最终战平。\"\n    },\n    {\n      \"match_no\": 42,\n      \"group\": \"I\",\n      \"home\": \"France\",\n      \"away\": \"Iraq\",\n      \"score\": \"4-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Kylian Mbappé\", \"minute\": 14},\n        {\"team\": \"home\", \"player\": \"Kylian Mbappé\", \"minute\": 44},\n        {\"team\": \"home\", \"player\": \"Ousmane Dembélé\", \"minute\": 68},\n        {\"team\": \"home\", \"player\": \"Warren Zaïre-Emery\", \"minute\": 89}\n      ],\n      \"reasoning\": \"姆巴佩再次梅开二度，法国队大胜伊拉克。\"\n    },\n    {\n      \"match_no\": 43,\n      \"group\": \"J\",\n      \"home\": \"Argentina\",\n      \"away\": \"Austria\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Lautaro Martínez\", \"minute\": 35},\n        {\"team\": \"away\", \"player\": \"Konrad Laimer\", \"minute\": 78}\n      ],\n      \"reasoning\": \"奥地利高位逼抢奏效，逼平强大的阿根廷。\"\n    },\n    {\n      \"match_no\": 44,\n      \"group\": \"J\",\n      \"home\": \"Jordan\",\n      \"away\": \"Algeria\",\n      \"score\": \"0-2\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Riyad Mahrez\", \"minute\": 41},\n        {\"team\": \"away\", \"player\": \"Ismaël Bennacer\", \"minute\": 83}\n      ],\n      \"reasoning\": \"马赫雷斯经验丰富，带领阿尔及利亚击败约旦。\"\n    },\n    {\n      \"match_no\": 45,\n      \"group\": \"L\",\n      \"home\": \"England\",\n      \"away\": \"Ghana\",\n      \"score\": \"2-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Jude Bellingham\", \"minute\": 27},\n        {\"team\": \"home\", \"player\": \"Bukayo Saka\", \"minute\": 65}\n      ],\n      \"reasoning\": \"贝林厄姆和萨卡联手发威，英格兰完胜加纳。\"\n    },\n    {\n      \"match_no\": 46,\n      \"group\": \"L\",\n      \"home\": \"Panama\",\n      \"away\": \"Croatia\",\n      \"score\": \"0-2\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Luka Modrić\", \"minute\": 33},\n        {\"team\": \"away\", \"player\": \"Joško Gvardiol\", \"minute\": 71}\n      ],\n      \"reasoning\": \"莫德里奇掌控节奏，克罗地亚轻松战胜巴拿马。\"\n    },\n    {\n      \"match_no\": 47,\n      \"group\": \"K\",\n      \"home\": \"Portugal\",\n      \"away\": \"Uzbekistan\",\n      \"score\": \"2-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"João Neves\", \"minute\": 48},\n        {\"team\": \"home\", \"player\": \"Diogo Jota\", \"minute\": 82}\n      ],\n      \"reasoning\": \"若昂·内维斯表现亮眼，葡萄牙击败乌兹别克斯坦。\"\n    },\n    {\n      \"match_no\": 48,\n      \"group\": \"K\",\n      \"home\": \"Colombia\",\n      \"away\": \"DR Congo\",\n      \"score\": \"3-1\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Jhon Arias\", \"minute\": 17},\n        {\"team\": \"home\", \"player\": \"Rafael Santos Borré\", \"minute\": 55},\n        {\"team\": \"home\", \"player\": \"Luis Sinisterra\", \"minute\": 89},\n        {\"team\": \"away\", \"player\": \"Yoane Wissa\", \"minute\": 42}\n      ],\n      \"reasoning\": \"哥伦比亚多点开花，轻松战胜刚果民主共和国。\"\n    },\n    {\n      \"match_no\": 49,\n      \"group\": \"C\",\n      \"home\": \"Scotland\",\n      \"away\": \"Brazil\",\n      \"score\": \"0-2\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Vinícius Júnior\", \"minute\": 38},\n        {\"team\": \"away\", \"player\": \"Bruno Guimarães\", \"minute\": 76}\n      ],\n      \"reasoning\": \"巴西队实力明显占优，维尼修斯再次破门。\"\n    },\n    {\n      \"match_no\": 50,\n      \"group\": \"C\",\n      \"home\": \"Morocco\",\n      \"away\": \"Haiti\",\n      \"score\": \"3-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Brahim Díaz\", \"minute\": 21},\n        {\"team\": \"home\", \"player\": \"Amine Adli\", \"minute\": 53},\n        {\"team\": \"home\", \"player\": \"Azzedine Ounahi\", \"minute\": 87}\n      ],\n      \"reasoning\": \"迪亚斯领衔摩洛哥攻击群，大胜海地。\"\n    },\n    {\n      \"match_no\": 51,\n      \"group\": \"B\",\n      \"home\": \"Switzerland\",\n      \"away\": \"Canada\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Manuel Akanji\", \"minute\": 62},\n        {\"team\": \"away\", \"player\": \"Jonathan David\", \"minute\": 29}\n      ],\n      \"reasoning\": \"瑞士与加拿大互有攻守，最终握手言和。\"\n    },\n    {\n      \"match_no\": 52,\n      \"group\": \"B\",\n      \"home\": \"Bosnia and Herzegovina\",\n      \"away\": \"Qatar\",\n      \"score\": \"2-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Miralem Pjanić\", \"minute\": 44},\n        {\"team\": \"home\", \"player\": \"Sead Kolašinac\", \"minute\": 78}\n      ],\n      \"reasoning\": \"波黑老将皮亚尼奇发挥余热，击败卡塔尔。\"\n    },\n    {\n      \"match_no\": 53,\n      \"group\": \"A\",\n      \"home\": \"Czech Republic\",\n      \"away\": \"Mexico\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Patrik Schick\", \"minute\": 51},\n        {\"team\": \"away\", \"player\": \"Edson Álvarez\", \"minute\": 34}\n      ],\n      \"reasoning\": \"捷克与墨西哥为出线名额死拼，最终战平。\"\n    },\n    {\n      \"match_no\": 54,\n      \"group\": \"A\",\n      \"home\": \"South Africa\",\n      \"away\": \"South Korea\",\n      \"score\": \"1-2\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Lyle Foster\", \"minute\": 27},\n        {\"team\": \"away\", \"player\": \"Hwang Hee-chan\", \"minute\": 65},\n        {\"team\": \"away\", \"player\": \"Son Heung-min\", \"minute\": 88}\n      ],\n      \"reasoning\": \"韩国队锋线把握机会能力更强，逆转击败南非。\"\n    },\n    {\n      \"match_no\": 55,\n      \"group\": \"E\",\n      \"home\": \"Curaçao\",\n      \"away\": \"Ivory Coast\",\n      \"score\": \"0-3\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Nicolas Pépé\", \"minute\": 18},\n        {\"team\": \"away\", \"player\": \"Franck Kessié\", \"minute\": 49},\n        {\"team\": \"away\", \"player\": \"Simon Adingra\", \"minute\": 77}\n      ],\n      \"reasoning\": \"科特迪瓦实力碾压库拉索，佩佩等人多点开花。\"\n    },\n    {\n      \"match_no\": 56,\n      \"group\": \"E\",\n      \"home\": \"Ecuador\",\n      \"away\": \"Germany\",\n      \"score\": \"1-2\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Enner Valencia\", \"minute\": 58},\n        {\"team\": \"away\", \"player\": \"Jamal Musiala\", \"minute\": 32},\n        {\"team\": \"away\", \"player\": \"Kai Havertz\", \"minute\": 81}\n      ],\n      \"reasoning\": \"德国队展现冠军相，穆西亚拉再次建功击败厄瓜多尔。\"\n    },\n    {\n      \"match_no\": 57,\n      \"group\": \"F\",\n      \"home\": \"Japan\",\n      \"away\": \"Sweden\",\n      \"score\": \"2-1\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Takumi Minamino\", \"minute\": 41},\n        {\"team\": \"home\", \"player\": \"Ritsu Doan\", \"minute\": 75},\n        {\"team\": \"away\", \"player\": \"Alexander Isak\", \"minute\": 22}\n      ],\n      \"reasoning\": \"日本队技术流打法克制瑞典，南野拓实破门。\"\n    },\n    {\n      \"match_no\": 58,\n      \"group\": \"F\",\n      \"home\": \"Tunisia\",\n      \"away\": \"Netherlands\",\n      \"score\": \"0-2\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Donyell Malen\", \"minute\": 36},\n        {\"team\": \"away\", \"player\": \"Jeremie Frimpong\", \"minute\": 84}\n      ],\n      \"reasoning\": \"荷兰队边路进攻犀利，弗林蓬建功完胜突尼斯。\"\n    },\n    {\n      \"match_no\": 59,\n      \"group\": \"D\",\n      \"home\": \"Turkey\",\n      \"away\": \"United States\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Orkun Kökçü\", \"minute\": 55},\n        {\"team\": \"away\", \"player\": \"Timothy Weah\", \"minute\": 28}\n      ],\n      \"reasoning\": \"土耳其与美国队势均力敌，最终战成平局。\"\n    },\n    {\n      \"match_no\": 60,\n      \"group\": \"D\",\n      \"home\": \"Paraguay\",\n      \"away\": \"Australia\",\n      \"score\": \"1-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Miguel Almirón\", \"minute\": 67}\n      ],\n      \"reasoning\": \"阿尔米隆打入关键进球，巴拉圭小胜澳大利亚。\"\n    },\n    {\n      \"match_no\": 61,\n      \"group\": \"I\",\n      \"home\": \"Norway\",\n      \"away\": \"France\",\n      \"score\": \"1-2\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Erling Haaland\", \"minute\": 45},\n        {\"team\": \"away\", \"player\": \"Marcus Thuram\", \"minute\": 21},\n        {\"team\": \"away\", \"player\": \"Eduardo Camavinga\", \"minute\": 88}\n      ],\n      \"reasoning\": \"法国队整体实力更胜一筹，卡马文加绝杀挪威。\"\n    },\n    {\n      \"match_no\": 62,\n      \"group\": \"I\",\n      \"home\": \"Senegal\",\n      \"away\": \"Iraq\",\n      \"score\": \"3-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Nicolas Jackson\", \"minute\": 34},\n        {\"team\": \"home\", \"player\": \"Iliman Ndiaye\", \"minute\": 61},\n        {\"team\": \"home\", \"player\": \"Pape Matar Sarr\", \"minute\": 85}\n      ],\n      \"reasoning\": \"塞内加尔锋线火力全开，杰克逊破门大胜伊拉克。\"\n    },\n    {\n      \"match_no\": 63,\n      \"group\": \"G\",\n      \"home\": \"Egypt\",\n      \"away\": \"Iran\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Mostafa Mohamed\", \"minute\": 52},\n        {\"team\": \"away\", \"player\": \"Sardar Azmoun\", \"minute\": 70}\n      ],\n      \"reasoning\": \"埃及与伊朗防守稳固，最终平局收场。\"\n    },\n    {\n      \"match_no\": 64,\n      \"group\": \"G\",\n      \"home\": \"New Zealand\",\n      \"away\": \"Belgium\",\n      \"score\": \"0-3\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Loïs Openda\", \"minute\": 19},\n        {\"team\": \"away\", \"player\": \"Youri Tielemans\", \"minute\": 48},\n        {\"team\": \"away\", \"player\": \"Amadou Onana\", \"minute\": 76}\n      ],\n      \"reasoning\": \"比利时替补阵容依然强大，奥蓬达建功大胜新西兰。\"\n    },\n    {\n      \"match_no\": 65,\n      \"group\": \"H\",\n      \"home\": \"Cape Verde\",\n      \"away\": \"Saudi Arabia\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Ryan Mendes\", \"minute\": 38},\n        {\"team\": \"away\", \"player\": \"Salem Al-Dawsari\", \"minute\": 64}\n      ],\n      \"reasoning\": \"佛得角与沙特实力相近，双方各取一分。\"\n    },\n    {\n      \"match_no\": 66,\n      \"group\": \"H\",\n      \"home\": \"Uruguay\",\n      \"away\": \"Spain\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Ronald Araújo\", \"minute\": 55},\n        {\"team\": \"away\", \"player\": \"Nico Williams\", \"minute\": 29}\n      ],\n      \"reasoning\": \"乌拉圭与西班牙上演强强对话，最终握手言和。\"\n    },\n    {\n      \"match_no\": 67,\n      \"group\": \"L\",\n      \"home\": \"Panama\",\n      \"away\": \"England\",\n      \"score\": \"0-3\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Phil Foden\", \"minute\": 22},\n        {\"team\": \"away\", \"player\": \"Declanc Rice\", \"minute\": 57},\n        {\"team\": \"away\", \"player\": \"Cole Palmer\", \"minute\": 81}\n      ],\n      \"reasoning\": \"英格兰年轻球员发挥出色，帕尔默破门大胜巴拿马。\"\n    },\n    {\n      \"match_no\": 68,\n      \"group\": \"L\",\n      \"home\": \"Croatia\",\n      \"away\": \"Ghana\",\n      \"score\": \"1-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Mateo Kovačić\", \"minute\": 68}\n      ],\n      \"reasoning\": \"科瓦契奇打入制胜球，克罗地亚小胜加纳。\"\n    },\n    {\n      \"match_no\": 69,\n      \"group\": \"J\",\n      \"home\": \"Algeria\",\n      \"away\": \"Austria\",\n      \"score\": \"1-2\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Amine Gouiri\", \"minute\": 42},\n        {\"team\": \"away\", \"player\": \"Michael Gregoritsch\", \"minute\": 15},\n        {\"team\": \"away\", \"player\": \"Marko Arnautović\", \"minute\": 77}\n      ],\n      \"reasoning\": \"奥地利战术执行力极强，阿瑙托维奇建功击败阿尔及利亚。\"\n    },\n    {\n      \"match_no\": 70,\n      \"group\": \"J\",\n      \"home\": \"Jordan\",\n      \"away\": \"Argentina\",\n      \"score\": \"0-3\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Enzo Fernández\", \"minute\": 26},\n        {\"team\": \"away\", \"player\": \"Alexis Mac Allister\", \"minute\": 59},\n        {\"team\": \"away\", \"player\": \"Alejandro Garnacho\", \"minute\": 84}\n      ],\n      \"reasoning\": \"阿根廷中场完全占据主动，加纳乔破门大胜约旦。\"\n    },\n    {\n      \"match_no\": 71,\n      \"group\": \"K\",\n      \"home\": \"Colombia\",\n      \"away\": \"Portugal\",\n      \"score\": \"1-2\",\n      \"result\": \"away\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Luis Díaz\", \"minute\": 63},\n        {\"team\": \"away\", \"player\": \"Bernardo Silva\", \"minute\": 31},\n        {\"team\": \"away\", \"player\": \"João Félix\", \"minute\": 89}\n      ],\n      \"reasoning\": \"葡萄牙进攻端天赋尽显，菲利克斯绝杀哥伦比亚。\"\n    },\n    {\n      \"match_no\": 72,\n      \"group\": \"K\",\n      \"home\": \"DR Congo\",\n      \"away\": \"Uzbekistan\",\n      \"score\": \"1-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Chancel Mbemba\", \"minute\": 74}\n      ],\n      \"reasoning\": \"姆本巴利用角球破门，刚果民主共和国小胜乌兹别克斯坦。\"\n    }\n  ],\n  \"sources\": [\n    \"https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026\",\n    \"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage\",\n    \"https://www.theguardian.com/football/2026/jun/09/a-very-beginners-guide-to-the-world-cup-how-does-it-work-and-the-players-to-look-out-for\",\n    \"https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/yamal-endrick-guler-co-the-young-guns-ready-to-storm-fifa-world-cup-2026/articleshow/131591795.cms\",\n    \"https://nypost.com/2026/06/09/betting/2026-world-cup-golden-boot-picks-best-bets-predictions-to-score-the-most-goals/\",\n    \"https://talksport.com/football/world-cup/4311921/world-cup-2026-injury-tracker-full-squads-messi/\"\n  ]\n}",
+    "knockout": "{\n  \"stage\": \"knockout\",\n  \"knockout_summary\": \"2026年世界杯淘汰赛阶段充满强强对话。巴西队凭借维尼修斯和恩德里克等年轻天才的出色发挥，一路过关斩将，在半决赛击败宿敌阿根廷，并在决赛中力克姆巴佩领衔的法国队，夺得队史第六座世界杯冠军。法国队和西班牙队展现了强大的欧洲足球底蕴，分别获得亚军和季军。梅西和C罗在四分之一决赛上演了史诗般的对决，最终阿根廷险胜，但止步半决赛。\",\n  \"knockout_matches\": [\n    {\n      \"match_no\": 73,\n      \"stage\": \"R32\",\n      \"home\": \"Mexico\",\n      \"away\": \"Canada\",\n      \"score\": \"2-1\",\n      \"winner\": \"Mexico\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Santiago Giménez\", \"minute\": 34},\n        {\"team\": \"home\", \"player\": \"Edson Álvarez\", \"minute\": 76},\n        {\"team\": \"away\", \"player\": \"Jonathan David\", \"minute\": 52}\n      ],\n      \"reasoning\": \"墨西哥在中北美洲内战中凭借更丰富的经验和主场氛围险胜加拿大。\"\n    },\n    {\n      \"match_no\": 74,\n      \"stage\": \"R32\",\n      \"home\": \"Germany\",\n      \"away\": \"South Korea\",\n      \"score\": \"2-0\",\n      \"winner\": \"Germany\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Jamal Musiala\", \"minute\": 41},\n        {\"team\": \"home\", \"player\": \"Kai Havertz\", \"minute\": 83}\n      ],\n      \"reasoning\": \"德国队整体实力碾压韩国，穆西亚拉和哈弗茨建功。\"\n    },\n    {\n      \"match_no\": 75,\n      \"stage\": \"R32\",\n      \"home\": \"Netherlands\",\n      \"away\": \"Morocco\",\n      \"score\": \"1-0\",\n      \"winner\": \"Netherlands\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Cody Gakpo\", \"minute\": 66}\n      ],\n      \"reasoning\": \"荷兰队防守稳固，加克波打入制胜球淘汰摩洛哥。\"\n    },\n    {\n      \"match_no\": 76,\n      \"stage\": \"R32\",\n      \"home\": \"Brazil\",\n      \"away\": \"Japan\",\n      \"score\": \"3-1\",\n      \"winner\": \"Brazil\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Vinícius Júnior\", \"minute\": 22},\n        {\"team\": \"home\", \"player\": \"Rodrygo\", \"minute\": 54},\n        {\"team\": \"home\", \"player\": \"Endrick\", \"minute\": 88},\n        {\"team\": \"away\", \"player\": \"Takefusa Kubo\", \"minute\": 71}\n      ],\n      \"reasoning\": \"巴西队进攻火力全开，维尼修斯和恩德里克表现抢眼击败日本。\"\n    },\n    {\n      \"match_no\": 77,\n      \"stage\": \"R32\",\n      \"home\": \"France\",\n      \"away\": \"Sweden\",\n      \"score\": \"2-0\",\n      \"winner\": \"France\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Kylian Mbappé\", \"minute\": 33},\n        {\"team\": \"home\", \"player\": \"Antoine Griezmann\", \"minute\": 75}\n      ],\n      \"reasoning\": \"法国队实力占优，姆巴佩和格列兹曼轻松带队晋级。\"\n    },\n    {\n      \"match_no\": 78,\n      \"stage\": \"R32\",\n      \"home\": \"Ecuador\",\n      \"away\": \"Norway\",\n      \"score\": \"1-2\",\n      \"winner\": \"Norway\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Kendry Páez\", \"minute\": 45},\n        {\"team\": \"away\", \"player\": \"Erling Haaland\", \"minute\": 62},\n        {\"team\": \"away\", \"player\": \"Erling Haaland\", \"minute\": 85}\n      ],\n      \"reasoning\": \"哈兰德展现顶级射手本色，梅开二度帮助挪威逆转厄瓜多尔。\"\n    },\n    {\n      \"match_no\": 79,\n      \"stage\": \"R32\",\n      \"home\": \"Czech Republic\",\n      \"away\": \"Scotland\",\n      \"score\": \"1-0\",\n      \"winner\": \"Czech Republic\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Patrik Schick\", \"minute\": 58}\n      ],\n      \"reasoning\": \"捷克队战术执行力更强，希克一锤定音淘汰苏格兰。\"\n    },\n    {\n      \"match_no\": 80,\n      \"stage\": \"R32\",\n      \"home\": \"England\",\n      \"away\": \"Ivory Coast\",\n      \"score\": \"2-0\",\n      \"winner\": \"England\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Harry Kane\", \"minute\": 28},\n        {\"team\": \"home\", \"player\": \"Jude Bellingham\", \"minute\": 72}\n      ],\n      \"reasoning\": \"英格兰中前场天赋尽显，凯恩和贝林厄姆破门完胜科特迪瓦。\"\n    },\n    {\n      \"match_no\": 81,\n      \"stage\": \"R32\",\n      \"home\": \"Turkey\",\n      \"away\": \"Bosnia and Herzegovina\",\n      \"score\": \"2-1\",\n      \"winner\": \"Turkey\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Arda Güler\", \"minute\": 39},\n        {\"team\": \"home\", \"player\": \"Hakan Çalhanoğlu\", \"minute\": 81},\n        {\"team\": \"away\", \"player\": \"Edin Džeko\", \"minute\": 65}\n      ],\n      \"reasoning\": \"土耳其年轻一代发挥出色，居莱尔建功击败波黑。\"\n    },\n    {\n      \"match_no\": 82,\n      \"stage\": \"R32\",\n      \"home\": \"Belgium\",\n      \"away\": \"Algeria\",\n      \"score\": \"2-0\",\n      \"winner\": \"Belgium\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Kevin De Bruyne\", \"minute\": 44},\n        {\"team\": \"home\", \"player\": \"Romelu Lukaku\", \"minute\": 78}\n      ],\n      \"reasoning\": \"比利时黄金一代余热未尽，德布劳内掌控比赛淘汰阿尔及利亚。\"\n    },\n    {\n      \"match_no\": 83,\n      \"stage\": \"R32\",\n      \"home\": \"Colombia\",\n      \"away\": \"Croatia\",\n      \"score\": \"2-1\",\n      \"winner\": \"Colombia\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Luis Díaz\", \"minute\": 31},\n        {\"team\": \"home\", \"player\": \"James Rodríguez\", \"minute\": 76},\n        {\"team\": \"away\", \"player\": \"Andrej Kramarić\", \"minute\": 55}\n      ],\n      \"reasoning\": \"哥伦比亚技术细腻，路易斯·迪亚斯带队险胜克罗地亚。\"\n    },\n    {\n      \"match_no\": 84,\n      \"stage\": \"R32\",\n      \"home\": \"Spain\",\n      \"away\": \"Austria\",\n      \"score\": \"2-1\",\n      \"winner\": \"Spain\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Lamine Yamal\", \"minute\": 25},\n        {\"team\": \"home\", \"player\": \"Dani Olmo\", \"minute\": 68},\n        {\"team\": \"away\", \"player\": \"Marcel Sabitzer\", \"minute\": 49}\n      ],\n      \"reasoning\": \"西班牙控球优势明显，亚马尔再次闪耀击败奥地利。\"\n    },\n    {\n      \"match_no\": 85,\n      \"stage\": \"R32\",\n      \"home\": \"Switzerland\",\n      \"away\": \"Iran\",\n      \"score\": \"1-0\",\n      \"winner\": \"Switzerland\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Granit Xhaka\", \"minute\": 73}\n      ],\n      \"reasoning\": \"瑞士队经验丰富，扎卡打入关键进球小胜伊朗。\"\n    },\n    {\n      \"match_no\": 86,\n      \"stage\": \"R32\",\n      \"home\": \"Argentina\",\n      \"away\": \"Uruguay\",\n      \"score\": \"1-1\",\n      \"winner\": \"Argentina\",\n      \"decider\": \"PEN\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Lionel Messi\", \"minute\": 42},\n        {\"team\": \"away\", \"player\": \"Darwin Núñez\", \"minute\": 67}\n      ],\n      \"reasoning\": \"南美德比战况焦灼，阿根廷最终在点球大战中淘汰乌拉圭。\"\n    },\n    {\n      \"match_no\": 87,\n      \"stage\": \"R32\",\n      \"home\": \"Portugal\",\n      \"away\": \"Senegal\",\n      \"score\": \"2-1\",\n      \"winner\": \"Portugal\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Cristiano Ronaldo\", \"minute\": 35},\n        {\"team\": \"home\", \"player\": \"Bruno Fernandes\", \"minute\": 82},\n        {\"team\": \"away\", \"player\": \"Sadio Mané\", \"minute\": 58}\n      ],\n      \"reasoning\": \"葡萄牙进攻端多点开花，C罗建功力克塞内加尔。\"\n    },\n    {\n      \"match_no\": 88,\n      \"stage\": \"R32\",\n      \"home\": \"United States\",\n      \"away\": \"Egypt\",\n      \"score\": \"2-1\",\n      \"winner\": \"United States\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Christian Pulisic\", \"minute\": 27},\n        {\"team\": \"home\", \"player\": \"Folarin Balogun\", \"minute\": 64},\n        {\"team\": \"away\", \"player\": \"Mohamed Salah\", \"minute\": 51}\n      ],\n      \"reasoning\": \"美国队主场作战气势如虹，普利西奇带领球队击败埃及。\"\n    },\n    {\n      \"match_no\": 89,\n      \"stage\": \"R16\",\n      \"home\": \"Mexico\",\n      \"away\": \"Netherlands\",\n      \"score\": \"1-2\",\n      \"winner\": \"Netherlands\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Santiago Giménez\", \"minute\": 40},\n        {\"team\": \"away\", \"player\": \"Xavi Simons\", \"minute\": 55},\n        {\"team\": \"away\", \"player\": \"Cody Gakpo\", \"minute\": 84}\n      ],\n      \"reasoning\": \"荷兰队战术素养更高，加克波绝杀终结墨西哥的主场之旅。\"\n    },\n    {\n      \"match_no\": 90,\n      \"stage\": \"R16\",\n      \"home\": \"Germany\",\n      \"away\": \"France\",\n      \"score\": \"1-2\",\n      \"winner\": \"France\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Florian Wirtz\", \"minute\": 32},\n        {\"team\": \"away\", \"player\": \"Kylian Mbappé\", \"minute\": 58},\n        {\"team\": \"away\", \"player\": \"Ousmane Dembélé\", \"minute\": 86}\n      ],\n      \"reasoning\": \"法德大战火星四射，姆巴佩和登贝莱的冲击力帮助法国笑到最后。\"\n    },\n    {\n      \"match_no\": 91,\n      \"stage\": \"R16\",\n      \"home\": \"Brazil\",\n      \"away\": \"Norway\",\n      \"score\": \"3-0\",\n      \"winner\": \"Brazil\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Vinícius Júnior\", \"minute\": 18},\n        {\"team\": \"home\", \"player\": \"Raphinha\", \"minute\": 45},\n        {\"team\": \"home\", \"player\": \"Lucas Paquetá\", \"minute\": 72}\n      ],\n      \"reasoning\": \"巴西队全面压制挪威，维尼修斯和拉菲尼亚轻松破门。\"\n    },\n    {\n      \"match_no\": 92,\n      \"stage\": \"R16\",\n      \"home\": \"Czech Republic\",\n      \"away\": \"England\",\n      \"score\": \"0-2\",\n      \"winner\": \"England\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Phil Foden\", \"minute\": 36},\n        {\"team\": \"away\", \"player\": \"Bukayo Saka\", \"minute\": 69}\n      ],\n      \"reasoning\": \"英格兰实力明显占优，福登和萨卡建功完胜捷克。\"\n    },\n    {\n      \"match_no\": 93,\n      \"stage\": \"R16\",\n      \"home\": \"Colombia\",\n      \"away\": \"Spain\",\n      \"score\": \"0-2\",\n      \"winner\": \"Spain\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Pedri\", \"minute\": 41},\n        {\"team\": \"away\", \"player\": \"Álvaro Morata\", \"minute\": 77}\n      ],\n      \"reasoning\": \"西班牙中场控制力极强，佩德里和莫拉塔破门淘汰哥伦比亚。\"\n    },\n    {\n      \"match_no\": 94,\n      \"stage\": \"R16\",\n      \"home\": \"Turkey\",\n      \"away\": \"Belgium\",\n      \"score\": \"1-2\",\n      \"winner\": \"Belgium\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Kenan Yıldız\", \"minute\": 53},\n        {\"team\": \"away\", \"player\": \"Jérémy Doku\", \"minute\": 34},\n        {\"team\": \"away\", \"player\": \"Leandro Trossard\", \"minute\": 82}\n      ],\n      \"reasoning\": \"比利时反击犀利，多库和特罗萨德帮助球队险胜土耳其。\"\n    },\n    {\n      \"match_no\": 95,\n      \"stage\": \"R16\",\n      \"home\": \"Argentina\",\n      \"away\": \"United States\",\n      \"score\": \"2-0\",\n      \"winner\": \"Argentina\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Julián Álvarez\", \"minute\": 29},\n        {\"team\": \"home\", \"player\": \"Enzo Fernández\", \"minute\": 74}\n      ],\n      \"reasoning\": \"阿根廷整体实力更胜一筹，阿尔瓦雷斯和恩佐终结美国队的黑马之路。\"\n    },\n    {\n      \"match_no\": 96,\n      \"stage\": \"R16\",\n      \"home\": \"Switzerland\",\n      \"away\": \"Portugal\",\n      \"score\": \"0-2\",\n      \"winner\": \"Portugal\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Rafael Leão\", \"minute\": 48},\n        {\"team\": \"away\", \"player\": \"João Félix\", \"minute\": 85}\n      ],\n      \"reasoning\": \"葡萄牙锋线天赋碾压瑞士，莱奥和菲利克斯先后建功。\"\n    },\n    {\n      \"match_no\": 97,\n      \"stage\": \"QF\",\n      \"home\": \"Netherlands\",\n      \"away\": \"France\",\n      \"score\": \"0-1\",\n      \"winner\": \"France\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"away\", \"player\": \"Kylian Mbappé\", \"minute\": 71}\n      ],\n      \"reasoning\": \"法国队防守反击极具威胁，姆巴佩一击致命淘汰荷兰。\"\n    },\n    {\n      \"match_no\": 98,\n      \"stage\": \"QF\",\n      \"home\": \"Spain\",\n      \"away\": \"Belgium\",\n      \"score\": \"2-1\",\n      \"winner\": \"Spain\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Lamine Yamal\", \"minute\": 38},\n        {\"team\": \"home\", \"player\": \"Nico Williams\", \"minute\": 76},\n        {\"team\": \"away\", \"player\": \"Loïs Openda\", \"minute\": 62}\n      ],\n      \"reasoning\": \"西班牙青春风暴席卷赛场，亚马尔和尼科·威廉斯击败比利时。\"\n    },\n    {\n      \"match_no\": 99,\n      \"stage\": \"QF\",\n      \"home\": \"Brazil\",\n      \"away\": \"England\",\n      \"score\": \"2-1\",\n      \"winner\": \"Brazil\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Endrick\", \"minute\": 44},\n        {\"team\": \"home\", \"player\": \"Vinícius Júnior\", \"minute\": 81},\n        {\"team\": \"away\", \"player\": \"Harry Kane\", \"minute\": 59}\n      ],\n      \"reasoning\": \"巴西队在强强对话中把握机会能力更强，恩德里克打入关键球淘汰英格兰。\"\n    },\n    {\n      \"match_no\": 100,\n      \"stage\": \"QF\",\n      \"home\": \"Argentina\",\n      \"away\": \"Portugal\",\n      \"score\": \"2-1\",\n      \"winner\": \"Argentina\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Lionel Messi\", \"minute\": 33},\n        {\"team\": \"home\", \"player\": \"Lautaro Martínez\", \"minute\": 88},\n        {\"team\": \"away\", \"player\": \"Cristiano Ronaldo\", \"minute\": 65}\n      ],\n      \"reasoning\": \"梅罗决战上演，梅西和劳塔罗的进球帮助阿根廷险胜葡萄牙晋级四强。\"\n    },\n    {\n      \"match_no\": 101,\n      \"stage\": \"SF\",\n      \"home\": \"France\",\n      \"away\": \"Spain\",\n      \"score\": \"2-1\",\n      \"winner\": \"France\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Kylian Mbappé\", \"minute\": 24},\n        {\"team\": \"home\", \"player\": \"Warren Zaïre-Emery\", \"minute\": 83},\n        {\"team\": \"away\", \"player\": \"Lamine Yamal\", \"minute\": 56}\n      ],\n      \"reasoning\": \"法国队大赛经验更丰富，姆巴佩和扎伊尔-埃梅里终结了西班牙的晋级之路。\"\n    },\n    {\n      \"match_no\": 102,\n      \"stage\": \"SF\",\n      \"home\": \"Brazil\",\n      \"away\": \"Argentina\",\n      \"score\": \"2-1\",\n      \"winner\": \"Brazil\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Vinícius Júnior\", \"minute\": 39},\n        {\"team\": \"home\", \"player\": \"Rodrygo\", \"minute\": 75},\n        {\"team\": \"away\", \"player\": \"Alexis Mac Allister\", \"minute\": 61}\n      ],\n      \"reasoning\": \"南美超级德比战况激烈，维尼修斯和罗德里戈帮助巴西力克阿根廷。\"\n    },\n    {\n      \"match_no\": 103,\n      \"stage\": \"THIRD_PLACE\",\n      \"home\": \"Spain\",\n      \"away\": \"Argentina\",\n      \"score\": \"2-1\",\n      \"winner\": \"Spain\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Dani Olmo\", \"minute\": 42},\n        {\"team\": \"home\", \"player\": \"Ferran Torres\", \"minute\": 78},\n        {\"team\": \"away\", \"player\": \"Alejandro Garnacho\", \"minute\": 55}\n      ],\n      \"reasoning\": \"西班牙在季军战中表现更积极，奥尔莫和费兰·托雷斯击败阿根廷。\"\n    },\n    {\n      \"match_no\": 104,\n      \"stage\": \"FINAL\",\n      \"home\": \"France\",\n      \"away\": \"Brazil\",\n      \"score\": \"1-2\",\n      \"winner\": \"Brazil\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Kylian Mbappé\", \"minute\": 45},\n        {\"team\": \"away\", \"player\": \"Vinícius Júnior\", \"minute\": 58},\n        {\"team\": \"away\", \"player\": \"Endrick\", \"minute\": 89}\n      ],\n      \"reasoning\": \"巴西队在决赛中展现出极强的冠军气质，恩德里克绝杀法国夺得大力神杯。\"\n    }\n  ],\n  \"champion\": \"Brazil\",\n  \"sources\": [\n    \"https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026\",\n    \"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage\",\n    \"https://www.theguardian.com/football/2026/jun/09/a-very-beginners-guide-to-the-world-cup-how-does-it-work-and-the-players-to-look-out-for\",\n    \"https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/yamal-endrick-guler-co-the-young-guns-ready-to-storm-fifa-world-cup-2026/articleshow/131591795.cms\",\n    \"https://nypost.com/2026/06/09/betting/2026-world-cup-golden-boot-picks-best-bets-predictions-to-score-the-most-goals/\",\n    \"https://talksport.com/football/world-cup/4311921/world-cup-2026-injury-tracker-full-squads-messi/\"\n  ]\n}"
+  },
+  "thinking_text": "**2026 FIFA World Cup Group Stage Prediction**\n\nMy task is to generate a comprehensive prediction for the 2026 FIFA World Cup group stage. I've been given a context pack that I will leverage to formulate the predictions. The output must be a single, valid JSON object that contains the group stage predictions, an overall tournament summary in Simplified Chinese, and the sources used. I need to be careful with information regarding player injuries.\n\nI've carefully planned to map out all 72 matches in the group stage, assigning realistic scores and scorers, also taking into account any injury news (e.g., Messi's muscle issue, Yamal's fitness, Neymar's calf injury). The scores need to be realistic and the scorers should match the scoreline. Each match requires a concise explanation in Simplified Chinese. I've considered that the model has to include all matches and only those matches. I'm building this as a single JSON object. Here is the JSON structure.\n\n```json\n{\n  \"stage\": \"group_stage\",\n  \"model_tournament_summary\": \"2026年世界杯小组赛预测综合考虑了各队近期状态、伤病情况（如内马尔缺阵、梅西带伤、亚马尔首发等）以及扩军至48支球队后的出线形势。传统强队如法国、阿根廷、西班牙和德国在小组赛中展现出强大的统治力，而恩德里克、亚马尔等年轻球员将大放异彩。部分实力接近的小组中，平局较多，各队为争夺成绩最好的小组第三名竞争激烈。\",\n  \"group_matches\": [\n    {\n      \"match_no\": 1,\n      \"group\": \"A\",\n      \"home\": \"Mexico\",\n      \"away\": \"South Africa\",\n      \"score\": \"2-1\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\n          \"team\": \"home\",\n          \"player\": \"Santiago Giménez\",\n          \"minute\": 24\n        },\n        {\n          \"team\": \"home\",\n          \"player\": \"Edson Álvarez\",\n          \"minute\": 68\n        },\n        {\n          \"team\": \"away\",\n          \"player\": \"Percy Tau\",\n          \"minute\": 82\n        }\n      ],\n      \"reasoning\": \"墨西哥凭借主场优势和更强的中场控制力险胜南非。\"\n    },\n    {\n      \"match_no\": 2,\n      \"group\": \"A\",\n      \"home\": \"South Korea\",\n      \"away\": \"Czech Republic\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\n          \"team\": \"home\",\n          \"player\": \"Son Heung-min\",\n          \"minute\": 15\n        },\n        {\n          \"team\": \"away\",\n          \"player\": \"Patrik Schick\",\n          \"minute\": 45\n        }\n      ],\n      \"reasoning\": \"韩国与捷克实力相当，孙兴慜的进球帮助球队拿到一分。\"\n    },\n    {\n      \"match_no\": 3,\n      \"group\": \"B\",\n      \"home\": \"Canada\",\n      \"away\": \"Bosnia and Herzegovina\",\n      \"score\": \"1-1\",\n      \"result\": \"draw\",\n      \"scorers\": [\n        {\n          \"team\": \"home\",\n          \"player\": \"Jonathan David\",\n          \"minute\": 5\n        },\n        {\n          \"team\": \"away\",\n          \"player\": \"Edin Džeko\",\n          \"minute\": 78\n        }\n      ],\n      \"reasoning\": \"加拿大在阿方索·戴维斯出战成疑的情况下，依靠戴维德的进球逼平波黑。\"\n    },\n    {\n      \"match_no\": 4,\n      \"group\": \"D\",\n      \"home\": \"United States\",\n      \"away\": \"Paraguay\",\n      \"score\": \"2-0\",\n      \"result\": \"home\",\n      \"scorers\": [\n        {\n          \"team\": \"home\",\n          \"player\": \"Christian Pulisic\",\n          \"minute\": 31\n        },\n        {\n          \"team\": \"home\",\n          \"player\": \"Folarin Balogun\",\n          \"minute\": 62\n        }\n      ],\n      \"reasoning\": \"美国队主场作战，普\n\n\n```json\n{\n  \"stage\": \"knockout\",\n  \"knockout_summary\": \"2026年世界杯淘汰赛阶段充满强强对话。巴西队凭借维尼修斯和恩德里克等年轻天才的出色发挥，一路过关斩将，在半决赛击败宿敌阿根廷，并在决赛中力克姆巴佩领衔的法国队，夺得队史第六座世界杯冠军。法国队和西班牙队展现了强大的欧洲足球底蕴，分别获得亚军和季军。梅西和C罗在四分之一决赛上演了史诗般的对决，最终阿根廷险胜，但止步半决赛。\",\n  \"knockout_matches\": [\n    {\n      \"match_no\": 73,\n      \"stage\": \"R32\",\n      \"home\": \"Mexico\",\n      \"away\": \"Canada\",\n      \"score\": \"2-1\",\n      \"winner\": \"Mexico\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Santiago Giménez\", \"minute\": 34},\n        {\"team\": \"home\", \"player\": \"Edson Álvarez\", \"minute\": 76},\n        {\"team\": \"away\", \"player\": \"Jonathan David\", \"minute\": 52}\n      ],\n      \"reasoning\": \"墨西哥在中北美洲内战中凭借更丰富的经验和主场氛围险胜加拿大。\"\n    },\n    {\n      \"match_no\": 74,\n      \"stage\": \"R32\",\n      \"home\": \"Germany\",\n      \"away\": \"South Korea\",\n      \"score\": \"2-0\",\n      \"winner\": \"Germany\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Jamal Musiala\", \"minute\": 41},\n        {\"team\": \"home\", \"player\": \"Kai Havertz\", \"minute\": 83}\n      ],\n      \"reasoning\": \"德国队整体实力碾压韩国，穆西亚拉和哈弗茨建功。\"\n    },\n    {\n      \"match_no\": 75,\n      \"stage\": \"R32\",\n      \"home\": \"Netherlands\",\n      \"away\": \"Morocco\",\n      \"score\": \"1-0\",\n      \"winner\": \"Netherlands\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Cody Gakpo\", \"minute\": 66}\n      ],\n      \"reasoning\": \"荷兰队防守稳固，加克波打入制胜球淘汰摩洛哥。\"\n    },\n    {\n      \"match_no\": 76,\n      \"stage\": \"R32\",\n      \"home\": \"Brazil\",\n      \"away\": \"Japan\",\n      \"score\": \"3-1\",\n      \"winner\": \"Brazil\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Vinícius Júnior\", \"minute\": 22},\n        {\"team\": \"home\", \"player\": \"Rodrygo\", \"minute\": 54},\n        {\"team\": \"home\", \"player\": \"Endrick\", \"minute\": 88},\n        {\"team\": \"away\", \"player\": \"Takefusa Kubo\", \"minute\": 71}\n      ],\n      \"reasoning\": \"巴西队进攻火力全开，维尼修斯和恩德里克表现抢眼击败日本。\"\n    },\n    {\n      \"match_no\": 77,\n      \"stage\": \"R32\",\n      \"home\": \"France\",\n      \"away\": \"Sweden\",\n      \"score\": \"2-0\",\n      \"winner\": \"France\",\n      \"decider\": \"REG\",\n      \"scorers\": [\n        {\"team\": \"home\", \"player\": \"Kylian Mbappé\", \"minute\": 33},\n        {\"team\": \"home\", \"player\": \"Antoine Griezmann\", \"minute\": 75}\n      ],\n      \"reasoning\": \"法国队实力占优，姆巴佩和格列兹曼轻松带队晋级。\"\n    },\n    {\n      \"match_no\": 78,\n      \"stage\": \"R32\",\n      \"home\": \"Ecuador\",\n      \"away\": \"Norway\",\n      \"score\": \"1-2\",\n\n"
+}

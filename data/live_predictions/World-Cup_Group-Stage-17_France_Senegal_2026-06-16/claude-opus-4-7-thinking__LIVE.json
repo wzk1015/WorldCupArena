@@ -1,0 +1,382 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-17_France_Senegal_2026-06-16",
+  "provider_fixture_id": "19609143",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-16T20:48:49+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 0
+    },
+    "home": "France",
+    "away": "Senegal",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-16T19:00:00+00:00",
+    "venue": "New York New Jersey Stadium",
+    "venue_city": "East Rutherford"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.985,
+      "draw": 0.012,
+      "away": 0.003
+    },
+    "most_likely_score": "2-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "目前比赛已进入第90分钟，法国2-0领先塞内加尔。姆巴佩在第66分钟首开纪录，巴尔科拉在第82分钟扩大比分，法国在控球率（55%）、射门次数（9比5）以及射正（6比1）方面均占据明显优势，整体场面牢牢掌控。塞内加尔虽然连续换上姆巴耶、迪亚拉、迪昂等攻击手试图改变局面，但仅有1次射正，进攻效率极低。考虑到比赛只剩补时阶段，法国获胜几乎已成定局，胜率给到98.5%，平局与塞内加尔翻盘的概率极低。最可能的最终比分维持在2-0，反映法国稳守反击的策略和塞内加尔难以在补时短时间内连入两球的现实。补时阶段若仍有进球，法国方面替补登场的登贝莱以及状态火热的姆巴佩最具威胁，塞内加尔方面则是新登场的尼古拉斯·杰克逊可能抓住反击机会，但整体进球概率都较低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 6172,
+    "output": 580
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0335664,
+  "wall_seconds": 13.475,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.985, \"draw\": 0.012, \"away\": 0.003},\n  \"most_likely_score\": \"2-0\",\n  \"scorers\": [\n    {\"player\": \"Ousmane Dembélé\", \"team\": \"home\", \"minute\": 92, \"p\": 0.06},\n    {\"player\": \"Kylian Mbappé\", \"team\": \"home\", \"minute\": 93, \"p\": 0.05},\n    {\"player\": \"Nicolas Jackson\", \"team\": \"away\", \"minute\": 94, \"p\": 0.03}\n  ],\n  \"reasoning\": {\"overall\": \"目前比赛已进入第90分钟，法国2-0领先塞内加尔。姆巴佩在第66分钟首开纪录，巴尔科拉在第82分钟扩大比分，法国在控球率（55%）、射门次数（9比5）以及射正（6比1）方面均占据明显优势，整体场面牢牢掌控。塞内加尔虽然连续换上姆巴耶、迪亚拉、迪昂等攻击手试图改变局面，但仅有1次射正，进攻效率极低。考虑到比赛只剩补时阶段，法国获胜几乎已成定局，胜率给到98.5%，平局与塞内加尔翻盘的概率极低。最可能的最终比分维持在2-0，反映法国稳守反击的策略和塞内加尔难以在补时短时间内连入两球的现实。补时阶段若仍有进球，法国方面替补登场的登贝莱以及状态火热的姆巴佩最具威胁，塞内加尔方面则是新登场的Nicolas Jackson可能抓住反击机会，但整体进球概率都较低。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-16T19:17:19+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Senegal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.25,
+        "away": 0.17
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 38,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 67,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Sadio Mané",
+          "minute": 74,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Antoine Griezmann",
+          "minute": 82,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Nicolas Jackson",
+          "minute": 60,
+          "p": 0.16,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第17分钟，双方仍是0-0。从开局阶段来看，法国控球率略占优势（55%对45%），但塞内加尔在前场更具威胁，已经制造了1次射门和1次角球，整体节奏比较开放。法国作为赛前热门，阵中拥有Mbappé、Dembélé、Griezmann等顶级攻击手，随着比赛深入，他们的个人能力优势会逐渐放大；塞内加尔则更依赖反击和定位球，Mané、Jackson的速度仍是稳定的得分来源。综合赛前实力差距与目前场面，法国获胜概率最高，约58%，平局25%，塞内加尔取胜约17%。结合两队进攻火力和当前节奏，最有可能的最终比分定为法国2-1塞内加尔——预计法国在上半场后段或下半场初段由Mbappé率先打破僵局，随后由Dembélé或Griezmann扩大比分，而塞内加尔有较大概率通过Mané或Jackson扳回一球。后续进球预测均设定在第17分钟之后，权重根据出场威胁与战术角色分配。"
+      },
+      "sources": [],
+      "cost_usd": 0.0328597,
+      "tokens": {
+        "input": 5511,
+        "output": 674
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.266
+    },
+    {
+      "submitted_at": "2026-06-16T19:31:03+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 31,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Senegal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.27,
+        "away": 0.18
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 63,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 75,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Sadio Mané",
+          "minute": 70,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Nicolas Jackson",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第31分钟，法国与塞内加尔暂时0-0战平，场面上还未出现进球或重大事件。从统计来看，法国掌握了61%的控球率，但射门数仅有1次，塞内加尔虽然控球落于下风，却在反击中送出2次射门，两队各得2个角球，整体场面较为均衡，法国稍占主动但效率不高。考虑到法国队整体阵容深度和大赛经验明显占优，加上控球优势能在下半场逐渐转化为更多机会，主胜仍是最可能的走向，因此给予法国约55%的胜率，平局27%，塞内加尔依靠反击爆冷的概率约18%。结合当前节奏与剩余时间，最可能的最终比分定在1-0法国小胜，符合一场强强对话中节奏偏慢、进球不多的剧本。后续进球方面，姆巴佩（Mbappé）作为法国头号终结者，在体能下降后的中段最具威胁，登贝莱（Dembélé）在边路突破中也有破门机会；塞内加尔方面则更可能由马内（Mané）或锋线杀手杰克逊（Jackson）在反击中制造威胁，因此把可能的进球者集中在下半场中后段。"
+      },
+      "sources": [],
+      "cost_usd": 0.0328745,
+      "tokens": {
+        "input": 5515,
+        "output": 674
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.127
+    },
+    {
+      "submitted_at": "2026-06-16T19:44:45+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 44,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Senegal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.27,
+        "away": 0.18
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 67,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Sadio Mané",
+          "minute": 72,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Nicolas Jackson",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到上半场第44分钟，法国与塞内加尔仍是0-0。从场面数据看，法国控球率56%略占优，角球2-2持平，但射门数1-4处于劣势，塞内加尔有1次射正，门将萨维奇也做出1次扑救，显示塞内加尔在进攻端更具威胁，而法国尚未形成有效射门。考虑到法国整体阵容深度和大赛经验更胜一筹，下半场体能与替补质量上的优势预计会逐步显现，而塞内加尔目前的进攻效率虽高，但持续输出难度较大。综合赛前实力差距与当前0-0的低比分局面，法国胜出概率仍最高，约55%，平局约27%，塞内加尔取胜约18%。最可能的最终比分为1-0法国小胜，符合控球占优一方在僵持比赛中通过一次把握住的机会破门的剧本。后续进球方面，法国端Mbappé作为头号终结点，下半场约65-70分钟阶段最具威胁；Dembélé在反击中也有补射可能。塞内加尔方面，萨迪奥·马内的个人能力是最大变数，尼古拉斯·杰克逊则可能在体能下降阶段抓住空档。所有预测进球时间均设定在第44分钟之后，符合当前比赛进程。"
+      },
+      "sources": [],
+      "cost_usd": 0.033599699999999996,
+      "tokens": {
+        "input": 5576,
+        "output": 701
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.686
+    },
+    {
+      "submitted_at": "2026-06-16T20:21:04+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 66,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Senegal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.36,
+        "away": 0.22
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Sadio Mané",
+          "minute": 80,
+          "p": 0.13,
+          "team": "away"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 82,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Nicolas Jackson",
+          "minute": 85,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第66分钟，法国与塞内加尔仍以0-0僵持。从场面数据看，法国控球率55%略占优，角球4-2领先，整体在阵地战中掌握主动；塞内加尔射门数5-3稍多但同样只有1次射正，两队均缺乏真正高质量的破门机会，且犯规6-3显示塞内加尔在中场拦截较为积极。考虑到比赛仅剩不到30分钟且双方进攻效率有限，平局概率明显上升，但法国凭借更强的个人能力和板凳深度，在末段通过替补冲击打破僵局的可能性仍略高于对手，因此主胜概率最高，平局次之，客胜最低。最可能的最终比分定为1-0，符合主队小胜的判断，同时不低于当前比分。后续进球人选方面，法国端Mbappé作为最具威胁的终结点，在70分钟后的提速阶段最可能抓住机会，Dembélé的突破制造也具一定威胁；塞内加尔若能扳平或反超，Mané的经验和Jackson的支点作用是最可能的得分来源，进球时间均设定在当前66分钟之后的常规时间末段。"
+      },
+      "sources": [],
+      "cost_usd": 0.0327487,
+      "tokens": {
+        "input": 5576,
+        "output": 655
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.459
+    },
+    {
+      "submitted_at": "2026-06-16T20:35:03+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 80,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Senegal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.17,
+        "away": 0.05
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第80分钟，法国凭借姆巴佩（Mbappé）第66分钟由奥利斯（Olise）助攻打入的进球以1-0领先塞内加尔。从场面数据来看，法国控球率55%，射门6次其中3次射正，角球5次，整体压制明显；塞内加尔虽然有5次射门但仅1次射正，犯规也更多（6次），进攻效率不足。考虑到比赛仅剩约10分钟加补时，法国领先且场面占优，胜率显著上升至约78%，平局概率压缩到17%左右，塞内加尔逆转的可能性已经很低，仅5%左右。最可能的最终比分维持1-0，因为法国在领先后通常会偏向控制节奏，塞内加尔则需要压上进攻但效率有限。后续进球方面，若有进球最可能仍来自法国的反击，姆巴佩与登贝莱（Dembélé）是最具威胁的人选；塞内加尔若投入进攻，杰克逊（Jackson）有一定扳平机会，但概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0319606,
+      "tokens": {
+        "input": 5738,
+        "output": 580
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.391
+    },
+    {
+      "submitted_at": "2026-06-16T20:48:49+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Senegal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.985,
+        "draw": 0.012,
+        "away": 0.003
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛已进入第90分钟，法国2-0领先塞内加尔。姆巴佩在第66分钟首开纪录，巴尔科拉在第82分钟扩大比分，法国在控球率（55%）、射门次数（9比5）以及射正（6比1）方面均占据明显优势，整体场面牢牢掌控。塞内加尔虽然连续换上姆巴耶、迪亚拉、迪昂等攻击手试图改变局面，但仅有1次射正，进攻效率极低。考虑到比赛只剩补时阶段，法国获胜几乎已成定局，胜率给到98.5%，平局与塞内加尔翻盘的概率极低。最可能的最终比分维持在2-0，反映法国稳守反击的策略和塞内加尔难以在补时短时间内连入两球的现实。补时阶段若仍有进球，法国方面替补登场的登贝莱以及状态火热的姆巴佩最具威胁，塞内加尔方面则是新登场的尼古拉斯·杰克逊可能抓住反击机会，但整体进球概率都较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0335664,
+      "tokens": {
+        "input": 6172,
+        "output": 580
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.475
+    }
+  ]
+}

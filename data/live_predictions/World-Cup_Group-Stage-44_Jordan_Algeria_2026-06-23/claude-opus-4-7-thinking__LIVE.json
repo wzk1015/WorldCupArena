@@ -1,0 +1,879 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-44_Jordan_Algeria_2026-06-23",
+  "provider_fixture_id": "19609181",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-23T04:59:21+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 2
+    },
+    "home": "Jordan",
+    "away": "Algeria",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-23T03:00:00+00:00",
+    "venue": "San Francisco Bay Area Stadium",
+    "venue_city": "Santa Clara"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.04,
+      "draw": 0.1,
+      "away": 0.86
+    },
+    "most_likely_score": "1-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进入第90分钟，比分1-2，阿尔及利亚客场领先约旦。约旦由尼扎尔·拉什丹在第36分钟首开纪录，但下半场被纳迪尔·本布瓦利（69'）和阿明·古里（82'）连入两球完成逆转。从场面统计看，阿尔及利亚控球率高达72%，全场17次射门、8次射正、9次角球，全面压制约旦（8次射门、4次射正、仅1次角球），整体局面与比分相符。约旦门将虽有6次扑救显示其抵抗力，但进攻端在比分落后阶段缺乏稳定的创造力。综合考虑剩余时间仅有数分钟伤停补时、阿尔及利亚已通过密集换人加强防守与拖延节奏，且仍保持一定反击能力，客胜概率大幅提升至约0.86，平局概率仅约0.10（来自约旦最后时刻扳平的小概率，例如定位球或禁区混战），主胜则几乎不可能。最可能的最终比分维持1-2。补时阶段如出现进球，最有可能来自阿尔及利亚的反击终结者Gouiri或刚替补登场的Hadj Moussa；约旦方面，阿里·奥勒万和马哈茂德·马尔迪作为前场球员在压上抢分时存在小概率破门机会，但整体进球概率都偏低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 21088,
+    "output": 731
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.09154910000000001,
+  "wall_seconds": 20.038,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.04, \"draw\": 0.10, \"away\": 0.86},\n  \"most_likely_score\": \"1-2\",\n  \"scorers\": [\n    {\"player\": \"Amine Gouiri\", \"team\": \"away\", \"minute\": 93, \"p\": 0.07},\n    {\"player\": \"Anis Hadj Moussa\", \"team\": \"away\", \"minute\": 94, \"p\": 0.05},\n    {\"player\": \"Ali Olwan\", \"team\": \"home\", \"minute\": 92, \"p\": 0.05},\n    {\"player\": \"Mahmoud Al-Mardi\", \"team\": \"home\", \"minute\": 95, \"p\": 0.04}\n  ],\n  \"reasoning\": {\"overall\": \"比赛已进入第90分钟，比分1-2，阿尔及利亚客场领先约旦。约旦由Nizar Al-Rashdan在第36分钟首开纪录，但下半场被Nadhir Benbouali（69'）和Amine Gouiri（82'）连入两球完成逆转。从场面统计看，阿尔及利亚控球率高达72%，全场17次射门、8次射正、9次角球，全面压制约旦（8次射门、4次射正、仅1次角球），整体局面与比分相符。约旦门将虽有6次扑救显示其抵抗力，但进攻端在比分落后阶段缺乏稳定的创造力。综合考虑剩余时间仅有数分钟伤停补时、阿尔及利亚已通过密集换人加强防守与拖延节奏，且仍保持一定反击能力，客胜概率大幅提升至约0.86，平局概率仅约0.10（来自约旦最后时刻扳平的小概率，例如定位球或禁区混战），主胜则几乎不可能。最可能的最终比分维持1-2。补时阶段如出现进球，最有可能来自阿尔及利亚的反击终结者Gouiri或刚替补登场的Hadj Moussa；约旦方面，Ali Olwan和Mahmoud Al-Mardi作为前场球员在压上抢分时存在小概率破门机会，但整体进球概率都偏低。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-23T03:03:15+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 3,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Jordan",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T03:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.3,
+        "away": 0.48
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Riyad Mahrez",
+          "minute": 63,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Baghdad Bounedjah",
+          "minute": 75,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Mousa Al-Tamari",
+          "minute": 70,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Islam Slimani",
+          "minute": 82,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Yazan Al-Naimat",
+          "minute": 80,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚刚开打3分钟，约旦与阿尔及利亚仍是0-0。从开场短短几分钟的迹象看，约旦在主场氛围（虽是中立场地圣克拉拉）下踢得相对积极，控球率略占优(51%)并先完成了1次射门，而阿尔及利亚则以1次犯规显示出更具身体对抗的开局，尚未形成有效射门。考虑到双方整体实力差距——阿尔及利亚拥有更高水准的欧洲联赛球员储备和世界杯经验，而约旦虽近年进步明显但仍处于追赶位置——赛前的基本面并未因这3分钟的轻微波动而改变，阿尔及利亚仍是更被看好的一方。因此胜负概率维持阿尔及利亚领先(约48%)，平局其次(约30%)，约旦取胜概率最低(约22%)。最可能的最终比分定为0-1，符合阿尔及利亚小胜的主基调，也与小组赛中实力略占优一方常见的谨慎控制节奏方式相符。后续进球方面，阿尔及利亚的Mahrez具备由边路制造威胁并把握机会的能力，预计是比赛中段后段最可能的破门者；替补或中锋位置的Bounedjah与Slimani在比赛后段对方体能下降时具备终结能力。约旦方面，Al-Tamari的速度与Al-Naimat的支点作用是制造反击进球的主要来源，因此也保留两人在中后段的进球可能。整体来看，比赛刚开始，主要变量仍在于阿尔及利亚能否率先打破僵局以及约旦能否依靠反击争取分数。"
+      },
+      "sources": [],
+      "cost_usd": 0.0885077,
+      "tokens": {
+        "input": 19581,
+        "output": 868
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.87
+    },
+    {
+      "submitted_at": "2026-06-23T03:09:33+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 9,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Jordan",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T03:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.3,
+        "away": 0.52
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Riyad Mahrez",
+          "minute": 63,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Baghdad Bounedjah",
+          "minute": 71,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Islam Slimani",
+          "minute": 78,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Mousa Al-Tamari",
+          "minute": 74,
+          "p": 0.13,
+          "team": "home"
+        },
+        {
+          "player": "Yazan Al-Naimat",
+          "minute": 82,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第9分钟，约旦与阿尔及利亚仍然互交白卷，比分0-0。从开局阶段的场面来看，阿尔及利亚明显占据主动，控球率高达72%，并已经获得1个角球，整体压迫和推进节奏要好于约旦；约旦目前控球只有28%，更多处于退守和反击的姿态，双方射门数虽然都是1次，但场面主导权倾向于非洲劲旅。结合赛前实力对比，阿尔及利亚的个人能力和锋线深度（Mahrez、Bounedjah、Slimani 等）相对更具威胁，是世界杯小组赛中明显被看好的一方，因此客胜概率给到0.52，平局0.30，主队取胜0.18。考虑到比赛刚开场不久、阿尔及利亚虽占优但尚未形成真正高质量的破门机会，且约旦的低位防守通常较为坚韧，预计全场进球数偏少，最有可能的最终比分定为0-1，由阿尔及利亚凭借中后段的一次有效进攻拿下比赛。后续进球人选方面，阿尔及利亚一侧以 Mahrez 在右路的组织与终结最具威胁，作为头号破门候选；Bounedjah 与 Slimani 作为禁区支点，在比赛进入60分钟后随着对手体能下降的把握力会上升；约旦方面若能扳平或追分，最可能来自速度型边锋 Mousa Al-Tamari 的反击突破，以及中锋 Yazan Al-Naimat 在定位球和二点球中的抢点，所有进球时间均设定在当前第9分钟之后，与最可能比分0-1的整体走势保持一致。"
+      },
+      "sources": [],
+      "cost_usd": 0.0888925,
+      "tokens": {
+        "input": 19615,
+        "output": 882
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.833
+    },
+    {
+      "submitted_at": "2026-06-23T03:15:56+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 15,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Jordan",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T03:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.3,
+        "away": 0.52
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Riyad Mahrez",
+          "minute": 63,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Baghdad Bounedjah",
+          "minute": 71,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Musa Al-Taamari",
+          "minute": 74,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Islam Slimani",
+          "minute": 78,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Yazan Al-Naimat",
+          "minute": 82,
+          "p": 0.14,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第15分钟，比分仍是0-0，尚未出现进球或重大事件。从场上数据来看，阿尔及利亚牢牢掌控了节奏，控球率高达75%，并且已经拿到1个角球，迫使约旦门将完成1次扑救，整体压制态势明显。约旦虽然控球只有25%，但利用为数不多的反击机会打出了2次射门、1次射正，反击效率不俗，说明他们大概率会延续低位防守加快速反击的策略。综合赛前实力差距、当前场面以及阿尔及利亚在中前场的人员厚度，主动权依然在客队一侧，因此客队取胜概率最高，平局其次，约旦爆冷的可能性较小。考虑到约旦防线在开场阶段站得比较稳，阿尔及利亚短时间内连入数球的概率不算高，最可能的最终比分定在0-1，由阿尔及利亚在下半时通过一次有效进攻锁定胜局。后续进球点上，客队前场的Mahrez具备打开僵局的个人能力，定位球和肋部渗透都是他的拿手好戏，因此把他列为首选射手；中锋Bounedjah和经验丰富的Slimani在禁区内的把握机会能力也值得关注，作为替补登场后更可能在比赛后段终结进攻。约旦一侧若想扳平或抢分，主要寄望于Al-Taamari的反击突破以及锋线Al-Naimat的抢点能力，两人都被列为潜在进球者，但概率明显低于客队球员。所有预测进球时间均设定在第15分钟之后，符合当前比赛进程。"
+      },
+      "sources": [],
+      "cost_usd": 0.0887445,
+      "tokens": {
+        "input": 19675,
+        "output": 862
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.733
+    },
+    {
+      "submitted_at": "2026-06-23T03:22:14+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 22,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Jordan",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T03:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.3,
+        "away": 0.52
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Riyad Mahrez",
+          "minute": 63,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Mohamed Amoura",
+          "minute": 71,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Baghdad Bounedjah",
+          "minute": 78,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Musa Al-Taamari",
+          "minute": 68,
+          "p": 0.13,
+          "team": "home"
+        },
+        {
+          "player": "Said Benrahma",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Yazan Al-Naimat",
+          "minute": 80,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第22分钟，约旦与阿尔及利亚仍是0-0。从场面数据看，阿尔及利亚控球率高达76%，完全掌握比赛节奏，已获得1次角球，并迫使约旦门将做出1次扑救；约旦则在为数不多的反击中打出2次射门、1次射正，更多依赖防守反击。考虑到阿尔及利亚整体实力和阵容厚度（马赫雷斯、阿穆拉、本拉赫马、布纽贾等攻击线明显优于约旦），加之控球与场面压制，他们破门的概率明显更高，因此客胜概率提升至约52%，平局保留在30%，主队取胜概率压低至18%左右。最可能的最终比分定为0-1：阿尔及利亚凭借持续施压在中下半场打入1球，而约旦在落后后想要扳平难度较大但并非完全无机会，故仍保留一定平局空间。后续进球预测集中在第60分钟后体能下降、防线松动的阶段：阿尔及利亚方面优先考虑Mahrez、Amoura、Bounedjah等核心攻击手；约旦若有机会，Al-Taamari和Al-Naimat是最具威胁的反击点。"
+      },
+      "sources": [],
+      "cost_usd": 0.0867872,
+      "tokens": {
+        "input": 19671,
+        "output": 757
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.245
+    },
+    {
+      "submitted_at": "2026-06-23T03:28:35+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 28,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Jordan",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T03:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.2,
+        "draw": 0.3,
+        "away": 0.5
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Riyad Mahrez",
+          "minute": 58,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Mousa Al-Tamari",
+          "minute": 67,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Baghdad Bounedjah",
+          "minute": 73,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Islam Slimani",
+          "minute": 80,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Yazan Al-Naimat",
+          "minute": 78,
+          "p": 0.16,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分 0-0，比赛进行到第 28 分钟，仍处于上半场中段。从场面来看，阿尔及利亚控球率高达 76%，完全掌控了节奏和中场，约旦只能依靠零星反击，整体被压制明显。不过有趣的是，约旦在为数不多的反击中已经完成 3 次射门、2 次射正，效率相当高，这也说明他们的反击具备一定威胁，迫使阿尔及利亚门将做出 2 次扑救。阿尔及利亚虽然控球占优，但目前 2 次射门 0 射正，进攻在最后一传和终结环节还没有完全打开，预计随着比赛推进、体能差距拉大，他们的机会会逐步增多。综合世界杯小组赛背景、双方实力差距以及阿尔及利亚明显的控球与场面优势，客队胜出的概率最高，约旦因防反效率尚可仍保留一定平局可能，主胜概率相对较低。基于客队大概率会在中后段打破僵局，并可能再下一城，而约旦凭借反击有机会扳回一球，最可能的最终比分定在 1-2。后续进球人选方面，阿尔及利亚一侧重点关注 Mahrez 的组织终结能力，以及 Bounedjah、Slimani 两位中锋在禁区内的把握机会能力；约旦一侧则看好速度型前锋 Al-Tamari 在反击中的冲击力，以及中锋 Al-Naimat 抢点的可能，所有进球时间均设定在当前 28 分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0881525,
+      "tokens": {
+        "input": 19675,
+        "output": 830
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.332
+    },
+    {
+      "submitted_at": "2026-06-23T03:34:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 34,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Jordan",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T03:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.3,
+        "away": 0.52
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Riyad Mahrez",
+          "minute": 58,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Baghdad Bounedjah",
+          "minute": 72,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Mousa Al-Tamari",
+          "minute": 67,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Islam Slimani",
+          "minute": 80,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Yazan Al-Naimat",
+          "minute": 78,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第34分钟，比分仍是0-0。从场面数据看，阿尔及利亚明显占据主导：控球率高达75%，已经制造2次角球，门将也做出2次扑救，显示他们持续在约旦半场施压。约旦虽然控球只有25%，但凭借快速反击打出3次射门、2次射正，门前效率不差，证明他们的反击威胁仍在。综合来看，阿尔及利亚的整体实力与本场掌控力使其取胜概率最高，但约旦的反击随时可能制造意外，因此平局概率也不低，主队全取三分的可能性相对最小。考虑到上半场尚未破门、阿队进攻持续渗透、约旦防线压力不断累积，最可能的最终比分判断为0-2，预计阿尔及利亚在下半场体能差距拉大后由Mahrez或Bounedjah等锋线球员率先打破僵局，并在末段再下一城；若约旦能抓住反击机会，Al-Tamari和Al-Naimat是最有可能的破门人选。所有预测进球时间均设定在第34分钟之后，符合当前比赛进程。"
+      },
+      "sources": [],
+      "cost_usd": 0.0854145,
+      "tokens": {
+        "input": 19675,
+        "output": 682
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.173
+    },
+    {
+      "submitted_at": "2026-06-23T03:41:13+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 41,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Jordan",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T03:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.38,
+        "draw": 0.3,
+        "away": 0.32
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Riyad Mahrez",
+          "minute": 68,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Baghdad Bounedjah",
+          "minute": 75,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Mousa Tamari",
+          "minute": 78,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Yazan Al-Naimat",
+          "minute": 82,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Islam Slimani",
+          "minute": 85,
+          "p": 0.14,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到上半场第41分钟，约旦凭借第36分钟尼扎尔·拉什丹接Mousa Tamari助攻的进球以1-0领先阿尔及利亚。从场面数据看，阿尔及利亚控球率高达75%，并已获得3个角球，整体压制明显，但有效射门只有2次，约旦反而在5次射门中3次射正，效率更高，并且在丢球前阿尔及利亚还有一个点球正在VAR审核中，悬念仍存。综合来看，约旦先进球加上反击效率给了主队领先优势，但阿尔及利亚整体实力和场面占优，下半场极有可能加强攻势并扳平甚至反超，因此胜平负概率拉得较为接近：约旦小幅领先，平局与阿尔及利亚胜出概率相近。最可能的最终比分定为1-1，符合阿尔及利亚控场施压下大概率追平、但难以在短时间内完全逆转的判断。后续进球方面，阿尔及利亚需要全力进攻，前场核心里亚德·马赫雷斯与中锋Baghdad Bounedjah、替补可能登场的Islam Slimani都是潜在破门人选；约旦方面则寄望于Mousa Tamari的反击串联和锋线Yazan Al-Naimat的把握机会，所有候选进球时间均设定在当前41分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.08763080000000001,
+      "tokens": {
+        "input": 19849,
+        "output": 767
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.732
+    },
+    {
+      "submitted_at": "2026-06-23T03:47:35+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Jordan",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T03:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.31,
+        "away": 0.23
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "上半场结束时约旦1-0领先阿尔及利亚，进球来自第36分钟尼扎尔·拉什丹接Mousa Tamari助攻的破门。从场面数据看，阿尔及利亚控球率高达73%、获得3个角球，明显占据场面主导，但约旦防守反击效率更高，5次射门3次射正，临门一脚的把握度优于对手；阿尔及利亚虽然射门4次但只有2次射正，且第44分钟拉米兹·泽鲁基吃到黄牌，中场拦截动作可能因此受限。综合先进球优势、世界杯小组赛半场领先球队的历史胜率以及约旦反击的锋利度，主队取胜概率最高，但考虑到阿尔及利亚整体实力和持续施压，下半场被扳平的风险不可忽视，因此平局概率明显高于客胜。最可能的最终比分给到1-0，符合主胜概率最高的判断，也契合约旦低控球率下死守反击的比赛模式。后续进球方面，阿尔及利亚必将加大攻势，Mahrez的组织串联以及Amoura、Bounedjah的前场冲击是最主要的破门威胁；约旦端则寄望Tamari在反击中再下一城，替补登场的Al-Naimat也可能在比赛末段利用对手压上后的空当制造杀机。"
+      },
+      "sources": [],
+      "cost_usd": 0.09417980000000001,
+      "tokens": {
+        "input": 19849,
+        "output": 1121
+      },
+      "tool_calls": 0,
+      "wall_seconds": 29.68
+    },
+    {
+      "submitted_at": "2026-06-23T04:10:34+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 55,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Jordan",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T03:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.3,
+        "away": 0.22
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第55分钟，约旦凭借第36分钟尼扎尔·拉什丹在Mousa Tamari助攻下打入的进球，目前1-0领先阿尔及利亚。从场面看，阿尔及利亚控球率高达74%，角球3-0占优，明显掌握主动权，但射门数仅4次、射正2次，转化效率不及预期；约旦虽然控球只有26%，却利用反击打出6次射门、3次射正，效率更高，且已经取得领先。中场休息时阿尔及利亚连换两人（Benbouali与Bentaleb登场），明显加强进攻端，下半场开局施压意图明显，扳平的概率有所上升。综合领先优势加上还剩约35分钟加补时，约旦获胜概率最高，平局次之，阿尔及利亚翻盘空间相对有限。最可能的最终比分仍为1-0约旦小胜：约旦取得领先后通常会回收防线打反击，阿尔及利亚虽会持续压上但射正转化偏低，再丢球风险也存在。后续进球方面，阿尔及利亚的换上前锋Benbouali与边路核心Mahrez是最具威胁的扳平点，约旦方面则由攻入进球的Al-Rashdan与组织核心Tamari在反击中最有机会扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0871831,
+      "tokens": {
+        "input": 20033,
+        "output": 706
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.161
+    },
+    {
+      "submitted_at": "2026-06-23T04:17:01+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 62,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Jordan",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T03:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.3,
+        "away": 0.22
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分1-0，约旦凭借第36分钟尼扎尔·拉什丹在Mousa Tamari助攻下的进球领先，比赛进入第62分钟。场面上阿尔及利亚明显占据控球（74%对26%），角球数4比1，显示出主导比赛节奏的意图，中场休息时一次性换上Benbouali和Bentaleb两名球员，明显加强进攻意图。但从射门转化来看，约旦总射门6次、射正3次，效率反而高于阿尔及利亚的5次射门、2次射正，反击非常具备威胁性。综合来看，约旦目前手握领先优势且防守组织有效，胜率最高约48%；阿尔及利亚后续会持续压上，扳平的可能性使平局概率上升到约30%；考虑到约旦反击锐利，阿尔及利亚后防压上后容易被打穿，反超难度更大，客胜概率约22%。最可能的最终比分仍是1-0，约旦守住胜果。后续进球点上，阿尔及利亚方面新登场的Benbouali作为前锋是最直接的得分威胁，经验丰富的Mahrez在最后阶段也具备改变战局的能力；约旦方面若有反击机会，核心Tamari和已经进球的Al-Rashdan仍是最可能的破门人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.08722010000000001,
+      "tokens": {
+        "input": 20033,
+        "output": 708
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.874
+    },
+    {
+      "submitted_at": "2026-06-23T04:23:25+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 68,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Jordan",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T03:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.28,
+        "away": 0.17
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分1-0，约旦凭借第36分钟尼扎尔·拉什丹接Mousa Tamari助攻的进球客场领先，比赛已进行至第68分钟。场面上阿尔及利亚控球率高达74%，角球4比1，射门7比3略占优，整体掌控比赛节奏，并在中场休息后连换两人（Benbouali、Bentaleb）加强进攻，意图扳平。但约旦防守反击效率更高，6次射门3次射正，门将完成3次扑救，整体防线稳固。考虑到剩余时间约22分钟+伤停补时，约旦1球领先且时间所剩不多，胜率明显占优，给到55%；阿尔及利亚虽控球占优但破门效率不足，扳平概率约28%，反超机会较小约17%。最可能的最终比分仍是1-0约旦小胜。若后续有进球，阿尔及利亚一方更可能由新登场的中锋Benbouali或边路核心Mahrez打破僵局；约旦则更可能在防反中通过Tamari或锋线Olwan扩大比分锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.0857105,
+      "tokens": {
+        "input": 20035,
+        "output": 626
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.153
+    },
+    {
+      "submitted_at": "2026-06-23T04:34:54+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 79,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Jordan",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T03:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.23,
+        "away": 0.15
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第79分钟，约旦凭借第36分钟尼扎尔·拉什丹接Mousa Tamari助攻的进球，仍以1-0领先阿尔及利亚。场面上阿尔及利亚占据明显主导，控球率高达74%，总射门9次、射正4次、角球4次，下半场开场即用Benbouali和Bentaleb两次换人加强攻势，持续施压；约旦则退守反击，全场仅26%控球，但门将已完成4次扑救，防线整体稳固，并通过Tamari的速度保留反击威胁。考虑到约旦手握领先且只剩十余分钟加补时，先丢球的概率虽然存在但已被时间稀释，主队取胜概率最高，约62%；阿尔及利亚控球占优、压迫凶猛，扳平的可能性约23%；完全翻盘时间已非常紧迫，客胜概率仅15%左右。最可能的最终比分维持1-0，与主队胜率最高一致。后续进球方面，阿尔及利亚势必全线压上，替补登场状态正盛的Benbouali和经验丰富的Mahrez是末段最可能的破门人选；约旦若再进球，大概率来自反击，Tamari持球推进和禁区终结者Al-Naimat的机会最大，进球时间集中在第85分钟之后到补时阶段。"
+      },
+      "sources": [],
+      "cost_usd": 0.08765669999999999,
+      "tokens": {
+        "input": 20116,
+        "output": 715
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.988
+    },
+    {
+      "submitted_at": "2026-06-23T04:41:18+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 86,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Jordan",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T03:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.66,
+        "away": 0.22
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分1-1，比赛已进行到第86分钟，常规时间仅剩约4分钟外加伤停补时。约旦在第36分钟由尼扎尔·拉什丹（Mousa Tamari助攻）首开纪录，阿尔及利亚则在第69分钟通过替补登场的纳迪尔·本布瓦利（里亚德·马赫雷斯助攻）扳平比分。从场面看，阿尔及利亚控球率高达74%，射门12次、射正6次、角球6个，明显在场面上占优；约旦控球仅26%，但凭借门将5次扑救稳住防线，反击效率不俗，射门8次射正4次。下半时阿尔及利亚连续三次换人（Benbouali、Bentaleb、Hadj Moussa）持续加强进攻，约旦在第77分钟也用阿卜杜拉·法胡里换下马哈茂德·马尔迪以加固中场。考虑到所剩时间极短、双方体能下降、约旦明显回收防守，平局是目前最大概率的结果，最可能最终比分维持1-1。阿尔及利亚整体压制更明显，仍存在通过定位球或边路传中由Mahrez、Hadj Moussa或Benbouali打入绝杀的可能，因此客队晚段进球概率略高于主队；约旦若再得分大概率来自Tamari领衔的快速反击。综合判断：平局概率最高，客队赢球概率略高于主队赢球。"
+      },
+      "sources": [],
+      "cost_usd": 0.089318,
+      "tokens": {
+        "input": 20395,
+        "output": 749
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.756
+    },
+    {
+      "submitted_at": "2026-06-23T04:47:41+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Jordan",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T03:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.1,
+        "away": 0.86
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进行至90分钟，约旦1-2落后阿尔及利亚。约旦由尼扎尔·拉什丹在第36分钟首开纪录，但下半场阿尔及利亚通过纳迪尔·本布瓦利（69分钟，Mahrez助攻）和阿明·古里（82分钟，并经VAR确认）完成逆转。从场面看，阿尔及利亚控球率高达75%，射门16-8、射正7-4、角球8-1，全面压制约旦，进球趋势和场面控制都明显倾向客队。进入伤停补时阶段，留给约旦扳平的时间极为有限，且其下半场缺乏有效组织，因此阿尔及利亚获胜概率显著抬升至约86%，平局概率约10%（仅依赖约旦在最后阶段抢点+定位球的低概率机会），约旦逆转可能性几乎可以忽略。最可能的最终比分维持当前的1-2，阿尔及利亚锁定胜局。补时阶段如再有进球，最有可能来自阿尔及利亚的反击推进，Gouiri状态正佳、刚替补登场的Hadj Moussa体能占优，都是潜在得分点；约旦若孤注一掷压上，Mousa Tamari作为前场核心仍保留一定威胁，但概率明显偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0883005,
+      "tokens": {
+        "input": 20540,
+        "output": 665
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.588
+    },
+    {
+      "submitted_at": "2026-06-23T04:53:11+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Jordan",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T03:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.1,
+        "away": 0.86
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，约旦1-2落后阿尔及利亚。约旦在第36分钟由尼扎尔·拉什丹（Tamari助攻）率先破门，但阿尔及利亚下半场易边后牢牢掌控节奏，第69分钟纳迪尔·本布瓦利接Mahrez助攻扳平，第82分钟阿明·古里再下一城完成反超，并在第84分钟经VAR确认有效。从场面数据看，阿尔及利亚控球率高达74%，16次射门、7次射正、8个角球，全面压制只有8次射门、1个角球的约旦，进攻威胁与场面控制都明显占优。临近终场，阿尔及利亚连换Hadjam、Belaid加固后防与节奏管理，约旦则在第85分钟一次性换上Azaizeh、Abu Hasheesh加强前压，但留给客队反扑的时间已极为有限。综合比分、场面和剩余时间，阿尔及利亚获胜概率极高，平局只能寄望于补时阶段的一次定位球或反击得手，约旦翻盘几乎不可能。最可能的最终比分维持在1-2，即阿尔及利亚小胜带走三分。补时阶段若再有进球，最可能来自阿尔及利亚的反击，由状态正佳的阿明·古里或刚替补登场的阿尼斯·哈杰·穆萨把握机会扩大比分；约旦方面若能扳平，新登场的阿里·阿宰泽在禁区内的争顶最具威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.0910237,
+      "tokens": {
+        "input": 20906,
+        "output": 739
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.126
+    },
+    {
+      "submitted_at": "2026-06-23T04:59:21+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Jordan",
+        "away": "Algeria",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-23T03:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.1,
+        "away": 0.86
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，比分1-2，阿尔及利亚客场领先约旦。约旦由尼扎尔·拉什丹在第36分钟首开纪录，但下半场被纳迪尔·本布瓦利（69'）和阿明·古里（82'）连入两球完成逆转。从场面统计看，阿尔及利亚控球率高达72%，全场17次射门、8次射正、9次角球，全面压制约旦（8次射门、4次射正、仅1次角球），整体局面与比分相符。约旦门将虽有6次扑救显示其抵抗力，但进攻端在比分落后阶段缺乏稳定的创造力。综合考虑剩余时间仅有数分钟伤停补时、阿尔及利亚已通过密集换人加强防守与拖延节奏，且仍保持一定反击能力，客胜概率大幅提升至约0.86，平局概率仅约0.10（来自约旦最后时刻扳平的小概率，例如定位球或禁区混战），主胜则几乎不可能。最可能的最终比分维持1-2。补时阶段如出现进球，最有可能来自阿尔及利亚的反击终结者Gouiri或刚替补登场的Hadj Moussa；约旦方面，阿里·奥勒万和马哈茂德·马尔迪作为前场球员在压上抢分时存在小概率破门机会，但整体进球概率都偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.09154910000000001,
+      "tokens": {
+        "input": 21088,
+        "output": 731
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.038
+    }
+  ]
+}

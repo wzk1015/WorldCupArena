@@ -1,0 +1,365 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-20_Austria_Jordan_2026-06-17",
+  "provider_fixture_id": "19609164",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-17T06:07:13+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 1
+    },
+    "home": "Austria",
+    "away": "Jordan",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-17T04:00:00+00:00",
+    "venue": "San Francisco Bay Area Stadium",
+    "venue_city": "Santa Clara"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.94,
+      "draw": 0.05,
+      "away": 0.01
+    },
+    "most_likely_score": "2-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前比赛已进行到第90分钟，奥地利以2-1领先约旦。从整体数据来看，奥地利掌控了63%的控球率，尽管约旦在反击中创造了11次射门并由奥尔万（阿里·奥勒万）打入一球，但奥地利凭借施密德（罗曼诺·施密德）的首开纪录以及下半场对手的乌龙球保持领先。比赛进入伤停补时阶段，约旦势必全线压上寻求绝平机会，这不仅难度极大，也会导致后防空虚。奥地利守住胜果的概率极高。考虑到补时阶段可能出现的VAR判罚或点球机会，替补登场的阿瑙托维奇（Marko Arnautovic）有机会利用反击或点球进一步扩大比分。综合判断，2-1是最可能的最终比分，奥地利胜券在握。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2114,
+    "output": 2084
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0153489,
+  "wall_seconds": 22.815,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.94,\n    \"draw\": 0.05,\n    \"away\": 0.01\n  },\n  \"most_likely_score\": \"2-1\",\n  \"scorers\": [\n    {\n      \"player\": \"Marko Arnautovic\",\n      \"team\": \"home\",\n      \"minute\": 99,\n      \"p\": 0.15\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"当前比赛已进行到第90分钟，奥地利以2-1领先约旦。从整体数据来看，奥地利掌控了63%的控球率，尽管约旦在反击中创造了11次射门并由奥尔万（Ali Olwan）打入一球，但奥地利凭借施密德（Romano Schmid）的首开纪录以及下半场对手的乌龙球保持领先。比赛进入伤停补时阶段，约旦势必全线压上寻求绝平机会，这不仅难度极大，也会导致后防空虚。奥地利守住胜果的概率极高。考虑到补时阶段可能出现的VAR判罚或点球机会，替补登场的阿瑙托维奇（Marko Arnautovic）有机会利用反击或点球进一步扩大比分。综合判断，2-1是最可能的最终比分，奥地利胜券在握。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Match Analysis: Austria vs. Jordan**\n\nOkay, here's the situation: Austria is up 2-1 against Jordan, and the clock shows 90 minutes. I'm seeing a VAR check flagged at 99', which likely indicates a penalty. Given the current score and time, Austria has a commanding lead. I'm calculating the probability of an Austria win at around 94%, a draw at 5%, and a Jordan win at a mere 1%.\n\nLooking at the game so far, Austria scored first with Schmid, assisted by Schlager, and then a Jordan goal by Olwan after an assist from Al-Rawabdeh. The own goal by Alarab put Austria back in the lead. The match has seen substitutions and cards.\n\nSince the time is at 90', the 99' event is likely to be a VAR-awarded penalty in stoppage time. Considering Austria's strong position, their most likely final score will be 2-1. However, since there is a strong possibility of a penalty for Austria, I will assign a 0.15 probability to Marko Arnautovic scoring at 99'. That would be a good prediction considering that the 99' time is a factor in stoppage time.\n\nBased on the game dynamics and time, Austria's victory seems almost certain, and a 2-1 final score looks like the most probable outcome. Let's see if that penalty plays out.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-17T04:07:38+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 7,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Austria",
+        "away": "Jordan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T04:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.75,
+        "draw": 0.18,
+        "away": 0.07
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Marko Arnautovic",
+          "minute": 32,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Marcel Sabitzer",
+          "minute": 68,
+          "p": 0.35,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第7分钟，目前比分为0-0。从开局阶段的场面来看，奥地利队展现了绝对的统治力，控球率高达85%，完全将比赛节奏掌控在自己手中。尽管约旦队利用仅有的15%球权完成了一脚射门，但这更多是开局阶段的零星反击，难以对奥地利的防线造成持续威胁。基于奥地利在整体实力上的明显优势以及目前的绝对压制态势，主队打破僵局只是时间问题。因此，奥地利获胜的概率依然极高。预计奥地利将通过持续的阵地战施压逐步撕开约旦队的密集防线，最可能的最终比分为2-0。在后续的比赛中，奥地利的进攻核心如马尔科·阿瑙托维奇（马尔科·阿瑙托维奇）和马塞尔·萨比策（马塞尔·萨比策）极有可能在半场中后段或下半场利用前场压迫和远射机会为球队建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.01267875,
+      "tokens": {
+        "input": 915,
+        "output": 1860
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.41
+    },
+    {
+      "submitted_at": "2026-06-17T04:22:49+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 22,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Austria",
+        "away": "Jordan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T04:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.28,
+        "away": 0.17
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "M. Arnautović",
+          "minute": 58,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "M. Sabitzer",
+          "minute": 75,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "M. Al-Taamari",
+          "minute": 62,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第22分钟，奥地利与约旦暂时战成0-0平。场面呈现出典型的攻防演练格局：奥地利占据了高达76%的绝对控球率，但面对约旦的密集防守显得办法不多，目前仅有1次射门且未能命中门框范围。相反，约旦队坚决执行防守反击战术，虽然控球率仅有24%，但反击效率极高，已经完成了3次射门其中2次射正，迫使奥地利门将做出了2次关键扑救。尽管约旦的反击颇具威胁，但随着比赛深入，奥地利在整体实力、阵容深度和持续施压能力上的优势将逐渐显现。高强度的低位防守对约旦的体能消耗极大，奥地利有望在下半场通过边路传中或远射打破僵局。因此，奥地利依然是取胜的热门，胜率维持在55%左右。考虑到约旦防守的韧性以及奥地利目前的进攻效率，最可能的最终比分预测为1-0。在进球球员方面，奥地利的阿瑙托维奇（M. Arnautović）作为锋线支点，以及擅长后插上的萨比策（M. Sabitzer）是破局的关键人物；约旦若能再次打出高质量反击，核心边锋塔马里（M. Al-Taamari）将是最具威胁的得分点。预计进球将出现在下半场双方体能临界点时。"
+      },
+      "sources": [],
+      "cost_usd": 0.0171444,
+      "tokens": {
+        "input": 998,
+        "output": 2555
+      },
+      "tool_calls": 0,
+      "wall_seconds": 27.185
+    },
+    {
+      "submitted_at": "2026-06-17T04:37:59+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 37,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Austria",
+        "away": "Jordan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T04:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.75,
+        "draw": 0.18,
+        "away": 0.07
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Marcel Sabitzer",
+          "minute": 65,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Marko Arnautovic",
+          "minute": 80,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Mousa Al-Tamari",
+          "minute": 72,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第37分钟，奥地利凭借罗马诺·施密德（罗曼诺·施密德）在第20分钟的进球，暂时以1-0领先约旦。从目前的场面数据来看，奥地利占据了绝对的控球优势，控球率高达70%，牢牢掌控着中场节奏。然而，约旦队在仅有30%控球率的情况下依然打出了极具威胁的反击，目前双方总射门数同为4次，约旦甚至有2次射正，迫使奥地利门将做出了2次关键扑救，这表明约旦在转换进攻中依然保持着得分的可能。尽管如此，奥地利在整体实力和战术执行力上明显更胜一筹，手握领先优势使他们能够更加从容地应对接下来的比赛。随着下半场约旦队体能下降并可能被迫压上进攻，奥地利将获得更多前场空间。综合判断，奥地利赢下比赛的概率高达75%，最可能的最终比分为2-0。在后续的比赛中，奥地利的核心攻击手如马塞尔·萨比策（马塞尔·萨比策）和马尔科·阿瑙托维奇（马尔科·阿瑙托维奇）极有可能利用对手防线的空当扩大战果；而约旦若想有所斩获，穆萨·塔马里（Mousa Al-Tamari）将是最具威胁的反击利器。"
+      },
+      "sources": [],
+      "cost_usd": 0.0129108,
+      "tokens": {
+        "input": 1070,
+        "output": 1871
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.866
+    },
+    {
+      "submitted_at": "2026-06-17T05:21:38+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 66,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Austria",
+        "away": "Jordan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T04:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.38,
+        "draw": 0.42,
+        "away": 0.2
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第66分钟，奥地利与约旦目前战成1-1平。上半场第20分钟，罗马诺·施密德（罗曼诺·施密德）为奥地利首开纪录，但约旦在下半场初段（第50分钟）由阿里·奥尔万（阿里·奥勒万）扳平比分。从场面数据来看，奥地利虽然占据了64%的控球率，但在进攻端的效率并不理想，全场仅有1次射正即转化为进球。相比之下，约旦的反击极具威胁，在仅有36%控球率的情况下完成了9次射门，其中4次打在门框范围内，迫使奥地利门将做出了3次扑救。奥地利在半场休息时换上了马尔科·阿瑙托维奇（Marko Arnautovic）试图加强攻势，但面对约旦坚韧的防守和犀利的反击，他们并未占到太多便宜。随着比赛进入后半段，双方体能下降，约旦大概率会采取更加保守的策略以保住平局，而奥地利面对密集防守破门乏术。综合判断，本场比赛以1-1平局收场的可能性最大。如果比赛在最后阶段还有进球，替补登场且具备极强终结能力的阿瑙托维奇将是奥地利最有可能的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.01592325,
+      "tokens": {
+        "input": 1215,
+        "output": 2325
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.626
+    },
+    {
+      "submitted_at": "2026-06-17T05:36:56+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 81,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Austria",
+        "away": "Jordan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T04:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.62,
+        "away": 0.1
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第81分钟，当前比分为1-1。奥地利在第20分钟由施密德（罗曼诺·施密德）首开纪录，但约旦在下半场第50分钟凭借奥尔万（阿里·奥勒万）的进球顽强扳平。第67分钟阿瑙托维奇（Marko Arnautovic）的进球因VAR介入被判无效，使得平局维持至今。从场面数据来看，奥地利虽然占据66%的绝对控球优势，但进攻效率一般，全场9次射门仅2次射正；反观约旦的反击极具威胁，10次射门中有4次射正，给奥地利防线制造了很大麻烦。随着比赛进入最后10分钟的倒计时，双方在体能下降的情况下都会更加注重防守的稳定性，避免在关键时刻犯错。综合当前的时间和场面走势，平局的概率最高。奥地利势必会在最后阶段大举压上尝试绝杀，替补登场的阿瑙托维奇是他们最倚重的得分点；而约旦则会伺机通过反击寻找机会。尽管如此，1-1仍是最可能的最终比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.01340535,
+      "tokens": {
+        "input": 1559,
+        "output": 1868
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.701
+    },
+    {
+      "submitted_at": "2026-06-17T05:52:06+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Austria",
+        "away": "Jordan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T04:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.93,
+        "draw": 0.06,
+        "away": 0.01
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟的常规时间尾声，奥地利目前以2-1领先约旦。从比赛进程来看，奥地利在控球率上占据绝对优势（65%），并在上半场由 罗曼诺·施密德 首开纪录。下半场约旦展现出极强的反击威胁，阿里·奥勒万 在第50分钟扳平比分，且全场约旦的射门数（10次）和射正数（4次）甚至高于奥地利。然而，第76分钟约旦球员 Yazan Alarab 的乌龙球让奥地利再次取得领先。考虑到比赛已进入伤停补时阶段，留给约旦扳平比分的时间所剩无几。奥地利通过换上 Marko Arnautovic 等球员有效控制了前场支点和比赛节奏。综合当前比分和极少的剩余时间，奥地利守住胜果全取三分的概率极高，最可能的最终比分将定格在2-1。尽管约旦会在最后时刻大举压上尝试绝平，奥地利也有机会利用对手防线空虚通过反击再入一球，但维持当前比分结束比赛是最符合逻辑的预期。"
+      },
+      "sources": [],
+      "cost_usd": 0.01062285,
+      "tokens": {
+        "input": 1909,
+        "output": 1368
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.051
+    },
+    {
+      "submitted_at": "2026-06-17T06:07:13+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Austria",
+        "away": "Jordan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T04:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.94,
+        "draw": 0.05,
+        "away": 0.01
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已进行到第90分钟，奥地利以2-1领先约旦。从整体数据来看，奥地利掌控了63%的控球率，尽管约旦在反击中创造了11次射门并由奥尔万（阿里·奥勒万）打入一球，但奥地利凭借施密德（罗曼诺·施密德）的首开纪录以及下半场对手的乌龙球保持领先。比赛进入伤停补时阶段，约旦势必全线压上寻求绝平机会，这不仅难度极大，也会导致后防空虚。奥地利守住胜果的概率极高。考虑到补时阶段可能出现的VAR判罚或点球机会，替补登场的阿瑙托维奇（Marko Arnautovic）有机会利用反击或点球进一步扩大比分。综合判断，2-1是最可能的最终比分，奥地利胜券在握。"
+      },
+      "sources": [],
+      "cost_usd": 0.0153489,
+      "tokens": {
+        "input": 2114,
+        "output": 2084
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.815
+    }
+  ]
+}

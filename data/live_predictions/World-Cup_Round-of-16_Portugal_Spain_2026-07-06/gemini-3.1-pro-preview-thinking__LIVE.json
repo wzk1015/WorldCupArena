@@ -1,0 +1,175 @@
+{
+  "fixture_id": "World-Cup_Round-of-16_Portugal_Spain_2026-07-06",
+  "provider_fixture_id": "19606964",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-06T20:58:21+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 1
+    },
+    "home": "Portugal",
+    "away": "Spain",
+    "competition": "World Cup",
+    "stage": "Round of 16",
+    "kickoff_utc": "2026-07-06T19:00:00+00:00",
+    "venue": "Dallas Stadium",
+    "venue_city": "Arlington"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.01,
+      "draw": 0.04,
+      "away": 0.95
+    },
+    "most_likely_score": "0-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入伤停补时阶段，当前比分为0-1。西班牙凭借米克尔·梅里诺（米克尔·梅里诺）在补时阶段的进球打破僵局，取得了领先。从全场数据来看，西班牙在控球率（57%）和射门数（15对8）上均占据优势，展现了更强的场面控制力。葡萄牙虽然进行了多次换人调整试图改变战局，但留给他们扳平比分的时间已经所剩无几。考虑到比赛即将结束，西班牙守住胜果的概率极高，最可能的最终比分即为0-1。由于比赛时间即将耗尽，预计不会有新的进球产生。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1225,
+    "output": 586
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0049780499999999995,
+  "wall_seconds": 12.261,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.01,\n    \"draw\": 0.04,\n    \"away\": 0.95\n  },\n  \"most_likely_score\": \"0-1\",\n  \"scorers\": [],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入伤停补时阶段，当前比分为0-1。西班牙凭借米克尔·梅里诺（Mikel Merino）在补时阶段的进球打破僵局，取得了领先。从全场数据来看，西班牙在控球率（57%）和射门数（15对8）上均占据优势，展现了更强的场面控制力。葡萄牙虽然进行了多次换人调整试图改变战局，但留给他们扳平比分的时间已经所剩无几。考虑到比赛即将结束，西班牙守住胜果的概率极高，最可能的最终比分即为0-1。由于比赛时间即将耗尽，预计不会有新的进球产生。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-06T19:13:17+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 13,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Portugal",
+        "away": "Spain",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-06T19:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.35,
+        "draw": 0.33,
+        "away": 0.32
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Rafael Leão",
+          "minute": 65,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Álvaro Morata",
+          "minute": 78,
+          "p": 0.22,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第13分钟，葡萄牙与西班牙暂时战成0-0平。从开场阶段的数据来看，双方互有攻守，场面非常胶着。西班牙队占据了52%的控球率，符合其传统的传控打法，而葡萄牙队在反击和定位球上表现得更具威胁，已经获得了2次角球和3次射门（1次射正）。双方门将也各自完成了一次扑救，说明比赛节奏较快，进攻端都有所建树。考虑到这是一场世界杯十六强的伊比利亚半岛德比，双方实力在伯仲之间，防守端都会非常谨慎。随着比赛深入，葡萄牙队可能会利用边路的速度优势寻找突破口，而西班牙则会继续通过传导寻找防线漏洞。综合目前的场面和双方的战术特点，葡萄牙队凭借更直接的进攻威胁略微占据优势，最可能的最终比分是1-0。预计下半场随着体能下降，葡萄牙的拉斐尔·莱奥有望利用反击打破僵局，而西班牙的Álvaro Morata也是潜在的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.0035794499999999996,
+      "tokens": {
+        "input": 847,
+        "output": 427
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.424
+    },
+    {
+      "submitted_at": "2026-07-06T20:08:28+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 53,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Portugal",
+        "away": "Spain",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-06T19:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.4,
+        "away": 0.32
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第53分钟，葡萄牙与西班牙依然维持0-0的平局。从场面数据来看，西班牙占据55%的控球率，并有8次射门（3次射正），在进攻端略显主动；而葡萄牙则以稳健的防守和反击为主，完成了5次射门（2次射正）。随着下半场时间的流逝，双方在淘汰赛阶段的战术布置会更加谨慎，防守端的容错率极低。考虑到两队实力接近且目前僵持不下，平局拖入加时赛的可能性正在逐渐增加。因此，平局的概率最高，最可能的常规时间比分为0-0。如果打破僵局，西班牙的锋线球员或葡萄牙的核心中场有望在比赛尾声阶段抓住为数不多的机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.00518595,
+      "tokens": {
+        "input": 847,
+        "output": 682
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.433
+    },
+    {
+      "submitted_at": "2026-07-06T20:58:21+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Portugal",
+        "away": "Spain",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-06T19:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入伤停补时阶段，当前比分为0-1。西班牙凭借米克尔·梅里诺（米克尔·梅里诺）在补时阶段的进球打破僵局，取得了领先。从全场数据来看，西班牙在控球率（57%）和射门数（15对8）上均占据优势，展现了更强的场面控制力。葡萄牙虽然进行了多次换人调整试图改变战局，但留给他们扳平比分的时间已经所剩无几。考虑到比赛即将结束，西班牙守住胜果的概率极高，最可能的最终比分即为0-1。由于比赛时间即将耗尽，预计不会有新的进球产生。"
+      },
+      "sources": [],
+      "cost_usd": 0.0049780499999999995,
+      "tokens": {
+        "input": 1225,
+        "output": 586
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.261
+    }
+  ]
+}

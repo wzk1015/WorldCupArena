@@ -1,0 +1,807 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-71_Colombia_Portugal_2026-06-27",
+  "provider_fixture_id": "19609147",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-28T01:24:06+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 0
+    },
+    "home": "Colombia",
+    "away": "Portugal",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-27T23:30:00+00:00",
+    "venue": "Miami Stadium",
+    "venue_city": "Miami Gardens"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.86,
+      "draw": 0.11,
+      "away": 0.03
+    },
+    "most_likely_score": "1-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进入第90分钟，哥伦比亚客场1-0领先葡萄牙，距离终场仅剩补时阶段。从场面数据看，哥伦比亚全场掌握主动，控球率54%，总射门23次、射正6次，并获得5个角球，明显压制葡萄牙；葡萄牙虽然下半场连续换上若昂·费利克斯、拉法·莱奥等攻击手加强进攻，但全场仅2脚射正，主要威胁被哥伦比亚门将化解（6次扑救）。在补时阶段且仅落后一球的情况下，葡萄牙必然全力压上寻求扳平，但留给他们的时间极为有限，因此哥伦比亚获胜概率大幅提升至接近八成半，平局概率维持在一成左右用于覆盖最后时刻被绝平的风险，葡萄牙翻盘几乎不可能。综合现有比分、场面控制以及剩余时间，最可能的最终比分仍是1-0哥伦比亚小胜。后续进球方面，补时阶段进球概率整体不高：哥伦比亚若打反击，替补登场的路易斯·苏亚雷斯具备一定终结能力；葡萄牙方面，全力压上后由克里斯蒂亚诺·罗纳尔多或新登场的拉斐尔·莱奥抓住定位球或禁区混战机会扳平的可能性较小但不能完全排除。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 50566,
+    "output": 678
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.19963720000000001,
+  "wall_seconds": 18.346,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.86, \"draw\": 0.11, \"away\": 0.03},\n  \"most_likely_score\": \"1-0\",\n  \"scorers\": [\n    {\"player\": \"Luis Suárez\", \"team\": \"home\", \"minute\": 92, \"p\": 0.07},\n    {\"player\": \"Cristiano Ronaldo\", \"team\": \"away\", \"minute\": 93, \"p\": 0.05},\n    {\"player\": \"Rafael Leão\", \"team\": \"away\", \"minute\": 90, \"p\": 0.04}\n  ],\n  \"reasoning\": {\"overall\": \"比赛进入第90分钟，哥伦比亚客场1-0领先葡萄牙，距离终场仅剩补时阶段。从场面数据看，哥伦比亚全场掌握主动，控球率54%，总射门23次、射正6次，并获得5个角球，明显压制葡萄牙；葡萄牙虽然下半场连续换上若昂·费利克斯、拉法·莱奥等攻击手加强进攻，但全场仅2脚射正，主要威胁被哥伦比亚门将化解（6次扑救）。在补时阶段且仅落后一球的情况下，葡萄牙必然全力压上寻求扳平，但留给他们的时间极为有限，因此哥伦比亚获胜概率大幅提升至接近八成半，平局概率维持在一成左右用于覆盖最后时刻被绝平的风险，葡萄牙翻盘几乎不可能。综合现有比分、场面控制以及剩余时间，最可能的最终比分仍是1-0哥伦比亚小胜。后续进球方面，补时阶段进球概率整体不高：哥伦比亚若打反击，替补登场的Luis Suárez具备一定终结能力；葡萄牙方面，全力压上后由Cristiano Ronaldo或新登场的Rafael Leão抓住定位球或禁区混战机会扳平的可能性较小但不能完全排除。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-27T23:33:02+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 3,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Portugal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.27,
+        "draw": 0.3,
+        "away": 0.43
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Cristiano Ronaldo",
+          "minute": 58,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Luis Díaz",
+          "minute": 66,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Fernandes",
+          "minute": 74,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Bernardo Silva",
+          "minute": 82,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "James Rodríguez",
+          "minute": 71,
+          "p": 0.17,
+          "team": "home"
+        },
+        {
+          "player": "Rafael Leão",
+          "minute": 86,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Jhon Durán",
+          "minute": 78,
+          "p": 0.13,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚刚开打3分钟，比分仍是0-0，双方控球率各占一半，目前只有葡萄牙有一次犯规记录，场面尚处于试探阶段，缺乏明显的进攻倾向信号。基于赛前实力评估，葡萄牙整体阵容深度和个人能力略胜一筹，中前场拥有C罗、B费、B席尔瓦、莱昂等多位顶级球员，控制力和终结效率都高于哥伦比亚；而哥伦比亚则更依赖路易斯·迪亚斯和J罗的个人创造力以及反击中的速度优势。考虑到这是小组赛阶段，双方都需要分数，比赛大概率不会过早开放，但葡萄牙在掌握节奏后破门概率更高，因此客胜概率给到最高的0.43，平局0.30反映出小组赛常见的谨慎博弈，主胜0.27则体现哥伦比亚在主场氛围（迈阿密拥有大量南美球迷）下不容小觑的反扑能力。最可能的最终比分定在1-2，符合客队最高胜率的判断，也吻合一场进球数中等、葡萄牙凭借效率取胜的剧本。后续进球预测方面，C罗作为锋线核心在中段60分钟前后体能与机会窗口最佳，给出最高权重；B费的远射与定位球能力在70分钟后值得关注；哥伦比亚一方迪亚斯的突破和J罗的定位球是主要得分来源，分别安排在下半场中段；替补登场的莱昂、B席尔瓦和杜兰则可能在末段利用体能差扩大或追平比分。整体逻辑围绕葡萄牙渐进式掌控、哥伦比亚伺机反击展开。"
+      },
+      "sources": [],
+      "cost_usd": 0.018710900000000003,
+      "tokens": {
+        "input": 797,
+        "output": 852
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.973
+    },
+    {
+      "submitted_at": "2026-06-27T23:40:26+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 10,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Portugal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.3,
+        "away": 0.4
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Cristiano Ronaldo",
+          "minute": 67,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Luis Díaz",
+          "minute": 55,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Fernandes",
+          "minute": 38,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Rafael Leão",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "James Rodríguez",
+          "minute": 72,
+          "p": 0.17,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第10分钟，哥伦比亚与葡萄牙在迈阿密的世界杯小组赛仍是0-0。从开场十分钟的走势来看，哥伦比亚虽然控球率只有40%，但已经完成4次射门，显示出他们在反击和前场施压上的积极姿态，路易斯·迪亚斯（路易斯·迪亚斯）和哈梅斯·罗德里格斯（哈梅斯·罗德里格斯）所串联的进攻线非常活跃。葡萄牙则掌握了60%的控球，但仅有1次射门，说明他们倾向于通过中场布鲁诺·费尔南德斯（布鲁诺·费尔南德斯）的调度逐步推进，尚未真正打开火力。\n\n基于赛前实力与阵容深度，葡萄牙整体更具冠军级配置，前场拥有C罗（克里斯蒂亚诺·罗纳尔多）、拉法·莱奥（拉斐尔·莱奥）等多点终结能力，因此在胜负概率上略占优势。哥伦比亚的快速反击是制造冷门的关键，但要在90分钟内完全压制葡萄牙的进攻波次难度较大，平局概率与主队胜概率较为接近。\n\n考虑到目前0-0的比分、双方都已展现一定进攻欲望，且世界杯小组赛阶段球队普遍倾向于求胜而非保守，预计后半段比赛会逐步打开。最可能的最终比分倾向于1-2，由葡萄牙凭借球星个人能力在中后段建立优势，哥伦比亚则有望通过定位球或快速反击扳回一球。\n\n后续进球点上，C罗在禁区内的把握机会能力依旧是最大威胁，布鲁诺·费尔南德斯的远射与定位球同样具备破门可能，莱奥的边路突破将在体能下降阶段制造杀机；哥伦比亚一侧，迪亚斯的速度与突破、以及哈梅斯在前场组织端的最后一传，是他们最现实的得分路径。"
+      },
+      "sources": [],
+      "cost_usd": 0.019154900000000002,
+      "tokens": {
+        "input": 777,
+        "output": 880
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.638
+    },
+    {
+      "submitted_at": "2026-06-27T23:47:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Portugal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.3,
+        "away": 0.42
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Cristiano Ronaldo",
+          "minute": 73,
+          "p": 0.26,
+          "team": "away"
+        },
+        {
+          "player": "Bruno Fernandes",
+          "minute": 58,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Luis Díaz",
+          "minute": 67,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Rafael Leão",
+          "minute": 81,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "James Rodríguez",
+          "minute": 78,
+          "p": 0.16,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第17分钟，迈阿密球场内哥伦比亚与葡萄牙仍是0-0僵局。开局阶段哥伦比亚射门次数(4次)略多于葡萄牙(2次)，显示南美球队主动施压，但葡萄牙以51%的控球率稳住节奏，犯规数双方持平，整体场面偏均衡而克制。考虑到这是世界杯小组赛关键战，双方阵中均拥有顶级前场球员，预计随着体能消耗与战术调整，下半时进球概率将明显提升。从纸面实力与大赛经验看，葡萄牙的整体厚度更胜一筹，中前场B费、C罗、莱昂的轮番冲击有能力撕开哥伦比亚防线，因此客队取胜的概率最高，约42%；哥伦比亚虽在主导射门，但终结效率与防守稳定性存在隐忧，胜率约28%；考虑当前比分胶着且双方都在试探阶段，平局概率维持在30%左右。最可能的最终比分为1-2，葡萄牙小胜。后续进球点方面，C罗在禁区内的把握能力依然是首选射手，B费的远射和定位球威胁紧随其后；哥伦比亚一侧，路易斯·迪亚斯的边路突破和J罗的前场组织+远射是最具威胁的得分手段；莱昂若在下半时登场或拉边制造空当，也具备改写比分的能力。"
+      },
+      "sources": [],
+      "cost_usd": 0.0163651,
+      "tokens": {
+        "input": 918,
+        "output": 701
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.459
+    },
+    {
+      "submitted_at": "2026-06-27T23:55:31+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 25,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Portugal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.32,
+        "away": 0.38
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Cristiano Ronaldo",
+          "minute": 63,
+          "p": 0.26,
+          "team": "away"
+        },
+        {
+          "player": "Luis Díaz",
+          "minute": 58,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Fernandes",
+          "minute": 72,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Jhon Durán",
+          "minute": 78,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Rafael Leão",
+          "minute": 81,
+          "p": 0.14,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第25分钟，哥伦比亚与葡萄牙在迈阿密仍是0-0平。从场面数据看，哥伦比亚虽然控球率只有42%，但更具进攻积极性，已经完成7次射门、2次射正并取得1次角球，明显在主动逼抢和反击中制造威胁；葡萄牙控球58%占优，但仅有2次射门且尚无射正，进攻组织偏慢，更多依靠后场倒脚渗透。综合来看，这是一场势均力敌、双方都具备打开局面能力的对决。考虑到葡萄牙整体阵容厚度、球星个人能力（C罗、B费、莱昂等）以及世界杯小组赛阶段控场经验更丰富，长期来看他们将逐步把控球优势转化为机会，因此客胜概率略高于主胜；但哥伦比亚目前的射门效率和反击锐度也让平局成为非常合理的结果，平局概率与胜负接近。最可能的最终比分判断为1-1：双方各有一次破门机会被把握，符合当前射门与射正趋势，也兼顾葡萄牙后段提速、哥伦比亚反击犀利的特点。后续进球人选方面，葡萄牙端首选C罗（禁区终结能力最强）、B费（定位球和远射）以及替补登场后可能改变节奏的莱昂；哥伦比亚端则看好路易斯·迪亚斯持续制造威胁，以及具备爆点的杜兰在比赛后段冲击体能下降的葡萄牙后防。所有进球时间均设定在25分钟之后，符合当前比赛进程。"
+      },
+      "sources": [],
+      "cost_usd": 0.1996668,
+      "tokens": {
+        "input": 49724,
+        "output": 848
+      },
+      "tool_calls": 0,
+      "wall_seconds": 32.114
+    },
+    {
+      "submitted_at": "2026-06-28T00:02:55+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 32,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Portugal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.32,
+        "draw": 0.3,
+        "away": 0.38
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Cristiano Ronaldo",
+          "minute": 58,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Luis Díaz",
+          "minute": 67,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Fernandes",
+          "minute": 74,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "James Rodríguez",
+          "minute": 81,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Rafael Leão",
+          "minute": 88,
+          "p": 0.16,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第32分钟，哥伦比亚与葡萄牙在迈阿密的小组赛阶段战成0-0。从开局到现在的场面看，哥伦比亚在进攻端更主动，全场7次射门、1次射正并赢得1个角球，体现出他们试图利用边路冲击和迪亚斯的速度建立压制；葡萄牙虽然控球与对手持平在50%，但只有3次射门、1次射正，更多依赖中前场组织和反击伺机出手。双方各有1次扑救，说明门将都已经进入状态，比赛节奏偏开放但仍处于试探阶段。考虑到葡萄牙整体阵容深度、中前场创造力以及B费、C罗、莱奥在下半场往往能逐步提速的特点，他们在比赛后段把控节奏和制造高质量机会的能力略胜一筹，因此客队取胜概率被调到略高于主队；哥伦比亚目前射门数据更好，仍保留相当的胜算，平局概率维持在合理区间但不是最高项。综合判断最可能的最终比分为1-2，符合客队胜率最高且双方都不低于当前0-0的约束。后续进球方面，葡萄牙的C罗在32分钟之后通过定位球或禁区抢点破门的概率最高，B费的远射和直塞跟进次之，莱奥替补或后段加速冲击边路也具威胁；哥伦比亚一侧，迪亚斯凭借持续的边路突破最有机会率先扳平，J罗在中后段通过定位球或前场组织参与进球的可能性同样存在。"
+      },
+      "sources": [],
+      "cost_usd": 0.0175602,
+      "tokens": {
+        "input": 871,
+        "output": 775
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.873
+    },
+    {
+      "submitted_at": "2026-06-28T00:10:19+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 40,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Portugal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.36,
+        "away": 0.3
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Luis Díaz",
+          "minute": 63,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Cristiano Ronaldo",
+          "minute": 70,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "James Rodríguez",
+          "minute": 78,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Fernandes",
+          "minute": 82,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Jhon Durán",
+          "minute": 85,
+          "p": 0.11,
+          "team": "home"
+        },
+        {
+          "player": "Bernardo Silva",
+          "minute": 75,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第40分钟，哥伦比亚与葡萄牙在迈阿密暂时0-0战平。从场面数据看，哥伦比亚目前略占主动，控球率54%对46%，射门7次明显多于葡萄牙的3次，并且拿到1次角球，整体推进更具威胁，但双方射正都仅有1次，门将各完成一次扑救，进攻转化效率都不算高。葡萄牙犯规略多，显示其在中场的防守压力较大，更倾向于通过反击寻找机会。综合判断，目前比赛节奏偏向开放但破门难度不小，平局概率略微领先，主队凭借场面优势胜率略高于葡萄牙，但葡萄牙拥有顶级个人能力随时可能改变战局，因此三种结果差距并不大。最可能的最终比分定为1-1，符合平局概率最高的判断，也与当前双方互有威胁但效率有限的走势相符。后续进球预测方面，考虑到下半场体能下降与战术调整通常带来更多机会，主队方面路易斯·迪亚斯凭借边路冲击力最具威胁，哈梅斯·罗德里格斯的定位球与组织、以及替补冲击型前锋Jhon Durán都可能在60分钟后建功；葡萄牙方面克里斯蒂亚诺·罗纳尔多作为禁区终结点仍是首选，布鲁诺·费尔南德斯的远射与跑位、贝尔纳多·席尔瓦的串联渗透同样具备打破僵局的能力，所有预测进球时间均设定在当前40分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.19961130000000002,
+      "tokens": {
+        "input": 49724,
+        "output": 845
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.21
+    },
+    {
+      "submitted_at": "2026-06-28T00:17:40+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Portugal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.3,
+        "away": 0.4
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Bruno Fernandes",
+          "minute": 63,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Cristiano Ronaldo",
+          "minute": 78,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Luis Díaz",
+          "minute": 70,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Rafael Leão",
+          "minute": 85,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "James Rodríguez",
+          "minute": 82,
+          "p": 0.14,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场结束阶段比分仍是0-0，世界杯小组赛在迈阿密的这场哥伦比亚对葡萄牙的对决进入下半场前的胶着状态。从场面数据看，哥伦比亚控球率54%略占优，总射门9次也稍多于葡萄牙的8次，并且拿到1个角球，进攻组织上更主动一些；但葡萄牙在射正数据上以2比1反超，门将两次扑救显示哥伦比亚的射门质量并未完全转化为威胁，葡萄牙利用反击形成了几次更直接的攻门。两队都打出2次扑救，意味着双方门将都已介入战斗，比赛节奏开放，下半场出现进球的概率不低。综合赛前实力面与上半场走势，葡萄牙整体阵容厚度和终结效率仍略高一筹，下半场体能进入对抗阶段后，B费、C罗、莱奥这条线在反击和定位球中的杀伤力会被放大，因此客队胜率略高于主队与平局。哥伦比亚若想破局，需要依靠路易斯·迪亚斯的突破和J罗在前场的串联制造定位球与肋部机会，他们在60到85分钟段落都具备改写比分的能力。综合判断最可能的最终比分为1-2，葡萄牙先由中场组织者打破僵局，哥伦比亚下半场后段扳回一城，葡萄牙再依靠替补登场或边路爆点锁定胜局；若哥伦比亚率先进球，比赛走向平局的概率会显著上升，这也是平局与主胜概率接近的原因。后续进球点上，B费的远射与直塞、C罗的禁区嗅觉、迪亚斯的内切以及J罗的死球都是关键观察对象。"
+      },
+      "sources": [],
+      "cost_usd": 0.018403799999999998,
+      "tokens": {
+        "input": 829,
+        "output": 829
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.004
+    },
+    {
+      "submitted_at": "2026-06-28T00:41:41+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 56,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Portugal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.34,
+        "away": 0.32
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Luis Díaz",
+          "minute": 72,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Cristiano Ronaldo",
+          "minute": 78,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Bruno Fernandes",
+          "minute": 75,
+          "p": 0.13,
+          "team": "away"
+        },
+        {
+          "player": "Jhon Durán",
+          "minute": 82,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Rafael Leão",
+          "minute": 85,
+          "p": 0.11,
+          "team": "away"
+        },
+        {
+          "player": "James Rodríguez",
+          "minute": 68,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第56分钟，哥伦比亚与葡萄牙仍然互交白卷，比分维持0-0。从场面来看，哥伦比亚整体略占主动，控球率54%对46%，全场射门12比9，射正3比2，并且拿到1个角球，进攻端的威胁稍高一筹；而葡萄牙虽然射门数和射正数稍逊，但门将已经做出3次扑救，防线整体顶住了上半场和下半场初段的压力，并且中场休息时一次性换上迪奥戈·达洛特和若昂·内维斯，明显是想在攻防转换和中场拦截上提速，下半场反扑的意图非常清晰。综合两队的世界杯小组赛战意、比分胶着的节奏和换人调整，下半场进入对攻和体能下滑阶段后双方都有破门可能，因此胜平负三项概率非常接近，主队凭借场面略占优获得略高的胜率，平局概率与之并列最高，葡萄牙凭借球星效率仍保留接近三成的胜算。最可能的最终比分判断为1-1：当前0-0且剩余时间有限，单方面连下两城的概率不高，而两队都具备至少打入一球的进攻能力，1-1既符合平局并列最高的概率结构，也契合场面均势。后续进球人选方面，哥伦比亚一侧路易斯·迪亚斯持续在边路制造威胁、把握力最强，哈梅斯·罗德里格斯的定位球与组织也可能直接转化为进球，替补登场或后段冲击型前锋Jhon Durán在体能拉开后具备抢点能力；葡萄牙一侧克里斯蒂亚诺·罗纳尔多作为禁区终结点效率依然最高，布鲁诺·费尔南德斯的远射和插上、以及边路爆点拉斐尔·莱奥在防线疲劳后的突破都是潜在破门来源，所有候选人的进球时间均设定在第56分钟之后，符合当前比赛进程。"
+      },
+      "sources": [],
+      "cost_usd": 0.2027156,
+      "tokens": {
+        "input": 49893,
+        "output": 979
+      },
+      "tool_calls": 0,
+      "wall_seconds": 32.616
+    },
+    {
+      "submitted_at": "2026-06-28T00:49:03+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 64,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Portugal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.34,
+        "away": 0.24
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Luis Díaz",
+          "minute": 76,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Jhon Durán",
+          "minute": 82,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Fernandes",
+          "minute": 79,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "James Rodríguez",
+          "minute": 88,
+          "p": 0.11,
+          "team": "home"
+        },
+        {
+          "player": "Cristiano Ronaldo",
+          "minute": 85,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第64分钟，双方仍然0-0僵持。从场面来看，哥伦比亚明显占据主动，全场14次射门、5次射正，控球率56%，葡萄牙门将已经做出5次扑救，说明哥伦比亚的进攻已经多次威胁到对方球门。葡萄牙虽然有10次射门，但仅2次射正，进攻效率明显偏低，且中场休息后连续换上迪奥戈·达洛特(迪奥戈·达洛特)和若昂·内维斯(若昂·内维斯)，更偏向加强防守和中场拦截，进攻端并未实质性补强。综合主场优势、场面压制和射门转化潜力，哥伦比亚率先打破僵局的概率最高，因此主胜概率上调至0.42，平局0.34，葡萄牙客胜0.24。考虑到比赛只剩约30分钟、双方体能下降、葡萄牙可能后撤防守，最可能的最终比分判断为1-0哥伦比亚小胜。后续进球候选方面，哥伦比亚边路核心路易斯·迪亚斯(路易斯·迪亚斯)持续制造威胁，是最可能的破门者；前场冲击型前锋胡安·杜兰(Jhon Durán)和定位球与组织核心J罗(哈梅斯·罗德里格斯)同样具备终结机会。葡萄牙若要扳平甚至反超，B费(布鲁诺·费尔南德斯)的远射和后插上以及C罗(克里斯蒂亚诺·罗纳尔多)的禁区嗅觉是主要破门来源，因此在75分钟后的时间窗口内给予相应胜平负倾向。"
+      },
+      "sources": [],
+      "cost_usd": 0.0168535,
+      "tokens": {
+        "input": 995,
+        "output": 712
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.13
+    },
+    {
+      "submitted_at": "2026-06-28T00:56:23+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Portugal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.42,
+        "away": 0.24
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第71分钟，哥伦比亚与葡萄牙仍是0-0僵局。从场面数据看，哥伦比亚控球率54%，全场15脚射门、5次射正、1个角球，整体进攻组织更为积极主动；葡萄牙11脚射门、2次射正，门将已做出5次扑救，防守端承压明显，但仍能凭借门将稳定发挥保持球门不失。下半场双方均已通过换人调整，葡萄牙在46分钟换上迪奥戈·达洛特和若昂·内维斯加强中后场，哥伦比亚则在60分钟用理查德·里奥斯和路易斯·苏亚雷斯增加中前场的活力与冲击力，意图打破僵局。结合当前剩余时间仅约20分钟加补时，且双方在僵持中均不愿冒进，平局概率最高，约42%；哥伦比亚射门质量与场面占优，胜率约34%略高于葡萄牙的24%。综合判断最可能的最终比分仍是0-0。若后续出现进球，哥伦比亚凭借持续施压更具威胁，路易斯·迪亚斯的突破和替补登场的路易斯·苏亚雷斯最有机会打破僵局；葡萄牙端则需依靠克里斯蒂亚诺·罗纳尔多的定位球嗅觉或布鲁诺·费尔南德斯的远射偷袭一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.198172,
+      "tokens": {
+        "input": 50065,
+        "output": 699
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.969
+    },
+    {
+      "submitted_at": "2026-06-28T01:17:17+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Portugal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.84,
+        "away": 0.08
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分仍为0-0，比赛已进行到第90分钟，即将进入补时阶段。从场面上看，哥伦比亚整场占据主动，控球率55%，全场21次射门、6次射正、4个角球，明显压制葡萄牙，但始终未能攻破对方球门，葡萄牙门将做出多达6次扑救表现出色。葡萄牙仅有12次射门、2次射正，进攻效率偏低，主要依靠防守反击。双方下半场均做出多次换人，哥伦比亚换上路易斯·苏亚雷斯和胡安·费尔南多·金特罗加强进攻，葡萄牙则用拉斐尔·莱奥和若昂·菲利克斯寻求反击空间，但场面格局未发生根本改变。考虑到比赛仅剩补时几分钟，双方体能消耗巨大、心理上也更趋于保守，平局是最自然的结果，因此平局概率显著提升至约84%，主客胜各约8%。最可能的最终比分锁定为0-0。若补时阶段仍有进球，哥伦比亚凭借持续的进攻压力略占上风，Suárez作为新登场的前锋最具威胁，Quintero也可能通过定位球或远射制造机会；葡萄牙方面若有反击得手，Leão的速度和Félix的灵巧最有可能形成致命一击，但整体概率都很低。"
+      },
+      "sources": [],
+      "cost_usd": 0.1994115,
+      "tokens": {
+        "input": 50400,
+        "output": 699
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.024
+    },
+    {
+      "submitted_at": "2026-06-28T01:24:06+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Portugal",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T23:30:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.11,
+        "away": 0.03
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进入第90分钟，哥伦比亚客场1-0领先葡萄牙，距离终场仅剩补时阶段。从场面数据看，哥伦比亚全场掌握主动，控球率54%，总射门23次、射正6次，并获得5个角球，明显压制葡萄牙；葡萄牙虽然下半场连续换上若昂·费利克斯、拉法·莱奥等攻击手加强进攻，但全场仅2脚射正，主要威胁被哥伦比亚门将化解（6次扑救）。在补时阶段且仅落后一球的情况下，葡萄牙必然全力压上寻求扳平，但留给他们的时间极为有限，因此哥伦比亚获胜概率大幅提升至接近八成半，平局概率维持在一成左右用于覆盖最后时刻被绝平的风险，葡萄牙翻盘几乎不可能。综合现有比分、场面控制以及剩余时间，最可能的最终比分仍是1-0哥伦比亚小胜。后续进球方面，补时阶段进球概率整体不高：哥伦比亚若打反击，替补登场的路易斯·苏亚雷斯具备一定终结能力；葡萄牙方面，全力压上后由克里斯蒂亚诺·罗纳尔多或新登场的拉斐尔·莱奥抓住定位球或禁区混战机会扳平的可能性较小但不能完全排除。"
+      },
+      "sources": [],
+      "cost_usd": 0.19963720000000001,
+      "tokens": {
+        "input": 50566,
+        "output": 678
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.346
+    }
+  ]
+}

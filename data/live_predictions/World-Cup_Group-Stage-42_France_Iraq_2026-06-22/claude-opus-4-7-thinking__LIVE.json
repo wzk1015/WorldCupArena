@@ -1,0 +1,1171 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-42_France_Iraq_2026-06-22",
+  "provider_fixture_id": "19609179",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-22T23:56:46+00:00",
+  "live": {
+    "status": "Interrupted",
+    "elapsed": 130,
+    "score": {
+      "home": 1,
+      "away": 0
+    },
+    "home": "France",
+    "away": "Iraq",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-22T21:00:00+00:00",
+    "venue": "Philadelphia Stadium",
+    "venue_city": "Philadelphia"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.92,
+      "draw": 0.05,
+      "away": 0.03
+    },
+    "most_likely_score": "1-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "目前比分1-0，比赛已进行到130分钟，处于中断状态，剩余可踢时间极为有限。法国凭借姆巴佩（基利安·姆巴佩）第14分钟由奥利斯（迈克尔·奥利斯）助攻打入的进球早早取得领先，并在控球率（58%对42%）、射门数（7比2）和角球等数据上全面压制伊拉克，整体场面牢牢掌握在卫冕级别强队手中。伊拉克全场仅2次射门且无射正，第26分钟已被迫换人调整，进攻端始终难以制造实质性威胁，要在补时阶段连扳两球几乎不可能，即便扳平也极为困难，因此平局与客胜概率被压到很低。综合考虑剩余时间极短且法国控制力极强，最可能的最终比分维持在1-0；若还有进球出现，最大可能来自延续状态的姆巴佩或具备直接参与进球能力的奥利斯在终场前再下一城，但概率本身偏低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 19885,
+    "output": 512
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0830465,
+  "wall_seconds": 15.593,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.92, \"draw\": 0.05, \"away\": 0.03},\n  \"most_likely_score\": \"1-0\",\n  \"scorers\": [\n    {\"player\": \"Kylian Mbappé\", \"team\": \"home\", \"minute\": 135, \"p\": 0.10},\n    {\"player\": \"Michael Olise\", \"team\": \"home\", \"minute\": 140, \"p\": 0.06}\n  ],\n  \"reasoning\": {\"overall\": \"目前比分1-0，比赛已进行到130分钟，处于中断状态，剩余可踢时间极为有限。法国凭借姆巴佩（Kylian Mbappé）第14分钟由奥利斯（Michael Olise）助攻打入的进球早早取得领先，并在控球率（58%对42%）、射门数（7比2）和角球等数据上全面压制伊拉克，整体场面牢牢掌握在卫冕级别强队手中。伊拉克全场仅2次射门且无射正，第26分钟已被迫换人调整，进攻端始终难以制造实质性威胁，要在补时阶段连扳两球几乎不可能，即便扳平也极为困难，因此平局与客胜概率被压到很低。综合考虑剩余时间极短且法国控制力极强，最可能的最终比分维持在1-0；若还有进球出现，最大可能来自延续状态的姆巴佩或具备直接参与进球能力的奥利斯在终场前再下一城，但概率本身偏低。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-22T21:06:58+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 6,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.09,
+        "away": 0.03
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 38,
+          "p": 0.55,
+          "team": "home"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 64,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Randal Kolo Muani",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Antoine Griezmann",
+          "minute": 56,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Aymen Hussein",
+          "minute": 82,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第6分钟，比分仍是0-0。开场阶段法国队已经展现出明显的控制力，控球率接近60%，并率先完成一次射门，伊拉克方面尚未形成有效进攻，也未出现犯规，整体处于被压制的态势。考虑到双方实力差距以及世界杯小组赛的背景，法国作为夺冠热门面对伊拉克本就是绝对优势方，开局的场面进一步确认了这一基本面，因此将法国胜率维持在很高水平（0.88），平局概率压低到接近0.09，伊拉克爆冷取胜的概率仅给到0.03。结合法国进攻端的火力以及伊拉克需要回收防守的现实，比赛大概率会以法国进2球左右、伊拉克难以取得进球的方式收场，因此最可能的最终比分给到2-0，与主胜概率最高的结论一致，并且不低于当前0-0的实际比分。后续进球预测放在第6分钟之后：Mbappé作为头号终结点，在上半场后段打破僵局的可能性最高；Dembélé具备制造和把握机会的能力，是下半场扩大比分的热门人选；替补登场的Kolo Muani在比赛后段往往能在体能下降的对手防线中找到空间；Griezmann在中场组织和前插中也存在中等概率的破门机会。伊拉克方面，整体进攻效率有限，但出于完整性考虑，给予前锋艾曼·侯赛因在比赛末段抓住反击机会的较低概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.08827460000000001,
+      "tokens": {
+        "input": 19568,
+        "output": 858
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.023
+    },
+    {
+      "submitted_at": "2026-06-22T21:13:13+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 13,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.11,
+        "away": 0.03
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 38,
+          "p": 0.42,
+          "team": "home"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 67,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Antoine Griezmann",
+          "minute": 74,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Randal Kolo Muani",
+          "minute": 82,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Aymeric Laporte",
+          "minute": 70,
+          "p": 0.05,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第13分钟，场上比分仍是0-0。开局阶段法国明显占据主动，控球率54%，已经完成3次射门并赢得1个角球，而伊拉克尚未形成任何射门，且在第6分钟就由阿米尔·阿马里吃到一张黄牌，中场施压动作显得仓促。考虑到法国的整体实力、World Cup小组赛舞台上的进攻深度，以及伊拉克目前完全被压制的局面，法国取胜的概率仍然非常高，约在85%上下，平局机会有限，伊拉克爆冷的可能性很低。最可能的最终比分定在2-0：法国大概率在上半场后段或下半场初段凭借持续压制率先破门，再通过替补登场的边路冲击力扩大比分，但伊拉克的密集防守和World Cup小组赛常见的求稳节奏会限制法国进一步扩大领先。后续进球预测集中在13分钟之后：Mbappé作为最大威胁点，最可能在上半场结束前打破僵局；Dembélé与Griezmann在下半场推进阶段是次要破门候选；替补出场的Kolo Muani在末段有机会锁定比分；伊拉克若有进球更可能来自定位球，给予较低概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.0863025,
+      "tokens": {
+        "input": 19680,
+        "output": 729
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.384
+    },
+    {
+      "submitted_at": "2026-06-22T21:19:25+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 19,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.09,
+        "away": 0.03
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 62,
+          "p": 0.38,
+          "team": "home"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 75,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Michael Olise",
+          "minute": 70,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Aymen Hussein",
+          "minute": 80,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第19分钟，法国凭借姆巴佩（基利安·姆巴佩）第14分钟在奥利斯（迈克尔·奥利斯）助攻下的进球，1-0领先伊拉克。从场面看，法国完全掌控节奏：控球率66%，已完成5次射门、1次射正和1个角球，而伊拉克目前0射门0角球，仅在第6分钟由阿米尔·阿马里吃到一张黄牌，进攻端几乎没有威胁。基于实力差距叠加领先和场面优势，法国胜率显著上调至0.88，平局压缩至0.09，伊拉克逆转概率仅0.03。考虑到法国持续制造机会但伊拉克会逐渐收缩防线，比赛剩余时间最可能再进一球，最终比分定为2-0。后续进球预测以法国前场核心为主：姆巴佩状态火热、最有可能梅开二度，其次是替补/边路爆点德姆贝莱（奥斯曼·登贝莱）和助攻者奥利斯（迈克尔·奥利斯）；伊拉克若有反扑，中锋艾曼·侯赛因是最可能的得分点，但概率较低。所有预测进球时间均设定在第19分钟之后，且不低于当前比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.08572160000000001,
+      "tokens": {
+        "input": 19793,
+        "output": 675
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.792
+    },
+    {
+      "submitted_at": "2026-06-22T21:25:31+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 25,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.09,
+        "away": 0.03
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 58,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 67,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Michael Olise",
+          "minute": 74,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Randal Kolo Muani",
+          "minute": 82,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Aymen Hussein",
+          "minute": 78,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到25分钟，法国凭借姆巴佩(基利安·姆巴佩)在第14分钟由奥利斯(迈克尔·奥利斯)助攻打入的进球以1-0领先伊拉克。从场面数据来看，法国完全掌控比赛节奏：控球率达到67%，已有5次射门、1次射正和1个角球；反观伊拉克至今0射门、0射正、0角球，并且早在第6分钟就吃到一张黄牌(阿米尔·阿马里)，防线压力明显。考虑到双方实力差距、法国领先且场面占优、伊拉克进攻端毫无威胁，法国取胜的概率显著提升至约0.88，平局概率约0.09，伊拉克翻盘可能性被压缩到0.03左右。后续走势上，法国大概率会继续控制比赛并寻找扩大比分的机会，但世界杯小组赛阶段球队通常在领先后会有所控制节奏，因此最可能的最终比分判断为2-0。后续进球人选方面，姆巴佩处于绝对火热状态、是头号终结点，给予最高概率；奥利斯、登贝莱(奥斯曼·登贝莱)、科洛穆阿尼(Randal Kolo Muani)作为常规进攻火力点也具备破门可能；伊拉克若想扳回一城，最可能依靠中锋侯赛因(艾曼·侯赛因)抓住反击或定位球机会，但概率较低。所有预测进球时间均设定在当前25分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0881821,
+      "tokens": {
+        "input": 19793,
+        "output": 808
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.352
+    },
+    {
+      "submitted_at": "2026-06-22T21:31:37+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 31,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.1,
+        "away": 0.04
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 58,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Michael Olise",
+          "minute": 67,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 75,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Aymen Hussein",
+          "minute": 82,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到31分钟，法国凭借姆巴佩（基利安·姆巴佩）在第14分钟由奥利塞（迈克尔·奥利斯）助攻打入的进球以1-0领先伊拉克。从场面数据来看，法国掌控了62%的控球率，射门5次、射正1次，并取得1个角球，整体进攻组织明显占优；伊拉克仅有2次射门、0射正，且早在第6分钟就吃到一张黄牌，第26分钟就被迫做出进攻端换人调整，反映出他们在比赛节奏中处于被动。基于法国本身在阵容深度、球星个人能力和大赛经验上的全面优势，再叠加已经领先且场面压制的现实，主队胜率应进一步上调，平局概率压低，伊拉克翻盘的可能性极小，因此给到主队约0.86、平局0.10、客队0.04的赔率分布。最终比分方面，考虑到比赛只过了三分之一，法国仍有充足时间扩大优势，而伊拉克需要压上则进一步增加被反击失球的风险，最可能的最终比分定为2-0。后续进球预测上，姆巴佩作为法国头号终结点，状态正佳，再下一城的概率最高，集中在下半场中段；奥利塞已有助攻贡献，活跃于右路，具备直接破门可能；登贝莱（奥斯曼·登贝莱）作为替补或持续冲击点也有望在体能下降阶段抓住机会；伊拉克方面，新登场的阿里·哈马迪（阿里·哈马迪）和前锋艾门·侯赛因（艾曼·侯赛因）是少数可能在反击或定位球中扳回一城的点，给到较低概率作为兜底。"
+      },
+      "sources": [],
+      "cost_usd": 0.08915890000000001,
+      "tokens": {
+        "input": 19882,
+        "output": 843
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.594
+    },
+    {
+      "submitted_at": "2026-06-22T21:37:54+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 37,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.1,
+        "away": 0.04
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 62,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 74,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Michael Olise",
+          "minute": 80,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Ali Al-Hamadi",
+          "minute": 78,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到37分钟，法国凭借姆巴佩（基利安·姆巴佩）第14分钟由奥利斯（迈克尔·奥利斯）助攻的进球以1-0领先伊拉克。从场面看，法国完全掌控了节奏：控球率64%，射门6比2，射正1比0，角球1比1基本持平，犯规也更少，整体压制非常明显。伊拉克则相对被动，第6分钟就早早吃到黄牌，第26分钟已被迫做出调整，用阿里·哈马迪（阿里·哈马迪）换下艾门·侯赛因（艾曼·侯赛因），显示出锋线急需变化来寻找机会。\n\n综合赛前实力差距、当前比分与场面优势，法国获胜的概率明显上升，估算在86%左右；伊拉克要在剩余时间里至少追回一球难度极大，胜率压低到4%；平局则需要伊拉克稳住防线并把握极少机会，给到10%。\n\n最可能的最终比分倾向2-0：法国持续掌控球权，下半场体能与替补深度都占优，再下一城的概率明显高于扩大到3球或被扳平；同时伊拉克进攻端创造力有限，零封他们的可能性相当高。\n\n后续进球方面，最有威胁的依旧是状态火热的姆巴佩，他在反击中随时可能再下一城；奥斯曼·登贝莱（奥斯曼·登贝莱）的突破和奥利斯（迈克尔·奥利斯）的边路传中也都是法国扩大比分的常规路径，分别给予次一级的进球概率；伊拉克方面，刚替补登场的阿里·哈马迪（阿里·哈马迪）是最可能的破门人选，但概率明显低于法国球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.0894882,
+      "tokens": {
+        "input": 19886,
+        "output": 860
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.101
+    },
+    {
+      "submitted_at": "2026-06-22T21:44:05+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 44,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.11,
+        "away": 0.03
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 63,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 71,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Michael Olise",
+          "minute": 78,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Randal Kolo Muani",
+          "minute": 82,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Aymen Hussein",
+          "minute": 88,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第44分钟，法国凭借姆巴佩（基利安·姆巴佩）第14分钟接奥利斯（迈克尔·奥利斯）助攻的进球以1-0领先伊拉克，半场即将结束。从场面数据看，法国控球率61%，射门7次、射正1次，并取得1个角球，整体节奏完全掌控在自己手中；伊拉克控球仅39%，射门2次、零射正，进攻威胁有限，且第6分钟阿尔-阿马里（阿米尔·阿马里）已吃到黄牌，第26分钟便提前用阿里·哈马迪（阿里·哈马迪）换下侯赛因（艾曼·侯赛因），显示主帅试图调整进攻但收效尚不明显。综合赛前实力差距、比分领先与场面压制，法国胜率显著上升至0.86左右，平局空间被压缩到约0.11，伊拉克翻盘概率仅余0.03。最可能的最终比分锁定在2-0：法国大概率会在下半场继续制造机会扩大领先，但伊拉克身后空间有限、法国也可能在领先后控制节奏，因此再丢两球的概率明显低于仅再入一球。后续进球倾向方面，姆巴佩状态火热且为头号终结点，最有可能再下一城；奥利斯、登贝莱（奥斯曼·登贝莱）作为边路爆点同样具备破门能力，替补登场的科洛·穆阿尼（Randal Kolo Muani）若获得机会也有机会建功；伊拉克若想扳回一城，前锋侯赛因（艾曼·侯赛因）在比赛末段最有可能利用对手松懈把握机会，但概率相对较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0897472,
+      "tokens": {
+        "input": 19886,
+        "output": 874
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.698
+    },
+    {
+      "submitted_at": "2026-06-22T22:06:03+00:00",
+      "live": {
+        "status": "Interrupted",
+        "elapsed": 66,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.14,
+        "away": 0.04
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 84,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Michael Olise",
+          "minute": 88,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Aymen Hussein",
+          "minute": 82,
+          "p": 0.06,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第66分钟，法国凭借姆巴佩第14分钟由奥利斯助攻的进球以1-0领先伊拉克。从场面数据看，法国控球率58%、射门7次（射正1次）、角球1次，整体压制明显；伊拉克仅有2次射门且0射正，进攻威胁有限，且早在第6分钟就吃到黄牌，第26分钟便提前做出换人调整，显示出在体能与战术层面承压。综合实力差距、领先优势与剩余时间，法国获胜概率明显上升至0.82，平局降至0.14，伊拉克翻盘可能性压低至0.04。最可能的最终比分判断为2-0：法国大概率会在剩余时段再下一城扩大领先，但伊拉克在防线收缩下仍具备一定韧性，再被连入多球的概率有限。后续进球预测以法国为主——基利安·姆巴佩仍是头号威胁，状态火热具备梅开二度可能；奥斯曼·登贝莱与迈克尔·奥利斯边路冲击力强，是替补登场或持续施压下的潜在破门人选；伊拉克方面若能反扑，前锋艾曼·侯赛因是相对最可能的得分点，但概率较低。所有进球时间均设定在第66分钟之后，符合当前比赛进程。"
+      },
+      "sources": [],
+      "cost_usd": 0.08643940000000001,
+      "tokens": {
+        "input": 19887,
+        "output": 695
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.543
+    },
+    {
+      "submitted_at": "2026-06-22T22:12:22+00:00",
+      "live": {
+        "status": "Interrupted",
+        "elapsed": 72,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.15,
+        "away": 0.03
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 82,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Michael Olise",
+          "minute": 86,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 88,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Ali Al-Hamadi",
+          "minute": 90,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到72分钟，法国主场1-0领先伊拉克。开场仅14分钟基利安·姆巴佩便由迈克尔·奥利斯助攻破门，为蓝衣军团奠定了主动权。从场面数据看，法国控球率达58%，射门7次、射正1次，并取得1个角球，整体压制力明显；伊拉克全场仅2次射门、0射正，进攻端非常乏力，并且第6分钟阿米尔·阿马里就吃到黄牌，限制了中场对抗强度，第26分钟换上阿里·哈马迪也未能改变被动局面。综合实力差距、当前比分领先以及剩余时间不多，法国获胜概率显著提升至0.82，平局回落至0.15，伊拉克逆转希望极低，仅约0.03。最可能的最终比分为2-0：法国在体能和阵容深度上占优，末段极可能利用对手压上反击或定位球再下一城，而伊拉克要在23分钟内连入两球难度极大。后续进球预测方面，Mbappé作为头号火力点且已进入状态，二度建功概率最高；Olise具备直塞和远射能力，是潜在的第二得分点；替补登场的Dembélé若获得出场时间，也是收割比赛的常用选项。伊拉克方面，若能制造机会，最具威胁的仍是前锋阿里·哈马迪，但概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.08710540000000001,
+      "tokens": {
+        "input": 19887,
+        "output": 731
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.746
+    },
+    {
+      "submitted_at": "2026-06-22T22:18:38+00:00",
+      "live": {
+        "status": "Interrupted",
+        "elapsed": 78,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.1,
+        "away": 0.02
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第78分钟，法国凭借姆巴佩(基利安·姆巴佩)第14分钟由奥利斯(迈克尔·奥利斯)助攻打入的进球，1-0领先伊拉克。从场面数据看，法国控球率58%，射门7次（射正1次），角球1次，整体掌控比赛节奏；伊拉克仅有2次射门、0射正，且第6分钟就已吃到黄牌，第26分钟也已用掉换人名额，进攻端缺乏有效组织。考虑到比赛已进入尾声，仅剩约12分钟加上伤停补时，伊拉克需要在短时间内连入两球才能逆转，难度极大；而法国只需控制节奏即可锁定胜局。综合比分、剩余时间和场上态势，法国取胜概率非常高，约88%，平局约10%（主要对应伊拉克扳平后保平的可能），伊拉克获胜的概率几乎可以忽略，约2%。最可能的最终比分维持1-0，这与领先方控场的趋势一致。后续进球方面，法国端的扩大比分人选首推状态在线的姆巴佩，其次是助攻者奥利斯具备突破和远射能力；伊拉克若要破门，替补登场的阿尔-哈马迪(阿里·哈马迪)是最具威胁的支点，可能在最后阶段抢点制造机会。所有潜在进球时间均设定在第78分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.08664290000000001,
+      "tokens": {
+        "input": 19887,
+        "output": 706
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.185
+    },
+    {
+      "submitted_at": "2026-06-22T22:24:54+00:00",
+      "live": {
+        "status": "Interrupted",
+        "elapsed": 84,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.92,
+        "draw": 0.07,
+        "away": 0.01
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第84分钟，法国凭借姆巴佩(基利安·姆巴佩)第14分钟由奥利斯(迈克尔·奥利斯)助攻打入的进球，1-0领先伊拉克。从场面数据看，法国控球率58%，全场7次射门、1次射正、1个角球，整体掌控比赛节奏；伊拉克仅有2次射门、0射正，进攻威胁非常有限，且早早就吃到黄牌、并在第26分钟就做出换人调整，反映出对方在比赛中始终处于被动。比赛目前因故中断，但比分与场面均明显向法国倾斜，剩余可补时阶段非常短，伊拉克要在如此短时间内连入两球几乎不可能，因此判断法国获胜概率高达92%左右，平局约7%（来自伊拉克极小概率的扳平），伊拉克翻盘概率仅约1%。最可能的最终比分仍是1-0，法国大概率以稳守方式带走三分。后续若再有进球，更有可能来自法国的反击或定位球，姆巴佩、奥利斯以及替补登场的德姆贝莱(奥斯曼·登贝莱)是最可能的破门人选；伊拉克方面，新换上的阿尔-哈马迪(阿里·哈马迪)在最后阶段压上进攻时存在极低概率的扳回一球机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.0869019,
+      "tokens": {
+        "input": 19887,
+        "output": 720
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.465
+    },
+    {
+      "submitted_at": "2026-06-22T22:30:56+00:00",
+      "live": {
+        "status": "Interrupted",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.94,
+        "draw": 0.05,
+        "away": 0.01
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分1-0，比赛已进行到第90分钟，处于补时阶段。法国队凭借第14分钟姆巴佩接奥利斯助攻的进球取得领先，全场掌控节奏：控球率58%、7次射门对伊拉克的2次，角球与犯规数据也都体现出主导态势。伊拉克全场仅有2次射门且0射正，第26分钟就已经做出进攻调整换上阿里·哈马迪，但并未制造出实质性威胁，第6分钟早早领到的黄牌也限制了中场逼抢强度。考虑到时间已进入90分钟、伊拉克需要在极短时间内连入两球才能扭转局势，几乎不具现实可能，因此法国胜率提升至接近终局水平，平局概率仅来自补时阶段被扳平的小概率事件，伊拉克获胜可视为可忽略。最可能的最终比分维持1-0：法国领先后通常会选择控球消耗时间而非压上进攻，伊拉克体能与战术层面都难以再形成有效攻势。后续进球只可能出现在补时阶段，主队反击中由姆巴佩个人能力终结的可能性最高，因此把他列为唯一的潜在进球者，概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0839086,
+      "tokens": {
+        "input": 19883,
+        "output": 559
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.965
+    },
+    {
+      "submitted_at": "2026-06-22T22:36:57+00:00",
+      "live": {
+        "status": "Interrupted",
+        "elapsed": 96,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.96,
+        "draw": 0.035,
+        "away": 0.005
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分1-0，法国领先伊拉克，比赛已进行到第96分钟并处于中断状态，实际上已接近终场。法国队上半场第14分钟由基利安·姆巴佩在迈克尔·奥利斯助攻下打入制胜球，全场控球率58%，射门7次（射正1次），整体场面占优。伊拉克全场仅有2次射门且0射正，进攻端始终未能制造有效威胁，加上第6分钟阿米尔·阿马里就已染黄，比赛后段难以掀起强力反扑。考虑到补时阶段已经走完且比赛被中断，留给伊拉克扳平的时间几乎为零，因此法国获胜的概率非常高，平局概率极低，伊拉克获胜基本可以排除。最可能的最终比分维持在1-0。由于现在已是第96分钟之后，常规可进球的时间窗口基本关闭，预计不会再有进球产生，因此不再列出后续射手。"
+      },
+      "sources": [],
+      "cost_usd": 0.08128160000000001,
+      "tokens": {
+        "input": 19883,
+        "output": 417
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.587
+    },
+    {
+      "submitted_at": "2026-06-22T22:42:52+00:00",
+      "live": {
+        "status": "Interrupted",
+        "elapsed": 102,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.94,
+        "draw": 0.05,
+        "away": 0.01
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前法国1-0领先伊拉克，比赛进行到第102分钟，处于补时/中断阶段。法国凭借姆巴佩(基利安·姆巴佩)第14分钟由奥利塞(迈克尔·奥利斯)助攻的进球早早取得领先，此后场面一直占据主动：控球率58%，7次射门（1次射正），1次角球，而伊拉克仅有2次射门且0射正，进攻端始终缺乏威胁。伊拉克第6分钟便吃到黄牌，第26分钟即用阿里·哈马迪(阿里·哈马迪)换下侯赛因(艾曼·侯赛因)，主动求变但收效甚微。比赛已进入第102分钟，留给伊拉克扳平的时间和机会都极为有限，法国获胜概率被推升至接近95%，平局概率压缩到个位数，伊拉克翻盘几乎不可能。综合射门效率与剩余时间，最可能的最终比分维持为1-0；若仍有进球，最大概率来自法国在伊拉克压上后打出的反击，姆巴佩与替补登场的德姆贝莱(奥斯曼·登贝莱)是最可能的破门者，而伊拉克若能扳平只能寄希望于哈马迪等前场球员把握零星机会，但概率很低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0856846,
+      "tokens": {
+        "input": 19883,
+        "output": 655
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.121
+    },
+    {
+      "submitted_at": "2026-06-22T22:48:59+00:00",
+      "live": {
+        "status": "Interrupted",
+        "elapsed": 108,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.92,
+        "draw": 0.06,
+        "away": 0.02
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前法国1-0领先伊拉克，比赛已进入加时赛第108分钟，且暂时处于中断状态。从场面数据看，法国全面占据主动：控球率58%，全场7次射门（1次射正），角球与犯规也都体现出他们在比赛节奏上的掌控；伊拉克仅有2次射门、0次射正，进攻端几乎没有制造威胁，仅靠阿里·哈马迪替补登场试图加强反击，但收效有限。\n\n基于14分钟Mbappé（Olise助攻）的入球，法国把领先保持到了加时阶段末段。考虑到剩余时间非常有限（含补时大约还剩十余分钟），伊拉克在体能与战术层面都难以连入两球翻盘，甚至追平的可能性也很低，因此主胜概率显著拉高至0.92，平局压缩到0.06，客胜仅0.02。\n\n最可能的最终比分维持当前的1-0：法国大概率会用控球和高位逼抢消耗剩余时间，伊拉克若孤注一掷压上则更容易被反击打穿。后续进球方面，更可能来自法国的反击或定位球，Mbappé在加时末段的快速反击仍是头号威胁，Dembélé等替补/边路球员若获得空间也具备终结能力；伊拉克在已无射正的情况下进球概率极低，因此未列入主要候选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0856846,
+      "tokens": {
+        "input": 19883,
+        "output": 655
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.578
+    },
+    {
+      "submitted_at": "2026-06-22T22:55:08+00:00",
+      "live": {
+        "status": "Interrupted",
+        "elapsed": 115,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.94,
+        "draw": 0.05,
+        "away": 0.01
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分为法国 1-0 伊拉克，比赛已进行到第115分钟，处于加时赛末段且当前为暂停状态。法国队凭借姆巴佩（基利安·姆巴佩）第14分钟由奥利斯（迈克尔·奥利斯）助攻打入的进球早早取得领先，此后凭借58%的控球率和7次射门（伊拉克仅2次射门、0次射正）牢牢掌控了比赛节奏，伊拉克全场缺乏有效的反扑手段，仅在第6分钟吃到一张黄牌、第26分钟做出换人调整，进攻端始终未能形成威胁。考虑到比赛仅剩极短时间、伊拉克需要连入两球才能逆转，几乎不存在现实可能，因此法国获胜的概率被大幅推高至接近95%，平局概率压缩至5%左右，伊拉克获胜概率几乎可以忽略。最可能的最终比分锁定为1-0，符合当前主队领先的局面；考虑到加时末段双方体能下降、伊拉克可能压上抢攻留下反击空间，法国仍存在小概率扩大比分的可能，因此后续进球候选人优先考虑状态火热的姆巴佩以及具备反击终结能力的登贝莱（奥斯曼·登贝莱），但整体出现新进球的概率不高。"
+      },
+      "sources": [],
+      "cost_usd": 0.08527760000000001,
+      "tokens": {
+        "input": 19883,
+        "output": 633
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.815
+    },
+    {
+      "submitted_at": "2026-06-22T23:18:58+00:00",
+      "live": {
+        "status": "Interrupted",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.94,
+        "draw": 0.05,
+        "away": 0.01
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分1-0，法国主场领先伊拉克，比赛进行到第130分钟，状态显示为中断。法国队由姆巴佩在第14分钟接奥利斯助攻首开纪录，全场控球率58%，射门7次（射正1次），整体场面占据明显优势；伊拉克仅有2次射门且0射正，进攻端基本未能制造实质威胁，第6分钟还吃到一张黄牌，第26分钟进行换人调整也未能扭转局面。考虑到比赛已进入第130分钟（远超常规补时），且当前处于中断状态，剩余可踢时间极为有限，再进球的可能性已经非常低。基于伊拉克全场缺乏有效攻势、追平难度极大，法国保住胜局的概率非常高，主胜概率给到0.94，平局0.05，客胜0.01。最可能的最终比分维持现状1-0。鉴于所剩时间几乎为零且场面已趋于停滞，不再预测130分钟之后的具体进球人。"
+      },
+      "sources": [],
+      "cost_usd": 0.08169230000000001,
+      "tokens": {
+        "input": 19889,
+        "output": 438
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.039
+    },
+    {
+      "submitted_at": "2026-06-22T23:25:03+00:00",
+      "live": {
+        "status": "Interrupted",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.96,
+        "draw": 0.03,
+        "away": 0.01
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前法国1-0领先伊拉克，比赛已进行到第130分钟且处于中断状态，常规时间与补时阶段实际上已基本走完。从场面来看，姆巴佩（基利安·姆巴佩）在第14分钟由奥利斯（迈克尔·奥利斯）助攻破门，为法国早早奠定领先优势；随后法国在控球率（58%对42%）、射门次数（7比2）等关键数据上全面占优，伊拉克全场未能形成射正，进攻威胁极为有限。伊拉克在第26分钟用阿里·哈马迪换下艾曼·侯赛因试图加强锋线，但并未改变场上节奏。考虑到比赛已实质性接近终场，且本场为世界杯小组赛常规比赛、不存在加时或点球流程，法国保住领先的概率极高，伊拉克扳平甚至反超的窗口几乎不存在，因此主胜概率压到非常高的区间，平局与客胜概率被大幅压缩。最可能的最终比分维持为1-0法国胜，与当前比分及最高胜率相吻合。由于剩余可进球的时间窗口已极其有限，且当前为比赛中断状态，预计后续不会再有进球产生，故不列出此后的进球候选球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.0832611,
+      "tokens": {
+        "input": 19883,
+        "output": 524
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.034
+    },
+    {
+      "submitted_at": "2026-06-22T23:31:13+00:00",
+      "live": {
+        "status": "Interrupted",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.94,
+        "draw": 0.05,
+        "away": 0.01
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分为法国 1-0 伊拉克，比赛进行到第130分钟且处于中断状态，已远超常规与加时时间，几乎可以视作终场前的极限阶段。法国队14分钟由Mbappé（奥利斯助攻）取得领先后牢牢掌控节奏，控球率58%、射门7次对2次，整体场面占优，伊拉克全场零射正，难以制造实质威胁。在比赛已被迫中断、剩余可踢时间极其有限的情况下，法国保住一球小胜的概率被进一步放大，平局空间很小，伊拉克逆转几乎不可能。综合走势，最可能的最终比分仍是1-0，与主胜概率最高保持一致。由于已过130分钟且比赛处于中断状态，130分钟之后基本不再具备产生新进球的合理窗口，因此不再列出后续进球者。"
+      },
+      "sources": [],
+      "cost_usd": 0.080808,
+      "tokens": {
+        "input": 19885,
+        "output": 391
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.812
+    },
+    {
+      "submitted_at": "2026-06-22T23:37:32+00:00",
+      "live": {
+        "status": "Interrupted",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.94,
+        "draw": 0.04,
+        "away": 0.02
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前法国1-0领先伊拉克，比赛已经进行到130分钟，处于中断状态。从场面看，姆巴佩（基利安·姆巴佩）在第14分钟由奥利塞（迈克尔·奥利斯）助攻破门后，法国一直掌控比赛节奏：控球率58%，射门7次对2次，射正1次，整体压制明显，伊拉克进攻端几乎没有有效威胁，仅2次射门且零射正，第6分钟还吃到一张黄牌，第26分钟换上阿尔-哈马迪（阿里·哈马迪）试图加强锋线但收效甚微。比赛已经远超常规90分钟和加时赛时长，目前因故中断，留给双方继续创造机会的时间窗口极其有限，因此进球概率被大幅压低。综合场面控制力和剩余时间，法国保住胜果几乎已成定局，胜率给到0.94，平局只在伊拉克极限扳平的小概率下成立，给0.04，伊拉克翻盘几乎不可能，给0.02。最可能的最终比分锁定在1-0，符合主队取胜的判断，也与现有比分一致。后续进球方面，只在比赛恢复并出现零星机会的前提下考虑，姆巴佩作为状态最好的球员仍是最有可能再下一城的人选，但概率极低，仅作为兜底情形列出。"
+      },
+      "sources": [],
+      "cost_usd": 0.0847855,
+      "tokens": {
+        "input": 19885,
+        "output": 606
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.557
+    },
+    {
+      "submitted_at": "2026-06-22T23:43:48+00:00",
+      "live": {
+        "status": "Interrupted",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.94,
+        "draw": 0.04,
+        "away": 0.02
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分为法国 1-0 伊拉克，比赛已进行到第130分钟，处于中断状态。法国第14分钟由姆巴佩（基利安·姆巴佩）接奥利斯（迈克尔·奥利斯）助攻率先破门，此后凭借58%的控球率和7次射门（其中1次射正）持续掌控节奏，伊拉克全场仅2次射门且无射正，进攻威胁极为有限。从场面流向看，法国控制了比赛节奏，伊拉克自第6分钟吃到黄牌后转入防守为主，第26分钟换上阿里·哈马迪（阿里·哈马迪）也未能扭转进攻乏力的局面。考虑到比赛已进入第130分钟并处于中断状态，常规与加时阶段几乎结束，剩余有效比赛时间极短，再进球的可能性已非常低；因此法国大概率守住胜果，胜率给到极高水平，平局与伊拉克扳平的概率均压缩到很小。基于剩余时间几乎为零的判断，最可能的最终比分维持为 1-0，未来进球者列表为空。"
+      },
+      "sources": [],
+      "cost_usd": 0.0823435,
+      "tokens": {
+        "input": 19885,
+        "output": 474
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.324
+    },
+    {
+      "submitted_at": "2026-06-22T23:50:35+00:00",
+      "live": {
+        "status": "Interrupted",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.97,
+        "draw": 0.02,
+        "away": 0.01
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前法国 1-0 领先伊拉克，比赛进行到第130分钟，状态为中断（Interrupted）。从场面来看，姆巴佩（基利安·姆巴佩）在第14分钟由奥利斯（迈克尔·奥利斯）助攻破门后，法国一直牢牢掌控局势，控球率58%、射门7次（射正1次），明显压制只有2次射门且无射正的伊拉克，伊拉克在第6分钟便吃到黄牌、第26分钟换上阿里·哈马迪（阿里·哈马迪）试图加强进攻但收效甚微。考虑到比赛已进入第130分钟仍因中断而停摆，常规时间及任何可能的补时基本已经走完，剩余可踢时间极为有限，再出现进球的概率非常低。综合场面、比分、剩余时间和比赛已被中断的状态，法国赢球几乎已成定局，平局或伊拉克扳平的可能性都极小，因此最可能的最终比分维持当前的1-0；由于现实可踢时间几乎为零，不再列出130分钟之后的进球预测。"
+      },
+      "sources": [],
+      "cost_usd": 0.0822695,
+      "tokens": {
+        "input": 19885,
+        "output": 470
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.351
+    },
+    {
+      "submitted_at": "2026-06-22T23:56:46+00:00",
+      "live": {
+        "status": "Interrupted",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Iraq",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-22T21:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.92,
+        "draw": 0.05,
+        "away": 0.03
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分1-0，比赛已进行到130分钟，处于中断状态，剩余可踢时间极为有限。法国凭借姆巴佩（基利安·姆巴佩）第14分钟由奥利斯（迈克尔·奥利斯）助攻打入的进球早早取得领先，并在控球率（58%对42%）、射门数（7比2）和角球等数据上全面压制伊拉克，整体场面牢牢掌握在卫冕级别强队手中。伊拉克全场仅2次射门且无射正，第26分钟已被迫换人调整，进攻端始终难以制造实质性威胁，要在补时阶段连扳两球几乎不可能，即便扳平也极为困难，因此平局与客胜概率被压到很低。综合考虑剩余时间极短且法国控制力极强，最可能的最终比分维持在1-0；若还有进球出现，最大可能来自延续状态的姆巴佩或具备直接参与进球能力的奥利斯在终场前再下一城，但概率本身偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0830465,
+      "tokens": {
+        "input": 19885,
+        "output": 512
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.593
+    }
+  ]
+}

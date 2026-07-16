@@ -1,0 +1,315 @@
+{
+  "fixture_id": "World-Cup_Round-of-32_Spain_Austria_2026-07-02",
+  "provider_fixture_id": "19606948",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-02T20:51:32+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 3,
+      "away": 0
+    },
+    "home": "Spain",
+    "away": "Austria",
+    "competition": "World Cup",
+    "stage": "Round of 32",
+    "kickoff_utc": "2026-07-02T19:00:00+00:00",
+    "venue": "Los Angeles Stadium",
+    "venue_city": null
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.999,
+      "draw": 0.001,
+      "away": 0.0
+    },
+    "most_likely_score": "3-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入第90分钟，目前西班牙以3-0遥遥领先奥地利。从场面数据来看，西班牙占据了绝对的统治地位，控球率高达66%，全场狂轰22脚射门且有10次射正，并获得了9个角球。相比之下，奥地利全场仅有5次射门且无一射正，进攻端完全被压制。奥亚萨瓦尔（米克尔·奥亚萨瓦尔）在第36分钟和第89分钟完成梅开二度，波罗（佩德罗·波罗）也在第66分钟建功。考虑到常规时间已经结束，比赛胜负已无悬念，西班牙获胜的概率接近100%。在伤停补时阶段，双方大概率会放缓节奏，3-0是最有可能的最终比分。尽管如此，替补登场的费兰·托雷斯（费兰·托雷斯）等攻击手仍有可能在最后时刻利用对手的防线松懈尝试反击得分，但再次进球的整体概率已经非常低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1277,
+    "output": 1545
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.01107435,
+  "wall_seconds": 15.046,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.999,\n    \"draw\": 0.001,\n    \"away\": 0.000\n  },\n  \"most_likely_score\": \"3-0\",\n  \"scorers\": [\n    {\n      \"player\": \"Ferran Torres\",\n      \"team\": \"home\",\n      \"minute\": 93,\n      \"p\": 0.05\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入第90分钟，目前西班牙以3-0遥遥领先奥地利。从场面数据来看，西班牙占据了绝对的统治地位，控球率高达66%，全场狂轰22脚射门且有10次射正，并获得了9个角球。相比之下，奥地利全场仅有5次射门且无一射正，进攻端完全被压制。奥亚萨瓦尔（Mikel Oyarzabal）在第36分钟和第89分钟完成梅开二度，波罗（Pedro Porro）也在第66分钟建功。考虑到常规时间已经结束，比赛胜负已无悬念，西班牙获胜的概率接近100%。在伤停补时阶段，双方大概率会放缓节奏，3-0是最有可能的最终比分。尽管如此，替补登场的费兰·托雷斯（Ferran Torres）等攻击手仍有可能在最后时刻利用对手的防线松懈尝试反击得分，但再次进球的整体概率已经非常低。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Match Analysis: Spain vs. Austria (World Cup Round of 32)**\n\nAlright, here's the situation: we're in the 90th minute, and Spain's absolutely crushing Austria, leading 3-0. Looking at the stats, it's clear Spain has dominated possession, controlling 66% of the play and peppering the Austrian goal with 22 shots, 10 of which were on target. Austria, on the other hand, hasn't managed a single shot on target. Oyarzabal's bagged two goals, and Porro also found the net. Given the time and the scoreline, this match is effectively over. Spain's victory is virtually guaranteed. It's highly unlikely we'll see much more action in stoppage time, with the most probable final result being a 3-0 victory for Spain. Although there is a small chance a substitute like Ferran Torres may have a chance.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-07-02T19:04:21+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 4,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.65,
+        "draw": 0.22,
+        "away": 0.13
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Álvaro Morata",
+          "minute": 35,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 68,
+          "p": 0.22,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第4分钟，目前比分0-0。从开局阶段的数据来看，奥地利队出人意料地占据了70%的控球率，试图通过传导来稳住阵脚并消耗对手。然而，西班牙队展现了更直接的进攻威胁，在仅有30%控球率的情况下已经完成了一次射正，并迫使奥地利门将做出了一次关键扑救。这表明西班牙在由守转攻时的效率极高。作为世界杯三十二强淘汰赛，西班牙在整体阵容深度和大赛经验上均占据明显优势。随着比赛深入，西班牙有望逐渐夺回中场控制权并持续施压。基于目前的场面和双方实力差距，西班牙获胜的概率依然高达65%，平局概率约为22%。最可能的最终比分预测为2-0，预计西班牙的锋线球员（如 Álvaro Morata 或 拉明·亚马尔）将在上半场中后段或下半场利用对手防线体能下降或压上进攻的契机取得进球，从而锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.012785849999999998,
+      "tokens": {
+        "input": 831,
+        "output": 1891
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.09
+    },
+    {
+      "submitted_at": "2026-07-02T19:37:36+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 37,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.13,
+        "away": 0.05
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Alvaro Morata",
+          "minute": 68,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 81,
+          "p": 0.28,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第37分钟，西班牙凭借米克尔·奥亚萨瓦尔（米克尔·奥亚萨瓦尔）刚刚打入的进球，以1-0领先奥地利。从场面数据来看，西班牙完全掌控了比赛节奏，控球率高达62%，并创造了6次射门（4次射正）和5个角球。相比之下，奥地利在进攻端显得非常挣扎，仅有1次射门且未能命中门框范围，角球数更是挂零。鉴于西班牙在比分和场面上的双重压制，以及奥地利破门乏术的现状，西班牙赢下本场淘汰赛的概率大幅提升。考虑到西班牙强大的中场控制力，他们大概率会继续施压并扩大战果，同时稳固防守，最可能的最终比分预测为2-0。在后续比赛中，随着奥地利被迫压上寻找扳平机会，西班牙的锋线球员如阿尔瓦罗·莫拉塔（Alvaro Morata）或拉明·亚马尔（拉明·亚马尔）将获得更多反击空间，极有可能在下半场为球队锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.0140322,
+      "tokens": {
+        "input": 884,
+        "output": 2080
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.721
+    },
+    {
+      "submitted_at": "2026-07-02T20:11:01+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 56,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.14,
+        "away": 0.04
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Mikel Oyarzabal",
+          "minute": 75,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Dani Olmo",
+          "minute": 82,
+          "p": 0.18,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第56分钟，西班牙凭借奥亚萨瓦尔（米克尔·奥亚萨瓦尔）在第36分钟的进球，目前以1-0领先奥地利。从场面数据来看，西班牙完全掌控了比赛节奏，控球率高达65%，并创造了11次射门（其中6次射正）和6次角球。相比之下，奥地利仅有2次射门且无一射正，西班牙门将至今未受到实质性考验。尽管奥地利在下半场伊始进行了双换人调整试图加强中场控制并改变局势，但面对西班牙稳固的传控体系，他们很难夺回主动权。鉴于西班牙在比分和场面上的双重压制，其获胜概率极高。随着比赛进入后半段，落后的奥地利必须阵型前压以寻求扳平比分，这将不可避免地暴露后防空当。预计西班牙能够利用对手压上后的空间打出高效反击，大概率会再入一球锁定胜局。最可能的最终比分为2-0，状态出色的奥亚萨瓦尔或西班牙的其他攻击手有望在70分钟后利用反击机会扩大领先优势。"
+      },
+      "sources": [],
+      "cost_usd": 0.01487325,
+      "tokens": {
+        "input": 959,
+        "output": 2201
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.732
+    },
+    {
+      "submitted_at": "2026-07-02T20:28:13+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 73,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.985,
+        "draw": 0.013,
+        "away": 0.002
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第73分钟，西班牙目前以2-0领先奥地利。从场面数据来看，西班牙占据了绝对的统治地位，控球率高达67%，并且狂轰17脚射门（7次射正），而奥地利全场仅有3次射门且无一射正，西班牙门将至今未做出任何扑救，说明奥地利的进攻几乎没有制造实质性威胁。尽管奥地利在下半场进行了大规模换人调整，换上阿瑙托维奇（Marko Arnautovic）和卡莱季奇（Sasa Kalajdzic）等高中锋试图通过长传冲吊改变战局，但面对西班牙严密的传控体系依然难以夺回球权。考虑到比赛只剩下不到20分钟，西班牙2球领先且牢牢掌控比赛节奏，主队获胜的概率已经极高。最可能的最终比分将维持在2-0，西班牙大概率会选择通过传导球来消耗剩余时间。在后续进球逻辑上，如果比分再次改写，更有可能是西班牙利用奥地利大举压上留下的防线空当打出致命反击，在比赛尾声阶段进一步扩大比分；而奥地利若想破门，只能寄希望于前场高中锋在定位球中的抢点，但整体破门概率依然较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.016833599999999997,
+      "tokens": {
+        "input": 1032,
+        "output": 2500
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.105
+    },
+    {
+      "submitted_at": "2026-07-02T20:34:35+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 79,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.985,
+        "draw": 0.012,
+        "away": 0.003
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第79分钟，西班牙目前以2-0稳稳领先奥地利。从场面数据来看，西班牙占据了绝对的统治地位，控球率高达67%，狂轰19脚射门且有8次射正，并凭借奥亚萨瓦尔和波罗的进球确立了胜局。相比之下，奥地利在进攻端毫无建树，仅有3次射门且无一射正，完全被对手的传控体系压制。考虑到比赛仅剩10多分钟加上伤停补时，且奥地利未能展现出任何反扑的威胁，西班牙获胜的概率已经极高。最可能的最终比分预计将维持在2-0，西班牙大概率会通过控制球权来消耗剩余时间。如果比赛尾声阶段还有进球产生，第71分钟刚刚替补登场的费兰·托雷斯（费兰·托雷斯）体能充沛，极有可能利用奥地利阵型前压留下的防线空当，在反击中完成致命一击。"
+      },
+      "sources": [],
+      "cost_usd": 0.011064899999999999,
+      "tokens": {
+        "input": 1136,
+        "output": 1567
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.319
+    },
+    {
+      "submitted_at": "2026-07-02T20:51:32+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Austria",
+        "competition": "World Cup",
+        "stage": "Round of 32",
+        "kickoff_utc": "2026-07-02T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.999,
+        "draw": 0.001,
+        "away": 0.0
+      },
+      "most_likely_score": "3-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，目前西班牙以3-0遥遥领先奥地利。从场面数据来看，西班牙占据了绝对的统治地位，控球率高达66%，全场狂轰22脚射门且有10次射正，并获得了9个角球。相比之下，奥地利全场仅有5次射门且无一射正，进攻端完全被压制。奥亚萨瓦尔（米克尔·奥亚萨瓦尔）在第36分钟和第89分钟完成梅开二度，波罗（佩德罗·波罗）也在第66分钟建功。考虑到常规时间已经结束，比赛胜负已无悬念，西班牙获胜的概率接近100%。在伤停补时阶段，双方大概率会放缓节奏，3-0是最有可能的最终比分。尽管如此，替补登场的费兰·托雷斯（费兰·托雷斯）等攻击手仍有可能在最后时刻利用对手的防线松懈尝试反击得分，但再次进球的整体概率已经非常低。"
+      },
+      "sources": [],
+      "cost_usd": 0.01107435,
+      "tokens": {
+        "input": 1277,
+        "output": 1545
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.046
+    }
+  ]
+}

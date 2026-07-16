@@ -1,0 +1,424 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-14_Spain_Cape-Verde_2026-06-15",
+  "provider_fixture_id": "19609162",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-15T17:50:29+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 0
+    },
+    "home": "Spain",
+    "away": "Cape Verde Islands",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-15T16:00:00+00:00",
+    "venue": "Atlanta Stadium",
+    "venue_city": "Atlanta"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.34,
+      "draw": 0.62,
+      "away": 0.04
+    },
+    "most_likely_score": "0-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进入第90分钟，西班牙与佛得角仍是0-0。从场面看，西班牙完全掌控比赛，控球率达到74%，总射门24次、射正7次，角球9个，但在佛得角门将多次扑救（7次）和密集防守下始终未能破门。佛得角则采取深度防守反击，全场仅3脚射门且无射正，威胁极其有限。考虑到目前只剩补时阶段，平局概率显著上升，是最可能的结果；西班牙凭借持续压制仍保留一定的绝杀可能，但时间所剩无几；佛得角想要在补时阶段打入进球难度极大。综合判断最可能的最终比分为0-0。若补时阶段出现进球，最有可能来自刚替补登场、状态正盛的亚马尔、达尼·奥尔莫或尼科·威廉姆斯等西班牙攻击手，梅里诺也可能在定位球中抢点建功。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2218,
+    "output": 561
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0185851,
+  "wall_seconds": 18.809,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.34, \"draw\": 0.62, \"away\": 0.04},\n  \"most_likely_score\": \"0-0\",\n  \"scorers\": [\n    {\"player\": \"Lamine Yamal\", \"team\": \"home\", \"minute\": 92, \"p\": 0.08},\n    {\"player\": \"Dani Olmo\", \"team\": \"home\", \"minute\": 93, \"p\": 0.07},\n    {\"player\": \"Nico Williams\", \"team\": \"home\", \"minute\": 94, \"p\": 0.06},\n    {\"player\": \"Mikel Merino\", \"team\": \"home\", \"minute\": 90, \"p\": 0.05}\n  ],\n  \"reasoning\": {\"overall\": \"比赛进入第90分钟，西班牙与佛得角仍是0-0。从场面看，西班牙完全掌控比赛，控球率达到74%，总射门24次、射正7次，角球9个，但在佛得角门将多次扑救（7次）和密集防守下始终未能破门。佛得角则采取深度防守反击，全场仅3脚射门且无射正，威胁极其有限。考虑到目前只剩补时阶段，平局概率显著上升，是最可能的结果；西班牙凭借持续压制仍保留一定的绝杀可能，但时间所剩无几；佛得角想要在补时阶段打入进球难度极大。综合判断最可能的最终比分为0-0。若补时阶段出现进球，最有可能来自刚替补登场、状态正盛的亚马尔、达尼·奥尔莫或尼科·威廉姆斯等西班牙攻击手，梅里诺也可能在定位球中抢点建功。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-15T16:26:51+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 26,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.11,
+        "away": 0.03
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lamine Yamal",
+          "minute": 38,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Álvaro Morata",
+          "minute": 58,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Nico Williams",
+          "minute": 67,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Dani Olmo",
+          "minute": 75,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Mikel Merino",
+          "minute": 82,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Ryan Mendes",
+          "minute": 78,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第26分钟，西班牙与佛得角仍是0-0。从场面数据看，西班牙完全掌控节奏，控球率高达69%，已经完成3次射门、1次射正并拿到1个角球，而佛得角则0射门、0角球，且已在第16分钟由西德尼·洛佩斯·卡布拉尔吃到黄牌，防线压力明显。佛得角整体退守、依靠门将一次扑救勉强守住城门，进攻端几乎没有威胁。\n\n基于实力差距和当前压制态势，西班牙取胜概率非常高，给到0.86左右，平局保留约0.11的可能性（考虑到佛得角偶有铁桶阵守平的剧本），佛得角爆冷胜出的可能性极低，仅约0.03。随着西班牙持续施压，预计上半场后段或下半场初段就会取得突破，最终最可能的比分是2-0。\n\n后续进球方面，拉明·亚马尔作为目前西班牙最具突破和终结能力的边路杀手，率先破门概率最高；Morata作为中锋在禁区内的把握机会能力使其成为第二个潜在得分点；尼科·威廉姆斯、达尼·奥尔莫和Merino也都有补射或远射建功的可能。佛得角若能得分，最有希望的是反击中的赖安·门德斯，但概率有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.019647,
+      "tokens": {
+        "input": 1430,
+        "output": 776
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.213
+    },
+    {
+      "submitted_at": "2026-06-15T16:39:03+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 39,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.17,
+        "away": 0.05
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Álvaro Morata",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 67,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Nico Williams",
+          "minute": 75,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Dani Olmo",
+          "minute": 82,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Ryan Mendes",
+          "minute": 78,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第39分钟，西班牙与佛得角仍是0-0。从场面数据看，西班牙完全掌控局势：控球率达到66%，5次射门对2次，1次射正以及1个角球，整体压制明显，但临门一脚效率欠佳，佛得角门将也贡献了一次扑救。佛得角防守较为被动，已经在第17分钟由西德尼·洛佩斯·卡布拉尔吃到黄牌，后续中场拦截动作会更谨慎，西班牙获得空间的概率会上升。考虑到西班牙整体实力优势和场上压制力，下半场破门只是时间问题，主队胜率维持在较高水平；佛得角依靠防守反击偷分的可能性存在但有限，平局概率有所下降。最可能的最终比分判断为2-0，西班牙在下半场通过持续施压打开局面后再下一城。后续进球点上，莫拉塔在禁区内的把握机会能力、亚马尔的边路突破、尼科·威廉姆斯的速度冲击以及奥尔莫的二线插上都是主要威胁来源；佛得角若想扳回，前锋赖安·门德斯的反击机会值得留意，但概率相对较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0180375,
+      "tokens": {
+        "input": 1430,
+        "output": 689
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.041
+    },
+    {
+      "submitted_at": "2026-06-15T17:13:38+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 58,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.74,
+        "draw": 0.21,
+        "away": 0.05
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Álvaro Morata",
+          "minute": 72,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 78,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Nico Williams",
+          "minute": 82,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Dani Olmo",
+          "minute": 75,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Mikel Oyarzabal",
+          "minute": 88,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Ryan Mendes",
+          "minute": 85,
+          "p": 0.05,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第58分钟，西班牙与佛得角仍是0-0僵持。从场面看，西班牙完全掌控比赛节奏，控球率高达72%，已经制造16次射门、4次射正、4个角球，整体压制非常明显；而佛得角全场仅3次射门、0射正、0角球，主要依靠密集防守和门将的4次扑救勉强守住球门。佛得角后卫西德尼·洛佩斯·卡布拉尔第16分钟已经领到黄牌，防守压力随时间推移会越来越大。综合实力差距加上场面走向，西班牙后段破门的概率很高，平局概率有所下降但仍存在，因为佛得角的低位防守效果不错；佛得角想要偷一球难度极大。最可能的最终比分锁定在西班牙1-0小胜，2-0也具备一定可能但单球决胜符合目前的进攻效率。后续进球候选以西班牙锋线和边路球员为主：Morata作为支点最具威胁，拉明·亚马尔和尼科·威廉姆斯的边路突破是打破密集防守的关键，Olmo和替补登场可能的Oyarzabal也具备终结能力；佛得角若能反击进球，最可能来自赖安·门德斯的个人发挥，但概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0191512,
+      "tokens": {
+        "input": 1431,
+        "output": 749
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.545
+    },
+    {
+      "submitted_at": "2026-06-15T17:25:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 70,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.33,
+        "away": 0.05
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Álvaro Morata",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 82,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Nico Williams",
+          "minute": 85,
+          "p": 0.13,
+          "team": "home"
+        },
+        {
+          "player": "Mikel Oyarzabal",
+          "minute": 88,
+          "p": 0.11,
+          "team": "home"
+        },
+        {
+          "player": "Dani Olmo",
+          "minute": 80,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Pedri",
+          "minute": 90,
+          "p": 0.07,
+          "team": "home"
+        },
+        {
+          "player": "Dailon Livramento",
+          "minute": 87,
+          "p": 0.05,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第70分钟，西班牙与佛得角仍是0-0。从场面数据看，西班牙完全占据主导，控球率71%，18次射门、5次射正、6个角球，对手仅3次射门且0射正，门将已做出5次扑救，可以说西班牙距离破门只差临门一脚。佛得角在61分钟一次性换上三人，明显倾向防守加固并寻求反击，整体策略偏保守。考虑到剩余20分钟加补时，西班牙凭借持续的进攻压力打破僵局的可能性较高，但久攻不下也意味着0-0保平不能完全排除，因此主胜概率上调至约0.62，平局保留0.33的空间，佛得角偷袭爆冷的概率压低到0.05。最可能的最终比分定为1-0，符合主队主导但对方门将状态出色、剩余时间有限的局面。后续进球人选方面，莫拉塔作为禁区终结点最具威胁，亚马尔与尼科·威廉姆斯的边路突破制造机会能力突出，奥亚萨瓦尔与奥尔莫具备替补登场把握机会的能力，佩德里远射也是潜在选项；佛得角方面若有进球，新登场的利夫拉门托速度反击最具可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.020879099999999998,
+      "tokens": {
+        "input": 1703,
+        "output": 788
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.07
+    },
+    {
+      "submitted_at": "2026-06-15T17:38:18+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 83,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.53,
+        "away": 0.05
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第83分钟，双方仍然0-0。从场面看，西班牙完全压制对手：控球率高达73%，射门20次、射正6次，角球7个，而佛得角全场仅3次射门且无射正，门将已做出6次扑救，是他们能保持净胜球为零的关键。佛得角在61分钟一口气换了三人，76分钟又用掉一个名额，明显在打防守消耗战；西班牙则在71分钟同时换上拉明·亚马尔与梅里诺，加强前场冲击力。考虑到剩余时间不多，佛得角门将状态极佳且对方防线收得很深，0-0被守住的概率明显上升，因此把平局列为最可能结果，最可能的最终比分维持0-0。不过西班牙整场持续制造机会，临门一脚若有改善，仍存在抢到绝杀的可能，所以主胜概率仍保留四成以上空间；佛得角全场仅1次犯规、几乎不过半场，反击破门的可能性很低，客胜概率压到很低水平。后续若有进球，大概率来自西班牙替补登场的生力军，亚马尔的边路爆点最具威胁，梅里诺在禁区内的高点和莫拉塔、奥尔莫的把握机会能力也都是潜在得分点；佛得角方面只在偶发反击中由前锋达科斯塔具备极小的破门概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.0244977,
+      "tokens": {
+        "input": 1961,
+        "output": 932
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.117
+    },
+    {
+      "submitted_at": "2026-06-15T17:50:29+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.62,
+        "away": 0.04
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进入第90分钟，西班牙与佛得角仍是0-0。从场面看，西班牙完全掌控比赛，控球率达到74%，总射门24次、射正7次，角球9个，但在佛得角门将多次扑救（7次）和密集防守下始终未能破门。佛得角则采取深度防守反击，全场仅3脚射门且无射正，威胁极其有限。考虑到目前只剩补时阶段，平局概率显著上升，是最可能的结果；西班牙凭借持续压制仍保留一定的绝杀可能，但时间所剩无几；佛得角想要在补时阶段打入进球难度极大。综合判断最可能的最终比分为0-0。若补时阶段出现进球，最有可能来自刚替补登场、状态正盛的亚马尔、达尼·奥尔莫或尼科·威廉姆斯等西班牙攻击手，梅里诺也可能在定位球中抢点建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.0185851,
+      "tokens": {
+        "input": 2218,
+        "output": 561
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.809
+    }
+  ]
+}

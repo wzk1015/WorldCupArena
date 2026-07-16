@@ -1,0 +1,759 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-9_Ivory-Coast_Ecuador_2026-06-14",
+  "provider_fixture_id": "19609157",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-15T00:55:57+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 0
+    },
+    "home": "Côte d'Ivoire",
+    "away": "Ecuador",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-14T23:00:00+00:00",
+    "venue": "Philadelphia Stadium",
+    "venue_city": "Philadelphia"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.96,
+      "draw": 0.03,
+      "away": 0.01
+    },
+    "most_likely_score": "1-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进行到第90分钟，科特迪瓦凭借阿马德·迪亚洛（Amad Diallo）在第90分钟的关键进球，目前以1-0领先厄瓜多尔。从全场数据来看，双方控球率（49%对51%）和总射门数（11对11）势均力敌，场面十分胶着。由于常规时间已经耗尽，比赛即将进入伤停补时阶段，留给厄瓜多尔扳平比分的时间所剩无几。科特迪瓦全取三分的概率极高，最可能的最终比分维持在1-0。尽管厄瓜多尔可能会在补时阶段大举压上尝试绝平（如替补登场的凯文·罗德里格斯），但产生新进球的整体概率已经非常低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1945,
+    "output": 1354
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.010572449999999999,
+  "wall_seconds": 14.308,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.96,\n    \"draw\": 0.03,\n    \"away\": 0.01\n  },\n  \"most_likely_score\": \"1-0\",\n  \"scorers\": [\n    {\n      \"player\": \"Kevin Rodríguez\",\n      \"team\": \"away\",\n      \"minute\": 94,\n      \"p\": 0.03\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进行到第90分钟，科特迪瓦凭借阿马德·迪亚洛（Amad Diallo）在第90分钟的关键进球，目前以1-0领先厄瓜多尔。从全场数据来看，双方控球率（49%对51%）和总射门数（11对11）势均力敌，场面十分胶着。由于常规时间已经耗尽，比赛即将进入伤停补时阶段，留给厄瓜多尔扳平比分的时间所剩无几。科特迪瓦全取三分的概率极高，最可能的最终比分维持在1-0。尽管厄瓜多尔可能会在补时阶段大举压上尝试绝平（如替补登场的凯文·罗德里格斯），但产生新进球的整体概率已经非常低。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Analysis of the Côte d'Ivoire vs. Ecuador Match in the 90th Minute**\n\nOkay, the match is at the 90th minute, Côte d'Ivoire is leading Ecuador 1-0 thanks to Diallo's goal in the 90th. Essentially, the game is over. Given the late stage, I'm going to set a very high probability for a home win, like, let's say 0.96. The draw probability is low; I'll put it at 0.03, and the away win probability is negligible at 0.01. The most likely score is definitely 1-0.\n\nRegarding scorers: It's extremely unlikely we'll see more goals, but if anything, it could be a late counter-attack by Côte d'Ivoire or a desperate equalizer by Ecuador in stoppage time. Since we are in the 90th minute, I have to ensure any scorer minute is *after* 90. I was considering Enner Valencia but then realized he was substituted out. Let's see...Kevin Rodríguez came on for Ecuador at the 77th minute. Alright, let's add him at the 94th minute with a very low probability of 0.03, just in case.\n\nNow I need to refine the probabilities, so I have the Home win at 0.96, the Draw at 0.03, and Away win at 0.01. The most likely score is 1-0.\n\nI'll put together the JSON structure now. I need to make sure the reasoning is correct and covers the situation. The score is valid, as it's the most likely score based on the win probabilities. The scorer minute is strictly after 90, so it's all good. Let's double-check the constraints and the JSON formatting, ensuring I am using the right names and structure.\n\nI'm ready with the structured output now.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-14T23:05:42+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 5,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.33,
+        "draw": 0.35,
+        "away": 0.32
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Sébastien Haller",
+          "minute": 65,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 42,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第5分钟，科特迪瓦与厄瓜多尔暂时战成0-0平。开场阶段双方处于试探期，控球率50%对50%，场面胶着，尚未出现有威胁的射门或关键事件。考虑到两队整体实力接近，科特迪瓦拥有强悍的身体素质和锋线冲击力，而厄瓜多尔在防守端纪律严明且具备出色的中场绞杀与反击能力，本场比赛平局的可能性略高（35%），主客胜概率分别为33%和32%。预计随着比赛深入，双方阵型拉开后会出现进球机会，最可能的最终比分为1-1。厄瓜多尔的 Enner Valencia 和科特迪瓦的 Sébastien Haller 是双方最具威胁的得分点，极有可能在后续比赛中打破僵局。"
+      },
+      "sources": [],
+      "cost_usd": 0.011444999999999999,
+      "tokens": {
+        "input": 856,
+        "output": 1674
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.99
+    },
+    {
+      "submitted_at": "2026-06-14T23:11:25+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 11,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.31,
+        "draw": 0.36,
+        "away": 0.33
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Enner Valencia",
+          "minute": 42,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Sébastien Haller",
+          "minute": 68,
+          "p": 0.22,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第11分钟，科特迪瓦与厄瓜多尔暂时战成0-0平。开场阶段双方互有攻守，场面十分胶着，控球率基本持平（科特迪瓦49%，厄瓜多尔51%）。厄瓜多尔完成了全场第一脚射门，而科特迪瓦仍在寻找前场进攻节奏，双方均处于战术试探阶段。考虑到这是一场势均力敌的世界杯小组赛，且开局节奏相对谨慎，平局的概率（36%）目前最高。厄瓜多尔凭借整体战术素养获得微弱的胜率优势（33%），科特迪瓦胜率为31%。结合双方的防守硬度与进攻端的球星个人能力，最可能的最终比分预测为1-1。预计随着比赛深入，双方会逐渐发力，厄瓜多尔的恩纳·瓦伦西亚（Enner Valencia）有望在半场结束前利用经验打破僵局，而科特迪瓦的塞巴斯蒂安·阿莱（Sébastien Haller）则可能在下半场为球队扳平比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0136353,
+      "tokens": {
+        "input": 878,
+        "output": 2018
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.393
+    },
+    {
+      "submitted_at": "2026-06-14T23:17:25+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.38,
+        "away": 0.34
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Enner Valencia",
+          "minute": 55,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Sébastien Haller",
+          "minute": 70,
+          "p": 0.22,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第17分钟，科特迪瓦与厄瓜多尔暂时战成0-0平。从开场数据来看，厄瓜多尔占据了55%的控球率，并已经完成了2次射门，而科特迪瓦尚未获得射门机会，场面上厄瓜多尔稍占主动。考虑到这是一场关键的世界杯小组赛，双方在防守端都会比较谨慎。结合目前的僵持局面，平局的概率最高（38%），厄瓜多尔凭借场面微弱优势胜率（34%）略高于科特迪瓦（28%）。预计随着比赛深入，双方体能下降后会产生进球，最可能的最终比分为1-1。厄瓜多尔的Enner Valencia有望在下半场率先破门，而科特迪瓦的Sébastien Haller可能在随后的反击或阵地战中扳平比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.012166350000000001,
+      "tokens": {
+        "input": 877,
+        "output": 1785
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.855
+    },
+    {
+      "submitted_at": "2026-06-14T23:23:23+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 23,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.36,
+        "away": 0.3
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "S. Haller",
+          "minute": 52,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "E. Valencia",
+          "minute": 68,
+          "p": 0.22,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第23分钟，科特迪瓦与厄瓜多尔目前战成0-0平。从场面数据来看，科特迪瓦占据57%的控球率，并有1次射正，而厄瓜多尔虽然也有2次射门但均未命中目标。整体比赛节奏较为谨慎，双方都在试探阶段，防守端表现稳固。随着比赛时间的推移且比分僵持，平局的概率逐渐上升。两队实力相对均衡，预计最终平局的可能性最大（36%），科特迪瓦凭借控球优势略微领先于厄瓜多尔的获胜概率。最可能的最终比分为1-1。预计下半场双方阵型拉开后会出现进球机会，科特迪瓦的 S. Haller 和厄瓜多尔的 E. Valencia 是最有可能为各自球队建功的关键球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.01216215,
+      "tokens": {
+        "input": 939,
+        "output": 1774
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.414
+    },
+    {
+      "submitted_at": "2026-06-14T23:29:18+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 29,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.4,
+        "away": 0.32
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "E. Valencia",
+          "minute": 55,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "S. Haller",
+          "minute": 72,
+          "p": 0.22,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第29分钟，科特迪瓦与厄瓜多尔暂时战成0-0平。从场面数据来看，科特迪瓦占据了60%的控球率，但仅有2次射门（1次射正）；厄瓜多尔虽然控球率较低（40%），但反击颇具威胁，已经完成4次射门（0次射正）。这表明比赛处于胶着状态，科特迪瓦主导球权，而厄瓜多尔在防守反击中寻找机会。考虑到双方在进攻端暂时缺乏绝对的终结效率，平局的概率逐渐上升（40%）。厄瓜多尔的快速反击略具威胁，客胜概率（32%）微幅领先于主胜（28%）。最可能的最终比分预测为1-1。预计下半场厄瓜多尔的 E. Valencia 可能会利用反击率先破门，而科特迪瓦的 S. Haller 有望在比赛后段通过阵地战扳平比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.01337805,
+      "tokens": {
+        "input": 939,
+        "output": 1967
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.708
+    },
+    {
+      "submitted_at": "2026-06-14T23:35:13+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 35,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.44,
+        "away": 0.28
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第35分钟，科特迪瓦与厄瓜多尔暂时战成0-0平。从场面数据来看，科特迪瓦虽然占据54%的控球率，但进攻端缺乏实质性威胁，仅有2次射门（1次射正）；而厄瓜多尔在反击中表现得更为积极，完成了6次射门，但准星欠佳，无一射正。科特迪瓦中场塞科·福法纳（Seko Fofana）在第28分钟领到黄牌，这可能会在后续比赛中限制他的防守动作。综合目前的僵持局面和双方较低的射门质量，平局的概率正在显著上升。预计下半场双方会继续在中场展开激烈争夺，但打破僵局的难度较大。最可能的最终比分为0-0。如果下半场产生进球，厄瓜多尔的恩纳·瓦伦西亚（Enner Valencia）和科特迪瓦的塞巴斯蒂安·阿莱（Sébastien Haller）将是双方最具威胁的潜在得分手。"
+      },
+      "sources": [],
+      "cost_usd": 0.011060700000000001,
+      "tokens": {
+        "input": 1012,
+        "output": 1587
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.58
+    },
+    {
+      "submitted_at": "2026-06-14T23:41:15+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 41,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.29,
+        "draw": 0.42,
+        "away": 0.29
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到第41分钟，科特迪瓦与厄瓜多尔战成0-0平。从上半场的数据来看，比赛场面非常胶着。厄瓜多尔在控球率（51%）和总射门数（6次）上略占优势，但尚未有一脚射正；科特迪瓦虽然只有4次射门，但有1次射正。双方在防守端都表现得较为稳固，科特迪瓦的塞科·福法纳（Seko Fofana）在第28分钟领到黄牌。考虑到上半场即将结束且双方创造的绝对得分机会有限，平局的概率显著上升。预计下半场双方依然会以稳为主，0-0是最可能的最终比分。如果下半场能打破僵局，厄瓜多尔的恩纳·瓦伦西亚（Enner Valencia）和科特迪瓦的塞巴斯蒂安·阿莱（Sébastien Haller）将是最具威胁的潜在进球者。"
+      },
+      "sources": [],
+      "cost_usd": 0.01197525,
+      "tokens": {
+        "input": 1013,
+        "output": 1732
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.091
+    },
+    {
+      "submitted_at": "2026-06-14T23:47:05+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.26,
+        "draw": 0.42,
+        "away": 0.32
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到半场结束，科特迪瓦与厄瓜多尔战成0-0平。从上半场的数据来看，厄瓜多尔在控球率（54%）和总射门数（6对4）上略占优势，但双方都缺乏绝对的得分机会，厄瓜多尔甚至没有一脚射正。科特迪瓦方面，中后场防守动作较大，弗法纳（Seko Fofana）、凯西（Franck Kessié）和杜埃（Guela Doué）在短时间内连吃三张黄牌，这将极大限制他们在下半场的防守硬度。考虑到双方进攻端表现乏力且比赛节奏较为胶着，下半场大概率会继续保持僵局。平局的概率最高，最可能的最终比分是0-0。如果下半场打破僵局，厄瓜多尔的恩纳·瓦伦西亚（Enner Valencia）和科特迪瓦的阿莱（Sébastien Haller）是最具威胁的潜在得分手。"
+      },
+      "sources": [],
+      "cost_usd": 0.009096149999999999,
+      "tokens": {
+        "input": 1151,
+        "output": 1252
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.211
+    },
+    {
+      "submitted_at": "2026-06-14T23:52:52+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.42,
+        "away": 0.3
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到半场45分钟，科特迪瓦与厄瓜多尔战成0-0平。从上半场的数据来看，双方在射门数上势均力敌（各6次），但厄瓜多尔占据了55%的控球率。科特迪瓦在防守端表现得非常具有侵略性，半场结束前已经领到3张黄牌，其中包括中场核心塞科·福法纳（Seko Fofana）和弗兰克·凯西（Franck Kessié）。这种犯规麻烦可能会在下半场限制他们的防守动作，给厄瓜多尔带来更多进攻空间。由于半场互交白卷且双方绝对得分机会不多（合计仅1次射正），平局的概率显著上升。综合判断，0-0是最可能的最终比分。如果下半场打破僵局，厄瓜多尔的恩纳·瓦伦西亚（Enner Valencia）和科特迪瓦的塞巴斯蒂安·阿莱（Sébastien Haller）是最具威胁的潜在进球者。"
+      },
+      "sources": [],
+      "cost_usd": 0.011981549999999999,
+      "tokens": {
+        "input": 1151,
+        "output": 1710
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.908
+    },
+    {
+      "submitted_at": "2026-06-15T00:14:35+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 59,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.27,
+        "draw": 0.45,
+        "away": 0.28
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第59分钟，科特迪瓦与厄瓜多尔战成0-0平。场面非常胶着且缺乏绝对的得分机会。厄瓜多尔控球率略占优（54%），有7次射门但无一射正；科特迪瓦有6次射门仅1次射正。值得注意的是，科特迪瓦在上半场中后段连续吃到三张黄牌（Seko Fofana、Franck Kessié、Guela Doué），中场防守动作可能会在下半场受到限制，这给厄瓜多尔带来了一定潜在优势。考虑到比赛已过大半且双方进攻效率极为低下，平局的概率显著上升。最可能的最终比分是0-0。若有进球发生，厄瓜多尔的Enner Valencia和科特迪瓦的Sébastien Haller是最可能在后续比赛中打破僵局的人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0133497,
+      "tokens": {
+        "input": 1152,
+        "output": 1927
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.028
+    },
+    {
+      "submitted_at": "2026-06-15T00:20:27+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 65,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.55,
+        "away": 0.2
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第65分钟，科特迪瓦与厄瓜多尔的比分依然是0-0。从场面数据来看，双方进攻效率极低，科特迪瓦虽然有9次射门但仅1次射正，而厄瓜多尔7次射门0射正，控球率方面厄瓜多尔以53%略占优势。科特迪瓦在上半场领到三张黄牌（包括中场核心凯西和福法纳），这使得他们在下半场的防守动作会有所顾忌。随着比赛时间流逝，双方在进攻端缺乏实质性威胁，平局的概率大幅上升。最可能的最终比分是0-0。如果比赛尾声阶段出现进球，科特迪瓦的阿莱（Sébastien Haller）和厄瓜多尔的恩纳·瓦伦西亚（Enner Valencia）是最有可能利用个人能力或定位球打破僵局的球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.01152165,
+      "tokens": {
+        "input": 1151,
+        "output": 1637
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.282
+    },
+    {
+      "submitted_at": "2026-06-15T00:26:40+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.6,
+        "away": 0.18
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第71分钟，科特迪瓦与厄瓜多尔的比分依然是0-0。从场面数据来看，双方控球率非常接近（49%对51%），射门次数（10对8）也相差无几，但两队在进攻端的效率都极低，科特迪瓦仅有1次射正，而厄瓜多尔更是0次射正。科特迪瓦在上半场领到了三张黄牌（福法纳、凯西、杜埃），防守端承受了一定压力。下半场第56分钟，双方都进行了换人调整，科特迪瓦换上了博尼（Ange-Yoan Bonny）和迪亚洛（Amad Diallo），厄瓜多尔换上了安古洛（Nilson Angulo），试图打破僵局。考虑到比赛所剩时间不多，且双方创造绝对得分机会的能力有限，平局的概率大幅上升，0-0是最可能的最终比分。如果比赛尾声出现进球，替补登场的生力军如博尼或安古洛可能会成为关键人物。"
+      },
+      "sources": [],
+      "cost_usd": 0.00925365,
+      "tokens": {
+        "input": 1373,
+        "output": 1240
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.192
+    },
+    {
+      "submitted_at": "2026-06-15T00:32:44+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 77,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.62,
+        "away": 0.16
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第77分钟，科特迪瓦与厄瓜多尔的比分依然是0-0。从目前的比赛数据来看，双方控球率旗鼓相当（科特迪瓦49%，厄瓜多尔51%），但进攻端均缺乏致命一击。科特迪瓦虽然完成了11次射门且有2次射正，但未能攻破对手球门；厄瓜多尔的8次射门更是无一射正，进攻威胁有限。科特迪瓦在中场拼抢较为凶狠，已经领到3张黄牌。随着比赛进入最后15分钟，双方体能下降，且在世界杯小组赛阶段，保平争分的战术意图可能会逐渐占据上风。因此，平局的概率大幅上升，0-0是最可能的最终比分。如果比赛尾声出现进球，替补登场的生力军如科特迪瓦的阿马德·迪亚洛（Amad Diallo）或厄瓜多尔的尼尔森·安古洛（Nilson Angulo）更有可能利用对手防线松懈完成致命一击。"
+      },
+      "sources": [],
+      "cost_usd": 0.00952665,
+      "tokens": {
+        "input": 1513,
+        "output": 1260
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.437
+    },
+    {
+      "submitted_at": "2026-06-15T00:38:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 83,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.11,
+        "draw": 0.8,
+        "away": 0.09
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第83分钟，当前比分仍然是0-0。从场面数据来看，双方控球率（科特迪瓦49%，厄瓜多尔51%）和射门数（11对9）都非常接近，但射正次数极少（2对1），说明两队的防守都比较稳固，且进攻端缺乏绝对的破门机会。科特迪瓦在上半场领到三张黄牌，下半场通过换人（如阿马德·迪亚洛、博尼）试图打破僵局，厄瓜多尔也进行了相应调整，但均未取得成效。考虑到常规时间仅剩不到10分钟以及可能的伤停补时，0-0维持到终场的概率极高。因此，平局的概率被大幅上调至80%。如果比赛尾声阶段出现绝杀，替补登场的生力军如科特迪瓦的阿马德·迪亚洛（Amad Diallo）或厄瓜多尔的尼尔森·安古洛（Nilson Angulo）可能会抓住对方防线体能下降的机会，但整体进球概率已经很低。最可能的最终比分预测为0-0。"
+      },
+      "sources": [],
+      "cost_usd": 0.0096915,
+      "tokens": {
+        "input": 1514,
+        "output": 1286
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.984
+    },
+    {
+      "submitted_at": "2026-06-15T00:44:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 89,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.9,
+        "away": 0.05
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第89分钟，当前比分依然是0-0。从全场统计数据来看，科特迪瓦与厄瓜多尔的控球率（49%对51%）和射门数（11对9，射正2对1）都非常接近，场面处于极度胶着的状态。双方在下半场进行了大量换人调整试图改变局势，但均未能有效打破僵局。由于常规时间所剩无几，仅剩伤停补时阶段，产生进球的时间窗口极小。因此，平局的概率已经急剧上升至90%，0-0是最可能的最终比分。尽管替补登场的球员（如科特迪瓦的Ange-Yoan Bonny或厄瓜多尔的Kevin Rodríguez）仍有可能在补时阶段完成绝杀，但这种概率已经非常低。"
+      },
+      "sources": [],
+      "cost_usd": 0.00908985,
+      "tokens": {
+        "input": 1799,
+        "output": 1143
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.233
+    },
+    {
+      "submitted_at": "2026-06-15T00:50:15+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.92,
+        "away": 0.04
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已经进行到第90分钟，比分依然是0-0。从全场数据来看，科特迪瓦与厄瓜多尔的控球率（49%对51%）和射门数（11对9，射正2对1）都非常接近，场面十分胶着，双方防守端表现稳固，均未能创造出绝对的得分机会。由于常规时间已经结束，比赛进入伤停补时阶段，双方大概率将以平局收场。因此，平局的概率极高（92%），最可能的最终比分预测为0-0。考虑到剩余时间极短，出现绝杀进球的可能性很低，故暂不预测后续进球球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.009097200000000001,
+      "tokens": {
+        "input": 1800,
+        "output": 1144
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.311
+    },
+    {
+      "submitted_at": "2026-06-15T00:55:57+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Côte d'Ivoire",
+        "away": "Ecuador",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T23:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.96,
+        "draw": 0.03,
+        "away": 0.01
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第90分钟，科特迪瓦凭借阿马德·迪亚洛（Amad Diallo）在第90分钟的关键进球，目前以1-0领先厄瓜多尔。从全场数据来看，双方控球率（49%对51%）和总射门数（11对11）势均力敌，场面十分胶着。由于常规时间已经耗尽，比赛即将进入伤停补时阶段，留给厄瓜多尔扳平比分的时间所剩无几。科特迪瓦全取三分的概率极高，最可能的最终比分维持在1-0。尽管厄瓜多尔可能会在补时阶段大举压上尝试绝平（如替补登场的凯文·罗德里格斯），但产生新进球的整体概率已经非常低。"
+      },
+      "sources": [],
+      "cost_usd": 0.010572449999999999,
+      "tokens": {
+        "input": 1945,
+        "output": 1354
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.308
+    }
+  ]
+}

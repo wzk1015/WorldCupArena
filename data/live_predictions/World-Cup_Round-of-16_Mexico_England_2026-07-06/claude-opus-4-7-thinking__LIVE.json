@@ -1,0 +1,397 @@
+{
+  "fixture_id": "World-Cup_Round-of-16_Mexico_England_2026-07-06",
+  "provider_fixture_id": "19606965",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-06T02:32:39+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 3
+    },
+    "home": "Mexico",
+    "away": "England",
+    "competition": "World Cup",
+    "stage": "Round of 16",
+    "kickoff_utc": "2026-07-06T01:00:00+00:00",
+    "venue": "Mexico City Stadium",
+    "venue_city": "Mexico City"
+  },
+  "prediction": {},
+  "sources": [],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 8.936,
+  "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "raw_text": "",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-06T01:06:31+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 6,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-06T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.3,
+        "away": 0.4
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 58,
+          "p": 0.34,
+          "team": "away"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 74,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Raúl Jiménez",
+          "minute": 66,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 88,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 81,
+          "p": 0.16,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第6分钟，墨西哥与英格兰在墨西哥城球场仍是0-0。开场阶段墨西哥凭借主场之利控球率一度达到62%，射门数1比0略占场面优势，试图利用主场氛围压出去打。英格兰第2分钟赖斯就吃到黄牌，说明中场对抗中他们已经需要用犯规去限制墨西哥的推进节奏，这对英格兰后续的中场保护会构成一定负担。不过考虑到这是淘汰赛，英格兰整体阵容深度、锋线终结能力以及大赛经验都明显优于墨西哥，随着比赛推进，控球质量和阵地进攻效率通常会向英格兰一侧倾斜，墨西哥高位逼抢难以维持90分钟。综合来看，英格兰取胜的概率最高，平局与墨西哥爆冷的可能性因主场因素也不能忽视，因此给出客胜0.40、主胜与平局各0.30的分布。最可能的最终比分定为1-2，即英格兰在下半场通过阵地进攻打破僵局并扩大领先，墨西哥依靠主场反扑扳回一球但难以逆转。后续进球方面，凯恩作为英格兰的战术核心和头号射手，是最可能率先破门的人选，萨卡的边路突破与贝林厄姆的后插上同样是重要得分点；墨西哥这边希门尼斯的支点作用和洛萨诺的反击速度是他们扳平或追分的主要武器，因此把这几位设为后续潜在破门者，进球时段集中在下半场中后段。"
+      },
+      "sources": [],
+      "cost_usd": 0.0180745,
+      "tokens": {
+        "input": 970,
+        "output": 783
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.262
+    },
+    {
+      "submitted_at": "2026-07-06T01:39:52+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 39,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Mexico",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-06T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.06,
+        "draw": 0.11,
+        "away": 0.83
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "上半场进行到第39分钟，墨西哥主场0比2落后英格兰。贝林厄姆在第36和第38分钟两分钟内梅开二度，萨卡与凯恩分别送出助攻，英格兰在短时间内彻底扭转了场面节奏。从数据看，墨西哥虽然控球率58%占优，角球和总射门数也略胜一筹，但真正打在门框范围内的只有1次，进攻转化效率明显不足；反观英格兰控球42%却有3次射正，直接换来两粒进球，效率上完全压制主队。开场第2分钟赖斯的黄牌一度让英格兰后腰位置略显谨慎，但两球领先后三狮军团完全可以放心退防打反击，防线压力反而更小。综合两球领先、剩余时间超过一小时、英格兰进攻效率极高且中场控制力强等因素，客队获胜概率大幅拉升至0.83左右，平局概率约0.11，主队翻盘可能性被压缩到0.06。最可能的最终比分维持在0比2：一方面英格兰领先后往往会主动降速控节奏，凯恩、萨卡和贝林厄姆仍可能利用反击再下一城；另一方面墨西哥在主场压力下必然加大投入，洛萨诺、希门尼斯等前场球员有望通过定位球或边路配合扳回一球，但完全逆转的概率极低。后续进球预测方面，凯恩作为英格兰头号射手在反击和定位球中威胁最大，贝林厄姆状态火热存在戴帽可能，萨卡边路突破也具备直接得分能力；主队方面希门尼斯的支点作用和洛萨诺的速度是最有希望改写比分的两个点。"
+      },
+      "sources": [],
+      "cost_usd": 0.019513799999999998,
+      "tokens": {
+        "input": 1084,
+        "output": 838
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.204
+    },
+    {
+      "submitted_at": "2026-07-06T01:45:59+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Mexico",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-06T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.28,
+        "away": 0.42
+      },
+      "most_likely_score": "2-3",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 68,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 75,
+          "p": 0.24,
+          "team": "away"
+        },
+        {
+          "player": "Julián Quiñones",
+          "minute": 63,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 82,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Raúl Jiménez",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 70,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场结束前墨西哥1-2落后英格兰，比赛进入焦灼阶段。贝林厄姆（裘德·贝林厄姆）在36分钟和38分钟两分钟内梅开二度，帮助英格兰迅速取得两球领先，随后墨西哥在42分钟由基尼奥内斯（胡利安·基诺内斯）扳回一城，为下半场保留希望。从场面统计看，墨西哥控球率高达61%，射门5次、角球2次，主场作战的推进意愿明显强于英格兰；而英格兰虽然控球较少，但3次射正显示反击效率极高，且莱斯（德克兰·赖斯）早早吃到黄牌，中场拦截动作需有所收敛。综合判断，英格兰凭借领先优势和反击威胁，赢下比赛的概率仍居首位，约42%；墨西哥主场高压之下追平乃至反超并非没有机会，胜平概率合计约58%，其中获胜概率约30%，平局约28%。最有可能的最终比分为2-3，即墨西哥再入一球但英格兰再下一城扩大战果。后续进球方面，英格兰前场凯恩（哈里·凯恩）和贝林厄姆状态火热，是最可能的破门人选，萨卡（布卡约·萨卡）边路突破也具威胁；墨西哥方面，基尼奥内斯延续手感、替补或前场支点希门尼斯（劳尔·希门尼斯）以及边锋洛萨诺（Hirving Lozano）都是主场追分的重点球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.016587099999999997,
+      "tokens": {
+        "input": 958,
+        "output": 705
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.532
+    },
+    {
+      "submitted_at": "2026-07-06T02:08:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 53,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Mexico",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-06T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.31,
+        "away": 0.39
+      },
+      "most_likely_score": "2-3",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 72,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Julián Quiñones",
+          "minute": 68,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Raúl Jiménez",
+          "minute": 82,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 85,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 88,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到下半场第53分钟，墨西哥1-2英格兰。上半场英格兰凭借贝林厄姆(裘德·贝林厄姆)第36和38分钟的梅开二度迅速拉开比分，但墨西哥在第42分钟由基尼奥内斯(胡利安·基诺内斯)扳回一球，将悬念带入下半场。从场面数据看，墨西哥控球率高达63%，射门7次、射正3次、角球4次，全面压制英格兰(控球37%，射门3次)，展现出主场优势和进攻主动权，中场休息后又用阿尔瓦雷斯(埃德松·阿尔瓦雷斯)加强中场硬度和推进能力，意图进一步施压。英格兰虽然领先，但赖斯早早吃到黄牌需谨慎，且进攻端在丢球后明显收缩，凯恩(哈里·凯恩)和萨卡(布卡约·萨卡)获得反击空间的机会仍在。综合来看，墨西哥追平的可能性显著提升，但英格兰凭借效率和反击威胁仍是三种结果中概率最高的一方，故客胜略微领先，平局紧随其后，主胜稍逊。最可能的最终比分定为2-2，反映墨西哥主场压迫下扳平、双方僵持收场的最合理走势。后续进球方面，墨西哥端基尼奥内斯延续手感、希门尼斯(劳尔·希门尼斯)和洛萨诺(Hirving Lozano)作为进攻支点最具威胁；英格兰端凯恩作为箭头和反击终结者概率最高，贝林厄姆和萨卡则可能通过反击或定位球再度制造杀机。"
+      },
+      "sources": [],
+      "cost_usd": 0.017822900000000003,
+      "tokens": {
+        "input": 992,
+        "output": 765
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.746
+    },
+    {
+      "submitted_at": "2026-07-06T02:20:20+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 65,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Mexico",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-06T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 4.136
+    },
+    {
+      "submitted_at": "2026-07-06T02:26:21+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "Mexico",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-06T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.06,
+        "draw": 0.14,
+        "away": 0.8
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第71分钟，墨西哥1-3落后英格兰。上半场贝林厄姆（Bellingham）在36、38分钟连入两球，基尼奥内斯（Quiñones）42分钟为墨西哥扳回一城；下半场凯恩（Kane）60分钟点球再下一城，英格兰实际上已经取得两球领先的关键优势。虽然英格兰在53分钟因Quansah红牌少一人作战，控球率仅40%，射门数也少于墨西哥（5比9），但两球领先加上剩余时间不足20分钟，主队需要在人数占优的情况下连入两球才能扳平，难度极大。综合来看，英格兰获胜概率大幅上升至0.80，平局概率约0.14（主要对应主队追回一球至2-3或3-3的情形），墨西哥翻盘概率极低仅0.06。最可能的最终比分维持在1-3，即双方均不再进球或各进一球的相似净胜格局中，1-3的单一概率最高。后续进球预测方面，墨西哥凭借多打一人和主场氛围，有较高概率再入一球，重点关注中锋希门尼斯（Gimenez）和状态火热的基尼奥内斯（Quiñones）；英格兰在防守反击中仍具威胁，凯恩（Kane）、贝林厄姆（Bellingham）和萨卡（Saka）依然是最可能的破门人选，尤其是终场阶段的反击机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.20285620000000001,
+      "tokens": {
+        "input": 50936,
+        "output": 778
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.928
+    },
+    {
+      "submitted_at": "2026-07-06T02:32:39+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 77,
+        "score": {
+          "home": 2,
+          "away": 3
+        },
+        "home": "Mexico",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-06T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.936
+    }
+  ],
+  "live_refreshed_at": "2026-07-06T03:00:02+00:00"
+}

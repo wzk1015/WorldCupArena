@@ -1,0 +1,735 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-54_South-Africa_South-Korea_2026-06-25",
+  "provider_fixture_id": "19609184",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-25T02:55:03+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 0
+    },
+    "home": "South Africa",
+    "away": "Korea Republic",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-25T01:00:00+00:00",
+    "venue": "Monterrey Stadium",
+    "venue_city": "Guadalupe"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.78,
+      "draw": 0.18,
+      "away": 0.04
+    },
+    "most_likely_score": "1-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进入第90分钟，南非凭借塔佩洛·马塞科在第63分钟的进球以1-0领先韩国。从场面看，韩国虽然控球率高达69%，角球6比4占优，但全场仅8次射门、3次射正，进攻效率明显低于南非（13射4正）。下半场孙兴慜、黄喜灿、赵圭成等攻击手陆续登场试图扳平，但临近补时仍未能转化为有效得分机会，南非防线在主动让出控球后依然稳固。综合比分、剩余时间极少以及双方近期攻防表现，南非保住胜果的概率最高，给出胜78%、平18%、负4%，最可能的最终比分维持在1-0。补时阶段韩国会全力压上寻求扳平，孙兴慜与替补登场的赵圭成是最具威胁的射手候选；而南非依赖反击，新援伊克拉姆·雷纳斯在空间被拉开时存在锁定胜局的机会，因此后续进球预测以这三名球员为主，但整体概率都不高，比赛大概率以现有比分结束。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 20926,
+    "output": 579
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0881377,
+  "wall_seconds": 15.917,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.78, \"draw\": 0.18, \"away\": 0.04},\n  \"most_likely_score\": \"1-0\",\n  \"scorers\": [\n    {\"player\": \"Heung-min Son\", \"team\": \"away\", \"minute\": 92, \"p\": 0.08},\n    {\"player\": \"Iqraam Rayners\", \"team\": \"home\", \"minute\": 93, \"p\": 0.06},\n    {\"player\": \"Gue-sung Cho\", \"team\": \"away\", \"minute\": 94, \"p\": 0.05}\n  ],\n  \"reasoning\": {\"overall\": \"比赛已进入第90分钟，南非凭借Thapelo Maseko在第63分钟的进球以1-0领先韩国。从场面看，韩国虽然控球率高达69%，角球6比4占优，但全场仅8次射门、3次射正，进攻效率明显低于南非（13射4正）。下半场孙兴慜、黄喜灿、赵圭成等攻击手陆续登场试图扳平，但临近补时仍未能转化为有效得分机会，南非防线在主动让出控球后依然稳固。综合比分、剩余时间极少以及双方近期攻防表现，南非保住胜果的概率最高，给出胜78%、平18%、负4%，最可能的最终比分维持在1-0。补时阶段韩国会全力压上寻求扳平，孙兴慜与替补登场的赵圭成是最具威胁的射手候选；而南非依赖反击，新援Iqraam Rayners在空间被拉开时存在锁定胜局的机会，因此后续进球预测以这三名球员为主，但整体概率都不高，比赛大概率以现有比分结束。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-25T01:07:13+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 7,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.24,
+        "draw": 0.3,
+        "away": 0.46
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Son Heung-min",
+          "minute": 38,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Hwang Hee-chan",
+          "minute": 67,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 72,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Lee Kang-in",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Percy Tau",
+          "minute": 84,
+          "p": 0.16,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛开打仅7分钟，比分仍为0-0，但场面已经显现出韩国队稍占主动的迹象。韩国队控球率54%，并已经完成1次射门且命中门框范围，南非则尚未形成有效射门，仅靠一次角球制造威胁。两队各得一个角球，说明双方都敢于压上，但韩国队在前场的组织和推进效率明显更高，孙兴慜、李刚仁等核心球员的活跃度可以预期会逐步提升。考虑到赛前实力对比，韩国队整体阵容深度、个人能力和大赛经验均优于南非，加上开场阶段已经掌握节奏，胜率自然向客队倾斜。南非队作为非洲球队拥有不错的身体素质和反击速度，有能力依靠定位球或快攻制造麻烦，因此平局概率也不能忽视，但取胜难度较大。综合判断，最可能的最终比分为1-2，韩国队凭借中前场的技术优势在比赛中后段打破僵局并扩大比分，南非则有机会在末段通过定位球或锋线球员的个人能力扳回一城。后续进球点方面，孙兴慜作为韩国队的进攻核心和定位球主罚者，最有可能率先破门；黄喜灿和李刚仁则具备在比赛进入开放阶段后利用空间得分的能力。南非方面，福斯特作为锋线支点和陶在边路的突破能力，是他们最现实的破门选项，进球时间更可能出现在下半场体能下降、防线松动的阶段。"
+      },
+      "sources": [],
+      "cost_usd": 0.0175676,
+      "tokens": {
+        "input": 858,
+        "output": 778
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.965
+    },
+    {
+      "submitted_at": "2026-06-25T01:14:17+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 14,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.3,
+        "away": 0.48
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Son Heung-min",
+          "minute": 38,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Lee Kang-in",
+          "minute": 67,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 72,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Hwang Hee-chan",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Themba Zwane",
+          "minute": 84,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第14分钟，南非与韩国仍是0-0。从开场阶段的场面来看，韩国队明显掌握主动，控球率达到69%，已经完成3次射门、其中1次射正，并且制造了1次角球，整体推进速度更快、组织更有层次。南非队虽然抢到了2个角球，说明他们在反击和定位球方面有一定威胁，但全场仅1次射门、0射正，进攻端的稳定性还没有建立起来，更多依靠身体对抗去阻断对手节奏。综合两队世界杯小组赛的整体实力、阵容深度和当前场上趋势，韩国队继续占据优势的可能性较大，因此判断客队胜出概率最高，平局次之，南非全取三分的难度相对更高。最可能的最终比分定在1-2，韩国凭借中前场的技术优势在常规时间内打入两球，南非则有机会通过定位球或快速反击扳回一城。后续进球方面，孙兴慜作为客队进攻核心，无论是反击还是禁区前沿处理都极具威胁，最有可能率先打破僵局；李康仁的组织串联和中远射、黄喜灿的冲击力同样是潜在得分点。南非这边，福斯特在禁区内的支点作用和扎内的盘带突破是最可能制造进球的两个方向，进球时间多集中在中后段比赛节奏拉开之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0167906,
+      "tokens": {
+        "input": 898,
+        "output": 728
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.576
+    },
+    {
+      "submitted_at": "2026-06-25T01:21:32+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 21,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.3,
+        "away": 0.48
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Son Heung-Min",
+          "minute": 63,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Hwang Hee-Chan",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Lee Kang-In",
+          "minute": 70,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 82,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Themba Zwane",
+          "minute": 75,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第21分钟，双方仍是0-0。从场面看，韩国队控球率约59%，已经完成3次射门并取得1次射正，对南非门将形成实质威胁；南非虽然拿到3个角球，但2次射门均未射正，整体进攻仍停留在边路传中阶段，缺乏穿透性。考虑到韩国中前场的孙兴慜、黄喜灿、李刚仁三人技术与速度组合更具决定性，随着比赛推进体能消耗加大，南非高位逼抢效率下降时韩国的反击杀伤力会逐渐放大。综合判断，韩国取胜概率最高，平局其次，南非取胜概率最低。最可能的最终比分定为0-1，符合韩国小幅占优、南非防守端拼抢积极但终结能力有限的整体走势。后续进球预测集中在比赛中后段：孙兴慜作为头号攻击点在60-70分钟体能窗口期破门概率最高；李刚仁在中路串联与远射上具备机会；黄喜灿替补或顺势插上可能在75-80分钟扩大优势。南非方面，福斯特依靠身体对抗在禁区内争取机会、兹瓦内利用定位球或反击仍保留扳平的可能，但概率明显低于韩国攻击群。所有进球时间均设定在当前21分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0162023,
+      "tokens": {
+        "input": 969,
+        "output": 682
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.205
+    },
+    {
+      "submitted_at": "2026-06-25T01:28:45+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 28,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.26,
+        "draw": 0.3,
+        "away": 0.44
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Son Heung-Min",
+          "minute": 64,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Lee Kang-In",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Themba Zwane",
+          "minute": 70,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Hwang Hee-Chan",
+          "minute": 85,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 82,
+          "p": 0.11,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第28分钟，场上仍是0-0。从开局阶段的走势来看，韩国队凭借62%的控球率掌控了节奏，传导更为流畅，并且已经迫使南非门将做出一次扑救，进攻组织呈现出大赛级强队的层次感。南非队则更多依靠由守转攻和定位球制造威胁，目前已经获得3个角球、4次射门，整体踢得积极但偏向反击型打法，效率取决于前场球员能否抓住为数不多的机会。综合两队的赛前实力差距、阵容深度以及当前场面控制力，韩国队仍是更可能拿下比赛的一方，但南非的反击隐患让韩国后防不能完全放心，因此平局的概率也维持在不低水平。基于这种走势，将韩国胜的概率设为最高，平局次之，南非胜最低。最可能的最终比分定为1-2，符合韩国控球占优、最终通过中前场技术优势打破僵局，同时南非利用定位球或反击扳回一球的剧本。后续进球预测方面，孙兴慜作为韩国进攻核心，下半场体能拉开后转化机会的概率最高；李刚仁的远射和定位球是第二个得分点；黄喜灿在比赛后段的冲击力也不容忽视。南非方面，前场支点福斯特和组织者兹瓦内最有可能在反击或定位球中完成终结，所有进球时间均设定在当前28分钟之后，符合比赛仍处于上半场中段、下半场打开后进球概率上升的规律。"
+      },
+      "sources": [],
+      "cost_usd": 0.018278,
+      "tokens": {
+        "input": 960,
+        "output": 796
+      },
+      "tool_calls": 0,
+      "wall_seconds": 28.81
+    },
+    {
+      "submitted_at": "2026-06-25T01:36:22+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 36,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.3,
+        "away": 0.42
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Son Heung-Min",
+          "minute": 68,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 74,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Hwang Hee-Chan",
+          "minute": 82,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Lee Kang-In",
+          "minute": 71,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Themba Zwane",
+          "minute": 78,
+          "p": 0.13,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第36分钟，场上仍是0-0。从场面看，韩国控球率高达63%，明显主导节奏与传导，但真正威胁球门的次数有限，全场仅4次射门、1次射正，进攻在三十米区域的最后一传偏粗糙。南非则展现出非常典型的反击型打法，利用速度和定位球反复制造威胁，已经累计6次射门、3次射正、3个角球，门前压迫感反而更强。韩国门将已经做出3次扑救，说明南非的射门质量并不低。综合两队世界杯整体实力、阵容厚度以及下半场体能消耗后韩国通常会逐步拉开差距的趋势，韩国仍是相对更可能拿下比赛的一方，但优势没有赛前预期那么明显，因此把客队胜的概率定在四成出头，平局概率上调到三成，南非赢球概率接近三成。最可能的最终比分给到0-1，理由是韩国后场出球能力更稳定，下半场体能拉开后由孙兴慜或李刚仁主导的快速反击有较高把握破门，而南非虽然能创造机会，但要在韩国密集防守下连续进球难度较大。后续进球点上，孙兴慜仍是头号热门，他在禁区前沿的远射和反越位威胁最大；黄喜灿替补登场或后段加速时常制造致命一击；南非方面，福斯特(莱尔·福斯特)是支点型射手，最有可能利用反击或定位球完成扳平，泽瓦内(滕巴·兹瓦内)在前场自由人位置上具备远射和小范围配合得分能力。若比赛被打开，1-1和1-2也都是合理走向，但单一最大概率仍指向韩国小胜0-1。"
+      },
+      "sources": [],
+      "cost_usd": 0.0188589,
+      "tokens": {
+        "input": 887,
+        "output": 842
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.231
+    },
+    {
+      "submitted_at": "2026-06-25T01:44:04+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 44,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.32,
+        "draw": 0.3,
+        "away": 0.38
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Son Heung-Min",
+          "minute": 63,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 71,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Hwang Hee-Chan",
+          "minute": 84,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Themba Zwane",
+          "minute": 58,
+          "p": 0.14,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场临近结束，南非与韩国在蒙特雷球场仍是0-0僵局，比赛进入第44分钟。从场面看，韩国队凭借64%的控球率主导节奏，传控组织清晰，但真正具备威胁的射门偏少，4次射门仅1次射正，更多是在中前场倒脚后被南非的紧逼破坏；南非队反而打得更直接，依靠快速反击和定位球已制造8次射门、3次射正和3个角球，门将朴扫出3次有效扑救，说明非洲球队的边路冲击和身体对抗在这场比赛里收到了效果。综合来看，韩国整体阵容厚度和个人能力略胜一筹，下半场体能拉开后中前场组合的渗透有望提高终结效率，因此客胜概率被设为最高；但南非目前的反击模式和定位球威胁让平局与主胜的概率也不能压得太低，所以三项分布相对接近。考虑到上半场双方均创造了清晰的得分机会，下半场任意一方先破门都极可能引发对手压上换分，因此最可能的最终比分倾向于双方互有进球的1-2，韩国凭借更稳定的阵地战在领先后控制比赛。后续进球预测方面，孙兴慜是韩国推进和终结的核心，下半场获得更多空间后转化机会最大；黄喜灿利用反击或替补登场冲击疲劳防线的概率次之；南非这边莱尔·福斯特作为支点前锋持续受益于边路传中和反击，是最可能的破门者，滕巴·兹瓦内在前腰位置的远射和二点球处理也具备打破僵局的能力，相应分配了概率权重，所有进球时间均设定在第44分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0187627,
+      "tokens": {
+        "input": 956,
+        "output": 823
+      },
+      "tool_calls": 0,
+      "wall_seconds": 32.69
+    },
+    {
+      "submitted_at": "2026-06-25T02:12:47+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 57,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.34,
+        "away": 0.38
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Heung-min Son",
+          "minute": 74,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Jens Castrop",
+          "minute": 83,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Jin-gyu Kim",
+          "minute": 88,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进入第57分钟，南非与韩国仍以0比0僵持。从上半场至今的走势看，南非虽然控球率仅41%，但10次射门、3次射正及4次角球都明显压过对手，进攻端的威胁更直接，韩国则更多依赖控球推进，但4次射门只有1次射正，门前转化效率偏低。中场休息时韩国一次性做出三个调整，孙兴慜、延斯·卡斯特罗普、Jin-gyu Kim悉数登场，等于把锋线和中场的纵深、跑动和终结能力同步提升，下半场开局阶段韩国的阵型与节奏明显比上半场更具侵略性，这也是接下来三十多分钟最关键的变量。综合来看，韩国虽暂时数据落后，但替补效应叠加南非体能下滑的可能，反超概率正在缓慢上升，因此客胜略高于平局，南非保平获胜的可能性反而被压在最低。最可能的最终比分判断为0比1，理由是南非进攻虽多但缺少稳定终结点，而韩国一旦由Son策动反击或定位球，破门效率往往高于运动战转化率。后续进球人选首推孙兴慜，他登场后是韩国最直接的得分威胁，预计在70至80分钟体能与空间最佳的窗口最具威胁；Castrop与Jin-gyu Kim作为新登场的中前场球员，也具备在比赛末段通过二点球或反击补射建功的可能，因此一并列入候选。所有候选进球时间均设定在当前57分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0174788,
+      "tokens": {
+        "input": 1104,
+        "output": 724
+      },
+      "tool_calls": 0,
+      "wall_seconds": 33.634
+    },
+    {
+      "submitted_at": "2026-06-25T02:21:05+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 66,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.27,
+        "draw": 0.4,
+        "away": 0.33
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第66分钟，比分仍为0-0。从场面数据来看，南非虽然控球率只有38%，却在射门数据上明显占优（12次射门、3次射正、4个角球），多次制造威胁；韩国队控球达到62%，但仅有4次射门、1次射正，进攻效率偏低，门将做出3次扑救一定程度上稳住了局面。半场休息时韩国一口气换上孙兴慜(Heung-min Son)、延斯·卡斯特罗普 和 Jin-gyu Kim 三名球员，攻击端明显增强，下半场威胁球预计会逐步增加，但目前尚未转化为射正。综合两队的进攻效率与节奏，剩余约24分钟内仍以僵持为主，平局概率最高；南非创造机会更多但终结欠佳，韩国凭借球星个人能力具备后程发力的潜质，因此客胜概率略高于主胜。最可能的最终比分是0-0，与平局概率最高保持一致。若后续出现进球，孙兴慜作为下半场登场后最具威胁的球员，是最有可能的破门者；替补登场的 延斯·卡斯特罗普 在韩国加强进攻的情况下也具备一定的进球机会，南非方面虽然射门多，但缺乏明确的核心终结点，因此暂不单独列出南非的具体射手。"
+      },
+      "sources": [],
+      "cost_usd": 0.09210410000000001,
+      "tokens": {
+        "input": 20223,
+        "output": 934
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.086
+    },
+    {
+      "submitted_at": "2026-06-25T02:28:06+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 73,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting property name enclosed in double quotes: line 12 column 3 (char 910)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.464
+    },
+    {
+      "submitted_at": "2026-06-25T02:34:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 79,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第79分钟，南非1比0领先韩国，进球来自第63分钟塔佩洛·马塞科接切潘·莫雷米助攻的破门。从场面来看，韩国虽然控球率高达65%，但射门数仅5次、射正2次，进攻效率明显不足；南非则在防守反击中打出13次射门、4次射正以及4个角球，质量更高，并且已经通过换上Moremi、Appollis等新鲜面孔加强了反击端的冲击力。韩国下半场一开始就连换三人，包括投入孙兴慜和黄喜灿，第66分钟又用朴镇燮换下金玟哉，明显押上抢分，但到目前为止尚未制造出真正高质量的破门机会。考虑到只剩约十余分钟加补时，南非仅需稳住防线即可拿下三分，因此主队取胜概率最高，平局次之，韩国完成逆转的可能性较小。最可能的最终比分维持在1比0，符合主胜走向。后续进球方面，韩国压上进攻会留下身后空当，Maseko和替补登场的Appollis有机会通过反击再下一城；而韩国一侧若能扳平，最具威胁的依然是孙兴慜，其次是同样具备终结能力的黄喜灿，但整体概率都不算高。"
+      },
+      "sources": [],
+      "cost_usd": 0.08926990000000001,
+      "tokens": {
+        "input": 20577,
+        "output": 710
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.723
+    },
+    {
+      "submitted_at": "2026-06-25T02:41:40+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 86,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.17,
+        "away": 0.05
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第86分钟，南非1-0领先韩国。南非凭借第63分钟塔佩洛·马塞科接切潘·莫雷米助攻的进球取得领先，此后整体比赛走势对主队相当有利：尽管控球率仅34%，但南非的射门数达到13次、射正4次，明显高于韩国的5次射门、2次射正，反映出南非在防守反击中的效率更高，韩国虽然占据球权却缺乏真正具备威胁的终结机会。下半场韩国连续换上孙兴慜、曹圭成等多名进攻球员加大攻势，但目前仍未能扳平，第79分钟曹圭成还吃到黄牌，节奏被打乱。结合仅剩4分钟加补时的时间窗口、南非的领先优势以及韩国进攻端的低效，主队取胜概率明显占优，平局概率主要来自韩国最后阶段压上可能制造的混乱机会，客队逆转的概率极低。综合判断最可能的最终比分仍为1-0。若末段再有进球，南非方面新登场的伊克拉姆·雷纳斯反击中最有可能终结比赛，韩国方面则以孙兴慜和高佳能型中锋曹圭成通过传中或定位球扳平的可能性较高。"
+      },
+      "sources": [],
+      "cost_usd": 0.0893106,
+      "tokens": {
+        "input": 20838,
+        "output": 660
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.478
+    },
+    {
+      "submitted_at": "2026-06-25T02:48:16+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.19,
+        "away": 0.03
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，南非主场1-0领先韩国，由塔佩洛·马塞科在第63分钟攻入唯一进球，切潘·莫雷米助攻。从场面看，韩国虽然控球率高达68%，但全场仅6脚射门、2次射正，进攻效率明显不如南非（13射4正、4角球）。南非反击犀利，在比分领先后通过Rayners、Adams等替补稳住阵脚并消耗时间，韩国虽然换上孙兴慜、曹圭成等攻击手加强攻势，但迟迟无法取得突破。考虑到目前已是90分钟、仅剩补时阶段，且韩国此前射门转化率偏低，南非守住胜局的概率非常高，因此主胜概率上调至0.78，平局回落至0.19，韩国逆转可能性仅0.03。最可能的最终比分维持在1-0。后续进球方面，韩国全力压上寻求扳平，孙兴慜作为头号球星在补时阶段最具威胁；而南非则可能通过反击由前锋Rayners打入锁定胜局的进球，曹圭成近期上场积极也存在抢点机会，但整体补时进球概率都不高。"
+      },
+      "sources": [],
+      "cost_usd": 0.0890627,
+      "tokens": {
+        "input": 20926,
+        "output": 629
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.366
+    },
+    {
+      "submitted_at": "2026-06-25T02:55:03+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "South Africa",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.18,
+        "away": 0.04
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，南非凭借塔佩洛·马塞科在第63分钟的进球以1-0领先韩国。从场面看，韩国虽然控球率高达69%，角球6比4占优，但全场仅8次射门、3次射正，进攻效率明显低于南非（13射4正）。下半场孙兴慜、黄喜灿、赵圭成等攻击手陆续登场试图扳平，但临近补时仍未能转化为有效得分机会，南非防线在主动让出控球后依然稳固。综合比分、剩余时间极少以及双方近期攻防表现，南非保住胜果的概率最高，给出胜78%、平18%、负4%，最可能的最终比分维持在1-0。补时阶段韩国会全力压上寻求扳平，孙兴慜与替补登场的赵圭成是最具威胁的射手候选；而南非依赖反击，新援伊克拉姆·雷纳斯在空间被拉开时存在锁定胜局的机会，因此后续进球预测以这三名球员为主，但整体概率都不高，比赛大概率以现有比分结束。"
+      },
+      "sources": [],
+      "cost_usd": 0.0881377,
+      "tokens": {
+        "input": 20926,
+        "output": 579
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.917
+    }
+  ]
+}

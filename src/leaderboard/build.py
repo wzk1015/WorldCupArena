@@ -6,6 +6,8 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
+from ..graders.metrics import contrast_calibrated_mean
+
 ROOT = Path(__file__).resolve().parents[2]
 RESULTS = ROOT / "data" / "results"
 OUT = ROOT / "docs" / "leaderboard"
@@ -21,6 +23,7 @@ def collect() -> list[dict]:
                 "model_id": r["model_id"],
                 "setting": r["setting"],
                 "composite": r.get("composite", 0.0),
+                "raw_composite": r.get("raw_composite", r.get("composite", 0.0)),
                 "layers": r.get("layers", {}),
                 "leaked": bool(r.get("leakage_audit", {}).get("leaked")),
             })
@@ -28,18 +31,24 @@ def collect() -> list[dict]:
 
 
 def aggregate(rows: list[dict]) -> dict:
-    by_model: dict[str, list[float]] = defaultdict(list)
-    by_model_setting: dict[tuple, list[float]] = defaultdict(list)
+    by_model_raw: dict[str, list[float]] = defaultdict(list)
+    by_model_setting_raw: dict[tuple, list[float]] = defaultdict(list)
     for r in rows:
         if r["leaked"]:
             continue
-        by_model[r["model_id"]].append(r["composite"])
-        by_model_setting[(r["model_id"], r["setting"])].append(r["composite"])
+        by_model_raw[r["model_id"]].append(r["raw_composite"])
+        by_model_setting_raw[(r["model_id"], r["setting"])].append(r["raw_composite"])
 
-    main = sorted(
-        [{"model_id": m, "mean": sum(v) / len(v), "n": len(v)} for m, v in by_model.items()],
-        key=lambda x: -x["mean"],
-    )
+    main = []
+    for model_id, values in by_model_raw.items():
+        raw_mean, mean = contrast_calibrated_mean(values)
+        main.append({
+            "model_id": model_id,
+            "raw_mean": raw_mean,
+            "mean": mean,
+            "n": len(values),
+        })
+    main.sort(key=lambda x: -x["mean"])
 
     # Research uplift: S2 (tool-using agent) minus S1 (best context-fed LLM).
     # Only defined for models where the same provider ships both an LLM-only
@@ -48,8 +57,8 @@ def aggregate(rows: list[dict]) -> dict:
     # or `claude-research` (S2). Downstream dashboards do the pairing; here we
     # just emit the per-(model, setting) means.
     by_setting: dict[str, dict[str, float]] = {}
-    for (m, s), v in by_model_setting.items():
-        by_setting.setdefault(m, {})[s] = sum(v) / len(v)
+    for (m, s), v in by_model_setting_raw.items():
+        by_setting.setdefault(m, {})[s] = contrast_calibrated_mean(v)[1]
 
     return {"main": main, "by_model_setting": by_setting, "rows": rows}
 

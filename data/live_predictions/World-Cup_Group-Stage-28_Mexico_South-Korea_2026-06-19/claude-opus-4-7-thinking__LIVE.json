@@ -1,0 +1,231 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-28_Mexico_South-Korea_2026-06-19",
+  "provider_fixture_id": "19609128",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-19T02:48:33+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 0
+    },
+    "home": "Mexico",
+    "away": "Korea Republic",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-19T01:00:00+00:00",
+    "venue": "Guadalajara Stadium",
+    "venue_city": "Zapopan"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.86,
+      "draw": 0.12,
+      "away": 0.02
+    },
+    "most_likely_score": "1-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进入第90分钟，墨西哥凭借路易斯·罗莫第50分钟的进球以1-0领先韩国。从场面数据看，墨西哥控球率虽只有44%，但射门8次、射正4次，明显比韩国的4射0正更具威胁，韩国门将已做出3次扑救却仍未能转化为进球。韩国队下半场连续用满换人名额，包括黄喜灿、吴贤揆、曹圭成等多名攻击手齐上，意图全力扳平，但直到补时阶段仍未制造有效射正。墨西哥则通过Gimenez、Pineda等替补稳住节奏并保留反击锐度。在仅剩补时时间的情况下，墨西哥保住胜果的概率极高，平局空间主要来自韩国孤注一掷的最后冲击，客胜几乎已无可能，因此主胜概率给到0.86、平局0.12、客胜0.02。最可能的最终比分仍是1-0，与当前比分及主胜走势一致。后续进球只可能出现在补时阶段：墨西哥端Santiago Gimenez作为新援前锋有反击打空门机会；韩国端黄喜灿在压上进攻中最具威胁，但概率均较低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 21045,
+    "output": 611
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.08917,
+  "wall_seconds": 17.475,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.86, \"draw\": 0.12, \"away\": 0.02},\n  \"most_likely_score\": \"1-0\",\n  \"scorers\": [\n    {\"player\": \"Santiago Gimenez\", \"team\": \"home\", \"minute\": 92, \"p\": 0.07},\n    {\"player\": \"Hee-chan Hwang\", \"team\": \"away\", \"minute\": 93, \"p\": 0.05}\n  ],\n  \"reasoning\": {\"overall\": \"比赛已进入第90分钟，墨西哥凭借Luis Romo第50分钟的进球以1-0领先韩国。从场面数据看，墨西哥控球率虽只有44%，但射门8次、射正4次，明显比韩国的4射0正更具威胁，韩国门将已做出3次扑救却仍未能转化为进球。韩国队下半场连续用满换人名额，包括Hwang Hee-chan、Oh Hyeon-gyu、Cho Gue-sung等多名攻击手齐上，意图全力扳平，但直到补时阶段仍未制造有效射正。墨西哥则通过Gimenez、Pineda等替补稳住节奏并保留反击锐度。在仅剩补时时间的情况下，墨西哥保住胜果的概率极高，平局空间主要来自韩国孤注一掷的最后冲击，客胜几乎已无可能，因此主胜概率给到0.86、平局0.12、客胜0.02。最可能的最终比分仍是1-0，与当前比分及主胜走势一致。后续进球只可能出现在补时阶段：墨西哥端Santiago Gimenez作为新援前锋有反击打空门机会；韩国端Hwang Hee-chan在压上进攻中最具威胁，但概率均较低。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-19T01:37:52+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 37,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T01:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.28,
+        "away": 0.2
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Raúl Jiménez",
+          "minute": 63,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Hirving Lozano",
+          "minute": 75,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Son Heung-Min",
+          "minute": 78,
+          "p": 0.17,
+          "team": "away"
+        },
+        {
+          "player": "Santiago Giménez",
+          "minute": 82,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Kang-in Lee",
+          "minute": 70,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第37分钟，墨西哥与韩国仍是0-0僵局。从场面上看，墨西哥占据明显主动，控球率达到62%，并已经完成3次射门、1次射正，整体节奏掌控在主队脚下；韩国队则尚未形成有效射门，反而通过4次犯规来打断对手进攻，李康仁也在第4分钟早早吃到黄牌，后续防守动作必须更谨慎，对中场施压能力会受到一定限制。综合主场之利、控球与射门数据以及目前韩国进攻端的迟滞，墨西哥获胜的概率被上调至约52%，平局约28%，韩国取胜则下调到约20%。考虑到上半场剩余时间不长、双方仍处于试探阶段，且韩国整体防线在世界杯舞台上具备一定韧性，预计全场进球数偏少，最可能的最终比分为1-0墨西哥小胜。后续进球方面，墨西哥的劳尔·希门尼斯作为禁区终结点最有机会率先打破僵局，Hirving Lozano的边路爆点以及替补登场后的圣地亚哥·希门尼斯也是潜在得分人选；韩国如果要扳平，最大威胁仍来自队长孙兴慜的反击一击，Kang-in Lee虽然背负黄牌，但定位球与远射依然是其得分手段之一。"
+      },
+      "sources": [],
+      "cost_usd": 0.0869833,
+      "tokens": {
+        "input": 19729,
+        "output": 756
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.874
+    },
+    {
+      "submitted_at": "2026-06-19T02:12:37+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 57,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T01:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.24,
+        "away": 0.14
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分1-0，墨西哥主场领先，比赛进行到第57分钟。路易斯·罗莫在第50分钟攻入下半场开局的关键一球，打破僵局，让墨西哥在场面与心理层面同时占据主动。从射门数据看，墨西哥6次射门、2次射正，明显多于韩国的2次射门、0射正，进攻威胁更具体；控球率虽然韩国以52%略占优，但缺乏实质性的破门机会，进攻转化效率不足。考虑到墨西哥已经取得领先且场面更具侵略性，主胜概率被上调至0.62；韩国仍有约30多分钟时间追平，但需要在落后局面下加大投入，平局概率维持在0.24；客胜需要净胜或翻盘，可能性较低，定为0.14。最可能的最终比分锁定为1-0，与主胜概率最高一致，同时也符合下半场领先方倾向收缩控制节奏的常见走势。后续进球方面，墨西哥的圣地亚哥·希门尼斯与Hirving Lozano作为前场主要终结点，在对手压上的空间里具备反击破门能力；韩国方面则寄望于核心孙兴慜的个人能力寻找扳平机会，已经吃到黄牌的Kang-in Lee在加大投入后也可能在禁区附近制造威胁，但概率相对偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0864172,
+      "tokens": {
+        "input": 19806,
+        "output": 710
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.886
+    },
+    {
+      "submitted_at": "2026-06-19T02:30:31+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 75,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T01:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.72,
+        "draw": 0.2,
+        "away": 0.08
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前墨西哥在主场1-0领先韩国，比赛已进行至75分钟。路易斯·罗莫在第50分钟的进球打破僵局，此后韩国队在57分钟连换两人（Hee-chan Hwang和Hyeon-gyu Oh登场），试图加强进攻火力，但截至目前射门数仅3次且0射正，进攻效率明显不足；墨西哥虽控球率略低（45%对55%），却完成6次射门、2次射正，整体场面更具威胁。考虑到仅剩约15分钟加上伤停补时，且韩国尚未在禁区内制造实质性威胁，墨西哥保住胜果的概率较高，给出主胜0.72、平局0.20、客胜0.08。最可能的最终比分为1-0，符合主胜占优且不低于当前比分的逻辑。后续进球方面，韩国需要压上抢分，替补登场的Hee-chan Hwang和Hyeon-gyu Oh具备搅局能力，Heung-min Son作为核心仍是定位球与反击的最大威胁；而墨西哥则可能在韩国压上后通过反击由前锋劳尔·希门尼斯扩大比分，因此将这几位列为75分钟后最可能的进球人选，但整体进球概率都不算高，1-0锁定终场仍是基准情景。"
+      },
+      "sources": [],
+      "cost_usd": 0.0883375,
+      "tokens": {
+        "input": 20345,
+        "output": 706
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.698
+    },
+    {
+      "submitted_at": "2026-06-19T02:48:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T01:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.12,
+        "away": 0.02
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，墨西哥凭借路易斯·罗莫第50分钟的进球以1-0领先韩国。从场面数据看，墨西哥控球率虽只有44%，但射门8次、射正4次，明显比韩国的4射0正更具威胁，韩国门将已做出3次扑救却仍未能转化为进球。韩国队下半场连续用满换人名额，包括黄喜灿、吴贤揆、曹圭成等多名攻击手齐上，意图全力扳平，但直到补时阶段仍未制造有效射正。墨西哥则通过Gimenez、Pineda等替补稳住节奏并保留反击锐度。在仅剩补时时间的情况下，墨西哥保住胜果的概率极高，平局空间主要来自韩国孤注一掷的最后冲击，客胜几乎已无可能，因此主胜概率给到0.86、平局0.12、客胜0.02。最可能的最终比分仍是1-0，与当前比分及主胜走势一致。后续进球只可能出现在补时阶段：墨西哥端Santiago Gimenez作为新援前锋有反击打空门机会；韩国端黄喜灿在压上进攻中最具威胁，但概率均较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.08917,
+      "tokens": {
+        "input": 21045,
+        "output": 611
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.475
+    }
+  ]
+}

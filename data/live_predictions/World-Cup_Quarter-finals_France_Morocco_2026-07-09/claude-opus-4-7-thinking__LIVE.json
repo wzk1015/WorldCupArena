@@ -1,0 +1,245 @@
+{
+  "fixture_id": "World-Cup_Quarter-finals_France_Morocco_2026-07-09",
+  "provider_fixture_id": "19606972",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-09T21:35:51+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 0
+    },
+    "home": "France",
+    "away": "Morocco",
+    "competition": "World Cup",
+    "stage": "Quarter-finals",
+    "kickoff_utc": "2026-07-09T20:00:00+00:00",
+    "venue": "Boston Stadium",
+    "venue_city": "Foxborough"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.96,
+      "draw": 0.03,
+      "away": 0.01
+    },
+    "most_likely_score": "2-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "第80分钟，法国队在主场2-0领先摩洛哥，比赛已进入尾声阶段。从场面上看，法国队完全掌控局势：全场17次射门、6次射正，角球3-2占优，控球率52%略高；姆巴佩(基利安·姆巴佩)第60分钟率先破门，登贝莱(奥斯曼·登贝莱)第66分钟由姆巴佩助攻扩大比分，此前姆巴佩在第28分钟还罚失了一粒点球，可见法国前场火力持续压制。反观摩洛哥全场仅2次射门且0射正，门将已做出4次扑救，第62分钟连换两人试图加强中前场，但第63分钟迪奥普(伊萨·迪奥普)吃到黄牌，进攻组织依旧乏力。综合两球领先、剩余时间不足10分钟加补时、以及摩洛哥缺乏有效射门等因素，法国获胜概率极高，平局与摩洛哥翻盘几乎可以忽略。最可能的最终比分维持在2-0，因为摩洛哥近乎无威胁、法国也可能收缩控场消耗时间；若继续进球，最有可能来自仍在场上寻求帽子戏法机会的姆巴佩，其次是状态火热的登贝莱和替补登场的高中锋科洛·穆阿尼(Randal Kolo Muani)；摩洛哥若想扳回颜面，最新替补上场的拉希米(苏菲扬·拉希米)是最可能的破门点，但概率有限。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 51284,
+    "output": 840
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.20529080000000002,
+  "wall_seconds": 21.38,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.96, \"draw\": 0.03, \"away\": 0.01},\n  \"most_likely_score\": \"2-0\",\n  \"scorers\": [\n    {\"player\": \"Kylian Mbappé\", \"team\": \"home\", \"minute\": 88, \"p\": 0.18},\n    {\"player\": \"Ousmane Dembélé\", \"team\": \"home\", \"minute\": 85, \"p\": 0.10},\n    {\"player\": \"Randal Kolo Muani\", \"team\": \"home\", \"minute\": 90, \"p\": 0.08},\n    {\"player\": \"Soufiane Rahimi\", \"team\": \"away\", \"minute\": 89, \"p\": 0.05}\n  ],\n  \"reasoning\": {\"overall\": \"第80分钟，法国队在主场2-0领先摩洛哥，比赛已进入尾声阶段。从场面上看，法国队完全掌控局势：全场17次射门、6次射正，角球3-2占优，控球率52%略高；姆巴佩(Kylian Mbappé)第60分钟率先破门，登贝莱(Ousmane Dembélé)第66分钟由姆巴佩助攻扩大比分，此前姆巴佩在第28分钟还罚失了一粒点球，可见法国前场火力持续压制。反观摩洛哥全场仅2次射门且0射正，门将已做出4次扑救，第62分钟连换两人试图加强中前场，但第63分钟迪奥普(Issa Diop)吃到黄牌，进攻组织依旧乏力。综合两球领先、剩余时间不足10分钟加补时、以及摩洛哥缺乏有效射门等因素，法国获胜概率极高，平局与摩洛哥翻盘几乎可以忽略。最可能的最终比分维持在2-0，因为摩洛哥近乎无威胁、法国也可能收缩控场消耗时间；若继续进球，最有可能来自仍在场上寻求帽子戏法机会的姆巴佩，其次是状态火热的登贝莱和替补登场的高中锋科洛·穆阿尼(Randal Kolo Muani)；摩洛哥若想扳回颜面，最新替补上场的拉希米(Soufiane Rahimi)是最可能的破门点，但概率有限。\",\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-09T20:06:51+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 6,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-09T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.22,
+        "away": 0.16
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 34,
+          "p": 0.36,
+          "team": "home"
+        },
+        {
+          "player": "Antoine Griezmann",
+          "minute": 58,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 66,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 71,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Hakim Ziyech",
+          "minute": 80,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第6分钟，法国与摩洛哥仍是0-0。开局阶段法国明显掌控主动，控球率高达73%，已完成2次射门且全部射正，还制造了1个角球，摩洛哥门将已经做出2次扑救，压力几乎完全集中在摩洛哥半场。摩洛哥暂时以密集防守应对，尚无射门，仅有1次犯规。基于世界杯八强赛的整体实力对比，法国锋线深度与个人能力更胜一筹，加上目前场面上的压制态势，主胜概率进一步上调至0.62左右，平局约0.22，摩洛哥爆冷取胜的概率维持在0.16附近。综合法国目前的进攻节奏和摩洛哥反击的威胁能力，最可能的最终比分定为2-1的法国小胜：法国大概率在上半场后半段依靠姆巴佩(Mbappé)的突破打破僵局，下半场再由格列兹曼(Griezmann)或登贝莱(Dembélé)扩大领先；摩洛哥则有机会通过恩内斯里(En-Nesyri)或齐耶什(Ziyech)在中后段的反击或定位球扳回一城，但难以完成逆转。后续进球人选与时间点均设定在第6分钟之后，符合当前场上局势的自然演进。"
+      },
+      "sources": [],
+      "cost_usd": 0.20226790000000003,
+      "tokens": {
+        "input": 50917,
+        "output": 750
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.977
+    },
+    {
+      "submitted_at": "2026-07-09T21:12:49+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 57,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-09T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 6.32
+    },
+    {
+      "submitted_at": "2026-07-09T21:29:43+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 74,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-09T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.74,
+        "draw": 0.18,
+        "away": 0.08
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 82,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 88,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Soufiane Rahimi",
+          "minute": 86,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第74分钟，法国凭借姆巴佩(Mbappé)在第60分钟由杜埃(Doué)助攻打进的进球1-0领先摩洛哥。从场面数据看，法国16次射门5次射正、3次角球，明显压制只有2次射门0射正的摩洛哥，摩洛哥门将已做出4次扑救，整体进攻组织乏力，只能依靠第62分钟连换两人(Amrabat、Rahimi登场)寻求变化，且刚吃到一张黄牌，心态和防线都承压。虽然姆巴佩第28分钟罚失点球留下一点隐患，但目前控球五五开、法国射门效率明显更高，剩下不到20分钟摩洛哥要在如此被动的局面下先追平再反超难度很大。综合来看，法国获胜概率显著提升至0.74左右，平局约0.18(主要来自摩洛哥孤注一掷偷袭扳平)，摩洛哥翻盘概率仅约0.08。最可能的最终比分定格在2-0：法国大概率会在摩洛哥压上进攻时抓反击再下一城，而摩洛哥即便打进也很难连入两球。后续进球方面，姆巴佩仍是最大威胁，反击终结能力最强，其次是替补登场后寻求表现的登贝莱(Dembélé)；摩洛哥一侧新登场的拉希米(Rahimi)作为前锋型奇兵，是他们最可能扳回一城的点。"
+      },
+      "sources": [],
+      "cost_usd": 0.20297830000000003,
+      "tokens": {
+        "input": 51219,
+        "output": 728
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.686
+    },
+    {
+      "submitted_at": "2026-07-09T21:35:51+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 80,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-09T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.96,
+        "draw": 0.03,
+        "away": 0.01
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第80分钟，法国队在主场2-0领先摩洛哥，比赛已进入尾声阶段。从场面上看，法国队完全掌控局势：全场17次射门、6次射正，角球3-2占优，控球率52%略高；姆巴佩(基利安·姆巴佩)第60分钟率先破门，登贝莱(奥斯曼·登贝莱)第66分钟由姆巴佩助攻扩大比分，此前姆巴佩在第28分钟还罚失了一粒点球，可见法国前场火力持续压制。反观摩洛哥全场仅2次射门且0射正，门将已做出4次扑救，第62分钟连换两人试图加强中前场，但第63分钟迪奥普(伊萨·迪奥普)吃到黄牌，进攻组织依旧乏力。综合两球领先、剩余时间不足10分钟加补时、以及摩洛哥缺乏有效射门等因素，法国获胜概率极高，平局与摩洛哥翻盘几乎可以忽略。最可能的最终比分维持在2-0，因为摩洛哥近乎无威胁、法国也可能收缩控场消耗时间；若继续进球，最有可能来自仍在场上寻求帽子戏法机会的姆巴佩，其次是状态火热的登贝莱和替补登场的高中锋科洛·穆阿尼(Randal Kolo Muani)；摩洛哥若想扳回颜面，最新替补上场的拉希米(苏菲扬·拉希米)是最可能的破门点，但概率有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.20529080000000002,
+      "tokens": {
+        "input": 51284,
+        "output": 840
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.38
+    }
+  ],
+  "live_refreshed_at": "2026-07-09T21:57:54+00:00"
+}

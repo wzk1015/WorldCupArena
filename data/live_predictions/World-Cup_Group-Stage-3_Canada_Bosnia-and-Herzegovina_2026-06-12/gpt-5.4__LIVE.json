@@ -1,0 +1,713 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-3_Canada_Bosnia-and-Herzegovina_2026-06-12",
+  "provider_fixture_id": "19609154",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-12T20:57:00+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "home": "Canada",
+    "away": "Bosnia and Herzegovina",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-12T19:00:00+00:00",
+    "venue": "Toronto Stadium",
+    "venue_city": "Toronto"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.17,
+      "draw": 0.74,
+      "away": 0.09
+    },
+    "most_likely_score": "1-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前已到90分钟，比分1-1，比赛已经进入最后补时阶段，因此平局概率明显高于双方取胜。已知进程显示，Bosnia and Herzegovina由Jovo Lukic在第21分钟先开纪录，而Canada在第78分钟由Cyle Larin扳平，说明加拿大在落后情况下完成追平，末段比赛走势更偏向主队持续施压。现有统计也支持这一点：Canada控球60%、射门12比8、射正4比3、角球9比4，整体进攻产量和压制力略优于客队。尽管如此，时间所剩极少，决定性因素不再是长期场面优势，而是补时内能否出现一次高质量机会，所以主胜概率虽高于客胜，但两者都被压低，平局成为最核心结果。基于当前1-1且已到90分钟，最可能最终比分维持在1-1，这也与最高的平局概率一致。后续进球逻辑方面，如果补时阶段再出现进球，更可能来自持续制造压力的Canada，候选人优先考虑已经取得进球的Cyle Larin，以及参与扳平球助攻、替补上来后提升前场活力的Promise David；客队若偷袭得手，则更可能来自替补前锋Samed Bazdar或已取得进球的Jovo Lukic。不过由于没有更多实时攻势事件显示场面出现持续失衡，补时内再进球总体仍属于低概率情形。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1912,
+    "output": 443
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.011425,
+  "wall_seconds": 10.452,
+  "error": null,
+  "raw_text": "{\"win_probs\":{\"home\":0.17,\"draw\":0.74,\"away\":0.09},\"most_likely_score\":\"1-1\",\"scorers\":[{\"player\":\"Cyle Larin\",\"team\":\"home\",\"minute\":94,\"p\":0.05},{\"player\":\"Samed Bazdar\",\"team\":\"away\",\"minute\":95,\"p\":0.03}],\"reasoning\":{\"overall\":\"当前已到90分钟，比分1-1，比赛已经进入最后补时阶段，因此平局概率明显高于双方取胜。已知进程显示，Bosnia and Herzegovina由Jovo Lukic在第21分钟先开纪录，而Canada在第78分钟由Cyle Larin扳平，说明加拿大在落后情况下完成追平，末段比赛走势更偏向主队持续施压。现有统计也支持这一点：Canada控球60%、射门12比8、射正4比3、角球9比4，整体进攻产量和压制力略优于客队。尽管如此，时间所剩极少，决定性因素不再是长期场面优势，而是补时内能否出现一次高质量机会，所以主胜概率虽高于客胜，但两者都被压低，平局成为最核心结果。基于当前1-1且已到90分钟，最可能最终比分维持在1-1，这也与最高的平局概率一致。后续进球逻辑方面，如果补时阶段再出现进球，更可能来自持续制造压力的Canada，候选人优先考虑已经取得进球的Cyle Larin，以及参与扳平球助攻、替补上来后提升前场活力的Promise David；客队若偷袭得手，则更可能来自替补前锋Samed Bazdar或已取得进球的Jovo Lukic。不过由于没有更多实时攻势事件显示场面出现持续失衡，补时内再进球总体仍属于低概率情形。\"},\"sources\":[]}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-12T19:05:29+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 5,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.41,
+        "draw": 0.34,
+        "away": 0.25
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 54,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Cyle Larin",
+          "minute": 71,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Edin Džeko",
+          "minute": 67,
+          "p": 0.14,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到5分钟，当前比分仍是0-0，样本非常早，因此赛果判断仍以赛前强弱与主场环境为基础，只对开局的有限比赛信息做小幅修正。从现有数据看，Canada控球率64%并已获得1个角球，说明主队开场阶段更多在前场组织和施压；Bosnia and Herzegovina虽然控球较少，但已经完成1次射门，说明客队并非完全被动，具备快速推进或直接制造威胁的能力。由于目前没有进球、红黄牌、伤退或其他重大事件，概率不会出现剧烈倾斜，平局仍保持较高权重，但主队凭借更高控球、主场作战以及早段场面主动性，胜率略高于平局和客胜。基于5分钟时点仍是僵持局面，最可能的终场比分倾向低比分，1-0比0-0更符合主队目前稍占优势的走势，同时也与主胜为最高概率保持一致。后续进球逻辑上，如果Canada继续维持控球并把角球和前场压制转化为禁区触球，最有希望在中后段先取得进球，因此主队前锋Jonathan David、Cyle Larin是更合理的潜在得分点；而Bosnia and Herzegovina若能利用反击或定位球，Edin Džeko这类终结点仍是客队最现实的未来进球人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0089975,
+      "tokens": {
+        "input": 821,
+        "output": 463
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.056
+    },
+    {
+      "submitted_at": "2026-06-12T19:11:25+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 11,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.39,
+        "draw": 0.35,
+        "away": 0.26
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到11分钟，当前比分仍是0-0，局面还处于非常早期阶段，因此平局概率依然保持在较高水平，但主队Canada凭借主场环境与略高的控球率（56%对44%）仍保有轻微优势。现有数据说明双方都还没有形成持续压制：Canada虽然拿到1个角球，但总射门仍为0；Bosnia and Herzegovina控球较少，却已经完成2次射门，说明客队在开局阶段的进攻尝试更直接。由于目前没有进球、红牌、伤停或其他重大事件，赛果判断不能被短时间样本过度放大，因此整体仍以均势偏主队的结构处理。概率上，主胜略高于平局，原因在于主场因素、控球主动权以及比赛时间还很长，Canada后续有较大机会把控球转化为更稳定的进攻；但客队已经先完成射门，也让away取胜仍保留现实可能。最可能最终比分给到1-0，是因为当前比赛节奏并未显示明显对攻走势，前11分钟总射门量不高，且Canada虽未完成射门，但场面控制稍优，后续更像是低比分分胜负的路径。未来进球逻辑上，更可能出现的是下半场或中后段才打破僵局，而不是短时间内迅速演变成多球比赛。由于当前直播状态中未提供官方/API形式的出场球员姓名，现阶段不列出具体后续进球者预测，以避免生成不稳定的人名字段。"
+      },
+      "sources": [],
+      "cost_usd": 0.011525,
+      "tokens": {
+        "input": 1106,
+        "output": 584
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.494
+    },
+    {
+      "submitted_at": "2026-06-12T19:17:20+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.33,
+        "draw": 0.41,
+        "away": 0.26
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到17分钟，当前比分仍是0-0。现有信息显示，加拿大控球略占优（52%）且拿到2个角球，但进攻终结质量不足，至今Total Shots和Shots on Goal都还是0；波黑控球稍少（48%），但已经完成3次射门并有1次射正，说明他们在有限球权下的直接威胁更明显。场面上更像是加拿大在组织和推进上略主动，波黑则更早形成了有效打门，因此原始主场优势被一定程度削弱。事件层面只有Alistair Johnston在11分钟吃到黄牌，这会轻微影响加拿大右路防守强度与后续对抗选择，但目前还不足以单独改变比赛方向。综合17分钟的0-0比分、双方早段统计对比以及世界杯小组赛通常相对谨慎的节奏，本次更新将平局概率维持为最高。加拿大仍有主场与控球上的基础优势，所以主胜概率略高于客胜；但由于他们暂未形成射门，主胜优势不能拉大。最可能最终比分因此维持在0-0，这也与当前平局为最高概率保持一致。如果下半场加拿大把控球转化为禁区内机会，他们更可能通过Jonathan David或Cyle Larin这类终结点打破僵局；而波黑目前已经展现出更直接的射门威胁，若比赛继续保持这种效率型走势，Edin Džeko类型的前场支点最有机会在反击或定位球二次进攻中取得进球。由于当前还处于上半场前段，后续进球分布更适合落在60分钟后，反映比赛节奏拉开、体能下降和调整生效后的得分窗口。"
+      },
+      "sources": [],
+      "cost_usd": 0.0102375,
+      "tokens": {
+        "input": 915,
+        "output": 530
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.294
+    },
+    {
+      "submitted_at": "2026-06-12T19:23:14+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 23,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.29,
+        "draw": 0.31,
+        "away": 0.4
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到23分钟，Canada目前主场0比1落后Bosnia and Herzegovina。就已知赛中信息看，主队控球率56%略占优势，角球2比1、射门2比3、射正1比1，说明场面并非被完全压制，更多是Canada在控球上稍优，但Bosnia and Herzegovina在进攻效率上更好，并且已经把一次阶段性优势转化为领先。现阶段比分对客队非常有利，因此胜平负概率相较开场已明显向客队倾斜，不过由于时间仍早、双方射门和射正差距都不大，平局仍保持较强可能，主队逆转空间也没有被完全封死。综合当前0比1的比分、23分钟的比赛时点，以及两队目前相对接近的数据结构，客胜仍是最高单项概率，平局次之，主胜最低。最可能最终比分判断为0比1：这既符合客队当前领先，也符合双方暂时都没有形成压倒性进攻输出的比赛节奏。如果Canada后续继续利用控球推进，最现实的改写路径是先扳成1比1；而如果Bosnia and Herzegovina在反击或定位球中再次抓住机会，比赛也可能走向0比2。由于未提供首发、实际进球者或更完整进攻球员数据，后续进球人只能基于球队层面做保守预测：主队若追平，更可能出现在下半场前中段持续施压后的阶段；客队若再进一球，更可能来自主队压上后的转换进攻时段。"
+      },
+      "sources": [],
+      "cost_usd": 0.0093975,
+      "tokens": {
+        "input": 915,
+        "output": 474
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.841
+    },
+    {
+      "submitted_at": "2026-06-12T19:29:18+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 29,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.26,
+        "draw": 0.28,
+        "away": 0.46
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到29分钟，当前Canada主场0比1落后Bosnia and Herzegovina，现阶段唯一进球来自21分钟Jovo Lukic，助攻者是Sead Kolasinac。就已知比赛信息看，Canada控球率57%占优，也拿到2个角球，但进攻产量偏低，只有1次射门且1次射正，说明控球更多停留在组织层面，暂时没有持续转化为高频威胁。相对而言，Bosnia and Herzegovina虽然控球43%较少，但4次射门、2次射正的效率更高，并且已经把一次有效攻势转化为领先，这使得客队在29分钟这个节点上的胜率保持最高。概率上，主队仍有追平空间，因为时间还很充足，而且Canada在控球端并不被动；但从当前射门质量和比分状态综合判断，客队继续守住优势甚至在转换中再进一球的路径更清晰，因此 away 胜面最高，draw 次之，home 逆转概率相对最低。最可能最终比分给到0-1：这既符合当前客队领先且比赛样本中客队效率更好的现实，也符合上半场中段后领先方可能收缩控制节奏的常见走势。后续进球逻辑上，如果比赛继续按照目前方式发展，Bosnia and Herzegovina的反击和边路传中仍是更直接的增量来源，因此Jovo Lukic依然是之后再进球的最突出人选，Sead Kolasinac也有通过后插上或定位球参与破门的可能；Canada若要改写比分，更可能来自比赛后段压上后的局部混战或定位球，当前可用事件名单里Alistair Johnston具备一定后点参与概率，但整体上主队未来进球把握仍低于客队。"
+      },
+      "sources": [],
+      "cost_usd": 0.0106425,
+      "tokens": {
+        "input": 981,
+        "output": 546
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.778
+    },
+    {
+      "submitted_at": "2026-06-12T19:35:26+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 35,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.27,
+        "draw": 0.31,
+        "away": 0.42
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到35分钟，Canada主场0比1落后Bosnia and Herzegovina，当前唯一进球来自21分钟Jovo Lukic，助攻者是Sead Kolasinac。就已知比赛态势看，Canada控球率达到64%，角球3比1领先，说明主队在场面推进和压制上并不吃亏；但双方总射门都是4次，射正则Canada仅1次、Bosnia and Herzegovina有2次，客队把握机会效率更高，也已经把领先优势兑现为比分。基于这种“主队控球占优、客队效率更好且已领先”的典型半场中段格局，赛果概率需要向客队倾斜，但不会极端偏离，因为Canada仍有足够时间凭借持续控球制造扳平机会。综合当前比分、时间点和有限技术统计，away胜面最高，draw次之，home逆转概率相对最低。最可能最终比分判断为0比1：这既符合当前客队领先且射门质量略优的现实，也考虑到Canada虽然控球多，但截至35分钟真正形成的高质量终结仍有限。后续进球逻辑上，若比赛继续按现有节奏发展，Canada会在下半场加强压上，从而提升Jonathan David或Alphonso Davies参与扳平球的可能；与此同时，Bosnia and Herzegovina在反击空间增大后，已有进球的Jovo Lukic仍是最可信的后续得分点。因此比分分布上，0比1、1比1、0比2是较集中的几个区间，其中0比1略高于1比1，而这也是客胜概率高于平局概率的主要原因。"
+      },
+      "sources": [],
+      "cost_usd": 0.010935,
+      "tokens": {
+        "input": 1266,
+        "output": 518
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.548
+    },
+    {
+      "submitted_at": "2026-06-12T19:41:28+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 41,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.29,
+        "draw": 0.33,
+        "away": 0.38
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到41分钟，Canada主场0比1落后Bosnia and Herzegovina，当前唯一进球来自21分钟Jovo Lukic，助攻者是Sead Kolasinac。就已知场面数据看，Canada控球65%、角球7比1、总射门6比4，说明主队在推进和持续施压方面更积极，也有一定半场压制力；但Canada目前只有1次射正，而Bosnia and Herzegovina 2次射正就取得1球，反映出客队进攻效率更高、防守阶段也基本承受住了压力。基于41分钟的即时比分，客队已经把领先优势带到上半场后段，这会显著抬高其不败概率；不过由于Canada的控球和角球优势明显，扳平机会仍然真实存在，因此平局概率不能低估。综合比分状态与有限统计，当前更倾向于客队小胜或被追平，而不是主队直接反超，所以胜平负概率给到home 0.29、draw 0.33、away 0.38。最可能最终比分定为0-1：这既符合客队当前最高胜率，也符合Canada虽然占优但终结质量不足、Bosnia and Herzegovina效率更好的比赛走势。后续进球逻辑上，若比赛再出球，更可能来自两种路径：一是Canada在持续压上后由前场核心完成扳平；二是Bosnia and Herzegovina在主队压出空间后通过反击由已进球球员Jovo Lukic扩大比分。因此未来进球人选优先考虑Jovo Lukic与Jonathan David，且时间均放在下半场中后段，以匹配比赛从僵持到开放的常见演变。"
+      },
+      "sources": [],
+      "cost_usd": 0.0099225,
+      "tokens": {
+        "input": 981,
+        "output": 498
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.977
+    },
+    {
+      "submitted_at": "2026-06-12T19:47:30+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.29,
+        "away": 0.43
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到45分钟，Canada主场0比1落后Bosnia and Herzegovina，唯一进球来自21分钟Jovo Lukic。就半场已知信息看，Canada在场面数据上占优，控球68%、角球8比1、总射门7比5，说明主队持续推进并把比赛压在客队半场；但Canada只有1次射正，转化效率偏低，说明虽然能形成进攻回合和定位球压力，真正高质量终结机会并不多。Bosnia and Herzegovina虽然控球只有32%，但2次射正打进1球，反击和机会把握更直接，因此在已经领先进入中场区间的前提下，胜率仍然保持最高。概率上，主队的场面优势让扳平可能性不能低估，所以平局概率被抬升到接近客胜；但由于比分已经是客队领先，且现有射门质量数据并不支持Canada已经形成持续高效破门，home胜面仍低于draw与away。最可能最终比分维持在0-1，逻辑是Bosnia and Herzegovina可以在下半场更多转入防守反击，而Canada虽然会继续压上，但半场射正偏少使其即使占据主动，也未必能稳定完成破门。若后续再有进球，比赛脚本更可能来自两种路径：一是Canada持续施压后由核心攻击点完成扳平；二是Canada压上后身后空间扩大，Bosnia and Herzegovina通过Jovo Lukic或Ermedin Demirovic在反击中再下一城。因此后续进球预测同时保留主队追平与客队扩大比分的可能，但综合当前比分、时间与效率表现，客队守住1球优势的单一比分仍是最稳健结果。"
+      },
+      "sources": [],
+      "cost_usd": 0.0127575,
+      "tokens": {
+        "input": 1329,
+        "output": 629
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.794
+    },
+    {
+      "submitted_at": "2026-06-12T20:08:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 53,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.27,
+        "draw": 0.31,
+        "away": 0.42
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到53分钟，Canada主场0比1落后Bosnia and Herzegovina，当前唯一进球来自21分钟的Jovo Lukic。基于现有赛中信息，Canada在场面上占据明显主动，控球66%、角球9比1、总射门7比5，说明其持续压制并不断把球推进到前场；但其真正高质量终结仍有限，射正只有1次，意味着优势更多体现在控球和定位球累计，而不是已经转化为大量门前绝对机会。Bosnia and Herzegovina虽然控球偏少，但3次射正就打入1球，进攻效率和反击威胁更直接，因此在已经领先且比赛时间进入下半场的前提下，客队仍保有最高胜率。概率上，落后方Canada因为主场、控球与角球优势，仍有较强扳平可能，所以平局概率被抬高到接近客胜；但由于其射正产出不足、而Bosnia and Herzegovina把握机会能力更好，away胜仍是最高结果。最可能最终比分判断为0-1：它既符合当前比分未变的时间衰减逻辑，也符合Canada虽然推进积极但临门一脚效率不足的比赛轨迹。与此同时，1-1是重要次选，因为Canada若继续保持高压，利用定位球或禁区二点球机会扳平并不意外；再下一层则是0-2，特别是在Canada继续压上后给客队留下转换空间。后续进球者方面，如果Canada完成追分，最合理的人选通常会落在终结点角色上，因此Jonathan David、Cyle Larin属于更可行的主队得分候选；若Bosnia and Herzegovina再入一球，则已经取得进球的Jovo Lukic以及前场威胁点Ermedin Demirovic更符合反击或禁区终结场景。综上，本次赛中更新维持客胜最高、平局次之、主胜最低，最可能终局为Bosnia and Herzegovina以0比1守住优势。"
+      },
+      "sources": [],
+      "cost_usd": 0.012985,
+      "tokens": {
+        "input": 1390,
+        "output": 634
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.38
+    },
+    {
+      "submitted_at": "2026-06-12T20:15:10+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 60,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.31,
+        "away": 0.44
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到60分钟，Canada主场0比1落后Bosnia and Herzegovina，现有唯一进球来自21分钟Jovo Lukic。就赛中状态看，Canada在控球和场面推进上占优，控球率66%、角球9比1、总射门7比6，说明主队持续把比赛压在前场，并且在落后情况下具备继续施压、争取扳平的基础。但效率层面并不理想，60分钟仅1次射正，说明虽然有围攻和定位球机会，真正转化为高质量终结的能力暂时不足。反过来看，Bosnia and Herzegovina控球较少，但3次射正就取得1球，进攻更直接，领先后也更容易转入收缩反击模式，因此客队仍保持最高胜率。概率上，随着时间进入最后30分钟，0比1这个比分本身天然抬高客胜与平局概率；不过由于Canada的持续压制数据较明显，平局概率被上调到接近客胜，主胜仍有空间但需要至少连进2球，难度相对更高。综合当前比分、时间节点和已有统计，最可能最终比分仍是0比1，其次是1比1和0比2：如果Canada迟迟无法把控球优势转化为射正和禁区内高质量机会，比赛会沿着客队守住领先的路径发展；如果主队在持续施压下提升终结效率，则更可能只追回一球而不是完成逆转。后续进球逻辑上，若Bosnia and Herzegovina再进球，最合理来源仍是反击端已破门的Jovo Lukic，或参与前场终结的Ermedin Demirovic；若Canada扳平，通常会来自其核心终结点在比赛后段把握禁区机会，因此看好Jonathan David成为主队最可能的后续进球人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.01207,
+      "tokens": {
+        "input": 1390,
+        "output": 573
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.896
+    },
+    {
+      "submitted_at": "2026-06-12T20:21:38+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 66,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.31,
+        "away": 0.44
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前进行到66分钟，Canada主场0比1落后Bosnia and Herzegovina，现有唯一进球来自21分钟Jovo Lukic。就已知赛况看，Canada在控球和压制性数据上占优，控球64%、角球9比3、总射门8比7，说明主队在持续推进并尝试围攻；但射正仅2次，而对手7次射门有3次射正并已把一次机会转化为进球，反映Bosnia and Herzegovina虽然控球较少，但反击效率和门前把握更好。比赛进入最后约25分钟后，落后一方通常会继续提高压上强度，因此Canada扳平的概率不能忽视；不过在只落后1球且时间已过三分之二的情况下，领先方天然拥有时间优势，且Bosnia and Herzegovina已经证明自己能通过较少控球制造有效威胁，所以客胜仍是最高单项概率。综合当前比分、剩余时间和已有数据，平局概率略高于主胜，因为Canada的场面优势更像支撑一球追平，而不是稳定完成逆转；因此最终结果分布倾向为客胜最高，其次平局，再次主胜。最可能最终比分定为0比1：这既符合当前客队领先且时间不断流逝的现实，也符合Canada虽有压制但终结效率一般的比赛轨迹。后续进球逻辑上，若Bosnia and Herzegovina再进球，更可能来自反击或定位球后的前场核心终结，已进球的Jovo Lukic与有前场参与度的Ermedin Demirovic是更直接的人选；若Canada扳平，则更可能出现在持续施压后的边路强点或核心个人能力兑现阶段，因此Alphonso Davies具备相对更高的后续进球可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.01199,
+      "tokens": {
+        "input": 1448,
+        "output": 558
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.981
+    },
+    {
+      "submitted_at": "2026-06-12T20:27:40+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 72,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.19,
+        "draw": 0.27,
+        "away": 0.54
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到72分钟，Canada主场0比1落后Bosnia and Herzegovina，当前唯一进球来自21分钟Jovo Lukic。结合现有赛中信息，Canada在场面上并非被动：控球65%、角球9比3、总射门9比7，说明主队后段持续施压并在推进到前场方面占优；但射正仅2次，而对手7次射门就有3次射正并已把一次机会转化为进球，体现出Bosnia and Herzegovina效率更高、领先后的比赛管理更合理。61至62分钟Canada连续调整，Ali Ahmed、Promise David等变动显示主队已经主动加码进攻，因此接下来主队扳平的可能性仍然存在，但由于时间只剩常规时间约18分钟外加补时，且目前落后方尚未把控球优势转化为足够高质量终结，主胜概率被明显压低。综合比分状态、剩余时间和有限统计，当前更大的概率仍是客队守住优势，其次是Canada追平，直接逆转所需条件更多，因此给出home 0.19、draw 0.27、away 0.54。最可能最终比分选择0-1：这既符合当前客队最高胜率，也符合现阶段Canada进攻数量高于质量、Bosnia and Herzegovina可以收缩防线并利用反击消耗时间的逻辑。未来进球人选上，若Canada持续压上，替补登场且更接近禁区终结点的Promise David是主队后段最可行的追分人选；而客队若再进球，已有进球纪录的Jovo Lukic依然是最直接的反击终结点，替补登场的Armin Gigovic则是后段利用空间扩大比分的次选。"
+      },
+      "sources": [],
+      "cost_usd": 0.01254,
+      "tokens": {
+        "input": 1734,
+        "output": 547
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.432
+    },
+    {
+      "submitted_at": "2026-06-12T20:33:37+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 78,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.29,
+        "away": 0.53
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到78分钟，Canada主场0比1落后Bosnia and Herzegovina，现阶段时间已经进入最后一段，比分和剩余时间共同决定了客队仍然占据明显优势。已知唯一进球来自21分钟Jovo Lukic，说明客队此前把握住了关键机会；而从统计看，Canada虽然以64%控球、10比7射门、9比3角球占优，场面上有持续施压迹象，但3次射正只换来有限威胁，说明其进攻效率一般，尚未把控球和定位球优势转化为进球。Bosnia and Herzegovina在较少控球下同样有3次射正，效率更高，且领先后比赛策略更偏向收缩和等待反击，这使得客队守住胜果的概率在当前时间点仍是最高。概率上，主队扳平仍有一定可能，因为其控球和角球数据意味着最后十多分钟仍会持续压上；但要在常规时间剩余阶段连进两球完成逆转，难度明显更高，所以主胜概率被压低。平局概率保留在次高位置，核心依据是Canada的主动进攻态势与换人后可能带来的末段冲击。最可能最终比分判断为0比1：这既符合当前客队领先、时间所剩不多的现实，也符合Canada虽有场面优势但门前转化不足的走势。如果后续再有进球，更可能出现在比赛末段两种路径：一是Canada继续高压后由替补或中锋点完成扳平；二是Bosnia and Herzegovina利用Canada整体压上后的身后空间打出反击扩大比分。因此未来进球人选上，主队侧重刚替补登场、具备冲击禁区属性的Promise David，客队则优先考虑已经取得进球的Jovo Lukic以及替补上场、适合反击终结的Samed Bazdar。"
+      },
+      "sources": [],
+      "cost_usd": 0.01311,
+      "tokens": {
+        "input": 1752,
+        "output": 582
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.406
+    },
+    {
+      "submitted_at": "2026-06-12T20:39:32+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 84,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.24,
+        "away": 0.64
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到84分钟，加拿大主场0比1落后波黑，时间已经明显站在领先一方一边。现有比赛信息显示，波黑在21分钟由Jovo Lukic先开纪录，此后比分一直没有再被改写。场面上加拿大并非完全被压制，反而拥有61%控球、10次射门、9个角球，对应波黑的39%控球、7次射门和3个角球，说明主队在持续推进并尝试围攻；但双方射正同为3次，说明加拿大虽然占据更多球权和定位球机会，真正转化为高质量终结的效率仍然有限。进入最后阶段后，加拿大已经连续通过换人增强前场冲击力，Ali Ahmed、Promise David、Jacob Shaffelburg以及随后登场的Cyle Larin，都表明主队在追分意图上非常明确；不过在84分钟这一时点，留给他们的有效比赛时间已经不多，因此扳平概率虽存在，但不足以反超客队胜率。综合当前比分、剩余时间与数据结构，客胜仍是最高结果，平局次之，主胜需要在极短时间内至少打入两球，概率最低。最可能的最终比分因此仍是0-1，这既符合波黑当前领先优势，也符合末段比赛常见的时间消耗逻辑。未来进球方面，如果加拿大压上继续制造传中和二点球机会，替补登场且更靠近禁区的Cyle Larin、Promise David是主队最现实的追平候选；而如果加拿大末段全线前压，波黑也会得到反击空间，替补前锋Samed Bazdar具备在补时阶段扩大比分的可能。但整体来看，后续最可预期的走势仍是加拿大施压、波黑守住领先，比分维持不变的单一结果概率最高。"
+      },
+      "sources": [],
+      "cost_usd": 0.0123825,
+      "tokens": {
+        "input": 1665,
+        "output": 548
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.034
+    },
+    {
+      "submitted_at": "2026-06-12T20:45:27+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.68,
+        "away": 0.14
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛来到90分钟，比分1-1，常规时间已基本走完，因此平局概率明显高于任何一方取胜。比赛进程上，Bosnia and Herzegovina在21分钟由Jovo Lukic先入一球，而Canada直到78分钟才由Cyle Larin扳平，说明主队在落后局面下完成追赶，末段势头相对更积极。现有统计也支持Canada略占上风：控球61%对39%，射门12比7，射正4比3，角球9比3，说明主队整体压制和持续施压更强。不过在90分钟这个时间点，哪怕场面优势偏向Canada，留给双方改变比分的时间已经很少，所以主胜概率只小幅高于客胜概率，但两者都低于平局。最可能最终比分因此维持在1-1，这既符合当前时间节点，也符合双方已各入一球、但新增进球窗口有限的现实。后续进球逻辑上，如果补时内再出现进球，更可能来自Canada继续利用其更高控球、更多角球和更频繁进攻制造机会，因此像替补后参与扳平阶段的Promise David，或已经取得进球的Cyle Larin，属于主队更现实的潜在制胜点；而客队若再进球，则更可能来自前场替补冲击点如Samed Bazdar，依靠快速反击或定位球完成偷袭。但整体而言，补时再进球属于小概率事件，故预测仍以终场1-1收束为主。"
+      },
+      "sources": [],
+      "cost_usd": 0.012325,
+      "tokens": {
+        "input": 2008,
+        "output": 487
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.941
+    },
+    {
+      "submitted_at": "2026-06-12T20:51:11+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.21,
+        "draw": 0.67,
+        "away": 0.12
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前已到90分钟，比分1-1，比赛进入常规时间尾声，因此剩余可供改写结果的时间已经非常有限，平局概率明显上升。就现有赛况看，波黑和黑塞哥维那由Jovo Lukic在第21分钟先开纪录，加拿大则在第78分钟由Cyle Larin扳平，说明比赛走势是客队早段领先、主队后段持续施压并完成追平。数据层面，加拿大占据更主动的一方：控球61%对39%，射门12比8，射正4比3，角球9比4，这些都表明主队在整体推进和压制上更强；但与此同时，比分仍然只是1-1，说明这种优势并没有转化为足够明确的胜势。到了90分钟这个节点，时间因素比场面优势更重要，所以虽然加拿大仍略有绝杀机会，但其赢球概率只能小幅高于客队，整体仍以平局为最可能结果。基于当前比分、时间和进程，最可能最终比分维持在1-1；若补时出现进球，更偏向于加拿大凭借末段 momentum 完成2-1，但这一分支概率仍低于直接收平。由于已到90分钟后，未来进球本身就是低概率事件，因此后续进球人选不做强推，整体判断仍以无新增进球收场为主。"
+      },
+      "sources": [],
+      "cost_usd": 0.0113475,
+      "tokens": {
+        "input": 1779,
+        "output": 460
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.783
+    },
+    {
+      "submitted_at": "2026-06-12T20:57:00+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.17,
+        "draw": 0.74,
+        "away": 0.09
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前已到90分钟，比分1-1，比赛已经进入最后补时阶段，因此平局概率明显高于双方取胜。已知进程显示，Bosnia and Herzegovina由Jovo Lukic在第21分钟先开纪录，而Canada在第78分钟由Cyle Larin扳平，说明加拿大在落后情况下完成追平，末段比赛走势更偏向主队持续施压。现有统计也支持这一点：Canada控球60%、射门12比8、射正4比3、角球9比4，整体进攻产量和压制力略优于客队。尽管如此，时间所剩极少，决定性因素不再是长期场面优势，而是补时内能否出现一次高质量机会，所以主胜概率虽高于客胜，但两者都被压低，平局成为最核心结果。基于当前1-1且已到90分钟，最可能最终比分维持在1-1，这也与最高的平局概率一致。后续进球逻辑方面，如果补时阶段再出现进球，更可能来自持续制造压力的Canada，候选人优先考虑已经取得进球的Cyle Larin，以及参与扳平球助攻、替补上来后提升前场活力的Promise David；客队若偷袭得手，则更可能来自替补前锋Samed Bazdar或已取得进球的Jovo Lukic。不过由于没有更多实时攻势事件显示场面出现持续失衡，补时内再进球总体仍属于低概率情形。"
+      },
+      "sources": [],
+      "cost_usd": 0.011425,
+      "tokens": {
+        "input": 1912,
+        "output": 443
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.452
+    }
+  ]
+}

@@ -1,0 +1,732 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-4_United-States_Paraguay_2026-06-13",
+  "provider_fixture_id": "19609133",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-13T02:58:50+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 3,
+      "away": 1
+    },
+    "home": "United States",
+    "away": "Paraguay",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-13T01:00:00+00:00",
+    "venue": "Los Angeles Stadium",
+    "venue_city": null
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.975,
+      "draw": 0.02,
+      "away": 0.005
+    },
+    "most_likely_score": "3-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前比赛已到90分钟，United States以3-1领先Paraguay，赛果已经非常接近锁定。结合现有进程看，主队在第7分钟通过Damián Bobadilla乌龙取得领先，随后Folarin Balogun在31分钟和50分钟两次破门，把优势扩大到3球；Paraguay直到73分钟才由Mauricio扳回一球。比赛走势上，United States整体控制力更强，63%控球、14次射门、5次射正，均明显优于Paraguay的37%控球、9次射门和1次射正，这说明主队不仅比分领先，场面上也更持续占优。到了90分钟仍保持2球优势，留给客队追平甚至逆转的时间极少，因此主胜概率被显著上调到绝对高位，平局和客胜只保留极低尾部可能。最可能最终比分维持在3-1，因为这是当前比分且与时间节点最匹配；补时阶段虽然仍可能再出现1球，但连续再进两球去改变胜负方向的概率很低。未来进球人逻辑上，若补时还有进球，更偏向United States利用对手压上后的空间，由替补前锋或后插上球员完成，例如Ricardo Pepi、Giovanni Reyna；而Paraguay若再进球，更现实的是由已有进攻参与度的Julio Enciso一类球员制造或完成机会，但其发生概率仍明显低于主队守住现有比分结束比赛。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2400,
+    "output": 656
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.01584,
+  "wall_seconds": 16.421,
+  "error": null,
+  "raw_text": "{\"win_probs\":{\"home\":0.975,\"draw\":0.02,\"away\":0.005},\"most_likely_score\":\"3-1\",\"scorers\":[{\"player\":\"Ricardo Pepi\",\"team\":\"home\",\"minute\":92,\"p\":0.06},{\"player\":\"Giovanni Reyna\",\"team\":\"home\",\"minute\":94,\"p\":0.04},{\"player\":\"Julio Enciso\",\"team\":\"away\",\"minute\":92,\"p\":0.02}],\"reasoning\":{\"overall\":\"当前比赛已到90分钟，United States以3-1领先Paraguay，赛果已经非常接近锁定。结合现有进程看，主队在第7分钟通过Damián Bobadilla乌龙取得领先，随后Folarin Balogun在31分钟和50分钟两次破门，把优势扩大到3球；Paraguay直到73分钟才由Mauricio扳回一球。比赛走势上，United States整体控制力更强，63%控球、14次射门、5次射正，均明显优于Paraguay的37%控球、9次射门和1次射正，这说明主队不仅比分领先，场面上也更持续占优。到了90分钟仍保持2球优势，留给客队追平甚至逆转的时间极少，因此主胜概率被显著上调到绝对高位，平局和客胜只保留极低尾部可能。最可能最终比分维持在3-1，因为这是当前比分且与时间节点最匹配；补时阶段虽然仍可能再出现1球，但连续再进两球去改变胜负方向的概率很低。未来进球人逻辑上，若补时还有进球，更偏向United States利用对手压上后的空间，由替补前锋或后插上球员完成，例如Ricardo Pepi、Giovanni Reyna；而Paraguay若再进球，更现实的是由已有进攻参与度的Julio Enciso一类球员制造或完成机会，但其发生概率仍明显低于主队守住现有比分结束比赛。\"},\"sources\":[]}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-13T01:04:06+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 4,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.41,
+        "draw": 0.34,
+        "away": 0.25
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到4分钟，当前比分仍是0-0，样本非常有限，赛中预测仍应以赛前强弱框架和主场/中立环境下的基础胜率为主，同时只对现有场面信号做小幅修正。从已知信息看，United States开局控球率达到67%，Paraguay为33%，说明主队在前几分钟更能把球控制在脚下，比赛节奏和推进主动权暂时更偏向home一侧；但截至目前没有射门、重大机会、定位球连续施压或关键事件数据，说明这种优势还主要停留在控球层面，尚不足以把胜负概率大幅拉开。因此本次更新仅将home胜率温和上调，draw仍保持较高，因为时间太早且比分未被打破，away依然保留明确反击或后程调整后的拿分机会。基于0-0且仅4分钟的状态，最可能最终比分仍集中在低比分区间；考虑到home开局控球更优，1-0比0-0和1-1略更符合当前走势，同时也与最高的home胜概率保持一致。后续进球逻辑上，若United States继续维持当前控球优势，最可能出现的是下一个阶段通过持续压制制造首球；但由于实时数据里没有提供官方/API球员名单或明确前场球员信息，无法在保证名称机器稳定的前提下可靠列出具体未来进球者，所以本次不输出球员级进球预测。"
+      },
+      "sources": [],
+      "cost_usd": 0.0101875,
+      "tokens": {
+        "input": 769,
+        "output": 551
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.217
+    },
+    {
+      "submitted_at": "2026-06-13T01:09:57+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 9,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.57,
+        "draw": 0.26,
+        "away": 0.17
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到9分钟，United States已经凭借7分钟的进球1比0领先，这会立即把赛中胜率明显推向主队一侧。现有数据样本还很小，但可见United States开局控球61%对39%占优，并且双方各有1次射门、1次射正，说明Paraguay并非被完全压制，也已经制造过一次有效威胁，因此当前判断不能把主队胜率拉得过高。结合早段领先的时间价值，主队从现在开始有更多空间按照比分管理比赛，而客队仍有充足时间扳平，所以平局概率仍然保留在较高区间，客胜则因先失球而明显下调。最可能最终比分方面，1比0符合当前领先状态、比赛时间仍早但双方暂未形成明显射门数量差距的格局；若后续比赛继续维持接近态势，低比分主胜依然是最稳健的单一结果。未来进球逻辑上，由于United States控球略优，下一粒更可能仍由主队制造；但Paraguay已经有射正记录，在比赛后段也具备通过直接推进或定位球扳平的路径，因此后续潜在进球分布相对分散，没有任何单一球员能获得很高的独立进球概率。由于现有进球者仍显示为<TBD>，未来进球人选也只能基于实时状态保持占位形式。"
+      },
+      "sources": [],
+      "cost_usd": 0.00961,
+      "tokens": {
+        "input": 1174,
+        "output": 445
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.096
+    },
+    {
+      "submitted_at": "2026-06-13T01:15:46+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 15,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.56,
+        "draw": 0.27,
+        "away": 0.17
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到15分钟，美国1比0领先，当前唯一进球来自第7分钟巴拉圭球员Damián Bobadilla的乌龙球，因此领先优势已经建立，但这个比分并不完全代表美国在进攻端已经持续制造了大量高质量机会。现有数据里双方总射门都是1次、射正都是1次，说明样本很小，比赛还处在较早阶段；不过美国控球率达到68%，巴拉圭只有32%，这表明美国至少在开局阶段更能控制比赛节奏和球权位置。巴拉圭第9分钟出现黄牌，也说明其防守端在追赶节奏时有一定被动。基于赛中最重要的信息是比分和时间，美国在15分钟时带着1球优势，通常会显著抬升主胜概率；但由于这粒进球是乌龙而非连续压制下的常规破门，且射门数据并未拉开差距，因此主胜概率不能拉得过高，平局和巴拉圭逆转仍然保留现实空间。综合当前1比0比分、15分钟时间点、美国更高控球但双方射门样本有限，更新后的结果倾向是美国胜面最高，其次是平局，巴拉圭客胜最低。最可能最终比分维持在1比0，因为美国已经领先，而目前并没有足够数据支持比赛必然转为对攻；同时巴拉圭虽有扳平可能，但在控球和纪律性上暂时更被动。未来进球球员方面，现有直播状态没有提供明确的首发或稳定射门点信息，且已知事件中的Damián Bobadilla是乌龙球记录、Juan José Cáceres是黄牌记录，并不能据此可靠推出谁最可能在15分钟后取得进球，因此本次不强行给出低置信度的后续进球者名单。"
+      },
+      "sources": [],
+      "cost_usd": 0.012975,
+      "tokens": {
+        "input": 1236,
+        "output": 659
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.375
+    },
+    {
+      "submitted_at": "2026-06-13T01:21:35+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 21,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.27,
+        "away": 0.15
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到21分钟，United States以1比0领先，且领先来自第7分钟Paraguay球员Damián Bobadilla的乌龙球。就当前赛中信息看，主队比分占优，同时控球率达到70%，说明United States在开局阶段对比赛节奏掌控更强；不过射门数据仅为1比2、双方射正都是1次，说明场面并非一边倒，Paraguay仍有一定反击和制造机会能力。客队在第9和第10分钟连续出现黄牌信息，这通常会削弱其前中场对抗强度与防守侵略性，使其后续防守时更受限制，也提升了United States继续守住优势甚至再进一球的概率。基于当前21分钟的领先状态、主队更高控球、客队早早背负两张黄牌，以及现阶段总机会数量还不算多，本次更新将主胜概率提升到明显高于平局和客胜；但由于领先并非来自持续高压下的多次创造，而是乌龙球形成，且射门数上Paraguay并未落后太多，所以平局仍保留相当权重，客队逆转概率则相对较低。最可能最终比分判断为1比0：这既符合United States当前领先且控场更好的走势，也符合前21分钟节奏并不算高产、双方实际高质量机会有限的进球分布逻辑。后续进球方面，若比赛继续按当前结构发展，United States更可能在下半场利用Paraguay压上后的空间打入下一球；而Paraguay若扳平，更大可能来自定位球、反击或主队防线一次失误。由于已知唯一明确官方球员名来自现有事件，未来进球人选可信度整体有限，因此后续进球预测以较低到中等概率呈现，整体仍以United States小胜收尾为基准情景。"
+      },
+      "sources": [],
+      "cost_usd": 0.01185,
+      "tokens": {
+        "input": 1308,
+        "output": 572
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.432
+    },
+    {
+      "submitted_at": "2026-06-13T01:27:32+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 27,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.57,
+        "draw": 0.28,
+        "away": 0.15
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第27分钟美国1比0领先，且当前唯一进球来自第7分钟巴拉圭球员Damián Bobadilla的乌龙球，因此比分优势已经真实建立，但并不代表美国已经在进攻端完全压制。现有数据里，美国控球率高达74%，说明比赛更多时间由主队掌控节奏、推进和落位组织；不过射门数据仅1比2、射正1比1，显示这种控球暂时更多体现为场面控制，而不是持续高质量机会输出。巴拉圭虽然控球偏少，但仍完成了更多总射门，说明其反击或直接推进仍有威胁，比赛并非一边倒。基于27分钟时主队已领先且掌控球权，主胜概率相对最高；但考虑到领先来自乌龙、双方射正接近、美国暂未形成明显射门压制，因此平局概率仍然保留在较高区间，巴拉圭逆转概率则低于平局。最可能最终比分给到1-0，一方面它与当前局面一致，另一方面也符合“美国控制比赛但进攻产量有限、巴拉圭有零星威胁却未必能持续兑现”的走势。后续进球逻辑上，如果比赛继续按现有结构发展，美国更可能凭借控球优势在下半场再制造一次决定性机会；但由于目前缺少明确的美国个人进攻热点与官方进球人信息，未来主队进球更适合保守地映射为团队进球概率。巴拉圭方面，若能在美国压上或比赛进入后段时提升反击效率，扳平并非不可能，因此保留少量客队未来进球概率，且乌龙制造者Damián Bobadilla作为定位球或混战中的低概率再参与者被列入极低权重候选。综合来看，本次赛中更新倾向美国守住优势，1-0仍是单一最可能赛果，其次才是2-0或1-1。"
+      },
+      "sources": [],
+      "cost_usd": 0.01197,
+      "tokens": {
+        "input": 1254,
+        "output": 589
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.82
+    },
+    {
+      "submitted_at": "2026-06-13T01:33:26+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 33,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.13,
+        "away": 0.05
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前33分钟，美国主场2比0领先，这一比分已经显著改变赛中胜平负分布。已发生的关键内容是第7分钟巴拉圭球员Damián Bobadilla自摆乌龙让美国早早领先，第31分钟Folarin Balogun再入一球把优势扩大到两球；此外Balogun在第28分钟还有一次越位导致的进球无效，说明美国前场威胁不只体现在记分牌上。数据层面，美国控球率70%明显占优，说明比赛节奏更多由主队掌控；虽然双方总射门都是2次、射正都是1次，样本还不大，但美国已经把有限机会转化为两球领先，而巴拉圭目前既落后两球又控球处于明显下风，追分难度较高。因此本次更新把美国取胜概率提升到明显优势区间，平局保留一定空间，主要对应下半场美国节奏回落、巴拉圭抓到一次机会后继续施压的路径；客胜则仅保留较低概率，需要巴拉圭在后续时间里完成强势逆转。最可能最终比分方面，2比0依然是单一概率最高的结果，因为美国已经建立两球缓冲，且现有统计并未显示比赛进入极端对攻；同时美国控球优势意味着其有能力通过降低比赛开放度来守住领先。后续进球逻辑上，美国若再进球，最合理的候选仍是Folarin Balogun——他已经取得进球且还有一次越位破门记录，说明其跑位和终结继续处在比赛高参与区。巴拉圭若追回一球，更可能来自整体压上后的偶发机会或定位球二点，因此仅给客队较低的未来进球概率。综合来看，美国大概率把比赛带入稳固领先并最终取胜，最可能的收官仍是2比0，其次才是3比0或2比1这类延伸比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.01201,
+      "tokens": {
+        "input": 1372,
+        "output": 572
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.546
+    },
+    {
+      "submitted_at": "2026-06-13T01:39:22+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 39,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.87,
+        "draw": 0.1,
+        "away": 0.03
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第39分钟美国队以2-0领先，这一比分在上半场末段已经显著改变胜负概率。已发生的关键内容显示，美国队第7分钟通过Damián Bobadilla的乌龙球取得领先，第31分钟又由Folarin Balogun在Christian Pulisic助攻下扩大优势；同时Balogun第28分钟还有一次越位进球被取消，说明美国前场持续制造威胁。统计层面美国队控球率76%、射门4比2、射正2比1、角球2比0，整体场面控制明显优于巴拉圭，说明这不是单纯依靠偶发事件形成的2球优势，而是比赛主动权基本掌握在主队手中。基于当前时间点和两队已呈现出的攻防走势，主胜概率继续维持在很高水平；平局仍保留小概率，主要依赖巴拉圭在下半场快速追回至少两球；客胜则需要比赛走势出现显著逆转，目前仅属低概率情形。最可能最终比分给到2-0，因为美国已经建立缓冲优势，而现有数据下巴拉圭控球和进攻产出有限，美国也未必需要在下半场持续高压冒进，因此比赛存在进入更稳健管理节奏的可能。不过若后续再出现进球，更偏向美国队利用转换或持续前场压制再下一城，其中Balogun作为已进球且持续活跃的终结点，后续破门概率最高，Pulisic则凭借创造力和前场触球质量也是主要候选。巴拉圭若能缩小比分，更多可能来自比赛后段被迫压上后的机会，但从当前39分钟的比赛状态看，美国守住胜局并以零封或只失1球结束的概率更大。"
+      },
+      "sources": [],
+      "cost_usd": 0.0107375,
+      "tokens": {
+        "input": 1091,
+        "output": 534
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.678
+    },
+    {
+      "submitted_at": "2026-06-13T01:45:14+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.9,
+        "draw": 0.08,
+        "away": 0.02
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛来到45分钟，美国以2-0领先巴拉圭，半场前的赛况明显偏向主队。已发生的关键进球包括第7分钟由Damián Bobadilla的乌龙球让美国早早领先，以及第31分钟Folarin Balogun接Christian Pulisic助攻扩大比分。结合现有数据，美国上半场控球率达到73%，总射门5比2领先，射正2比1，角球2比0，说明美国不仅比分占优，场面控制也更稳定；巴拉圭控球仅27%，同时犯规更多，说明其更多处于被动防守和破坏节奏的状态。基于45分钟时2球领先且主队在控球与推进上持续压制，主胜概率已被显著抬升，平局和客胜空间都被压缩。最可能最终比分判断为2-0，因为这是当前比分且与美国较强控场、巴拉圭进攻产出有限的走势一致；同时也保留美国再进一球形成3-0、或双方下半场各入一球形成3-1/2-1的次级可能。后续进球者逻辑上，美国若继续利用优势推进，Folarin Balogun作为已经破门且处于前场终结位置的球员，仍是下半场最有代表性的潜在进球点，Christian Pulisic则因已送出助攻、参与度高，也具备较强的后续得分可能。巴拉圭方面若想追回比分，更可能来自局部反击或定位球后的前场机会，但从当前数据看其未来进球概率明显低于美国，因此客队潜在进球者只给出较低概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.0104825,
+      "tokens": {
+        "input": 1091,
+        "output": 517
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.368
+    },
+    {
+      "submitted_at": "2026-06-13T01:51:02+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.09,
+        "away": 0.03
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛来到45分钟，美国队以2-0领先巴拉圭，这一比分在中场时点已经显著改变胜负概率。就已知比赛进程看，美国队第7分钟依靠Damián Bobadilla的乌龙球取得领先，第31分钟再由Folarin Balogun接Christian Pulisic助攻扩大优势；此外Balogun在第28分钟还有一次越位进球被吹，说明美国队在进攻端不仅效率更高，而且持续制造了高质量威胁。数据层面，美国队控球率72%、射门6比2、射正3比1、角球2比0，整体压制非常明显，巴拉圭上半场更多处于被动防守状态，门将已有2次扑救，也反映出美国队创造机会更多。基于半场两球领先与场面优势，美国队取胜概率维持在很高区间，平局与客胜只保留较小可能，主要取决于下半场巴拉圭能否明显提升反击效率并尽早追回一球。最可能最终比分判断为2-0：一方面这与当前比分一致，符合领先方在世界杯小组赛中下半场更可能优先控制节奏、降低比赛波动的常见逻辑；另一方面美国队虽然继续进球的概率仍高于巴拉圭，但两球优势下未必需要持续高压，因此3-0、2-1也都是次优结果。后续进球者逻辑上，美国队若再进球，最值得关注的仍是上半场已经破门且存在持续威胁的Folarin Balogun，以及已送出助攻、在前场触球影响力较强的Christian Pulisic；若巴拉圭追回一球，则更可能来自其前场核心球员把握转换进攻机会，其中Miguel Almirón类型的球员更符合落后局面下的个人推进与远射追分场景。"
+      },
+      "sources": [],
+      "cost_usd": 0.012125,
+      "tokens": {
+        "input": 1376,
+        "output": 579
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.343
+    },
+    {
+      "submitted_at": "2026-06-13T02:12:11+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 57,
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.976,
+        "draw": 0.02,
+        "away": 0.004
+      },
+      "most_likely_score": "3-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第57分钟美国队以3-0领先，赛中胜负概率已经明显向主队倾斜。就现有比赛状态看，美国队不仅比分优势巨大，而且过程同样占优：前7分钟就因Damián Bobadilla乌龙取得领先，随后Folarin Balogun在31分钟和50分钟两次破门，把差距扩大到三球。数据层面美国队控球率71%，总射门7比2，射正4比1，角球2比0，说明主队不仅效率更高，也持续掌控比赛节奏。巴拉圭目前进攻产出有限，57分钟只有2次射门、1次射正，在三球落后的情况下虽然理论上会加强前压，但以现有创造力来看，连续追赶三球甚至扳平的可能性非常低，因此主胜概率被大幅上调，平局和客胜仅保留很小尾部概率。最可能最终比分方面，3-0本身仍是单一概率最高的结果，因为主队已经建立足够缓冲，接下来比赛管理、节奏放缓和轮换因素都可能降低后续进球密度；不过美国队凭借控球与反击空间，继续打进第4球的机会仍然存在，所以4-0也是重要次选。未来进球人逻辑上，Folarin Balogun目前状态最热，且已经梅开二度，是后续最可能再次进球的球员；Sebastian Berhalter下半场刚替补出场，如果美国继续压制，他也有参与终结的潜在机会。巴拉圭方面若出现安慰球，更可能来自下半场调整后前场参与度提升的球员，但整体概率仍偏低。综合来看，本场更新后的核心判断是：美国队极大概率守住胜局，最可能以3-0结束，若再有进球则更偏向主队扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.01147,
+      "tokens": {
+        "input": 1276,
+        "output": 552
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.199
+    },
+    {
+      "submitted_at": "2026-06-13T02:18:04+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 63,
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.97,
+        "draw": 0.025,
+        "away": 0.005
+      },
+      "most_likely_score": "3-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到63分钟，美国以3-0领先，赛中胜负走势已经非常明确。当前比分优势很大，而且进程上美国在7分钟通过Damián Bobadilla的乌龙取得领先，随后Folarin Balogun在31分钟和50分钟梅开二度，把差距拉开到三球。结合现有统计，美国控球率69%明显占优，射门8比6、射正4比0，说明主队不仅掌控比赛节奏，而且真正有威胁的终结质量更高；巴拉圭虽然也有一定射门次数，但截至目前射正为0，反映出其进攻转化不足，短时间内连续追回三球的可能性极低。因此当前概率大幅倾向主胜，平局和客胜只保留极小尾部概率。最可能最终比分方面，3-0本身已经是一个非常稳固的赛中落点：美国在领先三球后更可能优先控制节奏、压缩风险，而巴拉圭若迟迟无法形成射正，比赛就很容易直接停留在这个比分。当然，美国凭借现有场面优势仍有继续进球的空间，所以4-0、4-1也具备一定次高可能，但综合时间剩余、领先幅度和比赛管理逻辑，3-0仍是单一最可能结果。后续进球人逻辑上，美国若再进球，最值得继续看好的仍是已经打入两球且处于终结热点的Folarin Balogun；此外，参与第二球助攻的Malik Tillman也有一定后续得分概率。巴拉圭方面，如果他们在比赛后段取得安慰球，具备个人推进和远射能力的Miguel Almirón相对更像潜在得分点，但总体概率仍然偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.011615,
+      "tokens": {
+        "input": 1448,
+        "output": 533
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.68
+    },
+    {
+      "submitted_at": "2026-06-13T02:23:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 68,
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.985,
+        "draw": 0.012,
+        "away": 0.003
+      },
+      "most_likely_score": "3-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第68分钟United States以3-0领先Paraguay，比赛已经进入最后约四分之一时段，当前赛况对主队极其有利。已发生的进球显示主队从开局就建立优势：7分钟先由Damián Bobadilla乌龙送礼，31分钟和50分钟Folarin Balogun两次破门，其中一次来自Christian Pulisic助攻、一次来自Malik Tillman助攻，说明United States不仅比分领先，而且前场配合效率更高。现有统计也明显倾向主队：控球68%对32%，射门9对5，射正4对0，角球3对1；Paraguay至今0次射正，意味着他们虽然有一定出脚次数，但真正威胁门前的质量不足。基于3球领先、剩余时间有限以及主队在控球和射正上的持续优势，主胜概率被上调到接近锁定，平局和客胜只保留极低尾部概率。最可能最终比分维持在3-0，因为这是当前比分，且在大比分领先后主队很可能优先控制节奏、降低风险；同时Paraguay进攻转化偏弱，短时间内连追三球的条件非常苛刻。不过United States仍有继续进球的空间，尤其是Balogun已经梅开二度、又是现阶段最直接的终结点，因此他是68分钟后最可能再次改写比分的球员；若主队继续利用前场跑动和传中，Malik Tillman这类后插上点也有补射或二次进攻得分可能。Paraguay方面，如果比赛后段主队强度下降，Miguel Almirón是客队更现实的潜在破门人选，但在他们尚未取得射正的背景下，客队后续进球概率仍然明显低于主队。因此综合判断：结果层面主队几乎稳胜，比分层面3-0最稳，次选才是4-0或4-1。"
+      },
+      "sources": [],
+      "cost_usd": 0.013225,
+      "tokens": {
+        "input": 1732,
+        "output": 593
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.628
+    },
+    {
+      "submitted_at": "2026-06-13T02:29:47+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 74,
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.982,
+        "draw": 0.015,
+        "away": 0.003
+      },
+      "most_likely_score": "3-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到74分钟，United States已经3比0领先Paraguay，胜负形势非常清晰。就现有赛况看，主队从开局就建立优势：7分钟由Damián Bobadilla的乌龙球送礼，31分钟和50分钟Folarin Balogun两次破门，把比分扩大到3球差距。数据层面同样支持主队全面占优，United States目前拥有65%控球、10比5的射门、4比0的射正以及3比1的角球，说明比赛节奏和威胁制造基本都掌握在主队手中；Paraguay到目前射正仍为0，这大幅压低了其在最后阶段连续追分的可能性。基于当前比分、时间节点和场面强弱对比，主胜概率已被显著抬升到极高区间，平局和客胜只保留极小尾部概率，更多对应极端情况下的短时崩盘或连续偶发事件。从最终比分分布看，3比0本身已经是最稳态结果：主队领先充足，后段更可能控制节奏而非持续高压；客队虽然换人后可能尝试压上，但进攻产出和射正质量不足，因此未必能稳定转化为进球。不过United States的前场效率较高，若Paraguay在比赛末段进一步压出，主队仍有通过转换进攻再进一球的空间，因此4比0也是次高可能分支之一。后续进球人方面，只考虑74分钟之后，Folarin Balogun作为已经梅开二度且持续处于终结点的球员，仍是最可能再次得分的人选；Malik Tillman具备后插上和二点进攻价值，也是主队追加进球的候选。Paraguay若能取得安慰球，更可能来自替补登场后需要承担冲击任务的Álex Arce，但由于客队至今射正为0，其个人进球概率仍然偏低。综合判断，本场更新后的最可能最终比分维持在3比0，主队大概率顺利收下比赛。"
+      },
+      "sources": [],
+      "cost_usd": 0.0138,
+      "tokens": {
+        "input": 1794,
+        "output": 621
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.386
+    },
+    {
+      "submitted_at": "2026-06-13T02:35:46+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 80,
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.988,
+        "draw": 0.01,
+        "away": 0.002
+      },
+      "most_likely_score": "3-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到80分钟，United States已3比0领先Paraguay，胜负走势已经非常清晰。现有进程里主队在第7分钟先由Damián Bobadilla乌龙受益，随后Folarin Balogun在31分钟和50分钟再进两球，把分差扩大到三球。结合数据面，United States目前以66%控球、10比7射门、4比0射正占优，这说明主队不仅比分领先，而且场面控制和门前效率都明显更好；Paraguay虽然有一定射门数量，但80分钟仍是0射正，意味着其真正威胁不足，短时间内连续追回三球的概率极低。因此当前胜平负概率大幅向主胜倾斜，主胜接近锁定，平局与客胜只保留极小尾部概率。最终比分逻辑上，剩余时间通常只有10分钟左右外加补时，在3球领先且主队掌控比赛节奏的背景下，最常见收束是United States直接守住3比0；若再出进球，也更可能来自主队利用Paraguay压上后的空间继续扩大比分，所以4比0是次优路径。后续进球人方面，已梅开二度且持续处于终结点位的Folarin Balogun仍是最可能再次破门的人选；若Paraguay在末段追回一球，更现实的候选会是下半场替补登场、承担冲击任务的Álex Arce，但整体客队进球概率仍然偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.01149,
+      "tokens": {
+        "input": 1794,
+        "output": 467
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.474
+    },
+    {
+      "submitted_at": "2026-06-13T02:41:28+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 86,
+        "score": {
+          "home": 3,
+          "away": 1
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.95,
+        "draw": 0.04,
+        "away": 0.01
+      },
+      "most_likely_score": "3-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第86分钟比分为3-1，United States手握两球领先，比赛已经进入常规时间尾声，因此主胜概率被大幅推高。就已知比赛进程看，United States先由Damián Bobadilla自摆乌龙受益取得领先，随后Folarin Balogun在31分钟和50分钟两次破门，将优势扩大到3-0；Paraguay直到73分钟才由Mauricio扳回一球。数据层面，United States以66%控球、11次射门、5次射正明显占优，Paraguay虽然也有9次射门，但只有1次射正，说明客队整体持续制造高质量机会的能力有限。基于当前时间与两球分差，剩余比赛窗口非常短，Paraguay连追两球扳平的条件较苛刻，因此平局与客胜概率都维持在很低水平。最可能最终比分判断为3-1，因为这是当前比分且与时间状态最匹配；相比之下，United States再进一球形成4-1的可能性次之，而Paraguay再追近到3-2也有一定但更低的概率。后续进球人逻辑上，更应优先考虑United States替补与前场活跃点利用Paraguay压上后的空间，其中Ricardo Pepi、Timothy Weah具备较高的终结可能；若客队在最后阶段再制造机会，73分钟已有进球的Mauricio是相对更合理的再次得分候选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0120275,
+      "tokens": {
+        "input": 1979,
+        "output": 472
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.668
+    },
+    {
+      "submitted_at": "2026-06-13T02:47:15+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 1
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.988,
+        "draw": 0.01,
+        "away": 0.002
+      },
+      "most_likely_score": "3-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已到90分钟，美国队以3-1领先巴拉圭，胜负结构已经非常清晰。结合现有赛况，美国队不仅比分上手握两球优势，而且过程数据也明显占优：控球率65%对35%，总射门12对9，射正5对1，说明主队在大部分时间里持续掌控比赛节奏，并且把优势转化为了更高质量的终结。进球进程也支持这一判断：美国队开场早段便因Damián Bobadilla乌龙取得领先，随后Folarin Balogun在31分钟和50分钟两次破门，把比分拉到3-0；巴拉圭直到73分钟才由Mauricio扳回一球，但在比赛进入最后阶段前仍未显示出足够持续的反扑效率。基于当前已到常规时间结束、且主队仍有两球缓冲，主胜概率被大幅抬高，平局和客胜仅保留极低的补时极端情形空间。最可能最终比分因此仍是3-1，因为在剩余时间极少的情况下，不再进球是最自然的终局；同时3-2与4-1属于次级分支，但发生率明显低于直接维持现比分。后续进球逻辑上，如果补时阶段再出现破门，更可能来自领先一方利用巴拉圭压上后的反击空间，因此替补前锋Ricardo Pepi、以及后上场的Giovanni Reyna具备相对更高的晚段进球机会；而巴拉圭方面若再追一球，现有唯一进球者Mauricio或前场继续前压的进攻点仍是更合理的人选。不过总体而言，补时再进球的总概率不高，比赛大概率就以美国队3-1获胜结束。"
+      },
+      "sources": [],
+      "cost_usd": 0.013915,
+      "tokens": {
+        "input": 2284,
+        "output": 547
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.835
+    },
+    {
+      "submitted_at": "2026-06-13T02:53:02+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 1
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.988,
+        "draw": 0.01,
+        "away": 0.002
+      },
+      "most_likely_score": "3-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前已到90分钟，United States以3比1领先Paraguay，比赛已经进入最后补时阶段，留给落后方扳回两球甚至三球的时间极少，因此主胜概率被大幅抬高。就比赛进程看，United States在第7分钟凭借Damián Bobadilla乌龙领先，随后Folarin Balogun在31分钟和50分钟两次进球，把优势扩大到3比0；Paraguay直到73分钟才由Mauricio追回一球，说明主队在绝大多数时间里都掌控了比分节奏。现有数据也支持这一判断：United States控球64%、总射门13比9、射正5比1、角球3比1，整体压制力和进攻质量都更好，而Paraguay虽然下半场通过换人加强进攻，但真正转化为高质量射门的数量有限。基于当前比分差、剩余时间和已呈现出的场面强弱，最可能的结果仍是United States守住两球优势结束比赛，因此最终胜平负概率明显偏向主胜。最可能最终比分维持在3比1，因为这是当前既成比分，且常规时间已走完，补时阶段再出现进球的总体概率不高；若再有进球，更可能来自领先一方利用Paraguay压上后的空间扩大比分，其次才是客队在最后时刻再追一球。后续进球人方面，只能考虑90分钟之后的补时：United States替补前锋Ricardo Pepi、攻击手Giovanni Reyna具备利用反击或终结机会的可能；Paraguay方面，替补登场且已吃到黄牌前曾参与前场冲击的Álex Arce ，是客队若在补时制造最后威胁时相对更可能的终结点。但综合来看，补时大概率不会再改写结果，3比1收场仍是最稳健判断。"
+      },
+      "sources": [],
+      "cost_usd": 0.0144825,
+      "tokens": {
+        "input": 2343,
+        "output": 575
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.419
+    },
+    {
+      "submitted_at": "2026-06-13T02:58:50+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 1
+        },
+        "home": "United States",
+        "away": "Paraguay",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T01:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.975,
+        "draw": 0.02,
+        "away": 0.005
+      },
+      "most_likely_score": "3-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已到90分钟，United States以3-1领先Paraguay，赛果已经非常接近锁定。结合现有进程看，主队在第7分钟通过Damián Bobadilla乌龙取得领先，随后Folarin Balogun在31分钟和50分钟两次破门，把优势扩大到3球；Paraguay直到73分钟才由Mauricio扳回一球。比赛走势上，United States整体控制力更强，63%控球、14次射门、5次射正，均明显优于Paraguay的37%控球、9次射门和1次射正，这说明主队不仅比分领先，场面上也更持续占优。到了90分钟仍保持2球优势，留给客队追平甚至逆转的时间极少，因此主胜概率被显著上调到绝对高位，平局和客胜只保留极低尾部可能。最可能最终比分维持在3-1，因为这是当前比分且与时间节点最匹配；补时阶段虽然仍可能再出现1球，但连续再进两球去改变胜负方向的概率很低。未来进球人逻辑上，若补时还有进球，更偏向United States利用对手压上后的空间，由替补前锋或后插上球员完成，例如Ricardo Pepi、Giovanni Reyna；而Paraguay若再进球，更现实的是由已有进攻参与度的Julio Enciso一类球员制造或完成机会，但其发生概率仍明显低于主队守住现有比分结束比赛。"
+      },
+      "sources": [],
+      "cost_usd": 0.01584,
+      "tokens": {
+        "input": 2400,
+        "output": 656
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.421
+    }
+  ]
+}

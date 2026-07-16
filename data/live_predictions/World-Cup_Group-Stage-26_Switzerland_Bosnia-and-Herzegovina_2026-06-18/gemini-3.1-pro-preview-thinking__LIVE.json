@@ -1,0 +1,348 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-26_Switzerland_Bosnia-and-Herzegovina_2026-06-18",
+  "provider_fixture_id": "19609169",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-18T20:56:35+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 3,
+      "away": 1
+    },
+    "home": "Switzerland",
+    "away": "Bosnia and Herzegovina",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-18T19:00:00+00:00",
+    "venue": "Los Angeles Stadium",
+    "venue_city": null
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.99,
+      "draw": 0.01,
+      "away": 0.0
+    },
+    "most_likely_score": "4-1",
+    "scorers": [
+      {
+        "player": "Johan Manzambi",
+        "minute": 98,
+        "p": 0.85,
+        "team": "home"
+      }
+    ],
+    "reasoning": {
+      "overall": "当前比赛已进入伤停补时阶段（常规时间90分钟），场上比分为瑞士3-1波黑。根据比赛数据与事件记录，瑞士队在下半场展现了压倒性的进攻优势，控球率高达62%，并由替补登场的曼赞比（约翰·曼赞比）和巴尔加斯（鲁文·巴尔加斯）连入三球。波黑队虽然在第93分钟由马赫米奇（Ermin Mahmic）扳回一城，但由于穆哈雷莫维奇（塔里克·穆哈雷莫维奇）在第80分钟被红牌罚下，少打一人的波黑队已无力回天。值得注意的是，第97分钟VAR介入并判给瑞士队一粒点球，这为他们进一步扩大比分提供了绝佳机会。考虑到曼赞比目前已梅开二度，他极有可能主罚此球以完成帽子戏法。综合当前局势、红牌影响及点球判罚，瑞士队胜券在握，最终比分极可能定格在4-1。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2348,
+    "output": 2096
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0156702,
+  "wall_seconds": 19.941,
+  "error": null,
+  "raw_text": "```json\n{\n  \"win_probs\": {\n    \"home\": 0.99,\n    \"draw\": 0.01,\n    \"away\": 0.0\n  },\n  \"most_likely_score\": \"4-1\",\n  \"scorers\": [\n    {\n      \"player\": \"Johan Manzambi\",\n      \"team\": \"home\",\n      \"minute\": 98,\n      \"p\": 0.85\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"当前比赛已进入伤停补时阶段（常规时间90分钟），场上比分为瑞士3-1波黑。根据比赛数据与事件记录，瑞士队在下半场展现了压倒性的进攻优势，控球率高达62%，并由替补登场的曼赞比（Johan Manzambi）和巴尔加斯（Rubén Vargas）连入三球。波黑队虽然在第93分钟由马赫米奇（Ermin Mahmic）扳回一城，但由于穆哈雷莫维奇（Tarik Muharemović）在第80分钟被红牌罚下，少打一人的波黑队已无力回天。值得注意的是，第97分钟VAR介入并判给瑞士队一粒点球，这为他们进一步扩大比分提供了绝佳机会。考虑到曼赞比目前已梅开二度，他极有可能主罚此球以完成帽子戏法。综合当前局势、红牌影响及点球判罚，瑞士队胜券在握，最终比分极可能定格在4-1。\"\n  },\n  \"sources\": []\n}\n```",
+  "thinking_text": "**Analyzing the Swiss-Bosnia Match: A Deep Dive**\n\nOkay, the clock's at 90 minutes. Switzerland's up 3-1 against Bosnia and Herzegovina. The events are crucial here. We have goals logged at 74' (Manzambi), 84' (Vargas), and 90' (Manzambi) for Switzerland, and 93' (Mahmic) for Bosnia. However, the current score is 3-1, which aligns with the events I have. There's a VAR penalty awarded to Switzerland at 97'. This is likely stoppage time.\n\nSince the current score is 3-1, and we have a penalty in the events, the most probable final score is 4-1. The critical thing here is that any additional goal has to occur after the 90-minute mark. The penalty at 97' fits perfectly.\n\nGiven Manzambi already has two goals (74', 90'), he's the prime candidate to take the penalty for a hat-trick. We have a solid probability of a home win at 0.99, a draw at 0.01, and away at 0.00.\n\nThe events provide: A red card for Bosnia (80'), goals at 74', 84', 90' for Switzerland, and 93' for Bosnia. A VAR penalty at 97'.\n\nSo, considering everything, the most likely result is a 4-1 victory for Switzerland, with Johan Manzambi scoring the penalty at 98' since he has already scored twice, and the 93' goal for Bosnia is already included in the current score. The 98' minute is strictly after the current elapsed time of 90'.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-18T19:15:17+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 15,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.26,
+        "away": 0.16
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Zeki Amdouni",
+          "minute": 38,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Breel Embolo",
+          "minute": 65,
+          "p": 0.3,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第15分钟，目前比分维持在0-0。从开场阶段的场面来看，瑞士队占据了绝对的主动权，控球率高达72%，并且已经创造了2次射门和3次角球机会，展现出强烈的进攻欲望。相比之下，波斯尼亚和黑塞哥维那（波黑）主要处于被动防守状态，控球率仅为28%，且为了破坏瑞士队的进攻节奏，已经付出了4次犯规。基于瑞士队在场面上的压制力以及持续施加的进攻压力，他们打破僵局的可能性正在稳步上升，获胜概率显著高于对手。考虑到波黑防线在持续受压下容易出现漏洞，预计瑞士队能够将控球优势转化为进球，最可能的最终比分预测为2-0。在后续的比赛中，瑞士队的锋线核心如 泽基·阿姆杜尼 和 布雷尔·恩博洛 在这种阵地战和定位球较多的局面下，将获得极佳的破门机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.012705,
+      "tokens": {
+        "input": 964,
+        "output": 1856
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.622
+    },
+    {
+      "submitted_at": "2026-06-18T19:32:31+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 32,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.3,
+        "away": 0.15
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 65,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Zeki Amdouni",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Edin Džeko",
+          "minute": 82,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第32分钟，瑞士与波斯尼亚和黑塞哥维那暂时战成0-0平。从场面数据来看，瑞士队完全掌控了比赛节奏，控球率高达70%，并创造了4次射门（1次射正）和3个角球。相比之下，波斯尼亚和黑塞哥维那处于被动防守状态，仅有30%的控球率和1次未射正的打门，同时他们通过较多的犯规（7次）来破坏瑞士队的进攻节奏。鉴于瑞士队在场面上的绝对压制力，他们打破僵局的可能性极高。因此，主队获胜的概率被评估为55%，考虑到波斯尼亚密集的防守可能将平局拖入下半场，平局概率为30%，客胜概率仅为15%。综合攻防态势，瑞士队极有可能在下半场通过持续施压取得进球，最可能的最终比分为1-0。预计瑞士队的锋线核心如 布雷尔·恩博洛 或 泽基·阿姆杜尼 有望在下半场对方防线体能下降期寻觅到破门良机。"
+      },
+      "sources": [],
+      "cost_usd": 0.013826399999999999,
+      "tokens": {
+        "input": 1006,
+        "output": 2027
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.878
+    },
+    {
+      "submitted_at": "2026-06-18T20:05:20+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 50,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.35,
+        "away": 0.17
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Zeki Amdouni",
+          "minute": 72,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Breel Embolo",
+          "minute": 84,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Edin Džeko",
+          "minute": 78,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第50分钟，瑞士与波斯尼亚和黑塞哥维那目前战成0-0平。从场面数据来看，瑞士队完全掌控了比赛节奏，控球率高达69%，并获得了4次角球机会。然而，他们在进攻端的绝对机会并不多，目前仅有4次射门且只有1次射正。波斯尼亚和黑塞哥维那则采取了坚决的防守反击策略，虽然控球率仅有31%，但也有3次射门和1次射正，同时通过8次犯规有效破坏了瑞士队的进攻组织。随着比赛深入下半场，0-0的比分使得平局概率显著上升，但考虑到瑞士队在场面上的绝对压制力，他们更有可能在对方体能下降的阶段通过持续施压打破僵局。因此，瑞士队获胜的概率依然最高，预测最可能的最终比分为1-0。预计瑞士队的攻击手如 泽基·阿姆杜尼 或 布雷尔·恩博洛 极有可能在比赛中后段抓住防线漏洞取得进球；而波斯尼亚若想破门，则极度依赖 埃丁·哲科 在反击或定位球中的发挥。"
+      },
+      "sources": [],
+      "cost_usd": 0.0147777,
+      "tokens": {
+        "input": 1006,
+        "output": 2178
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.531
+    },
+    {
+      "submitted_at": "2026-06-18T20:22:29+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 67,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.4,
+        "away": 0.12
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Zeki Amdouni",
+          "minute": 78,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第67分钟，瑞士与波斯尼亚和黑塞哥维那的比分依然是0-0。从场面数据来看，瑞士队占据了绝对的主动权，控球率高达65%，并创造了8次射门（3次射正）和6个角球。相比之下，波斯尼亚和黑塞哥维那在进攻端表现乏力，仅有3次射门，主要依靠密集的防守和犯规来破坏瑞士队的进攻节奏。波黑队已经累计了14次犯规，并且在下半场短时间内连续吃到两张黄牌（阿马尔·德迪奇 和 埃丁·哲科），这表明他们的防线正承受着巨大的压力，体能和防守动作的规范性都在下降。随着比赛进入最后阶段，瑞士队持续的施压极有可能转化为进球。虽然0-0的平局概率依然不低，但考虑到波黑防线的消耗以及瑞士队在进攻端的投入，瑞士队在最后20多分钟内打破僵局的可能性最大。因此，预测瑞士队将以1-0拿下比赛。进攻核心如 泽基·阿姆杜尼 极有可能在比赛尾声阶段抓住波黑防线体能下降的漏洞完成致命一击。"
+      },
+      "sources": [],
+      "cost_usd": 0.01234275,
+      "tokens": {
+        "input": 1147,
+        "output": 1768
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.968
+    },
+    {
+      "submitted_at": "2026-06-18T20:39:39+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 84,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Switzerland",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.92,
+        "draw": 0.07,
+        "away": 0.01
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第84分钟，瑞士队目前以1-0领先波黑队。从场面数据来看，瑞士队占据了60%的控球率，并创造了9次射门机会（3次射正），在进攻端完全压制了对手。波黑队不仅在场面上处于劣势，而且在第80分钟时，塔里克·穆哈雷莫维奇 被红牌罚下，导致他们只能以10人应战。瑞士队的替补奇兵 约翰·曼赞比 在第74分钟打破僵局，这极大地提升了球队的士气。考虑到比赛所剩时间不多，且波黑队少打一人，他们很难组织起有效的反扑。瑞士队有极高的概率将1-0的比分保持到终场，甚至有可能利用对手大举压上留下的空当，通过反击再入一球。因此，主胜概率极高，最可能的最终比分是1-0。如果后续还有进球，状态出色的 约翰·曼赞比 或替补登场的 鲁文·巴尔加斯 是最有可能的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.01180725,
+      "tokens": {
+        "input": 1705,
+        "output": 1590
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.79
+    },
+    {
+      "submitted_at": "2026-06-18T20:56:35+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 1
+        },
+        "home": "Switzerland",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T19:00:00+00:00",
+        "venue": "Los Angeles Stadium",
+        "venue_city": null
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.99,
+        "draw": 0.01,
+        "away": 0.0
+      },
+      "most_likely_score": "4-1",
+      "scorers": [
+        {
+          "player": "Johan Manzambi",
+          "minute": 98,
+          "p": 0.85,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比赛已进入伤停补时阶段（常规时间90分钟），场上比分为瑞士3-1波黑。根据比赛数据与事件记录，瑞士队在下半场展现了压倒性的进攻优势，控球率高达62%，并由替补登场的曼赞比（约翰·曼赞比）和巴尔加斯（鲁文·巴尔加斯）连入三球。波黑队虽然在第93分钟由马赫米奇（Ermin Mahmic）扳回一城，但由于穆哈雷莫维奇（塔里克·穆哈雷莫维奇）在第80分钟被红牌罚下，少打一人的波黑队已无力回天。值得注意的是，第97分钟VAR介入并判给瑞士队一粒点球，这为他们进一步扩大比分提供了绝佳机会。考虑到曼赞比目前已梅开二度，他极有可能主罚此球以完成帽子戏法。综合当前局势、红牌影响及点球判罚，瑞士队胜券在握，最终比分极可能定格在4-1。"
+      },
+      "sources": [],
+      "cost_usd": 0.0156702,
+      "tokens": {
+        "input": 2348,
+        "output": 2096
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.941
+    }
+  ]
+}

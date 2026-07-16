@@ -1,0 +1,685 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-67_Panama_England_2026-06-27",
+  "provider_fixture_id": "19609199",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-27T22:51:33+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 2
+    },
+    "home": "Panama",
+    "away": "England",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-27T21:00:00+00:00",
+    "venue": "New York New Jersey Stadium",
+    "venue_city": "East Rutherford"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.0,
+      "draw": 0.0,
+      "away": 1.0
+    },
+    "most_likely_score": "0-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入第90分钟，英格兰队目前以2-0领先巴拿马队。从整场比赛的数据来看，英格兰队占据了绝对优势，控球率高达67%，并且有6次射正。下半场凭借 裘德·贝林厄姆 和 哈里·凯恩 的进球，英格兰队已经锁定了胜局。由于常规时间已经结束，比赛即将进入伤停补时阶段，巴拿马队扳平比分的可能性已经不存在。因此，英格兰队获胜的概率为100%。最可能的最终比分将维持在0-2。在补时阶段，替补登场的 奥利·沃特金斯 可能会利用对手体能下降和防线压上的机会，尝试在反击中寻找破门良机，但整体而言再次出现进球的概率较低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2041,
+    "output": 306
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.00407085,
+  "wall_seconds": 5.915,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.0,\n    \"draw\": 0.0,\n    \"away\": 1.0\n  },\n  \"most_likely_score\": \"0-2\",\n  \"scorers\": [\n    {\n      \"player\": \"Ollie Watkins\",\n      \"team\": \"away\",\n      \"minute\": 93,\n      \"p\": 0.05\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入第90分钟，英格兰队目前以2-0领先巴拿马队。从整场比赛的数据来看，英格兰队占据了绝对优势，控球率高达67%，并且有6次射正。下半场凭借 Jude Bellingham 和 Harry Kane 的进球，英格兰队已经锁定了胜局。由于常规时间已经结束，比赛即将进入伤停补时阶段，巴拿马队扳平比分的可能性已经不存在。因此，英格兰队获胜的概率为100%。最可能的最终比分将维持在0-2。在补时阶段，替补登场的 Ollie Watkins 可能会利用对手体能下降和防线压上的机会，尝试在反击中寻找破门良机，但整体而言再次出现进球的概率较低。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-27T21:05:33+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 5,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Panama",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.15,
+        "away": 0.8
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 35,
+          "p": 0.55,
+          "team": "away"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 68,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第5分钟，目前比分为0-0。开场阶段，虽然巴拿马队表现积极并率先完成了一次射正，但英格兰队迅速稳住了阵脚，控球率达到56%，掌控了比赛的整体节奏。英格兰门将也成功化解了对手的初次试探。作为本届世界杯的夺冠热门之一，英格兰队在整体实力、球员个人能力和战术素养上均大幅领先于巴拿马。尽管开局巴拿马有一次射门，但这不足以改变英格兰队极高的获胜概率。随着比赛深入，英格兰队的中前场压迫将逐渐撕开巴拿马的防线，预计英格兰将以2-0的比分稳稳拿下本场比赛。进球方面，英格兰的锋线核心 哈里·凯恩 极有可能在上半场中后段利用禁区内的抢点或定位球打破僵局，而边路快马 布卡约·萨卡 则有望在下半场利用对手体能下降、阵型前压时的空当扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0125937,
+      "tokens": {
+        "input": 978,
+        "output": 1836
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.744
+    },
+    {
+      "submitted_at": "2026-06-27T21:12:50+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 12,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Panama",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.15,
+        "away": 0.8
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 34,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 68,
+          "p": 0.3,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第12分钟，目前比分为0-0。从开场阶段的数据来看，英格兰队占据了绝对的主动权，控球率高达69%，并且已经获得了3个角球，展现出了强烈的进攻意图。巴拿马虽然处于被动防守状态，但也完成了一次中目标的射门。考虑到两队在整体实力上的巨大差距，英格兰队在适应了对方的防守节奏后，打破僵局只是时间问题。因此，英格兰队获胜的概率依然极高。预计英格兰将以2-0的比分拿下比赛，哈里·凯恩和布卡约·萨卡等核心攻击手在接下来的比赛中极有可能取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0058632,
+      "tokens": {
+        "input": 1000,
+        "output": 764
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.893
+    },
+    {
+      "submitted_at": "2026-06-27T21:19:49+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 19,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Panama",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.15,
+        "away": 0.8
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 38,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 65,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第19分钟，目前比分依然是0-0。从场面数据来看，英格兰队完全掌控了比赛节奏，控球率高达72%，并且已经获得了4次角球和3次射门（其中2次射正）。巴拿马队则处于被动防守状态，仅有28%的控球率，并已经付出了6次犯规来破坏英格兰的进攻节奏。尽管巴拿马门将做出了2次扑救力保球门不失，但面对英格兰持续的高压进攻，防线出现漏洞只是时间问题。基于双方实力差距和目前的场面压制力，英格兰队获胜的概率极高。预计英格兰将在上半场中后段打破僵局，最终以0-2的比分拿下比赛。在进球球员方面，作为英格兰的进攻核心和第一点球手，哈里·凯恩（哈里·凯恩）极有可能在禁区内寻觅到破门良机；而随着比赛深入，巴拿马体能下降，布卡约·萨卡（布卡约·萨卡）在边路的突破将制造巨大威胁，有望在下半场扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0037968,
+      "tokens": {
+        "input": 1000,
+        "output": 436
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.967
+    },
+    {
+      "submitted_at": "2026-06-27T21:26:50+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 26,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Panama",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.15,
+        "away": 0.8
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 41,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 68,
+          "p": 0.3,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第26分钟，巴拿马与英格兰暂时战成0-0平。从目前的场面数据来看，英格兰完全掌控了比赛节奏，控球率高达72%，并已经创造了5次射门和4个角球。巴拿马则主要处于被动防守状态，通过较多的犯规（7次）来破坏对方的进攻节奏，仅有1次射门。尽管目前比分未被改写，但英格兰强大的进攻火力随时可能打破僵局。随着比赛深入，巴拿马的防线专注度将面临巨大考验。预计英格兰将在上半场末段或下半场取得进球，最终以2-0获胜的概率最大。哈里·凯恩和裘德·贝林厄姆等核心球员极有可能在接下来的比赛中建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.0069153,
+      "tokens": {
+        "input": 1000,
+        "output": 931
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.041
+    },
+    {
+      "submitted_at": "2026-06-27T21:34:00+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 34,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Panama",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.2,
+        "away": 0.75
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 55,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 78,
+          "p": 0.3,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第34分钟，巴拿马与英格兰暂时战成0-0平。从场面数据来看，英格兰队占据了绝对的主动权，控球率高达70%，并获得了4次角球和5次射门机会。然而，巴拿马队在防守端表现顽强，且反击颇具威胁，在仅有30%控球率的情况下完成了3次射门，其中2次射正，反而比英格兰（1次射正）更多地考验了对方门将。尽管目前比分未被改写，但考虑到英格兰队在整体实力、阵容深度以及持续施压能力上的巨大优势，随着比赛深入，巴拿马的防线在持续高压下极易因体能下降而出现漏洞。因此，英格兰队最终获胜的概率依然高达75%，平局概率约为20%，巴拿马爆冷取胜的概率仅为5%。预计英格兰将在下半场打破僵局并确立胜势，最可能的最终比分为0-2。进攻核心如哈里·凯恩（哈里·凯恩）和祖德·贝林厄姆（裘德·贝林厄姆）极有可能在下半场利用阵地战或定位球机会为英格兰建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.013676249999999997,
+      "tokens": {
+        "input": 1001,
+        "output": 2004
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.407
+    },
+    {
+      "submitted_at": "2026-06-27T21:41:18+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 41,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Panama",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.22,
+        "away": 0.7
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 58,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 78,
+          "p": 0.3,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第41分钟，巴拿马与英格兰暂时战成0-0平。从场面数据来看，英格兰占据了绝对的主导地位，控球率高达71%，并完成了8次射门和4次角球。然而，巴拿马展现出了极强的防守韧性，并且在仅有的29%控球率下打出了高效反击，3次射门中有2次射正，迫使英格兰门将做出了2次扑救。尽管上半场即将以平局收场，但英格兰在整体实力和持续施压能力上优势明显。随着比赛深入，巴拿马的体能可能会在长时间的被动防守中消耗殆尽。因此，英格兰最终获胜的概率依然高达70%，平局概率为22%，巴拿马爆冷取胜的概率仅为8%。最可能的最终比分预测为0-2，英格兰有望在下半场打破僵局。预计 哈里·凯恩 等核心攻击手将在下半场中段（约第58分钟）利用阵地战或定位球机会首开纪录，而 布卡约·萨卡 则有望在比赛尾声阶段（约第78分钟）利用对手体能下降后的防线空当扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.013738199999999999,
+      "tokens": {
+        "input": 1000,
+        "output": 2014
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.41
+    },
+    {
+      "submitted_at": "2026-06-27T21:48:18+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Panama",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.22,
+        "away": 0.7
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "H. Kane",
+          "minute": 58,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "J. Bellingham",
+          "minute": 76,
+          "p": 0.3,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场比赛结束，巴拿马暂时以0-0战平英格兰。从半场数据来看，英格兰在场面上占据绝对主动，控球率高达72%，并获得了5次角球和8次射门机会。不过巴拿马防守十分顽强，且在有限的控球时间里也完成了2次命中目标的射门，给英格兰防线带来了一定考验。尽管半场互交白卷，但考虑到双方整体实力的巨大差距以及英格兰持续的战术施压，客队在下半场打破僵局的概率依然极高。随着比赛深入，巴拿马的体能下降可能会在防守端暴露更多空当，预计英格兰能够顺利拿下比赛，最可能的最终比分为0-2。在进球球员方面，英格兰的进攻核心如哈里·凯恩（H. Kane）和贝林厄姆（J. Bellingham）极有可能在下半场利用阵地战或定位球机会为球队建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.0035574,
+      "tokens": {
+        "input": 1000,
+        "output": 398
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.275
+    },
+    {
+      "submitted_at": "2026-06-27T22:06:37+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 51,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Panama",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.27,
+        "away": 0.65
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 68,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 82,
+          "p": 0.22,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第51分钟，巴拿马与英格兰暂时战成0-0平。从上半场及下半场初段的场面来看，英格兰占据了绝对的控制权，控球率高达73%，并完成了9次射门和5次角球。然而，巴拿马展现出了极具韧性的防守，通过积极的拼抢和战术犯规（已累计11次犯规）有效破坏了英格兰的进攻节奏，双方目前各有2次射正。尽管英格兰迟迟未能打破僵局，但随着比赛深入，巴拿马球员的体能可能会因为长时间的被动防守而下降。基于英格兰强大的阵容深度和持续的进攻施压，客队获胜的概率依然高达65%，而随着时间流逝，平局的概率上升至27%，巴拿马爆冷取胜的概率仅为8%。综合来看，最可能的最终比分是0-1，预计英格兰将在下半场中后段通过核心球员如 哈里·凯恩 或 裘德·贝林厄姆 的个人能力或定位球机会攻入制胜一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.00378525,
+      "tokens": {
+        "input": 1073,
+        "output": 422
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.774
+    },
+    {
+      "submitted_at": "2026-06-27T22:13:51+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 58,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Panama",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.27,
+        "away": 0.65
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 74,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 86,
+          "p": 0.22,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第58分钟，巴拿马与英格兰的比分依然维持在0-0。从场面数据来看，英格兰占据了绝对的统治地位，控球率高达72%，并创造了9次射门和5个角球。然而，巴拿马的密集防守和积极的身体对抗（已累计12次犯规并有一张黄牌）让英格兰暂时难以打破僵局。随着比赛进入最后半小时，英格兰势必会进一步加强进攻节奏并调兵遣将。尽管随着时间流逝，平局的概率有所上升，但英格兰凭借强大的整体实力和锋线深度，依然有很大概率在比赛后段取得进球。预计英格兰最终能以1-0小胜对手，哈里·凯恩 或 裘德·贝林厄姆 等核心球员极有可能在最后阶段挺身而出完成致命一击。"
+      },
+      "sources": [],
+      "cost_usd": 0.0035007,
+      "tokens": {
+        "input": 1138,
+        "output": 366
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.652
+    },
+    {
+      "submitted_at": "2026-06-27T22:20:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 65,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Panama",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.37,
+        "away": 0.55
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 78,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Jude Bellingham",
+          "minute": 85,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第65分钟，巴拿马与英格兰的比分依然维持在0-0。从场面数据来看，英格兰占据了绝对的控球优势（72%）并创造了11次射门机会，但仅有3次射正，显示出他们在破密集防守时遇到了一定阻力。巴拿马虽然控球率仅有28%，但也完成了4次射门和2次射正，展现出一定的反击威胁。随着比赛进入最后阶段，平局的概率有所上升，但英格兰凭借整体实力和阵容深度，依然有较大机会在比赛尾声阶段打破僵局。因此，客队取胜的概率依然最高，最可能的最终比分预测为0-1。预计英格兰的锋线核心如 哈里·凯恩 或 裘德·贝林厄姆 等球员有望在最后20分钟左右完成致命一击。"
+      },
+      "sources": [],
+      "cost_usd": 0.0035868000000000002,
+      "tokens": {
+        "input": 1208,
+        "output": 368
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.875
+    },
+    {
+      "submitted_at": "2026-06-27T22:27:48+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 72,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Panama",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.005,
+        "draw": 0.015,
+        "away": 0.98
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "minute": 84,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Noni Madueke",
+          "minute": 89,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第72分钟，英格兰队目前以2-0领先巴拿马队。从场面数据来看，英格兰队占据了绝对的统治地位，控球率高达71%，并创造了14次射门机会。下半场贝林厄姆（裘德·贝林厄姆）和哈里·凯恩（哈里·凯恩）在短时间内连入两球，彻底打破了场上的僵局。巴拿马队在落后的情况下必须大举压上以寻求进球，这将不可避免地在后防线上留下更多空当。考虑到英格兰队强大的攻击火力和替补上场的生力军（如马杜埃凯 诺尼·马杜埃凯），他们极有可能在比赛尾声阶段利用反击或阵地战再下一城。因此，英格兰队获胜的概率已经极高，最可能的最终比分预计为0-3。哈里·凯恩和替补登场的马杜埃凯是后续最有可能取得进球的球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.004095,
+      "tokens": {
+        "input": 1488,
+        "output": 402
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.26
+    },
+    {
+      "submitted_at": "2026-06-27T22:44:15+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 89,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Panama",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.001,
+        "draw": 0.001,
+        "away": 0.998
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第89分钟，英格兰目前以2-0领先巴拿马。下半场贝林厄姆（裘德·贝林厄姆）和哈里·凯恩（哈里·凯恩）在短时间内连入两球，帮助英格兰确立了胜势。从场面数据来看，英格兰掌控了66%的控球率，并在进攻端持续施压；巴拿马虽然也有一定的射门尝试，但缺乏足够的绝对得分机会。由于常规时间仅剩1分钟加上伤停补时，巴拿马连扳两球的概率微乎其微，英格兰客场获胜已基本毫无悬念。最可能的最终比分即为当前的0-2。在最后的补时阶段，巴拿马可能会大举压上尝试挽回颜面，这会给英格兰留下反击空间，替补登场的前锋沃特金斯（奥利·沃特金斯）具备利用速度和体能优势在补时阶段打入第三球的潜力，但总体而言，比赛大概率将以现有比分平稳结束。"
+      },
+      "sources": [],
+      "cost_usd": 0.010959900000000002,
+      "tokens": {
+        "input": 1906,
+        "output": 1422
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.447
+    },
+    {
+      "submitted_at": "2026-06-27T22:51:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Panama",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T21:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.0,
+        "away": 1.0
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，英格兰队目前以2-0领先巴拿马队。从整场比赛的数据来看，英格兰队占据了绝对优势，控球率高达67%，并且有6次射正。下半场凭借 裘德·贝林厄姆 和 哈里·凯恩 的进球，英格兰队已经锁定了胜局。由于常规时间已经结束，比赛即将进入伤停补时阶段，巴拿马队扳平比分的可能性已经不存在。因此，英格兰队获胜的概率为100%。最可能的最终比分将维持在0-2。在补时阶段，替补登场的 奥利·沃特金斯 可能会利用对手体能下降和防线压上的机会，尝试在反击中寻找破门良机，但整体而言再次出现进球的概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.00407085,
+      "tokens": {
+        "input": 2041,
+        "output": 306
+      },
+      "tool_calls": 0,
+      "wall_seconds": 5.915
+    }
+  ]
+}

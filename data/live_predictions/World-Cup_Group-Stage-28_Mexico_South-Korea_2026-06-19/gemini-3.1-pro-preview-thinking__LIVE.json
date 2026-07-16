@@ -1,0 +1,226 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-28_Mexico_South-Korea_2026-06-19",
+  "provider_fixture_id": "19609128",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-19T02:48:15+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 0
+    },
+    "home": "Mexico",
+    "away": "Korea Republic",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-19T01:00:00+00:00",
+    "venue": "Guadalajara Stadium",
+    "venue_city": "Zapopan"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.96,
+      "draw": 0.03,
+      "away": 0.01
+    },
+    "most_likely_score": "1-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入第90分钟，当前比分为墨西哥1-0领先韩国。从场面数据来看，尽管韩国队在控球率上以56%占据优势，但他们全场仅有4次射门且0次射正，未能对墨西哥球门造成实质性威胁。相反，墨西哥队在进攻端表现得更加高效，8次射门中有4次射正，并由路易斯·罗莫（路易斯·罗莫）在第50分钟打入目前全场唯一进球。随着比赛进入伤停补时阶段，墨西哥队全取三分的概率极高。韩国队虽然连续换上曹圭成（Gue-sung Cho）等攻击手试图做最后一搏，但面对墨西哥稳固的防守，扳平比分的难度极大。同时，墨西哥队替补登场的圣地亚哥·希门尼斯（Santiago Gimenez）有望利用韩国队全线压上留下的防守空当，在补时阶段通过反击扩大比分。综合当前局势与剩余时间，最可能的最终比分将维持在1-0。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1889,
+    "output": 1661
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.01244775,
+  "wall_seconds": 18.746,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.96,\n    \"draw\": 0.03,\n    \"away\": 0.01\n  },\n  \"most_likely_score\": \"1-0\",\n  \"scorers\": [\n    {\n      \"player\": \"Santiago Gimenez\",\n      \"team\": \"home\",\n      \"minute\": 93,\n      \"p\": 0.05\n    },\n    {\n      \"player\": \"Gue-sung Cho\",\n      \"team\": \"away\",\n      \"minute\": 94,\n      \"p\": 0.02\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入第90分钟，当前比分为墨西哥1-0领先韩国。从场面数据来看，尽管韩国队在控球率上以56%占据优势，但他们全场仅有4次射门且0次射正，未能对墨西哥球门造成实质性威胁。相反，墨西哥队在进攻端表现得更加高效，8次射门中有4次射正，并由路易斯·罗莫（Luis Romo）在第50分钟打入目前全场唯一进球。随着比赛进入伤停补时阶段，墨西哥队全取三分的概率极高。韩国队虽然连续换上曹圭成（Gue-sung Cho）等攻击手试图做最后一搏，但面对墨西哥稳固的防守，扳平比分的难度极大。同时，墨西哥队替补登场的圣地亚哥·希门尼斯（Santiago Gimenez）有望利用韩国队全线压上留下的防守空当，在补时阶段通过反击扩大比分。综合当前局势与剩余时间，最可能的最终比分将维持在1-0。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Match Analysis: Mexico vs. Korea Republic (90'+)**\n\nOkay, here's the breakdown as the match hits the 90th minute. Mexico is leading Korea Republic 1-0, with Luis Romo's goal at the 50th minute being the difference-maker. Looking at the stats, Mexico's control over the match is clearly evident despite Korea's slightly higher possession (56% to 44%). They've been far more clinical in attack, with 4 shots on target from 8 total shots, while Korea Republic has struggled to create genuine chances, registering zero shots on target from their 4 attempts. The Mexican goalkeeper hasn't had to make a single save. Given these stats and the late stage of the game, I'm increasing the probability of a Mexican victory to a very high 96%. A draw is now at 3%, and a Korean win is highly unlikely, just 1%.\n\nTherefore, the most probable final score is 1-0. However, in these dying moments, there's always the chance for a late goal. Let's consider potential scorers: Santiago Gimenez, who came on as a substitute for Mexico at the 80th minute, and Gue-sung Cho, another substitute for Korea Republic, who came on at the 77th minute. I'm assigning a 5% chance of Gimenez scoring in the 93rd minute and a 2% chance of Gue-sung Cho equalizing in the 94th. The format is right, the probabilities are assigned, and the output is JSON only. Everything's accounted for. I'm calling it a day.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-19T01:37:28+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 37,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T01:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.3,
+        "away": 0.15
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Santiago Giménez",
+          "minute": 65,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Heung-min Son",
+          "minute": 78,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第37分钟，墨西哥与韩国暂时战成0-0平。从场面数据来看，坐镇主场（瓜达拉哈拉）的墨西哥队占据了绝对优势，控球率高达62%，并完成了3次射门（1次射正）。相比之下，韩国队在进攻端完全哑火，至今零射门，且开场仅4分钟李刚仁（Kang-in Lee）就领到黄牌，球队整体处于被动防守和破坏对方节奏的状态（已累计4次犯规）。考虑到墨西哥的主场优势和持续的场面压制，他们打破僵局的可能性依然最高，胜率预估为55%。不过随着上半场尾声临近且比分未变，平局的概率也上升至30%。结合目前韩国队密集的防守和墨西哥队相对有限的绝对得分机会，预计这将是一场低比分的较量，最可能的最终比分是墨西哥1-0小胜。在后续进球预测方面，墨西哥主力前锋圣地亚哥·希门尼斯（圣地亚哥·希门尼斯）有望在下半场随着对方体能下降时寻觅到破门良机；而韩国队若想通过反击制造威胁，孙兴慜（Heung-min Son）将是他们最核心的得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.014765099999999998,
+      "tokens": {
+        "input": 1048,
+        "output": 2169
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.775
+    },
+    {
+      "submitted_at": "2026-06-19T02:12:13+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 57,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T01:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.76,
+        "draw": 0.18,
+        "away": 0.06
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Santiago Giménez",
+          "minute": 75,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Heung-min Son",
+          "minute": 82,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第57分钟，墨西哥凭借路易斯·罗莫（路易斯·罗莫）在下半场初段（第50分钟）的进球，目前以1-0领先韩国。从场面数据来看，尽管韩国队在控球率上以52%略占优势，但他们在进攻端的实质威胁十分有限，至今仅有2次射门且无一射正，未能对墨西哥门将造成任何考验。相比之下，坐拥瓜达拉哈拉绝对主场之利的墨西哥队进攻更为直接高效，已完成6次射门并有2次射正。韩国中场核心李刚仁（Kang-in Lee）开场仅4分钟便领到黄牌，这在一定程度上限制了他在中场的防守硬度与战术动作。随着比赛深入，落后的韩国队势必需要阵型前压以寻求扳平比分的机会，这将不可避免地暴露后防空档。考虑到墨西哥队目前的比分优势、主场加成以及反击中的速度优势，他们赢下比赛的概率已大幅提升。预计韩国队的阵地战进攻难以轻易打穿墨西哥的防线，而墨西哥极有可能在比赛后段利用对手压上留下的空间，通过快速反击再入一球。因此，最可能的最终比分定格为2-0，墨西哥前锋如圣地亚哥·希门尼斯（圣地亚哥·希门尼斯）有望在第75分钟左右抓住反击机会锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.013459949999999998,
+      "tokens": {
+        "input": 1113,
+        "output": 1951
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.166
+    },
+    {
+      "submitted_at": "2026-06-19T02:30:05+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 75,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T01:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.18,
+        "away": 0.04
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第75分钟，墨西哥目前以1-0领先韩国。尽管韩国队在控球率上占据优势（55%），但他们在进攻端显得缺乏穿透力，全场仅有3次射门且无一射正。墨西哥队在第50分钟由路易斯·罗莫（路易斯·罗莫）打破僵局后，防守端表现稳健，并利用反击制造了更多威胁（6次射门2次射正）。韩国队在落后时进行了换人调整，换上黄喜灿（Hee-chan Hwang）和吴贤揆（Hyeon-gyu Oh）试图加强进攻，但目前仍未创造出实质性威胁。考虑到比赛仅剩15分钟左右的常规时间，墨西哥队全取三分的概率大幅上升至78%，平局概率约为18%，而韩国队逆转取胜的概率仅剩4%。最可能的最终比分将维持在1-0。不过，随着韩国队在比赛尾声阶段大举压上，防线身后可能暴露出空当，墨西哥有机会通过反击扩大比分，状态出色的路易斯·罗莫有望再次制造杀机；同时韩国队的替补前锋黄喜灿也有可能利用体能优势在乱战中寻找扳平比分的机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.0163947,
+      "tokens": {
+        "input": 1328,
+        "output": 2381
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.087
+    },
+    {
+      "submitted_at": "2026-06-19T02:48:15+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "Korea Republic",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-19T01:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.96,
+        "draw": 0.03,
+        "away": 0.01
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，当前比分为墨西哥1-0领先韩国。从场面数据来看，尽管韩国队在控球率上以56%占据优势，但他们全场仅有4次射门且0次射正，未能对墨西哥球门造成实质性威胁。相反，墨西哥队在进攻端表现得更加高效，8次射门中有4次射正，并由路易斯·罗莫（路易斯·罗莫）在第50分钟打入目前全场唯一进球。随着比赛进入伤停补时阶段，墨西哥队全取三分的概率极高。韩国队虽然连续换上曹圭成（Gue-sung Cho）等攻击手试图做最后一搏，但面对墨西哥稳固的防守，扳平比分的难度极大。同时，墨西哥队替补登场的圣地亚哥·希门尼斯（Santiago Gimenez）有望利用韩国队全线压上留下的防守空当，在补时阶段通过反击扩大比分。综合当前局势与剩余时间，最可能的最终比分将维持在1-0。"
+      },
+      "sources": [],
+      "cost_usd": 0.01244775,
+      "tokens": {
+        "input": 1889,
+        "output": 1661
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.746
+    }
+  ]
+}

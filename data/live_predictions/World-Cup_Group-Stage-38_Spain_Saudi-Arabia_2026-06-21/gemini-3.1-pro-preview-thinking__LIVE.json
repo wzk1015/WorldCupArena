@@ -1,0 +1,239 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-38_Spain_Saudi-Arabia_2026-06-21",
+  "provider_fixture_id": "19609142",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-21T17:47:44+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 4,
+      "away": 0
+    },
+    "home": "Spain",
+    "away": "Saudi Arabia",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-21T16:00:00+00:00",
+    "venue": "Atlanta Stadium",
+    "venue_city": "Atlanta"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 1.0,
+      "draw": 0.0,
+      "away": 0.0
+    },
+    "most_likely_score": "4-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进入常规时间最后一分钟，当前比分为西班牙 4-0 领先沙特阿拉伯。从场面数据来看，西班牙占据了绝对的统治地位，控球率高达 68%，全场狂轰 21 脚射门且有 8 次射正。上半场凭借 拉明·亚马尔 的首开纪录以及 米克尔·奥亚萨瓦尔 的梅开二度，西班牙早早确立了巨大优势，并在下半场初段造成了 Hassan Tambakti 的乌龙球。由于比赛即将结束且分差悬殊，西班牙获胜的概率已达到 100%。最可能的最终比分即为当前的 4-0。在伤停补时阶段，虽然再次进球的整体概率较低，但如果西班牙继续施压，替补登场的攻击手如 费兰·托雷斯 或 尼科·威廉姆斯 仍有可能利用对手体能下降与防线松懈的机会完成破门。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2058,
+    "output": 1285
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.010256399999999999,
+  "wall_seconds": 14.811,
+  "error": null,
+  "raw_text": "```json\n{\n  \"win_probs\": {\n    \"home\": 1.0,\n    \"draw\": 0.0,\n    \"away\": 0.0\n  },\n  \"most_likely_score\": \"4-0\",\n  \"scorers\": [\n    {\n      \"player\": \"Ferran Torres\",\n      \"team\": \"home\",\n      \"minute\": 92,\n      \"p\": 0.05\n    },\n    {\n      \"player\": \"Nico Williams\",\n      \"team\": \"home\",\n      \"minute\": 94,\n      \"p\": 0.03\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已进入常规时间最后一分钟，当前比分为西班牙 4-0 领先沙特阿拉伯。从场面数据来看，西班牙占据了绝对的统治地位，控球率高达 68%，全场狂轰 21 脚射门且有 8 次射正。上半场凭借 Lamine Yamal 的首开纪录以及 Mikel Oyarzabal 的梅开二度，西班牙早早确立了巨大优势，并在下半场初段造成了 Hassan Tambakti 的乌龙球。由于比赛即将结束且分差悬殊，西班牙获胜的概率已达到 100%。最可能的最终比分即为当前的 4-0。在伤停补时阶段，虽然再次进球的整体概率较低，但如果西班牙继续施压，替补登场的攻击手如 Ferran Torres 或 Nico Williams 仍有可能利用对手体能下降与防线松懈的机会完成破门。\"\n  },\n  \"sources\": []\n}\n```",
+  "thinking_text": "**Game Analysis: Spain vs. Saudi Arabia - Final Thoughts**\n\nOkay, here's the breakdown. Spain's absolutely crushing Saudi Arabia, 4-0, and we're at the 90th minute. It's essentially over. Looking at the stats – 68% possession, 21 shots, 8 on target – it's a complete mismatch. Spain's clearly superior and their victory is a certainty, probability-wise, it's 1.000. No way Saudi Arabia is coming back from this. The most likely final score, unsurprisingly, is the current 4-0.\n\nNow, it's stoppage time, but if there's a goal it'll probably be by a sub, it's a low probability, but still possible. Ferran Torres or Nico Williams, both of whom came on, could grab a late one, so let's account for that, even if it's just a tiny chance.\n\nSo, final call? 4-0 is the safe bet, but we'll include a small probability for Torres or Williams scoring in stoppage time. Ready to format this into the final JSON output.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-21T16:20:16+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 20,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Saudi Arabia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.93,
+        "draw": 0.06,
+        "away": 0.01
+      },
+      "most_likely_score": "3-0",
+      "scorers": [
+        {
+          "player": "Mikel Oyarzabal",
+          "minute": 38,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 65,
+          "p": 0.28,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第20分钟，西班牙目前以1-0领先沙特阿拉伯。开场仅11分钟，拉明·亚马尔（拉明·亚马尔）接米克尔·奥亚萨瓦尔（米克尔·奥亚萨瓦尔）的助攻率先破门，为西班牙早早确立了优势。从场面数据来看，西班牙展现了绝对的统治力，控球率高达79%，且在短短20分钟内已经狂轰8脚射门，而沙特阿拉伯至今未能完成任何射门或角球，完全被压制在己方半场。基于这种极度倾斜的比赛走势，西班牙获胜的概率已经极高。预计西班牙将在接下来的比赛中继续掌控绝对球权并持续施压，沙特阿拉伯很难组织起实质性的反击。最终比分最有可能定格在3-0。在后续进球者方面，状态活跃且已有助攻入账的奥亚萨瓦尔极具破门机会，而展现出极佳竞技状态的亚马尔也有望在下半场利用对手阵型前压或体能下降的空档完成梅开二度。"
+      },
+      "sources": [],
+      "cost_usd": 0.015465449999999999,
+      "tokens": {
+        "input": 1073,
+        "output": 2276
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.912
+    },
+    {
+      "submitted_at": "2026-06-21T16:41:31+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 41,
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Saudi Arabia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.992,
+        "draw": 0.007,
+        "away": 0.001
+      },
+      "most_likely_score": "4-0",
+      "scorers": [
+        {
+          "player": "Mikel Oyarzabal",
+          "minute": 58,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Dani Olmo",
+          "minute": 74,
+          "p": 0.28,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第41分钟，西班牙目前以3-0遥遥领先沙特阿拉伯。从场面数据来看，西班牙占据了绝对的统治地位，控球率高达75%，狂轰15脚射门且有5次射正。沙特阿拉伯仅有1脚射门且未中目标，完全处于被动防守的局面。拉明·亚马尔在第11分钟首开纪录，随后米克尔·奥亚萨瓦尔在短短3分钟内完成梅开二度，彻底打穿了对手的防线。鉴于巨大的比分优势和压倒性的场面控制力，西班牙获胜的概率已经超过99%。沙特阿拉伯在进攻端毫无建树，且萨勒姆·道萨里已经染黄，球队在下半场扳平或逆转的可能性微乎其微。预计下半场西班牙会适当控制节奏并进行人员轮换以备战后续比赛，但由于双方实力差距悬殊，西班牙仍有很大机会利用反击或阵地战继续扩大比分。最可能的最终比分预测为4-0。后续进球方面，状态火热的米克尔·奥亚萨瓦尔极有可能在下半场完成帽子戏法，而频频送出威胁传球的达尼·奥尔莫也有望在下半场中后段斩获进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.01262625,
+      "tokens": {
+        "input": 1285,
+        "output": 1790
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.885
+    },
+    {
+      "submitted_at": "2026-06-21T17:26:30+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 4,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Saudi Arabia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.999,
+        "draw": 0.001,
+        "away": 0.0
+      },
+      "most_likely_score": "5-0",
+      "scorers": [
+        {
+          "player": "Ferran Torres",
+          "minute": 81,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Nico Williams",
+          "minute": 87,
+          "p": 0.18,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第71分钟，西班牙以4-0遥遥领先沙特阿拉伯。从场面数据来看，西班牙占据了绝对的统治地位，控球率高达72%，狂轰20脚射门且有8次射正，而沙特阿拉伯至今零射正，完全被压制在半场。由于巨大的比分差距和剩余时间所剩无几，西班牙获胜的概率已接近100%。在下半场，西班牙换上了费兰·托雷斯（费兰·托雷斯）、尼科·威廉斯（尼科·威廉姆斯）和耶雷米·皮诺（耶雷米·皮诺）等生力军，这些进攻球员体能充沛且极具冲击力。面对体能下降且士气低落的沙特防线，西班牙极有可能在比赛尾声阶段再入一球。因此，最可能的最终比分预测为5-0。后续进球逻辑方面，替补登场的费兰·托雷斯和尼科·威廉斯将是扩大比分的最有力候选人。"
+      },
+      "sources": [],
+      "cost_usd": 0.00852915,
+      "tokens": {
+        "input": 1997,
+        "output": 1021
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.166
+    },
+    {
+      "submitted_at": "2026-06-21T17:47:44+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 4,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Saudi Arabia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 1.0,
+        "draw": 0.0,
+        "away": 0.0
+      },
+      "most_likely_score": "4-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入常规时间最后一分钟，当前比分为西班牙 4-0 领先沙特阿拉伯。从场面数据来看，西班牙占据了绝对的统治地位，控球率高达 68%，全场狂轰 21 脚射门且有 8 次射正。上半场凭借 拉明·亚马尔 的首开纪录以及 米克尔·奥亚萨瓦尔 的梅开二度，西班牙早早确立了巨大优势，并在下半场初段造成了 Hassan Tambakti 的乌龙球。由于比赛即将结束且分差悬殊，西班牙获胜的概率已达到 100%。最可能的最终比分即为当前的 4-0。在伤停补时阶段，虽然再次进球的整体概率较低，但如果西班牙继续施压，替补登场的攻击手如 费兰·托雷斯 或 尼科·威廉姆斯 仍有可能利用对手体能下降与防线松懈的机会完成破门。"
+      },
+      "sources": [],
+      "cost_usd": 0.010256399999999999,
+      "tokens": {
+        "input": 2058,
+        "output": 1285
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.811
+    }
+  ]
+}

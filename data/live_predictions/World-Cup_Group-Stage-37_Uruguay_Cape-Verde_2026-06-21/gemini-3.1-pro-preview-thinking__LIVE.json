@@ -1,0 +1,277 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-37_Uruguay_Cape-Verde_2026-06-21",
+  "provider_fixture_id": "19609178",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-21T23:57:26+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 2
+    },
+    "home": "Uruguay",
+    "away": "Cape Verde Islands",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-21T22:00:00+00:00",
+    "venue": "Miami Stadium",
+    "venue_city": "Miami Gardens"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.12,
+      "draw": 0.85,
+      "away": 0.03
+    },
+    "most_likely_score": "2-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入第90分钟，当前比分为乌拉圭 2-2 佛得角。从全场数据来看，乌拉圭占据了绝对的场面主动权，控球率高达67%，并获得了11次角球和16次总射门。然而，他们的射门精度欠佳，全场仅有2次射正，虽然这两次射正全部转化为进球（分别由 Maxi Araújo 和 阿古斯丁·卡诺比奥 打进），但防守端同样暴露了问题。佛得角展现了极高的反击效率，全场仅有33%的控球率和7次射门，但2次射正全部得分（Kevin Lenini 和 埃利奥·瓦雷拉 建功）。由于常规时间已经耗尽，比赛即将进入伤停补时阶段，双方在最后几分钟内改写比分的可能性大幅降低，平局的概率目前已攀升至最高，预计最终比分大概率定格在 2-2。不过，考虑到乌拉圭在场面上的持续压制，以及在比赛尾声换上 布莱恩·罗德里格斯 等生力军加强进攻，主队仍有微弱的机会在补时阶段完成绝杀。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2103,
+    "output": 1827
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.01371825,
+  "wall_seconds": 18.469,
+  "error": null,
+  "raw_text": "```json\n{\n  \"win_probs\": {\n    \"home\": 0.12,\n    \"draw\": 0.85,\n    \"away\": 0.03\n  },\n  \"most_likely_score\": \"2-2\",\n  \"scorers\": [\n    {\n      \"player\": \"Brian Rodríguez\",\n      \"team\": \"home\",\n      \"minute\": 94,\n      \"p\": 0.05\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入第90分钟，当前比分为乌拉圭 2-2 佛得角。从全场数据来看，乌拉圭占据了绝对的场面主动权，控球率高达67%，并获得了11次角球和16次总射门。然而，他们的射门精度欠佳，全场仅有2次射正，虽然这两次射正全部转化为进球（分别由 Maxi Araújo 和 Agustín Canobbio 打进），但防守端同样暴露了问题。佛得角展现了极高的反击效率，全场仅有33%的控球率和7次射门，但2次射正全部得分（Kevin Lenini 和 Hélio Varela 建功）。由于常规时间已经耗尽，比赛即将进入伤停补时阶段，双方在最后几分钟内改写比分的可能性大幅降低，平局的概率目前已攀升至最高，预计最终比分大概率定格在 2-2。不过，考虑到乌拉圭在场面上的持续压制，以及在比赛尾声换上 Brian Rodríguez 等生力军加强进攻，主队仍有微弱的机会在补时阶段完成绝杀。\"\n  },\n  \"sources\": []\n}\n```",
+  "thinking_text": "**Match Analysis: Uruguay vs. Cape Verde Islands**\n\nOkay, so we're at the 90th minute of the Uruguay vs. Cape Verde match, and the score is locked at 2-2. Looking at the data, Uruguay has had the lion's share of possession at 67%, they've taken 16 shots, earned 11 corners, and just 2 shots on goal, converting them all. Cape Verde, on the other hand, has been efficient, with only 33% possession and 7 shots, but they've scored on both of their 2 shots on target. Both teams have a 100% conversion rate on target.\n\nIt's clear that Uruguay has been controlling the game, but they haven't been clinical enough in front of goal. Now that the match is in the 90th minute, it's pretty much stoppage time. I'd say the probability of a draw is extremely high given the remaining time. I'm going to set it at 0.85, with a small probability of Uruguay scoring a late winner (0.12) due to their possession advantage and a very small chance for Cape Verde to steal it (0.03).\n\nTherefore, the most likely score is 2-2. Considering the match state, I will add Brian Rodríguez, who subbed on in the 82nd minute, and I'll predict he has a small chance to score at minute 94.\n\nMy final prediction: a 2-2 draw with a potential stoppage-time goal by Brian Rodríguez for Uruguay.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-21T22:25:40+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 25,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Uruguay",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.28,
+        "away": 0.2
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Darwin Núñez",
+          "minute": 27,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Federico Valverde",
+          "minute": 68,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第25分钟，佛得角凭借凯文·莱尼尼（Kevin Lenini）在第21分钟的进球意外取得1-0的领先。然而，从场面数据来看，乌拉圭占据了绝对的主动权，控球率高达66%，并获得了4次角球机会。虽然乌拉圭目前3次射门均未射正，但第25分钟VAR介入并涉及乌拉圭的点球判罚，这极大地改变了比赛的走势预期。考虑到乌拉圭整体实力的巨大优势以及充足的剩余比赛时间，他们极有可能利用这次点球机会迅速扳平比分，并在随后的比赛中继续施压实现反超。佛得角虽然反击效率极高，但在巨大的防守压力下很难全场保持领先。因此，预测乌拉圭最终能够稳住阵脚并逆转取胜，最可能的最终比分为2-1。预计达尔文·努涅斯（达尔文·努涅斯）有望主罚点球命中，而费德里科·巴尔韦德（费德里科·巴尔韦德）等核心球员也有望在下半场利用远射或后插上为球队建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.01051575,
+      "tokens": {
+        "input": 1255,
+        "output": 1460
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.298
+    },
+    {
+      "submitted_at": "2026-06-21T22:48:38+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Uruguay",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Darwin Núñez",
+          "minute": 65,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Maxi Araújo",
+          "minute": 78,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场结束，乌拉圭与佛得角战成1-1平。从比赛进程来看，佛得角在第21分钟凭借凯文·莱尼尼（Kevin Lenini）的进球取得领先，但乌拉圭在半场结束前由马克西·阿劳霍（Maxi Araújo）扳平比分，这为乌拉圭在下半场注入了极大的信心和势头。数据方面，乌拉圭占据了绝对优势，控球率高达66%，总射门数10次远超对手的2次，并获得了4个角球。尽管乌拉圭上半场射正次数不多，但他们在场面上的压制力十分明显。佛得角虽然反击效率极高，但很难在整个下半场继续顶住乌拉圭的持续猛攻。结合乌拉圭扳平比分后的心理优势以及双方整体实力的差距，预计乌拉圭在下半场将继续掌控比赛节奏并反超比分。因此，主队获胜的概率最高，最可能的最终比分为2-1。预计乌拉圭的锋线核心球员有望在下半场中后段再次破门，帮助球队锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.0134883,
+      "tokens": {
+        "input": 1332,
+        "output": 1919
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.074
+    },
+    {
+      "submitted_at": "2026-06-21T23:11:32+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 56,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Uruguay",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.13,
+        "away": 0.05
+      },
+      "most_likely_score": "3-1",
+      "scorers": [
+        {
+          "player": "Darwin Núñez",
+          "minute": 75,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Maxi Araújo",
+          "minute": 82,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第56分钟，乌拉圭目前以2-1领先佛得角。尽管佛得角在第21分钟由Kevin Lenini意外先拔头筹，但乌拉圭凭借强大的整体实力迅速接管了比赛。从场面数据来看，乌拉圭控球率高达65%，并完成了11次射门，对仅有2次射门的佛得角形成了绝对的压制。Maxi Araújo表现极为抢眼，他在上半场结束前打入扳平进球，又在下半场刚开场时助攻阿古斯丁·卡诺比奥完成反超，彻底扭转了比赛势头。鉴于乌拉圭在场面上的统治力以及目前的比分优势，他们全取三分的概率极高。佛得角虽然在下半场初段进行了换人调整试图挽回劣势，但在巨大的实力差距和被动防守的消耗下，很难组织起持续有效的反扑。随着比赛进入后半程，落后的佛得角势必需要阵型前压以寻求扳平机会，这将给乌拉圭留下充足的反击空间。预计乌拉圭极有可能在比赛后段利用对手防线的空当再入一球锁定胜局，3-1是最可能的最终比分。在后续的进球者预测中，状态火热的Maxi Araújo以及乌拉圭的锋线核心球员有望在70分钟后的攻防转换中抓住机会扩大战果。"
+      },
+      "sources": [],
+      "cost_usd": 0.01398705,
+      "tokens": {
+        "input": 1405,
+        "output": 1986
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.457
+    },
+    {
+      "submitted_at": "2026-06-21T23:34:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 79,
+        "score": {
+          "home": 2,
+          "away": 2
+        },
+        "home": "Uruguay",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.65,
+        "away": 0.07
+      },
+      "most_likely_score": "2-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第79分钟，乌拉圭与佛得角目前战成2-2平。从场面数据来看，乌拉圭占据了绝对的主导地位，控球率高达68%，并完成了12次射门。然而，佛得角展现出了极高的反击效率，全场仅有32%的控球率和6次射门，但2次射正全部转化为进球，凯文·莱尼尼（Kevin Lenini）和埃利奥·瓦雷拉（埃利奥·瓦雷拉）为客队屡建奇功。乌拉圭方面，马克西·阿劳霍（Maxi Araújo）状态火热，已经贡献一传一射。随着比赛进入最后10多分钟的倒计时，双方体能均有所下降，佛得角大概率会进一步收缩防线以保住这宝贵的一分。尽管乌拉圭拥有更强的阵容实力和持续施压的能力，但在所剩时间不多的情况下，面对密集的防守打破僵局的难度正在显著增加。因此，本场比赛最终以2-2握手言和的概率最高。如果比赛在尾声阶段再次出现进球，状态出色的马克西·阿劳霍是最有可能利用个人能力或远射为乌拉圭完成绝杀的关键球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.01638315,
+      "tokens": {
+        "input": 1683,
+        "output": 2320
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.686
+    },
+    {
+      "submitted_at": "2026-06-21T23:57:26+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 2
+        },
+        "home": "Uruguay",
+        "away": "Cape Verde Islands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T22:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.85,
+        "away": 0.03
+      },
+      "most_likely_score": "2-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，当前比分为乌拉圭 2-2 佛得角。从全场数据来看，乌拉圭占据了绝对的场面主动权，控球率高达67%，并获得了11次角球和16次总射门。然而，他们的射门精度欠佳，全场仅有2次射正，虽然这两次射正全部转化为进球（分别由 Maxi Araújo 和 阿古斯丁·卡诺比奥 打进），但防守端同样暴露了问题。佛得角展现了极高的反击效率，全场仅有33%的控球率和7次射门，但2次射正全部得分（Kevin Lenini 和 埃利奥·瓦雷拉 建功）。由于常规时间已经耗尽，比赛即将进入伤停补时阶段，双方在最后几分钟内改写比分的可能性大幅降低，平局的概率目前已攀升至最高，预计最终比分大概率定格在 2-2。不过，考虑到乌拉圭在场面上的持续压制，以及在比赛尾声换上 布莱恩·罗德里格斯 等生力军加强进攻，主队仍有微弱的机会在补时阶段完成绝杀。"
+      },
+      "sources": [],
+      "cost_usd": 0.01371825,
+      "tokens": {
+        "input": 2103,
+        "output": 1827
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.469
+    }
+  ]
+}

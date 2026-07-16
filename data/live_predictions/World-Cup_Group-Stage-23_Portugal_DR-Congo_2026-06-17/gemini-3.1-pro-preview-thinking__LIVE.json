@@ -1,0 +1,322 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-23_Portugal_DR-Congo_2026-06-17",
+  "provider_fixture_id": "19609166",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-17T18:54:32+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "home": "Portugal",
+    "away": "Congo DR",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-17T17:00:00+00:00",
+    "venue": "Houston Stadium",
+    "venue_city": "Houston"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.12,
+      "draw": 0.83,
+      "away": 0.05
+    },
+    "most_likely_score": "1-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前比赛已进入第90分钟的伤停补时阶段，比分为葡萄牙 1-1 刚果民主共和国。从场面数据来看，葡萄牙虽然占据了高达76%的控球率，但在进攻端显得办法不多，全场仅有5次射门且只有1次射正（即若昂·内维斯开场第6分钟的进球）。相比之下，刚果民主共和国的反击十分犀利，在仅有24%控球率的情况下完成了8次射门和2次射正，并由约阿内·维萨在下半场初段扳平比分。随着常规时间耗尽，平局的概率已大幅上升至绝对高位。葡萄牙在最后阶段换上了拉斐尔·莱奥（拉斐尔·莱奥）和贡萨洛·拉莫斯（贡萨洛·拉莫斯）等攻击手试图绝杀，但面对刚果民主共和国稳固的防线，改变比分的难度极大。因此，1-1是最可能的最终比分。如果比赛在补时阶段出现戏剧性的绝杀进球，葡萄牙的替补前锋贡萨洛·拉莫斯或刚果民主共和国的西蒙·班扎（西蒙·班扎）是最有可能的得分人选。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1984,
+    "output": 2152
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0156408,
+  "wall_seconds": 20.375,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.12,\n    \"draw\": 0.83,\n    \"away\": 0.05\n  },\n  \"most_likely_score\": \"1-1\",\n  \"scorers\": [\n    {\n      \"player\": \"Gonçalo Ramos\",\n      \"team\": \"home\",\n      \"minute\": 93,\n      \"p\": 0.05\n    },\n    {\n      \"player\": \"Rafael Leão\",\n      \"team\": \"home\",\n      \"minute\": 94,\n      \"p\": 0.04\n    },\n    {\n      \"player\": \"Simon Banza\",\n      \"team\": \"away\",\n      \"minute\": 92,\n      \"p\": 0.02\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"当前比赛已进入第90分钟的伤停补时阶段，比分为葡萄牙 1-1 刚果民主共和国。从场面数据来看，葡萄牙虽然占据了高达76%的控球率，但在进攻端显得办法不多，全场仅有5次射门且只有1次射正（即若昂·内维斯开场第6分钟的进球）。相比之下，刚果民主共和国的反击十分犀利，在仅有24%控球率的情况下完成了8次射门和2次射正，并由约阿内·维萨在下半场初段扳平比分。随着常规时间耗尽，平局的概率已大幅上升至绝对高位。葡萄牙在最后阶段换上了拉斐尔·莱奥（Rafael Leão）和贡萨洛·拉莫斯（Gonçalo Ramos）等攻击手试图绝杀，但面对刚果民主共和国稳固的防线，改变比分的难度极大。因此，1-1是最可能的最终比分。如果比赛在补时阶段出现戏剧性的绝杀进球，葡萄牙的替补前锋贡萨洛·拉莫斯或刚果民主共和国的西蒙·班扎（Simon Banza）是最有可能的得分人选。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "```json\n{\n  \"win_probs\": {\n    \"home\": 0.12,\n    \"draw\": 0.83,\n    \"away\": 0.05\n  },\n  \"most_likely_score\": \"1-1\",\n  \"scorers\": [\n    {\n      \"player\": \"Gonçalo Ramos\",\n      \"team\": \"home\",\n      \"minute\": 93,\n      \"p\": 0.05\n    },\n    {\n      \"player\": \"Rafael Leão\",\n      \"team\": \"home\",\n      \"minute\": 94,\n      \"p\": 0.04\n    },\n    {\n      \"player\": \"Simon Banza\",\n      \"team\": \"away\",\n      \"minute\": 92,\n      \"p\": 0.02\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"当前比赛已进入第90分钟的伤停补时阶段，比分为葡萄牙 1-1 刚果民主共和国。从场面数据来看，葡萄牙虽然占据了高达76%的控球率，但在进攻端显得办法不多，全场仅有5次射门且只有1次射正（即若昂·内维斯开场第6分钟的进球）。相比之下，刚果民主共和国的反击十分犀利，在仅有24%控球率的情况下完成了8次射门和2次射正，并由约阿内·维萨在下半场初段扳平比分。随着常规时间耗尽，平局的概率已大幅上升至绝对高位。葡萄牙在最后阶段换上了拉斐尔·莱奥（Rafael Leão）和贡萨洛·拉莫斯（Gonçalo Ramos）等攻击手试图绝杀，但面对刚果民主共和国稳固的防线，改变比分的难度极大。因此，1-1是最可能的最终比分。如果比赛在补时阶段出现戏剧性的绝杀进球，葡萄牙的替补前锋贡萨洛·拉莫斯或刚果民主共和国的西蒙·班扎（Simon Banza）是最有可能的得分人选。\"\n  },\n  \"sources\": []\n}\n```\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-17T17:21:28+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 21,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Portugal",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.85,
+        "draw": 0.11,
+        "away": 0.04
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Cristiano Ronaldo",
+          "minute": 58,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Fernandes",
+          "minute": 76,
+          "p": 0.35,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第21分钟，葡萄牙目前以1-0领先刚果民主共和国。开场仅6分钟，若昂·内维斯 就接 佩德罗·内托 的助攻为葡萄牙首开纪录，展现了球队极佳的进攻状态。从场面数据来看，葡萄牙占据了绝对的主导地位，控球率高达77%，完全控制了中场和比赛节奏。虽然刚果民主共和国在劣势下也完成了2次射门并获得1个角球，但均未命中门框范围，反击的实质性威胁有限。贝尔纳多·席尔瓦 在第13分钟吃到黄牌，但这并未改变葡萄牙的整体压制态势。鉴于葡萄牙在整体实力上的巨大优势以及早早确立的领先局面，他们顺利拿下本场比赛的概率极高。刚果民主共和国想要在如此被动的控球劣势下扳平甚至逆转难度极大。考虑到葡萄牙强大的进攻火力和持续的施压能力，预计他们会在下半场对手体能下降、阵型被迫前压时抓住机会继续扩大比分。最可能的最终比分预测为2-0。在后续进球者方面，葡萄牙的锋线核心如 克里斯蒂亚诺·罗纳尔多 或中场核心 布鲁诺·费尔南德斯 都有很大机会在下半场利用对手防线的空当取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0160272,
+      "tokens": {
+        "input": 1116,
+        "output": 2358
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.125
+    },
+    {
+      "submitted_at": "2026-06-17T17:37:16+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 37,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Portugal",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.13,
+        "away": 0.05
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Cristiano Ronaldo",
+          "minute": 65,
+          "p": 0.4,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Fernandes",
+          "minute": 78,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第37分钟，葡萄牙目前以1-0领先刚果民主共和国。从场面数据来看，葡萄牙占据了绝对的统治地位，控球率高达80%，并且在开场第6分钟就凭借若昂·内维斯（若昂·内维斯）的进球取得领先。不过，葡萄牙至今只有1次射门，说明他们在领先后踢得较为保守和注重控制。另一方面，刚果民主共和国虽然控球率仅有20%，但已经完成了3次射门（1次射正），展现出了一定的防守反击威胁。基于目前的比分和控球优势，葡萄牙获胜的概率极高。随着下半场刚果民主共和国必须压上进攻以寻求扳平比分，葡萄牙将获得更多反击和进攻空间。预计葡萄牙能够再入一球锁定胜局，最可能的最终比分为2-0。在后续进球者方面，随着比赛深入，像克里斯蒂亚诺·罗纳尔多（克里斯蒂亚诺·罗纳尔多）或布鲁诺·费尔南德斯（布鲁诺·费尔南德斯）这样的核心攻击手极有可能利用对手防线的空当取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0120183,
+      "tokens": {
+        "input": 1204,
+        "output": 1707
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.003
+    },
+    {
+      "submitted_at": "2026-06-17T17:52:44+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Portugal",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.3,
+        "away": 0.15
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Bruno Fernandes",
+          "minute": 72,
+          "p": 0.28,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到半场（45分钟），葡萄牙与刚果民主共和国暂时战成1-1平。葡萄牙在开场第6分钟由若昂·内维斯（若昂·内维斯）早早取得领先，并占据了高达80%的绝对控球率。然而，他们在进攻端的转化率并不理想，半场仅有2次射门。相反，刚果民主共和国展现了极具威胁的反击效率，尽管控球率仅有20%，却完成了6次射门并获得3个角球，最终由约安·维萨（约阿内·维萨）在上半场补时阶段扳平比分。考虑到葡萄牙在场面控制上的绝对优势以及整体阵容深度，他们依然是更有可能拿下比赛的一方，主胜概率维持在55%左右。但刚果民主共和国极具针对性的反击让平局的概率（30%）不容忽视。预计下半场葡萄牙会加强进攻节奏并进行人员调整以打破僵局。最可能的最终比分预测为2-1，葡萄牙险胜。后续进球方面，葡萄牙的核心攻击手如布鲁诺·费尔南德斯（布鲁诺·费尔南德斯）极有可能在下半场中后段利用远射或阵地战机会完成致命一击。"
+      },
+      "sources": [],
+      "cost_usd": 0.0163905,
+      "tokens": {
+        "input": 1276,
+        "output": 2389
+      },
+      "tool_calls": 0,
+      "wall_seconds": 55.84
+    },
+    {
+      "submitted_at": "2026-06-17T18:23:29+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 68,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Portugal",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.38,
+        "away": 0.14
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Francisco Conceição",
+          "minute": 81,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Pedro Neto",
+          "minute": 86,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比赛进行到第68分钟，葡萄牙与刚果民主共和国战成1-1平。从场面数据来看，葡萄牙虽然占据了高达77%的绝对控球优势，但在进攻端的实质威胁有限，全场至今仅有2次射门（其中1次为开场第6分钟若昂·内维斯的进球）。相反，刚果民主共和国在仅有23%控球率的情况下，坚决贯彻防守反击战术，完成了6次射门并由约阿内·维萨在下半场初段成功扳平比分。尽管葡萄牙目前进攻受阻，但考虑到其强大的阵容深度与整体实力，在比赛最后20多分钟必然会持续施压寻求超前。随着比赛深入，刚果民主共和国的防线在长时间的高压下可能会出现体能瓶颈和盯人失误。综合判断，葡萄牙在比赛尾声阶段打入制胜球的概率依然最高，因此预测最可能的最终比分为2-1。在后续进球者方面，下半场替补登场的弗朗西斯科·孔塞桑（弗朗西斯科·孔塞桑）体能充沛且具备极强的突破能力，而边路核心佩德罗·内托（佩德罗·内托）也随时可能通过传射建功，他们是最有希望打破僵局的球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.0167349,
+      "tokens": {
+        "input": 1418,
+        "output": 2420
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.986
+    },
+    {
+      "submitted_at": "2026-06-17T18:39:04+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 84,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Portugal",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.65,
+        "away": 0.1
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第84分钟，葡萄牙与刚果民主共和国目前战成1-1平。葡萄牙在开场第6分钟便由若昂·内维斯（若昂·内维斯）早早取得领先，但下半场第50分钟，刚果民主共和国凭借约阿内·维萨（约阿内·维萨）的进球顽强扳平了比分。从场面数据来看，葡萄牙占据了高达78%的绝对控球率，但面对对手的密集防守显得办法不多，全场仅有4次射门且只有1次射正（即进球那次）。相反，刚果民主共和国在仅有22%控球率的情况下，打出了极具威胁的防守反击，完成了7次射门和2次射正，角球数甚至以4比3领先。随着比赛进入尾声，留给双方改变战局的时间已经不多。葡萄牙虽然在下半场陆续换上了拉斐尔·莱奥（拉斐尔·莱奥）和弗朗西斯科·孔塞桑（弗朗西斯科·孔塞桑）等生力军试图加强边路冲击，但在对手严密的防守体系下，破门难度极大。综合当前局势与剩余时间，平局是大概率事件，最可能的最终比分将定格在1-1。如果比赛在最后时刻出现绝杀，替补登场且体能充沛的拉斐尔·莱奥将是葡萄牙阵中最具威胁的潜在得分手。"
+      },
+      "sources": [],
+      "cost_usd": 0.01402905,
+      "tokens": {
+        "input": 1703,
+        "output": 1943
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.713
+    },
+    {
+      "submitted_at": "2026-06-17T18:54:32+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Portugal",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.83,
+        "away": 0.05
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已进入第90分钟的伤停补时阶段，比分为葡萄牙 1-1 刚果民主共和国。从场面数据来看，葡萄牙虽然占据了高达76%的控球率，但在进攻端显得办法不多，全场仅有5次射门且只有1次射正（即若昂·内维斯开场第6分钟的进球）。相比之下，刚果民主共和国的反击十分犀利，在仅有24%控球率的情况下完成了8次射门和2次射正，并由约阿内·维萨在下半场初段扳平比分。随着常规时间耗尽，平局的概率已大幅上升至绝对高位。葡萄牙在最后阶段换上了拉斐尔·莱奥（拉斐尔·莱奥）和贡萨洛·拉莫斯（贡萨洛·拉莫斯）等攻击手试图绝杀，但面对刚果民主共和国稳固的防线，改变比分的难度极大。因此，1-1是最可能的最终比分。如果比赛在补时阶段出现戏剧性的绝杀进球，葡萄牙的替补前锋贡萨洛·拉莫斯或刚果民主共和国的西蒙·班扎（西蒙·班扎）是最有可能的得分人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0156408,
+      "tokens": {
+        "input": 1984,
+        "output": 2152
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.375
+    }
+  ]
+}

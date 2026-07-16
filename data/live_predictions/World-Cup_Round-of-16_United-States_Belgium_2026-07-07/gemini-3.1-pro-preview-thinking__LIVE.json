@@ -1,0 +1,334 @@
+{
+  "fixture_id": "World-Cup_Round-of-16_United-States_Belgium_2026-07-07",
+  "provider_fixture_id": "19606963",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-07T01:58:44+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 4
+    },
+    "home": "United States",
+    "away": "Belgium",
+    "competition": "World Cup",
+    "stage": "Round of 16",
+    "kickoff_utc": "2026-07-07T00:00:00+00:00",
+    "venue": "Seattle Stadium",
+    "venue_city": "Seattle"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.0,
+      "draw": 0.0,
+      "away": 1.0
+    },
+    "most_likely_score": "1-4",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入常规时间第90分钟后的伤停补时阶段，当前比分为美国 1-4 比利时。从场面数据来看，尽管美国队拥有56%的控球率，但比利时队在进攻端展现了极高的效率和统治力。比利时全场共完成15次射门，其中7次射正并转化为4粒进球；相比之下，美国队仅有7次射门和2次射正。上半场 查尔斯·德凯特拉雷 表现抢眼完成梅开二度，马利克·蒂尔曼 为美国队扳回一城；下半场替补登场的 汉斯·瓦纳肯 扩大领先优势，而 罗梅卢·卢卡库 在第93分钟的进球则彻底终结了比赛悬念。鉴于比赛时间所剩无几，且比利时手握3球的巨大领先优势，比利时队取胜的概率已达到100%。预计最终比分将定格在 1-4，在剩余的短暂补时内产生新进球的可能性微乎其微，因此不再预测后续进球者。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1461,
+    "output": 1503
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.01100295,
+  "wall_seconds": 17.531,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.0,\n    \"draw\": 0.0,\n    \"away\": 1.0\n  },\n  \"most_likely_score\": \"1-4\",\n  \"scorers\": [],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入常规时间第90分钟后的伤停补时阶段，当前比分为美国 1-4 比利时。从场面数据来看，尽管美国队拥有56%的控球率，但比利时队在进攻端展现了极高的效率和统治力。比利时全场共完成15次射门，其中7次射正并转化为4粒进球；相比之下，美国队仅有7次射门和2次射正。上半场 Charles De Ketelaere 表现抢眼完成梅开二度，Malik Tillman 为美国队扳回一城；下半场替补登场的 Hans Vanaken 扩大领先优势，而 Romelu Lukaku 在第93分钟的进球则彻底终结了比赛悬念。鉴于比赛时间所剩无几，且比利时手握3球的巨大领先优势，比利时队取胜的概率已达到100%。预计最终比分将定格在 1-4，在剩余的短暂补时内产生新进球的可能性微乎其微，因此不再预测后续进球者。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Live Prediction Update - Match State Analysis**\n\nOkay, here's the situation: the user wants a live prediction, and the current match state is United States 1, Belgium 4, at the 90-minute mark. But wait, there's more – the events show a goal at minute 93 by Lukaku, confirming we're deep into stoppage time. Given the 1-4 score, and the clock ticking down, it's pretty clear Belgium has this locked up.\n\nLet's break it down: Belgium is up by three goals. The win probabilities? Home win: 0.0%, Draw: 0.0%, and Away win: a solid 1.0 (or, basically, 100%). The most likely score? Sticking with the 1-4. Because it's stoppage time, I'm confident there won't be any more goals, so I can safely leave the `scorers` array empty. The events match the score and time: De Ketelaere with two goals, Tillman for the USA, Vanaken and Lukaku with one each for Belgium.\n\nI can build the JSON now, based on my understanding. Let's make sure it's perfect:\n\n```json\n{\n  \"win_probs\": {\"home\": 0.0, \"draw\": 0.0, \"away\": 1.0},\n  \"most_likely_score\": \"1-4\",\n  \"scorers\": [],\n  \"reasoning\": {\"overall\": \"比赛已经进入伤停补时阶段，当前比分为美国 1-4 比利时。尽管美国队在控球率上以56%略占优势，但比利时队在进攻端表现得更加高效和致命。全场比赛比利时共完成15次射门，其中7次射正并打入4球。查尔斯·德凯特莱尔（Charles De Ketelaere）在上半场完成梅开二度，汉斯·瓦纳肯（Hans Vanaken）在下半场扩大比分，而替补登场的罗梅卢·卢卡库（Romelu Lukaku）在第93分钟的进球彻底杀死了比赛悬念。考虑到比赛所剩时间极少，且双方分差已经达到3球，比利时队获胜的概率已达100%。预计最终比分将定格在1-4，后续不再有进球产生。\"},\n  \"sources\": []\n}\n```\n\nOkay, I double-checked everything against all the constraints: It's just a single, valid JSON object, no markdown. The narrative reasoning is in Simplified Chinese. The `team` values are exactly \"home\" and \"away\". \"most_likely_score\" is \"H-A\". The win probabilities all match the score. The final score is definitely not lower than the current score, and the scorers array is empty because the match is effectively over. I think it's spot on.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-07-07T00:05:18+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 5,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "United States",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T00:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.28,
+        "away": 0.5
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Romelu Lukaku",
+          "minute": 34,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Christian Pulisic",
+          "minute": 62,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Jeremy Doku",
+          "minute": 78,
+          "p": 0.2,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第5分钟，目前比分为0-0。从开场短短几分钟的数据来看，虽然美国队占据了59%的控球率，但比利时队展现出了极强的进攻效率和实质性威胁。比利时在5分钟内已经完成了4次射门，其中2次射正，并迫使美国队门将做出了2次关键扑救，同时还获得了一次角球。这表明比利时在快速转换和前场压迫上极具穿透力，而美国队虽然控球占优，但防线已经承受了巨大压力。基于比利时队开场展现出的进攻火力和整体实力优势，客队获胜的概率显著高于主队。预计最终比分最可能为1-2，比利时有望在接下来的比赛中通过高效的进攻打破僵局，而美国队也能凭借主场氛围和控球优势扳回一城。进球球员方面，比利时的锋线杀手如罗梅卢·卢卡库极有可能在比赛中段抓住机会破门，而美国的克里斯蒂安·普利希奇也有望在下半场建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.00797685,
+      "tokens": {
+        "input": 847,
+        "output": 1125
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.794
+    },
+    {
+      "submitted_at": "2026-07-07T00:11:38+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 11,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "United States",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T00:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.06,
+        "draw": 0.16,
+        "away": 0.78
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Lois Openda",
+          "minute": 55,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Jeremy Doku",
+          "minute": 78,
+          "p": 0.28,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第11分钟，比利时凭借查尔斯·德凯特莱尔（查尔斯·德凯特拉雷）在第9分钟的进球，目前以1-0领先美国队。开场阶段比利时展现出了压倒性的优势，控球率高达66%，且在短短11分钟内狂轰7脚射门（其中3次射正）。美国队目前完全处于被动，尚未完成任何射门，门将已经做出了2次扑救，防线承受着巨大的压力。鉴于比利时早早取得领先且在场面上形成全面压制，客胜概率已大幅飙升。美国队若想扭转局势，必须尽快调整中场拦截和控球，但面对比利时的猛攻，逆转难度极大。综合目前的攻防数据，比利时极有可能在后续比赛中继续扩大战果。最可能的最终比分预测为0-2。在后续进球者方面，随着美国队在下半场必须大举压上寻求扳平，比利时的锋线球员如洛伊斯·奥彭达（Lois Openda）或杰里米·多库（热雷米·多库）将有很大机会利用反击空当取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.014248499999999999,
+      "tokens": {
+        "input": 886,
+        "output": 2114
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.038
+    },
+    {
+      "submitted_at": "2026-07-07T00:34:23+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 34,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "United States",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T00:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.18,
+        "away": 0.7
+      },
+      "most_likely_score": "1-3",
+      "scorers": [
+        {
+          "player": "Leandro Trossard",
+          "minute": 68,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Charles De Ketelaere",
+          "minute": 82,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第34分钟，比利时目前以2-1领先美国。从场面数据来看，比利时占据了绝对优势，控球率达到57%，且已经完成了8次射门（4次射正）。查尔斯·德凯特莱尔（查尔斯·德凯特拉雷）状态极佳，开场不久便首开纪录，并在美国队由马利克·蒂尔曼（马利克·蒂尔曼）扳平比分后的短短两分钟内迅速完成梅开二度，展现了比利时强大的进攻压制力。美国队虽然进攻效率极高（仅1次射门即取得进球），但防线承受了巨大压力，门将已有2次扑救。考虑到比利时在进攻端的持续威胁以及对比赛节奏的掌控，他们赢下这场八分之一决赛的概率高达70%。随着比赛深入，落后的美国队势必需要大举压上寻求扳平，这将给比利时留下更多反击空间。预计下半场比利时能够进一步扩大领先优势，最可能的最终比分为1-3。在前场表现活跃且已贡献一次助攻的莱安德罗·特罗萨德（莱昂德罗·特罗萨德）有很大机会在下半场利用反击破门，而状态火热的德凯特莱尔也有机会完成帽子戏法。"
+      },
+      "sources": [],
+      "cost_usd": 0.0149142,
+      "tokens": {
+        "input": 992,
+        "output": 2202
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.027
+    },
+    {
+      "submitted_at": "2026-07-07T01:13:23+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 58,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "United States",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T00:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.1,
+        "draw": 0.2,
+        "away": 0.7
+      },
+      "most_likely_score": "1-3",
+      "scorers": [
+        {
+          "player": "Leandro Trossard",
+          "minute": 75,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Giovanni Reyna",
+          "minute": 82,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第58分钟，当前比分为美国 1-2 比利时。从场面数据来看，比利时占据了明显的进攻主导权，控球率达到52%，且已经完成了11次射门（5次射正），而美国队仅有3次射门（1次射正）。查尔斯·德凯特莱尔（查尔斯·德凯特拉雷）状态火热，已经完成梅开二度。美国队虽然由马利克·蒂尔曼（马利克·蒂尔曼）扳回一城，并在下半场伊始换上乔瓦尼·雷纳（乔瓦尼·雷纳）试图加强进攻，但防线依然承受着巨大压力。考虑到比利时手握领先优势且进攻端威胁持续存在，随着美国队阵型前压，比利时将获得更多反击空间。因此，比利时最终获胜的概率高达70%，平局概率约为20%，美国队逆转的概率仅为10%。最可能的最终比分预测为 1-3。在后续的比赛中，已经贡献一次助攻的莱安德罗·特罗萨德（莱昂德罗·特罗萨德）极有可能利用反击机会扩大比分，而美国队的替补奇兵乔瓦尼·雷纳也是主队追分的主要潜在火力点。"
+      },
+      "sources": [],
+      "cost_usd": 0.01569435,
+      "tokens": {
+        "input": 1063,
+        "output": 2314
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.714
+    },
+    {
+      "submitted_at": "2026-07-07T01:25:24+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 70,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "United States",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T00:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第70分钟，比利时客场3-1领先美国。从场面和数据来看，比利时在进攻端表现出极强的压制力和高效的终结能力。尽管美国队控球率（52%）略占优势，但全场仅有3次射门且只有1次射正；反观比利时，在48%的控球率下完成了12脚射门，其中6次射正。比利时攻击手查尔斯·德凯特拉雷状态火热，已贡献两射一传，替补登场的汉斯·瓦纳肯也扩大了比分。考虑到比赛仅剩20分钟常规时间，且比利时手握两球领先优势，客队获胜的概率高达95%。美国队想要连入两球扳平比分的希望非常渺茫（平局概率约4%），逆转取胜的概率仅为1%。最可能的最终比分预计将维持在1-3。在后续比赛中，随着美国队必须大举压上进攻，后防线将不可避免地暴露出更多空当，比利时有望利用反击再次得分，查尔斯·德凯特拉雷极具完成帽子戏法的可能；而美国队替补登场的乔瓦尼·雷纳则是主队最具威胁的潜在得分点。"
+      },
+      "sources": [],
+      "cost_usd": 0.01524705,
+      "tokens": {
+        "input": 1135,
+        "output": 2231
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.0
+    },
+    {
+      "submitted_at": "2026-07-07T01:58:44+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 4
+        },
+        "home": "United States",
+        "away": "Belgium",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T00:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.0,
+        "away": 1.0
+      },
+      "most_likely_score": "1-4",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入常规时间第90分钟后的伤停补时阶段，当前比分为美国 1-4 比利时。从场面数据来看，尽管美国队拥有56%的控球率，但比利时队在进攻端展现了极高的效率和统治力。比利时全场共完成15次射门，其中7次射正并转化为4粒进球；相比之下，美国队仅有7次射门和2次射正。上半场 查尔斯·德凯特拉雷 表现抢眼完成梅开二度，马利克·蒂尔曼 为美国队扳回一城；下半场替补登场的 汉斯·瓦纳肯 扩大领先优势，而 罗梅卢·卢卡库 在第93分钟的进球则彻底终结了比赛悬念。鉴于比赛时间所剩无几，且比利时手握3球的巨大领先优势，比利时队取胜的概率已达到100%。预计最终比分将定格在 1-4，在剩余的短暂补时内产生新进球的可能性微乎其微，因此不再预测后续进球者。"
+      },
+      "sources": [],
+      "cost_usd": 0.01100295,
+      "tokens": {
+        "input": 1461,
+        "output": 1503
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.531
+    }
+  ]
+}

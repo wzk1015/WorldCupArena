@@ -1,0 +1,524 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-53_Czech-Republic_Mexico_2026-06-25",
+  "provider_fixture_id": "19609185",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-25T02:53:52+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 2
+    },
+    "home": "Czech Republic",
+    "away": "Mexico",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-25T01:00:00+00:00",
+    "venue": "Mexico City Stadium",
+    "venue_city": "Mexico City"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.01,
+      "draw": 0.03,
+      "away": 0.96
+    },
+    "most_likely_score": "0-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经来到90分钟，捷克0比2落后墨西哥，胜负走势已经非常清晰。现有比赛进程显示，墨西哥在下半场55分钟由马特奥·查韦斯首开纪录，61分钟再由胡利安·基诺内斯扩大优势，短时间内连续两次把握住机会，直接改变了比赛形势。虽然捷克在数据上并不完全被压制，控球51%对49%、总射门12比9、角球5比1，看起来推进和压上次数不少，但真正决定比赛的是门前效率：捷克全场只有1次射正，却已经打到常规时间结束，这说明他们虽然有进攻回合，但高质量终结明显不足；反过来墨西哥3次射正就换来2个进球，效率更高，比赛管理也更成熟。进入90分钟后，留给捷克扳平甚至逆转的时间已经极其有限，因此主胜与平局概率都被大幅压低，客胜自然处于绝对优势。基于当前比分、时间节点以及双方到目前为止展现出的转化效率，最可能的最终结果仍是0比2完场。至于补时阶段的后续进球逻辑，理论上只有在捷克全线压上、墨西哥获得反击空间时，才更可能再出现进球，但从当前局面看，新增进球的整体概率已经不高，因此更稳健的判断是保持现有比分结束比赛。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1690,
+    "output": 474
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.011335,
+  "wall_seconds": 13.158,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.01,\n    \"draw\": 0.03,\n    \"away\": 0.96\n  },\n  \"most_likely_score\": \"0-2\",\n  \"scorers\": [],\n  \"reasoning\": {\n    \"overall\": \"比赛已经来到90分钟，捷克0比2落后墨西哥，胜负走势已经非常清晰。现有比赛进程显示，墨西哥在下半场55分钟由Mateo Chávez首开纪录，61分钟再由Julián Quiñones扩大优势，短时间内连续两次把握住机会，直接改变了比赛形势。虽然捷克在数据上并不完全被压制，控球51%对49%、总射门12比9、角球5比1，看起来推进和压上次数不少，但真正决定比赛的是门前效率：捷克全场只有1次射正，却已经打到常规时间结束，这说明他们虽然有进攻回合，但高质量终结明显不足；反过来墨西哥3次射正就换来2个进球，效率更高，比赛管理也更成熟。进入90分钟后，留给捷克扳平甚至逆转的时间已经极其有限，因此主胜与平局概率都被大幅压低，客胜自然处于绝对优势。基于当前比分、时间节点以及双方到目前为止展现出的转化效率，最可能的最终结果仍是0比2完场。至于补时阶段的后续进球逻辑，理论上只有在捷克全线压上、墨西哥获得反击空间时，才更可能再出现进球，但从当前局面看，新增进球的整体概率已经不高，因此更稳健的判断是保持现有比分结束比赛。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-25T01:05:38+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 5,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.29,
+        "draw": 0.4,
+        "away": 0.31
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第5分钟，比分仍是0-0，整体还处在试探阶段。现有信息里，墨西哥控球63%，略占场面主动，但时间太早，这种控球优势还不足以明显转化为胜势；捷克共和国目前更多是稳守等待反击机会。由于双方都还没有形成决定性差距，平局依然是当前最合理的大方向，其中0-0是最贴近此时节奏的最终比分判断。相较开场前，墨西哥凭借控球把客胜概率抬高了一点，但幅度不大，因此胜平负仍然是三向接近、平局略高。若后续比分被打破，最可能先出现进球的一方仍更偏向控球更主动的墨西哥；若比赛继续维持这种早期谨慎节奏，1球以内的小比分会比大开大合更符合走势。"
+      },
+      "sources": [],
+      "cost_usd": 0.0203525,
+      "tokens": {
+        "input": 1127,
+        "output": 1169
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.228
+    },
+    {
+      "submitted_at": "2026-06-25T01:12:50+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 12,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.27,
+        "draw": 0.45,
+        "away": 0.28
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到12分钟，比分仍是0比0，现阶段更像是相互试探的开局。已知信息里还没有关键事件出现，说明比赛节奏虽然展开，但真正改变比分的高质量机会暂时不多。从数据看，墨西哥控球率55%略占主动，说明他们在组织和推进上稍微更稳定；不过捷克已经有2次射门，而墨西哥还没有完成射门，这又说明捷克在有限控球下的直接推进更有威胁。这样的对比通常意味着场面并未形成一边倒，而是控球优势与进攻终结效率暂时分离，因此平局概率仍然是当前最高。就胜负走势而言，墨西哥凭借更多控球保留了略强的持续压制潜力，但捷克已经更早把球打到射门阶段，反击或快速进攻同样具备兑现空间，所以两队取胜概率目前非常接近，只是都略低于平局。考虑到时间还早、比分未破、现有射门总量也不高，最合理的结果仍是低比分发展，其中0比0是单一最可能的终场比分。如果接下来比赛继续保持这种格局，后续进球更可能来自下半场节奏提升、体能变化或定位球质量提升后的机会，而不是眼下就迅速进入对攻。"
+      },
+      "sources": [],
+      "cost_usd": 0.0130525,
+      "tokens": {
+        "input": 2287,
+        "output": 489
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.989
+    },
+    {
+      "submitted_at": "2026-06-25T01:19:51+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 19,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.39,
+        "draw": 0.36,
+        "away": 0.25
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到19分钟仍是0-0，但场面上捷克共和国更主动，4次射门而墨西哥还没有射门，说明主队在前场推进和试探性进攻上占优；不过控球率50%对50%，也意味着墨西哥并没有在整体节奏上完全失控。当前阶段还很早，0-0和小比分分胜负依然是最合理的方向。综合现有进攻倾向，捷克共和国赢球概率略高于平局，但优势并不大；墨西哥若能把防守压力转化为反击，仍有扳回局面的空间。最终比分最可能落在1-0，因为比赛进入中前段后，一方的持续射门更容易先打开局面，而目前更像是捷克共和国先取得进球的走势。由于没有明确的球员级信息，后续进球人选只能保持谨慎，倾向于来自持续压制一方的前场核心或中锋，但在缺少名单和事件的情况下不宜硬指定具体名字。"
+      },
+      "sources": [],
+      "cost_usd": 0.0137325,
+      "tokens": {
+        "input": 1143,
+        "output": 725
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.527
+    },
+    {
+      "submitted_at": "2026-06-25T01:27:12+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 27,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.43,
+        "away": 0.23
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到27分钟，比分仍是0比0。就目前可见信息来看，捷克在场面上稍占主动：控球达到56%，并且已经完成4次射门；墨西哥目前还没有形成射门数据，说明比赛前段更多时间是在承受对手推进，进攻端尚未真正打开。尽管如此，捷克的优势还没有转化为决定性的高质量终结，因此平局概率依然维持在最高位置。\n\n从赛中走势判断，这场比赛目前更像是节奏不算特别开放、先求稳再寻找机会的局面。捷克凭借更多控球和射门拿到轻微上风，所以主胜概率相较赛前中性状态有所提升；但因为比分仍未被改写，而且墨西哥暂时只是在进攻数据上偏保守，并不代表后续完全没有反击空间，因此客胜仍然保留一定可能，只是低于平局和主胜。\n\n基于27分钟时的0比0以及双方目前制造机会能力的差异，最可能的最终结果仍是低比分收场，其中0比0是当前最稳妥的单一比分判断。如果捷克继续保持现有的控球和射门优势，1比0会是最接近的次选路径；而若墨西哥在上半场后段或下半场提升推进速度，0比1或1比1也会进入更现实的区间。\n\n后续进球逻辑上，若接下来出现进球，更大概率会先来自捷克，因为他们已经在前27分钟建立了更明确的进攻存在感；墨西哥若想在后续收获进球，更可能依赖比赛进入更开放阶段后的快速推进或转换机会。不过截至当前，数据还不足以明确锁定某一位最突出的潜在得分者，因此更合理的判断仍是：下一阶段先看捷克能否把控球优势转化为更高质量射门，否则比赛将继续朝着低比分平局发展。"
+      },
+      "sources": [],
+      "cost_usd": 0.0124675,
+      "tokens": {
+        "input": 847,
+        "output": 690
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.75
+    },
+    {
+      "submitted_at": "2026-06-25T01:34:31+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 34,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.33,
+        "draw": 0.46,
+        "away": 0.21
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到34分钟，双方仍是0比0，这使平局概率继续维持在最高位。就目前能看到的场面数据而言，捷克共和国稍占主动：控球52%对48%，并且已经完成5次射门，而墨西哥暂时还没有形成射门记录，这说明捷克在推进到进攻三区和制造尝试方面更积极一些。不过，捷克的优势还没有转化为进球，意味着他们虽然更接近先开纪录，但比赛整体节奏仍偏谨慎，破门效率暂时不足。基于当前时间点和0比0的比分，后续可供双方改写比分的时间仍然充足，但上半场前段没有出现明显强势压制或连续高质量机会，通常会把最终结果进一步拉向低比分。综合来看，捷克的赢面略高于墨西哥，因为他们至少已经建立了基础进攻输出；但考虑到比分尚未打开、墨西哥仍有中场调整和下半场反扑空间，平局依旧是最合理的主判断。最可能的最终比分因此维持在0比0，其次才是1比0或0比1这类一球分胜负的结果。至于后续进球逻辑，如果比赛接下来出现首球，更可能来自捷克在持续射门基础上的一次效率提升；但在当前信息下，没有可用的球员级进攻数据支持对具体未来进球者作出稳健指向，因此暂不单列明确的后续得分人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0140125,
+      "tokens": {
+        "input": 2287,
+        "output": 553
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.921
+    },
+    {
+      "submitted_at": "2026-06-25T01:42:08+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 42,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 2.807
+    },
+    {
+      "submitted_at": "2026-06-25T02:11:25+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 56,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.24,
+        "draw": 0.52,
+        "away": 0.24
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第56分钟，双方仍是0比0。从现有数据看，场面非常胶着：捷克7次射门、墨西哥5次射门，控球率则是墨西哥53%略占上风，但两队都只有1次射正，说明真正高质量的破门机会并不多，比赛更多停留在中场争夺和零散试探阶段。没有明显关键事件打破平衡，也进一步强化了目前这是一场低比分走势的判断。\n\n进入下半场后，随着比赛时间不断减少，平局概率相较开场前会明显上升。虽然两队都有能力在最后半小时通过定位球、反击或个人能力制造决定性瞬间，但从目前射门质量和射正数量来看，短时间内连续进球的可能性不高，更像是一场谁先犯错谁就可能丢分的比赛。因此，当前最合理的结果仍是平局占优。\n\n在胜负方向上，双方数据差距很小：墨西哥控球稍多，捷克射门稍多，但都没有形成足够明确的压制，所以两边取胜机会接近。综合时间节点与比赛内容，0比0依然是最可能的最终比分；如果比赛后段节奏被换人或体能波动拉开，1比0或0比1会是次一级的结果，但概率仍低于平局。\n\n后续进球逻辑方面，如果捷克先取得进球，更可能来自中锋在禁区内把握有限机会；如果墨西哥破门，则更可能来自前场核心在反击或禁区抢点中的一击制胜。由于当前整体节奏偏谨慎，即便出现进球，也更像是单个决定比赛走势的进球，而不是演变成对攻局面。"
+      },
+      "sources": [],
+      "cost_usd": 0.010015,
+      "tokens": {
+        "input": 940,
+        "output": 511
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.516
+    },
+    {
+      "submitted_at": "2026-06-25T02:18:39+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 63,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.16,
+        "draw": 0.28,
+        "away": 0.56
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到63分钟，捷克0比1落后墨西哥，当前走势仍然更偏向客队守住优势。场上唯一进球出现在55分钟，由马特奥·查韦斯破门，路易斯·罗莫送出助攻，这让墨西哥在时间与比分上都占据主动。数据层面两队总射门接近，捷克8次、墨西哥7次，但捷克只有1次射正，墨西哥2次射正却已经转化为进球，说明客队在关键机会的把握上更有效。控球率方面墨西哥54%略占上风，也符合其目前能够更从容控制比赛节奏的局面。捷克在丢球后马上通过换人尝试提速，后段确实有追平机会，但从目前创造高质量机会的效率来看，捷克要连续扭转比分的难度仍然偏大，因此客胜概率继续维持最高。平局仍有一定空间，因为1球差距且比赛还有近30分钟；但若墨西哥继续保持现有比赛管理能力，1比0带走比赛依然是最合理的单一结果判断。后续进球逻辑上，捷克若加强压上，最可能来自替补登场后更具冲击力的Lukas Provod；而墨西哥则可能在反击空间扩大后，再由已经取得进球的马特奥·查韦斯制造第二球威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.0127125,
+      "tokens": {
+        "input": 1023,
+        "output": 677
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.445
+    },
+    {
+      "submitted_at": "2026-06-25T02:26:45+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 2.839
+    },
+    {
+      "submitted_at": "2026-06-25T02:33:43+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 78,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.06,
+        "draw": 0.14,
+        "away": 0.8
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第78分钟，捷克共和国主场0比2落后墨西哥，形势已经明显偏向客队。墨西哥在55分钟和61分钟连续进球，说明他们把握机会的能力更强，而且在领先后可以更从容地控制节奏。捷克虽然控球略占优，角球也更多，但射正只有1次，说明进攻推进到最后一击的质量不足，短时间内要连追两球难度很大。结合剩余时间和当前比分，最可能的结局仍是墨西哥守住两球优势，最终0比2的概率最高；若主队在压上后获得一次机会，1比2是次选，但平局或主胜都需要极强的后程反扑。后续进球方面，墨西哥更可能利用反击和替补前场球员继续制造威胁，Santiago Gimenez是最值得关注的潜在后续进球点；捷克若能扳回一球，帕特里克·希克是最有可能的终结者。"
+      },
+      "sources": [],
+      "cost_usd": 0.0089,
+      "tokens": {
+        "input": 1502,
+        "output": 343
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.876
+    },
+    {
+      "submitted_at": "2026-06-25T02:40:29+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 85,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.05,
+        "away": 0.94
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经来到85分钟，捷克目前0比2落后墨西哥，留给主队扭转局面的时间非常有限。从已知进程看，比赛真正被拉开是在下半场中段：马特奥·查韦斯第55分钟先破门，随后胡利安·基诺内斯在61分钟再下一城，墨西哥在短时间内把握住了更高质量的进攻回合。虽然捷克在控球率53%、角球5比1、总射门10比9这些数据上并不吃亏，甚至场面上有一定主动，但他们只有1次射正，说明进攻推进到最后一击的效率明显不足；反过来墨西哥 3次射正打进2球，临门一脚和转换效率更高，这也是比分差距形成的核心原因。进入最后几分钟后，两球领先的一方通常会更倾向于压缩空间、控制节奏，而落后方即使继续压上，也需要在极短时间里至少打进两球才能追平，这使得结果概率明显向客队胜出倾斜。基于当前比分、时间节点以及双方到目前为止展现出的效率差异，墨西哥守住胜局的可能性非常高，平局只剩下小概率，主队直接逆转几乎只存在理论空间。最可能的最终结果仍然是0比2，因为这是与当前比赛走势最吻合的终局：捷克有一定进攻量但缺少足够高质量射门，墨西哥则更可能把现有优势稳稳带到终场。至于最后时段的后续进球逻辑，如果比赛继续出现进球，更像是捷克压上后留下空间，墨西哥通过反击由Santiago Gimenez这类替补前锋扩大比分；另一种较低概率 сценарий是主队在持续施压下由帕特里克·希克抓住定位球或禁区机会扳回一球，但整体上新增进球的期望并不高。"
+      },
+      "sources": [],
+      "cost_usd": 0.0121875,
+      "tokens": {
+        "input": 1623,
+        "output": 542
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.072
+    },
+    {
+      "submitted_at": "2026-06-25T02:47:17+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 7.12
+    },
+    {
+      "submitted_at": "2026-06-25T02:53:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Czech Republic",
+        "away": "Mexico",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T01:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.03,
+        "away": 0.96
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经来到90分钟，捷克0比2落后墨西哥，胜负走势已经非常清晰。现有比赛进程显示，墨西哥在下半场55分钟由马特奥·查韦斯首开纪录，61分钟再由胡利安·基诺内斯扩大优势，短时间内连续两次把握住机会，直接改变了比赛形势。虽然捷克在数据上并不完全被压制，控球51%对49%、总射门12比9、角球5比1，看起来推进和压上次数不少，但真正决定比赛的是门前效率：捷克全场只有1次射正，却已经打到常规时间结束，这说明他们虽然有进攻回合，但高质量终结明显不足；反过来墨西哥3次射正就换来2个进球，效率更高，比赛管理也更成熟。进入90分钟后，留给捷克扳平甚至逆转的时间已经极其有限，因此主胜与平局概率都被大幅压低，客胜自然处于绝对优势。基于当前比分、时间节点以及双方到目前为止展现出的转化效率，最可能的最终结果仍是0比2完场。至于补时阶段的后续进球逻辑，理论上只有在捷克全线压上、墨西哥获得反击空间时，才更可能再出现进球，但从当前局面看，新增进球的整体概率已经不高，因此更稳健的判断是保持现有比分结束比赛。"
+      },
+      "sources": [],
+      "cost_usd": 0.011335,
+      "tokens": {
+        "input": 1690,
+        "output": 474
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.158
+    }
+  ]
+}

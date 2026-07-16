@@ -1,0 +1,824 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-1_Germany_Curaçao_2026-06-14",
+  "provider_fixture_id": "19609158",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-14T18:53:54+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 7,
+      "away": 1
+    },
+    "home": "Germany",
+    "away": "Curacao",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-14T17:00:00+00:00",
+    "venue": "Houston Stadium",
+    "venue_city": "Houston"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 1.0,
+      "draw": 0.0,
+      "away": 0.0
+    },
+    "most_likely_score": "7-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前比赛已进行到第90分钟，比分为德国 7-1 库拉索。从场面数据来看，德国队占据了绝对的统治地位，控球率高达67%，狂轰26脚射门且12次射正，而库拉索仅有8次射门2次射正。德国队多点开花，哈弗茨（Kai Havertz）已经梅开二度，恩梅查、施洛特贝克、穆西亚拉、布朗和温达夫也均有进球入账。由于常规时间已经结束，且分差极其巨大，德国队的胜率已锁定为100%。最可能的最终比分即为当前的 7-1。考虑到补时阶段德国队仍可能创造进攻机会，正在寻求帽子戏法的哈弗茨或替补登场状态火热的温达夫（Deniz Undav）存在微小的进球概率。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2055,
+    "output": 1563
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.01200465,
+  "wall_seconds": 16.326,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 1.0,\n    \"draw\": 0.0,\n    \"away\": 0.0\n  },\n  \"most_likely_score\": \"7-1\",\n  \"scorers\": [\n    {\n      \"player\": \"Kai Havertz\",\n      \"team\": \"home\",\n      \"minute\": 92,\n      \"p\": 0.05\n    },\n    {\n      \"player\": \"Deniz Undav\",\n      \"team\": \"home\",\n      \"minute\": 94,\n      \"p\": 0.03\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"当前比赛已进行到第90分钟，比分为德国 7-1 库拉索。从场面数据来看，德国队占据了绝对的统治地位，控球率高达67%，狂轰26脚射门且12次射正，而库拉索仅有8次射门2次射正。德国队多点开花，哈弗茨（Kai Havertz）已经梅开二度，恩梅查、施洛特贝克、穆西亚拉、布朗和温达夫也均有进球入账。由于常规时间已经结束，且分差极其巨大，德国队的胜率已锁定为100%。最可能的最终比分即为当前的 7-1。考虑到补时阶段德国队仍可能创造进攻机会，正在寻求帽子戏法的哈弗茨或替补登场状态火热的温达夫（Deniz Undav）存在微小的进球概率。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Final Thoughts on the Germany vs. Curacao Match**\n\nOkay, here's how I'm assessing this match. It's the 90th minute, and the score is a decisive 7-1 in favor of Germany. The match flow is clear: Germany has completely controlled the game. They've had 67% possession, a whopping 26 shots, and 12 of them on target. Curacao? Only 8 shots, with just 2 on target. It's been a masterclass in attacking football from Germany. They've had six different goalscorers, with Kai Havertz bagging a brace. Given the score and the remaining time, there's basically no chance of a comeback. Germany's win probability is effectively 1.0 (or 0.999).\n\nThe most likely final score is, without a doubt, 7-1. However, since we're in stoppage time, I'll allow for a very small probability of another goal. Kai Havertz is on for a hat-trick and Deniz Undav is also looking dangerous. Thus, I am assigning a very low probability to both these players scoring.\n\nI've set the win probabilities accordingly: Germany at home has 1.0, the draw and away are at 0.0. The most likely score is, as mentioned, 7-1.\n\nMy key reasoning is: The current score and time (7-1 at 90'). The match flow is Germany's dominance. Probabilities are 100% home win. The final score, barring any miracle, will be 7-1.\n\nAnd here's the final JSON, which takes into account all the constraints, especially the minute constraints for scorers:\n```json\n{\n  \"win_probs\": {\n    \"home\": 1.0,\n    \"draw\": 0.0,\n    \"away\": 0.0\n  },\n  \"most_likely_score\": \"7-1\",\n  \"scorers\": [\n    {\n      \"player\": \"Kai Havertz\",\n      \"team\": \"home\",\n      \"minute\": 92,\n      \"p\": 0.05\n    },\n    {\n      \"player\": \"Deniz Undav\",\n      \"team\": \"home\",\n      \"minute\": 94,\n      \"p\": 0.03\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"当前比赛已进行到第90分钟，比分为德国 7-1 库拉索。从场面数据来看，德国队占据了绝对的统治地位，控球率高达67%，狂轰26脚射门且12次射正，而库拉索仅有8次射门2次射正。德国队多点开花，哈弗茨（Kai Havertz）已经梅开二度，恩梅查、施洛特贝克、穆西亚拉、布朗和温达夫也均有进球入账。由于常规时间已经结束，且分差极其巨大，德国队的胜率已锁定为100%。最可能的最终比分即为当前的 7-1。考虑到补时阶段德国队仍可能创造进攻机会，正在寻求帽子戏法的哈弗茨或替补登场状态火热的温达夫（Deniz Undav）存在微小的进球概率。\"\n  },\n  \"sources\": []\n}\n```\n\nAll details are accounted for, and I am satisfied with this assessment.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-14T17:11:04+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 11,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.96,
+        "draw": 0.03,
+        "away": 0.01
+      },
+      "most_likely_score": "4-0",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 58,
+          "p": 0.5,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 34,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Felix Nmecha",
+          "minute": 75,
+          "p": 0.3,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第11分钟，德国队凭借费利克斯·恩梅查（Felix Nmecha）在第6分钟的进球，目前以1-0领先库拉索。从场面数据来看，德国队展现了绝对的统治力，控球率高达65%，且在开场仅11分钟内就完成了4次射门。库拉索目前0射门，完全处于被动防守状态。考虑到双方巨大的实力差距以及德国队早早打破僵局，主队获胜的概率已经极高（96%）。按照目前的攻防节奏和压制力，德国队极有可能继续扩大比分，最可能的最终比分为4-0。在后续进球者方面，已经贡献一次助攻的弗洛里安·维尔茨（Florian Wirtz）状态极佳，有望亲自建功；同时，德国队的其他攻击手（如Kai Havertz）也有很大机会在比赛中后段利用对手防线疲惫取得进球，恩梅查也有完成梅开二度的可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.0137991,
+      "tokens": {
+        "input": 962,
+        "output": 2030
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.926
+    },
+    {
+      "submitted_at": "2026-06-14T17:16:55+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 16,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.98,
+        "draw": 0.015,
+        "away": 0.005
+      },
+      "most_likely_score": "4-0",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 58,
+          "p": 0.55,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 34,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 76,
+          "p": 0.4,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第16分钟，德国队凭借Felix Nmecha在第6分钟的进球暂时1-0领先库拉索。从场面数据来看，德国队占据了绝对的统治地位，控球率高达77%，且在短短16分钟内已经完成了7次射门（2次射正），而库拉索至今零射门，完全处于被动挨打的局面。基于双方巨大的实力差距以及德国队早早打破僵局的势头，德国队获胜的概率已经接近98%。预计德国队会在接下来的比赛中继续扩大比分，最可能的最终比分为4-0。后续进球逻辑方面，已经贡献一次助攻的Florian Wirtz状态出色，极有可能亲自建功，而德国队前场的其他攻击手如Kai Havertz和Jamal Musiala也有很大机会在后续比赛中利用对手体能下降和防线漏洞取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.007394100000000001,
+      "tokens": {
+        "input": 982,
+        "output": 1010
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.35
+    },
+    {
+      "submitted_at": "2026-06-14T17:22:38+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 22,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.96,
+        "draw": 0.03,
+        "away": 0.01
+      },
+      "most_likely_score": "4-0",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 63,
+          "p": 0.55,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 41,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Felix Nmecha",
+          "minute": 75,
+          "p": 0.3,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第22分钟，德国队凭借菲利克斯·恩梅查（Felix Nmecha）在第6分钟的进球，目前以1-0领先库拉索。从场面数据来看，德国队占据了绝对的统治地位，控球率高达70%，且在短短20多分钟内已经完成了8次射门，而库拉索仅有1次射门且未能命中目标。这种压倒性的局面和两队之间巨大的实力差距表明，德国队在接下来的比赛中极有可能继续扩大领先优势。基于当前的比赛走势，主队获胜的概率高达96%。预计德国队会在后续比赛中保持攻势并再入多球，最可能的最终比分为4-0。弗洛里安·维尔茨（Florian Wirtz）已经贡献了一次助攻，状态活跃，极有可能在后续比赛中亲自建功；同时，德国队的其他攻击手也有望在下半场利用对手体能下降的机会取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0089754,
+      "tokens": {
+        "input": 982,
+        "output": 1261
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.8
+    },
+    {
+      "submitted_at": "2026-06-14T17:28:23+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 28,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.09,
+        "away": 0.03
+      },
+      "most_likely_score": "4-1",
+      "scorers": [
+        {
+          "player": "Florian Wirtz",
+          "minute": 42,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Kai Havertz",
+          "minute": 65,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Felix Nmecha",
+          "minute": 81,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第28分钟，当前比分为德国 1-1 库拉索。德国队在第6分钟由费利克斯·恩梅查（Felix Nmecha）接弗洛里安·维尔茨（Florian Wirtz）助攻首开纪录，但库拉索在第21分钟由利瓦诺·科梅嫩西亚（Livano Comenencia）利用全场唯一一次射正将比分扳平。从实时数据来看，德国队占据了绝对统治地位，控球率高达69%，并已完成8次射门。尽管比分暂时平局，但两队整体实力差距悬殊，且德国队在进攻端持续施压，预计他们将在接下来的比赛中重新确立领先优势。基于场面压制力和创造出的机会，德国队最终获胜的概率极高，最可能的最终比分为 4-1。后续进球逻辑上，已经贡献助攻且状态活跃的维尔茨，以及可能在下半场发力的锋线球员（如哈弗茨）都有很高的破门概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.0123039,
+      "tokens": {
+        "input": 1050,
+        "output": 1778
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.042
+    },
+    {
+      "submitted_at": "2026-06-14T17:34:09+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 34,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.85,
+        "draw": 0.11,
+        "away": 0.04
+      },
+      "most_likely_score": "3-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 76,
+          "p": 0.4,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 52,
+          "p": 0.35,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第34分钟，当前比分为德国 1-1 库拉索。德国队在第6分钟由 Felix Nmecha 首开纪录，但库拉索在第21分钟凭借 Livano Comenencia 的进球意外扳平比分。从场面数据来看，德国队占据了绝对的统治地位，控球率高达72%，总射门数10次（3次射正），而库拉索仅有2次射门且唯一一次射正即转化为进球。考虑到两队巨大的实力差距以及德国队持续的高压进攻，预计德国队在接下来的比赛中将重新掌控局面并取得进球。因此，主队获胜的概率依然极高（85%），最可能的最终比分预测为 3-1。后续进球逻辑方面，已经贡献一次助攻的 Florian Wirtz 以及德国队锋线主力（如 Kai Havertz）有望在下半场为球队建功，将优势转化为胜势。"
+      },
+      "sources": [],
+      "cost_usd": 0.01136835,
+      "tokens": {
+        "input": 1071,
+        "output": 1626
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.265
+    },
+    {
+      "submitted_at": "2026-06-14T17:40:00+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 40,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.09,
+        "away": 0.03
+      },
+      "most_likely_score": "4-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 75,
+          "p": 0.4,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 58,
+          "p": 0.35,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第40分钟，当前比分为德国 2-1 库拉索。虽然库拉索在第21分钟由Livano Comenencia打入一球，但德国队凭借绝对的实力优势再次取得领先（当前比分2-1）。从场面数据来看，德国队控球率高达71%，并完成了11次射门和4次角球，完全掌控了比赛节奏；而库拉索仅有29%的控球率和3次射门。考虑到德国队强大的进攻火力和对比赛的绝对控制力，他们在下半场继续扩大比分的可能性极高。因此，德国队获胜的概率被评估为88%。预测最终比分最可能为4-1，Florian Wirtz（已贡献一次助攻）和前场核心如Kai Havertz等攻击手有望在下半场进一步取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.010201799999999999,
+      "tokens": {
+        "input": 1070,
+        "output": 1441
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.1
+    },
+    {
+      "submitted_at": "2026-06-14T17:45:55+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.09,
+        "away": 0.03
+      },
+      "most_likely_score": "4-1",
+      "scorers": [
+        {
+          "player": "Florian Wirtz",
+          "minute": 62,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Felix Nmecha",
+          "minute": 78,
+          "p": 0.35,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第45分钟，德国队暂时以2-1领先库拉索队。从上半场的统计数据来看，德国队占据了绝对的统治地位，控球率高达70%，并完成了12次射门和5次角球。尽管库拉索队利用仅有的一次射正机会由Livano Comenencia打入一球，但德国队凭借Felix Nmecha和Nico Schlotterbeck的进球稳住了局势。鉴于两队巨大的实力差距以及德国队在进攻端的持续压制，下半场德国队极有可能继续扩大领先优势。因此，德国队的胜率高达88%，最可能的最终比分预测为4-1。上半场已经贡献助攻的Florian Wirtz以及状态出色的Felix Nmecha有望在下半场进一步破门得分。"
+      },
+      "sources": [],
+      "cost_usd": 0.012601049999999999,
+      "tokens": {
+        "input": 1141,
+        "output": 1810
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.239
+    },
+    {
+      "submitted_at": "2026-06-14T17:52:04+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 3,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.98,
+        "draw": 0.01,
+        "away": 0.01
+      },
+      "most_likely_score": "5-1",
+      "scorers": [
+        {
+          "player": "Florian Wirtz",
+          "minute": 62,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Jamal Musiala",
+          "minute": 78,
+          "p": 0.4,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比赛进行到半场结束（45分钟），德国队以3-1领先库拉索队。从场面数据来看，德国队占据了绝对优势，控球率高达71.0%，总射门数达到16次，而库拉索仅有29.0%的控球率和4次射门。德国队在上半场展现了强大的进攻火力，Felix Nmecha、Nico Schlotterbeck以及Kai Havertz先后建功，虽然库拉索通过Livano Comenencia扳回一城，但双方实力差距悬殊。基于目前的比分和场面压制力，德国队获胜的概率极高。预计下半场德国队会继续掌控比赛节奏并扩大领先优势，最可能的最终比分为5-1。后续进球逻辑方面，活跃在进攻端的Florian Wirtz（已有一次助攻）以及其他攻击手有望在下半场继续取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0124929,
+      "tokens": {
+        "input": 1206,
+        "output": 1782
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.212
+    },
+    {
+      "submitted_at": "2026-06-14T18:13:13+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 58,
+        "score": {
+          "home": 4,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.995,
+        "draw": 0.004,
+        "away": 0.001
+      },
+      "most_likely_score": "5-1",
+      "scorers": [
+        {
+          "player": "Florian Wirtz",
+          "minute": 72,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Kai Havertz",
+          "minute": 84,
+          "p": 0.35,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第58分钟，德国队目前4-1大比分领先库拉索。从场面数据来看，德国队占据绝对优势，控球率高达72%，总射门数达到17次，且已经由恩梅查、施洛特贝克、穆西亚拉和哈弗茨多点开花打入4球。库拉索虽然在第21分钟由科梅嫩西亚扳回一城，但整体实力差距悬殊，下半场开场不久连丢两球，防线已经崩溃。基于当前比分和剩余时间，德国队获胜的概率接近100%。考虑到德国队强大的进攻火力和库拉索体能下降，预计德国队在接下来的比赛中还会继续扩大比分。最可能的最终比分预测为5-1。后续进球者方面，已经送出助攻且状态出色的维尔茨（Florian Wirtz）和已经打入一球的哈弗茨（Kai Havertz）有望在比赛后半段继续取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.00859845,
+      "tokens": {
+        "input": 1349,
+        "output": 1140
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.036
+    },
+    {
+      "submitted_at": "2026-06-14T18:19:06+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 64,
+        "score": {
+          "home": 4,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.99,
+        "draw": 0.009,
+        "away": 0.001
+      },
+      "most_likely_score": "5-1",
+      "scorers": [
+        {
+          "player": "Kai Havertz",
+          "minute": 76,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Florian Wirtz",
+          "minute": 84,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第64分钟，德国队目前以4-1大比分领先库拉索队。从场面数据来看，德国队占据了绝对的统治地位，控球率高达69%，狂轰18脚射门且8次射正，并获得了7次角球。库拉索虽然在第21分钟由Livano Comenencia意外扳回一城，但整体实力差距悬殊，德国队在半场结束前后由Nico Schlotterbeck、Jamal Musiala和Kai Havertz连入三球，彻底终结了比赛悬念。鉴于三球的巨大领先优势和剩余不到30分钟的常规时间，德国队获胜的概率已高达99%，平局和客队逆转的可能性微乎其微。考虑到德国队强大的进攻火力和库拉索疲于奔命的防守状态，预计德国队在比赛后段仍会掌控节奏并伺机扩大比分。最可能的最终比分预测为5-1。后续进球逻辑方面，已经通过点球建功的Kai Havertz以及在前场表现活跃、送出助攻的Florian Wirtz极有可能在第76分钟或84分钟左右利用对手体能下降的空当再入一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.012429899999999999,
+      "tokens": {
+        "input": 1350,
+        "output": 1748
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.957
+    },
+    {
+      "submitted_at": "2026-06-14T18:24:56+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 69,
+        "score": {
+          "home": 4,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.995,
+        "draw": 0.004,
+        "away": 0.001
+      },
+      "most_likely_score": "5-1",
+      "scorers": [
+        {
+          "player": "Florian Wirtz",
+          "minute": 78,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Kai Havertz",
+          "minute": 85,
+          "p": 0.22,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第69分钟，德国队目前以4-1大比分领先库拉索队。从场面数据来看，德国队占据了绝对优势，控球率高达69%，总射门数达到21次（其中8次射正），并获得了7次角球。库拉索队虽然在第21分钟由Livano Comenencia扳回一城，但整体进攻机会寥寥，仅有4次射门。下半场开局阶段，德国队通过Jamal Musiala的进球和Kai Havertz的点球迅速扩大领先优势，彻底掌控了比赛节奏。鉴于巨大的比分差距和场面压制，德国队获胜的概率已接近100%。在剩余的20多分钟内，德国队仍有很强的进攻欲望和能力，预计他们可能会再入一球，最可能的最终比分为5-1。后续进球者方面，已经贡献助攻且表现活跃的Florian Wirtz，或已打入一球的Kai Havertz都有可能在比赛尾声阶段继续扩大战果。"
+      },
+      "sources": [],
+      "cost_usd": 0.0119196,
+      "tokens": {
+        "input": 1350,
+        "output": 1667
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.455
+    },
+    {
+      "submitted_at": "2026-06-14T18:30:40+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 75,
+        "score": {
+          "home": 4,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.99,
+        "draw": 0.01,
+        "away": 0.0
+      },
+      "most_likely_score": "5-1",
+      "scorers": [
+        {
+          "player": "Florian Wirtz",
+          "minute": 84,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第75分钟，当前比分为德国 4-1 库拉索。从场面数据来看，德国队占据绝对统治地位，控球率高达68%，并完成了22次射门（8次射正）。尽管库拉索在第21分钟由Livano Comenencia打入一球，但下半场开局阶段德国队通过Jamal Musiala和Kai Havertz的进球迅速扩大了领先优势。由于比赛仅剩15分钟且分差达到3球，德国队的胜率已接近100%，悬念彻底终结。考虑到德国队持续的进攻压迫以及库拉索防线在比赛末段可能出现的体能下降，德国队有较高概率再入一球。因此，最可能的最终比分预测为5-1。后续进球逻辑方面，预计如Florian Wirtz等前场核心球员有望在第84分钟左右利用反击或阵地战机会进一步扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0104433,
+      "tokens": {
+        "input": 1474,
+        "output": 1412
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.78
+    },
+    {
+      "submitted_at": "2026-06-14T18:36:23+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 81,
+        "score": {
+          "home": 5,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.999,
+        "draw": 0.001,
+        "away": 0.0
+      },
+      "most_likely_score": "5-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第81分钟，德国队以5-1遥遥领先库拉索。从场面数据来看，德国队占据绝对统治地位，控球率高达68%，并创造了23次射门（9次射正），而库拉索仅有6次射门。由于比赛所剩时间不多且分差巨大，德国队的胜率已接近100%。在最终比分预测上，考虑到德国队可能在最后阶段放缓进攻节奏以消耗时间，维持5-1的比分是最可能的结果。不过，替补登场且已贡献助攻的昂达夫（Deniz Undav）体能充沛，以及首发前锋哈弗茨（Kai Havertz）仍有在比赛尾声阶段利用对手防线松懈进一步扩大比分的可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.0128793,
+      "tokens": {
+        "input": 1562,
+        "output": 1784
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.19
+    },
+    {
+      "submitted_at": "2026-06-14T18:42:09+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 87,
+        "score": {
+          "home": 6,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 1.0,
+        "draw": 0.0,
+        "away": 0.0
+      },
+      "most_likely_score": "6-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第87分钟，德国队目前以6-1遥遥领先库拉索队。从场面数据来看，德国队占据了绝对的统治地位，控球率达到67%，并完成了多达24次射门（10次射正）。多名球员如Felix Nmecha、Nico Schlotterbeck、Jamal Musiala、Kai Havertz、Nathaniel Brown以及替补登场的Deniz Undav均有进球入账，展现了强大的进攻火力。库拉索队仅在第21分钟由Livano Comenencia打入一球，全场仅有2次射正，难以对德国队防线构成持续威胁。鉴于比赛仅剩最后几分钟加上伤停补时，且比分差距达到5球，德国队获胜的概率已达100%。最可能的最终比分大概率将维持在目前的6-1。不过，考虑到德国队替补球员体能充沛且进攻欲望依然强烈，Deniz Undav或Kai Havertz在补时阶段（如第90或92分钟）仍有小概率利用对手防线松懈再入一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.015547349999999998,
+      "tokens": {
+        "input": 1841,
+        "output": 2161
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.241
+    },
+    {
+      "submitted_at": "2026-06-14T18:48:04+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 6,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 24 column 4 (char 637)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.909
+    },
+    {
+      "submitted_at": "2026-06-14T18:53:54+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 7,
+          "away": 1
+        },
+        "home": "Germany",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T17:00:00+00:00",
+        "venue": "Houston Stadium",
+        "venue_city": "Houston"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 1.0,
+        "draw": 0.0,
+        "away": 0.0
+      },
+      "most_likely_score": "7-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已进行到第90分钟，比分为德国 7-1 库拉索。从场面数据来看，德国队占据了绝对的统治地位，控球率高达67%，狂轰26脚射门且12次射正，而库拉索仅有8次射门2次射正。德国队多点开花，哈弗茨（Kai Havertz）已经梅开二度，恩梅查、施洛特贝克、穆西亚拉、布朗和温达夫也均有进球入账。由于常规时间已经结束，且分差极其巨大，德国队的胜率已锁定为100%。最可能的最终比分即为当前的 7-1。考虑到补时阶段德国队仍可能创造进攻机会，正在寻求帽子戏法的哈弗茨或替补登场状态火热的温达夫（Deniz Undav）存在微小的进球概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.01200465,
+      "tokens": {
+        "input": 2055,
+        "output": 1563
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.326
+    }
+  ]
+}

@@ -1,0 +1,745 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-1_Mexico_South-Africa_2026-06-11",
+  "provider_fixture_id": "19609127",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-11T21:03:28+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 0
+    },
+    "home": "Mexico",
+    "away": "South Africa",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-11T19:00:00+00:00",
+    "venue": "Mexico City Stadium",
+    "venue_city": "Mexico City"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.992,
+      "draw": 0.007,
+      "away": 0.001
+    },
+    "most_likely_score": "2-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经到90分钟，Mexico目前2-0领先，胜负格局基本确定。现有比赛进程显示，Mexico在第9分钟由Julián Quiñones首开纪录，第67分钟由Raúl Jiménez再下一城，形成稳定的两球优势。场面数据也明显倾向主队：Mexico总射门16比3、射正4比2、控球61%比39%、角球3比1，说明他们不仅比分领先，而且整体压制力更强。South Africa在第49分钟吃到Yaya Sithole红牌、在第84分钟又有Themba Zwane被罚下，按当前90分钟时点可视为客队以9人应战，这进一步大幅压低了他们在最后时段追分的可能性。基于当前比分、时间所剩无几、以及Mexico在人数和场面上的双重优势，主胜概率被进一步抬高到接近锁定，平局和客胜只保留极低尾部概率。最可能最终比分维持在2-0，因为进入90分钟后剩余时间非常有限，领先方更可能控场收尾，而落后且少打两人的South Africa很难组织连续高质量进攻；与此同时，Mexico虽然仍有反击空间，但在两球领先情况下继续强攻的必要性不高，所以新增进球的总体预期也偏低。因此后续进球人选不作重点看好，最终比分以2-0完场的概率最高。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 3349,
+    "output": 592
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0172525,
+  "wall_seconds": 12.512,
+  "error": null,
+  "raw_text": "<think>**Evaluating match state and predictions**\n\nI need to output JSON only based on the current match state. The user mentioned the current time is 90 minutes, and any events after that, like a goal in the 92nd minute, should be ignored because they’re inconsistent with the current elapsed time. So, it seems I should craft probabilities for a likely home win, maybe a draw or away win, though the away team is at a disadvantage due to player red cards. I can probably predict no future scorers, resulting in an empty array in the JSON.</think>\n\n{\"win_probs\":{\"home\":0.992,\"draw\":0.007,\"away\":0.001},\"most_likely_score\":\"2-0\",\"scorers\":[],\"reasoning\":{\"overall\":\"比赛已经到90分钟，Mexico目前2-0领先，胜负格局基本确定。现有比赛进程显示，Mexico在第9分钟由Julián Quiñones首开纪录，第67分钟由Raúl Jiménez再下一城，形成稳定的两球优势。场面数据也明显倾向主队：Mexico总射门16比3、射正4比2、控球61%比39%、角球3比1，说明他们不仅比分领先，而且整体压制力更强。South Africa在第49分钟吃到Yaya Sithole红牌、在第84分钟又有Themba Zwane被罚下，按当前90分钟时点可视为客队以9人应战，这进一步大幅压低了他们在最后时段追分的可能性。基于当前比分、时间所剩无几、以及Mexico在人数和场面上的双重优势，主胜概率被进一步抬高到接近锁定，平局和客胜只保留极低尾部概率。最可能最终比分维持在2-0，因为进入90分钟后剩余时间非常有限，领先方更可能控场收尾，而落后且少打两人的South Africa很难组织连续高质量进攻；与此同时，Mexico虽然仍有反击空间，但在两球领先情况下继续强攻的必要性不高，所以新增进球的总体预期也偏低。因此后续进球人选不作重点看好，最终比分以2-0完场的概率最高。\"},\"sources\":[]}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-11T19:10:41+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 10,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.49,
+        "draw": 0.34,
+        "away": 0.17
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到10分钟，比分仍是0比0，属于样本很早的阶段，赛果分布仍然保留较高不确定性。就现有场面数据看，Mexico开局控制力更强，控球率67%对33%，并且已经完成1次射门且1次射正，同时拿到1个角球；South Africa暂时还没有射门和射正，说明前10分钟主要是Mexico在推进和施压。由于目前没有出现进球、红牌或其他重大事件，预测不会发生剧烈跳变，但早段控球和射门优势足以让主队胜率相对赛前中性局面上升。基于0比0的当前比分、仅10分钟的时间节点以及Mexico更好的控场表现，最终结果仍以主队小胜或平局最为集中，因此将主胜设为最高，其次是平局，客胜最低。最可能最终比分选择1比0，一方面符合Mexico目前略占主动但尚未形成大量机会的比赛节奏，另一方面也比2比0、2比1这类需要后续持续高压和更多转化率的比分更稳健。如果后续比赛延续当前结构，Mexico更可能凭借持续控球和边路、定位球制造出下一次高质量机会；而South Africa若继续被压制，更多要依赖反击或定位球寻找破门。不过由于直播状态中尚未提供任何首发或明确前场核心球员信息，且用户要求仅依据当前比赛状态进行更新，因此此时不列出具体未来进球者预测，避免凭空指定球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.01211,
+      "tokens": {
+        "input": 2258,
+        "output": 431
+      },
+      "tool_calls": 0,
+      "wall_seconds": 36.911
+    },
+    {
+      "submitted_at": "2026-06-11T19:15:02+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 15,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.7,
+        "draw": 0.2,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Unknown",
+          "minute": 58,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Unknown",
+          "minute": 69,
+          "p": 0.14,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比赛进行到15分钟，Mexico以1比0领先，这一比分在赛中已经明显改变了胜平负分布。虽然已发生进球的具体事件信息未提供，但从现有数据看，Mexico开局控制力更强，控球率67%对33%占优，射门1比0、射正1比0、角球1比0，说明主队在前15分钟几乎完全掌握节奏，并且唯一一次射正就转化为了领先优势。South Africa目前还没有完成射门或射正，进攻推进和前场威胁都较有限，因此其即时逆转概率被压低。基于1比0的早段领先、主队场面优势以及客队进攻数据偏弱，当前更应上调Mexico取胜概率，同时保留一定平局空间，因为比赛时间还很长，且1球领先在世界杯小组赛环境下并不稳固；South Africa仍有追平机会，但直接反超所需条件更多。最可能最终比分判断为2比0：这既符合Mexico现阶段更强的控场和压制，也符合早早领先后继续通过控球制造下一次高质量机会的逻辑；相比之下，1比0也是合理备选，但考虑到主队前场效率和客队尚未形成射门，2比0略优。后续进球者方面，实时数据未提供官方/API格式的已出场球员名单或射门球员信息，因此无法稳定指向具体姓名，只能保守地将未来进球概率分配为Mexico更可能在下半场前后再入一球，而South Africa若能扳回一球，更可能出现在比赛进入中后段、主队节奏回落或比赛拉开后的阶段。"
+      },
+      "sources": [],
+      "cost_usd": 0.01316,
+      "tokens": {
+        "input": 2276,
+        "output": 498
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.687
+    },
+    {
+      "submitted_at": "2026-06-11T19:21:09+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 21,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.69,
+        "draw": 0.21,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Julián Quiñones",
+          "minute": 57,
+          "p": 0.19,
+          "team": "home"
+        },
+        {
+          "player": "Érik Lira",
+          "minute": 74,
+          "p": 0.08,
+          "team": "home"
+        },
+        {
+          "player": "Teboho Mokoena",
+          "minute": 68,
+          "p": 0.06,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到21分钟，Mexico暂时1比0领先，且唯一进球来自第9分钟Julián Quiñones，助攻者是Érik Lira。仅依据当前赛中状态，Mexico的优势比较明确：他们已经打出5次射门、2次射正、2个角球，控球率达到61%，而South Africa目前仍是0射门、0射正、0角球，说明比赛前21分钟主要由主队掌控节奏。这个场面使主胜概率相比开场后明显上调，因为Mexico不仅已经取得领先，还在持续制造进攻事件；相对地，South Africa进攻产出几乎为空，短时间内逆转所需的进球质量和频率都缺少现场支撑。基于1比0的即时比分、Mexico对比赛控制更强以及South Africa尚未形成有效威胁，当前更合理的结果分布是主胜最高，平局次之，客胜最低。最终比分方面，1比0当然仍有现实可能，但从Mexico现有射门和控球优势看，他们后续再进一球的机会高于South Africa扳平，因此把2比0作为单一最可能最终比分更符合当前走势，同时也与主胜为最高概率保持一致。未来进球者逻辑上，已经取得进球且身处更强进攻一方的Julián Quiñones，仍是21分钟后最值得继续看好的破门人选；Érik Lira作为已经送出助攻、且主队持续压上的关键参与者，也具备次级得分概率。South Africa若能在下半场调整后加强推进，中后段由中场或定位球参与者完成扳回一球的可能性存在，但由于他们截至目前没有射门数据支撑，这类客队进球概率仍明显低于Mexico继续扩大比分的路径。"
+      },
+      "sources": [],
+      "cost_usd": 0.01416,
+      "tokens": {
+        "input": 2340,
+        "output": 554
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.212
+    },
+    {
+      "submitted_at": "2026-06-11T19:27:08+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 27,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Julián Quiñones",
+          "minute": 63,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Érik Lira",
+          "minute": 71,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Teboho Mokoena",
+          "minute": 76,
+          "p": 0.05,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到27分钟，Mexico以1-0领先，现有赛中信息明显偏向主队。9分钟Julián Quiñones已经破门，且由Érik Lira助攻，说明Mexico在前场推进和最后一传上已经形成有效连线。数据层面，Mexico以58%控球、6次射门对0次、2次射正对0次、角球2对0全面占优，而South Africa截至目前还没有形成任何射门或射正，这使得主队在接下来很长一段时间内继续掌控比赛节奏的概率较高。17分钟Teboho Mokoena染黄，也会在一定程度上限制客队中场对抗强度和防守侵略性。基于当前1-0比分和前27分钟的场面压制，主胜概率相对开场明显上升，平局仍有一定空间，主要来自Mexico若效率下降或South Africa下半场改善反击质量；客胜则因进攻输出为零而被压低。最可能最终比分判断为2-0：它既符合Mexico当前优势，也反映足球比赛中领先一方未必持续高强度进球的常见走势。未来进球逻辑上，若Mexico继续保持控球和射门优势，最可能的后续进球仍来自其已证明能进入核心机会区域的攻击点，Julián Quiñones作为已进球球员，继续破门的可能性最高；Érik Lira则因前插和定位球二点参与具备次级威胁。South Africa若想改写比分，更现实的路径是比赛后段利用定位球或转换进攻偷一个进球，因此保留了较低概率的客队后续得分可能，但整体仍不足以改变主队更接近赢球收场的判断。"
+      },
+      "sources": [],
+      "cost_usd": 0.0142025,
+      "tokens": {
+        "input": 2399,
+        "output": 547
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.08
+    },
+    {
+      "submitted_at": "2026-06-11T19:32:55+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 32,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.64,
+        "draw": 0.24,
+        "away": 0.12
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到32分钟，Mexico目前1比0领先South Africa，且唯一进球来自9分钟Julián Quiñones，说明主队较早把握住了机会。从现有比赛状态看，Mexico在数据上占据温和但明确的优势：控球54%对46%，总射门5比0，射正2比0，角球2比0，这意味着South Africa到目前为止还没有形成真正有威胁的终结，客队进攻存在感偏弱。基于当前比分与场面，主胜概率相较开场前明显上升，而平局仍保留一定空间，主要因为1球领先在上半场中段还不算安全；客胜则因South Africa尚无射门、进攻产出不足而被明显压低。最可能的最终比分维持在1比0，因为Mexico虽然更主动，但优势还没有大到必然继续扩大，现阶段更像是主队控制比赛、客队寻找反击窗口的走势；其次才是2比0或1比1这类结果。后续进球逻辑上，如果再有进球，仍更偏向Mexico，因为Julián Quiñones已经取得进球且身处更靠前的终结位置，继续成为后续得分点的概率最高；为其送出助攻的Érik Lira也说明他在推进和二次进攻中的参与度不错。South Africa若想扳平，更可能来自比赛后段在被迫压上后的机会，因此给到客队潜在得分人的概率较低且时间更靠后。"
+      },
+      "sources": [],
+      "cost_usd": 0.01346,
+      "tokens": {
+        "input": 2456,
+        "output": 488
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.22
+    },
+    {
+      "submitted_at": "2026-06-11T19:38:46+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 38,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.25,
+        "away": 0.13
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到38分钟，Mexico主场1比0领先South Africa，且唯一进球来自9分钟Julián Quiñones，说明主队较早建立了优势。就目前可用赛中信息看，Mexico在数据上占据更主动的位置：6次射门、2次射正、2个角球、52%控球；South Africa至今0次射门、0次射正，这对落后一方非常不利，也显著压低了客队即时逆转概率。虽然控球差距不大，说明South Africa并非完全被压制，但他们还没有把控球转化为真正威胁，因此当前概率判断会明显向主队倾斜。基于1比0的现有比分、已接近半场的时间点，以及客队进攻产出不足的现实，主胜仍是最高结果，平局保留一定空间，主要来自下半场客队加强压上后偷到一球；客胜则需要比赛走势出现较大反转，所以概率最低。最可能最终比分定为1-0，逻辑是Mexico已经领先，且比赛样本显示South Africa暂时缺乏直接得分迹象，而Mexico也未形成压倒性高射正数量，因此再进一球并非主线情景。后续进球者方面，如果比赛在下半场继续按照当前效率推进，Mexico的前场终结点Julián Quiñones仍是最像再次破门的人选；已送出助攻的Érik Lira也有一定后插上或远射机会。South Africa若能扳平，更可能来自中前场核心球员把握定位球或二点机会，因此Teboho Mokoena可作为客队相对靠前的潜在进球候选，但整体概率仍低于Mexico球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.01487,
+      "tokens": {
+        "input": 1016,
+        "output": 822
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.856
+    },
+    {
+      "submitted_at": "2026-06-11T19:44:37+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 44,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.23,
+        "away": 0.09
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到44分钟，Mexico目前1比0领先South Africa，唯一进球来自9分钟Julián Quiñones，且由Érik Lira助攻。从已知比赛态势看，Mexico在上半场占据轻微到中等优势：控球54%对46%，总射门6比1，射正2比0，角球2比0，说明主队不仅先取得领先，而且后续在进攻推进和禁区威胁上也更稳定。South Africa到目前只有1次射门且没有射正，门将已有1次扑救，反映出他们在进攻端制造的直接威胁较少，而防守端承受了更多压力。基于当前比分和时间点，1球领先进入半场前对主队胜率提升明显；同时由于比分仍只差1球，平局仍保留较现实可能，尤其若客队下半场加强压迫或利用定位球扳平。综合现有事件与统计，主胜概率应维持最高，平局次之，客胜空间相对有限。最可能最终比分判断为1-0，因为Mexico虽然场面更好，但现阶段射正总量不高，说明优势尚未大到必然继续扩大比分；而South Africa创造机会能力有限，使比赛停留在主队小胜的概率最高。后续进球逻辑上，若Mexico再次得分，最可能仍来自已经取得进球、门前参与度最高的Julián Quiñones，或来自已有助攻、前场连接较活跃的Érik Lira；若South Africa取得下半场进球，更可能来自中前场具备一定球权参与和定位球影响力的Teboho Mokoena。所有后续进球预测都放在44分钟之后，并以主队更可能再进一球、客队较小概率扳平为基础。"
+      },
+      "sources": [],
+      "cost_usd": 0.014495,
+      "tokens": {
+        "input": 2456,
+        "output": 557
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.372
+    },
+    {
+      "submitted_at": "2026-06-11T19:50:38+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.67,
+        "draw": 0.23,
+        "away": 0.1
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛来到45分钟，Mexico以1-0领先，且唯一进球来自9分钟Julián Quiñones，说明主队已经把早段优势转化为比分。结合现有数据，Mexico半场在控球率上以57%对43%占优，总射门8比2、射正2比0、角球2比1，整体场面控制和进攻频率都明显更好；South Africa虽然仍在可追分范围内，但上半场没有射正，说明其真正威胁机会较少。基于这种半场一球领先且数据占优的局面，主胜概率较开场明显上升，平局仍保留一定权重，因为1球差距在下半场并不安全；客胜则需要South Africa在进攻质量上出现较大改善，因此概率最低。最可能最终比分判断为1-0：这既符合Mexico当前领先、射门压制但射正并非特别夸张的比赛走势，也符合世界杯小组赛中领先一方下半场更倾向于控制节奏、降低风险的常见逻辑。若后续再出进球，更大可能仍先来自Mexico，因为其上半场已经证明能更稳定地进入射门区域，而South Africa若想扳平，往往要在比赛后段压上，这会同时增加自己失球与偷到一球的双向可能性。未来进球者方面，已有进球的Julián Quiñones仍是Mexico最直接的终结点，因此在45分钟后仍是主队最可能继续破门的人选；Érik Lira已经送出助攻，也反映其参与前场推进的活跃度，因此具备次级进球可能。South Africa方面，由于缺少射正和明确高威胁事件，未来进球概率整体有限，但像Teboho Mokoena这类具备中前场参与度的球员，仍是客队若扳平时相对更可信的候选。"
+      },
+      "sources": [],
+      "cost_usd": 0.01487,
+      "tokens": {
+        "input": 2456,
+        "output": 582
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.221
+    },
+    {
+      "submitted_at": "2026-06-11T20:16:50+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 61,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.8,
+        "draw": 0.16,
+        "away": 0.04
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到61分钟，Mexico目前1比0领先South Africa，且唯一进球来自9分钟Julián Quiñones，说明主队较早建立优势。结合现有比赛数据，Mexico以55%控球、12次射门和3次射正明显压过South Africa的2次射门和1次射正，场面主动权和持续制造机会的能力都更强。更关键的是South Africa在50分钟被罚下一人，Yaya Sithole的红牌显著改变了后续比赛的胜平负分布：落后一方还要以10人应战，追平难度明显上升，因此主胜概率相较常规1球领先局面进一步抬高。尽管Mexico射正数不算特别夸张，说明他们未必已经把优势彻底转化为大量高质量机会，但South Africa进攻产出偏低、人数处于劣势，令平局和客胜空间都受到压缩。基于当前比分、时间点和红牌背景，最终结果最有可能是Mexico守住领先，小比分完赛，因此将1比0作为最可能最终比分；同时，考虑到接下来近30分钟里Mexico面对10人仍有继续扩大比分的可能，2比0也具备一定权重，只是单一精确比分里1比0仍最突出。后续进球人逻辑上更偏向Mexico球员，因为主队射门量更高且人数占优，其中已取得进球的Julián Quiñones继续成为最可能再次破门的人选，而有助攻记录的Érik Lira也有较高参与后续进球的可能。South Africa若要进球，更可能来自少数反击或定位球机会，因此仅给予较低概率，并以已有黄牌但通常具备中场参与度的Teboho Mokoena作为低概率候选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0145625,
+      "tokens": {
+        "input": 2513,
+        "output": 552
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.951
+    },
+    {
+      "submitted_at": "2026-06-11T20:22:46+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 67,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.17,
+        "away": 0.05
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "67分钟时Mexico以1比0领先，当前赛中局面对主队明显有利。唯一进球来自9分钟Julián Quiñones，说明Mexico较早建立优势；更关键的是49分钟South Africa的Yaya Sithole被红牌罚下，客队随后长时间少打一人，这显著抬升了Mexico守住领先甚至扩大比分的概率。从现有数据看，Mexico以14比3领先总射门、3比1领先角球、控球55%对45%，整体持续压制更明显；虽然双方射正分别是3比2，说明South Africa并非完全没有反击威胁，但在少一人的背景下，他们后段持续制造高质量机会的能力会下降。基于当前比分、时间点和红牌因素，主胜概率继续维持最高，平局仍保留一定空间，主要来自Mexico迟迟无法打进第二球而被客队一次反击或定位球扳平；至于客胜，需要South Africa在10人应战下连进至少2球，发生条件最苛刻，因此概率最低。最可能最终比分判断为1-0：这既符合Mexico当前领先且比赛已进入最后约四分之一时段，也符合其虽然射门优势大、但实际射正转化并不算特别高的走势；其次可想象的分支是2-0或1-1。后续进球逻辑上，若再有进球，仍更偏向Mexico利用人数优势、边路推进和持续压迫完成第二球，因此Julián Quiñones作为已进球且位置最直接的终结点，仍是67分钟后最值得关注的潜在进球者；Érik Lira则因已有助攻、可能继续前插或参与二次进攻而具备次级概率。South Africa若追平，更可能来自比赛末段的冒险压上、定位球或中场远射，因此将Teboho Mokoena列为客队相对更现实的后续进球候选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0150725,
+      "tokens": {
+        "input": 2513,
+        "output": 586
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.655
+    },
+    {
+      "submitted_at": "2026-06-11T20:28:38+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 73,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.14,
+        "away": 0.04
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第73分钟Mexico以1-0领先，且比赛唯一进球来自第9分钟Julián Quiñones。基于当前赛中信息，主队优势比较明确：Mexico射门15比3、射正3比2、角球3比1，控球率也以56%对44%占优，说明比赛大部分时间里Mexico在持续把South Africa压制在较低产出。更关键的是South Africa在第49分钟吃到红牌，剩余时间少打一人，这显著提升了Mexico守住领先的概率，也降低了客队持续反扑和逆转的可能。虽然South Africa在56和61分钟连续换人，说明他们仍在尝试调整进攻与中前场活力，但在少打一人的前提下，客队要同时兼顾压上与防守平衡会更困难。因而当前概率较更新前进一步向主胜倾斜，主胜应为最高，平局保留一定空间，主要对应Mexico未能扩大比分且South Africa在比赛末段抓住一次定位球或转换机会扳平；客胜则需要先追平再反超，在时间和人数双重劣势下概率最低。最可能最终比分维持在1-0，因为Mexico虽然创造了更多射门，但射正转化并不算特别高，领先后一方在最后15到20分钟通常会更重视控制节奏与防守站位；与此同时，South Africa进攻数据偏少，少打一人的情况下持续制造高质量机会的能力受限。后续进球逻辑上，如果再有进球，优先仍看主队利用人数优势与反击空间，由已经进球的Julián Quiñones再次完成终结最合理；但若客队搏命压上成功，替补登场后更靠前的Themba Zwane属于相对更现实的扳平人选之一。不过综合看，比赛最可能以Mexico小胜收尾。"
+      },
+      "sources": [],
+      "cost_usd": 0.014805,
+      "tokens": {
+        "input": 2634,
+        "output": 548
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.914
+    },
+    {
+      "submitted_at": "2026-06-11T20:34:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 79,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.95,
+        "draw": 0.04,
+        "away": 0.01
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到79分钟，Mexico以2-0领先South Africa，且South Africa在49分钟因Yaya Sithole被红牌罚下后长期少打一人，这使主队的胜率在最后阶段明显上升。已发生的关键进程显示Mexico在第9分钟由Julián Quiñones首开纪录，并在第67分钟由Raúl Jiménez扩大优势；从数据看，Mexico以16比3领先总射门、4比2领先射正、控球57%对43%，整体场面控制和持续威胁都更强。South Africa下半场做出换人调整，但在少打一人的情况下，逆转所需至少两球，结合其进攻产出偏低，扳平概率已被显著压缩。基于当前2球差距、仅剩常规时间加补时、以及Mexico人数与场面双重优势，主胜概率维持在极高水平，平局只保留给South Africa最后阶段连续追分的低概率情形，客胜则接近极小概率。最可能最终比分判断为2-0，因为领先方在此阶段通常会优先管理比赛节奏，而Mexico虽然继续制造机会，但未必需要高强度冒进；同时South Africa射门数量有限，少打一人后持续破门难度更高。未来进球逻辑上，若比赛再出现进球，更可能来自Mexico的反击或阵地压制，因此Raúl Jiménez与Julián Quiñones作为已经完成破门、且最直接参与前场终结的球员，是79分钟后更可信的潜在进球点；South Africa若能追回一球，更偏向由替补后增强前场活力的Themba Zwane把握零星机会，但整体概率仍然较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0149875,
+      "tokens": {
+        "input": 2809,
+        "output": 531
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.614
+    },
+    {
+      "submitted_at": "2026-06-11T20:40:18+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 85,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.972,
+        "draw": 0.024,
+        "away": 0.004
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到85分钟，Mexico已经2比0领先South Africa，时间所剩无几，主队胜率因此被大幅抬高。现有比赛进程也明显支持这一判断：Mexico在第9分钟由Julián Quiñones先开纪录，第67分钟Raúl Jiménez再下一城，形成稳定两球优势；South Africa则在第49分钟Yaya Sithole染红，之后长时间少打一人，这对其末段追分能力打击很大。统计层面同样偏向主队，Mexico以16比3领先总射门、4比2领先射正，并有57%控球，说明主队不仅领先比分，场面上也持续占优。基于85分钟时的2球差距、South Africa少打一人以及其进攻产出有限，平局与客胜概率已经被压到很低；South Africa若想扳平至少需要在极短时间内连进两球，这与当前比赛数据和人数劣势并不匹配。最可能最终比分因此仍是2-0：Mexico在领先且人数占优的情况下，更可能控制节奏、降低比赛波动，而不是必须继续强攻。与此同时，末段开放空间和South Africa压上留下的身后，也让Mexico仍保留一定扩大到3-0的机会，所以未来进球候选更偏向主队，Raúl Jiménez与Julián Quiñones作为已取得进球且处于更有利进攻环境的一方，仍是补时阶段最合理的潜在得分点；客队若出现进球，更可能来自被迫前压后的偶发机会，因此仅给予Themba Zwane较低概率。综合来看，主胜几乎稳固，最优更新是Mexico守住2-0，次选才是3-0或2-1。"
+      },
+      "sources": [],
+      "cost_usd": 0.01512,
+      "tokens": {
+        "input": 2814,
+        "output": 539
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.525
+    },
+    {
+      "submitted_at": "2026-06-11T20:46:05+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.992,
+        "draw": 0.007,
+        "away": 0.001
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前已经进行到90分钟，比分是Mexico 2比0领先South Africa，主队胜面已极大。已发生的比赛信息显示，Mexico在第9分钟由Julián Quiñones首开纪录，第67分钟Raúl Jiménez再下一城，形成稳定的两球优势；同时South Africa在第49分钟吃到红牌，最后阶段长期少打一人，这对其追分能力造成决定性打击。现有统计也明显倾向主队：Mexico射门16比3、射正4比2、控球59%比41%、角球3比1，说明主队不仅更早建立优势，而且整体压制和比赛控制力都更强。基于90分钟时点、两球差距、South Africa少打一人以及双方已完成多次换人后的比赛节奏，胜平负概率进一步向主胜集中，平局和客胜只保留极低尾部可能，主要对应超长补时内出现连续偶发进球的极端情形。最可能最终比分维持在2-0，因为这是当前即时比分，且在常规时间已走完的情况下无需额外进球也最符合概率质量；若补时还有进球，更偏向Mexico利用人数与场面优势扩大到3-0，而South Africa若追回一球，更多是定位球或比赛末段压上后的偶发机会。未来进球者方面，只考虑90分钟后的潜在进球，Mexico替补上场且更可能冲击身后空间的Armando González、Alexis Vega具备相对更高的补时破门概率；South Africa一侧若出现进球，则更可能来自末段投入进攻的Evidence Makgopa，但整体概率明显低于主队。"
+      },
+      "sources": [],
+      "cost_usd": 0.0156575,
+      "tokens": {
+        "input": 3179,
+        "output": 514
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.661
+    },
+    {
+      "submitted_at": "2026-06-11T20:51:50+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.992,
+        "draw": 0.007,
+        "away": 0.001
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到90分钟，Mexico目前2-0领先South Africa，胜负判断已经非常清晰，主胜概率被进一步抬升到接近锁定。已发生的关键走势是Mexico在第9分钟由Julián Quiñones首开纪录，并在第67分钟由Raúl Jiménez扩大优势；与此同时，South Africa在下半场连续出现重大减员，第49分钟Yaya Sithole被罚下，第84分钟Themba Zwane再吃红牌，最后阶段实际以9人应对，这显著削弱了他们追分可能。现有数据同样支持这一判断：Mexico以59%控球、16次射门对3次、4次射正对2次占优，说明主队不仅比分领先，场面也更稳定。基于90分钟时2球优势、对手双红牌以及South Africa进攻产出有限，平局和客胜只剩极低理论空间，因此主胜概率远高于其他结果。最可能的最终比分维持在2-0，因为常规时间已结束，剩余补时有限，领先一方更可能选择控节奏和风险管理；不过考虑到Mexico人数优势明显、替补球员体能更充足，补时阶段仍存在小概率再进一球的可能，所以后续进球逻辑更偏向主队而非客队。未来进球者方面，若补时继续出现机会，更可能来自仍具冲击力的Mexico前场替补，如Alexis Vega或Armando González；South Africa在少打两人的情况下，要在最后时段完成破门的概率非常低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0159475,
+      "tokens": {
+        "input": 1909,
+        "output": 745
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.537
+    },
+    {
+      "submitted_at": "2026-06-11T20:57:36+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.992,
+        "draw": 0.007,
+        "away": 0.001
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已到90分钟，Mexico以2-0领先South Africa，胜负形势已经非常明确。已有比赛信息显示Mexico在第9分钟由Julián Quiñones首开纪录，第67分钟Raúl Jiménez再下一城，形成稳定的两球优势。场面数据也明显倾向主队：Mexico总射门16比3、射正4比2、控球61%比39%、角球3比1，说明主队在大部分时间里都更持续地控制比赛并创造机会。概率层面，到了90分钟还保持2球领先，本身就使主胜概率接近锁定；同时South Africa在第49分钟Yaya Sithole被罚下后少打一人，又在第84分钟Themba Zwane再次染红，最后阶段实际处于9人应战，这进一步压低了其追平甚至扳回一球的可能性。因此本次更新将主胜概率大幅抬升至绝对优势，平局和客胜只保留极低尾部概率以覆盖极端补时波动。最可能最终比分方面，现有2-0既符合时间位置，也符合Mexico已经建立优势后在终盘更可能控节奏收比赛的逻辑，所以2-0仍是单一最高概率比分。至于90分钟后的潜在进球，若补时中再有破门，更可能来自人数和场面都占优的Mexico，尤其是后段替补登场、面对South Africa残阵更容易获得终结机会的Armando González或Alexis Vega；South Africa若想在补时进球，更多只能依赖零星反击或定位球，概率明显更低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0157025,
+      "tokens": {
+        "input": 3293,
+        "output": 498
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.055
+    },
+    {
+      "submitted_at": "2026-06-11T21:03:28+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Mexico",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-11T19:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.992,
+        "draw": 0.007,
+        "away": 0.001
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经到90分钟，Mexico目前2-0领先，胜负格局基本确定。现有比赛进程显示，Mexico在第9分钟由Julián Quiñones首开纪录，第67分钟由Raúl Jiménez再下一城，形成稳定的两球优势。场面数据也明显倾向主队：Mexico总射门16比3、射正4比2、控球61%比39%、角球3比1，说明他们不仅比分领先，而且整体压制力更强。South Africa在第49分钟吃到Yaya Sithole红牌、在第84分钟又有Themba Zwane被罚下，按当前90分钟时点可视为客队以9人应战，这进一步大幅压低了他们在最后时段追分的可能性。基于当前比分、时间所剩无几、以及Mexico在人数和场面上的双重优势，主胜概率被进一步抬高到接近锁定，平局和客胜只保留极低尾部概率。最可能最终比分维持在2-0，因为进入90分钟后剩余时间非常有限，领先方更可能控场收尾，而落后且少打两人的South Africa很难组织连续高质量进攻；与此同时，Mexico虽然仍有反击空间，但在两球领先情况下继续强攻的必要性不高，所以新增进球的总体预期也偏低。因此后续进球人选不作重点看好，最终比分以2-0完场的概率最高。"
+      },
+      "sources": [],
+      "cost_usd": 0.0172525,
+      "tokens": {
+        "input": 3349,
+        "output": 592
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.512
+    }
+  ]
+}

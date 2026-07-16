@@ -1,0 +1,221 @@
+{
+  "fixture_id": "World-Cup_Quarter-finals_France_Morocco_2026-07-09",
+  "provider_fixture_id": "19606972",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-09T21:35:42+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 0
+    },
+    "home": "France",
+    "away": "Morocco",
+    "competition": "World Cup",
+    "stage": "Quarter-finals",
+    "kickoff_utc": "2026-07-09T20:00:00+00:00",
+    "venue": "Boston Stadium",
+    "venue_city": "Foxborough"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.98,
+      "draw": 0.01,
+      "away": 0.01
+    },
+    "most_likely_score": "2-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进行到第80分钟，法国队目前以2-0领先摩洛哥。从场面数据来看，法国队完全占据主动，全场狂轰17脚射门其中6次射正，而摩洛哥仅有2次射门且无一射正。下半场姆巴佩（基利安·姆巴佩）和登贝莱（奥斯曼·登贝莱）在短时间内连入两球，彻底改变了比赛走势。考虑到比赛仅剩10分钟左右的常规时间，摩洛哥想要连扳两球的难度极大，法国队获胜的概率已经接近98%。最可能的最终比分维持在2-0。不过，随着摩洛哥大举压上尝试反扑，后防线势必留下空当，姆巴佩利用速度在反击中再次破门的可能性依然存在。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1072,
+    "output": 493
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0042315,
+  "wall_seconds": 8.846,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.98,\n    \"draw\": 0.01,\n    \"away\": 0.01\n  },\n  \"most_likely_score\": \"2-0\",\n  \"scorers\": [\n    {\n      \"player\": \"Kylian Mbappé\",\n      \"team\": \"home\",\n      \"minute\": 88,\n      \"p\": 0.15\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛进行到第80分钟，法国队目前以2-0领先摩洛哥。从场面数据来看，法国队完全占据主动，全场狂轰17脚射门其中6次射正，而摩洛哥仅有2次射门且无一射正。下半场姆巴佩（Kylian Mbappé）和登贝莱（Ousmane Dembélé）在短时间内连入两球，彻底改变了比赛走势。考虑到比赛仅剩10分钟左右的常规时间，摩洛哥想要连扳两球的难度极大，法国队获胜的概率已经接近98%。最可能的最终比分维持在2-0。不过，随着摩洛哥大举压上尝试反扑，后防线势必留下空当，姆巴佩利用速度在反击中再次破门的可能性依然存在。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-09T20:06:36+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 6,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-09T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 38,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Randal Kolo Muani",
+          "minute": 75,
+          "p": 0.3,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第6分钟，目前比分依然是0-0。从开场的数据来看，主场作战的法国队（法国）迅速占据了场上的绝对主动权，控球率高达73%，并且已经完成了2次射门且全部射正，迫使摩洛哥（摩洛哥）门将做出了2次精彩扑救。此外，法国队还获得了一次角球机会，展现出极强的进攻压迫感。相比之下，摩洛哥队开场阶段主要以收缩防守为主，尚未完成任何射门，控球率仅为27%。基于法国队开场后展现出的强大统治力和进攻欲望，他们打破僵局的可能性非常高。摩洛哥虽然防守坚韧，但在如此高强度的持续施压下，很难全场保持城门不失。因此，预测法国队在常规时间内获胜的概率最高，最可能的最终比分为2-0。在后续进球逻辑方面，法国队的核心攻击手如 基利安·姆巴佩 极有可能在接下来的比赛中利用个人能力或前场配合撕开对手防线取得进球，而随着比赛深入，摩洛哥体能下降后，法国队有望在下半场进一步扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.00903,
+      "tokens": {
+        "input": 842,
+        "output": 1293
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.786
+    },
+    {
+      "submitted_at": "2026-07-09T21:12:28+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 57,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-09T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.35,
+        "away": 0.1
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 74,
+          "p": 0.35,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第57分钟，法国与摩洛哥的比分依然是0-0。尽管双方控球率平分秋色（各占50%），但法国队在进攻端占据了绝对的压倒性优势。法国队目前已经完成了13次射门，其中3次射正，而摩洛哥仅有1次射门且未中目标。上半场第28分钟，姆巴佩（基利安·姆巴佩）遗憾罚失点球，加上摩洛哥门将的3次成功扑救，使得僵局维持至今。随着比赛进入下半场中段，留给法国队在常规时间内解决战斗的时间正在减少，平局的概率因此有所上升。然而，考虑到法国队持续的高压进攻和创造机会的能力，他们依然是更有可能在90分钟内获胜的一方。摩洛哥则主要依靠坚固的防守体系试图将比赛拖入加时。综合场面数据，最可能的最终比分预测为法国1-0小胜。姆巴佩虽然错失了点球，但他依然是法国队最具威胁的进攻核心，极有可能在比赛后段完成救赎，打破场上僵局。"
+      },
+      "sources": [],
+      "cost_usd": 0.01387155,
+      "tokens": {
+        "input": 881,
+        "output": 2055
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.012
+    },
+    {
+      "submitted_at": "2026-07-09T21:29:27+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 74,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-09T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.85,
+        "draw": 0.12,
+        "away": 0.03
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第74分钟，法国队目前以1-0领先摩洛哥队。从场面数据来看，法国队在进攻端占据绝对优势，全场已完成16次射门其中5次射正，而摩洛哥队仅有2次射门且无一射正。尽管姆巴佩在上半场第28分钟罚失点球，但他随后在第60分钟接杜埃助攻打破僵局，展现了强大的个人能力和调整能力。摩洛哥队虽然控球率达到49%，但在进攻端缺乏实质性威胁，难以穿透法国队的防线。随着比赛进入尾声，落后的摩洛哥队势必大举压上寻求扳平比分，这将给法国队留下广阔的反击空间。综合当前比分、剩余时间及双方攻防表现，法国队将优势转化为最终胜利的概率极高。最可能的最终比分是1-0，但如果法国队抓住对手压上后的防线空当，姆巴佩等速度型前锋有望在比赛末段通过反击再次破门。"
+      },
+      "sources": [],
+      "cost_usd": 0.009456299999999999,
+      "tokens": {
+        "input": 1032,
+        "output": 1329
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.167
+    },
+    {
+      "submitted_at": "2026-07-09T21:35:42+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 80,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Quarter-finals",
+        "kickoff_utc": "2026-07-09T20:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.98,
+        "draw": 0.01,
+        "away": 0.01
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第80分钟，法国队目前以2-0领先摩洛哥。从场面数据来看，法国队完全占据主动，全场狂轰17脚射门其中6次射正，而摩洛哥仅有2次射门且无一射正。下半场姆巴佩（基利安·姆巴佩）和登贝莱（奥斯曼·登贝莱）在短时间内连入两球，彻底改变了比赛走势。考虑到比赛仅剩10分钟左右的常规时间，摩洛哥想要连扳两球的难度极大，法国队获胜的概率已经接近98%。最可能的最终比分维持在2-0。不过，随着摩洛哥大举压上尝试反扑，后防线势必留下空当，姆巴佩利用速度在反击中再次破门的可能性依然存在。"
+      },
+      "sources": [],
+      "cost_usd": 0.0042315,
+      "tokens": {
+        "input": 1072,
+        "output": 493
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.846
+    }
+  ],
+  "live_refreshed_at": "2026-07-09T21:57:54+00:00"
+}

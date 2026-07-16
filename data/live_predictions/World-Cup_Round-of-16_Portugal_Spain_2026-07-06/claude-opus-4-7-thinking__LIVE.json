@@ -1,0 +1,205 @@
+{
+  "fixture_id": "World-Cup_Round-of-16_Portugal_Spain_2026-07-06",
+  "provider_fixture_id": "19606964",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-06T20:58:33+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 1
+    },
+    "home": "Portugal",
+    "away": "Spain",
+    "competition": "World Cup",
+    "stage": "Round of 16",
+    "kickoff_utc": "2026-07-06T19:00:00+00:00",
+    "venue": "Dallas Stadium",
+    "venue_city": "Arlington"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.06,
+      "draw": 0.12,
+      "away": 0.82
+    },
+    "most_likely_score": "0-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进行到第90分钟，葡萄牙0比1落后西班牙，米克尔·梅里诺在第91分钟由费兰·托雷斯助攻打入制胜球，这一进球实际上把比赛推向了尾声。从场面数据看，西班牙全场占据主动：控球率57%对43%，射门15比8，射正6比2，角球7比3，明显掌控节奏，葡萄牙门将也做出了5次扑救才把比分压制到只丢一球。葡萄牙虽在70分钟后连续换上拉斐尔·莱奥、若昂·菲利克斯、弗朗西斯科·孔塞桑等攻击手加大进攻投入，但缺乏有效射正，且第89分钟贝尔纳多·席尔瓦吃到黄牌反映出防线在承压。考虑到目前实际比赛已进入第91分钟以后的补时阶段，剩余可利用时间极为有限，因此把西班牙获胜概率上调到0.82，平局概率保留0.12（补时阶段被葡萄牙定位球或后卫压上扳平的小概率），葡萄牙逆转赢球几乎不现实，给到0.06。最可能的最终比分锁定为0-1，与胜负概率一致，也符合当前比分不得下调的约束。后续进球方面只考虑90分钟之后：葡萄牙若能扳平，最可能来自压上冲击禁区的Ronaldo头球，或替补上场且状态活跃的若昂·菲利克斯、拉斐尔·莱奥在反击/二点球中的把握；西班牙则可能在葡萄牙全线压上后由Morata、达尼·奥尔莫打入反击锁定胜局，因此对这几名球员给予较小但非零的补时进球概率。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 50963,
+    "output": 906
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.2053241,
+  "wall_seconds": 24.395,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.06, \"draw\": 0.12, \"away\": 0.82},\n  \"most_likely_score\": \"0-1\",\n  \"scorers\": [\n    {\"player\": \"Cristiano Ronaldo\", \"team\": \"home\", \"minute\": 93, \"p\": 0.05},\n    {\"player\": \"João Félix\", \"team\": \"home\", \"minute\": 94, \"p\": 0.04},\n    {\"player\": \"Rafael Leão\", \"team\": \"home\", \"minute\": 92, \"p\": 0.03},\n    {\"player\": \"Álvaro Morata\", \"team\": \"away\", \"minute\": 95, \"p\": 0.04},\n    {\"player\": \"Dani Olmo\", \"team\": \"away\", \"minute\": 93, \"p\": 0.03}\n  ],\n  \"reasoning\": {\"overall\": \"比赛进行到第90分钟，葡萄牙0比1落后西班牙，Mikel Merino在第91分钟由Ferran Torres助攻打入制胜球，这一进球实际上把比赛推向了尾声。从场面数据看，西班牙全场占据主动：控球率57%对43%，射门15比8，射正6比2，角球7比3，明显掌控节奏，葡萄牙门将也做出了5次扑救才把比分压制到只丢一球。葡萄牙虽在70分钟后连续换上Rafael Leão、João Félix、Francisco Conceição等攻击手加大进攻投入，但缺乏有效射正，且第89分钟Bernardo Silva吃到黄牌反映出防线在承压。考虑到目前实际比赛已进入第91分钟以后的补时阶段，剩余可利用时间极为有限，因此把西班牙获胜概率上调到0.82，平局概率保留0.12（补时阶段被葡萄牙定位球或后卫压上扳平的小概率），葡萄牙逆转赢球几乎不现实，给到0.06。最可能的最终比分锁定为0-1，与胜负概率一致，也符合当前比分不得下调的约束。后续进球方面只考虑90分钟之后：葡萄牙若能扳平，最可能来自压上冲击禁区的Ronaldo头球，或替补上场且状态活跃的João Félix、Rafael Leão在反击/二点球中的把握；西班牙则可能在葡萄牙全线压上后由Morata、Dani Olmo打入反击锁定胜局，因此对这几名球员给予较小但非零的补时进球概率。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-06T19:13:30+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 13,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Portugal",
+        "away": "Spain",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-06T19:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.3,
+        "away": 0.36
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Lamine Yamal",
+          "minute": 58,
+          "p": 0.24,
+          "team": "away"
+        },
+        {
+          "player": "Álvaro Morata",
+          "minute": 74,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Bruno Fernandes",
+          "minute": 63,
+          "p": 0.19,
+          "team": "home"
+        },
+        {
+          "player": "Cristiano Ronaldo",
+          "minute": 71,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Rafael Leão",
+          "minute": 82,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Pedri",
+          "minute": 67,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Nico Williams",
+          "minute": 79,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Bernardo Silva",
+          "minute": 76,
+          "p": 0.13,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "开场13分钟双方仍以0-0僵持，场面呈现典型伊比利亚德比的对峙格局。西班牙控球率略占优（52%对48%），但葡萄牙在进攻端反而更为主动，3脚射门、1次射正、2个角球都领先于对手，说明C罗领衔的葡萄牙在反击和定位球端已经找到威胁点；西班牙则是通过中场传导积累节奏，射门2次射正1次，尚未完全释放Yamal、尼科·威廉姆斯两翼的冲击力。犯规都只有1次，比赛节奏顺畅、裁判尺度偏松，这通常有利于技术型球队后半段发挥。基于双方近年交锋和本场早段的态势，胜平负概率维持接近的三分格局，西班牙凭借整体阵容深度和中场控制力略占上风（36%），葡萄牙依托个人能力和反击效率紧随其后（34%），平局30%。考虑到淘汰赛容错率低、双方都不会保守，进球大概率出现在下半场体能下降、防线拉扯之后，最可能的最终比分为1-2，西班牙险胜。后续进球点方面，西班牙这边Yamal的右路突破和Morata禁区嗅觉是最主要威胁，佩德里后插上和尼科·威廉姆斯反击也具备破门可能；葡萄牙方面则看好布鲁诺·费尔南德斯的第二落点射门、C罗定位球或抢点，以及Leão替补登场后的爆点作用，贝尔纳多·席尔瓦的肋部渗透同样值得关注。"
+      },
+      "sources": [],
+      "cost_usd": 0.20543140000000001,
+      "tokens": {
+        "input": 50317,
+        "output": 1041
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.737
+    },
+    {
+      "submitted_at": "2026-07-06T20:08:38+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 53,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Portugal",
+        "away": "Spain",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-06T19:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.118
+    },
+    {
+      "submitted_at": "2026-07-06T20:58:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Portugal",
+        "away": "Spain",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-06T19:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.06,
+        "draw": 0.12,
+        "away": 0.82
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第90分钟，葡萄牙0比1落后西班牙，米克尔·梅里诺在第91分钟由费兰·托雷斯助攻打入制胜球，这一进球实际上把比赛推向了尾声。从场面数据看，西班牙全场占据主动：控球率57%对43%，射门15比8，射正6比2，角球7比3，明显掌控节奏，葡萄牙门将也做出了5次扑救才把比分压制到只丢一球。葡萄牙虽在70分钟后连续换上拉斐尔·莱奥、若昂·菲利克斯、弗朗西斯科·孔塞桑等攻击手加大进攻投入，但缺乏有效射正，且第89分钟贝尔纳多·席尔瓦吃到黄牌反映出防线在承压。考虑到目前实际比赛已进入第91分钟以后的补时阶段，剩余可利用时间极为有限，因此把西班牙获胜概率上调到0.82，平局概率保留0.12（补时阶段被葡萄牙定位球或后卫压上扳平的小概率），葡萄牙逆转赢球几乎不现实，给到0.06。最可能的最终比分锁定为0-1，与胜负概率一致，也符合当前比分不得下调的约束。后续进球方面只考虑90分钟之后：葡萄牙若能扳平，最可能来自压上冲击禁区的Ronaldo头球，或替补上场且状态活跃的若昂·菲利克斯、拉斐尔·莱奥在反击/二点球中的把握；西班牙则可能在葡萄牙全线压上后由Morata、达尼·奥尔莫打入反击锁定胜局，因此对这几名球员给予较小但非零的补时进球概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.2053241,
+      "tokens": {
+        "input": 50963,
+        "output": 906
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.395
+    }
+  ]
+}

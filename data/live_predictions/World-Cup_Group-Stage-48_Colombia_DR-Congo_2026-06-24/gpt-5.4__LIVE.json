@@ -1,0 +1,748 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-48_Colombia_DR-Congo_2026-06-24",
+  "provider_fixture_id": "19609182",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-24T03:52:33+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 0
+    },
+    "home": "Colombia",
+    "away": "Congo DR",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-24T02:00:00+00:00",
+    "venue": "Guadalajara Stadium",
+    "venue_city": "Zapopan"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.91,
+      "draw": 0.08,
+      "away": 0.01
+    },
+    "most_likely_score": "1-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入90分钟，哥伦比亚 目前1比0领先 Congo DR，胜负天平已经明显偏向主队。现有比赛进程显示，哥伦比亚 在第76分钟由 丹尼尔·穆尼奥斯 破门，并且整体场面优势相当清晰：控球64%对36%，射门19比5，射正9比0，角球5比2，说明主队不仅掌控节奏，而且真正把压力持续施加到了对方禁区。Congo DR 到目前为止射正仍是0次，这使他们在最后时段扳平的概率被进一步压低。与此同时，客队门将已经做出8次扑救，也反向说明如果不是防线和门将持续承压，比分可能早已被拉开。基于当前比分和时间节点，最合理的判断仍是哥伦比亚守住优势到终场，因此1比0是最可能的最终比分。胜平负倾向上，主胜显著最高，平局仍保留一小部分空间，主要来自补时阶段定位球、长传冲吊或混战造成的偶发进球；客胜则已经非常低，因为他们不仅落后，还缺少持续制造高质量机会的迹象。至于补时内的后续进球逻辑，如果还有进球，更像是Congo DR 压上后留下身后空间，哥伦比亚 通过反击再下一城；因此像替补登场、具备终结点属性的 约翰·科尔多瓦 会是更现实的主队追加进球候选。客队方面若出现意外扳平，更可能来自前场换上后的冲击点，例如 西蒙·班扎 在最后几分钟抓住一次直接机会，但这一情景的整体发生率仍然有限。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1871,
+    "output": 495
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0121025,
+  "wall_seconds": 11.054,
+  "error": null,
+  "raw_text": "{\"win_probs\":{\"home\":0.91,\"draw\":0.08,\"away\":0.01},\"most_likely_score\":\"1-0\",\"scorers\":[{\"player\":\"Jhon Córdoba\",\"team\":\"home\",\"minute\":92,\"p\":0.05},{\"player\":\"Simon Banza\",\"team\":\"away\",\"minute\":93,\"p\":0.03}],\"reasoning\":{\"overall\":\"比赛已经进入90分钟，Colombia 目前1比0领先 Congo DR，胜负天平已经明显偏向主队。现有比赛进程显示，Colombia 在第76分钟由 Daniel Muñoz 破门，并且整体场面优势相当清晰：控球64%对36%，射门19比5，射正9比0，角球5比2，说明主队不仅掌控节奏，而且真正把压力持续施加到了对方禁区。Congo DR 到目前为止射正仍是0次，这使他们在最后时段扳平的概率被进一步压低。与此同时，客队门将已经做出8次扑救，也反向说明如果不是防线和门将持续承压，比分可能早已被拉开。基于当前比分和时间节点，最合理的判断仍是Colombia守住优势到终场，因此1比0是最可能的最终比分。概率分布上，主胜显著最高，平局仍保留一小部分空间，主要来自补时阶段定位球、长传冲吊或混战造成的偶发进球；客胜则已经非常低，因为他们不仅落后，还缺少持续制造高质量机会的迹象。至于补时内的后续进球逻辑，如果还有进球，更像是Congo DR 压上后留下身后空间，Colombia 通过反击再下一城；因此像替补登场、具备终结点属性的 Jhon Córdoba 会是更现实的主队追加进球候选。客队方面若出现意外扳平，更可能来自前场换上后的冲击点，例如 Simon Banza 在最后几分钟抓住一次直接机会，但这一情景的整体发生率仍然有限。\"},\"sources\":[]}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-24T02:01:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 1,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "failed",
+      "error": "AuthenticationError: Error code: 401 - {'error': {'code': '', 'message': 'This token quota is exhausted TokenStatusExhausted[sk-V2A***1le] (request id: 202606240201542056329438268d9d6GPvgvMTn)', 'type': 'new_api_error'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.949
+    },
+    {
+      "submitted_at": "2026-06-24T02:07:13+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 7,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "failed",
+      "error": "AuthenticationError: Error code: 401 - {'error': {'code': '', 'message': 'This token quota is exhausted TokenStatusExhausted[sk-V2A***1le] (request id: 202606240207155593741808268d9d695uIEdtL)', 'type': 'new_api_error'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 2.767
+    },
+    {
+      "submitted_at": "2026-06-24T02:12:34+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 12,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "failed",
+      "error": "AuthenticationError: Error code: 401 - {'error': {'code': '', 'message': 'This token quota is exhausted TokenStatusExhausted[sk-V2A***1le] (request id: 202606240212355027681528268d9d6O5FPBptM)', 'type': 'new_api_error'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 1.1
+    },
+    {
+      "submitted_at": "2026-06-24T02:17:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "failed",
+      "error": "AuthenticationError: Error code: 401 - {'error': {'code': '', 'message': 'This token quota is exhausted TokenStatusExhausted[sk-V2A***1le] (request id: 202606240217541405989818268d9d6tu9RYbyq)', 'type': 'new_api_error'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.941
+    },
+    {
+      "submitted_at": "2026-06-24T02:23:13+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 23,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "failed",
+      "error": "AuthenticationError: Error code: 401 - {'error': {'code': '', 'message': 'This token quota is exhausted TokenStatusExhausted[sk-V2A***1le] (request id: 202606240223151026722468268d9d6MfbsWdtJ)', 'type': 'new_api_error'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 2.173
+    },
+    {
+      "submitted_at": "2026-06-24T02:28:33+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 28,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "failed",
+      "error": "AuthenticationError: Error code: 401 - {'error': {'code': '', 'message': 'This token quota is exhausted TokenStatusExhausted[sk-V2A***1le] (request id: 202606240228342595974888268d9d6DCORqQJ3)', 'type': 'new_api_error'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.986
+    },
+    {
+      "submitted_at": "2026-06-24T02:33:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 33,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "failed",
+      "error": "AuthenticationError: Error code: 401 - {'error': {'code': '', 'message': 'This token quota is exhausted TokenStatusExhausted[sk-V2A***1le] (request id: 202606240233539863671788268d9d6VNspGqhT)', 'type': 'new_api_error'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.945
+    },
+    {
+      "submitted_at": "2026-06-24T02:39:13+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 39,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "failed",
+      "error": "AuthenticationError: Error code: 401 - {'error': {'code': '', 'message': 'This token quota is exhausted TokenStatusExhausted[sk-V2A***1le] (request id: 202606240239143157566478268d9d6vNjPr68T)', 'type': 'new_api_error'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 0.938
+    },
+    {
+      "submitted_at": "2026-06-24T02:44:32+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 44,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "failed",
+      "error": "AuthenticationError: Error code: 401 - {'error': {'code': '', 'message': 'This token quota is exhausted TokenStatusExhausted[sk-V2A***1le] (request id: 202606240244347152558798268d9d6Z0crEKmj)', 'type': 'new_api_error'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 2.146
+    },
+    {
+      "submitted_at": "2026-06-24T02:49:52+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "failed",
+      "error": "AuthenticationError: Error code: 401 - {'error': {'code': '', 'message': 'This token quota is exhausted TokenStatusExhausted[sk-V2A***1le] (request id: 202606240249547853349398268d9d6DZ1XlQQl)', 'type': 'new_api_error'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 2.004
+    },
+    {
+      "submitted_at": "2026-06-24T03:14:11+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 59,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.63,
+        "draw": 0.29,
+        "away": 0.08
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Luis Díaz",
+          "minute": 72,
+          "p": 0.19,
+          "team": "home"
+        },
+        {
+          "player": "Rafael Santos Borré",
+          "minute": 78,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Jhon Durán",
+          "minute": 84,
+          "p": 0.11,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛来到第59分钟，比分仍是0比0，但场面信息明显更倾向哥伦比亚。哥伦比亚目前控球达到68%，已经完成16次射门和7次射正，而刚果民主共和国只有2次射门、0次射正，门将一侧还已经做出7次扑救，这说明比赛大部分时间都在刚果民主共和国半场附近进行，哥伦比亚持续施压但临门一脚和最后处理还差一点。进入下半场后，0比0会自然抬高平局概率，但从现有攻防数据看，哥伦比亚的胜面仍然是三项结果里最高的一项，因为他们不仅创造了远多于对手的进攻回合，而且对手至今几乎没有形成真正持续的反击威胁。基于这种局势，最合理的判断是接下来若有进球，更大概率来自主导比赛的哥伦比亚；而如果他们迟迟不能把优势转化为进球，比赛就会逐步滑向闷平，因此平局仍然保留了不低的可能。综合时间消耗与场面压制强度，最可能的结局是哥伦比亚在最后三十分钟内打进一球，以1比0收下比赛。后续潜在进球人选也更应集中在哥伦比亚前场攻击点，尤其是擅长在持续压迫中完成终结的边锋和中锋类型球员；若比赛继续维持当前攻守结构，进球时间更可能出现在70分钟以后，随着刚果民主共和国防线承压累积，禁区内二点球、边路内切射门或定位球后的补射都会是最现实的破门方式。"
+      },
+      "sources": [],
+      "cost_usd": 0.0104625,
+      "tokens": {
+        "input": 1083,
+        "output": 517
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.193
+    },
+    {
+      "submitted_at": "2026-06-24T03:20:22+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 65,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.33,
+        "away": 0.09
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Jhon Córdoba",
+          "minute": 74,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Juan Fernando Quintero",
+          "minute": 81,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Simon Banza",
+          "minute": 86,
+          "p": 0.06,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到65分钟仍是0比0，但场面数据明显倾向哥伦比亚。哥伦比亚已经完成16次射门、7次射正，控球率达到66%，角球也以3比2领先，说明他们在大部分时间里持续把比赛压在刚果（金）半场。相对来看，刚果（金）只有3次射门、0次射正，同时门将已经做出7次扑救，这通常意味着客队防线承受了较大压力，当前比分更像是哥伦比亚迟迟没有把优势转化为进球，而不是双方机会均等。下半场双方都通过换人调整节奏，哥伦比亚换上约翰·科尔多瓦和胡安·费尔南多·金特罗后，前场冲击力与最后一传质量都有提升空间；刚果（金）则换上西蒙·班扎加强反击和支点作用。基于当前时间点和比赛走势，平局概率仍然不低，因为时间已经进入最后25分钟左右，而且刚果（金）的防守韧性已经支撑到现在；但从持续压制、射门质量和比赛主动权来看，哥伦比亚仍然是更可能在后段打破僵局的一方，因此主胜概率最高。最可能的最终比分判断为1比0，这既符合当前0比0的僵持局面，也匹配哥伦比亚占优但未形成大比分趋势的比赛结构。后续进球逻辑上，哥伦比亚如果破门，更可能来自禁区内终结或定位球后的二点机会，约翰·科尔多瓦具备成为直接终结点的条件，而胡安·费尔南多·金特罗则有通过远射、直塞或定位球制造决定性时刻的可能。刚果（金）若想改写比分，最现实路径仍是后程反击或定位球抢点，西蒙·班扎是客队后段最值得关注的潜在得分点，但整体来看，客队逆转比赛的概率依然偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0125725,
+      "tokens": {
+        "input": 1561,
+        "output": 578
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.247
+    },
+    {
+      "submitted_at": "2026-06-24T03:26:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.39,
+        "away": 0.09
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Jhon Córdoba",
+          "minute": 79,
+          "p": 0.19,
+          "team": "home"
+        },
+        {
+          "player": "Juan Fernando Quintero",
+          "minute": 84,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Simon Banza",
+          "minute": 88,
+          "p": 0.05,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛来到71分钟，比分仍是0比0，但场面信息明显更偏向哥伦比亚。哥伦比亚目前控球达到68%，总射门16比3、射正7比0，角球4比2，而且对方门将已经做出7次扑救，这说明比赛并不是均势僵局，而是主队持续压制、只是临门一脚和门将发挥让比分暂时没有被改写。刚过一小时两队都进行了调整，哥伦比亚换上约翰·科尔多瓦和胡安·费尔南多·金特罗，进一步增强前场冲击和最后一传质量；刚果民主共和国则更多是在被动应对，进攻数据非常有限，71分钟仍然没有射正，说明他们后段想直接带走比赛的概率相对较低。\n\n在这个时间点，0比0的平局概率自然仍然不小，因为留给双方的常规时间已经不多；但结合射门量、射正差距和比赛控制力，哥伦比亚在最后20分钟左右打进1球的机会依旧高于其他结果，所以主胜概率被维持在最高。最合理的终局逻辑是：如果哥伦比亚继续保持这样的压制强度，最容易出现的是一次禁区内终结、定位球二点球，或者Quintero送出关键传球后的破门，因此1比0比0比0更像当前最可能的最终比分。至于刚果民主共和国，他们更现实的路径是利用反击或最后阶段的直接冲吊偷一个，但基于到目前为止的进攻产出，这种情形仍属于次要分支。\n\n后续潜在进球人方面，约翰·科尔多瓦替补登场后最像哥伦比亚在禁区内的直接终结点，适合对应比赛末段持续传中和二次进攻的节奏；胡安·费尔南多·金特罗则有机会通过远射、定位球或前场串联制造决定性一击。客队如果真的在后段制造意外，西蒙·班扎会是相对更合理的人选，因为他代表的是更直接的锋线终结威胁。综合来看，当前更新更倾向哥伦比亚小胜，其次是0比0守到终场，客胜仍是低概率结果。"
+      },
+      "sources": [],
+      "cost_usd": 0.01286,
+      "tokens": {
+        "input": 1322,
+        "output": 637
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.124
+    },
+    {
+      "submitted_at": "2026-06-24T03:27:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 72,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.53,
+        "draw": 0.38,
+        "away": 0.09
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Jhon Córdoba",
+          "minute": 81,
+          "p": 0.17,
+          "team": "home"
+        },
+        {
+          "player": "Juan Fernando Quintero",
+          "minute": 86,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Simon Banza",
+          "minute": 88,
+          "p": 0.05,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛来到72分钟仍是0比0，但场面数据明显更倾向哥伦比亚。哥伦比亚目前控球达到69%，总射门16比3、射正7比0，角球也以4比2领先，说明比赛大部分时间都在刚果民主共和国半场展开，客队门将已经多次参与防守，才把比分维持在僵局。刚果民主共和国在下半场早段连续换人，加强了前场冲击与体能，但到目前为止仍没有射正，这使得他们在最后阶段直接拿下比赛的概率依然偏低。哥伦比亚则在58分钟换上约翰·科尔多瓦和胡安·费尔南多·金特罗，释放出更明确的进攻信号，意味着最后二十分钟继续施压、争取一球制胜的可能性更高。\n\n从时间节点看，72分钟后的每一分钟都会抬高平局的自然权重，因此0比0依然是很现实的结果；不过结合哥伦比亚持续的控球压制、射门产量和禁区前威胁，他们比对手更接近打破僵局。正因如此，主胜概率被维持在最高位，但不会拉得过大，因为比分迟迟未开、对方防线和门将的抗压表现都说明这场比赛的容错空间很小。最可能的终局因此更像是哥伦比亚在比赛后段抓住一次机会，以1比0险胜，而不是演变成大比分。\n\n后续进球逻辑上，如果哥伦比亚进球，最有可能来自替补登场后增强禁区存在感的约翰·科尔多瓦，或者由胡安·费尔南多·金特罗利用定位球、直塞和二点球处理制造决定性一击。刚果民主共和国若要改写走势，更可能依靠最后阶段的直接反击或定位球，由西蒙·班扎这类前场终结点完成偷袭，但整体机会仍明显少于主队。"
+      },
+      "sources": [],
+      "cost_usd": 0.011825,
+      "tokens": {
+        "input": 1322,
+        "output": 568
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.634
+    },
+    {
+      "submitted_at": "2026-06-24T03:33:49+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 78,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.29,
+        "draw": 0.61,
+        "away": 0.1
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到78分钟，比分仍是0比0，平局结果的权重已经明显上升。就场面看，哥伦比亚一直是更主动的一方，控球达到69%，射门16比3、射正7比0、角球4比2，说明他们在推进、压制和进入进攻三区方面都占优；而Congo DR更多处于收缩防守状态，门将已经完成7次扑救，这也是比分还能维持不变的关键。进入最后十多分钟后，时间因素会显著压低再出现多球的概率，因此虽然哥伦比亚整体优势很明显，但最可能的单一结局仍是0比0。与此同时，哥伦比亚的胜率依然保留在第二高水平，因为他们持续制造射门、且下半场通过约翰·科尔多瓦与胡安·费尔南多·金特罗的调整，意味着最后阶段仍有靠禁区冲击或定位球打破僵局的可能。Congo DR的进攻数据偏弱、至今没有射正，因此客胜空间相对最小，不过在比赛末段若哥伦比亚压得更靠前，反击偷到一次机会也不能完全排除。后续进球逻辑上，更值得关注的仍是主队端：约翰·科尔多瓦适合把握禁区内的终结机会，胡安·费尔南多·金特罗则可能通过直塞、远射或定位球制造决定性一击；若比赛被拖入补时且场面继续僵持，那么无进球收场仍然是最大概率路径。"
+      },
+      "sources": [],
+      "cost_usd": 0.0145,
+      "tokens": {
+        "input": 1684,
+        "output": 686
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.228
+    },
+    {
+      "submitted_at": "2026-06-24T03:40:10+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 85,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.97,
+        "draw": 0.025,
+        "away": 0.005
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经来到85分钟，哥伦比亚以2比0领先，局势对主队非常有利。从现有比赛信息看，哥伦比亚在场面上形成了明显压制：控球率67%对33%，射门17比4，射正8比0，而且对手门将已经做出7次扑救，这说明比分不仅领先，比赛内容也持续倾向主队。76分钟丹尼尔·穆尼奥斯的进球进一步拉开差距，随后哥伦比亚通过换人继续保持前场活力，胡安·费尔南多·金特罗替补登场后也立即送出助攻，显示主队在比赛后段依然具备制造机会的能力。Congo DR到目前为止射正仍为0，说明他们虽然在下半场连续调整，但真正威胁哥伦比亚球门的能力仍然有限。在只剩常规时间末段和补时的情况下，主队被连追两球的概率已经很低，因此主胜概率继续大幅上升，平局和客胜空间都非常有限。基于当前比分、时间和双方攻防数据，最可能的最终结果仍是2比0；如果比赛末段再出现进球，更像是哥伦比亚利用对手压上后的空间再下一城。后续潜在进球人选方面，主队替补登场的约翰·科尔多瓦更可能成为终结点，而客队若想追回一球，则更依赖前场替补冲击的西蒙·班扎在最后时段把握有限机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.01269,
+      "tokens": {
+        "input": 1806,
+        "output": 545
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.769
+    },
+    {
+      "submitted_at": "2026-06-24T03:46:36+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.94,
+        "draw": 0.05,
+        "away": 0.01
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经来到90分钟，哥伦比亚目前1比0领先Congo DR，胜负天平已经非常明显地偏向主队。现有比赛进程显示，决定性进球出现在第76分钟，由丹尼尔·穆尼奥斯打入，助攻来自胡安·费尔南多·金特罗；这也和场面数据基本一致。哥伦比亚到目前为止拥有66%的控球、17次射门和8次射正，持续在进攻端施压，而Congo DR只有4次射门、0次射正，说明客队虽然在下半场通过换人尝试提速和加强冲击，但真正形成门前威胁的能力非常有限。与此同时，Congo DR门将已经做出7次扑救，也侧面说明比赛大部分时间是哥伦比亚在掌控局面。\n\n在这个时间点，主队领先且客队迟迟没有制造出有效射正，意味着哥伦比亚守住优势的概率大幅上升；平局的可能主要来自补时阶段的偶发定位球或乱战，而Congo DR直接完成逆转的空间已经极小。基于当前比分、时间和双方创造机会的质量，最合理的结果仍然是哥伦比亚把1比0保持到终场。\n\n至于补时阶段的后续进球逻辑，理论上仍存在两种路径：一是Congo DR压上后利用长传、二点球或定位球偷到扳平；二是哥伦比亚在对手压出阵型后打出反击再进一球。不过从现有数据看，客队至今没有射正，主队虽然进攻更活跃，但比赛已进入尾声，新增进球的总体概率并不高，因此当前最可能的最终比分仍是1比0。"
+      },
+      "sources": [],
+      "cost_usd": 0.0127725,
+      "tokens": {
+        "input": 1575,
+        "output": 589
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.057
+    },
+    {
+      "submitted_at": "2026-06-24T03:52:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Colombia",
+        "away": "Congo DR",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-24T02:00:00+00:00",
+        "venue": "Guadalajara Stadium",
+        "venue_city": "Zapopan"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.91,
+        "draw": 0.08,
+        "away": 0.01
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入90分钟，哥伦比亚 目前1比0领先 Congo DR，胜负天平已经明显偏向主队。现有比赛进程显示，哥伦比亚 在第76分钟由 丹尼尔·穆尼奥斯 破门，并且整体场面优势相当清晰：控球64%对36%，射门19比5，射正9比0，角球5比2，说明主队不仅掌控节奏，而且真正把压力持续施加到了对方禁区。Congo DR 到目前为止射正仍是0次，这使他们在最后时段扳平的概率被进一步压低。与此同时，客队门将已经做出8次扑救，也反向说明如果不是防线和门将持续承压，比分可能早已被拉开。基于当前比分和时间节点，最合理的判断仍是哥伦比亚守住优势到终场，因此1比0是最可能的最终比分。胜平负倾向上，主胜显著最高，平局仍保留一小部分空间，主要来自补时阶段定位球、长传冲吊或混战造成的偶发进球；客胜则已经非常低，因为他们不仅落后，还缺少持续制造高质量机会的迹象。至于补时内的后续进球逻辑，如果还有进球，更像是Congo DR 压上后留下身后空间，哥伦比亚 通过反击再下一城；因此像替补登场、具备终结点属性的 约翰·科尔多瓦 会是更现实的主队追加进球候选。客队方面若出现意外扳平，更可能来自前场换上后的冲击点，例如 西蒙·班扎 在最后几分钟抓住一次直接机会，但这一情景的整体发生率仍然有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.0121025,
+      "tokens": {
+        "input": 1871,
+        "output": 495
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.054
+    }
+  ]
+}

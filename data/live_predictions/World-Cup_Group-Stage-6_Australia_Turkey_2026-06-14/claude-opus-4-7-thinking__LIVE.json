@@ -1,0 +1,919 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-6_Australia_Turkey_2026-06-14",
+  "provider_fixture_id": "19609156",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-14T05:56:44+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 0
+    },
+    "home": "Australia",
+    "away": "Türkiye",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-14T04:00:00+00:00",
+    "venue": "Vancouver Stadium",
+    "venue_city": "Vancouver"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.97,
+      "draw": 0.02,
+      "away": 0.01
+    },
+    "most_likely_score": "2-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "目前比赛进入第90分钟，澳大利亚2-0领先土耳其。Irankunda在第27分钟首开纪录，Metcalfe在第75分钟扩大比分，两球均来自澳大利亚高效的反击转化。从数据看，土耳其控球率72%、射门高达30次（射正8次），全面占优，但澳大利亚门将8次扑救表现神勇，加上12次犯规打乱了对手节奏，土耳其始终未能破门。进入补时阶段，土耳其虽有Yıldız、Yunus Akgün、Deniz Gül等攻击替补登场，但要在极短时间内连入两球扳平的概率极低；而澳大利亚通过Behich、Irvine、Geria等防守型换人进一步巩固防线，并可能利用对手压上空档完成反击。综合时间所剩无几与现有比分差距，主胜概率压倒性领先，最可能的最终比分维持2-0。后续若有进球，澳大利亚反击中由前场新援Velupillay或Metcalfe补刀的可能性最高，土耳其则由Yıldız凭借个人能力打入安慰球的机会相对较大。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1262,
+    "output": 540
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.014659400000000001,
+  "wall_seconds": 12.419,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.97, \"draw\": 0.02, \"away\": 0.01},\n  \"most_likely_score\": \"2-0\",\n  \"scorers\": [\n    {\"player\": \"Nishan Velupillay\", \"team\": \"home\", \"minute\": 92, \"p\": 0.06},\n    {\"player\": \"Kenan Yıldız\", \"team\": \"away\", \"minute\": 93, \"p\": 0.05},\n    {\"player\": \"Connor Metcalfe\", \"team\": \"home\", \"minute\": 90, \"p\": 0.04}\n  ],\n  \"reasoning\": {\"overall\": \"目前比赛进入第90分钟，澳大利亚2-0领先土耳其。Irankunda在第27分钟首开纪录，Metcalfe在第75分钟扩大比分，两球均来自澳大利亚高效的反击转化。从数据看，土耳其控球率72%、射门高达30次（射正8次），全面占优，但澳大利亚门将8次扑救表现神勇，加上12次犯规打乱了对手节奏，土耳其始终未能破门。进入补时阶段，土耳其虽有Yıldız、Yunus Akgün、Deniz Gül等攻击替补登场，但要在极短时间内连入两球扳平的概率极低；而澳大利亚通过Behich、Irvine、Geria等防守型换人进一步巩固防线，并可能利用对手压上空档完成反击。综合时间所剩无几与现有比分差距，主胜概率压倒性领先，最可能的最终比分维持2-0。后续若有进球，澳大利亚反击中由前场新援Velupillay或Metcalfe补刀的可能性最高，土耳其则由Yıldız凭借个人能力打入安慰球的机会相对较大。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-14T04:04:21+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 4,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.3,
+        "away": 0.45
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Hakan Çalhanoğlu",
+          "minute": 34,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Kerem Aktürkoğlu",
+          "minute": 62,
+          "p": 0.13,
+          "team": "away"
+        },
+        {
+          "player": "Barış Alper Yılmaz",
+          "minute": 75,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Mathew Leckie",
+          "minute": 55,
+          "p": 0.08,
+          "team": "home"
+        },
+        {
+          "player": "Jamie Maclaren",
+          "minute": 70,
+          "p": 0.07,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛仅进行至第4分钟，当前比分0-0。从早期统计数据来看，土耳其控球率高达81%，澳大利亚仅19%，且澳大利亚已犯规1次，这表明土耳其在开场阶段掌握了比赛主动权，对澳大利亚施加了较大压力。考虑到2026世界杯小组赛阶段双方实力对比，土耳其近年来阵容提升明显，拥有Çalhanoğlu、Aktürkoğlu、Yılmaz等攻击力出色的球员，在技术和控球方面占据优势。澳大利亚虽然纪律性和防守能力稳定，但面对主控球队通常处于被动。综合早期场面以及赛前实力评估，给予土耳其胜率0.45、平局0.30、澳大利亚获胜0.25。最可能比分设为0-1，符合客队最高胜率逻辑。后续进球预测方面，Çalhanoğlu作为土耳其核心中场，定位球和远射能力突出，预测在34分钟左右最可能打破僵局；Aktürkoğlu和Yılmaz作为边路突击手也有较高进球概率。澳大利亚若能利用反击，Leckie和Maclaren在下半场有机会取得进球。所有进球时间均在当前第4分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0302364,
+      "tokens": {
+        "input": 5137,
+        "output": 607
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.678
+    },
+    {
+      "submitted_at": "2026-06-14T04:10:22+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 10,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.3,
+        "away": 0.52
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Kerem Aktürkoğlu",
+          "minute": 38,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Arda Güler",
+          "minute": 62,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Barış Alper Yılmaz",
+          "minute": 74,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Mathew Leckie",
+          "minute": 68,
+          "p": 0.09,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行至第10分钟，比分0-0。从早期统计数据来看，土耳其（Türkiye）占据了压倒性的控球率（84%），并已有4次射门和2个角球，而澳大利亚仅有16%的控球且无射门。这表明土耳其在场面上完全主导，攻势明显，澳大利亚采取深度防守策略。基于此场面形势以及两队世界杯实力对比——土耳其近年来拥有Arda Güler、Kerem Aktürkoğlu、Barış Alper Yılmaz等优秀进攻球员——判断土耳其获胜概率为52%，平局概率30%，澳大利亚获胜概率18%。最可能的最终比分为0-1，土耳其凭借持续的压制大概率在上半场后段或下半场取得进球。Kerem Aktürkoğlu作为主力边锋在压迫性进攻中最有可能率先打破僵局，Arda Güler的远射和组织能力也是重要进球来源。澳大利亚如果得分，可能依靠反击由经验丰富的Leckie完成。整体预测反映了土耳其早期的场面优势与世界杯小组赛中防守一方也有可能坚持到最后的现实。"
+      },
+      "sources": [],
+      "cost_usd": 0.0295445,
+      "tokens": {
+        "input": 5165,
+        "output": 564
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.84
+    },
+    {
+      "submitted_at": "2026-06-14T04:16:14+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 16,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.3,
+        "away": 0.48
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Kerem Aktürkoğlu",
+          "minute": 38,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Barış Alper Yılmaz",
+          "minute": 63,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Arda Güler",
+          "minute": 55,
+          "p": 0.13,
+          "team": "away"
+        },
+        {
+          "player": "Mathew Leckie",
+          "minute": 71,
+          "p": 0.09,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "第16分钟，比分0-0。从当前统计数据来看，土耳其（Türkiye）以73%的控球率和3次射门对比澳大利亚0次射门，明显占据场面主动。澳大利亚仅有27%控球且尚无射门，呈防守姿态。此阶段无任何事件（无进球、黄牌、换人），但土耳其的攻势已相当明显。基于双方世界杯实力差距及当前场面表现，土耳其获胜概率约为0.48，平局概率约0.30，澳大利亚获胜概率约0.22。最可能的最终比分为0-1，与客队最高胜率一致。后续进球方面，预测土耳其前锋Kerem Aktürkoğlu有较大概率在上半场后段打破僵局，Arda Güler和Barış Alper Yılmaz在下半场亦有进球可能；澳大利亚方面Mathew Leckie可能在反击中制造威胁但概率偏低。整体判断土耳其凭借控球和射门优势大概率小胜。"
+      },
+      "sources": [],
+      "cost_usd": 0.0282014,
+      "tokens": {
+        "input": 5177,
+        "output": 489
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.837
+    },
+    {
+      "submitted_at": "2026-06-14T04:22:11+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 22,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.3,
+        "away": 0.48
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Kerem Aktürkoğlu",
+          "minute": 58,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Barış Alper Yılmaz",
+          "minute": 73,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Arda Güler",
+          "minute": 65,
+          "p": 0.13,
+          "team": "away"
+        },
+        {
+          "player": "Mathew Leckie",
+          "minute": 80,
+          "p": 0.08,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行至第22分钟，双方仍为0-0。从统计数据看，土耳其（Türkiye）控球率高达69%，总射门4次对澳大利亚的1次，场面占据明显优势。澳大利亚目前采取偏防守反击策略，控球仅31%，但拿到了2个角球说明偶有威胁。当前无任何事件（无进球、无红黄牌）。综合赛前实力对比——土耳其阵容深度更强，拥有Arda Güler、Kerem Aktürkoğlu等攻击好手——加上场面统计优势，判断土耳其获胜概率最高（0.48），平局概率次之（0.30），澳大利亚获胜概率较低（0.22）。最可能最终比分为0-1，符合客队胜的最高概率要求。后续进球预测方面，Kerem Aktürkoğlu作为土耳其主力边锋有较高概率在下半场打破僵局，Barış Alper Yılmaz和Arda Güler也具备得分能力；澳大利亚方面Mathew Leckie虽然概率不高但有反击破门可能。所有预测进球时间均在第22分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0289858,
+      "tokens": {
+        "input": 5174,
+        "output": 532
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.348
+    },
+    {
+      "submitted_at": "2026-06-14T04:28:03+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 28,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.45,
+        "draw": 0.28,
+        "away": 0.27
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第28分钟，澳大利亚凭借Nestory Irankunda的进球1-0领先土耳其。从统计数据来看，土耳其控球率高达64%，射门5次（1次射正），角球2次，场面上占据主动；而澳大利亚仅有1次射门但把握住了机会取得领先。当前局势表明土耳其具备较强的进攻能力和压迫感，下半场有很大概率发起反扑。然而澳大利亚防守反击效率高，且领先优势带来心理和战术层面的缓冲。综合考虑：主队获胜概率约45%，平局概率约28%，客队逆转概率约27%。最可能的最终比分为1-0，即澳大利亚守住领先优势。后续进球预测方面，土耳其中场核心Arda Güler和前锋Kerem Aktürkoğlu是最有可能为客队扳平的球员，Hakan Çalhanoğlu的远射/定位球也构成威胁；而Irankunda有机会利用反击再下一城。整体来看比赛仍然开放，土耳其控球优势可能转化为进球，但澳大利亚目前的防反策略有效。"
+      },
+      "sources": [],
+      "cost_usd": 0.029551900000000002,
+      "tokens": {
+        "input": 5272,
+        "output": 543
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.613
+    },
+    {
+      "submitted_at": "2026-06-14T04:33:51+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 33,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.28,
+        "away": 0.3
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Kerem Aktürkoğlu",
+          "minute": 58,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Arda Güler",
+          "minute": 67,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Barış Alper Yılmaz",
+          "minute": 75,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Nestory Irankunda",
+          "minute": 81,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "第33分钟澳大利亚1-0领先土耳其。从统计数据看，土耳其控球率高达68%，射门7次（2次射正），明显占据场面主动；而澳大利亚仅2次射门1次射正，第27分钟由Nestory Irankunda打入反击进球（Paul Okon-Engstler助攻），体现出典型的防守反击战术。土耳其虽然控球和射门占优但临门一脚欠缺效率，门将零扑救说明澳大利亚的进攻威胁确实有限。考虑到土耳其整体实力较强、控球优势明显且仍有大量时间追平，预计土耳其在下半场扳平概率较高。综合评估：主队获胜概率42%，平局28%，客队逆转30%。由于主队胜率最高，最可能终场比分应为主队获胜比分，但考虑到土耳其的场面压制力和进攻投入，1-1平局可能性也很大——然而依据规则需与最高概率一致，故最终比分预测为1-0（澳大利亚凭借防守反击守住胜果）。后续进球方面，土耳其Kerem Aktürkoğlu、Arda Güler、Barış Alper Yılmaz均有机会在下半场取得进球；澳大利亚Irankunda也有可能利用反击再下一城。"
+      },
+      "sources": [],
+      "cost_usd": 0.041617600000000005,
+      "tokens": {
+        "input": 5283,
+        "output": 1193
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.832
+    },
+    {
+      "submitted_at": "2026-06-14T04:39:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 39,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.28,
+        "away": 0.3
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Kerem Aktürkoğlu",
+          "minute": 58,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Arda Güler",
+          "minute": 67,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Barış Alper Yılmaz",
+          "minute": 74,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Nestory Irankunda",
+          "minute": 81,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分1-0，第39分钟，澳大利亚凭借Nestory Irankunda在27分钟的进球领先。然而从统计数据看，土耳其控球率高达69%，射门8次（2次射正）对比澳大利亚仅2次射门（1次射正），场面上土耳其明显占优，澳大利亚更多依靠反击和门将扑救（2次）维持领先。土耳其攻势猛烈但临门一脚欠缺效率，考虑到下半场仍有大量时间，且土耳其作为技术型球队有持续施压能力，扳平概率较高。综合赛中模型：主队（澳大利亚）胜率42%，平局28%，客队（土耳其）逆转胜率30%。由于主队胜率最高，最可能最终比分应为主队获胜的1-0，但考虑到土耳其的强势进攻数据和控球优势，1-1平局是单一比分中概率最集中的结果——然而根据规则要求最可能比分须与最高胜率方向一致，因此修正判断：在主队胜的场景下1-0是最可能单一终场比分。后续进球预测方面，土耳其Kerem Aktürkoğlu、Arda Güler等前场球员在下半场有较大进球概率，澳大利亚Irankunda则可能利用反击再次建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.0413549,
+      "tokens": {
+        "input": 5282,
+        "output": 1179
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.901
+    },
+    {
+      "submitted_at": "2026-06-14T04:46:00+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.28,
+        "away": 0.3
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Kerem Aktürkoğlu",
+          "minute": 58,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Arda Güler",
+          "minute": 67,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Nestory Irankunda",
+          "minute": 73,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Barış Alper Yılmaz",
+          "minute": 78,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分1-0，澳大利亚在第27分钟由Nestory Irankunda打入一球取得领先，但从上半场统计数据来看，土耳其控球率高达68%，射门9次（其中2次射正）远多于澳大利亚的3次射门（1次射正），场面上土耳其占据明显优势，澳大利亚的进球更多依靠反击效率。半场结束时1-0的比分并不稳固——土耳其创造了大量机会但未能转化，下半场预计他们将继续施压。考虑到土耳其的攻击火力和场面压制力，下半场扳平比分的概率较高，因此给出主胜42%、平局28%、客胜30%的概率分布。由于主胜概率最高，但1-1平局作为单一比分的出现概率实际最大（土耳其下半场进球概率高且主队难以再次反击得手），这里需要注意：主胜概率最高意味着最可能比分应为主胜比分。重新评估后，考虑到澳大利亚防守反击风格和已有1球领先的优势，维持1-0的概率约为0.25，而1-1约为0.22，综合来看调整为主胜概率最高对应最可能比分1-0。最终判定：最可能比分1-0（澳大利亚守住优势），后续进球候选人以土耳其攻击手Kerem Aktürkoğlu、Arda Güler为主，但他们未必能突破澳大利亚的防线。"
+      },
+      "sources": [],
+      "cost_usd": 0.041917300000000005,
+      "tokens": {
+        "input": 5264,
+        "output": 1213
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.727
+    },
+    {
+      "submitted_at": "2026-06-14T05:07:16+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 52,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.38,
+        "away": 0.32
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Kenan Yıldız",
+          "minute": 71,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Barış Alper Yılmaz",
+          "minute": 82,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Nestory Irankunda",
+          "minute": 78,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Paul Okon-Engstler",
+          "minute": 88,
+          "p": 0.07,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比分1-0，澳大利亚凭借第27分钟Nestory Irankunda（伊兰昆达）的进球领先，比赛进入第52分钟。从场面数据看，土耳其完全占据主动：控球率70%对30%，射门11比4，角球持平，犯规仅1次显示其控制节奏的能力，而澳大利亚2次射正是高效转化的结果，门将也已做出2次扑救。半场Kenan Yıldız（肯安·伊尔迪兹）替补登场，进一步增强了土耳其的进攻锋线威胁，下半场土耳其极可能持续高压。基于此判断：澳大利亚虽领先，但被压制明显，守住1-0难度较大；土耳其反扑追平的概率最高，逆转赢球也具备一定可能。因此平局概率最高（0.38），土耳其取胜次之（0.32），澳大利亚保平或赢球（0.30）。最可能最终比分定为1-1，符合平局为最高概率的逻辑。后续进球方面，Yıldız作为新登场的进攻核心，是追平进球的首选人选；Barış Alper Yılmaz（巴勒什·阿尔佩尔·耶尔马兹）在边路也具备破门能力；澳大利亚若反击得手，Irankunda仍是最可能的得分点，Paul Okon-Engstler（保罗·奥孔-恩斯特勒）有望参与进攻终结。所有预测进球时间均设置在第52分钟之后，且最终比分不低于当前比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0167795,
+      "tokens": {
+        "input": 1070,
+        "output": 693
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.287
+    },
+    {
+      "submitted_at": "2026-06-14T05:13:22+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 58,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.44,
+        "draw": 0.33,
+        "away": 0.23
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前第58分钟，澳大利亚（主队）凭借第27分钟Irankunda的进球以1-0领先土耳其。从场面统计看，土耳其完全掌控比赛节奏：控球率70%对30%，射门13-6，角球4-3，显示土耳其在中前场持续施压，澳大利亚则更多依靠防守反击得手；澳门将已完成3次扑救，说明门前压力确实存在。土耳其中场换上Kenan Yıldız，进攻火力进一步加强，下半场剩余30分钟左右仍有较强追平动能。但考虑到澳大利亚已经取得领先、防守组织稳固，且土耳其虽射门多但射正仅3次转化效率有限，主队保住胜果或扩大比分的概率仍略高于被扳平。综合判断：主胜0.44、平局0.33、客胜0.23，主胜最高。最可能最终比分锁定为1-0，符合主胜逻辑且不低于当前任一方比分。后续进球预测以土耳其阵营为主：Kenan Yıldız作为换上的进攻核心威胁最大，Barış Alper Yılmaz边路冲击力强，可能制造第二点；澳大利亚方面Irankunda在反击中仍是最具效率的得分点，可能在土耳其压上后再下一城。所有进球时间均设定在58分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0154808,
+      "tokens": {
+        "input": 1079,
+        "output": 621
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.58
+    },
+    {
+      "submitted_at": "2026-06-14T05:21:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 66,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.38,
+        "away": 0.34
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Kenan Yıldız",
+          "minute": 78,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Barış Alper Yılmaz",
+          "minute": 84,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Nestory Irankunda",
+          "minute": 82,
+          "p": 0.14,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前第66分钟，澳大利亚1-0领先土耳其。比分来自第27分钟Nestory Irankunda（伊兰昆达）由Paul Okon-Engstler助攻打入的运动战进球。从场面数据看，土耳其完全占据主导：控球率67%对33%，射门16比8，角球5比4，且半场换上Kenan Yıldız（肯南·耶尔德兹）后进攻威胁进一步提升，澳大利亚门将已做出4次扑救，呈现典型的『被压制+反击得手』走势。考虑到剩余约25分钟+伤停补时，土耳其大概率会继续加大投入并制造威胁，扳平概率明显高于澳大利亚再下一城或全身而退的概率，因此平局概率被上调至0.38，土耳其取胜概率0.34，澳大利亚保胜概率压低至0.28。最可能的最终比分定为1-1，与平局为最高概率相一致，且不低于当前任一方比分。后续进球方面，Yıldız作为下半场生力军且具备终结能力，被列为最高概率射手；Barış Alper Yılmaz（巴勒什·阿尔佩尔·耶尔马兹）作为边路爆点同样具备破门可能；澳大利亚一侧若再获反击机会，Irankunda仍是最可能的终结点，但权重明显低于土耳其球员。所有预测进球时间均设定在66分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0158545,
+      "tokens": {
+        "input": 1070,
+        "output": 643
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.024
+    },
+    {
+      "submitted_at": "2026-06-14T05:27:39+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 72,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.3,
+        "away": 0.18
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前第72分钟，澳大利亚主场1-0领先土耳其，进球来自第27分钟Nestory Irankunda在Paul Okon-Engstler助攻下的破门。从场面数据看，土耳其控球率高达66%，总射门20次（3次射正对4次射正实际相近，澳门将完成4次扑救），角球5-4，土耳其在场面上明显占优，但效率偏低；澳大利亚在反击和定位球中创造了8次射门、3次射正，门将表现稳健。半场土耳其换上Kenan Yıldız，第62分钟再换上Yunus Akgün加强进攻，澳大利亚则在61分钟用Nishan Velupillay换下进球功臣Irankunda巩固阵型。综合领先优势与剩余时间约18+分钟补时，澳大利亚胜率上调至0.52，平局0.30（土耳其压迫下扳平有一定概率），土耳其逆转概率0.18。最可能的最终比分维持1-0，符合主队胜率最高且不低于当前比分的约束。后续进球逻辑：土耳其将持续猛攻，新援Yıldız和Akgün、边路Yılmaz是最可能扳平的射手；澳大利亚若反击得手，替补前锋Velupillay最具威胁。所有预测进球时间均设在72分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0152551,
+      "tokens": {
+        "input": 1058,
+        "output": 613
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.225
+    },
+    {
+      "submitted_at": "2026-06-14T05:33:29+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 78,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.3,
+        "away": 0.15
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前第78分钟，澳大利亚主场1-0领先土耳其，进球来自第27分钟Nestory Irankunda接Paul Okon-Engstler助攻的破门。从场面看土耳其完全占据主导，控球率67%、总射门21次（澳大利亚仅8次），并通过换上Kenan Yıldız和Yunus Akgün加强进攻火力，澳大利亚门将已做出4次扑救，防线压力极大；但澳大利亚反击有效，射正3次效率更高，且Irankunda下场后由Nishan Velupillay接班维持反击点。仅剩约12分钟加补时，土耳其虽攻势凶猛，但始终未能打穿澳大利亚密集防守，因此主队保住胜果的概率最高，给出home 0.55、draw 0.30、away 0.15。最可能最终比分锁定为1-0，与主胜概率最高一致，且不低于当前任何一方的进球数。后续进球逻辑上：土耳其换上的两名生力军Kenan Yıldız与Yunus Akgün在末段最具威胁，分别给予较高单点概率；澳大利亚则可能由替补前锋Velupillay在反击中扩大比分，但概率相对较低。所有候选射手出场分钟均严格晚于当前78分钟。"
+      },
+      "sources": [],
+      "cost_usd": 0.0149406,
+      "tokens": {
+        "input": 1148,
+        "output": 578
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.517
+    },
+    {
+      "submitted_at": "2026-06-14T05:39:20+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 84,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.94,
+        "draw": 0.05,
+        "away": 0.01
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前第84分钟，澳大利亚主场2-0领先土耳其。比分由Nestory Irankunda（27'）和Connor Metcalfe（75'）打入，澳大利亚虽然控球率仅31%、射门数9次明显少于土耳其的25次（射正6次），但门将已完成6次扑救，防守端非常稳固，反击效率极高。土耳其控球占优却始终无法转化为进球，第75分钟再丢一球后心理与时间双重压力陡增，剩余约6分钟加伤停时间内连扳两球的概率极低。澳大利亚在74分钟连换两人加固防线与反击点，整体节奏管理到位。综合来看，主队胜率压倒性领先（约0.94），平局概率极低（约0.05），客队翻盘概率几乎可以忽略（约0.01）。最可能的最终比分维持2-0：再进球需在84分钟之后，主队反击仍可能由替补前锋Nishan Velupillay或Tete Yengi把握空当扩大比分；客队若有回应，最具威胁的是下半场登场后较为活跃的Kenan Yıldız，但概率均偏低，所有候选进球时间均设定在85分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.014615,
+      "tokens": {
+        "input": 1140,
+        "output": 562
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.113
+    },
+    {
+      "submitted_at": "2026-06-14T05:45:06+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.985,
+        "draw": 0.012,
+        "away": 0.003
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，澳大利亚主场2-0领先土耳其。从赛事进程看，澳大利亚虽然控球率仅30%、射门数9-26明显处于下风，但凭借更高效的把握机会能力，由Nestory Irankunda在第27分钟首开纪录、Connor Metcalfe在第75分钟扩大比分。土耳其虽全场施压（射正6次），但澳大利亚门将完成6次扑救稳住后防。临近终场，澳大利亚已通过多次换人（Jason Geria、Tete Yengi、Aziz Behich、Jackson Irvine）巩固阵型并消耗时间，土耳其在剩余补时阶段连追两球的概率极低。综合来看，主胜概率压倒性领先，平局和客胜几乎可以忽略。最可能的最终比分维持2-0，这与现有比分和主胜判断一致。后续进球逻辑：补时时间有限，土耳其全力压上可能为澳大利亚反击创造空间，替补登场的Velupillay和Irvine具备反击终结能力；土耳其方面Kenan Yıldız作为半场登场的进攻核心仍保有把握零星机会的可能，因此分别给予较低的进球概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.014999799999999999,
+      "tokens": {
+        "input": 1204,
+        "output": 570
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.049
+    },
+    {
+      "submitted_at": "2026-06-14T05:50:53+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.97,
+        "draw": 0.025,
+        "away": 0.005
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比分2-0，比赛已进入第90分钟，进入补时阶段。澳大利亚两度破门：第27分钟Nestory Irankunda（由Paul Okon-Engstler助攻）首开纪录，第75分钟Connor Metcalfe再下一城，将领先优势扩大到两球。从场面统计看，土耳其控球率71%、总射门28次、射正8次，场面占优，但澳大利亚门将完成7次扑救表现极为出色，加上后防整体顽强，多次化解危机。澳大利亚仅29%控球、9次射门4次射正，但抓住机会效率极高。第84分钟换上Jackson Irvine、Aziz Behich明显是加固中后场、消耗时间的调整，土耳其虽多次换人增加进攻火力（Kenan Yıldız、Yunus Akgün、Deniz Gül等），但第86分钟Yunus Akgün的黄牌也反映出客队的焦躁情绪。综合两球领先、仅剩补时几分钟、土耳其需在极短时间内连入两球的难度，主胜概率应给到极高水平，平局与客胜概率近乎可忽略。最可能最终比分维持2-0，与最高的主胜概率一致，且不低于当前比分。补时阶段进球者方面，澳大利亚反击中Nishan Velupillay、Tete Yengi等替补前锋有机会扩大比分；土耳其压上进攻时Kenan Yıldız、Deniz Gül若打入安慰球也属合理，但整体进球概率较低，因此最可能的最终比分仍是2-0。"
+      },
+      "sources": [],
+      "cost_usd": 0.0167351,
+      "tokens": {
+        "input": 1158,
+        "output": 673
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.527
+    },
+    {
+      "submitted_at": "2026-06-14T05:56:44+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Australia",
+        "away": "Türkiye",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T04:00:00+00:00",
+        "venue": "Vancouver Stadium",
+        "venue_city": "Vancouver"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.97,
+        "draw": 0.02,
+        "away": 0.01
+      },
+      "most_likely_score": "2-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进入第90分钟，澳大利亚2-0领先土耳其。Irankunda在第27分钟首开纪录，Metcalfe在第75分钟扩大比分，两球均来自澳大利亚高效的反击转化。从数据看，土耳其控球率72%、射门高达30次（射正8次），全面占优，但澳大利亚门将8次扑救表现神勇，加上12次犯规打乱了对手节奏，土耳其始终未能破门。进入补时阶段，土耳其虽有Yıldız、Yunus Akgün、Deniz Gül等攻击替补登场，但要在极短时间内连入两球扳平的概率极低；而澳大利亚通过Behich、Irvine、Geria等防守型换人进一步巩固防线，并可能利用对手压上空档完成反击。综合时间所剩无几与现有比分差距，主胜概率压倒性领先，最可能的最终比分维持2-0。后续若有进球，澳大利亚反击中由前场新援Velupillay或Metcalfe补刀的可能性最高，土耳其则由Yıldız凭借个人能力打入安慰球的机会相对较大。"
+      },
+      "sources": [],
+      "cost_usd": 0.014659400000000001,
+      "tokens": {
+        "input": 1262,
+        "output": 540
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.419
+    }
+  ]
+}

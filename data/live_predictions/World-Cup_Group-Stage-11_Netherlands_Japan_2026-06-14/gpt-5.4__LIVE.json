@@ -1,0 +1,858 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-11_Netherlands_Japan_2026-06-14",
+  "provider_fixture_id": "19609138",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-14T21:55:02+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 2
+    },
+    "home": "Netherlands",
+    "away": "Japan",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-14T20:00:00+00:00",
+    "venue": "Dallas Stadium",
+    "venue_city": "Arlington"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.21,
+      "draw": 0.65,
+      "away": 0.14
+    },
+    "most_likely_score": "2-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前比赛在90分钟时战成2-2，进入补时阶段后，平局概率已明显上升并成为主导结果。就现有赛况看，双方下半场都持续制造了有效进球：Netherlands在51分钟由Virgil van Dijk、64分钟由Crysencio Summerville两度领先，而Japan先在57分钟由Keito Nakamura扳平，又在89分钟由Daichi Kamada追到2-2，这个89分钟的进球对即时概率影响最大，使原本更接近主队小胜的走势迅速回到平局中心。数据层面，Netherlands控球60%、射门10比10、射正6比3，整体场面和持续压制感略强，因此补时最后阶段若再出胜负，主队绝杀概率仍略高于客队；但Japan在有限控球下完成两次关键追分，说明其转换效率和反击威胁真实存在，所以客队仍保留一定反超机会。综合时间所剩无几、比分已被追平、以及双方创造机会数量接近的事实，最终胜平负分布应以平局为最高，主胜次之，客胜最低。最可能最终比分因此保持在2-2，这既符合当前时间节点，也符合平局为最高概率的约束。至于90分钟后的潜在进球人选，逻辑上更应优先考虑此后仍在场、且位置更靠前或替补后具冲击力的球员：Netherlands方面Memphis Depay与Brian Brobbey具备补时阶段终结机会；Japan方面Koki Ogawa已在89分钟追平进球前送出助攻，继续参与最后一击的概率相对更高。不过由于补时剩余时间有限，任何新增进球的单个球员概率都应维持在较低水平。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2169,
+    "output": 615
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0146475,
+  "wall_seconds": 13.074,
+  "error": null,
+  "raw_text": "{\"win_probs\":{\"home\":0.21,\"draw\":0.65,\"away\":0.14},\"most_likely_score\":\"2-2\",\"scorers\":[{\"player\":\"Memphis Depay\",\"team\":\"home\",\"minute\":92,\"p\":0.08},{\"player\":\"Koki Ogawa\",\"team\":\"away\",\"minute\":93,\"p\":0.06},{\"player\":\"Brian Brobbey\",\"team\":\"home\",\"minute\":94,\"p\":0.05}],\"reasoning\":{\"overall\":\"当前比赛在90分钟时战成2-2，进入补时阶段后，平局概率已明显上升并成为主导结果。就现有赛况看，双方下半场都持续制造了有效进球：Netherlands在51分钟由Virgil van Dijk、64分钟由Crysencio Summerville两度领先，而Japan先在57分钟由Keito Nakamura扳平，又在89分钟由Daichi Kamada追到2-2，这个89分钟的进球对即时概率影响最大，使原本更接近主队小胜的走势迅速回到平局中心。数据层面，Netherlands控球60%、射门10比10、射正6比3，整体场面和持续压制感略强，因此补时最后阶段若再出胜负，主队绝杀概率仍略高于客队；但Japan在有限控球下完成两次关键追分，说明其转换效率和反击威胁真实存在，所以客队仍保留一定反超机会。综合时间所剩无几、比分已被追平、以及双方创造机会数量接近的事实，最终胜平负分布应以平局为最高，主胜次之，客胜最低。最可能最终比分因此保持在2-2，这既符合当前时间节点，也符合平局为最高概率的约束。至于90分钟后的潜在进球人选，逻辑上更应优先考虑此后仍在场、且位置更靠前或替补后具冲击力的球员：Netherlands方面Memphis Depay与Brian Brobbey具备补时阶段终结机会；Japan方面Koki Ogawa已在89分钟追平进球前送出助攻，继续参与最后一击的概率相对更高。不过由于补时剩余时间有限，任何新增进球的单个球员概率都应维持在较低水平。\"},\"sources\":[]}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-14T20:06:44+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 6,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.27,
+        "away": 0.15
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第6分钟，当前比分仍是0比0，但现有赛中信息已经显示出明显的早段倾向。荷兰在开局阶段控球率达到87%，并且已经完成1次射门且1次射正，同时拿到1个角球；日本暂时没有射门，控球仅13%，并且门将已经做出1次扑救。这说明场面主动权目前更偏向主队，荷兰在前6分钟已经把比赛压到日本半场附近展开，至少从即时数据看，荷兰更接近率先破门。基于当前仍是很早的时间点，0比0的平局概率依然不能低估，因为样本还很小，比赛还有大量时间可以修正走势；但与开场前的中性状态相比，荷兰的胜率应当因为这段早期压制而上调，日本胜率则相应下调。最可能最终比分判断为1比0，逻辑是：荷兰已经展现出更好的控场和制造机会能力，但比赛尚早，暂时还没有出现多次高质量机会或进球事件，因此更稳健的赛中预测不是大比分，而是荷兰凭借持续压制打入1球后守住优势。至于后续进球者，由于当前实时状态没有提供首发、球员射门归属或明确的前场核心球员数据，无法在不引入外部信息的前提下稳定给出具体球员姓名；因此本次更新不列出未来进球者名单，但整体进球方向仍然更偏向荷兰在后续时间里先取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0133625,
+      "tokens": {
+        "input": 2273,
+        "output": 512
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.419
+    },
+    {
+      "submitted_at": "2026-06-14T20:12:35+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 12,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.35,
+        "away": 0.19
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到12分钟，比分仍是0比0。就已给出的赛中信息看，Netherlands开局明显更主动：控球率82%对18%，射门1比0，射正1比0，角球1比0，说明比赛前段更多是在Japan半场进行，且Netherlands已经制造过一次需要门将处理的威胁。虽然样本还很小、尚未出现进球或关键事件，但这种早段压制会把原本接近均衡的赛果分布轻微推向主队方向，因此当前更新为Netherlands胜面最高，其次是平局，Japan取胜概率相对较低。考虑到现在只踢了12分钟，且Netherlands虽然占优但创造的绝对机会数量仍有限，最稳妥的最终比分仍偏向低比分；在主队优势与0比0现状之间平衡后，1比0是最可能的终场结果。后续进球逻辑上，如果Netherlands继续维持高控球和前场压迫，下一粒进球更可能来自主队；但由于当前实时状态里没有可用的官方球员级射门/首发/触球信息，无法可靠定位到具体球员，因此本次不输出未来进球者名单，只保留球队层面的进球倾向判断。"
+      },
+      "sources": [],
+      "cost_usd": 0.0098225,
+      "tokens": {
+        "input": 833,
+        "output": 516
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.546
+    },
+    {
+      "submitted_at": "2026-06-14T20:18:16+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 18,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.34,
+        "away": 0.2
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Memphis Depay",
+          "minute": 57,
+          "p": 0.17,
+          "team": "home"
+        },
+        {
+          "player": "Cody Gakpo",
+          "minute": 69,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Wout Weghorst",
+          "minute": 78,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Takumi Minamino",
+          "minute": 73,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到18分钟，当前比分仍是0比0，属于较早阶段，留给双方改变结果的时间充足。从现有实时数据看，Netherlands控球率62%明显占优，射门1比1、射正1比0，角球1比1，说明场面上Netherlands更多掌控比赛节奏，并且已经完成了本场第一次更有威胁的射正；Japan虽然暂时没有射正，但角球和射门数并未落后太多，表示其反击和定位球仍有制造机会的能力。由于目前还没有进球、红黄牌、伤病或换人等重大事件，模型会更多依赖当前0比0比分、时间推进以及控球与射门质量的轻微倾斜来更新概率，因此主胜相对赛前基础面和即时数据获得一定提升，但平局仍保持较高占比，因为18分钟样本很小、总射门很少，比赛暂未进入高强度对攻节奏。综合判断，Netherlands赢面最高，但优势并不足以压倒性拉开，所以主胜46%、平局34%、客胜20%较为合理。最可能最终比分选择1比0，一方面它与当前主队场面略优相匹配，另一方面也符合早段低事件量比赛常见的低比分收束逻辑；0比0虽然也很有可能，但在主队已有更多控球和唯一射正的前提下，1比0略高一档。后续进球者方面，只预测18分钟之后的潜在得分者：如果Netherlands继续维持控球压制，锋线核心和禁区终结点最有机会在下半场通过阵地战或二次进攻取得进球，因此Memphis Depay、Cody Gakpo和Wout Weghorst是较合理的人选；Japan若扳破僵局，更可能来自反击中的前场速度点与二线插上，因此Takumi Minamino保留一定概率。整体而言，本场当前走势更接近Netherlands小胜或僵持到后程才分出胜负。"
+      },
+      "sources": [],
+      "cost_usd": 0.0122875,
+      "tokens": {
+        "input": 1129,
+        "output": 631
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.366
+    },
+    {
+      "submitted_at": "2026-06-14T20:24:05+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 24,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.34,
+        "away": 0.2
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Netherlands Forward",
+          "minute": 58,
+          "p": 0.19,
+          "team": "home"
+        },
+        {
+          "player": "Japan Forward",
+          "minute": 71,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到24分钟，当前比分仍是0-0。从现有赛中数据看，Netherlands控球率66%明显占优，射门1比1持平，但唯一一次射正来自Netherlands，同时Japan已经出现1次门将扑救，说明主队至少制造过一次较有威胁的终结。两队角球同为1个、犯规都不多，且没有出现进球、红黄牌或换人等事件，说明比赛节奏总体还在试探与组织阶段，尚未进入大开大合的高波动状态。基于24分钟时的0-0比分，平局概率依然保持较高，但考虑到Netherlands在控球和场面主导权上的优势，其后续把比赛逐步压向Japan半场、并通过持续控球转化为更多机会的可能性更大，因此主胜概率被提升到全场最高。Japan目前并非没有反击机会，但在控球明显落后的情况下，若后续不能增加射门质量，客胜空间仍相对有限。最可能最终比分给到1-0，这既符合当前低事件密度、总进球预期偏克制的走势，也与主胜为最高概率结果保持一致。后续进球逻辑上，更可能先来自Netherlands在下半场前后通过持续压制取得领先；而Japan若要进球，更像是比赛后段利用反击或定位球制造机会，因此只给予较低的未来进球概率。由于实时数据未提供官方出场球员名单与具体射门球员姓名，未来进球者只能以通用占位形式表示。"
+      },
+      "sources": [],
+      "cost_usd": 0.0098875,
+      "tokens": {
+        "input": 1129,
+        "output": 471
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.687
+    },
+    {
+      "submitted_at": "2026-06-14T20:29:56+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 29,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.44,
+        "draw": 0.36,
+        "away": 0.2
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Memphis Depay",
+          "minute": 67,
+          "p": 0.19,
+          "team": "home"
+        },
+        {
+          "player": "Cody Gakpo",
+          "minute": 74,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Takumi Minamino",
+          "minute": 79,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到29分钟，当前比分0比0，场上还没有出现进球或其他关键事件。从现有数据看，Netherlands控球率62%明显占优，说明其更多掌握比赛节奏；不过双方总射门都只有1次，Netherlands仅有1次射正，Japan没有射正，整体意味着比赛节奏不快、真正高质量机会仍然有限。Japan门将已经有1次扑救，也侧面说明Netherlands到目前为止制造了更接近得分的一次威胁，但优势还不足以把胜率拉到非常高。基于29分钟仍是0比0、且双方射门产量偏低，平局概率相比开场前会上升；但考虑到Netherlands在控球和场面主动权上更好，主胜仍保持最高。综合当前比分、时间节点和有限统计，更新为Netherlands胜面略高，平局次之，Japan依靠反击偷到比赛的概率仍然存在但相对最低。最可能最终比分定为1-0，因为这既符合Netherlands当前更强的控场优势，也符合比赛至今机会不多、总进球预期偏低的走势；0-0同样有相当可能，但在主队已有一定压制的情况下，1球小胜略占先。后续进球逻辑上，更可能发生在下半场中后段：如果Netherlands继续维持控球并逐步增加禁区内触球，前场核心如Memphis Depay或Cody Gakpo最有机会把有限机会转化为进球；而如果Japan在落后或僵持阶段获得转换空间，Takumi Minamino这类前场终结点是更现实的追分人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0135575,
+      "tokens": {
+        "input": 2273,
+        "output": 525
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.641
+    },
+    {
+      "submitted_at": "2026-06-14T20:35:46+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 35,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.49,
+        "draw": 0.34,
+        "away": 0.17
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Unknown",
+          "minute": 63,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Unknown",
+          "minute": 74,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到35分钟，当前比分仍是0比0。就现有赛中信息看，Netherlands在场面上明显更主动：控球率68%对32%，总射门3比1，射正2比0，角球2比1，而且Japan门将已经有2次扑救，说明主队至少制造出了几次更接近进球的机会。虽然截至目前还没有出现进球或关键事件，且样本仍然有限，但从控球与射门质量分布来看，Netherlands在前35分钟建立了更高的进攻占优基础，因此其取胜概率相较开场后的均势已经上升。与此同时，比分仍是0比0，这会继续抬高平局，尤其是0比0或1比1这类低比分结果的可能性；Japan虽然进攻数据偏少，但在防守端暂时守住了局面，因此客胜概率仍存在，只是低于主胜与平局。综合当前时间点、比分状态以及已知统计，最合理的判断是主胜略占先、平局紧随其后、客胜第三。最可能最终比分给到1比0，因为这既符合Netherlands当前的场面优势，也符合上半场35分钟仍未破门所对应的低比分比赛节奏。后续进球逻辑上，如果比赛继续维持类似控球和压制结构，Netherlands更可能在下半场中段凭借持续推进、定位球或禁区内二次进攻取得首球；而Japan若想进球，更像是比赛后段利用反击或主队压上后的转换机会。由于实时数据中未提供官方球员名单或明确个人进攻参与信息，后续潜在进球者只能保守处理为球队层面的未知球员，其中主队在60至75分钟区间的进球概率高于客队。"
+      },
+      "sources": [],
+      "cost_usd": 0.0135125,
+      "tokens": {
+        "input": 2273,
+        "output": 522
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.041
+    },
+    {
+      "submitted_at": "2026-06-14T20:41:34+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 41,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.49,
+        "draw": 0.38,
+        "away": 0.13
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Memphis Depay",
+          "minute": 68,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Wout Weghorst",
+          "minute": 79,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Takumi Minamino",
+          "minute": 74,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到41分钟，当前比分仍是0比0。就现有赛中信息看，荷兰明显占据主动：控球率70%对30%领先，射门4比1、射正2比0、角球2比1，说明比赛大部分时间在日本半场或由荷兰主导推进；同时日本门将已经有2次扑救，也侧面说明荷兰已经制造出一定质量的机会。虽然目前尚未破门，但在接近半场结束时持续保持控球和射门优势，通常会把后续胜率往主队方向推高。不过，比分依旧是0比0，而且荷兰现阶段总射门数量并不算特别高，意味着优势存在但尚未转化为压倒性的预期进球，因此平局概率仍然维持在较高水平。综合当前时间点与场面数据，主胜概率最高，平局次之，客胜最低。最可能最终比分给到1-0，因为这既符合荷兰当前在控球、射门和压制力上的领先，也符合上半场后段仍未进球所反映出的低到中等节奏比赛走势；0-0依然是重要备选，但由于主胜概率已高于平局，单一最可能比分需对应荷兰小胜。后续进球人方面，只能基于荷兰更可能在下半场继续形成稳定进攻这一逻辑来判断，因此更偏向荷兰前场核心或中锋在60分钟后把握机会；日本若取得进球，更可能来自比赛后段反击或转换进攻中的前场主力，但整体概率低于荷兰。"
+      },
+      "sources": [],
+      "cost_usd": 0.0132425,
+      "tokens": {
+        "input": 2273,
+        "output": 504
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.049
+    },
+    {
+      "submitted_at": "2026-06-14T20:47:31+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.35,
+        "away": 0.19
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Memphis Depay",
+          "minute": 67,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Cody Gakpo",
+          "minute": 74,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Wout Weghorst",
+          "minute": 81,
+          "p": 0.11,
+          "team": "home"
+        },
+        {
+          "player": "Takumi Minamino",
+          "minute": 76,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分是0比0，比赛来到45分钟，意味着进入中场前后时段，胜负仍完全开放，但上半场数据已经给出一定倾向。荷兰目前控球率达到68%，射门4比3、射正2比0、角球2比1，说明比赛主动权更多在主队一侧，日本更多处于收缩和等待反击的节奏。日本门将已经有2次扑救，而荷兰门将暂时没有扑救任务，这进一步表明荷兰制造的有效威胁更清晰。由于目前没有进球和重大事件，半场0比0会自然抬高平局概率，但结合场面优势，荷兰在下半场先破门的机会仍高于日本，因此我将主胜保持为最高概率，平局次之，客胜最低。最可能最终比分选择1-0，原因是荷兰优势存在但并非压倒性，射门总量不高，说明比赛更像是荷兰持续压制、但进球数有限的走势；0-0仍有现实可能，但考虑到荷兰的控球和射正领先，1-0比纯闷平更符合当前比赛轨迹。后续进球者方面，只预测45分钟之后的潜在人选：荷兰若继续占据前场时间，锋线与前场攻击手最有希望把握机会，因此Memphis Depay、Cody Gakpo和Wout Weghorst是更合理的潜在进球点；日本若通过反击或定位球打破僵局，则Takumi Minamino这类前场终结点更具代表性。整体来看，下半场更可能出现由荷兰主导、但总进球数偏低的结果。"
+      },
+      "sources": [],
+      "cost_usd": 0.0138575,
+      "tokens": {
+        "input": 2273,
+        "output": 545
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.505
+    },
+    {
+      "submitted_at": "2026-06-14T21:08:35+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 53,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.44,
+        "draw": 0.4,
+        "away": 0.16
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Memphis Depay",
+          "minute": 71,
+          "p": 0.19,
+          "team": "home"
+        },
+        {
+          "player": "Cody Gakpo",
+          "minute": 78,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Wout Weghorst",
+          "minute": 84,
+          "p": 0.11,
+          "team": "home"
+        },
+        {
+          "player": "Takumi Minamino",
+          "minute": 76,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到53分钟，当前仍是0比0，意味着胜负判断已经从赛前预期明显转向“剩余时间内谁能先把控机会”。就现有赛中信息看，荷兰在场面上占据更主动的位置：控球69%对31%，射门4比3，射正2比0，角球3比1，日本门将已有2次扑救而荷兰门将暂时没有扑救任务，这说明荷兰更多把球压在前场并制造了更接近进球的尝试。虽然绝对机会数量还不算很多，比赛节奏并非完全一边倒，因此0比0的平局概率依然很高，但与日本相比，荷兰在控球、禁区压迫和持续输出方面更像是更可能打破僵局的一方。基于53分钟仍无进球这一事实，整体进球预期会较开赛前下降，所以大比分结果的概率被压低，1球分胜负或互交白卷会成为更现实的区间。综合当前比分、时间消耗以及荷兰更优的过程数据，主胜概率略高于平局，客胜则最低。最可能最终比分给到1-0，因为这既符合荷兰目前更强的场面优势，也符合比赛已经进入下半场后总进球空间收缩的逻辑；0-0依然是非常接近的次优结果，但荷兰至少打进1球的路径比日本更清晰。后续进球人方面，只考虑53分钟之后，荷兰若兑现优势，最可能来自其前场终结点或禁区内主要攻击手，因此Memphis Depay、Cody Gakpo和Wout Weghorst属于更合理的候选；日本若在反击或定位球中偷到进球，Takumi Minamino这类能在转换中完成最后一击的球员相对更值得关注。"
+      },
+      "sources": [],
+      "cost_usd": 0.0145175,
+      "tokens": {
+        "input": 2273,
+        "output": 589
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.134
+    },
+    {
+      "submitted_at": "2026-06-14T21:14:23+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 59,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.22,
+        "away": 0.1
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "59分钟时荷兰1比0领先，日本仍有时间追分，但赛中数据明显更支持主队守住优势。唯一进球出现在51分钟，由Virgil van Dijk破门，说明荷兰下半场开局后的压制已经兑现为比分优势。现有统计里，荷兰控球率达到70%，射门5比3、射正3比0、角球3比1，且日本至今射正为0，这意味着日本虽然落后，但真正制造门前高质量终结的能力还没有体现。基于当前比分和时间，领先一方在剩余约30分钟常规时间里本就占据概率优势，而荷兰还同时拥有更高控球和更稳定的场面控制，因此主胜概率被拉高到0.68；日本扳平所需至少先提升进攻质量，所以平局保留在0.22；客胜需要在剩余时间内连进至少2球，且与现阶段0射正的表现不匹配，因此仅给到0.10。最可能最终比分定为1-0，因为这既符合主胜为最高概率，也符合当前比赛节奏：荷兰优势存在但射门总量并不极端，说明比赛更像是可控领先而非全面围攻，日本如果迟迟不能形成射正，比分完全可能维持到终场。至于后续进球逻辑，若比赛再出现进球，更可能来自荷兰利用日本压上后的空间完成第二击，因此Cody Gakpo和Wout Weghorst这类前场终结点具备更高的未来进球可能；但考虑到日本在落后局面下后段势必加强投入，Takumi Minamino作为客队追分阶段的代表性威胁点，也保留一定破门概率。总体判断是：荷兰守住领先最合理，次选是日本追平，比赛从现在开始再出现很多球的概率并不高。"
+      },
+      "sources": [],
+      "cost_usd": 0.0115075,
+      "tokens": {
+        "input": 1195,
+        "output": 568
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.85
+    },
+    {
+      "submitted_at": "2026-06-14T21:20:05+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 65,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.45,
+        "draw": 0.34,
+        "away": 0.21
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Virgil van Dijk",
+          "minute": 78,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Ryan Gravenberch",
+          "minute": 81,
+          "p": 0.09,
+          "team": "home"
+        },
+        {
+          "player": "Keito Nakamura",
+          "minute": 83,
+          "p": 0.07,
+          "team": "away"
+        },
+        {
+          "player": "Takefusa Kubo",
+          "minute": 86,
+          "p": 0.06,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到65分钟，当前比分1-1，且两粒进球都出现在下半场初段：Netherlands先由Virgil van Dijk打破僵局，随后Japan通过Keito Nakamura迅速扳平，说明比赛节奏在进入下半场后明显提速。从现有数据看，Netherlands控球70%、角球4比1、总射门5比4、射正3比1，场面主导权和持续压制都更明显，Japan虽然控球较少，但反击效率不错，有限的射正就转化为进球，因此客队仍保留再进一球的现实可能。基于65分钟这一时间点，平局仍有较大权重，因为比分已经回到均势，且剩余时间不足以支撑特别激进的多球预期；但考虑到Netherlands在控球、定位球与射正质量上的优势，主队在最后25分钟内打进制胜球的概率略高于Japan，所以主胜概率被抬到最高。最终比分逻辑上，2-1比1-1更能反映当前场面优势与剩余时间窗口，因此将2-1设为单一最可能结果，同时保留1-1作为重要次选。后续进球人方面，只能依据当前已知进球与助攻链条以及球队进攻主导趋势推断：Netherlands若再进球，更可能继续来自已经完成破门的Virgil van Dijk在定位球中的威胁，或由已有助攻的Ryan Gravenberch参与终结；Japan若再进球，则更可能落在已取得进球的Keito Nakamura，或继续由创造机会能力已被验证的Takefusa Kubo完成。"
+      },
+      "sources": [],
+      "cost_usd": 0.014205,
+      "tokens": {
+        "input": 2400,
+        "output": 547
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.303
+    },
+    {
+      "submitted_at": "2026-06-14T21:25:55+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 70,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.69,
+        "draw": 0.2,
+        "away": 0.11
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "70分钟时Netherlands以2-1领先Japan，比赛已进入最后三分之一阶段，当前比分与时间天然明显抬升主队守住胜局的概率。就已知赛中信息看，下半场进程对比赛走势很有指向性：Netherlands在51分钟由Virgil van Dijk 先开纪录，57分钟被Keito Nakamura扳回后，又在64分钟由Crysencio Summerville再次取得领先，说明主队在比分被追近后仍能迅速重新建立优势。统计层面，Netherlands以70%控球、6比4射门、4比1射正、4比1角球占优，说明主队不仅控场更强，而且创造出的高质量机会更多；Japan虽然效率不差，且通过Takefusa Kubo助攻Keito Nakamura证明其反击有威胁，但整体场面仍偏被动。基于70分钟2-1的比分结构，剩余时间有限，最主要分布会集中在主队小胜收尾或客队追平两种情形，因此主胜概率最高，平局次之，客胜因需要至少再进两球且要在客场劣势场面下完成逆转，所以概率最低。最可能最终比分定为2-1，一方面它与当前主胜为最大概率相一致，另一方面也符合领先方在控球优势下通过降速管理比赛的常见终盘路径。后续进球逻辑上，若Netherlands继续利用控球压制和定位球制造机会，已取得进球且活跃的Crysencio Summerville，以及通过角球和高点威胁参与进攻的Virgil van Dijk ，都是主队再下一城的较合理候选；若Japan在最后20分钟提速压上，刚替补登场的Junya Ito具备冲击力，配合此前已有助攻的Takefusa Kubo所在一侧推进，客队仍有一定追平机会，但总体更像是追至2-2而非完成反超。"
+      },
+      "sources": [],
+      "cost_usd": 0.012425,
+      "tokens": {
+        "input": 1436,
+        "output": 589
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.456
+    },
+    {
+      "submitted_at": "2026-06-14T21:31:48+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 76,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.71,
+        "draw": 0.19,
+        "away": 0.1
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到76分钟，Netherlands目前2比1领先Japan，时间已经进入最后阶段，主队天然占据明显优势。就现有赛中信息看，51分钟Virgil van Dijk打破平衡，57分钟Keito Nakamura一度追平，但64分钟Crysencio Summerville再次帮助Netherlands领先，说明下半场节奏里主队对关键时段的把握更强。数据层面Netherlands控球69%、射门6比5、射正4比1、角球4比1，虽然射门总数差距不大，但主队在控场和射门质量上更优，Japan到目前只有1次射正却已取得1球，效率偏高、可持续性相对有限。结合76分钟这一时间点，剩余常规时间加补时已不多，2比1领先的一方通常更接近守住胜果，因此主胜概率维持最高，平局仍有一定空间，主要来自Japan末段压上形成单次扳平；客胜则需要Japan至少再进2球且不再失球，在时间约束下概率最低。最可能最终比分判断为2比1，因为当前比分本身已经匹配主队最高胜率，而且现有比赛形态更像Netherlands通过控球管理比赛、Japan争取最后反扑；若再出现进球，最常见分支会是Japan追成2比2，或Netherlands利用反击扩大到3比1。后续进球人方面，只考虑76分钟之后，Netherlands替补登场的Memphis Depay具备终结与反击点属性，在Japan压上时是主队最像追加进球的人选；Japan若形成扳平威胁，已进球的Keito Nakamura以及刚替补上场的Junya Ito都是更合理的末段冲击点。"
+      },
+      "sources": [],
+      "cost_usd": 0.0122025,
+      "tokens": {
+        "input": 1623,
+        "output": 543
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.933
+    },
+    {
+      "submitted_at": "2026-06-14T21:37:30+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 82,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.76,
+        "draw": 0.17,
+        "away": 0.07
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前进行到82分钟，Netherlands以2-1领先Japan，比赛已经进入最后阶段，时间对领先一方明显有利。从已知进程看，下半场51分钟Virgil van Dijk先开纪录，57分钟Keito Nakamura一度扳平，但64分钟Crysencio Summerville再次帮助Netherlands领先，说明本场在关键下半场波段里，主队创造并兑现机会的能力更强。统计上Netherlands以66%控球、8次射门、6次射正、5个角球全面占优，而Japan只有1次射正却已打进1球，转化率偏高但持续性通常较难维持，因此随着时间推进，主队胜率应继续高于平局和客胜。基于82分钟时2-1的比分结构，最常见结局仍是Netherlands守住现有优势直接结束，所以最可能最终比分维持在2-1；其次才是主队反击再进一球形成3-1，或Japan在末段压上追成2-2。后续进球逻辑上，Japan落后必然增加前压，比赛尾声会同时提升双方再进球的小概率：主队方面，刚替补登场的Memphis Depay具备在反击或定位球二次进攻中终结的可能；客队方面，75分钟替补上来的Koki Ogawa更像末段禁区抢点人选。如果没有新的高质量机会出现，当前比分被保持到终场的概率仍然最高。"
+      },
+      "sources": [],
+      "cost_usd": 0.01646,
+      "tokens": {
+        "input": 2954,
+        "output": 605
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.461
+    },
+    {
+      "submitted_at": "2026-06-14T21:43:23+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 88,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.14,
+        "away": 0.04
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "第88分钟 Netherlands 以2-1领先 Japan，比赛已经进入最后常规时间和补时阶段，主队胜面明显更高。现有比赛进程显示，下半场51至64分钟连续出现3个进球，说明双方在这一阶段都能制造有效机会，但自64分钟后直到现在没有再改写比分，且 Netherlands 在数据上占优：控球62%、射门9比8、射正6比2、角球5比2，这说明主队整体控制力和门前效率更好。Japan 虽然仍保留追平希望，但射正次数偏少，意味着他们若想在最后时段扳平，需要把有限的压上机会转化为高质量终结。概率上，随着时间来到88分钟，2-1领先的一方天然受益于剩余时间快速减少，因此主胜概率被进一步抬高；平局主要来自 Japan 在补时阶段抓住一次反击、定位球或禁区混战机会；客胜则需要 Japan 连进2球，时间窗口过短，所以概率很低。最可能最终比分维持在2-1，因为这是与当前时间、主队控场优势以及剩余分钟数最匹配的结果。后续进球逻辑方面，若再有进球，更可能出现在补时阶段双方节奏被拉开之后：Netherlands 可能利用 Japan 压上后的身后空间，由替补前锋 Memphis Depay 完成终结；而 Japan 若扳平，更可能由已经替补登场、具备冲击力和门前参与度的 Koki Ogawa 或边路突击的 Junya Ito 抓住最后机会。总体而言，本次赛中更新仍以 Netherlands 守住1球优势完场为主判断。"
+      },
+      "sources": [],
+      "cost_usd": 0.0156325,
+      "tokens": {
+        "input": 3133,
+        "output": 520
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.08
+    },
+    {
+      "submitted_at": "2026-06-14T21:49:15+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 2
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.21,
+        "draw": 0.58,
+        "away": 0.21
+      },
+      "most_likely_score": "2-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比分在90分钟来到2-2，比赛已经进入常规时间末段，平局概率因此明显上升并成为最大结果。就已知赛中走势看，荷兰下半场先由 Virgil van Dijk 和 Crysencio Summerville 两次取得领先，日本则由 Keito Nakamura 与第89分钟的 Daichi Kamada 两次追平，尤其是日本刚刚在89分钟扳成2-2，说明最后阶段比赛波动性仍在，但留给双方完成绝杀的实际时间已经非常有限。从数据看，荷兰控球60%、射门9次、射正6次，整体场面组织略占优；日本射门10次、角球4比5并不落下风，且用更少的射正打进2球，反击和终结效率不错。因此当前不宜把任何一方设为明显热门，主胜与客胜概率接近，而平局由于时间因素占据最高权重。最可能最终比分维持在2-2，这既符合当前时间点，也符合双方本场互有回应、难以彻底压制对手的比赛结构。至于90分钟后的潜在进球人选，只能优先考虑仍可能在补时内获得最后机会的前场或刚制造影响的球员：荷兰方面替补登场的 Memphis Depay、Brian Brobbey具备终结点属性；日本方面刚进球的 Daichi Kamada 与送出助攻、替补上场后提升冲击力的 Junya Ito，是补时阶段最现实的客队得分候选。不过总体而言，后续再进球概率低于比赛直接停留在2-2结束的概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.01318,
+      "tokens": {
+        "input": 2110,
+        "output": 527
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.435
+    },
+    {
+      "submitted_at": "2026-06-14T21:55:02+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 2
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.21,
+        "draw": 0.65,
+        "away": 0.14
+      },
+      "most_likely_score": "2-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛在90分钟时战成2-2，进入补时阶段后，平局概率已明显上升并成为主导结果。就现有赛况看，双方下半场都持续制造了有效进球：Netherlands在51分钟由Virgil van Dijk、64分钟由Crysencio Summerville两度领先，而Japan先在57分钟由Keito Nakamura扳平，又在89分钟由Daichi Kamada追到2-2，这个89分钟的进球对即时概率影响最大，使原本更接近主队小胜的走势迅速回到平局中心。数据层面，Netherlands控球60%、射门10比10、射正6比3，整体场面和持续压制感略强，因此补时最后阶段若再出胜负，主队绝杀概率仍略高于客队；但Japan在有限控球下完成两次关键追分，说明其转换效率和反击威胁真实存在，所以客队仍保留一定反超机会。综合时间所剩无几、比分已被追平、以及双方创造机会数量接近的事实，最终胜平负分布应以平局为最高，主胜次之，客胜最低。最可能最终比分因此保持在2-2，这既符合当前时间节点，也符合平局为最高概率的约束。至于90分钟后的潜在进球人选，逻辑上更应优先考虑此后仍在场、且位置更靠前或替补后具冲击力的球员：Netherlands方面Memphis Depay与Brian Brobbey具备补时阶段终结机会；Japan方面Koki Ogawa已在89分钟追平进球前送出助攻，继续参与最后一击的概率相对更高。不过由于补时剩余时间有限，任何新增进球的单个球员概率都应维持在较低水平。"
+      },
+      "sources": [],
+      "cost_usd": 0.0146475,
+      "tokens": {
+        "input": 2169,
+        "output": 615
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.074
+    }
+  ]
+}

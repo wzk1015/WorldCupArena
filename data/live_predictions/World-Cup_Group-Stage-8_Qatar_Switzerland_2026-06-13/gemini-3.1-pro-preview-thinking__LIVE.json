@@ -1,0 +1,888 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-8_Qatar_Switzerland_2026-06-13",
+  "provider_fixture_id": "19609130",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-13T21:04:00+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "home": "Qatar",
+    "away": "Switzerland",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-13T19:00:00+00:00",
+    "venue": "San Francisco Bay Area Stadium",
+    "venue_city": "Santa Clara"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.01,
+      "draw": 0.97,
+      "away": 0.02
+    },
+    "most_likely_score": "1-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前比赛已进行到第90分钟（进入伤停补时），比分为卡塔尔 1-1 瑞士。从全场数据来看，瑞士队占据绝对优势，控球率高达68%，狂轰25脚射门并获得10次角球，依靠恩博洛（Breel Embolo）在第17分钟的点球早早取得领先。然而，卡塔尔在极其被动的局面下展现了极强的韧性，并在补时阶段由布阿莱姆·胡赫（Boualem Khoukhi）顽强扳平比分。由于比赛所剩时间极少，双方再次改写比分的可能性微乎其微。因此，平局的概率极高，最可能的最终比分锁定为1-1。后续进球逻辑上，仅存在极小概率的绝杀可能，例如瑞士队的替补球员 Johan Manzambi 在最后读秒阶段的进攻尝试。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2025,
+    "output": 1639
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.012451949999999998,
+  "wall_seconds": 19.11,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.01,\n    \"draw\": 0.97,\n    \"away\": 0.02\n  },\n  \"most_likely_score\": \"1-1\",\n  \"scorers\": [\n    {\n      \"player\": \"Johan Manzambi\",\n      \"team\": \"away\",\n      \"minute\": 96,\n      \"p\": 0.02\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"当前比赛已进行到第90分钟（进入伤停补时），比分为卡塔尔 1-1 瑞士。从全场数据来看，瑞士队占据绝对优势，控球率高达68%，狂轰25脚射门并获得10次角球，依靠恩博洛（Breel Embolo）在第17分钟的点球早早取得领先。然而，卡塔尔在极其被动的局面下展现了极强的韧性，并在补时阶段由布阿莱姆·胡赫（Boualem Khoukhi）顽强扳平比分。由于比赛所剩时间极少，双方再次改写比分的可能性微乎其微。因此，平局的概率极高，最可能的最终比分锁定为1-1。后续进球逻辑上，仅存在极小概率的绝杀可能，例如瑞士队的替补球员 Johan Manzambi 在最后读秒阶段的进攻尝试。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Analysis of the Qatar vs. Switzerland Match at 90'**\n\nOkay, so the match is at the 90-minute mark, and it's Qatar 1, Switzerland 1. Let's break this down. The event list mentions a Qatar goal at 95', but the current time is 90'. Given that the score is 1-1, I'm assuming that the 95' goal is either already incorporated into the current score, or it is meant to be in stoppage time, which is consistent with the scoreline.\n\nWith the clock almost done, a draw is the overwhelmingly probable outcome. Switzerland seems to have dominated possession and shots, but Qatar equalized. Let's put the win probabilities as: home (Qatar) 0.01, draw 0.97, and away (Switzerland) 0.02. The most likely score to me appears to be \"1-1\".\n\nConsidering scorers, since we're in stoppage time, any further goals are highly unlikely, but the schema requires an array. Let's include Johan Manzambi (Switzerland), who came on as a substitute, with a very low probability (0.02) at 96', which is after the 90' minute, and is likely a theoretical goal.\n\nThe overall reasoning is this: \"当前比赛已进行到第90分钟（进入伤停补时），比分为卡塔尔 1-1 瑞士。从全场数据来看，瑞士队占据绝对优势，控球率高达68%，狂轰25脚射门并获得10次角球，依靠恩博洛（Breel Embolo）在第17分钟的点球早早取得领先。然而，卡塔尔在极其被动的局面下展现了韧性，并在补时阶段（第95分钟）由布阿莱姆·胡赫（Boualem Khoukhi）顽强扳平比分。由于比赛所剩时间极少，双方再次改写比分的可能性微乎其微。因此，平局的概率极高，最可能的最终比分锁定为1-1。后续进球逻辑上，仅存在极小概率的绝杀可能，例如瑞士队的替补前锋在最后时刻的进攻尝试。\"\n\nSo, finalizing the JSON:\n```json\n{\n  \"win_probs\": {\"home\": 0.01, \"draw\": 0.97, \"away\": 0.02},\n  \"most_likely_score\": \"1-1\",\n  \"scorers\": [\n    {\"player\": \"Johan Manzambi\", \"team\": \"away\", \"minute\": 96, \"p\": 0.02}\n  ],\n  \"reasoning\": {\"overall\": \"当前比赛已进行到第90分钟（进入伤停补时），比分为卡塔尔 1-1 瑞士。从全场数据来看，瑞士队占据绝对优势，控球率高达68%，狂轰25脚射门并获得10次角球，依靠恩博洛（Breel Embolo）在第17分钟的点球早早取得领先。然而，卡塔尔在极其被动的局面下展现了韧性，并在补时阶段（第95分钟）由布阿莱姆·胡赫（Boualem Khoukhi）顽强扳平比分。由于比赛所剩时间极少，双方再次改写比分的可能性微乎其微。因此，平局的概率极高，最可能的最终比分锁定为1-1。后续进球逻辑上，仅存在极小概率的绝杀可能，例如瑞士队的替补前锋在最后时刻的进攻尝试。\"},\n  \"sources\": []\n}\n```\n\nDouble-checking all constraints, everything looks good and the JSON is valid.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-13T19:06:32+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 6,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.23,
+        "away": 0.65
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 34,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Zeki Amdouni",
+          "minute": 68,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Almoez Ali",
+          "minute": 75,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第6分钟，目前比分为0-0。从开场的数据来看，双方控球率均等（50%），但瑞士队已经率先完成1次射门，展现出了更强的进攻主动性。本场比赛虽然卡塔尔名义上是主队，但实际在美国圣克拉拉的中立场地进行，失去了本土作战的加持。瑞士队在整体阵容深度、战术素养和世界杯经验上均大幅领先于卡塔尔。基于当前的场面和双方硬实力差距，瑞士队赢下比赛的概率高达65%。随着比赛深入，瑞士队的中前场控制力将逐步显现，预计他们能够稳妥地撕开卡塔尔的防线，最可能的最终比分预测为0-2。在后续进球逻辑方面，瑞士队的主力前锋 Breel Embolo 和 Zeki Amdouni 是最具威胁的得分点，预计进球将出现在上半场中后段及下半场；卡塔尔方面则只能依赖 Almoez Ali 等人的防守反击，但攻破瑞士队球门的难度较大。"
+      },
+      "sources": [],
+      "cost_usd": 0.01086855,
+      "tokens": {
+        "input": 847,
+        "output": 1584
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.156
+    },
+    {
+      "submitted_at": "2026-06-13T19:12:23+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 12,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.1,
+        "draw": 0.25,
+        "away": 0.65
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 34,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Zeki Amdouni",
+          "minute": 68,
+          "p": 0.28,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第12分钟，目前比分为0-0。从开局阶段的场面数据来看，瑞士队（客队）展现了绝对的控制力，控球率高达81%，而卡塔尔队（主队）仅有19%的控球率，明显采取了深度防守反击的战术。尽管卡塔尔队利用有限的反击机会完成了一次射正，但瑞士队牢牢掌控了比赛节奏，持续在对方半场施压。基于双方的实力差距以及当前的比赛走势，瑞士队获胜的概率依然最高（65%）。长时间的被动防守极易导致卡塔尔队防线出现漏洞，预计瑞士队将通过阵地战或定位球打破僵局。最可能的最终比分预测为0-2。在后续进球逻辑上，瑞士队的锋线核心如Breel Embolo和Zeki Amdouni在禁区内具备极强的终结能力，预计他们将在上半场中后段或下半场体能下降时寻觅到破门良机。"
+      },
+      "sources": [],
+      "cost_usd": 0.01040445,
+      "tokens": {
+        "input": 909,
+        "output": 1500
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.151
+    },
+    {
+      "submitted_at": "2026-06-13T19:18:27+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 18,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.1,
+        "draw": 0.25,
+        "away": 0.65
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 38,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Zeki Amdouni",
+          "minute": 65,
+          "p": 0.28,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第18分钟，目前比分为0-0。从场面数据来看，客队瑞士占据了绝对的统治地位，控球率高达83%，并在开局阶段就完成了4次射门（2次射正）。主队卡塔尔完全处于被动防守状态，控球率仅为17%，主要依靠门将的2次扑救维持均势。鉴于瑞士队展现出的压倒性控制力和持续的进攻施压，客胜概率评估为65%，平局概率为25%，而卡塔尔爆冷取胜的概率仅为10%。按照目前的攻防演练节奏，瑞士队打破僵局只是时间问题，最可能的最终比分预测为0-2。预计瑞士队的攻击手如 Breel Embolo 和 Zeki Amdouni 将在后续比赛中把握住破门机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.01157205,
+      "tokens": {
+        "input": 929,
+        "output": 1682
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.189
+    },
+    {
+      "submitted_at": "2026-06-13T19:24:19+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 24,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.12,
+        "away": 0.85
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 41,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "Ruben Vargas",
+          "minute": 68,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第24分钟，目前比分为卡塔尔 0-1 瑞士。瑞士队在第16分钟由恩博洛（Breel Embolo）罚入点球取得领先。从场面数据来看，瑞士队占据了绝对的统治地位，控球率高达80%，并已经完成了5次射门（3次射正），而卡塔尔队仅有20%的控球率和1次射门。考虑到双方实力的巨大差距以及瑞士队早早建立的领先优势，瑞士队赢下比赛的概率极高。预计瑞士队会在接下来的比赛中继续扩大比分，最可能的最终比分为0-3。后续进球者方面，状态出色的恩博洛有望梅开二度，而像鲁本·巴尔加斯（Ruben Vargas）等攻击手也有很大机会在下半场取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.007888649999999999,
+      "tokens": {
+        "input": 1129,
+        "output": 1064
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.005
+    },
+    {
+      "submitted_at": "2026-06-13T19:30:10+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 30,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.12,
+        "away": 0.85
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 58,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Ruben Vargas",
+          "minute": 76,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第30分钟，瑞士队目前1-0领先卡塔尔队。从场面数据来看，瑞士队占据了绝对的统治地位，控球率高达74%，并已经完成了7次射门（4次射正）。卡塔尔队在防守端承受了巨大压力，门将已做出3次扑救，且已有两名球员领到黄牌。第17分钟，恩博洛（Breel Embolo）通过点球为瑞士队首开纪录。基于目前的压倒性优势，瑞士队极有可能在接下来的比赛中继续控制节奏并扩大比分，而卡塔尔队反扑乏力，很难创造出实质性的威胁。因此，预测瑞士队获胜的概率高达85%，最可能的最终比分为0-2。后续进球逻辑上，状态出色的恩博洛以及瑞士队的其他攻击手（如Ruben Vargas）有望在下半场利用卡塔尔体能下降和防线漏洞再次破门。"
+      },
+      "sources": [],
+      "cost_usd": 0.012237749999999999,
+      "tokens": {
+        "input": 1131,
+        "output": 1754
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.493
+    },
+    {
+      "submitted_at": "2026-06-13T19:36:06+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 36,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.12,
+        "away": 0.85
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 62,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Ruben Vargas",
+          "minute": 78,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第36分钟，当前比分0-1，瑞士客场领先。从场面数据来看，瑞士队占据了绝对优势，控球率高达74%，并完成了8次射门（其中4次射正）。他们在第17分钟由恩博洛（Breel Embolo）通过点球打破僵局。卡塔尔队目前仅有26%的控球率和2次射门，且已经领到两张黄牌，防守端压力巨大。基于目前的比赛走势和双方实力差距，瑞士队极有可能在下半场继续扩大比分。因此，客队获胜的概率被调整至85%，最可能的最终比分预测为0-2。后续进球逻辑方面，瑞士队持续的进攻压迫很可能导致卡塔尔防线再次出现漏洞，恩博洛或边路攻击手有望在下半场中后段再次取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.008990100000000001,
+      "tokens": {
+        "input": 1194,
+        "output": 1228
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.988
+    },
+    {
+      "submitted_at": "2026-06-13T19:41:55+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 41,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.12,
+        "away": 0.85
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 65,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Ruben Vargas",
+          "minute": 82,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第41分钟，当前比分为卡塔尔 0-1 瑞士。瑞士队在场面上占据绝对统治地位，控球率高达78%，并已完成9次射门（4次射正）。卡塔尔队门将阿布纳达（Mahmoud Abunada）在第16分钟送出点球并染黄，恩博洛（Breel Embolo）主罚命中为瑞士取得领先。卡塔尔队目前仅有22%的控球率和2次射门，且已有两名球员吃到黄牌，防守压力巨大。鉴于瑞士队压倒性的场面优势和一球领先的局面，他们拿下本场比赛的概率极高（约85%）。卡塔尔队很难在劣势下组织起有效的反击，且防守端动作较大，体能消耗极快，存在进一步丢球的风险。因此，最可能的最终比分预测为0-2。预计瑞士队在下半场会继续利用控球调动对手防线并扩大比分，状态出色的恩博洛有望梅开二度，其他边路或中场攻击手也有机会在下半场中后段（如第65至85分钟）取得进球锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.01459185,
+      "tokens": {
+        "input": 1195,
+        "output": 2117
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.903
+    },
+    {
+      "submitted_at": "2026-06-13T19:47:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.08,
+        "away": 0.9
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 62,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Ruben Vargas",
+          "minute": 76,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第45分钟，瑞士客场1-0领先卡塔尔。从上半场的数据来看，瑞士队占据了绝对的统治地位，控球率高达78%，并创造了10次射门（4次射正），而卡塔尔仅有22%的控球率和2次射门。第17分钟，恩博洛（Breel Embolo）通过点球为瑞士首开纪录。考虑到双方实力的巨大差距以及场面上的完全压制，瑞士队在下半场极有可能继续扩大比分，而卡塔尔很难组织起有效的反击。因此，客队获胜的概率极高。预测最终比分为0-2，瑞士队将在下半场再次取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0106407,
+      "tokens": {
+        "input": 1260,
+        "output": 1479
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.725
+    },
+    {
+      "submitted_at": "2026-06-13T19:53:41+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.15,
+        "away": 0.8
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 65,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Ruben Vargas",
+          "minute": 78,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第45分钟，当前比分为卡塔尔 0-1 瑞士。从上半场的场面来看，瑞士队占据了压倒性的优势，控球率高达77%，并完成了11次射门（5次射正）。第17分钟，恩博洛（Breel Embolo）通过点球为瑞士首开纪录。卡塔尔方面虽然有2次射正，但大部分时间处于被动防守状态，门将做出了4次扑救。基于瑞士队在控球和创造机会上的绝对统治力，客胜概率高达80%。下半场卡塔尔若想扳平比分必然会压上进攻，这将给瑞士留下更多反击空间。预计瑞士队会在下半场再入一球锁定胜局，最可能的最终比分为0-2。后续进球逻辑方面，状态火热的恩博洛有望梅开二度，而边路攻击手如鲁本·巴尔加斯（Ruben Vargas）也有较大机会在下半场利用空间取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0118062,
+      "tokens": {
+        "input": 1260,
+        "output": 1664
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.488
+    },
+    {
+      "submitted_at": "2026-06-13T20:14:51+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 59,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.14,
+        "away": 0.82
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 75,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Zeki Amdouni",
+          "minute": 83,
+          "p": 0.2,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第59分钟，当前比分为卡塔尔 0-1 瑞士。瑞士队在第17分钟由恩博洛（Breel Embolo）罚入点球取得领先。从场面数据来看，瑞士队占据了绝对优势，控球率高达75%，并完成了14次射门（6次射正），而卡塔尔仅有25%的控球率和4次射门。基于瑞士队在场上的压制力以及卡塔尔防线的持续压力，瑞士队有极大概率保持领先并进一步扩大比分。因此，客队获胜的概率高达82%，平局概率为14%，主队逆转的概率仅为4%。最可能的最终比分预测为0-2。在后续进球逻辑上，瑞士队持续的进攻施压极易在比赛后半段利用对手体能下降创造机会，状态出色的恩博洛以及潜在的攻击手阿姆杜尼（Zeki Amdouni）是最有可能在后续比赛中破门的球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.0093429,
+      "tokens": {
+        "input": 1260,
+        "output": 1273
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.004
+    },
+    {
+      "submitted_at": "2026-06-13T20:20:50+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 65,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.12,
+        "away": 0.85
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 78,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第65分钟，当前比分为卡塔尔 0-1 瑞士。从场面数据来看，瑞士队占据绝对统治地位，控球率高达75%，狂轰17脚射门（6次射正）并获得7次角球；而卡塔尔仅有25%的控球率和4次射门，防线承受巨大压力，主要依靠门将的4次扑救维持分差。第17分钟恩博洛（Breel Embolo）的点球帮助瑞士确立领先优势。鉴于瑞士队的压倒性控制力，客队获胜的概率高达85%，卡塔尔扳平的希望渺茫（平局概率12%）。随着比赛进入尾声，落后的卡塔尔势必需要阵型前移以寻求进球，这将为瑞士队提供更多反击空间。结合瑞士队极高的进攻频率，最可能的最终比分是0-2，恩博洛极有可能在第78分钟左右利用对手防线空当完成梅开二度。"
+      },
+      "sources": [],
+      "cost_usd": 0.0134694,
+      "tokens": {
+        "input": 1260,
+        "output": 1928
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.899
+    },
+    {
+      "submitted_at": "2026-06-13T20:26:49+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.12,
+        "away": 0.85
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "minute": 84,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Ruben Vargas",
+          "minute": 88,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分0-1，比赛进行到第71分钟。从场面数据来看，瑞士队占据了压倒性的优势，控球率高达76%，并创造了17次射门（6次射正）和8个角球；而主场作战的卡塔尔队仅有24%的控球率和4次射门，完全处于被动防守状态。基于目前的比赛走势和剩余时间，瑞士队保持领先并最终获胜的概率极高（85%），卡塔尔队想要扳平比分的难度极大（平局概率12%），逆转取胜更是微乎其微（3%）。在比赛的最后20分钟，落后的卡塔尔队势必会增加进攻投入，这将导致后防线暴露出更多空当。瑞士队有望利用反击机会扩大战果，因此最可能的最终比分预测为0-2。在后续进球逻辑方面，已经打入一粒点球的 Breel Embolo 状态活跃，极有可能在第84分钟左右利用对手防线压上的机会再次破门，而 Ruben Vargas 等攻击手也有望在比赛尾声阶段参与进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0103383,
+      "tokens": {
+        "input": 1260,
+        "output": 1431
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.723
+    },
+    {
+      "submitted_at": "2026-06-13T20:33:48+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 78,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.12,
+        "away": 0.86
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第78分钟，当前比分为卡塔尔 0-1 瑞士。从场面数据来看，瑞士队占据压倒性优势，控球率高达75%，射门数18比4，角球9比3。瑞士在第17分钟由恩博洛（Breel Embolo）点球破门后一直掌控比赛节奏。卡塔尔虽然在下半场进行了多次换人调整，但进攻端依然缺乏实质性威胁，全场仅有2次射正。考虑到比赛仅剩10多分钟，瑞士队有极高概率将领先优势保持到终场，客胜概率达到86%。最可能的最终比分为维持现状的0-1。不过，随着卡塔尔在比赛尾声阶段被迫压上进攻，瑞士队有望利用反击空间扩大比分，恩博洛等锋线球员在第88分钟左右有再次破门的可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.011981549999999999,
+      "tokens": {
+        "input": 1475,
+        "output": 1656
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.53
+    },
+    {
+      "submitted_at": "2026-06-13T20:39:46+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 84,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.12,
+        "away": 0.87
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第84分钟，当前比分为卡塔尔 0-1 瑞士。瑞士队在第17分钟由恩博洛（Breel Embolo）罚入点球取得领先。从比赛数据来看，瑞士队占据了绝对优势，控球率高达74%，总射门数19次（6次射正），而卡塔尔仅有4次射门（2次射正）和26%的控球率。考虑到比赛所剩时间无几，且瑞士队牢牢掌控着比赛节奏，瑞士队保持胜果的概率极高。卡塔尔队虽然在下半场进行了多次换人调整试图反扑，但受限于整体实力和场面被动，扳平比分的难度很大。因此，最可能的最终比分维持在0-1。如果后续还有进球，瑞士队利用对手大举压上防线空虚打反击的可能性更大，恩博洛或替补登场的曼赞比（Johan Manzambi）有望在最后阶段扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0090237,
+      "tokens": {
+        "input": 1616,
+        "output": 1163
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.281
+    },
+    {
+      "submitted_at": "2026-06-13T20:45:37+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟的伤停补时阶段，当前比分为卡塔尔 0-1 瑞士。从全场统计数据来看，瑞士队占据了绝对的统治地位，控球率高达71%，并且完成了22次射门（7次射正），而卡塔尔仅有5次射门（2次射正）和29%的控球率。瑞士队凭借恩博洛（Breel Embolo）在第17分钟的点球一直保持领先。考虑到比赛所剩时间极少，且卡塔尔在场面上完全处于劣势，缺乏足够的进攻威胁，瑞士队拿下本场比赛的概率极高。卡塔尔绝平的可能性微乎其微。因此，最可能的最终比分大概率维持在0-1。由于比赛即将结束，后续出现进球的概率极低，但如果卡塔尔大举压上导致后防空虚，瑞士队的恩博洛等攻击手仍有极小概率在补时阶段通过反击再入一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.0105357,
+      "tokens": {
+        "input": 1616,
+        "output": 1403
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.472
+    },
+    {
+      "submitted_at": "2026-06-13T20:51:25+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.03,
+        "away": 0.97
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已进入第90分钟，比分为卡塔尔 0-1 瑞士。瑞士队凭借上半场第17分钟恩博洛（Breel Embolo）的点球取得领先。从全场数据来看，瑞士队占据了绝对的场面优势，控球率高达70%，总射门次数多达23次（7次射正），而卡塔尔仅有30%的控球率和5次射门。考虑到常规时间已经结束，比赛即将进入伤停补时，卡塔尔扳平比分的难度极大，瑞士队极大概率将以1-0的比分拿下胜利。不过在补时阶段，由于卡塔尔必须全线压上进攻，瑞士队有可能通过反击再入一球，替补登场的曼赞比（Johan Manzambi）存在微弱的补时进球可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.008608949999999999,
+      "tokens": {
+        "input": 1737,
+        "output": 1077
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.04
+    },
+    {
+      "submitted_at": "2026-06-13T20:57:59+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.05,
+        "away": 0.94
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已进行到第90分钟，比分为卡塔尔 0-1 瑞士。瑞士队在第17分钟由恩博洛（Breel Embolo）罚入点球取得领先。从全场数据来看，瑞士队占据了绝对优势，控球率高达68%，射门次数更是以24比6遥遥领先，且获得了9次角球。卡塔尔虽然在下半场进行了多次换人调整试图挽回败局，但面对瑞士稳固的防守和强大的中场控制，未能创造出太多实质性威胁。由于常规时间已经结束，比赛进入伤停补时阶段，留给卡塔尔扳平比分的时间所剩无几。因此，瑞士队保持胜果的概率极高（约94%），平局概率仅为5%左右，卡塔尔逆转取胜的概率微乎其微。最可能的最终比分将维持在0-1。考虑到补时阶段卡塔尔队可能大举压上导致后防空虚，瑞士队替补登场的曼赞比（Johan Manzambi）有极小概率在反击中再入一球，但整体而言不再产生进球是最符合当前局势的判断。"
+      },
+      "sources": [],
+      "cost_usd": 0.0132447,
+      "tokens": {
+        "input": 1952,
+        "output": 1777
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.301
+    },
+    {
+      "submitted_at": "2026-06-13T21:04:00+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Qatar",
+        "away": "Switzerland",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T19:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.97,
+        "away": 0.02
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已进行到第90分钟（进入伤停补时），比分为卡塔尔 1-1 瑞士。从全场数据来看，瑞士队占据绝对优势，控球率高达68%，狂轰25脚射门并获得10次角球，依靠恩博洛（Breel Embolo）在第17分钟的点球早早取得领先。然而，卡塔尔在极其被动的局面下展现了极强的韧性，并在补时阶段由布阿莱姆·胡赫（Boualem Khoukhi）顽强扳平比分。由于比赛所剩时间极少，双方再次改写比分的可能性微乎其微。因此，平局的概率极高，最可能的最终比分锁定为1-1。后续进球逻辑上，仅存在极小概率的绝杀可能，例如瑞士队的替补球员 Johan Manzambi 在最后读秒阶段的进攻尝试。"
+      },
+      "sources": [],
+      "cost_usd": 0.012451949999999998,
+      "tokens": {
+        "input": 2025,
+        "output": 1639
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.11
+    }
+  ]
+}

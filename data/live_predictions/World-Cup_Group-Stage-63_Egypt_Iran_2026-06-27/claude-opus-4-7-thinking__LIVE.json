@@ -1,0 +1,758 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-63_Egypt_Iran_2026-06-27",
+  "provider_fixture_id": "19609193",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-27T04:35:07+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 80,
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "home": "Egypt",
+    "away": "Iran",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-27T03:00:00+00:00",
+    "venue": "Seattle Stadium",
+    "venue_city": "Seattle"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.36,
+      "draw": 0.46,
+      "away": 0.18
+    },
+    "most_likely_score": "1-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进行到第80分钟，埃及与伊朗1-1战平。开场第5分钟马哈茂德·萨贝接Trezeguet助攻为埃及首开纪录，伊朗随后在第11分钟由Taremi主罚点球被扑出错失反超良机，但第14分钟拉明·雷扎伊安迅速扳平。下半场至今，埃及通过多次换人（Marwan Ateya、奥马尔·马尔穆什、Zizo相继登场）持续加码进攻端配置，控球率高达64%，角球7-0全面压制，总射门12-8，整体场面占据明显主动。伊朗一方控球仅36%，犯规已达12次，体能与防线压力均较大，第67分钟换上Moghanlou试图寻求反击突破点。综合判断，10分钟左右的剩余时间内，埃及继续围攻的概率较高，但伊朗深度防守加上换人调整可能稳住比分，因此平局仍是最大概率结果，埃及胜出概率次之，伊朗反超的可能性较低。最可能的最终比分维持1-1。若末段仍有进球，埃及阵中的Marmoush凭借速度与冲击力最具威胁，Trezeguet定位球或反越位也有机会；伊朗一侧则主要寄望于Taremi的禁区终结能力以及替补出场的Moghanlou利用反击空间，但整体进球概率均偏低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1300,
+    "output": 636
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.016576,
+  "wall_seconds": 19.139,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.36, \"draw\": 0.46, \"away\": 0.18},\n  \"most_likely_score\": \"1-1\",\n  \"scorers\": [\n    {\"player\": \"Omar Marmoush\", \"team\": \"home\", \"minute\": 86, \"p\": 0.11},\n    {\"player\": \"Mahmoud Trezeguet\", \"team\": \"home\", \"minute\": 89, \"p\": 0.07},\n    {\"player\": \"Mehdi Taremi\", \"team\": \"away\", \"minute\": 88, \"p\": 0.06},\n    {\"player\": \"Shahriar Moghanlou\", \"team\": \"away\", \"minute\": 90, \"p\": 0.05}\n  ],\n  \"reasoning\": {\"overall\": \"比赛进行到第80分钟，埃及与伊朗1-1战平。开场第5分钟Mahmoud Saber接Trezeguet助攻为埃及首开纪录，伊朗随后在第11分钟由Taremi主罚点球被扑出错失反超良机，但第14分钟Ramin Rezaeian迅速扳平。下半场至今，埃及通过多次换人（Marwan Ateya、Omar Marmoush、Zizo相继登场）持续加码进攻端配置，控球率高达64%，角球7-0全面压制，总射门12-8，整体场面占据明显主动。伊朗一方控球仅36%，犯规已达12次，体能与防线压力均较大，第67分钟换上Moghanlou试图寻求反击突破点。综合判断，10分钟左右的剩余时间内，埃及继续围攻的概率较高，但伊朗深度防守加上换人调整可能稳住比分，因此平局仍是最大概率结果，埃及胜出概率次之，伊朗反超的可能性较低。最可能的最终比分维持1-1。若末段仍有进球，埃及阵中的Marmoush凭借速度与冲击力最具威胁，Trezeguet定位球或反越位也有机会；伊朗一侧则主要寄望于Taremi的禁区终结能力以及替补出场的Moghanlou利用反击空间，但整体进球概率均偏低。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-27T03:02:27+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 2,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Egypt",
+        "away": "Iran",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.33,
+        "away": 0.33
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Mohamed Salah",
+          "minute": 63,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Mehdi Taremi",
+          "minute": 68,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Omar Marmoush",
+          "minute": 74,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Sardar Azmoun",
+          "minute": 79,
+          "p": 0.16,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚开打2分钟，埃及与伊朗在西雅图体育场仍是0-0。双方控球各占一半，仅有埃及方面一次犯规，整体节奏处于相互试探阶段，没有明显的进攻倾向或战术劣势暴露出来，所以场面因素对概率的影响非常有限。基于赛前实力评估，这是一场世界杯小组赛中典型的势均力敌对决：埃及拥有萨拉赫领衔的边路爆点和稳定的中前场组织，伊朗则在塔雷米与阿兹蒙的支点作用下具备高效的反击和定位球威胁，两队后防也都偏向务实。综合考虑主客场标识、阵容厚度与近期状态，把胜平负的概率维持在接近三分天下的格局，埃及由于进攻端创造力略占优而被给予非常小幅度的领先。最可能的最终比分判断为1-0埃及小胜，原因是两队都倾向于在小组赛阶段先稳后伺机，开局阶段的谨慎通常意味着进球总数偏低，比赛更可能由一次定位球或个人能力解决战斗，而埃及在这种低比分剧本里转化优势的能力略高一筹。后续进球预测放在下半场体力下降、防线出现空档的时间段：萨拉赫在60分钟后接应反击或主罚定位球的威胁最大；马尔穆什作为替补或前场穿插也具备终结能力；伊朗一侧则把塔雷米视为最可能的破门点，他在禁区内的嗅觉和身体对抗都很突出，阿兹蒙则在比赛后段作为变阵选项具备改变战局的潜力。"
+      },
+      "sources": [],
+      "cost_usd": 0.017612,
+      "tokens": {
+        "input": 835,
+        "output": 785
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.282
+    },
+    {
+      "submitted_at": "2026-06-27T03:09:46+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 9,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Egypt",
+        "away": "Iran",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.27,
+        "away": 0.15
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Mohamed Salah",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Mehdi Taremi",
+          "minute": 71,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Mahmoud Saber",
+          "minute": 63,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Sardar Azmoun",
+          "minute": 80,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第9分钟，埃及凭借第5分钟马哈茂德·萨贝的进球以1-0领先伊朗。从开场场面看，埃及节奏更积极，控球率53%略占优，2次射门1次射正，已经率先转化为进球；伊朗目前尚无射门记录，进入比赛的速度偏慢，需要时间稳住阵脚。早早取得领先让埃及在战术上更从容，可以适度回收并打反击，这对其胜率有明显加成，因此目前主胜概率上调到接近六成，平局保持在三成左右，伊朗翻盘的难度增加，客胜概率压缩到一成五附近。考虑到世界杯小组赛阶段双方都不会过早放弃进攻，伊朗在落后形势下势必加大压上力度，前场Taremi、Azmoun的支点作用会被放大，而埃及在反击中通过Salah的速度威胁对手防线的机会也会增加，因此比赛后段仍有继续进球的空间。综合射门效率、控场能力和落后方的反扑节奏，最可能的最终比分定格在2-1，由埃及在中场后段通过反击或定位球扩大比分，伊朗则在70分钟之后凭借压上获得一粒挽回颜面的进球。后续进球人选方面，埃及一侧Salah在反击中的终结概率最高，Saber延续状态的可能性也存在；伊朗一侧Taremi作为禁区支点最具威胁，Azmoun在末段加强进攻时也具备抢点能力。"
+      },
+      "sources": [],
+      "cost_usd": 0.016712900000000003,
+      "tokens": {
+        "input": 917,
+        "output": 720
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.844
+    },
+    {
+      "submitted_at": "2026-06-27T03:17:10+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Egypt",
+        "away": "Iran",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.34,
+        "away": 0.36
+      },
+      "most_likely_score": "2-3",
+      "scorers": [
+        {
+          "player": "Mehdi Taremi",
+          "minute": 63,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Mahmoud Trezeguet",
+          "minute": 71,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Mahmoud Saber",
+          "minute": 58,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Sardar Azmoun",
+          "minute": 82,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Ramin Rezaeian",
+          "minute": 78,
+          "p": 0.14,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第17分钟，埃及与伊朗1比1战平。开局阶段进球节奏非常快：埃及由马哈茂德·萨贝（萨贝尔）在第5分钟由Trezeguet（特雷泽盖）助攻先下一城，伊朗则在第14分钟通过拉明·雷扎伊安（雷扎伊安）扳平。值得注意的是，伊朗在第11分钟还由迈赫迪·塔雷米（塔雷米）罚丢了一粒点球，否则比分可能已经被反超。从场面数据看，伊朗虽然控球率略低（47%对53%），但射门数3比2、射正数更是以3比1全面占优，进攻威胁明显更高，埃及门将已经做出两次扑救，防线承压较大。综合考虑伊朗在跑动质量和创造机会方面的优势，以及他们仍有罚失点球后心态调整的空间，客队后续略占上风，但埃及在反击中同样具备一击致命的能力，因此三种结果概率比较接近，客胜略高于平局，主胜垫后。考虑到双方开场15分钟内已经互交白卷式对攻，全场仍有70多分钟，再进球的概率相当高，最可能的最终比分判断为2比2。在后续破门人选上，塔雷米作为伊朗锋线核心刚刚罚失点球，求胜欲望和出场威胁最大；特雷泽盖在埃及边路持续制造机会，是主队最具效率的进攻点；雷扎伊安状态正佳有望梅开二度，萨贝尔则可能再次利用快速反击；阿兹蒙若登场或继续在锋线施压，也具备改写比分的能力。"
+      },
+      "sources": [],
+      "cost_usd": 0.0179006,
+      "tokens": {
+        "input": 913,
+        "output": 785
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.893
+    },
+    {
+      "submitted_at": "2026-06-27T03:24:18+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 24,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Egypt",
+        "away": "Iran",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.3,
+        "away": 0.36
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Mehdi Taremi",
+          "minute": 63,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Mohamed Salah",
+          "minute": 58,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Mahmoud Trezeguet",
+          "minute": 71,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Sardar Azmoun",
+          "minute": 82,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Alireza Jahanbakhsh",
+          "minute": 75,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Mahmoud Saber",
+          "minute": 78,
+          "p": 0.16,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第24分钟，双方在开场阶段就互交白卷之后变成1比1的对攻局面。埃及第5分钟由萨贝尔（马哈茂德·萨贝）抢先破门，特雷泽盖（Mahmoud Trezeguet）助攻；伊朗第14分钟通过雷扎伊安（拉明·雷扎伊安）迅速扳平，而且第11分钟塔雷米（迈赫迪·塔雷米）的点球被扑出，否则比分可能已经是客队领先。从场面数据看，埃及控球率60%、3个角球，整体场面占优，但4次射门只有1次射正，进攻效率一般；伊朗虽然控球少、零角球，但4射3正，射门质量明显更高，加上塔雷米、阿兹蒙（Sardar Azmoun）这条锋线持续具备制造威胁的能力，反击端的杀伤力是真实存在的。埃及在第14分钟已经被迫做出换人（亚瑟·易卜拉欣亚瑟·易卜拉欣登场），意味着可能有伤情或战术微调，对后防协同是一个隐忧；萨贝尔此后又吃到黄牌，逼抢和拼抢都要更谨慎。综合射正质量、点球被扑后的心理反弹、以及伊朗中前场组合的稳定性，客队赢球的概率被略微上调至36%，主队34%，平局30%。考虑到上半场已经出现两球、双方都还有较强的进攻欲望，最可能的最终比分定为1比2，由伊朗在中后段再下一城。后续进球点上，塔雷米作为点球主罚者通常会想用运动战找回状态，是最可能的破门人选；阿兹蒙和贾汉巴赫什（阿里雷扎·贾汉巴赫什）在反击和定位球中都具备机会。埃及方面，萨拉赫（穆罕默德·萨拉赫）的个人能力随时可能改变比赛，特雷泽盖的边路突破以及萨贝尔的二次抢点也都有兑现空间。"
+      },
+      "sources": [],
+      "cost_usd": 0.019943,
+      "tokens": {
+        "input": 885,
+        "output": 901
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.533
+    },
+    {
+      "submitted_at": "2026-06-27T03:31:41+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 31,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Egypt",
+        "away": "Iran",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.38,
+        "draw": 0.3,
+        "away": 0.32
+      },
+      "most_likely_score": "3-2",
+      "scorers": [
+        {
+          "player": "Mehdi Taremi",
+          "minute": 70,
+          "p": 0.24,
+          "team": "away"
+        },
+        {
+          "player": "Mahmoud Trezeguet",
+          "minute": 63,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Sardar Azmoun",
+          "minute": 82,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Mahmoud Saber",
+          "minute": 78,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Mostafa Mohamed",
+          "minute": 88,
+          "p": 0.14,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第31分钟，埃及与伊朗1比1战平。开场仅5分钟萨贝尔接特雷泽盖助攻为埃及首开纪录，伊朗在第14分钟由雷扎埃恩迅速回敬一球，随后第11分钟塔雷米罚失点球，否则伊朗本可能取得领先，这粒丢失的点球对伊朗心理层面有一定打击。从场面看，埃及控球率61%，角球3比0，整体节奏掌控更稳，但伊朗的射正数3比1反映出反击效率更高、威胁更直接，双方目前呈现出攻强守弱、空间较大的开放式对攻格局。埃及第14分钟已被迫提前换人（易卜拉欣替补登场），后防稳定性存在隐忧；萨贝尔早早领到黄牌也限制了他后续的对抗强度。综合主场优势、控球结构和换人余量，埃及略占优势，但伊朗的反击锋线和塔雷米的个人能力随时可能再度破门。基于当前节奏与剩余近60分钟时间，比赛继续进球的概率较高，最可能的最终比分定格在2比2，体现双方都具备再下一城的实力但难以完全压制对手。后续进球候选方面，埃及一侧特雷泽盖(Mahmoud Trezeguet)边路爆点最具威胁，萨贝尔(马哈茂德·萨贝)和替补前锋穆斯塔法(Mostafa Mohamed)在下半场体能拉开后机会增加；伊朗一侧塔雷米(迈赫迪·塔雷米)在罚失点球后通常会有强烈的弥补欲望，阿兹蒙(Sardar Azmoun)若登场也是典型的下半场致命武器。胜平负概率上，埃及主控但防线松动，给到约38%，伊朗反击犀利且锋线更具个人能力，约32%，平局维持在30%左右。"
+      },
+      "sources": [],
+      "cost_usd": 0.0190735,
+      "tokens": {
+        "input": 925,
+        "output": 846
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.022
+    },
+    {
+      "submitted_at": "2026-06-27T03:39:31+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 39,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Egypt",
+        "away": "Iran",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.33,
+        "away": 0.33
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Mehdi Taremi",
+          "minute": 72,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Mahmoud Trezeguet",
+          "minute": 67,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Mahmoud Saber",
+          "minute": 78,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Sardar Azmoun",
+          "minute": 81,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Ramin Rezaeian",
+          "minute": 85,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到上半场第39分钟，埃及与伊朗在西雅图战成1-1。开场仅5分钟马哈茂德·萨贝（萨贝尔）为埃及破门，由Trezeguet（特雷泽盖）助攻，但伊朗在第14分钟由后卫拉明·雷扎伊安（雷扎埃安）迅速扳平。值得关注的是第11分钟迈赫迪·塔雷米（塔雷米）罚丢点球，否则伊朗本可以反超，这一插曲对伊朗心理层面有一定影响，但也说明他们具备制造威胁的能力。从场面数据看，埃及控球率59%，角球3比0占优，显示出他们更主导节奏；不过伊朗5次射门有3次射正，反击效率更高，两队进攻锋芒都很锐利。埃及在第14分钟便用亚瑟·易卜拉欣换下穆罕默德·阿卜杜勒莫内姆，疑似伤病调整，对后防稳定性有一定隐忧；同时Saber已领黄牌，下半场需要谨慎。综合两队此前的对攻趋势、伊朗错失点球但仍保持射正高效、埃及控场但防线被调整等因素，胜平负三项概率非常接近，埃及凭借控球与主导权略占优势。最可能的最终比分判断为2-1，即埃及在下半场凭借持续的控球优势再下一城拿下比赛。后续进球点上，埃及方面特雷泽盖作为助攻发起者、Saber作为既有进球者仍是主要威胁；伊朗方面塔雷米渴望弥补失点遗憾，Azmoun（阿兹蒙）作为锋线尖刀以及已破门的雷扎埃安在定位球中均具备得分能力。"
+      },
+      "sources": [],
+      "cost_usd": 0.017959799999999998,
+      "tokens": {
+        "input": 984,
+        "output": 774
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.055
+    },
+    {
+      "submitted_at": "2026-06-27T03:46:53+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Egypt",
+        "away": "Iran",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.38,
+        "draw": 0.33,
+        "away": 0.29
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Mehdi Taremi",
+          "minute": 80,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Mahmoud Trezeguet",
+          "minute": 67,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Mahmoud Saber",
+          "minute": 75,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Ramin Rezaeian",
+          "minute": 72,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场战罢，埃及与伊朗在西雅图战成1比1。埃及在第5分钟由马哈茂德·萨贝（萨贝尔）接Mahmoud Trezeguet（特雷泽盖）助攻率先破门，伊朗则在第11分钟由迈赫迪·塔雷米（塔雷米）罚失点球，但第14分钟通过拉明·雷扎伊安（雷扎埃安）的进球扳平。从场面看，埃及控球率达到61%，并取得4个角球和7次射门，整体压制较为明显，但仅2次射正反映临门一脚效率不高；伊朗虽然控球处于下风，3次射正显示反击更具威胁，加之罚失点球错失关键机会。埃及第14分钟较早换人换上亚瑟·易卜拉欣，加上随后Saber与Ibrahim相继吃牌，下半场防守端会有些被动，纪律性是隐患；伊朗方面Kanaani与Nemati也已染黄。综合控球与机会质量，埃及继续掌握主动的概率略高，但伊朗反击随时可能改写比分，因此主胜概率小幅领先、平局次之、客胜紧随其后。最可能的最终比分锁定在埃及2比1伊朗，理由是埃及阵地战持续压制有望转化为一粒制胜球，但伊朗整场未必再丢球而无法得分。下半场进球点上，埃及方面Trezeguet作为助攻发起者具备直接破门能力，是首选射手；Saber若不被换下仍是定位球与禁区前沿的威胁。伊朗方面Taremi心理调整后大概率成为最大反扑点，他的支点作用和射门把握能力是球队主要火力；Rezaeian已经进过球，在右路前插也有可能再下一城。"
+      },
+      "sources": [],
+      "cost_usd": 0.0186332,
+      "tokens": {
+        "input": 1146,
+        "output": 778
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.742
+    },
+    {
+      "submitted_at": "2026-06-27T04:12:23+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 57,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Egypt",
+        "away": "Iran",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.33,
+        "away": 0.25
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Omar Marmoush",
+          "minute": 72,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Mehdi Taremi",
+          "minute": 75,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Mahmoud Trezeguet",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Marwan Ateya",
+          "minute": 83,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Ramin Rezaeian",
+          "minute": 88,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第57分钟，埃及与伊朗1比1战平。开局阶段萨贝尔（马哈茂德·萨贝）第5分钟先拔头筹，但伊朗第11分钟错失塔雷米（迈赫迪·塔雷米）主罚的点球，随后由雷扎伊安（拉明·雷扎伊安）在第14分钟扳平比分。从场面数据看，埃及控球率62%，角球4比0占优，射门8比6也略胜一筹，整体掌控比赛节奏；伊朗虽然控球较少，但射正3比2更具效率，反击仍具威胁。半场过后埃及一次性换上马尔穆什（奥马尔·马尔穆什）和阿蒂亚（Marwan Ateya）等攻击手，进攻投入明显加大，下半场开局阶段的施压意图清晰。考虑到埃及的场地控制力、角球持续性和换人后的锋线提速，主队后程获胜的可能性最高，因此主胜概率领先，平局其次，伊朗客胜偏低。最可能的最终比分定为2比1埃及取胜，符合主队由控球转化为决定性一击的逻辑。后续进球人选方面，新登场的马尔穆什被视为埃及最具威胁的破门点，特雷泽盖（Mahmoud Trezeguet）凭借边路传中能力也具备建功条件，阿蒂亚作为生力军补射或二点包抄机会值得关注；伊朗一侧塔雷米仍是中锋核心，错失点球后有强烈扳回欲望，雷扎伊安在反击和定位球争顶中亦可能再度威胁球门，但整体爆冷反超概率有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.0179228,
+      "tokens": {
+        "input": 1084,
+        "output": 752
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.752
+    },
+    {
+      "submitted_at": "2026-06-27T04:19:50+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 64,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Egypt",
+        "away": "Iran",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.31,
+        "away": 0.23
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Omar Marmoush",
+          "minute": 78,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Mehdi Taremi",
+          "minute": 84,
+          "p": 0.17,
+          "team": "away"
+        },
+        {
+          "player": "Marwan Ateya",
+          "minute": 82,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Mahmoud Trezeguet",
+          "minute": 75,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Ramin Rezaeian",
+          "minute": 88,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第64分钟，埃及与伊朗在西雅图战成1比1。埃及由马哈茂德·萨贝第5分钟率先破门，伊朗则在第14分钟由拉明·雷扎伊安扳平，期间迈赫迪·塔雷米在第11分钟还罚失了一粒点球，这粒点球对伊朗的心理影响不容小觑。整体场面上，埃及占据明显主动：控球率63%，射门11次对7次，角球5比0完全压制，说明法老军团在中前场的组织和边路推进效率更高，伊朗的进攻更多依赖个人能力和反击。下半场开始时埃及一口气换上Marwan Ateya和奥马尔·马尔穆什两名进攻型球员，明显是要加强前场冲击力，Marmoush的速度和终结能力会让伊朗后防承受更大压力。伊朗这边Hossein Kanaani已染黄被换下，后防轮换叠加纪律隐患，加上角球数挂零，定位球防守也将持续被考验。综合控球、射门质量、角球压制以及埃及主动加码进攻的换人意图，主队再下一城的可能性高于伊朗反超，主胜概率领先，平局次之，伊朗客胜概率最低。最可能的最终比分定为2比1，埃及凭借场面优势在最后阶段打入制胜球。后续进球点首选Marmoush，他刚登场体能充沛且具备直接撕开防线的能力；Ateya作为新援前锋同样有破门机会；Trezeguet在边路的传中和远射也是威胁来源。伊朗方面如能再入一球，最大概率仍来自Taremi——他想要弥补此前失点的心理动机很强，Rezaeian的远射也保留一定可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.0188145,
+      "tokens": {
+        "input": 1030,
+        "output": 811
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.273
+    },
+    {
+      "submitted_at": "2026-06-27T04:27:26+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 72,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Egypt",
+        "away": "Iran",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.4,
+        "away": 0.18
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Omar Marmoush",
+          "minute": 82,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Mohamed Salah",
+          "minute": 88,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Mehdi Taremi",
+          "minute": 85,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Mahmoud Trezeguet",
+          "minute": 90,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第72分钟，埃及与伊朗在西雅图1比1战平。开场仅5分钟马哈茂德·萨贝为埃及首开纪录，伊朗随后由拉明·雷扎伊安在第14分钟回敬一球，而第11分钟迈赫迪·塔雷米罚失点球是伊朗本场极为关键的转折点，他们错失了反超良机。从场面看，埃及控球率62%，角球6比0，射门11比8，整体节奏与领地优势明显，且半场后连续换上奥马尔·马尔穆什、Zizo两名进攻型球员，并保留穆罕默德·萨拉赫在前场，显示出明确的争胜意图。伊朗则在下半场换上偏防守的萨利赫·哈达尼，更倾向于稳守反击，加之Hossein Kanaani、阿里·内马蒂已背黄牌，防线在末段压力下容易出现纪律性问题。综合控场质量与换人取向，埃及在最后阶段更可能再下一城，因此主胜概率略高于平局，而伊朗依靠Taremi单点反击仍具备偷分能力，但客胜概率明显偏低。最可能的最终比分定为2比1埃及小胜，符合主胜概率最高的判断，也契合双方此前均能在跑动空间里制造威胁的脚法。后续进球点上，Marmoush与Salah是埃及替补登场后最具突破和终结力的两人，列为首要候选；Trezeguet在边路传中和远射上仍可能贡献致命一击；伊朗一侧Taremi作为唯一稳定的支点和罚球手，是反击中最可能完成终结的人，但其概率需要因之前失点的心理影响而下调。"
+      },
+      "sources": [],
+      "cost_usd": 0.0178673,
+      "tokens": {
+        "input": 1099,
+        "output": 746
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.552
+    },
+    {
+      "submitted_at": "2026-06-27T04:35:07+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 80,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Egypt",
+        "away": "Iran",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-27T03:00:00+00:00",
+        "venue": "Seattle Stadium",
+        "venue_city": "Seattle"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.36,
+        "draw": 0.46,
+        "away": 0.18
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第80分钟，埃及与伊朗1-1战平。开场第5分钟马哈茂德·萨贝接Trezeguet助攻为埃及首开纪录，伊朗随后在第11分钟由Taremi主罚点球被扑出错失反超良机，但第14分钟拉明·雷扎伊安迅速扳平。下半场至今，埃及通过多次换人（Marwan Ateya、奥马尔·马尔穆什、Zizo相继登场）持续加码进攻端配置，控球率高达64%，角球7-0全面压制，总射门12-8，整体场面占据明显主动。伊朗一方控球仅36%，犯规已达12次，体能与防线压力均较大，第67分钟换上Moghanlou试图寻求反击突破点。综合判断，10分钟左右的剩余时间内，埃及继续围攻的概率较高，但伊朗深度防守加上换人调整可能稳住比分，因此平局仍是最大概率结果，埃及胜出概率次之，伊朗反超的可能性较低。最可能的最终比分维持1-1。若末段仍有进球，埃及阵中的Marmoush凭借速度与冲击力最具威胁，Trezeguet定位球或反越位也有机会；伊朗一侧则主要寄望于Taremi的禁区终结能力以及替补出场的Moghanlou利用反击空间，但整体进球概率均偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.016576,
+      "tokens": {
+        "input": 1300,
+        "output": 636
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.139
+    }
+  ]
+}

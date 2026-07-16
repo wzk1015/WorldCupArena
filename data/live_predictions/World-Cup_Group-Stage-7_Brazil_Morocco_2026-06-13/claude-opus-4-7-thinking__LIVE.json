@@ -1,0 +1,1066 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-7_Brazil_Morocco_2026-06-13",
+  "provider_fixture_id": "19609131",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-14T00:01:54+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "home": "Brazil",
+    "away": "Morocco",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-13T22:00:00+00:00",
+    "venue": "New York New Jersey Stadium",
+    "venue_city": "East Rutherford"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.18,
+      "draw": 0.62,
+      "away": 0.2
+    },
+    "most_likely_score": "1-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进入第90分钟，比分1-1，仅剩补时阶段。上半场Ismael Saibari第21分钟为摩洛哥首开纪录，Vinicius Junior第32分钟为巴西扳平，此后双方都未能再下一城。从数据看，巴西控球52%、射门13次、射正5次、角球6次，整体进攻强度略占优；摩洛哥射门12次但射正仅2次，门将做出4次扑救显示出韧性，且替补席不断投入Rahimi、Talbi等冲击型球员意图偷取胜局。考虑到当前补时时间窗口很短、双方均已多次换人打乱节奏、且世界杯小组赛阶段一分对两队都可接受，平局是最高概率结果。最可能最终比分维持1-1，与平局概率最高一致。后续进球只能出现在补时阶段，概率整体较低；巴西方面Vinicius Junior仍是最具威胁的破门点，替补登场的Matheus Cunha和Luiz Henrique具备反击终结能力；摩洛哥方面新换上的Soufiane Rahimi为禁区终结型前锋，加上Brahim Díaz和Chemsdine Talbi的边路爆点，均保留小概率绝杀可能。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1217,
+    "output": 632
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0161949,
+  "wall_seconds": 18.334,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.18, \"draw\": 0.62, \"away\": 0.20},\n  \"most_likely_score\": \"1-1\",\n  \"scorers\": [\n    {\"player\": \"Vinicius Junior\", \"team\": \"home\", \"minute\": 92, \"p\": 0.07},\n    {\"player\": \"Matheus Cunha\", \"team\": \"home\", \"minute\": 93, \"p\": 0.05},\n    {\"player\": \"Luiz Henrique\", \"team\": \"home\", \"minute\": 90, \"p\": 0.04},\n    {\"player\": \"Soufiane Rahimi\", \"team\": \"away\", \"minute\": 92, \"p\": 0.05},\n    {\"player\": \"Brahim Díaz\", \"team\": \"away\", \"minute\": 91, \"p\": 0.04},\n    {\"player\": \"Chemsdine Talbi\", \"team\": \"away\", \"minute\": 93, \"p\": 0.03}\n  ],\n  \"reasoning\": {\"overall\": \"比赛进入第90分钟，比分1-1，仅剩补时阶段。上半场Ismael Saibari第21分钟为摩洛哥首开纪录，Vinicius Junior第32分钟为巴西扳平，此后双方都未能再下一城。从数据看，巴西控球52%、射门13次、射正5次、角球6次，整体进攻强度略占优；摩洛哥射门12次但射正仅2次，门将做出4次扑救显示出韧性，且替补席不断投入Rahimi、Talbi等冲击型球员意图偷取胜局。考虑到当前补时时间窗口很短、双方均已多次换人打乱节奏、且世界杯小组赛阶段一分对两队都可接受，平局是最高概率结果。最可能最终比分维持1-1，与平局概率最高一致。后续进球只能出现在补时阶段，概率整体较低；巴西方面Vinicius Junior仍是最具威胁的破门点，替补登场的Matheus Cunha和Luiz Henrique具备反击终结能力；摩洛哥方面新换上的Soufiane Rahimi为禁区终结型前锋，加上Brahim Díaz和Chemsdine Talbi的边路爆点，均保留小概率绝杀可能。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-13T22:06:23+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 6,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.24,
+        "away": 0.14
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 38,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Rodrygo",
+          "minute": 67,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Raphinha",
+          "minute": 74,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Neymar",
+          "minute": 58,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Hakim Ziyech",
+          "minute": 71,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 82,
+          "p": 0.16,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行至第6分钟，比分仍为0-0，双方控球率各占50%，尚无关键事件发生，场面处于试探阶段。基于赛前实力对比，巴西作为传统强队在个人能力、阵容深度和世界杯经验上明显占优；摩洛哥虽在上届世界杯表现亮眼且防守体系扎实，但面对桑巴军团的高强度逼抢和前场组合，进攻端创造高质量机会的难度较大。结合小组赛阶段球队通常更注重结果而非冒进，再考虑到比赛刚开始6分钟、变量空间仍然很大，主胜概率给到0.62、平局0.24、客胜0.14较为合理。最可能最终比分预测为2-1：巴西凭借边路突破与定位球大概率打入两球，而摩洛哥具备一定反击能力，有机会通过齐耶赫或恩内西里制造一粒进球。后续进球逻辑上，维尼修斯作为左路爆点最有可能率先打破僵局，下半场体能下降后罗德里戈、拉菲尼亚等替补或轮换球员的得分概率上升；摩洛哥方面则更可能在比赛后段依靠反击或定位球扳回一城。所有预测进球时间均设定在第6分钟之后，符合赛中预测约束。"
+      },
+      "sources": [],
+      "cost_usd": 0.016072799999999998,
+      "tokens": {
+        "input": 894,
+        "output": 690
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.976
+    },
+    {
+      "submitted_at": "2026-06-13T22:12:27+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 12,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.25,
+        "away": 0.2
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Vinícius Júnior",
+          "minute": 38,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Rodrygo",
+          "minute": 64,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Raphinha",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Hakim Ziyech",
+          "minute": 70,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 82,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比赛进行到第12分钟，比分仍为0-0。从早期数据看，摩洛哥控球率高达70%，并已完成2次射门，巴西0射且有2次犯规，说明摩洛哥开场压迫主动，巴西暂时让出中场、依靠反击寻找空间，这种开局对巴西并不算异常，反而符合其对阵高强度逼抢球队时的常见战术节奏。考虑到巴西整体球员个人能力、终结效率和阵容深度仍明显占优，随着比赛推进，控球与射门数据预计会逐步回归均衡，巴西在30-75分钟区间通过Vinícius Júnior、Rodrygo、Raphinha等边路爆点制造威胁的概率较高。摩洛哥则有能力凭借Ziyech的定位球与En-Nesyri的支点抢点偷袭一球。综合判断，主队胜率0.55、平局0.25、客队0.20，最可能的最终比分为2-1巴西胜，与主胜概率最高一致，且不低于当前0-0的实际比分。后续进球预测全部安排在第12分钟之后，巴西方面以Vinícius Júnior（38'）、Rodrygo（64'）、Raphinha（78'）为主要候选，摩洛哥方面以Ziyech（70'）和En-Nesyri（82'）作为反扑选项，概率依据出场位置、终结习惯与剩余时间分布加以分配。"
+      },
+      "sources": [],
+      "cost_usd": 0.015799,
+      "tokens": {
+        "input": 925,
+        "output": 669
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.865
+    },
+    {
+      "submitted_at": "2026-06-13T22:18:24+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 18,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.27,
+        "away": 0.21
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 67,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Rodrygo",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Raphinha",
+          "minute": 55,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Hakim Ziyech",
+          "minute": 72,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 83,
+          "p": 0.13,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分 0-0，比赛进行到第18分钟，仍处于上半场早期阶段。从现有统计来看，摩洛哥开局更为积极，控球率59%且已完成6次射门，反观巴西仅有1次射门、控球率41%，犯规也少于对手，整体呈现摩洛哥压迫、巴西耐心观察的局面。不过开局阶段强队被动属常见现象，巴西通常在适应节奏后凭借维尼修斯（Vinicius Junior）、罗德里戈（Rodrygo）、拉菲尼亚（Raphinha）等前场球员的个人能力逐步掌控比赛，球队的整体阵容深度与终结效率仍明显优于对手。综合阵容、世界排名与小组赛场上预期表现，我们将主胜概率定为0.52，平局0.27，摩洛哥取胜0.21。最可能的最终比分为 1-0 巴西小胜，与主胜概率最高保持一致，也符合开局节奏偏闷、双方目前 0-0 的现状。后续进球预测方面，巴西方进球候选集中在维尼修斯（67分钟，0.30）、罗德里戈（78分钟，0.22）、拉菲尼亚（55分钟，0.18），分别覆盖中段提速、下半场体能下降期与替补冲击窗口；摩洛哥方面齐耶赫（Hakim Ziyech，72分钟，0.15）与恩内斯里（Youssef En-Nesyri，83分钟，0.13）作为定位球与反击终结点保留扳平可能。所有进球时间均设定在第18分钟之后，符合赛中预测约束。"
+      },
+      "sources": [],
+      "cost_usd": 0.016934900000000003,
+      "tokens": {
+        "input": 867,
+        "output": 742
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.287
+    },
+    {
+      "submitted_at": "2026-06-13T22:24:21+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 24,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.24,
+        "away": 0.18
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 58,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Rodrygo",
+          "minute": 71,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Hakim Ziyech",
+          "minute": 67,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 78,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Raphinha",
+          "minute": 80,
+          "p": 0.2,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分0-0，比赛进行至第24分钟，仍处于上半场试探阶段。从已有数据看，巴西控球率53%略占优，角球1-0领先，显示其在阵地组织上更为主动；但摩洛哥的总射门数达到6次，多于巴西的3次，说明非洲球队利用反击与定位球已经制造了实际威胁，比赛节奏偏开放。基于赛前实力差距与世界杯小组赛巴西通常的进攻倾斜，主队仍是赢球的主要候选，因此将主胜概率定在0.58，平局0.24，客胜0.18，反映摩洛哥确有冷门可能但概率有限。考虑到上半场过半仍0-0，下半场进球概率会随体能下降与战术调整上升，巴西边路Vinicius Junior、Rodrygo、Raphinha具备最强破门期望值，摩洛哥若能在中后段保持反击效率，Ziyech的定位球与En-Nesyri的禁区抢点是最可能的得分来源。综合最可能的剧本为巴西在下半场通过两次边路渗透打破僵局，摩洛哥在末段扳回一球，因此最终最可能比分为2-1，与主胜概率最高的判定保持一致，且不低于当前0-0比分，所有预测进球时间均设定在第24分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0156769,
+      "tokens": {
+        "input": 932,
+        "output": 661
+      },
+      "tool_calls": 0,
+      "wall_seconds": 29.236
+    },
+    {
+      "submitted_at": "2026-06-13T22:30:30+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 30,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.26,
+        "away": 0.28
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Vinícius Júnior",
+          "minute": 58,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Rodrygo",
+          "minute": 71,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Raphinha",
+          "minute": 82,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 76,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Ismael Saibari",
+          "minute": 88,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第30分钟，比分0-1，摩洛哥(Morocco)由Ismael Saibari在第21分钟由Brahim Díaz助攻打入一球客场领先。从场面数据看，巴西(Brazil)控球率55%略占优，角球1-0领先，但3次射门0射正，进攻威胁不足；摩洛哥反而以7次射门、1次射正展现高效反击，体现出典型的稳守反击策略。基于此，摩洛哥短期内仍具反击威胁，但巴西作为整体阵容更厚、个人能力更强的主队，在还有60分钟的情况下逆转可能性最高，因此主胜概率(0.46)仍高于平局(0.26)与客胜(0.28)，客胜略高于平局是因为摩洛哥已具备先手并有再下一城的反击空间。最可能的最终比分定为2-1主胜，符合主胜概率最高的约束，也不低于当前任一方的比分。后续进球逻辑：30分钟后巴西大概率加强进攻，Vinícius Június作为左路爆点最具破门可能，Rodrygo和Raphinha作为关键替补型/边路终结者在中后段扩大攻势时易于建功；摩洛哥方面若获得反击，En-Nesyri作为支点中锋是首选完成者，Saibari也可能在末段形成第二次冲击，所有进球时间均设置在第30分钟之后，符合时间约束。"
+      },
+      "sources": [],
+      "cost_usd": 0.01628,
+      "tokens": {
+        "input": 975,
+        "output": 685
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.584
+    },
+    {
+      "submitted_at": "2026-06-13T22:36:28+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 36,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.27,
+        "away": 0.31
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Vinícius Júnior",
+          "minute": 58,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Raphinha",
+          "minute": 74,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Rodrygo",
+          "minute": 82,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Ismael Saibari",
+          "minute": 67,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Brahim Díaz",
+          "minute": 79,
+          "p": 0.14,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前第36分钟，巴西0-1摩洛哥，Saibari在第21分钟由Brahim Díaz助攻破门。从场面数据看，摩洛哥虽然控球率略低（47%对53%），但射门次数高达12比3、射正2比0，进攻效率明显更高，巴西到目前为止还没有射正，进攻组织偏沉闷。不过比赛仍剩下接近一个完整的下半场，巴西作为整体实力更强、阵中Vinícius、Raphinha、Rodrygo等终结点更多的一方，落后一球往往会加大压上力度，预期下半场控球与射正都会显著提升。综合来看，主队胜的概率仍略高于客队胜，但差距被领先和射门质量明显拉近，因此给出主胜0.42、平0.27、客胜0.31的概率结构。最可能最终比分与最高的主胜概率保持一致，给到2-1：预计巴西在下半场打开局面后由前场球星先扳平，再在比赛末段完成反超，同时摩洛哥在反击中仍保留扩大比分的可能。后续进球者方面，Vinícius Júnior作为左路最具威胁的攻击点给到最高概率，Raphinha与Rodrygo作为常规终结者次之；摩洛哥端则继续看好已经进球且状态在线的Saibari，以及组织串联出色的Brahim Díaz具备反击破门能力，所有进球时间均设定在36分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0168017,
+      "tokens": {
+        "input": 1011,
+        "output": 706
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.057
+    },
+    {
+      "submitted_at": "2026-06-13T22:42:27+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 42,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.27,
+        "away": 0.25
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 67,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Raphinha",
+          "minute": 78,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Brahim Díaz",
+          "minute": 71,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Rodrygo",
+          "minute": 83,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 80,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比分 1-1，比赛进行到第 42 分钟，仍处于上半场尾声。摩洛哥第 21 分钟由 Ismael Saibari（伊斯梅尔·赛巴里）在 Brahim Díaz（布拉欣·迪亚斯）助攻下首开纪录，巴西第 32 分钟由 Vinicius Junior（维尼修斯）接 Bruno Guimarães（布鲁诺·吉马良斯）传球扳平。统计层面，摩洛哥总射门 12 次、射正 2 次，明显多于巴西的 4 次射门、1 次射正，说明摩洛哥在反击和远射端制造了更多威胁；但巴西控球 52%、角球 1-0 占优，把握机会效率更高，整体场面仍偏向巴西控制节奏。第 37 分钟 Casemiro（卡塞米罗）吃到黄牌，会在中场对抗中略受影响，是摩洛哥可以利用的点。综合双方实力差、星级球员深度（Vinicius、Raphinha、Rodrygo 替补/进攻轮换）以及巴西下半场通常的提速能力，主胜概率最高（0.48），平局次之（0.27），客胜（0.25）受摩洛哥射门质量支撑而保持一定权重。最可能的最终比分定为 2-1，符合主胜判断且不低于当前比分。后续进球预测：Vinicius 状态火热、与 Casemiro 受限后边路联系增多，最有可能再下一城；Raphinha、Rodrygo 在下半场常作为破密集防守的关键点；摩洛哥方面 Brahim Díaz 已有助攻并持续制造威胁，En-Nesyri 在禁区内的终结能力是后段定位球与传中的主要得分源。所有进球时间均设定在第 42 分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.018181799999999998,
+      "tokens": {
+        "input": 984,
+        "output": 786
+      },
+      "tool_calls": 0,
+      "wall_seconds": 27.52
+    },
+    {
+      "submitted_at": "2026-06-13T22:48:32+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.28,
+        "away": 0.26
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 67,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Rodrygo",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Raphinha",
+          "minute": 72,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Ismael Saibari",
+          "minute": 74,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Brahim Díaz",
+          "minute": 81,
+          "p": 0.11,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场结束阶段，比分1-1：摩洛哥第21分钟由Ismael Saibari（Brahim Díaz助攻）首开纪录，巴西第32分钟由Vinicius Junior（Bruno Guimarães助攻）扳平。从场面统计看，巴西控球率56%占优，但摩洛哥总射门12次明显高于巴西的4次，反击与中前场推进效率更高，制造威胁的能力不容忽视；不过摩洛哥射正仅2次，转化效率有限，且角球为0说明持续压制不足。巴西方面虽射门偏少，却拥有更稳定的控球与个人能力，下半场体能与替补深度（Rodrygo、Raphinha、Endrick等）将逐步占优。隐患在于Casemiro与Roger Ibañez均已吃到黄牌，下半场动作需谨慎，存在被针对反击的风险。综合判断：巴西取胜概率最高(0.46)，平局(0.28)略高于摩洛哥获胜(0.26)，最可能的最终比分为2-1巴西小胜，符合主胜逻辑且不低于当前任一方比分。后续进球预测集中在第46分钟之后：巴西端Vinicius Junior延续状态最可能再下一城，Rodrygo与Raphinha作为下半场加速点亦具威胁；摩洛哥端Saibari与Brahim Díaz仍是反击核心，保留一定再入球概率以反映其射门数据带来的尾段变盘风险。"
+      },
+      "sources": [],
+      "cost_usd": 0.0162467,
+      "tokens": {
+        "input": 1006,
+        "output": 677
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.902
+    },
+    {
+      "submitted_at": "2026-06-13T23:14:44+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 59,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.3,
+        "away": 0.24
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 74,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Rodrygo",
+          "minute": 82,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Brahim Díaz",
+          "minute": 85,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Raphinha",
+          "minute": 78,
+          "p": 0.11,
+          "team": "home"
+        },
+        {
+          "player": "Youssef En-Nesyri",
+          "minute": 88,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前第59分钟，巴西1-1摩洛哥，比赛进入下半场关键阶段。从场面看，巴西控球率55%，角球4-0占优，整体在中前场施压更稳定；摩洛哥虽然总射门12次多于巴西的6次，但射正同为2次，说明摩洛哥远射较多、真正的高质量机会有限，Brahim Díaz助攻Saibari的反击破门是其最锋利一击。巴西在37'(Casemiro)和43'(Roger Ibañez)两张黄牌后，半场用Danilo和Fabinho同时换下两名持牌球员，明显在稳固防线、降低再吃牌风险，这一调整有利于巴西在保持进攻火力的同时控制比赛节奏。综合来看，巴西夺胜概率最高(0.46)，平局(0.30)次之，摩洛哥取胜(0.24)概率最低；最可能的最终比分锁定为2-1巴西胜，与主胜倾向一致且不低于当前任一方比分。后续进球方面，Vinicius Junior(维尼修斯)已破门且持续制造威胁，是最可能的破僵者；Rodrygo(罗德里戈)和Raphinha(拉菲尼亚)作为边路爆点也有较高概率；摩洛哥方面，Brahim Díaz(布拉欣·迪亚兹)的串联和En-Nesyri(恩-内西里)的禁区终结是主要威胁来源，所有候选进球时间均设定在59分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0165575,
+      "tokens": {
+        "input": 1125,
+        "output": 670
+      },
+      "tool_calls": 0,
+      "wall_seconds": 31.593
+    },
+    {
+      "submitted_at": "2026-06-13T23:20:58+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 65,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.3,
+        "away": 0.24
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Rodrygo",
+          "minute": 82,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Brahim Díaz",
+          "minute": 80,
+          "p": 0.11,
+          "team": "away"
+        },
+        {
+          "player": "Bruno Guimarães",
+          "minute": 74,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Ismael Saibari",
+          "minute": 88,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第65分钟，比分1-1。摩洛哥在第21分钟由Ismael Saibari（萨伊巴里）首开纪录，巴西在第32分钟由Vinicius Junior（维尼修斯）扳平。从场面数据看，巴西控球率56%，角球4-0领先，射正3-2略占优，整体场面更具组织性；摩洛哥总射门12次偏多但多为远射，且角球挂零，进攻渗透较弱。巴西中场已两黄在身（Casemiro、Roger Ibañez），故下半场开场即换上Danilo和Fabinho稳固防线，意图明显是控制比赛节奏并寻找第二球。结合世界杯小组赛场景下巴西必须取胜的赛事压力，主队在最后25分钟掌握主动权概率较高。综合考虑：巴西胜0.46，平局0.30，摩洛哥胜0.24，最可能最终比分为2-1。后续进球以巴西攻击群为主，Vinicius Junior状态在线且已破门，二度建功概率最高；Rodrygo与Bruno Guimarães作为后续推进点亦具威胁；摩洛哥若能反击得手，Brahim Díaz与Saibari是主要终结者，但概率相对较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0152033,
+      "tokens": {
+        "input": 1099,
+        "output": 602
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.749
+    },
+    {
+      "submitted_at": "2026-06-13T23:26:53+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.46,
+        "draw": 0.32,
+        "away": 0.22
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 82,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Rodrygo",
+          "minute": 86,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Guimarães",
+          "minute": 80,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Ismael Saibari",
+          "minute": 84,
+          "p": 0.1,
+          "team": "away"
+        },
+        {
+          "player": "Brahim Díaz",
+          "minute": 88,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行至第71分钟，比分1-1，巴西由Vinicius Junior在32分钟扳平摩洛哥Ismael Saibari在21分钟的进球。从场面数据看，巴西控球率58%，角球4-0领先，射正3-2略占优，整体掌控节奏更明显；摩洛哥总射门12次反映出反击效率高，但缺乏角球与持续压迫，进攻多依赖个人突破。巴西已用掉两个换人名额（Danilo、Fabinho登场），加强了防守与中场覆盖，Casemiro与Roger Ibañez均背黄牌，后防需谨慎。考虑到巴西阵容深度（Rodrygo、Endrick等替补待命）以及末段体能与板凳厚度优势，最后20分钟主队取得制胜球的概率最高，因此win_probs给予home 0.46、draw 0.32、away 0.22。最可能的最终比分锁定为2-1巴西小胜，这与最高胜率方向一致，且双方比分均不低于现状。后续进球预测集中在71分钟之后：Vinicius Junior作为巴西头号火力点概率最高(0.22)，Rodrygo常作为奇兵替补登场制造杀机(0.14)，Bruno Guimarães后插上具威胁(0.10)；摩洛哥方面若再入球最可能来自Saibari的延续状态(0.10)或Brahim Díaz的突破(0.09)。"
+      },
+      "sources": [],
+      "cost_usd": 0.0159137,
+      "tokens": {
+        "input": 1066,
+        "output": 647
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.207
+    },
+    {
+      "submitted_at": "2026-06-13T23:32:58+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 77,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.4,
+        "away": 0.18
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Vinicius Junior",
+          "minute": 84,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Matheus Cunha",
+          "minute": 88,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Luiz Henrique",
+          "minute": 90,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Bruno Guimarães",
+          "minute": 86,
+          "p": 0.08,
+          "team": "home"
+        },
+        {
+          "player": "Chemsdine Talbi",
+          "minute": 89,
+          "p": 0.07,
+          "team": "away"
+        },
+        {
+          "player": "Ismael Saibari",
+          "minute": 82,
+          "p": 0.06,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前第77分钟，巴西1-1摩洛哥。从场面看，摩洛哥第21分钟由Ismael Saibari（伊斯梅尔·赛巴里）首开纪录，巴西第32分钟通过Vinicius Junior（维尼修斯）扳平。控球率上巴西59%占优，射门9次（射正3次）对摩洛哥12次（射正2次），但摩洛哥0角球显示其多为反击远射，威胁度有限；巴西在角球(4)和控球端持续施压。下半场巴西通过四次换人加强进攻端（Matheus Cunha、Luiz Henrique登场），明显追求三分；摩洛哥换上Talbi与El Mourabet偏向保守轮换。Casemiro与Roger Ibañez的黄牌略增防线风险，但未到崩盘程度。综合推进趋势，巴西在最后13分钟+伤停补时绝杀概率最高，因此主胜概率(0.42)略高于平局(0.40)，客胜(0.18)最低。最可能最终比分设为2-1（与主胜最高概率一致，且不低于当前比分）。后续进球者方面，巴西替补攻击手Cunha、Luiz Henrique及状态在线的Vinicius是首选目标，Bruno Guimarães远射或定位球补射也具威胁；摩洛哥若能再下一城，最可能来自反击中的Talbi或继续活跃的Saibari，所有进球分钟严格设定在77分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0169238,
+      "tokens": {
+        "input": 1099,
+        "output": 695
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.521
+    },
+    {
+      "submitted_at": "2026-06-13T23:38:59+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 83,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "failed",
+      "error": "InternalServerError: Error code: 500 - {'error': {'message': 'Error processing request: No claude account available', 'type': 'bad_response_status_code', 'param': '', 'code': 'bad_response_status_code'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 3.418
+    },
+    {
+      "submitted_at": "2026-06-13T23:44:31+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 89,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "failed",
+      "error": "InternalServerError: Error code: 500 - {'error': {'message': 'Error processing request: No claude account available', 'type': 'bad_response_status_code', 'param': '', 'code': 'bad_response_status_code'}}",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 7.274
+    },
+    {
+      "submitted_at": "2026-06-13T23:50:08+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.7,
+        "away": 0.12
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第90分钟，比分1-1。摩洛哥(Morocco)在第21分钟由Ismael Saibari率先打破僵局，巴西(Brazil)在第32分钟由Vinicius Junior扳平。从统计上看，巴西控球55%、4次射正、4个角球，整体场面略占优；摩洛哥总射门12次但射正仅2次，且零角球，进攻多集中在反击。下半场巴西连续四次换人(Fabinho、Matheus Cunha、Luiz Henrique、Danilo)增强中前场冲击力，摩洛哥则用Samir El Mourabet、Chemsdine Talbi、Anass Salah-Eddine等人加强中后场轮转，意图稳住平局。考虑到现已进入第90分钟，仅剩补时阶段，双方体能下降、摩洛哥防守倾向明显，绝大多数情景将以1-1收场，因此平局概率显著高于双方胜率(0.70)；巴西在主场气势与替补冲击力下扳超的可能性略高于摩洛哥再下一城(0.18 vs 0.12)。最可能最终比分锁定为1-1。补时进球预测方面，仅给出90分钟之后的可能进球者：巴西方面Vinicius Junior、Matheus Cunha、Luiz Henrique为最具威胁选项；摩洛哥方面Brahim Díaz与替补登场的Chemsdine Talbi具备反击破门可能，整体概率均较低，符合补时绝杀的小概率特性。"
+      },
+      "sources": [],
+      "cost_usd": 0.016794299999999998,
+      "tokens": {
+        "input": 1194,
+        "output": 669
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.413
+    },
+    {
+      "submitted_at": "2026-06-13T23:55:58+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.14,
+        "draw": 0.74,
+        "away": 0.12
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分1-1，比赛已进行到第90分钟，进入伤停补时阶段，留给双方破门的时间极其有限。从赛程脉络看，摩洛哥第21分钟由Ismael Saibari（伊斯梅尔·赛巴里）首开纪录，巴西第32分钟由Vinicius Junior（维尼修斯）扳平，此后双方陷入相持：巴西控球54%、射门11次（射正4次），摩洛哥射门12次（射正2次），整体场面均势，没有一方建立明显的压制优势。下半场两队累计进行了多次换人，巴西的Matheus Cunha（马特乌斯·库尼亚）和Luiz Henrique（路易斯·恩里克）以及摩洛哥的Soufiane Rahimi（拉希米）等替补登场，体能尚有余力，但比赛节奏因频繁换人而被打散，进入收官阶段后双方更倾向于稳守平局，尤其是小组赛阶段一分对双方都有价值。基于此，平局概率被显著上调至0.74，主队凭借家门口般的支持和略占优的进攻数据获得0.14的胜率，摩洛哥则为0.12。最可能的最终比分锁定为1-1，与最高的平局概率一致，且不低于当前任一方的进球数。补时阶段若出现破门，巴西方面Vinicius Junior与Matheus Cunha具备个人爆点能力，是最有可能改写比分的人选；摩洛哥方面新登场的Soufiane Rahimi以及活跃的Brahim Díaz（布拉欣·迪亚斯）有望利用反击机会，因此将其列为补时小概率破门候选，所有进球分钟严格设定在第90分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0183002,
+      "tokens": {
+        "input": 1121,
+        "output": 765
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.909
+    },
+    {
+      "submitted_at": "2026-06-14T00:01:54+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Brazil",
+        "away": "Morocco",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-13T22:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.62,
+        "away": 0.2
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进入第90分钟，比分1-1，仅剩补时阶段。上半场Ismael Saibari第21分钟为摩洛哥首开纪录，Vinicius Junior第32分钟为巴西扳平，此后双方都未能再下一城。从数据看，巴西控球52%、射门13次、射正5次、角球6次，整体进攻强度略占优；摩洛哥射门12次但射正仅2次，门将做出4次扑救显示出韧性，且替补席不断投入Rahimi、Talbi等冲击型球员意图偷取胜局。考虑到当前补时时间窗口很短、双方均已多次换人打乱节奏、且世界杯小组赛阶段一分对两队都可接受，平局是最高概率结果。最可能最终比分维持1-1，与平局概率最高一致。后续进球只能出现在补时阶段，概率整体较低；巴西方面Vinicius Junior仍是最具威胁的破门点，替补登场的Matheus Cunha和Luiz Henrique具备反击终结能力；摩洛哥方面新换上的Soufiane Rahimi为禁区终结型前锋，加上Brahim Díaz和Chemsdine Talbi的边路爆点，均保留小概率绝杀可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.0161949,
+      "tokens": {
+        "input": 1217,
+        "output": 632
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.334
+    }
+  ]
+}

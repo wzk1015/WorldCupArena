@@ -1,0 +1,455 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-55_Curaçao_Ivory-Coast_2026-06-25",
+  "provider_fixture_id": "19609191",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-25T21:29:11+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 74,
+    "score": {
+      "home": 0,
+      "away": 2
+    },
+    "home": "Curacao",
+    "away": "Côte d'Ivoire",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-25T20:00:00+00:00",
+    "venue": "Philadelphia Stadium",
+    "venue_city": "Philadelphia"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.02,
+      "draw": 0.08,
+      "away": 0.9
+    },
+    "most_likely_score": "0-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛第74分钟，科特迪瓦客场2-0领先，局面已经明显偏向客队。前74分钟里，科特迪瓦在控球和射门质量上都更占优，65%控球、6次射门且2次射正并转化为2球；库拉索虽然也有6次射门和3个角球，但只有1次射正，说明进攻更多停留在外围，真正威胁不足。两粒进球都来自尼古拉斯·佩佩，说明客队前场终结点非常稳定，而67分钟后又连续调整锋线，进一步体现出他们仍有继续扩大比分的意图。基于两球领先且时间已进入后段，平局和主胜空间都很小，客胜概率应明显上调到接近锁定；最可能的终场仍是0-2，因为科特迪瓦在领先后更可能控制节奏、降低风险，若再有进球也更可能来自反击或替补前锋的补刀，形成0-3的备选，但从时间和比赛形态看0-2仍是最稳的单一比分判断。后续进球人选上，尼古拉斯·佩佩依然是最直接的威胁点，若比赛再出现进球，他最有机会完成帽子戏法；同时，刚换上的埃利·瓦希也有望在冲刺阶段获得机会，成为另一位较可能的后续进球者。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2864,
+    "output": 712
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.01784,
+  "wall_seconds": 142.37,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.02,\n    \"draw\": 0.08,\n    \"away\": 0.9\n  },\n  \"most_likely_score\": \"0-2\",\n  \"scorers\": [\n    {\n      \"player\": \"Nicolas Pépé\",\n      \"team\": \"away\",\n      \"minute\": 76,\n      \"p\": 0.22\n    },\n    {\n      \"player\": \"Elye Wahi\",\n      \"team\": \"away\",\n      \"minute\": 82,\n      \"p\": 0.12\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛第74分钟，科特迪瓦客场2-0领先，局面已经明显偏向客队。前74分钟里，科特迪瓦在控球和射门质量上都更占优，65%控球、6次射门且2次射正并转化为2球；库拉索虽然也有6次射门和3个角球，但只有1次射正，说明进攻更多停留在外围，真正威胁不足。两粒进球都来自尼古拉斯·佩佩，说明客队前场终结点非常稳定，而67分钟后又连续调整锋线，进一步体现出他们仍有继续扩大比分的意图。基于两球领先且时间已进入后段，平局和主胜空间都很小，客胜概率应明显上调到接近锁定；最可能的终场仍是0-2，因为科特迪瓦在领先后更可能控制节奏、降低风险，若再有进球也更可能来自反击或替补前锋的补刀，形成0-3的备选，但从时间和比赛形态看0-2仍是最稳的单一比分判断。后续进球人选上，尼古拉斯·佩佩依然是最直接的威胁点，若比赛再出现进球，他最有机会完成帽子戏法；同时，刚换上的Elye Wahi也有望在冲刺阶段获得机会，成为另一位较可能的后续进球者。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-25T20:03:49+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 3,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Curacao",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.31,
+        "draw": 0.36,
+        "away": 0.33
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛刚进行到第3分钟，比分仍是0-0。当前场面上，库拉索以80%控球和1次射正占据主动，Côte d'Ivoire暂时更多处于防守和等待反击的一侧，但样本还非常小，早段控球优势不等于最终优势。考虑到比赛刚开局，双方通常先试探节奏，零封局面仍然很常见；不过库拉索已经制造出更直接的威胁，使平局概率略高于双方即时取胜概率。综合当前节奏与双方实力预期，最可能的终局仍是低比分平局，首选0-0，其次才是1-1或一球分胜负。若后续进球出现，更可能来自持续获得射门机会的一方，现阶段更值得留意的是库拉索的前场终结点，以及Côte d'Ivoire在比赛拉长后通过反击形成的进球机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.017385,
+      "tokens": {
+        "input": 2310,
+        "output": 774
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.856
+    },
+    {
+      "submitted_at": "2026-06-25T20:10:51+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 10,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Curacao",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.14,
+        "draw": 0.22,
+        "away": 0.64
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Nicolas Pépé",
+          "minute": 34,
+          "p": 0.27,
+          "team": "away"
+        },
+        {
+          "player": "Yan Diomande",
+          "minute": 67,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛打到10分钟，Côte d'Ivoire已经凭借第7分钟尼古拉·佩佩的进球1比0领先，这个开局明显把走势推向客队一侧。现阶段可用信息里，双方射门都是1次且都打正，但控球率是30%对70%，说明Côte d'Ivoire不仅率先得分，而且在开场阶段更稳定地掌控球权和节奏。库拉索虽然也有一次中目标射门，证明并非完全没有反击威胁，但在落后的情况下，他们后续必须把阵型和压迫线往前提，这会增加比赛开放度，也给客队留下更多转换和二次打击空间。从赛中概率看，客队先发制人且场面主动，因此取胜机会继续保持最高；平局仍然有一定可能，主要来自库拉索在较长比赛时间里抓住一次定位球或快速反击扳平；主队直接逆转的难度则相对更大。结合早段领先优势、控球差异以及目前尚处上半场前段的时间点，最合理的终局判断仍是Côte d'Ivoire以一球到两球优势带走比赛，其中0比2是最顺畅的比分路径：既符合客队已经建立的领先基础，也符合他们目前对节奏的控制。后续进球逻辑上，如果比赛继续按现在的结构发展，客队更像是下一支进球球队；尼古拉·佩佩作为已经打开局面的攻击点，仍是最值得关注的再次破门人选，而扬·迪奥曼德此前送出助攻，在客队持续占优时也具备后插上直接参与得分的可能。"
+      },
+      "sources": [],
+      "cost_usd": 0.0158275,
+      "tokens": {
+        "input": 2395,
+        "output": 656
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.318
+    },
+    {
+      "submitted_at": "2026-06-25T20:17:41+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Curacao",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.16,
+        "draw": 0.23,
+        "away": 0.61
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Nicolas Pépé",
+          "minute": 63,
+          "p": 0.24,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到17分钟，科特迪瓦已经凭借第7分钟 尼古拉·佩佩 的进球取得1比0领先。就当前走势看，科特迪瓦在控球上明显占优，场面更主动，前场推进和持续压迫更像是领先方的比赛方式；库拉索虽然也有一定射门尝试，但整体威胁和控场能力仍偏弱。基于这样的开局，客队拿下比赛的概率仍然最高，平局次之，主队逆转所需的进攻效率和持续性都还不够充足。比分判断上，0比1当然仍是一个重要分支，但考虑到科特迪瓦目前的控球优势和领先后的反击空间，最可能的最终比分更倾向于0比2。后续进球逻辑上，若客队继续维持现有节奏，第二个进球更可能来自已经打开局面的 尼古拉·佩佩，或由其带动的前场第二波进攻；时间点通常会落在下半场中段附近。"
+      },
+      "sources": [],
+      "cost_usd": 0.0141925,
+      "tokens": {
+        "input": 2395,
+        "output": 547
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.416
+    },
+    {
+      "submitted_at": "2026-06-25T20:24:51+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 24,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Curacao",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.24,
+        "away": 0.64
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第24分钟，库拉索暂时0比1落后，Côte d'Ivoire凭借尼古拉·佩佩在第7分钟的进球取得领先。就目前可见信息来看，客队对比赛的控制力更强：控球率达到73%，射门4比2领先，说明比赛大部分时间还是在Côte d'Ivoire主导节奏，库拉索更多处于被动防守和寻找反击机会的状态。虽然双方射正都是1次，意味着客队暂时还没有把场面优势完全转化为连续高质量机会，但早早领先本身会让他们更容易按照自己熟悉的节奏推进比赛。基于当前比分、时间点和场面分布，客队取胜概率依然最高，平局仍然保留一定空间，主要因为现在距离半场和终场都还很远，只要库拉索抓住一次定位球或反击，比赛就会重新进入拉锯；但主队直接逆转所需条件更多，因此概率最低。最可能的最终比分仍然是0比1，这一判断的核心在于：Côte d'Ivoire已经领先，而且控球优势明显，完全有能力把比赛压在可控区间；与此同时，现阶段射门数据还不足以支持一场大比分走势，所以小胜路径比继续快速拉开分差更合理。后续进球逻辑上，如果比赛继续沿着当前节奏发展，下一粒更可能来自客队，尤其是已经完成破门的尼古拉·佩佩，以及送出助攻、在前场连接作用明显的扬·迪奥曼德，都更像是接下来制造决定性瞬间的人选；而库拉索若想改写比分，更现实的方式不是持续围攻，而是等待少数高效转换机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.0157675,
+      "tokens": {
+        "input": 2395,
+        "output": 652
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.123
+    },
+    {
+      "submitted_at": "2026-06-25T20:32:11+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 32,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Curacao",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.11,
+        "draw": 0.19,
+        "away": 0.7
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第32分钟，科特迪瓦客场1球领先，局面已经明显偏向他们一方。开局早早由尼古拉·佩佩破门后，科特迪瓦在控球和射门上都占据上风，74%的控球率和4次射门说明他们更能把比赛带入自己节奏；库拉索虽然有少量推进，但整体威胁和持续压制能力仍然不足。结合当前比分、时间和双方场面，科特迪瓦更接近把领先优势守到终场，同时也保留再进一球的空间。胜平负概率因此继续向客队倾斜，客胜是最可能结果，平局次之，主胜概率最低。最可能的终场比分仍是0-1，因为在领先方控制比赛节奏的情况下，最常见的走势是继续消耗时间并稳住防线；但若比赛后段空间被拉开，科特迪瓦也有机会把比分扩大到0-2。后续进球人选上，尼古拉·佩佩仍是最有威胁的终结点，若客队再进一球，他最有可能继续参与；扬·迪奥曼德则是另一位可能在转换进攻中制造终结的球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.0233575,
+      "tokens": {
+        "input": 2413,
+        "output": 1155
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.116
+    },
+    {
+      "submitted_at": "2026-06-25T20:39:45+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 39,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Curacao",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.14,
+        "draw": 0.24,
+        "away": 0.62
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第39分钟，科特迪瓦1球领先，局面已经更偏向客队掌控。上半场早段的进球让科特迪瓦能够按自己的节奏踢，随后数据也支持这种判断：他们拥有明显更高的控球率和更多射门，且已经把比赛压在古拉索半场附近。古拉索虽然有一定反击和定位球机会，但进攻产量偏低，想在剩余时间里直接扳平并不容易。综合当前比分、时间和场面，科特迪瓦赢球仍是最高概率，平局次之，主队逆转概率最低。最可能的终场比分仍是0比1，因为客队在领先后倾向于控制风险，若再有进球，更合理的走向是把比分扩大到0比2而不是主队追平。未来进球方面，科特迪瓦更有可能继续由前场核心或边路冲击点完成，尼古拉斯·佩佩和扬·迪奥曼德仍是最值得关注的后续得分点；古拉索若要改写比赛，通常只能依靠少数高质量反击或定位球机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.017045,
+      "tokens": {
+        "input": 2474,
+        "output": 724
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.344
+    },
+    {
+      "submitted_at": "2026-06-25T20:46:47+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Curacao",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.14,
+        "draw": 0.18,
+        "away": 0.68
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Nicolas Pépé",
+          "minute": 68,
+          "p": 0.24,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛来到45分钟，科特迪瓦客场1比0领先，半场走势与比分基本一致。开场7分钟就由尼古拉·佩佩破门，说明他们把握机会能力更强；随后虽然他在35分钟吃到黄牌，但球队整体仍然牢牢掌控节奏。当前控球率72%对28%，射门4比4、射正1比1，说明科特迪瓦在场面上更主动，库拉索更多是被动防守，进攻端威胁有限。基于这种局面，科特迪瓦下半场继续扩大优势的概率高于主队扳平，平局的主要路径仍是客队效率下降或久攻不下。综合比分、控球和机会质量，最可能的终局是0比2，其次才是0比1或1比1。后续进球更倾向于继续来自科特迪瓦一方，尼古拉·佩佩依然是最直接的终结点之一，若比赛开放度提升，他有机会再参与进球；库拉索若要进球，通常需要依靠少数反击或定位球机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.017135,
+      "tokens": {
+        "input": 2474,
+        "output": 730
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.881
+    },
+    {
+      "submitted_at": "2026-06-25T21:09:55+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 54,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Curacao",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.27,
+        "away": 0.55
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到54分钟，科特迪瓦客场1球领先，局面上依然更接近客队拿分。上半场早段的进球让科特迪瓦掌握了主动权，随后虽然库拉索并非完全被压制，射门和角球并不落后太多，但控球明显偏向科特迪瓦，66%对34%的优势说明他们更能控制比赛节奏。双方目前射门都是4次、射正各1次，意味着比赛并没有被彻底打穿，库拉索仍有追平可能，因此平局概率不能忽视。相比54分钟前，客胜概率保持最高，但在只领先1球、且比赛已进入下半场后段的情况下，平局和主胜都比开局阶段更有抬升空间。综合当前攻防效率与时间消耗，最可能的走势仍是科特迪瓦守住优势，最终以0-1或0-2结束，其中0-1最贴合目前的节奏与机会质量。后续进球更倾向于仍由科特迪瓦制造，尼古拉·佩佩是最直接的终结点，若比赛被拉开，阿马德·迪亚洛也有机会在反击或二点球中参与收尾。"
+      },
+      "sources": [],
+      "cost_usd": 0.02134,
+      "tokens": {
+        "input": 1396,
+        "output": 1190
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.872
+    },
+    {
+      "submitted_at": "2026-06-25T21:16:55+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 61,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Curacao",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.19,
+        "draw": 0.29,
+        "away": 0.52
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第61分钟，科特迪瓦客场1球领先，局面上处于主动。上半场早段的进球让他们掌握了节奏，而目前双方在射门、角球上都比较接近，说明库拉索并非没有反扑机会，但科特迪瓦的控球明显更高，比赛更多时间仍在客队掌控中。考虑到时间已经进入下半场后段，领先一方的守分价值上升，平局概率也会随时间推进继续抬升；不过在现有比分和控球结构下，科特迪瓦守住胜果并再进一球的可能性仍略高于被扳平。综合判断，最可能的结果仍是科特迪瓦1-0或扩大到2-0，其中1-0最符合当前进程，因为双方有效射正都不多，比赛节奏并不支持大比分继续打开。后续进球方向上，更看好科特迪瓦利用反击或定位球再制造威胁，已取得进球的 尼古拉·佩佩 仍是最直接的二次得分点，另一名较可能参与终结的仍会来自客队前场轮换球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.014005,
+      "tokens": {
+        "input": 1396,
+        "output": 701
+      },
+      "tool_calls": 0,
+      "wall_seconds": 51.776
+    },
+    {
+      "submitted_at": "2026-06-25T21:29:11+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 74,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Curacao",
+        "away": "Côte d'Ivoire",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T20:00:00+00:00",
+        "venue": "Philadelphia Stadium",
+        "venue_city": "Philadelphia"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.08,
+        "away": 0.9
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛第74分钟，科特迪瓦客场2-0领先，局面已经明显偏向客队。前74分钟里，科特迪瓦在控球和射门质量上都更占优，65%控球、6次射门且2次射正并转化为2球；库拉索虽然也有6次射门和3个角球，但只有1次射正，说明进攻更多停留在外围，真正威胁不足。两粒进球都来自尼古拉斯·佩佩，说明客队前场终结点非常稳定，而67分钟后又连续调整锋线，进一步体现出他们仍有继续扩大比分的意图。基于两球领先且时间已进入后段，平局和主胜空间都很小，客胜概率应明显上调到接近锁定；最可能的终场仍是0-2，因为科特迪瓦在领先后更可能控制节奏、降低风险，若再有进球也更可能来自反击或替补前锋的补刀，形成0-3的备选，但从时间和比赛形态看0-2仍是最稳的单一比分判断。后续进球人选上，尼古拉斯·佩佩依然是最直接的威胁点，若比赛再出现进球，他最有机会完成帽子戏法；同时，刚换上的埃利·瓦希也有望在冲刺阶段获得机会，成为另一位较可能的后续进球者。"
+      },
+      "sources": [],
+      "cost_usd": 0.01784,
+      "tokens": {
+        "input": 2864,
+        "output": 712
+      },
+      "tool_calls": 0,
+      "wall_seconds": 142.37
+    }
+  ]
+}

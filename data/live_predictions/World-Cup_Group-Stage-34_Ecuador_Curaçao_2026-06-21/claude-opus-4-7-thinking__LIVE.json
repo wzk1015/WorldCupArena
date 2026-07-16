@@ -1,0 +1,898 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-34_Ecuador_Curaçao_2026-06-21",
+  "provider_fixture_id": "19609174",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-21T01:50:30+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 0
+    },
+    "home": "Ecuador",
+    "away": "Curacao",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-21T00:00:00+00:00",
+    "venue": "Kansas City Stadium",
+    "venue_city": "Kansas City"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.34,
+      "draw": 0.58,
+      "away": 0.08
+    },
+    "most_likely_score": "0-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进行到第90分钟，厄瓜多尔与库拉索仍是0-0。从场面看，厄瓜多尔完全掌控比赛：控球率高达75%，全场29脚射门、15脚射正、7个角球，对手库拉索门将已经做出多达15次扑救，是这场比赛被压制最明显的一项数据。然而库拉索的门将和后卫站位极佳，加上对方接连5次换人加固防线（包括防守型和体能型替补），已经摆出明显的死守姿态。厄瓜多尔此前两次换上凯文·罗德里格斯、尼尔森·安古洛意在加强锋线冲击，第89分钟再换上霍尔迪·凯塞多更是孤注一掷想抢分。考虑当前比分、所剩时间仅有补时阶段以及库拉索整场被动防守的事实，平局成为概率最高的结局，约58%；厄瓜多尔仍有约34%的机会在最后阶段或补时打破僵局，而库拉索几乎不具备反击得分的条件，胜率仅约8%。综合最可能的最终比分仍为0-0。若补时阶段出现进球，最有可能的破门者来自厄瓜多尔的替补攻击手，凯文·罗德里格斯、新换上的霍尔迪·凯塞多以及尼尔森·安古洛抢点机会最大，老将恩纳·瓦伦西亚在禁区内的嗅觉也不能忽视。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 20860,
+    "output": 730
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.090687,
+  "wall_seconds": 19.82,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.34, \"draw\": 0.58, \"away\": 0.08},\n  \"most_likely_score\": \"0-0\",\n  \"scorers\": [\n    {\"player\": \"Kevin Rodríguez\", \"team\": \"home\", \"minute\": 92, \"p\": 0.10},\n    {\"player\": \"Enner Valencia\", \"team\": \"home\", \"minute\": 93, \"p\": 0.07},\n    {\"player\": \"Nilson Angulo\", \"team\": \"home\", \"minute\": 94, \"p\": 0.06},\n    {\"player\": \"Jordy Caicedo\", \"team\": \"home\", \"minute\": 90, \"p\": 0.05}\n  ],\n  \"reasoning\": {\"overall\": \"比赛进行到第90分钟，厄瓜多尔与库拉索仍是0-0。从场面看，厄瓜多尔完全掌控比赛：控球率高达75%，全场29脚射门、15脚射正、7个角球，对手库拉索门将已经做出多达15次扑救，是这场比赛被压制最明显的一项数据。然而库拉索的门将和后卫站位极佳，加上对方接连5次换人加固防线（包括防守型和体能型替补），已经摆出明显的死守姿态。厄瓜多尔此前两次换上Kevin Rodríguez、Nilson Angulo意在加强锋线冲击，第89分钟再换上Jordy Caicedo更是孤注一掷想抢分。考虑当前比分、所剩时间仅有补时阶段以及库拉索整场被动防守的事实，平局成为概率最高的结局，约58%；厄瓜多尔仍有约34%的机会在最后阶段或补时打破僵局，而库拉索几乎不具备反击得分的条件，胜率仅约8%。综合最可能的最终比分仍为0-0。若补时阶段出现进球，最有可能的破门者来自厄瓜多尔的替补攻击手，Kevin Rodríguez、新换上的Jordy Caicedo以及Nilson Angulo抢点机会最大，老将Enner Valencia在禁区内的嗅觉也不能忽视。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-21T00:04:09+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 4,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Ecuador",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T00:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.16,
+        "away": 0.06
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Enner Valencia",
+          "minute": 38,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 62,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Kendry Páez",
+          "minute": 74,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Gonçalo Plata",
+          "minute": 81,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Leandro Bacuna",
+          "minute": 88,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第4分钟，厄瓜多尔0-0库拉索，场面尚未完全打开，但厄瓜多尔已经率先制造1次射正和1个角球，迫使库拉索门将做出1次扑救，开局压制态势明显。结合赛前实力差距——厄瓜多尔是世界排名稳定在前25的南美劲旅，整体身体素质、节奏和大赛经验都全面优于首次踏上世界杯舞台的库拉索，加上这是小组赛出线关键战，厄瓜多尔有充分动力主动施压，主胜概率给到0.78，平局0.16，库拉索爆冷取胜仅0.06。比分维持0-0的概率会随时间推移快速下滑，预计厄瓜多尔将在上半场后段通过定位球或边路传中率先打破僵局，下半场库拉索体能下降后还有机会再下一城，因此最可能的最终比分给到2-0。进球人选方面，中锋恩纳·瓦伦西亚作为禁区终结点最可能率先建功，中场核心莫伊塞斯·凯塞多具备后插上远射能力可在下半场扩大比分，新星肯德里·帕埃斯和边锋Gonçalo Plata也都是潜在破门点；库拉索若想扳回一城，经验丰富的莱昂德罗·巴库纳在比赛末段通过定位球机会偷袭的可能性最大。"
+      },
+      "sources": [],
+      "cost_usd": 0.08658740000000001,
+      "tokens": {
+        "input": 19647,
+        "output": 751
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.201
+    },
+    {
+      "submitted_at": "2026-06-21T00:11:01+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 11,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Ecuador",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T00:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.17,
+        "away": 0.05
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Enner Valencia",
+          "minute": 38,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 67,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Kendry Páez",
+          "minute": 75,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Gonzalo Plata",
+          "minute": 82,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Leandro Bacuna",
+          "minute": 88,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到11分钟，厄瓜多尔与库拉索仍是0-0。从开局十余分钟的场面看，厄瓜多尔完全掌控了比赛节奏，控球率高达76%，已经获得1次角球并打出1脚射正，库拉索仅有的1脚射门也被门将没收，整体压制非常明显。考虑到双方在世界排名、人员厚度和大赛经验上的差距，加之厄瓜多尔本场是小组赛出线关键战，进攻端的持续施压预计会延续整场，主队取胜概率明显偏高，平局概率有限，客队爆冷取分的可能性很小。综合控球与射门倾向，预计最可能的最终比分为厄瓜多尔2-0小胜：首球大概率出现在上半场后段由前场核心打破僵局，下半场再添保险球的剧本符合当前场面走势。后续进球方面，厄瓜多尔进攻端恩纳·瓦伦西亚作为支点中锋射手价值最高，莫伊塞斯·凯塞多后插上和定位球补射也具威胁，肯德里·帕埃斯与贡萨洛·普拉塔则是边路与禁区前沿的破局点；客队若能进球，更可能来自经验丰富的莱昂德罗·巴库纳在比赛尾段的定位球或反击机会，但概率明显偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.08719790000000001,
+      "tokens": {
+        "input": 19922,
+        "output": 729
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.563
+    },
+    {
+      "submitted_at": "2026-06-21T00:17:47+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Ecuador",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T00:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.15,
+        "away": 0.07
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Enner Valencia",
+          "minute": 38,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 62,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Kendry Páez",
+          "minute": 71,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Gonzalo Plata",
+          "minute": 80,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Leandro Bacuna",
+          "minute": 78,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第17分钟，厄瓜多尔与库拉索暂时0-0。从场面来看，厄瓜多尔几乎完全掌控了主动权，控球率高达80%，已经打出4次射门、3次射正并制造1个角球，库拉索门将已经做出3次扑救，仅靠门将表现勉强守住城门；库拉索则只有1次射门，0射正，0角球，进攻端几乎被压制到本方半场。基于这种一边倒的开局节奏，厄瓜多尔取胜概率明显上升，约定在0.78左右，平局空间被压缩到0.15附近，库拉索翻盘可能性仅在0.07上下。考虑到厄瓜多尔射正效率很高、进攻势头持续且对手只靠扑救硬扛，进球只是时间问题，预计上半场后段就有机会破门，下半场随着体能差距进一步拉大，还有较大概率再下一城，因此最可能的最终比分锁定为2-0。后续进球点方面，中锋恩纳·瓦伦西亚在禁区内的把握力最强，是上半场前最有威胁的破门选择；中场核心莫伊塞斯·凯塞多和年轻组织者肯德里·帕埃斯具备远射与插上能力，是下半场打破或扩大比分的合理候选；边路爆点贡萨洛·普拉塔在体能下降阶段更容易制造杀机；库拉索方面，若能在后段获得反击机会，经验丰富的莱昂德罗·巴库纳存在一定的偶发破门可能，但概率明显偏低。所有标注的进球时间均设定在当前17分钟之后，与场上走势保持一致。"
+      },
+      "sources": [],
+      "cost_usd": 0.0882117,
+      "tokens": {
+        "input": 19651,
+        "output": 838
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.137
+    },
+    {
+      "submitted_at": "2026-06-21T00:24:37+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 24,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Ecuador",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T00:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.11,
+        "away": 0.03
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Enner Valencia",
+          "minute": 38,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Kendry Páez",
+          "minute": 62,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Gonzalo Plata",
+          "minute": 80,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 71,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Tahith Chong",
+          "minute": 75,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第24分钟，比分仍是0-0，但场面已经完全一边倒。厄瓜多尔控球率高达78%，全场已有6次射门，其中4次射正，并赢得1个角球；库拉索方面仅有2次射门、0射正，门将已经做出4次扑救，防线承受巨大压力。从场面流向来看，厄瓜多尔距离破门只是时间问题，因此主胜概率被显著上调至0.86，平局压在0.11，客胜仅给到0.03。综合射正频率和扑救数据，预计厄瓜多尔会在上半场结束前先下一城，下半场再扩大比分，最可能的最终比分定为2-0。后续进球人选方面，主队前场核心恩纳·瓦伦西亚、肯德里·帕埃斯和边路突击手贡萨洛·普拉塔都是高威胁点，中场莫伊塞斯·凯塞多后插上也具备得分能力；库拉索若想扳回一城，反击端的塔希思·钟概率最高，但整体可能性较低。所有预测进球时间均设定在第24分钟之后，且最终比分不低于当前0-0。"
+      },
+      "sources": [],
+      "cost_usd": 0.0863506,
+      "tokens": {
+        "input": 19673,
+        "output": 733
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.636
+    },
+    {
+      "submitted_at": "2026-06-21T00:31:23+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 31,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Ecuador",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T00:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.17,
+        "away": 0.05
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Enner Valencia",
+          "minute": 58,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Kendry Páez",
+          "minute": 72,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 81,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Tahith Chong",
+          "minute": 78,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第31分钟，厄瓜多尔与库拉索仍是0-0。虽然比分未开，但场面呈现完全一边倒的局面：厄瓜多尔控球率高达73%，已完成7次射门，其中5次射正，并取得1个角球；库拉索全场仅3次射门、0射正，主要依靠门将的5次扑救才得以保持城门不失。这说明厄瓜多尔已经长时间在对方半场施压，进球只是时间问题，而库拉索几乎没有形成有威胁的反击。基于此，厄瓜多尔获胜概率显著上调至约0.78，平局概率压缩到0.17左右，库拉索取胜概率仅保留0.05作为反击或定位球冷门的极小空间。考虑到上半场尚有十余分钟、且厄瓜多尔射门效率与压制力都很高，预计他们将在下半场前后率先打破僵局，并在体能下降阶段再下一城，最可能的最终比分定为2-0。后续进球人选方面，锋线核心恩纳·瓦伦西亚在禁区内的把握机会能力最强，是最有可能率先破门的人；中场新星肯德里·帕埃斯具备前插和远射威胁，可在比赛后段扩大比分；莫伊塞斯·凯塞多则有机会通过定位球或二点球抢射建功。库拉索方面若能取得进球，最可能来自具备个人能力的边路球员塔希思·钟在反击中的一击，但概率明显偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0866466,
+      "tokens": {
+        "input": 19673,
+        "output": 749
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.496
+    },
+    {
+      "submitted_at": "2026-06-21T00:38:13+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 38,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Ecuador",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T00:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.17,
+        "away": 0.05
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Enner Valencia",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Kendry Páez",
+          "minute": 72,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 80,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Gonçalo Franco",
+          "minute": 75,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第38分钟，厄瓜多尔与库拉索仍是0-0。但从场面数据看，厄瓜多尔几乎完全掌控了这场比赛：控球率高达74%，7次射门5次射正，并已经拿到1个角球；库拉索全场仅4次射门，0次射正，门将已经做出5次扑救，完全被压制在己方半场。比分能维持平局，主要归功于库拉索门将的多次关键扑救，而非防线本身的稳固。基于这种一边倒的压制态势，厄瓜多尔在剩余时间里取得进球只是时间问题，主队胜率因此上调至约0.78，平局概率保留在0.17（考虑到库拉索门将状态火热以及厄瓜多尔可能浪费机会），客队取胜概率压低至0.05。综合下半场体能下降后防线更难维持、以及厄瓜多尔射正转化率应当回归正常的判断，最可能的最终比分为2-0。后续进球点上，恩纳·瓦伦西亚作为中锋是最直接的得分点，肯德里·帕埃斯在前场创造力突出，莫伊塞斯·凯塞多后插上射门也具有威胁；库拉索方面机会有限，但若打反击，中场核心Gonçalo Franco是较可能的得分人选。所有预测进球时间均设定在38分钟之后，且最终比分不低于当前比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.08599910000000001,
+      "tokens": {
+        "input": 19673,
+        "output": 714
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.837
+    },
+    {
+      "submitted_at": "2026-06-21T00:45:07+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Ecuador",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T00:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.17,
+        "away": 0.05
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Enner Valencia",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Kendry Páez",
+          "minute": 72,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 80,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Leandro Bacuna",
+          "minute": 85,
+          "p": 0.07,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "上半场结束阶段比分仍是0-0，但场面完全是厄瓜多尔的天下。主队控球率高达76%，全场8次射门、6次射正，已经迫使库拉索门将做出6次扑救，而库拉索全场仅4脚射门、0射正，进攻几乎没有形成有效威胁。这种压制下0-0更多是门将神勇和运气因素，并不能反映真实场面，进球只是时间问题。综合双方实力差距（厄瓜多尔为南美区强队，库拉索整体班底差距明显）和场上态势，主队胜率明显上调至0.78，平局概率压在0.17，客队靠偷袭取分的概率仅0.05。下半场厄瓜多尔大概率会延续高压并最终破门，考虑到库拉索门将状态出色加上体能下滑后防线漏洞会扩大，最可能的最终比分定在2-0。后续进球人选方面，恩纳·瓦伦西亚作为前场支点和点球手最具威胁，预计在55-65分钟率先打破僵局；中场核心肯德里·帕埃斯具备远射与禁区前沿处理能力，可能在70分钟前后扩大比分；莫伊塞斯·凯塞多后插上或定位球争顶也是潜在得分点。客队若能进球，最大可能来自经验丰富的莱昂德罗·巴库纳在比赛末段的定位球机会，但概率有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.0866244,
+      "tokens": {
+        "input": 19837,
+        "output": 715
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.265
+    },
+    {
+      "submitted_at": "2026-06-21T01:09:24+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 54,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Ecuador",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T00:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.74,
+        "draw": 0.2,
+        "away": 0.06
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Enner Valencia",
+          "minute": 68,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Kevin Rodríguez",
+          "minute": 75,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 82,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Leandro Bacuna",
+          "minute": 88,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第54分钟，厄瓜多尔与库拉索仍是0-0。从场面数据看，厄瓜多尔完全主导比赛：控球率高达74%，全场8次射门、6次射正，而库拉索仅有5次射门且无一射正，对方门将已经做出6次扑救，可见厄瓜多尔的攻势非常密集，进球只是时间问题。半场后厄瓜多尔换上凯文·罗德里格斯加强进攻，意图打破僵局，更显主队求胜决心。综合实力差距、场面压制以及世界杯小组赛厄瓜多尔必须拿分的战意，主队取胜概率明显领先，平局存在一定可能但较低，库拉索翻盘机会很小。考虑到剩余时间约36分钟外加补时，厄瓜多尔有较大概率打入1球但再下一城的难度因对方密集防守而上升，最可能的最终比分定为1-0。后续进球人选优先考虑前场核心恩纳·瓦伦西亚和刚替补登场、体能充沛的凯文·罗德里格斯，中场莫伊塞斯·凯塞多后插上远射也具备威胁；库拉索若能获得机会，经验丰富的莱昂德罗·巴库纳最有可能在末段定位球或反击中制造冷门。所有预测进球时间均设定在第54分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0878676,
+      "tokens": {
+        "input": 20198,
+        "output": 710
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.091
+    },
+    {
+      "submitted_at": "2026-06-21T01:16:17+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 61,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Ecuador",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T00:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.68,
+        "draw": 0.25,
+        "away": 0.07
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Kevin Rodríguez",
+          "minute": 75,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 82,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 78,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Leandro Bacuna",
+          "minute": 88,
+          "p": 0.06,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第61分钟，厄瓜多尔与库拉索仍然是0-0僵局。从场面数据看，厄瓜多尔完全掌控比赛：控球率高达74%，全场11脚射门、7次射正，而库拉索仅5射0正，库拉索门将已经做出7次扑救，可以说是凭借门将的发挥才将比分保持平局。厄瓜多尔在中场已用凯文·罗德里格斯换人增强进攻，而库拉索在防守端连续吃到黄牌（莱昂德罗·巴库纳、朱尼尼奥·巴库纳），防线压力非常大。基于这种一边倒的攻防态势，主队取胜概率明显占优，但考虑到对方门将状态火热以及比赛仅剩约30分钟，平局仍有一定可能，客队偷分的概率很低。最可能的最终比分为1-0，厄瓜多尔凭借持续施压在下半场后段打破僵局的可能性最高。后续进球方面，刚替补登场、状态充沛的凯文·罗德里格斯最具威胁，老牌射手恩纳·瓦伦西亚以及中场核心莫伊塞斯·凯塞多也具备破门能力；客队若有进球，更可能来自定位球或反击中的莱昂德罗·巴库纳，但概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.08666140000000001,
+      "tokens": {
+        "input": 20002,
+        "output": 684
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.393
+    },
+    {
+      "submitted_at": "2026-06-21T01:23:03+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 68,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Ecuador",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T00:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.3,
+        "away": 0.08
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Kevin Rodríguez",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 82,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 85,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Leandro Bacuna",
+          "minute": 88,
+          "p": 0.06,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第68分钟，厄瓜多尔与库拉索仍是0-0僵局。从场面数据看，厄瓜多尔完全掌控比赛节奏，控球率高达73%，全场15次射门、其中9次射正，角球2-0领先，已经对库拉索球门形成持续高压；库拉索门将做出9次扑救，凸显厄瓜多尔机会质量很高，只是临门一脚或运气欠佳。库拉索方面射门9次、射正仅2次，且下半场连续吃到三张黄牌（朱尼尼奥·巴库纳、利瓦诺·科梅嫩西亚等），防守动作明显变形，体能与纪律都在下滑，往后越来越难维持防线完整。基于此，厄瓜多尔取胜概率明显占优，给到0.62；库拉索若想偷分需要先守住剩余20多分钟的高压，平局概率0.30；客队完成反杀的可能性很低，仅0.08。考虑到厄瓜多尔进攻效率虽高但把握机会能力一般，且库拉索整体退守，最可能的最终比分定在1-0厄瓜多尔小胜。后续进球人选方面，下半场替补登场的凯文·罗德里格斯带来新的冲击力，最有希望率先破门；老将恩纳·瓦伦西亚作为禁区终结者在比赛末段往往能抓住机会；莫伊塞斯·凯塞多则可能通过远射或二点球建功。若库拉索能打出反击，经验丰富的莱昂德罗·巴库纳是最可能的得分点，但概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.08860760000000001,
+      "tokens": {
+        "input": 20083,
+        "output": 773
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.989
+    },
+    {
+      "submitted_at": "2026-06-21T01:29:58+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 74,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Ecuador",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T00:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.34,
+        "away": 0.08
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Kevin Rodríguez",
+          "minute": 83,
+          "p": 0.2,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 88,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Kendry Páez",
+          "minute": 86,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Moisés Caicedo",
+          "minute": 90,
+          "p": 0.08,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比分0-0，比赛进行到第74分钟。厄瓜多尔在场面上完全占据主导，控球率高达74%，全场21次射门、12次射正，角球4-0领先，而库拉索全场仅2次射正、0角球，门将已经做出11次扑救，明显是在依靠门将的神勇表演苦苦支撑。库拉索本场也已经吃到3张黄牌，体能与纪律性都开始出现问题，下半场防线压力越来越大。基于这种一边倒的局面，主队厄瓜多尔在剩余约16分钟+伤停补时内打破僵局的概率明显高于继续保持0-0，因此主胜概率上调至0.58左右，平局仍有一定概率维持在0.34，客队凭借少量反击偷分的可能性很低，仅给到0.08。综合射门转化率与剩余时间，最可能的最终比分为1-0小胜,再追加一球的可能性相对有限。后续进球更可能来自主队的进攻端：替补登场、状态正盛的凯文·罗德里格斯是最有威胁的抢点人选，老将恩纳·瓦伦西亚和年轻新星肯德里·帕埃斯在禁区前沿和定位球中都具备破门能力，中场核心莫伊塞斯·凯塞多后插上远射也是一种可能的破门方式。"
+      },
+      "sources": [],
+      "cost_usd": 0.0870721,
+      "tokens": {
+        "input": 20083,
+        "output": 690
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.914
+    },
+    {
+      "submitted_at": "2026-06-21T01:36:55+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 81,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Ecuador",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T00:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.4,
+        "away": 0.05
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Kevin Rodríguez",
+          "minute": 86,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Nilson Angulo",
+          "minute": 89,
+          "p": 0.15,
+          "team": "home"
+        },
+        {
+          "player": "Enner Valencia",
+          "minute": 88,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第81分钟，厄瓜多尔与库拉索仍是0-0。从场面看，厄瓜多尔完全掌控比赛：控球率高达73%，射门24-10、射正13-3，角球5-0，全场对库拉索球门形成持续压迫，库拉索门将已做出13次扑救，是他们能够保持城门不失的关键。库拉索方面则更多以防守为主，连续吃到多张黄牌（包括第75分钟尤里恩·加里的黄牌），体能与纪律都接近临界点，反扑能力非常有限。结合这些信息，厄瓜多尔在最后10分钟+伤停补时仍是最有可能打破僵局的一方，主胜概率上调至约0.55；但鉴于此前13次射正都未能转化，且时间所剩不多，平局概率仍保有约0.40的较高权重；库拉索想要在如此被动的局面下偷球甚至完成反超几乎不现实，客胜概率压低到0.05左右。综合判断，最可能的最终比分为1-0厄瓜多尔小胜，与主胜概率最高相吻合。后续进球更可能来自主队替补登场的生力军：第46分钟替补上场的凯文·罗德里格斯具备身体优势，在对方体能下降阶段抢点机会最大；第71分钟替补登场的尼尔森·安古洛速度型边路冲击力强，可在防线松动时制造机会；老将恩纳·瓦伦西亚则始终是定位球和禁区内的潜在终结点。库拉索由于全场仅3次射正、且球员频繁吃牌，剩余时间内进球概率极低，因此不列入主要射手预测。"
+      },
+      "sources": [],
+      "cost_usd": 0.08960660000000001,
+      "tokens": {
+        "input": 20338,
+        "output": 776
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.296
+    },
+    {
+      "submitted_at": "2026-06-21T01:43:46+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 88,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Ecuador",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T00:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.52,
+        "away": 0.06
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到88分钟，厄瓜多尔与库拉索仍是0-0僵局。从场面数据看，厄瓜多尔完全主导比赛：控球率74%，27脚射门15射正，7个角球，对手则只有10射3正且零角球，库拉索门将已经做出15次扑救，几乎是凭借门将神勇和密集防守把比分维持住。库拉索这边在75-76分钟连换三人加固防线，且累计五张黄牌，明显是退守保平的打法；厄瓜多尔则在83分钟换上Preciado，加上之前替补登场的凯文·罗德里格斯和尼尔森·安古洛，仍在加强进攻。考虑到只剩补时阶段、库拉索门将状态火热以及对方铁桶阵已经成型，最可能的最终比分仍是0-0，平局概率最高。厄瓜多尔凭借持续的压迫和角球机会仍保有抢分可能，主胜概率明显高于客胜；库拉索几乎不具备打反击破门的条件，客胜概率极低。若补时阶段真的破门，最有机会的是状态正佳的替补前锋凯文·罗德里格斯，其次是边路冲击型的尼尔森·安古洛，以及定位球争顶能力出色的恩纳·瓦伦西亚。"
+      },
+      "sources": [],
+      "cost_usd": 0.0881747,
+      "tokens": {
+        "input": 20596,
+        "output": 647
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.969
+    },
+    {
+      "submitted_at": "2026-06-21T01:50:30+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Ecuador",
+        "away": "Curacao",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T00:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.34,
+        "draw": 0.58,
+        "away": 0.08
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第90分钟，厄瓜多尔与库拉索仍是0-0。从场面看，厄瓜多尔完全掌控比赛：控球率高达75%，全场29脚射门、15脚射正、7个角球，对手库拉索门将已经做出多达15次扑救，是这场比赛被压制最明显的一项数据。然而库拉索的门将和后卫站位极佳，加上对方接连5次换人加固防线（包括防守型和体能型替补），已经摆出明显的死守姿态。厄瓜多尔此前两次换上凯文·罗德里格斯、尼尔森·安古洛意在加强锋线冲击，第89分钟再换上霍尔迪·凯塞多更是孤注一掷想抢分。考虑当前比分、所剩时间仅有补时阶段以及库拉索整场被动防守的事实，平局成为概率最高的结局，约58%；厄瓜多尔仍有约34%的机会在最后阶段或补时打破僵局，而库拉索几乎不具备反击得分的条件，胜率仅约8%。综合最可能的最终比分仍为0-0。若补时阶段出现进球，最有可能的破门者来自厄瓜多尔的替补攻击手，凯文·罗德里格斯、新换上的霍尔迪·凯塞多以及尼尔森·安古洛抢点机会最大，老将恩纳·瓦伦西亚在禁区内的嗅觉也不能忽视。"
+      },
+      "sources": [],
+      "cost_usd": 0.090687,
+      "tokens": {
+        "input": 20860,
+        "output": 730
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.82
+    }
+  ]
+}

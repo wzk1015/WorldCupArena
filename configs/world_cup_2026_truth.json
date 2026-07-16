@@ -2,13 +2,70 @@
   "tournament_id": "world_cup_2026",
   "as_of": "2026-07-13",
   "provisional_terminal_stage": "SF",
+  "group_standings": {
+    "A": ["mexico", "south-africa", "south-korea", "czech-republic"],
+    "B": ["switzerland", "canada", "bosnia-and-herzegovina", "qatar"],
+    "C": ["brazil", "morocco", "scotland", "haiti"],
+    "D": ["united-states", "australia", "paraguay", "turkey"],
+    "E": ["germany", "ivory-coast", "ecuador", "cura-ao"],
+    "F": ["netherlands", "japan", "sweden", "tunisia"],
+    "G": ["belgium", "egypt", "iran", "new-zealand"],
+    "H": ["spain", "cape-verde", "uruguay", "saudi-arabia"],
+    "I": ["france", "norway", "senegal", "iraq"],
+    "J": ["argentina", "austria", "algeria", "jordan"],
+    "K": ["colombia", "portugal", "dr-congo", "uzbekistan"],
+    "L": ["england", "croatia", "ghana", "panama"]
+  },
+  "knockout_stages": {
+    "R32": [
+      {"home": "south-africa", "away": "canada"},
+      {"home": "brazil", "away": "japan"},
+      {"home": "germany", "away": "paraguay"},
+      {"home": "netherlands", "away": "morocco"},
+      {"home": "ivory-coast", "away": "norway"},
+      {"home": "france", "away": "sweden"},
+      {"home": "mexico", "away": "ecuador"},
+      {"home": "england", "away": "dr-congo"},
+      {"home": "belgium", "away": "senegal"},
+      {"home": "united-states", "away": "bosnia-and-herzegovina"},
+      {"home": "spain", "away": "austria"},
+      {"home": "portugal", "away": "croatia"},
+      {"home": "switzerland", "away": "algeria"},
+      {"home": "australia", "away": "egypt"},
+      {"home": "argentina", "away": "cape-verde"},
+      {"home": "colombia", "away": "ghana"}
+    ],
+    "R16": [
+      {"home": "canada", "away": "morocco"},
+      {"home": "paraguay", "away": "france"},
+      {"home": "brazil", "away": "norway"},
+      {"home": "mexico", "away": "england"},
+      {"home": "portugal", "away": "spain"},
+      {"home": "united-states", "away": "belgium"},
+      {"home": "argentina", "away": "egypt"},
+      {"home": "switzerland", "away": "colombia"}
+    ],
+    "QF": [
+      {"home": "argentina", "away": "switzerland"},
+      {"home": "france", "away": "morocco"},
+      {"home": "norway", "away": "england"},
+      {"home": "spain", "away": "belgium"}
+    ],
+    "SF": [
+      {"home": "france", "away": "spain"},
+      {"home": "england", "away": "argentina"}
+    ]
+  },
   "semifinalists": ["france", "spain", "england", "argentina"],
   "semifinal_pairings": [
     ["france", "spain"],
     ["england", "argentina"]
   ],
   "sources": [
-    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/match-schedule-fixtures-results-teams-stadiums/",
-    "https://www.nbcsports.com/soccer/news/when-are-the-2026-fifa-world-cup-semifinals-dates-confirmed-teams"
+    "data/snapshots/World-Cup_Group-Stage-*/truth.json",
+    "data/snapshots/World-Cup_Round-of-32_*/truth.json",
+    "data/snapshots/World-Cup_Round-of-16_*/truth.json",
+    "data/snapshots/World-Cup_Quarter-finals_*/truth.json",
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/match-schedule-fixtures-results-teams-stadiums/"
   ]
 }

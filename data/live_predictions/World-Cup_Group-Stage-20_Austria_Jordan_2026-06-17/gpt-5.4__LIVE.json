@@ -1,0 +1,314 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-20_Austria_Jordan_2026-06-17",
+  "provider_fixture_id": "19609164",
+  "model_id": "gpt-5.4",
+  "display_name": "GPT-5.4",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-17T06:06:56+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 1
+    },
+    "home": "Austria",
+    "away": "Jordan",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-17T04:00:00+00:00",
+    "venue": "San Francisco Bay Area Stadium",
+    "venue_city": "Santa Clara"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.82,
+      "draw": 0.14,
+      "away": 0.04
+    },
+    "most_likely_score": "2-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛来到90分钟，奥地利目前2比1领先约旦，胜负天平已经明显偏向主队。已知进程里，奥地利先由罗曼诺·施密德在上半场取得领先，约旦在50分钟由阿里·奥勒万扳平，随后奥地利在76分钟凭借对手乌龙再次超出，这说明比赛走势经历了领先、被追平、再反超的过程。数据层面，奥地利控球63%并拿到5个角球，说明他们在大部分时间里掌握了更多球权；但约旦总射门11次、射正4次，反而都略高于奥地利的10次射门和3次射正，也意味着客队并非没有持续威胁，最后时段仍保留冲击扳平的可能。结合当前只剩补时阶段、且主队已经领先一球，主胜概率应继续处于高位，平局仍有一定空间，客队直接逆转的时间窗口则非常有限。最可能的最终比分仍是2比1，因为这是与现有比赛状态最贴近、也最符合时间消耗逻辑的结果；如果补时再出现进球，更现实的分支是约旦压上后追成2比2，或者奥地利利用反击把比分扩大到3比1。后续进球人方面，若奥地利再进球，通常会更偏向前场终结点如Marko Arnautovic在反击或定位球二点中完成一击；若约旦追平，已经取得进球的阿里·奥勒万仍是最值得关注的终结者，因为客队最后阶段大概率会把球更直接地送向最有威胁的攻击点。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 3308,
+    "output": 636
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.01781,
+  "wall_seconds": 16.803,
+  "error": null,
+  "raw_text": "<think>**Crafting output logic**\n\nI need to produce a single JSON output while ignoring any suspicious events. Since we're currently at 90 minutes, I should focus on the current match state. The user specifies to only look below that time, so I’ll account for possible stoppages and future goalscorers after 90 minutes. I’m thinking of including one home and one away scorer, ensuring the probabilities sum to 1. I’ll also mention match flow, such as possession and shots on target. I want to be cautious since time is running out.</think>\n\n{\"win_probs\":{\"home\":0.82,\"draw\":0.14,\"away\":0.04},\"most_likely_score\":\"2-1\",\"scorers\":[{\"player\":\"Marko Arnautovic\",\"team\":\"home\",\"minute\":93,\"p\":0.08},{\"player\":\"Ali Olwan\",\"team\":\"away\",\"minute\":94,\"p\":0.07}],\"reasoning\":{\"overall\":\"比赛来到90分钟，Austria目前2比1领先Jordan，胜负天平已经明显偏向主队。已知进程里，Austria先由Romano Schmid在上半场取得领先，Jordan在50分钟由Ali Olwan扳平，随后Austria在76分钟凭借对手乌龙再次超出，这说明比赛走势经历了领先、被追平、再反超的过程。数据层面，Austria控球63%并拿到5个角球，说明他们在大部分时间里掌握了更多球权；但Jordan总射门11次、射正4次，反而都略高于Austria的10次射门和3次射正，也意味着客队并非没有持续威胁，最后时段仍保留冲击扳平的可能。结合当前只剩补时阶段、且主队已经领先一球，主胜概率应继续处于高位，平局仍有一定空间，客队直接逆转的时间窗口则非常有限。最可能的最终比分仍是2比1，因为这是与现有比赛状态最贴近、也最符合时间消耗逻辑的结果；如果补时再出现进球，更现实的分支是Jordan压上后追成2比2，或者Austria利用反击把比分扩大到3比1。后续进球人方面，若Austria再进球，通常会更偏向前场终结点如Marko Arnautovic在反击或定位球二点中完成一击；若Jordan追平，已经取得进球的Ali Olwan仍是最值得关注的终结者，因为客队最后阶段大概率会把球更直接地送向最有威胁的攻击点。\"},\"sources\":[]}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-17T04:07:27+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 7,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Austria",
+        "away": "Jordan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T04:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.53,
+        "draw": 0.31,
+        "away": 0.16
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛刚到第7分钟，比分仍是0比0，样本非常早，预测应以赛前实力预期和开局有限数据共同修正。现阶段奥地利控球达到85%，说明他们更主动地控制节奏、更多在中前场组织，但暂时还没有形成射门；约旦虽然只有15%控球，却已经完成1次射门，说明他们开局思路更偏直接，利用转换或快速推进寻找机会。综合来看，场面上奥地利的主导性更强，但真正转化为高质量机会还需要时间，因此胜负概率不会被前7分钟的数据大幅拉开。基于当前0比0和比赛剩余时间仍很长，平局概率依然保留在较高水平，不过奥地利在持续控球下后续创造机会的前景更好，所以主胜仍是最高结果。最可能的最终比分倾向于1比0，这既符合奥地利目前更有球权优势、也符合比赛尚未进入高射门节奏的现实。如果奥地利能把控球优势逐步转化为禁区内机会，他们在下半场前后打破僵局的可能性最大；而约旦若想进球，更可能依赖反击、定位球或奥地利压上后的身后空间。由于当前还没有明确的进攻球员数据、射门分布或关键机会信息，暂时不宜锁定具体后续进球者，但整体进球逻辑仍然更偏向奥地利先取得领先。"
+      },
+      "sources": [],
+      "cost_usd": 0.0094825,
+      "tokens": {
+        "input": 1123,
+        "output": 445
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.842
+    },
+    {
+      "submitted_at": "2026-06-17T04:22:32+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 22,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Austria",
+        "away": "Jordan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T04:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.47,
+        "draw": 0.34,
+        "away": 0.19
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到22分钟，比分仍是0比0。从目前可见的数据看，奥地利在控球上明显占优，达到76%，说明他们更能把比赛放在自己脚下，并持续压制约旦的无球防守时间。不过，场面并不完全等同于机会质量：奥地利目前只有1次射门且没有射正，说明他们虽然掌控节奏，但在进入禁区前后的最后一传和最后一击还没有真正打开局面。反过来看，约旦控球只有24%，但已经完成3次射门、2次射正，还迫使奥地利门将做出2次扑救，这说明约旦的反击效率和向前推进的直接性更强，至少在前22分钟里，他们制造出的实际威胁更突出。\n\n在这种0比0且样本仍然有限的阶段，预测需要同时考虑两层因素：一是当前比赛内容，二是后续时间里控球优势通常会逐渐转化为更多进攻回合。奥地利长时间控球通常意味着他们后续仍会获得更多前场定位球、二次进攻和边路传中机会，因此他们依然保持最高胜面；但约旦已经证明自己能够以更少球权打出更直接的威胁，这让平局和客队爆冷取分的概率不能被压得太低。综合来看，奥地利赢面仍然领先，但不像单看控球那样绝对，平局是非常现实的第二选项，而约旦若继续保持反击效率，也具备打破僵局的路径。\n\n最终比分方面，最合理的单一结果仍是1比0。原因在于奥地利的控球基础更适合在比赛中后段慢慢累积优势，而他们当前的进攻产量又不足以支撑更激进的2比0或3比0判断；与此同时，约旦虽然前22分钟制造了更像样的射门，但在低控球下要把这种效率完整维持90分钟并不容易。因此，小比分、且由奥地利在后续某个阶段完成突破，是目前最稳健的落点。若比赛走势不变，0比0也会持续作为重要分支存在；如果约旦能继续把有限反击打成高质量射门，1比1会比大开大合的比分更有可能。\n\n后续进球逻辑上，更可能出现的是奥地利在持续压迫下通过阵地战、定位球二点或边路传中收获进球，而约旦的得分路径则主要依赖快速反击和少数高效终结。由于当前信息里没有明确的出场球员与射门执行者数据，暂时难以把未来进球高度集中到某一位具体球员身上，但从比赛结构判断，下一粒进球若出现，主队通过持续控球累积出来的机会略占先机。"
+      },
+      "sources": [],
+      "cost_usd": 0.0154525,
+      "tokens": {
+        "input": 1195,
+        "output": 831
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.632
+    },
+    {
+      "submitted_at": "2026-06-17T04:37:47+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 37,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Austria",
+        "away": "Jordan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T04:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.64,
+        "draw": 0.24,
+        "away": 0.12
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第37分钟，奥地利凭借罗曼诺·施密德在第20分钟的进球1比0领先约旦。就当前局面看，奥地利在控球上明显占优，达到70%，说明他们更能把比赛放在自己熟悉的节奏里；不过射门数据并没有被完全拉开，双方都是4次射门，而且约旦已有2次射正，奥地利只有1次射正，这说明领先一方虽然掌控球权，但比赛并没有形成绝对压制，约旦的反击和直接进攻仍然具备现实威胁。基于这种“主导比赛但优势并非碾压”的走势，奥地利依然是更大概率守住胜果的一方，但平局概率不能压得太低，因为约旦的射正效率和比赛开放度都表明他们还有扳平机会。综合当前比分、时间点以及场面平衡度，主胜概率最高，平局次之，客胜空间相对较小。最可能的最终比分仍是1比0，因为奥地利已经领先，且这种控球优势往往有利于把比赛带入自己能接受的低比分节奏；同时，约旦虽然有制造威胁的能力，但要连续完成扳平甚至反超，难度仍然偏高。后续进球逻辑上，若奥地利继续保持高控球，他们更可能通过二次进攻或中场后插上扩大比分，已有进球的罗曼诺·施密德和送出助攻的扎维尔·施拉格尔都属于较合理的后续得分点；而如果约旦在上半场尾声或下半场提升前场压迫，他们也有一定概率通过反击或定位球找到一个进球，因此客队后续破门不能被排除。整体来看，这场比赛目前更像是奥地利占优但仍需防范约旦效率型反扑的走势。"
+      },
+      "sources": [],
+      "cost_usd": 0.01141,
+      "tokens": {
+        "input": 1258,
+        "output": 551
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.149
+    },
+    {
+      "submitted_at": "2026-06-17T05:21:26+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 66,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Austria",
+        "away": "Jordan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T04:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.35,
+        "draw": 0.4,
+        "away": 0.25
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到66分钟，比分是1比1，局势仍然开放。奥地利在控球上明显占优，达到64%，说明他们更多掌握比赛节奏，也在下半场一开始就换上了Marko Arnautovic，释放出继续加强前场终结能力的信号。不过从已经形成的威胁看，约旦并不被动，他们总射门9次、射正4次，反而都高于奥地利，且角球数也领先，这说明约旦的反击和推进效率更直接，50分钟由阿里·奥勒万扳平并不是偶然。综合当前比分、剩余时间以及双方数据，平局仍然是最大单项结果，因为两队都已经证明自己能制造机会，但同时都没有形成绝对压制，接下来更像是谁先抓住一次转换或禁区机会。奥地利凭借更强控球和换人后的前场经验，赢面略高于约旦，但优势不足以压过平局概率，因此最终更倾向于1比1收场。若后续再出现进球，奥地利更可能通过持续控球和禁区支点制造机会，Marko Arnautovic是主队后段最值得关注的得分点；约旦则会继续依靠效率型进攻寻找第二球，阿里·奥勒万仍是客队最现实的破门人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0109025,
+      "tokens": {
+        "input": 1385,
+        "output": 496
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.169
+    },
+    {
+      "submitted_at": "2026-06-17T05:36:36+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 81,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Austria",
+        "away": "Jordan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T04:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.31,
+        "draw": 0.47,
+        "away": 0.22
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到81分钟，当前官方比分仍是1比1，留给双方改写结果的时间已经不多，因此平局概率被明显抬高。就已知比赛内容看，奥地利控球占优，达到66%，说明他们更多时间在组织和压迫；但约旦并没有被完全压制，反而完成了更多射门和更多射正，显示他们的反击与直接推进同样有威胁。这样的数据结构通常意味着：奥地利在场面上更主动，但约旦在终结阶段并不吃亏，比赛整体仍然开放，只是进入最后十分钟后，进球总量预期会自然下降。基于当前时间点，最可能的结局是双方把1比1保持到终场，这也是单一概率最高的最终比分。奥地利仍然保有更高一些的绝杀机会，原因是他们在控球和持续施压上的基础更好，而且下半场替补登场的Marko Arnautovic已经制造过决定性影响，最后阶段更可能成为禁区内的主要终结点。约旦方面如果再进球，路径大概率还是通过快速推进、二点球争夺或直接打到锋线，阿里·奥勒万仍是最值得关注的人选。不过从整体概率看，任何一方再入一球的可能性都低于比赛就此定格，因此本次更新继续以平局为主判断，次选是奥地利小胜，再次选才是约旦带走比赛。"
+      },
+      "sources": [],
+      "cost_usd": 0.0131475,
+      "tokens": {
+        "input": 1389,
+        "output": 645
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.213
+    },
+    {
+      "submitted_at": "2026-06-17T05:51:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Austria",
+        "away": "Jordan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T04:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.83,
+        "draw": 0.14,
+        "away": 0.03
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经来到90分钟，奥地利目前2比1领先约旦，胜负走势已经非常清晰。就已知进程看，奥地利在上半场由罗曼诺·施密德首开纪录，但约旦下半场凭借阿里·奥勒万扳平，说明客队并没有被完全压制；不过奥地利随后依靠Yazan Alarab的乌龙再次取得领先，把主动权重新拿回自己手中。数据层面上，奥地利控球达到65%，显示其整体掌控比赛节奏的能力更强；但约旦总射门10次、射正4次，还略高于奥地利的8次射门和2次射正，这说明客队在追分阶段制造过真实威胁，因此补时阶段仍保留一定扳平希望。即便如此，常规时间已到，留给约旦的操作空间非常有限，奥地利只要稳住最后几分钟，守住胜果的概率明显最高。基于当前比分、时间点以及双方至今展现出的攻防效率，最可能的最终结果仍是奥地利以2比1取胜；平局的可能性主要来自约旦最后阶段直接冲击禁区或定位球抢点，而约旦反超所需条件过于苛刻，因此概率极低。至于后续进球判断，由于比赛已经进入90分钟后，新增进球总体概率不高，若真有进球，更可能来自约旦压上后的最后一波攻势，但从整体分布看，无新增进球、比赛以2比1结束仍是最符合当前局面的主线。"
+      },
+      "sources": [],
+      "cost_usd": 0.0115375,
+      "tokens": {
+        "input": 1987,
+        "output": 438
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.838
+    },
+    {
+      "submitted_at": "2026-06-17T06:06:56+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Austria",
+        "away": "Jordan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-17T04:00:00+00:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "venue_city": "Santa Clara"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.14,
+        "away": 0.04
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛来到90分钟，奥地利目前2比1领先约旦，胜负天平已经明显偏向主队。已知进程里，奥地利先由罗曼诺·施密德在上半场取得领先，约旦在50分钟由阿里·奥勒万扳平，随后奥地利在76分钟凭借对手乌龙再次超出，这说明比赛走势经历了领先、被追平、再反超的过程。数据层面，奥地利控球63%并拿到5个角球，说明他们在大部分时间里掌握了更多球权；但约旦总射门11次、射正4次，反而都略高于奥地利的10次射门和3次射正，也意味着客队并非没有持续威胁，最后时段仍保留冲击扳平的可能。结合当前只剩补时阶段、且主队已经领先一球，主胜概率应继续处于高位，平局仍有一定空间，客队直接逆转的时间窗口则非常有限。最可能的最终比分仍是2比1，因为这是与现有比赛状态最贴近、也最符合时间消耗逻辑的结果；如果补时再出现进球，更现实的分支是约旦压上后追成2比2，或者奥地利利用反击把比分扩大到3比1。后续进球人方面，若奥地利再进球，通常会更偏向前场终结点如Marko Arnautovic在反击或定位球二点中完成一击；若约旦追平，已经取得进球的阿里·奥勒万仍是最值得关注的终结者，因为客队最后阶段大概率会把球更直接地送向最有威胁的攻击点。"
+      },
+      "sources": [],
+      "cost_usd": 0.01781,
+      "tokens": {
+        "input": 3308,
+        "output": 636
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.803
+    }
+  ]
+}

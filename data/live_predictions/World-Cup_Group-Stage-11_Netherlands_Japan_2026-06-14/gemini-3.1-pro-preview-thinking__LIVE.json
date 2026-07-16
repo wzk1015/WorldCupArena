@@ -1,0 +1,814 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-11_Netherlands_Japan_2026-06-14",
+  "provider_fixture_id": "19609138",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-14T21:55:15+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 2,
+      "away": 2
+    },
+    "home": "Netherlands",
+    "away": "Japan",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-14T20:00:00+00:00",
+    "venue": "Dallas Stadium",
+    "venue_city": "Arlington"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.05,
+      "draw": 0.92,
+      "away": 0.03
+    },
+    "most_likely_score": "2-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进行到第90分钟，当前比分为2-2。日本队在第89分钟由镰田大地（Daichi Kamada）打入关键进球将比分扳平，极大地改变了比赛的最终走向。从全场数据来看，荷兰队在控球率（60%）和射正数（6对3）上占据一定优势，但日本队反击高效且展现了极强的韧性。由于常规时间已经结束，比赛进入伤停补时阶段，双方再次改写比分的时间窗口非常短暂。因此，最终比分大概率定格在2-2平局。平局概率高达92%，荷兰和日本完成绝杀的概率分别仅为5%和3%。如果出现奇迹般的绝杀，替补登场的德佩（Memphis Depay）或刚刚送出助攻的小川航基（Koki Ogawa）是最有可能在补时阶段完成致命一击的球员。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2122,
+    "output": 936
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0081249,
+  "wall_seconds": 11.845,
+  "error": null,
+  "raw_text": "```json\n{\n  \"win_probs\": {\n    \"home\": 0.05,\n    \"draw\": 0.92,\n    \"away\": 0.03\n  },\n  \"most_likely_score\": \"2-2\",\n  \"scorers\": [\n    {\n      \"player\": \"Memphis Depay\",\n      \"team\": \"home\",\n      \"minute\": 93,\n      \"p\": 0.02\n    },\n    {\n      \"player\": \"Koki Ogawa\",\n      \"team\": \"away\",\n      \"minute\": 94,\n      \"p\": 0.01\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进行到第90分钟，当前比分为2-2。日本队在第89分钟由镰田大地（Daichi Kamada）打入关键进球将比分扳平，极大地改变了比赛的最终走向。从全场数据来看，荷兰队在控球率（60%）和射正数（6对3）上占据一定优势，但日本队反击高效且展现了极强的韧性。由于常规时间已经结束，比赛进入伤停补时阶段，双方再次改写比分的时间窗口非常短暂。因此，最终比分大概率定格在2-2平局。平局概率高达92%，荷兰和日本完成绝杀的概率分别仅为5%和3%。如果出现奇迹般的绝杀，替补登场的德佩（Memphis Depay）或刚刚送出助攻的小川航基（Koki Ogawa）是最有可能在补时阶段完成致命一击的球员。\"\n  },\n  \"sources\": []\n}\n```",
+  "thinking_text": "**Analyzing the Netherlands vs. Japan Match in Stoppage Time**\n\nOkay, so we're deep into stoppage time of the Netherlands vs. Japan match – 90th minute, score tied 2-2. Kamada's equalizer in the 89th minute has made this a nail-biter. Given the extremely limited time left, it's pretty clear that a draw is the most probable outcome. I'm currently estimating the probability of a draw is extremely high; I'm putting it at around 92%. The chances of either team snatching a late winner are quite low; maybe 5% for Netherlands and 3% for Japan. We're talking about a very slim window for anything significant to happen.\n\nThe most likely final score, unsurprisingly, is 2-2. Now, if there *were* to be a goal, I'm thinking it would be from a sub. Considering who's on the pitch, both Memphis Depay for the Netherlands and Koki Ogawa for Japan are potential late heroes. Both Depay and Ogawa were subbed into the match. Given it's stoppage time, I'm assigning Depay a 2% chance of scoring in the 93rd minute and Ogawa a 1% chance in the 94th. The prompt ensures that these minutes are, indeed, after the 90th minute. Now, let me just organize this into a proper JSON format.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-14T20:06:59+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 6,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.65,
+        "draw": 0.22,
+        "away": 0.13
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 35,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Memphis Depay",
+          "minute": 68,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第6分钟，目前比分0-0。荷兰队（主队）开场展现出极强的控制力，控球率高达87%，并且已经完成了一次射正和一次角球，日本队门将也已做出一次扑救。日本队目前处于完全的被动防守状态，控球率仅为13%，尚未形成射门。鉴于荷兰队在场面上的绝对压制力以及整体实力的优势，主胜概率显著上升（约65%）。日本队虽然防守顽强，但如果持续承受这种高压，防线被击穿是大概率事件。因此，最可能的最终比分预测为2-0，荷兰队获胜。预计荷兰队的前场攻击手如 Cody Gakpo 和 Memphis Depay 将在后续比赛中利用持续的阵地战和控球优势打破僵局并扩大比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0106344,
+      "tokens": {
+        "input": 924,
+        "output": 1534
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.265
+    },
+    {
+      "submitted_at": "2026-06-14T20:12:43+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 12,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.65,
+        "draw": 0.22,
+        "away": 0.13
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 38,
+          "p": 0.45,
+          "team": "home"
+        },
+        {
+          "player": "Memphis Depay",
+          "minute": 65,
+          "p": 0.4,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第12分钟，目前比分为0-0。从开场阶段的数据来看，荷兰队（主队）占据了绝对的主动权，控球率高达82%，并且已经完成了一次射正和一次角球。日本队（客队）目前处于深度防守状态，控球率仅为18%，尚未创造出射门机会，但门将已经完成了一次成功扑救。鉴于荷兰队在场面上的压倒性优势以及持续的进攻施压，主队获胜的概率较高（65%）。日本队虽然防守阵型紧凑，但在长时间的高压下容易出现漏洞。综合判断，最可能的最终比分为2-0。预计荷兰队会在上半场中后段通过阵地战或定位球打破僵局，并在下半场利用对手压上反扑的空间扩大领先优势。Cody Gakpo 和 Memphis Depay 作为锋线核心，是最有可能在后续比赛中取得进球的球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.0100275,
+      "tokens": {
+        "input": 928,
+        "output": 1437
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.152
+    },
+    {
+      "submitted_at": "2026-06-14T20:18:29+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 18,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.28,
+        "away": 0.17
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 55,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Memphis Depay",
+          "minute": 78,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第18分钟，当前比分为0-0。从场面数据来看，主队荷兰队占据了62%的绝对控球优势，并完成了1次射正（被日本门将扑出），展现出较强的进攻意图和中场控制力。客队日本队目前立足防守，控球率仅为38%，虽有1次射门但未能命中目标。基于荷兰队的整体实力优势和开局阶段的压制力，预测其获胜概率为55%，平局概率为28%，日本队依靠反击获胜的概率为17%。最可能的最终比分预测为1-0，预计荷兰队将在持续施压后于下半场打破僵局，Cody Gakpo 等核心攻击手极有可能在第55分钟左右寻觅到破门良机。"
+      },
+      "sources": [],
+      "cost_usd": 0.01169595,
+      "tokens": {
+        "input": 927,
+        "output": 1702
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.498
+    },
+    {
+      "submitted_at": "2026-06-14T20:24:22+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 24,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.28,
+        "away": 0.17
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 58,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Memphis Depay",
+          "minute": 74,
+          "p": 0.18,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第24分钟，目前比分为0-0。从场面数据来看，主队荷兰队占据了绝对的控球优势（66%），但进攻端尚未完全打开局面，仅创造了1次射门且射正。客队日本队则立足于防守反击（34%控球率），目前也有1次射门但未射正，防守端表现较为稳健。考虑到荷兰队的整体实力和对比赛节奏的控制力，他们依然是获胜热门，但随着比赛时间的推移和日本队展现出的战术纪律性，平局的概率较赛前有所上升。综合判断，预测荷兰胜率约为55%，平局28%，日本胜率17%。最可能的最终比分预测为1-0，荷兰队有望在下半场通过持续施压打破僵局。预计 Cody Gakpo 或 Memphis Depay 等锋线核心将在后续比赛中寻觅到破门良机。"
+      },
+      "sources": [],
+      "cost_usd": 0.01248345,
+      "tokens": {
+        "input": 927,
+        "output": 1827
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.214
+    },
+    {
+      "submitted_at": "2026-06-14T20:30:09+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 30,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.35,
+        "away": 0.17
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 65,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Kaoru Mitoma",
+          "minute": 78,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第30分钟，目前比分为0-0。从场面数据来看，荷兰队占据了62%的绝对控球优势，但进攻端缺乏实质性威胁，前30分钟仅完成1次射门（1次射正）。日本队立足防守，控球率仅为38%，同样只有1次未射正的打门。由于双方创造的绝对机会极少，比赛节奏缓慢，平局的概率随着时间推移有所上升。然而，荷兰队整体实力占优，随着比赛深入，他们有望通过调整撕开日本队的密集防守，因此主胜概率仍保持在48%，平局为35%，客胜为17%。结合当前的低射门数和沉闷的比赛进程，最可能的最终比分是荷兰队1-0小胜。进球逻辑方面，荷兰队的Cody Gakpo在边路内切和终结能力上极具威胁，是下半场打破僵局的关键人物；日本队若想得分，Kaoru Mitoma在左路的反击将是他们最大的倚仗。"
+      },
+      "sources": [],
+      "cost_usd": 0.013530299999999999,
+      "tokens": {
+        "input": 928,
+        "output": 1993
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.528
+    },
+    {
+      "submitted_at": "2026-06-14T20:35:59+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 35,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.3,
+        "away": 0.15
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 65,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第35分钟，当前比分为0-0。从场面数据来看，主队荷兰队占据了绝对优势，控球率高达68%，并有3次射门（其中2次射正），而客队日本队控球率仅为32%，仅有1次射门且未射正。日本队门将贡献了2次扑救，说明其防守端表现顽强，成功顶住了荷兰队的前期攻势。随着上半场接近尾声，比赛节奏可能放缓，半场0-0结束的可能性极高。不过，考虑到荷兰队在场面上的持续压制，他们在下半场打破僵局的概率依然最大。因此，胜平负概率方面，荷兰队获胜的概率最高（55%），平局概率随着时间推移升至30%，日本队依靠反击获胜的概率为15%。最可能的最终比分预测为1-0，预计荷兰队的攻击手（如Cody Gakpo）将在下半场第65分钟左右通过阵地战或定位球取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.013398,
+      "tokens": {
+        "input": 928,
+        "output": 1972
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.433
+    },
+    {
+      "submitted_at": "2026-06-14T20:41:46+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 41,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.55,
+        "draw": 0.3,
+        "away": 0.15
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 65,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Xavi Simons",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第41分钟，目前比分依然是0-0。从场面数据来看，主队荷兰占据了绝对的主动权，控球率高达70%，并创造了4次射门机会（其中2次射正），但均被日本队门将成功扑救。日本队目前以稳固防守为主，控球率仅为30%，进攻端仅有1次未中目标的射门。基于荷兰队持续的压制力和创造出的实质性威胁，他们赢下比赛的概率依然最高（55%）。随着上半场即将结束，如果日本队能将0-0保持到中场，平局概率会有所支撑（30%），但下半场荷兰队势必会继续加强攻势。综合判断，最可能的最终比分为1-0，预计荷兰队的核心攻击手如Cody Gakpo或Xavi Simons极有可能在下半场（如第65分钟左右）通过阵地战或远射打破僵局。"
+      },
+      "sources": [],
+      "cost_usd": 0.01286145,
+      "tokens": {
+        "input": 927,
+        "output": 1887
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.107
+    },
+    {
+      "submitted_at": "2026-06-14T20:47:42+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.52,
+        "draw": 0.32,
+        "away": 0.16
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 65,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第45分钟，目前比分为0-0。从上半场的统计数据来看，主队荷兰队占据了68%的绝对控球优势，但进攻端缺乏实质性威胁，仅有4次射门和2次射正。客队日本队立足防守反击，门将完成了2次扑救，并在有限的球权下尝试了3次射门。随着比赛进入下半场且比分依然僵持，平局的概率相较赛前有所上升。然而，考虑到荷兰队在场面上的持续压制力以及阵容深度，他们依然是最有可能打破僵局的一方。因此，主胜概率目前评估为52%，平局32%，客胜16%。结合上半场双方展现出的防守韧性和较低的射门转化率，预计下半场进球数较少，1-0是目前最可能的最终比分。在后续进球逻辑上，荷兰队预计会在下半场中段通过换人或战术调整加快节奏，Cody Gakpo 等锋线核心极有可能在第65分钟左右寻觅到破门良机。"
+      },
+      "sources": [],
+      "cost_usd": 0.01285515,
+      "tokens": {
+        "input": 927,
+        "output": 1886
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.246
+    },
+    {
+      "submitted_at": "2026-06-14T21:08:49+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 53,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.45,
+        "draw": 0.4,
+        "away": 0.15
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 72,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第53分钟，目前比分依然是0-0。从场面数据来看，主队荷兰队占据了绝对的控球优势（69%），但进攻端的绝对机会并不多，半场多过后仅有4次射门（2次射正）。客队日本队防守十分稳固，虽然控球率仅为31%且没有射正，但成功限制了荷兰队的攻势。随着比赛时间的流逝，平局的概率正在逐渐上升。然而，考虑到荷兰队在场面上的持续压制以及阵容深度，他们依然是最有可能打破僵局的一方。综合判断，荷兰队的胜率约为45%，平局概率为40%。最可能的最终比分是1-0，预计荷兰队的核心攻击手（如Cody Gakpo）会在比赛第72分钟左右利用体能优势或战术调整打入制胜进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.00720405,
+      "tokens": {
+        "input": 927,
+        "output": 989
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.404
+    },
+    {
+      "submitted_at": "2026-06-14T21:14:35+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 59,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.17,
+        "away": 0.05
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 76,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第59分钟，荷兰队凭借范迪克在第51分钟的进球以1-0领先日本队。从场面数据来看，荷兰队占据了绝对的统治地位，控球率高达70%，并且有3次射正，而日本队至今0射正，进攻端未能对荷兰球门造成实质性威胁。随着比赛时间的推移，落后的日本队必须阵型前压以寻求扳平比分的机会，这将不可避免地在后场留下空当。荷兰队有望利用反击机会扩大领先优势。综合当前比分、时间及双方表现，荷兰队获胜的概率极高，最可能的最终比分为2-0，预计荷兰队攻击手（如Cody Gakpo）可能会在比赛后半段利用空间再入一球锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.00839895,
+      "tokens": {
+        "input": 1003,
+        "output": 1166
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.427
+    },
+    {
+      "submitted_at": "2026-06-14T21:20:18+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 65,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.48,
+        "draw": 0.38,
+        "away": 0.14
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 78,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第65分钟，目前比分为1-1。荷兰队占据了70.0%的绝对控球率，并在下半场第51分钟由范迪克（Virgil van Dijk）首开纪录。然而，日本队展现了极高的反击效率，第57分钟由中村敬斗（Keito Nakamura）扳平比分，这也是日本队目前唯一的一次射正。考虑到荷兰队在场面上的持续压制力（5次射门3次射正，4次角球），他们在剩余的25多分钟内更有可能打破僵局。因此，预测荷兰队的胜率最高（48%），平局概率为38%，日本队反击取胜的概率为14%。最可能的最终比分预测为荷兰队2-1获胜。后续进球逻辑方面，预计荷兰队会持续施压，像Cody Gakpo这样的攻击手在第78分钟左右有较高概率通过阵地战或远射破门得分。"
+      },
+      "sources": [],
+      "cost_usd": 0.01365105,
+      "tokens": {
+        "input": 1325,
+        "output": 1946
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.093
+    },
+    {
+      "submitted_at": "2026-06-14T21:26:08+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.18,
+        "away": 0.04
+      },
+      "most_likely_score": "3-1",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 86,
+          "p": 0.25,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第71分钟，荷兰目前以2-1领先日本。从场面数据来看，荷兰占据了绝对优势，控球率高达70%，且6次射门中有4次射正并转化为2个进球。日本队虽然控球率仅为30%，但反击效率不错，唯一一次射正就由中村敬斗（Keito Nakamura）打入一球。荷兰队在被扳平后迅速由萨默维尔（Crysencio Summerville）再次超出比分，显示出强大的进攻压制力。随着比赛进入最后20分钟，日本队势必需要大举压上寻求扳平比分，这将给荷兰队留下广阔的反击空间。结合当前比分和剩余时间，荷兰队获胜的概率极高（78%），平局概率为18%，日本逆转取胜的概率仅为4%。最可能的最终比分是3-1，预计荷兰队会在比赛尾声阶段利用对手防线压上的空当，由加克波（Cody Gakpo）等攻击手再入一球锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.0107919,
+      "tokens": {
+        "input": 1278,
+        "output": 1500
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.349
+    },
+    {
+      "submitted_at": "2026-06-14T21:32:03+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 77,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.82,
+        "draw": 0.15,
+        "away": 0.03
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第77分钟，当前比分为荷兰2-1领先日本。从场面数据来看，荷兰队占据了绝对的控球优势（69%），并且在射正转化率上表现出色（4次射正打进2球）。日本队虽然只有1次射正但成功把握住了机会。在比赛的最后阶段，落后的日本队势必会大举压上寻求扳平比分，这将给荷兰队留下反击的空间。荷兰队在第70分钟换上了德佩（Memphis Depay）等生力军，有望利用对手防线的空当扩大比分。综合当前时间和场面局势，荷兰队保持胜果的概率极高（82%），最可能的最终比分维持在2-1。如果后续有进球，替补登场的德佩是荷兰队最具威胁的反击点，而日本队的久保建英（Takefusa Kubo）则是他们扳平比分的关键人物。"
+      },
+      "sources": [],
+      "cost_usd": 0.007508549999999999,
+      "tokens": {
+        "input": 1493,
+        "output": 943
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.796
+    },
+    {
+      "submitted_at": "2026-06-14T21:37:44+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 82,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.85,
+        "draw": 0.12,
+        "away": 0.03
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行至第82分钟，荷兰目前以2-1领先日本。从场面数据来看，荷兰队占据绝对主动，控球率高达66%，且8次射门中有6次射正，展现了极高的进攻效率。日本队虽然在第57分钟由中村敬斗（Keito Nakamura）打入一球，但全场仅有1次射正，整体进攻威胁有限。考虑到比赛仅剩不到10分钟的常规时间及补时，荷兰队获胜的概率极高（85%）。日本队在最后阶段必然会大举压上寻求扳平比分，这使得平局仍有12%的可能，但客队逆转取胜的概率仅剩3%。最可能的最终比分将维持在目前的2-1。在后续进球逻辑上，日本队防线前压会暴露出巨大空当，荷兰队替补登场的德佩（Memphis Depay）体能充沛，有一定概率在补时阶段通过反击打入锁定胜局的进球；而日本队替补登场的前锋小川航基（Koki Ogawa）则是客队潜在的绝平人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.016151099999999998,
+      "tokens": {
+        "input": 1708,
+        "output": 2279
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.706
+    },
+    {
+      "submitted_at": "2026-06-14T21:43:34+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 88,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.92,
+        "draw": 0.07,
+        "away": 0.01
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第88分钟，当前比分为荷兰 2-1 日本。荷兰队在控球率（62%）和射正次数（6对2）上占据明显优势，并且在下半场通过范戴克和萨默维尔的进球确立了领先。日本队虽然由中村敬斗扳回一城，并在比赛尾声换上多名攻击手（如小川航基、盐贝健人）试图绝平，但留给他们的常规时间已经所剩无几。荷兰队在第81分钟换上阿克等防守球员，意在稳固防线并消耗时间。基于当前的时间和场面，荷兰队有极大概率将2-1的比分保持到终场。不过，由于日本队必然会在补时阶段大举压上，荷兰队的替补前锋德佩（Memphis Depay）有机会利用对手身后的空当在反击中破门；同时，日本队的替补中锋小川航基（Koki Ogawa）也存在微弱的乱战绝平可能。综合判断，最可能的最终比分依然是2-1，荷兰队全取三分的概率高达92%。"
+      },
+      "sources": [],
+      "cost_usd": 0.01271865,
+      "tokens": {
+        "input": 1913,
+        "output": 1700
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.928
+    },
+    {
+      "submitted_at": "2026-06-14T21:49:26+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 2
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.06,
+        "draw": 0.9,
+        "away": 0.04
+      },
+      "most_likely_score": "2-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第90分钟，当前比分为2-2。日本队在第89分钟由镰田大地（Daichi Kamada）打入关键进球扳平比分。由于常规时间已经结束，比赛即将进入伤停补时阶段，留给双方再次改写比分的时间非常有限。荷兰队虽然在控球率上占据优势（60%），但日本队的反击和射门数（10次）同样极具威胁。综合当前时间和场面数据，平局是极大概率事件。最可能的最终比分维持在2-2。若在补时阶段出现绝杀，替补登场的德佩（Memphis Depay）或小川航基（Koki Ogawa）是最有可能的得分点，但整体进球概率已经非常低。"
+      },
+      "sources": [],
+      "cost_usd": 0.00744135,
+      "tokens": {
+        "input": 2053,
+        "output": 839
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.726
+    },
+    {
+      "submitted_at": "2026-06-14T21:55:15+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 2
+        },
+        "home": "Netherlands",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-14T20:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.92,
+        "away": 0.03
+      },
+      "most_likely_score": "2-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第90分钟，当前比分为2-2。日本队在第89分钟由镰田大地（Daichi Kamada）打入关键进球将比分扳平，极大地改变了比赛的最终走向。从全场数据来看，荷兰队在控球率（60%）和射正数（6对3）上占据一定优势，但日本队反击高效且展现了极强的韧性。由于常规时间已经结束，比赛进入伤停补时阶段，双方再次改写比分的时间窗口非常短暂。因此，最终比分大概率定格在2-2平局。平局概率高达92%，荷兰和日本完成绝杀的概率分别仅为5%和3%。如果出现奇迹般的绝杀，替补登场的德佩（Memphis Depay）或刚刚送出助攻的小川航基（Koki Ogawa）是最有可能在补时阶段完成致命一击的球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.0081249,
+      "tokens": {
+        "input": 2122,
+        "output": 936
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.845
+    }
+  ]
+}

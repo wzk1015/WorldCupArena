@@ -1,0 +1,936 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-12_Sweden_Tunisia_2026-06-15",
+  "model_id": "minimax-m2.7",
+  "setting": "S1",
+  "submitted_at": "2026-06-14T09:27:35.276597+00:00",
+  "prediction": {
+    "fixture_id": "World-Cup_Group-Stage-12_Sweden_Tunisia_2026-06-15",
+    "model_id": "WorldCupArena-v1",
+    "setting": "S1",
+    "submitted_at": "2026-06-12T12:00:00+00:00",
+    "reasoning": {
+      "overall": "瑞典队近期状态堪忧，最近8场世界杯预选赛仅取得2胜2平4负的战绩，防守端漏洞明显（曾0-4负于瑞士、0-2负于科索沃），但坐镇蒙特雷主场仍具备一定地利优势，伊萨克（Alexander Isak）和吉洛霍雷斯（Viktor Gyökeres）领衔的锋线具备较强终结能力。突尼斯队则状态火热，同期豪取7胜1平0负，进攻端多点开花（曾6-0大胜圣多美、3-0击败纳米比亚），防守同样稳固。本场是典型的矛盾对决：突尼斯攻守均衡、状态正佳；瑞典主场有底蕴但近况低迷。综合评估，突尼斯客场不败概率较大，但瑞典主场有望凭借明星前锋的个人能力抢下分数，预计双方均有进球，小胜格局更倾向于突尼斯。",
+      "t1_result": "瑞典主场劣态明显（2W2D4L），而突尼斯客场7胜1平状态惊人，攻守数据全面占优。权衡之下主队赢面约35%、平局约28%、客队赢面约37%，呈现三足鼎立格局，进球预期偏高（2.8左右）。",
+      "t2_player": "瑞典预计以4-3-3阵型出战，伊萨克居中突前，吉洛霍雷斯与埃兰加分居两翼；中场由贝格瓦尔、斯万贝里和卡尔斯特伦组成攻守枢纽，后防由尼德尔福领衔。突尼斯预计采用4-4-2或4-3-3体系，塔尔比坐镇中卫，斯基里与梅吉布里控制中场，锋线由赛义德与本·古比领衔。",
+      "t3_events": "比赛节奏预计中高速，双方均有望破门。突尼斯进攻启动较早（45-65分钟），瑞典锋线个人能力可能在75分钟后制造威胁。黄牌可能出现在中场的激烈对抗中，换人调整预计在60-75分钟区间进行。",
+      "t4_stats": "突尼斯在射门次数（11.5）和射正率（5.2）上领先，瑞典则在控球率（50.4%）和传球准确率上有微幅优势。两队角球数接近（瑞典4.9 vs 突尼斯5.4），防守数据（扑救、防守动作）基本对等。"
+    },
+    "win_probs": {
+      "home": 0.35,
+      "draw": 0.28,
+      "away": 0.37
+    },
+    "headline_score": "1-2",
+    "expected_goal_diff": -0.05,
+    "match_profile": "open",
+    "expected_total_goals": 3.05,
+    "lineups": {
+      "home": {
+        "starting": [
+          {
+            "name": "Jacob Widell Zetterström",
+            "position": "GK"
+          },
+          {
+            "name": "Victor Nilsson Lindelöf",
+            "position": "DF"
+          },
+          {
+            "name": "Isak Hien",
+            "position": "DF"
+          },
+          {
+            "name": "Gustaf Lagerbielke",
+            "position": "DF"
+          },
+          {
+            "name": "Gabriel Gudmundsson",
+            "position": "DF"
+          },
+          {
+            "name": "Lucas Bergvall",
+            "position": "MF"
+          },
+          {
+            "name": "Mattias Svanberg",
+            "position": "MF"
+          },
+          {
+            "name": "Jesper Karlström",
+            "position": "MF"
+          },
+          {
+            "name": "Anthony Elanga",
+            "position": "FW"
+          },
+          {
+            "name": "Alexander Isak",
+            "position": "FW"
+          },
+          {
+            "name": "Viktor Gyökeres",
+            "position": "FW"
+          }
+        ],
+        "bench": [
+          {
+            "name": "Viktor Johansson",
+            "position": "GK"
+          },
+          {
+            "name": "Kristoffer Nordfeldt",
+            "position": "GK"
+          },
+          {
+            "name": "Hjalmar Ekdal",
+            "position": "DF"
+          },
+          {
+            "name": "Eric Anders Smith",
+            "position": "DF"
+          },
+          {
+            "name": "Daniel Svensson",
+            "position": "DF"
+          },
+          {
+            "name": "Carl Starfelt",
+            "position": "DF"
+          },
+          {
+            "name": "Ken Sema",
+            "position": "DF"
+          },
+          {
+            "name": "Besfort Zeneli",
+            "position": "MF"
+          },
+          {
+            "name": "Herman Nils Johansson",
+            "position": "MF"
+          },
+          {
+            "name": "Elliot Stroud",
+            "position": "MF"
+          },
+          {
+            "name": "Benjamin Nygren",
+            "position": "MF"
+          },
+          {
+            "name": "Gustaf Nilsson",
+            "position": "FW"
+          }
+        ]
+      },
+      "away": {
+        "starting": [
+          {
+            "name": "Aymen Dahmen",
+            "position": "GK"
+          },
+          {
+            "name": "Ali Abdi",
+            "position": "DF"
+          },
+          {
+            "name": "Montassar Talbi",
+            "position": "DF"
+          },
+          {
+            "name": "Dylan Bronn",
+            "position": "DF"
+          },
+          {
+            "name": "Adam Arous",
+            "position": "DF"
+          },
+          {
+            "name": "Ellyes Skhiri",
+            "position": "MF"
+          },
+          {
+            "name": "Anis Ben Slimane",
+            "position": "MF"
+          },
+          {
+            "name": "Hannibal Mejbri",
+            "position": "MF"
+          },
+          {
+            "name": "Rayan Elloumi",
+            "position": "FW"
+          },
+          {
+            "name": "Elias Saad",
+            "position": "FW"
+          },
+          {
+            "name": "Mohamed Elias Achouri",
+            "position": "FW"
+          }
+        ],
+        "bench": [
+          {
+            "name": "Abdelmouhib Chamakh",
+            "position": "GK"
+          },
+          {
+            "name": "Sabri Ben Hsan",
+            "position": "GK"
+          },
+          {
+            "name": "Omar Rekik",
+            "position": "DF"
+          },
+          {
+            "name": "Moutaz Neffati",
+            "position": "DF"
+          },
+          {
+            "name": "Amine Ben Hmida",
+            "position": "DF"
+          },
+          {
+            "name": "Raed Chikhaoui",
+            "position": "DF"
+          },
+          {
+            "name": "Rani Khedira",
+            "position": "MF"
+          },
+          {
+            "name": "Mohamed Belhaj Mahmoud",
+            "position": "MF"
+          },
+          {
+            "name": "Hazem Mastouri",
+            "position": "FW"
+          },
+          {
+            "name": "Ismaël Gharbi",
+            "position": "FW"
+          },
+          {
+            "name": "Khalil Ayari",
+            "position": "FW"
+          },
+          {
+            "name": "Mortadha Ben Ouannes",
+            "position": "FW"
+          }
+        ]
+      }
+    },
+    "formations": {
+      "home": "4-3-3",
+      "away": "4-3-3"
+    },
+    "scorers": [
+      {
+        "player": "Alexander Isak",
+        "team": "home",
+        "minute_range": [
+          55,
+          75
+        ],
+        "p": 0.35
+      },
+      {
+        "player": "Elias Saad",
+        "team": "away",
+        "minute_range": [
+          25,
+          45
+        ],
+        "p": 0.4
+      },
+      {
+        "player": "Mohamed Elias Achouri",
+        "team": "away",
+        "minute_range": [
+          65,
+          85
+        ],
+        "p": 0.38
+      }
+    ],
+    "assisters": [
+      {
+        "player": "Anthony Elanga",
+        "team": "home",
+        "p": 0.3,
+        "minute": 62
+      },
+      {
+        "player": "Hannibal Mejbri",
+        "team": "away",
+        "p": 0.35,
+        "minute": 32
+      },
+      {
+        "player": "Rayan Elloumi",
+        "team": "away",
+        "p": 0.32,
+        "minute": 72
+      }
+    ],
+    "substitutions": [
+      {
+        "team": "home",
+        "off": "Jesper Karlström",
+        "on": "Benjamin Nygren",
+        "minute": 65
+      },
+      {
+        "team": "home",
+        "off": "Anthony Elanga",
+        "on": "Gustaf Nilsson",
+        "minute": 76
+      },
+      {
+        "team": "away",
+        "off": "Elias Saad",
+        "on": "Khalil Ayari",
+        "minute": 70
+      },
+      {
+        "team": "away",
+        "off": "Rayan Elloumi",
+        "on": "Hazem Mastouri",
+        "minute": 80
+      }
+    ],
+    "cards": [
+      {
+        "player": "Victor Nilsson Lindelöf",
+        "team": "home",
+        "color": "yellow",
+        "minute": 38
+      },
+      {
+        "player": "Ellyes Skhiri",
+        "team": "away",
+        "color": "yellow",
+        "minute": 52
+      }
+    ],
+    "penalties": [],
+    "own_goals": [],
+    "key_events": [],
+    "motm_probs": [
+      {
+        "player": "Alexander Isak",
+        "team": "home",
+        "p": 0.3
+      },
+      {
+        "player": "Elias Saad",
+        "team": "away",
+        "p": 0.35
+      },
+      {
+        "player": "Montassar Talbi",
+        "team": "away",
+        "p": 0.2
+      },
+      {
+        "player": "Viktor Gyökeres",
+        "team": "home",
+        "p": 0.15
+      }
+    ],
+    "stats": {
+      "possession": {
+        "home": 48,
+        "away": 52
+      },
+      "shots": {
+        "home": 10,
+        "away": 12
+      },
+      "shots_on_target": {
+        "home": 4,
+        "away": 5
+      },
+      "corners": {
+        "home": 5,
+        "away": 6
+      },
+      "pass_accuracy": {
+        "home": 83,
+        "away": 80
+      },
+      "fouls": {
+        "home": 13,
+        "away": 15
+      },
+      "saves": {
+        "home": 3,
+        "away": 2
+      },
+      "defensive_actions": {
+        "home": 18,
+        "away": 16
+      }
+    },
+    "sources": [],
+    "score_dist": [
+      {
+        "score": "1-2",
+        "p": 0.137
+      },
+      {
+        "score": "1-1",
+        "p": 0.13
+      },
+      {
+        "score": "2-1",
+        "p": 0.09
+      },
+      {
+        "score": "1-0",
+        "p": 0.079
+      },
+      {
+        "score": "2-2",
+        "p": 0.074
+      },
+      {
+        "score": "2-0",
+        "p": 0.058
+      },
+      {
+        "score": "0-0",
+        "p": 0.057
+      },
+      {
+        "score": "0-1",
+        "p": 0.045
+      },
+      {
+        "score": "3-1",
+        "p": 0.044
+      },
+      {
+        "score": "1-3",
+        "p": 0.044
+      },
+      {
+        "score": "0-2",
+        "p": 0.04
+      },
+      {
+        "score": "3-2",
+        "p": 0.034
+      },
+      {
+        "score": "2-3",
+        "p": 0.033
+      },
+      {
+        "score": "0-3",
+        "p": 0.031
+      },
+      {
+        "score": "3-0",
+        "p": 0.028
+      },
+      {
+        "score": "3-3",
+        "p": 0.019
+      },
+      {
+        "score": "1-4",
+        "p": 0.017
+      },
+      {
+        "score": "4-1",
+        "p": 0.016
+      },
+      {
+        "score": "2-4",
+        "p": 0.012
+      },
+      {
+        "score": "0-4",
+        "p": 0.012
+      }
+    ],
+    "most_likely_score": "1-2",
+    "over_under_probs": {
+      "over_1_5": 0.819,
+      "over_2_5": 0.591,
+      "over_3_5": 0.305,
+      "over_4_5": 0.131
+    }
+  },
+  "raw_prediction": {
+    "fixture_id": "World-Cup_Group-Stage-12_Sweden_Tunisia_2026-06-15",
+    "model_id": "WorldCupArena-v1",
+    "setting": "S1",
+    "submitted_at": "2026-06-12T12:00:00+00:00",
+    "reasoning": {
+      "overall": "瑞典队近期状态堪忧，最近8场世界杯预选赛仅取得2胜2平4负的战绩，防守端漏洞明显（曾0-4负于瑞士、0-2负于科索沃），但坐镇蒙特雷主场仍具备一定地利优势，伊萨克（Alexander Isak）和吉洛霍雷斯（Viktor Gyökeres）领衔的锋线具备较强终结能力。突尼斯队则状态火热，同期豪取7胜1平0负，进攻端多点开花（曾6-0大胜圣多美、3-0击败纳米比亚），防守同样稳固。本场是典型的矛盾对决：突尼斯攻守均衡、状态正佳；瑞典主场有底蕴但近况低迷。综合评估，突尼斯客场不败概率较大，但瑞典主场有望凭借明星前锋的个人能力抢下分数，预计双方均有进球，小胜格局更倾向于突尼斯。",
+      "t1_result": "瑞典主场劣态明显（2W2D4L），而突尼斯客场7胜1平状态惊人，攻守数据全面占优。权衡之下主队赢面约35%、平局约28%、客队赢面约37%，呈现三足鼎立格局，进球预期偏高（2.8左右）。",
+      "t2_player": "瑞典预计以4-3-3阵型出战，伊萨克居中突前，吉洛霍雷斯与埃兰加分居两翼；中场由贝格瓦尔、斯万贝里和卡尔斯特伦组成攻守枢纽，后防由尼德尔福领衔。突尼斯预计采用4-4-2或4-3-3体系，塔尔比坐镇中卫，斯基里与梅吉布里控制中场，锋线由赛义德与本·古比领衔。",
+      "t3_events": "比赛节奏预计中高速，双方均有望破门。突尼斯进攻启动较早（45-65分钟），瑞典锋线个人能力可能在75分钟后制造威胁。黄牌可能出现在中场的激烈对抗中，换人调整预计在60-75分钟区间进行。",
+      "t4_stats": "突尼斯在射门次数（11.5）和射正率（5.2）上领先，瑞典则在控球率（50.4%）和传球准确率上有微幅优势。两队角球数接近（瑞典4.9 vs 突尼斯5.4），防守数据（扑救、防守动作）基本对等。"
+    },
+    "win_probs": {
+      "home": 0.35,
+      "draw": 0.28,
+      "away": 0.37
+    },
+    "headline_score": "1-2",
+    "expected_goal_diff": -0.1,
+    "match_profile": "open",
+    "expected_total_goals": 3.0,
+    "lineups": {
+      "home": {
+        "starting": [
+          {
+            "name": "Jacob Widell Zetterström",
+            "position": "GK"
+          },
+          {
+            "name": "Victor Nilsson Lindelöf",
+            "position": "DF"
+          },
+          {
+            "name": "Isak Hien",
+            "position": "DF"
+          },
+          {
+            "name": "Gustaf Lagerbielke",
+            "position": "DF"
+          },
+          {
+            "name": "Gabriel Gudmundsson",
+            "position": "DF"
+          },
+          {
+            "name": "Lucas Bergvall",
+            "position": "MF"
+          },
+          {
+            "name": "Mattias Svanberg",
+            "position": "MF"
+          },
+          {
+            "name": "Jesper Karlström",
+            "position": "MF"
+          },
+          {
+            "name": "Anthony Elanga",
+            "position": "FW"
+          },
+          {
+            "name": "Alexander Isak",
+            "position": "FW"
+          },
+          {
+            "name": "Viktor Gyökeres",
+            "position": "FW"
+          }
+        ],
+        "bench": [
+          {
+            "name": "Viktor Johansson",
+            "position": "GK"
+          },
+          {
+            "name": "Kristoffer Nordfeldt",
+            "position": "GK"
+          },
+          {
+            "name": "Hjalmar Ekdal",
+            "position": "DF"
+          },
+          {
+            "name": "Eric Anders Smith",
+            "position": "DF"
+          },
+          {
+            "name": "Daniel Svensson",
+            "position": "DF"
+          },
+          {
+            "name": "Carl Starfelt",
+            "position": "DF"
+          },
+          {
+            "name": "Ken Sema",
+            "position": "DF"
+          },
+          {
+            "name": "Besfort Zeneli",
+            "position": "MF"
+          },
+          {
+            "name": "Herman Nils Johansson",
+            "position": "MF"
+          },
+          {
+            "name": "Elliot Stroud",
+            "position": "MF"
+          },
+          {
+            "name": "Benjamin Nygren",
+            "position": "MF"
+          },
+          {
+            "name": "Gustaf Nilsson",
+            "position": "FW"
+          }
+        ]
+      },
+      "away": {
+        "starting": [
+          {
+            "name": "Aymen Dahmen",
+            "position": "GK"
+          },
+          {
+            "name": "Ali Abdi",
+            "position": "DF"
+          },
+          {
+            "name": "Montassar Talbi",
+            "position": "DF"
+          },
+          {
+            "name": "Dylan Bronn",
+            "position": "DF"
+          },
+          {
+            "name": "Adam Arous",
+            "position": "DF"
+          },
+          {
+            "name": "Ellyes Skhiri",
+            "position": "MF"
+          },
+          {
+            "name": "Anis Ben Slimane",
+            "position": "MF"
+          },
+          {
+            "name": "Hannibal Mejbri",
+            "position": "MF"
+          },
+          {
+            "name": "Rayan Elloumi",
+            "position": "FW"
+          },
+          {
+            "name": "Elias Saad",
+            "position": "FW"
+          },
+          {
+            "name": "Mohamed Elias Achouri",
+            "position": "FW"
+          }
+        ],
+        "bench": [
+          {
+            "name": "Abdelmouhib Chamakh",
+            "position": "GK"
+          },
+          {
+            "name": "Sabri Ben Hsan",
+            "position": "GK"
+          },
+          {
+            "name": "Omar Rekik",
+            "position": "DF"
+          },
+          {
+            "name": "Moutaz Neffati",
+            "position": "DF"
+          },
+          {
+            "name": "Amine Ben Hmida",
+            "position": "DF"
+          },
+          {
+            "name": "Raed Chikhaoui",
+            "position": "DF"
+          },
+          {
+            "name": "Rani Khedira",
+            "position": "MF"
+          },
+          {
+            "name": "Mohamed Belhaj Mahmoud",
+            "position": "MF"
+          },
+          {
+            "name": "Hazem Mastouri",
+            "position": "FW"
+          },
+          {
+            "name": "Ismaël Gharbi",
+            "position": "FW"
+          },
+          {
+            "name": "Khalil Ayari",
+            "position": "FW"
+          },
+          {
+            "name": "Mortadha Ben Ouannes",
+            "position": "FW"
+          }
+        ]
+      }
+    },
+    "formations": {
+      "home": "4-3-3",
+      "away": "4-3-3"
+    },
+    "scorers": [
+      {
+        "player": "Alexander Isak",
+        "team": "home",
+        "minute_range": [
+          55,
+          75
+        ],
+        "p": 0.35
+      },
+      {
+        "player": "Elias Saad",
+        "team": "away",
+        "minute_range": [
+          25,
+          45
+        ],
+        "p": 0.4
+      },
+      {
+        "player": "Mohamed Elias Achouri",
+        "team": "away",
+        "minute_range": [
+          65,
+          85
+        ],
+        "p": 0.38
+      }
+    ],
+    "assisters": [
+      {
+        "player": "Anthony Elanga",
+        "team": "home",
+        "p": 0.3,
+        "minute": 62
+      },
+      {
+        "player": "Hannibal Mejbri",
+        "team": "away",
+        "p": 0.35,
+        "minute": 32
+      },
+      {
+        "player": "Rayan Elloumi",
+        "team": "away",
+        "p": 0.32,
+        "minute": 72
+      }
+    ],
+    "substitutions": [
+      {
+        "team": "home",
+        "off": "Jesper Karlström",
+        "on": "Benjamin Nygren",
+        "minute": 65
+      },
+      {
+        "team": "home",
+        "off": "Anthony Elanga",
+        "on": "Gustaf Nilsson",
+        "minute": 76
+      },
+      {
+        "team": "away",
+        "off": "Elias Saad",
+        "on": "Khalil Ayari",
+        "minute": 70
+      },
+      {
+        "team": "away",
+        "off": "Rayan Elloumi",
+        "on": "Hazem Mastouri",
+        "minute": 80
+      }
+    ],
+    "cards": [
+      {
+        "player": "Victor Nilsson Lindelöf",
+        "team": "home",
+        "color": "yellow",
+        "minute": 38
+      },
+      {
+        "player": "Ellyes Skhiri",
+        "team": "away",
+        "color": "yellow",
+        "minute": 52
+      }
+    ],
+    "penalties": [],
+    "own_goals": [],
+    "key_events": [],
+    "motm_probs": [
+      {
+        "player": "Alexander Isak",
+        "team": "home",
+        "p": 0.3
+      },
+      {
+        "player": "Elias Saad",
+        "team": "away",
+        "p": 0.35
+      },
+      {
+        "player": "Montassar Talbi",
+        "team": "away",
+        "p": 0.2
+      },
+      {
+        "player": "Viktor Gyökeres",
+        "team": "home",
+        "p": 0.15
+      }
+    ],
+    "stats": {
+      "possession": {
+        "home": 48,
+        "away": 52
+      },
+      "shots": {
+        "home": 10,
+        "away": 12
+      },
+      "shots_on_target": {
+        "home": 4,
+        "away": 5
+      },
+      "corners": {
+        "home": 5,
+        "away": 6
+      },
+      "pass_accuracy": {
+        "home": 83,
+        "away": 80
+      },
+      "fouls": {
+        "home": 13,
+        "away": 15
+      },
+      "saves": {
+        "home": 3,
+        "away": 2
+      },
+      "defensive_actions": {
+        "home": 18,
+        "away": 16
+      }
+    },
+    "sources": []
+  },
+  "sources": [],
+  "leakage_audit": {
+    "leaked": false,
+    "leaked_sources": []
+  },
+  "cost_usd": 0.0105997,
+  "tokens": {
+    "input": 13085,
+    "output": 5998
+  },
+  "tool_calls": 0,
+  "wall_seconds": 75.15413546562195,
+  "repair_retries": 1,
+  "validation_errors": [],
+  "error": null,
+  "raw_text": "\n{\n  \"fixture_id\": \"World-Cup_Group-Stage-12_Sweden_Tunisia_2026-06-15\",\n  \"model_id\": \"WorldCupArena-v1\",\n  \"setting\": \"S1\",\n  \"submitted_at\": \"2026-06-12T12:00:00+00:00\",\n  \"reasoning\": {\n    \"overall\": \"瑞典队近期状态堪忧，最近8场世界杯预选赛仅取得2胜2平4负的战绩，防守端漏洞明显（曾0-4负于瑞士、0-2负于科索沃），但坐镇蒙特雷主场仍具备一定地利优势，伊萨克（Alexander Isak）和吉洛霍雷斯（Viktor Gyökeres）领衔的锋线具备较强终结能力。突尼斯队则状态火热，同期豪取7胜1平0负，进攻端多点开花（曾6-0大胜圣多美、3-0击败纳米比亚），防守同样稳固。本场是典型的矛盾对决：突尼斯攻守均衡、状态正佳；瑞典主场有底蕴但近况低迷。综合评估，突尼斯客场不败概率较大，但瑞典主场有望凭借明星前锋的个人能力抢下分数，预计双方均有进球，小胜格局更倾向于突尼斯。\",\n    \"t1_result\": \"瑞典主场劣态明显（2W2D4L），而突尼斯客场7胜1平状态惊人，攻守数据全面占优。权衡之下主队赢面约35%、平局约28%、客队赢面约37%，呈现三足鼎立格局，进球预期偏高（2.8左右）。\",\n    \"t2_player\": \"瑞典预计以4-3-3阵型出战，伊萨克居中突前，吉洛霍雷斯与埃兰加分居两翼；中场由贝格瓦尔、斯万贝里和卡尔斯特伦组成攻守枢纽，后防由尼德尔福领衔。突尼斯预计采用4-4-2或4-3-3体系，塔尔比坐镇中卫，斯基里与梅吉布里控制中场，锋线由赛义德与本·古比领衔。\",\n    \"t3_events\": \"比赛节奏预计中高速，双方均有望破门。突尼斯进攻启动较早（45-65分钟），瑞典锋线个人能力可能在75分钟后制造威胁。黄牌可能出现在中场的激烈对抗中，换人调整预计在60-75分钟区间进行。\",\n    \"t4_stats\": \"突尼斯在射门次数（11.5）和射正率（5.2）上领先，瑞典则在控球率（50.4%）和传球准确率上有微幅优势。两队角球数接近（瑞典4.9 vs 突尼斯5.4），防守数据（扑救、防守动作）基本对等。\"\n  },\n  \"win_probs\": {\n    \"home\": 0.35,\n    \"draw\": 0.28,\n    \"away\": 0.37\n  },\n  \"headline_score\": \"1-2\",\n  \"expected_goal_diff\": -0.3,\n  \"match_profile\": \"open\",\n  \"expected_total_goals\": 3.0,\n  \"lineups\": {\n    \"home\": {\n      \"starting\": [\n        {\n          \"name\": \"Jacob Widell Zetterström\",\n          \"position\": \"GK\"\n        },\n        {\n          \"name\": \"Victor Nilsson Lindelöf\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Isak Hien\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Gustaf Lagerbielke\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Gabriel Gudmundsson\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Lucas Bergvall\",\n          \"position\": \"MF\"\n        },\n        {\n          \"name\": \"Mattias Svanberg\",\n          \"position\": \"MF\"\n        },\n        {\n          \"name\": \"Jesper Karlström\",\n          \"position\": \"MF\"\n        },\n        {\n          \"name\": \"Anthony Elanga\",\n          \"position\": \"FW\"\n        },\n        {\n          \"name\": \"Alexander Isak\",\n          \"position\": \"FW\"\n        },\n        {\n          \"name\": \"Viktor Gyökeres\",\n          \"position\": \"FW\"\n        }\n      ],\n      \"bench\": [\n        {\n          \"name\": \"Viktor Johansson\",\n          \"position\": \"GK\"\n        },\n        {\n          \"name\": \"Kristoffer Nordfeldt\",\n          \"position\": \"GK\"\n        },\n        {\n          \"name\": \"Hjalmar Ekdal\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Eric Anders Smith\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Daniel Svensson\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Carl Starfelt\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Ken Sema\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Besfort Zeneli\",\n          \"position\": \"MF\"\n        },\n        {\n          \"name\": \"Herman Nils Johansson\",\n          \"position\": \"MF\"\n        },\n        {\n          \"name\": \"Elliot Stroud\",\n          \"position\": \"MF\"\n        },\n        {\n          \"name\": \"Benjamin Nygren\",\n          \"position\": \"MF\"\n        },\n        {\n          \"name\": \"Gustaf Nilsson\",\n          \"position\": \"FW\"\n        }\n      ]\n    },\n    \"away\": {\n      \"starting\": [\n        {\n          \"name\": \"Aymen Dahmen\",\n          \"position\": \"GK\"\n        },\n        {\n          \"name\": \"Ali Abdi\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Montassar Talbi\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Dylan Bronn\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Adam Arous\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Ellyes Skhiri\",\n          \"position\": \"MF\"\n        },\n        {\n          \"name\": \"Anis Ben Slimane\",\n          \"position\": \"MF\"\n        },\n        {\n          \"name\": \"Hannibal Mejbri\",\n          \"position\": \"MF\"\n        },\n        {\n          \"name\": \"Rayan Elloumi\",\n          \"position\": \"FW\"\n        },\n        {\n          \"name\": \"Elias Saad\",\n          \"position\": \"FW\"\n        },\n        {\n          \"name\": \"Mohamed Elias Achouri\",\n          \"position\": \"FW\"\n        }\n      ],\n      \"bench\": [\n        {\n          \"name\": \"Abdelmouhib Chamakh\",\n          \"position\": \"GK\"\n        },\n        {\n          \"name\": \"Sabri Ben Hsan\",\n          \"position\": \"GK\"\n        },\n        {\n          \"name\": \"Omar Rekik\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Moutaz Neffati\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Amine Ben Hmida\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Raed Chikhaoui\",\n          \"position\": \"DF\"\n        },\n        {\n          \"name\": \"Rani Khedira\",\n          \"position\": \"MF\"\n        },\n        {\n          \"name\": \"Mohamed Belhaj Mahmoud\",\n          \"position\": \"MF\"\n        },\n        {\n          \"name\": \"Hazem Mastouri\",\n          \"position\": \"FW\"\n        },\n        {\n          \"name\": \"Ismaël Gharbi\",\n          \"position\": \"FW\"\n        },\n        {\n          \"name\": \"Khalil Ayari\",\n          \"position\": \"FW\"\n        },\n        {\n          \"name\": \"Mortadha Ben Ouannes\",\n          \"position\": \"FW\"\n        }\n      ]\n    }\n  },\n  \"formations\": {\n    \"home\": \"4-3-3\",\n    \"away\": \"4-3-3\"\n  },\n  \"scorers\": [\n    {\n      \"player\": \"Alexander Isak\",\n      \"team\": \"home\",\n      \"minute_range\": [\n        55,\n        75\n      ],\n      \"p\": 0.35\n    },\n    {\n      \"player\": \"Elias Saad\",\n      \"team\": \"away\",\n      \"minute_range\": [\n        25,\n        45\n      ],\n      \"p\": 0.4\n    },\n    {\n      \"player\": \"Mohamed Elias Achouri\",\n      \"team\": \"away\",\n      \"minute_range\": [\n        65,\n        85\n      ],\n      \"p\": 0.38\n    }\n  ],\n  \"assisters\": [\n    {\n      \"player\": \"Anthony Elanga\",\n      \"team\": \"home\",\n      \"p\": 0.3,\n      \"minute\": 62\n    },\n    {\n      \"player\": \"Hannibal Mejbri\",\n      \"team\": \"away\",\n      \"p\": 0.35,\n      \"minute\": 32\n    },\n    {\n      \"player\": \"Rayan Elloumi\",\n      \"team\": \"away\",\n      \"p\": 0.32,\n      \"minute\": 72\n    }\n  ],\n  \"substitutions\": [\n    {\n      \"team\": \"home\",\n      \"off\": \"Jesper Karlström\",\n      \"on\": \"Benjamin Nygren\",\n      \"minute\": 65\n    },\n    {\n      \"team\": \"home\",\n      \"off\": \"Anthony Elanga\",\n      \"on\": \"Gustaf Nilsson\",\n      \"minute\": 76\n    },\n    {\n      \"team\": \"away\",\n      \"off\": \"Elias Saad\",\n      \"on\": \"Khalil Ayari\",\n      \"minute\": 70\n    },\n    {\n      \"team\": \"away\",\n      \"off\": \"Rayan Elloumi\",\n      \"on\": \"Hazem Mastouri\",\n      \"minute\": 80\n    }\n  ],\n  \"cards\": [\n    {\n      \"player\": \"Victor Nilsson Lindelöf\",\n      \"team\": \"home\",\n      \"color\": \"yellow\",\n      \"minute\": 38\n    },\n    {\n      \"player\": \"Ellyes Skhiri\",\n      \"team\": \"away\",\n      \"color\": \"yellow\",\n      \"minute\": 52\n    }\n  ],\n  \"penalties\": [],\n  \"own_goals\": [],\n  \"key_events\": [],\n  \"motm_probs\": [\n    {\n      \"player\": \"Alexander Isak\",\n      \"team\": \"home\",\n      \"p\": 0.3\n    },\n    {\n      \"player\": \"Elias Saad\",\n      \"team\": \"away\",\n      \"p\": 0.35\n    },\n    {\n      \"player\": \"Montassar Talbi\",\n      \"team\": \"away\",\n      \"p\": 0.2\n    },\n    {\n      \"player\": \"Viktor Gyökeres\",\n      \"team\": \"home\",\n      \"p\": 0.15\n    }\n  ],\n  \"stats\": {\n    \"possession\": {\n      \"home\": 48,\n      \"away\": 52\n    },\n    \"shots\": {\n      \"home\": 10,\n      \"away\": 12\n    },\n    \"shots_on_target\": {\n      \"home\": 4,\n      \"away\": 5\n    },\n    \"corners\": {\n      \"home\": 5,\n      \"away\": 6\n    },\n    \"pass_accuracy\": {\n      \"home\": 83,\n      \"away\": 80\n    },\n    \"fouls\": {\n      \"home\": 13,\n      \"away\": 15\n    },\n    \"saves\": {\n      \"home\": 3,\n      \"away\": 2\n    },\n    \"defensive_actions\": {\n      \"home\": 18,\n      \"away\": 16\n    }\n  },\n  \"sources\": []\n}",
+  "thinking_text": "Let me analyze this match between Sweden and Tunisia for the 2026 World Cup Group Stage.\n\n**Team Analysis:**\n\n**Sweden (Home):**\n- Recent form: 2W 2D 4L in last 8 matches - poor form\n- Key players: Alexander Isak (Attacker), Viktor Gyökeres (Attacker), Anthony Elanga (Attacker)\n- Stats: 50.4% possession, 9.5 shots per game, 3.1 shots on target, 4.9 corners\n- Defensive issues evident (conceded 4 to Switzerland, 2 to Kosovo twice)\n\n**Tunisia (Away):**\n- Recent form: 7W 1D 0L in last 8 matches - excellent form\n- Key players: Montassar Talbi (Defender), Ellyes Skhiri (Midfielder), Hannibal Mejbri (Midfielder)\n- Stats: 53.2% possession, 11.5 shots per game, 5.2 shots on target, 5.4 corners\n- Strong attacking record (6-0 vs São Tomé, 3-0 vs Namibia)\n\n**Key Considerations:**\n1. Sweden has been in poor form, especially in their last 8 matches\n2. Tunisia is in exceptional form with 7 wins in 8 matches\n3. Sweden plays at home which provides some advantage\n4. Sweden has quality attackers (Isak, Gyökeres) who can threaten\n5. Tunisia's defense (Talbi, Bronn) has been solid\n\n**Win Probability Estimate:**\nGiven Sweden's poor form and Tunisia's excellent form, but Sweden playing at home:\n- Home win: ~35%\n- Draw: ~28%\n- Away win: ~37%\n\nActually, let me reconsider. \n\nSweden's quality combined with home advantage is significant, though their recent results are troubling. Tunisia's dominant form and strong attacking output (averaging over 3 goals per match in qualifiers) suggests they can capitalize on Sweden's defensive vulnerabilities. The handicap odds of around 0.5 favor Sweden, but given Tunisia's scoring rate and Sweden's tendency to concede, an away win seems increasingly likely.\n\nFor the score prediction, I need to weigh Sweden's firepower against their shaky defense. Isak, Gyökeres, and Elanga give them enough quality to find the net, but Tunisia's form and attacking efficiency suggest they can match or exceed that output. A 2-1 or 2-2 result feels most plausible, though Sweden's ability to score at home keeps the home win possibility alive despite the form disparity.\n\nGiven Tunisia's exceptional away record and Sweden's defensive issues, I'm leaning toward a Tunisia win or draw. The 2-1 away victory seems the most likely outcome, with Sweden managing one goal from their attacking threats while Tunisia's momentum carries them to victory.\nThe user wants me to fix the validation error. The issue is that `advance_prob` is set to `null`, but according to the schema, it needs to be a number (type 'number'). Since this is a group stage match (as indicated by the fixture_id \"World-Cup_Group-Stage-12\"), advance_prob should be either removed or set to a valid number.\n\nLooking at the schema, `advance_prob` is likely related to knockout/advancement scenarios. For group stage matches, this field might not apply or should be set to 0 for both teams.\n\nWait, let me check the fixture_id: \"World-Cup_Group-Stage-12_Sweden_Tunisia_2026-06-15\" - this is indeed a group stage match. In group stage matches, there's no advancement scenario (both teams are playing to advance from their group, but the advance_prob is typically not used for single matches in this context).\n\nLooking at the error message: \"schema: advance_prob: None is not of type 'number'\" - this means the schema requires a number value.\n\nThe simplest fix is to remove `advance_prob` from the JSON since it's not applicable for a group stage match, OR set it to a number like 0 (or perhaps we need to include it with a specific value).\n\nActually, looking more carefully at the schema requirement, if `advance_prob` is a required field but not applicable for group stage, we might need to either:\n1. Remove it entirely (if the schema allows it to be optional)\n2. Set it to 0\n\nBut the error says \"None is not of type 'number'\" which suggests it was present but null. The fix should be to either remove it or set it to a number.\n\nSince this is a group stage match and there's no direct advancement probability from a single match (advancement depends on the group's other results), I'll set `advance_prob` to 0.0 as a reasonable default, or better yet, since it's not applicable to group stage matches, I should remove it entirely if the schema allows for optional fields.\n \nFor group stage matches, both teams would have `advance_prob` values based on their group stage prospects, but since we're predicting a single match, there's no single \"advance_prob\" value for the match itself. The safest approach is to remove the field entirely if the schema allows it to be optional, or set it to 0 if it's required. Since the schema seems to expect a number, I'll remove it to resolve the validation error.\n\nThe user's instructions are clear—I should fix only the listed issues without adding new fields. The error points to `advance_prob` being null when it should be a number. The fixture is a group stage match where advancement isn't determined by a single game, so the field doesn't apply here. I'll remove it from the JSON since it's not applicable to this scenario.\n",
+  "score_calibration": {
+    "applied": true,
+    "method": "winprob_poisson_generator_v1",
+    "model_weight": 0.62,
+    "favorite_margin": 0.0,
+    "lambda_home": 1.5,
+    "lambda_away": 1.55,
+    "target_total_goals": 3.05,
+    "target_goal_diff": -0.1,
+    "target_outcome_probs": {
+      "home": 0.35,
+      "draw": 0.28,
+      "away": 0.37
+    },
+    "forced_headline_outcome": "away",
+    "score_hint_used": "1-2",
+    "fitted_outcomes": {
+      "home": 0.369,
+      "draw": 0.241,
+      "away": 0.391
+    },
+    "before": {
+      "headline_score": "1-2",
+      "most_likely_score": "1-2",
+      "win_probs": {
+        "home": 0.35,
+        "draw": 0.28,
+        "away": 0.37
+      },
+      "score_dist_head": [
+        {
+          "score": "1-2",
+          "p": 0.138
+        },
+        {
+          "score": "1-1",
+          "p": 0.13
+        },
+        {
+          "score": "2-1",
+          "p": 0.09
+        },
+        {
+          "score": "1-0",
+          "p": 0.08
+        },
+        {
+          "score": "2-2",
+          "p": 0.073
+        }
+      ]
+    },
+    "after": {
+      "most_likely_score": "1-2",
+      "score_dist_head": [
+        {
+          "score": "1-2",
+          "p": 0.137
+        },
+        {
+          "score": "1-1",
+          "p": 0.13
+        },
+        {
+          "score": "2-1",
+          "p": 0.09
+        },
+        {
+          "score": "1-0",
+          "p": 0.079
+        },
+        {
+          "score": "2-2",
+          "p": 0.074
+        }
+      ]
+    }
+  }
+}

@@ -33,6 +33,7 @@ artifacts fall back to score_dist-derived win probabilities.
 from __future__ import annotations
 
 import json
+import math
 import os
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
@@ -568,6 +569,7 @@ def _header_mismatches_registry(hdr: dict | None, fx: dict) -> bool:
 # leaderboard. Ignore any fixture before LEADERBOARD_MIN_DATE in the leaderboard;
 # a few marquee pre-cup matches are still kept in `history` as worked examples.
 LEADERBOARD_MIN_DATE = "2026-06-10"
+LEADERBOARD_MIN_COVERAGE_RATIO = 0.5
 HISTORY_EXAMPLE_WHITELIST = {
     "UEFA-Champions-League_Paris-Saint-Germain_Arsenal_2026-05-30",
     "UEFA-Champions-League_Bayern-München_Paris-Saint-Germain_2026-05-06",
@@ -596,9 +598,10 @@ def _is_knockout_wca_id(wca_id: str) -> bool:
 
 
 def build_leaderboard(fixture_filter=None) -> dict:
-    by_model_composites: dict[str, list[float]] = defaultdict(list)
+    by_model_raw_composites: dict[str, list[float]] = defaultdict(list)
     by_model_layers: dict[str, dict[str, list[float]]] = defaultdict(lambda: defaultdict(list))
-    by_model_setting: dict[tuple[str, str], list[float]] = defaultdict(list)
+    by_model_raw_layers: dict[str, dict[str, list[float]]] = defaultdict(lambda: defaultdict(list))
+    by_model_setting_raw: dict[tuple[str, str], list[float]] = defaultdict(list)
     by_model_winner_correct: dict[str, int] = defaultdict(int)
     by_model_winner_total: dict[str, int] = defaultdict(int)
     by_model_exact_score_correct: dict[str, int] = defaultdict(int)
@@ -617,7 +620,9 @@ def build_leaderboard(fixture_filter=None) -> dict:
             continue
         if wca_id not in _truth_cache:
             _truth_cache[wca_id] = _load_truth_data(wca_id)
-        truth = _truth_cache[wca_id] or {}
+        truth = _truth_cache[wca_id]
+        if truth is None:
+            continue
         truth_result = truth.get("result")
         truth_score = truth.get("score")
 
@@ -627,11 +632,13 @@ def build_leaderboard(fixture_filter=None) -> dict:
                 continue
             model = r["model_id"]
             setting = r["setting"]
-            comp = float(r.get("composite", 0.0))
-            by_model_composites[model].append(comp)
-            by_model_setting[(model, setting)].append(comp)
+            raw_comp = float(r.get("raw_composite", r.get("composite", 0.0)))
+            by_model_raw_composites[model].append(raw_comp)
+            by_model_setting_raw[(model, setting)].append(raw_comp)
             for k, v in (r.get("layers") or {}).items():
                 by_model_layers[model][k].append(float(v))
+            for k, v in (r.get("raw_layers") or r.get("layers") or {}).items():
+                by_model_raw_layers[model][k].append(float(v))
 
             # Headline metrics are computed from the model-owned point forecast,
             # independently of the composite task aggregation.
@@ -658,33 +665,53 @@ def build_leaderboard(fixture_filter=None) -> dict:
                         )
 
     main = []
-    for m, v in by_model_composites.items():
+    for m, raw_values in by_model_raw_composites.items():
+        raw_mean, mean = grading_metrics.contrast_calibrated_mean(raw_values)
+        raw_layers_mean = {
+            k: sum(xs) / len(xs) for k, xs in by_model_raw_layers[m].items() if xs
+        }
         layers_mean = {k: sum(xs) / len(xs) for k, xs in by_model_layers[m].items() if xs}
         total = by_model_winner_total[m]
         exact_total = by_model_exact_score_total[m]
         scoreline_values = by_model_scoreline_scores[m]
+        raw_scoreline_score, scoreline_score = grading_metrics.scoreline_calibrated_mean(
+            scoreline_values
+        )
         meta = MODEL_META.get(m) or _infer_model_metadata(m)
         if m in HIDDEN_SITE_MODELS:
             continue
         main.append({
             "model_id":      m,
-            "mean":          sum(v) / len(v),
-            "n":             len(v),
+            "mean":          mean,
+            "raw_mean":      raw_mean,
+            "n":             len(raw_values),
             "layers_mean":   layers_mean,
+            "raw_layers_mean": raw_layers_mean,
             "winner_correct": by_model_winner_correct[m],
             "winner_total":   total,
             "winner_acc":    by_model_winner_correct[m] / total if total else None,
             "exact_score_correct": by_model_exact_score_correct[m],
             "exact_score_total": exact_total,
             "exact_score_acc": by_model_exact_score_correct[m] / exact_total if exact_total else None,
-            "scoreline_score": sum(scoreline_values) / len(scoreline_values) if scoreline_values else None,
+            "scoreline_raw_score": raw_scoreline_score if scoreline_values else None,
+            "scoreline_score": scoreline_score if scoreline_values else None,
             **meta,
         })
+    if main:
+        coverage_floor = max(
+            1,
+            math.ceil(max(row["n"] for row in main) * LEADERBOARD_MIN_COVERAGE_RATIO),
+        )
+        main = [row for row in main if row["n"] >= coverage_floor]
     main.sort(key=lambda x: -x["mean"])
 
+    eligible_models = {row["model_id"] for row in main}
     by_setting = {}
-    for (m, s), xs in by_model_setting.items():
-        by_setting.setdefault(m, {})[s] = sum(xs) / len(xs)
+    for (m, s), raw_values in by_model_setting_raw.items():
+        if m not in eligible_models:
+            continue
+        _, displayed_mean = grading_metrics.contrast_calibrated_mean(raw_values)
+        by_setting.setdefault(m, {})[s] = displayed_mean
     by_setting = {m: dict(sorted(v.items())) for m, v in sorted(by_setting.items())}
 
     return {"main": main, "by_model_setting": by_setting}
@@ -1698,22 +1725,42 @@ def build_tournament_predictions() -> dict | None:
     }
 
 
+def _attach_tournament_layer(leaderboard: dict, tournament: dict | None) -> None:
+    """Add the currently observable tournament score to the five-layer view."""
+    if not tournament:
+        return
+    by_model = {
+        row.get("model_id"): (row.get("evaluation") or {}).get("t5_score")
+        for row in tournament.get("predictions") or []
+    }
+    for row in leaderboard.get("main") or []:
+        score = by_model.get(row.get("model_id"))
+        if score is None:
+            continue
+        row.setdefault("layers_mean", {})["T5_tournament_macro"] = float(score)
+        row.setdefault("raw_layers_mean", {})["T5_tournament_macro"] = float(score)
+
+
 def main() -> None:
     incoming = build_incoming_matches()
     _attach_comments(incoming, key="fixture")
     history = build_history()
     _attach_comments(history, key=None)
     leaderboard = build_leaderboard()
+    leaderboard_knockout = build_leaderboard(fixture_filter=_is_knockout_wca_id)
+    tournament_predictions = build_tournament_predictions()
+    _attach_tournament_layer(leaderboard, tournament_predictions)
+    _attach_tournament_layer(leaderboard_knockout, tournament_predictions)
     payload = {
         # "generated_at":     _now_iso(),
         "leaderboard":      leaderboard,
         # Knockout-only slice (R32 onwards), same shape/metrics as `leaderboard`.
         # Absent key ⇒ old data JSON; the site hides the scope toggle then.
-        "leaderboard_knockout": build_leaderboard(fixture_filter=_is_knockout_wca_id),
+        "leaderboard_knockout": leaderboard_knockout,
         "incoming_matches": incoming,
         "featured_match":   _select_featured_match(history),
         "history":          history,
-        "tournament_predictions": build_tournament_predictions(),
+        "tournament_predictions": tournament_predictions,
     }
     # Attach the country flag to each fixture so the prediction card can show it
     # prominently next to the predicted winner. We attach BOTH the emoji (home_flag)

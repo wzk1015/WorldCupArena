@@ -1,0 +1,880 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-12_Sweden_Tunisia_2026-06-15",
+  "provider_fixture_id": "19609159",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-15T03:52:31+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 4,
+      "away": 1
+    },
+    "home": "Sweden",
+    "away": "Tunisia",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-15T02:00:00+00:00",
+    "venue": "Monterrey Stadium",
+    "venue_city": "Guadalupe"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.97,
+      "draw": 0.02,
+      "away": 0.01
+    },
+    "most_likely_score": "4-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进入第90分钟，瑞典以4-1大比分领先突尼斯。从赛事进程来看，瑞典在第7分钟由Yasin Ayari率先破门，第30分钟Alexander Isak扩大比分，突尼斯第43分钟由Omar Rekik扳回一球，但下半场第60分钟Viktor Gyökeres和第84分钟Mattias Svanberg的进球彻底杀死了比赛悬念。统计数据方面，瑞典11射5正高效转化为4球，突尼斯仅5射1正且门将仅扑出1次射门，反映出双方攻击力差距巨大。当前已到90分钟，预计会有3-5分钟补时。瑞典刚刚换上Anthony Elanga和Daniel Svensson，而突尼斯在72和83分钟已用完换人名额，体能已严重下滑。概率判断上，瑞典主胜概率高达97%，平局和突尼斯逆转几乎不可能。最终比分大概率维持4-1不变，但补时阶段仍有少量进球可能性——瑞典替补Elanga和仍在场上的Gyökeres有小概率再入一球，突尼斯替补前锋Firas Chaouat也存在极低概率的安慰球机会。综合考虑，最可能最终比分为4-1。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 6452,
+    "output": 538
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0338254,
+  "wall_seconds": 12.614,
+  "error": null,
+  "raw_text": "```json\n{\"win_probs\":{\"home\":0.97,\"draw\":0.02,\"away\":0.01},\"most_likely_score\":\"4-1\",\"scorers\":[{\"player\":\"Anthony Elanga\",\"team\":\"home\",\"minute\":93,\"p\":0.08},{\"player\":\"Viktor Gyökeres\",\"team\":\"home\",\"minute\":92,\"p\":0.06},{\"player\":\"Firas Chaouat\",\"team\":\"away\",\"minute\":94,\"p\":0.05}],\"reasoning\":{\"overall\":\"比赛已进入第90分钟，瑞典以4-1大比分领先突尼斯。从赛事进程来看，瑞典在第7分钟由Yasin Ayari率先破门，第30分钟Alexander Isak扩大比分，突尼斯第43分钟由Omar Rekik扳回一球，但下半场第60分钟Viktor Gyökeres和第84分钟Mattias Svanberg的进球彻底杀死了比赛悬念。统计数据方面，瑞典11射5正高效转化为4球，突尼斯仅5射1正且门将仅扑出1次射门，反映出双方攻击力差距巨大。当前已到90分钟，预计会有3-5分钟补时。瑞典刚刚换上Anthony Elanga和Daniel Svensson，而突尼斯在72和83分钟已用完换人名额，体能已严重下滑。概率判断上，瑞典主胜概率高达97%，平局和突尼斯逆转几乎不可能。最终比分大概率维持4-1不变，但补时阶段仍有少量进球可能性——瑞典替补Elanga和仍在场上的Gyökeres有小概率再入一球，突尼斯替补前锋Firas Chaouat也存在极低概率的安慰球机会。综合考虑，最可能最终比分为4-1。\"},\"sources\":[]}\n```",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-15T02:08:48+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 8,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Sweden",
+        "away": "Tunisia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T02:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.23,
+        "away": 0.15
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Alexander Isak",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 74,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Dejan Kulusevski",
+          "minute": 82,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Hannibal Mejbri",
+          "minute": 67,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Youssef Msakni",
+          "minute": 79,
+          "p": 0.13,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分1-0，比赛仅进行到第8分钟，瑞典通过Yasin Ayari（亚辛·阿亚里）在第7分钟的进球率先打破僵局。从已有数据看，瑞典控球率63%，2脚射门并有1次射正，而突尼斯尚无射门，犯规1次，场面被动，瑞典开局气势完全压制对手。基于早早领先与场面优势，主胜概率上调至约0.62，平局保留0.23（早期失球后突尼斯仍有近82分钟扳平时间），客胜下调至0.15。最终比分逻辑上，瑞典在控住节奏后通常会再寻求一球锁定胜局，但突尼斯非洲球队的身体与反击能力也让大比分不稳定，因此最可能的最终比分判定为2-0，符合主胜概率最高的约束，且不低于当前任一方比分。后续进球方面，仅预测8分钟之后，瑞典锋线Alexander Isak（伊萨克）与Viktor Gyökeres（约凯雷斯）是最大威胁点，Dejan Kulusevski（库卢塞夫斯基）具备由边路内切打门的能力；突尼斯若能制造反扑，Hannibal Mejbri（梅吉布里）和Youssef Msakni（姆萨克尼）是最具创造力与终结能力的候选，均给予较低但合理的进球概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.0158027,
+      "tokens": {
+        "input": 951,
+        "output": 664
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.387
+    },
+    {
+      "submitted_at": "2026-06-15T02:14:40+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 14,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Sweden",
+        "away": "Tunisia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T02:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.23,
+        "away": 0.15
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Alexander Isak",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 73,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Youssef Msakni",
+          "minute": 67,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Dejan Kulusevski",
+          "minute": 81,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Wahbi Khazri",
+          "minute": 84,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分1-0，比赛进行到第14分钟，瑞典凭借第7分钟Yasin Ayari的进球率先打破僵局。从早期场面数据来看，瑞典完全占据主动：控球率65%对35%，射门数3比0，射正2比0，突尼斯目前尚未对瑞典球门形成任何威胁，仅在犯规数(2比1)上略占多。结合瑞典领先且控场的态势，主队胜率上调至0.62，平局概率约0.23(突尼斯仍有充分时间扳平)，客队胜率压低至0.15。考虑到本场仍有逾75分钟比赛时间，且瑞典进攻效率偏高，但也存在领先后回收节奏放缓的可能，最可能的最终比分定为2-0，瑞典再下一城但突尼斯难以攻破对方球门。后续进球者方面，瑞典锋线核心Alexander Isak与Viktor Gyökeres在中后段把握机会能力突出，列为主要候选；Dejan Kulusevski具备前插与定位球得分能力作为补充。突尼斯若要扳回，Youssef Msakni与Wahbi Khazri是经验最丰富的攻击点，给予中等偏低概率。所有预测进球时间均设定在第14分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0151071,
+      "tokens": {
+        "input": 988,
+        "output": 619
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.677
+    },
+    {
+      "submitted_at": "2026-06-15T02:20:30+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 20,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Sweden",
+        "away": "Tunisia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T02:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.24,
+        "away": 0.14
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Alexander Isak",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 72,
+          "p": 0.26,
+          "team": "home"
+        },
+        {
+          "player": "Dejan Kulusevski",
+          "minute": 80,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Youssef Msakni",
+          "minute": 75,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Wahbi Khazri",
+          "minute": 84,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前第20分钟，瑞典(Sweden)主场1-0领先突尼斯(Tunisia)，由Yasin Ayari在第7分钟率先破门。从已有数据看，瑞典控球率高达68%，3次射门2次射正，对比突尼斯仅1次射门0射正，场面与节奏完全由瑞典掌控，且突尼斯尚未对球门构成有效威胁。基于早早领先与压制性表现，瑞典获胜概率提升至0.62，平局0.24，突尼斯反胜仅0.14。最终比分逻辑上倾向瑞典在保持优势的同时再下一城，再考虑到突尼斯北非球队下半场常见的体能反扑窗口仍存在但威胁有限，最可能的最终比分定为2-0。后续进球预测以瑞典锋线Alexander Isak与Viktor Gyökeres为最高概率得分者，分别落在下半场中段；Kulusevski作为前场组织兼终结点亦具备破门可能；突尼斯方面Msakni与Khazri为最具经验的进攻终结者，是潜在追分点，但概率明显低于主队。所有预测时间均严格晚于当前第20分钟，且最终比分不低于现有比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0148703,
+      "tokens": {
+        "input": 999,
+        "output": 604
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.084
+    },
+    {
+      "submitted_at": "2026-06-15T02:26:18+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 26,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Sweden",
+        "away": "Tunisia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T02:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.24,
+        "away": 0.14
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Alexander Isak",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 74,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Dejan Kulusevski",
+          "minute": 82,
+          "p": 0.16,
+          "team": "home"
+        },
+        {
+          "player": "Wahbi Khazri",
+          "minute": 68,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Youssef Msakni",
+          "minute": 79,
+          "p": 0.11,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第26分钟，瑞典(Sweden)凭借第7分钟Yasin Ayari的进球以1-0领先突尼斯(Tunisia)。从场面数据看，瑞典占据明显主动：控球率69%对31%，射门3比1，射正2比0，犯规也仅有3次，整体节奏与威胁度均压制对手。基于早早取得领先且持续掌控比赛，主队胜率上调至0.62，平局0.24，突尼斯翻盘空间被压缩至0.14。最可能的最终比分判断为2-0：瑞典进攻端有Isak、Gyökeres等强点，再下一城概率较高；突尼斯虽落后但目前进攻乏力，要在剩余时间内连入两球难度较大，单场扳平也偏低。后续进球预测集中在26分钟之后：Alexander Isak作为瑞典锋线核心，下半场早段(约58')扩大比分概率最高(0.30)；Viktor Gyökeres在体能拉开后的74'门前嗅觉值得关注(0.22)；Dejan Kulusevski在比赛末段82'的二点球或反击机会(0.16)。突尼斯方面若加强压上，Wahbi Khazri(68', 0.14)与Youssef Msakni(79', 0.11)是最可能的破门人选。所有进球分钟均严格晚于当前26分钟，且最终比分不低于当前1-0，符合主队领先的概率排序。"
+      },
+      "sources": [],
+      "cost_usd": 0.015639899999999998,
+      "tokens": {
+        "input": 967,
+        "output": 652
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.754
+    },
+    {
+      "submitted_at": "2026-06-15T02:32:14+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 32,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Sweden",
+        "away": "Tunisia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T02:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.08,
+        "away": 0.04
+      },
+      "most_likely_score": "3-0",
+      "scorers": [
+        {
+          "player": "Alexander Isak",
+          "minute": 58,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 71,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Dejan Kulusevski",
+          "minute": 78,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Hannibal Mejbri",
+          "minute": 82,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分 2-0，比赛进行至第 32 分钟，瑞典在主场已通过 Yasin Ayari（第 7 分钟）和 Alexander Isak（第 30 分钟，Viktor Gyökeres 助攻）连下两城。从场面统计看，瑞典控球率 58%、总射门 4 次、射正 3 次，突尼斯仅 1 次射门且零射正，进攻端基本被压制，整体比赛走势完全倾向主队。基于两球领先、上半场即将结束、对手缺乏有效反扑手段，瑞典获胜概率显著抬升至 0.88，平局压缩至 0.08，突尼斯翻盘概率降至 0.04。最终比分最有可能为 3-0：瑞典极可能在下半场再下一城扩大优势，而突尼斯需要在落后两球的情况下进行战术调整，短时间内连入两球难度极大。后续进球预测方面，Isak 状态正佳且已有进球，是再下一城的首选（第 58 分钟附近，p=0.30）；Gyökeres 已贡献助攻、跑位积极，可能在中后段把握机会（p=0.24）；替补或边路威胁如 Kulusevski 在比赛后段出场制造机会的可能性也存在（p=0.14）。突尼斯方面，若调整进攻配置，Hannibal Mejbri 在末段打入安慰球的概率约 0.10，所有进球时间均严格晚于第 32 分钟。"
+      },
+      "sources": [],
+      "cost_usd": 0.015684299999999998,
+      "tokens": {
+        "input": 979,
+        "output": 652
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.963
+    },
+    {
+      "submitted_at": "2026-06-15T02:38:12+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 38,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Sweden",
+        "away": "Tunisia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T02:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.86,
+        "draw": 0.1,
+        "away": 0.04
+      },
+      "most_likely_score": "3-0",
+      "scorers": [
+        {
+          "player": "Alexander Isak",
+          "minute": 67,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Yasin Ayari",
+          "minute": 82,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Wahbi Khazri",
+          "minute": 73,
+          "p": 0.08,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比赛进行到上半场第38分钟，瑞典(Sweden)主场2-0领先突尼斯(Tunisia)。从场面看，瑞典完全掌控比赛节奏：第7分钟Yasin Ayari首开纪录，第30分钟Alexander Isak接Viktor Gyökeres助攻扩大比分，进攻效率极高。控球率59%对41%、射门5-2、射正3-0、角球2-0，瑞典在所有关键数据上都全面压制，突尼斯上半场结束前尚未形成有效射门威胁。基于两球领先且场面占优，主队获胜概率显著上调至0.86，平局0.10，突尼斯翻盘的可能性极低仅0.04。最终比分逻辑上，考虑到瑞典进攻势头强劲、突尼斯下半场需要前压而进一步暴露防线，再进一球的可能性最大，故最可能最终比分定为3-0；不排除突尼斯下半场调整后扳回一球，但完成逆转或追平的概率很小。后续进球预测方面，Isak作为当前最具威胁的射手延续状态可能性最高(0.30)，Gyökeres在助攻后亦具备直接得分潜力(0.22)，Ayari可能再度建功(0.12)；突尼斯方面若反扑则Wahbi Khazri作为经验型攻击手最可能把握零星机会(0.08)，所有预测进球时间均晚于第38分钟。"
+      },
+      "sources": [],
+      "cost_usd": 0.0155178,
+      "tokens": {
+        "input": 994,
+        "output": 640
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.451
+    },
+    {
+      "submitted_at": "2026-06-15T02:44:04+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 44,
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "home": "Sweden",
+        "away": "Tunisia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T02:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.08,
+        "away": 0.04
+      },
+      "most_likely_score": "3-0",
+      "scorers": [
+        {
+          "player": "Alexander Isak",
+          "minute": 67,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 75,
+          "p": 0.24,
+          "team": "home"
+        },
+        {
+          "player": "Yasin Ayari",
+          "minute": 82,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Dejan Kulusevski",
+          "minute": 70,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分为瑞典 2-0 突尼斯，比赛进行到第44分钟，仍在上半场。瑞典开局极为高效：第7分钟 Yasin Ayari 首开纪录，第30分钟 Alexander Isak 接 Viktor Gyökeres 助攻再下一城，两球均为运动战正常进球，反映出瑞典的进攻组织已经成型。从场面统计看，瑞典控球率59%、射门5次、射正3次、角球2次，全面压制突尼斯（射门2次、射正0次、角球0次），突尼斯尚未对瑞典球门形成实质威胁。综合两球领先、临近半场、控射全面占优以及突尼斯进攻乏力的现状，主队胜率应大幅上调至0.88，平局概率压低至0.08，突尼斯翻盘概率仅0.04。最可能的最终比分判断为3-0：瑞典手握安全垫后下半场强度可能略降，但凭借 Isak 与 Gyökeres 的锋线组合，再入一球的概率高于被扳回；突尼斯在缺乏射正的情况下短时间内难以打破僵局。后续进球者方面，44分钟之后的候选集中在瑞典进攻端：Isak 状态火热且已破门，最可能再下一城；Gyökeres 已有助攻、跑位积极，是次选射手；Ayari 远射能力可作为补充；Kulusevski 在边路具备制造机会和终结的能力。所有候选进球时间均设定在第44分钟之后，符合赛中续推逻辑。"
+      },
+      "sources": [],
+      "cost_usd": 0.016405799999999998,
+      "tokens": {
+        "input": 944,
+        "output": 698
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.1
+    },
+    {
+      "submitted_at": "2026-06-15T02:50:01+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Sweden",
+        "away": "Tunisia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T02:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.22,
+        "away": 0.16
+      },
+      "most_likely_score": "3-1",
+      "scorers": [
+        {
+          "player": "Alexander Isak",
+          "minute": 67,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "minute": 78,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Hannibal",
+          "minute": 73,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Yasin Ayari",
+          "minute": 85,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第45分钟上半场结束，瑞典(Sweden)主场2-1领先突尼斯(Tunisia)。从场面看，瑞典开局极佳，第7分钟Yasin Ayari率先破门，第30分钟Alexander Isak在Viktor Gyökeres助攻下扩大比分；突尼斯在第43分钟由Omar Rekik接Hannibal传球扳回一城，半场尾段抢回一些气势。统计层面瑞典控球58%，射门5次、射正3次，角球2次，全面压制突尼斯的3射1正、0角球，进攻效率与威胁更高。综合领先优势、射门质量与控球，瑞典获胜概率明显占优(0.62)，平局(0.22)反映突尼斯进球带来的反扑可能，客胜(0.16)概率较低但因比分接近不可忽视。最可能的最终比分锁定为3-1：瑞典进攻火力充沛，下半场仍可能再下一城；突尼斯虽有反弹动能，但要再追两球难度较大。后续进球预测集中于瑞典的Isak与Gyökeres两名前场核心，Ayari作为中场远射点为补充；突尼斯方面Hannibal已有助攻、是最可能的下一个客队进球点，给予一定权重以匹配平局/客胜尾部概率。所有预测进球时间均设定在45分钟之后，且最终比分不低于当前各自进球数。"
+      },
+      "sources": [],
+      "cost_usd": 0.0156806,
+      "tokens": {
+        "input": 1003,
+        "output": 647
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.285
+    },
+    {
+      "submitted_at": "2026-06-15T03:11:25+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 56,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Sweden",
+        "away": "Tunisia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T02:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.22,
+        "away": 0.16
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前第56分钟，瑞典(Sweden)主场2-1领先突尼斯(Tunisia)。瑞典上半场由Yasin Ayari第7分钟率先破门，Alexander Isak第30分钟在Viktor Gyökeres助攻下扩大比分；突尼斯通过Omar Rekik在第43分钟由Hannibal助攻扳回一球，将悬念带入下半场。从场面数据看，瑞典控球52%、射门5次(射正3次)、角球2次，全面优于突尼斯的3射1正、0角球，显示主队仍掌握节奏与进攻威胁，而突尼斯进球更多来自单点机会而非持续压制。基于一球领先+场面占优+下半场仍有34分钟+伤停补时的情境，瑞典获胜概率上调至0.62，平局0.22(若突尼斯抓住反扑窗口),突尼斯翻盘0.16(需要至少再进两球，难度较大)。最可能最终比分锁定2-1，与最高胜率方向一致，且不低于当前任一队比分。后续进球逻辑：56分钟后若再有进球，最可能来自瑞典的锋线核心Isak与Gyökeres,二人此前已直接参与进球、状态在线；突尼斯方面Hannibal作为助攻者与中场组织点，是其追平最具威胁的来源；Ayari远射也具备补射可能性。所有预测进球分钟均严格晚于第56分钟。"
+      },
+      "sources": [],
+      "cost_usd": 0.0155955,
+      "tokens": {
+        "input": 1010,
+        "output": 641
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.451
+    },
+    {
+      "submitted_at": "2026-06-15T03:17:17+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 62,
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "home": "Sweden",
+        "away": "Tunisia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T02:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.23,
+        "away": 0.15
+      },
+      "most_likely_score": "2-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前第62分钟，瑞典(Sweden)主场2-1领先突尼斯(Tunisia)。从比赛进程看，瑞典上半场7分钟由Yasin Ayari率先破门，30分钟Alexander Isak接Viktor Gyökeres助攻再下一城；突尼斯则在43分钟由Omar Rekik(Hannibal助攻)将比分扳回一球，54分钟Rani Khedira领到黄牌。射门统计上瑞典6射3正，突尼斯5射1正，瑞典在射正率与进攻效率上占优，控球率持平说明双方对抗均衡，但瑞典已建立领先且把握机会能力更强。基于此，主队保住胜势的概率较高，给予瑞典胜0.62、平局0.23、突尼斯胜0.15。剩余约30分钟内最可能的剧本是瑞典稳住一球优势带走比赛，故最可能的最终比分维持为2-1。后续进球方面，瑞典锋线Isak与Gyökeres在反击中仍具威胁，是首选射手；突尼斯需压上扳平，Hannibal作为组织核心兼具远射与跟进能力，为客队最可能的得分者；Ayari在补时阶段仍可能利用对方压上空档锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.0145299,
+      "tokens": {
+        "input": 1087,
+        "output": 568
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.566
+    },
+    {
+      "submitted_at": "2026-06-15T03:23:09+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 68,
+        "score": {
+          "home": 3,
+          "away": 1
+        },
+        "home": "Sweden",
+        "away": "Tunisia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T02:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.92,
+        "draw": 0.05,
+        "away": 0.03
+      },
+      "most_likely_score": "3-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前第68分钟，瑞典(主)3-1领先突尼斯(客)。从赛中事件看，瑞典上半场由Yasin Ayari(7')和Alexander Isak(30')先下两城，突尼斯由Omar Rekik(43')在Hannibal助攻下扳回一城，但下半场第60分钟Viktor Gyökeres接Isak助攻再下一城，将比分拉开到三球。技术统计层面，瑞典射门7次、射正4次，明显高于突尼斯的5次/1次，控球率近乎对开(49% vs 51%)，说明瑞典在效率与门前威胁上占据主导，突尼斯虽有球权但缺乏穿透力，且Rani Khedira已吃黄牌，防线压力上升。结合两球净优势、剩余约22分钟+伤停、突尼斯需在短时间内连入两球的难度，主胜概率显著上调至0.92，平局0.05，客胜0.03。最可能最终比分维持当前的3-1：瑞典已建立安全领先，常见赛中走势是控制节奏、降低风险；突尼斯单场连追两球概率较低，因此即便后续仍可能进球，3-1作为期望值最稳健的收尾。后续进球逻辑：瑞典锋线Isak与Gyökeres已形成联动，反击端最具威胁，给予较高再入球概率；Ayari作为中场插上得分者亦保留一定权重；突尼斯方面Hannibal为本场组织核心，是最可能制造客队第二球的人选，但整体概率受制于落后阶段防线压上后的反击劣势，权重低于瑞典前场球员。所有预测进球分钟均设定在68'之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.017156900000000003,
+      "tokens": {
+        "input": 967,
+        "output": 734
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.983
+    },
+    {
+      "submitted_at": "2026-06-15T03:29:10+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 74,
+        "score": {
+          "home": 3,
+          "away": 1
+        },
+        "home": "Sweden",
+        "away": "Tunisia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T02:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.93,
+        "draw": 0.05,
+        "away": 0.02
+      },
+      "most_likely_score": "3-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前第74分钟，瑞典主场3-1领先突尼斯。从事件线看，瑞典在第7分钟由Yasin Ayari率先破门，第30分钟Alexander Isak扩大比分，突尼斯Omar Rekik在第43分钟由Hannibal助攻扳回一城，下半场第60分钟Viktor Gyökeres再下一城将比分拉开至两球。第65分钟瑞典已做出双换调整（Bergvall与Stroud登场），显示出控制比赛节奏、稳住领先的意图。统计层面双方控球接近（49% vs 51%），但瑞典8射4正明显高于突尼斯的5射1正，进攻效率与威胁度更胜一筹。两球领先且只剩约16分钟加伤停时间，时间因素强烈倾向主队，因此win_probs给到home 0.93，平局0.05，客队逆转概率仅约0.02。最可能最终比分判断为3-1：突尼斯需两球扳平时间不足，瑞典在领先后通常会通过换人降速控制比赛，再入一球的概率虽存在但不及保持现状。后续进球逻辑上，若瑞典再下一城，最可能由仍在场上状态火热的Gyökeres和Isak完成，替补登场的Nygren具备冲击力也有一定机会；客队若想扳平希望渺茫，但Hannibal作为组织核心仍是最具威胁的破门人选，故给出较低概率。所有进球分钟均设定在74分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0163799,
+      "tokens": {
+        "input": 1067,
+        "output": 672
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.836
+    },
+    {
+      "submitted_at": "2026-06-15T03:35:10+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 80,
+        "score": {
+          "home": 3,
+          "away": 1
+        },
+        "home": "Sweden",
+        "away": "Tunisia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T02:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.95,
+        "draw": 0.03,
+        "away": 0.02
+      },
+      "most_likely_score": "3-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比分3-1，比赛进行到第80分钟，瑞典领先两球且比赛仅剩约10分钟（含补时）。从赛事进程来看，瑞典在第7分钟由Yasin Ayari首开纪录，第30分钟Alexander Isak扩大比分，突尼斯在上半场补时前由Omar Rekik扳回一球，但下半场第60分钟Viktor Gyökeres再次为瑞典建功，使领先优势恢复为两球。统计数据上瑞典9次射门4次射正，进攻效率极高；突尼斯5次射门仅1次射正，进攻威胁有限。突尼斯虽然控球率略高（51%），但实际转化能力很弱。在80分钟领先两球的情况下，瑞典胜率极高（0.95），平局和突尼斯逆转的可能性微乎其微。最可能的最终比分维持3-1不变，因为比赛末段双方体能下降、瑞典大概率控制节奏消耗时间。后续进球方面，Viktor Gyökeres状态火热且仍在场上，有一定概率在补时阶段再入一球；Alexander Isak同样具备破门能力；替补上场的Benjamin Nygren可能获得反击机会；突尼斯方面替补登场的Sebastian Tounekti有小概率利用瑞典防线松懈抓住机会。整体而言比赛大局已定，瑞典将以3-1或可能更大比分获胜。"
+      },
+      "sources": [],
+      "cost_usd": 0.033485,
+      "tokens": {
+        "input": 5885,
+        "output": 633
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.984
+    },
+    {
+      "submitted_at": "2026-06-15T03:40:59+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 85,
+        "score": {
+          "home": 3,
+          "away": 1
+        },
+        "home": "Sweden",
+        "away": "Tunisia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T02:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.96,
+        "draw": 0.025,
+        "away": 0.015
+      },
+      "most_likely_score": "3-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比分3-1，比赛进行至第85分钟，瑞典以两球优势领先突尼斯，胜局基本锁定。从赛事事件看，瑞典由Yasin Ayari（7'）、Alexander Isak（30'）和Viktor Gyökeres（60'）分别进球，进攻端表现高效（9射4正）；突尼斯仅由Omar Rekik（43'）扳回一球，全场射正仅1次，进攻威胁极低。突尼斯虽然控球率略高（53%），但未能转化为有效射门。比赛仅余约5分钟加补时，瑞典获胜概率极高（96%），平局和突尼斯逆转几乎不可能。最可能的最终比分维持3-1不变。后续进球方面，Viktor Gyökeres状态出色且仍在场上，有一定补时进球可能；替补上场的Benjamin Nygren也可能获得反击机会；突尼斯替补Sebastian Tounekti有微小概率利用瑞典防线松懈打入安慰球，但整体再进球概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0305065,
+      "tokens": {
+        "input": 5895,
+        "output": 470
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.196
+    },
+    {
+      "submitted_at": "2026-06-15T03:46:49+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 1
+        },
+        "home": "Sweden",
+        "away": "Tunisia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T02:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.97,
+        "draw": 0.02,
+        "away": 0.01
+      },
+      "most_likely_score": "3-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进行至第90分钟，瑞典以3-1领先突尼斯。瑞典的进球分别来自Yasin Ayari（第7分钟）、Alexander Isak（第30分钟）和Viktor Gyökeres（第60分钟），突尼斯由Omar Rekik在第43分钟扳回一球。目前比赛基本进入补时阶段，瑞典领先两球，比赛悬念已几乎消失。从数据来看，瑞典9次射门4次射正，突尼斯5次射门仅1次射正，瑞典攻击效率极高。突尼斯在72分钟和83分钟大量换人试图挽回局面但未见效。考虑到比赛仅剩补时时间（预计3-5分钟），瑞典获胜概率极高（0.97），平局和突尼斯逆转几乎不可能。最可能的最终比分维持3-1不变。补时阶段仍有小概率出现进球，Viktor Gyökeres状态出色且仍在场上可能再入一球，突尼斯替补前锋Firas Chaouat也有微小概率抓住反击机会，但总体进球概率很低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0315795,
+      "tokens": {
+        "input": 6205,
+        "output": 466
+      },
+      "tool_calls": 0,
+      "wall_seconds": 13.817
+    },
+    {
+      "submitted_at": "2026-06-15T03:52:31+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 4,
+          "away": 1
+        },
+        "home": "Sweden",
+        "away": "Tunisia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-15T02:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.97,
+        "draw": 0.02,
+        "away": 0.01
+      },
+      "most_likely_score": "4-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进入第90分钟，瑞典以4-1大比分领先突尼斯。从赛事进程来看，瑞典在第7分钟由Yasin Ayari率先破门，第30分钟Alexander Isak扩大比分，突尼斯第43分钟由Omar Rekik扳回一球，但下半场第60分钟Viktor Gyökeres和第84分钟Mattias Svanberg的进球彻底杀死了比赛悬念。统计数据方面，瑞典11射5正高效转化为4球，突尼斯仅5射1正且门将仅扑出1次射门，反映出双方攻击力差距巨大。当前已到90分钟，预计会有3-5分钟补时。瑞典刚刚换上Anthony Elanga和Daniel Svensson，而突尼斯在72和83分钟已用完换人名额，体能已严重下滑。概率判断上，瑞典主胜概率高达97%，平局和突尼斯逆转几乎不可能。最终比分大概率维持4-1不变，但补时阶段仍有少量进球可能性——瑞典替补Elanga和仍在场上的Gyökeres有小概率再入一球，突尼斯替补前锋Firas Chaouat也存在极低概率的安慰球机会。综合考虑，最可能最终比分为4-1。"
+      },
+      "sources": [],
+      "cost_usd": 0.0338254,
+      "tokens": {
+        "input": 6452,
+        "output": 538
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.614
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-18_Iraq_Norway_2026-06-16",
+  "provider_fixture_id": "19609163",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-16T23:55:07+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 3
+    },
+    "home": "Iraq",
+    "away": "Norway",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-16T22:00:00+00:00",
+    "venue": "Boston Stadium",
+    "venue_city": "Foxborough"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.01,
+      "draw": 0.02,
+      "away": 0.97
+    },
+    "most_likely_score": "1-3",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进行到第90分钟，伊拉克1-3落后挪威，常规时间几乎走完，挪威胜局已定。从场面来看，挪威全场控球63%，射门12次、射正5次，由哈兰德上半场梅开二度，第77分钟厄斯蒂高再下一城，整体压制明显；伊拉克虽射门次数不少(11次)但仅1次射正，第39分钟侯赛因扳回一城后并未能延续威胁，伤停补时阶段难以连进两球。基于此，挪威获胜概率高达约97%，平局与伊拉克翻盘概率几乎可以忽略。最可能的最终比分维持在1-3，即比赛在补时阶段不再出现进球。若补时阶段仍有进球，挪威方面哈兰德状态火热、替补登场的瑟尔洛特具备终结能力，最有机会破门；伊拉克方面则是已经进球的侯赛因仍是最具威胁的支点，但综合概率都很低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 6876,
+    "output": 546
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.035542199999999996,
+  "wall_seconds": 16.056,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.01, \"draw\": 0.02, \"away\": 0.97},\n  \"most_likely_score\": \"1-3\",\n  \"scorers\": [\n    {\"player\": \"Erling Haaland\", \"team\": \"away\", \"minute\": 92, \"p\": 0.06},\n    {\"player\": \"Aymen Hussein\", \"team\": \"home\", \"minute\": 92, \"p\": 0.04},\n    {\"player\": \"Alexander Sørloth\", \"team\": \"away\", \"minute\": 93, \"p\": 0.04}\n  ],\n  \"reasoning\": {\"overall\": \"比赛已进行到第90分钟，伊拉克1-3落后挪威，常规时间几乎走完，挪威胜局已定。从场面来看，挪威全场控球63%，射门12次、射正5次，由哈兰德上半场梅开二度，第77分钟厄斯蒂高再下一城，整体压制明显；伊拉克虽射门次数不少(11次)但仅1次射正，第39分钟侯赛因扳回一城后并未能延续威胁，伤停补时阶段难以连进两球。基于此，挪威获胜概率高达约97%，平局与伊拉克翻盘概率几乎可以忽略。最可能的最终比分维持在1-3，即比赛在补时阶段不再出现进球。若补时阶段仍有进球，挪威方面哈兰德状态火热、替补登场的瑟尔洛特具备终结能力，最有机会破门；伊拉克方面则是已经进球的侯赛因仍是最具威胁的支点，但综合概率都很低。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-16T22:24:49+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 24,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Iraq",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T22:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.2,
+        "away": 0.72
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Erling Haaland",
+          "minute": 58,
+          "p": 0.4,
+          "team": "away"
+        },
+        {
+          "player": "Martin Ødegaard",
+          "minute": 75,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Alexander Sørloth",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Aymen Hussein",
+          "minute": 70,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第24分钟，伊拉克0-0战平挪威。从场面数据看，挪威控球率达到61%，并已获得1个角球，整体掌控节奏，而伊拉克虽然射门数略多（2比1），但更多是防守反击形态，控球仅39%。考虑到赛前实力差距明显——挪威拥有Haaland、Ødegaard等世界级球星，整体身价和近期状态远胜伊拉克，而本场又是世界杯小组赛关键战，挪威需要拿分——客队取胜概率明显占优，给到约72%，平局20%，伊拉克爆冷只有8%左右。比赛尚有60多分钟，目前0-0意味着进球大概率还会出现，结合挪威的控球优势和锋线效率，最可能的最终比分为0-2，挪威下半场体能优势放大后由Haaland率先打破僵局的可能性最高，Ødegaard和Sørloth也是潜在破门点；伊拉克方面若能扳回一球，艾曼·侯赛因作为主力中锋是最可能的得分人选，但概率有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.0318829,
+      "tokens": {
+        "input": 5512,
+        "output": 621
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.572
+    },
+    {
+      "submitted_at": "2026-06-16T22:39:04+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 39,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Iraq",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T22:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.2,
+        "away": 0.72
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Erling Haaland",
+          "minute": 67,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Martin Ødegaard",
+          "minute": 78,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Aymen Hussein",
+          "minute": 75,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Alexander Sørloth",
+          "minute": 82,
+          "p": 0.1,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第39分钟，挪威凭借哈兰德在第29分钟由大卫·默勒·沃尔夫助攻打入的进球，客场1-0领先伊拉克。从场面数据看，挪威控球率62%占据主动，射门5次1次射正且已取得2个角球，整体施压明显；伊拉克虽有3次射门但0射正、0角球，犯规也偏多，进攻组织相对粗糙。综合两队实力差距（挪威拥有哈兰德、厄德高等顶级球星）以及目前的比分和场面走势，挪威赢球概率显著上升，给出客胜约72%、平局20%、主胜仅8%。最可能的最终比分为0-2，挪威有较大机会在下半场再下一城扩大领先优势。后续进球方面，哈兰德作为最具威胁的前锋，再次破门的概率最高；厄德高与Sørloth也具备改写比分的能力；伊拉克若想扳回一城，前锋艾曼·侯赛因是相对可能的得分点，但概率有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.031945799999999996,
+      "tokens": {
+        "input": 5634,
+        "output": 600
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.854
+    },
+    {
+      "submitted_at": "2026-06-16T23:12:30+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 57,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Iraq",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T22:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.27,
+        "away": 0.55
+      },
+      "most_likely_score": "1-3",
+      "scorers": [
+        {
+          "player": "Erling Haaland",
+          "minute": 72,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Aymen Hussein",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Alexander Sørloth",
+          "minute": 82,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Martin Ødegaard",
+          "minute": 68,
+          "p": 0.14,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第57分钟，伊拉克1比2落后挪威。上半场哈兰德先在29分钟首开纪录，伊拉克由艾曼·侯赛因在39分钟扳平，但哈兰德在43分钟梅开二度帮助挪威再度领先。从场面数据看，伊拉克虽然总射门9次多于挪威的7次，但射正只有1次，进攻效率明显偏低；挪威控球率59%占优，射正3次更具威胁，整体比赛节奏掌握在挪威脚下。考虑到挪威已经取得领先且锋线效率出色，加上伊拉克需要压上进攻可能进一步暴露后防空间，挪威获胜概率明显占优，平局次之，伊拉克翻盘难度较大。最可能的最终比分判断为1比3，挪威有较大概率再下一城扩大优势。后续进球方面，哈兰德状态火热且仍在场上，是最有可能再次破门的球员；Sørloth作为锋线另一选择和Ødegaard作为中场组织核心都具备得分能力；伊拉克方面艾曼·侯赛因作为已经进球的前锋，仍是最可能为主队再入一球的人选。所有预测进球时间均设在57分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0340252,
+      "tokens": {
+        "input": 5836,
+        "output": 672
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.286
+    },
+    {
+      "submitted_at": "2026-06-16T23:26:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Iraq",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T22:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.27,
+        "away": 0.55
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第71分钟，伊拉克1-2落后挪威。挪威由哈兰德在第29分钟和第43分钟两度破门，伊拉克则在第39分钟由艾曼·侯赛因扳回一城。从场面统计看，伊拉克控球率40%、总射门10次但射正仅1次，进攻效率不高；挪威控球率60%、射正3次，整体掌控更稳。伊拉克在第59分钟连换两人(马尔科·法尔吉、齐达内·伊克巴尔登场)，意图加强攻势追平，未来20分钟必然加大压迫，但挪威的反击和哈兰德的终结力依然致命。综合考量，挪威保住胜果的概率最大，约55%；伊拉克若能在主动出击中找到机会则有可能扳平，平局概率约27%；伊拉克完成逆转的可能性较低，约18%。最可能的最终比分维持1-2，挪威小胜。后续若再有进球，挪威方面哈兰德及亚历山大·瑟洛特等反击终结点最具威胁，而伊拉克方面艾曼·侯赛因与替补登场的阿里·哈马迪在加强进攻时段最有可能成为破门者。"
+      },
+      "sources": [],
+      "cost_usd": 0.034558,
+      "tokens": {
+        "input": 6010,
+        "output": 666
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.505
+    },
+    {
+      "submitted_at": "2026-06-16T23:41:01+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 86,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "Iraq",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T22:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.001,
+        "draw": 0.004,
+        "away": 0.995
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第86分钟，伊拉克1-3落后挪威。挪威由哈兰德上半场梅开二度，奥斯蒂加德在第77分钟头槌再下一城基本锁定胜局，伊拉克仅由侯赛因在第39分钟扳回一球。从场面看，挪威控球率61%占优，射正4次明显高于伊拉克的1次，且第73分钟一口气换下四人保持体能与防守强度，主帅明显在管理比赛节奏。伊拉克虽然总射门11次但仅1次射正，进攻效率低下，剩余时间不足5分钟加补时要连入两球翻盘几乎没有可能。综合判断挪威胜出的概率高达约99.5%，平局与伊拉克获胜的可能性都极低。最可能的最终比分维持当前的1-3，因为双方在第77分钟后均已进入控制节奏阶段，挪威主打反击与拖延，伊拉克体能下降难以制造高质量机会。后续如果再有进球，挪威反击得手的概率略高于伊拉克扳回一城，哈兰德仍是最大威胁，替补登场的瑟洛特也具备终结能力；伊拉克方面则寄望于侯赛因这样的支点把握定位球机会，但整体概率都不高。"
+      },
+      "sources": [],
+      "cost_usd": 0.0365227,
+      "tokens": {
+        "input": 6621,
+        "output": 650
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.514
+    },
+    {
+      "submitted_at": "2026-06-16T23:55:07+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "Iraq",
+        "away": "Norway",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-16T22:00:00+00:00",
+        "venue": "Boston Stadium",
+        "venue_city": "Foxborough"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.02,
+        "away": 0.97
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进行到第90分钟，伊拉克1-3落后挪威，常规时间几乎走完，挪威胜局已定。从场面来看，挪威全场控球63%，射门12次、射正5次，由哈兰德上半场梅开二度，第77分钟厄斯蒂高再下一城，整体压制明显；伊拉克虽射门次数不少(11次)但仅1次射正，第39分钟侯赛因扳回一城后并未能延续威胁，伤停补时阶段难以连进两球。基于此，挪威获胜概率高达约97%，平局与伊拉克翻盘概率几乎可以忽略。最可能的最终比分维持在1-3，即比赛在补时阶段不再出现进球。若补时阶段仍有进球，挪威方面哈兰德状态火热、替补登场的瑟尔洛特具备终结能力，最有机会破门；伊拉克方面则是已经进球的侯赛因仍是最具威胁的支点，但综合概率都很低。"
+      },
+      "sources": [],
+      "cost_usd": 0.035542199999999996,
+      "tokens": {
+        "input": 6876,
+        "output": 546
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.056
+    }
+  ]
+}

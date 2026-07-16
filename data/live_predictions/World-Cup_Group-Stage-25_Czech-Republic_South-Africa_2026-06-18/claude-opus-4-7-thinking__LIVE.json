@@ -1,0 +1,294 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-25_Czech-Republic_South-Africa_2026-06-18",
+  "provider_fixture_id": "19609168",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-18T17:49:40+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "home": "Czech Republic",
+    "away": "South Africa",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-18T16:00:00+00:00",
+    "venue": "Atlanta Stadium",
+    "venue_city": "Atlanta"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.13,
+      "draw": 0.74,
+      "away": 0.13
+    },
+    "most_likely_score": "1-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "目前比分1-1，比赛已进入第90分钟，即将进入补时阶段。捷克在第6分钟由米哈尔·萨迪莱克首开纪录，南非则在第83分钟通过特博霍·莫科埃纳的点球扳平比分，势头明显倒向客队。从场面数据看，南非控球率高达62%，总射门13次略多于捷克的11次，但射正只有2次，捷克3次射正稍占优，整体属于势均力敲、南非占据主动但效率不足的胶着局面。捷克近期连续换上Souček、Provod、Sulc等攻防兼备的球员稳住阵脚，南非也通过Makgopa、Sebelebele等替补保持冲击力。考虑到只剩补时几分钟，双方在体能下降、心理上更倾向保平的情况下，绝杀概率有限，平局是最可能的结局，因此把和局概率设在0.74，主客胜各约0.13。最可能的最终比分维持1-1。若补时阶段仍有进球，捷克方面身高体壮的Souček在定位球中威胁最大，Sulc具备突击能力；南非方面状态正佳的Mokoena以及替补登场冲击力强的Makgopa是最具威胁的候选，因此给出他们在补时阶段较低但合理的进球概率。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 21072,
+    "output": 685
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.09063890000000001,
+  "wall_seconds": 18.629,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.13, \"draw\": 0.74, \"away\": 0.13},\n  \"most_likely_score\": \"1-1\",\n  \"scorers\": [\n    {\"player\": \"Tomáš Souček\", \"team\": \"home\", \"minute\": 92, \"p\": 0.04},\n    {\"player\": \"Evidence Makgopa\", \"team\": \"away\", \"minute\": 93, \"p\": 0.04},\n    {\"player\": \"Teboho Mokoena\", \"team\": \"away\", \"minute\": 92, \"p\": 0.03},\n    {\"player\": \"Pavel Sulc\", \"team\": \"home\", \"minute\": 94, \"p\": 0.03}\n  ],\n  \"reasoning\": {\"overall\": \"目前比分1-1，比赛已进入第90分钟，即将进入补时阶段。捷克在第6分钟由Michal Sadílek首开纪录，南非则在第83分钟通过Teboho Mokoena的点球扳平比分，势头明显倒向客队。从场面数据看，南非控球率高达62%，总射门13次略多于捷克的11次，但射正只有2次，捷克3次射正稍占优，整体属于势均力敲、南非占据主动但效率不足的胶着局面。捷克近期连续换上Souček、Provod、Sulc等攻防兼备的球员稳住阵脚，南非也通过Makgopa、Sebelebele等替补保持冲击力。考虑到只剩补时几分钟，双方在体能下降、心理上更倾向保平的情况下，绝杀概率有限，平局是最可能的结局，因此把和局概率设在0.74，主客胜各约0.13。最可能的最终比分维持1-1。若补时阶段仍有进球，捷克方面身高体壮的Souček在定位球中威胁最大，Sulc具备突击能力；南非方面状态正佳的Mokoena以及替补登场冲击力强的Makgopa是最具威胁的候选，因此给出他们在补时阶段较低但合理的进球概率。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-18T16:25:40+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 25,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.27,
+        "away": 0.15
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Patrik Schick",
+          "minute": 75,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 78,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Michal Sadílek",
+          "minute": 68,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Percy Tau",
+          "minute": 82,
+          "p": 0.17,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第25分钟，捷克1-0领先南非。第6分钟米哈尔·萨迪莱克在亚历山大·索伊卡助攻下闪击破门，为捷克奠定了心理与战术优势。从场面数据看，捷克虽然控球率只有45%，但射门4次、射正1次、角球2次，进攻效率与威胁度明显高于对手；南非控球55%但2次射门0射正，控球更多停留在中后场转移，缺乏真正具备杀伤力的最后一传。综合早早入球的先发优势、捷克在世界杯小组赛中相对更稳的整体结构，以及南非需要前压追分但锋线尚未制造实质威胁，主队胜率明显高于平局和客胜。考虑到比赛才刚过四分之一，南非下半场必然加大投入，会拉开攻防空间，使后续仍有进球出现的可能性较大，但完全翻盘概率有限，因此最可能的最终比分定为捷克2-1小胜。后续进球预测中，米哈尔·萨迪莱克延续手感有望再下一城，帕特里克·希克作为禁区终结点在体能下降阶段杀伤力会放大；南非方面，莱尔·福斯特和Percy Tau是最具个人爆点的攻击手，南非若能扳回一球，大概率出自二人之手，且时间窗口集中在65分钟之后的开放阶段。"
+      },
+      "sources": [],
+      "cost_usd": 0.086173,
+      "tokens": {
+        "input": 19740,
+        "output": 710
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.013
+    },
+    {
+      "submitted_at": "2026-06-18T16:42:38+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 42,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.27,
+        "away": 0.15
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Patrik Schick",
+          "minute": 75,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Lyle Foster",
+          "minute": 70,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "Michal Sadílek",
+          "minute": 67,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Percy Tau",
+          "minute": 80,
+          "p": 0.17,
+          "team": "away"
+        },
+        {
+          "player": "Lukáš Provod",
+          "minute": 82,
+          "p": 0.14,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比分1-0，捷克在主场凭借第6分钟米哈尔·萨迪莱克的进球（亚历山大·索伊卡助攻）取得领先，比赛已进行至42分钟，上半场即将结束。从场面数据看，南非控球率达到60%占据主动，角球2-2持平，但射门3次0射正，进攻效率明显不及捷克（4射1正），并且在33分钟和40分钟接连吃到两张黄牌（Mokoena与Mbatha），下半场拼抢空间会受限。捷克虽控球不占优，但反击效率高且已经建立领先，胜率上调至约0.58，平局保留约0.27的空间以应对南非控球反扑可能扳平的情形，南非翻盘的概率约0.15。综合上半场尾段无明显爆点、双方各有机会的节奏，最可能的最终比分定为2-1：捷克下半场凭借反击或定位球再下一城概率较高，Schick作为主力中锋是最大终结点，Sadílek延续手感、Provod远射也具威胁；南非随着体能与黄牌压力增大，进球更可能依靠Foster的支点冲击或Tau的个人能力打入一球扳回颜面，因此后续进球时间集中安排在60分钟之后体能与心理双重转折阶段。"
+      },
+      "sources": [],
+      "cost_usd": 0.08685380000000001,
+      "tokens": {
+        "input": 19894,
+        "output": 716
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.512
+    },
+    {
+      "submitted_at": "2026-06-18T17:15:28+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 60,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.62,
+        "draw": 0.23,
+        "away": 0.15
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第60分钟，捷克1-0领先南非。开场仅6分钟Sadílek接Sojka助攻闪击破门，为捷克奠定领先优势。从场面看，南非控球率高达62%，明显占据中场主导，但6次射门0次射正，进攻效率极差，反而是捷克在38%控球下打出8射3正的高效表现，整体威胁更大。南非上半场还连吃两张黄牌（Mokoena 33'、Mbatha 40'），中场拼抢已显隐患，下半场易边后第46分钟换上Mofokeng加强进攻，意图扳平。综合来看，捷克防守稳固且反击锋利，南非虽控球占优但缺乏射正，剩余30分钟扳平难度较大，因此捷克胜率提升至约62%，平局约23%，南非取胜约15%。最可能的最终比分维持1-0，捷克稳守反击拿下比赛。后续进球方面，若捷克再下一城，前场支点Schick和状态火热的Sadílek威胁最大；南非若要破门，新上场的Mofokeng和锋线Foster是最可能的得分点，但整体进球概率有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.08714240000000001,
+      "tokens": {
+        "input": 20292,
+        "output": 652
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.209
+    },
+    {
+      "submitted_at": "2026-06-18T17:32:36+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 77,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Czech Republic",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.17,
+        "away": 0.05
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第77分钟，捷克1比0领先南非。捷克凭借第6分钟米哈尔·萨迪莱克（在亚历山大·索伊卡助攻下）的早早破门确立优势，并在随后的比赛中以更具威胁的方式控制局面：尽管控球率仅39%，但他们打出11次射门、3次射正，明显高于南非的8射0正，门将至今零扑救，说明南非虽然占据球权却始终难以制造真正威胁。南非两张黄牌（特博霍·莫科埃纳第33分钟、塔伦特·姆巴塔第40分钟）也反映出他们在中场对抗中的吃紧。下半场双方都做了多次调整，南非用Mofokeng、Makgopa加强进攻端，捷克则换上Sulc、Provod、Souček加固中场与前场压迫，整体局面仍偏向捷克。\n\n基于比分、场面与剩余时间（含补时不足20分钟），捷克获胜的概率显著占优，给到约0.78；南非至今零射正且需要在短时间内连入一球非常困难，胜率压低到约0.05；考虑到他们仍有边路冲击和定位球机会，扳平打平的概率给到约0.17。\n\n最终比分最有可能维持在1-0：捷克在领先后通常会收缩防线、利用Souček的高度和Sulc、Hlozek的反击寻找第二球，但在剩余时间内更可能选择控制节奏而非全力进攻；南非则需冒险压上，反而进一步暴露后防。综合射门质量与节奏，1-0是概率密度最高的终局。\n\n后续进球人选方面，若捷克扩大比分，反击中的Pavel Sulc、定位球争点的托马什·绍切克以及具备终结能力的Adam Hlozek是最具可能的破门者，时间多落在第80分钟后的反击或角球机会；若南非扳回一城，技术型边锋雷莱博希尔·莫福肯和换上来增加禁区存在感的埃维登斯·马克戈帕最具威胁，更可能在比赛尾段通过边路传中或乱战中完成进球。所有候选射手的进球时间均设定在当前77分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0959632,
+      "tokens": {
+        "input": 20736,
+        "output": 1040
+      },
+      "tool_calls": 0,
+      "wall_seconds": 29.23
+    },
+    {
+      "submitted_at": "2026-06-18T17:49:40+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Czech Republic",
+        "away": "South Africa",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.13,
+        "draw": 0.74,
+        "away": 0.13
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分1-1，比赛已进入第90分钟，即将进入补时阶段。捷克在第6分钟由米哈尔·萨迪莱克首开纪录，南非则在第83分钟通过特博霍·莫科埃纳的点球扳平比分，势头明显倒向客队。从场面数据看，南非控球率高达62%，总射门13次略多于捷克的11次，但射正只有2次，捷克3次射正稍占优，整体属于势均力敲、南非占据主动但效率不足的胶着局面。捷克近期连续换上Souček、Provod、Sulc等攻防兼备的球员稳住阵脚，南非也通过Makgopa、Sebelebele等替补保持冲击力。考虑到只剩补时几分钟，双方在体能下降、心理上更倾向保平的情况下，绝杀概率有限，平局是最可能的结局，因此把和局概率设在0.74，主客胜各约0.13。最可能的最终比分维持1-1。若补时阶段仍有进球，捷克方面身高体壮的Souček在定位球中威胁最大，Sulc具备突击能力；南非方面状态正佳的Mokoena以及替补登场冲击力强的Makgopa是最具威胁的候选，因此给出他们在补时阶段较低但合理的进球概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.09063890000000001,
+      "tokens": {
+        "input": 21072,
+        "output": 685
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.629
+    }
+  ]
+}

@@ -1,0 +1,451 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-24_Uzbekistan_Colombia_2026-06-18",
+  "provider_fixture_id": "19609165",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-18T03:57:13+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 2
+    },
+    "home": "Uzbekistan",
+    "away": "Colombia",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-18T02:00:00+00:00",
+    "venue": "Mexico City Stadium",
+    "venue_city": "Mexico City"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.06,
+      "draw": 0.12,
+      "away": 0.82
+    },
+    "most_likely_score": "1-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进入第90分钟，乌兹别克斯坦1-2哥伦比亚，已经进入补时阶段。场面上哥伦比亚控球率63%，射门14比6、射正3比2、角球4比3全面占优，整体节奏由南美球队掌控。进球节点也清晰：41分钟丹尼尔·穆尼奥斯由路易斯·迪亚斯助攻首开纪录，61分钟Fayzullaev为乌兹别克扳平，但仅5分钟后路易斯·迪亚斯就在古斯塔沃·普埃尔塔策动下再度领跑。此后哥伦比亚通过Jáminton Campaz、库乔·埃尔南德斯、理查德·里奥斯等多次换人加强中前场控制，乌兹别克虽换上伊戈尔·谢尔盖耶夫等攻击手搏命，但创造实质威胁的能力有限。基于剩余时间极短、哥伦比亚领先且控场，客胜概率给到0.82，平局0.12（仅保留乌兹别克最后一攻扳平的小概率），主胜0.06基本只剩理论可能。最可能的最终比分锁定为1-2，与客胜概率最高一致，并且不低于当前任何一方的进球数。后续进球方面，时间仅够补时阶段的零星机会：哥伦比亚反击端库乔·埃尔南德斯和路易斯·迪亚斯最具威胁，分别给出0.07和0.06的小概率；乌兹别克为求扳平会全线压上，刚替补登场的埃尔多尔·肖穆罗多夫（注：其实是被换下，场上前锋为伊戈尔·谢尔盖耶夫/Shomurodov轮换体系中的高点）以及Fayzullaev仍保留一定头球与远射可能，给出0.05和0.04的低概率，整体仍以维持1-2收场为主线。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 21278,
+    "output": 912
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.09560060000000001,
+  "wall_seconds": 24.422,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.06, \"draw\": 0.12, \"away\": 0.82},\n  \"most_likely_score\": \"1-2\",\n  \"scorers\": [\n    {\"player\": \"Cucho Hernández\", \"team\": \"away\", \"minute\": 93, \"p\": 0.07},\n    {\"player\": \"Luis Díaz\", \"team\": \"away\", \"minute\": 92, \"p\": 0.06},\n    {\"player\": \"Eldor Shomurodov\", \"team\": \"home\", \"minute\": 94, \"p\": 0.05},\n    {\"player\": \"Abbosbek Fayzullaev\", \"team\": \"home\", \"minute\": 92, \"p\": 0.04}\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛进入第90分钟，乌兹别克斯坦1-2哥伦比亚，已经进入补时阶段。场面上哥伦比亚控球率63%，射门14比6、射正3比2、角球4比3全面占优，整体节奏由南美球队掌控。进球节点也清晰：41分钟Daniel Muñoz由Luis Díaz助攻首开纪录，61分钟Fayzullaev为乌兹别克扳平，但仅5分钟后Luis Díaz就在Gustavo Puerta策动下再度领跑。此后哥伦比亚通过Jáminton Campaz、Cucho Hernández、Richard Ríos等多次换人加强中前场控制，乌兹别克虽换上Igor Sergeev等攻击手搏命，但创造实质威胁的能力有限。基于剩余时间极短、哥伦比亚领先且控场，客胜概率给到0.82，平局0.12（仅保留乌兹别克最后一攻扳平的小概率），主胜0.06基本只剩理论可能。最可能的最终比分锁定为1-2，与客胜概率最高一致，并且不低于当前任何一方的进球数。后续进球方面，时间仅够补时阶段的零星机会：哥伦比亚反击端Cucho Hernández和Luis Díaz最具威胁，分别给出0.07和0.06的小概率；乌兹别克为求扳平会全线压上，刚替补登场的Eldor Shomurodov（注：其实是被换下，场上前锋为Igor Sergeev/Shomurodov轮换体系中的高点）以及Fayzullaev仍保留一定头球与远射可能，给出0.05和0.04的低概率，整体仍以维持1-2收场为主线。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-18T02:04:19+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 4,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Uzbekistan",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.15,
+        "draw": 0.25,
+        "away": 0.6
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Luis Díaz",
+          "minute": 58,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Jhon Durán",
+          "minute": 75,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "James Rodríguez",
+          "minute": 67,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Eldor Shomurodov",
+          "minute": 80,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第4分钟，双方仍然是0-0。开局阶段哥伦比亚牢牢掌控了节奏，控球率高达78%，乌兹别克斯坦只有22%，被压制在本方半场，仅有的数据是双方各有一次犯规，说明哥伦比亚通过传导持续施压，而乌兹别克斯坦被迫用犯规来打断对手节奏。结合世界杯小组赛的背景以及哥伦比亚整体阵容和大赛经验上的明显优势，再加上场面上的绝对主导，胜率天平明显向客队倾斜，将哥伦比亚获胜概率设为60%，平局25%，乌兹别克斯坦取胜仅15%。考虑到乌兹别克斯坦防守相对稳固、开场摆出低位防守的姿态，哥伦比亚虽占优但破门未必轻松，最可能的最终比分定为0-1，即哥伦比亚小胜一球。后续进球方面，路易斯·迪亚斯作为最具突破和终结能力的边路核心，在下半场体能下降后最有可能率先打破僵局；哈梅斯·罗德里格斯的组织和定位球威胁、Jhon Durán替补登场后的冲击力同样值得期待；乌兹别克斯坦如果能取得进球，最大概率来自前锋埃尔多尔·肖穆罗多夫在比赛末段的反击或定位球机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.087505,
+      "tokens": {
+        "input": 19835,
+        "output": 763
+      },
+      "tool_calls": 0,
+      "wall_seconds": 30.632
+    },
+    {
+      "submitted_at": "2026-06-18T02:21:05+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 21,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Uzbekistan",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.28,
+        "away": 0.6
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Luis Díaz",
+          "minute": 63,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Jhon Durán",
+          "minute": 78,
+          "p": 0.2,
+          "team": "away"
+        },
+        {
+          "player": "James Rodríguez",
+          "minute": 70,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Eldor Shomurodov",
+          "minute": 82,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第21分钟，双方仍是0-0。从场面看，哥伦比亚明显占据主导：控球率高达73%，并已制造1次射门和1次角球，而乌兹别克斯坦控球仅27%，零射门、零角球，且已经累积4次犯规，明显处于被压制和被动防守的状态。哥伦比亚虽然第7分钟莫希卡吃到黄牌，会让左路防守略微保守，但整体进攻组织仍由迪亚斯、J罗等人主导，威胁性持续累积。基于赛前哥伦比亚作为客队但实力与大赛经验明显占优，加上目前压制性场面，客队胜率上调到约0.60，平局约0.28，乌兹别克斯坦取胜概率压低到0.12。最可能的最终比分判断为0-1，即哥伦比亚凭借一次有效进攻在下半场打破僵局、并控制住比赛节奏带走三分；考虑到乌兹别克斯坦防线在中下半场体能下降、且暂无反扑能力，再丢球风险存在但可能性低于一球小胜。后续进球方面，21分钟之后最可能由哥伦比亚率先取得，迪亚斯作为左路爆点+终结者，是最具威胁的破门人选；J罗在前场组织兼远射/定位球同样有较高把握；杜兰作为下半场冲击型替补/前锋选项，在体能下降阶段更易抓住机会。乌兹别克斯坦若想扳平/反超，最可能依靠肖穆罗多夫在终场前的零星反击机会，但概率明显偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0887334,
+      "tokens": {
+        "input": 19967,
+        "output": 803
+      },
+      "tool_calls": 0,
+      "wall_seconds": 36.4
+    },
+    {
+      "submitted_at": "2026-06-18T02:37:27+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 37,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Uzbekistan",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.3,
+        "away": 0.58
+      },
+      "most_likely_score": "0-1",
+      "scorers": [
+        {
+          "player": "Luis Díaz",
+          "minute": 67,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Jhon Durán",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "James Rodríguez",
+          "minute": 72,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Eldor Shomurodov",
+          "minute": 82,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第37分钟，乌兹别克斯坦0-0哥伦比亚。从场面数据看，哥伦比亚完全掌控比赛：控球率71%对29%，射门2-0，角球1-0领先，乌兹别克斯坦至今没有一脚射门，并且通过8次犯规（对方4次）显示出明显的防守压迫倾向，Khusanov在第34分钟已经吃到黄牌，后续防守动作将受限。哥伦比亚虽然Mojica早早染黄，但整体局面依然主导。基于这种一边倒的场面，哥伦比亚取胜概率明显上升至约58%，乌兹别克斯坦在如此被动局面下几乎只能寄望防反保平，平局概率约30%，主队取胜概率压低至12%左右。最可能的最终比分定为0-1，符合哥伦比亚控制比赛但乌兹别克斯坦摆大巴限制空间的典型剧本，进球大概率出现在下半场体能下降之后。后续进球人选方面，路易斯·迪亚斯作为哥伦比亚最具突破能力的边锋，是最有可能打破僵局的球员；Jhon Durán具备替补登场后的爆点能力，适合下半场后段抓机会；哈梅斯·罗德里格斯的定位球和组织能力同样可能直接转化为进球；若乌兹别克斯坦需要追分，前锋埃尔多尔·肖穆罗多夫是最可能的进球点，但概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0880156,
+      "tokens": {
+        "input": 20053,
+        "output": 747
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.584
+    },
+    {
+      "submitted_at": "2026-06-18T03:08:50+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 53,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Uzbekistan",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.07,
+        "draw": 0.2,
+        "away": 0.73
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Luis Díaz",
+          "minute": 70,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Jhon Durán",
+          "minute": 78,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "James Rodríguez",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Dostonbek Khamdamov",
+          "minute": 75,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Daniel Muñoz",
+          "minute": 85,
+          "p": 0.09,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第53分钟，乌兹别克斯坦0-1落后于哥伦比亚，比分来自第41分钟丹尼尔·穆尼奥斯接路易斯·迪亚斯助攻的进球。从场面看，哥伦比亚完全掌控比赛：控球率70%对30%，射门7比1，射正2比0，角球2比1，乌兹别克斯坦上半场仅有1次射门且未射正，进攻端几乎没有威胁。乌兹别克斯坦中场休息时一口气换上Khamdamov和Sayfiev两人，意在加强进攻，但下半场开局并未改变被动局面。综合考虑领先优势、场面压制、控球结构以及乌方较高的犯规数（9次）反映出的防守疲态，哥伦比亚获胜概率显著抬升至0.73，平局概率约0.20（乌方仍有近40分钟扳平时间，但需依靠定位球或反击），乌方逆转概率仅约0.07。最可能的最终比分为0-2，因为哥伦比亚控球和射门质量占优，比赛后段乌方压上反而会留出反击空间；若乌方加强攻势后仍难破门，哥伦比亚有机会通过路易斯·迪亚斯的边路推进或替补前锋扩大比分。后续进球预测优先考虑哥伦比亚阵中状态最佳的路易斯·迪亚斯，其次是具备冲击力的Jhon Durán和组织核心哈梅斯·罗德里格斯，丹尼尔·穆尼奥斯作为已破门球员仍有插上得分可能；乌方一侧最可能由刚替补登场、状态较新的多斯顿别克·哈姆达莫夫打进追平球，所有预测进球时间均设定在第53分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.0915972,
+      "tokens": {
+        "input": 20391,
+        "output": 873
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.17
+    },
+    {
+      "submitted_at": "2026-06-18T03:24:55+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 69,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Uzbekistan",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.34,
+        "away": 0.48
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Luis Díaz",
+          "minute": 82,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Jhon Durán",
+          "minute": 86,
+          "p": 0.12,
+          "team": "away"
+        },
+        {
+          "player": "Abbosbek Fayzullaev",
+          "minute": 84,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Daniel Muñoz",
+          "minute": 78,
+          "p": 0.09,
+          "team": "away"
+        },
+        {
+          "player": "Eldor Shomurodov",
+          "minute": 88,
+          "p": 0.08,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第69分钟，乌兹别克斯坦1-1哥伦比亚。哥伦比亚由穆尼奥斯(丹尼尔·穆尼奥斯)在第41分钟率先破门，乌兹别克斯坦中场核心法伊祖拉耶夫(阿布博斯别克·法伊祖拉耶夫)在第61分钟扳平比分，将比赛重新拉回平衡。从场面数据看，哥伦比亚控球率高达67%，射门7-3、射正2-2，整体仍然占据主导，乌兹别克斯坦更多依靠反击与定位球，并且犯规数达到11次，说明体能与防守压力较大；下半场开始即换下两人也反映出主帅希望加强中场补防与边路冲击。综合来看，扳平后乌兹别克斯坦士气有所提振，但哥伦比亚的控制力、个人能力（迪亚斯、穆尼奥斯、J罗体系）以及替补席深度在最后20分钟更具杀伤力，因此客队再下一城的概率明显高于主队反超，给出客胜0.48、平局0.34、主胜0.18的判断。最可能的最终比分定在1-2，即哥伦比亚凭借边路渗透或反击在75-90分钟之间再入一球；若进入僵持也存在维持1-1的可能，所以平局概率同样不低。后续进球点上，迪亚斯(路易斯·迪亚斯)是哥伦比亚最具威胁的持续输出点，穆尼奥斯右路插上仍有二次得分可能，替补登场的杜兰(Jhon Durán)是终结型武器；乌兹别克斯坦方面，状态火热的法伊祖拉耶夫和锋线支点绍穆罗多夫(埃尔多尔·肖穆罗多夫)是最可能再次破门的人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0925592,
+      "tokens": {
+        "input": 20481,
+        "output": 907
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.82
+    },
+    {
+      "submitted_at": "2026-06-18T03:41:08+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 86,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Uzbekistan",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.06,
+        "draw": 0.16,
+        "away": 0.78
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第86分钟，乌兹别克斯坦1-2不敌哥伦比亚。上半场41分钟丹尼尔·穆尼奥斯接路易斯·迪亚斯助攻先拔头筹，下半场Fayzullaev在61分钟扳平，但仅5分钟后路易斯·迪亚斯再下一城帮助哥伦比亚重新领先。从场面数据看，哥伦比亚控球率高达67%，11次射门、3次射正，全面压制乌兹别克斯坦的3次射门，进攻端依旧具备威胁。乌兹别克斯坦虽在61分钟一度扳平，但此后并未持续制造有威胁的反扑，加之犯规多达13次、控球被动，最后阶段想要再下一城难度极大。哥伦比亚则换上Campaz加强中前场轮换，控制节奏意图明显。综合时间所剩无几、比分形势与场面走势，哥伦比亚获胜概率明显占优，平局只剩补时阶段乌兹别克斯坦绝平的小概率，主队翻盘几乎无望。最可能的最终比分维持现状1-2。若末段及补时阶段还有进球，最可能来自反击中的路易斯·迪亚斯或替补登场寻求表现的Campaz；乌方若孤注一掷压上，Fayzullaev仍是最具威胁的得分点，但整体概率都不高。"
+      },
+      "sources": [],
+      "cost_usd": 0.0897657,
+      "tokens": {
+        "input": 20846,
+        "output": 683
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.042
+    },
+    {
+      "submitted_at": "2026-06-18T03:57:13+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Uzbekistan",
+        "away": "Colombia",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-18T02:00:00+00:00",
+        "venue": "Mexico City Stadium",
+        "venue_city": "Mexico City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.06,
+        "draw": 0.12,
+        "away": 0.82
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进入第90分钟，乌兹别克斯坦1-2哥伦比亚，已经进入补时阶段。场面上哥伦比亚控球率63%，射门14比6、射正3比2、角球4比3全面占优，整体节奏由南美球队掌控。进球节点也清晰：41分钟丹尼尔·穆尼奥斯由路易斯·迪亚斯助攻首开纪录，61分钟Fayzullaev为乌兹别克扳平，但仅5分钟后路易斯·迪亚斯就在古斯塔沃·普埃尔塔策动下再度领跑。此后哥伦比亚通过Jáminton Campaz、库乔·埃尔南德斯、理查德·里奥斯等多次换人加强中前场控制，乌兹别克虽换上伊戈尔·谢尔盖耶夫等攻击手搏命，但创造实质威胁的能力有限。基于剩余时间极短、哥伦比亚领先且控场，客胜概率给到0.82，平局0.12（仅保留乌兹别克最后一攻扳平的小概率），主胜0.06基本只剩理论可能。最可能的最终比分锁定为1-2，与客胜概率最高一致，并且不低于当前任何一方的进球数。后续进球方面，时间仅够补时阶段的零星机会：哥伦比亚反击端库乔·埃尔南德斯和路易斯·迪亚斯最具威胁，分别给出0.07和0.06的小概率；乌兹别克为求扳平会全线压上，刚替补登场的埃尔多尔·肖穆罗多夫（注：其实是被换下，场上前锋为伊戈尔·谢尔盖耶夫/Shomurodov轮换体系中的高点）以及Fayzullaev仍保留一定头球与远射可能，给出0.05和0.04的低概率，整体仍以维持1-2收场为主线。"
+      },
+      "sources": [],
+      "cost_usd": 0.09560060000000001,
+      "tokens": {
+        "input": 21278,
+        "output": 912
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.422
+    }
+  ]
+}

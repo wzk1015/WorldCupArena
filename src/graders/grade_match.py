@@ -15,7 +15,7 @@ from ..pipeline.prediction_derivatives import derive_win_probs_from_score_dist
 
 ROOT = Path(__file__).resolve().parents[2]
 TASKS_YAML = ROOT / "configs" / "tasks.yaml"
-SCORING_VERSION = "wca-v2-availability-contrast-2026-07-13"
+SCORING_VERSION = "wca-v3-aggregate-contrast-t5-layers-t10-2026-07-13"
 
 
 def load_tasks() -> dict[str, Any]:
@@ -320,7 +320,13 @@ def grade_match(prediction: dict[str, Any], truth: dict[str, Any]) -> dict[str, 
         if layer_weight_total
         else 0.0
     )
-    layers = {lid: metrics.contrast_calibrated_score(score) for lid, score in raw_layers.items()}
+    layers = {
+        lid: metrics.contrast_calibrated_score(
+            score,
+            temperature=metrics.LAYER_CONTRAST_TEMPERATURE,
+        )
+        for lid, score in raw_layers.items()
+    }
     composite = metrics.contrast_calibrated_score(raw_composite)
 
     return {

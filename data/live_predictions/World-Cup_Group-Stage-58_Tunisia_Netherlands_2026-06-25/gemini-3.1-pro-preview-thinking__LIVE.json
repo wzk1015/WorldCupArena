@@ -1,0 +1,698 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-58_Tunisia_Netherlands_2026-06-25",
+  "provider_fixture_id": "19609137",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-26T00:52:49+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 3
+    },
+    "home": "Tunisia",
+    "away": "Netherlands",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-25T23:00:00+00:00",
+    "venue": "Kansas City Stadium",
+    "venue_city": "Kansas City"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.0,
+      "draw": 0.0,
+      "away": 1.0
+    },
+    "most_likely_score": "1-3",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入第90分钟，当前比分突尼斯1-3落后于荷兰。从场面数据来看，荷兰队占据了绝对优势，控球率高达72%，并完成了20次射门（7次射正）。荷兰队在开场阶段就凭借对手的乌龙球和布罗贝伊（布莱恩·布罗比）的进球确立了领先优势。尽管突尼斯在下半场由马斯图里（哈齐姆·马斯图里）扳回一城，但范黑克（扬·保罗·范赫克）的进球迅速稳固了荷兰队的胜局。由于常规时间已经结束，比赛即将进入伤停补时，突尼斯连进两球扳平比分的可能性微乎其微。因此，荷兰队获胜的概率接近100%。最可能的最终比分将维持在1-3。不过，考虑到荷兰队在比赛尾声换上了德佩（孟菲斯·德佩）等进攻球员，他们在补时阶段利用反击再入一球的可能性依然存在，但概率较小。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2004,
+    "output": 364
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.004397399999999999,
+  "wall_seconds": 8.511,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.0,\n    \"draw\": 0.0,\n    \"away\": 1.0\n  },\n  \"most_likely_score\": \"1-3\",\n  \"scorers\": [\n    {\n      \"player\": \"Memphis Depay\",\n      \"team\": \"away\",\n      \"minute\": 93,\n      \"p\": 0.05\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入第90分钟，当前比分突尼斯1-3落后于荷兰。从场面数据来看，荷兰队占据了绝对优势，控球率高达72%，并完成了20次射门（7次射正）。荷兰队在开场阶段就凭借对手的乌龙球和布罗贝伊（Brian Brobbey）的进球确立了领先优势。尽管突尼斯在下半场由马斯图里（Hazem Mastouri）扳回一城，但范黑克（Jan Paul van Hecke）的进球迅速稳固了荷兰队的胜局。由于常规时间已经结束，比赛即将进入伤停补时，突尼斯连进两球扳平比分的可能性微乎其微。因此，荷兰队获胜的概率接近100%。最可能的最终比分将维持在1-3。不过，考虑到荷兰队在比赛尾声换上了德佩（Memphis Depay）等进攻球员，他们在补时阶段利用反击再入一球的可能性依然存在，但概率较小。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-25T23:02:51+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 2,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Tunisia",
+        "away": "Netherlands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.23,
+        "away": 0.65
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 35,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "Xavi Simons",
+          "minute": 68,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚刚开场2分钟，目前比分维持在0-0。从开局阶段的数据来看，荷兰队迅速接管了比赛节奏，控球率高达88%，展现出强烈的控制欲。尽管突尼斯在开场利用一次突击完成了一脚射门，但整体局势已完全由荷兰队主导。考虑到双方整体实力的显著差距以及荷兰队在场上的绝对控球优势，客队全取三分的概率极高。突尼斯很难在长达90分钟的比赛中完全顶住荷兰队持续的阵地战与边路渗透压力。因此，预测荷兰队将顺利拿下比赛，最可能的最终比分为0-2。在后续比赛中，荷兰队的锋线核心如加克波（科迪·加克波）和哈维·西蒙斯（Xavi Simons）将有极大概率通过阵地战或前场压迫打破僵局并扩大比分。突尼斯虽然开局防守积极，但随着比赛深入和体能消耗，防线出现致命漏洞的风险会逐步增加。"
+      },
+      "sources": [],
+      "cost_usd": 0.013454699999999998,
+      "tokens": {
+        "input": 1168,
+        "output": 1941
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.886
+    },
+    {
+      "submitted_at": "2026-06-25T23:09:43+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 9,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Tunisia",
+        "away": "Netherlands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "0-4",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 38,
+          "p": 0.45,
+          "team": "away"
+        },
+        {
+          "player": "Brian Brobbey",
+          "minute": 55,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Xavi Simons",
+          "minute": 72,
+          "p": 0.3,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛开场仅仅9分钟，荷兰队便以2-0取得梦幻开局。第3分钟突尼斯中场斯希里（伊利耶斯·斯希里）的不慎乌龙让荷兰队早早领先，随后第7分钟布罗贝伊（布莱恩·布罗比）接范戴克（维吉尔·范戴克）助攻再下一城。从场面数据来看，荷兰队控球率高达68%，完全掌控了比赛节奏，而突尼斯虽然有1次射门但未能命中目标。考虑到荷兰队在开局阶段展现出的压倒性优势以及巨大的比分领先，他们赢下本场比赛的概率已经极高。突尼斯在防守端显得十分脆弱，且过早的两球落后会迫使他们阵型前压，从而给荷兰队留下更多反击空间。预计荷兰队会在接下来的比赛中继续扩大战果，最可能的最终比分是0-4。加克波（科迪·加克波）和西蒙斯（Xavi Simons）等攻击手有望在后续比赛中利用突尼斯防线的空当取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.004085549999999999,
+      "tokens": {
+        "input": 1095,
+        "output": 466
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.677
+    },
+    {
+      "submitted_at": "2026-06-25T23:16:43+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 16,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Tunisia",
+        "away": "Netherlands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.06,
+        "away": 0.92
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 55,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Brian Brobbey",
+          "minute": 68,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第16分钟，荷兰队反客为主，以2-0领先突尼斯队。开场仅3分钟，突尼斯中场斯希里（伊利耶斯·斯希里）不幸自摆乌龙，随后第7分钟，布罗贝伊（布莱恩·布罗比）接范戴克助攻再下一城，帮助荷兰取得梦幻开局。从场面来看，荷兰队控球率高达65%，完全掌控了比赛节奏。尽管突尼斯有3次射门尝试，但面对两球落后的巨大劣势和荷兰队稳固的防线，翻盘难度极大。基于当前比分和比赛时间，荷兰队的胜率已飙升至92%，平局概率约为6%，突尼斯逆转的概率仅剩2%。预计荷兰队会在下半场继续利用对手压上留下的空间扩大比分，最可能的最终比分为0-3。加克波（科迪·加克波）等攻击手有望在后续比赛中利用反击或阵地战取得进球，而布罗贝伊也有机会完成梅开二度。"
+      },
+      "sources": [],
+      "cost_usd": 0.0038535,
+      "tokens": {
+        "input": 1138,
+        "output": 422
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.146
+    },
+    {
+      "submitted_at": "2026-06-25T23:23:34+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 23,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Tunisia",
+        "away": "Netherlands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.08,
+        "away": 0.9
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Brian Brobbey",
+          "minute": 58,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Cody Gakpo",
+          "minute": 76,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第23分钟，荷兰队反客为主，目前以2-0领先突尼斯队。开场仅3分钟，突尼斯中场斯希里（伊利耶斯·斯希里）不幸自摆乌龙，随后第7分钟，布罗贝伊（布莱恩·布罗比）接范戴克助攻再下一城，荷兰队取得了梦幻开局。从数据来看，荷兰队控球率高达70%，完全掌控了中场和比赛节奏，而突尼斯队虽然尝试了3次射门，但受制于控球劣势，很难组织起持续的绝对威胁。鉴于荷兰队早早确立两球优势且场面呈压倒性优势，他们全取三分的概率极高。突尼斯队想要在剩下的时间里连扳两球难度极大，且随着比赛深入，体能下降后防线可能出现更多漏洞。预计荷兰队会在下半场继续利用对手压上进攻留下的空当扩大比分，最可能的最终比分定格在0-3。状态火热的布罗贝伊或其他荷兰攻击手有望在下半场继续建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.0039039,
+      "tokens": {
+        "input": 1138,
+        "output": 430
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.372
+    },
+    {
+      "submitted_at": "2026-06-25T23:30:29+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 30,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Tunisia",
+        "away": "Netherlands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.06,
+        "away": 0.92
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 68,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第30分钟，荷兰队反客为主，目前以2-0领先突尼斯队。开场仅3分钟，突尼斯中场伊利耶斯·斯希里的不慎乌龙让荷兰队取得梦幻开局；随后第7分钟，布莱恩·布罗比接维吉尔·范戴克助攻再下一城，迅速确立了巨大的比分优势。从场面数据来看，荷兰队完全掌控了比赛节奏，控球率高达67%，并完成了6次射门。突尼斯队虽然有3次射门尝试，但在荷兰队严密的防守下难以制造实质性威胁。基于目前的比分优势和场面压制力，荷兰队全取三分的概率极高。预计下半场突尼斯队为了挽回劣势必然会阵型前压，这将给荷兰队留下更多致命的反击空间。因此，最可能的最终比分预测为0-3，荷兰队有望在下半场通过科迪·加克波等锋线球员的速度和终结能力进一步锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.01357545,
+      "tokens": {
+        "input": 1391,
+        "output": 1923
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.47
+    },
+    {
+      "submitted_at": "2026-06-25T23:37:36+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 37,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Tunisia",
+        "away": "Netherlands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.06,
+        "away": 0.92
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 62,
+          "p": 0.28,
+          "team": "away"
+        },
+        {
+          "player": "Xavi Simons",
+          "minute": 78,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第37分钟，荷兰队目前以2-0领先突尼斯队。开场阶段荷兰队展现了强大的压制力，第3分钟突尼斯球员 伊利耶斯·斯希里 的不幸乌龙球打破僵局，紧接着第7分钟 布莱恩·布罗比 接 维吉尔·范戴克 助攻迅速扩大比分。从场面数据来看，荷兰队完全掌控了比赛节奏，控球率高达69%，并完成了9次射门。相比之下，突尼斯队在巨大的防守压力下仅获得31%的控球率，虽然有4次射门但仅1次射正，进攻端缺乏实质性威胁。鉴于荷兰队早早确立了两球优势且在场面上占据绝对主动，他们最终获胜的概率已经极高。随着比赛深入，突尼斯若想挽回败局必须在下半场阵型前压，这将不可避免地在后防线留下更多空当。预计荷兰队会在下半场利用对手压上的机会，通过快速反击或边路渗透再入一球彻底杀死比赛悬念。因此，0-3是最可能的最终比分，像 科迪·加克波 和 Xavi Simons 这样的前场攻击手非常有机会在下半场利用空间取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.012617849999999998,
+      "tokens": {
+        "input": 1391,
+        "output": 1771
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.045
+    },
+    {
+      "submitted_at": "2026-06-25T23:44:30+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 44,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Tunisia",
+        "away": "Netherlands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Brian Brobbey",
+          "minute": 62,
+          "p": 0.35,
+          "team": "away"
+        },
+        {
+          "player": "Cody Gakpo",
+          "minute": 78,
+          "p": 0.28,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第44分钟，荷兰队目前以2-0领先突尼斯队。开场仅3分钟，突尼斯中场伊利耶斯·斯希里的不慎乌龙就打破了僵局，随后在第7分钟，布莱恩·布罗比接维吉尔·范戴克的助攻再下一城，帮助荷兰队早早确立了巨大优势。从场面数据来看，荷兰队完全掌控了比赛节奏，控球率高达71%，并狂轰12脚射门。突尼斯队在巨大的防守压力下很难组织起有效的反击，仅有29%的控球率和1脚射正。基于目前的比分和场面压制力，荷兰队拿下本场比赛的概率已经极高。下半场突尼斯队如果大举压上试图挽回颜面，后防线将暴露出更多空当。预计荷兰队会在下半场利用反击或阵地战继续扩大比分，0-3是最可能的最终比分。在后续进球球员方面，状态火热的布莱恩·布罗比有望梅开二度，而荷兰队的其他攻击手如科迪·加克波也有很大机会在下半场取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.00398685,
+      "tokens": {
+        "input": 1139,
+        "output": 443
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.074
+    },
+    {
+      "submitted_at": "2026-06-26T00:08:17+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 53,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Tunisia",
+        "away": "Netherlands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "0-3",
+      "scorers": [
+        {
+          "player": "Brian Brobbey",
+          "minute": 68,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Cody Gakpo",
+          "minute": 78,
+          "p": 0.2,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第53分钟，荷兰队目前以2-0领先突尼斯队。荷兰队在开局阶段就展现了强大的统治力，第3分钟突尼斯中场斯希里（伊利耶斯·斯希里）不慎自摆乌龙，随后第7分钟布罗贝伊（布莱恩·布罗比）接范迪克助攻迅速扩大比分。从场面数据来看，荷兰队控球率高达71%，并完成了12次射门，完全掌控了比赛节奏；而突尼斯队进攻乏力，仅有1脚射正。鉴于两球的领先优势和压倒性的场面控制力，荷兰队全取三分的概率极高，突尼斯队想要扳平甚至逆转的希望十分渺茫。预计下半场荷兰队会继续通过传导控制比赛，并利用突尼斯队压上反扑留下的防守空当伺机反击。最可能的最终比分为0-3。状态出色的布罗贝伊或荷兰队的其他锋线核心（如加克波）极有可能在比赛中后段再次攻破突尼斯队的球门。"
+      },
+      "sources": [],
+      "cost_usd": 0.00389235,
+      "tokens": {
+        "input": 1139,
+        "output": 428
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.012
+    },
+    {
+      "submitted_at": "2026-06-26T00:17:41+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 62,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Tunisia",
+        "away": "Netherlands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.22,
+        "away": 0.7
+      },
+      "most_likely_score": "1-3",
+      "scorers": [
+        {
+          "player": "Cody Gakpo",
+          "minute": 82,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第62分钟，突尼斯目前1-2落后于荷兰。荷兰队在开场阶段凭借斯希里的乌龙球和布罗贝伊（布莱恩·布罗比）的进球早早取得两球领先。下半场第54分钟，马斯图里（哈齐姆·马斯图里）为突尼斯扳回一城，让比赛悬念重生。从场面数据来看，荷兰队占据了绝对优势，控球率高达70%，且完成了13次射门。尽管突尼斯在下半场展现出了一定的反击能力，但荷兰队整体实力更强，中场控制力出色。随着比赛进入最后30分钟，落后的突尼斯势必会大举压上寻求扳平比分，这将给荷兰队留下更多前场反击的空间。综合当前比分和场面走势，荷兰队保住胜果甚至扩大比分的概率极高。预计最终比分最可能为1-3，荷兰队有望在比赛尾声阶段通过快速反击再入一球锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.0036057,
+      "tokens": {
+        "input": 1208,
+        "output": 371
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.42
+    },
+    {
+      "submitted_at": "2026-06-26T00:24:40+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 69,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "Tunisia",
+        "away": "Netherlands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "1-4",
+      "scorers": [
+        {
+          "player": "Brian Brobbey",
+          "minute": 82,
+          "p": 0.28,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第69分钟，荷兰队目前以3-1领先突尼斯队。从场面数据来看，荷兰队占据了绝对的统治力，控球率高达72%，并完成了15次射门。尽管突尼斯在下半场初段由哈齐姆·马斯图里（哈齐姆·马斯图里）扳回一球，展现出了一定的韧性，但荷兰队迅速通过扬·保罗·范赫克（扬·保罗·范赫克）的进球再次将分差拉开，彻底稳住了局势。考虑到比赛仅剩20多分钟，且荷兰队牢牢掌控着中场节奏，突尼斯想要连入两球扳平比分的希望非常渺茫，荷兰队顺利拿下比赛的概率极高。在接下来的时间里，落后的突尼斯势必会阵型前压尝试反扑，这将给荷兰队留下广阔的反击空间。预计荷兰队有望在比赛尾声阶段利用对手防线空当再入一球，将最终比分定格在1-4，上半场已经取得进球且状态出色的布莱恩·布罗贝伊（布莱恩·布罗比）极有可能利用反击机会完成梅开二度。"
+      },
+      "sources": [],
+      "cost_usd": 0.0144249,
+      "tokens": {
+        "input": 1534,
+        "output": 2034
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.44
+    },
+    {
+      "submitted_at": "2026-06-26T00:31:55+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 76,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "Tunisia",
+        "away": "Netherlands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第76分钟，当前比分为突尼斯1-3荷兰。从场面数据来看，荷兰队占据了绝对优势，控球率高达73%，且已经完成了18次射门。尽管突尼斯在下半场由哈齐姆·马斯图里扳回一城，但荷兰队迅速由扬·保罗·范赫克扩大比分，稳固了领先优势。考虑到比赛所剩时间不多，且两球的差距较大，荷兰队拿下本场比赛的概率极高。突尼斯在最后阶段必须大举压上，这会给荷兰队留下反击空间。荷兰队刚刚换上了克里斯滕西奥·苏姆维尔和贾斯汀·克鲁伊维特等生力军，他们在反击中极具威胁。综合判断，最可能的最终比分是维持1-3，但荷兰队利用反击再入一球（如1-4）的可能性同样存在。"
+      },
+      "sources": [],
+      "cost_usd": 0.0041475,
+      "tokens": {
+        "input": 1718,
+        "output": 372
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.907
+    },
+    {
+      "submitted_at": "2026-06-26T00:39:11+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 84,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "Tunisia",
+        "away": "Netherlands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.001,
+        "draw": 0.009,
+        "away": 0.99
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第84分钟，荷兰队以3-1领先突尼斯队。从场面数据来看，荷兰队占据了绝对优势，控球率高达71%，并创造了19次射门（7次射正）。突尼斯虽然在下半场由哈齐姆·马斯图里扳回一城，但扬·保罗·范赫克随后的进球再次拉开了比分差距。考虑到比赛所剩时间无几且两球落后，突尼斯扳平比分的希望十分渺茫，荷兰队全取三分的概率极高。最可能的最终比分将维持在1-3。荷兰队在最后阶段换上了孟菲斯·德佩等攻击手，在突尼斯大举压上尝试反扑时，荷兰队仍有微小机会通过反击扩大比分，但整体而言维持现状是最可能的结果。"
+      },
+      "sources": [],
+      "cost_usd": 0.00796005,
+      "tokens": {
+        "input": 2115,
+        "output": 911
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.347
+    },
+    {
+      "submitted_at": "2026-06-26T00:45:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "Tunisia",
+        "away": "Netherlands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.001,
+        "draw": 0.001,
+        "away": 0.998
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，当前比分为突尼斯 1-3 荷兰。从全场数据来看，荷兰队占据了绝对优势，控球率高达70%，并创造了20次射门机会。荷兰队在开场阶段就凭借对方的乌龙球和布罗贝伊（布莱恩·布罗比）的进球确立了领先优势。尽管突尼斯在下半场由马斯图里（哈齐姆·马斯图里）扳回一城，但范赫克（扬·保罗·范赫克）随后的进球彻底杀死了比赛悬念。考虑到常规时间已经结束，仅剩伤停补时，突尼斯连入两球扳平比分的可能性微乎其微。因此，荷兰队获胜的概率接近100%。最可能的最终比分将维持在1-3。在补时阶段，由于突尼斯可能大举压上导致后防空虚，替补登场的德佩（孟菲斯·德佩）有极小概率利用反击再入一球，但整体而言比分改变的可能性不大。"
+      },
+      "sources": [],
+      "cost_usd": 0.011504849999999999,
+      "tokens": {
+        "input": 1933,
+        "output": 1504
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.083
+    },
+    {
+      "submitted_at": "2026-06-26T00:52:49+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "home": "Tunisia",
+        "away": "Netherlands",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-25T23:00:00+00:00",
+        "venue": "Kansas City Stadium",
+        "venue_city": "Kansas City"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.0,
+        "away": 1.0
+      },
+      "most_likely_score": "1-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，当前比分突尼斯1-3落后于荷兰。从场面数据来看，荷兰队占据了绝对优势，控球率高达72%，并完成了20次射门（7次射正）。荷兰队在开场阶段就凭借对手的乌龙球和布罗贝伊（布莱恩·布罗比）的进球确立了领先优势。尽管突尼斯在下半场由马斯图里（哈齐姆·马斯图里）扳回一城，但范黑克（扬·保罗·范赫克）的进球迅速稳固了荷兰队的胜局。由于常规时间已经结束，比赛即将进入伤停补时，突尼斯连进两球扳平比分的可能性微乎其微。因此，荷兰队获胜的概率接近100%。最可能的最终比分将维持在1-3。不过，考虑到荷兰队在比赛尾声换上了德佩（孟菲斯·德佩）等进攻球员，他们在补时阶段利用反击再入一球的可能性依然存在，但概率较小。"
+      },
+      "sources": [],
+      "cost_usd": 0.004397399999999999,
+      "tokens": {
+        "input": 2004,
+        "output": 364
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.511
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+{
+  "fixture_id": "World-Cup_Round-of-16_Argentina_Egypt_2026-07-07",
+  "provider_fixture_id": "19606962",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-07T18:01:53+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 3,
+      "away": 2
+    },
+    "home": "Argentina",
+    "away": "Egypt",
+    "competition": "World Cup",
+    "stage": "Round of 16",
+    "kickoff_utc": "2026-07-07T16:00:00+00:00",
+    "venue": "Atlanta Stadium",
+    "venue_city": "Atlanta"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.88,
+      "draw": 0.1,
+      "away": 0.02
+    },
+    "most_likely_score": "3-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "目前比分3-2，阿根廷领先，比赛已进行到90分钟，进入伤停补时阶段。场面上阿根廷完全占据主动，控球率高达65%，射门19次、射正7次，角球6个，全面压制埃及（5射2正、1角球）。埃及虽在15分钟由亚瑟·易卜拉欣率先破门，67分钟Mostafa Mohamed再入一球取得2-1领先，但阿根廷在79、83分钟由Romero和Messi连入两球逆转，凭借梅西的组织和劳塔罗替补登场后的活力完成翻盘。考虑到仅剩伤停补时数分钟、阿根廷已用换人加固防线（Otamendi、Medina登场）、并且比赛主动权牢牢在手，阿根廷保住胜果的概率非常高，给到约88%；埃及此前一次射正来自反击效率，补时阶段全力压上仍有极小扳平机会，平局概率约10%，埃及再逆转反超的可能性极低，仅约2%。最可能的最终比分即维持3-2。若补时阶段仍有进球，最可能来自阿根廷的反击终结，梅西与替补上场的Julián Álvarez为主要候选；埃及若能抓住最后定位球或压上机会，Marmoush和Trezeguet作为前场替补球员具备一定威胁，但整体进球概率都很有限。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 51468,
+    "output": 864
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.2064156,
+  "wall_seconds": 21.269,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.88, \"draw\": 0.10, \"away\": 0.02},\n  \"most_likely_score\": \"3-2\",\n  \"scorers\": [\n    {\"player\": \"Lionel Messi\", \"team\": \"home\", \"minute\": 93, \"p\": 0.08},\n    {\"player\": \"Julián Álvarez\", \"team\": \"home\", \"minute\": 94, \"p\": 0.06},\n    {\"player\": \"Omar Marmoush\", \"team\": \"away\", \"minute\": 94, \"p\": 0.05},\n    {\"player\": \"Mahmoud Trezeguet\", \"team\": \"away\", \"minute\": 93, \"p\": 0.04}\n  ],\n  \"reasoning\": {\"overall\": \"目前比分3-2，阿根廷领先，比赛已进行到90分钟，进入伤停补时阶段。场面上阿根廷完全占据主动，控球率高达65%，射门19次、射正7次，角球6个，全面压制埃及（5射2正、1角球）。埃及虽在15分钟由Yasser Ibrahim率先破门，67分钟Mostafa Mohamed再入一球取得2-1领先，但阿根廷在79、83分钟由Romero和Messi连入两球逆转，凭借梅西的组织和劳塔罗替补登场后的活力完成翻盘。考虑到仅剩伤停补时数分钟、阿根廷已用换人加固防线（Otamendi、Medina登场）、并且比赛主动权牢牢在手，阿根廷保住胜果的概率非常高，给到约88%；埃及此前一次射正来自反击效率，补时阶段全力压上仍有极小扳平机会，平局概率约10%，埃及再逆转反超的可能性极低，仅约2%。最可能的最终比分即维持3-2。若补时阶段仍有进球，最可能来自阿根廷的反击终结，梅西与替补上场的Julián Álvarez为主要候选；埃及若能抓住最后定位球或压上机会，Marmoush和Trezeguet作为前场替补球员具备一定威胁，但整体进球概率都很有限。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-07T16:06:41+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 6,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Argentina",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.78,
+        "draw": 0.15,
+        "away": 0.07
+      },
+      "most_likely_score": "2-0",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 38,
+          "p": 0.42,
+          "team": "home"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "minute": 63,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Julián Álvarez",
+          "minute": 71,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Mohamed Salah",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚进行到第6分钟，双方仍是0-0。开局阶段阿根廷已经明显掌控节奏，控球率高达67%，将埃及压制在自己半场，比赛主动权完全在潘帕斯雄鹰手中，而埃及暂时缺乏有威胁的反击组织。结合世界杯淘汰赛的整体背景，阿根廷作为夺冠热门在阵容深度、个人能力和大赛经验上都对埃及形成压制，加上目前场面上的控球优势进一步印证了赛前的实力差距，因此主队获胜概率上调至0.78，平局约0.15，埃及爆冷取胜的可能性压低到0.07左右。最终比分方面，考虑到埃及防守整体性尚可、且开局阶段双方都还在试探，阿根廷完全打开局面需要一定时间，预计全场以2-0小胜的剧本最为合理，这也与主胜概率最高的判断相吻合。后续进球方面，梅西作为进攻核心随着比赛推进拿球区域会更靠前，最有可能在上半场后段利用一次定位球或前场配合首开纪录；劳塔罗和J·阿尔瓦雷斯作为禁区终结点，在阿根廷持续施压下有较大概率在下半场扩大比分；埃及方面若能获得反击机会，萨拉赫仍是最具威胁的得分点，给予其一定的进球概率以对冲比分被扳回一城的风险。"
+      },
+      "sources": [],
+      "cost_usd": 0.199763,
+      "tokens": {
+        "input": 50220,
+        "output": 754
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.799
+    },
+    {
+      "submitted_at": "2026-07-07T16:18:19+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 18,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Argentina",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.58,
+        "draw": 0.24,
+        "away": 0.18
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "minute": 56,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Julian Alvarez",
+          "minute": 71,
+          "p": 0.3,
+          "team": "home"
+        },
+        {
+          "player": "Lautaro Martinez",
+          "minute": 82,
+          "p": 0.22,
+          "team": "home"
+        },
+        {
+          "player": "Mohamed Salah",
+          "minute": 65,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Omar Marmoush",
+          "minute": 78,
+          "p": 0.11,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第18分钟，阿根廷主场0-1落后埃及，亚瑟·易卜拉欣在第15分钟由Marwan Ateya助攻打入唯一进球，这是埃及本场为数不多的一次射门就转化为进球，效率极高。从数据看，阿根廷控球率略占优（51%对49%），但0射门、0射正、0角球，反映出他们尚未真正进入状态，而埃及虽然只有1次射门却已转化为1次射正加进球，同时零犯规，防守站位稳固。丢球后阿根廷已经出现4次犯规，节奏略显急躁。综合考虑，阿根廷阵容深度与整体实力仍明显高于埃及，剩余72分钟足以让梅西、阿尔瓦雷斯、劳塔罗等前场球员逐步找到节奏并制造威胁，尤其在下半场埃及体能下降后，被扳平乃至反超的概率较大；因此我将主队胜率上调至0.58，平局0.24，埃及守住冷门的概率0.18。最可能的最终比分为2-1的阿根廷逆转，这既符合主队最高胜率的假设，也与目前双方场面强弱一致，同时不低于当前任一方的进球数。后续进球方面，第18分钟之后阿根廷方面梅西（里奥·梅西）在中场后段找到空间破门的可能性最高，其次是替补或前插的胡利安·阿尔瓦雷斯和劳塔罗·马丁内斯；埃及若能反击得手，最可能来自穆罕默德·萨拉赫和奥马尔·马尔穆什的快速反击。所有进球时间均设定在当前18分钟之后，符合比赛进程。"
+      },
+      "sources": [],
+      "cost_usd": 0.2033261,
+      "tokens": {
+        "input": 50363,
+        "output": 918
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.446
+    },
+    {
+      "submitted_at": "2026-07-07T17:13:42+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 58,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Argentina",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.177
+    },
+    {
+      "submitted_at": "2026-07-07T17:25:19+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 70,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Argentina",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 14.823
+    },
+    {
+      "submitted_at": "2026-07-07T17:32:06+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 77,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Argentina",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 10.333
+    },
+    {
+      "submitted_at": "2026-07-07T17:38:08+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 83,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Argentina",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.1,
+        "away": 0.88
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分0-2，比赛已进行到第83分钟，埃及凭借第15分钟亚瑟·易卜拉欣和第67分钟Mostafa Mohamed的两粒进球取得两球领先。场面上阿根廷占据主导，控球率63%，射门12次(射正4次)，角球4个，明显压制对手，但转化率极低，且梅西在第21分钟罚失点球，是本场比赛的重要转折点。埃及全场仅3次射门却打入2球，效率极高，同时门将已完成4次扑救，防线整体稳固。阿根廷已在66分钟连换劳塔罗·马丁内斯和Nico González试图加强进攻，73分钟又用Montiel换下Molina，但短短剩余7分钟加补时内追回两球的可能性极小。综合判断埃及赢球概率高达88%左右，平局约10%(阿根廷若在最后阶段扳回一球仍难再追平)，阿根廷逆转赢球几乎可以忽略。最可能的最终比分维持0-2，与胜率最高方一致，且不低于当前比分。后续进球方面，阿根廷仍全力压上进攻，Lautaro和梅西在末段获得机会的概率相对较高，可能打入挽回颜面的进球；埃及则可能在防守反击中由Mostafa等前场球员再下一城，但总体进球概率均偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.2020385,
+      "tokens": {
+        "input": 50905,
+        "output": 740
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.54
+    },
+    {
+      "submitted_at": "2026-07-07T17:44:21+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 89,
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "home": "Argentina",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.2,
+        "away": 0.62
+      },
+      "most_likely_score": "1-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进入第89分钟，阿根廷1-2落后埃及。埃及由亚瑟·易卜拉欣第15分钟先拔头筹，Mostafa Mohamed第67分钟扩大比分，阿根廷则由克里斯蒂安·罗梅罗在第79分钟接Messi助攻扳回一城。全场阿根廷占据65%控球率、16次射门5次射正、5个角球，明显掌控场面，但Messi第21分钟罚失点球是关键转折点，埃及门将也做出4次扑救表现出色。当前仅剩伤停补时阶段，阿根廷会全力压上寻找扳平机会，劳塔罗·马丁内斯、替补上场的Nico González以及Messi都是最可能的破门人选；而埃及则可能通过防守反击由Mostafa Mohamed或Trezeguet制造威胁。综合来看，剩余时间过短，埃及守住胜果的概率最高，因此客队获胜概率设为0.62，平局0.20（阿根廷补时绝平仍有一定可能），主队逆转仅0.18。最可能最终比分维持1-2，即埃及晋级八强。后续进球候选以阿根廷压上寻求扳平的球员为主，同时保留埃及反击破门的低概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.201798,
+      "tokens": {
+        "input": 50965,
+        "output": 715
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.739
+    },
+    {
+      "submitted_at": "2026-07-07T17:50:27+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 2,
+          "away": 2
+        },
+        "home": "Argentina",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.696
+    },
+    {
+      "submitted_at": "2026-07-07T18:01:53+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 2
+        },
+        "home": "Argentina",
+        "away": "Egypt",
+        "competition": "World Cup",
+        "stage": "Round of 16",
+        "kickoff_utc": "2026-07-07T16:00:00+00:00",
+        "venue": "Atlanta Stadium",
+        "venue_city": "Atlanta"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.88,
+        "draw": 0.1,
+        "away": 0.02
+      },
+      "most_likely_score": "3-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比分3-2，阿根廷领先，比赛已进行到90分钟，进入伤停补时阶段。场面上阿根廷完全占据主动，控球率高达65%，射门19次、射正7次，角球6个，全面压制埃及（5射2正、1角球）。埃及虽在15分钟由亚瑟·易卜拉欣率先破门，67分钟Mostafa Mohamed再入一球取得2-1领先，但阿根廷在79、83分钟由Romero和Messi连入两球逆转，凭借梅西的组织和劳塔罗替补登场后的活力完成翻盘。考虑到仅剩伤停补时数分钟、阿根廷已用换人加固防线（Otamendi、Medina登场）、并且比赛主动权牢牢在手，阿根廷保住胜果的概率非常高，给到约88%；埃及此前一次射正来自反击效率，补时阶段全力压上仍有极小扳平机会，平局概率约10%，埃及再逆转反超的可能性极低，仅约2%。最可能的最终比分即维持3-2。若补时阶段仍有进球，最可能来自阿根廷的反击终结，梅西与替补上场的Julián Álvarez为主要候选；埃及若能抓住最后定位球或压上机会，Marmoush和Trezeguet作为前场替补球员具备一定威胁，但整体进球概率都很有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.2064156,
+      "tokens": {
+        "input": 51468,
+        "output": 864
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.269
+    }
+  ]
+}

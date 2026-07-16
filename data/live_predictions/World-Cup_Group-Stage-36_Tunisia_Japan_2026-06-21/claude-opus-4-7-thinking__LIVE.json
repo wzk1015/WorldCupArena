@@ -1,0 +1,766 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-36_Tunisia_Japan_2026-06-21",
+  "provider_fixture_id": "19609175",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-21T05:55:35+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 4
+    },
+    "home": "Tunisia",
+    "away": "Japan",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-21T04:00:00+00:00",
+    "venue": "Monterrey Stadium",
+    "venue_city": "Guadalupe"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.0,
+      "draw": 0.0,
+      "away": 1.0
+    },
+    "most_likely_score": "0-4",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已进行到第90分钟，突尼斯0-4落后日本，胜负已无悬念。日本队从第4分钟镰田大地开场破门后便牢牢掌控节奏，随后上田绮世在第31分钟和第84分钟梅开二度，Junya Ito也在第69分钟入账，4个进球分布均匀，体现出全场压制。数据端日本控球率62%，11次射门5次射正，而突尼斯全场仅2次射门且0射正，进攻端完全哑火，下半场连续换人也未能改变局面。基于此，日本获胜概率锁定在接近100%，突尼斯获胜与平局概率均为0。考虑到目前已进入补时阶段，突尼斯刚刚做出第91分钟的双换人调整以稳住阵脚，短时间内追回4球几乎不可能，因此最可能的最终比分维持在0-4。补时阶段仍存在的少量进球可能主要来自日本替补登场的新鲜攻击手，Keisuke Goto与铃木唯人作为最后阶段的替补前场球员，是补时再下一城的最有可能人选，但整体补射概率都偏低。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 20901,
+    "output": 572
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0879157,
+  "wall_seconds": 15.326,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.0, \"draw\": 0.0, \"away\": 1.0},\n  \"most_likely_score\": \"0-4\",\n  \"scorers\": [\n    {\"player\": \"Keisuke Goto\", \"team\": \"away\", \"minute\": 92, \"p\": 0.06},\n    {\"player\": \"Yuito Suzuki\", \"team\": \"away\", \"minute\": 93, \"p\": 0.05}\n  ],\n  \"reasoning\": {\"overall\": \"比赛已进行到第90分钟，突尼斯0-4落后日本，胜负已无悬念。日本队从第4分钟Daichi Kamada开场破门后便牢牢掌控节奏，随后Ayase Ueda在第31分钟和第84分钟梅开二度，Junya Ito也在第69分钟入账，4个进球分布均匀，体现出全场压制。数据端日本控球率62%，11次射门5次射正，而突尼斯全场仅2次射门且0射正，进攻端完全哑火，下半场连续换人也未能改变局面。基于此，日本获胜概率锁定在接近100%，突尼斯获胜与平局概率均为0。考虑到目前已进入补时阶段，突尼斯刚刚做出第91分钟的双换人调整以稳住阵脚，短时间内追回4球几乎不可能，因此最可能的最终比分维持在0-4。补时阶段仍存在的少量进球可能主要来自日本替补登场的新鲜攻击手，Keisuke Goto与Yuito Suzuki作为最后阶段的替补前场球员，是补时再下一城的最有可能人选，但整体补射概率都偏低。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-06-21T04:05:54+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 5,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Tunisia",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T04:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.25,
+        "away": 0.63
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Takefusa Kubo",
+          "minute": 58,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Daichi Kamada",
+          "minute": 71,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Ayase Ueda",
+          "minute": 66,
+          "p": 0.17,
+          "team": "away"
+        },
+        {
+          "player": "Keito Nakamura",
+          "minute": 78,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Hannibal Mejbri",
+          "minute": 75,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Youssef Msakni",
+          "minute": 82,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第5分钟，突尼斯0-1日本。日本队在第4分钟由镰田大地（镰田大地）在中村敬斗（中村敬斗）的助攻下闪击破门，开局取得领先。从早期数据看，日本队完全掌控了节奏：控球率高达78%，唯一一次射门即转化为射正并破门；突尼斯仅有22%控球，1次射门但未射正，开局明显被压制。结合赛前实力对比，日本作为亚洲一流强队整体技术、组织和压迫能力都强于突尼斯，加上闪电进球后心理与战术上都占据主动，胜率显著上调至约63%，平局约25%，突尼斯反弹取胜的概率被压低到约12%左右。剩余时间还有八十多分钟，突尼斯需要前压寻求扳平，这反而会给日本反击留下空间，因此最可能的最终比分判断为0-2，日本依靠反击或定位球再下一城。后续进球人选方面，日本一侧最具威胁的是技术型攻击手久保建英（久保建英），其次是已经进球、状态火热的镰田大地，中锋上田绮世（上田绮世）在禁区内的把握能力以及助攻者中村敬斗的二次冲击同样值得关注；突尼斯一侧若能压上反扑，核心组织者赫尼巴尔·梅杰布里（汉尼拔·梅布里）与经验丰富的尤塞夫·姆萨克尼（Youssef Msakni）是最可能扳回一城的人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.0889813,
+      "tokens": {
+        "input": 19699,
+        "output": 870
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.006
+    },
+    {
+      "submitted_at": "2026-06-21T04:12:23+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 12,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Tunisia",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T04:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.23,
+        "away": 0.65
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Daichi Kamada",
+          "minute": 67,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Keito Nakamura",
+          "minute": 74,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Takefusa Kubo",
+          "minute": 80,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Ayase Ueda",
+          "minute": 58,
+          "p": 0.14,
+          "team": "away"
+        },
+        {
+          "player": "Youssef Msakni",
+          "minute": 78,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Wahbi Khazri",
+          "minute": 85,
+          "p": 0.08,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "目前比赛进行到第12分钟，突尼斯0-1日本。日本第4分钟由镰田大地（镰田大地）接中村敬斗（中村敬斗）的助攻闪击破门，开场即取得领先。从早期数据看，日本控球率高达72%，已有2次射门、1次射正、1个角球，明显掌握场面主导权；突尼斯仅1次射门且未射正，控球只有28%，进攻端尚未形成有效威胁。结合早进球+场面被压制的局面，日本胜率应明显上调至约0.65，突尼斯翻盘难度较大，胜率压低至约0.12，平局概率约0.23。比赛尚有近80分钟，日本若继续保持节奏，再下一城的概率高于突尼斯连追两球，因此最可能的最终比分判断为0-2。后续进球方面，日本进攻群里镰田大地状态火热、中村敬斗已有助攻且边路威胁大，久保建英（久保建英）与上田绮世（上田绮世）作为主要进攻支点也具备扩大比分的能力；突尼斯方面若要扳平，主要寄望于经验丰富的Msakni和Khazri在中后段抓住反扑机会，但出场概率相对较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0871794,
+      "tokens": {
+        "input": 19757,
+        "output": 761
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.767
+    },
+    {
+      "submitted_at": "2026-06-21T04:19:03+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 19,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Tunisia",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T04:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.13,
+        "draw": 0.26,
+        "away": 0.61
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Daichi Kamada",
+          "minute": 67,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Keito Nakamura",
+          "minute": 58,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Takefusa Kubo",
+          "minute": 74,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Ayase Ueda",
+          "minute": 82,
+          "p": 0.13,
+          "team": "away"
+        },
+        {
+          "player": "Issam Jebali",
+          "minute": 78,
+          "p": 0.1,
+          "team": "home"
+        },
+        {
+          "player": "Hannibal Mejbri",
+          "minute": 86,
+          "p": 0.08,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比分突尼斯0-1日本，比赛进行到第19分钟。日本队凭借第4分钟镰田大地的进球（中村敬斗助攻）早早占据领先优势，并且场面上完全压制对手：控球率64%对36%，射门4-1，射正3-0，角球2-1，开局阶段日本队就已经迫使突尼斯门将做出2次扑救，进攻威胁明显大于对手。基于这种早早领先加上场面优势的局面，我们将日本队获胜的概率上调至约0.61，平局保持在0.26左右，突尼斯翻盘获胜的概率压缩到0.13。考虑到比赛仅过去19分钟，日本队仍有大量时间继续放大优势，而突尼斯需要前压寻求扳平、防线会被进一步拉开，最有可能的最终比分判定为0-2，日本队在中下半场再下一城。后续进球人选方面，日本队的进攻核心Kamada、Nakamura、Kubo、前锋Ueda都是顺势扩大比分的高概率选项，分钟数全部安排在第19分钟之后的中下半场区间；突尼斯方面若要追分，则倾向于由Jebali在禁区内抓机会，或由Mejbri在比赛末段制造冲击，因此也分别给出较低但不可忽略的进球概率。"
+      },
+      "sources": [],
+      "cost_usd": 0.0875938,
+      "tokens": {
+        "input": 19759,
+        "output": 783
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.624
+    },
+    {
+      "submitted_at": "2026-06-21T04:25:34+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 25,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Tunisia",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T04:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.25,
+        "away": 0.63
+      },
+      "most_likely_score": "0-2",
+      "scorers": [
+        {
+          "player": "Takefusa Kubo",
+          "minute": 62,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Daichi Kamada",
+          "minute": 70,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Keito Nakamura",
+          "minute": 78,
+          "p": 0.16,
+          "team": "away"
+        },
+        {
+          "player": "Ayase Ueda",
+          "minute": 83,
+          "p": 0.15,
+          "team": "away"
+        },
+        {
+          "player": "Hannibal Mejbri",
+          "minute": 75,
+          "p": 0.12,
+          "team": "home"
+        },
+        {
+          "player": "Youssef Msakni",
+          "minute": 88,
+          "p": 0.1,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第25分钟，突尼斯主场0-1落后日本。日本在第4分钟由镰田大地（镰田大地）接中村敬斗（中村敬斗）助攻闪电破门，早早占据主动。从场面数据看，日本控球率高达68%，已完成4次射门、1次射正、2个角球，全面压制对手；突尼斯仅有1次射门且未射正，控球只有32%，进攻端尚未真正威胁到日本球门，反映出两队在节奏和组织上的明显差距。\n\n基于早早领先加上场面优势，日本获胜概率显著上调至约63%，平局约25%，突尼斯逆转概率压低至约12%左右。突尼斯需要至少打入两球才能拿分，而目前的进攻产出难以支撑这一预期；日本则更可能凭借控球继续消耗对手，并在中后段利用反击或定位球扩大比分。\n\n最可能的最终比分定为0-2：日本大概率在下半场再下一城锁定胜局，而突尼斯虽有体能下降后被打反击的风险，但凭借主队心态在末段也可能制造一定威胁，整体仍以日本小胜收尾的概率最高。后续进球人选方面，日本边路的久保建英（久保建英）和中村敬斗具备持续制造杀机的能力，镰田大地状态在线有望梅开二度，前锋上田绮世（上田绮世）作为支点也是禁区内的潜在终结点；突尼斯方面若能扳回一城，中场核心梅伊布里（汉尼拔·梅布里）的远射和经验丰富的姆萨克尼（Youssef Msakni）在末段的定位球或反击中最具威胁。"
+      },
+      "sources": [],
+      "cost_usd": 0.0902282,
+      "tokens": {
+        "input": 19761,
+        "output": 925
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.253
+    },
+    {
+      "submitted_at": "2026-06-21T04:32:11+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 32,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Tunisia",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T04:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.06,
+        "away": 0.92
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到上半场第32分钟，突尼斯主场0-2落后日本。日本开局非常迅猛，第4分钟由镰田大地（镰田大地）抢先打破僵局，中村敬斗（中村敬斗）送出助攻；第31分钟上田绫世（上田绮世）再下一城，将比分扩大到两球。从场面数据看，日本控球率达到60%，5次射门2次射正，角球2比1，全面压制突尼斯；而突尼斯仅有1次射门且未射正，进攻端基本被锁死，犯规数也偏高，显示防守已经吃紧。综合两球领先、半场尚未结束以及双方场面强弱差距，日本获胜概率大幅上升至九成以上，平局和突尼斯翻盘的可能性都被压得很低。最可能的最终比分仍然是0-2——日本已经握有舒适领先，下半场可能会有所收缩控制节奏；突尼斯虽然必须压上，但缺乏有效的进攻火力，要在剩余时间连扳两球非常困难，因此维持当前比分是最高概率走向。后续进球方面，日本依然是更可能取得进球的一方：上田绫世、镰田大地状态正佳，是再下一城的首选；中村敬斗在边路具备直接得分能力，久保建英（久保建英）若获得空间也可能制造威胁。突尼斯方面若要扳回颜面，更可能依靠卡兹里（Wahbi Khazri）或姆萨克尼（Youssef Msakni）这类经验丰富的进攻球员在对手回收后抓住反击或定位球机会，但整体概率明显低于日本球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.0901505,
+      "tokens": {
+        "input": 19840,
+        "output": 905
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.363
+    },
+    {
+      "submitted_at": "2026-06-21T04:38:47+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 38,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Tunisia",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T04:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.1,
+        "away": 0.87
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第38分钟，日本客场2-0领先突尼斯。开场仅4分钟，鎌田大地（镰田大地）便接中村敬斗（中村敬斗）助攻先下一城，第31分钟上田绫世（上田绮世）再下一城，由板仓滉（Ko Itakura）送出助攻，日本上半场就基本掌控了局面。从场面数据看，日本控球率59%，射门5次、射正3次，全部转化为高质量威胁，而突尼斯仅有1次射门且未射正，门将扑救数为0，进攻端几乎没有制造任何实质性威胁，犯规次数（6次）也反映出日本在节奏掌控上的优势。基于两球领先加上明显的场面压制，日本获胜概率被大幅上调至0.87，平局概率压至0.10，突尼斯翻盘的可能性仅约0.03——要在剩余50多分钟内连进三球，对目前进攻乏力的突尼斯而言非常困难。最可能的最终比分维持在0-2，这是日本继续控制比赛节奏、突尼斯急于扳回比分但难以撕开防线时的最常见走向。后续若再有进球，最大概率仍来自日本一方：上田绫世和鎌田大地已经进入射手状态，最有可能再下一城；中村敬斗、久保建英（久保建英）作为边路爆点也具备打入第三球的能力；突尼斯方面若调整进攻，Wahbi Khazri 和 Youssef Msakni 是为数不多具备终结能力的球员，但概率明显偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0897472,
+      "tokens": {
+        "input": 19846,
+        "output": 882
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.725
+    },
+    {
+      "submitted_at": "2026-06-21T04:46:01+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Tunisia",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T04:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.03,
+        "draw": 0.1,
+        "away": 0.87
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "上半场结束，突尼斯主场0-2落后日本。日本开局闪电战，第4分钟镰田大地由中村敬斗助攻首开纪录，第31分钟上田绮世再接Ko Itakura传球扩大比分，半场内已两度洞穿对手球门。场面上日本同样占优：控球率63%对37%，射门5比1，射正3比0，突尼斯门将已经做出1次扑救但仍难挡颓势，攻防两端被全面压制。基于双球领先加场面碾压，日本胜率大幅上调至0.87，平局概率压缩至0.10，突尼斯翻盘窗口仅剩约0.03。最可能的最终比分维持在0-2：日本掌握节奏后大概率回收阵型控制比赛，但突尼斯下半场势必加强进攻寻求扳回，比分继续被改写的可能性中等偏低，因此沿用当前比分作为最优解。后续进球预测中，日本一方Kubo替补登场可能利用对手压上后的空当反击破门，Ueda和Kamada作为已得分球员仍具威胁；突尼斯方面，若主帅调整加强进攻，Jebali和Mejbri是争取扳回一城的主要点，但概率明显低于客队继续扩大比分的可能性。"
+      },
+      "sources": [],
+      "cost_usd": 0.0870166,
+      "tokens": {
+        "input": 19848,
+        "output": 734
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.287
+    },
+    {
+      "submitted_at": "2026-06-21T05:09:33+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 54,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Tunisia",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T04:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.08,
+        "away": 0.9
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第54分钟，突尼斯0比2落后日本。日本开场第4分钟由镰田大地（镰田大地）接中村敬斗（中村敬斗）助攻首开纪录，第31分钟上田绮世（上田绮世）再下一城，半场前已建立两球优势。从数据面看，日本控球率高达67%，6次射门3次射正，而突尼斯仅1次射门且零射正，进攻端几乎被完全压制。突尼斯中场休息时一口气换上两名球员（伊斯梅尔·加尔比、穆罕默德·阿明·本·哈米达）试图扭转局面，但易边后场面仍未明显改观。综合比分、剩余时间和场面控制力，日本获胜概率压倒性领先，平局与突尼斯翻盘的可能性都极低，因此把胜率给到日本约九成、平局不足一成、突尼斯仅有象征性几率。最可能的最终比分维持在0-2：日本两球在手已倾向控制节奏，但凭借持续的控球与射门威胁仍随时可能扩大比分；突尼斯虽会在替补登场后加强进攻，但锋线效率极低，难以打破僵局。后续进球候选人方面，日本端最被看好的是状态正佳的上田绮世，其次是镰田大地与边路串联出色的中村敬斗；突尼斯若想破门，刚登场的Gharbi与Saad最具威胁，但概率明显偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.08862980000000001,
+      "tokens": {
+        "input": 20024,
+        "output": 786
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.645
+    },
+    {
+      "submitted_at": "2026-06-21T05:16:09+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 61,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Tunisia",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T04:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.08,
+        "away": 0.9
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "目前比赛进行到第61分钟，比分0-2，日本客场领先突尼斯两球。日本在第4分钟由镰田大地（镰田大地）首开纪录，第31分钟上田绫世（上田绮世）扩大比分，全场掌控节奏：控球率63%、6次射门3次射正，明显压制只有2次射门0射正的突尼斯。突尼斯虽然中场休息时连换两人试图加强进攻，但目前仍未制造有效威胁，剩余不到30分钟要连扳两球难度极大。综合场面与剩余时间，日本获胜概率高达九成左右，平局与突尼斯翻盘的可能性都很低，最可能的最终比分维持0-2。后续进球方面，日本依然是更可能取得进球的一方，上田绫世状态火热且作为支点前锋最具威胁，镰田大地和中村敬斗在反击中具备扩大比分的能力；突尼斯方面，新换上的伊斯梅尔·加尔比带来一定前场冲击力，是主队最有可能扳回一城的人选，但整体进球概率明显低于日本球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.08686490000000001,
+      "tokens": {
+        "input": 20302,
+        "output": 635
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.899
+    },
+    {
+      "submitted_at": "2026-06-21T05:22:42+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 67,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "Tunisia",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T04:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.08,
+        "away": 0.9
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到67分钟，突尼斯主场0-2落后日本。日本队上半场就由镰田大地(镰田大地)第4分钟和上田绫世(上田绮世)第31分钟两度破门，早早奠定优势。从场面数据看，日本控球率63%，射门6次、射正3次，角球3个；突尼斯仅有2次射门且0射正，控球37%，进攻端几乎没有威胁。突尼斯虽在中场休息时连换两人试图加强攻势，但场面并未明显改观，仍处于明显下风。综合两球落后、剩余时间不足30分钟、且突尼斯创造机会能力有限来看，日本拿下三分的概率非常高，主队扳平甚至取胜的可能性微乎其微。最可能的最终比分维持在0-2，日本以两球优势稳守胜局。后续若再有进球，更可能来自日本的反击或定位球，上田绫世和镰田大地状态正佳，是最具威胁的射手人选，中村敬斗(中村敬斗)的边路突破也可能制造破门机会；突尼斯方面，替补登场的伊斯梅尔·加尔比带来一定活力，是主队若能扳回一球的可能选项，但整体概率有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.08660590000000001,
+      "tokens": {
+        "input": 20032,
+        "output": 675
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.896
+    },
+    {
+      "submitted_at": "2026-06-21T05:29:19+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 74,
+        "score": {
+          "home": 0,
+          "away": 3
+        },
+        "home": "Tunisia",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T04:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.001,
+        "draw": 0.004,
+        "away": 0.995
+      },
+      "most_likely_score": "0-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第74分钟，突尼斯主场0-3落后日本，已经基本失去翻盘可能。日本队凭借第4分钟镰田大地的闪击和第31分钟上田绮世的进球早早奠定两球优势，下半场又再下一城将比分扩大到三球。从场面数据看，日本控球率63%，全场8脚射门3次射正，角球4-1领先，完全掌握比赛节奏；突尼斯仅有2次射门且0射正，进攻端缺乏威胁，主帅虽在46分钟和64分钟连续换上伊斯梅尔·加尔比、穆罕默德·阿明·本·哈米达和菲拉斯·沙瓦特试图救场，但仍未能改变颓势。剩余约16分钟加补时，突尼斯要连入三球追平几乎不可能，因此客胜概率高达99.5%，平局和主胜概率几乎可以忽略。最可能的最终比分维持在0-3，日本大概率以三球优势全取三分。后续进球方面，日本仍掌握控球与节奏，若再有破门，最可能来自前场具备冲击力的久保建英或状态正佳的上田绮世梅开二度；突尼斯若想扳回颜面，新换上的菲拉斯·沙瓦特在前场最具机会，但概率较低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0866355,
+      "tokens": {
+        "input": 20115,
+        "output": 660
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.736
+    },
+    {
+      "submitted_at": "2026-06-21T05:35:58+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 80,
+        "score": {
+          "home": 0,
+          "away": 3
+        },
+        "home": "Tunisia",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T04:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.001,
+        "draw": 0.004,
+        "away": 0.995
+      },
+      "most_likely_score": "0-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到80分钟，突尼斯主场0-3落后日本。日本队凭借第4分钟镰田大地、第31分钟上田绮世和第69分钟Junya Ito的进球已经牢牢掌控比赛走势。从场面数据看，日本控球率63%，9次射门4次射正，而突尼斯仅有1次射门且0射正，进攻端几乎被完全压制，扳平比赛在剩余时间内基本无可能。突尼斯虽已经用满三次换人调整，但缺乏制造威胁的能力，且需要在十分钟内连入三球，概率可以忽略不计。综合判断，日本获胜概率极高（约99.5%），平局与突尼斯翻盘几乎归零，最可能的最终比分维持0-3。后续进球方面，日本仍占据主动，并已通过换人保持前场冲击力，存在小概率扩大比分的可能，候选射手以仍在场上、且本场状态出色的上田绮世、Junya Ito以及替补登场的Ritsu Doan为主；突尼斯破门希望极小，不列入预测。"
+      },
+      "sources": [],
+      "cost_usd": 0.08624330000000001,
+      "tokens": {
+        "input": 20374,
+        "output": 587
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.865
+    },
+    {
+      "submitted_at": "2026-06-21T05:42:34+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 87,
+        "score": {
+          "home": 0,
+          "away": 3
+        },
+        "home": "Tunisia",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T04:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.001,
+        "draw": 0.002,
+        "away": 0.997
+      },
+      "most_likely_score": "0-3",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第87分钟，突尼斯主场0-3落后日本，比分差距已达三球，留给主队的时间只剩常规时间最后三分钟加补时。日本队的三个进球分别来自第4分钟镰田大地的闪击、第31分钟上田绮世的扩大比分以及第69分钟Junya Ito的锁定胜局，进球节奏稳定，完全掌控比赛走势。从场面数据看，日本控球率63%，9次射门、4次射正，5个角球，全面压制突尼斯；而突尼斯仅有2次射门且零射正，整场制造威胁极为有限，下半场连续三次换人也未能改变颓势。在剩余不到3分钟加伤停补时的窗口内，主队几乎不可能连入三球扳平，日本的胜利已基本锁定，因此客队胜概率压至接近1，平局和主队获胜概率仅作极小余量保留。最可能的最终比分维持当前的0-3：突尼斯短时间内难以破门，日本在大幅领先后通常会通过换人和控球消耗时间，但近期连续换上的铃木唯人等新鲜攻击点仍存在反击中再下一城的可能，因此在末段进球人选上给铃木唯人和已经梅开度数感不强但仍在场上保持威胁的Junya Ito留出小概率的补时进球空间，其余球员在如此短的剩余时间内进球概率可忽略。"
+      },
+      "sources": [],
+      "cost_usd": 0.0884485,
+      "tokens": {
+        "input": 20555,
+        "output": 670
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.468
+    },
+    {
+      "submitted_at": "2026-06-21T05:49:05+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 4
+        },
+        "home": "Tunisia",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T04:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.001,
+        "draw": 0.001,
+        "away": 0.998
+      },
+      "most_likely_score": "0-4",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进行到90分钟，突尼斯0-4落后日本，胜负悬念几乎为零。日本队从开场就掌控比赛：第4分钟镰田大地抢点破门，第31分钟上田绮世再下一城，下半场第69分钟Junya Ito扩大比分，第84分钟Ueda梅开二度彻底锁定胜局。从数据来看，日本控球率61%，射门11次、射正5次，全部转化为高效进球；而突尼斯全场仅2次射门且0射正，进攻端基本被完全压制，即便半场和中段连续换上Gharbi、Ben Hamida、Chaouat试图改变局面也未能制造威胁。考虑到剩余时间只有伤停补时阶段，且突尼斯本场连射正都未能做到，主队扳回任何一球的概率都极低，因此客胜概率压到接近100%，平局与主胜概率几乎可以忽略。最可能的最终比分维持当前0-4。后续进球方面，日本仍保持流畅的进攻节奏，且刚刚换上的Keisuke Goto和铃木唯人体能充沛、寻求个人进球的欲望强烈，是补时阶段最可能再下一城的人选，但由于时间所剩无几，整体再进球的概率也相对有限。"
+      },
+      "sources": [],
+      "cost_usd": 0.0881747,
+      "tokens": {
+        "input": 20726,
+        "output": 621
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.045
+    },
+    {
+      "submitted_at": "2026-06-21T05:55:35+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 0,
+          "away": 4
+        },
+        "home": "Tunisia",
+        "away": "Japan",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-21T04:00:00+00:00",
+        "venue": "Monterrey Stadium",
+        "venue_city": "Guadalupe"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 0.0,
+        "away": 1.0
+      },
+      "most_likely_score": "0-4",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进行到第90分钟，突尼斯0-4落后日本，胜负已无悬念。日本队从第4分钟镰田大地开场破门后便牢牢掌控节奏，随后上田绮世在第31分钟和第84分钟梅开二度，Junya Ito也在第69分钟入账，4个进球分布均匀，体现出全场压制。数据端日本控球率62%，11次射门5次射正，而突尼斯全场仅2次射门且0射正，进攻端完全哑火，下半场连续换人也未能改变局面。基于此，日本获胜概率锁定在接近100%，突尼斯获胜与平局概率均为0。考虑到目前已进入补时阶段，突尼斯刚刚做出第91分钟的双换人调整以稳住阵脚，短时间内追回4球几乎不可能，因此最可能的最终比分维持在0-4。补时阶段仍存在的少量进球可能主要来自日本替补登场的新鲜攻击手，Keisuke Goto与铃木唯人作为最后阶段的替补前场球员，是补时再下一城的最有可能人选，但整体补射概率都偏低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0879157,
+      "tokens": {
+        "input": 20901,
+        "output": 572
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.326
+    }
+  ]
+}

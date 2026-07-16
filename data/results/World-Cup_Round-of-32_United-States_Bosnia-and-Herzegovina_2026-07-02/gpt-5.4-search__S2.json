@@ -1,0 +1,141 @@
+{
+  "scoring_version": "wca-v3-aggregate-contrast-t5-layers-t10-2026-07-13",
+  "tasks": {
+    "match_winner_prob": {
+      "score": 85.44,
+      "available": true
+    },
+    "exact_score": {
+      "score": 0.0,
+      "available": true
+    },
+    "headline_score": {
+      "score": 90.41666666666667,
+      "available": true
+    },
+    "goal_diff_mae": {
+      "score": 76.0,
+      "available": true
+    },
+    "qualification": {
+      "score": null,
+      "available": false
+    },
+    "starting_xi": {
+      "score": 27.77777777777778,
+      "available": true
+    },
+    "formation": {
+      "score": null,
+      "available": false
+    },
+    "goalscorers": {
+      "score": 54.40750133727474,
+      "available": true
+    },
+    "assist_providers": {
+      "score": 0.0,
+      "available": true
+    },
+    "man_of_the_match": {
+      "score": null,
+      "available": false
+    },
+    "goal_minute": {
+      "score": 69.33333333333333,
+      "available": true
+    },
+    "substitution_times": {
+      "score": 66.125,
+      "available": true
+    },
+    "cards": {
+      "score": 0.0,
+      "available": true
+    },
+    "penalty_events": {
+      "score": 100.0,
+      "available": true
+    },
+    "own_goals": {
+      "score": 100.0,
+      "available": true
+    },
+    "tactical_formation_match": {
+      "score": null,
+      "available": false
+    },
+    "possession_pct": {
+      "score": 79.92773986350863,
+      "available": true
+    },
+    "shots": {
+      "score": 72.72727272727273,
+      "available": true
+    },
+    "shots_on_target": {
+      "score": 35.714285714285715,
+      "available": true
+    },
+    "corners": {
+      "score": 65.71428571428572,
+      "available": true
+    },
+    "pass_accuracy": {
+      "score": null,
+      "available": false
+    },
+    "fouls": {
+      "score": 69.98050682261209,
+      "available": true
+    },
+    "saves": {
+      "score": 50.0,
+      "available": true
+    },
+    "tackles_and_interceptions": {
+      "score": null,
+      "available": false
+    },
+    "group_standings": {
+      "score": null,
+      "available": false
+    },
+    "bracket_advancement": {
+      "score": null,
+      "available": false
+    },
+    "champion": {
+      "score": null,
+      "available": false
+    },
+    "top_scorer": {
+      "score": null,
+      "available": false
+    },
+    "golden_glove_and_awards": {
+      "score": null,
+      "available": false
+    }
+  },
+  "raw_layers": {
+    "T1_core_result": 68.03052631578946,
+    "T2_player_level": 34.21994850172437,
+    "T3_event_level": 54.425,
+    "T4_tactics_stats": 62.344015140327485
+  },
+  "layers": {
+    "T1_core_result": 86.33842774140118,
+    "T2_player_level": 16.661560287348472,
+    "T3_event_level": 61.03314328759532,
+    "T4_tactics_stats": 77.83134342376253
+  },
+  "raw_composite": 57.30172499745531,
+  "composite": 81.16137290858707,
+  "model_id": "gpt-5.4-search",
+  "setting": "S2",
+  "leakage_audit": {
+    "leaked": false,
+    "leaked_sources": []
+  }
+}

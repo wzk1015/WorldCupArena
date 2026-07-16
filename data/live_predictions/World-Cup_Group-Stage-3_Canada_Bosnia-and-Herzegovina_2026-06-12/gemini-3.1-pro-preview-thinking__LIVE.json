@@ -1,0 +1,818 @@
+{
+  "fixture_id": "World-Cup_Group-Stage-3_Canada_Bosnia-and-Herzegovina_2026-06-12",
+  "provider_fixture_id": "19609154",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-06-12T20:57:10+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "home": "Canada",
+    "away": "Bosnia and Herzegovina",
+    "competition": "World Cup",
+    "stage": "Group Stage",
+    "kickoff_utc": "2026-06-12T19:00:00+00:00",
+    "venue": "Toronto Stadium",
+    "venue_city": "Toronto"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.08,
+      "draw": 0.88,
+      "away": 0.04
+    },
+    "most_likely_score": "1-1",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前比赛已进入伤停补时阶段（常规时间90分钟已满），比分为1-1。波黑在第21分钟由Jovo Lukic先拔头筹，而加拿大在下半场大举反击，凭借60%的控球率和多达9次的角球机会，终于在第78分钟由替补登场的Cyle Larin扳平比分。从场面数据来看，加拿大在射门数（12对8）和进攻主导权上占据优势，而波黑则以较多的犯规（20次）来破坏对方节奏，且已有多名球员染黄。由于比赛所剩时间极少，维持1-1平局结束的概率极高（88%）。不过考虑到加拿大的主场气势与进攻压迫，他们绝杀取胜的可能性略高于波黑。预测最终比分最可能为1-1，若在最后几分钟的补时阶段出现进球，状态火热的Cyle Larin或波黑前锋Ermedin Demirovic是潜在的绝杀人选。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 2143,
+    "output": 1596
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.012304949999999999,
+  "wall_seconds": 18.165,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.08,\n    \"draw\": 0.88,\n    \"away\": 0.04\n  },\n  \"most_likely_score\": \"1-1\",\n  \"scorers\": [\n    {\n      \"player\": \"Cyle Larin\",\n      \"team\": \"home\",\n      \"minute\": 95,\n      \"p\": 0.03\n    },\n    {\n      \"player\": \"Ermedin Demirovic\",\n      \"team\": \"away\",\n      \"minute\": 94,\n      \"p\": 0.01\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"当前比赛已进入伤停补时阶段（常规时间90分钟已满），比分为1-1。波黑在第21分钟由Jovo Lukic先拔头筹，而加拿大在下半场大举反击，凭借60%的控球率和多达9次的角球机会，终于在第78分钟由替补登场的Cyle Larin扳平比分。从场面数据来看，加拿大在射门数（12对8）和进攻主导权上占据优势，而波黑则以较多的犯规（20次）来破坏对方节奏，且已有多名球员染黄。由于比赛所剩时间极少，维持1-1平局结束的概率极高（88%）。不过考虑到加拿大的主场气势与进攻压迫，他们绝杀取胜的可能性略高于波黑。预测最终比分最可能为1-1，若在最后几分钟的补时阶段出现进球，状态火热的Cyle Larin或波黑前锋Ermedin Demirovic是潜在的绝杀人选。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "**Analyzing the Canada vs. Bosnia & Herzegovina Match in Stoppage Time**\n\nOkay, so it's the Canada vs. Bosnia and Herzegovina match. The clock reads 90', but wait, there are events logged at 91' and 93', so we're definitely in stoppage time. The score is deadlocked at 1-1. The game is virtually over. Given the late stage of the match, the probability of a draw is incredibly high, probably around 85% or even higher. Let's crunch some numbers based on what we've got.\n\nCanada is dominating possession, 60% with 12 shots, 4 on target, and 9 corners. Bosnia, on the other hand, has 40% possession, 8 shots with 3 on target, and 4 corners. Now, let's look at probabilities.\n\n*   Canada Win (Home): 8%\n*   Draw: 88%\n*   Bosnia Win (Away): 4%\n\nSo, as expected, the most likely scoreline is 1-1.\n\nSince we are in stoppage time, the chance of any additional goals is low. However, we have to consider the possibility of a late, late goal. According to the prompt, any scorer minute must be *strictly* after 90'. I need to make sure I am accounting for that.\n\nLet's consider possible scorers at 94' or 95'. Cyle Larin for Canada scored in the 78th minute, and there was a substitution at 76' (Larin, assist Tani Oluwaseyi). Given that Larin scored, he's definitely on the pitch. So I'll add Cyle Larin at 95' with a probability of 3%. And then Ermedin Demirovic for Bosnia at 94', with a low probability of 1%.\n\n**Reasoning:**\n\nThe score is 1-1 at 90' plus stoppage time. Canada equalized in the 78th minute through Cyle Larin, and they've been in control, boasting the majority of possession (60%) and the lion's share of corners (9). Bosnia took an early lead, but they have been under pressure and defending heavily, as demonstrated by the fouls committed (20). Considering the minimal time left, a 1-1 draw is the most likely outcome, around 88%. Given the home advantage and Canada's momentum, there is a slightly higher chance of a late winner for Canada.\n\nNow, let's refine the JSON.\n\n```json\n{\n  \"win_probs\": {\n    \"home\": 0.08,\n    \"draw\": 0.88,\n    \"away\": 0.04\n  },\n  \"most_likely_score\": \"1-1\",\n  \"scorers\": [\n    {\n      \"player\": \"Cyle Larin\",\n      \"team\": \"home\",\n      \"minute\": 95,\n      \"p\": 0.03\n    },\n    {\n      \"player\": \"Ermedin Demirovic\",\n      \"team\": \"away\",\n      \"minute\": 94,\n      \"p\": 0.01\n    }\n  ]\n}\n```\n\nOkay, the logic checks out. Everything is as it should be.\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-06-12T19:05:40+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 5,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.42,
+        "draw": 0.31,
+        "away": 0.27
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 62,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Ermedin Demirović",
+          "minute": 75,
+          "p": 0.18,
+          "team": "away"
+        },
+        {
+          "player": "Alphonso Davies",
+          "minute": 41,
+          "p": 0.15,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第5分钟，当前比分为0-0。加拿大作为东道主在多伦多主场作战，开场后迅速掌控了比赛节奏，控球率达到64%并获得1次角球，显示出较强的压迫感和主场气势。波斯尼亚和黑塞哥维那虽然控球率仅为36%，但已完成1次射门，展现了防守反击的潜在威胁。考虑到加拿大的主场优势和开局的场面控制力，模型略微看好主队，主胜概率评估为42%，平局31%，客胜27%。最可能的最终比分预测为1-0。在后续进球逻辑上，预计比赛初期双方会继续互相试探，加拿大的锋线核心 Jonathan David 或 Alphonso Davies 有望在半场结束前或下半场利用阵地战打破僵局；而波斯尼亚的 Ermedin Demirović 等球员则可能在下半场的反击中寻找得分机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.0136647,
+      "tokens": {
+        "input": 894,
+        "output": 2020
+      },
+      "tool_calls": 0,
+      "wall_seconds": 22.724
+    },
+    {
+      "submitted_at": "2026-06-12T19:11:38+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 11,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.4,
+        "draw": 0.33,
+        "away": 0.27
+      },
+      "most_likely_score": "1-0",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 65,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Ermedin Demirović",
+          "minute": 78,
+          "p": 0.18,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第11分钟，目前比分0-0。加拿大凭借主场（多伦多）优势占据了56%的控球率，并获得1次角球，但尚未形成射门；波斯尼亚和黑塞哥维那虽然控球率略低（44%），但开局反击较为直接，已经完成2次射门。考虑到加拿大拥有主场优势且整体控球占优，随着比赛深入，他们有望逐渐适应节奏并将控球转化为实质威胁。波斯尼亚的防守反击同样具有一定威胁，但客场作战在防守端的压力会逐渐增大。综合判断，目前预测加拿大获胜概率最高（40%），平局概率33%，客胜概率27%。最可能的最终比分为1-0。预计加拿大的核心前锋（如 Jonathan David）将在下半场第65分钟左右利用阵地战或边路传中打破僵局。"
+      },
+      "sources": [],
+      "cost_usd": 0.01284255,
+      "tokens": {
+        "input": 897,
+        "output": 1889
+      },
+      "tool_calls": 0,
+      "wall_seconds": 21.651
+    },
+    {
+      "submitted_at": "2026-06-12T19:17:31+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 17,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.35,
+        "draw": 0.38,
+        "away": 0.27
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 62,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Ermedin Demirović",
+          "minute": 75,
+          "p": 0.22,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第17分钟，当前比分为0-0。加拿大坐镇多伦多主场，控球率（52%）略微占优并获得了2次角球，但进攻端尚未完成任何射门。相反，客队波斯尼亚和黑塞哥维那开局反击更为高效，目前已有3次射门（其中1次射正），迫使加拿大门将做出1次扑救。此外，加拿大后卫阿利斯泰尔·约翰斯顿（Alistair Johnston）在第11分钟早早领到黄牌，给主队防线带来了一定隐患。综合场面数据，波斯尼亚展现出了实质性的进攻威胁，而加拿大则拥有主场优势和控球底蕴，比赛大概率会陷入胶着。随着比赛深入，双方都有机会把握住对方防线的漏洞打破僵局。因此，平局的概率（38%）目前略高于主胜（35%），最可能的最终比分预测为1-1。后续进球逻辑上，预计加拿大的核心前锋Jonathan David和波斯尼亚的Ermedin Demirović将在下半场体能下降、阵型拉开后获得破门良机。"
+      },
+      "sources": [],
+      "cost_usd": 0.01271235,
+      "tokens": {
+        "input": 1007,
+        "output": 1850
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.87
+    },
+    {
+      "submitted_at": "2026-06-12T19:23:25+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 23,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.3,
+        "away": 0.45
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 55,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Ermedin Demirovic",
+          "minute": 78,
+          "p": 0.22,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第23分钟，波斯尼亚和黑塞哥维那目前以1-0客场领先。尽管加拿大拥有主场（多伦多）优势且控球率占优（56%），并创造了2次射门和2次角球，但波斯尼亚的进攻更为高效，3次射门中1次射正即转化为进球。加拿大后卫Alistair Johnston在第11分钟领到黄牌，显示出主队防线在应对反击时面临一定压力。由于客队早早取得领先，波斯尼亚最终获胜的概率显著提升至45%。加拿大虽然在场面上施加了压力，但要完全逆转比赛难度较大，主胜概率调整为25%，平局概率为30%。综合考虑加拿大主场反扑的意愿和波斯尼亚稳守反击的策略，最可能的最终比分预测为1-2。预计加拿大的核心前锋Jonathan David有望在下半场（约第55分钟）扳回一城，而波斯尼亚的Ermedin Demirovic可能会在比赛后段（约第78分钟）利用反击再次破门锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.019409249999999996,
+      "tokens": {
+        "input": 1007,
+        "output": 2913
+      },
+      "tool_calls": 0,
+      "wall_seconds": 31.544
+    },
+    {
+      "submitted_at": "2026-06-12T19:29:30+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 29,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.33,
+        "away": 0.45
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 58,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Ermedin Demirovic",
+          "minute": 76,
+          "p": 0.22,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "当前比赛进行到第29分钟，波斯尼亚和黑塞哥维那凭借 Jovo Lukic 在第21分钟的进球（Sead Kolasinac 助攻）以1-0客场领先加拿大。从场面数据来看，作为东道主的加拿大虽然占据了57%的控球率，但进攻端显得办法不多，目前仅有1次射门（1次射正）；而波斯尼亚在防守反击中表现得极具威胁，仅43%的控球率就创造了4次射门（2次射正）并取得领先。此外，加拿大的 Alistair Johnston 早在第11分钟就领到黄牌，防守端存在隐患。考虑到加拿大在主场落后的情况下势必会在中场休息后大举压上，他们有较大机会在下半场通过 Jonathan David 等核心前锋扳回一球。然而，阵型前压会给波斯尼亚留下更多反击空间，客队有望利用 Ermedin Demirovic 等攻击手再次破门。综合当前比分、剩余时间及双方展现出的战术特点，客队保持领先并获胜的概率最高（45%），平局概率为33%，主队逆转的概率为22%。最可能的最终比分预测为1-2。"
+      },
+      "sources": [],
+      "cost_usd": 0.01721895,
+      "tokens": {
+        "input": 1081,
+        "output": 2553
+      },
+      "tool_calls": 0,
+      "wall_seconds": 28.285
+    },
+    {
+      "submitted_at": "2026-06-12T19:35:38+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 35,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.28,
+        "draw": 0.38,
+        "away": 0.34
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 65,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Cyle Larin",
+          "minute": 76,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Jovo Lukic",
+          "minute": 82,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第35分钟，波斯尼亚和黑塞哥维那凭借 Jovo Lukic 在第21分钟的进球，目前在客场0-1领先加拿大。从场面数据来看，主场作战的加拿大控球率高达64%，并获得了3个角球和4次射门，但仅有1次射正，进攻转化率有待提高。波斯尼亚虽然控球率仅为36%，但反击效率较高，4次射门2次射正并取得领先。考虑到加拿大拥有主场优势（多伦多）且场面占优，他们在下半场势必会大举压上寻求扳平比分。波斯尼亚则可能继续采取防守反击策略来维持领先优势。综合当前比分、剩余时间及双方表现，平局的概率逐渐上升，加拿大有较大机会在下半场扳平比分。因此，预测最可能的最终比分为1-1。后续进球方面，加拿大的核心攻击手（如 Jonathan David 或 Cyle Larin）有望在下半场为球队建功。"
+      },
+      "sources": [],
+      "cost_usd": 0.013312949999999999,
+      "tokens": {
+        "input": 1081,
+        "output": 1933
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.424
+    },
+    {
+      "submitted_at": "2026-06-12T19:41:39+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 41,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.23,
+        "draw": 0.42,
+        "away": 0.35
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 65,
+          "p": 0.28,
+          "team": "home"
+        },
+        {
+          "player": "Jovo Lukic",
+          "minute": 78,
+          "p": 0.12,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第41分钟，波斯尼亚和黑塞哥维那凭借 Jovo Lukic 在第21分钟的进球暂时以1-0客场领先。从场面数据来看，主队加拿大占据了绝对的控球优势（65%），并且在半场结束前就疯狂制造了7次角球和6次射门，施加了极大的进攻压力。然而加拿大的射门转化率不佳，目前仅有1次射正。波斯尼亚则采取了非常务实且高效的防守反击策略，35%的控球率下创造了2次射正并斩获1球。基于加拿大在场面上的持续压制力，他们在下半场通过边路传中或定位球扳平比分的可能性极高，波斯尼亚想要在如此被动的局面下全场保持零封难度很大。因此，本场比赛最终走向平局的概率最高（42%），最可能的最终比分预测为1-1。在后续进球逻辑上，加拿大的核心攻击手如 Jonathan David 极有可能在下半场的高压态势下（约第65分钟）寻觅到破门良机；而波斯尼亚若能再次打出反击，状态出色的 Jovo Lukic 依然是最大的威胁点。"
+      },
+      "sources": [],
+      "cost_usd": 0.014938349999999998,
+      "tokens": {
+        "input": 1081,
+        "output": 2191
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.903
+    },
+    {
+      "submitted_at": "2026-06-12T19:47:43+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 45,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.22,
+        "draw": 0.42,
+        "away": 0.36
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 65,
+          "p": 0.28,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到半场结束（45分钟），目前比分为加拿大 0-1 波斯尼亚和黑塞哥维那。波斯尼亚在第21分钟由 Jovo Lukic 接 Sead Kolasinac 助攻打入一球取得领先。尽管比分落后，加拿大在场面上占据了绝对优势，控球率高达68%，并获得了多达8次角球，总射门数也以7-5领先，显示出他们在主场（多伦多）施加了极大的进攻压力。波斯尼亚虽然控球率仅为32%，但防守反击效率较高，2次射正即取得进球。考虑到加拿大持续的施压和主场优势，下半场他们极有可能攻破对方球门扳平比分。因此，平局的概率被评估为最高（42%），波斯尼亚守住胜果的客胜概率为36%，而加拿大逆转取胜的概率为22%。最可能的最终比分预测为 1-1。预计加拿大的进攻核心（如 Jonathan David）将在下半场中段（约65分钟）利用球队持续的压迫和定位球机会取得进球。"
+      },
+      "sources": [],
+      "cost_usd": 0.011937449999999999,
+      "tokens": {
+        "input": 1151,
+        "output": 1703
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.45
+    },
+    {
+      "submitted_at": "2026-06-12T20:09:06+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 54,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.2,
+        "draw": 0.42,
+        "away": 0.38
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 72,
+          "p": 0.3,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第54分钟，波斯尼亚和黑塞哥维那凭借约沃·卢基奇（Jovo Lukic）在第21分钟的进球，目前以1-0客场领先加拿大。从场面数据来看，主场作战的加拿大队占据了绝对优势，控球率高达66%，并且已经获得了惊人的9个角球，总射门数7次。然而，他们仅有1次射正，进攻转化率有待提高。波斯尼亚则采取防守反击策略，虽然控球率仅有34%，但5次射门中有3次射正，进攻效率更高，且通过频繁犯规（9次）和战术黄牌来破坏加拿大的进攻节奏。考虑到加拿大在多伦多主场的巨大压力和持续的角球攻势，他们在接下来的比赛中扳平比分的可能性非常大。波斯尼亚虽然领先，但防守压力巨大。因此，平局（42%）是目前概率最高的结果，客胜（38%）次之。最可能的最终比分预测为1-1。预计加拿大将在下半场中后段通过阵地战或定位球破门，核心前锋乔纳森·戴维（Jonathan David）是极具威胁的得分点，有望在第72分钟左右为球队扳平比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.01631805,
+      "tokens": {
+        "input": 1219,
+        "output": 2387
+      },
+      "tool_calls": 0,
+      "wall_seconds": 24.044
+    },
+    {
+      "submitted_at": "2026-06-12T20:15:23+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 60,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.18,
+        "draw": 0.43,
+        "away": 0.39
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "minute": 78,
+          "p": 0.28,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第60分钟，波斯尼亚和黑塞哥维那凭借约沃·卢基奇（Jovo Lukic）在第21分钟的进球，暂时以0-1客场领先加拿大。从场面数据来看，主队加拿大占据了绝对的控球优势（66%），并且获得了惊人的9次角球机会，总射门数也以7对6领先。然而，加拿大的进攻转化率较低，目前仅有1次射正。波斯尼亚则采取了坚决的防守反击策略，虽然控球率仅有34%，但3次射正打入1球，反击效率极高。此外，波斯尼亚犯规多达11次，且两名前场球员（Demirovic和Lukic）均已染黄，显示出他们承受了巨大的防守压力。考虑到加拿大持续的高压进攻和海量的定位球机会，他们在剩余的30分钟内扳平比分的可能性极大。因此，平局的概率被评估为最高（43%），波斯尼亚守住胜果的概率为39%，而加拿大连入两球逆转取胜的难度较大，概率为18%。最可能的最终比分预测为1-1。预计加拿大将在比赛后半段通过阵地战或角球打破僵局，主力前锋乔纳森·戴维（Jonathan David）是极具威胁的得分点，预测在第78分钟左右主队能够扳平比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0172704,
+      "tokens": {
+        "input": 1220,
+        "output": 2538
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.85
+    },
+    {
+      "submitted_at": "2026-06-12T20:21:50+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 66,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.15,
+        "draw": 0.35,
+        "away": 0.5
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第66分钟，波斯尼亚和黑塞哥维那凭借约沃·卢基奇（Jovo Lukic）在第21分钟的进球以1-0客场领先加拿大。从场面数据来看，加拿大占据了64%的控球率，并获得了多达9次角球，表明他们正在全力压上寻求扳平比分。然而，波斯尼亚防守相对稳固，且通过战术犯规（11次）有效破坏了对手的进攻节奏。考虑到比赛所剩时间不多（约24分钟加补时），波斯尼亚保持领先并最终获胜的概率最高（50%）。不过，在加拿大的持续施压下，平局的可能性也不容忽视（35%）。最可能的最终比分维持在0-1。如果后续有进球，加拿大的核心前锋乔纳森·戴维（Jonathan David）极有可能在围攻中建功，而波斯尼亚的埃尔梅丁·德米罗维奇（Ermedin Demirovic）则可能利用加拿大防线身后的空当打入反击进球锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.011405099999999998,
+      "tokens": {
+        "input": 1286,
+        "output": 1596
+      },
+      "tool_calls": 0,
+      "wall_seconds": 19.235
+    },
+    {
+      "submitted_at": "2026-06-12T20:27:52+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 72,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.28,
+        "away": 0.6
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到第72分钟，加拿大 0-1 落后于波斯尼亚和黑塞哥维那。从场面数据来看，加拿大控球率高达65%，并获得了9次角球，显示出他们在落后局面下正对波斯尼亚球门施加巨大压力。波斯尼亚在第21分钟由 Jovo Lukic 取得进球后，主要采取防守反击策略。加拿大在第61和62分钟换上了 Jonathan David 和 Tajon Buchanan 等核心攻击手，意图在最后阶段全力反扑。尽管加拿大攻势猛烈，但随着比赛时间所剩无几，波斯尼亚守住胜果的概率（60%）依然最高，最可能最终比分为 0-1。不过，如果后续有进球产生，替补登场且体能充沛的 Jonathan David 是加拿大最危险的得分点；而波斯尼亚的 Ermedin Demirovic 则极有可能利用加拿大全线压上防线空虚的机会，在反击中锁定胜局。"
+      },
+      "sources": [],
+      "cost_usd": 0.0132762,
+      "tokens": {
+        "input": 1616,
+        "output": 1838
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.366
+    },
+    {
+      "submitted_at": "2026-06-12T20:33:49+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 78,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.21,
+        "away": 0.75
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛进行到第78分钟，波斯尼亚和黑塞哥维那以1-0客场领先加拿大。从场面数据来看，落后的加拿大占据了64%的控球率，并获得了多达9次角球和10次射门（3次射正），显示出他们正全力压上寻求扳平。然而，波斯尼亚的防守反击同样具有威胁，他们虽然控球率仅有36%，但也完成了7次射门（3次射正）。在常规时间仅剩12分钟加伤停补时的情况下，波斯尼亚守住胜果的概率（约75%）最高。加拿大在第61分钟换上了乔纳森·戴维（Jonathan David）等攻击手，有望在最后阶段制造威胁，因此平局概率约为21%。最可能的最终比分维持在0-1。如果后续有进球，加拿大的乔纳森·戴维是扳平比分的热门人选，而波斯尼亚的德米罗维奇（Ermedin Demirovic）则可能利用对手大举压上留下的后防空当，在反击中打入锁定胜局的一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.010871700000000002,
+      "tokens": {
+        "input": 1636,
+        "output": 1453
+      },
+      "tool_calls": 0,
+      "wall_seconds": 15.484
+    },
+    {
+      "submitted_at": "2026-06-12T20:39:45+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 84,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.18,
+        "away": 0.8
+      },
+      "most_likely_score": "0-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已进行至第84分钟，波斯尼亚和黑塞哥维那凭借 Jovo Lukic 在第21分钟的进球1-0领先。从场面数据来看，加拿大占据了61%的控球率，并获得了多达9次角球和10次射门，显示出他们在落后情况下的强烈反扑意图。然而，留给主队的时间已经所剩无几。波斯尼亚在防守端表现顽强，且通过换人调整保持了防守硬度。考虑到比赛临近尾声，客队全取三分的概率极高（约80%），最可能的最终比分大概率维持在0-1。不过，加拿大换上了 Jonathan David 等攻击手，在最后阶段的狂攻中仍有一定绝平的可能；同时波斯尼亚的 Ermedin Demirovic 也有利用对手全线压上打反击锁定胜局的机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.012761699999999999,
+      "tokens": {
+        "input": 1858,
+        "output": 1716
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.464
+    },
+    {
+      "submitted_at": "2026-06-12T20:45:39+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.9,
+        "away": 0.05
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已进行到第90分钟，比分为1-1平。从场面数据来看，主场作战的加拿大队占据了61%的控球率，并有多达12次射门和9次角球，他们在下半场持续施压，最终在第78分钟由拉林（Cyle Larin）扳平比分。波黑队虽然在第21分钟早早取得领先，但下半场主要处于守势。由于比赛已进入伤停补时阶段，留给双方改变战局的时间所剩无几，因此平局的概率极高（90%）。最可能的最终比分维持在1-1。如果出现绝杀进球，刚刚替补登场并打入扳平进球的加拿大前锋拉林是最具威胁的潜在得分点，但整体进球概率已非常低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0073521,
+      "tokens": {
+        "input": 1926,
+        "output": 846
+      },
+      "tool_calls": 0,
+      "wall_seconds": 11.319
+    },
+    {
+      "submitted_at": "2026-06-12T20:51:20+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.06,
+        "draw": 0.89,
+        "away": 0.05
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第90分钟，当前比分为1-1。波黑在上半场由卢基奇（Jovo Lukic）先拔头筹，而加拿大在下半场第78分钟由替补登场的拉林（Cyle Larin）扳平比分。从全场数据来看，加拿大在控球率（61%对39%）、射门数（12对8）和角球数（9对4）上均占据明显优势，展现出更强的进攻压迫力。然而，由于比赛已进入伤停补时阶段，留给双方改变战局的时间所剩无几。尽管加拿大拥有主场优势且势头较盛，存在微弱的绝杀可能，但平局（1-1）无疑是当前最可能出现的最终赛果。后续进球逻辑仅考虑伤停补时阶段的极低概率绝杀事件。"
+      },
+      "sources": [],
+      "cost_usd": 0.012937049999999999,
+      "tokens": {
+        "input": 2001,
+        "output": 1720
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.735
+    },
+    {
+      "submitted_at": "2026-06-12T20:57:10+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "competition": "World Cup",
+        "stage": "Group Stage",
+        "kickoff_utc": "2026-06-12T19:00:00+00:00",
+        "venue": "Toronto Stadium",
+        "venue_city": "Toronto"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.88,
+        "away": 0.04
+      },
+      "most_likely_score": "1-1",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已进入伤停补时阶段（常规时间90分钟已满），比分为1-1。波黑在第21分钟由Jovo Lukic先拔头筹，而加拿大在下半场大举反击，凭借60%的控球率和多达9次的角球机会，终于在第78分钟由替补登场的Cyle Larin扳平比分。从场面数据来看，加拿大在射门数（12对8）和进攻主导权上占据优势，而波黑则以较多的犯规（20次）来破坏对方节奏，且已有多名球员染黄。由于比赛所剩时间极少，维持1-1平局结束的概率极高（88%）。不过考虑到加拿大的主场气势与进攻压迫，他们绝杀取胜的可能性略高于波黑。预测最终比分最可能为1-1，若在最后几分钟的补时阶段出现进球，状态火热的Cyle Larin或波黑前锋Ermedin Demirovic是潜在的绝杀人选。"
+      },
+      "sources": [],
+      "cost_usd": 0.012304949999999999,
+      "tokens": {
+        "input": 2143,
+        "output": 1596
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.165
+    }
+  ]
+}
