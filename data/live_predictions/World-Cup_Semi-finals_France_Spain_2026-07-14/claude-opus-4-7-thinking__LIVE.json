@@ -1,0 +1,289 @@
+{
+  "fixture_id": "World-Cup_Semi-finals_France_Spain_2026-07-14",
+  "provider_fixture_id": "19606974",
+  "model_id": "claude-opus-4-7-thinking",
+  "display_name": "Claude Opus 4.7 (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-14T20:26:47+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 0,
+      "away": 2
+    },
+    "home": "France",
+    "away": "Spain",
+    "competition": "World Cup",
+    "stage": "Semi-finals",
+    "kickoff_utc": "2026-07-14T19:00:00+00:00",
+    "venue": "Dallas Stadium",
+    "venue_city": "Arlington"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.04,
+      "draw": 0.11,
+      "away": 0.85
+    },
+    "most_likely_score": "0-2",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛进行到第71分钟，法国主场0-2落后西班牙。西班牙上半场第22分钟由米克尔·奥亚萨瓦尔点球破门先拔头筹，下半场第58分钟佩德罗·波罗接达尼·奥尔莫助攻再入一城，两球领先局面已经确立。从场面数据看，西班牙全场8次射门、2次射正，控球率53%，进攻端明显更具威胁；法国仅有2次射门、0次射正，尽管获得3个角球，但由Deschamps在30、46、57分钟连续三次换人调整（Lacroix、Koné、Doué登场）后仍未能形成有效冲击，进攻端效率偏低。基于两球净胜、剩余时间不足20分钟以及法国射正挂零的表现，西班牙晋级概率明显占优，胜平负概率大致定为主胜0.04、平局0.11、客胜0.85。最可能的最终比分维持在0-2，考虑到法国必然全力压上寻求扳回一球，可能被西班牙抓住反击机会扩大比分，因此1-2和0-3也具备一定概率，但0-2仍是权重最高的收官结果。后续进球方面，法国若能追分，最具威胁的仍是攻击线上的Mbappé与替补登场后带来变化的Dembélé；西班牙方面则由持续掌握主动的Oyarzabal、达尼·奥尔莫以及可能替补登场的费兰·托雷斯最有希望在反击中再下一城。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 51284,
+    "output": 873
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.2059013,
+  "wall_seconds": 20.426,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\"home\": 0.04, \"draw\": 0.11, \"away\": 0.85},\n  \"most_likely_score\": \"0-2\",\n  \"scorers\": [\n    {\"player\": \"Kylian Mbappé\", \"team\": \"home\", \"minute\": 82, \"p\": 0.18},\n    {\"player\": \"Ferran Torres\", \"team\": \"away\", \"minute\": 85, \"p\": 0.12},\n    {\"player\": \"Mikel Oyarzabal\", \"team\": \"away\", \"minute\": 88, \"p\": 0.10},\n    {\"player\": \"Ousmane Dembélé\", \"team\": \"home\", \"minute\": 79, \"p\": 0.10},\n    {\"player\": \"Dani Olmo\", \"team\": \"away\", \"minute\": 83, \"p\": 0.09}\n  ],\n  \"reasoning\": {\"overall\": \"比赛进行到第71分钟，法国主场0-2落后西班牙。西班牙上半场第22分钟由Mikel Oyarzabal点球破门先拔头筹，下半场第58分钟Pedro Porro接Dani Olmo助攻再入一城，两球领先局面已经确立。从场面数据看，西班牙全场8次射门、2次射正，控球率53%，进攻端明显更具威胁；法国仅有2次射门、0次射正，尽管获得3个角球，但由Deschamps在30、46、57分钟连续三次换人调整（Lacroix、Koné、Doué登场）后仍未能形成有效冲击，进攻端效率偏低。基于两球净胜、剩余时间不足20分钟以及法国射正挂零的表现，西班牙晋级概率明显占优，胜平负概率大致定为主胜0.04、平局0.11、客胜0.85。最可能的最终比分维持在0-2，考虑到法国必然全力压上寻求扳回一球，可能被西班牙抓住反击机会扩大比分，因此1-2和0-3也具备一定概率，但0-2仍是权重最高的收官结果。后续进球方面，法国若能追分，最具威胁的仍是攻击线上的Mbappé与替补登场后带来变化的Dembélé；西班牙方面则由持续掌握主动的Oyarzabal、Dani Olmo以及可能替补登场的Ferran Torres最有希望在反击中再下一城。\"},\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-14T19:01:22+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 1,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "France",
+        "away": "Spain",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-14T19:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.36,
+        "draw": 0.28,
+        "away": 0.36
+      },
+      "most_likely_score": "2-1",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 63,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 71,
+          "p": 0.3,
+          "team": "away"
+        },
+        {
+          "player": "Antoine Griezmann",
+          "minute": 78,
+          "p": 0.18,
+          "team": "home"
+        },
+        {
+          "player": "Álvaro Morata",
+          "minute": 82,
+          "p": 0.17,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛刚刚在达拉斯球场开球，第1分钟法国0-0西班牙，双方控球率均为50%，尚无射门、角球或犯规等有效事件可供参考，场面完全处于试探阶段。作为世界杯半决赛，两队都会以稳健开局为主，前15分钟很难看到大规模压上，因此现阶段的胜平负判断更多依赖赛前实力评估而非临场表现。法国拥有姆巴佩领衔的高效反击体系和更强的锋线终结力，西班牙则凭借控球和年轻边路（亚马尔、尼科·威廉姆斯）在中前场的组织性形成对抗，两队整体实力接近，法国的个人爆点略占优势，但西班牙的控球压迫可以抵消这一差距，因此把胜平负设为法国0.36、平0.28、西班牙0.36，几乎五五开而略偏向双方获胜而非平局。半决赛级别的比赛往往节奏偏谨慎，进球通常出现在下半场体能下降或战术调整之后，综合两队近期锋线火力和防线稳定性，最可能的最终比分定为1-1，这也与双方胜率接近、平局概率不低的判断相吻合，同时保证不低于当前0-0的比分。未来进球方面，法国一侧姆巴佩作为反击核心在60分钟前后最具威胁，格列兹曼在定位球和二点球机会中具备补射能力；西班牙一侧亚马尔的边路突破在70分钟左右最容易撕开对方边卫，替补或首发的莫拉塔在下半场后段是抢点终结的重点人选，因此按上述节点和概率列出后续可能的破门球员。"
+      },
+      "sources": [],
+      "cost_usd": 0.2042215,
+      "tokens": {
+        "input": 50810,
+        "output": 877
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.686
+    },
+    {
+      "submitted_at": "2026-07-14T19:23:58+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 23,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "France",
+        "away": "Spain",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-14T19:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.3,
+        "draw": 0.28,
+        "away": 0.42
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 63,
+          "p": 0.34,
+          "team": "home"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 70,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Antoine Griezmann",
+          "minute": 78,
+          "p": 0.14,
+          "team": "home"
+        },
+        {
+          "player": "Álvaro Morata",
+          "minute": 82,
+          "p": 0.13,
+          "team": "away"
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "minute": 55,
+          "p": 0.12,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "第23分钟，法国0-1西班牙。西班牙由米克尔·奥亚萨瓦尔在第22分钟主罚点球命中，率先打破僵局，这一进球显著改变了半决赛的走势。从场面数据看，西班牙控球率56%略占优，射门2次并有1次射正，整体节奏更为稳健；法国控球44%，虽然拿到2个角球，但1次射门0射正，进攻效率偏低，且Rabiot早在第9分钟就已吃到黄牌，中场拦截将受到一定限制。综合以上局面，西班牙的胜率被上调至约0.42，法国仍有充足时间反扑，胜率约0.30，考虑到法国锋线的爆发力和大赛经验，平局概率约0.28。基于西班牙暂时领先且防守组织稳固、法国需压上带来的对攻空间，最可能的最终比分判断为1-2，即法国追回一球但西班牙再入一球锁定胜局。后续进球方面，法国最可能由Mbappé把握反击机会破门，Griezmann和Dembélé也具备通过定位球或个人突破得分的能力；西班牙则可能由拉明·亚马尔利用边路突破创造机会，Morata在禁区内的抢点同样值得警惕。所有预测进球时间均设置在当前23分钟之后。"
+      },
+      "sources": [],
+      "cost_usd": 0.2131163,
+      "tokens": {
+        "input": 50994,
+        "output": 1321
+      },
+      "tool_calls": 0,
+      "wall_seconds": 26.119
+    },
+    {
+      "submitted_at": "2026-07-14T20:08:28+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 53,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "France",
+        "away": "Spain",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-14T19:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "win_probs": {},
+      "most_likely_score": null,
+      "scorers": [],
+      "reasoning": {},
+      "sources": [],
+      "cost_usd": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "tool_calls": 0,
+      "wall_seconds": 32.774
+    },
+    {
+      "submitted_at": "2026-07-14T20:20:35+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 65,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "France",
+        "away": "Spain",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-14T19:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.12,
+        "away": 0.83
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到65分钟，法国0-2落后西班牙。西班牙凭借第22分钟Oyarzabal的点球领先，下半场又扩大了比分优势，目前控球率54%、射门6次(1次射正)全面压制场面。法国队进攻端表现低迷，全场2次射门0射正，仅3个角球，明显缺乏威胁。主教练已经用完三个换人名额（Lacroix、Koné、Doué相继登场），意图加强中前场攻击力，但仍未看到实质性起色。综合考虑2球落后、剩余时间不足30分钟、法国进攻效率极低的现状，西班牙获胜概率大幅提升至约83%，平局约12%，法国翻盘可能性仅5%左右。最可能的最终比分维持0-2，西班牙在领先后倾向于控制节奏消耗时间。后续进球方面，西班牙可能利用法国压上后的反击机会由Yamal或Morata再下一城；法国方面若要扳回颜面，Mbappé仍是最具威胁的破门点，替补登场的Kolo Muani在末段也具备把握机会的能力。"
+      },
+      "sources": [],
+      "cost_usd": 0.2023049,
+      "tokens": {
+        "input": 51222,
+        "output": 691
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.582
+    },
+    {
+      "submitted_at": "2026-07-14T20:26:47+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 71,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "France",
+        "away": "Spain",
+        "competition": "World Cup",
+        "stage": "Semi-finals",
+        "kickoff_utc": "2026-07-14T19:00:00+00:00",
+        "venue": "Dallas Stadium",
+        "venue_city": "Arlington"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.04,
+        "draw": 0.11,
+        "away": 0.85
+      },
+      "most_likely_score": "0-2",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第71分钟，法国主场0-2落后西班牙。西班牙上半场第22分钟由米克尔·奥亚萨瓦尔点球破门先拔头筹，下半场第58分钟佩德罗·波罗接达尼·奥尔莫助攻再入一城，两球领先局面已经确立。从场面数据看，西班牙全场8次射门、2次射正，控球率53%，进攻端明显更具威胁；法国仅有2次射门、0次射正，尽管获得3个角球，但由Deschamps在30、46、57分钟连续三次换人调整（Lacroix、Koné、Doué登场）后仍未能形成有效冲击，进攻端效率偏低。基于两球净胜、剩余时间不足20分钟以及法国射正挂零的表现，西班牙晋级概率明显占优，胜平负概率大致定为主胜0.04、平局0.11、客胜0.85。最可能的最终比分维持在0-2，考虑到法国必然全力压上寻求扳回一球，可能被西班牙抓住反击机会扩大比分，因此1-2和0-3也具备一定概率，但0-2仍是权重最高的收官结果。后续进球方面，法国若能追分，最具威胁的仍是攻击线上的Mbappé与替补登场后带来变化的Dembélé；西班牙方面则由持续掌握主动的Oyarzabal、达尼·奥尔莫以及可能替补登场的费兰·托雷斯最有希望在反击中再下一城。"
+      },
+      "sources": [],
+      "cost_usd": 0.2059013,
+      "tokens": {
+        "input": 51284,
+        "output": 873
+      },
+      "tool_calls": 0,
+      "wall_seconds": 20.426
+    }
+  ],
+  "live_refreshed_at": "2026-07-14T20:54:25+00:00"
+}

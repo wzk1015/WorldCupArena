@@ -1,0 +1,423 @@
+{
+  "fixture_id": "World-Cup_3rd-Place-Final_France_England_2026-07-18",
+  "provider_fixture_id": "19606976",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-18T22:59:21+00:00",
+  "live": {
+    "status": "2nd Half",
+    "elapsed": 90,
+    "score": {
+      "home": 4,
+      "away": 5
+    },
+    "home": "France",
+    "away": "England",
+    "competition": "World Cup",
+    "stage": "3rd Place Final",
+    "kickoff_utc": "2026-07-18T21:00:00+00:00",
+    "venue": "Miami Stadium",
+    "venue_city": "Miami Gardens"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.02,
+      "draw": 0.08,
+      "away": 0.9
+    },
+    "most_likely_score": "4-5",
+    "scorers": [],
+    "reasoning": {
+      "overall": "比赛已经进入常规时间的最后阶段（90分钟），当前比分为法国4-5英格兰。这是一场进球大战，英格兰在上半场建立巨大优势，而法国在下半场展开了疯狂的反扑，姆巴佩（基利安·姆巴佩）和登贝莱（奥斯曼·登贝莱）等人表现出色。尽管法国队攻势如潮，但英格兰凭借萨卡（布卡约·萨卡）的帽子戏法保持着一球的领先优势。考虑到比赛所剩时间极少，英格兰守住胜果的概率非常大。最可能的最终比分即为当前的4-5。由于比赛即将结束，预计不会再有新的进球产生。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1528,
+    "output": 599
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.0053781,
+  "wall_seconds": 8.314,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.02,\n    \"draw\": 0.08,\n    \"away\": 0.90\n  },\n  \"most_likely_score\": \"4-5\",\n  \"scorers\": [],\n  \"reasoning\": {\n    \"overall\": \"比赛已经进入常规时间的最后阶段（90分钟），当前比分为法国4-5英格兰。这是一场进球大战，英格兰在上半场建立巨大优势，而法国在下半场展开了疯狂的反扑，姆巴佩（Kylian Mbappé）和登贝莱（Ousmane Dembélé）等人表现出色。尽管法国队攻势如潮，但英格兰凭借萨卡（Bukayo Saka）的帽子戏法保持着一球的领先优势。考虑到比赛所剩时间极少，英格兰守住胜果的概率非常大。最可能的最终比分即为当前的4-5。由于比赛即将结束，预计不会再有新的进球产生。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "history": [
+    {
+      "submitted_at": "2026-07-18T21:05:11+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 5,
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "home": "France",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "3rd Place Final",
+        "kickoff_utc": "2026-07-18T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.3,
+        "away": 0.45
+      },
+      "most_likely_score": "1-2",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 35,
+          "p": 0.4,
+          "team": "home"
+        },
+        {
+          "player": "Harry Kane",
+          "minute": 68,
+          "p": 0.35,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第5分钟，英格兰凭借德克兰·赖斯（德克兰·赖斯）在第3分钟的闪击进球，暂时以1-0领先法国。从开场数据来看，法国队控球率略占优势（54%），但尚未形成射门；而英格兰队效率极高，唯一一次射正便转化为进球。作为世界杯三四名决赛，双方通常会踢得相对开放，防守压力较小。考虑到比赛才刚刚开始，法国队拥有强大的攻击线，有充足的时间进行反扑。然而，英格兰手握一球优势，胜率自然大幅上升。综合判断，英格兰保持领先并最终获胜的概率最高（45%），但法国队极有可能取得进球。最可能的最终比分预测为1-2。在后续进球者方面，法国队核心 基利安·姆巴佩 有望在上半场中段利用个人能力扳平比分，而英格兰的 哈里·凯恩 则可能在下半场利用反击或定位球机会再次超出比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0074508000000000005,
+      "tokens": {
+        "input": 850,
+        "output": 1041
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.578
+    },
+    {
+      "submitted_at": "2026-07-18T21:22:28+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 22,
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "home": "France",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "3rd Place Final",
+        "kickoff_utc": "2026-07-18T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.08,
+        "draw": 0.12,
+        "away": 0.8
+      },
+      "most_likely_score": "1-3",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 55,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Harry Kane",
+          "minute": 78,
+          "p": 0.28,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第22分钟，英格兰队取得了梦幻般的开局，目前以2-0领先法国队。德克兰·赖斯（德克兰·赖斯）在第3分钟闪击破门，随后在第18分钟又助攻埃兹里·孔萨（埃兹里·孔萨）扩大比分。从场面数据来看，法国队虽然控球率略占优势（51%），但英格兰队的反击和定位球效率极高，两次射正全部转化为进球。考虑到在世界杯三四名决赛中，落后一方通常会大举压上，法国队势必会在接下来的比赛中加强进攻，这会给英格兰队留下广阔的反击空间。基于目前的2球领先优势，英格兰队获胜的概率已经大幅提升至80%左右。预计法国队能在下半场扳回一城，但英格兰队有望通过反击锁定胜局，最可能的最终比分预测为1-3。后续进球者方面，法国队的锋线核心有望在下半场初段建功，而英格兰队的前锋则可能在比赛尾声阶段利用对手防线空当打入制胜球。"
+      },
+      "sources": [],
+      "cost_usd": 0.007326900000000001,
+      "tokens": {
+        "input": 912,
+        "output": 1011
+      },
+      "tool_calls": 0,
+      "wall_seconds": 12.44
+    },
+    {
+      "submitted_at": "2026-07-18T21:39:34+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 39,
+        "score": {
+          "home": 0,
+          "away": 3
+        },
+        "home": "France",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "3rd Place Final",
+        "kickoff_utc": "2026-07-18T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.03,
+        "away": 0.95
+      },
+      "most_likely_score": "1-3",
+      "scorers": [
+        {
+          "player": "Kylian Mbappe",
+          "minute": 65,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Marcus Rashford",
+          "minute": 78,
+          "p": 0.25,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第39分钟，英格兰已经以3-0遥遥领先法国。从场面数据来看，英格兰在进攻端表现出了极高的效率，9次射门6次射正便打入3球，而法国队虽然控球率相差不大（48%），但进攻威胁明显不足。考虑到目前巨大的比分差距和英格兰火热的状态，英格兰拿下本场季军战的概率已经极高。预计下半场法国队会大举压上试图挽回颜面，可能会由核心球员打入挽回面子的一球，但英格兰的反击同样极具威胁。综合来看，1-3是最可能的最终比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.0051943499999999995,
+      "tokens": {
+        "input": 945,
+        "output": 667
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.867
+    },
+    {
+      "submitted_at": "2026-07-18T22:12:59+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 57,
+        "score": {
+          "home": 1,
+          "away": 4
+        },
+        "home": "France",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "3rd Place Final",
+        "kickoff_utc": "2026-07-18T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.04,
+        "away": 0.95
+      },
+      "most_likely_score": "2-4",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 76,
+          "p": 0.25,
+          "team": "home"
+        },
+        {
+          "player": "Ollie Watkins",
+          "minute": 84,
+          "p": 0.22,
+          "team": "away"
+        },
+        {
+          "player": "Bukayo Saka",
+          "minute": 70,
+          "p": 0.15,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第57分钟，当前比分为法国 1-4 英格兰。英格兰在上半场及下半场初段展现了压倒性的进攻效率，凭借 德克兰·赖斯、埃兹里·孔萨 以及 布卡约·萨卡 的梅开二度取得了巨大的领先优势。法国队在半场进行了四次换人调整，并由 基利安·姆巴佩 在第48分钟迅速扳回一城，进攻端有所起色。从数据来看，英格兰控球率占优（56%）且射门数（11对6）和射正数（7对3）均大幅领先，整体掌控着比赛节奏。由于分差多达三球且比赛仅剩三十多分钟，英格兰获胜的概率极高，法国队逆转或扳平的希望十分渺茫。在接下来的比赛中，法国队势必大举压上试图进一步缩小分差，这会给英格兰留下充足的反击空间。综合判断，最终比分最可能定格在 2-4。后续进球方面，状态出色的 基利安·姆巴佩 有望再次为法国队建功，而替补登场体能充沛的 奥利·沃特金斯 以及正在寻求帽子戏法的 布卡约·萨卡 则是英格兰反击中的重要威胁点。"
+      },
+      "sources": [],
+      "cost_usd": 0.0120939,
+      "tokens": {
+        "input": 1198,
+        "output": 1720
+      },
+      "tool_calls": 0,
+      "wall_seconds": 16.432
+    },
+    {
+      "submitted_at": "2026-07-18T22:19:11+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 64,
+        "score": {
+          "home": 2,
+          "away": 4
+        },
+        "home": "France",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "3rd Place Final",
+        "kickoff_utc": "2026-07-18T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.05,
+        "draw": 0.1,
+        "away": 0.85
+      },
+      "most_likely_score": "3-4",
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "minute": 78,
+          "p": 0.35,
+          "team": "home"
+        },
+        {
+          "player": "Ollie Watkins",
+          "minute": 85,
+          "p": 0.2,
+          "team": "away"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第64分钟，当前比分为法国2-4英格兰。英格兰在上半场和下半场开局阶段表现极其出色，凭借赖斯、孔萨以及萨卡的梅开二度一度取得4-0的巨大领先。然而，法国队在半场进行了四次换人调整后，进攻端焕发活力，姆巴佩和替补登场的巴尔科拉在短时间内连扳两球，将比分追至2-4，展现出强烈的反扑势头。从数据上看，英格兰控球率占优（56%）且射门次数更多，但法国队目前的士气和进攻节奏不容小觑。考虑到英格兰手握两球优势且比赛所剩时间不足半小时，他们赢下比赛的概率依然高达85%。不过，法国队在姆巴佩的带领下极有可能再入一球，因此3-4是最可能的最终比分。在后续比赛中，姆巴佩作为法国队的核心，极具得分威胁；而英格兰替补登场的沃特金斯也有望在反击中觅得良机。"
+      },
+      "sources": [],
+      "cost_usd": 0.0054925500000000006,
+      "tokens": {
+        "input": 1235,
+        "output": 666
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.334
+    },
+    {
+      "submitted_at": "2026-07-18T22:30:46+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 75,
+        "score": {
+          "home": 3,
+          "away": 4
+        },
+        "home": "France",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "3rd Place Final",
+        "kickoff_utc": "2026-07-18T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.12,
+        "draw": 0.33,
+        "away": 0.55
+      },
+      "most_likely_score": "3-4",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第75分钟，当前比分为法国 3-4 英格兰。这是一场极其疯狂的世界杯季军战。英格兰在前半场及下半场开局阶段表现出色，凭借赖斯（德克兰·赖斯）、孔萨（埃兹里·孔萨）以及萨卡（布卡约·萨卡）的梅开二度，一度取得4-0的巨大领先。然而，法国队在半场进行大幅换人调整后发起绝地反击，姆巴佩（基利安·姆巴佩）完成双响，替补登场的巴尔科拉（布拉德利·巴尔科拉）也建功，在短短18分钟内连扳三球，将悬念完全打回来。尽管法国队势头正盛，但英格兰依然手握一球领先优势，且比赛仅剩15分钟左右。因此，英格兰在常规时间内获胜的概率（55%）依然最高，但平局的概率（33%）因法国队的猛烈攻势而大幅上升。法国队直接逆转取胜的难度较大（12%）。考虑到英格兰可能会在最后阶段收缩防线并利用控球（目前55%）消耗时间，最可能的最终比分是维持现状的 3-4，英格兰惊险获胜。如果比赛再有进球，极度渴望完成帽子戏法并扳平比分的姆巴佩是法国队最危险的武器；而英格兰方面，替补登场的沃特金斯（奥利·沃特金斯）或状态火热的萨卡可能会利用法国队大举压上留下的后防空当，在反击中制造致命一击。"
+      },
+      "sources": [],
+      "cost_usd": 0.01344525,
+      "tokens": {
+        "input": 1273,
+        "output": 1922
+      },
+      "tool_calls": 0,
+      "wall_seconds": 18.731
+    },
+    {
+      "submitted_at": "2026-07-18T22:53:14+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 3,
+          "away": 5
+        },
+        "home": "France",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "3rd Place Final",
+        "kickoff_utc": "2026-07-18T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.01,
+        "away": 0.98
+      },
+      "most_likely_score": "3-5",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入第90分钟，当前比分为法国3-5英格兰。这是一场进球大战，英格兰在上半场和下半场初段建立巨大优势，萨卡（布卡约·萨卡）更是完成了帽子戏法。尽管法国队在下半场由姆巴佩（基利安·姆巴佩）和巴尔科拉（布拉德利·巴尔科拉）连扳三球，但萨卡在第87分钟的点球彻底杀死了比赛悬念。考虑到比赛仅剩伤停补时阶段，两球的差距几乎无法抹平，英格兰拿下季军的概率极高。最可能的最终比分将维持在3-5。虽然补时阶段双方可能还有零星的反击机会，但再次改写比分的可能性已经很低。"
+      },
+      "sources": [],
+      "cost_usd": 0.0051534,
+      "tokens": {
+        "input": 1416,
+        "output": 582
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.152
+    },
+    {
+      "submitted_at": "2026-07-18T22:59:21+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 90,
+        "score": {
+          "home": 4,
+          "away": 5
+        },
+        "home": "France",
+        "away": "England",
+        "competition": "World Cup",
+        "stage": "3rd Place Final",
+        "kickoff_utc": "2026-07-18T21:00:00+00:00",
+        "venue": "Miami Stadium",
+        "venue_city": "Miami Gardens"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.02,
+        "draw": 0.08,
+        "away": 0.9
+      },
+      "most_likely_score": "4-5",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进入常规时间的最后阶段（90分钟），当前比分为法国4-5英格兰。这是一场进球大战，英格兰在上半场建立巨大优势，而法国在下半场展开了疯狂的反扑，姆巴佩（基利安·姆巴佩）和登贝莱（奥斯曼·登贝莱）等人表现出色。尽管法国队攻势如潮，但英格兰凭借萨卡（布卡约·萨卡）的帽子戏法保持着一球的领先优势。考虑到比赛所剩时间极少，英格兰守住胜果的概率非常大。最可能的最终比分即为当前的4-5。由于比赛即将结束，预计不会再有新的进球产生。"
+      },
+      "sources": [],
+      "cost_usd": 0.0053781,
+      "tokens": {
+        "input": 1528,
+        "output": 599
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.314
+    }
+  ]
+}

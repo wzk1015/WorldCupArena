@@ -1,0 +1,328 @@
+{
+  "fixture_id": "World-Cup_Final_Spain_Argentina_2026-07-19",
+  "provider_fixture_id": "19606975",
+  "model_id": "gemini-3.1-pro-preview-thinking",
+  "display_name": "Gemini 3.1 Pro Preview (Thinking)",
+  "setting": "LIVE",
+  "submitted_at": "2026-07-19T21:48:33+00:00",
+  "live": {
+    "status": "Extra Time",
+    "elapsed": 130,
+    "score": {
+      "home": 1,
+      "away": 0
+    },
+    "home": "Spain",
+    "away": "Argentina",
+    "competition": "World Cup",
+    "stage": "Final",
+    "kickoff_utc": "2026-07-19T19:00:00+00:00",
+    "venue": "New York New Jersey Stadium",
+    "venue_city": "East Rutherford"
+  },
+  "prediction": {
+    "win_probs": {
+      "home": 0.99,
+      "draw": 0.01,
+      "away": 0.0
+    },
+    "most_likely_score": "1-0",
+    "scorers": [],
+    "reasoning": {
+      "overall": "当前比赛已经进行到加时赛第130分钟，西班牙以1-0领先阿根廷。从场面数据来看，西班牙占据了绝对优势，控球率高达67%，全场狂轰20脚射门且有12次射正，而阿根廷至今0射门，完全处于被动防守状态。阿根廷门将做出了11次扑救，但防线最终在第106分钟被费兰·托雷斯（费兰·托雷斯）攻破。此外，阿根廷全场犯规多达23次并领到多张黄牌，体能和防守压力均已到达极限。由于比赛已经进入加时赛超长的伤停补时阶段，留给阿根廷扳平比分的时间所剩无几，且他们整场比赛都缺乏进攻端的实质威胁。因此，西班牙拿下本场比赛的概率极高。预测最终比分最可能维持在1-0，后续出现进球的概率微乎其微，但如果阿根廷孤注一掷全线压上，西班牙仍有极小概率在最后时刻通过反击再入一球。"
+    }
+  },
+  "sources": [],
+  "tokens": {
+    "input": 1539,
+    "output": 2081
+  },
+  "tool_calls": 0,
+  "cost_usd": 0.01472625,
+  "wall_seconds": 17.709,
+  "error": null,
+  "raw_text": "{\n  \"win_probs\": {\n    \"home\": 0.99,\n    \"draw\": 0.01,\n    \"away\": 0.00\n  },\n  \"most_likely_score\": \"1-0\",\n  \"scorers\": [\n    {\n      \"player\": \"Ferran Torres\",\n      \"team\": \"home\",\n      \"minute\": 132,\n      \"p\": 0.02\n    }\n  ],\n  \"reasoning\": {\n    \"overall\": \"当前比赛已经进行到加时赛第130分钟，西班牙以1-0领先阿根廷。从场面数据来看，西班牙占据了绝对优势，控球率高达67%，全场狂轰20脚射门且有12次射正，而阿根廷至今0射门，完全处于被动防守状态。阿根廷门将做出了11次扑救，但防线最终在第106分钟被费兰·托雷斯（Ferran Torres）攻破。此外，阿根廷全场犯规多达23次并领到多张黄牌，体能和防守压力均已到达极限。由于比赛已经进入加时赛超长的伤停补时阶段，留给阿根廷扳平比分的时间所剩无几，且他们整场比赛都缺乏进攻端的实质威胁。因此，西班牙拿下本场比赛的概率极高。预测最终比分最可能维持在1-0，后续出现进球的概率微乎其微，但如果阿根廷孤注一掷全线压上，西班牙仍有极小概率在最后时刻通过反击再入一球。\"\n  },\n  \"sources\": []\n}",
+  "thinking_text": "```json\n{\n  \"win_probs\": {\"home\": 0.99, \"draw\": 0.01, \"away\": 0.0},\n  \"most_likely_score\": \"1-0\",\n  \"scorers\": [\n    {\"player\": \"Ferran Torres\", \"team\": \"home\", \"minute\": 132, \"p\": 0.02}\n  ],\n  \"reasoning\": {\n    \"overall\": \"当前比赛已经进行到加时赛第130分钟，西班牙以1-0领先阿根廷。从场面数据来看，西班牙占据了绝对优势，控球率高达67%，全场狂轰20脚射门且有12次射正，而阿根廷至今0射门，完全处于被动防守状态。阿根廷门将做出了11次扑救，但防线最终在第106分钟被费兰·托雷斯（Ferran Torres）攻破。此外，阿根廷全场犯规多达23次并领到多张黄牌，体能和情绪均已到达极限。由于比赛已经进入加时赛最后的伤停补时阶段，留给阿根廷扳平比分的时间所剩无几，且他们缺乏进攻端的威胁。因此，西班牙拿下本场比赛的概率极高。预测最终比分最可能维持在1-0，后续出现进球的概率微乎其微，但如果阿根廷孤注一掷全线压上，西班牙仍有极小概率在最后时刻通过反击再入一球。\"\n  },\n  \"sources\": []\n}\n```\n\n\n",
+  "history": [
+    {
+      "submitted_at": "2026-07-19T19:10:25+00:00",
+      "live": {
+        "status": "1st Half",
+        "elapsed": 10,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Final",
+        "kickoff_utc": "2026-07-19T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.31,
+        "draw": 0.36,
+        "away": 0.33
+      },
+      "most_likely_score": "1-1",
+      "scorers": [
+        {
+          "player": "Julian Alvarez",
+          "minute": 42,
+          "p": 0.25,
+          "team": "away"
+        },
+        {
+          "player": "Lamine Yamal",
+          "minute": 68,
+          "p": 0.22,
+          "team": "home"
+        }
+      ],
+      "reasoning": {
+        "overall": "比赛进行到第10分钟，目前比分维持在0-0。作为万众瞩目的世界杯决赛，开场阶段双方都踢得相对谨慎，处于互相试探的阶段。从目前的场面数据来看，阿根廷队以52%的控球率略微占据主动，而西班牙队则保持着紧凑的防守阵型，目前仅有1次犯规，比赛节奏尚未完全拉开。考虑到决赛极高的容错成本以及双方势均力敌的整体实力，随着时间的推移，常规时间内战平的概率正在逐渐上升。综合双方的防守韧性与前场创造力，最可能的最终比分是1-1，双方极有可能将悬念保留到加时赛。在后续的进球逻辑上，预计比赛在半场结束前会迎来第一波高潮，阿根廷的 胡利安·阿尔瓦雷斯 跑动积极，有望在第42分钟左右利用前场压迫或快速反击率先破门；而落后的西班牙队会在下半场加强攻势，边路核心 拉明·亚马尔 极有可能在第68分钟左右通过个人能力或精妙配合扳平比分。"
+      },
+      "sources": [],
+      "cost_usd": 0.01124655,
+      "tokens": {
+        "input": 793,
+        "output": 1653
+      },
+      "tool_calls": 0,
+      "wall_seconds": 25.824
+    },
+    {
+      "submitted_at": "2026-07-19T20:27:57+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 72,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Final",
+        "kickoff_utc": "2026-07-19T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.32,
+        "draw": 0.56,
+        "away": 0.12
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛进行到第72分钟，目前比分依然是0-0。从场面数据来看，西班牙队占据了绝对的主动权，控球率高达62%，并且完成了4次射门（其中3次射正），迫使阿根廷门将做出了3次关键扑救。反观阿根廷队，至今未能完成任何一脚射门，进攻端完全处于被动状态。阿根廷在半场结束前后接连换上 尼古拉斯·奥塔门迪 和 莱昂德罗·帕雷德斯，意在稳固防守并试图改善中场硬度，但目前他们仍以收缩防守为主。考虑到这是世界杯决赛，且常规时间仅剩不到20分钟，双方在最后阶段的战术安排会更加谨慎以避免致命失误。因此，常规时间内互交白卷进入加时赛的概率最大，平局概率显著上升，最可能的最终比分预测为0-0。如果常规时间内有绝杀进球出现，持续施压的西班牙队更有可能把握住机会，锋线球员在禁区内的威胁不容忽视；而阿根廷队若想破局，则高度依赖核心球员在零星反击或定位球中的个人闪光。"
+      },
+      "sources": [],
+      "cost_usd": 0.0162372,
+      "tokens": {
+        "input": 944,
+        "output": 2420
+      },
+      "tool_calls": 0,
+      "wall_seconds": 23.909
+    },
+    {
+      "submitted_at": "2026-07-19T20:34:18+00:00",
+      "live": {
+        "status": "2nd Half",
+        "elapsed": 79,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Final",
+        "kickoff_utc": "2026-07-19T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.25,
+        "draw": 0.65,
+        "away": 0.1
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第79分钟，当前比分依然是0-0。从场面数据来看，西班牙（西班牙）占据了61%的控球率，并且有4次射门（其中3次射正），而阿根廷（阿根廷）至今0射门，且已经吃到了两张黄牌并进行了两次换人调整。尽管西班牙在场面上占据主动，但面对阿根廷严密的防守，始终未能转化为进球。考虑到常规时间仅剩10分钟左右，双方在世界杯决赛的巨大压力下大概率会踢得更加保守，以避免致命失误。因此，常规时间以0-0平局收场的概率最高。如果比赛在最后阶段出现绝杀，西班牙凭借持续的压迫更有可能由前锋（如Alvaro Morata）完成致命一击，而阿根廷则只能寄希望于里奥·梅西等核心球员的个人闪光或反击机会。"
+      },
+      "sources": [],
+      "cost_usd": 0.00509145,
+      "tokens": {
+        "input": 979,
+        "output": 645
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.148
+    },
+    {
+      "submitted_at": "2026-07-19T21:18:50+00:00",
+      "live": {
+        "status": "Break Time",
+        "elapsed": 130,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Final",
+        "kickoff_utc": "2026-07-19T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.0,
+        "draw": 1.0,
+        "away": 0.0
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到130分钟，这意味着加时赛已经结束，双方在常规时间和加时赛内均未取得进球，当前比分依然是0-0。从全场数据来看，西班牙（西班牙）占据了绝对优势，控球率高达66%，并有多达15次射门和10次射正，但阿根廷（阿根廷）的门将发挥神勇，贡献了10次扑救，力保城门不失。阿根廷方面则全场零射门，且吃到了多张黄牌，防守压力巨大。由于比赛时间已经耗尽，双方将进入点球大战来决出世界杯冠军。因此，本场比赛的最终官方比分（不含点球大战）已经确定为0-0，平局概率为100%，后续也不会再有常规时间或加时赛的进球者。"
+      },
+      "sources": [],
+      "cost_usd": 0.0054684,
+      "tokens": {
+        "input": 1332,
+        "output": 646
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.043
+    },
+    {
+      "submitted_at": "2026-07-19T21:24:55+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 129,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Final",
+        "kickoff_utc": "2026-07-19T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.99,
+        "away": 0.0
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第129分钟，加时赛即将结束，当前比分依然是0-0。从全场数据来看，西班牙队占据了绝对优势，控球率高达67%，并有多达15次射门和10次射正，但阿根廷门将发挥神勇，完成了10次扑救。阿根廷队全场0射门，且在防守端付出了巨大代价，恩佐·费尔南德斯在第93分钟吃到第二张黄牌。由于比赛所剩时间极少，双方在常规运动战中破门的几率微乎其微，比赛大概率将以0-0结束并进入点球大战。因此，平局的概率极高，最可能的最终比分锁定为0-0。"
+      },
+      "sources": [],
+      "cost_usd": 0.00504,
+      "tokens": {
+        "input": 1332,
+        "output": 578
+      },
+      "tool_calls": 0,
+      "wall_seconds": 8.32
+    },
+    {
+      "submitted_at": "2026-07-19T21:42:10+00:00",
+      "live": {
+        "status": "Extra Time - Break",
+        "elapsed": 130,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Final",
+        "kickoff_utc": "2026-07-19T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.01,
+        "draw": 0.98,
+        "away": 0.01
+      },
+      "most_likely_score": "0-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "比赛已经进行到第130分钟，比分依然是0-0。从场面数据来看，西班牙占据了绝对的优势，控球率高达67%，并且有多达19次射门和11次射正。然而，阿根廷门将表现神勇，贡献了11次扑救，力保城门不失。阿根廷方面不仅零射门，还付出了惨重的犯规代价，恩佐·费尔南德斯甚至在加时赛中两黄变一红被罚下。尽管西班牙在人数和场面上占据绝对主动，但考虑到比赛时间已经远远超过常规的120分钟加时赛限度，比赛极大概率将以0-0的平局结束，并进入残酷的点球大战。因此，平局的概率接近100%，最可能的最终比分为0-0，在剩余极短的时间内出现进球的可能性微乎其微。"
+      },
+      "sources": [],
+      "cost_usd": 0.0058988999999999995,
+      "tokens": {
+        "input": 1508,
+        "output": 685
+      },
+      "tool_calls": 0,
+      "wall_seconds": 9.599
+    },
+    {
+      "submitted_at": "2026-07-19T21:48:33+00:00",
+      "live": {
+        "status": "Extra Time",
+        "elapsed": 130,
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "home": "Spain",
+        "away": "Argentina",
+        "competition": "World Cup",
+        "stage": "Final",
+        "kickoff_utc": "2026-07-19T19:00:00+00:00",
+        "venue": "New York New Jersey Stadium",
+        "venue_city": "East Rutherford"
+      },
+      "status": "ok",
+      "error": null,
+      "win_probs": {
+        "home": 0.99,
+        "draw": 0.01,
+        "away": 0.0
+      },
+      "most_likely_score": "1-0",
+      "scorers": [],
+      "reasoning": {
+        "overall": "当前比赛已经进行到加时赛第130分钟，西班牙以1-0领先阿根廷。从场面数据来看，西班牙占据了绝对优势，控球率高达67%，全场狂轰20脚射门且有12次射正，而阿根廷至今0射门，完全处于被动防守状态。阿根廷门将做出了11次扑救，但防线最终在第106分钟被费兰·托雷斯（费兰·托雷斯）攻破。此外，阿根廷全场犯规多达23次并领到多张黄牌，体能和防守压力均已到达极限。由于比赛已经进入加时赛超长的伤停补时阶段，留给阿根廷扳平比分的时间所剩无几，且他们整场比赛都缺乏进攻端的实质威胁。因此，西班牙拿下本场比赛的概率极高。预测最终比分最可能维持在1-0，后续出现进球的概率微乎其微，但如果阿根廷孤注一掷全线压上，西班牙仍有极小概率在最后时刻通过反击再入一球。"
+      },
+      "sources": [],
+      "cost_usd": 0.01472625,
+      "tokens": {
+        "input": 1539,
+        "output": 2081
+      },
+      "tool_calls": 0,
+      "wall_seconds": 17.709
+    }
+  ],
+  "live_refreshed_at": "2026-07-19T21:54:40+00:00"
+}
