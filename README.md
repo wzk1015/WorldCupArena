@@ -2,9 +2,9 @@
 
 Benchmarking LLMs and deep-research agents on real-world football prediction — from the tactical "who scores in minute 67" to the strategic "who wins the World Cup."
 
-**Check the [website](https://www.matchmate.chat/predict/) for leaderboard and predictions!**
 
-**Docs**: [Usage](docs/usage.md) · [Automation](docs/automation.md) · [Integration](docs/integration.md) · [MatchMate `/predict/`](docs/matchmate_predict.md) · [Tech Report](docs/tech_report.md) · [中文技术报告](docs/tech_report_zh.md) · [Announcement](docs/announcement.md) · [中文宣传](docs/promo_zh.md)
+
+[Leaderboard](docs/matchmate_predict.md) | [Tech Report](https://arxiv.org/pdf/2607.18084) | [Usage](docs/usage.md)
 
 ---
 
@@ -36,9 +36,6 @@ Currently we support the following models (defined in [configs/models.yaml](conf
 
 - **Closed LLMs**: GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro.
 - **Search-enabled LLMs**: GPT-5.4 + web_search, Claude Opus 4.7 + web_search, Gemini 3.1 Pro + google_search.
-
-TODO:
-
 - **Open LLMs**: DeepSeek R1, Qwen3-Max, Llama-4 Maverick. *(Currently via hosted endpoints; swap to self-hosted vLLM by setting `base_url`.)*
 - **Deep Research Agents**: OpenAI Deep Research, Gemini Deep Research, Perplexity Deep Research, Claude Research, MiroMind MiroThinker H1.
 - **Baselines**: Pinnacle closing odds, FiveThirtyEight SPI/Elo, "chalk pick."
@@ -113,9 +110,6 @@ Full step-by-step usage (ingest → lock → predict → grade → leaderboard) 
 
 Want your model on the leaderboard? See [docs/integration.md](docs/integration.md) — most integrations take less than 10 minutes.
 
-## Cost
-
-With the flagship-only roster: **~$10 per fixture** with format-retry buffer. Phase 1 (UCL semis + final) ≈ $60; Phase 2 (World Cup 2026) ≈ $701; full project through July 2026 ≈ **$1,109** at full roster, or **~$450 at recommended Tier C** (economy levers + caching + tiered T5). Full breakdown — including per-layer T1–T5 costs and T5 frequency options — in [docs/cost_estimate.md](docs/cost_estimate.md).
 
 ## Leakage policy
 
@@ -143,8 +137,8 @@ If validation fails, the orchestrator sends a targeted repair prompt to the same
 - [x] Automated cron pipeline (GitHub Actions, every 10 min)
 - [x] Live score display during matches
 - [x] S2 search log archival
-- [ ] Phase 1: UCL SF1 (Bayern vs PSG, 2026-04-29 / 2026-05-06)
-- [ ] Phase 2: Pre-tournament WC prediction (by 2026-06-10)
+- [x] Phase 1: UCL SF1 (Bayern vs PSG, 2026-04-29 / 2026-05-06)
+- [x] Phase 2: Pre-tournament WC prediction (by 2026-06-10)
 
 Contributions welcome — especially new model runners and ingest adapters. See [docs/integration.md](docs/integration.md) for model-maintainer onboarding.
 
@@ -157,12 +151,10 @@ MIT. Predictions, prompts, and grading code are all open; model outputs are attr
 ## Citation
 
 ```
-@misc{worldcuparena,
-  author = {Zhaokai Wang},
-  title = {WorldCupArena},
-  year = {2026},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/wzk1015/WorldCupArena}}
+@article{WorldCupArena,
+  title={WorldCupArena: Fine-Grained Evaluation of Language Models and Deep-Research Agents on Football Forecasting},
+  author = {Wang, Zhaokai and Gui, Tianlin and Rao, Jiayuan and Di, Shangzhe and Tang, Yihong and Liang, Dingli},
+  journal={arXiv preprint arXiv:2607.18084},
+  year={2026 }
 }
 ```
