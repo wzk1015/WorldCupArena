@@ -142,6 +142,23 @@ class TournamentMetricTests(unittest.TestCase):
         self.assertEqual(result["available_weight"], 0.25)
         self.assertNotIn("champion", result["available_components"])
 
+    def test_observed_champion_uses_reserved_t5_weight(self) -> None:
+        prediction = {
+            "champion": {"id": "spain"},
+        }
+        truth = {
+            "champion": "spain",
+        }
+
+        result = grade_tournament_prediction(prediction, truth)
+
+        self.assertEqual(result["champion_score"], 100.0)
+        self.assertEqual(result["predicted_champion"], "spain")
+        self.assertEqual(result["actual_champion"], "spain")
+        self.assertEqual(result["available_components"]["champion"]["configured_weight"], 0.20)
+        self.assertEqual(result["available_weight"], 0.20)
+        self.assertEqual(result["t5_score"], 100.0)
+
 
 if __name__ == "__main__":
     unittest.main()

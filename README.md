@@ -1,148 +1,224 @@
 # ⚽️🤖 WorldCupArena
 
-Benchmarking LLMs and deep-research agents on real-world football prediction — from the tactical "who scores in minute 67" to the strategic "who wins the World Cup."
+WorldCupArena is a dynamic benchmark for evaluating language models and deep-research agents on football forecasting, from match results and scorelines to players, events, statistics, and full-competition outcomes.
 
 
 
-[Leaderboard](docs/matchmate_predict.md) | [Tech Report](https://arxiv.org/pdf/2607.18084) | [Usage](docs/usage.md)
+[[Leaderboard]](docs/matchmate_predict.md) | [[Tech Report]](https://arxiv.org/pdf/2607.18084) | [[Usage]](docs/usage.md)
+
+
+---
+
+<div align="center">
+  <img src="assets/overview.png" alt="teaser" width="100%">
+</div>
+
+---
+
+<div align="center">
+  <img src="assets/exp_summary.png" alt="teaser" width="100%">
+</div>
 
 ---
 
 ## Why
 
-Existing LLM benchmarks test static knowledge or isolated reasoning. **Football prediction** requires multi-source real-time retrieval (injury news, tactical reports, odds), integrated reasoning over heterogeneous signals, and produces ground truth on a fixed schedule. It is therefore an ideal testbed for deep-research agents vs. plain LLMs.
+Most language-model benchmarks are built from questions whose answers already exist. Football offers a different test: a system must collect changing pre-match evidence, commit to a forecast before kickoff, and wait for objective ground truth. A single fixture also produces much richer evidence than a winner alone, including lineups, scorers, cards, substitutions, and match statistics.
 
-Unlike weather or stock prediction, football also has rich sub-structure (lineups, in-match events, season-long standings) so a single match yields many evaluation signals.
+The 2026 FIFA World Cup is our first complete evaluation. The benchmark is not tied to this tournament: the same snapshot, prediction, and post-match grading pipeline can be applied to future leagues and cups by supplying their fixtures, competition rules, and truth adapters.
+
+## Current release
+
+
+
+
+| Item | Coverage |
+|---|---|
+| Competition | All **104 matches** of the 2026 FIFA World Cup |
+| Systems | **13** model and agent variants across two evidence settings |
+| Pre-match track | Result, scoreline, players, events, and statistics for every fixture |
+| Competition track | Group order, knockout progression and pairings, finalists, and champion |
+| In-play track | **2,957** valid checkpoints from **100** matches and three models |
+| Ground truth | Structured post-match records plus the completed tournament outcome |
+
+Valid prediction coverage can differ by system when a provider call fails or a response does not pass validation.
+
+<div align="center">
+  <img src="assets/example.png" alt="teaser" width="100%">
+</div>
+
 
 ## What we measure
 
+<div align="center">
+  <img src="assets/layers.png" alt="teaser" width="100%">
+</div>
+
+
 | Layer | Task examples | Primary metric |
 |---|---|---|
-| **T1 Core result** (35%) | 1X2 probabilities, score distribution, advancement | Brier, RPS |
-| **T2 Player level** (25%) | starting XI, goalscorers, formations, MOTM | Jaccard, F1+nDCG |
+| **T1 Core result** (40%) | 1X2 probabilities, exact score, scoreline closeness, goal difference | Brier, exact accuracy, scoreline score, MAE |
+| **T2 Player level** (20%) | starting XI, formation, goalscorers, assisters, player of the match | Jaccard, F1, nDCG, top-1 accuracy |
 | **T3 Event level** (15%) | goal minute, subs, cards, penalties | Hungarian-matched MAE, event-F1 |
-| **T4 Tactics & stats** (15%) | possession, xG, shots, passes, defensive actions | sMAPE |
-| **T5 Tournament macro** (10%) | group standings, bracket, champion, top scorer | Kendall τ, bracket score |
+| **T4 Tactics & stats** (15%) | formation, possession, shots, corners, passing, fouls, saves | exact match, sMAPE |
+| **T5 Competition level** (10%) | group standings, round-by-round advancement and pairings, champion | Kendall tau, bracket score, top-1 accuracy |
 
-Composite score ∈ [0, 100]. Three leaderboards:
+The public leaderboard reports several views rather than reducing every forecast to one number:
 
-1. **Main** — overall composite.
-2. **Above-Market** — composite gain vs. Pinnacle closing odds.
-3. **Research Uplift** — score increase from S2 (tool-using agent, self-search) over S1 (LLM with the full injected context pack).
+- **Composite** combines T1-T5 using the weights above. A fixed monotonic transform is applied after averaging so that small raw differences remain visible without changing system order.
+- **Result accuracy** checks whether the predicted home win, draw, or away win is correct.
+- **Exact-score accuracy** requires both teams' predicted goal counts to match the final score exactly.
+- **Scoreline score** rewards exact predictions and gives decreasing credit for near misses based on the result, goal difference, total goals, and each team's goals.
+- **Layer profile** shows T1-T5 separately, including the completed competition-level evaluation.
+
+Tasks are scored only when the required prediction and ground truth are available. See [configs/tasks.yaml](configs/tasks.yaml) for the current weights and metric mapping.
+
+<div align="center">
+  <img src="assets/radar.png" alt="teaser" width="100%">
+</div>
 
 ## Who we test
 
-Currently we support the following models (defined in [configs/models.yaml](configs/models.yaml)):
+The released leaderboard currently contains 13 systems (defined in [configs/models.yaml](configs/models.yaml)):
 
-- **Closed LLMs**: GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro.
-- **Search-enabled LLMs**: GPT-5.4 + web_search, Claude Opus 4.7 + web_search, Gemini 3.1 Pro + google_search.
-- **Open LLMs**: DeepSeek R1, Qwen3-Max, Llama-4 Maverick. *(Currently via hosted endpoints; swap to self-hosted vLLM by setting `base_url`.)*
-- **Deep Research Agents**: OpenAI Deep Research, Gemini Deep Research, Perplexity Deep Research, Claude Research, MiroMind MiroThinker H1.
-- **Baselines**: Pinnacle closing odds, FiveThirtyEight SPI/Elo, "chalk pick."
+- **Context-fed models (S1):** Claude Opus 4.7 (Thinking), GPT-5.4, Gemini 3.1 Pro Preview (Thinking), DeepSeek V4 Pro, GLM-5.1, Kimi K2.6, MiniMax M2.7, Doubao Seed 2.0 Lite, and Qwen3.7 Max.
+- **Search-enabled models (S2):** search variants of Claude Opus 4.7, GPT-5.4, and Gemini 3.1 Pro Preview.
+- **Deep-research agent (S2):** Gemini Deep Research.
 
+The technical report additionally compares applicable match-level metrics with Polymarket, BetVictor, and a 152-person football-fan baseline. These baselines do not produce the full set of player-, event-, or competition-level predictions.
 
-Every model entry in [configs/models.yaml](configs/models.yaml) supports a `base_url` field for routing through proxy / 中转 endpoints.
+Model entries support provider-specific endpoints and environment-variable overrides, so hosted or proxy-compatible deployments can be selected without changing benchmark outputs.
 
 ## Setting matrix
 
-Two settings — one for non-tool LLMs, one for tool-using models / agents:
+Two settings separate forecasting with common evidence from self-directed retrieval:
 
 | Setting | Injected context | Tools | Run by |
 |---|---|---|---|
-| **S1** | full context pack (squads + recent form + ~20 news headlines + recent stats) | off | closed / open LLMs |
-| **S2** | fixture header + self-search guidance block (with worked examples of each evidence type) | **on** | search-LLMs + deep-research agents |
+| **S1** | frozen context pack with squads, recent form, news, statistics, and odds when available | off | context-fed models |
+| **S2** | fixture header plus guidance on evidence to gather | on | search-enabled models and research agents |
 
-See [configs/settings.yaml](configs/settings.yaml). S1 measures "best case with injected evidence"; S2 measures "best case with self-directed retrieval". Research uplift = S2 − S1.
+S1 gives systems the same prepared evidence package. S2 gives no context pack and asks each system to find its own evidence before the prediction cutoff. See [configs/settings.yaml](configs/settings.yaml) for the exact injection and tool policy.
+
+## Prediction tracks
+
+### Pre-match forecasting
+
+For each fixture, a model predicts the 1X2 result and probabilities, an exact headline score, likely lineups and players, match events, and team statistics. Predictions are locked before kickoff and graded after structured truth is available.
+
+<div align="center">
+  <img src="assets/results_match.png" alt="teaser" width="100%">
+</div>
+
+### Full-competition forecasting
+
+Before the tournament, systems predict all group tables and a complete knockout path. T5 combines group-order agreement, round-weighted advancement and exact-pairing credit, and champion accuracy. The completed 2026 World Cup truth is stored in [configs/world_cup_2026_truth.json](configs/world_cup_2026_truth.json).
+
+<div align="center">
+  <img src="assets/results_competition.png" alt="teaser" width="100%">
+</div>
+
+### In-play forecasting
+
+The optional live runner repeatedly records the current match state and asks selected models for updated result probabilities and scorelines. The current analysis uses the checkpoints that were actually captured, not an assumed fixed interval: the median wall-clock gap is 6.8 minutes, with an interquartile range of 6.2-12.4 minutes. Records are stored under `data/live_predictions/` with their full history.
+
+<div align="center">
+  <img src="assets/results_inplay.png" alt="teaser" width="100%">
+</div>
 
 ## Repo layout
 
 ```
-configs/       models, settings, tasks + weights
-schemas/       prediction + fixture JSON schemas
-prompts/       system + task templates (bilingual)
+configs/       fixtures, models, settings, task weights, competition spec and truth
+schemas/       fixture and prediction JSON schemas
+prompts/       per-match and full-competition prompts
 src/
-  ingest/      API-Football, transfermarkt, odds
-  runners/     one file per provider (openai_compat, anthropic, ...)
-  graders/     metrics + per-match grader
-  pipeline/    orchestrator, prompt_build, lock/audit, scheduler
-  leaderboard/ aggregate → static site
+  ingest/      football data, news and odds adapters
+  runners/     provider-specific model clients
+  graders/     match and competition metrics
+  pipeline/    snapshots, validation, prediction, live and tournament runners
+  leaderboard/ aggregation and static-site payload generation
 data/
-  snapshots/<fixture_id>/fixture.json    frozen pre-match state
-  snapshots/<fixture_id>/truth.json      filled in post-match
-  predictions/<fixture_id>/*.json        raw per-model outputs
-  results/<fixture_id>/*.json            scored outputs
-  live/<fixture_id>.json                 real-time score during match (T+0h → T+3h)
-  search_logs/<fixture_id>/*.json        S2 search sources for review
-  archive/                               fixtures removed from leaderboard
-.github/workflows/   automate (cron every 10 min) + pages deploy
-docs/
-  cost_estimate.md   per-fixture and per-phase $$ estimates
-  tech_report.md     methodology + results
-  announcement.md    promotional write-up
-  site/              static site (GH Pages)
+  snapshots/                  frozen pre-match inputs and post-match truth
+  predictions/                pre-match model outputs
+  results/                    graded per-match outputs
+  live/                       provider match-state snapshots
+  live_predictions/           in-play model histories
+  tournament_context/         prepared competition-level evidence
+  tournament_predictions/     full-competition forecasts
+  search_logs/                archived S2 sources
+  i18n/                       site translation data
+docs/site/                    bilingual static leaderboard
+tests/                        scoring tests
+worldcup写作/                 LaTeX technical report and analysis scripts
 ```
 
 ## Lifecycle of a fixture
 
 ```
- T-7d  → T-24h   ingest       pull fixture.json from API-Football
- T-48h → T-24h   populate     fill context_pack (squads, form, news, stats)
- T-24h → T+0h    lock_predict lock snapshot_hash; run every (model × setting)  →  predictions/<id>/*.json
- T+0h  → T+3h    live_update  fetch live score every 10 min  →  data/live/<id>.json
-                              if status = "Match Finished": trigger truth_grade immediately
- T+3h  → T+48h   truth_grade  fetch truth + grade + rebuild leaderboard  →  results/<id>/*.json
+register fixture
+      |
+      v
+ingest and populate context
+      |
+      v
+freeze snapshot at the configured cutoff and run pre-match predictions
+      |
+      +---- optional in-play state and prediction updates
+      |
+      v
+fetch final truth, grade all valid outputs, and rebuild the site
 ```
 
-The entire lifecycle is driven by a single GitHub Actions cron (`automate.yml`, every 10 minutes). Each phase is idempotent — repeated ticks are no-ops, missed ticks catch up automatically.
+`src.pipeline.scheduler` implements the idempotent `ingest`, `populate`, `lock_predict`, `live_update`, and `truth_grade` phases and is designed for a short-interval cron. Full-competition predictions and in-play model calls are separate runners because they have different schedules and costs. The Pages workflow rebuilds and deploys the bilingual site when relevant data or site code changes on `main`.
 
 ## Quickstart
 
 ```bash
-python3 -m venv .venv && . .venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env         # fill in API keys
+cp .env.example .env
 
 python -m src.pipeline.scheduler show
-python -m src.pipeline.scheduler tick
+python -m src.leaderboard.build_site
 ```
 
-Full step-by-step usage (ingest → lock → predict → grade → leaderboard) lives in [docs/usage.md](docs/usage.md).
+Common commands:
 
-Want your model on the leaderboard? See [docs/integration.md](docs/integration.md) — most integrations take less than 10 minutes.
+```bash
+# Run every currently due fixture phase
+python -m src.pipeline.scheduler tick
 
+# Inspect models available for full-competition forecasting
+python -m src.pipeline.tournament_predict list-models
 
-## Leakage policy
+# Check a tournament run without calling a provider
+python -m src.pipeline.tournament_predict run --models gpt-5.4 --dry-run
 
-Every agent/search response must include `sources[].accessed_at`. Any source with `published_at > lock_at_utc` invalidates the tasks that depend on it (0 score). Leakage events are highlighted on the leaderboard.
+# Run the scoring tests
+python -m unittest discover -s tests
+```
 
-## Format integrity
+Full step-by-step usage lives in [docs/usage.md](docs/usage.md). To add a provider or model, see [docs/integration.md](docs/integration.md).
 
-Every prediction is **schema-validated + semantically checked** at submission time:
-- JSON Schema conformance (required fields, enums, patterns).
-- `win_probs` and `score_dist` probability sums normalized to 1 (within 1e-2), all floats rounded to 3 decimal places.
-- The outcome implied by the highest-`p` entry in `score_dist` must match the highest-probability key in `win_probs` (e.g. a home-win `win_probs` paired with a draw top scoreline is rejected).
-- `lineups.*.starting` has exactly 11 players.
-- `stats` contains all 8 required keys with `{home, away}` pairs.
-- `reasoning.overall` non-empty and ≥80 characters (reasoning comes *first* in the JSON, before numeric fields).
+## Reproducibility and integrity
 
-If validation fails, the orchestrator sends a targeted repair prompt to the same model (up to 2 retries) so we never discover malformed output only after kickoff.
+- Each pre-match fixture is stored as a frozen snapshot with a hash and information cutoff.
+- Outputs are checked against JSON Schema and semantic constraints, including normalized probabilities, agreement among the predicted result, headline score, and probability argmax, complete starting lineups, and required reasoning fields.
+- Invalid outputs receive a targeted repair prompt, up to the retry limit in [configs/settings.yaml](configs/settings.yaml).
+- S2 sources and timestamps are archived so information published after the cutoff can be audited.
+- Model-owned predictions are kept separate from deterministic score-distribution derivatives generated by the pipeline.
 
-## Status & roadmap
+## Status and next steps
 
-- [x] Config schema, metrics, orchestrator skeleton
-- [x] OpenAI-compat + Anthropic runners
-- [x] Gemini runner, MiroThinker runner, Perplexity/OpenAI DR runners
-- [x] Ingest: squads + news + odds
-- [x] Phase 0 dry run on a Premier League fixture
-- [x] Automated cron pipeline (GitHub Actions, every 10 min)
-- [x] Live score display during matches
-- [x] S2 search log archival
-- [x] Phase 1: UCL SF1 (Bayern vs PSG, 2026-04-29 / 2026-05-06)
-- [x] Phase 2: Pre-tournament WC prediction (by 2026-06-10)
+- [x] Complete 104-match 2026 World Cup release
+- [x] Thirteen-system pre-match leaderboard with T1-T5 profiles
+- [x] Completed competition-level grading through the final
+- [x] In-play prediction histories and time-stratified analysis
+- [x] Bilingual static leaderboard and GitHub Pages deployment
 
-Contributions welcome — especially new model runners and ingest adapters. See [docs/integration.md](docs/integration.md) for model-maintainer onboarding.
-
-Sponsorship welcome for API cost and deployment of open-source models.
+Contributions are welcome, especially new model runners, football-data adapters, competition specifications, and reproducibility checks.
 
 ## License
 
@@ -155,6 +231,6 @@ MIT. Predictions, prompts, and grading code are all open; model outputs are attr
   title={WorldCupArena: Fine-Grained Evaluation of Language Models and Deep-Research Agents on Football Forecasting},
   author = {Wang, Zhaokai and Gui, Tianlin and Rao, Jiayuan and Di, Shangzhe and Tang, Yihong and Liang, Dingli},
   journal={arXiv preprint arXiv:2607.18084},
-  year={2026 }
+  year={2026}
 }
 ```

@@ -162,8 +162,8 @@ tasks:
   - id: champion
     layer: T5_tournament_macro
     weight_in_layer: 0.20
-    metric: brier_multiclass
-    output_field: champion_probs
+    metric: top1_accuracy
+    output_field: champion
   - id: top_scorer
     layer: T5_tournament_macro
     weight_in_layer: 0.10

@@ -3,7 +3,7 @@
 The score expands as tournament truth becomes observable.  Group standings are
 graded for rank agreement, while every known knockout round is graded for both
 the teams that reached it and the exact pairings.  Unobserved outcomes such as
-the champion and individual awards are excluded instead of being scored zero.
+individual awards are excluded instead of being scored zero.
 """
 
 from __future__ import annotations
@@ -22,6 +22,7 @@ PREDICTIONS_DIR = ROOT / "data" / "tournament_predictions" / "world_cup_2026"
 
 GROUP_COMPONENT_WEIGHT = 0.25
 BRACKET_COMPONENT_WEIGHT = 0.35
+CHAMPION_COMPONENT_WEIGHT = 0.20
 ADVANCEMENT_SHARE = 0.70
 PAIRING_SHARE = 0.30
 STAGE_WEIGHTS = {"R32": 1.0, "R16": 2.0, "QF": 4.0, "SF": 8.0, "FINAL": 16.0}
@@ -181,6 +182,15 @@ def grade_tournament_prediction(prediction: dict[str, Any], truth: dict[str, Any
             "score": bracket_score,
             "configured_weight": BRACKET_COMPONENT_WEIGHT,
         }
+    actual_champion = _team_id(truth.get("champion"))
+    predicted_champion = _team_id(prediction.get("champion"))
+    champion_score = None
+    if actual_champion:
+        champion_score = 100.0 if predicted_champion == actual_champion else 0.0
+        available_components["champion"] = {
+            "score": champion_score,
+            "configured_weight": CHAMPION_COMPONENT_WEIGHT,
+        }
     available_weight = sum(item["configured_weight"] for item in available_components.values())
     t5_score = (
         sum(item["score"] * item["configured_weight"] for item in available_components.values())
@@ -210,6 +220,9 @@ def grade_tournament_prediction(prediction: dict[str, Any], truth: dict[str, Any
         "advancement_score": advancement_score,
         "pairing_score": pairing_score,
         "bracket_score": bracket_score,
+        "champion_score": champion_score,
+        "predicted_champion": predicted_champion or None,
+        "actual_champion": actual_champion or None,
         "stage_scores": stage_scores,
         "bracket_mix": {"advancement": ADVANCEMENT_SHARE, "pairings": PAIRING_SHARE},
         "available_components": available_components,

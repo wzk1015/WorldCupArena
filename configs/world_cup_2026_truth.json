@@ -1,7 +1,7 @@
 {
   "tournament_id": "world_cup_2026",
-  "as_of": "2026-07-13",
-  "provisional_terminal_stage": "SF",
+  "as_of": "2026-07-19",
+  "provisional_terminal_stage": "FINAL",
   "group_standings": {
     "A": ["mexico", "south-africa", "south-korea", "czech-republic"],
     "B": ["switzerland", "canada", "bosnia-and-herzegovina", "qatar"],
@@ -54,6 +54,9 @@
     "SF": [
       {"home": "france", "away": "spain"},
       {"home": "england", "away": "argentina"}
+    ],
+    "FINAL": [
+      {"home": "spain", "away": "argentina"}
     ]
   },
   "semifinalists": ["france", "spain", "england", "argentina"],
@@ -61,11 +64,17 @@
     ["france", "spain"],
     ["england", "argentina"]
   ],
+  "champion": "spain",
+  "runner_up": "argentina",
+  "third_place": "england",
   "sources": [
     "data/snapshots/World-Cup_Group-Stage-*/truth.json",
     "data/snapshots/World-Cup_Round-of-32_*/truth.json",
     "data/snapshots/World-Cup_Round-of-16_*/truth.json",
     "data/snapshots/World-Cup_Quarter-finals_*/truth.json",
+    "data/snapshots/World-Cup_Semi-finals_*/truth.json",
+    "data/snapshots/World-Cup_3rd-Place-Final_*/truth.json",
+    "data/snapshots/World-Cup_Final_*/truth.json",
     "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/match-schedule-fixtures-results-teams-stadiums/"
   ]
 }
