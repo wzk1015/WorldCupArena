@@ -130,8 +130,7 @@ If validation fails, the orchestrator sends a targeted repair prompt to the same
 ## Status & roadmap
 
 - [x] Config schema, metrics, orchestrator skeleton
-- [x] OpenAI-compat + Anthropic runners
-- [x] Gemini runner, MiroThinker runner, Perplexity/OpenAI DR runners
+- [x] OpenAI-compat + Anthropic runners + Gemini runner
 - [x] Ingest: squads + news + odds
 - [x] Phase 0 dry run on a Premier League fixture
 - [x] Automated cron pipeline (GitHub Actions, every 10 min)
@@ -153,7 +152,7 @@ MIT. Predictions, prompts, and grading code are all open; model outputs are attr
 ```
 @article{WorldCupArena,
   title={WorldCupArena: Fine-Grained Evaluation of Language Models and Deep-Research Agents on Football Forecasting},
-  author = {Wang, Zhaokai and Gui, Tianlin and Rao, Jiayuan and Di, Shangzhe and Tang, Yihong and Liang, Dingli},
+  author={Wang, Zhaokai and Gui, Tianlin and Rao, Jiayuan and Di, Shangzhe and Tang, Yihong and Liang, Dingli},
   journal={arXiv preprint arXiv:2607.18084},
   year={2026 }
 }
